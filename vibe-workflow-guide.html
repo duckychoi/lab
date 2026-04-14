@@ -143,17 +143,235 @@ pre{font-family:monospace;font-size:12px;line-height:1.8;color:#a8c0d0;overflow-
 /* FOOTER */
 .footer{padding:40px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);}
 
-/* Animated lizard */
-#lizard{position:fixed;bottom:20px;right:20px;font-size:32px;pointer-events:none;z-index:999;animation:liz-walk 8s linear infinite;}
-@keyframes liz-walk{0%{bottom:20px;right:-40px;transform:scaleX(-1);}40%{bottom:20px;right:calc(100% - 60px);transform:scaleX(-1);}41%{transform:scaleX(1);}80%{bottom:20px;right:-40px;transform:scaleX(1);}100%{bottom:20px;right:-40px;transform:scaleX(1);}}
-#lizard .sprite{animation:liz-bob 0.5s ease-in-out infinite alternate;}
-@keyframes liz-bob{from{transform:translateY(0);}to{transform:translateY(-4px);}}
+/* ── Scroll-walking Lizard ── */
+#scroll-lizard {
+  position: fixed;
+  right: 0;
+  top: 80px;
+  width: 72px;
+  pointer-events: none;
+  z-index: 9999;
+  transform-origin: center center;
+  will-change: transform;
+}
+/* 몸통 전체 걷기 — 상하 bobbing */
+#scroll-lizard .liz-body {
+  animation: liz-body-bob 0.32s ease-in-out infinite alternate;
+}
+@keyframes liz-body-bob {
+  from { transform: translateY(0px) rotate(-1deg); }
+  to   { transform: translateY(3px) rotate(1deg); }
+}
+/* 앞발 왼쪽 */
+#scroll-lizard .leg-fl {
+  animation: leg-fl 0.32s ease-in-out infinite;
+  transform-origin: 22px 30px;
+}
+@keyframes leg-fl {
+  0%,100% { transform: rotate(-18deg); }
+  50%      { transform: rotate(22deg); }
+}
+/* 앞발 오른쪽 (반대 위상) */
+#scroll-lizard .leg-fr {
+  animation: leg-fr 0.32s ease-in-out infinite;
+  transform-origin: 50px 30px;
+}
+@keyframes leg-fr {
+  0%,100% { transform: rotate(18deg); }
+  50%      { transform: rotate(-22deg); }
+}
+/* 뒷발 왼쪽 (앞발 오른쪽과 동위상) */
+#scroll-lizard .leg-rl {
+  animation: leg-rl 0.32s ease-in-out infinite;
+  transform-origin: 18px 50px;
+}
+@keyframes leg-rl {
+  0%,100% { transform: rotate(18deg); }
+  50%      { transform: rotate(-22deg); }
+}
+/* 뒷발 오른쪽 (앞발 왼쪽과 동위상) */
+#scroll-lizard .leg-rr {
+  animation: leg-rr 0.32s ease-in-out infinite;
+  transform-origin: 54px 50px;
+}
+@keyframes leg-rr {
+  0%,100% { transform: rotate(-18deg); }
+  50%      { transform: rotate(22deg); }
+}
+/* 꼬리 흔들기 */
+#scroll-lizard .liz-tail {
+  animation: liz-tail 0.64s ease-in-out infinite alternate;
+  transform-origin: 12px 54px;
+}
+@keyframes liz-tail {
+  from { transform: rotate(-12deg); }
+  to   { transform: rotate(12deg); }
+}
+/* 눈 깜빡임 */
+#scroll-lizard .liz-eye {
+  animation: liz-blink 4s ease-in-out infinite;
+}
+@keyframes liz-blink {
+  0%,90%,100% { transform: scaleY(1); }
+  95%          { transform: scaleY(0.1); }
+}
 </style>
 </head>
 <body>
 
 <!-- 화면 돌아다니는 도마뱀 -->
-<div id="lizard"><span class="sprite">🦎</span></div>
+<!-- Scroll-walking SVG Lizard -->
+<div id="scroll-lizard">
+  <svg viewBox="0 0 72 90" xmlns="http://www.w3.org/2000/svg">
+    <g class="liz-tail">
+      <!-- 꼬리 -->
+      <path d="M20 62 Q8 72 4 85 Q6 87 8 85 Q12 74 22 65Z" fill="#4a8c3f"/>
+      <path d="M20 62 Q7 70 3 83 Q4 84 5 83 Q10 72 21 63Z" fill="#3a7030"/>
+    </g>
+    <g class="liz-body">
+      <!-- 뒷다리 왼쪽 -->
+      <g class="leg-rl">
+        <path d="M18 52 Q10 60 8 68 Q9 69 11 68 Q13 61 20 54Z" fill="#5aaa4a"/>
+        <path d="M8 68 Q6 72 5 70 Q7 66 8 68Z" fill="#4a8c3f"/>
+        <path d="M8 68 Q9 73 7 71 Q8 67 9 68Z" fill="#4a8c3f"/>
+        <path d="M9 68 Q11 72 9 71 Q9 67 10 68Z" fill="#4a8c3f"/>
+      </g>
+      <!-- 뒷다리 오른쪽 -->
+      <g class="leg-rr">
+        <path d="M54 52 Q62 60 64 68 Q63 69 61 68 Q59 61 52 54Z" fill="#5aaa4a"/>
+        <path d="M64 68 Q66 72 67 70 Q65 66 64 68Z" fill="#4a8c3f"/>
+        <path d="M64 68 Q63 73 65 71 Q64 67 63 68Z" fill="#4a8c3f"/>
+        <path d="M63 68 Q61 72 63 71 Q63 67 62 68Z" fill="#4a8c3f"/>
+      </g>
+      <!-- 앞다리 왼쪽 -->
+      <g class="leg-fl">
+        <path d="M22 32 Q12 40 10 48 Q11 49 13 48 Q15 41 24 34Z" fill="#5aaa4a"/>
+        <path d="M10 48 Q8 52 7 50 Q9 46 10 48Z" fill="#4a8c3f"/>
+        <path d="M10 48 Q11 53 9 51 Q10 47 11 48Z" fill="#4a8c3f"/>
+        <path d="M11 48 Q13 52 11 51 Q11 47 12 48Z" fill="#4a8c3f"/>
+      </g>
+      <!-- 앞다리 오른쪽 -->
+      <g class="leg-fr">
+        <path d="M50 32 Q60 40 62 48 Q61 49 59 48 Q57 41 48 34Z" fill="#5aaa4a"/>
+        <path d="M62 48 Q64 52 65 50 Q63 46 62 48Z" fill="#4a8c3f"/>
+        <path d="M62 48 Q61 53 63 51 Q62 47 61 48Z" fill="#4a8c3f"/>
+        <path d="M61 48 Q59 52 61 51 Q61 47 60 48Z" fill="#4a8c3f"/>
+      </g>
+      <!-- 몸통 -->
+      <ellipse cx="36" cy="44" rx="18" ry="22" fill="#5aaa4a"/>
+      <!-- 배 무늬 -->
+      <ellipse cx="36" cy="46" rx="12" ry="16" fill="#8dcc6a" opacity="0.6"/>
+      <!-- 등 줄무늬 -->
+      <path d="M30 28 Q36 24 42 28 Q40 42 36 58 Q32 42 30 28Z" fill="#3a7030" opacity="0.4"/>
+      <!-- 머리 -->
+      <ellipse cx="36" cy="22" rx="14" ry="12" fill="#5aaa4a"/>
+      <!-- 머리 무늬 -->
+      <ellipse cx="36" cy="23" rx="9" ry="7" fill="#8dcc6a" opacity="0.5"/>
+      <!-- 코 부분 -->
+      <ellipse cx="36" cy="17" rx="6" ry="5" fill="#4a8c3f"/>
+      <!-- 콧구멍 -->
+      <circle cx="33" cy="16" r="1.2" fill="#2a5c20"/>
+      <circle cx="39" cy="16" r="1.2" fill="#2a5c20"/>
+      <!-- 눈 왼쪽 -->
+      <g class="liz-eye">
+        <circle cx="28" cy="19" r="4" fill="#ffe082"/>
+        <circle cx="28" cy="19" r="2.5" fill="#1a1a00"/>
+        <circle cx="29" cy="18" r="0.8" fill="white"/>
+      </g>
+      <!-- 눈 오른쪽 -->
+      <g class="liz-eye">
+        <circle cx="44" cy="19" r="4" fill="#ffe082"/>
+        <circle cx="44" cy="19" r="2.5" fill="#1a1a00"/>
+        <circle cx="45" cy="18" r="0.8" fill="white"/>
+      </g>
+      <!-- 혀 -->
+      <g style="animation:tongue 1.8s ease-in-out infinite;">
+        <path d="M33 13 Q36 8 39 13" stroke="#e53935" stroke-width="1.5" fill="none"/>
+        <circle cx="33" cy="13" r="1" fill="#e53935"/>
+        <circle cx="39" cy="13" r="1" fill="#e53935"/>
+      </g>
+    </g>
+  </svg>
+</div>
+
+<style>
+@keyframes tongue {
+  0%,70%,100% { opacity:0; transform:translateY(0); }
+  80%          { opacity:1; transform:translateY(2px); }
+  90%          { opacity:1; transform:translateY(0); }
+}
+#scroll-lizard svg g[style] { transform-origin: 36px 13px; }
+</style>
+
+<script>
+(function(){
+  const liz = document.getElementById('scroll-lizard');
+  if(!liz) return;
+
+  const EDGE_OFFSET = 6; // px from right edge
+  let currentY = 80;
+  let targetY = 80;
+  let facingDown = true;
+  let isMoving = false;
+  let lastScroll = window.scrollY;
+  let rafId = null;
+
+  function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
+
+  function updateLizard(){
+    // 부드럽게 따라가기 (lerp)
+    currentY += (targetY - currentY) * 0.09;
+
+    const maxY = window.innerHeight - 100;
+    currentY = clamp(currentY, 60, maxY);
+
+    liz.style.top = currentY + 'px';
+    liz.style.right = EDGE_OFFSET + 'px';
+
+    // 이동 중이면 걷기 애니 켜기, 정지면 느리게
+    const speed = Math.abs(targetY - currentY);
+    const dur = isMoving ? '0.32s' : '1.2s';
+    liz.querySelectorAll('.leg-fl,.leg-fr,.leg-rl,.leg-rr,.liz-body').forEach(el => {
+      el.style.animationDuration = dur;
+    });
+
+    rafId = requestAnimationFrame(updateLizard);
+  }
+
+  window.addEventListener('scroll', function(){
+    const scrollY = window.scrollY;
+    const scrollDelta = scrollY - lastScroll;
+    const winH = window.innerHeight;
+    const docH = document.documentElement.scrollHeight;
+    const maxScroll = docH - winH;
+    const progress = maxScroll > 0 ? scrollY / maxScroll : 0;
+
+    // 스크롤 진행도에 비례해서 Y 위치 결정
+    // 화면 상단 60px ~ 하단 100px 사이를 스크롤 100%로 커버
+    targetY = 60 + progress * (winH - 160);
+    isMoving = Math.abs(scrollDelta) > 1;
+
+    // 아래로 스크롤 = 머리가 아래를 향함 (SVG 정방향)
+    // 위로 스크롤 = 뒤집기
+    if(scrollDelta > 2 && !facingDown){
+      facingDown = true;
+      liz.style.transform = 'scaleY(1)';
+    } else if(scrollDelta < -2 && facingDown){
+      facingDown = false;
+      liz.style.transform = 'scaleY(-1)';
+    }
+
+    lastScroll = scrollY;
+
+    // 잠깐 후 정지 상태로
+    clearTimeout(liz._stopTimer);
+    liz._stopTimer = setTimeout(() => { isMoving = false; }, 200);
+  }, {passive:true});
+
+  // 시작
+  updateLizard();
+})();
+</script>
 
 <nav class="nav">
   <span class="nav-logo">Vibe 2026</span>
