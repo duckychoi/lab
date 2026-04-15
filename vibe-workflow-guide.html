@@ -660,277 +660,39 @@ console.<span class="fn">log</span>(<span class="str">`높이: ${height}px, 줄�
   </div>
 
   <!-- ── UnityPretext Editorial Engine 포팅 ── -->
-  <div style="margin-top:40px;">
+  <div style="margin-top:40px;" id="editorialWrap">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
       <div style="background:rgba(34,211,238,.12);color:var(--a3);border:1px solid rgba(34,211,238,.25);border-radius:8px;padding:4px 12px;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;">UnityPretext 포팅</div>
       <code style="font-size:11px;color:var(--muted);background:rgba(255,255,255,.05);padding:3px 8px;border-radius:6px;border:1px solid var(--border);">mjshin82/UnityPretext · EditorialEngine.cs → Canvas 2D</code>
     </div>
-
     <h3 style="font-size:18px;font-weight:700;margin-bottom:8px;">Editorial Engine — 실시간 텍스트 리플로우</h3>
-    <p style="font-size:13px;color:var(--muted);margin-bottom:6px;">
-      Unity의 <code style="background:rgba(255,255,255,.08);padding:2px 6px;border-radius:4px;font-size:12px;">EditorialEngine.cs</code>가 하는 일:
-      매 프레임마다 bouncing orb의 원형 충돌 영역을 계산하고,
-      각 줄에서 비어 있는 슬롯마다 <code style="background:rgba(255,255,255,.08);padding:2px 6px;border-radius:4px;font-size:12px;">LayoutNextLine()</code>을 다른 너비로 호출해 텍스트를 채운다.
-      DOM reflow가 없기 때문에 60fps로 돌아간다.
+    <p style="font-size:13px;color:var(--muted);margin-bottom:18px;">
+      바운싱 구체 주위로 텍스트가 매 프레임 실시간 재배치된다.
+      <code style="background:rgba(255,255,255,.08);padding:2px 6px;border-radius:4px;font-size:12px;">LayoutNextLine()</code>을 줄마다 다른 너비로 호출 — DOM reflow 없이 60fps.
+      <span style="opacity:.6;font-size:12px;"> · 클릭: orb 추가</span>
     </p>
-    <p style="font-size:12px;color:var(--muted);margin-bottom:18px;opacity:.7;">캔버스를 클릭하면 orb가 추가됩니다 (최대 8개)</p>
 
-    <canvas id="editorialCanvas"
-      style="width:100%;border-radius:16px;border:1px solid rgba(34,211,238,.18);
-             background:#070714;display:block;cursor:crosshair;"></canvas>
-
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;gap:8px;">
-      <div id="editorialFps" style="font-size:11px;color:var(--muted);font-family:monospace;">-- fps · -- lines/frame</div>
+    <!-- canvas: explicit width/height so it's NEVER 0 on init -->
+    <div style="position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(34,211,238,.22);">
+      <canvas id="editorialCanvas" width="800" height="460"
+        style="display:block;width:100%;background:#05050f;cursor:crosshair;"></canvas>
+      <div id="editorialHud"
+        style="position:absolute;top:10px;right:14px;font-family:monospace;font-size:11px;
+               color:rgba(34,211,238,.7);background:rgba(0,0,0,.5);padding:4px 10px;
+               border-radius:6px;pointer-events:none;">initializing…</div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:8px;">
       <a href="https://github.com/mjshin82/UnityPretext" target="_blank"
-         style="font-size:11px;color:var(--a3);text-decoration:none;">↗ mjshin82/UnityPretext</a>
+         style="font-size:11px;color:var(--a3);text-decoration:none;opacity:.7;">↗ mjshin82/UnityPretext</a>
     </div>
   </div>
 
   <div class="callout info" style="margin-top:24px;border-color:rgba(34,211,238,.3);">
     <div class="cl">포팅 차이점</div>
-    Unity 버전은 TMP 폰트 아틀라스로 글리프 너비를 측정하고, 이 데모는 Canvas <code style="font-size:11px;">measureText()</code>를 사용한다.
-    두 구현 모두 <strong>prepare → layoutNextLine</strong> 2단계 아키텍처는 동일하다.
+    Unity 버전은 TMP 폰트 아틀라스로 글리프 너비를 측정. 이 데모는 Canvas <code style="font-size:11px;">measureText()</code> 사용. 두 구현 모두 <strong>prepare → layoutNextLine</strong> 2단계 아키텍처 동일.
   </div>
 </div>
 </section>
-
-<script>
-/* ════════════════════════════════════════════════════════
-   Editorial Engine — UnityPretext/EditorialEngine.cs 포팅
-   PortedBy: mjshin82/UnityPretext → Canvas 2D JS
-   ════════════════════════════════════════════════════════ */
-(function(){
-  const canvas  = document.getElementById('editorialCanvas');
-  const fpsEl   = document.getElementById('editorialFps');
-  if(!canvas) return;
-
-  /* ── constants ── */
-  const FONT_SIZE = 13;
-  const LINE_H    = 21;
-  const GUTTER    = 28;
-  const COL_GAP   = 22;
-  const PADDING_Y = 18;
-  const ORB_R     = 46;
-  const ORB_PAD   = 13;
-  const MIN_SLOT  = FONT_SIZE * 2.5;
-
-  const ORB_FILL  = ['rgba(34,211,238,.25)','rgba(168,85,247,.25)','rgba(251,113,133,.25)','rgba(251,191,36,.25)'];
-  const ORB_EDGE  = ['#22d3ee','#a855f7','#fb7185','#fbbf24'];
-
-  const SAMPLE_TEXT =
-    "Pretext는 DOM 없이 텍스트 레이아웃을 계산하는 라이브러리다. " +
-    "prepare() 단계에서 모든 글리프 너비를 한 번만 측정하고 캐시한다. " +
-    "layout() 단계는 순수 산술 연산만 사용한다 — DOM 접근, 리플로우, 렌더링 엔진 쿼리가 전혀 없다. " +
-    "UnityPretext는 이 아키텍처를 Unity TextMesh Pro로 포팅했다. " +
-    "브라우저의 measureText() 대신 TMP 폰트 아틀라스를 직접 조회한다. " +
-    "이 캔버스는 EditorialEngine.cs의 핵심 알고리즘을 재현한다: " +
-    "매 프레임 orb가 이동하면 각 줄의 사용 가능한 슬롯을 재계산하고 " +
-    "layoutNextLine()을 슬롯마다 다른 너비로 호출해 텍스트를 채운다. " +
-    "DOM reflow가 없으니 60fps로 돌아간다. " +
-    "500x 빠른 이유가 여기 있다. 텍스트는 유체처럼 흐른다.";
-
-  /* ── Mini Pretext engine (same 2-phase arch as the Unity port) ── */
-  let prepared = null;
-
-  function prepareText(){
-    const off = document.createElement('canvas').getContext('2d');
-    off.font = `${FONT_SIZE}px system-ui,-apple-system,sans-serif`;
-    const spW = off.measureText(' ').width;
-    const words = SAMPLE_TEXT.split(' ').filter(Boolean);
-    const segs = [];
-    for(let i=0;i<words.length;i++){
-      segs.push({t: words[i], w: off.measureText(words[i]).width, br: false});
-      if(i < words.length-1) segs.push({t:' ', w:spW, br:true});
-    }
-    return segs;
-  }
-
-  /* port of PretextLayout.LayoutNextLine */
-  function layoutNextLine(segs, maxW, start){
-    let lw=0, lastBr=-1, lastW=0;
-    for(let i=start;i<segs.length;i++){
-      if(segs[i].br && i>start){ lastBr=i; lastW=lw; }
-      if(lw + segs[i].w > maxW && i>start)
-        return lastBr>=start ? {end:lastBr+1, w:lastW} : {end:i, w:lw};
-      lw += segs[i].w;
-    }
-    return {end:segs.length, w:lw};
-  }
-
-  function buildLine(segs,s,e){
-    return segs.slice(s,e).map(x=>x.t).join('').trimEnd();
-  }
-
-  /* port of EditorialEngine.GetOrbExclusions */
-  function getExclusions(lineY, colX, colRight){
-    const mid = lineY + LINE_H*.5;
-    const intervals = [];
-    for(const o of orbs){
-      const dy = Math.abs(o.y - mid);
-      const R  = ORB_R + ORB_PAD;
-      if(dy >= R) continue;
-      const hc = Math.sqrt(R*R - dy*dy);
-      const L  = Math.max(o.x - hc, colX);
-      const R2 = Math.min(o.x + hc, colRight);
-      if(L >= R2) continue;
-      intervals.push([L, R2]);
-    }
-    intervals.sort((a,b)=>a[0]-b[0]);
-    if(intervals.length<2) return intervals;
-    const m=[intervals[0].slice()];
-    for(let i=1;i<intervals.length;i++){
-      const last=m[m.length-1];
-      if(intervals[i][0]<=last[1]) last[1]=Math.max(last[1],intervals[i][1]);
-      else m.push(intervals[i].slice());
-    }
-    return m;
-  }
-
-  /* ── Orbs ── */
-  let orbs = [];
-  let cW=0, cH=0;
-
-  function initOrbs(){
-    orbs=[];
-    for(let i=0;i<4;i++){
-      const a=Math.random()*Math.PI*2, spd=28+Math.random()*36;
-      orbs.push({
-        x: GUTTER+ORB_R+Math.random()*(cW-2*GUTTER-2*ORB_R),
-        y: ORB_R+PADDING_Y+Math.random()*(cH-2*ORB_R-2*PADDING_Y),
-        vx:Math.cos(a)*spd, vy:Math.sin(a)*spd,
-        ci:i
-      });
-    }
-  }
-
-  /* port of EditorialEngine.UpdateOrbs */
-  function updateOrbs(dt){
-    const minX=GUTTER+ORB_R+ORB_PAD, maxX=cW-GUTTER-ORB_R-ORB_PAD;
-    const minY=ORB_R+ORB_PAD,        maxY=cH-ORB_R-ORB_PAD;
-    for(const o of orbs){
-      o.x+=o.vx*dt; o.y+=o.vy*dt;
-      if(o.x<minX){o.x=minX;o.vx=Math.abs(o.vx);}
-      if(o.x>maxX){o.x=maxX;o.vx=-Math.abs(o.vx);}
-      if(o.y<minY){o.y=minY;o.vy=Math.abs(o.vy);}
-      if(o.y>maxY){o.y=maxY;o.vy=-Math.abs(o.vy);}
-    }
-  }
-
-  /* ── Render ── */
-  function render(ctx){
-    ctx.clearRect(0,0,cW,cH);
-
-    /* orb glows */
-    for(const o of orbs){
-      const g=ctx.createRadialGradient(o.x,o.y,0,o.x,o.y,ORB_R);
-      g.addColorStop(0, ORB_FILL[o.ci%ORB_FILL.length].replace('.25','.55'));
-      g.addColorStop(1, ORB_FILL[o.ci%ORB_FILL.length].replace('.25','.04'));
-      ctx.beginPath();
-      ctx.arc(o.x,o.y,ORB_R,0,Math.PI*2);
-      ctx.fillStyle=g; ctx.fill();
-      ctx.save();
-      ctx.strokeStyle=ORB_EDGE[o.ci%ORB_EDGE.length];
-      ctx.globalAlpha=0.45; ctx.lineWidth=1.5;
-      ctx.stroke();
-      ctx.restore();
-    }
-
-    /* text layout — port of EditorialEngine.Reflow */
-    ctx.font=`${FONT_SIZE}px system-ui,-apple-system,sans-serif`;
-    ctx.textBaseline='top';
-    ctx.fillStyle='rgba(226,232,240,.82)';
-
-    const totalW = cW - GUTTER*2;
-    const colW   = (totalW - COL_GAP)/2;
-    const cols   = [
-      {x:GUTTER,       right:GUTTER+colW},
-      {x:GUTTER+colW+COL_GAP, right:GUTTER+totalW}
-    ];
-
-    let cursor=0, linesDrawn=0;
-
-    for(const col of cols){
-      if(cursor>=prepared.length) break;
-      let y=PADDING_Y;
-      while(cursor<prepared.length && y+LINE_H < cH-PADDING_Y){
-        const excl=getExclusions(y, col.x, col.right);
-        if(excl.length===0){
-          const {end}=layoutNextLine(prepared, col.right-col.x, cursor);
-          const txt=buildLine(prepared,cursor,end);
-          if(txt){ctx.fillText(txt,col.x,y);linesDrawn++;}
-          cursor=end;
-        } else {
-          let slotStart=col.x;
-          for(const [exL,exR] of excl){
-            const sw=exL-slotStart;
-            if(sw>=MIN_SLOT && cursor<prepared.length){
-              const {end}=layoutNextLine(prepared,sw,cursor);
-              const txt=buildLine(prepared,cursor,end);
-              if(txt){ctx.fillText(txt,slotStart,y);linesDrawn++;}
-              cursor=end;
-            }
-            slotStart=exR;
-          }
-          const lsw=col.right-slotStart;
-          if(lsw>=MIN_SLOT && cursor<prepared.length){
-            const {end}=layoutNextLine(prepared,lsw,cursor);
-            const txt=buildLine(prepared,cursor,end);
-            if(txt){ctx.fillText(txt,slotStart,y);linesDrawn++;}
-            cursor=end;
-          }
-        }
-        y+=LINE_H;
-      }
-    }
-    return linesDrawn;
-  }
-
-  /* ── Resize ── */
-  function resize(){
-    cW=canvas.offsetWidth||canvas.parentElement.offsetWidth||600;
-    cH=Math.max(320, Math.round(cW*.5));
-    canvas.width=cW; canvas.height=cH;
-    canvas.style.height=cH+'px';
-    if(orbs.length===0) initOrbs();
-    prepared=prepareText();
-  }
-
-  /* ── Loop ── */
-  let lastTs=0, fpsArr=[];
-  function loop(ts){
-    const dt=Math.min((ts-lastTs)/1000,.05);
-    lastTs=ts;
-    updateOrbs(dt);
-    const ctx=canvas.getContext('2d');
-    const lines=render(ctx);
-    /* FPS display */
-    fpsArr.push(1/Math.max(dt,.001));
-    if(fpsArr.length>30){
-      const avg=Math.round(fpsArr.reduce((a,b)=>a+b)/fpsArr.length);
-      fpsEl.textContent=`${avg} fps · ${lines} lines/frame · ${orbs.length} orbs`;
-      fpsArr=[];
-    }
-    requestAnimationFrame(loop);
-  }
-
-  /* ── Click → add orb ── */
-  canvas.addEventListener('click',e=>{
-    if(orbs.length>=8) return;
-    const r=canvas.getBoundingClientRect();
-    const a=Math.random()*Math.PI*2, spd=28+Math.random()*36;
-    orbs.push({
-      x:e.clientX-r.left, y:e.clientY-r.top,
-      vx:Math.cos(a)*spd, vy:Math.sin(a)*spd,
-      ci:orbs.length
-    });
-  });
-
-  /* ── Start ── */
-  resize();
-  new ResizeObserver(resize).observe(canvas.parentElement);
-  requestAnimationFrame(ts=>{lastTs=ts;loop(ts);});
-})();
-</script>
 
 <!-- ═══════════════════════ SECTION 3: Website Pet / Claude Buddy ═══════════════════════ -->
 <section class="section" id="buddy">
@@ -1098,6 +860,293 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+</script>
+
+<!-- ═══ UnityPretext Editorial Engine — Canvas 2D port ═══
+     runs after full DOM load so canvas.offsetWidth is real -->
+<script>
+window.addEventListener('load', function() {
+  var canvas = document.getElementById('editorialCanvas');
+  var hud    = document.getElementById('editorialHud');
+  if (!canvas) return;
+
+  /* ── layout constants ── */
+  var FS   = 15;        // font size px
+  var LH   = 25;        // line height px
+  var GUT  = 32;        // left/right gutter
+  var GAP  = 26;        // column gap
+  var PADY = 22;        // top/bottom padding
+  var OR   = 55;        // orb radius
+  var OP   = 16;        // orb padding around text
+  var MSLOT = FS * 3;   // min slot width to bother laying text
+
+  var COLORS = [
+    {fill:'rgba(34,211,238,', edge:'#22d3ee'},
+    {fill:'rgba(168,85,247,', edge:'#a855f7'},
+    {fill:'rgba(251,113,133,', edge:'#fb7185'},
+    {fill:'rgba(251,191,36,',  edge:'#fbbf24'}
+  ];
+
+  /* ── sample text (same spirit as EditorialEngine.cs sampleText) ── */
+  var TEXT =
+    "The web renders text through a pipeline designed thirty years ago. " +
+    "Every measurement requires the browser to consult its internal layout tree — " +
+    "a structure so expensive that browsers guard it behind synchronous reflow barriers " +
+    "that can freeze the main thread for tens of milliseconds. " +
+    "Pretext solves this with a two-phase approach: a one-time prepare() pass measures " +
+    "every glyph width and caches the result. After that, layout() is pure arithmetic — " +
+    "no DOM queries, no reflows, no rendering engine calls. " +
+    "UnityPretext ports this architecture to Unity TextMesh Pro: " +
+    "instead of Canvas measureText(), it reads widths directly from the TMP font atlas. " +
+    "This canvas demonstrates the Editorial Engine sample from that repo — " +
+    "text reflows around bouncing obstacles every frame at 60 fps. " +
+    "500x faster. Text becomes fluid.";
+
+  /* ════ Phase 1: prepare() — measure every segment once ════ */
+  var prepared;
+  function prepareText(cw) {
+    var off = document.createElement('canvas').getContext('2d');
+    off.font = FS + 'px system-ui,-apple-system,BlinkMacSystemFont,sans-serif';
+    var spW  = off.measureText(' ').width;
+    var words = TEXT.split(' ').filter(Boolean);
+    var segs  = [];
+    for (var i = 0; i < words.length; i++) {
+      segs.push({ t: words[i], w: off.measureText(words[i]).width, sp: false });
+      if (i < words.length - 1) segs.push({ t: ' ', w: spW, sp: true });
+    }
+    return segs;
+  }
+
+  /* ════ Phase 2: layoutNextLine() — port of PretextLayout.LayoutNextLine ════ */
+  function layoutNextLine(segs, maxW, start) {
+    var lw = 0, lb = -1, lbw = 0;
+    for (var i = start; i < segs.length; i++) {
+      if (segs[i].sp && i > start) { lb = i; lbw = lw; }
+      if (lw + segs[i].w > maxW && i > start)
+        return lb >= start ? { end: lb + 1, w: lbw } : { end: i, w: lw };
+      lw += segs[i].w;
+    }
+    return { end: segs.length, w: lw };
+  }
+
+  function buildLine(segs, s, e) {
+    var out = '';
+    for (var i = s; i < e; i++) out += segs[i].t;
+    return out.replace(/\s+$/, '');
+  }
+
+  /* ════ GetOrbExclusions — port of EditorialEngine.GetOrbExclusions ════ */
+  function getExclusions(lineY, colX, colRight) {
+    var mid = lineY + LH * 0.5;
+    var ivs = [];
+    for (var k = 0; k < orbs.length; k++) {
+      var o  = orbs[k];
+      var dy = Math.abs(o.y - mid);
+      var R  = OR + OP;
+      if (dy >= R) continue;
+      var hc = Math.sqrt(R * R - dy * dy);
+      var L  = Math.max(o.x - hc, colX);
+      var Rr = Math.min(o.x + hc, colRight);
+      if (L >= Rr) continue;
+      ivs.push([L, Rr]);
+    }
+    ivs.sort(function(a, b) { return a[0] - b[0]; });
+    if (ivs.length < 2) return ivs;
+    var m = [ivs[0].slice()];
+    for (var j = 1; j < ivs.length; j++) {
+      var last = m[m.length - 1];
+      if (ivs[j][0] <= last[1]) last[1] = Math.max(last[1], ivs[j][1]);
+      else m.push(ivs[j].slice());
+    }
+    return m;
+  }
+
+  /* ════ Orbs ════ */
+  var orbs = [];
+  var cW, cH;
+
+  function initOrbs() {
+    orbs = [];
+    for (var i = 0; i < 4; i++) {
+      var a = Math.random() * Math.PI * 2;
+      var spd = 32 + Math.random() * 38;
+      orbs.push({
+        x:  GUT + OR + Math.random() * (cW - 2 * GUT - 2 * OR),
+        y:  OR + PADY + Math.random() * (cH - 2 * OR - 2 * PADY),
+        vx: Math.cos(a) * spd,
+        vy: Math.sin(a) * spd,
+        ci: i
+      });
+    }
+  }
+
+  /* port of UpdateOrbs */
+  function updateOrbs(dt) {
+    var minX = GUT + OR + OP,  maxX = cW - GUT - OR - OP;
+    var minY = OR + OP,        maxY = cH - OR - OP;
+    for (var i = 0; i < orbs.length; i++) {
+      var o = orbs[i];
+      o.x += o.vx * dt; o.y += o.vy * dt;
+      if (o.x < minX) { o.x = minX; o.vx =  Math.abs(o.vx); }
+      if (o.x > maxX) { o.x = maxX; o.vx = -Math.abs(o.vx); }
+      if (o.y < minY) { o.y = minY; o.vy =  Math.abs(o.vy); }
+      if (o.y > maxY) { o.y = maxY; o.vy = -Math.abs(o.vy); }
+    }
+  }
+
+  /* ════ Render ════ */
+  function render(ctx) {
+    ctx.clearRect(0, 0, cW, cH);
+
+    /* background grid lines (subtle) */
+    ctx.strokeStyle = 'rgba(255,255,255,.03)';
+    ctx.lineWidth = 1;
+    for (var gy = 0; gy < cH; gy += LH) {
+      ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(cW, gy); ctx.stroke();
+    }
+
+    /* orbs */
+    for (var k = 0; k < orbs.length; k++) {
+      var o = orbs[k];
+      var c = COLORS[o.ci % COLORS.length];
+      /* outer glow ring */
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, OR + 10, 0, Math.PI * 2);
+      ctx.fillStyle = c.fill + '0.06)';
+      ctx.fill();
+      ctx.restore();
+      /* main orb */
+      var g = ctx.createRadialGradient(o.x - OR * 0.3, o.y - OR * 0.3, 0, o.x, o.y, OR);
+      g.addColorStop(0, c.fill + '0.7)');
+      g.addColorStop(0.6, c.fill + '0.35)');
+      g.addColorStop(1, c.fill + '0.05)');
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, OR, 0, Math.PI * 2);
+      ctx.fillStyle = g; ctx.fill();
+      /* rim */
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, OR, 0, Math.PI * 2);
+      ctx.strokeStyle = c.edge;
+      ctx.globalAlpha = 0.5;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    /* ── Reflow — port of EditorialEngine.Reflow ── */
+    ctx.font = FS + 'px system-ui,-apple-system,BlinkMacSystemFont,sans-serif';
+    ctx.textBaseline = 'top';
+    ctx.fillStyle = 'rgba(226,232,240,0.88)';
+
+    var totalW = cW - GUT * 2;
+    var colW   = (totalW - GAP) / 2;
+    var cols   = [
+      { x: GUT,            right: GUT + colW },
+      { x: GUT + colW + GAP, right: GUT + totalW }
+    ];
+
+    var cursor = 0, linesDrawn = 0;
+
+    for (var ci = 0; ci < cols.length; ci++) {
+      if (cursor >= prepared.length) break;
+      var col = cols[ci];
+      var y   = PADY;
+
+      while (cursor < prepared.length && y + LH < cH - PADY) {
+        var excl = getExclusions(y, col.x, col.right);
+
+        if (excl.length === 0) {
+          var r0 = layoutNextLine(prepared, col.right - col.x, cursor);
+          var t0 = buildLine(prepared, cursor, r0.end);
+          if (t0) { ctx.fillText(t0, col.x, y); linesDrawn++; }
+          cursor = r0.end;
+        } else {
+          var slotX = col.x;
+          for (var ei = 0; ei < excl.length; ei++) {
+            var sw = excl[ei][0] - slotX;
+            if (sw >= MSLOT && cursor < prepared.length) {
+              var rs = layoutNextLine(prepared, sw, cursor);
+              var ts = buildLine(prepared, cursor, rs.end);
+              if (ts) { ctx.fillText(ts, slotX, y); linesDrawn++; }
+              cursor = rs.end;
+            }
+            slotX = excl[ei][1];
+          }
+          var lsw = col.right - slotX;
+          if (lsw >= MSLOT && cursor < prepared.length) {
+            var rl = layoutNextLine(prepared, lsw, cursor);
+            var tl = buildLine(prepared, cursor, rl.end);
+            if (tl) { ctx.fillText(tl, slotX, y); linesDrawn++; }
+            cursor = rl.end;
+          }
+        }
+        y += LH;
+      }
+    }
+    return linesDrawn;
+  }
+
+  /* ════ Init & resize ════ */
+  function setupCanvas() {
+    cW = canvas.offsetWidth  || 800;
+    cH = canvas.offsetHeight || 460;
+    /* set logical pixel dimensions (canvas element already has width/height attrs as fallback) */
+    canvas.width  = cW;
+    canvas.height = cH;
+    orbs = [];
+    initOrbs();
+    prepared = prepareText();
+  }
+
+  /* ════ Animation loop ════ */
+  var lastTs = 0, fpsBuf = [], linesBuf = 0;
+
+  function loop(ts) {
+    var dt = Math.min((ts - lastTs) / 1000, 0.05);
+    lastTs = ts;
+    updateOrbs(dt);
+    var ctx   = canvas.getContext('2d');
+    var lines = render(ctx);
+    linesBuf  = lines;
+    fpsBuf.push(dt > 0 ? 1 / dt : 60);
+    if (fpsBuf.length >= 60) {
+      var avg = Math.round(fpsBuf.reduce(function(a,b){return a+b;}) / fpsBuf.length);
+      hud.textContent = avg + ' fps  ·  ' + linesBuf + ' lines  ·  ' + orbs.length + ' orbs';
+      fpsBuf = [];
+    }
+    requestAnimationFrame(loop);
+  }
+
+  /* ════ Click: add orb at cursor position ════ */
+  canvas.addEventListener('click', function(e) {
+    if (orbs.length >= 8) { orbs.shift(); } /* replace oldest instead of blocking */
+    var r   = canvas.getBoundingClientRect();
+    var sx  = cW  / r.width;   /* CSS px → canvas px scale */
+    var sy  = cH  / r.height;
+    var a   = Math.random() * Math.PI * 2;
+    var spd = 32 + Math.random() * 38;
+    orbs.push({
+      x:  (e.clientX - r.left)  * sx,
+      y:  (e.clientY - r.top)   * sy,
+      vx: Math.cos(a) * spd,
+      vy: Math.sin(a) * spd,
+      ci: orbs.length
+    });
+  });
+
+  /* ════ Start ════ */
+  setupCanvas();
+
+  /* re-setup when the wrapper is resized */
+  var ro = new ResizeObserver(function() {
+    setupCanvas();
+  });
+  ro.observe(document.getElementById('editorialWrap'));
+
+  requestAnimationFrame(function(ts) { lastTs = ts; loop(ts); });
+});
 </script>
 </body>
 </html>
