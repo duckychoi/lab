@@ -1,0 +1,124 @@
+---
+name: wiki
+description: LLM-Wiki 패턴으로 개인 지식베이스를 관리한다. 소스 인제스트, 쿼리, 린트를 수행한다.
+---
+
+# Wiki 스킬
+
+볼트 경로: `/home/monday/vault`
+스키마: `/home/monday/vault/CLAUDE.md` (반드시 먼저 읽을 것)
+
+## 시작하기 전에 반드시
+
+```bash
+cat /home/monday/vault/CLAUDE.md
+cat /home/monday/vault/index.md
+```
+
+---
+
+## Ingest — 새 소스 추가
+
+### URL 인제스트
+```bash
+VAULT="/home/monday/vault"
+# 1. 소스 가져오기
+curl -sL "URL" | defuddle parse --md > "$VAULT/raw/소스제목.md"
+# 2. 내용 읽기
+cat "$VAULT/raw/소스제목.md"
+# 3. 위키 페이지 생성/업데이트 (CLAUDE.md 스키마 따름)
+# 4. index.md 업데이트
+# 5. log.md 기록
+```
+
+### 텍스트/파일 인제스트
+```bash
+VAULT="/home/monday/vault"
+cat "$VAULT/raw/파일명.md"   # 소스 읽기
+# → 위키 통합 작업 수행
+```
+
+---
+
+## Query — 위키 질문
+
+```bash
+VAULT="/home/monday/vault"
+# 1. 인덱스 확인
+cat "$VAULT/index.md"
+# 2. 관련 페이지 읽기
+cat "$VAULT/wiki/concepts/관련개념.md"
+# 3. 답변 합성 후 좋은 답변은 저장
+cat > "$VAULT/queries/질문요약-$(date +%Y%m%d).md" << 'EOF'
+---
+title: 질문 요약
+type: query
+created: $(date +%Y-%m-%d)
+---
+# 질문
+...
+# 답변
+...
+EOF
+```
+
+---
+
+## Lint — 위키 건강 점검
+
+```bash
+VAULT="/home/monday/vault"
+# 고아 페이지 탐지 (인바운드 링크 없는 페이지)
+find "$VAULT/wiki" -name "*.md" | while read f; do
+  page=$(basename "$f" .md)
+  count=$(grep -rl "\[\[$page\]\]" "$VAULT/wiki" "$VAULT/index.md" 2>/dev/null | wc -l)
+  if [ "$count" -eq 0 ]; then echo "고아 페이지: $f"; fi
+done
+
+# 최근 로그 확인
+grep "^## \[" "$VAULT/log.md" | tail -10
+```
+
+---
+
+## 빠른 탐색
+
+```bash
+VAULT="/home/monday/vault"
+# 키워드로 페이지 검색
+grep -rli "키워드" "$VAULT/wiki" --include="*.md"
+
+# 모든 위키 페이지 목록
+find "$VAULT/wiki" -name "*.md" -type f
+
+# 최근 수정된 페이지
+find "$VAULT/wiki" -name "*.md" -newer "$VAULT/log.md" -type f
+```
+
+---
+
+## 새 페이지 생성 템플릿
+
+```bash
+VAULT="/home/monday/vault"
+cat > "$VAULT/wiki/concepts/새개념.md" << 'EOF'
+---
+title: 새개념
+type: concept
+tags: [태그1, 태그2]
+created: $(date +%Y-%m-%d)
+updated: $(date +%Y-%m-%d)
+sources: []
+---
+
+# 새개념
+
+설명...
+
+---
+
+## 관련 페이지
+
+- [[관련페이지]]
+EOF
+```

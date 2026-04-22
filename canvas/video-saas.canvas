@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
+      "x": -100, "y": -60, "width": 240, "height": 120,
+      "color": "1"
+    },
+    {
+      "id": "cluster-sources",
+      "type": "text",
+      "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
+      "x": -400, "y": 150, "width": 180, "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-entities",
+      "type": "text",
+      "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
+      "x": -100, "y": 150, "width": 180, "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-concepts",
+      "type": "text",
+      "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
+      "x": 200, "y": 150, "width": 180, "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "cluster-actionables",
+      "type": "text",
+      "text": "## 실행 항목\n\n_actionable.md 연동_",
+      "x": 500, "y": 150, "width": 180, "height": 80,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-sources", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-entities", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-concepts", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e4", "fromNode": "domain-hub", "toNode": "cluster-actionables", "fromSide": "bottom", "toSide": "top" }
+  ]
+}

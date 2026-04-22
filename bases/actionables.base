@@ -1,0 +1,25 @@
+```base
+filters:
+  - field: 상태
+    operator: is-not
+    value: 완료
+sorts:
+  - field: 우선순위
+    direction: asc
+columns:
+  - field: title
+    label: 할 것
+    width: 220
+  - field: 도메인
+    label: 도메인
+    width: 120
+  - field: 우선순위
+    label: 우선순위
+    width: 80
+  - field: 상태
+    label: 상태
+    width: 80
+  - field: 추가일
+    label: 추가일
+    width: 100
+```

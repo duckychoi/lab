@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# Local/Edge LLM\n\n목표: 경량 모델 실배포 + 에이전트 메모리\n\n[[local-llm]]",
+      "x": -100, "y": -60, "width": 240, "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "cluster-models",
+      "type": "text",
+      "text": "## 모델들\n\n_HuggingFace 기준 신뢰_",
+      "x": -400, "y": 150, "width": 180, "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-memory",
+      "type": "text",
+      "text": "## 메모리 아키텍처\n\n_RAG, KV-Cache, 압축 등_",
+      "x": -100, "y": 150, "width": 180, "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "cluster-hermes",
+      "type": "text",
+      "text": "## Hermes 적용\n\n_ChinameBot 직접 연동 가능한 것_",
+      "x": 200, "y": 150, "width": 180, "height": 80,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-models", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-memory", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-hermes", "fromSide": "bottom", "toSide": "top" }
+  ]
+}

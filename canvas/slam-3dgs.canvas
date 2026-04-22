@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
+      "x": -100, "y": -60, "width": 260, "height": 120,
+      "color": "3"
+    },
+    {
+      "id": "cluster-slam",
+      "type": "text",
+      "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
+      "x": -400, "y": 150, "width": 180, "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-3dgs",
+      "type": "text",
+      "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
+      "x": -100, "y": 150, "width": 180, "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-camera",
+      "type": "text",
+      "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
+      "x": 200, "y": 150, "width": 180, "height": 80,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-slam", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-3dgs", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-camera", "fromSide": "bottom", "toSide": "top" }
+  ]
+}

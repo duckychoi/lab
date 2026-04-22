@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# AI 뉴스 / GitHub\n\n목표: 쓸모있는 AI 발굴 + 워크플로우 통합\n\n[[ai-news]]",
+      "x": -100, "y": -60, "width": 240, "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "cluster-github",
+      "type": "text",
+      "text": "## GitHub ⭐1000+\n\n_스타 높은 AI 레포만_",
+      "x": -400, "y": 150, "width": 180, "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-hf",
+      "type": "text",
+      "text": "## HuggingFace 모델\n\n_다운로드 수 + 벤치마크 기준_",
+      "x": -100, "y": 150, "width": 180, "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-workflow",
+      "type": "text",
+      "text": "## 워크플로우 통합\n\n_내 도구에 실제 적용된 것_",
+      "x": 200, "y": 150, "width": 180, "height": 80,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-github", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-hf", "fromSide": "bottom", "toSide": "top" },
+    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-workflow", "fromSide": "bottom", "toSide": "top" }
+  ]
+}

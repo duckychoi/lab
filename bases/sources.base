@@ -1,0 +1,24 @@
+```base
+filters:
+  - field: domain
+    operator: is-not-empty
+sorts:
+  - field: created
+    direction: desc
+columns:
+  - field: title
+    label: 제목
+    width: 200
+  - field: domain
+    label: 도메인
+    width: 120
+  - field: created
+    label: 날짜
+    width: 100
+  - field: reliability
+    label: 신뢰도
+    width: 80
+  - field: tags
+    label: 태그
+    width: 150
+```

@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "hub-video-saas",
+      "type": "text",
+      "text": "# 영상 AI SaaS\n\n힉스필드 같은 영상 자동화 SaaS 개발\n\n`#video-saas`",
+      "x": -400, "y": -100, "width": 220, "height": 140,
+      "color": "1"
+    },
+    {
+      "id": "hub-local-llm",
+      "type": "text",
+      "text": "# Local/Edge LLM\n\n경량 모델 실배포 + 에이전트 메모리\n\n`#local-llm`",
+      "x": 200, "y": -100, "width": 220, "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "hub-slam-3dgs",
+      "type": "text",
+      "text": "# SLAM / 3DGS\n\n로봇 SLAM + 가우시안 스플래팅 + 카메라\n\n`#slam-3dgs`",
+      "x": -400, "y": 200, "width": 220, "height": 140,
+      "color": "3"
+    },
+    {
+      "id": "hub-ai-news",
+      "type": "text",
+      "text": "# AI 뉴스 / GitHub\n\n트렌딩 + 워크플로우 통합\n\n`#ai-news`",
+      "x": 200, "y": 200, "width": 220, "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "center",
+      "type": "text",
+      "text": "# 지식 베이스\n\n소스가 쌓이면\n연결이 생긴다",
+      "x": -90, "y": 50, "width": 180, "height": 100,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "fromNode": "hub-video-saas", "toNode": "center", "fromSide": "right", "toSide": "left" },
+    { "id": "e2", "fromNode": "hub-local-llm", "toNode": "center", "fromSide": "left", "toSide": "right" },
+    { "id": "e3", "fromNode": "hub-slam-3dgs", "toNode": "center", "fromSide": "right", "toSide": "left" },
+    { "id": "e4", "fromNode": "hub-ai-news", "toNode": "center", "fromSide": "left", "toSide": "right" }
+  ]
+}
