@@ -1,0 +1,146 @@
+/* ============================================
+   LLM Wiki Custom Styles
+   Obsidian WS — Wiki Layer Theme Enhancement
+   ============================================ */
+
+/* --- Wiki Home Badge --- */
+.markdown-preview-view img[alt="wiki-badge"] {
+  height: 20px;
+  opacity: 0.85;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* --- Custom Callout: Definition --- */
+.callout[data-callout="definition"] {
+  --callout-color: 124, 106, 247;
+  --callout-icon: lucide-book-open;
+  border-left: 3px solid rgba(124, 106, 247, 0.6);
+}
+
+/* --- Custom Callout: Key Insight --- */
+.callout[data-callout="insight"] {
+  --callout-color: 255, 183, 77;
+  --callout-icon: lucide-lightbulb;
+  border-left: 3px solid rgba(255, 183, 77, 0.6);
+}
+
+/* --- Custom Callout: Model Card --- */
+.callout[data-callout="model"] {
+  --callout-color: 79, 195, 247;
+  --callout-icon: lucide-cpu;
+  border-left: 3px solid rgba(79, 195, 247, 0.6);
+}
+
+/* --- Custom Callout: Architecture --- */
+.callout[data-callout="architecture"] {
+  --callout-color: 129, 199, 132;
+  --callout-icon: lucide-git-branch;
+  border-left: 3px solid rgba(129, 199, 132, 0.6);
+}
+
+/* --- Custom Callout: Limitation --- */
+.callout[data-callout="limitation"] {
+  --callout-color: 239, 83, 80;
+  --callout-icon: lucide-alert-triangle;
+  border-left: 3px solid rgba(239, 83, 80, 0.6);
+}
+
+/* --- Custom Callout: Open Question --- */
+.callout[data-callout="open-question"] {
+  --callout-color: 255, 215, 0;
+  --callout-icon: lucide-help-circle;
+  border-left: 3px solid rgba(255, 215, 0, 0.6);
+}
+
+/* --- Custom Callout: Activity Log --- */
+.callout[data-callout="log"] {
+  --callout-color: 102, 102, 136;
+  --callout-icon: lucide-history;
+  border-left: 3px solid rgba(102, 102, 136, 0.6);
+}
+
+/* --- Wiki-specific table styling --- */
+.markdown-preview-view .markdown-preview-sizer div[data-callout-meta^="wiki-table"] table,
+.markdown-preview-view .internal-embed {
+  font-size: 0.92em;
+}
+
+/* --- Mermaid diagram centering --- */
+.mermaid {
+  text-align: center;
+}
+
+/* --- Blockquote styling for wiki pages --- */
+.markdown-preview-view blockquote {
+  border-radius: 4px;
+}
+
+/* --- Tag pill style in reading view --- */
+.cm-s-obsidian span.cm-hashtag,
+.markdown-preview-view a.tag {
+  background-color: var(--background-modifier-hover);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.85em;
+}
+
+/* --- Horizontal rule refinement --- */
+.markdown-preview-view hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--background-modifier-border),
+    transparent
+  );
+  margin: 2em 0;
+}
+
+/* --- Code block styling --- */
+.markdown-preview-view pre {
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* --- Inline code --- */
+.markdown-preview-view code {
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* --- Nested list indentation lines --- */
+.markdown-preview-view .markdown-rendered .list-collapse-indicator {
+  opacity: 0.4;
+}
+
+/* --- Wiki frontmatter styling enhancement --- */
+.metadata-container {
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* --- Smooth scrolling for wiki pages --- */
+.markdown-preview-view {
+  scroll-behavior: smooth;
+}
+
+/* --- Embed styling --- */
+.markdown-preview-view .internal-embed {
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.markdown-preview-view .internal-embed .markdown-embed-title {
+  font-weight: 600;
+}
+
+/* --- Checkbox styling --- */
+.markdown-preview-view .task-list-item-checkbox {
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked {
+  border-color: var(--interactive-accent);
+}

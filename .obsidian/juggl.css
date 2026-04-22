@@ -1,0 +1,45 @@
+/* Juggl node styling — wiki type별 색상
+   type 값은 각 wiki 페이지의 YAML frontmatter type: 필드와 일치
+   https://juggl.io/Features/Styling */
+
+/* concept — 보라 */
+.type-concept {
+  background-color: #7c6af7;
+  border-color: #9d8ff9;
+  color: #ffffff;
+}
+
+/* entity (모델/도구/인물) — 하늘 */
+.type-entity {
+  background-color: #4fc3f7;
+  border-color: #81d4fa;
+  color: #000000;
+}
+
+/* domain — 초록 */
+.type-domain {
+  background-color: #81c784;
+  border-color: #a5d6a7;
+  color: #000000;
+}
+
+/* source (소스 요약) — 주황 */
+.type-source {
+  background-color: #ffb74d;
+  border-color: #ffcc80;
+  color: #000000;
+}
+
+/* synthesis (분석/비교/발견) — 핑크 */
+.type-synthesis {
+  background-color: #f06292;
+  border-color: #f48fb1;
+  color: #ffffff;
+}
+
+/* overview — 빨강 */
+.type-overview {
+  background-color: #ef5350;
+  border-color: #ef9a9a;
+  color: #ffffff;
+}

@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "generated": "2026-04-10 12:09",
+    "node_count": 11,
+    "link_count": 24,
+    "type_legend": {
+      "concept": "개념",
+      "entity": "엔티티",
+      "domain": "도메인",
+      "source": "소스",
+      "overview": "개요",
+      "index": "인덱스",
+      "synthesis": "분석",
+      "unknown": "기타"
+    },
+    "color_legend": {
+      "concept": "#7c6af7",
+      "entity": "#4fc3f7",
+      "domain": "#81c784",
+      "source": "#ffb74d",
+      "overview": "#ef5350",
+      "index": "#ffffff",
+      "synthesis": "#f06292",
+      "unknown": "#666688"
+    }
+  },
+  "nodes": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "type": "overview",
+      "tags": [],
+      "sources": [],
+      "excerpt": "이 vault는 **LLM wiki 패턴**으로 운영된다. Claude가 wiki를 유지하고, 사용자가 소스를 큐레이션한다.",
+      "color": "#ef5350",
+      "file": "wiki/overview.md",
+      "inbound": 2,
+      "val": 7
+    },
+    {
+      "id": "log",
+      "title": "log",
+      "type": "unknown",
+      "tags": [],
+      "sources": [],
+      "excerpt": "append-only 활동 기록. 각 항목은 `## [YYYY-MM-DD] operation | title` 형식.",
+      "color": "#666688",
+      "file": "wiki/log.md",
+      "inbound": 0,
+      "val": 5
+    },
+    {
+      "id": "index",
+      "title": "Wiki Index",
+      "type": "index",
+      "tags": [],
+      "sources": [],
+      "excerpt": "> 마지막 업데이트: 2026-04-10 | 총 4개 페이지",
+      "color": "#ffffff",
+      "file": "wiki/index.md",
+      "inbound": 0,
+      "val": 5
+    },
+    {
+      "id": "entities/qwen-image",
+      "title": "Qwen-Image",
+      "type": "entity",
+      "tags": [
+        "model",
+        "multimodal",
+        "image-generation",
+        "alibaba"
+      ],
+      "sources": [
+        "qwen-research-notes"
+      ],
+      "excerpt": "**제작**: Alibaba Qwen 팀  ",
+      "color": "#4fc3f7",
+      "file": "wiki/entities/qwen-image.md",
+      "inbound": 2,
+      "val": 7
+    },
+    {
+      "id": "concepts/llm-wiki",
+      "title": "LLM Wiki Pattern",
+      "type": "concept",
+      "tags": [
+        "knowledge-management",
+        "llm",
+        "pkm",
+        "obsidian"
+      ],
+      "sources": [
+        "karpathy-llm-wiki"
+      ],
+      "excerpt": "> \"The tedious part of maintaining a knowledge base is not the reading or the thinking — it's the bookkeeping.\"",
+      "color": "#7c6af7",
+      "file": "wiki/concepts/llm-wiki.md",
+      "inbound": 4,
+      "val": 11
+    },
+    {
+      "id": "concepts/novel-view-synthesis",
+      "title": "Novel View Synthesis (NVS)",
+      "type": "concept",
+      "tags": [
+        "computer-vision",
+        "image-generation",
+        "3d",
+        "diffusion-model"
+      ],
+      "sources": [
+        "qwen-research-notes"
+      ],
+      "excerpt": "단일 이미지(또는 소수 이미지)를 입력으로 받아 **보이지 않던 시점**의 이미지를 생성하는 기술.",
+      "color": "#7c6af7",
+      "file": "wiki/concepts/novel-view-synthesis.md",
+      "inbound": 3,
+      "val": 9
+    },
+    {
+      "id": "domains/vibe-coding",
+      "title": "Vibe Coding Domain",
+      "type": "domain",
+      "tags": [
+        "ai-coding",
+        "agents",
+        "prompt-engineering",
+        "workflow"
+      ],
+      "sources": [],
+      "excerpt": "AI 보조 코딩, 에이전트 워크플로우, 프롬프트 엔지니어링 관련 지식 베이스.",
+      "color": "#81c784",
+      "file": "wiki/domains/vibe-coding.md",
+      "inbound": 1,
+      "val": 5
+    },
+    {
+      "id": "domains/cinema-studio",
+      "title": "Cinema Studio Domain",
+      "type": "domain",
+      "tags": [
+        "cinema",
+        "video-production",
+        "studio"
+      ],
+      "sources": [],
+      "excerpt": "시네마 스튜디오 관련 지식 베이스.",
+      "color": "#81c784",
+      "file": "wiki/domains/cinema-studio.md",
+      "inbound": 1,
+      "val": 5
+    },
+    {
+      "id": "domains/ai-ml",
+      "title": "AI/ML Domain",
+      "type": "domain",
+      "tags": [
+        "ai",
+        "machine-learning",
+        "computer-vision",
+        "llm"
+      ],
+      "sources": [],
+      "excerpt": "이 vault의 AI/ML 지식 베이스 종합 페이지.",
+      "color": "#81c784",
+      "file": "wiki/domains/ai-ml.md",
+      "inbound": 6,
+      "val": 15
+    },
+    {
+      "id": "sources/karpathy-llm-wiki",
+      "title": "Karpathy — LLM Wiki (2026)",
+      "type": "source",
+      "tags": [
+        "knowledge-management",
+        "llm",
+        "pkm",
+        "pattern"
+      ],
+      "sources": [],
+      "excerpt": "**소스**: GitHub Gist  ",
+      "color": "#ffb74d",
+      "file": "wiki/sources/karpathy-llm-wiki.md",
+      "inbound": 2,
+      "val": 7
+    },
+    {
+      "id": "sources/qwen-research-notes",
+      "title": "Qwen Novel View Synthesis — Research Notes",
+      "type": "source",
+      "tags": [
+        "computer-vision",
+        "image-generation",
+        "qwen",
+        "research-note"
+      ],
+      "sources": [],
+      "excerpt": "**소스 파일**: `Research.md` (vault root)  ",
+      "color": "#ffb74d",
+      "file": "wiki/sources/qwen-research-notes.md",
+      "inbound": 3,
+      "val": 9
+    }
+  ],
+  "links": [
+    {
+      "source": "overview",
+      "target": "concepts/llm-wiki"
+    },
+    {
+      "source": "overview",
+      "target": "concepts/novel-view-synthesis"
+    },
+    {
+      "source": "overview",
+      "target": "entities/qwen-image"
+    },
+    {
+      "source": "index",
+      "target": "overview"
+    },
+    {
+      "source": "index",
+      "target": "concepts/llm-wiki"
+    },
+    {
+      "source": "index",
+      "target": "concepts/novel-view-synthesis"
+    },
+    {
+      "source": "index",
+      "target": "entities/qwen-image"
+    },
+    {
+      "source": "index",
+      "target": "domains/ai-ml"
+    },
+    {
+      "source": "index",
+      "target": "domains/cinema-studio"
+    },
+    {
+      "source": "index",
+      "target": "domains/vibe-coding"
+    },
+    {
+      "source": "index",
+      "target": "sources/karpathy-llm-wiki"
+    },
+    {
+      "source": "index",
+      "target": "sources/qwen-research-notes"
+    },
+    {
+      "source": "entities/qwen-image",
+      "target": "concepts/novel-view-synthesis"
+    },
+    {
+      "source": "entities/qwen-image",
+      "target": "domains/ai-ml"
+    },
+    {
+      "source": "entities/qwen-image",
+      "target": "sources/qwen-research-notes"
+    },
+    {
+      "source": "concepts/llm-wiki",
+      "target": "sources/karpathy-llm-wiki"
+    },
+    {
+      "source": "concepts/novel-view-synthesis",
+      "target": "domains/ai-ml"
+    },
+    {
+      "source": "concepts/novel-view-synthesis",
+      "target": "sources/qwen-research-notes"
+    },
+    {
+      "source": "domains/vibe-coding",
+      "target": "domains/ai-ml"
+    },
+    {
+      "source": "domains/vibe-coding",
+      "target": "concepts/llm-wiki"
+    },
+    {
+      "source": "domains/cinema-studio",
+      "target": "domains/ai-ml"
+    },
+    {
+      "source": "domains/ai-ml",
+      "target": "concepts/llm-wiki"
+    },
+    {
+      "source": "sources/karpathy-llm-wiki",
+      "target": "overview"
+    },
+    {
+      "source": "sources/qwen-research-notes",
+      "target": "domains/ai-ml"
+    }
+  ]
+}

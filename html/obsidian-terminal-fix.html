@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obsidian Terminal Fix Log</title>
+  <style>
+    :root {
+      --bg: #0f0f13;
+      --surface: #1a1a24;
+      --surface2: #22222f;
+      --border: #2e2e42;
+      --accent: #7c6af7;
+      --accent2: #4fc3f7;
+      --accent3: #81c784;
+      --warn: #ffb74d;
+      --danger: #ef5350;
+      --text: #e0e0f0;
+      --text-dim: #8888aa;
+      --code-bg: #12121a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .25rem .75rem;
+      border-radius: 999px;
+      margin-bottom: .75rem;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #c4b5fd, var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p {
+      color: var(--text-dim);
+      margin-top: .5rem;
+      font-size: .95rem;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: .85rem;
+      top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+
+    .step {
+      position: relative;
+      margin-bottom: 2.5rem;
+      animation: fadeUp .4s ease both;
+    }
+    .step:nth-child(1) { animation-delay: .05s; }
+    .step:nth-child(2) { animation-delay: .15s; }
+    .step:nth-child(3) { animation-delay: .25s; }
+    .step:nth-child(4) { animation-delay: .35s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-dot {
+      position: absolute;
+      left: -2.15rem;
+      top: .35rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--bg), 0 0 12px var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .55rem;
+      color: #fff;
+      font-weight: 900;
+    }
+    .step-dot.green  { background: var(--accent3); box-shadow: 0 0 0 4px var(--bg), 0 0 12px var(--accent3); }
+    .step-dot.blue   { background: var(--accent2); box-shadow: 0 0 0 4px var(--bg), 0 0 12px var(--accent2); }
+    .step-dot.orange { background: var(--warn);    box-shadow: 0 0 0 4px var(--bg), 0 0 12px var(--warn); }
+
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .step-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(124,106,247,.15);
+    }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      justify-content: space-between;
+    }
+    .step-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .step-file {
+      font-size: .75rem;
+      color: var(--text-dim);
+      font-family: monospace;
+      background: var(--code-bg);
+      padding: .15rem .5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    .chevron {
+      color: var(--text-dim);
+      font-size: .8rem;
+      transition: transform .25s;
+      flex-shrink: 0;
+    }
+
+    .step-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height .35s ease, opacity .3s ease, margin-top .3s;
+      opacity: 0;
+    }
+    .step-body.open {
+      max-height: 1000px;
+      opacity: 1;
+      margin-top: 1rem;
+    }
+    .step.open .chevron { transform: rotate(180deg); }
+
+    .problem-box {
+      background: rgba(239,83,80,.08);
+      border-left: 3px solid var(--danger);
+      padding: .6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: .75rem;
+      font-size: .88rem;
+      color: #ffcdd2;
+    }
+    .fix-box {
+      background: rgba(129,199,132,.08);
+      border-left: 3px solid var(--accent3);
+      padding: .6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: .75rem;
+      font-size: .88rem;
+      color: #c8e6c9;
+    }
+    .reason-box {
+      background: rgba(79,195,247,.07);
+      border-left: 3px solid var(--accent2);
+      padding: .6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: .88rem;
+      color: #b3e5fc;
+    }
+
+    .label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: .3rem;
+      opacity: .7;
+    }
+
+    /* ── Diff ── */
+    .diff {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: .75rem 0;
+      font-family: 'Fira Code', 'Cascadia Code', monospace;
+      font-size: .82rem;
+    }
+    .diff-header {
+      background: var(--surface2);
+      padding: .4rem .9rem;
+      font-size: .72rem;
+      color: var(--text-dim);
+      border-bottom: 1px solid var(--border);
+    }
+    .diff-line {
+      padding: .18rem .9rem;
+      white-space: pre;
+    }
+    .diff-line.removed { background: rgba(239,83,80,.12); color: #ef9a9a; }
+    .diff-line.added   { background: rgba(129,199,132,.1); color: #a5d6a7; }
+    .diff-line.ctx     { color: var(--text-dim); }
+
+    /* ── Result banner ── */
+    .result-banner {
+      background: linear-gradient(135deg, rgba(124,106,247,.15), rgba(79,195,247,.1));
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .result-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+    .result-text h3 { font-size: 1rem; color: #c4b5fd; margin-bottom: .3rem; }
+    .result-text p  { font-size: .88rem; color: var(--text-dim); }
+
+    /* ── Chips ── */
+    .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+    .chip {
+      font-size: .72rem;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      border: 1px solid;
+      font-weight: 600;
+    }
+    .chip.purple { border-color: var(--accent); color: var(--accent); }
+    .chip.blue   { border-color: var(--accent2); color: var(--accent2); }
+    .chip.green  { border-color: var(--accent3); color: var(--accent3); }
+
+    /* ── Guide section ── */
+    .guide-section {
+      margin-top: 4rem;
+      border-top: 1px solid var(--border);
+      padding-top: 3rem;
+    }
+    .guide-section > .section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: .4rem;
+    }
+    .guide-section > .section-sub {
+      color: var(--text-dim);
+      font-size: .9rem;
+      margin-bottom: 2rem;
+    }
+
+    .guide-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .guide-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .guide-card h3 .num {
+      background: var(--accent);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 900;
+      width: 1.4rem; height: 1.4rem;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .guide-card h3 .num.blue   { background: var(--accent2); }
+    .guide-card h3 .num.green  { background: var(--accent3); }
+    .guide-card h3 .num.orange { background: var(--warn); }
+
+    .guide-card p {
+      font-size: .88rem;
+      color: var(--text-dim);
+      margin-bottom: .75rem;
+      line-height: 1.7;
+    }
+    .guide-card p strong { color: var(--text); }
+
+    .code-block {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .9rem 1.1rem;
+      font-family: 'Fira Code', 'Cascadia Code', monospace;
+      font-size: .82rem;
+      white-space: pre;
+      overflow-x: auto;
+      color: #c8c8e8;
+      margin: .5rem 0 .75rem;
+      position: relative;
+    }
+    .code-block .comment { color: #555577; }
+    .code-block .key     { color: #c4b5fd; }
+    .code-block .val     { color: #a5d6a7; }
+    .code-block .str     { color: #80cbc4; }
+    .code-block .hl      { color: #ffcc80; }
+
+    .copy-btn {
+      position: absolute;
+      top: .5rem; right: .5rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: .68rem;
+      padding: .2rem .5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    .copy-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .warn-box {
+      background: rgba(255,183,77,.07);
+      border-left: 3px solid var(--warn);
+      padding: .6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: .85rem;
+      color: #ffe0b2;
+      margin: .5rem 0;
+    }
+    .info-box {
+      background: rgba(124,106,247,.08);
+      border-left: 3px solid var(--accent);
+      padding: .6rem 1rem;
+      border-radius: 0 6px 6px 0;
+      font-size: .85rem;
+      color: #d1c4e9;
+      margin: .5rem 0;
+    }
+
+    .checklist {
+      list-style: none;
+      margin: .5rem 0;
+    }
+    .checklist li {
+      font-size: .88rem;
+      color: var(--text-dim);
+      padding: .25rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+    }
+    .checklist li::before {
+      content: '▸';
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: .05rem;
+    }
+
+    .diag-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin: .75rem 0;
+    }
+    @media (max-width: 600px) { .diag-grid { grid-template-columns: 1fr; } }
+
+    .diag-card {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+    }
+    .diag-card .diag-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: .4rem;
+    }
+    .diag-card code {
+      display: block;
+      font-family: monospace;
+      font-size: .82rem;
+      color: var(--accent2);
+      margin: .15rem 0;
+    }
+    .diag-card .diag-note {
+      font-size: .75rem;
+      color: var(--text-dim);
+      margin-top: .3rem;
+    }
+
+    .shell-flow {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin: .75rem 0;
+      font-size: .8rem;
+    }
+    .shell-node {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: .3rem .7rem;
+      color: var(--text);
+      font-family: monospace;
+    }
+    .shell-node.accent { border-color: var(--accent); color: var(--accent); }
+    .shell-node.green  { border-color: var(--accent3); color: var(--accent3); }
+    .shell-arrow { color: var(--text-dim); }
+
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1rem;
+    }
+    .tab {
+      padding: .4rem 1rem;
+      font-size: .82rem;
+      cursor: pointer;
+      color: var(--text-dim);
+      border-bottom: 2px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Page nav ── */
+    .page-nav {
+      display: flex;
+      gap: .5rem;
+      margin-bottom: 2.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .4rem;
+    }
+    .page-btn {
+      flex: 1;
+      padding: .6rem 1rem;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-dim);
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      text-align: center;
+    }
+    .page-btn.active {
+      background: var(--accent);
+      color: #fff;
+    }
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* ── Snap badge ── */
+    .snap-badge {
+      display: inline-block;
+      background: rgba(239,83,80,.15);
+      border: 1px solid var(--danger);
+      color: #ef9a9a;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: .15rem .55rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    /* ── Flow diagram ── */
+    .flow {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin: .75rem 0;
+      font-family: monospace;
+      font-size: .82rem;
+      line-height: 2;
+    }
+    .flow .fl-bad  { color: #ef9a9a; }
+    .flow .fl-good { color: #a5d6a7; }
+    .flow .fl-dim  { color: var(--text-dim); }
+    .flow .fl-key  { color: #ffcc80; }
+    .flow .fl-arrow { color: #7c6af7; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <nav class="page-nav">
+    <button class="page-btn active" onclick="showPage('p1', this)">① Terminal 기본 설정</button>
+    <button class="page-btn" onclick="showPage('p2', this)">② opencode + GLM-5 연동</button>
+  </nav>
+
+  <!-- ══════════════ PAGE 1 ══════════════ -->
+  <div class="page active" id="p1">
+
+  <header>
+    <div class="badge">Fix Log · 2026-04-09</div>
+    <h1>Obsidian Terminal 수정 기록</h1>
+    <p>Obsidian 내장 터미널에서 <code style="color:var(--accent2)">claude</code> · <code style="color:var(--accent2)">opencode</code> · bashrc 정상 동작하도록 수정</p>
+  </header>
+
+  <div class="timeline">
+
+    <!-- STEP 1 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot">1</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">Shell 교체 — sh → bash + login 플래그</div>
+            <div class="chips">
+              <span class="chip purple">핵심 수정</span>
+              <span class="chip blue">환경 로드</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <span class="step-file">.obsidian/plugins/terminal/data.json</span>
+            <span class="chevron">▼</span>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="problem-box">
+            <div class="label">문제</div>
+            기본 프로파일이 <strong>/bin/sh</strong>에 args 없음 → sh는 <code>.bashrc</code>를 로드하지 않아 PATH가 불완전. <code>opencode</code>·<code>claude</code> 명령 미인식.
+          </div>
+          <div class="diff">
+            <div class="diff-header">linuxIntegratedDefault 프로파일</div>
+            <div class="diff-line removed">-  "args": [],</div>
+            <div class="diff-line removed">-  "executable": "/bin/sh",</div>
+            <div class="diff-line added">+  "args": ["--login", "-i"],</div>
+            <div class="diff-line added">+  "executable": "/bin/bash",</div>
+          </div>
+          <div class="fix-box">
+            <div class="label">효과</div>
+            <code>--login</code> : <code>/etc/profile</code> → <code>~/.profile</code> → <code>~/.bashrc</code> 순서로 완전 로드<br>
+            <code>-i</code> : interactive 모드로 alias·함수 활성화
+          </div>
+          <div class="reason-box">
+            <div class="label">로드 순서 (login shell)</div>
+            /etc/profile → /etc/profile.d/* → ~/.profile → ~/.bashrc<br>
+            → NVM, .local/bin, .opencode/bin 등 모든 PATH 정상화
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot blue">2</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">cc 래퍼 스크립트 생성</div>
+            <div class="chips">
+              <span class="chip green">편의 기능</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <span class="step-file">~/.local/bin/cc</span>
+            <span class="chevron">▼</span>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="problem-box">
+            <div class="label">요구사항</div>
+            Obsidian 터미널에서 <code>claude --dangerously-skip-permissions</code>를 짧게 <code>cc</code>로 호출하고 싶음
+          </div>
+          <div class="diff">
+            <div class="diff-header">~/.local/bin/cc (신규 생성, chmod +x)</div>
+            <div class="diff-line added">+ #!/bin/bash</div>
+            <div class="diff-line added">+ exec claude --dangerously-skip-permissions "$@"</div>
+          </div>
+          <div class="fix-box">
+            <div class="label">왜 alias가 아닌 스크립트?</div>
+            alias는 shell config 로드 여부에 종속. 스크립트는 PATH만 있으면 어떤 shell에서도 동작.
+            <code>~/.local/bin</code>은 이미 PATH에 포함되어 있어 즉시 인식.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot orange">3</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">로케일 환경변수 고정 — GLM-5 중국어 방지</div>
+            <div class="chips">
+              <span class="chip purple">AI 동작</span>
+              <span class="chip blue">로케일</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <span class="step-file">~/.bashrc</span>
+            <span class="chevron">▼</span>
+          </div>
+        </div>
+        <div class="step-body">
+          <div class="problem-box">
+            <div class="label">문제</div>
+            Obsidian(Electron) 프로세스가 <code>LANG</code>/<code>LC_ALL</code>을 명시적으로 상속하지 않는 경우, GLM-5가 locale 미감지 → 중국어로 thinking·응답
+          </div>
+          <div class="diff">
+            <div class="diff-header">~/.bashrc — interactive check 이전에 추가</div>
+            <div class="diff-line ctx"> # PATH exports</div>
+            <div class="diff-line ctx"> export PATH=...</div>
+            <div class="diff-line added">+</div>
+            <div class="diff-line added">+ # Locale (ensures AI tools don't default to Chinese)</div>
+            <div class="diff-line added">+ export LANG=en_US.UTF-8</div>
+            <div class="diff-line added">+ export LC_ALL=en_US.UTF-8</div>
+            <div class="diff-line ctx"> </div>
+            <div class="diff-line ctx"> # If not running interactively, don't do anything</div>
+            <div class="diff-line ctx"> case $- in</div>
+          </div>
+          <div class="reason-box">
+            <div class="label">왜 interactive check 앞에?</div>
+            check 이후에 두면 non-interactive shell(스크립트 실행 등)에서 미적용. 앞에 두면 모든 bash 호출에서 보장.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot green">4</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">최종 확인 · 동작 상태</div>
+            <div class="chips">
+              <span class="chip green">완료</span>
+            </div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="step-body">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.75rem">
+            <div style="background:rgba(129,199,132,.07);border:1px solid rgba(129,199,132,.3);border-radius:8px;padding:.75rem">
+              <div class="label" style="color:var(--accent3)">동작 확인</div>
+              <ul style="list-style:none;font-size:.88rem;line-height:2">
+                <li>✅ <code>claude --dangerously-skip-permissions</code></li>
+                <li>✅ <code>cc</code> (래퍼 단축 명령)</li>
+                <li>✅ <code>opencode</code></li>
+                <li>✅ <code>.bashrc</code> alias·함수</li>
+                <li>✅ NVM / PATH 완전 로드</li>
+              </ul>
+            </div>
+            <div style="background:rgba(239,83,80,.07);border:1px solid rgba(239,83,80,.25);border-radius:8px;padding:.75rem">
+              <div class="label" style="color:var(--warn)">수정 전 증상</div>
+              <ul style="list-style:none;font-size:.88rem;line-height:2">
+                <li>❌ <code>claude</code> command not found</li>
+                <li>❌ <code>opencode</code> not found</li>
+                <li>❌ bashrc alias 미적용</li>
+                <li>❌ GLM-5 중국어 응답</li>
+              </ul>
+            </div>
+          </div>
+          <div class="reason-box">
+            <div class="label">적용 방법</div>
+            data.json 수정 후 Obsidian에서 Terminal 플러그인 비활성화 → 재활성화 (또는 Obsidian 재시작)
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+  <div class="result-banner">
+    <div class="result-icon">⚡</div>
+    <div class="result-text">
+      <h3>핵심 원인 요약</h3>
+      <p>Obsidian 터미널 플러그인의 Linux 기본 프로파일이 <strong>/bin/sh</strong>을 login 없이 실행 → 쉘 초기화 파일 미로드 → PATH 불완전. <strong>/bin/bash --login -i</strong> 로 변경하는 것이 근본 해결책.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <!--  AGENT GUIDE                                           -->
+  <!-- ═══════════════════════════════════════════════════════ -->
+  <div class="guide-section">
+    <div class="section-title">Agent Reproduction Guide</div>
+    <div class="section-sub">동일 환경을 세팅하는 다른 에이전트가 따라 할 수 있는 단계별 가이드 (Linux / Obsidian Terminal plugin 기준)</div>
+
+    <!-- ── Context ── -->
+    <div class="guide-card">
+      <h3><span class="num" style="background:var(--text-dim)">?</span> 문제 상황 파악 — 언제 이 가이드가 필요한가</h3>
+      <p>다음 증상이 하나라도 해당되면 이 가이드를 따른다.</p>
+      <ul class="checklist">
+        <li>Obsidian 내장 터미널에서 <strong>claude / opencode / nvm / pip 등이 "command not found"</strong></li>
+        <li>일반 터미널(gnome-terminal, kitty 등)에서는 동일 명령이 정상 동작</li>
+        <li>LLM 도구(opencode + GLM-5 등 중국산 모델)가 <strong>중국어로 thinking/응답</strong></li>
+        <li><code>.bashrc</code> alias, 함수가 Obsidian 터미널에서만 미적용</li>
+      </ul>
+      <div class="info-box">
+        <strong>근본 원인:</strong> Obsidian은 Electron 앱으로, 터미널 플러그인이 생성하는 쉘이 <strong>login shell이 아닌 /bin/sh</strong>로 실행된다.
+        sh는 <code>~/.bashrc</code>·<code>~/.profile</code>을 로드하지 않아 사용자가 설정한 PATH가 전혀 반영되지 않는다.
+      </div>
+    </div>
+
+    <!-- ── Prerequisites ── -->
+    <div class="guide-card">
+      <h3><span class="num" style="background:var(--text-dim)">0</span> 사전 확인</h3>
+      <p>수정 전에 아래 명령으로 현재 상태를 파악한다.</p>
+
+      <div class="tab-bar">
+        <div class="tab active" onclick="switchTab(this,'pre-diag')">진단 명령</div>
+        <div class="tab" onclick="switchTab(this,'pre-paths')">경로 확인</div>
+      </div>
+      <div class="tab-panel active" id="pre-diag">
+        <div class="diag-grid">
+          <div class="diag-card">
+            <div class="diag-label" style="color:var(--accent2)">일반 터미널에서 실행</div>
+            <code>which claude</code>
+            <code>echo $PATH</code>
+            <code>echo $SHELL</code>
+            <div class="diag-note">정상 동작하는 환경의 기준값 기록</div>
+          </div>
+          <div class="diag-card">
+            <div class="diag-label" style="color:var(--danger)">Obsidian 터미널에서 실행</div>
+            <code>which claude</code>
+            <code>echo $PATH</code>
+            <code>echo $SHELL</code>
+            <div class="diag-note">PATH가 짧거나 /bin/sh면 이 가이드 적용</div>
+          </div>
+        </div>
+        <div class="warn-box">
+          Obsidian 터미널의 PATH가 일반 터미널보다 짧고, <code>/home/user/.local/bin</code>이나 <code>.nvm/versions/...</code> 경로가 없다면 shell 초기화 미로드 확정.
+        </div>
+      </div>
+      <div class="tab-panel" id="pre-paths">
+        <p>수정할 파일 위치를 미리 확인한다.</p>
+        <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># 터미널 플러그인 설정 파일</span>
+&lt;vault-root&gt;/.obsidian/plugins/terminal/data.json
+
+<span class="comment"># 쉘 초기화 파일 (존재 여부 확인)</span>
+~/.bashrc          <span class="comment"># bash interactive shell 설정</span>
+~/.profile         <span class="comment"># login shell 설정 (보통 .bashrc를 source)</span>
+~/.bash_profile    <span class="comment"># 있으면 .profile 대신 사용됨</span>
+
+<span class="comment"># PATH에 포함돼야 할 경로 예시</span>
+~/.local/bin       <span class="comment"># pip install --user, claude 등</span>
+~/.nvm/versions/node/&lt;ver&gt;/bin   <span class="comment"># nvm node</span>
+~/.opencode/bin    <span class="comment"># opencode</span></div>
+      </div>
+    </div>
+
+    <!-- ── Step 1 ── -->
+    <div class="guide-card">
+      <h3><span class="num">1</span> 터미널 플러그인 프로파일 수정 — <em>핵심</em></h3>
+      <p>
+        <strong>파일:</strong> <code>&lt;vault-root&gt;/.obsidian/plugins/terminal/data.json</code><br>
+        <code>profiles.linuxIntegratedDefault</code> 객체에서 <strong>두 필드</strong>를 변경한다.
+      </p>
+      <div class="code-block" id="step1-code"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment">// Before (기본값)</span>
+<span class="key">"linuxIntegratedDefault"</span>: {
+  <span class="key">"args"</span>: <span class="val">[]</span>,
+  <span class="key">"executable"</span>: <span class="str">"/bin/sh"</span>,
+  ...
+}
+
+<span class="comment">// After (수정)</span>
+<span class="key">"linuxIntegratedDefault"</span>: {
+  <span class="key">"args"</span>: <span class="val">["--login", "-i"]</span>,
+  <span class="key">"executable"</span>: <span class="str">"/bin/bash"</span>,
+  ...
+}</div>
+
+      <p>각 플래그의 역할:</p>
+      <div class="shell-flow">
+        <span class="shell-node accent">--login</span>
+        <span class="shell-arrow">→</span>
+        <span class="shell-node">/etc/profile</span>
+        <span class="shell-arrow">→</span>
+        <span class="shell-node">~/.profile</span>
+        <span class="shell-arrow">→</span>
+        <span class="shell-node green">~/.bashrc 로드</span>
+        <span class="shell-arrow">→</span>
+        <span class="shell-node green">PATH 완전 구성</span>
+      </div>
+      <div class="shell-flow">
+        <span class="shell-node accent">-i</span>
+        <span class="shell-arrow">→</span>
+        <span class="shell-node">interactive 모드</span>
+        <span class="shell-arrow">→</span>
+        <span class="shell-node green">alias · 함수 활성화</span>
+      </div>
+
+      <div class="warn-box">
+        <strong>macOS:</strong> Darwin 프로파일은 <code>/bin/zsh</code>에 <code>["--login"]</code>이 이미 설정되어 있어 별도 수정 불필요.
+        <strong>Windows:</strong> cmd.exe 기반이므로 이 가이드와 무관.
+      </div>
+
+      <p style="margin-top:.75rem">수정 후 Obsidian에서 플러그인을 재활성화해야 적용된다:</p>
+      <ul class="checklist">
+        <li>Settings → Community plugins → Terminal 비활성화 → 재활성화</li>
+        <li>또는 Obsidian 완전 재시작</li>
+      </ul>
+    </div>
+
+    <!-- ── Step 2 ── -->
+    <div class="guide-card">
+      <h3><span class="num blue">2</span> 로케일 환경변수 보장 — AI 도구 언어 고정</h3>
+      <p>
+        <strong>파일:</strong> <code>~/.bashrc</code><br>
+        Electron 앱은 OS 세션의 locale 환경변수를 그대로 상속하지 않는 경우가 있다.
+        GLM-5처럼 중국산 LLM은 <code>LANG</code>/<code>LC_ALL</code>이 없으면 중국어로 defaulting한다.
+      </p>
+      <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># ~/.bashrc 상단, interactive check(case $- in) 이전에 추가</span>
+
+<span class="comment"># Locale — Electron 터미널에서 AI 도구가 중국어 defaulting하는 것 방지</span>
+<span class="hl">export LANG=en_US.UTF-8</span>
+<span class="hl">export LC_ALL=en_US.UTF-8</span></div>
+
+      <div class="info-box">
+        <strong>왜 interactive check 앞에 넣어야 하는가:</strong><br>
+        bash의 기본 <code>~/.bashrc</code>는 <code>case $- in *i*)</code> 체크 이후 return한다.
+        check 뒤에 export를 두면 non-interactive 쉘(스크립트, opencode 내부 호출 등)에서 적용되지 않는다.
+        check <em>앞</em>에 두면 모든 bash 호출에서 무조건 실행된다.
+      </div>
+
+      <div class="warn-box">
+        이미 시스템 locale이 <code>/etc/default/locale</code>에 올바르게 설정돼 있더라도,
+        Electron 프로세스가 <code>/etc/profile.d/</code>를 거치지 않고 실행될 수 있으므로
+        <code>.bashrc</code>에 명시적으로 export하는 것이 안전하다.
+      </div>
+    </div>
+
+    <!-- ── Step 3 ── -->
+    <div class="guide-card">
+      <h3><span class="num green">3</span> 단축 명령 스크립트 생성 (선택)</h3>
+      <p>
+        긴 명령을 짧게 쓰고 싶을 때. alias 대신 실행 스크립트를 <code>~/.local/bin/</code>에 두면
+        어떤 shell에서도 동작한다.
+      </p>
+      <p><strong>예시: <code>cc</code> → <code>claude --dangerously-skip-permissions</code></strong></p>
+      <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># 생성</span>
+cat &gt; ~/.local/bin/cc &lt;&lt;'EOF'
+#!/bin/bash
+exec claude --dangerously-skip-permissions "$@"
+EOF
+chmod +x ~/.local/bin/cc
+
+<span class="comment"># 확인</span>
+which cc   <span class="comment"># → /home/user/.local/bin/cc</span></div>
+
+      <div class="info-box">
+        <strong>alias vs 스크립트:</strong> alias는 <code>~/.bashrc</code>가 로드된 interactive bash에서만 동작.
+        스크립트는 PATH에 <code>~/.local/bin</code>이 있으면 sh, bash, 어떤 subshell에서도 동작.
+        <code>exec</code>를 쓰면 wrapper 프로세스를 남기지 않고 바로 대체된다.
+      </div>
+    </div>
+
+    <!-- ── Step 4 Verify ── -->
+    <div class="guide-card">
+      <h3><span class="num orange">4</span> 검증 체크리스트</h3>
+      <p>플러그인 재활성화 후 Obsidian 터미널에서 순서대로 실행한다.</p>
+      <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># 1. shell 초기화 확인</span>
+echo $SHELL          <span class="comment"># /bin/bash 이어야 함</span>
+echo $0              <span class="comment"># -bash (앞의 - 가 login shell 표시)</span>
+
+<span class="comment"># 2. PATH 확인 — .local/bin, nvm 경로 등이 포함돼야 함</span>
+echo $PATH
+
+<span class="comment"># 3. 명령 인식 확인</span>
+which claude
+which opencode
+
+<span class="comment"># 4. 로케일 확인</span>
+locale               <span class="comment"># LANG=en_US.UTF-8, LC_ALL=en_US.UTF-8</span>
+
+<span class="comment"># 5. bashrc alias 동작 확인 (본인 alias 이름으로)</span>
+type &lt;alias-name&gt;</div>
+
+      <div class="diag-grid" style="margin-top:.75rem">
+        <div class="diag-card">
+          <div class="diag-label" style="color:var(--accent3)">정상 상태</div>
+          <code>echo $0  →  -bash</code>
+          <code>which claude  →  ~/.local/bin/claude</code>
+          <code>locale LANG  →  en_US.UTF-8</code>
+          <div class="diag-note">앞의 하이픈(-)이 login shell 증거</div>
+        </div>
+        <div class="diag-card">
+          <div class="diag-label" style="color:var(--danger)">비정상 상태</div>
+          <code>echo $0  →  sh 또는 bash</code>
+          <code>which claude  →  not found</code>
+          <code>locale LANG  →  (없음) 또는 C</code>
+          <div class="diag-note">Step 1 미적용 또는 플러그인 재시작 필요</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Troubleshooting ── -->
+    <div class="guide-card">
+      <h3><span class="num" style="background:#546e7a">TS</span> 트러블슈팅</h3>
+
+      <p><strong>Q. 수정 후에도 여전히 command not found</strong></p>
+      <ul class="checklist">
+        <li>플러그인 재활성화가 됐는지 확인 (완전 재시작 권장)</li>
+        <li><code>echo $0</code>이 <code>-bash</code>인지 확인 (하이픈 없으면 login shell 미적용)</li>
+        <li><code>~/.profile</code>이 <code>~/.bashrc</code>를 source하는지 확인:<br>
+          <code style="font-family:monospace;font-size:.8rem;color:var(--accent2)">grep bashrc ~/.profile</code></li>
+        <li><code>~/.bash_profile</code>이 존재하면 <code>~/.profile</code> 대신 그 파일이 로드됨 — 해당 파일에도 동일 설정 필요</li>
+      </ul>
+
+      <p style="margin-top:.75rem"><strong>Q. GLM-5가 여전히 중국어로 응답</strong></p>
+      <ul class="checklist">
+        <li><code>locale</code> 명령으로 <code>LC_ALL=en_US.UTF-8</code> 확인</li>
+        <li>opencode를 재시작해야 변경된 환경변수가 반영됨</li>
+        <li>그래도 안 되면 opencode 설정에 system prompt 추가:<br>
+          <code style="font-family:monospace;font-size:.8rem;color:var(--accent2)">~/.config/opencode/opencode.json</code>에
+          <code>"agent": {"general": {"prompt": "Always respond in Korean or English."}}</code></li>
+      </ul>
+
+      <p style="margin-top:.75rem"><strong>Q. 터미널 플러그인 data.json 위치를 모름</strong></p>
+      <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># vault 루트 찾기</span>
+find ~ -name "data.json" -path "*/plugins/terminal/*" 2>/dev/null</div>
+
+      <p style="margin-top:.75rem"><strong>Q. zsh를 사용하는 경우</strong></p>
+      <ul class="checklist">
+        <li>executable을 <code>/bin/zsh</code>로, args를 <code>["--login", "-i"]</code>로 설정 (macOS Darwin 프로파일 참고)</li>
+        <li>zsh는 <code>~/.zprofile</code>(login) → <code>~/.zshrc</code>(interactive) 순으로 로드</li>
+      </ul>
+    </div>
+
+  </div><!-- /guide-section -->
+
+  </div><!-- /guide-section (end of p1 guide) -->
+  </div><!-- /page p1 -->
+
+  <!-- ══════════════ PAGE 2 ══════════════ -->
+  <div class="page" id="p2">
+
+  <header>
+    <div class="badge">Fix Log · 2026-04-10</div>
+    <h1>opencode + GLM-5 연동 수정</h1>
+    <p>Obsidian(snap) 터미널에서 GLM-5가 중국어로만 thinking하고 응답 못하는 문제 해결</p>
+  </header>
+
+  <!-- 증상 요약 -->
+  <div style="background:rgba(239,83,80,.07);border:1px solid rgba(239,83,80,.3);border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:2rem">
+    <div style="font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#ef9a9a;margin-bottom:.6rem">증상</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;font-size:.88rem">
+      <div>
+        <div style="color:var(--text-dim);margin-bottom:.3rem">Obsidian 터미널</div>
+        <div style="color:#ef9a9a">❌ GLM-5가 중국어로 thinking만 하고 최종 답변 없음</div>
+      </div>
+      <div>
+        <div style="color:var(--text-dim);margin-bottom:.3rem">일반 터미널</div>
+        <div style="color:#a5d6a7">✅ 정상 동작</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline">
+
+    <!-- STEP A: 원인 분석 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot" style="background:#ef5350;box-shadow:0 0 0 4px var(--bg),0 0 12px #ef5350">!</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">원인 분석 — Snap 격리로 인한 XDG 경로 오염</div>
+            <div class="chips">
+              <span class="chip purple">근본 원인</span>
+              <span class="chip" style="border-color:#ef5350;color:#ef5350">snap</span>
+            </div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="step-body">
+          <p style="font-size:.88rem;color:var(--text-dim);margin-bottom:.75rem">
+            Obsidian이 <strong style="color:var(--text)">snap 패키지</strong>로 설치되어 있어서, 실행 시 XDG 표준 경로를 snap 전용 격리 경로로 override한다.
+            터미널 플러그인이 띄운 쉘은 이 환경을 그대로 상속한다.
+          </p>
+
+          <div class="flow">
+<span class="fl-dim"># Obsidian(snap) 프로세스 환경변수</span>
+<span class="fl-key">XDG_DATA_HOME</span>  <span class="fl-arrow">=</span> <span class="fl-bad">/home/ducky/snap/obsidian/62/.local/share</span>  <span class="fl-dim">← snap 격리</span>
+<span class="fl-key">XDG_CONFIG_HOME</span> <span class="fl-arrow">=</span> <span class="fl-bad">/home/ducky/snap/obsidian/62/.config</span>         <span class="fl-dim">← snap 격리</span>
+
+<span class="fl-dim"># 정상 값</span>
+<span class="fl-key">XDG_DATA_HOME</span>  <span class="fl-arrow">=</span> <span class="fl-good">/home/ducky/.local/share</span>
+<span class="fl-key">XDG_CONFIG_HOME</span> <span class="fl-arrow">=</span> <span class="fl-good">/home/ducky/.config</span></div>
+
+          <p style="font-size:.88rem;color:var(--text-dim);margin:.75rem 0 .5rem">opencode는 API 인증 키를 <code>$XDG_DATA_HOME/opencode/auth.json</code>에서 읽는다.</p>
+
+          <div class="flow">
+<span class="fl-dim"># snap 경로의 auth.json (Obsidian 터미널이 읽는 파일)</span>
+<span class="fl-bad">{ "zhipuai": { "type": "api", "key": "..." } }</span>
+<span class="fl-dim">              ↑ 구버전 provider 키</span>
+
+<span class="fl-dim"># 실제 사용해야 할 auth.json (~/.local/share/opencode/auth.json)</span>
+<span class="fl-good">{ "zai-coding-plan": { "type": "api", "key": "..." } }</span>
+<span class="fl-dim">    ↑ opencode.json의 model: "zai-coding-plan/glm-5" 와 일치</span></div>
+
+          <div class="problem-box" style="margin-top:.75rem">
+            <div class="label">결과</div>
+            잘못된 provider 키(<code>zhipuai</code>)로 <code>api.z.ai</code>에 요청 →
+            HTTP <strong>429</strong> (인증 실패 / 과부하로 위장) →
+            GLM-5가 thinking 스트리밍 중 끊김 → 중국어 thinking만 보이고 최종 답변 없음
+          </div>
+
+          <div class="reason-box" style="margin-top:.75rem">
+            <div class="label">왜 일반 터미널에서는 되는가</div>
+            일반 터미널은 snap 환경 밖에서 실행 → XDG 경로가 표준값 유지 →
+            <code>~/.local/share/opencode/auth.json</code>에서 <code>zai-coding-plan</code> 키를 올바르게 읽음
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP B: 진단 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot blue">B</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">진단 방법 — 동일 증상인지 확인</div>
+            <div class="chips"><span class="chip blue">진단</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="step-body">
+          <p style="font-size:.88rem;color:var(--text-dim);margin-bottom:.75rem">Obsidian 터미널에서 아래를 실행해 snap 감염 여부를 확인한다.</p>
+          <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># 1. XDG 경로 확인 — snap 경로면 이 가이드 해당</span>
+echo $XDG_DATA_HOME
+<span class="comment"># 정상: /home/user/.local/share</span>
+<span class="comment"># 비정상: /home/user/snap/obsidian/XX/.local/share  ← snap 감염</span>
+
+<span class="comment"># 2. opencode가 실제로 읽는 auth.json 확인</span>
+cat ${XDG_DATA_HOME:-$HOME/.local/share}/opencode/auth.json
+
+<span class="comment"># 3. opencode 로그에서 에러 확인</span>
+tail -50 ~/.local/share/opencode/log/$(ls -t ~/.local/share/opencode/log/ | head -1) \
+  | grep -E "ERROR|429|statusCode"</div>
+
+          <div class="diag-grid">
+            <div class="diag-card">
+              <div class="diag-label" style="color:var(--danger)">비정상 (snap 감염)</div>
+              <code>XDG_DATA_HOME = .../snap/obsidian/...</code>
+              <code>auth.json: { "zhipuai": ... }</code>
+              <code>log: HTTP 429 statusCode</code>
+              <div class="diag-note">이 가이드의 수정 적용</div>
+            </div>
+            <div class="diag-card">
+              <div class="diag-label" style="color:var(--accent3)">정상</div>
+              <code>XDG_DATA_HOME = ~/.local/share</code>
+              <code>auth.json: { "zai-coding-plan": ... }</code>
+              <code>log: stream 성공</code>
+              <div class="diag-note">수정 불필요</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP C: 수정 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot green">C</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">수정 — .bashrc에서 XDG 경로 강제 복원</div>
+            <div class="chips">
+              <span class="chip purple">핵심 수정</span>
+              <span class="chip green">1줄 추가</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem">
+            <span class="step-file">~/.bashrc</span>
+            <span class="chevron">▼</span>
+          </div>
+        </div>
+        <div class="step-body">
+          <p style="font-size:.88rem;color:var(--text-dim);margin-bottom:.75rem">
+            snap이 XDG 경로를 process 레벨에서 오염시키지만, bash가 시작할 때 <code>.bashrc</code>에서 재정의하면 덮어쓸 수 있다.
+            반드시 interactive check(<code>case $- in</code>) <strong>앞</strong>에 위치해야 한다.
+          </p>
+
+          <div class="diff">
+            <div class="diff-header">~/.bashrc</div>
+            <div class="diff-line ctx"> export LANG=en_US.UTF-8</div>
+            <div class="diff-line ctx"> export LC_ALL=en_US.UTF-8</div>
+            <div class="diff-line ctx"> </div>
+            <div class="diff-line added">+ # Override snap's XDG path hijacking so tools like opencode use correct auth/config</div>
+            <div class="diff-line added">+ export XDG_DATA_HOME="$HOME/.local/share"</div>
+            <div class="diff-line added">+ export XDG_CONFIG_HOME="$HOME/.config"</div>
+          </div>
+
+          <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># 직접 편집하거나 아래 명령으로 추가</span>
+cat >> ~/.bashrc &lt;&lt;'EOF'
+
+# Override snap's XDG path hijacking so tools like opencode use correct auth/config
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+EOF</div>
+
+          <div class="info-box">
+            <strong>왜 이 방법이 작동하는가:</strong><br>
+            snap은 XDG 경로를 Obsidian 프로세스 시작 시점에 설정한다.
+            bash가 child process로 실행될 때 이 값을 상속하지만,
+            <code>.bashrc</code>가 실행되면서 <code>export</code>로 덮어쓰면
+            이후 bash에서 실행되는 모든 프로그램(opencode 포함)은 올바른 경로를 본다.
+          </div>
+
+          <div class="warn-box" style="margin-top:.75rem">
+            <strong>주의:</strong> <code>XDG_DATA_HOME</code>을 변경하면 snap으로 설치된 다른 앱이
+            데이터를 <code>~/.local/share</code>에 쓸 수 있다. 대부분의 경우 문제없지만,
+            snap 앱의 데이터 격리를 의도적으로 사용하고 있다면 영향을 확인할 것.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP D: 전체 원인 체인 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot orange">D</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">전체 원인 체인 요약</div>
+            <div class="chips"><span class="chip purple">분석</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="step-body">
+          <div class="flow">
+<span class="fl-dim">Obsidian (snap 설치)</span>
+  <span class="fl-arrow">↓</span> XDG_DATA_HOME = <span class="fl-bad">/snap/obsidian/62/.local/share</span>  <span class="fl-dim">(snap 격리)</span>
+  <span class="fl-arrow">↓</span> 터미널 플러그인이 bash 실행 → 환경 상속
+  <span class="fl-arrow">↓</span> 사용자가 opencode 실행
+  <span class="fl-arrow">↓</span> opencode가 <span class="fl-bad">$XDG_DATA_HOME/opencode/auth.json</span> 읽음
+  <span class="fl-arrow">↓</span> auth.json에 <span class="fl-bad">{ "zhipuai": "..." }</span>  ← 구버전 키
+  <span class="fl-arrow">↓</span> opencode.json: model = <span class="fl-key">"zai-coding-plan/glm-5"</span>  ← provider 불일치
+  <span class="fl-arrow">↓</span> api.z.ai 요청 → <span class="fl-bad">HTTP 429</span>
+  <span class="fl-arrow">↓</span> GLM-5: thinking 스트리밍 시작 (중국어) → 429로 중단
+  <span class="fl-arrow">↓</span> <span class="fl-bad">중국어 thinking만 표시, 최종 답변 없음</span>
+
+<span class="fl-dim">──────────────────────────────</span>
+<span class="fl-good">.bashrc에 XDG_DATA_HOME 재정의 후</span>
+  <span class="fl-arrow">↓</span> opencode가 <span class="fl-good">~/.local/share/opencode/auth.json</span> 읽음
+  <span class="fl-arrow">↓</span> <span class="fl-good">{ "zai-coding-plan": "..." }</span>  ← 올바른 키
+  <span class="fl-arrow">↓</span> <span class="fl-good">정상 응답</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP E: 추가 확인 -->
+    <div class="step" onclick="toggle(this)">
+      <div class="step-dot green">E</div>
+      <div class="step-card">
+        <div class="step-header">
+          <div>
+            <div class="step-title">적용 확인 및 트러블슈팅</div>
+            <div class="chips"><span class="chip green">검증</span></div>
+          </div>
+          <span class="chevron">▼</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block"><button class="copy-btn" onclick="copyCode(this)">copy</button><span class="comment"># Obsidian 터미널 재시작 후 확인</span>
+
+<span class="comment"># 1. XDG 경로가 올바른지</span>
+echo $XDG_DATA_HOME
+<span class="comment"># 기대값: /home/user/.local/share</span>
+
+<span class="comment"># 2. opencode가 올바른 auth를 읽는지</span>
+cat $XDG_DATA_HOME/opencode/auth.json
+<span class="comment"># 기대값: { "zai-coding-plan": { ... } }</span>
+
+<span class="comment"># 3. opencode 정상 실행</span>
+opencode</div>
+
+          <p style="font-size:.88rem;color:var(--text-dim);margin-top:.75rem"><strong>Q. 수정 후에도 여전히 같은 증상</strong></p>
+          <ul class="checklist">
+            <li>Obsidian 터미널을 완전히 닫고 새로 열었는지 확인 (bash 재시작 필요)</li>
+            <li><code>source ~/.bashrc</code> 실행 후 <code>echo $XDG_DATA_HOME</code> 재확인</li>
+            <li>snap 버전 번호(62)가 업데이트로 바뀌었을 수 있음 — 동일 증상이면 동일 수정으로 해결</li>
+          </ul>
+
+          <p style="font-size:.88rem;color:var(--text-dim);margin-top:.75rem"><strong>Q. GLM-5가 여전히 중국어로 thinking</strong></p>
+          <div class="info-box">
+            GLM-5는 reasoning 과정을 중국어로 수행하는 모델 특성이 있다.
+            thinking이 중국어여도 <strong>최종 답변이 한국어/영어로 나오면 정상</strong>.
+            thinking 언어 자체는 변경 불가.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /timeline -->
+
+  <div class="result-banner">
+    <div class="result-icon">🔑</div>
+    <div class="result-text">
+      <h3>핵심 요약</h3>
+      <p>
+        Obsidian snap 설치 → XDG 경로 오염 → opencode가 구버전 <code>zhipuai</code> 키로 인증 시도 → API 거부.
+        <code>~/.bashrc</code>에 <code>XDG_DATA_HOME</code> / <code>XDG_CONFIG_HOME</code> 재정의로 해결.
+      </p>
+    </div>
+  </div>
+
+  </div><!-- /page p2 -->
+
+</div><!-- /container -->
+
+<script>
+  function showPage(id, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.page-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function toggle(stepEl) {
+    const body = stepEl.querySelector('.step-body');
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.step-body.open').forEach(b => {
+      b.classList.remove('open');
+      b.closest('.step').classList.remove('open');
+    });
+    if (!isOpen) {
+      body.classList.add('open');
+      stepEl.classList.add('open');
+    }
+  }
+
+  function switchTab(tabEl, panelId) {
+    const card = tabEl.closest('.guide-card');
+    card.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    card.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tabEl.classList.add('active');
+    card.querySelector('#' + panelId).classList.add('active');
+  }
+
+  function copyCode(btn) {
+    const block = btn.closest('.code-block');
+    const text = block.innerText.replace(/^copy\n/, '').trim();
+    navigator.clipboard.writeText(text).then(() => {
+      const orig = btn.textContent;
+      btn.textContent = 'copied!';
+      setTimeout(() => btn.textContent = orig, 1500);
+    });
+  }
+</script>
+</body>
+</html>

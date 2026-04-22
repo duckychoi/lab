@@ -1,0 +1,11 @@
+{
+  "accentColor": "#f797ea",
+  "theme": "moonstone",
+  "cssTheme": "Minimal",
+  "interfaceFontFamily": "FreeSans",
+  "textFontFamily": "Kinnari",
+  "monospaceFontFamily": "Inter",
+  "enabledCssSnippets": [
+    "wiki-styles"
+  ]
+}

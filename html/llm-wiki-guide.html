@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM Wiki — Obsidian WS 가이드</title>
+<style>
+:root {
+  --bg:       #0f0f13;
+  --surface:  #1a1a24;
+  --surface2: #22222f;
+  --border:   #2e2e42;
+  --accent:   #7c6af7;
+  --accent2:  #4fc3f7;
+  --accent3:  #81c784;
+  --warn:     #ffb74d;
+  --danger:   #ef5350;
+  --text:     #e0e0f0;
+  --text-dim: #8888aa;
+  --code-bg:  #12121a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Header ── */
+header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge {
+  display: inline-block;
+  padding: .3rem .8rem;
+  border-radius: 20px;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .05em;
+  background: linear-gradient(135deg, #3d3575, #1a3050);
+  color: var(--accent2);
+  margin-bottom: .8rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c4b5fd, var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .5rem;
+}
+
+header p {
+  color: var(--text-dim);
+  font-size: .95rem;
+}
+
+/* ── Section titles ── */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent2);
+  margin-bottom: .3rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.section-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1.1rem;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.section-sub {
+  color: var(--text-dim);
+  font-size: .85rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── 3-Layer Architecture ── */
+.arch-section {
+  margin-bottom: 3rem;
+}
+
+.arch-diagram {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.arch-layer {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  border-bottom: 1px solid var(--border);
+  transition: background .2s;
+}
+
+.arch-layer:last-child { border-bottom: none; }
+.arch-layer:hover { background: var(--surface2); }
+
+.arch-label {
+  padding: 1.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--border);
+}
+
+.arch-layer-name {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .25rem;
+}
+
+.arch-layer-sub {
+  font-size: .78rem;
+  color: var(--text-dim);
+}
+
+.arch-content {
+  padding: 1.2rem 1.4rem;
+}
+
+.arch-content-title {
+  font-weight: 700;
+  margin-bottom: .35rem;
+  font-size: .95rem;
+}
+
+.arch-content p {
+  color: var(--text-dim);
+  font-size: .85rem;
+  line-height: 1.6;
+}
+
+.layer-raw    { border-left: 3px solid var(--warn); }
+.layer-wiki   { border-left: 3px solid var(--accent); }
+.layer-schema { border-left: 3px solid var(--accent2); }
+
+.layer-raw    .arch-layer-name { color: var(--warn); }
+.layer-wiki   .arch-layer-name { color: var(--accent); }
+.layer-schema .arch-layer-name { color: var(--accent2); }
+
+/* arrow between layers */
+.arch-arrow {
+  text-align: center;
+  padding: .4rem;
+  color: var(--text-dim);
+  font-size: .8rem;
+  background: var(--surface2);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+}
+
+/* ── raw/ directory tree ── */
+.tree-section {
+  margin-bottom: 3rem;
+}
+
+.tree-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tree-header {
+  background: var(--surface2);
+  padding: .8rem 1.2rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.tree-body {
+  padding: 1.2rem 1.4rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: .88rem;
+  line-height: 2;
+}
+
+.tree-root { color: var(--accent2); font-weight: 700; }
+.tree-folder { color: var(--warn); }
+.tree-file { color: var(--text-dim); }
+.tree-file.active { color: var(--accent3); }
+.tree-badge {
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: .68rem;
+  padding: .1rem .45rem;
+  border-radius: 10px;
+  margin-left: .5rem;
+  vertical-align: middle;
+  font-weight: 600;
+}
+.badge-new  { background: #1a3a1a; color: var(--accent3); }
+.badge-raw  { background: #3a2e0a; color: var(--warn); }
+.badge-lock { background: #2e1a1a; color: var(--danger); }
+
+/* ── current state comparison ── */
+.compare-section { margin-bottom: 3rem; }
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .arch-layer { grid-template-columns: 1fr; }
+  .arch-label { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+.compare-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.compare-card-header {
+  padding: .7rem 1rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-card.before .compare-card-header {
+  background: #2e1a1a;
+  color: var(--danger);
+}
+
+.compare-card.after .compare-card-header {
+  background: #1a2e1a;
+  color: var(--accent3);
+}
+
+.compare-card-body {
+  padding: 1rem;
+  font-size: .85rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.compare-card-body .dim { opacity: .5; }
+.compare-card-body .hi  { color: var(--text); }
+.compare-card-body .good { color: var(--accent3); }
+.compare-card-body .bad  { color: var(--danger); opacity: .7; }
+
+/* ── workflow steps ── */
+.workflow-section { margin-bottom: 3rem; }
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 0;
+}
+
+.flow-step-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.flow-connector {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  background: var(--border);
+  margin: 2px 0;
+}
+
+.flow-step:last-child .flow-connector { display: none; }
+
+.flow-step-body {
+  padding: 0 0 1.5rem 1rem;
+}
+
+.flow-step-title {
+  font-weight: 700;
+  font-size: .95rem;
+  margin-bottom: .3rem;
+  line-height: 2.4;
+}
+
+.flow-step-desc {
+  color: var(--text-dim);
+  font-size: .85rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .8rem 1rem;
+}
+
+.flow-step-desc code {
+  background: var(--code-bg);
+  padding: .1rem .35rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: .82rem;
+  color: var(--accent2);
+}
+
+.dot-1 { background: #3a2e0a; color: var(--warn); border: 2px solid var(--warn); }
+.dot-2 { background: #1a1a3a; color: var(--accent); border: 2px solid var(--accent); }
+.dot-3 { background: #1a3a1a; color: var(--accent3); border: 2px solid var(--accent3); }
+.dot-4 { background: #1a2a3a; color: var(--accent2); border: 2px solid var(--accent2); }
+
+/* ── rules cards ── */
+.rules-section { margin-bottom: 3rem; }
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+}
+
+@media (max-width: 600px) { .rules-grid { grid-template-columns: 1fr; } }
+
+.rule-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+}
+
+.rule-icon {
+  font-size: 1.3rem;
+  margin-bottom: .4rem;
+}
+
+.rule-title {
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: .3rem;
+}
+
+.rule-desc {
+  font-size: .8rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.rule-card.ok  { border-left: 3px solid var(--accent3); }
+.rule-card.no  { border-left: 3px solid var(--danger); }
+.rule-card.tip { border-left: 3px solid var(--accent); }
+
+/* ── result banner ── */
+.result-banner {
+  background: linear-gradient(135deg, #1e1a3a, #1a2e1e);
+  border: 1px solid #3a3560;
+  border-radius: 12px;
+  padding: 1.5rem 1.8rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
+
+.result-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.result-text h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #c4b5fd, var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .4rem;
+}
+
+.result-text p {
+  font-size: .88rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.result-text code {
+  background: var(--code-bg);
+  padding: .1rem .35rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: .82rem;
+  color: var(--accent3);
+}
+
+/* ── obsidian settings section ── */
+.settings-section { margin-bottom: 3rem; }
+
+.settings-steps {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.settings-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-step:last-child { border-bottom: none; }
+
+.settings-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2a2040;
+  color: var(--accent);
+  font-size: .75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: .2rem;
+}
+
+.settings-step-content {
+  flex: 1;
+}
+
+.settings-step-title {
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.settings-step-path {
+  font-size: .78rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  flex-wrap: wrap;
+}
+
+.path-node {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  padding: .15rem .45rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: .8rem;
+  color: var(--text);
+}
+
+.path-sep { color: var(--text-dim); }
+
+.settings-step-note {
+  margin-top: .3rem;
+  font-size: .78rem;
+  color: var(--accent3);
+  background: #1a2e1a;
+  border-radius: 4px;
+  padding: .25rem .6rem;
+  display: inline-block;
+}
+
+#pikaCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="badge">LLM Wiki Guide · 2026-04-10</div>
+    <h1>raw/ 디렉토리 가이드</h1>
+    <p>Karpathy LLM Wiki 패턴의 첫 번째 레이어 — 원본 소스를 저장하고 Claude에게 인제스트를 요청하는 방법</p>
+  </header>
+
+  <!-- 3-Layer Architecture -->
+  <section class="arch-section">
+    <div class="section-title">3레이어 아키텍처</div>
+    <div class="section-sub">이 vault가 돌아가는 구조 — raw/는 맨 아래 기반 레이어</div>
+
+    <div class="arch-diagram">
+
+      <div class="arch-layer layer-schema">
+        <div class="arch-label">
+          <div class="arch-layer-name">Schema</div>
+          <div class="arch-layer-sub">Layer 3</div>
+        </div>
+        <div class="arch-content">
+          <div class="arch-content-title">CLAUDE.md</div>
+          <p>wiki 구조, 컨벤션, 워크플로우 정의. Claude가 이 파일을 읽고 어떻게 행동할지 결정. 사용자 + Claude가 함께 발전시킴.</p>
+        </div>
+      </div>
+
+      <div class="arch-arrow">▼ Claude가 schema를 보고 wiki를 관리</div>
+
+      <div class="arch-layer layer-wiki">
+        <div class="arch-label">
+          <div class="arch-layer-name">Wiki</div>
+          <div class="arch-layer-sub">Layer 2</div>
+        </div>
+        <div class="arch-content">
+          <div class="arch-content-title">wiki/ 폴더</div>
+          <p>Claude가 소유하고 관리하는 마크다운 파일들. 요약, 개념 페이지, 엔티티 페이지, 크로스 레퍼런스, 종합 분석. 사용자는 읽고, Claude는 쓴다.</p>
+        </div>
+      </div>
+
+      <div class="arch-arrow">▼ raw 소스를 읽어서 wiki로 합성 (ingest)</div>
+
+      <div class="arch-layer layer-raw">
+        <div class="arch-label">
+          <div class="arch-layer-name">Raw Sources</div>
+          <div class="arch-layer-sub">Layer 1 — 여기!</div>
+        </div>
+        <div class="arch-content">
+          <div class="arch-content-title">raw/ 폴더 + AI News/ + Cinema Studio/ + Vibe Coding/</div>
+          <p>원본 소스 문서들. 기사, 논문, 메모, 데이터 파일. <strong style="color:var(--warn)">불변 — Claude는 읽기만 하고 절대 수정하지 않는다.</strong> 진실의 소스.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Directory Tree -->
+  <section class="tree-section">
+    <div class="section-title">raw/ 디렉토리 구조</div>
+    <div class="section-sub">방금 생성된 폴더 — 이렇게 채워나가면 된다</div>
+
+    <div class="tree-card">
+      <div class="tree-header">
+        <span style="color:var(--accent2)">📁</span>
+        Obsidian_WS / raw/
+      </div>
+      <div class="tree-body">
+<span class="tree-root">raw/</span>  <span class="tree-badge badge-new">방금 생성</span>
+├── <span class="tree-folder">assets/</span>      <span class="tree-badge badge-raw">이미지 전용</span>
+│   └── <span class="tree-file">.gitkeep</span>
+├── <span class="tree-folder">articles/</span>    <span class="tree-file dim">← 기사, 블로그 포스트 (.md)</span>
+├── <span class="tree-folder">papers/</span>      <span class="tree-file dim">← 논문, 기술 리포트 (.md, .pdf)</span>
+├── <span class="tree-folder">notes/</span>       <span class="tree-file dim">← 직접 쓴 메모, 대화 요약 (.md)</span>
+├── <span class="tree-folder">data/</span>        <span class="tree-file dim">← 데이터 파일, 스프레드시트</span>
+└── <span class="tree-file active">README.md</span>    <span class="tree-badge badge-new">생성됨</span>
+      </div>
+    </div>
+
+    <div style="height:.8rem"></div>
+
+    <div class="tree-card">
+      <div class="tree-header">
+        <span style="color:var(--warn)">⚠️</span>
+        기존 vault 파일들도 사실상 raw sources — 이렇게 분류된다
+      </div>
+      <div class="tree-body">
+<span class="tree-root">Obsidian_WS/</span>
+├── <span class="tree-folder">AI News/</span>          <span class="tree-file dim">← AI 뉴스 클리핑들</span>   <span class="tree-badge badge-raw">raw source</span>
+├── <span class="tree-folder">Cinema Studio/</span>    <span class="tree-file dim">← 시네마 스튜디오 자료</span> <span class="tree-badge badge-raw">raw source</span>
+├── <span class="tree-folder">Vibe Coding/</span>      <span class="tree-file dim">← 바이브 코딩 자료</span>   <span class="tree-badge badge-raw">raw source</span>
+├── <span class="tree-file active">Research.md</span>       <span class="tree-file dim">← Qwen 연구 노트</span>     <span class="tree-badge badge-raw">raw source</span>
+├── <span class="tree-file active">design.md</span>         <span class="tree-file dim">← HTML 디자인 가이드</span>  <span class="tree-badge badge-raw">raw source</span>
+│
+├── <span class="tree-folder">raw/</span>              <span class="tree-file dim">← 앞으로 새 소스는 여기</span> <span class="tree-badge badge-new">신규</span>
+├── <span class="tree-folder">wiki/</span>             <span class="tree-file dim">← Claude가 관리하는 wiki</span>
+└── <span class="tree-file">CLAUDE.md</span>         <span class="tree-file dim">← 스키마</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before / After comparison -->
+  <section class="compare-section">
+    <div class="section-title">raw/ vs wiki/ — 핵심 차이</div>
+    <div class="section-sub">왜 두 폴더가 분리되어 있는가</div>
+
+    <div class="compare-grid">
+      <div class="compare-card before">
+        <div class="compare-card-header">raw/ — 원본 소스</div>
+        <div class="compare-card-body">
+          <div class="bad">✗ Claude가 수정하지 않음</div>
+          <div class="hi">✓ 사용자가 직접 파일 추가</div>
+          <div class="hi">✓ 원문 그대로 보관</div>
+          <div class="hi">✓ 진실의 소스</div>
+          <div class="hi">✓ 이미지, PDF, 데이터 모두 OK</div>
+          <div class="hi">✓ 삭제해도 wiki는 살아있음</div>
+          <div style="margin-top:.8rem; font-size:.78rem; opacity:.6">예: 기사 마크다운, 논문 PDF, 메모</div>
+        </div>
+      </div>
+
+      <div class="compare-card after">
+        <div class="compare-card-header">wiki/ — 합성 지식</div>
+        <div class="compare-card-body">
+          <div class="good">✓ Claude가 소유하고 관리</div>
+          <div class="bad">✗ 사용자가 직접 수정 안 함</div>
+          <div class="good">✓ 요약, 크로스 레퍼런스, 합성</div>
+          <div class="good">✓ 마크다운 + wikilinks</div>
+          <div class="good">✓ 소스 추가할수록 더 풍부해짐</div>
+          <div class="good">✓ 쿼리 답변의 기반</div>
+          <div style="margin-top:.8rem; font-size:.78rem; opacity:.6">예: concept 페이지, entity 페이지, 도메인 종합</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow -->
+  <section class="workflow-section">
+    <div class="section-title">raw/ 사용 워크플로우</div>
+    <div class="section-sub">새 소스를 추가하고 wiki에 반영하는 전체 과정</div>
+
+    <div class="flow-steps">
+
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-dot dot-1">1</div>
+          <div class="flow-connector"></div>
+        </div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">소스 준비 — raw/에 파일 넣기</div>
+          <div class="flow-step-desc">
+            <strong style="color:var(--warn)">방법 A</strong> — Obsidian Web Clipper로 기사 클리핑<br>
+            → <code>raw/articles/[제목].md</code> 자동 저장<br><br>
+            <strong style="color:var(--warn)">방법 B</strong> — 파일 직접 드래그앤드롭<br>
+            → <code>raw/papers/</code>, <code>raw/notes/</code> 등에 저장<br><br>
+            <strong style="color:var(--warn)">방법 C</strong> — 기존 폴더 파일 (AI News/, Cinema Studio/, Vibe Coding/)<br>
+            → 그대로 사용 가능, raw source로 취급됨
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-dot dot-2">2</div>
+          <div class="flow-connector"></div>
+        </div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Claude에게 인제스트 요청</div>
+          <div class="flow-step-desc">
+            Claude Code에서 <code>/ingest</code> 스킬 실행 후:<br><br>
+            <code>"raw/articles/[파일명].md 인제스트해줘"</code><br>
+            <code>"AI News/[파일명].md wiki에 추가해줘"</code><br>
+            <code>"[URL] 인제스트해줘"</code> (URL 직접도 가능)<br><br>
+            <span style="color:var(--text-dim); font-size:.8rem">→ 배치 인제스트도 가능: "raw/articles/ 안에 있는 거 다 인제스트해줘"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-dot dot-3">3</div>
+          <div class="flow-connector"></div>
+        </div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Claude가 wiki 업데이트 (자동)</div>
+          <div class="flow-step-desc">
+            Claude가 알아서 처리하는 것들:<br>
+            → <code>wiki/sources/[slug].md</code> 요약 페이지 생성<br>
+            → <code>wiki/index.md</code> 업데이트<br>
+            → 관련 <code>wiki/concepts/</code>, <code>wiki/entities/</code> 페이지 생성/업데이트<br>
+            → <code>wiki/domains/</code> 도메인 페이지 업데이트<br>
+            → <code>wiki/log.md</code>에 기록<br><br>
+            <span style="color:var(--text-dim); font-size:.8rem">소스 1개 → 보통 5~15개 wiki 파일에 영향</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-line">
+          <div class="flow-dot dot-4">4</div>
+        </div>
+        <div class="flow-step-body">
+          <div class="flow-step-title">Obsidian에서 결과 확인</div>
+          <div class="flow-step-desc">
+            Obsidian Graph View로 wiki 토폴로지 확인<br>
+            → 새 페이지들이 어떻게 연결됐는지 시각화<br><br>
+            <code>wiki/index.md</code> 읽어서 전체 목록 확인<br>
+            <code>wiki/log.md</code>에서 방금 한 인제스트 기록 확인<br><br>
+            궁금한 거 있으면: <code>/query "질문"</code>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="rules-section">
+    <div class="section-title">raw/ 사용 규칙</div>
+    <div class="section-sub">지키면 wiki가 깔끔하게 유지된다</div>
+
+    <div class="rules-grid">
+      <div class="rule-card ok">
+        <div class="rule-icon">✅</div>
+        <div class="rule-title">파일은 그대로 넣기</div>
+        <div class="rule-desc">원문을 수정하거나 요약하지 않고 그대로 저장. 요약은 Claude가 wiki에서 담당.</div>
+      </div>
+
+      <div class="rule-card no">
+        <div class="rule-icon">🚫</div>
+        <div class="rule-title">raw/를 직접 편집하지 않기</div>
+        <div class="rule-desc">Claude도, 사용자도 raw/ 파일을 나중에 수정하면 안 됨. 추가는 OK, 수정은 NO.</div>
+      </div>
+
+      <div class="rule-card ok">
+        <div class="rule-icon">📥</div>
+        <div class="rule-title">이미지는 raw/assets/에</div>
+        <div class="rule-desc">Obsidian 설정에서 attachment 폴더를 <code>raw/assets/</code>로 설정하면 자동 저장됨.</div>
+      </div>
+
+      <div class="rule-card no">
+        <div class="rule-icon">🚫</div>
+        <div class="rule-title">wiki/에 원본 넣지 않기</div>
+        <div class="rule-desc">wiki/는 합성 레이어. 원본 파일을 여기에 넣으면 레이어 구분이 무너짐.</div>
+      </div>
+
+      <div class="rule-card tip">
+        <div class="rule-icon">💡</div>
+        <div class="rule-title">인제스트 전에 미리 읽어도 OK</div>
+        <div class="rule-desc">raw/ 파일을 Obsidian에서 직접 읽어도 됨. 인제스트는 Claude가 wiki에 반영할 때만 필요.</div>
+      </div>
+
+      <div class="rule-card tip">
+        <div class="rule-icon">🔗</div>
+        <div class="rule-title">기존 폴더도 raw source</div>
+        <div class="rule-desc">AI News/, Cinema Studio/, Vibe Coding/ 폴더 파일들도 raw source. 새 파일은 raw/에 추가하는 게 더 정리됨.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Obsidian Settings -->
+  <section class="settings-section">
+    <div class="section-title">Obsidian 설정 — raw/assets/ 자동 저장</div>
+    <div class="section-sub">Web Clipper로 가져온 이미지가 raw/assets/에 자동 저장되도록</div>
+
+    <div class="settings-steps">
+      <div class="settings-step">
+        <div class="settings-step-num">1</div>
+        <div class="settings-step-content">
+          <div class="settings-step-title">Attachment 폴더 설정</div>
+          <div class="settings-step-path">
+            <span class="path-node">Settings</span>
+            <span class="path-sep">→</span>
+            <span class="path-node">Files and links</span>
+            <span class="path-sep">→</span>
+            <span class="path-node">Default location for new attachments</span>
+            <span class="path-sep">→</span>
+            <span class="path-node">In the folder specified below</span>
+          </div>
+          <div class="settings-step-note">Attachment folder path: <code>raw/assets</code></div>
+        </div>
+      </div>
+
+      <div class="settings-step">
+        <div class="settings-step-num">2</div>
+        <div class="settings-step-content">
+          <div class="settings-step-title">이미지 다운로드 단축키 설정 (선택)</div>
+          <div class="settings-step-path">
+            <span class="path-node">Settings</span>
+            <span class="path-sep">→</span>
+            <span class="path-node">Hotkeys</span>
+            <span class="path-sep">→</span>
+            <span class="path-node">"Download attachments for current file" 검색</span>
+          </div>
+          <div class="settings-step-note">권장 단축키: Ctrl+Shift+D — Web Clipper 후 한 번에 이미지 다운로드</div>
+        </div>
+      </div>
+
+      <div class="settings-step">
+        <div class="settings-step-num">3</div>
+        <div class="settings-step-content">
+          <div class="settings-step-title">Obsidian Web Clipper 설치</div>
+          <div class="settings-step-path">
+            <span class="path-node">Chrome / Firefox 확장 프로그램</span>
+            <span class="path-sep">→</span>
+            <span class="path-node">"Obsidian Web Clipper" 검색</span>
+          </div>
+          <div class="settings-step-note">기사 클리핑 시 저장 위치를 raw/articles/ 또는 AI News/로 지정</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Result Banner -->
+  <div class="result-banner">
+    <div class="result-icon">🗂️</div>
+    <div class="result-text">
+      <h3>한 줄 요약</h3>
+      <p>
+        <code>raw/</code>는 원본을 보관하는 곳. 사용자가 파일을 넣고, Claude에게 <code>/ingest</code>를 요청하면
+        Claude가 <code>wiki/</code>를 자동으로 업데이트한다.
+        raw/를 직접 편집하거나 wiki/에 원본을 넣지 않는 것이 핵심 규칙.
+        기존의 <code>AI News/</code>, <code>Cinema Studio/</code>, <code>Vibe Coding/</code> 폴더도 raw source로 취급된다.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+<canvas id="pikaCanvas"></canvas>
+<script type="module">
+let prepareWithSegments, layoutNextLine;
+try {
+  const m = await import('https://esm.sh/@chenglou/pretext@0.0.5');
+  prepareWithSegments = m.prepareWithSegments;
+  layoutNextLine = m.layoutNextLine;
+} catch (e) {
+  console.warn('pretext import failed, using canvas fallback', e);
+  const _mc = document.createElement('canvas').getContext('2d');
+  prepareWithSegments = (text, font) => ({ text, font, _fb: true });
+  layoutNextLine = (prepared, cursor, maxW) => {
+    _mc.font = prepared.font;
+    const txt = prepared.text;
+    if (cursor.segmentIndex >= txt.length) return null;
+    const start = cursor.segmentIndex;
+    let end = start;
+    let w = 0;
+    while (end < txt.length) {
+      const nw = _mc.measureText(txt.slice(start, end + 1)).width;
+      if (nw > maxW && end > start) break;
+      w = nw;
+      end++;
+    }
+    if (end === start) end = Math.min(start + 1, txt.length);
+    return {
+      text: txt.slice(start, end),
+      width: w || _mc.measureText(txt.slice(start, end)).width,
+      end: { segmentIndex: end, graphemeIndex: 0 }
+    };
+  };
+}
+
+await document.fonts.ready;
+
+const img = new Image();
+img.src = 'pikachu.png';
+await img.decode();
+
+const RES = 28;
+const PX = 4;
+const DISP = RES * PX;
+
+function extractBase(src) {
+  const c = document.createElement('canvas');
+  c.width = RES; c.height = RES;
+  const x = c.getContext('2d');
+  x.drawImage(src, 0, 0, RES, RES);
+  const id = x.getImageData(0, 0, RES, RES);
+  const d = id.data;
+  for (let i = 0; i < d.length; i += 4) {
+    if (d[i] > 225 && d[i + 1] > 225 && d[i + 2] > 225) d[i + 3] = 0;
+  }
+  x.putImageData(id, 0, 0);
+  return c;
+}
+
+function scaleUp(src) {
+  const big = document.createElement('canvas');
+  big.width = DISP; big.height = DISP;
+  const cx = big.getContext('2d');
+  cx.imageSmoothingEnabled = false;
+  cx.drawImage(src, 0, 0, DISP, DISP);
+  return big;
+}
+
+function flipCanvas(src) {
+  const c = document.createElement('canvas');
+  c.width = DISP; c.height = DISP;
+  const x = c.getContext('2d');
+  x.imageSmoothingEnabled = false;
+  x.translate(DISP, 0);
+  x.scale(-1, 1);
+  x.drawImage(src, 0, 0);
+  return c;
+}
+
+function makeFrame(base, legShift, bodyY) {
+  const out = document.createElement('canvas');
+  out.width = RES; out.height = RES;
+  const ox = out.getContext('2d');
+  const cut = Math.floor(RES * 0.72);
+  ox.drawImage(base, 0, 0, RES, cut, 0, bodyY, RES, cut);
+  if (legShift !== 0) {
+    ox.drawImage(base, 0, cut, RES, RES - cut, legShift, cut + bodyY, RES, RES - cut);
+  } else {
+    ox.drawImage(base, 0, cut, RES, RES - cut, 0, cut + bodyY, RES, RES - cut);
+  }
+  return scaleUp(out);
+}
+
+function makeTuck(base) {
+  const out = document.createElement('canvas');
+  out.width = RES; out.height = RES;
+  const ox = out.getContext('2d');
+  const cut = Math.floor(RES * 0.65);
+  ox.drawImage(base, 0, 0, RES, cut, 0, 0, RES, cut);
+  return scaleUp(out);
+}
+
+const baseCanvas = extractBase(img);
+
+const runLegShifts = [-2, -1, 0, 1, 2, 0];
+const runBobs = [0, -1, -0.5, 0, -1, -0.5];
+const runFrames = runLegShifts.map((ls, i) => makeFrame(baseCanvas, ls, runBobs[i]));
+const idleFrame = makeFrame(baseCanvas, 0, 0);
+const jumpFrame = makeTuck(baseCanvas);
+
+const sprR = { idle: idleFrame, run: runFrames, jump: jumpFrame };
+const sprL = {
+  idle: flipCanvas(sprR.idle),
+  run: sprR.run.map(f => flipCanvas(f)),
+  jump: flipCanvas(sprR.jump),
+};
+
+const canvas = document.getElementById('pikaCanvas');
+const ctx = canvas.getContext('2d');
+let W, H;
+
+function resize() {
+  const dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resize();
+window.addEventListener('resize', resize);
+
+const BUBBLE_FONT = 'bold 13px "Segoe UI", sans-serif';
+const BUBBLE_LH = 18;
+const BUBBLE_MAX_W = 140;
+const BUBBLE_TEXTS = [
+  'pretext는 DOM reflow 없이 텍스트를 측정합니다!',
+  'layoutNextLine()이 장애물을 피해 커서를 유지합니다.',
+  'prepareWithSegments()로 텍스트를 전처리합니다.',
+  'Canvas measureText + Intl.Segmenter 기반입니다.',
+  '순수 산술로 멀티라인 높이를 계산합니다!',
+  '가상 스크롤, 채팅 버블, Canvas 에디터에 활용됩니다.',
+  '성능 저하 없이 실시간 레이아웃이 핵심 강점입니다!',
+];
+let bubblePrepared = null;
+let bubbleIdx = 0;
+function getBubble() {
+  const text = BUBBLE_TEXTS[bubbleIdx % BUBBLE_TEXTS.length];
+  bubblePrepared = prepareWithSegments(text, BUBBLE_FONT);
+  return text;
+}
+getBubble();
+
+const dust = [];
+
+function spawnDust(x, y, count, spread, dir) {
+  for (let i = 0; i < count; i++) {
+    dust.push({
+      x: x + (Math.random() - 0.5) * spread,
+      y: y + Math.random() * 4,
+      vx: (Math.random() - 0.5) * 2 - dir * 0.5,
+      vy: -Math.random() * 2 - 0.5,
+      life: 12 + Math.random() * 10,
+      max: 22,
+      r: 1.5 + Math.random() * 2,
+    });
+  }
+}
+
+const NUM_PIKA = 3;
+
+class Pika {
+  constructor(isSpeaker) {
+    const m = DISP;
+    this.x = m + Math.random() * (W - m * 2);
+    this.y = m + Math.random() * (H - m * 2);
+    this.vx = 0;
+    this.vy = 0;
+    this.dir = Math.random() > 0.5 ? 1 : -1;
+    this.state = 'idle';
+    this.speed = 1.8 + Math.random() * 1.2;
+    this.frame = 0;
+    this.frameTick = 0;
+    this.idleTime = 0;
+    this.nextAction = 30 + Math.random() * 90;
+    this.isSpeaker = isSpeaker;
+    this.bob = Math.random() * Math.PI * 2;
+    this.showBubble = false;
+    this.bubbleTimer = 0;
+    this.bubbleCD = isSpeaker ? 60 : 99999;
+    this.scale = isSpeaker ? 1 : (0.75 + Math.random() * 0.25);
+    this.arriving = false;
+  }
+
+  pickTarget(tx, ty) {
+    const m = DISP * this.scale * 0.6;
+    this.tx = tx ?? (m + Math.random() * (W - m * 2));
+    this.ty = ty ?? (m + Math.random() * (H - m * 2));
+    this.dir = this.tx > this.x ? 1 : -1;
+    this.state = 'running';
+    this.arriving = false;
+  }
+
+  update() {
+    this.bob += 0.1;
+    const half = DISP * this.scale / 2;
+
+    if (this.state === 'idle') {
+      this.idleTime++;
+      this.vx *= 0.85;
+      this.vy *= 0.85;
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (this.isSpeaker) {
+        if (this.bubbleCD > 0) this.bubbleCD--;
+        if (!this.showBubble && this.bubbleCD <= 0 && this.idleTime > 25) {
+          this.showBubble = true;
+          this.bubbleTimer = 220;
+          bubbleIdx++;
+          getBubble();
+        }
+        if (this.showBubble) {
+          this.bubbleTimer--;
+          if (this.bubbleTimer <= 0) {
+            this.showBubble = false;
+            this.bubbleCD = 100 + Math.random() * 80;
+          }
+        }
+      }
+
+      if (this.idleTime >= this.nextAction) {
+        this.pickTarget();
+      }
+    } else if (this.state === 'running') {
+      const dx = this.tx - this.x;
+      const dy = this.ty - this.y;
+      const dist = Math.hypot(dx, dy);
+
+      if (dist < 6) {
+        this.state = 'idle';
+        this.idleTime = 0;
+        this.nextAction = this.arriving ? 80 + Math.random() * 60 : 40 + Math.random() * 80;
+        this.vx = 0;
+        this.vy = 0;
+        spawnDust(this.x, this.y + half * 1.5, 5, 16, this.dir);
+        if (this.arriving && this.isSpeaker) {
+          this.showBubble = true;
+          this.bubbleTimer = 250;
+          bubbleIdx++;
+          getBubble();
+          this.bubbleCD = 0;
+        }
+      } else {
+        const spd = this.speed * (this.arriving ? 1.3 : 1);
+        const targetVx = (dx / dist) * spd;
+        const targetVy = (dy / dist) * spd;
+        this.vx += (targetVx - this.vx) * 0.12;
+        this.vy += (targetVy - this.vy) * 0.12;
+
+        const brake = dist < 60 ? dist / 60 : 1;
+        this.x += this.vx * brake;
+        this.y += this.vy * brake;
+
+        if (Math.abs(this.vx) > 0.2) this.dir = this.vx > 0 ? 1 : -1;
+
+        this.frameTick++;
+        if (this.frameTick % 4 === 0) this.frame = (this.frame + 1) % runFrames.length;
+
+        if (this.frameTick % 7 === 0) {
+          spawnDust(this.x - this.dir * 8, this.y + half * 1.4, 1, 6, this.dir);
+        }
+      }
+    }
+
+    this.x = Math.max(half, Math.min(W - half, this.x));
+    this.y = Math.max(half, Math.min(H - half, this.y));
+  }
+
+  onScroll(dy) {
+    if (this.state === 'idle') {
+      this.vy -= dy * 0.2;
+    }
+
+    const half = DISP * this.scale / 2;
+
+    if (this.y < -half * 2 || this.y > H + half * 2) {
+      if (dy > 0) {
+        this.y = -half * 0.5;
+      } else {
+        this.y = H + half * 0.5;
+      }
+      this.pickTarget(
+        half + Math.random() * (W - half * 2),
+        half * 2 + Math.random() * (H - half * 4)
+      );
+      this.arriving = true;
+      if (this.isSpeaker) {
+        this.showBubble = false;
+        this.bubbleTimer = 0;
+      }
+    } else if (this.y < half || this.y > H - half) {
+      if (this.state === 'idle') {
+        this.pickTarget(
+          half + Math.random() * (W - half * 2),
+          H * 0.3 + Math.random() * H * 0.4
+        );
+        this.arriving = true;
+      }
+    }
+  }
+}
+
+const pikas = [];
+for (let i = 0; i < NUM_PIKA; i++) {
+  pikas.push(new Pika(i === 0));
+}
+
+let lastScrollY = window.scrollY;
+window.addEventListener('scroll', () => {
+  const dy = window.scrollY - lastScrollY;
+  lastScrollY = window.scrollY;
+  if (Math.abs(dy) < 3) return;
+  for (const p of pikas) p.onScroll(dy);
+});
+
+function getSprite(p) {
+  const pool = p.dir === 1 ? sprR : sprL;
+  if (p.state === 'running') return pool.run[p.frame % pool.run.length];
+  return pool.idle;
+}
+
+function drawPika(p) {
+  const s = p.scale;
+  const d = DISP * s;
+
+  ctx.fillStyle = 'rgba(255,216,26,0.06)';
+  const ss = p.state === 'running' ? 0.9 + Math.sin(p.bob * 2) * 0.1 : 1;
+  ctx.beginPath();
+  ctx.ellipse(p.x, p.y + d * 0.44, d * 0.22 * ss, 3.5 * ss * s, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.save();
+  ctx.translate(p.x, p.y);
+  ctx.scale(s, s);
+  if (p.state === 'running') {
+    ctx.translate(0, Math.sin(p.bob * 3) * 2);
+  } else {
+    ctx.translate(0, Math.sin(p.bob) * 1.5);
+  }
+  ctx.shadowColor = 'rgba(255,216,26,0.2)';
+  ctx.shadowBlur = 18;
+  ctx.drawImage(getSprite(p), -DISP / 2, -DISP / 2);
+  ctx.shadowBlur = 0;
+  ctx.restore();
+}
+
+function drawBubble(p) {
+  if (!p.showBubble || !bubblePrepared) return;
+  const d = DISP * p.scale;
+  const bx = p.x + d * 0.4 * p.dir;
+  const by = p.y - d * 0.45;
+
+  ctx.font = BUBBLE_FONT;
+  ctx.textBaseline = 'top';
+
+  const lines = [];
+  let cursor = { segmentIndex: 0, graphemeIndex: 0 };
+  for (;;) {
+    const line = layoutNextLine(bubblePrepared, cursor, BUBBLE_MAX_W);
+    if (!line) break;
+    lines.push(line);
+    cursor = line.end;
+  }
+
+  let maxW = 0;
+  for (const l of lines) if (l.width > maxW) maxW = l.width;
+
+  const pad = 10;
+  const bw = maxW + pad * 2;
+  const bh = lines.length * BUBBLE_LH + pad * 2;
+  const rx = bx - bw / 2;
+  const ry = by - bh;
+
+  const alpha = Math.min(1, (220 - p.bubbleTimer + 1) / 20);
+  ctx.globalAlpha = alpha;
+
+  ctx.fillStyle = 'rgba(17,17,25,0.92)';
+  ctx.strokeStyle = 'rgba(255,216,26,0.35)';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(rx + 8, ry);
+  ctx.lineTo(rx + bw - 8, ry);
+  ctx.arcTo(rx + bw, ry, rx + bw, ry + 8, 8);
+  ctx.lineTo(rx + bw, ry + bh - 8);
+  ctx.arcTo(rx + bw, ry + bh, rx + bw - 8, ry + bh, 8);
+  ctx.lineTo(rx + 8, ry + bh);
+  ctx.arcTo(rx, ry + bh, rx, ry + bh - 8, 8);
+  ctx.lineTo(rx, ry + 8);
+  ctx.arcTo(rx, ry, rx + 8, ry, 8);
+  ctx.closePath();
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(bx - 4 * p.dir, ry + bh);
+  ctx.lineTo(bx - 10 * p.dir, ry + bh + 8);
+  ctx.lineTo(bx + 3 * p.dir, ry + bh);
+  ctx.closePath();
+  ctx.fill();
+
+  let ly = ry + pad;
+  for (const l of lines) {
+    ctx.fillStyle = '#FFF9C4';
+    ctx.fillText(l.text, rx + pad, ly);
+    ly += BUBBLE_LH;
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawDust() {
+  for (let i = dust.length - 1; i >= 0; i--) {
+    const d = dust[i];
+    d.x += d.vx;
+    d.y += d.vy;
+    d.vy += 0.06;
+    d.life--;
+    if (d.life <= 0) { dust.splice(i, 1); continue; }
+    ctx.globalAlpha = (d.life / d.max) * 0.45;
+    ctx.fillStyle = '#C8B060';
+    ctx.beginPath();
+    ctx.arc(d.x, d.y, d.r * (d.life / d.max), 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+
+function frame() {
+  ctx.clearRect(0, 0, W, H);
+  for (const p of pikas) p.update();
+  drawDust();
+  for (const p of pikas) drawPika(p);
+  for (const p of pikas) {
+    if (p.isSpeaker) drawBubble(p);
+  }
+  requestAnimationFrame(frame);
+}
+frame();
+</script>
+</body>
+</html>
