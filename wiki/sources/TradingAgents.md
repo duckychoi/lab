@@ -2,14 +2,17 @@
 title: TradingAgents — 멀티에이전트 LLM 주식거래 프레임워크
 type: source
 domain: ai-news
-tags: [ai-news, hf-paper, finance-ai, multi-agent, trading, LLM, reinforcement]
+tags: [ai-news, hf-paper, github-trending, finance-ai, multi-agent, trading, LLM, reinforcement]
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-04-28
 sources: []
-reliability: medium
+reliability: high
 ---
 
-# TradingAgents (arXiv 2412.20138)
+# TradingAgents (arXiv 2412.20138 / GitHub ⭐54,163)
+
+**GitHub**: https://github.com/TauricResearch/TradingAgents  
+**스타수**: 54,163 (2026-04-28 기준, 오늘 +248)
 
 > [!insight] 핵심 인사이트
 > 실제 트레이딩 회사 구조(분석가, 리스크 매니저, 트레이더 등)를 멀티에이전트 LLM으로 모방. 누적수익률·샤프지수·최대낙폭 모두 기존 대비 우수. 역할 분리로 단일 LLM의 편향 완화 — "조직 구조가 AI 성능을 올린다"는 새 패러다임.

@@ -5,6 +5,7 @@ type: source
 source_type: huggingface
 url: https://huggingface.co/moonshotai/Kimi-K2.6
 date_ingested: 2026-04-22
+updated: 2026-04-25
 tags: [llm, moe, multimodal, moonshot, local-llm, image-text]
 ---
 
@@ -14,8 +15,8 @@ tags: [llm, moe, multimodal, moonshot, local-llm, image-text]
 Moonshot AI(月之暗面)의 1.1T 파라미터 멀티모달 MoE 모델. 출시 1일 만에 트렌딩 2위 진입.
 
 - **제작**: Moonshot AI
-- **다운로드**: 54,500 (출시 1일차, 2026-04-22 기준)
-- **likes**: 747
+- **다운로드**: 376,000 (2026-04-27 기준)
+- **likes**: 989
 - **파라미터**: 1.1T (MoE)
 
 ## 핵심 특징

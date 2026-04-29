@@ -4,6 +4,87 @@
 
 ---
 
+## [2026-04-29] ingest | GitHub Trending + HF 자동수집 (2026-04-29 일괄)
+- 도메인: ai-news (주)
+- 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+- 추가 페이지: 9개 | 업데이트 페이지: 4개
+  - sources 신규 (9): daily-stock-analysis, recursive-multi-agent, DV-World, test-driven-data-engineering, refinement-via-regeneration, meta-cot-image-editing, Qwen3-0.6B, Qwen2.5-7B-Instruct, DeepSeek-V3.2
+  - sources 스탯 업데이트 (4): VibeVoice(⭐43,576→45,300 +1,483), TradingAgents(⭐54,163→54,500 +932), GitNexus(⭐32,105→32,900 +1,607), awesome-codex-skills(⭐1,960→4,386 +953)
+  - index.md 업데이트 (total_pages: 212→221, total_sources: 197→206)
+  - raw.md 전량 삭제 완료
+- 핵심 인사이트: GitNexus(+1,607 당일)·VibeVoice(+1,483 당일)의 급성장 — 코드 지식 그래프 + 로컬 음성 AI가 2026-04 최대 관심사. Qwen3-0.6B(18.5M DL/월)·Qwen2.5-7B-Instruct(12.8M DL/월)·DeepSeek-V3.2(11.3M DL/월) — 엣지/로컬 추론 수요가 압도적으로 커지는 중. daily-stock-analysis(LLM+멀티채널 주식 분석)는 금융-AI 도메인 실전 적용 패턴의 표준화 사례.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-04-28] ingest | GitHub Trending + HF 자동수집 (2026-04-28 일괄)
+- 도메인: ai-news (주)
+- 처리 항목: 총 14개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3 + 스탯 업데이트 1)
+- 추가 페이지: 6개 | 업데이트 페이지: 8개
+  - sources 신규 (6): DeepSeek-V3, ClawMark, SkillsToTalent, World-R1, ReVSI, VLA-Safety
+  - sources 스탯 업데이트 (8): VibeVoice(GitHub 43K 공개 → reliability 상향), TradingAgents(GitHub ⭐54,163 추가), mattpocock-skills(⭐23,518→32,812), GitNexus(⭐30,152→32,105), Qwen3.6-27B(330K→509K DL), DeepSeek-V4-Pro(174K DL 추가), openai-privacy-filter(1.9K→57.7K DL)
+  - 이미 최신 상태 스킵 (없음)
+  - index.md 업데이트 (total_pages: 206→212, total_sources: 191→197)
+  - raw.md 전량 삭제 완료
+  - ai-news.md 도메인 업데이트 없음 (스탯 업데이트 위주)
+- 핵심 인사이트: microsoft/VibeVoice(⭐43K)로 VibeVoice가 논문→오픈소스 코드 공개 완료 — ElevenLabs 대체 실험 가능한 단계. mattpocock/skills(+5,645 당일, 총 32K)는 AI 코딩 스킬 생태계에서 TypeScript/프론트엔드 벡터가 빠르게 성장 중. DeepSeek-V3(⭐103K 돌파)가 오픈소스 LLM 기준점으로 고착화 — V3→V4-Pro 시리즈가 중국 AI 최전선. SkillsToTalent(조직 구조로 에이전트 성능 향상)는 TradingAgents의 "역할 분리 패러다임"을 일반화.
+- canvas 업데이트: NO
+- actionable 추가: YES (VibeVoice 로컬 테스트 → ElevenLabs 대체 실험 즉시 가능)
+
+---
+
+## [2026-04-27] ingest | GitHub Trending + HF 자동수집 (2026-04-26~27 일괄)
+- 도메인: ai-news (주)
+- 처리 항목: 총 27개 (GitHub Trending 9 + HF 논문 10 + HF 모델 8)
+- 추가 페이지: 10개 | 업데이트 페이지: 7개
+  - sources 신규 (10): rlm, mattpocock-skills, trycua-cua, beads, awesome-codex-skills, GitNexus, VLAA-GUI, TingIS, Context-Unrolling, DeepSeek-V4-Flash
+  - sources 스탯 업데이트 (7): free-claude-code(⭐10,167→12,012), ml-intern(⭐5,743→6,473), Kronos(⭐17,996→21,524), open-webui(⭐133,530→134,166), Kimi-K2.6(292K→376K DL), Qwen3.6-27B(258K→330K DL), Qwen3.6-35B-A3B(583K→1.18M DL)
+  - 이미 인덱스 등재·파일 존재 스킵 (10): LLaTiSA, WorldMark, UniT-Humanoid-Policy, StyleID-Facial-Identity, Co-Evolving-LLM-Agents, Seeing-Fast-and-Slow, Hybrid-Policy-Distillation, DeepSeek-V4-Pro, openai-privacy-filter, Qwen3.6-35B-A3B
+  - index.md 업데이트 (total_pages: 196→206, total_sources: 181→191)
+  - raw.md 전량 삭제 완료
+  - ai-news.md 도메인 2026-04-26/27 섹션 추가
+- 핵심 인사이트: mattpocock/skills(+2,519 당일)·awesome-codex-skills(+517)·awesome-agent-skills(기존) — 에이전트 스킬 허브가 Claude/Codex/다중 플랫폼별로 독립 형성되며 플랫폼 선택이 스킬 생태계 선택으로 연결되는 잠금 효과 발생. GitNexus(⭐30K, 서버리스 코드 지식 그래프)는 프라이버시 친화적 코드 인텔리전스의 첫 대형 후보. Qwen3.6-35B-A3B 다운로드 583K→1.18M(+102%)은 MoE 효율 구조가 로컬 추론 표준으로 굳어지는 중.
+- canvas 업데이트: NO
+- actionable 추가: NO (mattpocock-skills .claude/ 통합·GitNexus 테스트 기존 목록에 흡수)
+
+## [2026-04-26] check | 대기 항목 없음
+- raw.md 확인 결과 인제스트 대기 항목 없음
+
+## [2026-04-25] ingest | GitHub Trending + HF 자동수집 (2026-04-25 일괄)
+- 도메인: ai-news (주)
+- 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+- 추가 페이지: 4개 | 업데이트 페이지: 5개
+  - sources 신규 (4): Open-Generative-AI, DeepEP, LLaTiSA, Co-Evolving-LLM-Agents
+  - sources 스탯 업데이트 (5): free-claude-code(⭐6,208→10,167), ml-intern(⭐4,371→5,743), claude-context(⭐6,953→9,167), Kimi-K2.6(54K→292K DL), Qwen3.6-27B(510→764 likes, 258K DL)
+  - 이미 인덱스 등재·파일 존재 스킵 (4): WorldMark, UniT-Humanoid-Policy, StyleID-Facial-Identity, DeepSeek-V4-Pro
+  - index.md 업데이트 (total_pages: 192→196, total_sources: 177→181)
+  - raw.md 전량 삭제 완료
+  - ai-news.md 도메인 2026-04-25 섹션 추가
+- 핵심 인사이트: free-claude-code가 하루 만에 6K→10K 스타 돌파 + ml-intern GitHub Trending 진입(+2,985) — Claude Code 무료화 수요와 HuggingFace 에이전트 생태계가 동시에 폭발. DeepEP(DeepSeek MoE expert-parallel 통신 최적화)는 DeepGEMM에 이은 MoE 인프라 오픈소스화 시리즈 2탄 — MoE가 표준이 될수록 이 스택의 가치 상승. Co-Evolving-LLM-Agents(에이전트+스킬 뱅크 공진화)는 SkillClaw와 함께 에이전트 자기진화가 연구 주류임을 재확인.
+- canvas 업데이트: NO
+- actionable 추가: NO (Open-Generative-AI 로컬 테스트 기존 목록에 흡수, DeepEP + DeepGEMM 조합 테스트 기존 인프라 목록에 흡수)
+
+---
+
+## [2026-04-23] ingest | GitHub Trending + HF 자동수집 (2026-04-23 일괄)
+- 도메인: ai-news (주), video-saas 교차 (Pixelle-Video, ReImagine), slam-3dgs 교차 (Spatial-Intelligence, DeVI), local-llm 교차 (Qwen3.6-27B, Qwen3.6-27B-GGUF)
+- 처리 항목: 총 33개 (GitHub Trending 13 + HF 논문 10 + HF 모델 10)
+- 추가 페이지: 14개 | 업데이트 페이지: 12개
+  - sources 신규 (14 파일, 24개 항목):
+    - 개별 파일 (13): open-webui, langfuse, claude-code-templates, last30days-skill, vercel-skills, swarms, Pixelle-Video, shannon, LLaDA2.0-Uni, DR-Venus, Qwen3.6-27B, openai-privacy-filter, Qwen3.6-27B-GGUF
+    - 배치 파일 (1): 2026-04-23-papers-batch (Near-Future-Policy-Optimization, Reward-Hacking-Large-Models, Spatial-Intelligence-Generative, WavAlign, SWE-chat, Scaling-Test-Time-Agentic-Coding, ReImagine, Cortex-2.0, DeVI 9개 포함)
+  - sources 스탯 업데이트 (12): RAG-Anything(⭐17,722), claude-context(⭐7,857), worldmonitor(⭐51,894), TrendRadar(⭐54,687), RuView(⭐49,483), Qwen3.6-35B-A3B(583K DL), Kimi-K2.6(54.5K DL), HY-World-2.0(557 likes), Gemma-4-31B(5.1M DL), GLM-5.1(183K DL, 1.47K likes)
+  - 미처리 스킵 (2): MiniMax-M2.7(416K — 변화 없음), Qwen3.6-35B-A3B-GGUF(1.1M — 변화 없음)
+  - index.md 업데이트 (total_pages: 168→182, total_sources: 146→167)
+  - raw.md 전량 삭제 완료
+  - ai-news.md 도메인 2026-04-23 섹션 추가
+- 핵심 인사이트: open-webui(⭐133K) + langfuse(⭐25K) + openai-privacy-filter(OpenAI 공개) = 로컬 LLM 앱의 UI·관측성·안전 3대 인프라가 하루에 완성된 신호. Claude Code 에코시스템이 설정(andrej-karpathy-skills) → 모니터링(claude-code-templates) → 메모리(claude-mem) → 스킬(last30days-skill) 4계층으로 두터워지며 전환 비용 급상승 중. LLaDA2.0-Uni(확산 LLM, 85 upvotes)는 AR vs Diffusion 패러다임 논쟁 재점화 신호.
+- canvas 업데이트: NO
+- actionable 추가: NO (신규 actionable 없음, openai-privacy-filter → wiki 파이프라인 PII 필터 통합 기존 목록에 흡수)
+
+---
+
 ## [2026-04-22] ingest | GitHub Trending + HF 자동수집 (2026-04-21~22 일괄)
 - 도메인: ai-news (주), slam-3dgs 교차 (anyrecon)
 - 처리 항목: 총 26개 (2026-04-21 13개 + 2026-04-22 13개)
@@ -232,3 +313,19 @@
 - canvas 업데이트: NO
 - actionable 추가: NO (신규 actionable 없음, 기존 목록 유지)
 - raw.md 처리: 19개 항목 전량 삭제 완료
+
+## [2026-04-24] ingest | GitHub Trending + HF 자동수집 (2026-04-23~24 일괄)
+- 도메인: ai-news (주도메인)
+- 처리 항목: 44개 (2026-04-23: 31개 + 2026-04-24: 13개)
+- 추가 페이지: 10개 | 업데이트 페이지: 16개
+  - sources 신규: Terminal-Agent-Context-Compression, Visual-Reasoning-Tool-RL, free-claude-code, ml-intern, WorldMark, UniT-Humanoid-Policy, DeepSeek-V4-Pro, StyleID-Facial-Identity, Seeing-Fast-and-Slow, Hybrid-Policy-Distillation (10개)
+  - sources 업데이트 (스탯): TrendRadar(54,772), worldmonitor(52,015), RAG-Anything(18,456), claude-context(8,697), RuView(49,992), Kimi-K2.6(208K DL), Qwen3.6-35B-A3B(861K DL), Qwen3.6-GGUF(1.28M), MiniMax-M2.7(463K), Gemma-4-E4B(3M), VoxCPM2(81.7K), FinceptTerminal(13,533), LLaDA2.0-Uni(126 upvotes), Near-Future-Policy(36), DR-Venus(32) 등 다수
+  - domains 업데이트: ai-news.md (2026-04-23, 2026-04-24 섹션 추가)
+  - index.md 업데이트 (total_pages: 182→192, total_sources: 167→177)
+- 핵심 인사이트: DeepSeek-V4-Pro(862B) 공개 5시간 만에 HF 트렌딩 1위 + free-claude-code 하루 +2K 스타 — 가장 강력한 오픈소스 모델이 계속 공개되면서 유료 AI 도구 우회 수요도 폭발. "AI 인프라 민주화 가속" 시대 신호.
+- canvas 업데이트: NO
+- actionable 추가: YES (DeepSeek-V4-Pro API 테스트, ml-intern 로컬 실험)
+- raw.md 처리: 44개 항목 전량 삭제 완료
+
+## [2026-04-29] lint | 정기 대기열 점검
+- 대기 항목 없음

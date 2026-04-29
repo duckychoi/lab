@@ -14,7 +14,7 @@ tags: [llm, moe, multimodal, qwen, local-llm, image-text]
 Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 고효율 구조. HuggingFace 트렌딩 2위 (다운로드 기준).
 
 - **제작**: Alibaba Qwen Team
-- **다운로드**: 583,000 (2026-04-22 기준)
+- **다운로드**: 1,180,000 (2026-04-27 기준)
 - **likes**: 1,170
 - **파라미터**: 35.7B total / 3B activated (MoE)
 

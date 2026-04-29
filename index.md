@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-04-22 (ingest batch)
-total_pages: 168
-total_sources: 146
+updated: 2026-04-29 (ingest batch)
+total_pages: 221
+total_sources: 206
 ---
 
 # Wiki Index
@@ -59,21 +59,21 @@ total_sources: 146
 - [[HY-Embodied]] — 실세계 로봇용 소형 임베디드 모델 (arXiv 2604.07430)
 - [[OpenSpatial]] — 멀티모달 3D 공간 이해 데이터 엔진 (arXiv 2604.07296)
 - [[DMax]] — 확산 LLM 병렬 디코딩 가속 (arXiv 2604.08302)
-- [[Gemma-4-31B]] — Google 멀티모달 31B, Apache 2.0 (HF 4.47M 다운로드) *(UPDATED)*
-- [[GLM-5.1]] — Zhipu AI MoE 753B, 한국어+영어, MIT (HF 28.8K 다운로드, 트렌딩 1위)
+- [[Gemma-4-31B]] — Google 멀티모달 31B, Apache 2.0 (HF 5.1M 다운로드) *(UPDATED)*
+- [[GLM-5.1]] — Zhipu AI MoE 753B, 한국어+영어, MIT (HF 183K 다운로드, 1.47K likes) *(UPDATED)*
 - [[VOID-model]] — Netflix 비디오 객체 인페인팅, Apache 2.0
 - [[superpowers]] — Shell 기반 에이전트 스킬 프레임워크 (GitHub ⭐158,202, +10,679)
 - [[multica]] — 오픈소스 매니지드 에이전트 플랫폼 (GitHub ⭐8,427)
 - [[andrej-karpathy-skills]] — Karpathy 관찰 기반 Claude Code 최적화 CLAUDE.md (GitHub ⭐12,083) *(NEW)*
-- [[VibeVoice]] — Next-token diffusion 장시간 다화자 TTS (arXiv 2508.19205) *(NEW)*
-- [[TradingAgents]] — 멀티에이전트 LLM 주식거래 프레임워크 (arXiv 2412.20138) *(NEW)*
+- [[VibeVoice]] — Microsoft 오픈소스 STT/TTS 엔진 + Next-token diffusion 장시간 다화자 (GitHub ⭐43,576) *(UPDATED)*
+- [[TradingAgents]] — 멀티에이전트 LLM 주식거래 프레임워크 (arXiv 2412.20138 / GitHub ⭐54,163) *(UPDATED)*
 - [[TimesFM]] — 디코더 전용 시계열 예측 파운데이션 모델, Google Research (arXiv 2310.10688) *(NEW)*
 - [[MinerU2.5]] — 1.2B 문서 파싱 VLM, PDF/수식/표 SOTA (arXiv 2509.22186) *(NEW)*
 - [[Gemma-4-26B]] — Google Gemma 4 26B MoE (활성 4B), 멀티모달, HF 3.29M 다운로드 *(UPDATED)*
 - [[markitdown]] — Microsoft 오픈소스 전방위 문서→마크다운 변환기 (GitHub ⭐103,007)
 - [[rowboat]] — 지속 기억 기반 오픈소스 AI 동료 플랫폼 (GitHub ⭐11,922) *(NEW)*
 - [[ClawBench]] — AI 에이전트 일상 온라인 태스크 종합 벤치마크 (arXiv 2604.08523) *(NEW)*
-- [[Gemma-4-E4B]] — Google Gemma 4 E4B Any-to-Any 8B 멀티모달 (HF 1.14M 다운로드) *(NEW)*
+- [[Gemma-4-E4B]] — Google Gemma 4 E4B Any-to-Any 8B 멀티모달 (HF 3M 다운로드) *(UPDATED)*
 - [[Qwen3.5-Claude-Distilled]] — Claude 4.6 Opus 추론 → Qwen3.5 27B 증류 (HF 567K)
 - [[Gemma-4-31B-JANG_4M-CRACK]] — Gemma-4 커뮤니티 파인튠, 이미지-텍스트 멀티모달 (HF 99.1K, 검증 필요) *(NEW)*
 - [[flash-attention]] — 메모리 효율 정확 어텐션 CUDA 구현, LLM 인프라 표준 (GitHub ⭐23,304) *(NEW)*
@@ -98,7 +98,7 @@ total_sources: 146
 - [[StripsAsTokens]] — 기하학 스트립 토큰화 + 네이티브 UV 분할 3D 메시 생성 (arXiv 2604.09132, upvotes 33) *(NEW)*
 - [[PseudoUnification]] — 통합 멀티모달 모델 엔트로피 프로빙, HKUST (arXiv 2604.10949, upvotes 31) *(NEW)*
 - [[Uni-ViGU]] — 확산 기반 영상 생성+이해 통합 단일 프레임워크 (arXiv 2604.08121, upvotes 33) *(NEW)*
-- [[MiniMax-M2.7]] — MiniMax 229B MoE 텍스트 생성 모델 (HF 358,000 다운로드) *(UPDATED)*
+- [[MiniMax-M2.7]] — MiniMax 229B MoE 텍스트 생성 모델 (HF 463,000 다운로드) *(UPDATED)*
 - [[hierarchical-svg-tokenization]] — SVG 계층 토크나이징 LLM 생성, Tencent Hunyuan (HF 업보트 224) *(NEW)*
 - [[block-diffusion-speculative-decoding]] — 블록 확산 드래프트 트리 투기적 디코딩 가속 (HF 업보트 177) *(NEW)*
 - [[lary-benchmark]] — 비전-액션 정렬 잠재 행동 표현 벤치마크, Meituan (HF 업보트 18) *(NEW)*
@@ -118,14 +118,14 @@ total_sources: 146
 - [[occubench]] — 실세계 직업 전문 태스크 에이전트 평가, Qwen/Alibaba (HF 업보트 38) *(NEW)*
 - [[openai-agents-python]] — OpenAI 공식 멀티에이전트 워크플로우 프레임워크, 경량 설계 (GitHub ⭐24,205) *(UPDATED)*
 - [[cognee]] — AI 에이전트 메모리를 6줄 코드로 구성하는 그래프 기반 지식 엔진 (GitHub ⭐15,974) *(NEW)*
-- [[HY-World-2.0]] — 단일 멀티모달 모델로 3D 세계 재구성·생성·시뮬레이션 통합 (HF upvote 77) *(UPDATED)*
+- [[HY-World-2.0]] — 단일 멀티모달 모델로 3D 세계 재구성·생성·시뮬레이션 통합 (557 likes) *(UPDATED)*
 - [[DR3-Eval]] — AI deep research 에이전트 재현 가능한 현실적 평가 프레임워크 (HF upvote 23) *(UPDATED)*
 - [[RAD-2]] — 생성기-판별기 구조에서 강화학습 확장 프레임워크 (HF upvote 23) *(UPDATED)*
 - [[HiVLA]] — 계층적 시각 기반 로봇 조작 시스템, VLA 실세계 정확도 향상 (HF upvote 16) *(UPDATED)*
 - [[ASGuard]] — 활성화 스케일링으로 Jailbreak 방어, 성능 저하 없이 안전성 강화 (HF upvote 17) *(UPDATED)*
 - [[HY-Embodied-0.5]] — Tencent 4B embodied AI 모델, 이미지-텍스트 입력 물리 세계 행동 계획 (HF 1,060) *(NEW)*
-- [[Qwen3.6-35B-A3B-GGUF]] — unsloth Qwen3.6-35B-A3B GGUF 양자화, llama.cpp 로컬 실행 최적화 (HF 1.1M 다운로드, local-llm) *(NEW)*
-- [[Qwen3.6-35B-A3B]] — Qwen MoE 멀티모달 36B, 활성 3B로 효율적 추론 (HF 트렌딩 1위, 458K 다운로드) *(UPDATED)*
+- [[Qwen3.6-35B-A3B-GGUF]] — unsloth Qwen3.6-35B-A3B GGUF 양자화, llama.cpp 로컬 실행 최적화 (HF 1.28M 다운로드, local-llm) *(UPDATED)*
+- [[Qwen3.6-35B-A3B]] — Qwen MoE 멀티모달 36B, 활성 3B로 효율적 추론 (HF 트렌딩, 1.18M 다운로드) *(UPDATED)*
 - [[omi]] — BasedHardware 화면+음성 멀티모달 오픈소스 AI 비서, 웨어러블 디바이스 연동 (GitHub ⭐10,022) *(UPDATED)*
 - [[how-to-fine-tune-reasoning-model]] — 교사-학생 협력 SFT 데이터 합성으로 추론 파인튜닝 효율 향상 (arXiv 2604.14164, upvote 21)
 - [[chrome-devtools-mcp]] — Chrome DevTools 공식 MCP 서버, 코딩 에이전트 브라우저 직접 제어·디버깅 (GitHub ⭐35,992) *(NEW)*
@@ -142,20 +142,20 @@ total_sources: 146
 - [[LeapAlign]] — ByteDance Seed, 플로우 매칭 모델 사후 정렬 2-스텝 궤적 (arXiv 2604.15311, upvote 7) *(NEW)*
 - [[OmniVoice]] — 다국어 고품질 TTS 모델, HF 1M+ 다운로드 (HF 트렌딩 3위)
 - [[deer-flow]] — ByteDance 장기 작업 수행 SuperAgent, 웹 리서치·코딩·콘텐츠 생성 자율 처리 (GitHub ⭐62,817) *(NEW)*
-- [[RuView]] — WiFi 신호 기반 DensePose 인체 자세 추정, 카메라 없이 벽 통과 실시간 감지 (GitHub ⭐48,549) *(UPDATED)*
+- [[RuView]] — WiFi 신호 기반 DensePose 인체 자세 추정, 카메라 없이 벽 통과 실시간 감지 (GitHub ⭐49,992) *(UPDATED)*
 - [[minimind]] — 64M 파라미터 GPT를 2시간 만에 처음부터 학습, LLM 내부 구조 실습 표준 (GitHub ⭐47,657) *(NEW)*
 - [[PersonaVLM]] — 사용자 페르소나 장기 기억 개인화 멀티모달 VLM 프레임워크 (arXiv 2604.13074, upvote 19) *(NEW)*
-- [[FinceptTerminal]] — AI·LLM 기반 금융 데이터 분석·투자 리서치 CLI 터미널 (GitHub ⭐12,144, +2,548 오늘) *(UPDATED)*
+- [[FinceptTerminal]] — AI·LLM 기반 금융 데이터 분석·투자 리서치 CLI 터미널 (GitHub ⭐13,533) *(UPDATED)*
 - [[CutYourLosses]] — 병렬 추론 불필요 경로 조기 제거 학습 기법, 추론 비용 절감 (arXiv 2604.16029, upvote 16) *(NEW)*
 - [[W-RAC]] — 웹 검색 특성 고려 청크 분할로 RAG 검색 정확도·비용 효율 개선 (arXiv 2604.04936, upvote 14) *(NEW)*
 - [[Qwen3.5-Omni]] — Qwen3.5 전방위 모달리티(텍스트·음성·이미지·비디오) 통합 모델 기술 보고서 (arXiv 2604.15804, upvote 9) *(NEW)*
 - [[MaximalBrainDamage]] — 부호 비트 플립으로 신경망 최대 손상 적대적 공격 연구 (NVIDIA, arXiv 2502.07408, upvote 8) *(NEW)*
 - [[ERNIE-Image]] — Baidu 8B Apache 2.0 텍스트-이미지 생성 모델, diffusers 기반 (HF 3,800 다운로드) *(NEW)*
-- [[worldmonitor]] — koala73, AI 기반 실시간 지정학 인텔리전스 대시보드 (GitHub ⭐50,611) *(UPDATED)*
-- [[TrendRadar]] — sansan0, AI 여론·트렌드 모니터링 + MCP 아키텍처 지원 (GitHub ⭐53,975) *(UPDATED)*
-- [[RAG-Anything]] — HKUDS, 멀티모달 올인원 RAG 프레임워크 텍스트+이미지+코드+테이블 (GitHub ⭐17,130) *(UPDATED)*
-- [[VoxCPM2]] — OpenBMB, 30개 언어 TTS + 음성 복제, Apache 2.0 (HF 66.6K 다운로드, 1,198 likes) *(NEW)*
-- [[Kimi-K2.6]] — Moonshot AI, 1.1조 파라미터 멀티모달 MoE 모델 (HF 트렌딩 2위, 736 likes, 8.2K DL) *(UPDATED)*
+- [[worldmonitor]] — koala73, AI 기반 실시간 지정학 인텔리전스 대시보드 (GitHub ⭐52,015) *(UPDATED)*
+- [[TrendRadar]] — sansan0, AI 여론·트렌드 모니터링 + MCP 아키텍처 지원 (GitHub ⭐54,772) *(UPDATED)*
+- [[RAG-Anything]] — HKUDS, 멀티모달 올인원 RAG 프레임워크 텍스트+이미지+코드+테이블 (GitHub ⭐18,456) *(UPDATED)*
+- [[VoxCPM2]] — OpenBMB, 30개 언어 TTS + 음성 복제, Apache 2.0 (HF 81.7K 다운로드, 1,198 likes) *(UPDATED)*
+- [[Kimi-K2.6]] — Moonshot AI, 1.1조 파라미터 멀티모달 MoE 모델 (HF 376K DL, 989 likes) *(UPDATED)*
 - [[Agent-World]] — ByteDance Seed, 에이전트 학습용 실세계 환경 합성 대규모 확장 (HF 데일리 1위, upvote 42) *(NEW)*
 - [[OneVL]] — Xiaomi Research, 단일 스텝 비전-언어 추론·계획 모델 (HF 데일리 2위, upvote 42) *(NEW)*
 - [[EasyVideoR1]] — 비디오 이해 RL 적용 단순화 프레임워크 (HF 데일리 5위, upvote 9) *(NEW)*
@@ -164,7 +164,7 @@ total_sources: 146
 - [[MultiWorld]] — HKU, 멀티에이전트 멀티뷰 비디오 월드 모델 (HF 데일리 4위, upvote 4) *(NEW)*
 - [[extending-one-step-image-gen]] — 클래스 레이블→텍스트 조건 1-step 이미지 생성 확장, 판별적 텍스트 표현 활용 (HF 데일리 1위 2026-04-21, upvote 70) *(NEW)*
 - [[ai-agents-for-beginners]] — Microsoft 공식 AI 에이전트 12강 Jupyter 실습 커리큘럼 (GitHub ⭐58,091) *(NEW)*
-- [[claude-context]] — Zilliz 코드베이스 시맨틱 검색으로 코딩 에이전트 컨텍스트 주입, Milvus 기반 (GitHub ⭐6,878) *(NEW)*
+- [[claude-context]] — Zilliz 코드베이스 시맨틱 검색으로 코딩 에이전트 컨텍스트 주입, Milvus 기반 (GitHub ⭐9,167) *(UPDATED)*
 - [[awesome-agent-skills]] — Claude Code·Cursor·Gemini CLI·Codex 호환 1000개+ 에이전트 스킬 큐레이션 (GitHub ⭐17,117) *(NEW)*
 - [[agentspex]] — UIUC ScaleML Lab 에이전트 명세·실행 언어 SPEX, 형식적 에이전트 행동 정의 (HF 데일리 1위 2026-04-22, upvote 44) *(NEW)*
 - [[tstars-tryon]] — Alibaba 다양한 패션 아이템 강건하고 사실적인 가상 피팅 시스템 (HF 데일리 2위 2026-04-22, upvote 29) *(NEW)*
@@ -172,6 +172,67 @@ total_sources: 146
 - [[cointeract]] — Alibaba 공간 구조화 공동 생성으로 물리 일관 인간-객체 상호작용 영상 합성 (HF 데일리 4위 2026-04-22, upvote 19) *(NEW)*
 - [[tempo-ttt]] — 대형 추론 모델 테스트 타임 트레이닝 스케일링, 추론 중 온라인 학습 (HF 데일리 5위 2026-04-22, upvote 17) *(NEW)*
 - [[gemma-4-e4b-obliterated]] — Gemma 4 4B abliteration + GGUF 양자화 커뮤니티 파인튠, 경량 무제한 로컬 추론 (HF 트렌딩 5위, 79K DL) *(NEW)*
+- [[open-webui]] — 오픈소스 AI 채팅 인터페이스, Ollama·OpenAI API 등 다양한 LLM 백엔드 통합 (GitHub ⭐133,530) *(NEW)*
+- [[langfuse]] — LLM 앱 오픈소스 관측성 플랫폼, 메트릭·평가·프롬프트 관리 통합 (GitHub ⭐25,791) *(NEW)*
+- [[claude-code-templates]] — Claude Code 설정·모니터링 CLI, 에이전트 코딩 워크플로 템플릿 모음 (GitHub ⭐24,971) *(NEW)*
+- [[last30days-skill]] — Reddit·X·YouTube·HN·Polymarket 멀티소스 자율 조사·종합 에이전트 스킬 (GitHub ⭐23,614) *(NEW)*
+- [[vercel-skills]] — Vercel Labs 공식 AI 에이전트용 오픈 스킬 레지스트리, npx 한 줄 설치 (GitHub ⭐15,695) *(NEW)*
+- [[swarms]] — 엔터프라이즈 프로덕션용 멀티에이전트 오케스트레이션 프레임워크 (GitHub ⭐6,471) *(NEW)*
+- [[Pixelle-Video]] — AIDC-AI, AI 기반 쇼트 영상 자동 생성 엔진, 입력→완성 영상 파이프라인 자동화 (GitHub ⭐5,983) *(NEW)*
+- [[shannon]] — KeygraphHQ, AI 화이트박스 웹 펜테스터, 소스코드 분석 후 공격 벡터 식별·익스플로잇 (GitHub ⭐39,847) *(NEW)*
+- [[LLaDA2.0-Uni]] — 확산 기반 LLM으로 멀티모달 이해·생성 단일 모델 통합 (HF 85 upvotes) *(NEW)*
+- [[DR-Venus]] — 10K 오픈 데이터로 훈련한 엣지 규모 딥 리서치 에이전트 (HF 25 upvotes) *(NEW)*
+- [[Near-Future-Policy-Optimization]] — 근미래 보상 예측 활용 강화학습 정책 최적화 신기법 (HF 19 upvotes) *(NEW)*
+- [[Reward-Hacking-Large-Models]] — 대형 모델 리워드 해킹 메커니즘·비정렬 현상 종합 분석 (HF 15 upvotes) *(NEW)*
+- [[Spatial-Intelligence-Generative]] — 생성 모델 관점 공간 추론 능력 탐색·벤치마크 (HF 10 upvotes) *(NEW)*
+- [[WavAlign]] — 적응형 하이브리드 후처리 훈련으로 음성 대화 모델 지능성·표현력 향상 (HF 9 upvotes) *(NEW)*
+- [[Scaling-Test-Time-Agentic-Coding]] — Meta AI, 에이전틱 코딩에서 테스트 시점 연산 확장 분석 *(NEW)*
+- [[ReImagine]] — 이미지 우선 합성 방식 고품질 인간 동작 영상 제어 생성 (HF 5 upvotes) *(NEW)*
+- [[SWE-chat]] — 실제 사용자가 코딩 에이전트와 상호작용한 자연발생 데이터셋 (HF 3 upvotes) *(NEW)*
+- [[Cortex-2.0]] — 실제 산업 현장 배포를 위한 세계 모델 그라운딩 방법론 (HF 3 upvotes) *(NEW)*
+- [[Qwen3.6-27B]] — Qwen3.6 27B 덴스 멀티모달 모델, 이미지-텍스트 이해·생성 (509K DL, 764 likes) *(UPDATED)*
+- [[openai-privacy-filter]] — OpenAI 공개 1B 토큰 PII 필터링 분류 모델, 57.7K DL *(UPDATED)*
+- [[DeepSeek-V3]] — DeepSeek 공식 MoE LLM 레포, 오픈소스 대형 언어 모델 기준점 (GitHub ⭐103,231) *(NEW)*
+- [[ClawMark]] — 멀티턴·멀티데이·멀티모달 AI 동료 에이전트 평가 벤치마크 (HF upvotes 80) *(NEW)*
+- [[SkillsToTalent]] — 이질적 에이전트를 실제 회사 구조로 조직화하는 멀티에이전트 협업 프레임워크 (HF upvotes 57) *(NEW)*
+- [[World-R1]] — 3D 제약 강화학습으로 텍스트→비디오 물리 일관성 향상 (HF upvotes 44) *(NEW)*
+- [[ReVSI]] — VLM 3D 공간 추론 평가 프레임워크 재구성 (HF upvotes 36) *(NEW)*
+- [[VLA-Safety]] — VLA 시스템 위협·도전·평가·방어 메커니즘 종합 조사 (HF upvotes 35) *(NEW)*
+- [[Qwen3.6-27B-GGUF]] — unsloth Qwen3.6 27B GGUF 양자화, 로컬 추론 최적화 (131,398 DL) *(NEW)*
+- [[DeVI]] — 합성 비디오 모방 학습으로 물리 기반 정밀 손-물체 상호작용 구현 (HF 12 upvotes) *(UPDATED)*
+- [[Terminal-Agent-Context-Compression]] — MAP Research Group, 관찰 컨텍스트 압축 자기진화형 터미널 에이전트 효율화 (HF 5 upvotes) *(NEW)*
+- [[Visual-Reasoning-Tool-RL]] — Amazon AGI, 도구 활용 강화학습으로 시각 추론 능력 향상 (HF 2 upvotes) *(NEW)*
+- [[Open-Generative-AI]] — Flux·Midjourney·Sora 등 200개+ 생성 AI 무검열 오픈소스 통합 플랫폼 (GitHub ⭐7,902, +842 오늘) *(NEW)*
+- [[DeepEP]] — DeepSeek 공식 MoE expert-parallel 통신 최적화 CUDA 라이브러리 (GitHub ⭐9,394) *(NEW)*
+- [[LLaTiSA]] — 시각 인식→의미 이해 계층화 시계열 추론 벤치마크 (arXiv 2604.17295) *(NEW)*
+- [[Co-Evolving-LLM-Agents]] — LLM 에이전트·스킬 뱅크 공진화로 장기 태스크 성능 향상 프레임워크 (arXiv 2604.20987) *(NEW)*
+- [[free-claude-code]] — Alishahryar1, 터미널·VSCode·Discord에서 Claude Code 무료 사용 프록시 (GitHub ⭐12,012) *(UPDATED)*
+- [[ml-intern]] — HuggingFace 공식 ML 엔지니어 에이전트, 논문 읽기·모델 학습·배포 자동화 (GitHub ⭐6,473) *(UPDATED)*
+- [[WorldMark]] — 인터랙티브 비디오 월드 모델 통합 벤치마크 스위트 (HF 27 upvotes) *(NEW)*
+- [[UniT-Humanoid-Policy]] — XPENG Robotics, 인간→휴머노이드 정책 학습 물리 언어 프레임워크 (HF 25 upvotes) *(NEW)*
+- [[DeepSeek-V4-Pro]] — DeepSeek 862B 플래그십 텍스트 생성 모델, HF 트렌딩 1위 (174K DL) *(UPDATED)*
+- [[StyleID-Facial-Identity]] — 스타일화 얼굴 신원 인식 인지 기반 데이터셋+메트릭 (HF 14 upvotes) *(NEW)*
+- [[Seeing-Fast-and-Slow]] — 빠른/느린 시간 인식 분리 학습 시각 모델, System 1/2 비디오 이해 (HF 11 upvotes) *(NEW)*
+- [[Hybrid-Policy-Distillation]] — LLM 추론 품질 유지 효율 정책 증류 하이브리드 방법론 (HF 8 upvotes) *(NEW)*
+- [[rlm]] — alexzhang13, 재귀적 언어 모델(RLM) 추론 plug-and-play 라이브러리 (GitHub ⭐3,916) *(NEW)*
+- [[mattpocock-skills]] — Matt Pocock, 실무 엔지니어용 Claude 에이전트 스킬 모음, .claude/ 즉시 적용 (GitHub ⭐32,812) *(UPDATED)*
+- [[trycua-cua]] — Computer-Use 에이전트 오픈소스 샌드박스·SDK·벤치마크 인프라 (GitHub ⭐14,360) *(NEW)*
+- [[beads]] — gastownhall, 코딩 에이전트용 메모리 업그레이드 레이어, 장기 기억 개선 (GitHub ⭐21,666) *(NEW)*
+- [[awesome-codex-skills]] — ComposioHQ, Codex CLI 실무 워크플로우 자동화 검증 스킬 큐레이션 (GitHub ⭐1,960, +517 당일) *(NEW)*
+- [[GitNexus]] — abhigyanpatwari, 서버 없이 클라이언트 사이드 코드베이스 지식 그래프 엔진 (GitHub ⭐32,105) *(UPDATED)*
+- [[VLAA-GUI]] — GUI 자동화 멈춤·복구·검색 판단 모듈형 에이전트 프레임워크 (arXiv 2604.21375) *(NEW)*
+- [[TingIS]] — 기업 규모 노이즈 인시던트 데이터 실시간 위험 이벤트 탐지 시스템 (arXiv 2604.21889) *(NEW)*
+- [[Context-Unrolling]] — 옴니 모달 모델 순차 컨텍스트 언롤링으로 멀티모달 처리 효율 개선 (arXiv 2604.21921) *(NEW)*
+- [[DeepSeek-V4-Flash]] — DeepSeek 158B 경량 고속 추론 최적화 텍스트 생성 모델 (HF 46K DL) *(NEW)*
+- [[daily-stock-analysis]] — ZhuLinsen, LLM 기반 A주·홍콩·미국 주식 일일 분석 자동화, 기술지표+뉴스감성+차금흐름 (GitHub ⭐32,300) *(NEW)*
+- [[recursive-multi-agent]] — 재귀적 구조 멀티 에이전트 시스템, 계층적 조율로 복잡 문제 해결 향상 (HF upvote 54) *(NEW)*
+- [[DV-World]] — 실세계 시나리오 AI 에이전트 데이터 시각화 생성·해석 능력 벤치마크 (HF upvote 33) *(NEW)*
+- [[test-driven-data-engineering]] — 테스트 주도 데이터 엔지니어링으로 원시 코퍼스에서 LLM 자기개선 데이터 자동 생성 (HF upvote 32) *(NEW)*
+- [[refinement-via-regeneration]] — 재생성을 통한 수정 공간 확대, 통합 멀티모달 모델 이미지 정제 성능 향상 (HF upvote 22) *(NEW)*
+- [[meta-cot-image-editing]] — 메타 체인오브생각으로 이미지 편집 세밀도+일반화 동시 개선, Tsinghua (HF upvote 22) *(NEW)*
+- [[Qwen3-0.6B]] — 0.6B 경량 Qwen3 텍스트 생성 모델, 소형 디바이스 배포·빠른 추론 최적화 (HF 18.5M DL/월) *(NEW)*
+- [[Qwen2.5-7B-Instruct]] — 7B 인스트럭션 튜닝, 코딩·수학·다국어 균형 성능, 로컬 배포 실용성 (HF 12.8M DL/월) *(NEW)*
+- [[DeepSeek-V3.2]] — DeepSeek 685B MoE 플래그십 텍스트 생성 최신 버전, MIT 라이선스 (HF 11.3M DL/월) *(NEW)*
 
 ---
 
@@ -179,7 +240,7 @@ total_sources: 146
 <!-- 도메인별 누적 인사이트 -->
 
 - video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석
-- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-04-11 업데이트)
+- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-04-23 업데이트)
 
 ---
 
