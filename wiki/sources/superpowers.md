@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-framework, shell, skills, open-source, software-methodology]
 created: 2026-04-11
-updated: 2026-04-12
+updated: 2026-05-01
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # obra/superpowers
 
 > [!insight] 핵심 인사이트
-> Shell 스크립트 기반으로 AI 에이전트에 "초능력(superpowers)"을 부여하는 프레임워크. 스타 147,523개(오늘 +1,591)로 에이전트 스킬 시장에서 압도적 존재감. 코드가 아닌 Shell 명령 조합으로 에이전트 능력 확장 — "AI 에이전트 + 유닉스 철학" 결합.
+> Shell 스크립트 기반으로 AI 에이전트에 "초능력(superpowers)"을 부여하는 프레임워크. 스타 174,000개(2026-04-30, +1,653)로 에이전트 스킬 시장에서 압도적 존재감. 코드가 아닌 Shell 명령 조합으로 에이전트 능력 확장 — "AI 에이전트 + 유닉스 철학" 결합.
 
 ## 핵심 인사이트
 
@@ -27,7 +27,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐⭐ — 스타 147,523개 (당일 +1,591), 소프트웨어 커뮤니티 검증됨
+- **신뢰도**: ⭐⭐⭐⭐ — 스타 174,963개 (당일 +1,591), 소프트웨어 커뮤니티 검증됨
 - **즉시 활용**: YES — Shell 환경만 있으면 바로 실험 가능
 - **6개월 영향력**: 에이전트 스킬 설계의 표준 참조 패턴이 될 가능성 높음
 - **대체 관계**: hermes-agent / LangChain 대비 훨씬 가볍고 언어 독립적
@@ -44,5 +44,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/obra/superpowers
-- 스타: 147,523 (2026-04-12 기준, +1,591 당일)
+- 스타: 174,000 (2026-04-30 기준, +1,653 당일)
 - 신뢰도: ⭐⭐⭐⭐

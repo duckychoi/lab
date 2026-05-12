@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, video-saas, short-video, pipeline, automation, aidc-ai]
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-05-07
 sources: []
 reliability: medium
 ---
@@ -12,10 +12,10 @@ reliability: medium
 # AIDC-AI/Pixelle-Video
 
 > [!insight] 핵심 인사이트
-> 입력(텍스트/이미지)부터 완성 쇼트 영상까지 파이프라인을 자동화하는 AI 엔진. 5K 스타로 신규 급부상. [[Seedance]] · [[Higgsfield]]와 경쟁하는 video-saas × ai-news 교차 도메인 항목.
+> 입력(텍스트/이미지)부터 완성 쇼트 영상까지 파이프라인을 자동화하는 AI 엔진. 12K 스타 돌파, 급성장 중. [[Seedance]] · [[Higgsfield]]와 경쟁하는 video-saas × ai-news 교차 도메인 항목.
 
 **GitHub**: https://github.com/AIDC-AI/Pixelle-Video  
-**스타**: ⭐5,983 (+308 오늘)  
+**스타**: ⭐12,394 (2026-05-06 기준, 이전 10,421)  
 **신뢰도**: ⭐⭐⭐
 
 ## 도메인별 추출 (video-saas 관점)

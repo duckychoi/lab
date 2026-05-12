@@ -4,6 +4,163 @@
 
 ---
 
+## [2026-05-11] ingest | GitHub Trending + HF 논문·모델 자동수집 (2026-05-11 일괄)
+- 도메인: ai-news (전체), local-llm (부), video-saas (부)
+- 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+  - **GitHub Trending 신규 (2개)**
+    - everything-claude-code(affaan-m ⭐178,846 +1,081, AI 코딩 에이전트 통합 하네스)
+    - omlx(jundot ⭐13,485 +185, Apple Silicon LLM 추론 서버 + SSD 캐싱)
+  - **GitHub Trending 스탯 업데이트 (3개)**
+    - financial-services(⭐17,876→19,584 +1,449), hello-agents(⭐45,203→47,169 +748 → *(UPDATED)*), UI-TARS-desktop(⭐31,655→32,567 +669)
+  - **HF 논문 신규 (5개)**
+    - R3-SQL(arXiv 2604.25325, BIRD-dev 75.03% Text-to-SQL SOTA)
+    - mean-mode-screaming(arXiv 2605.06169, DiT MMS 현상 규명 + 1000층 안정화)
+    - MACE-Dance(arXiv 2512.18181, 음악→댄스 영상 MoE 캐스케이드 SOTA)
+    - Gated-QKAN-FWP(arXiv 2605.06734, 양자 영감 FWP 12.5k 파라미터)
+    - DTap(arXiv 2605.04808, AI 에이전트 레드팀 플랫폼 14개 도메인)
+  - **HF 모델 스탯 업데이트 (3개)**
+    - Gemma-4-31B(8.89M→9.12M DL), Qwen3.6-35B-A3B(3.51M→3.86M DL), Qwen3.6-27B(1.77M→2.45M DL)
+  - **index.md 업데이트**: total_pages: 292→299, total_sources: 277→284
+  - **raw.md 전량 삭제 완료**
+- 추가 페이지: 7개 | 업데이트 페이지: 6개
+  - sources 신규 (7): everything-claude-code, omlx, R3-SQL, mean-mode-screaming, MACE-Dance, Gated-QKAN-FWP, DTap
+  - sources 스탯 업데이트 (6): financial-services, hello-agents, UI-TARS-desktop, Gemma-4-31B, Qwen3.6-35B-A3B, Qwen3.6-27B
+- 핵심 인사이트: everything-claude-code ⭐178,846이 GitHub Trending 1위 — "AI 코딩 에이전트 설정 하네스"가 단순 개인 CLAUDE.md 공유를 넘어 커뮤니티 표준 자료집으로 자리잡았음 확인. DTap(14개 도메인 에이전트 레드팀 자동화)과 mean-mode-screaming(1000층 DiT 안정화)는 각각 에이전트 보안/영상 생성 스케일업 두 축의 인프라 연구가 성숙 단계 진입했음을 시사. Qwen3.6-27B 1.77M→2.45M DL(+38% 4일) — 덴스 27B가 MoE 35B/3B 대비 실사용 편의성으로 수요 급증.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-05-10] ingest | GitHub Trending + HF 논문·모델 자동수집 (2026-05-09 + 2026-05-10 통합 일괄)
+- 도메인: ai-news (전체), local-llm (부)
+- 처리 항목: 총 25개 (2026-05-09: 13개 + 2026-05-10: 12개)
+  - **신규 소스 파일 생성 (9개)**
+    - hello-agents(Datawhale ⭐45,203, 에이전트 튜토리얼 중문), CloakBrowser(⭐3,551, 봇감지 우회 Chromium)
+    - Skill1-Unified-Evolution(arXiv 2605.06130, upvote 58, RL 스킬 자동 진화)
+    - Beyond-Semantic-Similarity-Agentic-Search(arXiv 2605.05242, upvote 58, 에이전틱 검색 재정의)
+    - UI-TARS-desktop(ByteDance ⭐31,655, 멀티모달 에이전트 데스크탑), agentmemory(⭐3,715, 영속 메모리)
+    - SkillOS(arXiv 2605.06614, upvote 32, 자율 스킬 큐레이션)
+    - Judge-Orchestrated-LLM-Ensemble(arXiv 2605.04523, upvote 38), Audio-Visual-Intelligence(arXiv 2605.04045, upvote 26)
+  - **스탯 업데이트 (11개)**
+    - agent-skills(31K→36.5K), DeepSeek-TUI(20.6K→22.6K), local-deep-research(6.5K→6.9K)
+    - Gemma-4-31B(8.21M→8.89M DL), Qwen3.6-35B-A3B(3.21M→3.51M DL), Qwen3.6-35B-A3B-GGUF(2.1M→2.58M DL)
+    - financial-services(13K→17.9K), dive-into-llms(31.7K→36.7K)
+    - Sulphur-2-base(93K→144K DL), ZAYA1-8B(6.8K→44.8K DL), DeepSeek-V4-Pro(1.06M→1.34M DL)
+  - **이미 처리된 항목 (5개)** — 이전 배치에서 완료, raw.md에서만 제거
+    - MiA-Signature, MARBLE, continuous-latent-diffusion-lm, when-to-trust-imagination, nonsense-helps
+  - **index.md 업데이트**: total_pages: 283→292, total_sources: 268→277
+  - **raw.md 전량 삭제 완료**
+- 핵심 인사이트: 같은 날 Skill1(2605.06130)과 SkillOS(2605.06614) 두 논문이 동시 등장 — "에이전트가 스킬을 스스로 큐레이션·진화"가 2026년 5월 AI 연구 핵심 트렌드. 수동 스킬 설계([[agent-skills]] 36K star) 시대와 자율 진화 시대가 동시에 존재하는 전환점.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+## [2026-05-09] ingest | 대기 항목 없음
+
+## [2026-05-08] ingest | GitHub Trending + HF 논문·모델 자동수집 (2026-05-08 일괄)
+- 도메인: ai-news (전체), local-llm (부)
+- 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+  - **GitHub Trending 신규 (4개)**
+    - financial-services(Anthropic 공식, ⭐13,013 +1,343), local-deep-research(⭐6,480 +559), TabPFN(⭐6,859 +230), dflash(⭐3,617 +671)
+  - **GitHub Trending 업데이트 (1개)**
+    - DeepSeek-TUI(⭐16,640→20,630 +5,799)
+  - **HF 논문 신규 (5개)**
+    - MiA-Signature(2605.06416, Tencent 긴 컨텍스트), MARBLE(2605.06507, 디퓨전 RL 보상 균형), continuous-latent-diffusion-lm(2605.06548, 연속 잠재 디퓨전 LM), when-to-trust-imagination(2605.06222, 세계 모델 신뢰 판단), nonsense-helps(2605.05566, 프롬프트 노이즈 추론 향상)
+  - **HF 모델 신규 (1개)**
+    - ZAYA1-8B(Zyphra, 6,810 DL)
+  - **HF 모델 업데이트 (2개)**
+    - DeepSeek-V4-Pro(786,631→1.06M DL), Sulphur-2-base(55,500→93,000 DL)
+- 추가 페이지: 10개 | 업데이트 페이지: 3개
+  - sources 신규 (10): financial-services, local-deep-research, TabPFN, dflash, MiA-Signature, MARBLE, continuous-latent-diffusion-lm, when-to-trust-imagination, nonsense-helps, ZAYA1-8B
+  - sources 스탯 업데이트 (3): DeepSeek-TUI(⭐20,630), DeepSeek-V4-Pro(1.06M DL), Sulphur-2-base(93K DL)
+  - index.md 업데이트 (total_pages: 273→283, total_sources: 258→268)
+  - raw.md 전량 삭제 완료
+- 핵심 인사이트: Anthropic이 금융 서비스 공식 레포(⭐13,013)를 직접 공개 — 금융을 Claude 핵심 엔터프라이즈 버티컬로 공식화. DeepSeek-TUI ⭐4,990→20,630(+313% 4일)는 "터미널 AI 에이전트" 수요가 DeepSeek 생태계로 완전히 확산됐음을 확인. nonsense-helps는 프롬프트 노이즈가 추론 탐색 공간을 넓힌다는 반직관적 발견 — 즉시 현재 워크플로우에 적용 실험 가치 있음.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-05-07] ingest | GitHub Trending + HF 논문·모델 자동수집 (2026-05-06~07 일괄)
+- 도메인: ai-news (전체), slam-3dgs (부), video-saas (부)
+- 처리 항목: 총 26개 (GitHub 8 + HF 논문 10 + HF 모델 8)
+  - **2026-05-06 배치 (13개)**
+    - GitHub Trending 신규: agency-agents(⭐94,058), context-mode(⭐13,388), awesome-ai-apps(⭐11,694), cocoindex(⭐8,544)
+    - GitHub Trending 업데이트: Pixelle-Video(⭐10,421→12,394)
+    - HF 논문 신규: PRISM(업보트 30), X2SAM(업보트 14), WindowsWorld(업보트 9), HeavySkill(업보트 6), PatRe(업보트 4)
+    - HF 모델 업데이트: DeepSeek-V4-Pro(535K→786,631 DL), openai-privacy-filter(133K→155,500 DL)
+    - HF 모델 신규: Sulphur-2-base(55,500 DL)
+  - **2026-05-07 배치 (13개)**
+    - GitHub Trending 신규: agent-skills(⭐31,833)
+    - GitHub Trending 업데이트: DeepSeek-TUI(⭐4,990→16,640), ruflo(⭐42,196→45,632), dexter(⭐23,393→24,565), deer-flow(⭐62,817→65,770)
+    - HF 논문 신규: Stream-R1(업보트 96), Stream-T1(업보트 84), RLDX-1(업보트 66), HERMES++(업보트 63), PhysForge(업보트 20)
+    - HF 모델 업데이트: Qwen3.6-35B-A3B(2.88M→3.21M DL), Qwen3.6-27B(1.46M→1.77M DL)
+    - HF 모델 신규: LTX2.3-10Eros(28,215 DL)
+- 추가 페이지: 17개 | 업데이트 페이지: 9개
+  - sources 신규 (17): agency-agents, context-mode, awesome-ai-apps, cocoindex, PRISM, X2SAM, WindowsWorld, HeavySkill, PatRe, Sulphur-2-base, agent-skills, Stream-R1, Stream-T1, RLDX-1, HERMES-plus-plus, PhysForge, LTX2.3-10Eros
+  - sources 스탯 업데이트 (9): Pixelle-Video, DeepSeek-V4-Pro, openai-privacy-filter, DeepSeek-TUI, ruflo, dexter, deer-flow, Qwen3.6-35B-A3B, Qwen3.6-27B
+  - index.md 업데이트 (total_pages: 256→273, total_sources: 241→258)
+  - raw.md 전량 삭제 완료
+- 핵심 인사이트: agency-agents ⭐94,058은 "멀티에이전트 에이전시(역할·프로세스·결과물 명세화)" 패러다임이 2026-05 최대 수요임을 확인. DeepSeek-TUI ⭐4,990→16,640(+233% 하루)은 "터미널 AI 에이전트" 수요 폭발적 성장 지속. Stream-R1(업보트 96)·Stream-T1(업보트 84)은 "스트리밍 T2V + RL/TTS" 결합 연구가 video-saas 차세대 기술 방향임을 시사. cocoindex 증분 처리 패턴은 wiki 자동 수집 파이프라인 효율화에 직접 적용 가능.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-05-06] ingest | GitHub Trending + HF 논문·모델 자동수집 (2026-05-05 일괄)
+- 도메인: ai-news (전체)
+- 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+- 추가 페이지: 6개 | 업데이트 페이지: 7개
+  - sources 신규 (6): dexter, MolmoAct2, From-Context-to-Skills, OceanPile, ComboStoc, AcademiClaw
+  - sources 스탯 업데이트 (7): ruflo(⭐37,284→42,196 +2,598), TradingAgents(⭐63,735→68,332 +2,182), DeepSeek-TUI(⭐2,827→4,990 +1,274), jcode(⭐3,057→4,043 +548), Qwen3.6-27B(906K→1.46M DL), Qwen3.6-35B-A3B(2.6M→2.88M DL), Gemma-4-31B(8.2M→8.21M DL)
+  - index.md 업데이트 (total_pages: 250→256, total_sources: 235→241)
+  - raw.md 전량 삭제 완료
+- 핵심 인사이트: TradingAgents ⭐68,332(+4,597/이틀)·ruflo ⭐42,196(+4,912/3일) 지속 급성장 — "금융 멀티에이전트"와 "Claude 네이티브 오케스트레이션"이 2026-05 GitHub 최고 수요 카테고리. DeepSeek-TUI ⭐2,827→4,990(76% 이틀 성장)는 "터미널 AI 에이전트" 수요가 DeepSeek 생태계로도 확산 중임을 확인. From-Context-to-Skills 논문(업보트 58)은 에이전트 스킬 ICL 일반화 한계를 체계적으로 분석 — 스킬 시스템 설계 시 파인튜닝 없는 ICL 단독 의존 경계 필요.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-05-05] 대기 항목 없음
+
+---
+
+## [2026-05-04] ingest | GitHub Trending + HF + arXiv 자동수집 (2026-05-03~04 일괄)
+- 도메인: ai-news (주), slam-3dgs (부)
+- 처리 항목: 총 26개 (GitHub Trending 9 + arXiv 논문 10 + HF 모델 7)
+- 추가 페이지: 16개 | 업데이트 페이지: 9개
+  - sources 신규 (16): ruflo, browserbase-skills, n8n-mcp, ouroboros, DeepSeek-TUI, Nemotron-3-Nano-Omni, Step-level-Optimization, ViPO, Semi-DPO, FlashRT, UniVidX, Learning-while-Deploying, Skill-Text-to-Skill-Structure, Map2World, Online-Self-Calibration-VLMs, Mistral-Medium-3.5-128B
+  - sources 스탯 업데이트 (9): TradingAgents(⭐58,379→63,735), Pixelle-Video(⭐5,983→10,421), VoxCPM(⭐14,227→17,274), jcode(⭐2,014→3,057), Gemma-4-31B(2.89M→8.2M DL), Qwen3.6-35B-A3B(1.18M→2.6M DL), Qwen3.6-35B-A3B-GGUF(1.11M→2.1M DL), DeepSeek-V4-Pro(321K→535K DL), openai-privacy-filter(82.9K→133K DL)
+  - index.md 업데이트 (total_pages: 234→250, total_sources: 219→235)
+  - raw.md 전량 삭제 완료
+- 핵심 인사이트: TradingAgents ⭐63,735(+5,356/3일)·Pixelle-Video ⭐10,421(+4,438/3일)의 폭발적 성장 — "금융 멀티에이전트"와 "쇼트폼 영상 자동화 오픈소스"가 2026-05 최고 수요. Learning-while-Deploying(실배포 중 RL로 95% 성공률)은 "배포=학습 종료" 고정관념을 깨는 이정표. Gemma-4-31B가 2.89M→8.2M DL(2.8배 급성장)로 오픈소스 멀티모달 VLM 표준 모델로 굳어지는 중. n8n-mcp ⭐19,680은 "자연어로 n8n 자동화" 수요가 폭발적임을 확인.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-05-03] wiki | 대기 항목 없음
+- 대기 항목 없음
+
+---
+
+## [2026-05-01] ingest | GitHub Trending + HF 자동수집 (2026-05-01 일괄)
+- 도메인: ai-news (주), local-llm (부), slam-3dgs (부)
+- 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+- 추가 페이지: 7개 | 업데이트 페이지: 6개
+  - sources 신규 (7): craft-agents-oss, jcode, Claw-Eval-Live, RoundPipe, LenVM, Edit-R1, ExoActor
+  - sources 스탯 업데이트 (6): superpowers(⭐147K→174,963), TradingAgents(⭐54,163→58,379), warp-terminal(⭐46,560→50,282), Qwen3.6-27B(509K→906,859 DL), DeepSeek-V4-Pro(272K→321,492 DL), DeepSeek-V4-Flash(199K→281,356 DL)
+  - index.md 업데이트 (total_pages: 227→234, total_sources: 212→219)
+  - raw.md 전량 삭제 완료
+- 핵심 인사이트: Claw-Eval-Live의 66.7% 통과율 — 2026-05 현재 최강 프론티어 모델도 워크플로우 태스크의 1/3을 실패. 에이전트 파이프라인 설계 시 실패 핸들링은 선택이 아닌 필수. RoundPipe(RTX 4090 8장 → 235B LoRA 파인튜닝)는 "클라우드 없이 대형 모델 파인튜닝" 현실화의 이정표. Qwen3.6-27B가 509K→906,859 DL로 1주일 만에 2배 급성장 — Qwen3.6 시리즈가 오픈소스 멀티모달 기준 모델로 확고히 자리잡는 추세.
+- canvas 업데이트: NO
+- actionable 추가: NO
+
+---
+
+## [2026-05-01] ingest | 대기 항목 없음
+
+---
+
 ## [2026-04-29] ingest | GitHub Trending + HF 자동수집 (2026-04-29 일괄)
 - 도메인: ai-news (주)
 - 처리 항목: 총 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
@@ -329,3 +486,16 @@
 
 ## [2026-04-29] lint | 정기 대기열 점검
 - 대기 항목 없음
+
+## [2026-04-30] ingest | GitHub Trending + HF 자동수집 (2026-04-30 일괄)
+- 도메인: ai-news (전량)
+- 처리 항목: 13개 (GitHub Trending 5 + HF 논문 5 + HF 모델 3)
+- 추가 페이지: 6개 | 업데이트 페이지: 7개
+  - sources 신규: warp-terminal(⭐46,560), GLM-5V-Turbo(업보트 68), Turning-the-TIDE(업보트 32), ClawGym(업보트 28), Diffusion-Templates(업보트 5), Accelerating-RL-Post-Training(업보트 3) (6개)
+  - sources 업데이트 스탯: superpowers(174K), mattpocock-skills(46,841), VibeVoice(45,909), GitNexus(33,562), DeepSeek-V4-Pro(272K DL), DeepSeek-V4-Flash(199K DL), openai-privacy-filter(82.9K DL) (7개)
+  - domains 업데이트: ai-news.md (2026-04-30 섹션 추가)
+  - index.md 업데이트 (total_pages: 221→227, total_sources: 206→212)
+- 핵심 인사이트: DeepSeek-V4-Flash(199K DL)가 Pro(272K DL)에 버금가는 채택속도 — 엔지니어들이 "최강 모델"보다 "실배포 가능한 빠른 모델"을 선택. 터미널(warp +12,822 / day)이 에이전트 실행 레이어 경쟁장으로 부상. 에이전트 스킬 생태계는 방법론(superpowers 174K)→컬렉션(mattpocock 47K)→인프라(warp 47K) 3계층으로 분화 완료.
+- canvas 업데이트: NO
+- actionable 추가: NO
+- raw.md 처리: 13개 항목 전량 삭제 완료

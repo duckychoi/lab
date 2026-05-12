@@ -27,7 +27,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐ — 스타 14,227개, OpenBMB 연구팀 신뢰도 높음
+- **신뢰도**: ⭐⭐⭐ — 스타 17,274개, OpenBMB 연구팀 신뢰도 높음
 - **즉시 활용**: YES — reat-voice 파이프라인 ElevenLabs 비용 절감 후보
 - **6개월 영향력**: TTS API 비용 0으로 만드는 경쟁 압력. ElevenLabs 포지셔닝 위협
 - **대체 관계**: ElevenLabs / OpenAI TTS 대체 오픈소스 후보
@@ -42,5 +42,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/OpenBMB/VoxCPM
-- 스타: 14,227 (2026-04-10 기준, +496 당일)
+- 스타: 17,274 (2026-05-04 기준, +383 당일)
 - 신뢰도: ⭐⭐⭐

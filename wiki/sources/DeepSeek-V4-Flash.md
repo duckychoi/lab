@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, deepseek, local-llm, inference-speed, flash, 158B]
 created: 2026-04-27
-updated: 2026-04-27
+updated: 2026-05-01
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # deepseek-ai/DeepSeek-V4-Flash
 
 > [!insight] 핵심 인사이트
-> 158B 파라미터의 경량화된 DeepSeek-V4 Flash 버전 — 빠른 추론 속도 최적화 텍스트 생성 모델. HF 다운로드 **46,000**. [[DeepSeek-V4-Pro]](862B, HF 트렌딩 1위)의 경량 버전으로, Pro 대비 속도↑·비용↓ 포지셔닝.
+> 158B 파라미터의 경량화된 DeepSeek-V4 Flash 버전 — 빠른 추론 속도 최적화 텍스트 생성 모델. HF 다운로드 **281,356**. [[DeepSeek-V4-Pro]](862B, HF 트렌딩 1위)의 경량 버전으로, Pro 대비 속도↑·비용↓ 포지셔닝.
 
 ## 도메인별 추출 (ai-news)
 
@@ -30,5 +30,5 @@ reliability: high
 
 ## 원본
 - 출처: https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash
-- 다운로드: 46,000 (2026-04-27 기준)
+- 다운로드: 281,356 (2026-05-01 기준, 이전 199,000)
 - 신뢰도: ⭐⭐⭐⭐⭐ (DeepSeek 공식)

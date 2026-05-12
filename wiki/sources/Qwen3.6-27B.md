@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, local-llm, qwen, multimodal, image-text, alibaba]
 created: 2026-04-23
-updated: 2026-04-25
+updated: 2026-05-11
 sources: []
 reliability: high
 ---
@@ -12,10 +12,10 @@ reliability: high
 # Qwen/Qwen3.6-27B
 
 > [!insight] 핵심 인사이트
-> [[Qwen3.6-35B-A3B]](MoE 35B/활성 3B)의 덴스 27B 버전. 출시 2일 만에 258,000 다운로드·764 likes — Qwen 시리즈가 오픈소스 멀티모달 기준으로 자리잡은 상태에서 새 크기 버전 추가.
+> [[Qwen3.6-35B-A3B]](MoE 35B/활성 3B)의 덴스 27B 버전. 출시 후 빠른 성장세로 2.45M 다운로드 돌파. Qwen 시리즈가 오픈소스 멀티모달 기준으로 자리잡은 상태에서 새 크기 버전 추가.
 
 **HuggingFace**: https://huggingface.co/Qwen/Qwen3.6-27B  
-**다운로드**: 509,000 (2026-04-28 기준, 이전 330,000)  
+**다운로드**: 2,446,478 (2026-05-11 기준, 이전 1,771,851)  
 **Likes**: 764  
 **신뢰도**: ⭐⭐⭐⭐
 

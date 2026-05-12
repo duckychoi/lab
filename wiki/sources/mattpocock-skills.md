@@ -12,7 +12,7 @@ reliability: high
 # mattpocock/skills
 
 > [!insight] 핵심 인사이트
-> `.claude` 디렉토리에서 바로 사용 가능한 실무 검증 Claude 에이전트 스킬 컬렉션. GitHub ⭐**32,812 (+5,645 당일 최신, 이전 23,518)** — 하루 만에 2.5K 급상승. Matt Pocock(TypeScript 교육자·Total TypeScript 운영)이 제작한 점에서 TypeScript·프론트엔드 실무 맥락에 특화된 스킬이 다수 포함될 것으로 예상.
+> `.claude` 디렉토리에서 바로 사용 가능한 실무 검증 Claude 에이전트 스킬 컬렉션. GitHub ⭐**46,841 (+7,280 당일 최신, 이전 32,812)** — 하루 만에 2.5K 급상승. Matt Pocock(TypeScript 교육자·Total TypeScript 운영)이 제작한 점에서 TypeScript·프론트엔드 실무 맥락에 특화된 스킬이 다수 포함될 것으로 예상.
 
 ## 도메인별 추출 (ai-news)
 
@@ -32,5 +32,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/mattpocock/skills
-- 스타: ⭐23,518 (+2,519 당일, 2026-04-27 기준)
+- 스타: ⭐46,841 (+7,280 당일, 2026-04-30 기준)
 - 신뢰도: ⭐⭐⭐⭐ (Matt Pocock 공인 실무 검증)

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, openai, pii, privacy, filtering, classification, 1b]
 created: 2026-04-23
-updated: 2026-04-28
+updated: 2026-05-07
 sources: []
 reliability: high
 ---
@@ -15,7 +15,7 @@ reliability: high
 > OpenAI가 공개한 1B 토큰 분류 모델 — 텍스트 내 개인정보(PII) 필터링 전용. 출시 15시간 만에 374 likes. 프로덕션 LLM 앱의 데이터 처리 파이프라인에 즉시 통합 가능한 실용 도구.
 
 **HuggingFace**: https://huggingface.co/openai/privacy-filter  
-**다운로드**: 57,700 (2026-04-28 기준, 이전 1,890)  
+**다운로드**: 155,500 (2026-05-06 기준, 이전 133,000)  
 **Likes**: 374  
 **신뢰도**: ⭐⭐⭐⭐⭐
 

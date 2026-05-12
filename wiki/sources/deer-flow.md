@@ -12,11 +12,11 @@ reliability: high
 # bytedance/deer-flow
 
 > [!insight] 핵심 인사이트
-> ByteDance가 공개한 장기 작업 수행 SuperAgent — 웹 리서치·코딩·콘텐츠 생성을 샌드박스 환경에서 자율 처리. ⭐62,817로 deer-flow는 OpenAI의 Swarm, Anthropic의 Claude Code와 동급 공식 에이전트 프레임워크로 포지셔닝.
+> ByteDance가 공개한 장기 작업 수행 SuperAgent — 웹 리서치·코딩·콘텐츠 생성을 샌드박스 환경에서 자율 처리. ⭐65,770로 deer-flow는 OpenAI의 Swarm, Anthropic의 Claude Code와 동급 공식 에이전트 프레임워크로 포지셔닝.
 
 ## 도메인별 추출
 
-**신뢰도**: ⭐⭐⭐⭐⭐ (ByteDance 공식 레포, ⭐62,817, 오늘 +190)
+**신뢰도**: ⭐⭐⭐⭐⭐ (ByteDance 공식 레포, ⭐65,770, 오늘 +190)
 **즉시 활용**: YES — 웹 리서치 자동화, 장기 코딩 태스크에 즉시 투입 가능
 **6개월 영향력**: SuperAgent 패러다임(단일 에이전트→복합 에이전트 루프)의 기업급 구현체 표준 후보
 **대체 관계**: perplexity-deep-research, OpenAI Deep Research의 오픈소스 대안
@@ -43,5 +43,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/bytedance/deer-flow
-- 스타: ⭐62,817 (2026-04-20, +190)
+- 스타: ⭐65,770 (2026-04-20, +190)
 - 신뢰도: ⭐⭐⭐⭐⭐

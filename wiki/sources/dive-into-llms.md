@@ -12,12 +12,12 @@ reliability: high
 # Dive into LLMs (동手学大模型)
 
 > [!insight] 핵심 인사이트
-> 중국 최대 LLM 실습 튜토리얼 레포. 《动手学大模型》 Jupyter Notebook 기반 단계별 대형 언어 모델 직접 구현. GitHub ⭐31,035(당일 +1,385) — 교육용 LLM 자료 중 가장 실용적인 커리큘럼 제공.
+> 중국 최대 LLM 실습 튜토리얼 레포. 《动手学大模型》 Jupyter Notebook 기반 단계별 대형 언어 모델 직접 구현. GitHub ⭐36,665(2026-05-10 기준, 이전 31,035) — 교육용 LLM 자료 중 가장 실용적인 커리큘럼 제공.
 
 ## 핵심 인사이트
 
 **스펙:**
-- GitHub ⭐31,035 (당일 +1,385)
+- GitHub ⭐36,665 (2026-05-10 기준)
 - 형식: Jupyter Notebook 실습 튜토리얼
 - 언어: 중국어 (기술 내용은 언어 무관)
 - 내용: Transformer 구현 → 파인튜닝 → RLHF → RAG 전 과정

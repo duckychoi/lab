@@ -5,16 +5,17 @@ type: source
 source_type: huggingface
 url: https://huggingface.co/Qwen/Qwen3.6-35B-A3B
 date_ingested: 2026-04-22
+updated: 2026-05-11
 tags: [llm, moe, multimodal, qwen, local-llm, image-text]
 ---
 
 # Qwen3.6-35B-A3B
 
 ## 개요
-Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 고효율 구조. HuggingFace 트렌딩 2위 (다운로드 기준).
+Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 고효율 구조. HuggingFace 트렌딩 2위. **다운로드**: 3,858,503 (2026-05-11 기준, 이전 3,510,000).
 
 - **제작**: Alibaba Qwen Team
-- **다운로드**: 1,180,000 (2026-04-27 기준)
+- **다운로드**: 2,600,000 (2026-05-03 기준)
 - **likes**: 1,170
 - **파라미터**: 35.7B total / 3B activated (MoE)
 

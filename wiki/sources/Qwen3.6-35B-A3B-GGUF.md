@@ -14,7 +14,7 @@ tags: [llm, gguf, quantization, moe, local-llm, qwen]
 Qwen3.6-35B-A3B 모델의 GGUF 양자화 버전. llama.cpp 로컬 실행 최적화. HuggingFace 트렌딩 1위 (다운로드 기준).
 
 - **제작**: unsloth (베이스: Qwen/Qwen3.6-35B-A3B)
-- **다운로드**: 1,110,000 (2026-04-22 기준)
+- **다운로드**: 2,580,000 (2026-05-10 기준, 이전 2,100,000)
 - **likes**: 632
 - **포맷**: GGUF (llama.cpp 호환)
 

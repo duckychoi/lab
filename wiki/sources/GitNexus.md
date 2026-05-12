@@ -12,11 +12,11 @@ reliability: high
 # abhigyanpatwari/GitNexus
 
 > [!insight] 핵심 인사이트
-> 코드베이스를 지식 그래프로 인덱싱하는 Graph RAG 도구. 의존성·콜체인 분석 + 16개 MCP 툴 제공, 브라우저/CLI 완전 로컬 실행. GitHub ⭐32,900 (오늘 +1,607) — [[claude-context]](Zilliz)와 직접 경쟁.
+> 코드베이스를 지식 그래프로 인덱싱하는 Graph RAG 도구. 의존성·콜체인 분석 + 16개 MCP 툴 제공, 브라우저/CLI 완전 로컬 실행. GitHub ⭐33,562 (2026-04-30, +774) — [[claude-context]](Zilliz)와 직접 경쟁.
 
 ## 도메인별 추출
 
-**신뢰도**: ⭐32,900, 오늘 +1,607 급상승 → HIGH
+**신뢰도**: ⭐33,562, 2026-04-30 +774 → HIGH
 **즉시 활용**: YES — 로컬 실행, MCP 16개 툴로 Claude Code 즉시 연동 가능
 **6개월 영향력**: "코드베이스 이해" 문제를 그래프 구조로 해결 — [[claude-context]] 대비 의존성 분석 강점
 **대체 관계**: [[claude-context]] 대비 Graph RAG 방식으로 더 깊은 코드 관계 파악
@@ -30,4 +30,4 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/abhigyanpatwari/GitNexus
-- 신뢰도: ⭐⭐⭐ (⭐32,900)
+- 신뢰도: ⭐⭐⭐ (⭐33,562)

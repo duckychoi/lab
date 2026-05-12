@@ -12,7 +12,7 @@ reliability: high
 # microsoft/VibeVoice
 
 > [!insight] 핵심 인사이트
-> Microsoft가 TTS(1.5B)·ASR(7B)·실시간TTS(0.5B) 3모델 구성의 오픈소스 음성 AI 공개. 60분 음성 단일 패스 인식, 90분 다화자 음성 합성 지원. GitHub ⭐45,300 (오늘 +1,483) — 출시 당일 폭발적 반응.
+> Microsoft가 TTS(1.5B)·ASR(7B)·실시간TTS(0.5B) 3모델 구성의 오픈소스 음성 AI 공개. 60분 음성 단일 패스 인식, 90분 다화자 음성 합성 지원. GitHub ⭐45,909 (2026-04-30, +1,690) — 출시 당일 폭발적 반응.
 
 ## 도메인별 추출
 
@@ -36,4 +36,4 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/microsoft/VibeVoice
-- 신뢰도: ⭐⭐⭐ (⭐45,300, Microsoft 공식)
+- 신뢰도: ⭐⭐⭐ (⭐45,909, Microsoft 공식)
