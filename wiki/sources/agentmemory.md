@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-memory, coding-agent, typescript, persistent-memory, benchmark]
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-20
 sources: []
 reliability: medium
 ---
@@ -16,7 +16,7 @@ reliability: medium
 
 ## 도메인별 추출 (ai-news)
 
-- **신뢰도**: GitHub ⭐3,715 (+533 오늘) — 신생 레포, 주장 검증 필요. medium
+- **신뢰도**: GitHub ⭐14,564 (+1,609 오늘, 2026-05-20; 이전 ⭐9,289) — 빠른 성장세. medium
 - **즉시 활용**: 조건부 — TypeScript 에이전트 환경에서 즉시 통합 가능
 - **6개월 영향력**: 코딩 에이전트 메모리 레이어 표준화 경쟁의 주요 후보 중 하나
 - **대체 관계**: [[claude-mem]](⭐60K), [[beads]](⭐21K) 대비 후발주자. 벤치마크 차별화 시도
@@ -36,5 +36,5 @@ reliability: medium
 ## 원본
 
 - 출처: https://github.com/rohitg00/agentmemory
-- GitHub 스타: ⭐3,715 (+533, 2026-05-10)
+- GitHub 스타: ⭐14,564 (+1,609, 2026-05-20) [이전: ⭐9,289 (2026-05-15), ⭐8,382 (2026-05-14), ⭐3,715 (2026-05-10)]
 - 신뢰도: ⭐⭐ (신생 레포, 자체 벤치마크)

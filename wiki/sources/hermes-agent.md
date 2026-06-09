@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-framework, open-source, tools, memory, multi-step-reasoning]
 created: 2026-04-10
-updated: 2026-04-15
+updated: 2026-06-08
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # NousResearch/hermes-agent
 
 > [!insight] 핵심 인사이트
-> 확장 가능한 오픈소스 AI 에이전트 프레임워크. 도구 통합, 메모리 관리, 멀티스텝 추론을 통합 API로 제공. **2026-04-14 기준 스타 80,633개 (+8,735 today)** — 4일 연속 급상승 1위. 71,898 → 80,633 (+12%). 에이전트 프레임워크 채택 가속화 중.
+> 확장 가능한 오픈소스 AI 에이전트 프레임워크. 세션 간 메모리·스킬 자동생성·크론 스케줄러를 내장한 자기개선 에이전트; Telegram/Discord/Slack 등 메신저 게이트웨이와 200+ 모델 지원. **2026-06-08 기준 스타 187,000개** — ⭐87K(2026-04-15) → ⭐147K(2026-05-13) → ⭐184K(2026-06-06) → ⭐187K(2026-06-08), 지속 급상승 중.
 
 ## 핵심 인사이트
 
@@ -24,7 +24,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐⭐ — 스타 87,101개 (2026-04-15 기준), 당일 +8,301 (급상승 1위), NousResearch 신뢰도 높음
+- **신뢰도**: ⭐⭐⭐⭐⭐ — 스타 187,000개 (2026-06-08 기준), NousResearch 신뢰도 높음, ⭐87K(4월) → ⭐147K(5월) → ⭐184K(6월초) → ⭐187K(6/8), 약 2개월 만에 +115%
 - **즉시 활용**: YES — 오픈소스 에이전트 프레임워크, pip install 가능 수준
 - **6개월 영향력**: 에이전트 메모리 표준화 방향에 영향. [[local-llm]] 도메인과 교차점
 - **대체 관계**: LangChain/LlamaIndex 대체 후보. 더 가볍고 모듈화 구조
@@ -41,5 +41,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/NousResearch/hermes-agent
-- 스타: 80,633 (2026-04-14 기준, +8,735 today) ← 4일 연속 1위, 4일간 26,428 증가
+- 스타: 184,000 (2026-06-06 기준) ← ⭐87K(2026-04-15) → ⭐147K(2026-05-13) → ⭐184K(2026-06-06), 약 2개월 +111%
 - 신뢰도: ⭐⭐⭐⭐

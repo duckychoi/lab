@@ -4,8 +4,8 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-04-27
-sources: [instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md]
+updated: 2026-05-26
+sources: [instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
@@ -424,6 +424,148 @@ Claude Code 관련 툴이 하루에 3개 동시 트렌딩 — Claude Code가 개
 
 > [!insight] 핵심 인사이트
 > 2026-04-27 핵심: **GUI 에이전트가 "자율 실행"에서 "실패 인식·복구"로 연구 초점 이동 중 — VLAA-GUI가 그 신호.** 단순히 클릭을 자동화하는 것이 아니라, 언제 멈춰야 하는지를 아는 에이전트가 프로덕션 투입 가능한 수준. Kronos 금융 모델 스타 누적 +205%는 금융 AI가 니치에서 메인스트림으로 진입하는 임계점 신호.
+
+---
+
+---
+
+## 2026-05-14 업데이트: GitHub Trending + HF 수집
+
+### GitHub Trending — 로컬 AI 에이전트 + 스킬 생태계 확장
+
+**openhuman — Rust 기반 로컬 개인 AI 에이전트 급등**
+- [[openhuman]] (⭐6,774, **+1,696 오늘**) — tinyhumansai. Rust 구현, 프라이버시 중심, 외부 클라우드 없이 강력한 AI 기능 제공. Rust AI 에이전트 최초 대형 트렌딩.
+
+> [!insight] 핵심 인사이트
+> Rust 기반 로컬 AI 에이전트가 처음으로 GitHub 트렌딩 상위에 진입 — **AI 에이전트의 "탈중앙화 + Rust 성능 안전성" 결합 수요** 신호. [[omi]](웨어러블 AI)과 포지셔닝 유사하나 언어 차별화 명확.
+
+**agentmemory 급성장 (+130%)**
+- [[agentmemory]] (⭐8,382, +1,379 오늘) — 이전 ⭐3,715 → 현재 ⭐8,382 (+125% 4일). AI 코딩 에이전트 영속 메모리 #1 주장. [[claude-mem]], [[beads]], [[cognee]]와 함께 **에이전트 메모리 레이어 4강** 구도 고착.
+
+**과학·공학 특화 에이전트 스킬 (21K 스타)**
+- [[scientific-agent-skills]] (⭐21,394, +99 오늘) — K-Dense-AI. 연구·과학·공학·금융·작문 분야별 바로 쓰는 Python 스킬 모음. [[awesome-agent-skills]](17K)보다 스타 많은 점 주목.
+
+**개인 AI 인프라 프레임워크 — Daniel Miessler**
+- [[Personal_AI_Infrastructure]] (⭐13,581, +435 오늘) — Fabric 개발자 Daniel Miessler. TypeScript 기반, 에이전트 구조 인간 능력 증강. [[LLM-Wiki]] 철학과 유사한 "개인 AI 복리 축적" 방향.
+
+**LLMs-from-scratch 지속 성장**
+- [[llms-from-scratch]] (⭐94,675, +821 오늘) — ⭐94,100 → ⭐94,675. Sebastian Raschka 교육 레포, 거의 10만 스타 도달 임박.
+
+### HF Daily Papers (2026-05-14)
+
+**멀티모달 테이블 벤치마크 + LLM 인프라 + 영상 확산 클러스터**
+- [[MulTaBench]] — 텍스트+이미지 결합 멀티모달 테이블 학습 벤치마크 (upvotes 67). 실제 표 데이터에 이미지/텍스트 동시 처리 평가 표준화.
+- [[MinT]] — 수백만 LLM 훈련·서빙 관리형 인프라 설계 (upvotes 65). [[skypilot]] 방향과 학문적으로 수렴.
+- [[AnyFlow]] — NVIDIA, **임의 스텝 수 영상 생성** on-policy flow map distillation (upvotes 59). 품질-속도 트레이드오프 사용자 제어 가능 → video-saas 파이프라인 직접 영향.
+- [[Long-Context-VLM-Training]] — ByteDance Seed, **128K 토큰 초과 컨텍스트** VLM 훈련 (upvotes 43). 긴 영상 전체 한 번에 이해 가능성 열어줌.
+- [[AI-Agent-Decision-Prediction]] — 제한된 데이터로 에이전트 결정 예측 (upvotes 31). 에이전트 감사/안전성 인프라로 연결 가능.
+
+### HF 모델 트렌딩 스탯 업데이트 (2026-05-14)
+
+- [[Sulphur-2-base]] — 627,000 DL (이전 535K → +92K). T2V 오픈소스 지속 성장.
+- [[ZAYA1-8B]] — 131,000 DL (이전 110K → +21K). Zyphra 8B 언어 모델 채택 가속.
+- [[MiniCPM-V-4.6]] — 16,800 DL (신규 공개). OpenBMB 1B VLM — 소형 멀티모달 틈새.
+
+> [!insight] 핵심 인사이트
+> 2026-05-14 핵심: **"Rust 로컬 AI 에이전트(openhuman) + 과학 특화 스킬(scientific-agent-skills, 21K) + 개인 AI 인프라(Personal_AI_Infrastructure, 13K) + NVIDIA 임의 스텝 영상 생성(AnyFlow)"** 4종이 같은 날. 공통 신호: AI 에이전트의 전문화·개인화·현지화(로컬)가 동시에 가속 중. 특히 Rust 기반 AI 에이전트의 등장은 **성능과 메모리 안전성** 두 마리 토끼를 노리는 새 트렌드.
+
+---
+
+---
+
+## 2026-05-18 업데이트: GitHub Trending + HF 자동수집
+
+### GitHub Trending — 로컬 AI + 스킬 생태계 스탯 급등
+
+**openhuman ⭐14,939 (+1,690 당일) — Rust 로컬 에이전트 계속 가속**
+- [[openhuman]] — 이전 ⭐9,634에서 ⭐14,939로 +56% 성장. Rust 기반 로컬 개인 AI 에이전트 지속 급등. [[에이전트-메모리-레이어]] 생태계에서 Rust 성능 안전성 수요 계속 검증 중.
+
+**codegraph ⭐3,787 (+857 당일) — 코딩 에이전트 토큰 절감 도구 신규 진입**
+- [[codegraph]] — Claude Code·Cursor·Codex용 코드베이스 사전 인덱싱 지식 그래프. 완전 로컬. [[claude-context]](⭐9,167, Milvus 서버 필요) 대비 경량 로컬 대안 포지셔닝.
+
+> [!insight] 핵심 인사이트
+> [[codegraph]] + [[GitNexus]](⭐33.5K) + [[claude-context]](⭐9K) 세 도구가 "코드베이스 지식 그래프" 경쟁을 구체화 중. 공통 목표: AI 에이전트가 대규모 코드베이스를 효율적으로 이해하게 하는 것. 차별점은 서버리스 여부·프라이버시·AI 플랫폼 통합 방식.
+
+**scientific-agent-skills ⭐24,065 (+762)** — [[scientific-agent-skills]] 과학·공학 특화 스킬 지속 성장.
+**Open-Generative-AI ⭐15,492 (+703)** — [[Open-Generative-AI]] 무검열 200개+ 생성 AI 플랫폼 급등.
+**ai-agents-for-beginners ⭐62,967 (+485)** — [[ai-agents-for-beginners]] Microsoft 에이전트 커리큘럼 꾸준한 성장.
+
+### HF Daily Papers (2026-05-18) — 멀티모달 에이전트 스킬 + 신뢰 AI 클러스터
+
+**CiteVQA (업보트 76 — 배치 1위)**
+- [[CiteVQA]] — 문서 VQA에서 답변 근거 인용 능력 평가. "맞는 답" → "근거 있는 답"으로 문서 AI 평가 기준 격상. [[MinerU2.5]]·[[markitdown]] 등 문서 파이프라인 선택 기준에 연결.
+
+**MMSkills (업보트 69 — 배치 2위)**
+- [[MMSkills]] — GUI 조작·이미지 이해·웹 탐색 통합 멀티모달 스킬 프레임워크. [[VLAA-GUI]]·[[ClawGUI]]·[[SkillClaw]] 클러스터와 에이전트 스킬 구조화 연구 수렴.
+
+> [!insight] 핵심 인사이트
+> CiteVQA + MMSkills 동시 등장: **문서 AI(신뢰성·근거 제시)와 에이전트 스킬(멀티모달 통합)** 두 축이 같은 날 주목. 공통 핵심: AI의 "행동 근거"와 "스킬 구조화" — 신뢰 가능한 에이전트를 만들기 위한 인프라 연구가 가속 중.
+
+**PhysBrain 1.0 (업보트 52)**
+- [[PhysBrain]] — DeepCybo 출시 물리 법칙 추론 특화 멀티모달 모델. [[scientific-agent-skills]]의 과학 특화 AI 수요와 연결. 과학·공학 도메인에서 범용 LLM의 약점 보완 시도.
+
+**DexJoCo (업보트 39)**
+- [[DexJoCo]] — MuJoCo 기반 작업 지향 로봇 손재주 조작 벤치마크·툴킷. [[ClawGym]]과 함께 로봇 제어 시뮬레이션 평가 표준화 클러스터 형성. slam-3dgs 도메인 교차.
+
+**FashionChameleon (업보트 38)**
+- [[FashionChameleon]] — 알리바바 실시간 인터랙티브 인물-의상 **영상** 커스터마이징. [[tstars-tryon]](이미지)의 영상 버전 — 알리바바의 패션 AI 이미지→영상 파이프라인 완성 신호. video-saas 교차.
+
+### HF 모델 트렌딩 스탯 업데이트 (2026-05-18)
+
+- [[Gemma-4-31B]] — 9.89M 다운로드 (이전 9.12M → +770K). Google 오픈소스 멀티모달 1위 지위 견고.
+- [[Qwen3.6-35B-A3B]] — 5.61M 다운로드 (이전 3.86M → +1.75M, +45%). MoE 효율 모델 채택 가속.
+- [[DeepSeek-V4-Pro]] — 3.44M 다운로드 (이전 3.14M → +300K). 플래그십 수요 지속.
+
+> [!insight] 핵심 인사이트
+> 2026-05-18 핵심: **"로컬 에이전트(openhuman ⭐14.9K) + 코드 그래프(codegraph 신규) + 물리 특화 AI(PhysBrain) + 패션 영상 AI(FashionChameleon)"** — 공통 신호는 AI의 전문화·현지화(로컬). Qwen3.6 MoE +45% 다운로드 급등은 오픈소스 경량 MoE가 클라우드 API의 실질적 대안으로 자리잡는 속도를 보여줌.
+
+---
+
+## 2026-05-19 업데이트: GitHub Trending + HF 자동수집
+
+### GitHub Trending — 학술·에이전트 스킬 + CLI 인프라
+
+**academic-research-skills ⭐13,041 (+1,439) — 학술 연구 자동화 스킬 폭발**
+- [[academic-research-skills]] — Claude Code용 연구 전 파이프라인 자동화 스킬셋. research → write → review → revise → finalize. 학술 커뮤니티의 Claude Code 채택 가속 신호.
+
+> [!insight] 핵심 인사이트
+> [[andrej-karpathy-skills]](37K)·[[claude-code-best-practice]](40K)에 이어 도메인 특화 스킬 레포가 부상 — **학술 연구자**, **AI 에이전트 보안 팀**(tech-leads), **데이터 과학 연구소**(HKUDS)가 각각 자신만의 스킬 레지스트리를 구축하는 스킬 생태계 전문화 단계 진입.
+
+**CLI-Anything ⭐37,137 (+1,049) — CLI 에이전트 네이티브화 대형 신호**
+- [[CLI-Anything]] — HKUDS ([[RAG-Anything]] 동일 그룹). 모든 CLI 소프트웨어를 에이전트가 사용할 수 있도록 래핑하는 범용 프레임워크.
+
+> [!insight] 핵심 인사이트
+> CLI-Anything이 완성되면 에이전트는 임의의 CLI 도구를 사용 가능 → Computer-Use 에이전트의 범용성이 폭발적으로 확장. [[chrome-devtools-mcp]](브라우저) + [[n8n-mcp]](워크플로우) + CLI-Anything(CLI) = **에이전트 도구 접근 3대 인프라** 완성.
+
+**12-factor-agents ⭐20,892 (+399) — 에이전트 아키텍처 설계 원칙**
+- [[12-factor-agents]] — humanlayer. 프로덕션 LLM 에이전트를 위한 12원칙. [[andrej-karpathy-skills]]가 "설정"이라면 12-factor-agents는 "아키텍처 원칙" — 에이전트 설계 방법론의 체계화.
+
+**tech-leads-agent-skills ⭐4,231 (+1,244)** — [[tech-leads-agent-skills]] 보안 검증 스킬 레지스트리 신규 진입.
+**supertonic ⭐8,556 (+715)** — [[supertonic]] ONNX 경량 TTS 지속 성장 (이전 ⭐6,270 → ⭐8,556).
+
+### HF Daily Papers (2026-05-19)
+
+**LongLive-2.0 (업보트 78 — 배치 1위)**
+- [[LongLive-2.0]] — NVIDIA NVFP4 병렬 인프라 기반 긴 영상 생성. 속도·품질 동시 개선 — 긴 영상 생성의 실용화 임계점 시도. video-saas 파이프라인 직접 영향.
+
+**Lance (업보트 51 — 배치 2위)**
+- [[Lance]] — ByteDance 멀티태스크 시너지 통합 멀티모달 모델. [[LLaDA2.0-Uni]]·[[Uni-ViGU]] 통합 모델 트렌드에 ByteDance가 합류.
+
+**AI-for-Auto-Research (업보트 40)**
+- [[AI-for-Auto-Research]] — AI 자율 연구 자동화 전 단계 로드맵. [[academic-research-skills]](실무 스킬)과 함께 읽으면 연구 자동화 파이프라인 완성 가능.
+
+**KVPO (업보트 33)** — [[KVPO]] 칭화대 ODE 네이티브 GRPO 영상 정렬. 텍스트 GRPO가 영상 생성으로 확산.
+
+**Code-as-Room (업보트 24)** — [[Code-as-Room]] 에이전트 코드 합성 기반 3D 방 생성. slam-3dgs × 코드 에이전트 교차.
+
+### HF 모델 트렌딩 스탯 업데이트 (2026-05-19)
+
+- [[Qwen3.6-27B]] — 3.68M 다운로드 (이전 2.45M → +50%). Qwen3.6 덴스 모델 지속 급등.
+- [[DeepSeek-V4-Flash]] — 2M 다운로드 (이전 281K → +7배). Flash(경량) 버전이 Pro(862B) 대비 실수요 더 높음 재확인.
+- [[Sulphur-2-base]] — 1.11M 다운로드 (이전 875K → +27%). T2V 오픈소스 1M 다운로드 돌파.
+
+> [!insight] 핵심 인사이트
+> 2026-05-19 핵심: **"CLI 에이전트 네이티브화(CLI-Anything ⭐37K) + 학술 연구 자동화(academic-research-skills ⭐13K) + 에이전트 설계 원칙(12-factor-agents ⭐20K) + NVIDIA 긴 영상 인프라(LongLive-2.0)"** — AI 에이전트가 임의의 소프트웨어를 사용하고(CLI-Anything), 학술 연구를 전담하며(academic-research-skills), 프로덕션 원칙으로 설계되는(12-factor-agents) 3방향 성숙화. DeepSeek-V4-Flash 2M DL(+7배)은 실무에서 "속도 > 크기" 선호를 다시 한번 입증.
 
 ---
 

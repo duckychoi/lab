@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, attention, LLM, transformer, gpu, cuda, performance, inference]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-05-28
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # Dao-AILab/flash-attention
 
 > [!insight] 핵심 인사이트
-> 트랜스포머 어텐션의 메모리-시간 복잡도를 획기적으로 줄인 CUDA 최적화 구현. LLM 학습·추론의 사실상 표준 라이브러리. ⭐23,304 — 수년간 검증된 인프라 레이어.
+> 트랜스포머 어텐션의 메모리-시간 복잡도를 획기적으로 줄인 CUDA 최적화 구현. LLM 학습·추론의 사실상 표준 라이브러리. ⭐23,951 — 수년간 검증된 인프라 레이어.
 
 ## 핵심 인사이트
 
@@ -24,7 +24,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐⭐⭐ — ⭐23,304, 업계 표준, Together AI 공식 지원
+- **신뢰도**: ⭐⭐⭐⭐⭐ — ⭐23,951 (2026-05-28), 업계 표준, Together AI 공식 지원
 - **즉시 활용**: YES — pip install flash-attn, PyTorch LLM 파이프라인에 즉시 적용
 - **6개월 영향력**: 변화 없음 — 이미 LLM 인프라 표준. 지속 유지 필요
 - **대체 관계**: PyTorch 내장 SDPA 대체 또는 병행 사용
@@ -40,5 +40,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/Dao-AILab/flash-attention
-- 스타: 23,304 (2026-04-12 기준)
+- 스타: 23,951 (2026-05-28 기준)
 - 신뢰도: ⭐⭐⭐⭐⭐

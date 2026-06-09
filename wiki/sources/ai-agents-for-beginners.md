@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, microsoft, education, agent-framework, jupyter, curriculum]
 created: 2026-04-22
-updated: 2026-04-22
+updated: 2026-05-20
 sources: []
 reliability: high
 ---
@@ -15,7 +15,7 @@ reliability: high
 > Microsoft가 공식으로 에이전트 입문 커리큘럼을 오픈소스화했다. 58K 스타는 에이전트 프레임워크 학습 수요가 얼마나 큰지 보여준다. [[AI-에이전트-프레임워크]] 생태계의 교육 인프라 역할.
 
 **GitHub**: https://github.com/microsoft/ai-agents-for-beginners  
-**스타**: ⭐58,209 (하루 +200)  
+**스타**: ⭐64,744 (+818 오늘, 2026-05-20; 이전 ⭐62,967)  
 **신뢰도**: ⭐⭐⭐ (Microsoft 공식)
 
 ## 도메인별 추출

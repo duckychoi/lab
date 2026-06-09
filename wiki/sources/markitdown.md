@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, document-parsing, markdown, pdf, office, LLM-pipeline, microsoft]
 created: 2026-04-11
-updated: 2026-04-14
+updated: 2026-06-02
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # microsoft/markitdown
 
 > [!insight] 핵심 인사이트
-> PDF·Office·HTML·이미지 등 모든 파일 형식을 LLM 입력용 마크다운으로 일괄 변환. Microsoft 공식 오픈소스, ⭐107,555(+4,548). [[MinerU2.5]]가 VLM 기반 정밀 파싱이라면, markitdown은 범용 파이프라인 통합 도구 — 서로 보완적.
+> PDF·Office·HTML·이미지 등 모든 파일 형식을 LLM 입력용 마크다운으로 일괄 변환. Microsoft 공식 오픈소스, ⭐139,776(+3,034). [[MinerU2.5]]가 VLM 기반 정밀 파싱이라면, markitdown은 범용 파이프라인 통합 도구 — 서로 보완적.
 
 ## 핵심 인사이트
 
@@ -24,7 +24,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐⭐ — Microsoft 공식, ⭐103,007, 커뮤니티 대규모 검증
+- **신뢰도**: ⭐⭐⭐⭐ — Microsoft 공식, ⭐139,776, 커뮤니티 대규모 검증
 - **즉시 활용**: YES — pip install markitdown, 즉시 사용
 - **6개월 영향력**: LLM 데이터 준비 파이프라인의 사실상 표준이 될 가능성 높음
 - **대체 관계**: defuddle, pypdf, docx2txt 대체. Office 파일까지 커버하는 것이 차별점
@@ -40,5 +40,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/microsoft/markitdown
-- 스타: 103,007 (2026-04-12 기준, +3,086 당일)
+- 스타: 139,776 (2026-06-02 기준, +3,034 당일)
 - 신뢰도: ⭐⭐⭐⭐

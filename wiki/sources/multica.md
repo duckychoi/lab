@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-platform, managed-agents, team-workflow, coding-agent]
 created: 2026-04-11
-updated: 2026-04-14
+updated: 2026-05-25
 sources: []
 reliability: medium
 ---
@@ -27,7 +27,7 @@ reliability: medium
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐ — 스타 8,427 (당일 +1,948), 신생 프로젝트
+- **신뢰도**: ⭐⭐ — 스타 32,822 (2026-05-25, +585 당일), 성장 확인
 - **즉시 활용**: PARTIAL — 팀 규모 에이전트 운용 계획 시 참조
 - **6개월 영향력**: 에이전트 팀워크 모델이 개발 조직에 어떻게 통합될지 선행 지표
 - **대체 관계**: GitHub Copilot Workspace / Devin과 경쟁 구도
@@ -43,5 +43,5 @@ reliability: medium
 ## 원본
 
 - 출처: https://github.com/multica-ai/multica
-- 스타: 8,427 (2026-04-12 기준, +1,948 당일)
+- 스타: 32,822 (2026-05-25, +585 당일) — 6주 만에 8K→32K
 - 신뢰도: ⭐⭐

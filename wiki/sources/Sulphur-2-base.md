@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, video-saas, text-to-video, diffusion, gguf, local-llm, sulphurai]
 created: 2026-05-07
-updated: 2026-05-08
+updated: 2026-05-20
 sources: []
 reliability: medium
 ---
@@ -15,7 +15,7 @@ reliability: medium
 > Diffusers 기반 텍스트→비디오 확산 모델. **GGUF 양자화 지원**으로 로컬 비디오 생성 가능. ⬇️55,500 다운로드 — 텍스트→비디오를 로컬에서 실행하려는 수요가 존재함을 확인. video-saas × local-llm 교차 도메인 항목.
 
 **HuggingFace**: https://huggingface.co/SulphurAI/Sulphur-2-base  
-**다운로드**: 144,000 (2026-05-10 기준, 이전 93,000)  
+**다운로드**: 1,160,000 (2026-05-20 기준, 이전 875K→1.11M; likes 1,000)  
 **신뢰도**: ⭐⭐⭐
 
 ## 도메인별 추출 (video-saas 관점)

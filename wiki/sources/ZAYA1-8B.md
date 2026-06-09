@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, local-llm, language-model, 8b, zyphra, text-generation, trending]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-14
 sources: []
 reliability: low
 ---
@@ -27,7 +27,7 @@ reliability: low
 
 ## 도메인별 추출 (ai-news)
 
-- **신뢰도**: HF 다운로드 44,800 (2026-05-10, 빠른 성장) → 중간, 추가 검증 권장
+- **신뢰도**: HF 다운로드 131,000 (2026-05-14, 이전 110K → 131K) → 중간, 추가 검증 권장
 - **즉시 활용**: 판단 보류 — 벤치마크 확인 후 결정
 - **6개월 영향력**: Zyphra가 오디오-텍스트 멀티모달 확장 시 주목 필요
 - **대체 관계**: 현재 불명확
@@ -42,5 +42,5 @@ reliability: low
 ## 원본
 
 - 출처: https://huggingface.co/Zyphra/ZAYA1-8B
-- HF 다운로드: 6,810 (공개 후 ~1시간)
+- HF 다운로드: 131,000 (2026-05-14) [이전: 110K (2026-05-13), 6,810 (최초 공개)]
 - 신뢰도: ⭐ (검증 전, 초기 공개)

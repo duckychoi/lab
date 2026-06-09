@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, google, gemma4, multimodal, image-text-to-text, apache2, open-source]
 created: 2026-04-10
-updated: 2026-05-11
+updated: 2026-05-25
 sources: []
 reliability: high
 ---

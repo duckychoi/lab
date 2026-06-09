@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, finance-ai, time-series, financial-llm, trading]
 created: 2026-04-10
-updated: 2026-04-14
+updated: 2026-05-25
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,7 @@ reliability: medium
 # shiyu-coder/Kronos
 
 > [!insight] 핵심 인사이트
-> 금융 시장 데이터(시계열, 가격, 지표)를 언어 모델 방식으로 이해·예측하는 파운데이션 모델. 스타 **21,524개(2026-04-26)**. 7,045 → 21,524로 급등 (+205%) — 금융 AI 관심 폭증 신호. "금융 언어 모델링"이라는 니치 도메인에서의 특화 모델 트렌드 반영.
+> 금융 시장 데이터(시계열, 가격, 지표)를 언어 모델 방식으로 이해·예측하는 파운데이션 모델. 스타 **24,981개(2026-05-15)**. 7,045 → 24,981로 급등 (+254%) — 금융 AI 관심 폭증 신호. "금융 언어 모델링"이라는 니치 도메인에서의 특화 모델 트렌드 반영.
 
 ## 핵심 인사이트
 

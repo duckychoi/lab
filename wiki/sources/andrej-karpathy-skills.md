@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, CLAUDE.md, llm-coding, prompt-engineering, workflow]
 created: 2026-04-11
-updated: 2026-04-15
+updated: 2026-05-25
 sources: []
 reliability: high
 ---
@@ -24,7 +24,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐ — 스타 37,597, Karpathy 관찰 기반, 커뮤니티 검증
+- **신뢰도**: ⭐⭐⭐ — 스타 150,477 (2026-05-24, +3,507 당일), Karpathy 관찰 기반, 커뮤니티 검증
 - **즉시 활용**: YES — CLAUDE.md 파일 하나로 즉시 적용
 - **6개월 영향력**: 개인화된 CLAUDE.md 생태계 표준화에 기여. Claude Code가 "설정 가능한 도구"로 자리잡는 흐름
 - **대체 관계**: 기존 프롬프트 엔지니어링 가이드를 CLAUDE.md 포맷으로 대체
@@ -41,5 +41,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/forrestchang/andrej-karpathy-skills
-- 스타: 12,083 (2026-04-11 기준, +1,450 당일)
+- 스타: 150,477 (2026-05-24, +3,507 당일) — 1개월 만에 12K→150K 폭발적 성장
 - 신뢰도: ⭐⭐⭐

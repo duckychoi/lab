@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, deepseek, llm, flagship, text-generation, chinese-ai]
 created: 2026-04-24
-updated: 2026-05-08
+updated: 2026-06-02
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # DeepSeek-V4-Pro
 
 **HuggingFace**: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro  
-**다운로드**: 1,340,000 (2026-05-10 기준, 이전 1,060,000)  
+**다운로드**: 5,830,000 (2026-06-02 기준, likes 4,470; 이전 5,890,000)  
 **신뢰도**: ⭐⭐⭐⭐⭐
 
 > [!insight] 핵심 인사이트

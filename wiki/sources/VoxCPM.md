@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, tts, voice-cloning, multilingual, tokenizer-free, openBMB]
 created: 2026-04-10
-updated: 2026-04-14
+updated: 2026-06-04
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # OpenBMB/VoxCPM
 
 > [!insight] 핵심 인사이트
-> 토크나이저(Tokenizer) 없이 직접 음성을 처리하는 새로운 TTS 아키텍처. 다국어 합성 + 스타일 전이 + 실제 음성 클로닝까지 하나의 모델로 처리. 스타 12,600개(2026-04-14, +1,178 today). 30개 언어 지원·48kHz 품질·RTF 0.13 실시간 처리. Apache-2.0.
+> 토크나이저(Tokenizer) 없이 직접 음성을 처리하는 새로운 TTS 아키텍처. 다국어 합성 + 스타일 전이 + 실제 음성 클로닝까지 하나의 모델로 처리. 스타 25,364개(2026-06-03, +783 당일, prev 24,625). 30개 언어 지원·48kHz 품질·RTF 0.13 실시간 처리. Apache-2.0.
 
 ## 핵심 인사이트
 
@@ -27,7 +27,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐ — 스타 17,274개, OpenBMB 연구팀 신뢰도 높음
+- **신뢰도**: ⭐⭐⭐ — 스타 24,625개, OpenBMB 연구팀 신뢰도 높음
 - **즉시 활용**: YES — reat-voice 파이프라인 ElevenLabs 비용 절감 후보
 - **6개월 영향력**: TTS API 비용 0으로 만드는 경쟁 압력. ElevenLabs 포지셔닝 위협
 - **대체 관계**: ElevenLabs / OpenAI TTS 대체 오픈소스 후보
@@ -42,5 +42,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/OpenBMB/VoxCPM
-- 스타: 17,274 (2026-05-04 기준, +383 당일)
+- 스타: 24,625 (2026-06-02 기준, +888 당일)
 - 신뢰도: ⭐⭐⭐
