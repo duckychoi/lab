@@ -1692,3 +1692,8 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 없음 (HF논문 저자·기관 salience 대비 날조 방지 — [[Microsoft]]·[[Meshy]]·[[Moonshot AI]] 등 기존 페이지 wikilink만)
 - index.md 업데이트 (total_pages: 836→842, total_sources: 791→797)
 - raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)
+
+## [2026-08-04] graph+lint | Monday 미완 작업 처리 (canvas 갱신 + 카운트 정합성)
+- 발견: Monday 인제스트는 08-03까지 최신·index 누락 0·실고아 0(Moonshot AI.md 공백 오탐). 미완 항목 = canvas(07-12 이후 3주 방치) + index total_pages 드리프트(842 vs 실제 814)
+- 조치: index total_pages 정합화, ai-news.canvas에 허브 노드(AI-에이전트-프레임워크·에이전트-메모리-레이어·임바디드-AI·온폴리시-증류)+인제스트 wave 요약+Moonshot AI 엔티티 6노드/8엣지 추가, 임바디드-AI↔월드모델 클러스터 연결
+- 커밋+푸시: duckychoi/lab main

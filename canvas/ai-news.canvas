@@ -629,6 +629,66 @@
       "width": 220,
       "height": 90,
       "color": "6"
+    },
+    {
+      "id": "hub-agent-fw",
+      "type": "text",
+      "text": "**[[AI-에이전트-프레임워크]]**\n최대 허브 (227 링크)",
+      "x": 600,
+      "y": 760,
+      "width": 220,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "hub-agent-mem",
+      "type": "text",
+      "text": "**[[에이전트-메모리-레이어]]**\n메모리 인프라 (196)\ncognee·claude-mem",
+      "x": 860,
+      "y": 760,
+      "width": 220,
+      "height": 100,
+      "color": "6"
+    },
+    {
+      "id": "hub-embodied2",
+      "type": "text",
+      "text": "**[[임바디드-AI]]**\n체화 AI 5각 루프 (58)",
+      "x": 1140,
+      "y": 760,
+      "width": 210,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "hub-onpolicy",
+      "type": "text",
+      "text": "**[[온폴리시-증류]]**\nOn-Policy Distillation (70)",
+      "x": 600,
+      "y": 900,
+      "width": 220,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "wave-jul-aug",
+      "type": "text",
+      "text": "## 인제스트 wave\n07-13 ~ 08-03 (일 5~13건)\n[[Kimi-K3]]·[[GLM-5.2]]·[[Unlimited-OCR]]\n[[TRELLIS.2]]·[[generative-ai-for-beginners]]",
+      "x": 860,
+      "y": 900,
+      "width": 280,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "ent-moonshot",
+      "type": "text",
+      "text": "**[[Moonshot AI]]**\nKimi 시리즈 프론티어 랩",
+      "x": 1140,
+      "y": 900,
+      "width": 210,
+      "height": 80,
+      "color": "4"
     }
   ],
   "edges": [
@@ -1126,6 +1186,47 @@
       "id": "e-wm-diff-wm-survey",
       "fromNode": "wm-diff",
       "toNode": "wm-survey"
+    },
+    {
+      "id": "e2-domain-hub-hub-agent-fw",
+      "fromNode": "domain-hub",
+      "toNode": "hub-agent-fw"
+    },
+    {
+      "id": "e2-domain-hub-hub-agent-mem",
+      "fromNode": "domain-hub",
+      "toNode": "hub-agent-mem"
+    },
+    {
+      "id": "e2-domain-hub-hub-embodied2",
+      "fromNode": "domain-hub",
+      "toNode": "hub-embodied2"
+    },
+    {
+      "id": "e2-domain-hub-hub-onpolicy",
+      "fromNode": "domain-hub",
+      "toNode": "hub-onpolicy"
+    },
+    {
+      "id": "e2-domain-hub-wave-jul-aug",
+      "fromNode": "domain-hub",
+      "toNode": "wave-jul-aug"
+    },
+    {
+      "id": "e2-hub-embodied2-wm-hub",
+      "fromNode": "hub-embodied2",
+      "toNode": "wm-hub",
+      "label": "월드모델"
+    },
+    {
+      "id": "e2-ent-moonshot-wave-jul-aug",
+      "fromNode": "ent-moonshot",
+      "toNode": "wave-jul-aug"
+    },
+    {
+      "id": "e2-hub-agent-mem-hub-agent-fw",
+      "fromNode": "hub-agent-mem",
+      "toNode": "hub-agent-fw"
     }
   ]
 }

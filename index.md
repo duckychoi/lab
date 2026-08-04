@@ -1,7 +1,7 @@
 ---
 title: Wiki Index
-updated: 2026-08-03 (자동수집 13건 — 신규 6·갱신 7 / 신규 generative-ai-for-beginners(⭐11.5만 MS 교육)·HF논문 5[RLSVR·N0-VTLA·Meshy-T2·AISPA·QQWorld], 갱신 AI-For-Beginners ⭐6만 돌파·airllm·Agent-Reach·TencentDB·Unlimited-OCR 2.6M·Fable-Fusion 1.55M·Kimi-K3 968k. GitHub·HF모델 raw API 수치·HF논문 미래형 ID 원문 미검증 medium)
-total_pages: 842
+updated: 2026-08-04 (graph 갱신 + 카운트 정합성 · Monday 미완 작업 처리)
+total_pages: 814
 total_sources: 797
 ---
 
