@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, merge, finetune, uncensored, 27b, local-llm, vision]
 created: 2026-07-22
-updated: 2026-08-03
+updated: 2026-08-04
 sources: []
 reliability: medium
 ---
 
 # Qwen3.6-27B-Fable-Fusion (DavidAU)
+
+> [!update] 2026-08-04 갱신 — DL 1.63M (좋아요 1.38k→1.47k)
+> HF 다운로드 **1.63M·좋아요 1.47k**(2026-08-04 자동수집) ← 1.55M(08-03, 1.38k). 하루 새 +약8만으로 커뮤니티 머지/GGUF 변종 중 최상위 채택 지속. [[Qwen3.6-27B]] 베이스·무검열·256k·비전·MTP 구성 동일. 자체 **ARC-C 0.711** 주장은 여전히 **재현 불가 → medium 유지, 벤치 인용은 실태스크 검증 후**. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-03 갱신 — DL 1.55M (좋아요 1.26k→1.38k)
 > HF 다운로드 **1.55M·좋아요 1.38k**(2026-08-03 자동수집) ← 1.37M(08-02, 1.26k). 하루 새 +약18만으로 커뮤니티 머지/GGUF 변종 중 최상위 채택 지속. [[Qwen3.6-27B]] 베이스·무검열·256k·비전·MTP 구성 동일. 자체 **ARC-C 0.711** 주장은 여전히 **재현 불가 → medium 유지, 벤치 인용은 실태스크 검증 후**. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
@@ -53,7 +56,7 @@ reliability: medium
 
 ## 원본
 - 출처: https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF
-- HuggingFace: 다운로드 **1.55M·좋아요 1.38k** (2026-08-03 자동수집) ← 1.37M(08-02, 1.26k) ← 1.17M(08-01, 1.17k) ← 956k(07-31, 1.06k) ← 737k(07-30, 974) ← 62,800·269(07-22, WebFetch 실확인)
+- HuggingFace: 다운로드 **1.63M·좋아요 1.47k** (2026-08-04 자동수집) ← 1.55M(08-03, 1.38k) ← 1.37M(08-02, 1.26k) ← 1.17M(08-01, 1.17k) ← 956k(07-31, 1.06k) ← 737k(07-30, 974) ← 62,800·269(07-22, WebFetch 실확인)
 - 스펙: Qwen3.6-27B 베이스 다단계 머지(Heretic+ARA·Fable·Opus 추론·F451·GPT5 Polaris), 비전 활성(mmproj 별도), 256k 컨텍스트, GGUF
 - 벤치(자체): ARC-C 0.711(8bit)/0.701(4bit) vs 베이스 0.647·35B-A3B 0.581·Qwen3.5-27B 0.557
 - 신뢰도: ⭐⭐ (모델카드 검증, 벤치 자체 리포트·독립 재현 전)

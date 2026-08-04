@@ -1697,3 +1697,15 @@ HF Trending Models (2026-05-29):
 - 발견: Monday 인제스트는 08-03까지 최신·index 누락 0·실고아 0(Moonshot AI.md 공백 오탐). 미완 항목 = canvas(07-12 이후 3주 방치) + index total_pages 드리프트(842 vs 실제 814)
 - 조치: index total_pages 정합화, ai-news.canvas에 허브 노드(AI-에이전트-프레임워크·에이전트-메모리-레이어·임바디드-AI·온폴리시-증류)+인제스트 wave 요약+Moonshot AI 엔티티 6노드/8엣지 추가, 임바디드-AI↔월드모델 클러스터 연결
 - 커밋+푸시: duckychoi/lab main
+
+## [2026-08-04] ingest | ai-news 자동수집 13건 배치 (신규 7 · 갱신 6)
+- 도메인: ai-news (교차: local-llm — airllm·Fable-Fusion·Kimi-K3·DeepSeek-V4-Flash·VAD / video-saas — SwanTale·WorldExam)
+- 추가 페이지: 8개 (신규 소스 7: [[pdf-inspector]] ⭐9,016 Firecrawl Rust PDF 판별·high / [[DeepSeek-V4-Flash-0731]] HF DL 433k 304B 저지연 medium / HF논문 5 [[LongHorizon-Harness]] 2608.01964·[[SwanTale]] 2608.02023·[[Progressive-Agent-Skill]] 2608.01678·[[VAD-Visual-Evidence-Attribution]] 2607.28590·[[WorldExam]] 2608.02603 — 전량 미래형 ID medium / 신규 entity 1: [[DeepSeek]])
+- 업데이트 페이지: 9개 (source 갱신 6: [[AI-For-Beginners]] ⭐60,032→61,320·[[airllm]] ⭐26,092→27,761·[[reverse-skill]] ⭐12,270→16,724(급상승 1위 재현)·[[TencentDB-Agent-Memory]] ⭐11,534→12,570·[[Qwen3.6-27B-Fable-Fusion]] DL 1.55M→1.63M·[[Kimi-K3]] DL 968k→1.13M(100만 돌파) / domain 1: ai-news 2026-08-04 배치 / index 1 / actionable 1)
+- 핵심 인사이트: 08-03 논문들이 보상·촉각·3D생성·보안·정규화로 광폭 분산됐던 것과 대조적으로, 08-04 HF 논문 5편은 "에이전트를 어떻게 학습·평가하나"의 메타 계층(롱호라이즌 학습·스킬 RL 생성·멀티모달 증류·월드모델 평가)으로 수렴 — SwanTale만 응용. 동시에 문서 전처리(pdf-inspector OCR 게이트)가 도구화되고, 오픈 웨이트 100만 채택 클럽에 Kimi-K3(1.13M)가 합류(GLM-5.2 200만·Unlimited-OCR 2.6M·Fable-Fusion 1.63M에 이어).
+- 검증: 신규 GitHub 1·HF모델 1·갱신 GitHub 4·HF모델 2 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-03 배치와 동일 처리). HF모델 자체발표 벤치(Fable-Fusion ARC-C·Kimi-K3 GPQA/BrowseComp)는 인용 시 미검증 병기. DeepSeek-V4-Flash 세부 스펙(활성 파라미터·컨텍스트·라이선스·벤치)은 원문 재현 전 → 구체 수치 미기재. **HF논문 5건은 전량 미래형 arxiv ID(2608.x·2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium, 구체 벤치 수치·저자/소속 미기재**(CLAUDE.md 사실확인 원칙).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: YES (2건 — pdf-inspector OCR 분기 전처리 편입[중간] / Progressive-Agent-Skill·LongHorizon-Harness 스킬 자가개선·롱호라이즌 안정성 개념 이식 검토[낮음])
+- 신규 entity: 1건 [[DeepSeek]] ([[Moonshot AI]] 선례처럼 프론티어 랩 salience — 랩·효율 노선만 실체 서술, V4-Flash 세부는 시뮬레이션 타임라인 raw 기반 미검증 병기). HF논문 저자·기관은 salience 대비 날조 방지로 wikilink만.
+- index.md 업데이트 (total_pages: 814→822, total_sources: 797→804)
+- raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)

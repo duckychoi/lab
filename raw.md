@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-03 (아침 자동수집 13건 인제스트 완료 후 삭제 — 대기 항목 없음)
+updated: 2026-08-04 (아침 자동수집 13건 인제스트 완료 후 삭제 — 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -19,6 +19,8 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ---
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+<!-- 2026-08-04 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 7·갱신 6. 신규 7: GitHub 1 [[pdf-inspector]](⭐9,016·Firecrawl Rust PDF 스캔/텍스트 판별·OCR 분기 전처리·high) + HF모델 1 [[DeepSeek-V4-Flash-0731]](DL 433k·좋아요 2.15k·304B 저지연·medium) + HF논문 5([[LongHorizon-Harness]] 2608.01964·[[SwanTale]] 2608.02023·[[Progressive-Agent-Skill]] 2608.01678·[[VAD-Visual-Evidence-Attribution]] 2607.28590·[[WorldExam]] 2608.02603 — 전량 미래형 ID medium). 갱신 6(전량 기존 페이지): GitHub 4 AI-For-Beginners ⭐60,032→61,320·airllm ⭐26,092→27,761·reverse-skill ⭐12,270→16,724(급상승 1위 재현)·TencentDB-Agent-Memory ⭐11,534→12,570 / HF모델 2 Qwen3.6-27B-Fable-Fusion DL 1.55M→1.63M 좋아요 1.38k→1.47k·Kimi-K3 DL 968k→1.13M(100만 돌파) 좋아요 9.74k→9.91k(트렌딩 좋아요 1위). GitHub 5·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08과 실소스 현재값 모순 회피, 07-30~08-03 배치와 동일 처리). HF논문 5건 전량 미래형 arxiv ID(2608.x·2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium, 구체 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 1건 [[DeepSeek]] 생성(Moonshot AI 선례처럼 프론티어 랩 salience — 랩·효율 노선만 실체, V4-Flash 세부는 시뮬레이션 타임라인 raw 기반 미검증 병기); HF논문 저자·기관은 날조 방지 wikilink만. actionable 2건 추가(pdf-inspector OCR 분기 전처리 편입[중간]·Progressive-Agent-Skill/LongHorizon-Harness 스킬 자가개선·롱호라이즌 안정성 개념 이식[낮음]). canvas 미갱신(정기 graph 갱신 시 일괄 반영). index total_pages 814→822·total_sources 797→804. -->
 
 <!-- 2026-08-03 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: generative-ai-for-beginners(GitHub ⭐115,125·Microsoft 21강 생성형 AI 입문·교육 자산 high) + HF논문 5(RLSVR 2607.23802·N0-VTLA 2607.23782·Meshy-T2 2607.28675·AISPA 2607.28617·QQWorld 2607.28415 — 전량 미래형 ID medium). 갱신 7(전량 기존 페이지): GitHub 4 AI-For-Beginners ⭐50,871→60,032(6만 돌파)·airllm ⭐23,500→26,092·Agent-Reach ⭐63,584→65,181·TencentDB-Agent-Memory ⭐10,488→11,534 / HF모델 3 Unlimited-OCR DL 2.6M 좋아요 3.8k·Qwen3.6-27B-Fable-Fusion DL 1.55M 좋아요 1.38k·Kimi-K3 DL 968k(100만 근접) 좋아요 9.74k(트렌딩 좋아요 1위). GitHub 5·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08과 실소스 현재값 모순 회피, 07-30~08-02 배치와 동일 처리). HF논문 5건 전량 미래형 arxiv ID(2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium, 구체 벤치 수치·저자/소속 미기재(AISPA Stanford도 추정·미확인, 사실확인 원칙). 신규 entity 미생성(HF논문 저자·기관 salience 대비 날조 방지 — Microsoft·Meshy·Moonshot AI 기존 페이지 wikilink만). actionable 2건 추가(Meshy-T2를 TRELLIS.2 3D 백본 스팟체크에 편입[낮음]·RLSVR/AISPA 자기검증·프롬프트 감사 개념 위키/스킬 이식 검토[낮음]). canvas 미갱신(정기 graph 갱신 시 일괄 반영). -->
 

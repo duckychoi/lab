@@ -944,3 +944,17 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **할 것**: [[Metis]]("메모리를 파운데이션 레이어로 승격")·[[AskChem]]("문헌을 클레임 단위로 추출·상충 추적")의 아이디어를 이 위키 쿼리·인제스트 고도화에 개념 이식 검토 — 인제스트를 "소스 요약"에서 "**소스→클레임 분해→상충 플래그**"로, 쿼리를 "wikilink/grep 직접매칭"에서 "관련성 랭킹([[RARG]] 결합)"으로. **원문이 미래형 ID로 재현 전이므로 개념 차용만·수치 인용 금지.**
 - **우선순위**: 낮음
 - **상태**: 대기
+
+## [2026-08-04] pdf-inspector — 문서 인제스트 OCR 분기 전처리 편입
+- **도메인**: ai-news
+- **출처**: [[pdf-inspector]] · [[Unlimited-OCR]]
+- **할 것**: [[Firecrawl]]/pdf-inspector(⭐9,016 Rust)로 입력 PDF를 "스캔본 vs 텍스트"로 자동 분류 → 스캔본만 [[Unlimited-OCR]]로 라우팅하는 **OCR 분기 전처리**를 내 문서/자료 인제스트에 편입. 기존 [[Unlimited-OCR]] 한국어 PDF 게이트 actionable에 앞단 게이트로 묶어 실험. 라이선스·Python 바인딩(FFI)·하이브리드 PDF 판별 정확도 먼저 확인.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-08-04] Progressive-Agent-Skill·LongHorizon-Harness — 스킬 자가개선·롱호라이즌 안정성 개념 이식 검토
+- **도메인**: ai-news
+- **출처**: [[Progressive-Agent-Skill]] · [[LongHorizon-Harness]] · [[OpenSpace]] · [[LLM-Wiki]]
+- **할 것**: [[Progressive-Agent-Skill]]("RL로 스킬 점진 생성·개선")·[[LongHorizon-Harness]]("장기 순차 의사결정 학습·평가")의 아이디어를 내 다수 스킬 하네스(wiki·reat·pptx) 자가개선에 개념 이식 검토 — lint/QA 결과→스킬 프롬프트 개선 루프를 "스킬 레퍼토리 점진 확장"으로, 다단계 워크플로를 "롱호라이즌 신용할당·안정성" 관점으로 자기점검. **원문이 미래형 ID(2608.x)로 재현 전이므로 개념 차용만·수치 인용 금지.**
+- **우선순위**: 낮음
+- **상태**: 대기

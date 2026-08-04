@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-04 (graph 갱신 + 카운트 정합성 · Monday 미완 작업 처리)
-total_pages: 814
-total_sources: 797
+updated: 2026-08-04 (자동수집 13건 배치 인제스트 — 신규 7·갱신 6 + DeepSeek 엔티티)
+total_pages: 822
+total_sources: 804
 ---
 
 # Wiki Index
@@ -46,6 +46,7 @@ total_sources: 797
 - [[Anthropic]] — Claude 개발사, 모델→Claude Code→Agent Skills→cookbooks 풀스택 에이전트 레이어 공식 제공 *(NEW 2026-07-12)*
 - [[Upstage]] — 한국 AI 기업, Solar LLM 시리즈 개발사(오픈 250B/15B MoE Solar-Open2·문서 AI) *(NEW 2026-07-25)*
 - [[Moonshot AI]] — Kimi 시리즈 중국 프론티어 랩(Kimi K3 2.8T/104B MoE·1M·네이티브 멀티모달), 오픈 웨이트 중국 축 *(NEW 2026-07-28)*
+- [[DeepSeek]] — 오픈 웨이트 대형 MoE·저비용/저지연 추론 중국 프론티어 랩(DeepSeek-V4-Flash 304B), 규모보다 효율 노선의 중국 오픈 축 *(NEW 2026-08-04)*
 
 ---
 
@@ -74,6 +75,20 @@ total_sources: 797
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-04 자동수집 배치 (신규 7 · 갱신 6 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[pdf-inspector]] — [[Firecrawl]] Rust PDF 스캔/텍스트 자동 판별·추출, [[Unlimited-OCR]] 앞단 OCR 분기 게이트 (GitHub ⭐9,016·당일 +1,699·raw API high) *(NEW 2026-08-04)*
+- [[DeepSeek-V4-Flash-0731]] — [[DeepSeek]] 304B 저지연 텍스트 생성(Flash 계열), [[Kimi-K3]]·[[GLM-5.2]] 대비 "규모보다 지연·비용" 축 (HF DL 433k·좋아요 2.15k·스펙/벤치 미검증 medium) *(NEW 2026-08-04)*
+- [[LongHorizon-Harness]] — 실세계 장기 순차 의사결정 에이전트 학습 하니스, [[Progressive-Agent-Skill]] 롱호라이즌 학습 축 (HF 데일리·미래형 ID 미검증 medium) (2608.01964) *(NEW 2026-08-04)*
+- [[SwanTale]] — 지시 기반·제로샷 다화자 음성/오디오 통합 생성, [[VibeVoice]]·[[reat-voice]] 연구측 상위 개념 (HF 데일리·미래형 ID 미검증 medium) (2608.02023) *(NEW 2026-08-04)*
+- [[Progressive-Agent-Skill]] — RL로 에이전트 스킬 점진 생성·개선, [[OpenSpace]]·[[book-to-skill]] 스킬 생성의 RL 학습 상위 (HF 데일리·미래형 ID 미검증 medium) (2608.01678) *(NEW 2026-08-04)*
+- [[VAD-Visual-Evidence-Attribution]] — 시각 근거 귀속 기반 멀티모달 온-폴리시 증류, [[온폴리시-증류]] 근거 정렬 기법 (HF 데일리·미래형 ID 미검증 medium) (2607.28590) *(NEW 2026-08-04)*
+- [[WorldExam]] — 외형~내재 반응성 월드모델 정확도 평가 벤치, [[월드모델]]·[[QQWorld]] 측정 축 (HF 데일리·미래형 ID 미검증 medium) (2608.02603) *(NEW 2026-08-04)*
+- [[AI-For-Beginners]] 갱신 — [[Microsoft]] 12주 24강 AI 기초, ⭐60,032→**61,320**(당일 +1,902)·교육 자산 성격 동일(raw API 수치) *(UPDATE 2026-08-04)*
+- [[airllm]] 갱신 — 레이어 단위 저사양 로컬 추론, ⭐26,092→**27,761**(당일 +1,085)·"속도 실측" 판단 원칙 유지(raw API 수치) *(UPDATE 2026-08-04)*
+- [[reverse-skill]] 갱신 — 리버스엔지니어링 스킬 AI 라우팅, ⭐12,270→**16,724**(당일 +2,446·**급상승 1위 재현**)·개인 프로젝트 low 유지(raw API 수치) *(UPDATE 2026-08-04)*
+- [[TencentDB-Agent-Memory]] 갱신 — [[Tencent]] 로컬 팀 에이전트 메모리, ⭐11,534→**12,570**(당일 +1,090)·1만 돌파 후 상승 가속(raw API 수치) *(UPDATE 2026-08-04)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, DL 1.55M→**1.63M**·좋아요 1.38k→**1.47k**·ARC-C 0.711 재현불가 medium 유지(raw API 수치) *(UPDATE 2026-08-04)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T/104B MoE, DL 968k→**1.13M**(**100만 돌파**)·좋아요 9.74k→**9.91k**(트렌딩 좋아요 1위)·자체발표 벤치 medium 유지(raw API 수치) *(UPDATE 2026-08-04)*
 <!-- ── 2026-08-03 자동수집 배치 (신규 6 · 갱신 7 / GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[generative-ai-for-beginners]] — [[Microsoft]] 21강 생성형 AI 구축 입문 커리큘럼, [[AI-For-Beginners]]·[[ai-agents-for-beginners]] "for-beginners" 3부작 최상단 (GitHub ⭐115,125·+588·교육 자산·raw API high) *(NEW 2026-08-03)*
 - [[RLSVR]] — 과제 변환으로 자기검증 가능 보상 유도(RLVR→RLSVR), [[knowrl]]·[[LLM-Wiki]] 자기검증 공명 (HF 데일리·미래형 ID 미검증 medium) (2607.23802) *(NEW 2026-08-03)*

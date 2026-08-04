@@ -4,16 +4,19 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-memory, local, rag, typescript]
 created: 2026-07-09
-updated: 2026-08-03
+updated: 2026-08-04
 sources: []
 reliability: high
 ---
 
-# TencentCloud/TencentDB-Agent-Memory (GitHub ⭐11,534)
+# TencentCloud/TencentDB-Agent-Memory (GitHub ⭐12,570)
 
 **GitHub**: https://github.com/TencentCloud/TencentDB-Agent-Memory
-**스타수**: 11,534 (2026-08-03 자동수집, 당일 +602) ← 10,488(08-02) ← 7,892(07-09) · **제작**: [[Tencent]]
+**스타수**: 12,570 (2026-08-04 자동수집, 당일 +1,090) ← 11,534(08-03) ← 10,488(08-02) ← 7,892(07-09) · **제작**: [[Tencent]]
 **라이선스**: MIT · **스택**: TypeScript 84.2%
+
+> [!update] 2026-08-04 갱신 — ⭐12,570 (당일 +1,090)
+> ⭐**12,570**(2026-08-04 자동수집, 당일 +1,090) ← 11,534(08-03). 1만 돌파 후 당일 +1,090으로 상승 가속 — "외부 API 0 + 로컬" 팀 단위 에이전트 메모리 허브 채택 확대 지속. 4단계 점진 파이프(기호적 단기 Mermaid 압축 + 계층형 장기 페르소나) 구성 동일. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-03 갱신 — ⭐11,534 (당일 +602)
 > ⭐**11,534**(2026-08-03 자동수집, 당일 +602) ← 10,488(08-02). 1만 돌파 후에도 당일 +602로 상승 지속 — "외부 API 0 + 로컬" 팀 단위 에이전트 메모리 허브 채택 가속. 4단계 점진 파이프(기호적 단기 Mermaid 압축 + 계층형 장기 페르소나) 구성 동일. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
@@ -43,6 +46,6 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/TencentCloud/TencentDB-Agent-Memory
-- GitHub: ⭐11,534 (2026-08-03 자동수집, 당일 +602) ← ⭐10,488 (08-02, +227) ← ⭐7,892 (2026-07-09, 당일 +318), MIT, TypeScript 84.2%
+- GitHub: ⭐12,570 (2026-08-04 자동수집, 당일 +1,090) ← ⭐11,534 (08-03, +602) ← ⭐10,488 (08-02, +227) ← ⭐7,892 (2026-07-09, 당일 +318), MIT, TypeScript 84.2%
 - 구조: 4단계 점진 파이프 / 기호적 단기(Mermaid 압축) + 계층형 장기(페르소나·시나리오) / OpenClaw·Hermes·Docker
 - 신뢰도: ⭐⭐⭐ (README 실측 / 61.38%·51.52% 자가 벤치)

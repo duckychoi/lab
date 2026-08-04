@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, education, curriculum, microsoft, learning]
 created: 2026-07-02
-updated: 2026-08-03
+updated: 2026-08-04
 sources: []
 reliability: high
 ---
 
 # AI-For-Beginners (microsoft/AI-For-Beginners)
+
+> [!update] 2026-08-04 갱신 — ⭐61,320 (당일 +1,902)
+> ⭐**61,320**(2026-08-04 자동수집, 당일 +1,902) ← 60,032(08-03). 6만 돌파 후에도 당일 +1,902로 유입 지속 — 다만 성격은 여전히 *새 기술*이 아니라 *교육 자산*이라 분류·활용 판단 불변("온보딩/레퍼런스 소스", 도구 아님). [[Microsoft]] 공식·MIT·다국어·12주 24강 구성 동일. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-03 갱신 — ⭐60,032 (당일 +2,629, 6만 돌파)
 > ⭐**60,032**(2026-08-03 자동수집, 당일 +2,629) ← 50,871(07-02). 약 한 달 새 +약9,200으로 **6만 돌파**, 당일 +2,629는 이날 배치 최대 급등 — 다만 성격은 여전히 *새 기술*이 아니라 *교육 자산*이라 분류·활용 판단은 불변("온보딩/레퍼런스 소스"). [[Microsoft]] 공식·MIT·다국어·12주 24강 구성 동일. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
@@ -35,6 +38,6 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/microsoft/AI-For-Beginners
-- 스타: ⭐60,032 (2026-08-03 자동수집, 당일 +2,629, 6만 돌파) ← ⭐50,871 (07-02, 당일 +1,096)
+- 스타: ⭐61,320 (2026-08-04 자동수집, 당일 +1,902) ← ⭐60,032 (08-03, +2,629, 6만 돌파) ← ⭐50,871 (07-02, 당일 +1,096)
 - 구성: 12주 24강 · TensorFlow/PyTorch 실습 · 50+ 언어 · MIT
 - 신뢰도: ⭐⭐⭐ (MS 공식 교육 자산 — 도구 아닌 레퍼런스, raw 자동수집 수치)
