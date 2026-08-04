@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robot RL Video Sequence Transformers 2023-2026</title>
+<style>
+  :root{
+    --bg:#0b1020; --panel:#141b2e; --panel2:#1b2440; --line:#2a3556;
+    --txt:#e8edf7; --muted:#9aa6c4; --accent:#5b8cff; --accent2:#22d3ee;
+    --good:#34d399; --warn:#fbbf24; --bad:#fb7185; --chip:#243056;
+    --code:#0a0e1a; --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:radial-gradient(1100px 520px at 78% -10%,#1b2a52 0,transparent 60%),var(--bg);color:var(--txt);line-height:1.62}
+  .wrap{max-width:1240px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:clamp(24px,3vw,38px);line-height:1.2;margin:0 0 8px}
+  h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  header p,.meta{color:var(--muted);margin:0 0 4px;font-size:14px}
+  .note{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.35);border-radius:12px;padding:13px 16px;margin:18px 0;font-size:13.5px;color:#bfe7d6}
+  .note b{color:var(--good)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 18px;box-shadow:var(--shadow)}
+  .stat b{font-size:25px;display:block;color:var(--accent2)}
+  .stat span{font-size:12.5px;color:var(--muted)}
+  h2{font-size:20px;margin:38px 0 12px;border-left:4px solid var(--accent);padding-left:12px}
+  h3{font-size:16px;color:var(--accent2);margin:20px 0 8px}
+  a{color:var(--accent2);text-decoration:none;border-bottom:1px dotted var(--accent2)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);border-top:4px solid var(--c,var(--accent))}
+  .card h3{margin-top:0;color:var(--txt)}
+  .tag{display:inline-block;background:var(--chip);border:1px solid var(--line);border-radius:999px;padding:3px 9px;margin:0 5px 5px 0;font-size:11px;color:var(--muted);font-weight:700}
+  .tag.ok{background:rgba(52,211,153,.15);color:var(--good);border-color:rgba(52,211,153,.45)}
+  .tag.warn{background:rgba(251,191,36,.13);color:var(--warn);border-color:rgba(251,191,36,.45)}
+  .tag.bad{background:rgba(251,113,133,.14);color:var(--bad);border-color:rgba(251,113,133,.45)}
+  .tag.info{background:rgba(91,140,255,.14);color:var(--accent);border-color:rgba(91,140,255,.45)}
+  .card p{font-size:13.2px;color:var(--txt);margin:8px 0}
+  .tscroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:880px;background:var(--panel);font-size:12.5px}
+  th,td{border-bottom:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--panel2);color:#cfe0ff;position:sticky;top:0}
+  tr:hover td{background:rgba(91,140,255,.06)}
+  .yes{color:var(--good);font-weight:800}
+  .partial{color:var(--warn);font-weight:800}
+  .no{color:var(--bad);font-weight:800}
+  .mono{font-family:"SF Mono",Consolas,monospace;color:#cfe3ff}
+  .flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+  .step b{display:block;color:var(--accent2);margin-bottom:5px}
+  pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:12px;overflow:auto;font-size:12px;line-height:1.55}
+  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>로봇 RL을 위한 <span>비디오 시퀀스 Transformer / VLM</span> 조사</h1>
+  <p>2023-2026 논문·GitHub·Hugging Face 기준: masked prediction, shuffled-order 학습, out-of-sequence/reject 가능성, 로봇 정책 적용성 비교</p>
+  <div class="meta">작성 기준: 2026-06-18 · 범위: 로봇 조작/월드모델/VLA/비디오 자기지도학습 · 핵심 결론: OpenGVL/GVL은 질문한 shuffled-frame progress 학습에 가장 직접 부합</div>
+</header>
+
+<div class="note">
+  <b>정직성 원칙</b> — 아래 표의 "shuffled-order"는 논문/README에 <b>shuffled frames 또는 temporal ordering objective가 명시된 경우만 Yes</b>로 표시했다. 단순 next-frame prediction, masked autoencoding, VLA action prediction은 <b>No 또는 Partial</b>로 분리했다. "reject/filter"는 직접 binary reject head가 있느냐가 아니라, 로봇 데이터 필터링·success detection·temporal inconsistency 탐지에 바로 쓸 수 있는지까지 구분했다.
+</div>
+
+<div class="stats">
+  <div class="stat"><b>12</b><span>검토 방법/계열</span></div>
+  <div class="stat"><b style="color:var(--good)">2</b><span>shuffled-order 직접 명시: GVL, OpenGVL</span></div>
+  <div class="stat"><b style="color:var(--warn)">6</b><span>masked/predictive objective 계열</span></div>
+  <div class="stat"><b style="color:var(--accent)">1순위</b><span>PushT 실험 시작 후보: OpenGVL teacher</span></div>
+</div>
+
+<h2>핵심 판정</h2>
+<div class="grid">
+  <div class="card" style="--c:var(--good)">
+    <h3>질문에 가장 정확히 맞는 방법</h3>
+    <span class="tag ok">GVL</span><span class="tag ok">OpenGVL</span><span class="tag info">VLM-as-value</span>
+    <p>GVL은 value/progress 추정을 <b>shuffled video frames의 temporal ordering 문제</b>로 바꾼다. OpenGVL은 이 아이디어를 benchmark/toolkit화해 evaluation episode의 shuffled frames와 ordered context episodes를 VLM에 넣고 per-frame completion percentage를 뽑는다.</p>
+  </div>
+  <div class="card" style="--c:var(--warn)">
+    <h3>masked prediction 계열</h3>
+    <span class="tag warn">RPT</span><span class="tag warn">MTM</span><span class="tag warn">V-JEPA 2.1</span><span class="tag warn">3D-MVP</span>
+    <p>센서모터 토큰, trajectory, image/video latent를 mask하고 복원하거나 예측한다. 순서 섞기 자체를 맞추는 objective는 아니지만, policy/world-model encoder에 temporal auxiliary를 붙이기 좋다.</p>
+  </div>
+  <div class="card" style="--c:var(--bad)">
+    <h3>정책 Transformer/VLA</h3>
+    <span class="tag bad">OpenVLA</span><span class="tag bad">Octo</span><span class="tag bad">SmolVLA</span>
+    <p>로봇 action을 직접 내는 정책 모델이지만, 공개 설명 기준으로 shuffled-order 학습은 주 objective가 아니다. OpenGVL/TOPReward 같은 progress teacher로 데이터 필터링 또는 reward-aligned BC를 붙이는 쪽이 현실적이다.</p>
+  </div>
+</div>
+
+<h2>방법별 비교표</h2>
+<div class="tscroll">
+<table>
+<thead>
+<tr>
+  <th>방법</th><th>연도</th><th>논문</th><th>GitHub / HF</th><th>Masked prediction</th><th>Shuffled-order 학습</th><th>부적절 시퀀스 reject/filter</th><th>로봇 적용 판단</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><b>GVL</b><br>Generative Value Learning</td>
+  <td>2024</td>
+  <td><a href="https://arxiv.org/abs/2411.04549" target="_blank">arXiv:2411.04549</a></td>
+  <td>공식 통합 코드는 OpenGVL 쪽이 실용적</td>
+  <td class="no">No</td>
+  <td class="yes">Yes</td>
+  <td class="partial">Partial/Strong</td>
+  <td>로봇 task progress/value를 shuffled frames ordering으로 추정. dataset filtering, success detection, AWR에 바로 연결 가능.</td>
+</tr>
+<tr>
+  <td><b>OpenGVL</b></td>
+  <td>2025</td>
+  <td><a href="https://arxiv.org/abs/2509.17321" target="_blank">arXiv:2509.17321</a></td>
+  <td><a href="https://github.com/budzianowski/opengvl" target="_blank">GitHub</a> · <a href="https://huggingface.co/spaces/OpenGVL/OpenGVL" target="_blank">HF Space</a></td>
+  <td class="no">No</td>
+  <td class="yes">Yes</td>
+  <td class="yes">Yes</td>
+  <td>evaluation episode를 shuffled frames로 구성하고 VLM이 frame별 completion %를 출력. 대규모 로봇 데이터 curation/filtering 툴킷.</td>
+</tr>
+<tr>
+  <td><b>TOPReward</b></td>
+  <td>2026</td>
+  <td><a href="https://arxiv.org/abs/2602.19313" target="_blank">arXiv:2602.19313</a></td>
+  <td>공개 코드 미확인</td>
+  <td class="no">No</td>
+  <td class="partial">Implicit progress</td>
+  <td class="yes">Yes</td>
+  <td>VLM의 내부 token probability에서 temporal reward를 추출. success detection과 reward-aligned BC에 적합. 공개 코드 전에는 OpenGVL 다음 후보.</td>
+</tr>
+<tr>
+  <td><b>V-JEPA 2</b></td>
+  <td>2025</td>
+  <td><a href="https://arxiv.org/abs/2506.09985" target="_blank">arXiv:2506.09985</a></td>
+  <td><a href="https://github.com/facebookresearch/vjepa2" target="_blank">GitHub</a> · <a href="https://huggingface.co/facebook/vjepa2-vitl-fpc64-256" target="_blank">HF</a></td>
+  <td class="partial">Predictive masking / JEPA</td>
+  <td class="no">No</td>
+  <td class="partial">Surprise/energy로 가능</td>
+  <td>비디오 latent prediction + action-conditioned robot world model. 순서 맞추기보다는 미래 latent 예측과 planning.</td>
+</tr>
+<tr>
+  <td><b>V-JEPA 2.1</b></td>
+  <td>2026</td>
+  <td><a href="https://arxiv.org/abs/2603.14482" target="_blank">arXiv:2603.14482</a></td>
+  <td>V-JEPA2 계열 HF/GitHub 참조</td>
+  <td class="yes">Yes</td>
+  <td class="no">No</td>
+  <td class="partial">Temporal consistency feature로 가능</td>
+  <td>dense predictive loss와 multi-layer self-supervision. 로봇 grasp/navigation 개선 보고. PushT에서는 encoder teacher 후보.</td>
+</tr>
+<tr>
+  <td><b>LeWorldModel / LeWM</b></td>
+  <td>2026</td>
+  <td><a href="https://arxiv.org/abs/2603.19312" target="_blank">arXiv:2603.19312</a></td>
+  <td><a href="https://github.com/lucas-maes/le-wm" target="_blank">GitHub</a> · <a href="https://huggingface.co/collections/quentinll/lewm" target="_blank">HF collection</a></td>
+  <td class="partial">Next latent prediction</td>
+  <td class="no">No</td>
+  <td class="partial">Surprise loss로 가능</td>
+  <td>현재 로컬 PushT 실험 기반. OpenGVL teacher progress/reject head를 embedding 위에 붙이기 가장 쉬운 코드베이스.</td>
+</tr>
+<tr>
+  <td><b>RPT</b><br>Robot Learning with Sensorimotor Pre-training</td>
+  <td>2023</td>
+  <td><a href="https://arxiv.org/abs/2306.10007" target="_blank">arXiv:2306.10007</a></td>
+  <td>공식 공개 코드 확인 필요</td>
+  <td class="yes">Yes</td>
+  <td class="no">No</td>
+  <td class="partial">Mask reconstruction error로 가능</td>
+  <td>이미지·proprioception·action 시퀀스 토큰 일부를 mask하고 복원. policy pretraining에 가깝다.</td>
+</tr>
+<tr>
+  <td><b>MTM</b><br>Masked Trajectory Models</td>
+  <td>2023</td>
+  <td><a href="https://arxiv.org/abs/2305.02968" target="_blank">arXiv:2305.02968</a></td>
+  <td><a href="https://github.com/facebookresearch/mtm" target="_blank">GitHub</a></td>
+  <td class="yes">Yes</td>
+  <td class="no">No</td>
+  <td class="partial">Trajectory inconsistency score 가능</td>
+  <td>state-action trajectory를 random masking으로 복원. forward/inverse/offline RL agent 역할을 mask 선택으로 바꾸는 일반 sequential decision model.</td>
+</tr>
+<tr>
+  <td><b>3D-MVP</b></td>
+  <td>2024</td>
+  <td><a href="https://arxiv.org/abs/2406.18158" target="_blank">arXiv:2406.18158</a></td>
+  <td><a href="https://jasonqsy.github.io/3DMVP" target="_blank">Project</a></td>
+  <td class="yes">Yes</td>
+  <td class="no">No</td>
+  <td class="partial">View/scene inconsistency score 가능</td>
+  <td>RVT multi-view transformer encoder를 masked autoencoding으로 사전학습. 시퀀스 순서보다는 3D/multiview spatial grounding.</td>
+</tr>
+<tr>
+  <td><b>Voltron</b></td>
+  <td>2023</td>
+  <td><a href="https://arxiv.org/abs/2302.12766" target="_blank">arXiv:2302.12766</a></td>
+  <td><a href="https://github.com/siddk/voltron-robotics" target="_blank">GitHub</a></td>
+  <td class="partial">Language-conditioned reconstruction</td>
+  <td class="no">No</td>
+  <td class="partial">Semantic mismatch score 가능</td>
+  <td>사람 비디오+caption으로 로봇용 visual representation 학습. masked autoencoding과 contrastive의 장단점을 언어로 보완.</td>
+</tr>
+<tr>
+  <td><b>OpenVLA</b></td>
+  <td>2024</td>
+  <td><a href="https://arxiv.org/abs/2406.09246" target="_blank">arXiv:2406.09246</a></td>
+  <td><a href="https://github.com/openvla/openvla" target="_blank">GitHub</a> · <a href="https://huggingface.co/openvla/openvla-7b" target="_blank">HF</a></td>
+  <td class="no">No</td>
+  <td class="no">No</td>
+  <td class="partial">외부 reward/filter 필요</td>
+  <td>970k robot demos로 훈련한 VLA policy. action prediction이 핵심. OpenGVL/TOPReward를 데이터 필터나 reward로 붙이는 대상.</td>
+</tr>
+<tr>
+  <td><b>Octo / SmolVLA</b></td>
+  <td>2024-2025</td>
+  <td><a href="https://arxiv.org/abs/2405.12213" target="_blank">Octo</a> · <a href="https://arxiv.org/abs/2506.01844" target="_blank">SmolVLA</a></td>
+  <td><a href="https://github.com/octo-models/octo" target="_blank">Octo GitHub</a> · <a href="https://huggingface.co/lerobot/smolvla_base" target="_blank">SmolVLA HF</a></td>
+  <td class="no">No</td>
+  <td class="no">No</td>
+  <td class="partial">외부 reward/filter 필요</td>
+  <td>일반 로봇 정책 초기화/배포용. 현재 질문의 shuffled-frame temporal objective와는 별도.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<h2>OpenGVL을 LeWM PushT에 붙이는 최소 실험 설계</h2>
+<p style="color:var(--muted);font-size:13.5px;margin-top:-4px">구현 코드는 원본 <span class="mono">le-wm/</span> baseline을 직접 수정하지 않고, 별도 sibling 디렉터리 <span class="mono">le-wm-opengvl/</span>에서 관리한다.</p>
+<div class="flow">
+  <div class="step"><b>1. PushT frame export</b>LeWM dataset에서 episode/window를 뽑아 ordered context frames와 shuffled eval frames를 저장한다.</div>
+  <div class="step"><b>2. OpenGVL teacher</b>VLM에 task instruction과 shuffled frames를 넣고 frame별 completion %를 얻는다.</div>
+  <div class="step"><b>3. Temporal head distill</b>LeWM의 <span class="mono">emb</span> 위에 작은 Transformer/MLP head를 붙여 progress, order, reject를 학습한다.</div>
+  <div class="step"><b>4. Policy/world-model 사용</b>progress는 reward/value, reject는 bad trajectory filtering, order는 latent temporal consistency loss로 사용한다.</div>
+</div>
+
+<h3>첫 구현 단위</h3>
+<pre><code>loss = lewm_pred_loss + lambda_sigreg * sigreg
+if temporal_aux.enabled:
+    progress_loss = mse(progress_head(emb_t), opengvl_completion_t)
+    reject_loss = bce(reject_head(emb_t), is_out_of_sequence_t)
+    order_loss = pairwise_ranking(progress_i, progress_j, sign(t_i - t_j))
+    loss += w_progress * progress_loss + w_reject * reject_loss + w_order * order_loss</code></pre>
+
+<h2>실험 우선순위</h2>
+<div class="grid">
+  <div class="card" style="--c:var(--good)">
+    <h3>1순위: OpenGVL teacher distillation</h3>
+    <p>질문한 shuffled frame ordering과 completion scoring이 정확히 들어 있고, 코드/HF Space가 공개되어 있다. LeWM PushT에 붙일 때도 기존 JEPA loss를 유지하고 auxiliary만 추가하면 된다.</p>
+  </div>
+  <div class="card" style="--c:var(--warn)">
+    <h3>2순위: V-JEPA 2/2.1 encoder teacher</h3>
+    <p>order matching은 아니지만 dense temporal/predictive representation이 강하다. PushT frame embedding teacher 또는 surprise detector로 쓸 수 있다.</p>
+  </div>
+  <div class="card" style="--c:var(--accent)">
+    <h3>3순위: policy에 직접 결합</h3>
+    <p>OpenVLA/Octo/SmolVLA 같은 정책에 바로 넣기보다, 먼저 dataset filtering/reward head로 검증한 뒤 policy fine-tuning에 반영하는 편이 안전하다.</p>
+  </div>
+</div>
+
+<footer>
+  주요 출처: GVL arXiv 2411.04549 · OpenGVL arXiv 2509.17321/GitHub/HF Space · TOPReward arXiv 2602.19313 · V-JEPA 2 arXiv 2506.09985/GitHub/HF · V-JEPA 2.1 arXiv 2603.14482 · RPT arXiv 2306.10007 · MTM arXiv 2305.02968 · OpenVLA/Octo/SmolVLA 공식 논문·저장소.
+</footer>
+</div>
+</body>
+</html>

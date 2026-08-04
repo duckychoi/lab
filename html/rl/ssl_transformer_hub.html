@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSL × Transformer × Locomotion/Drone — 선행연구·타당성</title>
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<script defer src="vendor/katex/katex.min.js"></script>
+<script defer src="vendor/katex/contrib/auto-render.min.js"></script>
+<script>
+const KATEX_OPT={delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}],throwOnError:false};
+function __km(el){ if(window.renderMathInElement) renderMathInElement(el||document.body, KATEX_OPT); }
+window.addEventListener('DOMContentLoaded', ()=>__km(document.body));
+</script>
+<style>
+  :root{--bg:#0b1020;--panel:#141b2e;--panel2:#1b2440;--line:#2a3556;--txt:#e8edf7;--muted:#9aa6c4;
+    --accent:#5b8cff;--accent2:#22d3ee;--good:#34d399;--bad:#fb7185;--warn:#fbbf24;--chip:#243056;--shadow:0 10px 30px rgba(0,0,0,.35);}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%,#1a2546 0,transparent 60%),var(--bg);color:var(--txt);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1240px;margin:0 auto;padding:32px 20px 80px}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  header h1{font-size:clamp(21px,3vw,33px);margin:0 0 6px;font-weight:800;letter-spacing:-.5px}
+  header h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  header p{color:var(--muted);margin:0 0 4px;font-size:15px}
+  .meta{color:var(--muted);font-size:13px;margin-top:8px}
+  .note{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.35);border-radius:12px;padding:12px 16px;margin:18px 0;font-size:13.5px;color:#bfe7d6}
+  .note b{color:var(--good)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px 18px;box-shadow:var(--shadow)}
+  .stat b{font-size:24px;display:block;color:var(--accent2)} .stat span{color:var(--muted);font-size:12.5px}
+  h2.sec-title{font-size:20px;margin:30px 0 14px;border-left:4px solid var(--accent);padding-left:12px}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 14px}
+  .search{flex:1;min-width:220px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 14px;color:var(--txt);font-size:14px;outline:none}
+  .search:focus{border-color:var(--accent)}
+  .filters{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:var(--chip);border:1px solid var(--line);color:var(--muted);padding:7px 12px;border-radius:999px;cursor:pointer;font-size:12.5px;transition:.15s;user-select:none}
+  .chip:hover{color:var(--txt);border-color:var(--accent)}
+  .chip.active{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#06122e;border-color:transparent;font-weight:700}
+  .cnt{color:var(--muted);font-size:12.5px;margin:2px 0 12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);transition:.18s;position:relative;overflow:hidden}
+  .card:hover{border-color:var(--accent)}
+  .card::before{content:"";position:absolute;left:0;top:0;height:100%;width:4px;background:var(--cat-color,var(--accent))}
+  .card .num{position:absolute;right:13px;top:11px;font-size:27px;font-weight:800;color:#26304e;line-height:1}
+  .card h3{margin:0 40px 3px 0;font-size:15.5px}
+  .card .yr{color:var(--accent2);font-size:11.5px;font-weight:700;margin-bottom:7px}
+  .b{display:inline-block;padding:3px 9px;border-radius:999px;font-size:10.5px;font-weight:700;margin:0 5px 6px 0}
+  .b.core{background:rgba(34,211,238,.16);color:var(--accent2);border:1px solid rgba(34,211,238,.4)}
+  .b.bg{background:var(--chip);color:var(--muted);border:1px solid var(--line)}
+  .b.tf{background:rgba(167,139,250,.16);color:#a78bfa;border:1px solid rgba(167,139,250,.4)}
+  .tag{display:inline-block;background:var(--chip);border:1px solid var(--line);color:var(--muted);padding:3px 9px;border-radius:999px;font-size:10.5px;margin:0 5px 5px 0}
+  .tag.cat{color:var(--cat-color,var(--accent));border-color:var(--cat-color,var(--accent))}
+  .idea{font-size:13px;color:var(--txt);margin:8px 0 0}
+  .rel{font-size:12px;color:var(--accent2);margin-top:6px;border-top:1px dashed var(--line);padding-top:7px}
+  .fw{display:grid;grid-template-columns:auto 1fr;gap:3px 9px;margin-top:10px;font-size:11.5px}
+  .fw dt{color:var(--muted)} .fw dd{margin:0;color:var(--txt)}
+  .links{margin-top:9px;font-size:12px}
+  /* pair (4단 분석 카드) */
+  .pair{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;border-left:4px solid var(--good)}
+  .pair.cond{border-left-color:var(--warn)} .pair.alt{border-left-color:var(--bad)} .pair.same{border-left-color:var(--accent2)}
+  .pair h4{margin:0 0 6px;font-size:15px}
+  .pair .verdict{font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;margin-left:8px}
+  .v-ok{background:rgba(52,211,153,.16);color:var(--good)} .v-cond{background:rgba(251,191,36,.16);color:var(--warn)}
+  .v-alt{background:rgba(251,113,133,.16);color:var(--bad)} .v-same{background:rgba(34,211,238,.16);color:var(--accent2)}
+  .pair .why{font-size:12.5px;color:var(--muted)} .pair .why b{color:var(--accent2)} .pair .why code{color:#cfe3ff;background:#0a0e1a;padding:1px 5px;border-radius:5px;font-size:11.5px}
+  /* tables */
+  .cwrap{overflow-x:auto} table.ctable{border-collapse:collapse;width:100%;font-size:11.5px;margin-top:6px}
+  table.ctable th,table.ctable td{border:1px solid var(--line);padding:8px 9px;text-align:left;vertical-align:top}
+  table.ctable th{background:var(--panel2);color:var(--muted);position:sticky;top:0}
+  table.ctable td.cmcol{min-width:150px;white-space:nowrap} .cmname{font-weight:700;color:var(--txt)} .ccat{font-size:10px;color:var(--muted)}
+  .cbul{margin:0;padding-left:15px} .cbul li{margin:3px 0;line-height:1.45} .cfp{margin:0}
+  table.matrix{border-collapse:collapse;margin-top:8px;font-size:12px} table.matrix th,table.matrix td{border:1px solid var(--line);padding:9px 12px;text-align:center}
+  table.matrix th{background:var(--panel2);color:var(--muted)} table.matrix td.lbl{background:var(--panel2);text-align:left;color:var(--txt);font-weight:600;white-space:nowrap}
+  .cellok{background:rgba(52,211,153,.18);color:#bdf0d8;font-weight:700} .cellc{background:rgba(251,191,36,.15);color:#ecd9a0} .cella{background:rgba(251,113,133,.14);color:#f0b9c2}
+  .katex{font-size:1.0em} .katex-display{margin:8px 0!important;padding:8px 10px;background:rgba(91,140,255,.08);border-left:3px solid var(--accent);border-radius:7px;overflow-x:auto}
+  footer{margin-top:40px;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--line);padding-top:20px}
+  .tabbar{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 24px;border-bottom:2px solid var(--line)}
+  .tabbtn{background:transparent;border:1px solid var(--line);border-bottom:none;color:var(--muted);padding:11px 16px;border-radius:11px 11px 0 0;cursor:pointer;font-size:13.5px;font-weight:700;transition:.15s;position:relative;top:2px}
+  .tabbtn:hover{color:var(--txt)} .tabbtn.on{background:var(--panel);color:var(--accent2)}
+  section.tab{display:none} section.tab.active{display:block;animation:fadein .25s ease}
+  @keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+  .ovgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:8px 0}
+  .ovcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px} .ovcard h3{margin:0 0 8px;font-size:15px} .ovcard p{color:var(--muted);font-size:13px;margin:0}
+  .fam{overflow-x:auto} table.fam{border-collapse:collapse;width:100%;font-size:12.5px;margin-top:6px} table.fam th,table.fam td{border:1px solid var(--line);padding:8px 10px;text-align:left} table.fam th{background:var(--panel2);color:var(--muted)}
+  @media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>자기지도학습(SSL) × <span class="grad">Transformer</span> × 사족보행·드론 제어</h1>
+    <p>“SimCLR/BYOL을 트랜스포머에? 샴 트랜스포머·2섹터 분할 대조?” — 선행연구 지도 + 타당성 분석</p>
+    <div class="meta">TAR·ULT에서 출발한 아이디어 검토 · 논문 35편(검증된 arXiv/공식 링크) · 작성 2026-06-18</div>
+  </header>
+  <div class="note">
+    <b>정직성</b> — 수록 논문은 모두 <b>실재하며 arXiv/공식 링크가 검증</b>되었습니다(웹서치 기반, 링크 클릭 확인). <b>‘아이디어·타당성’ 탭의 판단은 분석/제안</b>이며 확립된 사실이 아닙니다(근거=수록 논문의 공백). 검증 제외(arXiv 없음·페이월): J. Field Robotics ‘Visual Prospective Representation’(rob.70057), Springer ‘Robust RL via Contrastive Features’(978-981-95-3736-5_11) — 초록만 확인되어 본 허브에서 제외.
+  </div>
+  <div class="tabbar" id="tabbar"></div>
+
+  <section class="tab" id="tab-overview">
+    <div class="stats">
+      <div class="stat"><b>35</b><span>수록 논문</span></div>
+      <div class="stat"><b style="color:var(--accent2)">19</b><span>🎯 직접 관련(core)</span></div>
+      <div class="stat"><b style="color:#a78bfa">13</b><span>트랜스포머 사용</span></div>
+      <div class="stat"><b style="color:var(--warn)">2</b><span>핵심 빈칸(아래)</span></div>
+    </div>
+    <h2 class="sec-title">❓ 한눈에 — 결론부터</h2>
+    <div class="ovgrid">
+      <div class="ovcard"><h3>🟢 아이디어 (b) 샴 트랜스포머</h3><p>이미 표준(DINO·SimSiam·MoCo-v3·data2vec). <b>비전엔 완성, 사족보행·드론엔 미적용</b> → 확실한 빈칸. 가장 근접: BarlowWalk(MLP).</p></div>
+      <div class="ovcard"><h3>🟠 아이디어 (a) 2섹터 분할 대조</h3><p>정확히 그 형태는 거의 <b>novel</b>. 근접: iBOT(CLS↔patch), Self-Contrastive(깊이). ‘센서-섹터 분할’로 구체화하면 방어 가능.</p></div>
+      <div class="ovcard"><h3>📍 핵심 좌표</h3><p><b>TAR</b>=대조지만 MLP/TCN/LSTM · <b>ULT</b>=트랜스포머지만 supervised. 둘의 교차점(트랜스포머×샴 SSL)이 빈칸.</p></div>
+    </div>
+    <h2 class="sec-title">🧭 SSL 3계열 — 무엇이 다른가</h2>
+    <div class="fam"><table class="fam">
+      <thead><tr><th>계열</th><th>negative?</th><th>teacher</th><th>붕괴 방지</th><th>트랜스포머 예시</th></tr></thead>
+      <tbody>
+        <tr><td><b>SimCLR / MoCo</b> (대조)</td><td>O (InfoNCE)</td><td>공유 / momentum</td><td>negative가 밀어냄</td><td>MoCo-v3</td></tr>
+        <tr><td><b>BYOL / DINO</b> (self-distill)</td><td>X</td><td>EMA 복제본</td><td>predictor+stop-grad / centering+sharpening</td><td>DINO·iBOT·DINOv2·data2vec</td></tr>
+        <tr><td><b>SimSiam</b> (샴)</td><td>X</td><td>가중치 공유</td><td><b>stop-grad만</b></td><td>(MoCo-v3 ablation)</td></tr>
+        <tr><td><b>Barlow Twins</b> (중복제거)</td><td>X</td><td>공유</td><td>상관행렬→단위행렬</td><td>BarlowWalk(고유감각)</td></tr>
+      </tbody></table></div>
+    <p class="cnt">대조용 reference: NT-Xent \(\;\ell_{i,j}=-\log\frac{\exp(\mathrm{sim}(z_i,z_j)/\tau)}{\sum_{k\neq i}\exp(\mathrm{sim}(z_i,z_k)/\tau)}\) (SimCLR) · BYOL은 negative 합 항이 사라지고 EMA target 회귀만 남는다.</p>
+    <h2 class="sec-title">🗺️ 공백 지도 (도메인 × 기법)</h2>
+    <p class="cnt"><span style="color:var(--good)">■ 있음(풍부)</span> · <span style="color:var(--warn)">■ 부분/희박</span> · <span style="color:var(--bad)">■ 공백</span> — 빨강·노랑이 곧 연구 여지.</p>
+    <div class="cwrap"><table class="matrix"><thead><tr><th>도메인 ＼ 기법</th><th>대조<br>(SimCLR/MoCo)</th><th>self-distill<br>(BYOL/DINO)</th><th>샴 <b>트랜스포머</b></th><th>2섹터 분할<br>(아이디어 a)</th></tr></thead><tbody>
+<tr><td class="lbl">비전(이미지)</td><td class="cellok">있음</td><td class="cellok">있음</td><td class="cellok">있음</td><td class="cellc">희박</td></tr>
+<tr><td class="lbl">시계열·음성</td><td class="cellok">있음</td><td class="cellok">있음</td><td class="cellok">있음</td><td class="cella">공백</td></tr>
+<tr><td class="lbl">사족보행 제어</td><td class="cellok">있음</td><td class="cellc">희박</td><td class="cella">공백</td><td class="cella">공백</td></tr>
+<tr><td class="lbl">드론 비행제어</td><td class="cellc">희박</td><td class="cella">공백</td><td class="cella">공백</td><td class="cella">공백</td></tr>
+
+    </tbody></table></div>
+  </section>
+
+  <section class="tab" id="tab-papers">
+    <div class="controls"><input class="search" id="p_q" placeholder="🔍 검색: 논문·기법·도메인 (DINO, BYOL, contrastive, transformer, quadruped, drone...)"><div class="filters" id="p_tier"></div></div>
+    <div class="controls" style="margin-top:-6px"><div class="filters" id="p_cat"></div></div>
+    <div class="cnt" id="p_cnt"></div>
+    <div class="grid" id="p_grid"></div>
+  </section>
+
+  <section class="tab" id="tab-compare">
+    <h2 class="sec-title">📊 논문 비교 — SSL 5축</h2>
+    <div class="controls"><input class="search" id="c_q" placeholder="🔍 비교표 검색"></div>
+    <div class="cwrap"><table class="ctable">
+      <thead><tr><th class="cmcol">논문</th><th>🧬 SSL 계열</th><th>👀 두 view(positive 쌍)</th><th>🛡 붕괴 방지</th><th>🧠 인코더</th><th>🎯 도메인·관련성</th></tr></thead>
+      <tbody id="c_tb"></tbody></table></div>
+  </section>
+
+  <section class="tab" id="tab-idea">
+    <h2 class="sec-title">🔗 아이디어·타당성 분석</h2>
+    <p class="cnt">아래는 <b>분석/제안</b>(확립된 사실 아님). 각 카드: <b>🔍쉽게 / 🧩핵심 / 🔧어떻게 / ✅타당성·선례 / ⚠️함정</b>. 색: <span style="color:var(--good)">🟢 빈칸</span> · <span style="color:var(--warn)">🟠 novel·위험</span> · <span style="color:var(--accent2)">🔧 설계</span> · <span style="color:var(--bad)">📌 결론</span>.</p>
+<div class="pair ok"><h4>아이디어 (b) — 단일 트랜스포머를 ‘샴 쌍둥이’로 만들어 self-distill/대조 <span class="verdict v-ok">🟢 견고한 빈칸 메우기</span></h4><div class="why"><p style="margin:5px 0"><b style="color:var(--accent2)">🔍 쉽게</b> 트랜스포머 한 개를 두 갈래(또는 EMA 복제본)로 두고, 한쪽이 다른 쪽 표현을 따라 배우게 한다.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🧩 핵심</b> 이건 발명이 아니라 <b>이미 완성된 패러다임</b>: SimSiam(공유+stop-grad)·MoCo-v3(momentum·ViT)·DINO/data2vec(EMA self-distill).</p><p style="margin:5px 0"><b style="color:var(--accent2)">🔧 어떻게(구체안)</b> <b>data2vec 청사진</b>: ① 트랜스포머가 고유감각 history(관절각·속도·IMU·last action 토큰열)를 인코딩 → ② EMA teacher=full 시퀀스, student=masked/증강 view → student가 teacher latent 회귀(또는 MoCo-v3식 대조) → ③ 정책은 student latent만 사용(추론비용 0 추가) → ④ 기존 teacher-student(특권→고유감각) 증류 <b>위에</b> 얹음.</p><p style="margin:5px 0"><b style="color:var(--good)">✅ 타당성·선례</b> 비전에선 표준, <b>사족보행·드론엔 미적용</b>. 가장 가까운 선례 BarlowWalk(고유감각 redundancy-reduction)는 <b>MLP</b> → 트랜스포머化가 곧 기여. ULT는 트랜스포머지만 보조손실이 supervised → 정확히 이 자리가 빈칸.</p><p style="margin:5px 0"><b style="color:var(--warn)">⚠️ 함정</b> 표현 붕괴(collapse): stop-grad/EMA/predictor/centering 중 하나 필수. MoCo-v3식 ViT 불안정 → patch-embed 동결 전례.</p></div></div>
+<div class="pair cond"><h4>아이디어 (a) — 트랜스포머를 2섹터로 나눠 그 사이에 대조/증류 <span class="verdict v-cond">🟠 더 novel·더 위험</span></h4><div class="why"><p style="margin:5px 0"><b style="color:var(--accent2)">🔍 쉽게</b> 한 트랜스포머의 토큰(또는 층)을 두 그룹으로 쪼개, 한 그룹으로 다른 그룹을 예측·정렬한다.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🧩 핵심</b> 정확히 그 형태의 논문은 <b>못 찾음(거의 novel)</b>. 빌딩블록만 존재.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🔧 어떻게(구체안)</b> <b>제어 도메인 특화 구체화</b>: 토큰을 <b>물리적 섹터</b>로 분할 — 앞다리↔뒷다리, 고유감각↔명령(command), IMU↔관절, (드론)자세↔추력. 한 공유 트랜스포머로 cross-sector 예측/대조. iBOT의 ‘CLS vs patch’를 <b>로봇 센서 토폴로지</b>로 옮긴 것.</p><p style="margin:5px 0"><b style="color:var(--good)">✅ 타당성·선례</b> 근접 선례: iBOT(CLS↔patch 두 토큰그룹, 🎯), Self-Contrastive(한 망 다른 깊이 대조, CNN), Hidden-layer SD(은닉층 증류). ‘토큰 섹터 분할 cross-contrast’ 자체는 방어 가능한 미개척 설계.</p><p style="margin:5px 0"><b style="color:var(--warn)">⚠️ 함정</b> ‘무엇이 유효한 positive 쌍인가’ 설계 실패 시 무의미한 불변성 학습(예: 속도명령에 불변하면 안 됨). 섹터 분할의 의미가 약하면 두 view가 사실상 동일.</p></div></div>
+<div class="pair same"><h4>‘두 view(positive 쌍)’를 무엇으로? — 제어엔 이미지 증강이 없다 <span class="verdict v-same">🔧 핵심 설계 포인트</span></h4><div class="why"><p style="margin:5px 0"><b style="color:var(--accent2)">🔍 쉽게</b> 비전 SSL의 성패는 augmentation인데, 로봇 고유감각은 이미지가 아니라 다변량 시계열이라 ‘두 view’를 새로 설계해야 한다.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🧩 핵심</b> 이게 이 방향의 <b>진짜 연구 포인트</b>.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🔧 어떻게(구체안)</b> 옵션: ① <b>시간 마스킹/두 시간창</b>(data2vec식) ② <b>센서·다리 dropout</b>을 positive로 ③ <b>domain-randomization 쌍</b>(TAR은 이걸 negative로 씀 → positive로도 활용) ④ (a)의 <b>섹터 분할</b> 자체가 view.</p><p style="margin:5px 0"><b style="color:var(--good)">✅ 타당성·선례</b> TAR·HIMLoco가 이미 ‘후속상태/도메인-rand’를 view로 쓴 전례 → 트랜스포머+샴으로 올리는 게 자연스러운 다음 수.</p><p style="margin:5px 0"><b style="color:var(--warn)">⚠️ 함정</b> 속도명령·목표 같은 <b>태스크 관련 정보에까지 불변</b>해지면 제어 성능 붕괴 → view는 ‘무관 잡음에만 불변’하도록.</p></div></div>
+<div class="pair alt"><h4>어디에 novelty가 있나 / 어느 도메인을 고를까 <span class="verdict v-alt">📌 결론·포지셔닝</span></h4><div class="why"><p style="margin:5px 0"><b style="color:var(--accent2)">🔍 쉽게</b> 두 아이디어의 선례 밀도가 정반대다.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🧩 핵심</b> (b)=낮은 risk·확실한 빈칸 / (a)=높은 novelty·높은 risk.</p><p style="margin:5px 0"><b style="color:var(--accent2)">🔧 어떻게(구체안)</b> 추천 경로: <b>BarlowWalk(MLP)를 트랜스포머로 올리고 teacher-student와 결합</b>(=b) → 안정적 1편. 그 위에 (a) 센서-섹터 cross-contrast를 ablation으로 추가하면 독창성↑.</p><p style="margin:5px 0"><b style="color:var(--good)">✅ 타당성·선례</b> <b>도메인</b>: 드론 저수준 제어가 사족보행보다 공백이 커 scoop 위험 낮음(유일 앵커 Xing/Scaramuzza). 단 사족보행은 TAR/ULT/HIMLoco라는 직접 비교군이 있어 ablation·스토리가 깔끔.</p><p style="margin:5px 0"><b style="color:var(--warn)">⚠️ 함정</b> ‘이미 됐다’ 리스크: 비전 쪽(DINO/data2vec)과 너무 닮으면 기여가 ‘적용’에 그침 → 제어 특화 view·섹터 설계로 차별화 필수.</p></div></div>
+  </section>
+
+  <footer>
+    출처: 각 논문 arXiv/공식 페이지(웹서치로 링크 검증). SSL 계열·인코더·도메인은 원문 기준 정리.<br>
+    아이디어·타당성은 수록 논문의 공백에 근거한 분석이며, 구현·실험으로 검증된 주장이 아님.
+  </footer>
+</div>
+<script>
+const PAPERS=[{"n": 1, "name": "SimCLR", "org": "Chen et al. · ICML 2020", "cat": "SSL 기초", "tier": "bg", "url": "https://arxiv.org/abs/2002.05709", "fam": "대조(InfoNCE)", "view": "증강 2-crop", "collapse": "배치 내 negatives", "enc": "CNN(ResNet)", "domain": "비전", "tf": false, "idea": "이미지 증강 두 view를 NT-Xent로 끌어당김. 대조학습의 표준 출발점.", "rel": "아이디어 (a) 대조 손실의 원형."}, {"n": 2, "name": "MoCo", "org": "He et al. · CVPR 2020", "cat": "SSL 기초", "tier": "bg", "url": "https://arxiv.org/abs/1911.05722", "fam": "대조(InfoNCE)", "view": "증강 2-view", "collapse": "momentum encoder + negative queue", "enc": "CNN", "domain": "비전", "tf": false, "idea": "momentum 인코더 + 큐로 많은 negative 확보.", "rel": "샴+momentum의 원형(MoCo-v3로 ViT 계승)."}, {"n": 3, "name": "BYOL", "org": "Grill et al. · NeurIPS 2020", "cat": "SSL 기초", "tier": "bg", "url": "https://arxiv.org/abs/2006.07733", "fam": "self-distill(비대조)", "view": "증강 2-view", "collapse": "EMA target + predictor + stop-grad", "enc": "CNN", "domain": "비전", "tf": false, "idea": "negative 없이 online이 EMA target을 예측. 붕괴를 predictor+EMA로 회피.", "rel": "아이디어 (b) 샴 self-distill의 원형."}, {"n": 4, "name": "SimSiam", "org": "Chen & He · CVPR 2021", "cat": "SSL 기초", "tier": "core", "url": "https://arxiv.org/abs/2011.10566", "fam": "self-distill(비대조)", "view": "증강 2-view", "collapse": "stop-grad만 (momentum·negative 없음)", "enc": "CNN", "domain": "비전", "tf": false, "idea": "가중치 공유 한 망 + 한쪽 stop-grad만으로 붕괴 방지 증명.", "rel": "🎯 사용자 ‘샴 쌍둥이’와 가장 정확히 일치(공유가중치)."}, {"n": 5, "name": "Barlow Twins", "org": "Zbontar et al. · ICML 2021", "cat": "SSL 기초", "tier": "bg", "url": "https://arxiv.org/abs/2103.03230", "fam": "redundancy-reduction(비대조)", "view": "증강 2-view", "collapse": "cross-correlation을 단위행렬로", "enc": "CNN", "domain": "비전", "tf": false, "idea": "두 view 임베딩의 상관행렬을 단위행렬에 맞춰 중복 제거. negative 불필요.", "rel": "사족보행 BarlowWalk가 이걸 고유감각에 적용."}, {"n": 6, "name": "SwAV", "org": "Caron et al. · NeurIPS 2020", "cat": "SSL 기초", "tier": "bg", "url": "https://arxiv.org/abs/2006.09882", "fam": "swapped-prediction(클러스터)", "view": "증강 2-view", "collapse": "Sinkhorn 균등배정", "enc": "CNN", "domain": "비전", "tf": false, "idea": "프로토타입 군집 + Sinkhorn으로 한 view가 다른 view의 군집배정을 예측.", "rel": "HIMLoco가 이 swapped-prediction을 차용."}, {"n": 7, "name": "DINO", "org": "Caron et al. · ICCV 2021", "cat": "트랜스포머 SSL", "tier": "core", "url": "https://arxiv.org/abs/2104.14294", "fam": "self-distill(비대조)", "view": "multi-crop(global+local)", "collapse": "centering + sharpening (predictor 없음)", "enc": "ViT", "domain": "비전", "tf": true, "idea": "student ViT가 EMA teacher ViT의 출력분포를 매칭. ‘라벨 없는 self-distillation’.", "rel": "🎯 아이디어 (b)를 트랜스포머에 구현한 정석."}, {"n": 8, "name": "iBOT", "org": "Zhou et al. · ICLR 2022", "cat": "트랜스포머 SSL", "tier": "core", "url": "https://arxiv.org/abs/2111.07832", "fam": "masked self-distill", "view": "CLS(global) + patch(masked)", "collapse": "centering, online tokenizer", "enc": "ViT", "domain": "비전", "tf": true, "idea": "DINO의 CLS 자기증류 + masked patch 토큰 예측을 한 ViT로.", "rel": "🎯 아이디어 (a) ‘CLS vs patch 두 토큰그룹’의 사실상 선례."}, {"n": 9, "name": "DINOv2", "org": "Oquab et al. · TMLR 2023", "cat": "트랜스포머 SSL", "tier": "core", "url": "https://arxiv.org/abs/2304.07193", "fam": "self-distill(iBOT+DINO)", "view": "multi-crop + masked", "collapse": "centering + KoLeo", "enc": "ViT", "domain": "비전", "tf": true, "idea": "iBOT+DINO 손실 + 큐레이션 데이터로 ViT 파운데이션. 큰 ViT→작은 ViT 증류.", "rel": "트랜스포머 self-distill의 규모화 레시피."}, {"n": 10, "name": "MoCo-v3", "org": "Chen et al. · ICCV 2021", "cat": "트랜스포머 SSL", "tier": "core", "url": "https://arxiv.org/abs/2104.02057", "fam": "대조(InfoNCE)", "view": "증강 2-view", "collapse": "momentum + projector + predictor", "enc": "ViT", "domain": "비전", "tf": true, "idea": "샴 ViT 대조학습. ViT 학습 불안정을 patch-embed 동결로 해결.", "rel": "🎯 아이디어 (b)의 대조판(ViT). ViT 안정화 전례 제공."}, {"n": 11, "name": "MAE", "org": "He et al. · CVPR 2022", "cat": "트랜스포머 SSL", "tier": "bg", "url": "https://arxiv.org/abs/2111.06377", "fam": "마스킹 복원(생성)", "view": "단일 view", "collapse": "해당없음(대조 아님)", "enc": "ViT(asym enc-dec)", "domain": "비전", "tf": true, "idea": "75% 마스킹 패치 픽셀 복원. 대조·샴 아님 — 대조용으로만 포함.", "rel": "사용자 아이디어와 ‘불일치’ 사례(참고)."}, {"n": 12, "name": "data2vec", "org": "Baevski et al. · ICML 2022", "cat": "트랜스포머 SSL", "tier": "core", "url": "https://arxiv.org/abs/2202.03555", "fam": "self-distill(latent 회귀)", "view": "full ↔ masked 시퀀스", "collapse": "EMA teacher + stop-grad", "enc": "Transformer", "domain": "음성·영상·텍스트", "tf": true, "idea": "EMA teacher가 full 입력의 contextualized latent, student가 masked view로 그 latent를 회귀.", "rel": "🎯 로봇 시계열에 가장 이식성 높은 청사진(view=full/masked)."}, {"n": 13, "name": "data2vec 2.0", "org": "Baevski et al. · ICML 2023", "cat": "트랜스포머 SSL", "tier": "core", "url": "https://arxiv.org/abs/2212.07525", "fam": "self-distill(latent 회귀)", "view": "full ↔ masked(다중마스크)", "collapse": "EMA teacher", "enc": "Transformer", "domain": "멀티모달", "tf": true, "idea": "masked 토큰 미인코딩·conv 디코더·multi-mask로 data2vec 효율화.", "rel": "🎯 (b) 실시간 학습비용 절감판."}, {"n": 14, "name": "SiT", "org": "Atito et al. · arXiv 2021", "cat": "트랜스포머 SSL", "tier": "bg", "url": "https://arxiv.org/abs/2104.03602", "fam": "멀티태스크 SSL", "view": "복원+회전+대조 헤드", "collapse": "태스크별 상이", "enc": "ViT", "domain": "비전", "tf": true, "idea": "ViT를 복원·회전·CLS 대조의 멀티헤드 SSL로.", "rel": "한 ViT에 여러 SSL 헤드 — (a) 인접."}, {"n": 15, "name": "Self-Contrastive Learning", "org": "Bae et al. · AAAI 2023", "cat": "아이디어 (a) 근접", "tier": "core", "url": "https://arxiv.org/abs/2106.15499", "fam": "지도-대조(단일 view)", "view": "한 망의 서로 다른 깊이(exit)", "collapse": "해당없음", "enc": "CNN(multi-exit)", "domain": "비전", "tf": false, "idea": "증강 대신 한 네트워크의 중간/최종 출력(다른 깊이)을 대조.", "rel": "🎯 ‘한 망 안 두 내부 view 대조’ = 아이디어 (a)의 가장 근접 선례(단 CNN·지도)."}, {"n": 16, "name": "Hidden-layer Self-Distillation", "org": "Lowe · arXiv 2026", "cat": "아이디어 (a) 근접", "tier": "core", "url": "https://arxiv.org/abs/2603.15553", "fam": "self-distill(은닉층)", "view": "여러 은닉층 latent", "collapse": "stop-grad(추정)", "enc": "미확인", "domain": "일반", "tf": false, "idea": "최종 임베딩이 아니라 여러 은닉층 latent를 예측(깊이 방향 자기증류).", "rel": "🎯 (a) ‘망 내부 부분들 간 증류’ 정신에 가장 가까움(아키텍처 세부 미확인)."}, {"n": 17, "name": "TST", "org": "Zerveas et al. · KDD 2021", "cat": "시계열 SSL", "tier": "core", "url": "https://arxiv.org/abs/2010.02803", "fam": "마스킹 복원(생성)", "view": "단일 view(masked)", "collapse": "해당없음", "enc": "Transformer", "domain": "다변량 시계열", "tf": true, "idea": "다변량 시계열용 트랜스포머의 ‘BERT식’ masked-value 복원.", "rel": "로봇 고유감각=다변량 시계열의 트랜스포머 baseline."}, {"n": 18, "name": "TS2Vec", "org": "Yue et al. · AAAI 2022", "cat": "시계열 SSL", "tier": "core", "url": "https://arxiv.org/abs/2106.10466", "fam": "대조(계층적)", "view": "시간 + 인스턴스 대조", "collapse": "negatives", "enc": "Dilated-CNN", "domain": "시계열", "tf": false, "idea": "타임스탬프별 표현을 시간/인스턴스 두 수준에서 대조.", "rel": "고유감각 스트림에 직접 적용 가능한 대조 TS 표준."}, {"n": 19, "name": "Sup. Contrastive Temporal TF", "org": "Liu et al. · arXiv 2024", "cat": "시계열 SSL", "tier": "bg", "url": "https://arxiv.org/abs/2403.10787", "fam": "지도-대조", "view": "증강 시계열 view", "collapse": "negatives", "enc": "Transformer", "domain": "시계열", "tf": true, "idea": "트랜스포머 + 대조를 시계열에 적용한 최근(2024) 사례.", "rel": "트랜스포머×대조가 시계열에서 활발함을 보임."}, {"n": 20, "name": "HIMLoco", "org": "Long et al. · ICLR 2024", "cat": "사족보행", "tier": "core", "url": "https://arxiv.org/abs/2312.11460", "fam": "SwAV식 대조", "view": "현재 ↔ 후속 상태", "collapse": "Sinkhorn 프로토타입", "enc": "MLP [512,256,128]", "domain": "사족보행 RL", "tf": false, "idea": "고유감각 잠재를 후속상태로 끌어당기는 swapped-prediction + 명시적 속도추정.", "rel": "🎯 사족보행 대조 SSL 대표 — 단 인코더가 MLP."}, {"n": 21, "name": "TAR", "org": "Mousa et al. · IROS 2025", "cat": "사족보행", "tier": "core", "url": "https://arxiv.org/abs/2503.20839", "fam": "triplet 대조", "view": "teacher next-latent ↔ student 예측", "collapse": "negatives(domain-rand)", "enc": "MLP/TCN/LSTM", "domain": "사족보행 RL", "tf": false, "idea": "teacher↔student 다음상태 잠재를 triplet으로 정렬, domain-rand을 negative로.", "rel": "🎯 사용자 출발점. 대조지만 인코더 MLP/TCN/LSTM(트랜스포머 아님)."}, {"n": 22, "name": "SLR", "org": "Chen et al. · CoRL 2024", "cat": "사족보행", "tier": "core", "url": "https://arxiv.org/abs/2406.04835", "fam": "self-predictive(SPR식)", "view": "현재 ↔ 미래 잠재", "collapse": "transition model", "enc": "MLP/recurrent", "domain": "사족보행 RL", "tf": false, "idea": "특권정보 없이 학습된 전이모델로 미래 잠재를 자기예측.", "rel": "BYOL/SPR 정신 — 단 트랜스포머 아님."}, {"n": 23, "name": "BarlowWalk", "org": "Huang et al. · Humanoids 2025", "cat": "사족보행", "tier": "core", "url": "https://arxiv.org/abs/2508.00939", "fam": "Barlow Twins(비대조)", "view": "연속 타임스텝", "collapse": "cross-correlation→단위행렬", "enc": "MLP", "domain": "보행 RL", "tf": false, "idea": "고유감각 history를 저차원 latent로, 연속 스텝 간 Barlow-Twins 손실.", "rel": "🎯🎯 사용자 (b)와 가장 유사한 선례(redundancy-reduction). 인코더만 MLP → 트랜스포머化가 빈칸."}, {"n": 24, "name": "DreamWaQ", "org": "Nahrendra et al. · ICRA 2023", "cat": "사족보행", "tier": "bg", "url": "https://arxiv.org/abs/2301.10602", "fam": "복원(VAE)", "view": "단일 view", "collapse": "해당없음", "enc": "MLP/GRU(VAE)", "domain": "사족보행 RL", "tf": false, "idea": "공유 인코더로 VAE 복원 + 속도추정(‘암묵 지형 상상’).", "rel": "대조 아님 — 자기지도 추정 baseline."}, {"n": 25, "name": "ULT", "org": "Liu et al. · IROS 2025", "cat": "사족보행", "tier": "core", "url": "https://arxiv.org/abs/2503.08997", "fam": "supervised 예측(SSL 아님)", "view": "해당없음", "collapse": "해당없음", "enc": "Transformer", "domain": "사족보행 RL", "tf": true, "idea": "트랜스포머 단일정책 + next state-action 예측 + 모방(전부 supervised).", "rel": "🎯🎯 트랜스포머지만 보조손실이 supervised → 샴 SSL이 정확히 그 ‘빈칸’."}, {"n": 26, "name": "Constrained Skill Discovery", "org": "Atanassov et al. · arXiv 2024", "cat": "사족보행", "tier": "bg", "url": "https://arxiv.org/abs/2410.07877", "fam": "상호정보 스킬(대조 아님)", "view": "스킬 ↔ 상태변화", "collapse": "norm-matching 제약", "enc": "MLP", "domain": "사족보행 RL", "tf": false, "idea": "거리/노름 제약 하 비지도 스킬발견(METRA/LSD 계열).", "rel": "대조 SSL로 오인 주의 — 참고용."}, {"n": 27, "name": "CURL", "org": "Srinivas et al. · ICML 2020", "cat": "RL 보조표현", "tier": "bg", "url": "https://arxiv.org/abs/2004.04136", "fam": "대조(InfoNCE)", "view": "이미지 증강", "collapse": "negatives", "enc": "CNN", "domain": "픽셀 RL", "tf": false, "idea": "SimCLR식 보조손실을 RL 인코더에. 보행엔 직접 적용 안 됨(개념 조상).", "rel": "대조-RL 조상. 사족보행 대조의 뿌리."}, {"n": 28, "name": "SPR", "org": "Schwarzer et al. · ICLR 2021", "cat": "RL 보조표현", "tier": "bg", "url": "https://arxiv.org/abs/2007.05929", "fam": "self-predictive(BYOL식)", "view": "현재 ↔ k-step 미래 잠재", "collapse": "target net + predictor", "enc": "CNN", "domain": "Atari", "tf": false, "idea": "전이모델로 다단계 미래 잠재를 자기예측(negative 없음).", "rel": "SLR·SPR-UAV가 계승한 BYOL식 RL 표현."}, {"n": 29, "name": "Contrastive Scene Transfer", "org": "Xing et al. (Scaramuzza) · ICRA 2024", "cat": "드론·비행", "tier": "core", "url": "https://arxiv.org/abs/2309.09865", "fam": "대조(multi-pair)", "view": "장면(scene) 쌍", "collapse": "negatives", "enc": "CNN", "domain": "agile 비행", "tf": false, "idea": "adaptive multi-pair 대조로 zero-shot 장면전이 시각표현 → 미지 환경 agile 비행.", "rel": "🎯 저수준 agile 비행 + 대조 SSL의 사실상 유일 앵커."}, {"n": 30, "name": "Depth-CUPRL", "org": "de Jesus et al. · IROS 2022", "cat": "드론·비행", "tier": "core", "url": "https://arxiv.org/abs/2206.15211", "fam": "대조(CURL식)", "view": "depth 증강", "collapse": "negatives + 우선순위 replay", "enc": "CNN", "domain": "mapless nav", "tf": false, "idea": "depth 이미지에 CURL식 대조 + 우선순위 replay로 UAV mapless 내비.", "rel": "고수준 UAV 내비의 대조 표현."}, {"n": 31, "name": "SPR-UAV Object-Goal Nav", "org": "Ayala et al. · arXiv(T-RO 제출) 2026", "cat": "드론·비행", "tier": "core", "url": "https://arxiv.org/abs/2604.21130", "fam": "self-predictive(SPR식)", "view": "현재 ↔ 미래 잠재", "collapse": "target net", "enc": "CNN", "domain": "object-goal nav", "tf": false, "idea": "SPR식 자기예측 지각 + actor-critic으로 3D object-goal UAV 내비 샘플효율↑.", "rel": "드론 영역의 SPR 직접 유사물."}, {"n": 32, "name": "DTPPO", "org": "Wei et al. · arXiv 2024", "cat": "드론·비행", "tier": "bg", "url": "https://arxiv.org/abs/2410.15205", "fam": "없음(supervised RL)", "view": "해당없음", "collapse": "해당없음", "enc": "Dual Transformer", "domain": "multi-UAV nav", "tf": true, "idea": "공간+시간 트랜스포머를 PPO에. SSL/대조 보조손실 없음.", "rel": "드론 트랜스포머지만 SSL 미결합 → 빈칸 방증."}, {"n": 33, "name": "Swift (drone racing)", "org": "Kaufmann et al. · Nature 2023", "cat": "드론·비행", "tier": "bg", "url": "https://www.nature.com/articles/s41586-023-06419-4", "fam": "없음(supervised 지각)", "view": "해당없음", "collapse": "해당없음", "enc": "CNN(gate detector)+MLP", "domain": "챔피언 레이싱", "tf": false, "idea": "supervised 게이트 검출 + VIO 상태 → PPO. 대조/SSL 없음.", "rel": "마퀴 레이싱은 지도지각 — 대조 미사용 방증."}, {"n": 34, "name": "Agile Flight from Pixels", "org": "Geles et al. (Scaramuzza) · RSS 2024", "cat": "드론·비행", "tier": "bg", "url": "https://arxiv.org/abs/2406.12505", "fam": "없음(비대칭 actor-critic)", "view": "해당없음", "collapse": "해당없음", "enc": "Swin(검출, 배포)", "domain": "픽셀→제어", "tf": true, "idea": "픽셀→제어 비대칭 actor-critic, 학습시 수제 센서추상. 대조 인코더 없음.", "rel": "저수준 비행 SSL 공백의 방증."}, {"n": 35, "name": "SkyDreamer", "org": "Verraest et al. · arXiv 2025", "cat": "드론·비행", "tier": "bg", "url": "https://arxiv.org/abs/2510.14783", "fam": "world-model(복원/예측)", "view": "해당없음", "collapse": "해당없음", "enc": "RSSM(Dreamer)", "domain": "레이싱", "tf": false, "idea": "Dreamer 세계모델 잠재가 암묵 상태추정. 대조 아님·트랜스포머 아님.", "rel": "SSL-풍 표현의 레이싱 근접물(비대조)."}];
+const CATS={"SSL 기초": "#9aa6c4", "트랜스포머 SSL": "#22d3ee", "아이디어 (a) 근접": "#a78bfa", "시계열 SSL": "#34d399", "사족보행": "#fb7185", "RL 보조표현": "#fbbf24", "드론·비행": "#5b8cff"};
+const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fmtC(s){
+  if(!s) return '';
+  s=String(s); var ph=[];
+  s=s.replace(/\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]/g,function(m){ph.push(m);return '~~M'+(ph.length-1)+'~~';});
+  s=s.replace(/\b(et al|e\.g|i\.e|vs|cf|approx|Eq|Fig|Sec|Tab|Ref|Dr|Prof|No|al)\./g,'$1~~D~~');
+  s=s.replace(/<br\s*\/?>/gi,'~~B~~');
+  var parts=s.split(/\.(?=\s)|\.$|~~B~~/).map(function(p){return p.replace(/~~D~~/g,'.').replace(/^[\s•·\-]+/,'').trim();}).filter(Boolean);
+  var rest=function(t){return t.replace(/~~M(\d+)~~/g,function(m,i){return ph[+i];});};
+  if(parts.length<=1) return '<div class="cfp">'+rest(parts[0]||'')+'</div>';
+  return '<ul class="cbul">'+parts.map(function(p){return '<li>'+rest(p)+'</li>';}).join('')+'</ul>';
+}
+// papers
+let pTier="전체", pCat="전체";
+function pcard(d){
+  const c=CATS[d.cat]||"#5b8cff";
+  const tierB=d.tier==="core"?'<span class="b core">🎯 직접관련</span>':'<span class="b bg">📚 배경</span>';
+  const tfB=d.tf?'<span class="b tf">Transformer</span>':'';
+  return `<div class="card" style="--cat-color:${c}">
+    <div class="num">${String(d.n).padStart(2,'0')}</div>
+    <h3>${esc(d.name)}</h3><div class="yr">${esc(d.org)}</div>
+    <div>${tierB}${tfB}<span class="tag cat" style="--cat-color:${c}">${esc(d.cat)}</span></div>
+    <p class="idea">${esc(d.idea)}</p>
+    <dl class="fw"><dt>SSL</dt><dd>${esc(d.fam)}</dd><dt>두 view</dt><dd>${esc(d.view)}</dd><dt>인코더</dt><dd>${esc(d.enc)}</dd><dt>도메인</dt><dd>${esc(d.domain)}</dd></dl>
+    <div class="rel">↳ ${esc(d.rel)}</div>
+    <div class="links"><a href="${esc(d.url)}" target="_blank">📄 논문 링크</a></div>
+  </div>`;
+}
+function prender(){
+  const q=document.getElementById("p_q").value.trim().toLowerCase();
+  const rows=PAPERS.filter(d=>(pTier==="전체"||d.tier===pTier)&&(pCat==="전체"||d.cat===pCat)&&
+    (q===""||(d.name+d.org+d.idea+d.fam+d.view+d.enc+d.domain+d.rel+d.cat).toLowerCase().includes(q)));
+  document.getElementById("p_cnt").textContent=`${rows.length}편 표시 (전체 ${PAPERS.length})`;
+  document.getElementById("p_grid").innerHTML=rows.map(pcard).join("")||'<div class="cnt">없음</div>';
+}
+(function(){
+  const tf=document.getElementById("p_tier");
+  [["전체","전체"],["🎯 직접관련","core"],["📚 배경","bg"]].forEach(([lab,v])=>{const e=document.createElement("div");e.className="chip"+(v==="전체"?" active":"");e.textContent=lab;e.onclick=()=>{pTier=v;[...tf.children].forEach(x=>x.classList.remove("active"));e.classList.add("active");prender();};tf.appendChild(e);});
+  const cf=document.getElementById("p_cat");
+  ["전체",...Object.keys(CATS)].forEach(c=>{const e=document.createElement("div");e.className="chip"+(c==="전체"?" active":"");e.textContent=c==="전체"?"전체 카테고리":c;if(c!=="전체")e.style.borderColor=CATS[c];e.onclick=()=>{pCat=c;[...cf.children].forEach(x=>x.classList.remove("active"));e.classList.add("active");prender();};cf.appendChild(e);});
+  document.getElementById("p_q").addEventListener("input",prender);
+})();
+// compare
+function crow(d){
+  const c=CATS[d.cat]||"#5b8cff";
+  const domrel=d.domain+". "+d.rel;
+  return `<tr data-b="${esc((d.name+d.fam+d.view+d.enc+d.domain+d.rel).toLowerCase())}">
+    <td class="cmcol" style="border-left:3px solid ${c}"><span class="cmname">${String(d.n).padStart(2,'0')} ${esc(d.name)}</span><br><span class="ccat">${esc(d.cat)}</span> <a href="${esc(d.url)}" target="_blank">📄</a></td>
+    <td>${fmtC(d.fam)}</td><td>${fmtC(d.view)}</td><td>${fmtC(d.collapse)}</td><td>${fmtC(d.enc)}</td><td>${fmtC(domrel)}</td></tr>`;
+}
+document.getElementById("c_tb").innerHTML=PAPERS.map(crow).join("");
+document.getElementById("c_q").addEventListener("input",e=>{
+  const q=e.target.value.trim().toLowerCase();
+  document.querySelectorAll("#c_tb tr").forEach(tr=>{tr.style.display=(q===""||tr.dataset.b.includes(q))?"":"none";});
+});
+// tabs
+(function(){
+  const tabs=[["overview","📋 개요"],["papers","🃏 논문 카드"],["compare","📊 비교표"],["idea","🔗 아이디어·타당성"]];
+  const bar=document.getElementById("tabbar");
+  tabs.forEach(([k,lab],i)=>{const b=document.createElement("button");b.className="tabbtn"+(i===0?" on":"");b.textContent=lab;
+    b.onclick=()=>{document.querySelectorAll(".tabbtn").forEach(x=>x.classList.remove("on"));b.classList.add("on");
+      document.querySelectorAll("section.tab").forEach(s=>s.classList.remove("active"));
+      const sec=document.getElementById("tab-"+k);sec.classList.add("active");__km(sec);window.scrollTo({top:0,behavior:"smooth"});};
+    bar.appendChild(b);});
+  document.getElementById("tab-overview").classList.add("active");
+})();
+prender();
+</script>
+</body>
+</html>
