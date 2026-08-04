@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, stock, llm, trading, automation, wechat, telegram, finance]
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-06-25
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,7 @@ reliability: medium
 # ZhuLinsen/daily_stock_analysis
 
 > [!insight] 핵심 인사이트
-> LLM 기반 A주·홍콩·미국 주식 일일 분석 자동화. 기술지표·뉴스감성·차금흐름 통합, WeChat/Telegram 멀티채널 푸시. ⭐32,300 — [[TradingAgents]]·[[ai-hedge-fund]]와 함께 AI 금융 자동화 생태계 성숙 신호.
+> LLM 기반 A주·홍콩·미국 주식 일일 분석 자동화. 기술지표·뉴스감성·차금흐름 통합, WeChat/Telegram 멀티채널 푸시. ⭐49,151 (2026-06-25, 당일 +1,468; 5만 근접) ← ⭐46,366 (2026-06-23) — [[TradingAgents]]·[[ai-hedge-fund]]와 함께 AI 금융 자동화 생태계 성숙 신호. 꾸준한 스타 증가 = 개인 투자자용 LLM 분석 자동화 수요 지속.
 
 ## 도메인별 추출
 
@@ -31,4 +31,5 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/ZhuLinsen/daily_stock_analysis
-- 신뢰도: ⭐⭐ (⭐32,300, A주 중심)
+- 스타: ⭐49,151 (2026-06-25, 당일 +1,468) ← ⭐46,366 (2026-06-23) ← ⭐32,300 (2026-04-29)
+- 신뢰도: ⭐⭐⭐ (⭐49,151, 5만 근접, A주 중심이나 채택 지속)

@@ -4,15 +4,18 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, dotclaude, developer-tools]
 created: 2026-04-27
-updated: 2026-05-16
+updated: 2026-07-16
 sources: []
 reliability: high
 ---
 
 # mattpocock/skills
 
+> [!note] 2026-07-16 갱신
+> GitHub ⭐**173,162 (당일 +2,130)** ← 156,933 (07-05) ← 85,662 (5월 중순) ← 46,841 (4월 말). 2개월 반 만에 17만 돌파, 하루 +2천대 유입 유지 = 에이전트 스킬 생태계의 사실상 표준 레퍼런스로 굳어짐. 같은 날 배치서 [[hallmark]](디자인 품질)·[[KnowAct-GUIClaw]](스킬 자동 축적)와 함께 "스킬" 축이 절차→미학→자동생성으로 3방향 확장.
+
 > [!insight] 핵심 인사이트
-> `.claude` 디렉토리에서 바로 사용 가능한 실무 검증 Claude 에이전트 스킬 컬렉션. GitHub ⭐**85,662 (+3,132 당일, 2026-05-16)** — 4월 말 ⭐46,841에서 약 2.5주 만에 거의 2배 급등. Matt Pocock(TypeScript 교육자·Total TypeScript 운영)의 브랜드 파워 + Claude Code 생태계 폭발적 성장의 교차점.
+> `.claude` 디렉토리에서 바로 사용 가능한 실무 검증 Claude 에이전트 스킬 컬렉션. GitHub ⭐**156,933 (+973/일, 2026-07-05)** — 4월 말 ⭐46,841 → 5월 중순 ⭐85,662 → 7월 초 ⭐156,933로 약 2개월간 3배 이상 지속 급등. Matt Pocock(TypeScript 교육자·Total TypeScript 운영)의 브랜드 파워 + Claude Code 스킬 생태계 폭발의 교차점. 개인 `.claude` 설정 공개가 곧 배포 단위가 된 대표 사례.
 
 ## 도메인별 추출 (ai-news)
 
@@ -32,5 +35,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/mattpocock/skills
-- 스타: ⭐85,662 (+3,132 당일, 2026-05-16 기준) ← 이전: ⭐46,841 (2026-04-30)
+- 스타: ⭐156,933 (+973/일, 2026-07-05 기준) ← ⭐85,662 (2026-05-16) ← ⭐46,841 (2026-04-30)
 - 신뢰도: ⭐⭐⭐⭐ (Matt Pocock 공인 실무 검증)

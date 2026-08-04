@@ -4,18 +4,21 @@ type: source
 domain: ai-news
 tags: [ai-news, coding-agent, skills, engineering, productivity, reference]
 created: 2026-05-07
-updated: 2026-05-10
+updated: 2026-07-07
 sources: []
 reliability: high
 ---
 
 # addyosmani/agent-skills
 
+> [!update] 2026-07-07 갱신
+> ⭐71,362 (2026-07-07 자동수집; 이전 ⭐58,861 2026-06-14, 약 +12,501). MIT. WebFetch 실측 구성: **24 스킬**(Define·Plan·Build·Verify·Review·Ship 6단계) + 슬래시 커맨드 8(`/spec`·`/plan`·`/build`·`/test`·`/review`·`/ship`) + 스페셜리스트 페르소나 4(코드리뷰어·테스트엔지니어·보안감사·웹성능감사) + 체크리스트 5. 핵심 설계는 "verification gate + anti-rationalization 표"로 에이전트 지름길 차단. [[awesome-claude-code]] 등재 허브.
+
 > [!insight] 핵심 인사이트
-> Addy Osmani(Google Chrome 팀)가 관리하는 AI 코딩 에이전트용 프로덕션급 엔지니어링 스킬 모음. ⭐36,529 — 실무 적용성이 검증된 스킬 레퍼런스. [[awesome-codex-skills]] · [[vercel-skills]] · [[mattpocock-skills]]와 함께 "에이전트 스킬 큐레이션" 생태계의 핵심 허브.
+> Addy Osmani(Google Chrome 팀)가 관리하는 AI 코딩 에이전트용 프로덕션급 엔지니어링 스킬 모음. ⭐58,861 (2026-06-14; 이전 ⭐55,789 2026-06-13, +1,514 today) — 실무 적용성이 검증된 스킬 레퍼런스. [[awesome-codex-skills]] · [[vercel-skills]] · [[mattpocock-skills]]와 함께 "에이전트 스킬 큐레이션" 생태계의 핵심 허브.
 
 **GitHub**: https://github.com/addyosmani/agent-skills  
-**스타**: ⭐36,529 (2026-05-10 기준, +893 2026-05-09)  
+**스타**: ⭐58,861 (2026-06-14; 이전 ⭐55,789 2026-06-13)  
 **신뢰도**: ⭐⭐⭐⭐⭐
 
 ## 도메인별 추출
@@ -39,4 +42,4 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/addyosmani/agent-skills
-- 신뢰도: ⭐⭐⭐⭐⭐ (36K 스타, Addy Osmani)
+- 신뢰도: ⭐⭐⭐⭐⭐ (55.8K 스타, Addy Osmani)

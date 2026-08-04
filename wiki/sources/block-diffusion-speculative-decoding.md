@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, speculative-decoding, inference, llm, diffusion, speed]
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-07-01
 sources: []
 reliability: medium
 ---
@@ -33,8 +33,14 @@ reliability: medium
 - **6개월 영향력**: LLM 추론 비용 절감 → 에이전트 루프 운영 비용 감소
 - **대체 관계**: 기존 SpecDecoding 논문(Leviathan 2023) 대비 드래프트 트리 개선
 
+> [!note] 후속 (2026-07-01)
+> [[BlockPilot]](HF 데일리 ↑54)이 이 계열의 약점을 정조준 — 고정 블록 크기 대신 프리필링 표현으로 **인스턴스별 최적 블록 크기를 예측**해 Qwen3-4B에서 4.20배 가속. "블록 확산 투기적 디코딩"이 고정 파라미터→적응형 정책으로 진화하는 단계.
+
 ## 관련 페이지
 
+- [[BlockPilot]]
+- [[JetSpec]]
+- [[Draft-OPD]]
 - [[DMax]]
 - [[AI-에이전트-프레임워크]]
 

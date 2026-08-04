@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-06-09 (ingest batch)
-total_pages: 469
-total_sources: 454
+updated: 2026-08-03 (자동수집 13건 — 신규 6·갱신 7 / 신규 generative-ai-for-beginners(⭐11.5만 MS 교육)·HF논문 5[RLSVR·N0-VTLA·Meshy-T2·AISPA·QQWorld], 갱신 AI-For-Beginners ⭐6만 돌파·airllm·Agent-Reach·TencentDB·Unlimited-OCR 2.6M·Fable-Fusion 1.55M·Kimi-K3 968k. GitHub·HF모델 raw API 수치·HF논문 미래형 ID 원문 미검증 medium)
+total_pages: 842
+total_sources: 797
 ---
 
 # Wiki Index
@@ -23,6 +23,29 @@ total_sources: 454
 - [[NousResearch]] — 오픈소스 LLM 파인튜닝, Hermes 시리즈, hermes-agent 개발사
 - [[Zhipu AI]] — GLM 시리즈 개발사 (Z.AI), Monday AI 기반 모델 제공사, GLM-5.1 (753B MoE)
 - [[Netflix-AI]] — Netflix AI Research, VOID 비디오 인페인팅 오픈소스 공개
+- [[Google-Labs]] — Google 실험 AI 조직(google-labs-code), 에이전트용 디자인 명세 design.md 공개 *(NEW 2026-06-25)*
+- [[Alibaba]] — Qwen 시리즈·오픈 에이전트 빅테크, page-agent·Qwen-Image-Agent 동시 공개 *(NEW 2026-06-26)*
+- [[comma-ai]] — 기존 양산차 ADAS를 엔드투엔드 ML로 업그레이드하는 로보틱스 오픈소스 기업, openpilot 제작 *(NEW 2026-06-27)*
+- [[Allen Institute for AI (AI2)]] — 오픈 웨이트·오픈 데이터 노선 비영리 AI 연구소, olmocr 제작 *(NEW 2026-07-02)*
+- [[Microsoft]] — 빅테크, 대규모 오픈 AI 교육 커리큘럼(AI-For-Beginners) 운영 *(NEW 2026-07-02)*
+- [[Google]] — Gemini·Gemma·ADK, 코딩 에이전트 겨냥 오픈 도구(agents-cli·design-md) 배포 *(NEW 2026-07-02)*
+- [[OpenAI]] — GPT·Codex 개발사, 경쟁사 Claude Code용 브리지(codex-plugin-cc) 공식 배포로 에이전트 interop 주도 *(NEW 2026-07-04)*
+- [[NVIDIA]] — GPU·추론 인프라, 자사 NVFP4 4비트로 오픈모델(Qwen3.6-27B) 직접 양자화 배포 *(NEW 2026-07-04)*
+- [[Tencent]] — 중국 빅테크, 에이전트용 경량 동시성 샌드박스 CubeSandbox 배포 *(NEW 2026-07-04)*
+- [[PyTorch]] — 딥러닝 표준 프레임워크, 위키 내 거의 모든 HF 모델의 공통 하부 인프라 *(NEW 2026-07-04)*
+- [[Addy Osmani]] — Google Chrome 엔지니어·web.dev 저자, 프로덕션급 에이전트 엔지니어링 스킬(agent-skills) 배포자 *(NEW 2026-07-07)*
+- [[Firecrawl]] — 웹→LLM 정제 데이터 수집 인프라 표준 제작사, 오픈코어(코어 AGPL·SDK MIT) *(NEW 2026-07-07)*
+- [[kyutai-labs]] — 오픈소스 음성 AI 랩(Moshi 계열), CPU 초경량 TTS pocket-tts 제작 *(NEW 2026-07-08)*
+- [[InternScience]] — 에이전트 특화 오픈 MoE 배포 연구조직, Agents-A1(35B MoE) 제작 *(NEW 2026-07-08)*
+- [[Meta]] — 빅테크(facebook), 에이전트 지향 오픈 디자인 시스템 astryx 배포(React/StyleX) *(NEW 2026-07-09)*
+- [[Meituan]] — 중국 빅테크, 1.6T 오픈 MoE LongCat-2.0 배포(MIT·1M·AI ASIC 학습) *(NEW 2026-07-09)*
+- [[ByteDance]] — TikTok 모회사, 에이전트 하네스(deer-flow ⭐78,859)+영상 AI(Seedance) 병행 *(UPDATED 2026-08-02)*
+- [[NAVER]] — 한국 빅테크, NAVER Cloud "영상 이해 강건성" 쌍논문(Video-Oasis·RCORE) *(NEW 2026-07-10)*
+- [[OpenBMB]] — 온디바이스 SLM 특화 조직, MiniCPM 시리즈(1B급 도구·추론) *(NEW 2026-07-10)*
+- [[Yann-LeCun]] — Meta 수석 AI 과학자, JEPA·월드모델 창안자(튜링상) *(NEW 2026-07-12)*
+- [[Anthropic]] — Claude 개발사, 모델→Claude Code→Agent Skills→cookbooks 풀스택 에이전트 레이어 공식 제공 *(NEW 2026-07-12)*
+- [[Upstage]] — 한국 AI 기업, Solar LLM 시리즈 개발사(오픈 250B/15B MoE Solar-Open2·문서 AI) *(NEW 2026-07-25)*
+- [[Moonshot AI]] — Kimi 시리즈 중국 프론티어 랩(Kimi K3 2.8T/104B MoE·1M·네이티브 멀티모달), 오픈 웨이트 중국 축 *(NEW 2026-07-28)*
 
 ---
 
@@ -41,34 +64,467 @@ total_sources: 454
 - [[시계열-예측-파운데이션-모델]] — TimesFM·Kronos 중심, 제로샷 시계열 예측 패러다임 *(NEW)*
 - [[금융-AI]] — TradingAgents·Kronos·TimesFM, 멀티에이전트+파운데이션 모델 결합 *(NEW)*
 - [[에이전트-메모리-레이어]] — cognee·claude-mem으로 대표되는 에이전트 메모리 인프라 패턴 *(NEW)*
+- [[온폴리시-증류]] — On-Policy Distillation, 학생 자기생성 샘플에 교사 신호 입혀 분포 불일치 교정 (DanceOPD·OPID·Draft-OPD 클러스터) *(NEW 2026-06-27)*
+- [[임바디드-AI]] — 체화 AI(로봇·VLA·월드모델), 학습→보정→메모리→배포→평가→환경생성 5각 루프 *(NEW 2026-07-09)*
+- [[JEPA]] — Joint Embedding Predictive Architecture, 표현공간 예측 월드모델(LeCun) *(NEW 2026-07-12)*
+- [[월드모델]] — 미래 예측·계획 모델, 2025~2026 최대 트렌드(예측형 vs 생성형) *(NEW 2026-07-12)*
+- [[Diffusion-월드모델]] — 픽셀 생성형 월드모델(Cosmos·Genie·GAIA·DIAMOND) *(NEW 2026-07-12)*
 
 ---
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-03 자동수집 배치 (신규 6 · 갱신 7 / GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[generative-ai-for-beginners]] — [[Microsoft]] 21강 생성형 AI 구축 입문 커리큘럼, [[AI-For-Beginners]]·[[ai-agents-for-beginners]] "for-beginners" 3부작 최상단 (GitHub ⭐115,125·+588·교육 자산·raw API high) *(NEW 2026-08-03)*
+- [[RLSVR]] — 과제 변환으로 자기검증 가능 보상 유도(RLVR→RLSVR), [[knowrl]]·[[LLM-Wiki]] 자기검증 공명 (HF 데일리·미래형 ID 미검증 medium) (2607.23802) *(NEW 2026-08-03)*
+- [[N0-VTLA]] — 잠재 촉각 토큰으로 시각·촉각·언어·행동 통합 스케일링, [[Qwen-VLA]]·[[임바디드-AI]] VLA에 촉각 축 추가 (HF 데일리·미래형 ID 미검증 medium) (2607.23782) *(NEW 2026-08-03)*
+- [[Meshy-T2]] — 플로우 매칭 기반 네이티브 3D 메시 고속 생성, [[TRELLIS.2]]·[[Meshy]]·[[AI-3D-생성]] 생성방식 축 (HF 데일리·미래형 ID 미검증 medium) (2607.28675) *(NEW 2026-08-03)*
+- [[AISPA]] — LLM 앱 시스템 프롬프트의 사용자 관점 보안 감사(Stanford 추정), [[system-prompts-and-models-of-ai-tools]] 상위 감사 레이어 (HF 데일리·미래형 ID 미검증 medium) (2607.28617) *(NEW 2026-08-03)*
+- [[QQWorld]] — 분위수-분위수 매칭 월드모델 정규화, [[PhiZero]] 표현계층 대비 최적화·안정화 축·[[JEPA]]·[[월드모델]] (HF 데일리·미래형 ID 미검증 medium) (2607.28415) *(NEW 2026-08-03)*
+- [[AI-For-Beginners]] 갱신 — [[Microsoft]] 12주 24강 AI 기초, ⭐50,871→**60,032**(당일 +2,629·**6만 돌파**)·교육 자산 성격 동일(raw API 수치) *(UPDATE 2026-08-03)*
+- [[airllm]] 갱신 — 레이어 단위 저사양 로컬 추론, ⭐23,500→**26,092**(당일 +819)·"속도 실측" 판단 원칙 유지(raw API 수치) *(UPDATE 2026-08-03)*
+- [[Agent-Reach]] 갱신 — 소셜 검색 커넥터 레이어, ⭐63,584→**65,181**(당일 +659)·[[last30days-skill]] 조합 파이프 유지(raw API 수치) *(UPDATE 2026-08-03)*
+- [[TencentDB-Agent-Memory]] 갱신 — [[Tencent]] 로컬 팀 에이전트 메모리, ⭐10,488→**11,534**(당일 +602)·1만 돌파 후 상승 지속(raw API 수치) *(UPDATE 2026-08-03)*
+- [[Unlimited-OCR]] 갱신 — [[Baidu]] 3B OCR, DL 2.54M→**2.6M**·좋아요 3.73k→**3.8k**·오픈 OCR 1위권(raw API 수치·ParseBench 자체발표) *(UPDATE 2026-08-03)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, DL 1.37M→**1.55M**·좋아요 1.26k→**1.38k**·ARC-C 0.711 재현불가 medium 유지(raw API 수치) *(UPDATE 2026-08-03)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T/104B MoE, DL 560k→**968k**(100만 근접)·좋아요 9.35k→**9.74k**(트렌딩 좋아요 1위)·자체발표 벤치 medium 유지(raw API 수치) *(UPDATE 2026-08-03)*
+<!-- ── 2026-08-02 자동수집 배치 (신규 3 · 갱신 5 / 전량 GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], 신규 3건 세부 스펙·HF 벤치 원문 미검증) ── -->
+- [[TRELLIS.2]] — [[Microsoft]] 3D 생성용 네이티브·컴팩트 구조화 latent 모델, [[Meshy]]·[[Tripo]] 오픈 백본 후보·[[slam-3dgs]] 인접 (GitHub ⭐10,031·+107·Python·세부 미검증 medium) *(NEW 2026-08-02)*
+- [[copilot-sdk]] — GitHub 공식 Copilot Agent 통합 멀티플랫폼 SDK, [[codex-plugin-cc]] "코딩 에이전트 개방" 계보 (GitHub ⭐10,318·+142·Java·API 커버리지 미검증 medium) *(NEW 2026-08-02)*
+- [[reverse-skill]] — 리버스엔지니어링·보안 리서치 스킬 AI 자동 라우팅, [[OpenSpace]]·[[book-to-skill]] 도메인특화판 (GitHub ⭐12,270·**당일 +1,320 급상승 1위**·PowerShell·개인 프로젝트·화제성 경계 low) *(NEW 2026-08-02)*
+- [[deer-flow]] 갱신 — [[ByteDance]] DeerFlow 2.0 슈퍼에이전트 하네스, ⭐76,695→**78,859**(당일 +209)·구성 동일 high 유지(raw API 수치) *(UPDATE 2026-08-02)*
+- [[TencentDB-Agent-Memory]] 갱신 — [[Tencent]] 로컬 팀 에이전트 메모리 허브, ⭐7,892→**10,488**(당일 +227·**1만 돌파**)·4단계 페르소나 파이프 동일(raw API 수치) *(UPDATE 2026-08-02)*
+- [[GLM-5.2]] 갱신 — [[Zhipu-AI]] 753B MIT 플래그십, HF DL 1.53M→**2.05M**(**200만 돌파**·좋아요 4.74k)·오픈가중치 최상위군(raw API 수치·벤치 자체발표) *(UPDATE 2026-08-02)*
+- [[Unlimited-OCR]] 갱신 — [[Baidu]] 3B OCR, DL 2.46M→**2.54M**·좋아요 3.68k→**3.73k**·MIT·오픈 OCR 1위권(raw API 수치·ParseBench 자체발표) *(UPDATE 2026-08-02)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, DL 1.17M→**1.37M**·좋아요 1.17k→**1.26k**·ARC-C 0.711 자체벤치 재현불가 medium 유지(raw API 수치) *(UPDATE 2026-08-02)*
+<!-- ── 2026-07-31 자동수집 배치 (신규 6 · 갱신 7 / GitHub 5 WebFetch 실검증, HF모델 3 raw API 수치, HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[openwork]] — [[different-ai]] "Claude Cowork 오픈소스 대안" AI 워크플로 공유 데스크톱, ⭐**19,035**(당일 +915·WebFetch 실확인 TS)·워크플로 자산화·[[ECC]] 계보(WebFetch high) *(NEW 2026-07-31)*
+- [[Qwen-UI-Agent]] — [[Alibaba]] 차세대 GUI 에이전트 파운데이션 모델 기술보고서, [[StateAct]] 방법론의 전용모델화·lightpanda 자동화 접점(HF ↑57·미래형 ID 미검증 medium) (2607.28227) *(NEW 2026-07-31)*
+- [[PhiZero]] — "물리 언어(physical language)" 중심 월드모델 프레임워크, [[JEPA]]·[[월드모델]] 표현계층 새 축(HF ↑130·미래형 ID 미검증 medium) (2607.28624) *(NEW 2026-07-31)*
+- [[Metis]] — 정보 보존·검색 "메모리 파운데이션 모델", [[에이전트-메모리-레이어]] 승격 시도(HF ↑93·미래형 ID 미검증 medium) (2607.26760) *(NEW 2026-07-31)*
+- [[Frontis-MA1]] — ML 엔지니어링의 재귀적 자기개선(AI4AI), 자기개선 주장 과장 위험·[[LLM-Wiki]] 자기검증 공명(HF ↑109·미래형 ID 미검증 medium) (2607.28568) *(NEW 2026-07-31)*
+- [[AskChem]] — 클레임 중심 화학 문헌 합성 인프라, "요약 아닌 주장 단위 구조화" [[LLM-Wiki]] 이식 힌트(HF ↑79·미래형 ID 미검증 medium) (2607.28618) *(NEW 2026-07-31)*
+- [[ECC]] 갱신 — [[affaan-m]] 에이전트 하네스, ⭐235,876→**236,434**(당일 +804·WebFetch "236k"·MIT·TS 실확인)·규모≠품질 원칙 유지 *(UPDATE 2026-07-31)*
+- [[chrome-devtools-mcp]] 갱신 — Chrome DevTools 공식 MCP, ⭐45,886→**48,211**(WebFetch "48.2k"·Apache-2.0 확정)·lightpanda 자동화 축 공식 레퍼런스 *(UPDATE 2026-07-31)*
+- [[last30days-skill]] 갱신 — 멀티소스 리서치 스킬, ⭐54,415→**55,775**(당일 +378·WebFetch "55.8k"·MIT 실확인) *(UPDATE 2026-07-31)*
+- [[speech-to-speech]] 갱신 — [[huggingface]] 로컬 음성 파이프라인, ⭐8,141→**9,425**(당일 +628·WebFetch "9.4k"·Apache-2.0)·로컬 음성 스택 급성장 지속 *(UPDATE 2026-07-31)*
+- [[GLM-5.2]] 갱신 — [[Zhipu-AI]] 753B MIT 플래그십, HF DL 1.00M→**1.53M**(좋아요 4.49k→4.69k)·채택 재가속(raw API 수치) *(UPDATE 2026-07-31)*
+- [[Unlimited-OCR]] 갱신 — [[Baidu]] 3B OCR, DL **2.6M** 유지·좋아요 3.54k→**3.61k**·MIT·한국어 PDF 게이트 편입 대기(raw API 수치) *(UPDATE 2026-07-31)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, DL 737k→**956k**·좋아요 974→**1.06k**·ARC-C 0.711 자체벤치 재현불가 medium 유지(raw API 수치) *(UPDATE 2026-07-31)*
+<!-- ── 2026-07-30 자동수집 배치 (신규 5 · 갱신 8 / GitHub·HF모델 raw API 실검증, HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[TurboVLA]] — 소비자 GPU 온디바이스 실시간 VLA, RTX 4090 <1GB VRAM·32Hz 자체주장([[임바디드-AI]] 엣지 배포축, raw 한줄요약·미검증 medium) (2607.27205) *(NEW 2026-07-30)*
+- [[HumanCLAW]] — "VLM이 신체로 실제 행동할 수 있는가" 체화 행동 검증, [[BadWAM]] "이해≠행동 접지" 계보(raw 한줄요약·미검증 medium) (2607.27180) *(NEW 2026-07-30)*
+- [[DecoEvo]] — solver↔rubric-generator 점수 분리 공진화 추론개선, [[Skill-Self-Play]]·[[CoRT]] "rubric 중심 RL"(raw 한줄요약·미검증 medium) (2607.25675) *(NEW 2026-07-30)*
+- [[CLBench-V]] — 멀티모달 문맥학습(시각 그라운딩~지식습득) 평가 벤치, [[Kimi-K3]]·[[Mage-VL]] 네이티브 멀티모달 진단축(raw 한줄요약·미검증 medium) (2607.25294) *(NEW 2026-07-30)*
+- [[CoRT]] — 반사실 리플레이+토큰단위 rubric 정책최적화, [[Progress-Reward-Modeling]] 조밀보상 언어판·[[DecoEvo]]와 짝(raw 한줄요약·미검증 medium) (2607.25659) *(NEW 2026-07-30)*
+- [[ECC]] 갱신 — [[affaan-m]] 에이전트 하네스 통합, ⭐235k→**235,876**(당일 +857 API 실검증)·규모≠품질 기능단위 검증 원칙 유지 *(UPDATE 2026-07-30)*
+- [[VibeVoice]] 갱신 — [[Microsoft]] 장시간 다화자 TTS, GitHub ⭐48,700→**51,534**(+336)·5만 돌파·Next-token diffusion 4화자 90분 재확인 *(UPDATE 2026-07-30)*
+- [[airi]] 갱신 — [[moeru-ai]] 셀프호스팅 컴패니언, ⭐44,374→**45,655**(+682)·프로바이더 추상화·WebGPU 로컬 유지 *(UPDATE 2026-07-30)*
+- [[open-code-review]] 갱신 — [[Alibaba]] 하이브리드 코드리뷰, ⭐15,242→**16,303**(+359)·결정론 룰셋+LLM 라인코멘트·~1/9 토큰 *(UPDATE 2026-07-30)*
+- [[speech-to-speech]] 갱신 — [[huggingface]] 로컬 음성 파이프라인, ⭐6,530→**8,141**(당일 +827 급상승)·[[VibeVoice]]·[[airi]]와 로컬 음성 스택 동반성장 *(UPDATE 2026-07-30)*
+- [[Unlimited-OCR]] 갱신 — [[Baidu]] 3B OCR, DL **2.69M** 유지·좋아요 3.36k→**3.54k**·MIT·32,768 컨텍스트·한국어 PDF 게이트 편입 대기 *(UPDATE 2026-07-30)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T/104B 멀티모달, DL 99.2k 유지·좋아요 8,320→**8.8k**, 초록 Claude Fable 5 열위 자인 medium 유지 *(UPDATE 2026-07-30)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, DL **737k** 유지·좋아요 784→**974**·ARC-C 0.711 자체벤치 재현불가 medium 유지 *(UPDATE 2026-07-30)*
+<!-- ── 2026-07-29 자동수집 배치 (신규 9 · 갱신 4 / 전량 WebFetch 실검증: GitHub 스타·HF 초록·모델카드) ── -->
+- [[ECC]] — [[Claude Code]]/Codex/Cursor 하네스 최적화 툴킷(67 서브에이전트·281 스킬·AgentShield 102 보안룰·메모리 볼트·훅), ⚠️스타 규모 이례적·실사용 검증 별도(WebFetch high) (GitHub ⭐235k, +636/일) *(NEW 2026-07-29)*
+- [[DocsGPT]] — [[arc53]] 온프레미스 프라이빗 AI 에이전트·엔터프라이즈 검색, 다포맷 문서분석·딥리서치·출처인용, 완성형 RAG 제품층(WebFetch high) (GitHub ⭐18.2k) *(NEW 2026-07-29)*
+- [[OpenSpace]] — [[HKUDS]] 에이전트 스킬 관리 레이어, 실행결과로 품질측정(선택/적용/완료/폴백)·자가진화 3연산(FIX/DERIVED/CAPTURED), Terminal-Bench 65.2→78.7% 자체(WebFetch high) (GitHub ⭐7.2k) *(NEW 2026-07-29)*
+- [[agent-governance-toolkit]] — [[Microsoft]] 자율에이전트 통제(정책 OPA/Cedar·제로트러스트·샌드박스·MCP 보안게이트웨이), OWASP Agentic 10/10 자체주장(WebFetch high) (GitHub ⭐5.4k) *(NEW 2026-07-29)*
+- [[HiFi-UMI]] — 로봇없는 고충실도 UMI 데이터만으로 조작정책 배포, 머리장착 스테레오-관성 SLAM 3mm·실로봇 대비 3.1%p·2,000시간 데이터셋(초록검증 medium) (2607.25895, ↑70) *(NEW 2026-07-29)*
+- [[RARG]] — [[Tencent]] relevance-aware ripgrep, 랭킹으로 탐색순서+매치 리랭킹, BrowseComp-Plus 84%·23.9 도구호출(vs 28.7·99.1)(초록·저자·기관검증 medium) (2607.24223, ↑70) *(NEW 2026-07-29)*
+- [[ReDesign]] — [[KAIST AI]] 이미지→편집가능 디자인구조 복원, 에이전틱 계층분해+graceful verification(accept/prune/retry)·Figma Replay 909파일(초록검증 medium) (2607.25565, ↑36) *(NEW 2026-07-29)*
+- [[InMind]] — USTC·Metastone 에이전트 메모리 암묵연상 사각지대 벤치, 직접회상 100% vs 간접적용 14.4%·실패는 retrieval 규명(초록·기관검증 medium) (2607.24368, ↑20) *(NEW 2026-07-29)*
+- [[Mage-VL]] — [[Microsoft]] 4B 코덱네이티브 스트리밍 멀티모달, 모션/잔차 희소패치로 토큰 75%↓·이중시스템(게이트+디코더)(초록·기관검증 medium) (2607.24904, ↑15) *(NEW 2026-07-29)*
+- [[OpenViking]] 갱신 — [[Volcengine]] 파일시스템 컨텍스트 DB, ⭐26,604→**27,604**(+129/일 WebFetch 일치)·L0/L1/L2 티어드 로딩 재확인 *(UPDATE 2026-07-29)*
+- [[Laguna-S-2.1]] 갱신 — [[poolside]] 118B/8B 코딩 MoE, HF DL 3,056→**67,286**(약 22배)·좋아요 266→805·SWE Atlas 46.2 추가, 자체벤치 medium 유지 *(UPDATE 2026-07-29)*
+- [[Solar-Open2-250B]] 갱신 — [[Upstage]] 250B/15B 하이브리드-어텐션 MoE, HF DL 2,784→**4,804**·좋아요 546→682·B200 2M GPU시간·위치인코딩 제거 확인 *(UPDATE 2026-07-29)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T/104B 멀티모달, HF 좋아요 7.21k→**8,320**·DL 99.2k 유지, 초록 Claude Fable 5 열위 자인 medium 유지 *(UPDATE 2026-07-29)*
+<!-- ── 2026-07-28 자동수집 배치 (신규 6 · 갱신 6 · entity 1 / 전량 WebFetch 실검증: GitHub 스타·HF 초록·모델카드) ── -->
+- [[airi]] — [[moeru-ai]] 셀프호스팅 AI 컴패니언, 실시간 음성+게임(Minecraft/Factorio)+VRM/Live2D·WebGPU 로컬·DuckDB WASM 메모리·프로바이더 교체(WebFetch high) (GitHub ⭐44,374, +572/일) *(NEW 2026-07-28)*
+- [[Kimi-K3]] — [[Moonshot AI]] 오픈 프론티어 멀티모달 MoE(2.8T/104B·1M·MoonViT-V2·Delta Attention), 자체 GPQA 93.5·초록이 Claude Fable 5 열위 자인(모델카드/초록검증 medium) (HF DL 99.2k·좋아요 7.21k / 논문 2607.24653 ↑170) *(NEW 2026-07-28)*
+- [[JarvisHub]] — 캔버스=작업공간+에이전트 메모리, 타입노드로 롱호라이즌 창작 상태 지속·3층 아키텍처, 정성데모(초록검증 medium) (2607.23588, ↑81) *(NEW 2026-07-28)*
+- [[Progress-Reward-Modeling]] — 로봇학습 진행도 리워드 서베이, 최종성공 이진→조밀 진행도, 3관점·4패러다임(Northwestern 외, 초록검증 medium) (2607.21655, ↑53) *(NEW 2026-07-28)*
+- [[MAPD]] — JSON 프로토콜 중간표현으로 독점 검색에이전트→소형 오픈 증류, Qwen3-4B 44.4%·$0.057/건(BIT·칭화 외, 초록검증 medium) (2607.24280, ↑51) *(NEW 2026-07-28)*
+- [[StateAct]] — 픽셀보다 프로그램 상태 우선 컴퓨터사용 에이전트, DOM/파일 직접조회+완료검증게이트, OSWorld2.0 바이너리 26.9%·9배↓([[Salesforce]], 초록검증 medium) (2607.22798, ↑42) *(NEW 2026-07-28)*
+- [[Kronos]] 갱신 — 금융 캔들스틱 오픈 파운데이션, ⭐33,610→**34,707**(+441/일, WebFetch 일치), 백테스트↔라이브 검증 필수 medium *(UPDATE 2026-07-28)*
+- [[open-code-review]] 갱신 — [[Alibaba]] 결정론+LLM 하이브리드 리뷰, ⭐13,269→**15,242**(당일 +979)·~1/9 토큰·4모드 재확인 *(UPDATE 2026-07-28)*
+- [[claude-video]] 갱신 — Claude 영상분석, ⭐3,704→**11,484**(+434/일)·4모드(transcript~token-burner)·dedup·zero-config 정교화 *(UPDATE 2026-07-28)*
+- [[last30days-skill]] 갱신 — 멀티소스 리서치 스킬, ⭐50,062→**54,415**·TikTok/Bluesky/arXiv 등 소스확장·Discovery 속도랭킹 *(UPDATE 2026-07-28)*
+- [[Unlimited-OCR]] 갱신 — [[Baidu]] 3B OCR, HF DL 2.56M→**2.69M**·**라이선스 MIT 확인**(인제스트 편입 장벽 해소)·32,768 컨텍스트 *(UPDATE 2026-07-28)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, HF DL 62,800→**737k**(약 12배)·ARC-C 0.711 자체벤치 재현불가 medium 유지 *(UPDATE 2026-07-28)*
+<!-- ── 2026-07-27 자동수집 배치 (신규 8 · 갱신 3 / 전량 WebFetch 실검증: GitHub API·HF 초록·모델카드) ── -->
+- [[impeccable]] — [[pbakaus]] "AI 하네스 디자인 언어", 23커맨드+**60 결정론 디텍터 룰**+키불필요 CLI, design.md에 자동감사 루프 추가(WebFetch high) (GitHub ⭐51,000, +413/일) *(NEW 2026-07-27)*
+- [[Chat2DB]] — AI DB 클라이언트, 30+DB(MySQL·PG·ClickHouse)·[[text2sql]]·ER다이어그램, ⚠️5.3.0+ 소스공개 라이선스(WebFetch high) (GitHub ⭐27,343) *(NEW 2026-07-27)*
+- [[book-to-skill]] — PDF·EPUB→Claude Code/Copilot/Amp **에이전트 스킬** 변환, 챕터별 온디맨드(자체 24×~51× 토큰↓)·[[LLM-Wiki]]와 동형(WebFetch high) (GitHub ⭐10,260, 1만 돌파) *(NEW 2026-07-27)*
+- [[Skill-Self-Play]] — [[Alibaba|Qwen]] proposer·solver·skill controller 공진화 RL로 스킬 self-play 자가학습(초록검증 medium) (HF ↑19) *(NEW 2026-07-27)*
+- [[DataPrep-Bench]] — 베이징대, LLM을 학습데이터 준비자로 평가(6도메인), 합성데이터 성능저하 규명·DAS 지표(초록검증 medium) (HF ↑14) *(NEW 2026-07-27)*
+- [[Molt]] — [[NVIDIA]] PyTorch 네이티브 agentic RL 프레임워크, Ray+vLLM+AutoModel ~8,600줄·토큰정확 일관성(초록검증 medium) (HF ↑11) *(NEW 2026-07-27)*
+- [[Scaling-Native-Multimodal-Pretraining]] — 홍콩중문대·[[Tencent]], 네이티브 멀티모달 컴퓨트-최적 스케일링(언어 둔감/멀티모달 민감)(초록검증 medium) (HF ↑11) *(NEW 2026-07-27)*
+- [[Three-Body-Scattering]] — 웨스트레이크대, 물리 삼체산란 차용 **원스텝(NFE=1) 생성모델 TBSM**, ImageNet-256 FID 2.23/1.63(초록검증 medium) (HF ↑8) *(NEW 2026-07-27)*
+- [[GLM-5.2]] — [[Zhipu-AI]] 753B MIT 플래그십, HF DL **월 100만 돌파**(490k→1,003,547)·HLE 40.5·MCP-Atlas 76.8 추가(WebFetch high) (HF DL 1,003,547) *(갱신 2026-07-27)*
+- [[ai-berkshire]] — Claude Code 가치투자 멀티에이전트, 한 달 스타 2배·⚠️수익주장 +69%/+66% 미검증(인용금지)(WebFetch medium) (GitHub ⭐7,104→14,336) *(갱신 2026-07-27)*
+- [[speech-to-speech]] — [[huggingface]] 로컬 음성 파이프라인(VAD→STT→LLM→TTS·OpenAI Realtime 호환)(WebFetch high) (GitHub ⭐6,089→6,530) *(갱신 2026-07-27)*
+<!-- ── 2026-07-26 자동수집 배치 (신규 3 · 갱신 4 / 전량 WebFetch 실검증: GitHub API·HF DL) ── -->
+- [[open-code-review]] — [[Alibaba]] 하이브리드 코드리뷰, 결정론 룰셋(NPE·XSS·SQLi·thread-safety)+LLM 라인코멘트·OpenAI/Anthropic 호환(WebFetch high) (GitHub ⭐13,269) *(NEW 2026-07-26)*
+- [[ego-lite]] — 에이전트용 경량 브라우저, 로그인 세션 공유로 인증 웹 조작(Codex·Claude Code)·⚠️보안주의(WebFetch high) (GitHub ⭐3,872, 당일 +986) *(NEW 2026-07-26)*
+- [[Nanbeige4.2-3B]] — 3B 에이전틱 LLM, 자체벤치 SWE 63.6·GPQA 87.4·Pinch 74.7 "대형 능가" 주장(DL확인·벤치 자체수치 medium·미검증) (HF DL 14,049) *(NEW 2026-07-26)*
+- [[superpowers]] — 에이전트 스킬·개발 방법론, 2주 +8,617로 26만 돌파·카테고리 1위 유지(WebFetch high) (GitHub ⭐252,676→261,293) *(갱신 2026-07-26)*
+- [[claude-cookbooks]] — [[Anthropic]] 공식 Claude API 레시피, **5만 돌파**·2주 +1,357(WebFetch high) (GitHub ⭐48,650→50,007) *(갱신 2026-07-26)*
+- [[aisuite]] — Andrew Ng 다중 프로바이더 단일 인터페이스, 6주 +796·벤더호환 레이어 확산(WebFetch high) (GitHub ⭐14,496→15,292) *(갱신 2026-07-26)*
+- [[Bonsai-27B]] — Qwen3.6-27B 삼진(1.71bit) 양자화 GGUF, 닷새 +20만·**좋아요 1,000 돌파**·base_model 확인(WebFetch medium) (HF DL 432k→631,970) *(갱신 2026-07-26)*
+<!-- ── 2026-07-25 자동수집 배치 (신규 7 · 갱신 6 / 전량 WebFetch 실검증: GitHub 스타·모델카드·HF초록) ── -->
+- [[awesome-claude-skills]] — Composio 운영 1000+ Claude Skills 큐레이션 인덱스, 스킬=프롬프트·MCP에 이은 세 번째 배포 단위(WebFetch high) (GitHub ⭐70,263) *(NEW 2026-07-25)*
+- [[Solar-Open2-250B]] — 한국 [[Upstage]] 오픈 250B/15B 하이브리드어텐션 MoE·1M·한일영, 자체 SWE 70.4·AIME 95.7(모델카드 실확인 medium) (HF DL 2,784월) *(NEW 2026-07-25)*
+- [[AREX]] — 재귀적 자기개선 딥리서치, discovery-verification 비대칭 이중루프·자기압축, 122B-A10B(초록검증 medium) (HF ↑122) *(NEW 2026-07-25)*
+- [[ReferTrack]] — 참조(bbox 객관식)→Refer-CoT→추적 임보디드 비주얼 트래킹, RL없이 89.4%·실로봇 sim2real(초록검증 medium) (HF ↑47) *(NEW 2026-07-25)*
+- [[K12-KGraph]] — K-12 커리큘럼 정렬 지식그래프(9노드·14관계)+벤치(23,640문항)+SFT, 상용모델 구조이해 ~57%(초록검증 medium) (HF ↑42) *(NEW 2026-07-25)*
+- [[VCSD]] — 원본 vs 내용제거 이미지 대비로 만드는 온폴리시 자기증류, 무라벨 Qwen VLM 7벤치 +2~5%(초록검증 medium) (HF ↑41) *(NEW 2026-07-25)*
+- [[Show-Dont-Tell-ProVisE]] — 생성 픽셀로 공간인지 평가 프로토콜, 시각답 태스크 +18점·텍스트 실패 37% 회수(초록검증 medium) (HF ↑34) *(NEW 2026-07-25)*
+- [[RuView]] — WiFi CSI 프라이버시 감지, 6채널 융합·17키포인트·105 엣지모듈·검증 존재감지 82.3% 재확인(WebFetch high) (GitHub ⭐78,763→86,127) *(갱신 2026-07-25)*
+- [[OmniRoute]] — 멀티프로바이더 게이트웨이, 290+ 프로바이더·43풀 ~1.53B토큰/월로 확장·무중단 코딩(WebFetch high) (GitHub ⭐22,500→29,343) *(갱신 2026-07-25)*
+- [[Kronos]] — 금융 캔들스틱 최초 오픈 파운데이션, 2단계 토크나이저+AR 트랜스포머·4.1M~499M 재확인(WebFetch medium) (GitHub ⭐30,432→33,610) *(갱신 2026-07-25)*
+- [[dive-into-llms]] — SJTU 제작 LLM 실습 11대주제(GUI에이전트·안전 추가)·화웨이 제휴 확인(WebFetch high) (GitHub ⭐36,665→45,182) *(갱신 2026-07-25)*
+- [[Unlimited-OCR]] — Baidu 3B 문서 OCR, DL 256만 돌파([[OvisOCR2]]와 3B vs 0.9B 경량화 경쟁 지속) (HF DL 1.85M→2.56M) *(갱신 2026-07-25)*
+- [[Inkling]] — thinkingmachines 975B/41B 멀티모달 MoE, DL 2.5배↑(31,575)이나 업로더 정체·벤치 여전히 미검증 low 유지 (HF DL 12,456→31,575) *(갱신 2026-07-25)*
+<!-- ── 2026-07-22 자동수집 배치 (신규 7 · 갱신 5 / 전량 WebFetch 실검증) ── -->
+- [[i-have-adhd]] — 코딩 에이전트 응답을 10규칙으로 간결·행동우선 재구성하는 스킬, "출력 UX" 정조준(WebFetch high) (GitHub ⭐7,400, +1,866 급상승) *(NEW 2026-07-22)*
+- [[Laguna-S-2.1]] — poolside 에이전틱 코딩 118B MoE(활성 8B)·1M 컨텍스트, SWE-ML 78.5% 자체(모델카드·자체벤치 medium) (HF DL 3,056월) *(NEW 2026-07-22)*
+- [[Qwen3.6-27B-Fable-Fusion]] — Qwen3.6-27B 다단계 머지 변종(비전·256k·GGUF), ARC-C 0.711 "700 돌파" 자체(모델카드·자체벤치 medium) (HF DL 62,800) *(NEW 2026-07-22)*
+- [[DataFlow-Harness]] — 에이전트가 편집가능 DAG로 데이터 파이프 조립(NL2Pipeline 갭), E2E 93.3%·비용72.5%↓·Request-Validate-Commit(초록검증 medium) (HF ↑51) *(NEW 2026-07-22)*
+- [[Generative-World-Renderer]] — AlayaRenderer-Flash, 엔진 G-buffer→실시간 렌더 0.56→31.54 FPS, AlayaWorld 팀(초록검증 medium) (HF ↑49) *(NEW 2026-07-22)*
+- [[Text-Template-Tokens]] — 확산 트랜스포머 템플릿 토큰=어텐션싱크·정체성허브 규명, 학습불필요 20% 프루닝(초록검증 medium) (HF ↑45) *(NEW 2026-07-22)*
+- [[Mage-Flow]] — 4B 네이티브해상도 이미지 생성·편집, A100 1024² 0.59초·MFU 33→77%(초록검증 medium) (HF ↑35) *(NEW 2026-07-22)*
+- [[worldmonitor]] — 지정학 인텔리전스 대시보드, Ollama 로컬 구동·500+피드·25언어 확인(WebFetch high) (GitHub ⭐53,142→67,000) *(갱신 2026-07-22)*
+- [[jcode]] — Rust 코딩 하네스, **1만 돌파(재검토 임계점)**·시맨틱 메모리·swarm·자기수정 확인 (GitHub ⭐9,127→10,500) *(갱신 2026-07-22)*
+- [[wigolo]] — 로컬 웹 인텔리전스 MCP, 사흘 2배+·멀티엔진 랭크퓨전 검색 확인 (GitHub ⭐1,400→3,300) *(갱신 2026-07-22)*
+- [[AstrBot]] — 다중 메신저 챗봇 플랫폼, 완만한 성장·공식 어댑터 14+ 재확인 (GitHub ⭐36,836→37,700) *(갱신 2026-07-22)*
+- [[AlayaWorld]] — 후속판(2607.18367 ↑556 데일리1위) 초록검증, 15B DiT·iWorld-Bench 0.7985, **low→medium** (HF ↑49→556) *(갱신 2026-07-22)*
+<!-- ── 2026-07-20 자동수집 배치 (신규 8 · 갱신 2 / GitHub 3 WebFetch검증 + HF논문 5) ── -->
+- [[ktransformers]] — CPU+GPU 이기종 초대형 MoE 추론·SFT(칭화대 MADSys, AMX 오프로딩), 로컬 구동 다섯 번째 축 "MoE CPU 오프로딩" (GitHub ⭐18,544, +360) *(NEW 2026-07-20)*
+- [[AstrBot]] — 15+ 메신저에 LLM 에이전트+MCP+1000+플러그인 붙이는 올인원 챗봇 플랫폼, 에이전트 배포의 "IM 채널 마지막 1마일" (GitHub ⭐36,836, +83) *(NEW 2026-07-20)*
+- [[WrenAI]] — 자연어→SQL·대시보드 GenBI 엔진, Git 버전관리 시맨틱 레이어로 출력 근거화(Canner·22+ DB) (GitHub ⭐16,369, +121) *(NEW 2026-07-20)*
+- [[Xiaomi-Robotics-VLA-Scaling]] — 10만+시간 실세계 궤적으로 VLA 스케일링, U0의 "통합"에 이은 "데이터 규모" 축(미래ID·초록 medium) (HF ↑72) *(NEW 2026-07-20)*
+- [[RAGU]] — 컴팩트 도메인 소형모델로 다단계 GraphRAG, "소형모델×그래프검색" 근거화(미래ID·초록 medium) (HF ↑48) *(NEW 2026-07-20)*
+- [[xHC]] — Expanded Hyper-Connections, 잔차연결(residual) 일반화 아키텍처 실험(미래ID·초록·업보트낮음 medium) (HF ↑21) *(NEW 2026-07-20)*
+- [[RecGPT-V3]] — 추천 시스템용 생성형 모델 3세대 기술보고서, LLM 응용의 추천 확산(미래ID·초록 medium) (HF ↑20) *(NEW 2026-07-20)*
+- [[Loop-the-Loopies]] — 반복(loop) 구조 연구, **세부 미확인·인용 금지**(정보 부족 사유 low) (HF ↑28) *(NEW 2026-07-20)*
+- [[voicebox]] — 로컬 AI 음성 스튜디오, 한 달 +10K로 4.3만 돌파·로컬 음성 카테고리 대표 안착 (GitHub ⭐33,512→43,708) *(갱신 2026-07-20)*
+- [[jcode]] — 경량 개인 코딩 하네스, 두 달 2배+로 1만 목전 재검토 임계점 근접 (GitHub ⭐4,043→9,127) *(갱신 2026-07-20)*
+<!-- ── 2026-07-19 자동수집 배치 (신규 5 · 갱신 0, 전량 GitHub) ── -->
+- [[posthog]] — LLM 옵저버빌리티 갖춘 제품 분석 플랫폼, 에이전트 스택의 미개척 끝단 "운영 관측(observability)" 축 (GitHub ⭐36,730, +338) *(NEW 2026-07-19)*
+- [[airllm]] — 레이어 단위 스와핑으로 671B를 4GB VRAM에 올리는 로컬 추론, 양자화 아닌 "메모리↔시간 교환" 네 번째 축 (GitHub ⭐23,500, +161) *(NEW 2026-07-19)*
+- [[lingbot-map]] — 스트리밍 비디오→단일 순전파 3D 재구성 파운데이션 모델, feed-forward化 로봇·매핑판(업로더 무명·벤치 미검증 low) (GitHub ⭐13,200, +831 급상승·slam-3dgs) *(NEW 2026-07-19)*
+- [[kimi-cli]] — MoonshotAI 공식 터미널 코딩 에이전트, "모델 벤더가 자기 CLI를 낸다" 파편화 흐름 합류(Kimi 계열 기검증) (GitHub ⭐9,600, +65) *(NEW 2026-07-19)*
+- [[wigolo]] — API키 없이 검색·크롤·추출을 MCP 로컬 제공하는 웹 인텔리전스 엔진, 웹 접근의 무과금·로컬화(신생·무명 medium) (GitHub ⭐1,400, +203 급상승) *(NEW 2026-07-19)*
+<!-- ── 2026-07-18 자동수집 배치 (신규 5 · 갱신 3) ── -->
+- [[maths-cs-ai-compendium]] — AI/ML 리서치 엔지니어용 수학·CS 이론 학습 커리큘럼, "밑바닥 구현→밑바닥 수학" (GitHub ⭐6,802, +200) *(NEW 2026-07-18)*
+- [[code-review-graph]] — 코드베이스→지속형 그래프로 코딩 에이전트 컨텍스트 축소(MCP·CLI·로컬우선), 그래프 인덱스 축 (GitHub ⭐19,905, +74) *(NEW 2026-07-18)*
+- [[agent-toolkit-for-aws]] — AWS 공식 에이전트 MCP·스킬·플러그인, 빅테크 "공식 어댑터" 흐름의 클라우드 인프라 축 (GitHub ⭐1,950, +34·공식) *(NEW 2026-07-18)*
+- [[LongStraw]] — 고정 GPU 예산 2M+ 토큰 장문맥 RL, 리플레이로 메모리↓(메모리↔재계산 교환) (HF 2607.14952, ↑134 데일리1위, 초록검증) *(NEW 2026-07-18)*
+- [[Inkling]] — 975B/41B 멀티모달 MoE, 자체벤치 SWE 77.6%·AIME 97.1%(업로더 정체·벤치 미검증) (HF, thinkingmachines, reliability low) *(NEW 2026-07-18)*
+<!-- ── 2026-07-17 자동수집 배치 (신규 7 · 갱신 6) ── -->
+- [[lobehub]] — 멀티 AI 에이전트 오케스트레이션 플랫폼(GUI·엔드유저 지향), agentscope·deer-flow의 UI 축 (GitHub ⭐80,362, +71) *(NEW 2026-07-17)*
+- [[SEED]] — 에이전트형 RL용 자기진화 온폴리시 증류, 교사도 함께 진화하는 [[온폴리시-증류]] 최신항 (HF 2607.14777, ↑51, 초록검증) *(NEW 2026-07-17)*
+- [[VideoChat3]] — 완전공개 비디오 MLLM, down-analysis 장면이해 오픈 백엔드 후보 (HF 2607.14935, ↑43, 초록검증·video-saas) *(NEW 2026-07-17)*
+- [[SearchOS-V1]] — 오픈도메인 정보탐색 다중에이전트 협업 프레임워크, deep-research 팬아웃 검색과 동형 (HF 2607.15257, ↑42, 초록검증) *(NEW 2026-07-17)*
+- [[KeyFrame-Compass]] — 키프레임 조건부 비디오생성 종합 평가 벤치, 구도 일관성 정량화 잣대 (HF 2607.14202, ↑28, 초록검증·video-saas) *(NEW 2026-07-17)*
+- [[BadWAM]] — 월드-액션 모델이 "예측은 맞고 행동은 틀리는" 실패 분석, 예측≠행동 접지 (HF 2607.15207, ↑27, 초록검증·임바디드) *(NEW 2026-07-17)*
+- [[Bonsai-27B]] — Qwen3.6-27B 삼진(-1,0,+1) 양자화 GGUF, 1.71bit/w·~7.2GB·9.4배↓·FP16의 95%(정체 규명, low→medium) (HF, prism-ml) *(UPDATED 2026-07-18)*
+- [[graphify]] — 코드베이스 지식그래프화 도구, 9만 목전·+1,100대 열흘째 유지 (GitHub ⭐85,376→89,575, +1,107) *(UPDATED 2026-07-17)*
+- [[awesome-llm-apps]] — 실행 가능 100+ 앱 라이브러리, 12만대 안착·유입 지속 (GitHub ⭐121,391→123,278, +923) *(UPDATED 2026-07-17)*
+- [[openinterpreter]] — "작고 로컬" 코딩 에이전트, 유입 재가속(오픈모델 백엔드 재확인) (GitHub ⭐65,711→66,157, +661) *(UPDATED 2026-07-17)*
+- [[DeepTutor]] — 개인화 튜터링 에이전트, 완만 채택기서 재트렌딩(+656) (GitHub ⭐26,570→27,105, +656) *(UPDATED 2026-07-17)*
+- [[Qwen3.6-35B-Uncensored]] — 커뮤니티 무검열 파인튜닝, 30일윈도 등락으로 280만→230만(순위 최상위 유지) (HF DL 2.82M→2.3M) *(UPDATED 2026-07-17)*
+- [[Qwythos-9B]] — 커뮤니티 롱컨텍스트 GGUF, 210만 근접·안정 우상향 (HF DL 2.01M→2.1M) *(UPDATED 2026-07-17)*
+<!-- ── 2026-07-16 자동수집 배치 (신규 7 · 갱신 6) ── -->
+- [[hallmark]] — 에이전트 UI "AI슬롭" 억제 안티-슬롭 디자인 스킬(CSS/규칙), 스킬이 절차→미학으로 확장 (Nutlope, GitHub ⭐9,734, +1,277) *(NEW 2026-07-16)*
+- [[openinterpreter]] — 저비용·소형 로컬 모델용 코딩/자동화 에이전트 Rust 재작성판, "작고 로컬" 축 재정립 (openinterpreter, GitHub ⭐65,711, +299) *(NEW 2026-07-16)*
+- [[Boogu-Image-0.1]] — 오픈소스 멀티모달 이해+이미지 생성 통합 모델, 생성↔이해 양방향 루프 (HF 2607.13125, ↑77, 초록검증) *(NEW 2026-07-16)*
+- [[Ring-Zero]] — SFT 없이 Zero RL을 1조 파라미터로 스케일해 추론 창발, RLVR 계보 상단 (inclusionAI, HF 2607.12395, ↑66, 초록검증) *(NEW 2026-07-16)*
+- [[Harness-Handbook]] — 진화형 에이전트 하네스를 읽기·탐색·편집 가능하게 유지하는 방법론, 이 위키 자체가 하네스 (Tencent Hunyuan, HF 2607.13285, ↑62, 초록검증) *(NEW 2026-07-16)*
+- [[OvisOCR2]] — 0.9B 경량 OCR 기술보고서+가중치 공개(ATH-MaaS), 온디바이스 문서 입력 게이트 (HF 2607.13639, ↑42, 초록/모델카드) *(NEW 2026-07-16)*
+- [[KnowAct-GUIClaw]] — 자기진화 메모리·스킬 개인 GUI 어시스턴트, 반복작업→스킬 자동축적 (HF 2607.12625, ↑36, 초록검증) *(NEW 2026-07-16)*
+- [[mattpocock-skills]] — 실무 Claude 스킬 모음, 17만 돌파 표준 레퍼런스화 (GitHub ⭐156,933→173,162, +2,130) *(UPDATED 2026-07-16)*
+- [[DeepTutor]] — 개인화 튜터링 에이전트, 폭증기 후 안정 채택기(1.6만→2.6만) (GitHub ⭐16,205→26,570, +172) *(UPDATED 2026-07-16)*
+- [[destructive_command_guard]] — 에이전트 셸 seatbelt, 상승 지속 (GitHub ⭐3,447→4,913, +471) *(UPDATED 2026-07-16)*
+- [[Unlimited-OCR]] — Baidu 3B OCR, 185만 돌파·경량 OvisOCR2와 경쟁구도 (HF DL 1.43M→1.85M) *(UPDATED 2026-07-16)*
+- [[Ornith-1.0-35B]] — 35B-MoE GGUF 로컬 배포본, 열흘 새 4배 급증(200만 근접) (HF DL 437k→1.79M) *(UPDATED 2026-07-16)*
+- [[Qwen3.6-27B-NVFP4]] — NVFP4 4비트 양자화, unsloth 리팩 변종 유입 통합(DL 1.71M)으로 NVFP4 실사용 확산 (HF, 갱신) *(UPDATED 2026-07-16)*
+<!-- ── 2026-07-15 자동수집 배치 (신규 7 · 갱신 5) ── -->
+- [[verifiers]] — RL 환경·검증기(verifier)를 코드로 정의하는 LLM 포스트트레이닝 라이브러리, RLVR 인프라 (PrimeIntellect-ai, GitHub ⭐4,358, +15) *(NEW 2026-07-15)*
+- [[needle]] — 26M 파라미터 온디바이스 함수 호출(function calling) 특화 초경량 모델, 에이전트 도구 라우팅 로컬화 (cactus-compute, GitHub ⭐3,132, +92) *(NEW 2026-07-15)*
+- [[Read-It-Back]] — 사전학습 MLLM을 T2I 생성의 제로샷 리워드 모델로(되읽기 일치도 스코어), 생성↔이해 수렴 (HF 2607.11886, ↑24, 초록검증·video-saas) *(NEW 2026-07-15)*
+- [[Know-Before-Fix]] — 이슈 수정 전 QA로 레포 지식 선획득, 코드 에이전트판 read-before-write (HF 2607.11111, ↑3, 초록검증) *(NEW 2026-07-15)*
+- [[Xiaomi-Robotics-U0]] — 월드 파운데이션 모델로 인지·예측·행동 통합한 임바디드 합성(U0), 산업 WFM 구현 (HF 2607.11643, ↑29, 초록검증·임바디드) *(NEW 2026-07-15)*
+- [[AdvancedMathBench]] — 정형 수학 증명 생성·검증 벤치(정답률 아닌 논증 타당성), verifiers 채점기 각도 (HF 2607.11849, ↑21, 초록검증) *(NEW 2026-07-15)*
+- [[Metacognition-LLMs]] — LLM 메타인지(자기지식·캘리브레이션·한계인식) 서베이, 발화의 seatbelt (HF 2607.11881, ↑14, 초록검증) *(NEW 2026-07-15)*
+- [[awesome-llm-apps]] — 실행 가능 100+ 앱 라이브러리, 12만 돌파 유입 가속 (GitHub ⭐119,041→121,391, +1,106) *(UPDATED 2026-07-15)*
+- [[Vibe-Trading]] — 개인 트레이딩 에이전트, 트렌딩 상위 유입 재가속 (GitHub ⭐21,022→23,216, +1,256) *(UPDATED 2026-07-15)*
+- [[google-skills]] — Google 공식 스킬 레지스트리, 완만 우상향 안착 (GitHub ⭐12,734→14,825, +153) *(UPDATED 2026-07-15)*
+- [[GLM-5.2]] — Z.AI 753B MIT 1M 플래그십, 완만 우상향 (HF DL 465k→490k) *(UPDATED 2026-07-15)*
+- [[Qwythos-9B]] — 커뮤니티 롱컨텍스트 GGUF, 200만 돌파·유입 둔화 안정기 (HF DL 1.99M→2.01M) *(UPDATED 2026-07-15)*
+- [[MiniCPM5-1B]] — 커뮤니티 thinking GGUF 변종 유입 통합(GnLOLot, DL 89.9k), 1B 로컬추론 수요 (HF, 갱신) *(UPDATED 2026-07-15)*
+<!-- ── 2026-07-14 자동수집 배치 (신규 8 · 갱신 5) ── -->
+- [[heretic]] — 오픈웨이트 LLM 거부방향 자동 탐지·제거(abliteration) 무인화 툴, 재학습 없이 검열해제(⚠️오남용 주의·성능손실) (p-e-w, GitHub ⭐26,261, +79) *(NEW 2026-07-14)*
+- [[ABot-N1]] — 범용 시각-언어 내비게이션(VLN) 파운데이션 모델, 임바디드-AI 행동 레이어 (HF 2607.10383, ↑70, 초록검증) *(NEW 2026-07-14)*
+- [[ABot-AgentOS]] — 평생 멀티모달 메모리 로봇 에이전트 OS, 에이전트-메모리-레이어의 체화·OS판 (HF 2607.10350, ↑61, 초록검증) *(NEW 2026-07-14)*
+- [[Weak-to-Strong-Generalization-OPD]] — 약한 교사→강한 학생 직접 온폴리시 증류, 초정렬 난제 접근 (HF 2607.05394, ↑42, 초록검증) *(NEW 2026-07-14)*
+- [[4D-Human-Scene-Reconstruction]] — 저겹침 소수 촬영본으로 사람+장면 4D(3D+시간) 복원, 희소입력 동적 재구성 (HF 2607.09125, ↑35, 초록검증·slam-3dgs) *(NEW 2026-07-14)*
+- [[LightMem-Ego]] — 일상 에고센트릭 데이터 저비용 저장·검색 경량 개인 메모리, 온디바이스 어시스턴트 장기기억 (HF 2607.11487, ↑27, 초록검증) *(NEW 2026-07-14)*
+- [[Qwen-Fixed-Chat-Templates]] — Qwen chat template 오류 교정 재배포본, 로컬 추론 프롬프트 포맷 정합성 복구 유틸 (froggeric, HF DL 890) *(NEW 2026-07-14)*
+- [[krea2-identity-edit]] — 인물 정체성 유지 이미지 편집(Krea2 기반 얼굴 일관성), 동일 캐릭터 다중 씬 부품 (conradlocke, HF DL 268, video-saas) *(NEW 2026-07-14)*
+- [[graphify]] — 코드베이스 지식그래프화 도구, 우상향 지속 (GitHub ⭐81,529→85,376, +1,095) *(UPDATED 2026-07-14)*
+- [[TradingAgents]] — 멀티에이전트 금융 프레임워크 앵커, 완만 우상향 (GitHub ⭐91,188→92,901, +245) *(UPDATED 2026-07-14)*
+- [[ai-hedge-fund]] — 페르소나 기반 헤지펀드 시뮬레이터, 6만 돌파 (GitHub ⭐54,543→61,645, +330) *(UPDATED 2026-07-14)*
+- [[OpenManus]] — 초대코드 없는 범용 자율 에이전트, 안정 유지 (GitHub ⭐57,200→57,404, +126) *(UPDATED 2026-07-14)*
+- [[ThinkingCap-Qwen3.6-27B-GGUF]] — 베이스 리포 벤치 추가(GPQA-D 83.8%·토큰 45.8%↓), GGUF와 원본/양자화 통합 (HF, 갱신) *(UPDATED 2026-07-14)*
+<!-- ── 2026-07-13 자동수집 배치 (신규 7 · 갱신 6) ── -->
+- [[awesome-llm-apps]] — 실제 클론·구동되는 100+ AI 에이전트·RAG 앱 구현체 라이브러리, "예제 포크→조립" 표준화 (Shubhamsaboo, ⭐119,041, +408) *(NEW 2026-07-13)*
+- [[destructive_command_guard]] — AI 에이전트 위험 git·shell 명령 실행 직전 차단 Rust 가드, 자기파괴 방지 seatbelt (Dicklesworthstone, ⭐3,447, +444 급상승) *(NEW 2026-07-13)*
+- [[Video-Gen-General-Vision-Learners]] — 비디오 생성 모델을 파인튜닝 없이 범용 비전 파운데이션으로 활용 (HF 2607.09024, 초록검증) *(NEW 2026-07-13)*
+- [[Scalable-Visual-Pretraining-Language]] — 시각 사전학습이 언어 모델 추론력 자체를 향상, JEPA grounding 실증 방향 (HF 2607.09657, 초록검증) *(NEW 2026-07-13)*
+- [[Long-Horizon-Terminal-Bench]] — 밀집 보상으로 장기 터미널 작업 에이전트 이탈 지점 정밀 진단 (HF 2607.08964, 초록검증) *(NEW 2026-07-13)*
+- [[KronQ]] — 크로네커 분해 헤시안 기반 LLM 양자화, 정확도-크기 프런티어 확장 (HF 2607.07964, 초록검증) *(NEW 2026-07-13)*
+- [[Trust-Region-Policy-Distillation]] — 신뢰영역 제약 안정적 정책 증류, 온폴리시-증류 클러스터 최신 (HF 2607.04751, 초록검증) *(NEW 2026-07-13)*
+- [[Vibe-Trading]] — HKUDS 개인 트레이딩 에이전트, 트렌딩 1위 재등극·2만 돌파 (GitHub ⭐16,995→21,022, +768) *(UPDATED 2026-07-13)*
+- [[claude-cookbooks]] — Anthropic 공식 Claude API 레시피, 유입 배증 (GitHub ⭐48,084→48,650, +459) *(UPDATED 2026-07-13)*
+- [[claude-code-templates]] — Claude Code 설정 표준화 CLI 지속 성장 (GitHub ⭐28,842→29,330, +274) *(UPDATED 2026-07-13)*
+- [[Qwythos-9B]] — 커뮤니티 GGUF 최상위 채택, 200만 목전·유입 둔화(안정기) (HF DL 1.97M→1.99M) *(UPDATED 2026-07-13)*
+- [[GLM-5.2]] — Zhipu 753B MIT 1M 플래그십, 하루 +24k 우상향 (HF DL 441k→465k) *(UPDATED 2026-07-13)*
+- [[Hy3]] — Tencent 295B/21B MoE 롱컨텍스트, 초기 채택 지속 (HF DL 5,572→9,163) *(UPDATED 2026-07-13)*
+<!-- ── 2026-07-12 자동수집 배치 (신규 5 · 갱신 5 · 중복 1) ── -->
+- [[OpenManus]] — 초대코드 없는 범용 자율 에이전트 오픈 구현(계획→도구호출→다단계 실행·Playwright·MCP·비전) (FoundationAgents, ⭐57,200, MIT) *(NEW 2026-07-12)*
+- [[claude-cookbooks]] — Anthropic 공식 Claude API 실전 레시피(RAG·툴use·prompt caching·서브에이전트·자동평가) (anthropics, ⭐48,084, MIT) *(NEW 2026-07-12)*
+- [[OpenViking]] — `viking://` 파일시스템 패러다임 에이전트 컨텍스트 DB(메모리+RAG+스킬 통합·L0/L1/L2 티어드 로딩) (ByteDance/Volcengine, ⭐26,604, AGPLv3) *(NEW 2026-07-12)*
+- [[Jet-Long]] — Dynamic Bifocal RoPE 제로샷 장문 확장(단문성능 유지·RULER +4.79%p·재학습 불필요) (HF 2607.07740, ↑14, 초록검증) *(NEW 2026-07-12)*
+- [[CineMobile]] — 온디바이스 i2v 확산 시네마틱 카메라무빙(40× 가속·<1GB·프루닝+4step증류+하이브리드양자화) (HF 2607.03803, ↑12, 초록검증) *(NEW 2026-07-12)*
+- [[superpowers]] — obra 에이전트 스킬·개발 방법론, 급상승 1위 유지 (GitHub ⭐244,962→252,676, +740) *(UPDATED 2026-07-12)*
+- [[speech-to-speech]] — HF 로컬 음성 에이전트(VAD→STT→LLM→TTS·OpenAI Realtime 호환) (GitHub ⭐5,401→6,089) *(UPDATED 2026-07-12)*
+- [[GLM-5.2]] — Zhipu 753B MIT 1M 플래그십, DL 급증 (HF DL 191k→441k, 좋아요 3.84k) *(UPDATED 2026-07-12)*
+- [[Qwythos-9B]] — Qwen3.5-9B 기반 커뮤니티 파인튜닝 GGUF(1M YaRN), 200만 임박 (HF DL 1.37M→1.97M) *(UPDATED 2026-07-12)*
+- [[Unlimited-OCR]] — Baidu 3B 문서 OCR/파싱, 143만 돌파 (HF DL 885k→1.43M) *(UPDATED 2026-07-12)*
+- [[Canvas360]] — (중복: 2607.08765, 2026-07-11 기인제스트 — 재작성 없이 raw 제거)
+<!-- ── 2026-07-12 JEPA·월드모델 심층분석 (신규 3) ── -->
+- [[C-JEPA]] — 객체 단위 잠재개입 월드모델, LeCun 공저(반사실 +20%, 패치 대비 1% 특징)
+- [[JEPA-월드모델-서베이-2026]] — 2026 5대 학회 JEPA+Diffusion 55편 직접 서베이
+- [[Flow-JEPA-연구아이디어]] — Flow×JEPA 신규 연구주제 + 효율화 교차(연구 아이디어)
+<!-- ── 2026-07-11 자동수집 배치 (신규 11 · 갱신 2) ── -->
+- [[DesktopCommanderMCP]] — Claude Desktop에 터미널·파일시스템·프로세스·인메모리 코드실행을 붙이는 MCP 서버(호스트 구독 그대로·Docker 격리) (wonderwhy-er, ⭐7,572, 당일 +328, MIT) *(NEW 2026-07-11)*
+- [[agentscope]] — 관측·권한·샌드박스 갖춘 프로덕션급 멀티 에이전트 프레임워크("agentic LLM 전제") (agentscope-ai, ⭐27,749, Apache 2.0) *(NEW 2026-07-11)*
+- [[stitch-skills]] — Agent Skills 표준 스킬 라이브러리(Design/Build/Remotion영상/Utilities), Stitch MCP 연동 (Google-Labs, ⭐6,863, Apache 2.0) *(NEW 2026-07-11)*
+- [[LongE2V]] — 이벤트 카메라 기반 장기 안정 비디오 생성(CogVideoX+자기회귀 언롤링·drift 억제) (HF 2607.08770, ↑20, 초록검증) *(NEW 2026-07-11)*
+- [[Linear-Attention-Architectures]] — 선형 어텐션 4종 통일 비교("단일 최강 없음"·32k 3.6배·CLVR 제안) (HF 2607.07953, ↑15, 초록검증) *(NEW 2026-07-11)*
+- [[Canvas360]] — 기하 인지 사전학습 360 파노라마 생성(RGB+Depth 병렬·100만 쌍) (HF 2607.08765, ↑5, 초록검증) *(NEW 2026-07-11)*
+- [[DrugGen-2]] — 질병 인지형 신약 후보 생성(GPT-2 SFT+GRPO·MeSH 온톨로지 조건화) (HF 2607.08404, ↑3, 초록검증) *(NEW 2026-07-11)*
+- [[UP-Asymmetric-Optimization]] — 비대칭 클리핑으로 탐험-안정성 딜레마 해소(GRPO/DAPO/GSPO plug-and-play) (HF 2607.06987, ↑3, 초록검증) *(NEW 2026-07-11)*
+- [[Qwen3.6-35B-A3B-MTP-GGUF]] — MTP 자기투기 1.5-2배 가속 로컬 멀티모달 MoE(35B/3B·262K→1M) (Alibaba/unsloth, HF DL 771k, Apache 2.0) *(NEW 2026-07-11)*
+- [[Qwopus3.6-35B-A3B-Coder-MTP-GGUF]] — 실행효율 지향 코딩 특화 로컬 MoE(thinking-off·SWE-bench 자가 62.4%) (Alibaba 파생/Jackrong, HF DL 318k) *(NEW 2026-07-11)*
+- [[Qwen3.6-40B-Deckard-Heretic]] — 커뮤니티 40B 멀티모달 병합(⚠️카드 미검증 HF 401·"Claude" 명명은 무관 추정) (DavidAU, HF DL 427k) *(NEW 2026-07-11)*
+- [[claude-code-templates]] — Claude Code 설정·모니터링 CLI, 3개월 +3,871 성장 (davila7, GitHub ⭐24,971→28,842) *(UPDATED 2026-07-11)*
+- [[LMCache]] — LLM 서빙 KV Cache 재사용 레이어, 1만 돌파(MTP 모델과 TTFT+throughput 이중 최적화) (GitHub ⭐9,081→10,423) *(UPDATED 2026-07-11)*
+<!-- ── 2026-07-10 자동수집 배치 (신규 8 · 갱신 5) ── -->
+- [[graphify]] — 코드베이스를 쿼리 가능한 지식 그래프로(tree-sitter 로컬·40언어·god node), 내 LLM-Wiki 코드판 (GitHub ⭐81,529, +909, MIT) *(NEW 2026-07-10)*
+- [[crawl4ai]] — LLM-ready 마크다운 웹 크롤러(Docker/FastAPI·스텔스), firecrawl 완전오픈 대안 (GitHub ⭐72,062, +215, Apache 2.0) *(NEW 2026-07-10)*
+- [[Vidu-S1]] — 실시간 인터랙티브 비디오 생성(소비자 GPU 540p/42FPS·음성제어·TurboServe) (칭화대, HF 2607.03118, 초록검증) *(NEW 2026-07-10)*
+- [[Compositional-Action-Shortcuts]] — 조합 행동 인식 객체 지름길 완화 RCORE(CPR+TORC), down-analysis 원칙 (NAVER+경희대, HF 2601.16211, 초록검증) *(NEW 2026-07-10)*
+- [[Video-Oasis]] — 영상 이해 벤치 55%가 영상 안 보고 풀림 실증, Beyond-Static 영상판 (NAVER+세종대, HF 2603.29616, 초록검증) *(NEW 2026-07-10)*
+- [[UniClawBench]] — 능동 에이전트 실세계 벤치 3역할 폐루프, Opus-4.8·GPT-5.4도 pass<50% (홍콩대+Meituan, HF 2607.08768, 초록검증) *(NEW 2026-07-10)*
+- [[Ideas-Have-Genomes]] — 아이디어 게놈+GenomeDiff 6동역학 과학 계보 추론, 최고 27.3% (상하이교통대, HF 2607.08758, 초록검증) *(NEW 2026-07-10)*
+- [[ThinkingCap-Qwen3.6-27B-GGUF]] — Qwen3.6-27B RL 파인튜닝, 추론 토큰 -50%·MTP 3.46배 (bottlecapai, HF DL 303k) *(NEW 2026-07-10)*
+- [[deer-flow]] — DeerFlow 2.0 슈퍼에이전트 하네스(멀티에이전트·메모리·샌드박스·Telegram연동), MIT (ByteDance, ⭐74,211→76,695) *(UPDATED 2026-07-10)*
+- [[SkillOpt]] — 논문→코드 공개, 프로즌 LLM 스킬 텍스트공간 최적화(best_skill.md·Claude Code 백엔드) (Microsoft, GitHub ⭐12,019) *(UPDATED 2026-07-10)*
+- [[Qwen3.6-27B]] — Gated DeltaNet+Attention 하이브리드 멀티모달·262K→1M, SWE-bench 77.2·AIME 94.1 (Alibaba, HF DL 4.84M) *(UPDATED 2026-07-10)*
+- [[MiniCPM5-1B]] — 1.08B 온디바이스 SLM(131K·think/fast·도구호출·RL+OPD +16점), DL 5배 급증 (OpenBMB, HF DL 68k→363k) *(UPDATED 2026-07-10)*
+- [[supervision]] — 모델비종속 CV 툴킷(검출·추적·어노테이터·실시간 zone), MIT (Roboflow, ⭐43,743→47,714) *(UPDATED 2026-07-10)*
+<!-- ── 2026-07-07 자동수집 배치 (신규 7 · 갱신 6) ── -->
+- [[meetily]] — 100% 로컬 AI 회의록(Whisper/Parakeet 전사 + Ollama 요약), Rust/Tauri (GitHub ⭐19,911, 당일 +2,494) *(NEW 2026-07-07)*
+- [[awesome-claude-code]] — Claude Code 스킬·플러그인·MCP 큐레이션 인덱스 목록 (GitHub ⭐48,769, MIT) *(NEW 2026-07-07)*
+- [[Morphing-Hybrid-Attention]] — full-attention 모델을 하이브리드 구조로 '변형'해 재학습 비용 절감 (HF 논문 ↑43, **원문 미검증**) *(NEW 2026-07-07)*
+- [[UI-MOPD]] — 멀티플랫폼 GUI 에이전트 연속 학습(온폴리시 증류), forgetting 방지 (HF 논문 ↑39, **원문 미검증**) *(NEW 2026-07-07)*
+- [[ResearchStudio-Reel]] — 논문→포스터/영상/블로그 자동 변환 라스트마일 파이프, 내 reat-* 스택과 겹침 (HF 논문 ↑35, **원문 미검증**) *(NEW 2026-07-07)*
+- [[DataComp-VLM]] — VLM 학습용 오픈 데이터셋 정제·개선, 데이터 중심 관점 (HF 논문 ↑34, **원문 미검증**) *(NEW 2026-07-07)*
+- [[OmniOpt]] — 현대 옵티마이저 분류·기하 관점·표준 벤치마크 서베이 (HF 논문 ↑26, **원문 미검증**) *(NEW 2026-07-07)*
+- [[firecrawl]] — 웹 스크래핑/검색→LLM 정제 API, ⭐146,774(2주 +9K), AGPL/MIT *(UPDATED 2026-07-07)*
+- [[last30days-skill]] — 멀티소스(Reddit·X·YT·TikTok·HN·Polymarket) 조사 스킬, ⭐50,062(+10.6K) *(UPDATED 2026-07-07)*
+- [[agent-skills]] — Addy Osmani 프로덕션급 엔지니어링 스킬 24종·6단계 SDLC, ⭐71,362(+12.5K) *(UPDATED 2026-07-07)*
+- [[LocateAnything-3B]] — NVIDIA visual grounding VLM, HF DL 1.42M(2주 5.2배 급증) *(UPDATED 2026-07-07)*
+- [[gemma-4-12B-coder-GGUF]] — Gemma-4 12B 코딩 특화 로컬 GGUF, HF DL 674,977(+61K) *(UPDATED 2026-07-07)*
+- [[Qwen3.6-35B-Uncensored]] — HauhauCS 무검열 파인튜닝(Aggressive), HF DL 2.82M 유지 *(UPDATED 2026-07-07)*
+<!-- ── 2026-07-06 자동수집 배치 (신규 9) ── -->
+- [[claude-skills]] — 13개 코딩 에이전트용 스킬·플러그인 355종 통합 마켓플레이스, stdlib-only 602 도구·크로스벤더 변환 (GitHub ⭐20,831, +392/일) *(NEW 2026-07-06)*
+- [[nanoGPT]] — Karpathy의 GPT-2 재현 최소 코드 교육 레퍼런스, **deprecated**(nanochat로 대체) (GitHub ⭐60,816, +246/일) *(NEW 2026-07-06)*
+- [[claude-video]] — `/watch`로 Claude가 영상을 자막 우선+scene-aware 프레임으로 보고 듣게 하는 플러그인, 내 down-analysis와 직접 대조 (GitHub ⭐3,704, +368/일) *(NEW 2026-07-06)*
+- [[speech-to-speech]] — HF 공식 VAD→STT→LLM→TTS 로컬 음성 에이전트, OpenAI Realtime 호환·Reachy Mini 실배포 (GitHub ⭐5,401, Apache 2.0) *(NEW 2026-07-06)*
+- [[Mirage-of-Optimizing-Training-Policies]] — LLM RL의 진짜 목표는 추론 정책 단조 개선(MIPI/MIPU), 학습-추론 불일치 재정의 (HF 데일리 #1) *(NEW 2026-07-06)*
+- [[VLA-Corrector]] — 액션 청킹 VLA의 잠재공간 비전 모니터 감지-수정 + 적응형 행동 지평, 백본 무수정 (HF 데일리 #2, ZJU) *(NEW 2026-07-06)*
+- [[Embodied-cpp]] — 이기종 로봇용 이식성 C++ 임바디드 추론 런타임(5계층), VLA 성공률 100%/91%·메모리 3.5배↓ (HF 데일리 #3, 동남대) *(NEW 2026-07-06)*
+- [[OrbitQuant]] — 재캘리브 불필요 데이터 비의존 디퓨전 트랜스포머 양자화, FLUX·Wan·CogVideoX W2A4 (HF papers, Cantina) *(NEW 2026-07-06)*
+- [[Multi-Layer-Agent-Red-Teaming]] — Tencent AI-Infra-Guard, 층별 패러다임 매칭 다층 에이전트 레드팀·스킬 공급망 감사 (HF papers) *(NEW 2026-07-06)*
+<!-- ── 2026-07-05 자동수집 배치 (신규 8) ── -->
+- [[agentskills]] — 에이전트 스킬 표준 규격(spec) 정의 저장소, 벤더 간 스킬 이식성 확보 시도 (GitHub ⭐22,425, +351/일) *(NEW 2026-07-05)*
+- [[system_prompts_leaks]] — Anthropic·OpenAI·Google·xAI 시스템 프롬프트 추출본 모음, 프롬프트 리버스 참고 (GitHub ⭐49,225, +471/일) *(NEW 2026-07-05)*
+- [[SkillCoach]] — 자기개선 루브릭으로 에이전트 스킬 사용 능력 평가·강화, 스킬 생태계 평가 레이어 (HF papers ↑14, 원문 미검증) *(NEW 2026-07-05)*
+- [[WorldDirector]] — 지속 동적 메모리로 상태 유지하는 제어 가능 월드 시뮬레이터, 인터랙티브 생성 (HF papers ↑21, 원문 미검증) *(NEW 2026-07-05)*
+- [[Multi-Resolution-Flow-Matching]] — training-free 단계적 샘플링으로 디퓨전 추론 가속, 재학습 없이 서빙 원가 절감 (HF papers ↑28, 원문 미검증) *(NEW 2026-07-05)*
+- [[Distribution-wise-Rewards]] — Tencent Hunyuan, 출력 분포 정렬 보상으로 시각 생성 모델 학습 (HF papers ↑14, 원문 미검증) *(NEW 2026-07-05)*
+- [[Breaking-Failure-Cascades]] — 의료 멀티모달 추론 오류 전파 차단 step-aware RL, 실패 모드 타깃 사후학습 (HF papers ↑19, 원문 미검증) *(NEW 2026-07-05)*
+- [[Qwen3.6-35B-A3B-NVFP4]] — Qwen3.6 35B A3B를 NVIDIA NVFP4 4비트로 양자화, 유효 ~19B·하드웨어 종속 (HF 6.52M DL 계열합산) *(NEW 2026-07-05)*
+<!-- ── 2026-07-04 자동수집 배치 (신규 5) ── -->
+- [[codex-plugin-cc]] — Claude Code 안에서 OpenAI Codex를 호출해 리뷰·위임하는 공식 브리지 플러그인, 크로스벤더 에이전트 interop (GitHub ⭐23,462, +634/일) *(NEW 2026-07-04)*
+- [[pytorch]] — GPU 가속 딥러닝 표준 프레임워크, 모든 HF 모델의 공통 하부 인프라 (GitHub ⭐101,471, +293/일) *(NEW 2026-07-04)*
+- [[cs249r_book]] — 하버드 ML 시스템 오픈 교재, 학습→배포→엣지 최적화를 시스템 관점으로 정리한 레퍼런스 (GitHub ⭐26,336, +793/일) *(NEW 2026-07-04)*
+- [[CubeSandbox]] — 에이전트 생성 코드를 격리 병렬 실행하는 경량 동시성 샌드박스(TencentCloud), 격리 강도 실측 필요 (GitHub ⭐7,243, +60/일) *(NEW 2026-07-04)*
+- [[Qwen3.6-27B-NVFP4]] — Qwen3.6 27B를 NVIDIA NVFP4 4비트로 양자화한 배포판, 유효 18B급·하드웨어 종속 (HF 185k DL) *(NEW 2026-07-04)*
+<!-- ── 2026-07-03 자동수집 배치 (신규 6) ── -->
+- [[caveman]] — 응답을 "원시인 말투"로 압축해 토큰 절감 주장하는 Claude Code 스킬(절감률 자가제출·검증 필요) (GitHub ⭐82,003, +926/일) *(NEW 2026-07-03)*
+- [[Program-as-Weights]] — 자연어 퍼지 함수를 로컬 실행 LoRA 어댑터로 컴파일, 0.6B 인터프리터가 32B급을 1/50 메모리로 재현 (HF papers ↑92 데일리 1위) *(NEW 2026-07-03)*
+- [[EvoPolicyGym]] — 고정 예산 하 실행형 정책(Python)을 반복 개선하는 능력을 궤적 단위로 진단하는 벤치마크(16환경, GPT-5.5 1위) (HF papers ↑29) *(NEW 2026-07-03)*
+- [[AgenticSTS]] — 타입별 검색으로 프롬프트 재조립하는 bounded-contract 장기 에이전트 메모리(Slay the Spire 2 298궤적) (HF papers ↑29) *(NEW 2026-07-03)*
+- [[FlashMorph]] — 하이브리드 어텐션 변환 시 어느 층을 선형화할지 학습 게이트로 공동 최적화, 층 선택 비용 대폭 절감 (HF papers ↑26) *(NEW 2026-07-03)*
+- [[AgenticDataBench]] — 15개 도메인 344태스크+433 재사용 스킬로 LLM 데이터 에이전트를 태스크·스킬 단위 세분 평가 (HF papers ↑19) *(NEW 2026-07-03)*
+- [[olmocr]] — AI2 PDF·이미지→LLM 학습용 텍스트 선형화 OCR 툴킷(7B VLM, olmOCR-Bench, Apache 2.0, 100만 페이지 <$200) (GitHub ⭐18,454, +334/일) *(NEW 2026-07-02)*
+- [[AI-For-Beginners]] — Microsoft 12주 24강 AI 기초 커리큘럼(MIT, 50+ 언어), 도구 아닌 교육 레퍼런스 (GitHub ⭐50,871, +1,096/일) *(NEW 2026-07-02)*
+- [[agents-cli]] — Google 코딩 어시스턴트로 GCP AI 에이전트 생성·평가·배포 ADK CLI(40+ 명령, Apache 2.0), GCP 종속 (GitHub ⭐4,609, +586/일) *(NEW 2026-07-02)*
+- [[VulnClaw]] — LLM+MCP+21침투스킬 자율 침투 에이전트, 증거 기반 환각 게이트(MIT), strix 계보 (GitHub ⭐1,692, +132/일) *(NEW 2026-07-02)*
+- [[TurboServe]] — 스트리밍 비디오 생성 모델 자원효율 저비용 서빙 시스템, video-saas 운영 원가 직결 (HF papers, 원문 미검증) *(NEW 2026-07-02)*
+- [[MemSyco-Bench]] — 에이전트 메모리 아첨(sycophancy) 편향 측정 벤치, 메모리 부작용 평가 축 (HF papers, 원문 미검증) *(NEW 2026-07-02)*
+- [[PerceptionRubrics]] — 멀티모달 평가 지표를 인간 지각 기준에 보정하는 루브릭, 평가 신뢰성 흐름 (HF papers, 원문 미검증) *(NEW 2026-07-02)*
+- [[ELDR]] — PD 분리형 MoE 서빙의 expert-locality 인지 디코드 라우팅, 초대형 MoE 서빙 최적화 (HF papers, 원문 미검증) *(NEW 2026-07-02)*
+- [[Domain-Arithmetic]] — 산술 연산으로 VLA를 신규 환경에 원샷 적응, In-Context 적응의 파라미터 산술판 (HF papers, 원문 미검증) *(NEW 2026-07-02)*
+- [[Orca]] — Next-State-Prediction 단일 월드 잠재공간 학습 범용 월드 파운데이션 모델(동결 백본+경량 디코더로 텍스트·이미지·체현액션) (HF papers ↑158 데일리 1위) *(NEW 2026-07-01)*
+- [[Dockerless]] — 컨테이너·실행 없이 에이전트 레포 탐색 증거로 코드 패치 정오 판정, 환경 없는 코딩에이전트 사후학습(SWE-bench Verified 62.0%) (HF papers ↑75 데일리 2위) *(NEW 2026-07-01)*
+- [[DOPD]] — 이중 온폴리시 증류, "특권 착각" 실패 모드를 어드밴티지 기반 토큰 라우팅으로 완화(LLM+VLM) (HF papers ↑56 데일리 3위) *(NEW 2026-07-01)*
+- [[BlockPilot]] — 프리필링 표현으로 인스턴스별 최적 블록 크기 예측하는 확산 추측 디코딩 정책, Qwen3-4B 4.20배 가속 (HF papers ↑54) *(NEW 2026-07-01)*
+- [[GEAR]] — 텐센트 훈위안, VQ 토크나이저+AR 생성기 엔드투엔드 동시학습(이중 read-out), ImageNet gFID 수렴 10배 가속 (HF papers ↑20) *(NEW 2026-07-01)*
+- [[OmniRoute]] — 236개 프로바이더(50+무료) 단일 엔드포인트 통합 AI 게이트웨이, 자동 폴백+토큰 15~95% 압축 (GitHub ⭐8,948, +387/일) *(NEW 2026-07-01)*
+- [[Ornith-1.0-9B]] — deepreinforce-ai 자기개선형 에이전틱 코딩 모델(Gemma4/Qwen3.5 사후학습, MIT), 9B로 SWE-bench Verified 69.4 (HF 1.47M DL) *(NEW 2026-07-01)*
+- [[video-use]] — browser-use 팀, LLM이 영상을 transcript로 "읽어"(ElevenLabs Scribe) 컷·자막·색보정 자동화하는 코딩 에이전트형 영상 편집 (GitHub ⭐14,077, +554/일) ← ⭐12,888 *(UPDATED 2026-07-03)*
+- [[FluidVoice]] — 인터넷 없이 로컬 동작하는 온디바이스 macOS 음성 받아쓰기, 프라이버시 강점 (GitHub ⭐5,165, +588/일) *(UPDATED 2026-07-01)*
+- [[Scaling-the-Horizon]] — 파라미터 대신 추론 호라이즌 확장으로 35B가 조 단위급 성능 주장(검증 필요) (HF papers ↑54) *(NEW 2026-06-30)*
+- [[LiveEdit]] — 디퓨전 기반 실시간 스트리밍 영상 편집, 프레임 지연 최소화로 라이브 비디오 편집 (HF papers ↑51) *(NEW 2026-06-30)*
+- [[TUA-Bench]] — 터미널/CLI 사용 에이전트 능력 측정 벤치마크, CLI-Universe와 짝 이루는 평가 인프라 (HF papers ↑33) *(NEW 2026-06-30)*
+- [[Trimming-Long-Tail]] — 비주얼 월드모델 평가 롱테일 가지치기로 평가 효율·신뢰도 개선 (HF papers ↑30) *(NEW 2026-06-30)*
+- [[Video-MME-Logical]] — 영상 시간적·논리적 추론 능력 진단 벤치마크, 비디오 LLM 시간 이해 격리 측정 (HF papers ↑20) *(NEW 2026-06-30)*
+- [[Ornith-1.0-35B]] — deepreinforce-ai 35B(-MoE) GGUF 로컬 배포본, 에이전틱 코딩 패밀리(Gemma4/Qwen3.5, MIT)로 정체 규명 (HF 285k DL, 2일 +128k) *(UPDATED 2026-07-02)*
+- [[agency-agents]] — 역할·프로세스·결과물 사전 정의 전문가 서브에이전트 프리셋 카탈로그, 코딩 에이전트에 페르소나·템플릿 주입 (GitHub ⭐126,006, +3,032/일) ← ⭐121,603 *(UPDATED 2026-07-03)*
+- [[Vibe-Trading]] — HKUDS LLM 개인 트레이딩 에이전트 프레임워크, 자연어 전략→자동 실행(실거래 검증 부재) (GitHub ⭐16,995, +694/일) *(UPDATED 2026-07-02)*
+- [[ai-berkshire]] — 버핏·멍거 등 4인 가치투자 멀티에이전트 페르소나 병렬 리서치, Claude Code 기반 (GitHub ⭐7,104, +1,386/일, 급등 4일째) *(UPDATED 2026-06-30)*
+- [[Qwythos-9B]] — empero-ai Qwen3.5-9B 기반 1M(YaRN 확장) 컨텍스트 image-text-to-text GGUF, 로컬(llama.cpp) 트렌딩 1위 (HF 1.37M DL, likes 1.30k) ← 1.11M *(UPDATED 2026-07-03)*
+- [[Unlimited-OCR]] — Baidu 3B 비전-언어 OCR/문서 파싱(PDF·다중페이지), ParseBench 46.17·텍스트추출 86.81·포맷보존 0.97(서식 약함) (HF 885k DL, likes 1.67k) ← 630k *(UPDATED 2026-07-03)*
 
-- [[khoj]] — khoj-ai 자체 호스팅 AI 세컨드 브레인, 개인 문서·웹·노트 통합 RAG, 오프라인 지원 (GitHub ⭐34,997) *(NEW)*
-- [[UnEmbedding-Matrix-Feature-Lens]] — 텍스트 임베딩 언임베딩 행렬이 피처 렌즈로 기능함 발견, 임베딩 해석 가능성 향상 (arXiv 2606.07502, ↑49) *(NEW)*
-- [[MMAE]] — 38인 공동 저술 멀티태스크 오디오 편집 종합 벤치마크 (arXiv 2606.07229, ↑33) *(NEW)*
-- [[SoCRATES]] — LLM 능동 중재·사회인지 능력 자동 평가 프레임워크 (arXiv 2606.05563, ↑29) *(NEW)*
-- [[AnchorWorld]] — Kling Team 에고센트릭 체현 AI 세계 시뮬레이터, 뷰 기반 진화 커스터마이제이션 (arXiv 2606.07326, ↑21) *(NEW)*
-- [[Direct-3D-Aware-Object-Insertion]] — 분해된 시각 프록시로 이미지에 3D 인식 객체 직접 삽입 (arXiv 2606.06601, ↑19) *(NEW)*
+- [[strix]] — 앱 취약점을 에이전트가 자율 탐지·PoC 검증·수정하는 오픈소스 AI 침투 테스트 도구, DevSecOps 확장 (GitHub ⭐33,232, +2,137/일) ← ⭐28,484 *(UPDATED 2026-07-03)*
+- [[Translation-as-Bridging-Action]] — 손목 상대이동 bridging action으로 인간 시연→로봇 조작 전이, 신체 구조 갭 흡수 (HF papers ↑23 데일리 1위) *(NEW 2026-06-29)*
+- [[ProMSA]] — 검색 전략 적응 선택 + 시퀀스 RL 점진적 멀티모달 검색 에이전트, 지식기반 VQA용 에이전틱 RAG (HF papers ↑7) *(NEW 2026-06-29)*
+- [[Learning-to-Fold]] — RL 개선 VLA 양손 의류 접기, 성공추정+어드밴티지 공유망, LeHome Challenge 2026 1위 (HF papers ↑4) *(NEW 2026-06-29)*
+- [[Ko-WideSearch]] — 웹 에이전트 완전 열거 능력 측정 한국어 벤치마크, 집합 식별은 정확하나 행 복구 일관 실패 (HF papers ↑3) *(NEW 2026-06-29)*
+- [[GBC]] — 멀티에이전트를 계산 그래프로 모델링, 그래디언트 연결 가중치로 토큰 단위 오류 원인 식별·최적화 (HF papers ↑2) *(NEW 2026-06-29)*
+
+- [[OpenSpec]] — 코드 작성 전 스펙 합의로 AI 코딩 에이전트 결과 일관성↑, 스펙 주도 개발(SDD) 프레임워크 (GitHub ⭐57,292) *(NEW 2026-06-28)*
+- [[ppt-master]] — 문서→진짜 편집 가능한 PPTX(네이티브 도형·애니·발표자노트 음성) 생성 (GitHub ⭐33,405) *(NEW 2026-06-28)*
+- [[openpilot]] — comma.ai 300+ 차종 ADAS 업그레이드 오픈소스 로보틱스 OS, 엔드투엔드 ML 주행 (GitHub ⭐61,895, +80/일) *(NEW 2026-06-27)*
+- [[MinerU]] — PDF·오피스·이미지→LLM용 markdown/JSON 변환 문서 파싱 도구, MinerU2.5 VLM 엔진 탑재 (GitHub ⭐72,033) *(UPDATED 2026-06-29)*
+- [[In-Context-World-Modeling]] — 시스템 식별을 인컨텍스트 적응으로 재정의, VLA 새 환경 제로샷 일반화 (HF papers ↑45) *(UPDATED 2026-06-28)*
+- [[page-agent]] — Alibaba 인페이지 JS GUI 에이전트, 외부 드라이버 없이 자연어로 웹 DOM 직접 조작 (GitHub ⭐23,394, +742/일) ← ⭐20,091 *(UPDATED 2026-07-05)*
+- [[DanceOPD]] — 온폴리시 생성형 필드 디스틸레이션, off-policy 분포 불일치 교정 (HF papers ↑66 데일리 1위 3일연속) *(UPDATED 2026-06-28)*
+- [[ViQ]] — 임의 해상도 + 텍스트 정렬 시각 양자화 표현, 비전 토크나이저 해상도 종속 한계 돌파 (HF papers ↑37 데일리 4위) *(UPDATED 2026-06-27)*
+- [[Qwen-Image-Agent]] — Alibaba 이미지 생성 컨텍스트 격차 보강 에이전트, 약한 프롬프트→에이전트 루프 확장 (HF papers ↑37 데일리 5위) *(UPDATED 2026-06-27)*
+- [[OPID]] — 에이전트 RL용 온폴리시 스킬 디스틸레이션, [[온폴리시-증류]] 클러스터 (HF papers ↑39 데일리 3위) *(UPDATED 2026-06-27)*
+- [[JetSpec]] — 병렬 트리 드래프팅으로 speculative decoding 확장 한계 돌파, 추론 비용 직접 절감 (HF papers ↑16) *(NEW 2026-06-26)*
+- [[ai-website-cloner-template]] — AI 에이전트로 임의 웹사이트 구조를 단일 명령에 복제하는 템플릿, 프런트엔드 클론 자동화 (GitHub ⭐22,400) *(UPDATED 2026-06-28)*
+- [[design-md]] — Google Labs 코딩 에이전트용 비주얼 아이덴티티 명세, 디자인판 CLAUDE.md (GitHub ⭐21,770, +2,407/일, 급등 재가속) *(UPDATED 2026-06-27)*
+- [[Agent-Native-Memory-System]] — 에이전트 전용 메모리 요건 충족 여부 점검, 메모리 연구의 평가 단계 이동 (HF papers ↑104 데일리 최상위) *(UPDATED 2026-06-28)*
+- [[DomainShuttle]] — 오픈도메인 주제 일관성 유지 텍스트→영상 생성, 상용툴 캐릭터 고정 기능 일반화 (HF papers ↑62) *(UPDATED 2026-06-28)*
+- [[ShutterMuse]] — MLLM 기반 촬영 시점 실시간 사진 구도·설정 가이드 (HF papers ↑44) *(UPDATED 2026-06-28)*
+- [[Beyond-NL2Code]] — 멀티모달 코드 인텔리전스 서베이, 자연어 넘어선 코드 생성 정리 (HF papers ↑25) *(NEW 2026-06-25)*
+- [[Improved-LLDM]] — 확산 기반 대규모 언어모델 학습·추론 개선, AR 디코딩 속도 한계 돌파 계보 (HF papers ↑21) *(NEW 2026-06-25)*
+- [[gemma-4-12B-agentic-GGUF]] — Gemma-4 12B 에이전트 작업 특화(tau2 튜닝) GGUF, coder의 형제 모델 (HF 314k DL, 주 +149k) *(UPDATED 2026-07-02)*
+- [[voicebox]] — 음성 클로닝·오디오 생성 로컬 처리 오픈소스 AI 음성 스튜디오, 클라우드 TTS 종량제 탈피 (GitHub ⭐33,512, +1,045/일) *(NEW 2026-06-24)*
+- [[Qwen-AgentWorld]] — 언어 월드 모델로 범용 에이전트 환경 일반화, LLM 계획 엔진에 직결 (HF papers ↑56 데일리 최다) *(NEW 2026-06-24)*
+- [[NatureBench]] — 코딩 에이전트의 Nature급 SOTA 재현 능력 평가 벤치마크, 과학 재현성 난이도 (HF papers ↑36) *(NEW 2026-06-24)*
+- [[MobileForge]] — 어노테이션 없는 계층적 피드백 RL 모바일 GUI 에이전트 적응 (HF papers ↑23) *(NEW 2026-06-24)*
+- [[AOHP]] — 개인화·효율·보안 갖춘 OS 레벨 에이전트 하네스 오픈소스 프레임워크 (HF papers ↑22) *(NEW 2026-06-24)*
+- [[MemGUI-Agent]] — 능동적 컨텍스트 관리형 장기 모바일 GUI 에이전트, 종단간 수행 (HF papers ↑21) *(NEW 2026-06-24)*
+- [[firecrawl]] — 웹 크롤·검색 → LLM 입력 정제 API, RAG·에이전트 데이터 수집 레이어 사실상 표준 (GitHub ⭐137,749)
+- [[OpenMontage]] — 12 파이프라인 + 500여 에이전트 스킬로 영상 편집·제작 자율 수행 (GitHub ⭐24,213, +1,754/일, 급등 둔화) *(UPDATED 2026-06-27)*
+- [[World-Action-Models-Survey]] — WAM 분야 전체 정리 서베이, HF 데일리 추천 217 최다 (arXiv 2606.20781) *(NEW)*
+- [[PlanBench-XL]] — 대규모 툴 생태계에서 LLM 에이전트 장기 계획 평가 벤치마크 (arXiv 2606.22388, ↑51) *(NEW)*
+- [[EnterpriseClawBench]] — 실제 업무 세션 기반 에이전트 성능 벤치마크 (arXiv 2606.23654, ↑48) *(NEW)*
+- [[KaLM-Reranker-V1]] — late interaction 없는 고속 압축 문서 리랭커, RAG 리랭킹 속도 개선 (arXiv 2606.22807, ↑33) *(NEW)*
+- [[CLI-Universe]] — 터미널 에이전트용 검증 가능 태스크 자동 합성 엔진 (arXiv 2606.22883, ↑21) *(NEW)*
+- [[crewAI]] — 역할 기반 자율 AI 에이전트 오케스트레이션 프레임워크, 멀티에이전트 협업 자동화 (GitHub ⭐53,946) *(NEW)*
+- [[codebase-memory-mcp]] — 코드베이스 지식 그래프 인덱싱 MCP 서버, 토큰 절감 주장 (GitHub ⭐20,534, +2,190/일, 급등 장기화) *(UPDATED 2026-06-29)*
+- [[LTX-2]] — Lightricks 오디오-비디오 동시 생성 오픈소스 멀티모달 모델, LoRA 파인튜닝 지원 (GitHub ⭐7,549) *(NEW)*
+- [[GLM-5]] — ZAI의 에이전틱 LLM 프레임워크, "Vibe Coding → Agentic Engineering" 전환 (GitHub ⭐4,299) *(NEW)*
+- [[Moebius-Inpainting]] — 0.2B 파라미터로 10B급 이미지 인페인팅 성능 주장, 경량 효율성 (arXiv 2606.19195, ↑34) *(NEW)*
+- [[Playful-Agentic-Robot]] — UC Berkeley 플레이풀 상호작용 방식의 에이전틱 로봇 학습 기법 (arXiv 2606.19419, ↑27) *(NEW)*
+- [[S-Agent]] — 공간 도구 사용으로 LLM 공간 추론 능력 향상 에이전트 프레임워크 (arXiv 2606.20515, ↑20) *(NEW)*
+- [[Beyond-Static-Leaderboards]] — IBM 연구, 정적 리더보드의 LLM 에이전트 예측 타당성 한계 분석 (arXiv 2606.19704, ↑17) *(NEW)*
+- [[FreeStyle]] — 커뮤니티 LoRA 마이닝으로 스타일-콘텐츠 독립 제어 이미지 생성 (arXiv 2606.20506, ↑14) *(NEW)*
+- [[GLM-5.2]] — Zhipu 753B MIT 플래그십(1M 컨텍스트), GPQA 91.2·AIME 99.2·SWE-Bench Pro 62.1·Terminal Bench 81.0 (HF 191k DL, likes 3.29k) ← 99k *(UPDATED 2026-07-03)*
+- [[Kairos-World-Model-Stack]] — 물리 AI용 네이티브 월드 모델 스택, 실제 환경 물리 상태 예측·이해 (arXiv 2606.16533, ↑712)
+- [[MLLMs-NonMarkov-Games]] — 비마르코프 게임에서 MLLM 과거 기억 의사결정 능력 평가 벤치마크 (arXiv 2606.19338, ↑33) *(NEW)*
+- [[Guava-Embodied-Manipulation]] — 체현 로봇 조작 태스크 범용 통합 평가 프레임워크 (arXiv 2606.18363, ↑20) *(NEW)*
+- [[Reinforcing-Dual-Path-Spatial-VLM]] — 공간 VLM에 이중 경로 추론 RL 강화, 공간 분석 정확도 향상 (arXiv 2606.17539, ↑11) *(NEW)*
+- [[SAE-Interventions-Unreliable]] — SAE 개입으로 억제된 신경망 행동이 사후 복구됨 실증, 해석 가능성 연구 경고 (arXiv 2606.18322, ↑11) *(NEW)*
+- [[karpathy-autoresearch]] — Karpathy의 싱글 GPU 자율 AI 연구 에이전트, 가설→실험→검증 루프 인간 개입 없이 반복 (GitHub ⭐87,253) *(NEW)*
+- [[vllm]] — LLM 고처리량·메모리 효율 추론 서빙 엔진 PagedAttention, 프로덕션 표준 (GitHub ⭐83,131) *(NEW)*
+- [[microsoft-fara]] — Microsoft Fara-7B 컴퓨터 사용 특화 에이전틱 모델, GUI 조작·웹 탐색 자동화 (GitHub ⭐5,833) *(NEW)*
+- [[Introduction-to-Autonomous-Robots]] — 자율 로봇 인식·계획·제어 전반 오픈소스 교과서, 강의 교재급 품질 (GitHub ⭐3,145) *(NEW)*
+- [[JoyAI-VL-Interaction]] — JD.com 실시간 비전-언어 상호작용 모델, 영상 스트리밍 저지연 응답 (arXiv 2606.14777, ↑141) *(NEW)*
+- [[Data-Journalist-Agent]] — Oxford 데이터→검증 가능한 멀티모달 저널리즘 스토리 자동 변환 에이전트 (arXiv 2606.11176, ↑77) *(NEW)*
+- [[Geometric-Action-Model]] — ETH Zürich SE(3) 기하학적 대칭성 기반 로봇 정책 학습, 샘플 효율 개선 (arXiv 2606.17046, ↑67) *(NEW)*
+- [[DreamX-World-1.0]] — AMAP-ML 사용자 행동 반응형 범용 인터랙티브 월드 모델 (arXiv 2606.16993, ↑60) *(NEW)*
+- [[FastContext]] — Microsoft 코딩 에이전트용 레포 전체 파싱 없이 필요 컨텍스트만 효율 추출 (arXiv 2606.14066, ↑40) *(NEW)*
+- [[LoopCoder-v2]] — 단일 루프 테스트타임 연산 스케일링 코딩 특화 LLM, 반복 없이 최적 추론 (arXiv 2606.18023, ↑58) *(NEW)*
+- [[GameCraft-Bench]] — 실제 게임 엔진 기반 AI 에이전트 플레이어블 게임 E2E 제작 능력 벤치마크 (arXiv 2606.17861, ↑34) *(NEW)*
+- [[ACE-Ego-0]] — 인간·로봇 에고센트릭 통합 학습 VLA 사전학습 모델, 다중 로봇 전이 (arXiv 2606.17200, ↑34) *(NEW)*
+- [[ZPPO]] — NVIDIA 교사 신호를 프롬프트에 담는 그래디언트 없는 RL 정책 최적화 (arXiv 2606.18216, ↑33) *(NEW)*
+- [[LecturaAgents]] — 학습자 수준 적응형 AI 보조 학습 멀티에이전트 프레임워크, 구현 교수법 (arXiv 2606.16428, ↑25) *(NEW)*
+- [[gemma-4-12B-coder-GGUF]] — Gemma-4 12B 코딩 파인튜닝 GGUF 양자화 로컬 추론 최적화 (HF 614k DL, +64k 지속 우상향) *(UPDATED 2026-07-02)*
+- [[MiniMax-M3]] — MiniMax 427B MoE 이미지-텍스트 멀티모달 대형 모델 (HF 25.1k DL) *(NEW)*
+- [[OpenHands]] — 오픈소스 AI 코딩 에이전트 플랫폼, Deepseek/Qwen 오픈 모델 호환, 코드 생성·실행·디버깅 자율 루프 (GitHub ⭐77,133) *(NEW)*
+- [[OmniDirector]] — Kling Team, 크로스 페어 데이터 없이 멀티샷 카메라 무빙 복제 영상 생성 기법 (arXiv 2606.13432, ❤️75) *(NEW)*
+- [[APPO]] — 에이전트 절차적 정책 자기 최적화 RL 프레임워크, 다단계 태스크 성능 향상 (arXiv 2606.12384, ❤️57) *(NEW)*
+- [[Graph-Memory-LLM-Agents]] — NUS 그래프 기반 LLM 에이전트 메모리 재구성, 단순 RAG 검색 한계 극복 (arXiv 2606.06036, ❤️46) *(NEW)*
+- [[Orchestra-o1]] — CUHK 멀티모달 에이전트 오케스트레이션 프레임워크, 텍스트·이미지·오디오 분업 처리 (arXiv 2606.13707, ❤️34) *(NEW)*
+- [[Rethinking-RAG-Long-Videos]] — 장시간 영상 특화 RAG 재정의, 의미 단위 기반 검색·활용 (arXiv 2606.13141, ❤️30) *(NEW)*
+- [[SkillSpector]] — NVIDIA AI 에이전트 스킬 보안 취약점·악성 패턴 정적 분석 스캐너 (GitHub ⭐5,800) *(UPDATED)*
+- [[LMCache]] — LLM 서빙 KV Cache 재사용 레이어, prefill 반복 요청 지연 감소 (GitHub ⭐9,081) *(UPDATED)*
+- [[agentsview]] — Claude Code 등 20+ 코딩 에이전트 세션·비용 로컬 분석 대시보드 (GitHub ⭐2,495) *(NEW)*
+- [[aisuite]] — Andrew Ng 관리 다중 LLM 공급사 단일 인터페이스 통합 Python 라이브러리 (GitHub ⭐14,496) *(UPDATED)*
+- [[MiniMax-Sparse-Attention]] — MiniMax 희소 어텐션 메커니즘, 긴 컨텍스트 연산량 감소 (arXiv 2606.13392, ↑109) *(NEW)*
+- [[Kimi-K2.7-Code]] — Moonshot 1.1T MoE 코드 특화 멀티모달 모델, 이미지+텍스트→코드 (HF 173k DL) *(UPDATED)*
+- [[diffusiongemma-26B]] — Google 26B MoE 디퓨전 기반 멀티모달 Gemma, 이미지-텍스트 입력 (HF 460k DL) *(UPDATED)*
+- [[WeaveBench]] — Microsoft 하이브리드 인터페이스 컴퓨터 사용 에이전트 장기 벤치마크 (arXiv 2606.09426, ↑95) *(UPDATED)*
+- [[MaxProof]] — MiniMax 생성-검증자 RL + 테스트 타임 스케일링으로 수학 증명 능력 확장 (arXiv 2606.13473, ↑55)
+- [[SpatialClaw]] — NVIDIA 공간 추론 에이전트 액션 인터페이스 재설계 연구 (arXiv 2606.13673, ↑83) *(UPDATED)*
+- [[InterleaveThinker]] — 에이전트 추론-행동 교차(interleaved) 생성 강화학습 방법론 (arXiv 2606.13679, ↑75) *(UPDATED)*
+- [[EvoArena]] — MIT 동적 환경에서 LLM 에이전트 메모리 진화 추적 벤치마크 (arXiv 2606.13681, ↑121) *(UPDATED)*
+- [[pm-skills]] — PM 워크플로우 전주기 100+ 에이전트 스킬 마켓플레이스 (GitHub ⭐16,581)
+- [[superpowers]] — 코딩 에이전트용 완결 개발 방법론+조합 스킬 프레임워크(스펙→계획→서브에이전트→리뷰), 공식 Claude 플러그인 (GitHub ⭐244,962, +897/일) ← ⭐225,402 *(UPDATED 2026-07-03)*
+- [[system-prompts-and-models-of-ai-tools]] — AI 코딩 도구 시스템 프롬프트 수집 (GitHub ⭐140,020)
+- [[agent-skills]] — Addy Osmani AI 코딩 에이전트용 프로덕션급 엔지니어링 스킬 (GitHub ⭐58,861, +1,514 today) *(UPDATED)*
+- [[khoj]] — khoj-ai 자체 호스팅 AI 세컨드 브레인, 개인 문서·웹·노트 통합 RAG, 오프라인 지원 (GitHub ⭐34,997)
+- [[UnEmbedding-Matrix-Feature-Lens]] — 텍스트 임베딩 언임베딩 행렬이 피처 렌즈로 기능함 발견, 임베딩 해석 가능성 향상 (arXiv 2606.07502, ↑49)
+- [[MMAE]] — 38인 공동 저술 멀티태스크 오디오 편집 종합 벤치마크 (arXiv 2606.07229, ↑33)
+- [[SoCRATES]] — LLM 능동 중재·사회인지 능력 자동 평가 프레임워크 (arXiv 2606.05563, ↑29)
+- [[AnchorWorld]] — Kling Team 에고센트릭 체현 AI 세계 시뮬레이터, 뷰 기반 진화 커스터마이제이션 (arXiv 2606.07326, ↑21)
+- [[Direct-3D-Aware-Object-Insertion]] — 분해된 시각 프록시로 이미지에 3D 인식 객체 직접 삽입 (arXiv 2606.06601, ↑19)
 - [[LLM-Wiki 원문 (Karpathy 2026)]] — Andrej Karpathy의 LLM-Wiki 패턴 가이드 원문
 - [[instagram-저장-2026-02-2026-04]] — 102개 인스타그램 저장 게시물 (2026-02~04), video-saas/ai-news/3D/모션디자인
-- [[hermes-agent]] — NousResearch 오픈소스 에이전트 프레임워크, 세션 메모리·스킬 자동생성·크론 내장 (GitHub ⭐187,000) *(UPDATED)*
-- [[DeepTutor]] — 에이전트 기반 적응형 학습 보조 시스템 (GitHub ⭐20,273) *(UPDATED)*
-- [[VoxCPM]] — 토크나이저 없는 오픈소스 TTS (GitHub ⭐24,625, +888) *(UPDATED)*
-- [[Kronos]] — 금융 시계열 파운데이션 모델 (GitHub ⭐26,251 + arXiv 2508.02739) *(UPDATED)*
+- [[hermes-agent]] — NousResearch 오픈소스 에이전트 프레임워크, 세션 메모리·스킬 자동생성·크론 내장 (GitHub ⭐201,404, 20만 돌파) *(UPDATED 2026-06-24)*
+- [[DeepTutor]] — 에이전트 기반 적응형 학습 보조 시스템 (GitHub ⭐20,273)
+- [[VoxCPM]] — 토크나이저 없는 오픈소스 TTS (GitHub ⭐30,552, +418 오늘) *(UPDATED)*
+- [[Kronos]] — 금융 시계열 파운데이션 모델 (GitHub ⭐30,061 + arXiv 2508.02739) *(UPDATED)*
 - [[Archon]] — AI 코딩 결정론화 하네스 (GitHub ⭐12,392)
 - [[SkillClaw]] — AI 에이전트 스킬 집단 진화 논문 (arXiv 2604.08377)
 - [[When-Numbers-Speak]] — T2V 숫자-객체 정렬 (arXiv 2604.08546)
 - [[HY-Embodied]] — 실세계 로봇용 소형 임베디드 모델 (arXiv 2604.07430)
 - [[OpenSpatial]] — 멀티모달 3D 공간 이해 데이터 엔진 (arXiv 2604.07296)
 - [[DMax]] — 확산 LLM 병렬 디코딩 가속 (arXiv 2604.08302)
-- [[Gemma-4-31B]] — Google 멀티모달 31B, Apache 2.0 (HF 10.4M 다운로드, AIME 89.2%) *(UPDATED)*
+- [[Gemma-4-31B]] — Google 멀티모달 31B, Apache 2.0 (HF 11.2M 다운로드, 트렌딩 DL 1위) ← 10.4M *(UPDATED 2026-07-05)*
 - [[GLM-5.1]] — Zhipu AI MoE 753B, 한국어+영어, MIT (HF 183K 다운로드, 1.47K likes) *(UPDATED)*
 - [[VOID-model]] — Netflix 비디오 객체 인페인팅, Apache 2.0
-- [[superpowers]] — Shell 기반 에이전트 스킬 프레임워크 (GitHub ⭐211,716, 2026-05-29 업데이트) *(UPDATED)*
 - [[multica]] — 오픈소스 매니지드 에이전트 플랫폼 (GitHub ⭐32,822, +585) *(UPDATED)*
 - [[andrej-karpathy-skills]] — Karpathy 관찰 기반 Claude Code 최적화 CLAUDE.md (GitHub ⭐155,977) *(UPDATED)*
 - [[VibeVoice]] — Microsoft 오픈소스 STT/TTS 엔진 + Next-token diffusion 장시간 다화자 (GitHub ⭐48,700) *(UPDATED)*
@@ -127,7 +583,7 @@ total_sources: 454
 - [[gameworld]] — 멀티모달 게임 에이전트 표준 평가 벤치마크, NUS (HF 업보트 42) *(NEW)*
 - [[occubench]] — 실세계 직업 전문 태스크 에이전트 평가, Qwen/Alibaba (HF 업보트 38) *(NEW)*
 - [[openai-agents-python]] — OpenAI 공식 멀티에이전트 워크플로우 프레임워크, 경량 설계 (GitHub ⭐24,205) *(UPDATED)*
-- [[cognee]] — AI 에이전트 메모리를 6줄 코드로 구성하는 그래프 기반 지식 엔진 (GitHub ⭐15,974) *(NEW)*
+- [[cognee]] — AI 에이전트 메모리를 6줄 코드로 구성하는 그래프 기반 지식 엔진 (GitHub ⭐24,282) *(UPDATED 2026-06-28)*
 - [[HY-World-2.0]] — 단일 멀티모달 모델로 3D 세계 재구성·생성·시뮬레이션 통합 (557 likes) *(UPDATED)*
 - [[DR3-Eval]] — AI deep research 에이전트 재현 가능한 현실적 평가 프레임워크 (HF upvote 23) *(UPDATED)*
 - [[RAD-2]] — 생성기-판별기 구조에서 강화학습 확장 프레임워크 (HF upvote 23) *(UPDATED)*
@@ -135,10 +591,10 @@ total_sources: 454
 - [[ASGuard]] — 활성화 스케일링으로 Jailbreak 방어, 성능 저하 없이 안전성 강화 (HF upvote 17) *(UPDATED)*
 - [[HY-Embodied-0.5]] — Tencent 4B embodied AI 모델, 이미지-텍스트 입력 물리 세계 행동 계획 (HF 1,060) *(NEW)*
 - [[Qwen3.6-35B-A3B-GGUF]] — unsloth Qwen3.6-35B-A3B GGUF 양자화, llama.cpp 로컬 실행 최적화 (HF 2.58M 다운로드, local-llm) *(UPDATED)*
-- [[Qwen3.6-35B-A3B]] — Qwen MoE 멀티모달 36B, 활성 3B로 효율적 추론 (HF 5.61M 다운로드) *(UPDATED)*
+- [[Qwen3.6-35B-A3B]] — Qwen MoE 멀티모달 36B, 활성 3B로 효율적 추론, NVFP4 양자화판 등장 (HF 5.86M 다운로드) ← 5.61M *(UPDATED 2026-07-05)*
 - [[omi]] — BasedHardware 화면+음성 멀티모달 오픈소스 AI 비서, 웨어러블 디바이스 연동 (GitHub ⭐10,022) *(UPDATED)*
 - [[how-to-fine-tune-reasoning-model]] — 교사-학생 협력 SFT 데이터 합성으로 추론 파인튜닝 효율 향상 (arXiv 2604.14164, upvote 21)
-- [[chrome-devtools-mcp]] — Chrome DevTools 공식 MCP 서버, 코딩 에이전트 브라우저 직접 제어·디버깅 (GitHub ⭐35,992) *(NEW)*
+- [[chrome-devtools-mcp]] — Chrome DevTools 공식 MCP 서버, 코딩 에이전트 브라우저 직접 제어·디버깅 (GitHub ⭐45,886, +304/일) ← ⭐35,992 *(UPDATED 2026-07-05)*
 - [[DeepGEMM]] — DeepSeek FP8 GEMM 커널, LLM 추론 연산 효율 극대화 (GitHub ⭐6,903) *(UPDATED)*
 - [[evolver]] — Genome Evolution Protocol 기반 AI 에이전트 자기진화 엔진 (GitHub ⭐5,147) *(NEW)*
 - [[claude-desktop-debian]] — Debian Linux에서 Claude Desktop 네이티브 실행, MCP 통합 (GitHub ⭐3,515) *(NEW)*
@@ -151,8 +607,8 @@ total_sources: 454
 - [[Representations-Before-Pixels]] — 의미론적 표현 계층 생성으로 비디오 예측 품질 향상 (arXiv 2604.11707, upvote 7) *(NEW)*
 - [[LeapAlign]] — ByteDance Seed, 플로우 매칭 모델 사후 정렬 2-스텝 궤적 (arXiv 2604.15311, upvote 7) *(NEW)*
 - [[OmniVoice]] — 다국어 고품질 TTS 모델, HF 1M+ 다운로드 (HF 트렌딩 3위)
-- [[deer-flow]] — ByteDance 장기 작업 수행 SuperAgent, 웹 리서치·코딩·콘텐츠 생성 자율 처리 (GitHub ⭐65,770) *(UPDATED)*
-- [[RuView]] — WiFi 신호 기반 DensePose 인체 자세 추정, 카메라 없이 벽 통과 실시간 감지 (GitHub ⭐57,762, +1,859) *(UPDATED)*
+- [[deer-flow]] — ByteDance 장기 작업 수행 SuperAgent, 웹 리서치·코딩·콘텐츠 생성 자율 처리 (GitHub ⭐74,211, +739/일) *(UPDATED 2026-06-24)*
+- [[RuView]] — WiFi 신호 기반 DensePose 인체 자세 추정, 카메라 없이 벽 통과 실시간 감지 (GitHub ⭐73,058, 2026-06-11) *(UPDATED)*
 - [[minimind]] — 64M 파라미터 GPT를 2시간 만에 처음부터 학습, LLM 내부 구조 실습 표준 (GitHub ⭐47,657) *(NEW)*
 - [[PersonaVLM]] — 사용자 페르소나 장기 기억 개인화 멀티모달 VLM 프레임워크 (arXiv 2604.13074, upvote 19) *(NEW)*
 - [[FinceptTerminal]] — AI·LLM 기반 금융 데이터 분석·투자 리서치 CLI 터미널 (GitHub ⭐13,533) *(UPDATED)*
@@ -185,7 +641,7 @@ total_sources: 454
 - [[open-webui]] — 오픈소스 AI 채팅 인터페이스, Ollama·OpenAI API 등 다양한 LLM 백엔드 통합 (GitHub ⭐133,530) *(NEW)*
 - [[langfuse]] — LLM 앱 오픈소스 관측성 플랫폼, 메트릭·평가·프롬프트 관리 통합 (GitHub ⭐25,791) *(NEW)*
 - [[claude-code-templates]] — Claude Code 설정·모니터링 CLI, 에이전트 코딩 워크플로 템플릿 모음 (GitHub ⭐24,971) *(NEW)*
-- [[last30days-skill]] — Reddit·X·YouTube·HN·Polymarket 멀티소스 자율 조사·종합 에이전트 스킬 (GitHub ⭐35,739, +3,558) *(UPDATED)*
+- [[last30days-skill]] — Reddit·X·YouTube·HN·Polymarket 멀티소스 자율 조사·종합 에이전트 스킬 (GitHub ⭐39,417, 2026-06-11) *(UPDATED)*
 - [[vercel-skills]] — Vercel Labs 공식 AI 에이전트용 오픈 스킬 레지스트리, npx 한 줄 설치 (GitHub ⭐15,695) *(NEW)*
 - [[swarms]] — 엔터프라이즈 프로덕션용 멀티에이전트 오케스트레이션 프레임워크 (GitHub ⭐6,471) *(NEW)*
 - [[Pixelle-Video]] — AIDC-AI, AI 기반 쇼트 영상 자동 생성 엔진, 입력→완성 영상 파이프라인 자동화 (GitHub ⭐12,394) *(UPDATED)*
@@ -212,7 +668,7 @@ total_sources: 454
 - [[DeVI]] — 합성 비디오 모방 학습으로 물리 기반 정밀 손-물체 상호작용 구현 (HF 12 upvotes) *(UPDATED)*
 - [[Terminal-Agent-Context-Compression]] — MAP Research Group, 관찰 컨텍스트 압축 자기진화형 터미널 에이전트 효율화 (HF 5 upvotes) *(NEW)*
 - [[Visual-Reasoning-Tool-RL]] — Amazon AGI, 도구 활용 강화학습으로 시각 추론 능력 향상 (HF 2 upvotes) *(NEW)*
-- [[Open-Generative-AI]] — Flux·Midjourney·Sora 등 200개+ 생성 AI 무검열 오픈소스 통합 플랫폼 (GitHub ⭐15,492, +703) *(UPDATED)*
+- [[Open-Generative-AI]] — Flux·Midjourney·Sora 등 200개+ 생성 AI 무검열 오픈소스 통합 플랫폼 (GitHub ⭐21,536) *(UPDATED 2026-06-28)*
 - [[DeepEP]] — DeepSeek 공식 MoE expert-parallel 통신 최적화 CUDA 라이브러리 (GitHub ⭐9,394) *(NEW)*
 - [[LLaTiSA]] — 시각 인식→의미 이해 계층화 시계열 추론 벤치마크 (arXiv 2604.17295) *(NEW)*
 - [[Co-Evolving-LLM-Agents]] — LLM 에이전트·스킬 뱅크 공진화로 장기 태스크 성능 향상 프레임워크 (arXiv 2604.20987) *(NEW)*
@@ -220,12 +676,12 @@ total_sources: 454
 - [[ml-intern]] — HuggingFace 공식 ML 엔지니어 에이전트, 논문 읽기·모델 학습·배포 자동화 (GitHub ⭐6,473) *(UPDATED)*
 - [[WorldMark]] — 인터랙티브 비디오 월드 모델 통합 벤치마크 스위트 (HF 27 upvotes) *(NEW)*
 - [[UniT-Humanoid-Policy]] — XPENG Robotics, 인간→휴머노이드 정책 학습 물리 언어 프레임워크 (HF 25 upvotes) *(NEW)*
-- [[DeepSeek-V4-Pro]] — DeepSeek 1.6T MoE 플래그십 (49B 활성), AIME 2026 95.2% (HF 5.83M DL) *(UPDATED)*
+- [[DeepSeek-V4-Pro]] — DeepSeek 1.6T MoE 플래그십 (49B 활성), AIME 2026 95.2% (HF 4.3M DL 월간, 2026-06-10) *(UPDATED)*
 - [[StyleID-Facial-Identity]] — 스타일화 얼굴 신원 인식 인지 기반 데이터셋+메트릭 (HF 14 upvotes) *(NEW)*
 - [[Seeing-Fast-and-Slow]] — 빠른/느린 시간 인식 분리 학습 시각 모델, System 1/2 비디오 이해 (HF 11 upvotes) *(NEW)*
 - [[Hybrid-Policy-Distillation]] — LLM 추론 품질 유지 효율 정책 증류 하이브리드 방법론 (HF 8 upvotes) *(NEW)*
 - [[rlm]] — alexzhang13, 재귀적 언어 모델(RLM) 추론 plug-and-play 라이브러리 (GitHub ⭐3,916) *(NEW)*
-- [[mattpocock-skills]] — Matt Pocock, 실무 엔지니어용 Claude 에이전트 스킬 모음, .claude/ 즉시 적용 (GitHub ⭐85,662, +3,132) *(UPDATED)*
+- [[mattpocock-skills]] — Matt Pocock, 실무 엔지니어용 Claude 에이전트 스킬 모음, .claude/ 즉시 적용 (GitHub ⭐156,933, +973/일) ← ⭐85,662 *(UPDATED 2026-07-05)*
 - [[trycua-cua]] — Computer-Use 에이전트 오픈소스 샌드박스·SDK·벤치마크 인프라 (GitHub ⭐14,360) *(NEW)*
 - [[beads]] — gastownhall, 코딩 에이전트용 메모리 업그레이드 레이어, 장기 기억 개선 (GitHub ⭐21,666) *(NEW)*
 - [[awesome-codex-skills]] — ComposioHQ, Codex CLI 실무 워크플로우 자동화 검증 스킬 큐레이션 (GitHub ⭐1,960, +517 당일) *(NEW)*
@@ -278,7 +734,6 @@ total_sources: 454
 - [[OceanPile]] — 해양과학 특화 대규모 멀티모달 데이터셋, 도메인 기초 모델 학습용 (HF 업보트 8) *(NEW)*
 - [[ComboStoc]] — 확산 모델 조합론적 확률성 도입, 생성 다양성·샘플 품질 동시 향상 (HF 업보트 5) *(NEW)*
 - [[AcademiClaw]] — 78명 학생 출제 AI 에이전트 벤치마크, 실제 학습 환경 기반 평가 (HF 업보트 3) *(NEW)*
-- [[agency-agents]] — 전문가 에이전트 집합 AI 에이전시, 역할·프로세스·결과물 사전 정의 (GitHub ⭐94,058) *(NEW)*
 - [[context-mode]] — AI 코딩 에이전트 컨텍스트 윈도우 98% 토큰 절감, 14개 플랫폼 지원 (GitHub ⭐13,388) *(NEW)*
 - [[awesome-ai-apps]] — RAG·에이전트·워크플로우 실용 AI 앱 예제 큐레이션 (GitHub ⭐11,694) *(NEW)*
 - [[cocoindex]] — 장기 에이전트용 증분 처리 인덱싱 엔진, 변경분만 재처리 (GitHub ⭐8,544) *(NEW)*
@@ -288,7 +743,7 @@ total_sources: 454
 - [[HeavySkill]] — 에이전트 오케스트레이션 헤비 씽킹 내재 스킬, RL 추론 깊이 확장 (HF 업보트 6) *(NEW)*
 - [[PatRe]] — 특허 심사 전 주기 벤치마크, 480개 실제 케이스 LLM 법률·기술 추론 평가 (HF 업보트 4) *(NEW)*
 - [[Sulphur-2-base]] — 9B 텍스트→비디오 확산 모델, 오픈소스 비디오 생성 트렌딩 1위 (HF 1.16M DL, 1,000 likes) *(UPDATED)*
-- [[agent-skills]] — Addy Osmani, AI 코딩 에이전트용 프로덕션급 엔지니어링 스킬 모음 (GitHub ⭐36,529) *(UPDATED)*
+- [[agent-skills]] — Addy Osmani, AI 코딩 에이전트용 프로덕션급 엔지니어링 스킬 모음 (GitHub ⭐50,100, 2026-06-10) *(UPDATED)*
 - [[hello-agents]] — Datawhale, 에이전트 원리부터 실전 구현 단계별 Python 튜토리얼 중문 (GitHub ⭐48,745) *(UPDATED)*
 - [[openhuman]] — Rust 기반 로컬 개인 AI 에이전트, 프라이버시 중심 외부 클라우드 불필요 (GitHub ⭐22,625, +3,973/day) *(UPDATED)*
 - [[scientific-agent-skills]] — 연구·과학·공학·금융·작문 분야별 바로 쓰는 AI 에이전트 스킬 모음 Python (GitHub ⭐24,065, +762) *(UPDATED)*
@@ -338,7 +793,7 @@ total_sources: 454
 - [[when-to-trust-imagination]] — 세계 모델 예측 vs 실환경 신뢰 판단 적응형 RL 전략 (arXiv 2605.06222) *(NEW)*
 - [[nonsense-helps]] — 프롬프트 노이즈로 추론 탐색 공간 확장, 성능 향상 (arXiv 2605.05566) *(NEW)*
 - [[ZAYA1-8B]] — Zyphra 8B 범용 언어 모델 (AIME'26 89.1%, MoE 활성 760M) (HF 131K DL) *(UPDATED)*
-- [[supervision]] — Roboflow 모델-비종속 CV 파이프라인 라이브러리, YOLO·Transformers 통합 (GitHub ⭐42,596, +1,288) *(UPDATED)*
+- [[supervision]] — Roboflow 모델-비종속 CV 파이프라인 라이브러리, YOLO·Transformers 통합 (GitHub ⭐43,743, 2026-06-11) *(UPDATED)*
 - [[olympiad-reasoning]] — 단순·통합 스케일링으로 수학 올림피아드 금메달 추론 달성 (HF 업보트 104) *(NEW)*
 - [[self-distilled-agentic-rl]] — 에이전트 강화학습에 자기 증류 적용, 성능·효율 동시 개선 (HF 업보트 48) *(NEW)*
 - [[MemEye]] — 멀티모달 에이전트 시각 메모리 보존·활용 능력 평가 벤치마크 프레임워크 (HF 업보트 46) *(NEW)*
@@ -374,9 +829,9 @@ total_sources: 454
 - [[EnvFactory]] — 실행 가능한 환경 합성+강건한 RL로 도구 사용 에이전트 대규모 확장 (HF 업보트 35) *(NEW)*
 - [[Understand-Anything]] — 코드베이스 인터랙티브 지식 그래프, Claude/Copilot/Gemini 연동 (GitHub ⭐43,637) *(UPDATED)*
 - [[claude-plugins-official]] — Anthropic 공식 Claude Code 플러그인 디렉토리, 검증된 워크플로우 확장 (GitHub ⭐26,877, +2,193) *(NEW)*
-- [[ai-engineering-from-scratch]] — LLM·RAG·Agent 실무 지향 AI 엔지니어링 커리큘럼 (GitHub ⭐19,554) *(UPDATED)*
+- [[ai-engineering-from-scratch]] — LLM·RAG·Agent 실무 지향 AI 엔지니어링 커리큘럼 (GitHub ⭐38,834, +232) *(UPDATED 2026-07-18)*
 - [[knowledge-work-plugins]] — Anthropic 공식 지식 노동자용 Claude Code 플러그인, 리서치·문서 자동화 특화 (GitHub ⭐14,447, +550) *(NEW)*
-- [[Anthropic-Cybersecurity-Skills]] — 5대 보안 프레임워크 매핑 754개 AI 에이전트용 사이버보안 스킬 (GitHub ⭐8,709, +930) *(NEW)*
+- [[Anthropic-Cybersecurity-Skills]] — 6개 보안 프레임워크 매핑 817개 AI 에이전트용 사이버보안 스킬(29개 도메인) (GitHub ⭐21,523, +571/일, 한달 2.5배) *(UPDATED 2026-06-26)*
 - [[DelTA]] — RLVR 토큰 그래디언트 선형 판별기 재가중, Qwen3-8B/14B +3.26/+2.62포인트 향상 (HF 업보트 191) *(NEW)*
 - [[TransitLM]] — 중국 4개 도시 1,300만+ 대중교통 경로 데이터셋, GPS→경로 LLM 생성 (HF 업보트 167) *(NEW)*
 - [[MLLM-personality-bias]] — MLLM 인물 사진 성격 추론 외모 편견 측정 벤치마크 (HF 업보트 160) *(NEW)*
@@ -407,7 +862,7 @@ total_sources: 454
 - [[SelfImprovingLMs]] — Harvard 양방향 진화적 탐색 기반 LLM 자기 개선 메커니즘 (HF 업보트 37) *(NEW)*
 - [[MiniCPM5-1B]] — OpenBMB 1B SFT+RL+OPD, Think/No-Think 전환, 동급 1B SOTA 주장, 엣지 배포 최적화 (HF DL 68,494) *(UPDATED)*
 - [[LongCat-Video-Avatar]] — 미투안 LongCat 비디오 아바타 생성 모델 v1.5 (HF 좋아요 352) *(NEW)*
-- [[MoneyPrinterTurbo]] — harry0703, AI LLM 기반 쇼트폼 영상 완전 자동화, 음성·자막·편집 일괄 (GitHub ⭐77,436, +3,375) *(UPDATED)*
+- [[MoneyPrinterTurbo]] — harry0703, AI LLM 기반 쇼트폼 영상 완전 자동화, 음성·자막·편집 일괄 (GitHub ⭐85,539, 2026-06-11) *(UPDATED)*
 - [[hermes-webui]] — nesquena, Hermes Agent 브라우저 접근 경량 웹UI, 빌드 없음·순수 Python+JS (GitHub ⭐12,806) *(UPDATED)*
 - [[supermemory]] — AI 앱용 고속 확장형 메모리 엔진, LongMemEval 벤치마크 1위, 50ms 응답 (GitHub ⭐24,863) *(UPDATED)*
 - [[PEFT-scaling]] — PEFT = 수조 파라미터 모델의 수백만 개인화 어댑터 인프라로 재정의 (arXiv 2606.02437) *(NEW)*
@@ -428,13 +883,13 @@ total_sources: 454
 - [[minWM]] — 실시간 인터랙티브 비디오 월드 모델 풀스택 오픈소스 프레임워크 (HF 업보트 43) *(UPDATED)*
 - [[GenClaw]] — Tencent Hunyuan 코드 기반 에이전트가 이미지 생성 파이프라인 직접 제어 (HF 업보트 21) *(NEW)*
 - [[LFM2.5-8B]] — Liquid AI 8B MoE (활성 1B), MATH500 74.8→88.8, AIME25 20→42.5, 비환각률 7.5→63.5 전작 대비 전 지표 대폭 개선 (HF 60,171 DL) *(UPDATED)*
-- [[LocateAnything-3B]] — NVIDIA 3B VLM, 자연어 쿼리 기반 이미지 내 객체 정밀 위치 탐색, Parallel Box Decoding 2.5배 처리량 (HF 111,000 DL) *(UPDATED)*
+- [[LocateAnything-3B]] — NVIDIA 3B VLM, 자연어 쿼리 기반 이미지 내 객체 정밀 위치 탐색, Parallel Box Decoding 2.5배 처리량 (HF 87,000 DL) *(UPDATED)*
 - [[n8n]] — Self-hosted AI 워크플로우 자동화, 400+ 서비스 + 네이티브 AI 노드, LLM 파이프라인 오케스트레이션 (GitHub ⭐190,304) *(NEW)*
 - [[Qlib]] — Microsoft end-to-end 퀀트 AI 리서치 프레임워크, ML/RL/GNN + 백테스팅 (GitHub ⭐43,714) *(NEW)*
 - [[InvokeAI]] — Stable Diffusion 크리에이티브 엔진, 노드 파이프라인 + REST API (GitHub ⭐27,287) *(NEW)*
 - [[ONNX-Runtime]] — Microsoft 크로스플랫폼 ML 추론 가속기, CPU/GPU/NPU, 엣지 배포 표준 (GitHub ⭐20,678) *(NEW)*
 - [[Qwen-VLA]] — 비전-언어-액션 통합 범용 로봇 파운데이션 모델, 다형태 지원 (HF 업보트 85) *(NEW)*
-- [[Qwen3.6-35B-Uncensored]] — Qwen3.6 35B MoE 커뮤니티 검열 제거 파인튜닝 (HF 2,230,000 DL) *(NEW)*
+- [[Qwen3.6-35B-Uncensored]] — Qwen3.6 35B MoE 커뮤니티 검열 제거 파인튜닝 (HF 2,980,000 DL, 2026-06-10) *(UPDATED)*
 - [[headroom]] — chopratejas, LLM 토큰 60~95% 압축 라이브러리, Library·Proxy·MCP Server 형태 제공 (GitHub ⭐15,000, +93% 3일) *(UPDATED)*
 - [[TrOPD]] — Samsung Research, 신뢰 구간 온폴리시 LLM 증류 불안정성 해결, 수학·코드·일반 벤치마크 SOTA 능가 (arXiv 2606.01249) *(NEW)*
 - [[Humanoid-GPT]] — 20억 프레임 GPT형 트랜스포머 휴머노이드 전신 제어, 비학습 동작 제로샷 일반화 (arXiv 2606.03985) *(NEW)*
@@ -458,19 +913,72 @@ total_sources: 454
 - [[Gemma-4-12B-GGUF]] — unsloth, Gemma 4 12B 인스트럭션 튜닝 GGUF 양자화, 로컬 추론 최적화 (HF 458,000 DL) *(NEW)*
 - [[Gemma-4-12B]] — Google 12B Any-to-Any 멀티모달 인스트럭션 튜닝 모델 (HF 315,000 DL) *(NEW)*
 - [[openai-whisper]] — OpenAI 범용 음성 인식 ASR, 100개 언어 전사·번역, 약지도 학습 기반 (GitHub ⭐101,966) *(NEW)*
-- [[PaddleOCR]] — Baidu PDF·이미지 구조화 데이터 변환 경량 OCR, 100개 언어 LLM 파이프라인 연동 최적화 (GitHub ⭐81,113, +433) *(NEW)*
+- [[PaddleOCR]] — Baidu PDF·이미지 구조화 데이터 변환 경량 OCR, 100개 언어 LLM 파이프라인 연동 최적화 (GitHub ⭐82,906, +335 오늘) *(UPDATED)*
 - [[MemPalace]] — 오픈소스 AI 에이전트 장기 기억 시스템, "벤치마크 1위" 주장 (GitHub ⭐54,472, +446, 검증 필요) *(NEW)*
 - [[CopilotKit]] — React/Angular 프론트엔드 AI 에이전트·생성형 UI 통합, AG-UI 프로토콜 기반 (GitHub ⭐33,451, +631) *(NEW)*
-- [[turbovec]] — RyanCodrai, Rust 구현 + Python 바인딩 고속 근사 최근접 이웃 벡터 인덱스 (GitHub ⭐9,543) *(NEW)*
-- [[Agent-Reach]] — Panniantong, Twitter·Reddit·YouTube·GitHub 실시간 검색 AI 에이전트 도구 (GitHub ⭐24,908) *(NEW)*
+- [[turbovec]] — RyanCodrai, Rust 구현 + Python 바인딩 고속 근사 최근접 이웃 벡터 인덱스 (GitHub ⭐13,420, +280) *(UPDATED 2026-07-18)*
+- [[Agent-Reach]] — Panniantong, Twitter·Reddit·YouTube·GitHub 실시간 검색 AI 에이전트 도구 (GitHub ⭐42,824, +1,194/일) *(UPDATED 2026-06-27)*
 - [[google-skills]] — Google 공식 제품·기술 대상 에이전트 스킬 모음, 빅테크 스킬 생태계 공식 진입 (GitHub ⭐12,734) *(NEW)*
 - [[SWE-Explore]] — 코딩 에이전트 레포지토리 탐색 능력 벤치마크, 탐색 전략이 성공률 직결 (HF upvote 85) *(NEW)*
 - [[On-Policy-Distillation]] — 온폴리시 지식 증류 기하학적 특성 분석, 교사-학생 분포 보간 경로 이론화 (HF upvote 49) *(NEW)*
 - [[Latent-Spatial-Memory]] — 비디오 월드 모델 잠재 공간 메모리 모듈, 장거리 공간 일관성·내비게이션 향상 (HF upvote 35) *(NEW)*
 - [[SpatialWorld]] — 멀티모달 에이전트 대화형 공간 추론 벤치마크, 실세계 환경 기반 (HF upvote 29) *(NEW)*
 - [[CoVEBench]] — 복잡 자연어 지시 비디오 편집 모델 평가 벤치마크, 현 모델 한계 측정 (HF upvote 28) *(NEW)*
-- [[gemma-4-12b-it-GGUF]] — unsloth Gemma-4 12B 인스트럭션 튜닝 GGUF 양자화, 로컬 멀티모달 실행 (HF 660,140 DL) *(NEW)*
-- [[gemma-4-12B-it]] — Google 공식 Gemma-4 12B 인스트럭션 튜닝, any-to-any 멀티모달 (HF 581,354 DL) *(NEW)*
+- [[gemma-4-12b-it-GGUF]] — unsloth Gemma-4 12B 인스트럭션 튜닝 GGUF 양자화, 로컬 멀티모달 실행 (HF 660,000 DL, 2026-06-10) *(UPDATED)*
+- [[gemma-4-12B-it]] — Google 공식 Gemma-4 12B 인스트럭션 튜닝, any-to-any 멀티모달 (HF 676,000 DL, 2026-06-11) *(UPDATED)*
+- [[system-prompts-and-models-of-ai-tools]] — x1xhlol, Claude Code·Cursor·Devin·Windsurf 등 AI 코딩 도구 시스템 프롬프트 수집 (GitHub ⭐139,300) *(NEW)*
+- [[opencv]] — 오픈소스 컴퓨터 비전 라이브러리, 이미지/영상 처리 및 ML 시각 인식 인프라 표준 (GitHub ⭐88,800) *(NEW)*
+- [[career-ops]] — santifer, Claude Code 기반 AI 취업 자동화 시스템, 14개 스킬 모드·Go 대시보드·PDF 생성 (GitHub ⭐52,200) *(NEW)*
+- [[block-goose]] — Block 공식 오픈소스 확장형 AI 코딩 에이전트, LLM-agnostic 설치·실행·수정·테스트 (GitHub ⭐48,600) *(NEW)*
+- [[ABot-Earth]] — Alibaba AMAP CV Lab, 위성·항공 이미지 기반 생성형 3D 지구 모델 (HF arXiv 2606.09967) *(NEW)*
+- [[Role-Agent]] — 이중 역할 진화(dual-role evolution)로 LLM 에이전트 부트스트래핑, 인간 레이블 없이 자기 개선 (HF arXiv 2606.10917) *(NEW)*
+- [[Kwai-Keye-VL-2]] — 쾌이쇼우(콰이쇼우) 자체 멀티모달 VLM 2.0, 53명 공동 저자 기술 보고서 (HF arXiv 2606.10651) *(NEW)*
+- [[SearchSwarm]] — 딥리서치용 에이전트 LLM 위임 지능(delegation intelligence) 프레임워크 (HF arXiv 2606.09730) *(NEW)*
+- [[MemDreamer]] — 계층적 그래프 메모리 + 에이전틱 검색으로 긴 영상 이해, 인식·추론 분리 (HF arXiv 2606.07512) *(NEW)*
+- [[MoE-Routers-Manifold-Power]] — 매니폴드 파워 이터레이션으로 MoE 라우터 재설계, 라우팅 효율 개선 (HF arXiv 2606.12397) *(NEW)*
+- [[Agentic-Environment-Engineering]] — 중국과학원, LLM 에이전트 환경 모델링·합성·평가·응용 종합 서베이 (HF arXiv 2606.12191) *(NEW)*
+- [[Hypothesis-Tree-Refinement]] — NLPIR Lab @ RUC, 가설 트리 정제로 자율 과학 연구 수행 범용 에이전트 (HF arXiv 2606.11926) *(NEW)*
+- [[Beyond-Scalar-Rewards]] — Alibaba Tongyi-MAI, 추론을 점수 분포에 내재화하여 강화학습 성능 향상 (HF arXiv 2606.09076) *(NEW)*
+- [[TRL-Bench]] — CUHK-Shenzhen, 표 형식 데이터 인코더 표현 수준 평가 벤치마크 표준화 (HF arXiv 2606.09323) *(NEW)*
+- [[higgs-audio-v3-tts]] — Boson AI 5B TTS 모델, 고품질 음성 합성, 출시 13시간 만에 334 likes (HF ⬇19,900) *(NEW)*
+- [[VibeVoice-microsoft]] — microsoft/VibeVoice HF 모델 페이지 (VibeVoice GitHub 연계, STT/TTS 오픈소스) *(NEW)*
+- [[VoxCPM2-HF]] — openbmb/VoxCPM2 HuggingFace 공개 모델 페이지 (VoxCPM2 연계, 30개 언어 TTS) *(NEW)*
+- [[MegaStyle]] — Tencent, T2I 스타일 데이터셋 자동 구축 방법론, 스타일 일관성 SOTA (HF 논문 2026-04-10) *(NEW)*
+- [[Reasoning-SFT-Generalization]] — 추론 SFT 일반화 재고찰 — 기억 vs 일반화 메커니즘 분석, fine-tuning 한계 실증 (HF 논문 2026-04-10) *(NEW)*
+- [[2026-04-23-papers-batch]] — 2026-04-23 HF 논문 소규모 배치: RL 보상 해킹·공간지능·TTS·코딩에이전트·Cortex·Reimagine (5편 묶음) *(NEW)*
+- [[ai-job-search]] — Claude Code 기반 구직 자동화 프레임워크(CV/커버레터/ATS/면접), ⭐12,704 MIT *(NEW 2026-07-08)*
+- [[OfficeCLI]] — AI 에이전트 전용 오피스 스위트(docx/xlsx/pptx·MCP·350+함수), ⭐10,728 Apache2.0 *(NEW 2026-07-08)*
+- [[pocket-tts]] — CPU 2코어 100M 로컬 TTS(200ms·6언어·클로닝), kyutai-labs ⭐6,432 MIT *(NEW 2026-07-08)*
+- [[CodexBar]] — AI 코딩 사용량 메뉴바 유틸(57+플랫폼 관제), macOS ⭐17,163 MIT *(NEW 2026-07-08)*
+- [[RuView]] — WiFi CSI 프라이버시 자세추정·생체신호(82.3%·$9 ESP32), ⭐78,763 MIT *(갱신 2026-07-08)*
+- [[AlayaWorld]] — 장시간·플레이 가능한 비디오 월드 생성 (HF 데일리 1위 ↑49, 원문 미검증) *(NEW 2026-07-08)*
+- [[Vision-as-Unified-Multimodal-Generation]] — 이미지 이해+생성 통합 프레임워크 (HF ↑22, 원문 미검증) *(NEW 2026-07-08)*
+- [[Hierarchical-Sparse-Attention]] — 계층적 희소 어텐션·무한 컨텍스트 지향 (HF ↑22, 원문 미검증) *(NEW 2026-07-08)*
+- [[Light-Omni]] — 장기메모리 에이전트형 비디오 이해(reflex over reasoning) (HF ↑18, 원문 미검증) *(NEW 2026-07-08)*
+- [[Parallelized-Autoregressive-Decoding]] — 옴니모달 밀집 비디오 캡셔닝 병렬 디코딩 가속 (HF ↑16, 원문 미검증) *(NEW 2026-07-08)*
+- [[Agents-A1]] — 35B MoE 에이전트 모델(262K), InternScience HF DL 14.7k (벤치 미검증) *(NEW 2026-07-08)*
+- [[tabfm-1.0.0]] — 구글 테이블 데이터 제로샷 파운데이션 모델(비상업), HF DL 9.46k *(NEW 2026-07-08)*
+- [[fable-traces]] — Fable 계열 추론 트레이스 산출물(세부 미검증), HF DL 3.89k *(NEW 2026-07-08)*
+<!-- ── 2026-07-09 자동수집 배치 (신규 13) ── -->
+- [[zvec]] — Alibaba 인프로세스 벡터 DB(하이브리드 검색·WAL·5 SDK), ⭐14,573 Apache2.0 C++ *(NEW 2026-07-09)*
+- [[TencentDB-Agent-Memory]] — 완전 로컬 에이전트 장기 메모리(4단계·Mermaid압축·페르소나계층), Tencent ⭐7,892 MIT *(NEW 2026-07-09)*
+- [[herdr]] — 터미널 에이전트 멀티플렉서("에이전트용 tmux"·소켓협조·단일 Rust바이너리), ⭐14,553 AGPL/상용 *(NEW 2026-07-09)*
+- [[astryx]] — Meta 에이전트 지향 오픈 디자인시스템(open internals·React/StyleX), ⭐7,301 MIT Beta *(NEW 2026-07-09)*
+- [[orca]] — 병렬 코딩 에이전트 ADE(격리 worktree 동시실행·모바일앱), stablyai ⭐14,538 MIT *(NEW 2026-07-09)*
+- [[SciReasoner-Structural-Reasoning]] — 구조→물성 추론 과학 FM, 86벤치 중 67 SOTA (arXiv 2607.07708, 초록 검증) *(NEW 2026-07-09)*
+- [[LaMem-VLA]] — VLA 이중 잠재 메모리(단기시각+장기의미) 롱호라이즌 조작 (arXiv 2607.07608, 초록 검증) *(NEW 2026-07-09)*
+- [[LingBot-Video]] — 임바디드용 MoE 비디오 사전학습 스케일링 (arXiv 2607.07675, 초록 검증) *(NEW 2026-07-09)*
+- [[World-Infinity]] — 무한 인터랙티브 월드 생성(720p/60fps 오픈소스) (arXiv 2607.07534, 초록 검증) *(NEW 2026-07-09)*
+- [[RoboDojo]] — sim-and-real 통합 로봇 조작 벤치(5능력축) (arXiv 2607.04434, 초록 검증) *(NEW 2026-07-09)*
+- [[Qwen3.6-35B-A3B-Uncensored-Aggressive]] — 무검열 MoE 멀티모달 GGUF(35B/3B·262K), HF DL 2.72M *(NEW 2026-07-09)*
+- [[Hy3]] — Tencent Hunyuan 295B/21B MoE(192e·256K·스캐폴딩견고성), HF DL 5,572 Apache2.0 *(NEW 2026-07-09)*
+- [[LongCat-2.0]] — Meituan 1.6T/48B MoE(희소어텐션·1M·ASIC학습), HF DL 1,107 MIT *(NEW 2026-07-09)*
+- [[ai-agent-book]] — 리보제(bojieli) 《深入理解 AI Agent》 오픈소스 본체+88실습, "Agent=LLM+Context+Tools", ⭐12.6K WebFetch검증 당일급상승1위 *(NEW 2026-07-21)*
+- [[SWE-Pruner-Pro]] — 코더 LLM 백본 은닉상태로 컨텍스트 프루닝(별도프루너 없이 토큰39%↓), SJTU (2607.18213, 초록검증) *(NEW 2026-07-21)*
+- [[EvolvingWorld]] — 롤플레이 에이전트+월드모델 공진화(오픈스키마·57권/138K샘플·7태스크) (2607.17250, 초록검증) *(NEW 2026-07-21)*
+- [[DeepSearch-World]] — 검증가능 환경 자기증류로 딥서치 에이전트(420K멀티홉·9B·교사없음) (2607.07820, 초록검증) *(NEW 2026-07-21)*
+- [[TimeLens2]] — 멀티모달LLM 범용 비디오 시간구간지정(TimeLens2-93K·Wasserstein보상·2/4/8B 7벤치SOTA) (2607.17423, 초록검증) *(NEW 2026-07-21)*
+- [[RynnBrain-1.1]] — 임바디드 FM 패밀리(2B/9B/122B·접촉점예측·네이티브3D·81차원VLA) (2607.17977, 초록검증) *(NEW 2026-07-21)*
 
 ---
 
@@ -478,7 +986,7 @@ total_sources: 454
 <!-- 도메인별 누적 인사이트 -->
 
 - video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석
-- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-04-23 업데이트)
+- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-07-11 업데이트)
 
 ---
 
@@ -498,6 +1006,8 @@ total_sources: 454
 
 ## synthesis
 <!-- 교차 도메인 통찰 -->
+- [[JEPA-vs-Diffusion-월드모델]] — 두 월드모델 패러다임의 대비와 수렴 *(NEW 2026-07-12)*
+- [[JEPA효율화-로컬추론]] — JEPA 철학으로 꿴 로컬 추론 4대 효율화 축 → 온디바이스 월드모델(local-llm×slam-3dgs) *(NEW 2026-07-12)*
 
 _소스 39개 누적됨 → 에이전트 프레임워크 클러스터(hermes-agent⭐61K, superpowers⭐147K, multica⭐8.4K) + LLM 인프라 클러스터(flash-attention, skypilot) synthesis 우선 작성 예정. LIO-SAM으로 slam-3dgs 도메인 첫 소스 확보._
 

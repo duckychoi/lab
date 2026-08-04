@@ -4,12 +4,18 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, finance-ai, multi-agent, trading, hedge-fund, simulation, research]
 created: 2026-04-13
-updated: 2026-04-14
+updated: 2026-07-14
 sources: []
 reliability: high
 ---
 
-# virattt/ai-hedge-fund
+# virattt/ai-hedge-fund (GitHub ⭐61,645)
+
+**GitHub**: https://github.com/virattt/ai-hedge-fund
+**스타수**: 61,645 (2026-07-14 기준, 당일 +330) ← 54,543 (04-14)
+
+> [!note] 2026-07-14 갱신
+> 스타 54,543→**61,645**(당일 +330)로 6만 돌파, 꾸준한 우상향. 유명 투자자 페르소나 기반 에이전트 토론 구조로 [[TradingAgents]](⭐9.2만)에 이은 금융 AI 2위 앵커. "실투자용 아님" 명시는 유지 — 교육·연구용. [[금융-AI]] 도메인.
 
 > [!insight] 핵심 인사이트
 > 멀티에이전트 LLM으로 헤지펀드 투자 결정을 시뮬레이션하는 연구용 오픈소스. 스타 **54,543개**. [[TradingAgents]](arXiv 논문)와 개념 동일하나 **실행 가능한 코드**로 구현 — "AI 금융 의사결정"이 커뮤니티 관심 최고조. 실전 투자가 아닌 연구·학습 목적.

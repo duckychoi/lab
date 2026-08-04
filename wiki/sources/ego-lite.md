@@ -1,0 +1,45 @@
+---
+title: ego-lite — 에이전트용 경량 브라우저 (로그인 세션 공유)
+type: source
+domain: ai-news
+tags: [ai-news, github-trending, browser, agent-browser, web-automation, javascript, claude-code, codex]
+created: 2026-07-26
+updated: 2026-07-26
+sources: []
+reliability: high
+---
+
+# citrolabs/ego-lite (GitHub ⭐3,872)
+
+> [!insight] 핵심 인사이트
+> AI 에이전트를 위한 **경량 브라우저** — 사람이 이미 로그인해 둔 브라우저 세션 상태를 [[Claude-Code-워크플로우|Claude Code]]·Codex 같은 에이전트와 **공유**해 웹 자동화를 시킨다. ⭐3,872 (2026-07-26, WebFetch 실검증, JavaScript, 당일 +986 급상승, 2026-04-16 생성). 핵심 차별점은 "**로그인된 상태를 방해 없이(without disturbing you) 넘겨준다**" — 에이전트가 인증 벽 뒤 페이지(대시보드·SaaS·소셜)를 사람 재로그인 없이 조작. "제로 비용·제로 설정(zero cost, zero config)"을 표방. 위키의 에이전트-웹 접근 축([[wigolo]] 로컬 검색 MCP·[[crawl4ai]] 크롤러·[[firecrawl]] 정제)이 *공개 웹 읽기*였다면, ego-lite는 *인증된 웹 조작*이라는 미개척 끝단을 채운다.
+
+**GitHub**: https://github.com/citrolabs/ego-lite
+**스타**: ⭐3,872 (2026-07-26, WebFetch 실검증, 당일 +986)
+**신뢰도**: ⭐⭐⭐⭐ (스타/기능 실확인 high, 신생 citrolabs·보안 격리 강도 미검증)
+
+## 도메인별 추출 (ai-news)
+
+- **신뢰도**: ⭐⭐⭐⭐ — ⭐3,872(WebFetch 일치)·당일 +986 급상승·기능 설명 실확인 → high. 단 citrolabs는 신생 조직이고 세션 공유의 **격리·권한 경계**는 외부 감사 전.
+- **즉시 활용**: YES(주의) — 인증 세션 뒤 반복 웹작업(리포트 수집·SaaS 조작)을 에이전트에 위임 가능. 단 로그인 세션을 에이전트에 넘기는 만큼 **자격증명 노출 위험**을 감안한 격리 환경에서만.
+- **6개월 영향력**: 에이전트 웹 자동화의 병목이 "공개 페이지 파싱"에서 "**인증 벽 통과**"로 이동 중 — 로그인 세션 공유가 표준화되면 SaaS 운영 자동화가 크게 열림. Playwright 기반 [[OpenManus]] 브라우징과 경쟁/보완.
+- **대체 관계**: [[wigolo]](로컬 검색 MCP)·[[crawl4ai]](크롤러)는 **공개 웹 읽기**, ego-lite는 **인증된 웹 조작** — 경쟁이 아닌 상보. 풀 Playwright 대비 "경량·세션 공유 특화" 포지션.
+- **허와 실**: "가장 빠른 브라우저" 주장은 벤치 미제시. 최대 리스크는 **보안** — 로그인 상태를 에이전트에 넘기면 프롬프트 인젝션·오작동이 실제 계정에 영향. 격리·감사 로그 없이는 프로덕션 부적합.
+- **액션**: 격리된 더미 계정으로 ego-lite에 에이전트를 붙여 **세션 공유 실동작·권한 경계**를 스팟체크 → 위키 자동수집의 인증 페이지 수집에 제한적 적용 여부 판단.
+
+> [!warning] 보안 주의 — 로그인 세션 위임
+> 로그인된 브라우저 상태를 에이전트에 공유하는 구조는 편의성만큼 위험하다. 프롬프트 인젝션·에이전트 오작동이 **실제 계정 권한**으로 실행될 수 있으므로, 반드시 격리 환경·더미 계정·감사 로그와 함께 검증 후 사용.
+
+## 관련 페이지
+- [[wigolo]]
+- [[crawl4ai]]
+- [[firecrawl]]
+- [[OpenManus]]
+- [[Claude-Code-워크플로우]]
+- [[ai-news]]
+
+## 원본
+- 출처: https://github.com/citrolabs/ego-lite
+- 스타: ⭐3,872 (2026-07-26, WebFetch 실검증, 당일 +986), JavaScript, 2026-04-16 생성
+- 기능: 에이전트용 경량 브라우저, 로그인 세션 상태 공유(Codex·Claude Code 등), 제로 설정·제로 비용 표방
+- 신뢰도: ⭐⭐⭐⭐ (스타/기능 실확인 high, 신생 조직·보안 격리 강도 미검증)

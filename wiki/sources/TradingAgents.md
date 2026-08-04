@@ -4,15 +4,21 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, github-trending, finance-ai, multi-agent, trading, LLM, reinforcement]
 created: 2026-04-11
-updated: 2026-05-06
+updated: 2026-07-14
 sources: []
 reliability: high
 ---
 
-# TradingAgents (arXiv 2412.20138 / GitHub ⭐68,332)
+# TradingAgents (arXiv 2412.20138 / GitHub ⭐92,901)
 
 **GitHub**: https://github.com/TauricResearch/TradingAgents  
-**스타수**: 68,332 (2026-05-06 기준, 오늘 +2,182)
+**스타수**: 92,901 (2026-07-14 기준, 당일 +245) ← 91,188 (07-06) ← 68,332 (05-06)
+
+> [!note] 2026-07-14 갱신
+> 스타 91,188→**92,901**(당일 +245)로 완만한 우상향 지속. 9만대 안착 후 성장 속도는 둔화(폭발기→안정기). 멀티에이전트 금융 프레임워크의 대표 앵커 위상 유지 — [[Vibe-Trading]](⭐2만대)·[[ai-hedge-fund]](⭐6.1만) 대비 여전히 최상위. [[금융-AI]] 기준점.
+
+> [!note] 2026-07-06 갱신
+> 스타 68,332→**91,188**(2개월 +22,856, 당일 +257)로 9만 돌파. 멀티에이전트 금융 트레이딩 프레임워크의 대표 앵커로 굳음. 실거래 백테스트 과적합 주의는 여전히 유효.
 
 > [!insight] 핵심 인사이트
 > 실제 트레이딩 회사 구조(분석가, 리스크 매니저, 트레이더 등)를 멀티에이전트 LLM으로 모방. 누적수익률·샤프지수·최대낙폭 모두 기존 대비 우수. 역할 분리로 단일 LLM의 편향 완화 — "조직 구조가 AI 성능을 올린다"는 새 패러다임.

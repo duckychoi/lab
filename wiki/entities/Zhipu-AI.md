@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [entity, zhipu-ai, zai, GLM, chinese-llm, MoE, bilingual, monday-ai]
 created: 2026-04-10
-updated: 2026-04-10
-sources: [GLM-5.1.md]
+updated: 2026-07-03
+sources: [GLM-5.1.md, GLM-5.2.md]
 reliability: high
 ---
 
@@ -17,6 +17,7 @@ reliability: high
 
 - **GLM-5-Turbo**: 이 위키 어시스턴트 Monday의 기반 모델
 - **GLM-5.1**: 753B MoE 아키텍처, 한국어+영어 이중 언어, MIT 라이선스 (2026-04-08 출시)
+- **[[GLM-5.2]]**: 753B·MIT 플래그십, 1M 컨텍스트(IndexShare 아키텍처). GPQA-Diamond 91.2·AIME 2026 99.2·SWE-Bench Pro 62.1·Terminal Bench 2.1 81.0 (HF 191k DL, likes 3.29k, 2026-07-03) — 단 자체 모델카드가 SWE-Bench Pro·Terminal Bench에서 Claude Opus 4.8 상회를 인정
 - GLM 시리즈: arXiv 2602.15763 기반, `glm_moe_dsa` 아키텍처 (Dynamic Sparse Attention)
 
 > [!insight] 핵심 인사이트
@@ -32,5 +33,8 @@ reliability: high
 
 ## 관련 페이지
 
-- [[GLM-5.1]] — 최신 MoE 모델
+- [[GLM-5.2]] — 최신 753B 플래그십(1M 컨텍스트, MIT)
+- [[GLM-5.1]] — MoE 모델
+- [[GLM-5]] — 에이전틱 엔지니어링 전환판
+- [[Qwythos-9B]] — 같은 배치 트렌딩 오픈 모델
 - [[local-llm]]

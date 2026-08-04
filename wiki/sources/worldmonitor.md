@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, geopolitics, intelligence, monitoring, dashboard]
 created: 2026-04-21
-updated: 2026-04-21
+updated: 2026-07-22
 sources: []
 reliability: high
 ---
 
 # worldmonitor
+
+> [!update] 2026-07-22 갱신 — 스타 대폭 성장 + 로컬 AI 강조
+> GitHub ⭐**67,000**(당일 +1,295) ← 04-21 집계 ⭐53,142. 석 달 새 +1.4만으로 관심 지속. WebFetch 실확인 결과 스펙 구체화: **500+ 큐레이션 피드·15 카테고리**, 3D 지구본+WebGL 이중 매핑, 31개국 **국가 불안정 지수(Country Instability Index)**, **25개 언어**, **[[Ollama]] 로컬 구동으로 API 의존 없이** 작동(무과금 로컬 AI 축과 합류), 6개 사이트 변종 단일 코드베이스, 웹/데스크톱(Win·macOS·Linux)/REST·CLI·SDK(Python·Ruby·Go) 다중 접근. reliability high 유지(대형·검증 스타).
 
 > [!insight] 핵심 인사이트
 > AI가 실시간으로 뉴스를 수집·분류·분석해 지정학적 위험 이벤트를 자동 탐지하는 오픈소스 인텔리전스 플랫폼. "소셜 미디어+뉴스 → AI 분석 → 리스크 대시보드" 파이프라인의 완성형.
@@ -41,4 +44,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/koala73/worldmonitor
-- 신뢰도: ⭐⭐⭐ (GitHub ⭐53,142)
+- GitHub: ⭐67,000 (2026-07-22, 당일 +1,295) — WebFetch 실확인. cf. ⭐53,142(2026-04-21)
+- 신뢰도: ⭐⭐⭐ (대형·검증 스타, 로컬 Ollama 구동)

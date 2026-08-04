@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, claude-code, cli, templates, monitoring, agent-coding]
 created: 2026-04-23
-updated: 2026-04-23
+updated: 2026-07-13
 sources: []
 reliability: high
 ---
@@ -15,8 +15,11 @@ reliability: high
 > Claude Code 설정·모니터링·에이전트 코딩 워크플로우 템플릿 모음 CLI. [[andrej-karpathy-skills]]·[[claude-code-best-practice]]에 이어 Claude Code 에코시스템의 세 번째 주요 템플릿 레포.
 
 **GitHub**: https://github.com/davila7/claude-code-templates  
-**스타**: ⭐24,971 (+100 오늘)  
+**스타**: ⭐29,330 (당일 +274, 2026-07-13) ← 28,842(07-11) ← 24,971(4/23)  
 **신뢰도**: ⭐⭐⭐⭐
+
+> [!note] 2026-07-13 갱신
+> ⭐28,842→**29,330**(2일 +488·당일 +274). Claude Code 설정 표준화 레포로 꾸준한 성장 지속. 같은 배치에서 공식 [[claude-cookbooks]]·커뮤니티 [[awesome-llm-apps]]와 함께 Claude/에이전트 실무 레퍼런스 계층이 동시에 두터워짐.
 
 ## 도메인별 추출
 

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [agent-skills, google, official, codex, claude-code, gemini]
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-07-15
 sources: []
 reliability: high
 ---
@@ -14,12 +14,12 @@ reliability: high
 ## 핵심 인사이트
 
 > [!insight] Google 공식 에이전트 스킬 레지스트리 — 빅테크의 스킬 생태계 진입
-> Google 제품·기술 대상 에이전트 스킬 모음을 공식 배포. Google 공식 참여는 에이전트 스킬 생태계가 개인/커뮤니티 수준을 넘어 빅테크 표준화 단계로 진입했음을 시사.
+> Google 제품·기술 대상 에이전트 스킬 모음을 공식 배포. Google 공식 참여는 에이전트 스킬 생태계가 개인/커뮤니티 수준을 넘어 빅테크 표준화 단계로 진입했음을 시사. **⭐14,825 (2026-07-15, 당일 +153) ← ⭐12,734 (06-09, +461)** — 한 달여 +2,091로 완만한 우상향, 빅테크 공식 스킬 레지스트리로 안착.
 
 ## 도메인별 추출
 
 **왜 중요한가:**
-- GitHub ⭐12,734, 당일 +461
+- GitHub ⭐14,825 (2026-07-15, 당일 +153) ← ⭐12,734 (06-09, +461)
 - **Google 공식(google/ org)** 배포 → 신뢰도와 유지보수 안정성 높음
 - Google 제품(Search, Workspace, Cloud 등) 연동 스킬 포함 예상
 - [[vercel-skills]], [[mattpocock-skills]], [[awesome-agent-skills]]에 이어 메이저 플레이어의 공식 스킬 레지스트리
@@ -40,5 +40,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/google/skills
-- GitHub ⭐12,734 (2026-06-09 기준, 당일 +461)
+- GitHub ⭐14,825 (2026-07-15, 당일 +153) ← ⭐12,734 (2026-06-09, +461)
 - 신뢰도: ⭐⭐⭐⭐⭐

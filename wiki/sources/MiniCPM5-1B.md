@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, local-llm, edge-ai, slm, openbmb, text-generation, on-device, 1B]
 created: 2026-05-28
-updated: 2026-06-04
+updated: 2026-07-15
 sources: []
 reliability: high
 ---
@@ -15,6 +15,12 @@ reliability: high
 
 > [!insight] 핵심 인사이트
 > MiniCPM 시리즈의 최신작. SFT+RL+OPD 학습, Think/No-Think 모드 전환 지원. 1B 초소형 파라미터로 강력한 텍스트 생성 — 동급 1B 모델 중 도구 사용·코드·추론 SOTA 주장. HF 다운로드 68,494 (2026-06-03, prev 45,700).
+
+> [!note] 2026-07-15 — 커뮤니티 GGUF 변종 유입 (GnLOLot/MiniCPM5-1B-...-Thinking-GGUF, DL 89.9k)
+> 자동수집에 `GnLOLot/MiniCPM5-1B-Claude-Opus-Fable5-Thinking-GGUF`(HF DL 89.9k, likes 239)가 별도 트렌딩으로 등장. **베이스 [[OpenBMB]] MiniCPM5-1B의 커뮤니티 추론(thinking) 특화 GGUF 양자화·머지판** — 원본/양자화 관계라 별도 페이지 대신 여기에 통합. 이름의 상표성 표기(Claude/Opus/Fable5)는 [[Qwythos-9B]]·비-공식 GGUF들과 같은 커뮤니티 명명 관행으로, **실제 성능·학습 데이터는 별도 검증 필요**(reliability low). 초경량 로컬 추론용 GGUF 수요가 1B 급에도 형성됨을 보여주는 신호 — 베이스가 이미 fast/think 2모드를 내장하므로 변종의 실효 이득(추가 thinking 튜닝)은 미검증.
+
+> [!note] 2026-07-10 갱신 — DL 363k (한 달 +295k 급증), 제작 [[OpenBMB]]
+> WebFetch 모델카드 실측: DL 68k→**362,863**로 5배 이상 급증(온디바이스 SLM 실수요 확인). 스펙 정정·보강 — 총 **1,080,632,832 파라미터**(비임베딩 679,552,512), LlamaForCausalLM 24층·16 Q헤드·2 KV헤드(GQA), **컨텍스트 131,072**. 기능: 내장 `<think>` 템플릿으로 **fast(빠른 응답) ↔ think(추론) 2모드 토글**, XML 스타일 **도구 호출**(SGLang 파서 호환), FlagOS로 다칩 지원. 학습 **RL + 온폴리시 증류([[온폴리시-증류]])**로 수학·코드 평균 **+16점**, 최대토큰 초과 응답 **-29%p**. 포맷 BF16/GGUF/MLX, Apache 2.0. → 1B로 "도구+추론"까지 넣은 온디바이스 에이전트 백엔드 실체.
 
 ## 도메인별 추출 (local-llm 템플릿)
 
@@ -43,7 +49,7 @@ reliability: high
 ## 원본
 
 - 출처: https://huggingface.co/openbmb/MiniCPM5-1B
-- 다운로드: 68,494 (2026-06-03 기준, prev 45,700)
-- 좋아요: 450
-- 태스크: Text Generation
-- 신뢰도: ⭐⭐⭐⭐
+- 다운로드: 362,863 (2026-07-10) ← 68,494 (2026-06-03) ← 45,700
+- 파라미터: 1.08B(비임베딩 0.68B) / 24층 GQA / 131K 컨텍스트 / Apache 2.0
+- 제작: [[OpenBMB]] · 태스크: Text Generation(think·fast 2모드, 도구호출)
+- 신뢰도: ⭐⭐⭐⭐ (모델카드 WebFetch 실측 / 벤치 자가측정)

@@ -4,8 +4,8 @@ type: concept
 domain: ai-news
 tags: [concept, agent-framework, tools, memory, multi-step, open-source, LLM-agent]
 created: 2026-04-10
-updated: 2026-04-11
-sources: [hermes-agent.md, Archon.md, SkillClaw.md, superpowers.md, multica.md]
+updated: 2026-07-12
+sources: [hermes-agent.md, Archon.md, SkillClaw.md, superpowers.md, multica.md, OpenManus.md]
 reliability: high
 ---
 
@@ -27,6 +27,12 @@ LLM에 도구(Tools), 메모리(Memory), 멀티스텝 추론 루프를 더해 �
 - [[rowboat]] — 지속 기억 기반 AI 동료 플랫폼 (스타 11,922, **2026-04-11 신규**)
 
 → [[ClawBench]] — 에이전트 벤치마크, 실용성 평가 기준선
+
+### 오케스트레이션·자율 실행 하네스 (2026-07 확장)
+- [[deer-flow]] ([[ByteDance]], ⭐76,695) — 서브에이전트·메모리·샌드박스 슈퍼에이전트 하네스
+- [[agentscope]] (⭐27,749) — 관측·권한·샌드박스 갖춘 프로덕션 멀티에이전트 프레임워크
+- [[OpenManus]] ([[MCP]] FoundationAgents, ⭐57,200, **2026-07-12 신규**) — 초대코드 없는 **범용 자율 에이전트** 오픈 구현(계획→도구호출→다단계 실행 + Playwright 브라우저 + MCP + 비전). 상용 Manus의 오픈 대항마
+- [[herdr]] · [[orca]] — 병렬 에이전트 플릿 오케스트레이션
 
 ## 핵심 구성 요소
 
@@ -56,6 +62,9 @@ LLM에 도구(Tools), 메모리(Memory), 멀티스텝 추론 루프를 더해 �
 - [[multica]]
 - [[Archon]]
 - [[SkillClaw]]
+- [[OpenManus]]
+- [[agentscope]]
+- [[deer-flow]]
 - [[Claude-Code-워크플로우]] — Claude Code 자체가 에이전트 프레임워크
 - [[andrej-karpathy-skills]] — Claude Code 행동 최적화 지침
 - [[local-llm]] — 로컬 배포 에이전트와 교차

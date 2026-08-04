@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, anthropic, coding-agent, terminal, CLI, agentic-coding]
 created: 2026-06-01
-updated: 2026-06-01
+updated: 2026-07-04
 sources: []
 reliability: high
 ---
@@ -12,14 +12,14 @@ reliability: high
 # anthropics/claude-code — 공식 터미널 AI 코딩 에이전트
 
 > [!insight] 핵심 인사이트
-> Anthropic 공식 Claude Code CLI — 코드베이스를 이해하고 자연어로 코딩·리팩토링·git 작업 수행. GitHub ⭐129,171 (+489 당일). [[everything-claude-code]](⭐199K), [[mattpocock-skills]](⭐85K) 등 파생 에코시스템의 원천. 이 레포 자체가 AI 에이전트 생태계 중심축.
+> Anthropic 공식 Claude Code CLI — 코드베이스를 이해하고 자연어로 코딩·리팩토링·git 작업 수행. GitHub ⭐**135,978 (+221 당일, 2026-07-04)** ← 129,171(06-01), 약 한 달 +6.8K. [[everything-claude-code]](⭐199K), [[mattpocock-skills]](⭐85K) 등 파생 에코시스템의 원천. 이 레포 자체가 AI 에이전트 생태계 중심축 — 경쟁사 OpenAI마저 이 CLI용 브리지 [[codex-plugin-cc]]를 직접 배포할 만큼 사실상 허브로 굳음.
 
 ## 도메인별 추출 (ai-news 템플릿)
 
 - **신뢰도**: ⭐⭐⭐⭐⭐ — Anthropic 공식, ⭐129K, 프로덕션 사용 대규모 검증
 - **즉시 활용**: YES — npm install -g @anthropic-ai/claude-code
 - **6개월 영향력**: AI 코딩 에이전트의 사실상 표준. 이 레포 중심으로 스킬·플러그인·메모리 레이어 생태계가 계속 성장
-- **대체 관계**: Cursor, GitHub Copilot, Gemini CLI 경쟁. 코드베이스 전체 이해·복잡 작업 처리에서 우위
+- **대체 관계**: Cursor, GitHub Copilot, Gemini CLI 경쟁. 코드베이스 전체 이해·복잡 작업 처리에서 우위. 이제 [[codex-plugin-cc]]로 OpenAI Codex를 서브에이전트/리뷰어로 흡수하는 멀티벤더 조합까지 가능
 - **허와 실**: 토큰 비용 높음. 긴 세션에서 컨텍스트 관리 필요 ([[claude-mem]], [[context-mode]] 등 보조 도구 필요)
 - **액션**: 현재 사용 중. [[Claude-Code-워크플로우]] 최적화 지속
 
@@ -37,5 +37,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/anthropics/claude-code
-- 스타: ⭐129,171 (2026-06-01 기준, +489 당일)
+- 스타: ⭐135,978 (2026-07-04 기준, +221 당일) ← 129,171 (2026-06-01)
 - 신뢰도: ⭐⭐⭐⭐⭐

@@ -1,0 +1,49 @@
+---
+title: Kimi K3 — Moonshot AI 오픈 프론티어 멀티모달 MoE (2.8T/104B·1M)
+type: source
+domain: ai-news
+tags: [ai-news, hf-model, hf-paper, moonshot, moe, multimodal, frontier-llm, agentic, open-weights]
+created: 2026-07-28
+updated: 2026-08-03
+sources: []
+reliability: medium
+---
+
+# Kimi K3 (moonshotai/Kimi-K3 · 논문 2607.24653)
+
+> [!update] 2026-08-03 갱신 — DL 968k (좋아요 9.35k→9.74k, 트렌딩 좋아요 1위)
+> HF 다운로드 **968k·좋아요 9.74k**(2026-08-03 자동수집) ← 560k(08-01, 9.35k). 하루 이틀 새 누적 다운로드 대폭 확대(56만→96.8만·100만 근접), 좋아요 트렌딩 **1위** 유지. 2.8T 총/104B 활성 MoE·1M·MoonViT-V2 구성 동일. 자체발표 벤치(GPQA 93.5·BrowseComp 91.2 등)·미래형 논문 ID(2607.24653)로 원문 재현 전 → medium 유지, 초록 스스로 Claude Fable 5·GPT-5.6 Sol 열위 자인. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
+
+> [!update] 2026-08-01 갱신 — DL 560k (좋아요 8.8k→9.35k, 트렌딩 좋아요 1위·DL 3위)
+> HF 다운로드 **560k·좋아요 9.35k**(2026-08-01 자동수집) ← DL 99.2k/월·좋아요 8.8k(07-30). 좋아요 트렌딩 **1위**(다운로드 기준 3위) 유지, 누적 다운로드 대폭 확대(56만). 2.8T 총/104B 활성 MoE·1M·MoonViT-V2 구성 동일. 자체발표 벤치(GPQA 93.5·BrowseComp 91.2 등)·미래형 논문 ID(2607.24653)로 원문 재현 전 → medium 유지, 초록 스스로 Claude Fable 5·GPT-5.6 Sol 열위 자인. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
+
+> [!insight] 핵심 인사이트
+> [[Moonshot AI]]의 **오픈 프론티어 멀티모달 에이전트 모델**. HF 모델 DL **99,214/월·좋아요 8.8k**(8,320→8.8k, 2026-07-30 갱신, 트렌딩 좋아요 최상위 유지), 논문(2607.24653) **HF 데일리 페이퍼 1위·업보트 170**. 아키텍처는 **2.8T 총 파라미터 / 104B 활성 MoE**(93레이어, **Stable LatentMoE** 896개 전문가 중 16개 활성), **1M 컨텍스트**, **MoonViT-V2(401M) 네이티브 비전 인코더**, MXFP4 웨이트/MXFP8 활성, 160K 어휘. 신규 아키텍처 요소는 **Kimi Delta Attention + Attention Residuals**(시퀀스 길이·모델 깊이 전반에 정보 분산 개선), 전작 [[Kimi-K2.6]] 대비 **~2.5배 스케일링 효율** 주장. "롱호라이즌 코딩·에이전틱 지식노동·멀티모달"을 겨냥 — [[GLM-5.2]]·[[Solar-Open2-250B]]에 이은 **오픈 웨이트 프론티어 MoE의 2.8T 최상단** 항.
+
+> [!warning] 자체발표 벤치 · 미래형 논문 ID
+> 벤치마크(GPQA Diamond 93.5·DeepSWE 67.5·Terminal-Bench 2.1 88.3·Video-MME 90.0·BrowseComp 91.2)와 "~2.5배 스케일링 효율"은 **모델카드·논문 초록 WebFetch로 확인**했으나 전부 **Moonshot 자체발표**로 독립 재현 전. 논문 ID(2607.24653)가 미래형이라 원문 정식 검증 불가 — medium. 논문 초록 스스로 **"최강 독점모델(Claude Fable 5·GPT-5.6 Sol)에는 뒤진다"**고 명시하므로 "프론티어"는 오픈 웨이트 기준으로 읽어야 함.
+
+## 도메인별 추출 (ai-news)
+
+- **신뢰도**: ⭐⭐⭐ — 모델카드·논문 초록 WebFetch 실확인(DL·좋아요·아키텍처·벤치), 단 벤치 자체발표·미래형 ID로 원문 재현 전 medium.
+- **즉시 활용**: 조건부 — 2.8T MoE라 로컬 상시 구동은 비현실적(활성 104B도 대형). API/호스팅으로 **1M 컨텍스트·네이티브 멀티모달·에이전틱 코딩** 태스크에 GLM-5.2 대비 스팟체크 후보. 오픈 웨이트라 파인튜닝·프라이빗 호스팅 옵션 존재.
+- **6개월 영향력**: 오픈 웨이트가 **2.8T MoE·1M·네이티브 멀티모달**까지 올라오며 클로즈드 프런티어와의 격차를 "뒤지지만 근접"으로 좁힘. [[GLM-5.2]] 100만 다운로드에 이어 **오픈 프론티어 채택 곡선**의 다음 데이터 포인트.
+- **대체 관계**: 클로즈드 프런티어(Claude·GPT) 대비 **오픈 웨이트·1M·멀티모달** 대안이나 초록 자인대로 최상단엔 못 미침. 오픈 진영에선 [[GLM-5.2]](753B)·[[Solar-Open2-250B]](250B)보다 규모 상단.
+- **허와 실**: "Open Frontier Intelligence"는 프레이밍 — 초록이 스스로 독점모델 열위를 인정. 실질 가치는 **오픈 웨이트로 1M·멀티모달·에이전틱을 얻는 것**이지 절대 SOTA가 아님. 벤치는 자체발표라 실태스크 검증 필요.
+- **액션**: API 데모로 1M 컨텍스트 롱호라이즌 코딩·멀티모달을 GLM-5.2 대비 스팟체크(자체벤치 GPQA/DeepSWE 인용은 검증 전 보류).
+
+## 관련 페이지
+- [[Moonshot AI]]
+- [[Kimi-K2.6]]
+- [[Kimi-K2.7-Code]]
+- [[GLM-5.2]]
+- [[Solar-Open2-250B]]
+- [[Scaling-Native-Multimodal-Pretraining]]
+- [[ai-news]]
+
+## 원본
+- 모델: https://huggingface.co/moonshotai/Kimi-K3 — DL 968k·좋아요 9.74k (2026-08-03 자동수집, 트렌딩 좋아요 1위) ← DL 560k·좋아요 9.35k(08-01) ← DL 99.2k/월·좋아요 8.8k(07-30) ← 8,320(07-29) ← 7.21k(07-28)
+- 논문: https://huggingface.co/papers/2607.24653 — 업보트 170·HF 데일리 1위, Kimi Team(380+저자)·Moonshot AI
+- 아키텍처: 2.8T 총/104B 활성 MoE·93레이어·Stable LatentMoE(896중 16 활성)·1M 컨텍스트·MoonViT-V2(401M)·MXFP4/MXFP8·160K 어휘·Kimi Delta Attention+Attention Residuals
+- 벤치(자체): GPQA Diamond 93.5·DeepSWE 67.5·Terminal-Bench 2.1 88.3·Video-MME 90.0·BrowseComp 91.2
+- 신뢰도: ⭐⭐⭐ (모델카드·초록 실검증, 벤치 자체발표·미래형 ID 원문 재현 전 medium. 초록이 Claude Fable 5·GPT-5.6 Sol 열위 자인)

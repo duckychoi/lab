@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, google, gemma4, multimodal, image-text-to-text, apache2, open-source]
 created: 2026-04-10
-updated: 2026-05-25
+updated: 2026-07-05
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # google/gemma-4-31B-it
 
 > [!insight] 핵심 인사이트
-> Google이 32B 멀티모달 모델을 Apache 2.0으로 오픈소스 공개. **9.12M 다운로드**(HF, 2026-05-11 기준), 1,603 likes. 이미지+텍스트 입력 → 텍스트 출력. 오픈소스 비전-언어 모델 상위권 진입 — Claude/GPT-4o 급 기능을 로컬 배포 가능.
+> Google이 32B 멀티모달 모델을 Apache 2.0으로 오픈소스 공개. **11.2M 다운로드**(HF, 2026-07-05 기준, 트렌딩 모델 다운로드 1위) ← 9.12M(2026-05-11). 지속적 채택으로 오픈 VLM 다운로드 최상위 유지. 이미지+텍스트 입력 → 텍스트 출력. 오픈소스 비전-언어 모델 상위권 진입 — Claude/GPT-4o 급 기능을 로컬 배포 가능.
 
 ## 핵심 인사이트
 
@@ -40,6 +40,6 @@ reliability: high
 ## 원본
 
 - 출처: https://huggingface.co/google/gemma-4-31B-it
-- 다운로드: 8,890,000 (HF, 2026-05-10 기준)
+- 다운로드: 11.2M (HF, 2026-07-05 기준, 트렌딩 1위) ← 9.12M (2026-05-11) ← 8.89M (2026-05-10)
 - 라이선스: Apache 2.0
 - 신뢰도: ⭐⭐⭐

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [gguf, local-llm, gemma, google, unsloth, quantization, multimodal, llama-cpp]
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-10
 sources: []
 reliability: high
 ---
@@ -19,7 +19,7 @@ reliability: high
 ## 도메인별 추출
 
 **스펙:**
-- HF 660,140 다운로드 (2026-06-09 기준) — 공개 직후 급속 확산
+- HF 660,000 다운로드 (2026-06-10; 이전 660,140 2026-06-09) — 급속 확산 유지
 - unsloth 최적화 GGUF: Q4_K_M, Q8_0 등 다양한 양자화 레벨
 - llama.cpp, Ollama, LM Studio 모두 호환
 - Gemma-4의 any-to-any 멀티모달 능력을 로컬에서 활용 가능
@@ -39,5 +39,5 @@ reliability: high
 
 ## 원본
 - 출처: https://huggingface.co/unsloth/gemma-4-12b-it-GGUF
-- HF 660,140 다운로드 (2026-06-09 기준)
+- HF 660,000 다운로드 (2026-06-10)
 - 신뢰도: ⭐⭐⭐⭐⭐

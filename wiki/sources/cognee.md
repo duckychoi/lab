@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-memory, knowledge-graph, rag, local-llm, graph-db]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-06-28
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # topoteretes/cognee
 
 > [!insight] 핵심 인사이트
-> AI 에이전트 메모리를 **6줄 코드**로 구성하는 지식 엔진. GitHub ⭐15,974 (당일 +170). 핵심은 **그래프 기반 메모리 관리** — 단순 벡터 RAG를 넘어 엔티티 관계 그래프로 지식 저장. [[LLM-Wiki]] 패턴과 유사하지만 에이전트용 API로 제공.
+> AI 에이전트 메모리를 **6줄 코드**로 구성하는 지식 엔진. GitHub ⭐24,282 (2026-06-28, 04-17 15,974 대비 약 +52%). 핵심은 **그래프 기반 메모리 관리** — 단순 벡터 RAG를 넘어 엔티티 관계 그래프로 지식 저장. [[LLM-Wiki]] 패턴과 유사하지만 에이전트용 API로 제공.
 
 ## 핵심 인사이트
 
@@ -27,7 +27,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐ — ⭐15,974, 활발한 커뮤니티
+- **신뢰도**: ⭐⭐⭐ — ⭐24,282 (지속 급성장), 활발한 커뮤니티
 - **즉시 활용**: YES — pip install cognee 후 에이전트 메모리로 즉시 연동 가능
 - **6개월 영향력**: 에이전트 메모리 표준 솔루션 후보. 그래프 기반 접근이 RAG를 대체할 가능성
 - **대체 관계**: 직접 벡터 DB 연동(Chroma, Pinecone) 대체. 더 높은 수준의 추상화 제공
@@ -43,4 +43,4 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/topoteretes/cognee
-- 신뢰도: ⭐⭐⭐ (⭐15,974)
+- 신뢰도: ⭐⭐⭐ (⭐24,282, 2026-06-28)

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, github-trending, tts, speech-synthesis, diffusion, multi-speaker, long-form, microsoft, open-source]
 created: 2026-04-11
-updated: 2026-06-08
+updated: 2026-07-30
 sources: []
 reliability: high
 ---
 
 # VibeVoice (arXiv 2508.19205)
+
+> [!update] 2026-07-30 갱신 — GitHub ⭐51,534 (당일 +336)
+> **microsoft/VibeVoice** GitHub ⭐**51,534**(2026-07-30 자동수집·API 실검증, 당일 +336, MIT) ← ⭐48,700(06-08). 5만 돌파로 오픈 장시간 다화자 TTS 대표 안착. 아키텍처·기능(Next-token diffusion·최대 4화자·90분·Encodec 80배 압축)은 기존 유지, 로컬 STT/TTS 파이프라인 대체 검토 액션 지속.
 
 > [!insight] 핵심 인사이트
 > Next-token diffusion으로 최대 4명 화자, 90분 분량 장시간 음성을 한 번에 합성. Encodec 대비 80배 압축률 향상. 기존 TTS의 "30초 한계"를 완전히 넘어선 아키텍처 — 포드캐스트·오디오북 자동화에 직접 적용 가능.

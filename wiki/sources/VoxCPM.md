@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, tts, voice-cloning, multilingual, tokenizer-free, openBMB]
 created: 2026-04-10
-updated: 2026-06-04
+updated: 2026-06-18
 sources: []
 reliability: high
 ---
@@ -12,7 +12,7 @@ reliability: high
 # OpenBMB/VoxCPM
 
 > [!insight] 핵심 인사이트
-> 토크나이저(Tokenizer) 없이 직접 음성을 처리하는 새로운 TTS 아키텍처. 다국어 합성 + 스타일 전이 + 실제 음성 클로닝까지 하나의 모델로 처리. 스타 25,364개(2026-06-03, +783 당일, prev 24,625). 30개 언어 지원·48kHz 품질·RTF 0.13 실시간 처리. Apache-2.0.
+> 토크나이저(Tokenizer) 없이 직접 음성을 처리하는 새로운 TTS 아키텍처. 다국어 합성 + 스타일 전이 + 실제 음성 클로닝까지 하나의 모델로 처리. 스타 30,552개(2026-06-17, +418 당일, prev 25,364). 30개 언어 지원·48kHz 품질·RTF 0.13 실시간 처리. Apache-2.0.
 
 ## 핵심 인사이트
 
@@ -42,5 +42,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/OpenBMB/VoxCPM
-- 스타: 24,625 (2026-06-02 기준, +888 당일)
+- 스타: 30,552 (2026-06-17 기준, +418 당일) ← 25,364 (2026-06-03)
 - 신뢰도: ⭐⭐⭐

@@ -4,12 +4,12 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, paddlepaddle, ocr, document-parsing, pdf, llm-pipeline, multilingual, open-source]
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-06-18
 sources: []
 reliability: high
 ---
 
-# PaddleOCR (GitHub ⭐81,113)
+# PaddleOCR (GitHub ⭐82,906)
 
 > [!insight] 핵심 인사이트
 > PDF·이미지를 구조화 데이터로 변환하는 경량 OCR 툴킷. 100개 언어 지원, LLM 파이프라인 연동 최적화 — 문서 파싱 파이프라인에서 [[markitdown]]·[[MinerU2.5]]와 함께 선택지. 오늘 +433으로 급상승 중.
@@ -30,7 +30,7 @@ reliability: high
 
 ## 도메인별 추출 (ai-news 템플릿)
 
-- **신뢰도**: ⭐⭐⭐⭐ — Baidu 공식, ⭐81,113, 실제 프로덕션 사용 사례 다수
+- **신뢰도**: ⭐⭐⭐⭐ — Baidu 공식, ⭐82,906, 실제 프로덕션 사용 사례 다수
 - **즉시 활용**: YES — `pip install paddlepaddle paddleocr` 후 2줄 코드로 실행
 - **6개월 영향력**: RAG 파이프라인 인구 증가로 문서 파싱 수요 지속. [[MinerU2.5]], [[liteparse]]와 경쟁
 - **대체 관계**: [[markitdown]](전방위 문서), [[MinerU2.5]](수식/표 특화), [[liteparse]](Rust 고속)와 비교 필요
@@ -46,4 +46,4 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/PaddlePaddle/PaddleOCR
-- 신뢰도: ⭐⭐⭐⭐ (Baidu 공식 GitHub 81,113 스타)
+- 신뢰도: ⭐⭐⭐⭐ (Baidu 공식 GitHub 82,906 스타)

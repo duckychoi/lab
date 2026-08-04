@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [google, gemma, multimodal, any-to-any, instruction-tuning, open-source]
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-06-13
 sources: []
 reliability: high
 ---
@@ -19,7 +19,7 @@ reliability: high
 ## 도메인별 추출
 
 **스펙:**
-- HF 581,354 다운로드 (2026-06-09 기준)
+- HF 676,000 다운로드 (2026-06-11; 이전 581,354 2026-06-09)
 - Any-to-any 멀티모달: 텍스트, 이미지, 오디오, 비디오 입출력 지원
 - Apache 2.0 라이선스 (상업적 사용 가능)
 - 12B 파라미터 — 31B 대비 절반 이하 크기, 더 넓은 하드웨어 호환성
@@ -39,5 +39,5 @@ reliability: high
 
 ## 원본
 - 출처: https://huggingface.co/google/gemma-4-12B-it
-- HF 581,354 다운로드 (2026-06-09 기준)
+- HF 676,000 다운로드 (2026-06-11; 이전 581,354)
 - 신뢰도: ⭐⭐⭐⭐⭐

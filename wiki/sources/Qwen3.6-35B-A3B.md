@@ -5,14 +5,14 @@ type: source
 source_type: huggingface
 url: https://huggingface.co/Qwen/Qwen3.6-35B-A3B
 date_ingested: 2026-04-22
-updated: 2026-05-11
+updated: 2026-07-05
 tags: [llm, moe, multimodal, qwen, local-llm, image-text]
 ---
 
 # Qwen3.6-35B-A3B
 
 ## 개요
-Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 고효율 구조. HuggingFace 트렌딩 2위. **다운로드**: 3,858,503 (2026-05-11 기준, 이전 3,510,000).
+Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 고효율 구조. HuggingFace 트렌딩 상위. **다운로드**: 5.86M (2026-07-05 기준) ← 5.61M(2026-07-02) ← 3.86M(2026-05-11). NVIDIA가 이 모델을 NVFP4로 양자화 배포([[Qwen3.6-35B-A3B-NVFP4]]).
 
 - **제작**: Alibaba Qwen Team
 - **다운로드**: 2,600,000 (2026-05-03 기준)
@@ -29,3 +29,5 @@ Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 
 - [[MoE]]
 - [[multimodal-llm]]
 - [[Qwen3.6-35B-A3B-GGUF]]
+- [[Qwen3.6-35B-A3B-NVFP4]]
+- [[Qwen3.6-27B-NVFP4]]

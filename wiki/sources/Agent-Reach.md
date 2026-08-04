@@ -4,12 +4,18 @@ type: source
 domain: ai-news
 tags: [agent, tool-use, twitter, reddit, youtube, github, real-time-search, mcp]
 created: 2026-06-09
-updated: 2026-06-09
+updated: 2026-08-03
 sources: []
 reliability: high
 ---
 
 # Agent-Reach
+
+> [!update] 2026-08-03 갱신 — ⭐65,181 (당일 +659)
+> ⭐**65,181**(2026-08-03 자동수집, 당일 +659) ← 63,584(08-01). Twitter·Reddit·YouTube·GitHub 동시 소셜 검색 커넥터 레이어 지속 급성장. [[last30days-skill]]+[[Agent-Reach]] 조합 자동 트렌드 리포트 파이프라인 actionable 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
+
+> [!update] 2026-08-01 갱신 — ⭐63,584 (당일 +503, 6만 돌파)
+> ⭐**63,584**(2026-08-01 자동수집, 당일 +503) ← 42,824(06-27). 약 5주 새 +약2.1만으로 소셜 검색 커넥터 레이어 지속 급성장. Twitter·Reddit·YouTube·GitHub 동시 검색 성격 동일. [[last30days-skill]]+[[Agent-Reach]] 조합 자동 트렌드 리포트 파이프라인 actionable 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 ## 핵심 인사이트
 
@@ -19,7 +25,7 @@ reliability: high
 ## 도메인별 추출
 
 **핵심 기능:**
-- GitHub ⭐24,908, 당일 +679 — 안정적 성장
+- GitHub ⭐42,824, 당일 +1,194 (2026-06-27) — 지속 급성장 (06-18 33,813 → 06-27 42,824)
 - 지원 소스: Twitter(X), Reddit, YouTube, GitHub 동시 검색
 - 실시간 데이터 접근 → LLM의 학습 데이터 시점 한계 극복
 - [[last30days-skill]]과 함께 소셜 인텔리전스 에이전트 스택 구성 가능
@@ -39,5 +45,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/Panniantong/Agent-Reach
-- GitHub ⭐24,908 (2026-06-09 기준)
+- GitHub ⭐65,181 (2026-08-03 자동수집, +659/일) ← ⭐63,584 (08-01, +503) ← ⭐42,824 (06-27) ← ⭐33,813 (06-16)
 - 신뢰도: ⭐⭐⭐⭐

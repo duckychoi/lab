@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, time-series, foundation-model, zero-shot, forecasting, decoder-only]
 created: 2026-04-11
-updated: 2026-04-11
+updated: 2026-06-19
 sources: []
 reliability: high
 ---
@@ -39,5 +39,6 @@ reliability: high
 
 ## 원본
 
-- 출처: https://arxiv.org/abs/2310.10688
-- 신뢰도: ⭐⭐⭐⭐ (Google Research 논문)
+- 출처: https://arxiv.org/abs/2310.10688 | https://github.com/google-research/timesfm
+- GitHub ⭐23,647 (2026-06-19 기준, +844/일 — 급등세)
+- 신뢰도: ⭐⭐⭐⭐ (Google Research 논문, GitHub ⭐23K+)

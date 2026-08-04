@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, deepseek, llm, flagship, text-generation, chinese-ai]
 created: 2026-04-24
-updated: 2026-06-02
+updated: 2026-07-06
 sources: []
 reliability: high
 ---
@@ -12,8 +12,11 @@ reliability: high
 # DeepSeek-V4-Pro
 
 **HuggingFace**: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro  
-**다운로드**: 5,830,000 (2026-06-02 기준, likes 4,470; 이전 5,890,000)  
+**다운로드**: 1,180,000 (2026-07-06) ← 2,250,000 (06-23, likes 5.02k) ← 2,830,000 (06-16) ← 4,300,000 (06-10)  
 **신뢰도**: ⭐⭐⭐⭐⭐
+
+> [!note] 2026-07-06 갱신
+> 월간 DL 1.18M로 하향(← 2.25M). 862B 플래그십이라 로컬 부담이 커 경량 [[DeepSeek-V4-Flash]](158B, 2.32M DL)에 채택 볼륨이 역전됨 — **"플래그십은 API/서버, 실수요 볼륨은 경량 Flash"** 구도 확인. 절대 성능은 Pro 우위 유지, 다운로드=품질 아님.
 
 > [!insight] 핵심 인사이트
 > DeepSeek의 최신 플래그십 862B 파라미터 텍스트 생성 모델. 공개 5시간 만에 HF 트렌딩 1위 등극, 현재 321K 다운로드 (2026-05-01). DeepSeek가 GPT-4o/Claude 수준 경쟁에서 오픈소스 선두를 계속 유지하겠다는 선언.
@@ -44,4 +47,5 @@ reliability: high
 
 ## 원본
 - 출처: https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro
-- 신뢰도: ⭐⭐⭐ (DeepSeek 공식, HF 트렌딩 1위, 5시간 만에 급등)
+- 다운로드 추이: 2.25M (2026-06-23, likes 5.02k) ← 2.83M (06-16) ← 4.3M (06-10). 월간 다운로드 수치라 변동성 있으나 HF 트렌딩 다운로드 1위 유지.
+- 신뢰도: ⭐⭐⭐⭐⭐ (DeepSeek 공식, HF 트렌딩 다운로드 1위)

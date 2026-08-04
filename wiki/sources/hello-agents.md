@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent, python, tutorial, education, chinese]
 created: 2026-05-10
-updated: 2026-05-13
+updated: 2026-06-17
 sources: []
 reliability: high
 ---
@@ -12,11 +12,11 @@ reliability: high
 # datawhalechina/hello-agents
 
 > [!insight] 핵심 인사이트
-> 중국 최대 AI 커뮤니티 Datawhale이 제작한 에이전트 입문→실전 Python 튜토리얼. ⭐47,169의 높은 스타 수는 "에이전트 개념을 코드로 직접 배우고 싶은" 수요가 전 세계적으로 폭증했음을 확인시켜준다.
+> 중국 최대 AI 커뮤니티 Datawhale이 제작한 에이전트 입문→실전 Python 튜토리얼. ⭐59,917 (2026-06-17, +291/일) — 꾸준한 성장 유지. "에이전트 개념을 코드로 직접 배우고 싶은" 수요가 전 세계적으로 폭증했음을 확인시켜준다.
 
 ## 도메인별 추출 (ai-news)
 
-- **신뢰도**: GitHub ⭐48,745 (오늘 +599, 2026-05-13) — Datawhale 공식 레포, 신뢰도 high
+- **신뢰도**: GitHub ⭐59,917 (오늘 +291, 2026-06-17) — Datawhale 공식 레포, 신뢰도 high
 - **즉시 활용**: YES — 에이전트 원리를 코드로 이해하고 싶을 때 바로 참조 가능
 - **6개월 영향력**: 에이전트 교육 자료 표준이 될 가능성 높음. 중문이지만 코드는 범용
 - **대체 관계**: [[ai-agents-for-beginners]](Microsoft 공식, ⭐58,091)와 경쟁 — 더 실전 코드 중심
@@ -36,5 +36,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/datawhalechina/hello-agents
-- GitHub 스타: ⭐48,745 (+599, 2026-05-13)
+- GitHub 스타: ⭐59,917 (+291, 2026-06-17)
 - 신뢰도: ⭐⭐⭐ (커뮤니티 검증, 대형 오픈소스)

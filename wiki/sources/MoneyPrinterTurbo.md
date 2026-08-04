@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, video-saas, short-form, automation, LLM, tts, subtitles]
 created: 2026-05-29
-updated: 2026-06-02
+updated: 2026-06-11
 sources: []
 reliability: high
 ---
@@ -14,11 +14,11 @@ reliability: high
 ## 핵심 인사이트
 
 > [!insight] 핵심 인사이트
-> 텍스트 입력 하나로 고화질 쇼트폼 영상(음성·자막·배경음악·편집)까지 일괄 생성. GitHub ⭐77,436, 당일 +3,375 — 2026-06-02 기준 GitHub Trending 상위권 유지. 영상 자동화 SaaS 구현의 완성형 레퍼런스.
+> 텍스트 입력 하나로 고화질 쇼트폼 영상(음성·자막·배경음악·편집)까지 일괄 생성. GitHub ⭐85,539 (2026-06-11; 이전 ⭐77,436 2026-06-02) — GitHub Trending 상위권 유지. 영상 자동화 SaaS 구현의 완성형 레퍼런스.
 
 ## 도메인별 추출 (video-saas + ai-news 교차)
 
-- **신뢰도**: ⭐⭐⭐⭐⭐ — ⭐77,436, 커뮤니티 검증, 중국어·영어 양방향 지원, 실제 영상 생성 데모 다수
+- **신뢰도**: ⭐⭐⭐⭐⭐ — ⭐85,539 (2026-06-11), 커뮤니티 검증, 중국어·영어 양방향 지원, 실제 영상 생성 데모 다수
 - **즉시 활용**: YES — Docker 또는 pip 설치. LLM API 키만 있으면 바로 영상 생성 가능
 - **6개월 영향력**: [[Pixelle-Video]], [[reat-slides]], [[reat-scene]] 같은 영상 자동화 파이프라인의 오픈소스 완성형 사례. 내 video-saas 구현의 기능 참조·경쟁 벤치마크
 - **대체 관계**: Pictory, Synthesia(유료 SaaS) 대비 완전 로컬·무료. [[Pixelle-Video]] 대비 더 많은 스타·커뮤니티 검증
@@ -44,6 +44,6 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/harry0703/MoneyPrinterTurbo
-- 스타: 77,436 (2026-06-02 기준, +3,375 당일)
+- 스타: ⭐85,539 (2026-06-11) ← ⭐77,436 (2026-06-02)
 - 언어: Python
 - 신뢰도: ⭐⭐⭐⭐⭐
