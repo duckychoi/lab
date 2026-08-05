@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-04 (아침 자동수집 13건 인제스트 완료 후 삭제 — 대기 항목 없음)
+updated: 2026-08-05 (아침 자동수집 13건 추가 — GitHub 5·HF논문 5·HF모델 3, 인제스트 대기)
 ---
 
 # Raw 대기열
@@ -19,6 +19,84 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ---
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+## [2026-08-05] 자동수집 | firecrawl/pdf-inspector (GitHub Trending)
+- URL: https://github.com/firecrawl/pdf-inspector
+- 도메인: ai-news
+- 스타수: 10,636 (당일 +2,540 급상승)
+- 한줄요약: 스캔본 vs 텍스트 기반 PDF를 감지해 OCR/직접추출 라우팅을 결정하는 Rust PDF 검사·분류·텍스트추출 라이브러리 (MIT)
+
+## [2026-08-05] 자동수집 | zhaoxuya520/reverse-skill (GitHub Trending)
+- URL: https://github.com/zhaoxuya520/reverse-skill
+- 도메인: ai-news
+- 스타수: 18,589 (당일 +2,297 급상승)
+- 한줄요약: 리버스엔지니어링/승인된 침투테스트용 AI 스킬 라우터 팩 — 자동 라우팅 + 온디맨드 툴체인 부트스트랩 + 자가진화 지식베이스, Claude Code·Cursor·Cline 등 지원 (PowerShell, MIT)
+
+## [2026-08-05] 자동수집 | lyogavin/airllm (GitHub Trending)
+- URL: https://github.com/lyogavin/airllm
+- 도메인: ai-news
+- 스타수: 28,687 (당일 +1,711)
+- 한줄요약: 레이어별 로딩으로 4GB 단일 GPU에서 70B 모델 추론을 가능케 하는 경량 추론 라이브러리 (Apache-2.0)
+
+## [2026-08-05] 자동수집 | TencentCloud/TencentDB-Agent-Memory (GitHub Trending)
+- URL: https://github.com/TencentCloud/TencentDB-Agent-Memory
+- 도메인: ai-news
+- 스타수: 14,423 (당일 +1,111)
+- 한줄요약: 대화·문서·코드를 4종 재사용 메모리 자산(Chat Memory·Skill·LLM-Wiki·Code-Graph)으로 전환해 에이전트 간 공유·거버넌스하는 팀 단위 AI 에이전트 메모리 허브 (TypeScript)
+
+## [2026-08-05] 자동수집 | esengine/DeepSeek-Reasonix (GitHub Trending)
+- URL: https://github.com/esengine/DeepSeek-Reasonix
+- 도메인: ai-news
+- 스타수: 31,101 (당일 +922)
+- 한줄요약: 프리픽스 캐시 안정성 중심으로 설계된 터미널용 DeepSeek 네이티브 코딩 에이전트(장시간 상주 실행 지향) (Go, MIT)
+
+## [2026-08-05] 자동수집 | JoyAI-Video-Edit (HF Daily Paper #1)
+- URL: https://huggingface.co/papers/2608.03974
+- 도메인: ai-news
+- 업보트: 63 (당일 1위, arXiv 2608.03974, jingdong)
+- 한줄요약: 오토리그레시브 디퓨전 기반 실시간 오픈엔디드 비디오 편집 모델 (제목·저자정보 기반, 구체 벤치 수치 미검증)
+
+## [2026-08-05] 자동수집 | MerchantBench (HF Daily Paper)
+- URL: https://huggingface.co/papers/2607.28956
+- 도메인: ai-news
+- 업보트: 52 (arXiv 2607.28956)
+- 한줄요약: 실제 98,843개 상품 레코드 기반 365일 주문 단위 이커머스 시뮬레이션으로, 공급 중단·환불·악성리뷰 등 지연 결과 하에서 LLM 에이전트의 장기 일관성을 26개 상인 툴로 평가하는 벤치마크
+
+## [2026-08-05] 자동수집 | AURORA-LM (HF Daily Paper)
+- URL: https://huggingface.co/papers/2608.02602
+- 도메인: ai-news
+- 업보트: 43 (arXiv 2608.02602)
+- 한줄요약: 연속 잠재공간 디퓨전 언어모델링을 위한 오토인코딩 통합 표현(제목 기반, 초록 본문 비공개·코드 github.com/fyv587/AURORA-LM, 세부 미검증)
+
+## [2026-08-05] 자동수집 | Hunyuan3D-Buffalo 1.0 (HF Daily Paper)
+- URL: https://huggingface.co/papers/2608.02711
+- 도메인: ai-news
+- 업보트: 43 (arXiv 2608.02711, Tencent Hunyuan)
+- 한줄요약: 3D 생성·이해·편집을 하나로 통합한 확장형 멀티모달 모델 (제목 기반, 데모 영상 제공·구체 수치 미검증)
+
+## [2026-08-05] 자동수집 | Knowledge-Geometry Decoupling (KGD) (HF Daily Paper)
+- URL: https://huggingface.co/papers/2608.02738
+- 도메인: ai-news
+- 업보트: 32 (arXiv 2608.02738)
+- 한줄요약: 사전학습→전이 산업추천에서 행동분포 드리프트 문제를 다뤄, 무관 세션 간 허위 전이를 유발하는 next-token 방식 대신 지식과 기하 구조를 분리해 리프레시 가능한 전이를 제안
+
+## [2026-08-05] 자동수집 | baidu/Unlimited-OCR (HF Trending Model)
+- URL: https://huggingface.co/baidu/Unlimited-OCR
+- 도메인: ai-news
+- 다운로드수: 2,703,366 (좋아요 3,888, image-text-to-text)
+- 한줄요약: Baidu의 이미지→텍스트 OCR 특화 모델, HF 트렌딩 다운로드 1위
+
+## [2026-08-05] 자동수집 | zai-org/GLM-5.2 (HF Trending Model)
+- URL: https://huggingface.co/zai-org/GLM-5.2
+- 도메인: ai-news
+- 다운로드수: 2,234,662 (좋아요 4,829, text-generation)
+- 한줄요약: Zhipu AI(zai-org)의 GLM-5.2 텍스트 생성 모델, 트렌딩 다운로드 2위
+
+## [2026-08-05] 자동수집 | DavidAU/Qwen3.6-27B-Fable-Fusion (HF Trending Model)
+- URL: https://huggingface.co/DavidAU/Qwen3.6-27B-Fable-Fusion-711-Uncensored-Heretic-NM-DAU-NEO-MAX-MTP-GGUF
+- 도메인: ai-news
+- 다운로드수: 1,633,405 (좋아요 1,536, GGUF 양자화)
+- 한줄요약: Qwen3.6-27B 기반 커뮤니티 파인튜닝/GGUF 양자화 배포판(로컬 추론용), 트렌딩 다운로드 3위
 
 <!-- 2026-08-04 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 7·갱신 6. 신규 7: GitHub 1 [[pdf-inspector]](⭐9,016·Firecrawl Rust PDF 스캔/텍스트 판별·OCR 분기 전처리·high) + HF모델 1 [[DeepSeek-V4-Flash-0731]](DL 433k·좋아요 2.15k·304B 저지연·medium) + HF논문 5([[LongHorizon-Harness]] 2608.01964·[[SwanTale]] 2608.02023·[[Progressive-Agent-Skill]] 2608.01678·[[VAD-Visual-Evidence-Attribution]] 2607.28590·[[WorldExam]] 2608.02603 — 전량 미래형 ID medium). 갱신 6(전량 기존 페이지): GitHub 4 AI-For-Beginners ⭐60,032→61,320·airllm ⭐26,092→27,761·reverse-skill ⭐12,270→16,724(급상승 1위 재현)·TencentDB-Agent-Memory ⭐11,534→12,570 / HF모델 2 Qwen3.6-27B-Fable-Fusion DL 1.55M→1.63M 좋아요 1.38k→1.47k·Kimi-K3 DL 968k→1.13M(100만 돌파) 좋아요 9.74k→9.91k(트렌딩 좋아요 1위). GitHub 5·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08과 실소스 현재값 모순 회피, 07-30~08-03 배치와 동일 처리). HF논문 5건 전량 미래형 arxiv ID(2608.x·2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium, 구체 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 1건 [[DeepSeek]] 생성(Moonshot AI 선례처럼 프론티어 랩 salience — 랩·효율 노선만 실체, V4-Flash 세부는 시뮬레이션 타임라인 raw 기반 미검증 병기); HF논문 저자·기관은 날조 방지 wikilink만. actionable 2건 추가(pdf-inspector OCR 분기 전처리 편입[중간]·Progressive-Agent-Skill/LongHorizon-Harness 스킬 자가개선·롱호라이즌 안정성 개념 이식[낮음]). canvas 미갱신(정기 graph 갱신 시 일괄 반영). index total_pages 814→822·total_sources 797→804. -->
 

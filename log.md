@@ -1709,3 +1709,6 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 1건 [[DeepSeek]] ([[Moonshot AI]] 선례처럼 프론티어 랩 salience — 랩·효율 노선만 실체 서술, V4-Flash 세부는 시뮬레이션 타임라인 raw 기반 미검증 병기). HF논문 저자·기관은 salience 대비 날조 방지로 wikilink만.
 - index.md 업데이트 (total_pages: 814→822, total_sources: 797→804)
 - raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)
+
+## [2026-08-05 09:04] ingest
+- 대기 항목 없음
