@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MARL SOTA 튜토리얼 · 2025+ 강화학습 방법 한눈에 (실제 코드)</title>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{typeset:true}};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root{
+  --bg:#0a0e17; --bg2:#0f1521; --panel:#141c2b; --panel2:#1b2535;
+  --line:#26324a; --line2:#33425f;
+  --txt:#e6edf7; --mut:#9fb0c8; --dim:#6d7d96;
+  --acc:#4da6ff; --acc2:#7c5cff; --grn:#34d399; --amb:#fbbf24; --red:#f87171; --pnk:#f472b6;
+  --jepa:#34d399; --gen:#f472b6; --ar:#fbbf24; --hyb:#7c5cff;
+  --radius:14px; --mw:1180px; --shadow:0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 700px at 80% -10%,#16213a 0%,transparent 55%),var(--bg);color:var(--txt);
+  font-family:"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .4em}
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 22px}
+.mono{font-family:"Consolas","Courier New",monospace}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,14,23,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav .brand{font-weight:800;font-size:15px;color:var(--txt);white-space:nowrap;margin-right:10px}
+nav .brand span{color:var(--acc)}
+nav a.navlink{color:var(--mut);font-size:13.5px;padding:7px 11px;border-radius:8px;white-space:nowrap;transition:.15s}
+nav a.navlink:hover{color:var(--txt);background:var(--panel);text-decoration:none}
+nav a.navlink.active{color:#fff;background:linear-gradient(135deg,var(--acc),var(--acc2))}
+.hero{padding:60px 0 42px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 15% 20%,rgba(124,92,255,.18),transparent 60%),
+  radial-gradient(600px 300px at 85% 80%,rgba(52,211,153,.12),transparent 60%);pointer-events:none}
+.hero .tag{display:inline-block;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);border:1px solid var(--line2);border-radius:30px;padding:5px 14px;margin-bottom:18px}
+.hero h1{font-size:clamp(27px,4.6vw,44px);font-weight:850;letter-spacing:-.5px;
+  background:linear-gradient(120deg,#fff 20%,#9cc7ff 60%,#c4b5ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:clamp(15px,2.1vw,17.5px);color:var(--mut);max-width:820px;margin-top:8px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero .meta .chip{font-size:12.5px;color:var(--mut);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px}
+.hero .meta .chip b{color:var(--txt)}
+.statbar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+.statbar .s{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.statbar .s .n{font-size:24px;font-weight:800;color:var(--txt)}
+.statbar .s .l{font-size:12px;color:var(--dim);margin-top:2px}
+section{padding:54px 0;border-bottom:1px solid var(--line)}
+.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.shead .idx{font-family:"Consolas",monospace;font-size:13px;font-weight:700}
+.shead .idx.A{color:var(--acc)} .shead .idx.B{color:var(--ar)} .shead .idx.C{color:var(--jepa)} .shead .idx.D{color:var(--hyb)}
+.shead h2{font-size:clamp(22px,3.3vw,29px);font-weight:800;letter-spacing:-.3px}
+.slead{color:var(--mut);max-width:860px;margin:0 0 24px;font-size:15px}
+/* group intro box */
+.gintro{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-left:4px solid var(--gc,var(--acc));border-radius:12px;padding:18px 20px;margin-bottom:26px;font-size:14.5px;color:var(--mut)}
+.gintro b{color:var(--txt)}
+.gintro .basics{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:13px}
+.gintro .basics code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-family:Consolas,monospace;color:#cfe3ff;font-size:12.5px}
+/* method tutorial card */
+.mcard{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-bottom:18px;border-top:3px solid var(--gc,var(--acc))}
+.mcard .mh{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.mcard .mh .num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:14px;flex:0 0 auto}
+.mcard .mh h3{font-size:19px;margin:0}
+.mcard .mh .vtag{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:20px;padding:3px 10px;margin-left:auto;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;padding:3px 9px;border-radius:20px;text-transform:uppercase}
+.pill.rl{background:rgba(77,166,255,.14);color:var(--acc);border:1px solid rgba(77,166,255,.3)}
+.pill.ar{background:rgba(251,191,36,.14);color:var(--ar);border:1px solid rgba(251,191,36,.3)}
+.pill.jepa{background:rgba(52,211,153,.14);color:var(--jepa);border:1px solid rgba(52,211,153,.3)}
+.pill.hyb{background:rgba(124,92,255,.16);color:#a99bff;border:1px solid rgba(124,92,255,.32)}
+.mcard .blk{margin:14px 0 0}
+.mcard .blk .bh{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;margin-bottom:5px}
+.mcard .blk.intuit .bh{color:var(--grn)}
+.mcard .blk.rl .bh{color:var(--acc)}
+.mcard .blk.contrib .bh{color:var(--acc2)}
+.mcard .blk p{margin:0;color:var(--mut);font-size:14.5px}
+.mcard .blk p b{color:var(--txt)}
+.contrib-list{list-style:none;padding:0;margin:0}
+.contrib-list li{position:relative;padding:7px 0 7px 26px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+.contrib-list li:last-child{border-bottom:0}
+.contrib-list li:before{content:"▶";position:absolute;left:6px;top:10px;color:var(--acc2);font-size:9px}
+.contrib-list li b{color:var(--txt)}
+/* code block (impl-card style) */
+.codewrap{margin:6px 0 0}
+.codewrap .cw-h{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);border-bottom:0;border-radius:9px 9px 0 0;padding:8px 14px;font-size:12px}
+.codewrap .cw-h .fn{font-family:Consolas,monospace;color:var(--grn);font-weight:600}
+.codewrap .cw-h .srcf{color:var(--dim);font-size:11px;font-family:Consolas,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
+pre.code{margin:0;background:#0b1018;border:1px solid var(--line);border-radius:0 0 9px 9px;padding:14px 16px;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:12px;line-height:1.6;color:#cfe3ff;white-space:pre;tab-size:4}
+pre.code .cm{color:#6d7d96}
+.codec{font-size:12.5px;color:var(--mut);margin:9px 0 0}
+.codec b{color:var(--grn)}
+.mlinks{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.mlinks a{display:inline-flex;align-items:center;gap:6px;font-size:12px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:5px 11px;color:var(--mut);transition:.15s}
+.mlinks a:hover{color:var(--txt);border-color:var(--acc);text-decoration:none}
+.mlinks a b{color:var(--txt)}
+.note{background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.3);border-radius:12px;padding:14px 18px;margin:18px 0;font-size:13.5px;color:#bfe7d6}
+.note b{color:var(--grn)}
+.callout{background:linear-gradient(120deg,rgba(124,92,255,.1),rgba(77,166,255,.06));border:1px solid var(--line2);border-radius:var(--radius);padding:22px 24px;margin-top:8px}
+.callout h3{font-size:17px} .callout p{color:var(--mut);font-size:14.5px;margin:.5em 0 0}
+.basics-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:14px;color:var(--mut)}
+.basics-card h4{color:var(--acc2);font-size:15px;margin:0 0 8px}
+.basics-card p{margin:.4em 0} .basics-card b{color:var(--txt)}
+.basics-card code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-family:Consolas,monospace;color:#cfe3ff;font-size:12.5px}
+.fml{background:#0b1018;border:1px solid var(--line);border-left:3px solid var(--acc2);border-radius:10px;padding:13px 18px;margin:10px 0;overflow-x:auto}
+.fml .fl-h{font-size:11.5px;color:#a99bff;font-weight:700;letter-spacing:.4px;margin-bottom:2px;text-transform:uppercase}
+.fml .fl-c{font-size:12px;color:var(--dim);margin-top:4px;line-height:1.6}
+.fml .fl-c b{color:var(--mut)}
+.fml mjx-container{margin:6px 0!important;color:var(--txt)}
+footer{padding:40px 0 60px;color:var(--dim);font-size:13px}
+footer .src{margin-top:14px;font-size:12px;line-height:1.9}
+footer .src a{color:var(--mut)}
+.toTop{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:var(--panel2);border:1px solid var(--line2);color:var(--txt);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:60;font-size:18px}
+.toTop.show{opacity:1;pointer-events:auto}
+@media(max-width:880px){.statbar{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.statbar{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand">MARL<span> 튜토리얼</span></div>
+  <a class="navlink" href="#s0">시작</a>
+  <a class="navlink" href="#sA">A · Actor-Critic</a>
+  <a class="navlink" href="#sB">B · 가치분해</a>
+  <a class="navlink" href="#sC">C · 로봇·메모리</a>
+  <a class="navlink" href="#sD">D · LLM·분산</a>
+  <a class="navlink" href="#sE">정리</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">MULTI-AGENT RL · 2025+ · 실제 코드 튜토리얼</span>
+  <h1>멀티에이전트 강화학습 SOTA,<br>코드로 한눈에 읽히는 튜토리얼</h1>
+  <p class="sub">2025–2026 발표된 19개 방법을 <b>강화학습 패러다임별로</b> 묶어, 직관 설명 → RL 방법 → 핵심 기여 → <b>실제 GitHub 원문 코드</b> 순으로 풉니다. 코드는 제가 작성하지 않고 각 연구의 공식 저장소 발췌본을 그대로 실었습니다.</p>
+  <div class="meta">
+    <span class="chip">분석 방법 <b>19</b></span>
+    <span class="chip">RL 패러다임 그룹 <b>4</b></span>
+    <span class="chip">확보 저장소 <b>19</b></span>
+    <span class="chip">기준 <b>2026-06</b></span>
+  </div>
+  <div class="statbar">
+    <div class="s"><div class="n" style="color:var(--acc)">5</div><div class="l">A · Actor-Critic (정책경사)</div></div>
+    <div class="s"><div class="n" style="color:var(--ar)">4</div><div class="l">B · 가치분해 (Q-학습)</div></div>
+    <div class="s"><div class="n" style="color:var(--jepa)">4</div><div class="l">C · 로봇·메모리·벤치마크</div></div>
+    <div class="s"><div class="n" style="color:var(--hyb)">6</div><div class="l">D · LLM·분산 RL 시스템</div></div>
+  </div>
+</div></header>
+
+<section id="s0"><div class="wrap">
+  <div class="shead"><span class="idx" style="color:var(--acc2)">00</span><h2>읽기 전에 — 멀티에이전트 RL 한 줄 요약</h2></div>
+  <p class="slead">튜토리얼 본문에 들어가기 전, 이 문서 전체를 관통하는 세 가지 핵심 개념을 짚고 갑니다. 아래 개념들이 본문의 모든 방법의 "왜 그렇게 짰는지"를 설명합니다.</p>
+  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <div class="basics-card"><h4>① CTDE — 중앙 학습, 분산 실행</h4>
+      <p>멀티에이전트 RL의 가장 흔한 구조. <b>학습할 때는</b> 전체 정보(다른 에이전트 관측·전역 상태)를 다 보는 크리틱/가이더를 쓰고, <b>실행할 때는</b> 각 에이전트가 자기 관측만 보고 혼자 결정합니다.</p>
+      <p>왜? 협력의 신용(credit)을 나누려면 전체를 봐야 하지만, 실제 배포는 각자 독립적으로 해야 효율적이니까요. 본문 거의 모든 방법이 CTDE입니다.</p></div>
+    <div class="basics-card"><h4>② PPO vs QMIX — 두 갈래 학습 신호</h4>
+      <p><b>PPO(정책경사)</b>: 정책(행동 확률)을 직접 학습. "더 좋은 보상을 낸 행동의 확률을 올리자." on-policy(현재 정책이 만든 데이터로만 학습). 그룹 A·C·D의 뼈대.</p>
+      <p><b>QMIX(가치분해)</b>: 행동의 가치(Q)를 학습. "가장 가치 높은 행동을 고르자." off-policy라 <code>replay buffer</code>로 과거 경험 재사용. 그룹 B의 뼈대.</p></div>
+    <div class="basics-card"><h4>③ 단조성(monotonicity) — 가치를 쪼개는 규칙</h4>
+      <p>가치분해(B 그룹)의 핵심 제약. <b>개별 에이전트 가치 Q<sub>i</sub>가 오르면 팀 가치 Q<sub>tot</sub>도 무조건 오르게</b> 만듭니다. 그래야 각자 따로 학습해도 팀 목표와 싸우지 않습니다.</p>
+      <p>QMIX는 믹서의 가중치를 양수로 제약해 이를 보장합니다(&part;Q<sub>tot</sub>/&part;Q<sub>i</sub>&ge;0, IGM 조건).</p>
+      <div class="fml"><div class="fl-h">QMIX 단조 믹서</div>
+      \[ Q_{tot}=f\!\left(\sum_i w_i(s)\,Q_i\,;\ b(s)\right),\quad w_i(s)\ge 0 \]
+      <div class="fl-c">가중치 <b>w<sub>i</sub></b>를 <code>abs()</code>로 양수화해 단조성 보장. Q<sub>tot</sub>가 Q<sub>i</sub>에 대해 단조증가 → 개별·팀 학습 정렬.</div></div></div>
+  </div>
+  <div class="note" style="margin-top:18px"><b>이 문서의 약속.</b> 각 방법 카드는 <b>① 직관(초보자용 비유) → ② RL 방법(네트워크·학습 신호) → ③ 핵심 기여 → ④ 실제 코드</b> 네 블록으로 구성됩니다. 코드 블록의 <span class="mono" style="color:var(--grn)">초록 헤더</span>는 <b>실제 GitHub 파일 경로</b>이고, 본문은 해당 파일에서 발췌한 원문입니다(일부 라인 생략, 한국어 주석은 이해를 돕기 위한 보조 설명).</div>
+</div></section>
+
+<section id="sA"><div class="wrap">
+  <div class="shead"><span class="idx A">그룹 A</span><h2>Actor-Critic · 정책경사 (PPO 계열)</h2></div>
+  <div class="gintro" style="--gc:var(--acc)"><p>각 에이전트가 <b>직접 정책(행동 확률)을 학습</b>하는 on-policy 계열. PPO를 뼈대로 삼아, <b>트랜스포머/순환망으로 에이전트 간 순서를 모델링</b>하거나 <b>중앙 크리틱으로 신용을 분배</b>하는 식으로 멀티에이전트를 다룹니다. 이 그룹의 공식: 각 에이전트가 자기 관측만 보고 행동하되(분산 실행), 학습 때는 더 많은 정보를 보는 크리틱/가이더가 돕습니다(중앙 학습).</p></div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">01</div>
+      <h3>MAGPO <span class="pill rl" style="margin-left:6px">A</span></h3>
+      <span class="vtag">arXiv 2025 · ★9</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p><b>'코치(guider)'</b>가 연습 때 전체 상황을 보며 선수(분산 정책)에게 좋은 행동을 시범 보이고, 선수는 코치를 따라가며 배운다. 시합(실행) 땐 선수 혼자 뛴다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>PPO를 뼈대로 한 Guided Policy Optimization. <b>중앙집중 Sable 가이더</b>(전체 에이전트 obs를 시퀀스로 보는 RetNet 트랜스포머)와 <b>분산 RNN 액터</b> 두 정책을 함께 학습. 가이더 손실에 <b>double-clipped ratio</b>(log-ratio를 ±log(clip_gpo)로 제한)를, 액터 손실에 <b>표준 PPO + guider KL 정렬</b> 항을 넣어 중앙↔분산 표현 격차를 좁힘.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>double-clipped GPO 손실 — 가이더와 액터의 log-ratio 폭주를 막아 안정적 정렬</li><li>KL 마스크로 클립 범위를 넘은 표본에만 페널티</li><li>CTDE를 양방향 KL로 명시적 연결(중앙 학습↔분산 실행)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 MAGPO.py</span><span class="srcf">mava/systems/gpo/anakin/rec_magpo.py</span></div>
+        <pre class="code"># mava/systems/gpo/anakin/rec_magpo.py (lines 244-296, _guider_loss_fn 발췌)
+actor_log_prob = actor_policy.log_prob(traj_batch.action)
+ratio = jnp.exp(guider_log_prob - traj_batch.log_prob)
+# Double clip: 가이더와 액터의 log-ratio를 [1/clip_gpo, clip_gpo]로 제한
+clipped_ratio = jnp.exp(
+    jnp.clip(
+        guider_log_prob - actor_log_prob,
+        jnp.log(1 / config.system.clip_gpo),
+        jnp.log(config.system.clip_gpo),
+    )
+    + actor_log_prob
+    - traj_batch.log_prob
+)
+# 가이더-액터 괴리가 클립 범위를 넘은 표본만 KL로 페널티
+mask = jnp.select(
+    [guider_log_prob - actor_log_prob &lt; jnp.log(1 / config.system.clip_gpo),
+     guider_log_prob - actor_log_prob &gt; jnp.log(config.system.clip_gpo)],
+    [1, 1], 0)
+kl_loss = (kl_loss * mask).mean()
+gae = (gae - gae.mean()) / (gae.std() + 1e-8)
+guider_loss1 = ratio * gae
+guider_loss2 = jnp.clip(clipped_ratio, 1.0 - config.system.clip_eps,
+                        1.0 + config.system.clip_eps) * gae
+guider_loss = -jnp.minimum(guider_loss1, guider_loss2).mean()
+total_loss = (guider_loss + kl_loss
+              - config.system.ent_coef * guider_entropy
+              + config.system.vf_coef * value_loss)</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 가이더 손실의 핵심 — ratio를 double-clip하고 KL에 마스크를 씌우는 부분. PPO의 clipped surrogate가 멀티에이전트 가이더-액터 정렬로 확장된 형태.</p>
+      <div class="mlinks">
+        <a href="https://github.com/liyheng/MAGPO" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2507.18059" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">02</div>
+      <h3>Sable <span class="pill rl" style="margin-left:6px">A</span></h3>
+      <span class="vtag">arXiv 2024/2025 · ★916</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>에이전트들을 <b>한 명씩 차례로</b>(자기회귀) 처리하는 트랜스포머. 단, 일반 attention 대신 <b>Retention(RetNet)</b>을 써서 에이전트 수·시간이 길어져도 비용이 선형으로 든다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>인코더(전체 관츰 처리) + 디코더(행동을 에이전트 순서대로 자기회귀 생성) 구조. PPO의 MAT식 어드밴티지 분해를 그대로 쓰되, attention 대신 <b>MultiScaleRetention</b>(masked 디코더)으로 교체. <b>chunkwise 메모리</b>가 시간축까지 이어붙여 수백 에이전트·장기 기억을 선형 비용으로 처리.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>Retention(RetNet) 기반 MARL 백본 — attention의 O(n²)를 선형으로</li><li>chunkwise 메모리로 시간×에이전트 시퀀스를 선형 비용 처리</li><li>학습=병렬/청크, 실행=recurrent 모드 전환(분산 배포 효율)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 Sable.py</span><span class="srcf">mava/networks/sable_network.py</span></div>
+        <pre class="code"># mava/networks/sable_network.py (lines 188-217, DecodeBlock.__call__)
+def __call__(self, x, obs_rep, hstates, dones, step_count):
+    """Chunkwise MultiScaleRetention 적용 (디코더 블록)."""
+    hs1, hs2 = hstates
+    # (1) action 시퀀스에 대한 masked self-retention
+    ret, hs1_new = self.retn1(
+        key=x, query=x, value=x, hstate=hs1, dones=dones, step_count=step_count)
+    ret = self.ln1(x + ret)
+    # (2) obs_rep(query) x action(key,value) 교차 retention
+    ret2, hs2_new = self.retn2(
+        key=ret, query=obs_rep, value=ret,
+        hstate=hs2, dones=dones, step_count=step_count)
+    y = self.ln2(obs_rep + ret2)
+    output = self.ln3(y + self.ffn(y))   # SwiGLU FFN
+    return output, (hs1_new, hs2_new)
+# 인코더(EncodeBlock)는 masked=False 전체 retention,
+# 디코더는 masked=True 인과 마스크로 자기회귀 행동 생성을 보장.</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> DecodeBlock의 순방향 — 두 개의 masked MultiScaleRetention과 SwiGLU가 에이전트를 자기회귀로 디코딩. attention이 아니라 retention이라는 점이 핵심.</p>
+      <div class="mlinks">
+        <a href="https://github.com/instadeepai/Mava" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2410.01706" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">03</div>
+      <h3>SrSv <span class="pill rl" style="margin-left:6px">A</span></h3>
+      <span class="vtag">arXiv 2025 · ★17</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>에이전트들이 <b>한 명씩 결정할 때</b>, 앞 로봇의 선택을 뒷 로봇이 보고 정한다(순서가 중요한 협력). SrSv는 <b>가치(v)까지 순서에 따라 재분배</b>해 '누가 먼저 어떤 기여를 했나'를 따진다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>MAT 백본(인코더-디코더 트랜스포머)에 <b>Sequential Value</b> 추가. 디코더의 행동-간 attention 행렬 A로 각 에이전트의 지역 가치를 재분배: seq_v = A·v_loc. 단일 팀 보상 위에서 <b>GAE</b>를 쓰되 가치 타깃을 seq_v로 추정해 순차적 신용 할당을 명시화.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>Sequential Value(seq_v = A·v_loc) — attention 행렬으로 가치를 순차 재분배</li><li>순서 의존 협력(선행/후행 에이전트)의 명시적 신용 할당</li><li>가변 에이전트 수(N)에 대한 일반화(Random SC2 맵)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 SrSv.py</span><span class="srcf">srsv/algorithms/srsv/algorithm/srsv.py</span></div>
+        <pre class="code"># srsv/algorithms/srsv/algorithm/srsv.py (lines 205-229, Decoder.forward)
+def forward(self, action, obs_rep, obs):
+    action_embeddings = self.action_encoder(action)
+    x = self.ln(action_embeddings)
+    for block in self.blocks:           # DecodeBlock: masked self-attn + cross-attn
+        x, att = block(x, obs_rep)      # att: [batch, n_agents, n_agents]
+    # 지역 가치: (obs_rep, x)를 결합해 에이전트별 v_loc 산출
+    loc_v = self.loc_v_mlp(torch.cat((obs_rep, x), axis=-1))  # [B, n_agents, 1]
+    # ★ Sequential Value: attention 행렬로 지역 가치를 에이전트 시퀀스 간 재분배
+    seq_v = torch.bmm(att, loc_v)       # [B, n_agents, 1]
+    logit = self.head(x)
+    return logit, seq_v, att
+# 두 번째 디코더 attn(attn2)은 masked=True, return_att=True 로
+# 선행 에이전트→후행 에이전트 의존 가중치를 그대로 가치 분배에 사용.</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 디코더 순방향 — attn2(cross attention)이 return_att=True로 attention 가중치를 반환하고, 이걸 loc_v에 곱해 seq_v(순차 가치)를 만드는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/waunx/SrSv" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2503.01458" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">04</div>
+      <h3>ACAC <span class="pill rl" style="margin-left:6px">A</span></h3>
+      <span class="vtag">ICML 2025 · ★9</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>에이전트마다 <b>행동이 걸리는 시간(매크로 행동 길이)이 달라</b> 결정 시점이 엇갈리는 환경에서, PPO의 신용 할당이 어긋나는 문제를 <b>시간 임베딩과 마스크</b>로 정렬한다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>매크로 행동 기반 PPO. 에이전트별 <b>GRU actor</b>(분산 실행) + <b>attention 중앙 joint critic</b>(PopArt 가치 정규화). <b>시간 임베딩</b>(sinusoidal)과 <b>매크로-행동 유효 마스크</b>로 의사결정 빈도가 다른 에이전트의 GAE를 정렬. 중앙 GAE를 각 에이전트 매크로 시점으로 정렬해 PPO clip으로 갱신.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>비동기(asynchronous) MARL을 위한 agent-centric 정렬 — 매크로 행동 길이 차이 처리</li><li>시간 임베딩 + 유효 마스크로 어긋난 행동 시점 보정</li><li>attention 중앙 joint critic + PopArt로 신용 할당</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 ACAC.py</span><span class="srcf">acac/acac_marl/cores/acac/learner_acac.py</span></div>
+        <pre class="code"># acac/acac_marl/cores/acac/learner_acac.py (lines 159-176, agent별 클리핑 정책 경사)
+### Get log_pi_a for each agent (분산 액터)
+action_logits_agent = agent.actor_net(obs_agent, eps=eps, time_emb=obs_seq_agent)[0]
+log_pi_a = action_logits_agent.gather(-1, action_agent)
+# 매크로-행동 유효 시점(exp_valid_agent)에서만 importance ratio 계산
+is_ratio = torch.exp((log_pi_a - old_log_pi_a) * exp_valid_agent)
+# 중앙 advantage를 각 에이전트의 매크로-행동 시점(mac_st_j)으로 정렬
+adv_agent = self._squeeze_tensor_by_mac_valid(adv_value, mac_st_j)
+pg_loss1 = exp_valid_agent * adv_agent * is_ratio
+pg_loss2 = exp_valid_agent * adv_agent * torch.clamp(
+    is_ratio, min=1-self.clip_ratio, max=1+self.clip_ratio)
+agent.actor_loss = (-torch.sum(torch.min(pg_loss1, pg_loss2),
+                    dim=-1, keepdim=True) * exp_valid_agent).sum() / exp_valid_agent.sum()
+actor_critic_loss += agent.actor_loss
+# 중앙 critic은 mac_st(매크로 시작 마스크)로 유효 transition만 골라 TD 학습.</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 에이전트별 클리핑 정책 경사 부분 — 중앙 advantage를 자기 매크로 시점으로 정렬해 PPO clip으로 갱신하는 곳.</p>
+      <div class="mlinks">
+        <a href="https://github.com/LGAI-Research/acac" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://openreview.net/forum?id=323GZNnGqe" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">08</div>
+      <h3>SMPE <span class="pill rl" style="margin-left:6px">A</span></h3>
+      <span class="vtag">arXiv 2025 · ★35</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>각 에이전트가 <b>안 보이는 부분(다른 에이전트 위치 등)을 머릿속으로 상상(belief)</b>해 판단에 쓰고, 쓸데없는 전역 정보는 걸러내며, 적대적 방식으로 새로운 상태를 찾아낸다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>Central-V 액터-크리틱(MAPPO/COMA 계열) + <b>per-agent VAE 상태모델</b>. 비관측 상태를 VAE로 추론해 belief z를 만들고, <b>Filter</b>로 불필요한 공동 정보 가중 복원. z를 정책 입력에 이어붙임. (옵션) SimHash 카운터로 내재 보상. VAE는 재구성 손실로 정책과 분리 학습.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>per-agent VAE belief — 부분관측에서 비관측 상태 추정</li><li>Filter로 불필요한 공동 상태정보 가중 복원(표현 필터링)</li><li>적대적 탐험 + 해시 기반 내재 보상(옵션)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 SMPE.py</span><span class="srcf">model_learners/vae_controller.py</span></div>
+        <pre class="code"># model_learners/vae_controller.py (lines 260-310)
+                    inputs_w = obs
+                    if self.args.use_actions:  inputs_w = th.cat((inputs_w, actions_onehot), dim=-1)
+                    if self.args.use_rewards:  inputs_w = th.cat((inputs_w, rewards), dim=-1)
+                    # Filter w_i: 어떤 공동상태 정보가 자기 정책에 유용한지 가중(redundant 정보 필터링)
+                    if self.args.use_w:
+                        w_i = self.filters[agent_id].forward(inputs_w)
+                        w_i_targets = self.target_filters[agent_id].forward(inputs_w).detach()
+                    # 인코딩: obs -&gt; belief z (비관측 상태에 대한 믿음)
+                    z_others, _, _ = self.agent_models[agent_id].encoder.forward(obs)
+                    predicted_states = self.agent_models[agent_id].decoder.forward(z_others)
+                    # 자기 자신의 obs 구간을 빼고 '타 에이전트 상태'만 복원 대상으로
+                    last_dim = states.shape[1]; cut = int(last_dim/self.n_agents)
+                    states = th.cat((states[:, 0:agent_id*cut], states[:, (agent_id*cut+cut):]), dim=-1)
+                    if self.args.use_aux:   # 역동역학 보조: (z_t, z_{t+1}) -&gt; 행동 예측
+                        z_others_next, _, _ = self.agent_models[agent_id].encoder.forward(next_obs)
+                        aux_inputs = th.cat((z_others, z_others_next), dim=-1)
+                        predicted_actions_logits = self.aux_models[agent_id].forward(aux_inputs)
+                        aux_loss = self.args.lambda_aux_loss * self.aux_criterion(predicted_actions_logits, actions[:, agent_id])
+                    # 필터-가중 ELBO 복원 손실 (적대적: w_i vs target w_i)
+                    if self.args.use_w:
+                        reconstrunction_loss = (((w_i*predicted_states - w_i_targets*states))**2).sum()
+                    else:
+                        reconstrunction_loss = (((predicted_states - states))**2).sum()
+                    reconstrunction_loss = self.args.lambda_rec * reconstrunction_loss
+                    kl_loss = self.args.lambda_kl_loss_obs * self.agent_models[agent_id].encoder.kl
+                    loss = loss + (reconstrunction_loss + kl_loss + reg_loss)</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> VAE 컨트롤러의 가중 복원 — 관측과 belief로 가중치를 만들어 공동 정보를 필터링하는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/andreaskontogiannis/smpe" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://www.arxiv.org/abs/2505.05262" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sB"><div class="wrap">
+  <div class="shead"><span class="idx B">그룹 B</span><h2>Value Decomposition · 가치분해 (Q-학습, off-policy)</h2></div>
+  <div class="gintro" style="--gc:var(--ar)"><p>각 에이전트는 <b>행동의 가치(Q값)</b>만 추정하고, <b>믹서(mixer)가 개별 가치를 합쳐 팀 전체 가치</b>를 만듭니다. off-policy라 <b>경험 재생 버퍼(replay buffer)</b>를 써 샘플 효율이 좋습니다. 핵심 제약은 <b>단조성(monotonicity)</b> — 한 에이전트의 가치가 오르면 팀 가치도 무조건 오르게 만들어(&part;Q<sub>tot</sub>/&part;Q<sub>i</sub>&ge;0), 개별 학습과 팀 학습이 충돌하지 않게 합니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--ar)">
+    <div class="mh">
+      <div class="num">05</div>
+      <h3>S2Q <span class="pill ar" style="margin-left:6px">B</span></h3>
+      <span class="vtag">ICLR 2026 · ★1</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>최적 행동이 <b>계속 바뀌는 환경</b>(shifting optima)에선, 차선책(suboptimal) 행동의 가치를 <b>버리지 말고 따로 저장</b>해뒀다가 — 상황이 바뀌어 그게 최적이 되면 바로 쓴다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>QMIX 계열 가치분해 + <b>다중 Q 헤드</b>. 한 에이전트의 Q를 여러 헤드로 나눠, 헤드1은 최적 행동, 헤드2/3는 <b>다른 헤드가 점유한 최적 행동의 중앙 Q를 뺀 차선 가치</b>를 학습. 단조 믹서(nmix, IGM 보장) + 중앙 FF 믹서(WQMIX 스타일, 단조 제약 풀어 표현력 보강).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>다중 Q 헤드로 차선(suboptimal) 행동 가치 보존 — shifting optima 추종</li><li>헤드 간 잔차 타깃으로 차선 가치 분리 학습</li><li>WQMIX식 중앙 믹서(nm_mix)로 단조 제약 완화, 표현력 보강</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 S2Q.py</span><span class="srcf">s2q_smac/src/learners/sq_learner.py</span></div>
+        <pre class="code"># s2q_smac/src/learners/sq_learner.py (lines 161-204)
+        is_max_action = (actions == cur_max_actions[:, :-1]).min(dim = 2)[0]
+        is_max_action_2 = (actions == cur_max_actions_2[:, :-1]).min(dim = 2)[0]
+
+        td_error = chosen_action_qvals - targets.clone().detach()
+        central_td_error = (central_chosen_action_qvals[:, :-1] - targets.clone().detach())
+
+        subtract_mask = (is_max_action | is_max_action_2).float()
+        # 헤드2/3는 이미 다른 헤드가 '최적'으로 잡은 행동의 중앙Q를 타깃에서 빼서(잔차) 학습 → 차선 행동을 별도로 보존
+        td_error_2 = chosen_action_qvals_2 - (targets.clone().detach() - central_chosen_action_qvals[:, :-1].clone().detach() * is_max_action.float())
+        td_error_3 = chosen_action_qvals_3 - (targets.clone().detach() - central_chosen_action_qvals[:, :-1].clone().detach() * subtract_mask)
+
+        ws = th.ones_like(td_error)
+        central_max_diff   = (central_chosen_action_qvals[:, :-1] &gt;= central_target_max_qvals[:, :-1]).clone().detach()
+        central_sub_diff   = (central_chosen_action_qvals[:, :-1] &gt;= central_target_max_qvals_2[:, :-1]).clone().detach()
+        central_sub_diff_2 = (central_chosen_action_qvals[:, :-1] &gt;= central_target_max_qvals_3[:, :-1]).clone().detach()
+        w_mask   = (central_max_diff &amp; central_sub_diff &amp; central_sub_diff_2)
+        # WQMIX식 비대칭 가중: 조건 만족 시 1, 아니면 w_c(=0.9)로 underestimation 억제
+        ws_1 = th.where(w_mask, th.ones_like(td_error) * 1, ws * self.args.w_c)
+        ws_2 = th.where(td_error_2 &lt; 0, th.ones_like(td_error) * 1, ws * self.args.w_c)
+        ws_3 = th.where(td_error_3 &lt; 0, th.ones_like(td_error) * 1, ws * self.args.w_c)
+        # 잠재 상태/행동분포 복원: 다중 헤드 중앙Q의 softmax 분포 P_K를 인코더-디코더가 KL로 추종
+        hat_s, hat_P = self.encoder_decoder(history[:, :-1].clone().detach().reshape(batch.batch_size, batch.max_seq_length-1, -1))
+        stacked_qvals = th.stack([central_target_max_qvals[:, :-1], central_target_max_qvals_2[:, :-1], central_target_max_qvals_3[:, :-1]], dim = -1)
+        P_K = th.softmax(stacked_qvals / self.args.T, dim=-1).squeeze(2)
+        ce_loss = F.kl_div(th.log(hat_P + 1e-8), P_K.detach(), reduction='mean')
+        mse_loss = F.mse_loss(hat_s, batch["state"][:, :-1])
+        latent_loss = ce_loss + mse_loss</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 헤드별 차선 가치를 분리하는 핵심 — is_max_action 여부로 헤드를 골라 잔차 타깃을 만드는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/hyeon1996/S2Q" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2602.17062" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--ar)">
+    <div class="mh">
+      <div class="num">06</div>
+      <h3>ComaDICE <span class="pill ar" style="margin-left:6px">B</span></h3>
+      <span class="vtag">arXiv 2024 · ★2</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p><b>과거 데이터(오프라인)</b>만으로 협력 정책을 배울 때, 데이터에 없는 행동을 과대평가하는 오류를 막기 위해 <b>분포 보정(DICE)</b>으로 정책이 데이터에서 너무 멀어지지 않게 잡아둔다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>오프라인 가치분해 + <b>DICE(분포 보정 추정)</b>. 전역 어드밴티지를 <b>비음수 단조 믹서</b>(MixNet, |w|로 단조성 보장)로 지역 분해. 정상분포 보정비 w_e를 에이전트별로 산출해 w_tot=&Sigma;w_e로 합산, <b>가중 행동복제(weighted BC)</b>로 정책 추출. f-divergence(soft_chisquare) 정규화로 분포 이동 억제.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>오프라인 협력 MARL에 DICE 정규화 결합 — 분포 이동(distribution shift) 억제</li><li>비음수 단조 믹서(|w|)로 IGM-호환 오프라인 분해</li><li>라그랑주 승수(lamb_v/lamb_e)로 정규화 강도 자동 조절</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 ComaDICE.py</span><span class="srcf">runner/madice/discrete.py</span></div>
+        <pre class="code"># runner/madice/discrete.py (lines 60-76, 125-160)
+    def _r_fn(self, x):                       # f-conjugate의 1차 도함수 (occupancy ratio w)
+        if self._f_divergence == "soft_chisquare":
+            _x = x.clamp_max(0)
+            return torch.where(x &lt; 0, torch.exp(_x), x + 1)
+    def _g_fn(self, x):                        # f-divergence 항 g(x)
+        if self._f_divergence == "soft_chisquare":
+            _x = x.clamp_max(0)
+            return torch.where(x &lt; 0, torch.exp(_x) * (_x - 1) + 1, 0.5 * x ** 2)
+    # --- V 학습 (DICE 라그랑주 듀얼) ---
+    v_values = torch.stack([self.model.v.forward(obs[:, :, j, :]) for j in range(n_agents)], 2)
+    e_v = mw_q * (q_values - v_values)        # 믹서 가중치 mw_q(=|w|)로 어드밴티지 분해
+    preactivation_v = (e_v - self._lamb_scale * self._lamb_v) / self._alpha
+    w_v   = self._r_fn(preactivation_v)       # 정상분포 보정비 w
+    f_w_v = self._g_fn(preactivation_v).detach()
+    e_v = e_v.detach()
+    init_values = v_values[is_inits]
+    v_loss0 = (1 - self.gamma) * torch.mean(init_values) if len(init_values) &gt; 0 else torch.tensor(0.0)
+    v_loss1 = torch.mean(- self._alpha * f_w_v)
+    v_loss2 = torch.mean(w_v * (e_v - self._lamb_v))
+    v_loss3 = self._lamb_v
+    v_loss = v_loss0 + v_loss1 + v_loss2 + v_loss3   # 볼록 듀얼 목적
+    # --- 정책: occupancy ratio w_e로 가중한 BC ---
+    e_values = target_w_q * (target_q_values - v_values)
+    preactivation_e = (e_values - self._lamb_scale * self._lamb_e) / self._alpha
+    w_e = self._r_fn(preactivation_e)
+    exp_a = w_e.clamp_max(2).squeeze(-1)
+    if self._use_w_tot: exp_a = exp_a.sum(-1, True)   # 전역 가중치 w_tot</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 보상 함수 r_fn과 믹서 — 비음수 가중 |w|로 단조 분해를 만드는 부분. 오프라인 분해의 볼록성 보장이 여기서 나온다.</p>
+      <div class="mlinks">
+        <a href="https://github.com/vietbt/ComaDICE" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2410.01954" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--ar)">
+    <div class="mh">
+      <div class="num">07</div>
+      <h3>AIR <span class="pill ar" style="margin-left:6px">B</span></h3>
+      <span class="vtag">arXiv 2024 · ★8</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>탐험을 <b>'각자 뭐가 좋을지 모색(개인 탐험)'</b>과 <b>'다 같이 뭐가 좋을지 모색(집단 탐험)'</b>으로 나누고, 학습 가능한 온도 &alpha;로 둘의 비중을 <b>자동으로 조절</b>한다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>QMIX/VDN/QTRAN 가치분해(믹서 교체 가능)에 <b>'개인 식별(Individual Recognition)' 보조 헤드</b> 추가. 이 헤드의 로그우도를 학습 가능한 온도 &alpha;로 가중해 탐험 신호로 부가. alpha loss로 &alpha;를 적응 갱신해 개인 vs 집단 탐험 균형을 자동 조절. loss 교체가 아니라 <b>보조 모듈 추가</b>.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>개인 식별(Individual Recognition) 보조 헤드 — 에이전트 구별 신호</li><li>적응 온도 &alpha;로 개인·집단 탐험 통합(자동 비중 조절)</li><li>QMIX/VDN/QTRAN 어디든 드롭인 가능한 보조 모듈</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 AIR.py</span><span class="srcf">src/learners/air_learner.py</span></div>
+        <pre class="code"># src/learners/air_learner.py (lines 69-121)
+        # Pick the Q-Values for the actions taken by each agent
+        chosen_action_qvals = th.gather(mac_out[:, :-1], dim=3, index=actions).squeeze(3)
+        chosen_action_qvals_ = chosen_action_qvals
+        # 개인 식별(AIR) 헤드: 각 에이전트가 '다른 에이전트의 행동'을 식별하는 확률 텐서
+        chosen_air_vals = th.gather(air_out[:, :-1], dim=4,
+                                    index=th.repeat_interleave(actions.unsqueeze(3), repeats=self.n_agents, dim=3)).squeeze(4)
+        chosen_air_vals = th.diagonal(chosen_air_vals, dim1=2, dim2=3)   # 자기 자신에 대한 식별 확률
+        chosen_air_vals = th.log(chosen_air_vals)                         # 로그우도
+        ...
+        # Mix (QMIX/VDN 믹서로 전역 Q 합성)
+        if self.mixer is not None:
+            chosen_action_qvals = self.mixer(chosen_action_qvals, batch["state"][:, :-1])
+            target_max_qvals   = self.target_mixer(target_max_qvals, batch["state"][:, 1:])
+        targets = rewards + self.args.gamma * (1 - terminated) * target_max_qvals
+        td_error = (chosen_action_qvals - targets.detach())
+        mask1 = mask.expand_as(td_error); mask2 = mask.expand_as(chosen_air_vals)
+        masked_td_error = td_error * mask1
+        masked_air_vals = chosen_air_vals * mask2
+        # 세 손실: TD, 식별 우도(air), 적응 온도 alpha
+        air_loss   = -masked_air_vals.sum() / mask2.sum()
+        alpha_loss = -(self.mac.alpha * ((chosen_air_vals - self.mean) * mask2).detach()).sum() / mask2.sum()
+        td_loss    = (masked_td_error ** 2).sum() / mask1.sum()
+        self.running_mean(chosen_air_vals.detach())     # 식별우도의 이동평균을 alpha 기준선으로</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 학습 단계 — Q값을 행동별로 골라내고, 식별 헤드 로그우도와 &alpha; 가중 탐험 손실을 더하는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/Jugg1er/AIR" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2412.15700" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--ar)">
+    <div class="mh">
+      <div class="num">15</div>
+      <h3>DMCG <span class="pill ar" style="margin-left:6px">B</span></h3>
+      <span class="vtag">arXiv 2025 (preprint) · ★10</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>로봇들을 <b>그래프 노드</b>로 보고, '누가 누구와 협력할지'를 <b>다중 관계·여러 홉(간접 연결)</b>까지 포함해 그래프로 학습한다. 단순한 1:1 관계를 넘어선다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>DCG(협응그래프) 계열 가치분해 + <b>Graph Transformer Network(GTN)</b>. 개별 효용(utility)과 쌍별/메타 페이오프(payoff)로 joint Q를 인수분해(cg_payoff_rank로 저랭크 옵션), max-plus 메시지패싱 추론. <b>GTN이 고차·다중홉 상호작용을 자동 발견</b>해 초기 비연결 에이전트 간에도 새 협응 엣지 생성. epsilon-greedy Q-learning.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>메타 협응그래프 — pairwise 한계 넘어 고차·다중홉(간접) 상호작용 모델링</li><li>GTN이 새 협응 엣지 자동 발견(초기 비연결 에이전트 간)</li><li>DCG 가치분해(joint Q 인수분해) + max-plus 메시지패싱</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 DMCG.py</span><span class="srcf">src/modules/agents/dmcg_agent_feat.py</span></div>
+        <pre class="code"># src/modules/agents/dmcg_agent_feat.py (lines 32-63)
+    def get_edge_index(self, type="star"):   # 초기 그래프 구조 생성
+        if type == "line":
+            edges = [[i, i + 1] for i in range(self.N - 1)]          # 에이전트를 선형 배치
+        elif type == "full":
+            edges = [[(j, i + j + 1) for i in range(self.N - j - 1)]
+                     for j in range(self.N - 1)]                       # 완전그래프
+            edges = [e for l in edges for e in l]
+        elif type == 'cycle':                                          # 원형 배치
+            edges = [(i, i + 1) for i in range(self.N - 1)] + [(self.N - 1, 0)]
+        elif type == 'star':                                           # 0번 에이전트 중심 별형
+            edges = [(0, i + 1) for i in range(self.N - 1)]
+        edge_index = th.tensor(edges).T
+        return edge_index.to(self.device)
+
+    def get_adjacency_matrix(self, type="allstar"):   # 다중 관계(base relation) 집합 구성
+        A = []
+        if type == "lcs":                              # line+cycle+star 동시 보유
+            for t in ["line", "cycle", "star"]:
+                edges = self.get_edge_index(type=t)
+                value_tmp = th.ones(edges.shape[1]).type(th.FloatTensor).to(self.device)
+                A.append((edges, value_tmp))
+        elif type == "allstar":                        # 모든 노드를 중심으로 한 별형들의 합집합
+            all_edges = [[(k, i) for i in range(self.N) if i != k] for k in range(self.N)]
+            for e in all_edges:
+                edges = th.tensor(e).T
+                value_tmp = th.ones(edges.shape[1]).type(th.FloatTensor).to(self.device)
+                A.append((edges, value_tmp))
+        elif type in ("line", "cycle", "star", "full"):
+            for t in [type] * self.N:
+                edges = self.get_edge_index(type=t)
+                value_tmp = th.ones(edges.shape[1]).type(th.FloatTensor).to(self.device)
+                A.append((edges, value_tmp))
+        return A</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> get_edge_index — GTN이 에이전트 간 관계(엣지)를 어떻게 구성하는지 보여주는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/Nikunj-Gupta/dmcg-marl" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2502.04028" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sC"><div class="wrap">
+  <div class="shead"><span class="idx C">그룹 C</span><h2>멀티로봇 · 형성 · 메모리 · 벤치마크</h2></div>
+  <div class="gintro" style="--gc:var(--jepa)"><p>로봇 군집이 <b>물리적으로 협력</b>하거나, <b>부분 관측을 메모리로 극복</b>하거나, <b>대규모 다중에이전트를 벤치마크</b>하는 연구들. 알고리즘 자체보다 <b>환경·표현·sim-to-real 배포</b>가 핵심 기여인 경우가 많습니다. JAX 가속과 실기체 배포가 두드러집니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">12</div>
+      <h3>CASH <span class="pill jepa" style="margin-left:6px">C</span></h3>
+      <span class="vtag">CoRL 2025 · ★2</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>각 로봇에 <b>'능력 카드'(capability — 속도·역할 등)를 같이 입력</b>하면, 하나의 정책이 능력에 맞춰 다르게 행동한다. 파라미터를 나누지 않고 <b>단일 공유 정책</b>으로 이질적 팀을 조종한다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>QMIX(가치)·MAPPO(정책경사) 둘 다 지원; 공통은 <b>하이퍼네트워크 디코더</b>. capability 벡터를 받아 <b>정책 고정면(decoder weight)을 즉석 생성</b>. capability만 바꾸면 한 정책이 공격/수비·빠름/느림을 자동 분담. 훈련 미관찰 팀 조합(test_teams)으로 일반화 평가.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>capability-conditioned 하이퍼네트 — 단일 공유 파라미터로 이질적 멀티로봇 조정</li><li>파라미터 분할 없이 능력 벡터만으로 역할·이질성 표현</li><li>JAX 정책 → GT STAR Lab Robotarium 실기체 배포(sim-to-real)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 CASH.py</span><span class="srcf">jaxmarl/policies/policies.py</span></div>
+        <pre class="code"># jaxmarl/policies/policies.py (lines 128-188)
+class AgentHyperRNN(nn.Module):
+    # 파라미터 공유용 동질 에이전트: 모든 에이전트가 같은 obs/action 차원을 가정
+    action_dim: int
+    hidden_dim: int
+    init_scale: float
+    dim_capabilities: int      # 팀당 capability 차원
+    hypernet_kwargs: dict
+
+    def hyper_forward(self, in_dim, out_dim, target_in, hyper_in, time_steps, batch_size):
+        # y = xW + b 를 계산, 단 W/b는 하이퍼네트가 hyper_in(=obs+cap)으로부터 생성
+        num_weights = (in_dim * out_dim)
+        weight_hypernet = HyperNetwork(hidden_dim=self.hypernet_kwargs["HIDDEN_DIM"],
+                                       output_dim=num_weights,
+                                       init_scale=self.hypernet_kwargs["INIT_SCALE"],
+                                       num_layers=self.hypernet_kwargs["NUM_LAYERS"],
+                                       use_layer_norm=self.hypernet_kwargs["USE_LAYER_NORM"])
+        weights = weight_hypernet(hyper_in).reshape(time_steps, batch_size, in_dim, out_dim)
+        bias_hypernet = HyperNetwork(..., output_dim=out_dim, init_scale=0, ...)
+        biases = bias_hypernet(hyper_in).reshape(time_steps, batch_size, 1, out_dim)
+        target_out = jnp.matmul(target_in[:, :, None, :], weights) + biases
+        return target_out.squeeze(axis=2)
+
+    @nn.compact
+    def __call__(self, hidden, x, train=True):
+        orig_obs, dones = x
+        cap = orig_obs[:, :, -self.dim_capabilities:]   # 마지막 dim_cap 원소 = capability
+        obs = orig_obs[:, :, :-self.dim_capabilities]
+        time_steps, batch_size, obs_dim = obs.shape
+        embedding = nn.relu(nn.Dense(self.hidden_dim, ...)(obs))   # 인코더 MLP
+        hidden, embedding = ScannedRNN()(hidden, (embedding, dones))  # GRU 순차처리
+        # 디코더 가중치를 orig_obs(cap 포함)로부터 하이퍼네트가 생성
+        q_vals = self.hyper_forward(self.hidden_dim, self.action_dim, embedding, orig_obs, time_steps, batch_size)
+        return hidden, q_vals</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> AgentHyperRNN — capability를 받아 GRU 가중치를 동적 생성하는 하이퍼네트워크의 핵심.</p>
+      <div class="mlinks">
+        <a href="https://github.com/GT-STAR-Lab/CASH" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2501.06058" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">13</div>
+      <h3>JaxRobotarium <span class="pill jepa" style="margin-left:6px">C</span></h3>
+      <span class="vtag">CoRL 2025 · ★25</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>멀티로봇 시뮬레이터(Robotarium)를 <b>JAX로 완전 벡터화</b>해, GPU 하나에서 10분 만에 학습하고 <b>같은 코드로 실제 로봇에 배포</b>하는 플랫폼.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>플랫폼 자체는 알고리즘 불가지론적(JaxMARL 베이스라인 MAPPO/IPPO/QMIX 그대로). 핵심 기여는 <b>sim-to-real 배포 파이프라인</b>: 학습된 Flax state_dict를 flax_to_torch로 PyTorch로 변환(_dense는 전치, _bias는 그대로)해 실기체 추론 actor에 적재. navigation 보상은 거리 셰이핑 + 위반 패널티(jnp.where 분기).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>Robotarium의 JAX 완전 벡터화·미분가능 재구현 (단일 GPU ~10분 학습)</li><li>동일 환경 정의→실기체 배포(sim-to-real) end-to-end 파이프라인</li><li>Flax→PyTorch 가중치 변환(flax_to_torch)으로 배포 호환</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 JaxRobotarium.py</span><span class="srcf">jaxrobotarium/scenarios/navigation.py</span></div>
+        <pre class="code"># jaxrobotarium/scenarios/navigation.py (lines 136-176)
+    def rewards(self, state: State) -&gt; Dict[str, float]:
+        # 에이전트별 셰이핑 보상(목표까지 거리) + 전역 위반 패널티
+        goals = state.p_pos[self.num_agents:, :2]
+        agent_pos = state.p_pos[:self.num_agents, :2]
+        d_goal = jnp.linalg.norm(agent_pos - goals, axis=1)
+        pos_rew = d_goal * self.pos_shaping            # pos_shaping 기본 -1
+
+        # 충돌/경계 위반에 대한 전역 패널티
+        violations = self._get_violations(state)
+        collisions = violations['collision']
+        boundaries = violations['boundary']
+        violation_rew = self.violation_shaping * (collisions + boundaries)
+
+        # 위반이 있으면 패널티로, 없으면 거리 셰이핑 보상으로 대체
+        return {agent: jnp.where(violation_rew == 0, pos_rew[i], violation_rew)
+                for i, agent in enumerate(self.agents)}
+
+    def get_obs(self, state: State) -&gt; Dict:
+        # 관측 = (자기 pose, 목표로의 벡터)
+        goals = state.p_pos[self.num_agents:, :2]
+        agent_pos = state.p_pos[:self.num_agents, :2]
+        to_goal = goals - agent_pos
+        return {a: jnp.concatenate([state.p_pos[i], to_goal[i]])
+                for i, a in enumerate(self.agents)}</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> navigation 보상 — 거리 셰이핑과 위반 패널티를 jnp.where로 분기하는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/GT-STAR-Lab/JaxRobotarium" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2505.06771" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">14</div>
+      <h3>SRMT <span class="pill jepa" style="margin-left:6px">C</span></h3>
+      <span class="vtag">arXiv 2025 (ICLR 제출·미확정) · ★36</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>각 로봇이 <b>자기 기억을 트랜스포머로 갱신</b>하고, 그 기억을 다른 로봇들과 <b>cross-attention으로 공유(pooled)</b>한다. 말을 안 해도 <b>암묵적으로 협응</b>하는 길찾기.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>Sample-Factory 기반 <b>비동기 PPO(APPO)</b>. ResNet 인코더 + <b>GPT2Block 트랜스포머 코어</b>(add_cross_attention=True). 자기 순환 메모리를 갱신하고 cross-attention으로 전역 메모리를 pooled 공유. 부분관측 <b>평생 길찾기(lifelong pathfinding, on_target='restart')</b>, num_agents=64까지 확장. 보상 함수를 CLI로 전환(sparse/dense/directional...).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>공유 순환 메모리 트랜스포머(SRMT) — 명시적 통신 없는 암묵적 협응</li><li>cross-attention 메모리 풀링으로 부분관측 평생 길찾기</li><li>대규모 동질 에이전트(64대) 확장, 다양한 보상 함수 비교</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 SRMT.py</span><span class="srcf">srmt/model.py</span></div>
+        <pre class="code"># srmt/model.py (lines 143-205)
+class TransformerCore(ModelCore):
+    def __init__(self, cfg: Config, input_size: int):
+        super().__init__(cfg)
+        self.core_cfg: CoreConfig = CoreConfig(**cfg.core)
+        self.use_memory = cfg.core_memory
+        self.use_global_memory = cfg.use_global_memory
+        self.num_agents = cfg.environment['grid_config']['num_agents']
+        core_cfg_copy = cfg.core.copy()
+        core_cfg_copy['hidden_size'] = core_cfg_copy.pop('core_hidden_size')
+        self.core_transformer = GPT2Block(GPT2Config(**core_cfg_copy))  # 트랜스포머 코어 블록
+        self.wpe = nn.Embedding(core_cfg_copy['max_position_embeddings'],
+                                self.core_cfg.core_hidden_size)        # 위치 임베딩
+        if self.use_memory:
+            self.mem_head = nn.Linear(self.core_cfg.core_hidden_size,
+                                      self.core_cfg.core_hidden_size, bias=False)
+        self.ln_f = nn.LayerNorm(self.core_cfg.core_hidden_size, eps=1e-5)
+
+    def forward(self, head_output, rnn_states, agent_memory=None,
+                global_memory=None, history_seq=None, **kwargs):
+        ...
+        if agent_memory is not None:
+            inputs = torch.cat([agent_memory_batch, inputs], dim=1)  # 자기 메모리를 앞에 prepend
+        position_ids = torch.arange(0, inputs.size(1)).unsqueeze(0).to('cuda')
+        hidden_states = inputs + self.wpe(position_ids)
+        encoder_hidden_states = None
+        if agent_memory is not None and self.use_global_memory:
+            encoder_hidden_states = restored_global_memory.contiguous()  # 공유 메모리에 cross-attn
+        x = self.core_transformer(hidden_states=hidden_states.contiguous(),
+                                  encoder_hidden_states=encoder_hidden_states)[0]
+        x = self.ln_f(x)
+        core_out = x[:, -1:]
+        my_new_mem = self.mem_head(my_new_mem)   # 갱신된 자기 메모리 산출</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> TransformerCore — GPT2Block으로 자기 메모리를 갱신하고 cross-attention으로 전역 메모리를 통합하는 코어.</p>
+      <div class="mlinks">
+        <a href="https://github.com/Aloriosa/srmt" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2501.13200" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">19</div>
+      <h3>MA-Craftax <span class="pill jepa" style="margin-left:6px">C</span></h3>
+      <span class="vtag">arXiv 2025 · ★12</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>Minecraft 같은 오픈엔드 게임(Craftax)을 <b>여러 에이전트 버전</b>으로 만들어, 에이전트 수를 늘리며 확장성을 벤치마크한다. 모든 베이스라인(IPPO/MAPPO/PQN)을 RNN 백본으로 제공.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>IPPO(에이전트별 독립 PPO)·MAPPO(공유 가치 baseline)·PQN(VDN 가치 합). 모두 <b>RNN(GRU) 백본</b>에 파라미터 공유. PPO 손실 = loss_actor + VF_COEF·value_loss − ENT_COEF·entropy. <b>GAE</b>(gamma·gae_lambda로 reverse scan). <b>num_agents</b> 인자로 에이전트 수 구성, JAX end-to-end jit로 다수 환경×다수 에이전트 병렬 롤아웃(250M env steps).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>Craftax-MA(협력형 Coop) — num_agents로 확장성 평가하는 many-agent 오픈엔드 벤치마크</li><li>IPPO/MAPPO/PQN(VDN) 표준 베이스라인(RNN 백본) 통합 제공</li><li>JAX end-to-end jit + 벡터화로 가속기 내 병렬·에이전트 확장</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 MA-Craftax.py</span><span class="srcf">baselines/ippo_rnn.py</span></div>
+        <pre class="code"># baselines/ippo_rnn.py (lines 281-307)
+# IPPO: 각 에이전트가 공유 파라미터 RNN 정책으로 독립 PPO 갱신.
+# 표준 PPO-clip 목적함수 + 클립된 가치손실 + 엔트로피 보너스.
+# CALCULATE ACTOR LOSS
+logratio = log_prob - traj_batch.log_prob
+ratio = jnp.exp(logratio)                       # 중요도 비율 \pi_new/\pi_old
+gae = (gae - gae.mean()) / (gae.std() + 1e-8)   # 어드밴티지 정규화
+loss_actor1 = ratio * gae
+loss_actor2 = (
+    jnp.clip(
+        ratio,
+        1.0 - config["CLIP_EPS"],
+        1.0 + config["CLIP_EPS"],               # PPO 클리핑 구간
+    )
+    * gae
+)
+loss_actor = -jnp.minimum(loss_actor1, loss_actor2)  # 비관적(min) 목적
+loss_actor = loss_actor.mean()
+entropy = pi.entropy().mean()                   # 탐험 장려
+
+# debug
+approx_kl = ((ratio - 1) - logratio).mean()
+clip_frac = jnp.mean(jnp.abs(ratio - 1) &gt; config["CLIP_EPS"])
+
+total_loss = (
+    loss_actor
+    + config["VF_COEF"] * value_loss            # 가치손실 가중
+    - config["ENT_COEF"] * entropy              # 엔트로피 보너스
+)
+return total_loss, (value_loss, loss_actor, entropy, ratio, approx_kl, clip_frac)</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> IPPO 학습 — 공유 파라미터 RNN 정책으로 각 에이전트가 독립 PPO 갱신. 표준 PPO 손실(actor+value−entropy)과 GAE.</p>
+      <div class="mlinks">
+        <a href="https://github.com/BaselOmari/MA-Craftax" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2511.04904" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sD"><div class="wrap">
+  <div class="shead"><span class="idx D">그룹 D</span><h2>LLM 다중에이전트 + 분산 RL 시스템</h2></div>
+  <div class="gintro" style="--gc:var(--hyb)"><p><b>대형 언어/비전 모델(LLM/VLM)을 강화학습으로 후학습</b>하거나, 그 <b>거대한 학습을 수천 GPU에 분산</b>시키는 시스템. GRPO(그룹 상대 이점)가 핵심 손실로, verl·AReaL·siiRL 같은 분산 엔진이 그 위에서 돕니다. LLM 에이전트들 사이 <b>크레딧 할당</b>이 차별점입니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--hyb)">
+    <div class="mh">
+      <div class="num">09</div>
+      <h3>VIKI-R <span class="pill hyb" style="margin-left:6px">D</span></h3>
+      <span class="vtag">NeurIPS 2025 (D&B 트랙) · ★94</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>여러 로봇이 <b>시각(VLM)으로 협업</b>하는 법을 강화학습으로 가르친다. 위에서 '어떤 로봇이 할지' 고르고, 그 로봇들에 '무슨 순서로 할지' 계획을 세우는 <b>계층적 시각 추론</b>.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>Qwen2.5-VL에 SFT→<b>GRPO</b> 2단계 후학습(verl 백엔드, adv_estimator=grpo). <b>검증 가능 보상</b>: 0.1·format(&lt;think&gt;/&lt;answer&gt; 구조 + 파싱 가능 계획) + 0.9·acc(SAPIEN 물리 엔진이 목표/시간 제약 실행 검증 + 계획 길이 효율). 그룹 내 정규화 GRPO advantage로 정책 갱신.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>VIKI-Bench — 임베디드 다중에이전트 협업 계층적 시각 추론 벤치마크(L1활성화·L2계획·L3궤적)</li><li>SFT→GRPO 2단계 VLM 후학습 프레임워크</li><li>검증 가능 보상(format + SAPIEN 물리 실행 acc)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 VIKI-R.py</span><span class="srcf">verl/verl/utils/reward_score/viki_2.py</span></div>
+        <pre class="code"># verl/verl/utils/reward_score/viki_2.py (lines 22-58, 135-136)
+# VIKI-R의 L2(Task Planning) GRPO 보상: 포맷 보상(0.1) + 정확도 보상(0.9)
+def format_reward(predict_str: str) -&gt; float:
+    # &lt;think&gt;...&lt;/think&gt;&lt;answer&gt;...&lt;/answer&gt; 구조 검사
+    structure_pattern = re.compile(r'&lt;think&gt;.*&lt;/think&gt;.*&lt;answer&gt;.*&lt;/answer&gt;.*', re.DOTALL)
+    if not re.fullmatch(structure_pattern, predict_str):
+        return 0.0
+    answer_match = re.search(re.compile(r'&lt;answer&gt;(.*?)&lt;/answer&gt;', re.DOTALL), predict_str)
+    if not answer_match:
+        return 0.0
+    answer_content = answer_match.group(1).strip()
+    # {{...}} 이중 중괄호 정규화
+    if re.search(re.compile(r'\{\{.*\}\}', re.DOTALL), answer_content):
+        answer_content = answer_content.replace('{{', '{').replace('}}', '}')
+    try:
+        parsed = ast.literal_eval(answer_content)   # list/dict 파싱 가능 시 1.0
+        return 1.0 if isinstance(parsed, (list, dict)) else 0.0
+    except (ValueError, SyntaxError, TypeError):
+        return 0.0
+
+# acc_reward: &lt;answer&gt; 파싱 → 로봇별 액션 시퀀스 변환 → eval_single(물리 제약·시간 제약 검증)
+# 성공 시 gt time_steps 길이 / 예측 길이 비율이 0.99≥면 1.0(효율성 게이트)
+def compute_score(predict_str: str, ground_truth) -&gt; float:
+    return 0.1 * format_reward(predict_str) + 0.9 * acc_reward(predict_str, ground_truth)</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 보상 계산 — format 보상(구조·파싱)과 acc 보상(SAPIEN 실행 검증)을 0.1:0.9로 합산하는 곳.</p>
+      <div class="mlinks">
+        <a href="https://github.com/MARS-EAI/VIKI-R" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2506.09049" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--hyb)">
+    <div class="mh">
+      <div class="num">10</div>
+      <h3>MARTI <span class="pill hyb" style="margin-left:6px">D</span></h3>
+      <span class="vtag">ICLR 2026 (저자 자가표기·미확인) · ★526</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>여러 LLM 에이전트가 <b>대화·토론(chain/debate/MoA)</b>으로 협력할 때, <b>각 턴·각 에이전트의 기여도(크레딧)</b>를 따져 보상을 쪼개주는 통합 학습 프레임워크.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>PPO/GRPO/REINFORCE++/TTRL 지원. 다중에이전트 스크립트는 <b>group_norm advantage + GSPO loss(시퀀스 레벨)</b> + TIS 보정. 턴별 로컬 보상을 margin(현재−과거평균) 또는 quality(품질 가중)로 <b>셰이핑</b>(alpha=0.5), 결과 보상 beta=0.5 가산. debate는 최종 라운드 majority_vote로 outcome 산출.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>워크플로(chain/debate/MoA/mathchat)별 크레딧 할당·보상 셰이핑 내장</li><li>margin/quality 턴별 보상 셰이핑 + 결과 보상 가산</li><li>이종 다중에이전트 동시 학습(Qwen3-8B+boba 등) + vLLM v1 Hybrid Engine</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 MARTI.py</span><span class="srcf">marti/verifiers/auto_reward_alloc.py</span></div>
+        <pre class="code"># marti/verifiers/auto_reward_alloc.py (lines 70-110)
+# MARTI 핵심: 멀티에이전트 턴별 보상 셰이핑(크레딧 할당). margin/quality 두 방식.
+def _reward_shaping(self, local_rewards, turn_ids=None):
+    if self.name in ["quality", "margin", "quality_with_outcome", "margin_with_outcome"]:
+        raw_rewards = deepcopy(local_rewards)
+        M, T = raw_rewards.shape            # M=에이전트(또는 문제), T=턴
+        for m in range(M):
+            start = 1
+            if turn_ids is not None:        # mixture는 turn_id==1부터 셰이핑
+                for turn, turn_id in enumerate(turn_ids[m]):
+                    if turn_id == 1:
+                        start = turn; break
+            for t in range(start, T):
+                # Q = 이전 턴들의 평균 보상(베이스라인/품질 추정)
+                Q = np.mean(raw_rewards[:, :t]) if turn_ids is None else np.mean(raw_rewards[m][:t])
+                R_final = raw_rewards[m][t]
+                if "quality" in self.name:  # 품질 가중: Q·R - (1-Q)(1-R)
+                    dynamic_term = Q * R_final - (1 - Q) * (1 - R_final)
+                    shaped_reward = R_final + self.alpha * dynamic_term
+                elif "margin" in self.name: # 마진: 현재 턴 보상 - 과거 평균(우위)
+                    baseline_term = R_final - Q
+                    shaped_reward = R_final + self.alpha * baseline_term
+                local_rewards[m][t] = shaped_reward
+        if "outcome" in self.name:          # 최종 결과 보상을 beta로 가산
+            for m in range(M):
+                for t in range(T):
+                    local_rewards[m][t] += self.beta * raw_rewards[m][-1]
+    return local_rewards</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 핵심 크레딧 할당 — 턴별 보상을 margin/quality로 셰이핑하고 결과 보상을 가산하는 auto_reward_alloc.</p>
+      <div class="mlinks">
+        <a href="https://github.com/TsinghuaC3I/MARTI" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://openreview.net/forum?id=E7jZqo0A50" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--hyb)">
+    <div class="mh">
+      <div class="num">11</div>
+      <h3>PettingLLMs <span class="pill hyb" style="margin-left:6px">D</span></h3>
+      <span class="vtag">ICLR 2026 (저자 자가표기·미확인) · ★185</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>고정된 대화 구조 안에서 <b>에이전트별로, 그리고 턴별로</b> 그룹을 나눠 이점(advantage)을 계산한다. 누가 어느 턴에 잘했는지 <b>아주 잘게 쪼개</b> 신용을 할당하고 역할을 특화시킨다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>AT-GRPO(Agent- and Turn-wise GRPO)</b>, verl GRPO 위에 구현. 고정 MAS 토폴로지 내에서 에이전트×턴으로 그룹화해 상대 이점 계산. env_final_reward를 <b>turn_weighted</b>((turn+1)/max_turns) 또는 <b>discount</b>(&gamma;^(max_turns−turn))로 턴별 재분배. norm_adv_by_std_in_grpo, KL(low_var_kl).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>AT-GRPO — 에이전트·턴별 그룹화로 미세 크레딧 할당</li><li>턴/홉별 보상 재분배(turn_weighted/discount)로 역할 특화</li><li>L2=공유베이스+역할 LoRA / L3=완전 독립 모델(유연한 정책 분리)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 PettingLLMs.py</span><span class="srcf">pettingllms/trainer/core_algo.py</span></div>
+        <pre class="code"># pettingllms/trainer/core_algo.py (lines 14, 128-167)
+# AT-GRPO 환경 보상 계산: 턴 인덱스 기반 가중/할인으로 턴별 크레딧 부여.
+def calculate_reward(data_proto, algorithm="default", **kwargs):
+    # env_final_reward(환경 최종 보상)를 turn_idx에 따라 재분배
+    env_final_reward = data_proto.non_tensor_batch["env_final_reward"]
+    if algorithm == "turn_weighted":
+        # 후반 턴일수록 높은 가중: r = env_final_reward * (turn_idx+1)/max_turns
+        turn_idx = data_proto.non_tensor_batch.get("turn_idx", np.zeros_like(env_final_reward))
+        max_turns = kwargs.get("max_turns", 8)
+        weights = (turn_idx + 1) / max_turns
+        data_proto.non_tensor_batch["reward"] = env_final_reward * weights
+    elif algorithm == "discount":
+        # 초반 턴을 더 할인: r = env_final_reward * gamma^(max_turns - turn_idx)
+        turn_idx = data_proto.non_tensor_batch.get("turn_idx", np.zeros_like(env_final_reward))
+        max_turns = kwargs.get("max_turns", 8)
+        gamma = kwargs.get("discount_factor", 0.99)
+        discount = np.power(gamma, np.maximum(0, max_turns - turn_idx))
+        data_proto.non_tensor_batch["reward"] = env_final_reward * discount
+    # ...(hop_weighted/hop_discount: 그래프 MAS의 hop_idx 기반, default 등)
+    return data_proto
+
+# docs/core-concepts/at-grpo.md: 에이전트·턴별 그룹 상대 이점
+# for agent_role: for turn_idx: adv[g] = r[g] - mean(r[group(agent_role,turn_idx)])</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> AT-GRPO 보상 계산 — env 보상을 turn_idx 기반으로 가중/할인해 턴별 크레딧으로 재분배.</p>
+      <div class="mlinks">
+        <a href="https://github.com/pettingllms-ai/PettingLLMs" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2510.11062" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--hyb)">
+    <div class="mh">
+      <div class="num">16</div>
+      <h3>verl <span class="pill hyb" style="margin-left:6px">D</span></h3>
+      <span class="vtag">EuroSys 2025 (시스템 학회) · ★21964</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>LLM에 강화학습 후학습(RLHF)을 <b>수천 GPU까지 확장</b>하는 시스템. <b>생성(rollout)과 학습을 한 자원 풀에서 섞어(hybrid)</b> 돌려 GPU를 효율적으로 쓴다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>PPO/GRPO/GSPO/RLOO/ReMax/Dr.GRPO(adv_estimator로 선택). <b>hybrid-controller 구조</b>: 단일 컨트롤러가 데이터플로 기술, Role별 다중 워커(Ray)가 SPMD 연산. <b>3D-HybridEngine</b>으로 학습↔추론 가중치를 즉시 재분할. GRPO는 critic 없이 그룹 정규화 A_i=(r_i−&mu;)/(&sigma;+&epsilon;)로 advantage, PPO는 GAE+가치망. KL 정규화.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>hybrid-controller 패러다임 — 단일 컨트롤러 데이터플로 + 다중 컨트롤러 연산</li><li>3D-HybridEngine으로 학습↔추론 가중치 즉시 재분할(GPU 효율)</li><li>다양한 RL 변종(GRPO/GSPO/RLOO/ReMax) adv_estimator 추상화</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 verl.py</span><span class="srcf">verl/trainer/ppo/core_algos.py</span></div>
+        <pre class="code"># verl/trainer/ppo/core_algos.py (lines 304-331)
+# GRPO outcome-advantage 계산: 그룹(같은 프롬프트의 여러 샘플) 내부에서
+# 점수를 평균/표준편차로 정규화 → critic 없이 advantage를 만든다.
+scores = token_level_rewards.sum(dim=-1)  # 응답별 스칼라 보상
+
+id2score = defaultdict(list)
+id2mean = {}
+id2std = {}
+
+with torch.no_grad():
+    bsz = scores.shape[0]
+    for i in range(bsz):
+        id2score[index[i]].append(scores[i])      # 같은 프롬프트 index로 그룹화
+    for idx in id2score:
+        if len(id2score[idx]) == 1:
+            id2mean[idx] = torch.tensor(0.0)
+            id2std[idx] = torch.tensor(1.0)
+        elif len(id2score[idx]) &gt; 1:
+            scores_tensor = torch.stack(id2score[idx])
+            id2mean[idx] = torch.mean(scores_tensor)  # 그룹 평균(baseline)
+            id2std[idx] = torch.std(scores_tensor)    # 그룹 표준편차
+        else:
+            raise ValueError(f"no score in prompt index: {idx}")
+    for i in range(bsz):
+        if norm_adv_by_std_in_grpo:
+            scores[i] = (scores[i] - id2mean[index[i]]) / (id2std[index[i]] + epsilon)  # GRPO
+        else:
+            scores[i] = scores[i] - id2mean[index[i]]   # Dr.GRPO (std 정규화 생략)
+    scores = scores.unsqueeze(-1) * response_mask        # 토큰별로 broadcast</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> GRPO outcome-advantage 계산 — 같은 프롬프트의 응답 그룹에서 정규화해 advantage를 만드는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/verl-project/verl" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2409.19256" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--hyb)">
+    <div class="mh">
+      <div class="num">17</div>
+      <h3>AReaL <span class="pill hyb" style="margin-left:6px">D</span></h3>
+      <span class="vtag">arXiv 2025 · ★5304</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>생성(rollout)과 학습(training)을 <b>완전히 분리해 비동기로</b> 돌린다. 학습 중에도 계속 새 데이터를 만들어 속도를 올리고, 오래된 데이터 쓰는 부작용은 <b>staleness 보정</b>으로 잡는다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>완전 비동기 PPO/GRPO. InferenceEngine(SGLang/vLLM 원격 생성)과 TrainEngine(FSDP/Megatron)을 분리, <b>max_head_offpolicyness</b>(버전 차 허용 상한)로 staleness 통제. <b>decoupled loss</b>는 proximal logp를 기준으로 importance weight &rho;=exp(log&pi;_&theta;−log&pi;_behavior) 계산해 off-policy 보정. ~2.77x 가속.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>완전 비동기(rollout↔training 완전 분리) RL 시스템</li><li>staleness 보정 PPO(max_head_offpolicyness + proximal logp importance weight)</li><li>decoupled loss로 off-policy 보정, ~2.77x RL 가속</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 AReaL.py</span><span class="srcf">areal/trainer/ppo/actor.py</span></div>
+        <pre class="code"># areal/trainer/ppo/actor.py (lines 408-444)
+# 비동기 RL의 핵심: 생성 시점(behavior) 정책과 학습 시점 정책이 다르므로
+# proximal log-prob을 별도로 '해결(resolve)'해 off-policy 보정을 한다.
+def grpo_loss_fn(
+    logprobs: torch.Tensor,
+    entropy: torch.Tensor,
+    input_data: dict,
+    eps_clip: float,
+    eps_clip_higher: float | None,
+    c_clip: float | None,
+    rejection_sampling: RejectionSamplingConfig | None = None,
+    m2_threshold: float | None = None,
+    importance_sampling_level: str = "token",
+    current_version: int | None = None,            # 현재 학습 정책 버전
+    prox_logp_method: str = PROX_LOGP_METHOD_RECOMPUTE,
+    use_sapo_loss: bool = False,
+    sapo_tau_pos: float = 1.0,
+    sapo_tau_neg: float = 1.05,
+    use_decoupled_loss: bool = False,              # decoupled(behavior/proximal) 손실
+    vocab_min_logits: torch.Tensor | None = None,
+    vocab_max_logits: torch.Tensor | None = None,
+):
+    """Loss function for actor step ... returns loss and logging stats."""
+    old_logp = input_data["logprobs"]              # 생성(behavior) 정책 logp
+    advantages = input_data["advantages"]
+    loss_mask = input_data["loss_mask"].bool()
+    prox_logp_gt = input_data.get("prox_logp")     # forward로 재계산된 proximal(없을 수 있음)
+
+    entropy = entropy.detach()
+
+    # proximal log-prob 결정: 재계산(ground truth) vs 근사
+    prox_logp = _resolve_proximal_logp(
+        prox_logp_gt=prox_logp_gt,
+        prox_logp_method=prox_logp_method,
+        old_logp=old_logp,
+        logprobs=logprobs.detach(),
+        versions=input_data.get("versions"),       # 토큰별 정책 버전(staleness 추적)
+        current_version=current_version,
+    )</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 비동기 RL 핵심 — behavior 정책(생성 시점)과 학습 정책이 다를 때 importance weight를 보정하는 부분.</p>
+      <div class="mlinks">
+        <a href="https://github.com/inclusionAI/AReaL" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2505.24298" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--hyb)">
+    <div class="mh">
+      <div class="num">18</div>
+      <h3>siiRL <span class="pill hyb" style="margin-left:6px">D</span></h3>
+      <span class="vtag">arXiv 2025 · ★360</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>RL 과정 전체를 <b>DAG(방향성 비순환 그래프)</b>로 표현하고, 각 GPU(rank)가 <b>자기 부분만</b> 실행한다. 중앙 컨트롤러 병목 없이 <b>1024+ GPU까지 거의 선형 확장</b>.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>완전 분산 다중 컨트롤러. RL 파이프라인을 <b>Node(NodeType×NodeRole)</b> 추상화로 DAG 데이터플로 기술. 각 rank의 DAGWorker가 자기 TaskGraph 서브그래프를 BFS 순회(ROLLOUT→INFERENCE→ADVANTAGE→TRAIN). 보상·어드밴티지를 별도 역할 노드(REWARD/ADVANTAGE)로 분리해 다른 자원에 독립 배치. PPO/GRPO 계열.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>DAG 데이터플로 RL — 파이프라인을 노드 타입+역할의 DAG로 기술</li><li>완전 분산 다중 컨트롤러(중앙 단일 컨트롤러 제거) — 1024+ GPU near-linear</li><li>역할 분리(REWARD/ADVANTAGE 노드)로 보상·어드밴티지 단계 독립 배치</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 siiRL.py</span><span class="srcf">siirl/execution/dag/node.py</span></div>
+        <pre class="code"># siirl/execution/dag/node.py (lines 44-74)
+# DistFlow의 핵심 추상화: RL 파이프라인을 '노드 타입 + 역할'의 DAG로 기술한다.
+# 각 rank는 이 노드들로 구성된 자기 taskgraph를 순회하며 실행한다.
+class NodeType(Enum):
+    """Define the types of nodes in the DAG."""
+
+    COMPUTE = "COMPUTE"              # 일반 연산 태스크
+    DATA_LOAD = "DATA_LOAD"          # DataLoader에서 데이터 적재
+    ENV_INTERACT = "ENV_INTERACT"    # 환경과 상호작용(멀티턴/embodied)
+    MODEL_INFERENCE = "MODEL_INFERENCE"  # 모델 추론(롤아웃/logp)
+    MODEL_TRAIN = "MODEL_TRAIN"      # 모델 학습(정책/가치 갱신)
+    PUT_TO_BUFFER = "PUT_TO_BUFFER"  # 분산 버퍼에 데이터 적재
+    GET_FROM_BUFFER = "GET_FROM_BUFFER"  # 분산 버퍼에서 데이터 인출
+    BARRIER_SYNC = "BARRIER_SYNC"    # 전역 동기화 지점
+    CUSTOM = "CUSTOM"               # 사용자 정의(executable로 실행)
+
+
+class NodeRole(Enum):
+    """Define the roles that a node plays in a distributed RL framework.
+    This helps with specific scheduling or resource allocation."""
+
+    DEFAULT = "DEFAULT"
+    ACTOR = "ACTOR"
+    ADVANTAGE = "ADVANTAGE"          # 어드밴티지 계산 전용 역할
+    CRITIC = "CRITIC"
+    ROLLOUT = "ROLLOUT"
+    REFERENCE = "REFERENCE"
+    REWARD = "REWARD"
+
+    DYNAMIC_SAMPLING = "DYNAMIC_SAMPLING"  # databuffer 내 동적 샘플링</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> DAG 핵심 추상화 — NodeType(ROLLOUT/INFERENCE/...)과 NodeRole(ACTOR/ADVANTAGE/...) 정의.</p>
+      <div class="mlinks">
+        <a href="https://github.com/sii-research/siiRL" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2507.13833" target="_blank">📄 논문</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sE"><div class="wrap">
+  <div class="shead"><span class="idx" style="color:var(--acc2)">정리</span><h2>어떤 방법을 언제 쓸까 — 선택 가이드</h2></div>
+  <p class="slead">19개 방법을 "무엇을 하고 싶은가" 기준으로 정리합니다. 모든 판단은 각 방법의 실제 코드·환경·학습 신호에 근거합니다.</p>
+  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+    <div class="basics-card"><h4>순서가 중요한 협력이 필요하다</h4>
+      <p>→ <b>SrSv(03)</b>(순차 가치 재분배) 또는 <b>Sable(02)</b>(자기회귀 시퀀스). 문 통과·박스 운반처럼 '앞 로봇이 공간을 열면 뒤 로봇이 밀기' 같은 순차 협력.</p></div>
+    <div class="basics-card"><h4>탐험이 어렵고 느린 과제</h4>
+      <p>→ <b>MAGPO(01)</b>(코치가 탐험 이끌기) 또는 <b>AIR(07)</b>(개인·집단 탐험 적응). 양몰이·희소 보상 환경.</p></div>
+    <div class="basics-card"><h4>오프라인 데이터로 협력 정책 학습</h4>
+      <p>→ <b>ComaDICE(06)</b>(DICE 분포 보정). 시뮬레이터 없이 기존 로그만으로, 또는 실로봇 안전 학습.</p></div>
+    <div class="basics-card"><h4>상황에 따라 최적이 계속 바뀜</h4>
+      <p>→ <b>S2Q(05)</b>(차선 행동 가치 보존). shifting optima — 적이 전술을 바꾸거나 환경이 비정상.</p></div>
+    <div class="basics-card"><h4>여러 종류 로봇을 한 정책으로</h4>
+      <p>→ <b>CASH(12)</b>(capability 하이퍼네트). 빠름/느림·공격/수비 섞인 이질적 팀, 새 조합에도 일반화.</p></div>
+    <div class="basics-card"><h4>부분 관측(안 보이는 상황) 극복</h4>
+      <p>→ <b>SMPE(08)</b>(VAE belief 추정) 또는 <b>SRMT(14)</b>(공유 트랜스포머 메모리). 시야 밖 협업·평생 길찾기.</p></div>
+    <div class="basics-card"><h4>LLM/VLM 에이전트를 RL로 후학습</h4>
+      <p>→ <b>VIKI-R(09)</b>(시각 협업 GRPO) · <b>MARTI(10)</b>(대화 워크플로 크레딧) · <b>PettingLLMs(11)</b>(턴별 미세 크레딧). 언어/시각 모델 협업.</p></div>
+    <div class="basics-card"><h4>대규모 LLM RL 학습 인프라</h4>
+      <p>→ <b>verl(16)</b>(범용·hybrid) · <b>AReaL(17)</b>(완전 비동기 속도) · <b>siiRL(18)</b>(DAG 1024+ GPU). LLM 후학습 시 택일.</p></div>
+  </div>
+  <div class="callout" style="margin-top:24px"><h3>🎯 튜토리얼을 읽는 순서 추천</h3>
+    <p>처음 MARL을 배운다면 <b>들어가며(00) → 그룹 A(직관적 PPO 계열) → 그룹 B(QMIX 단조성)</b> 순으로. 각 카드의 <b>① 직관</b>만 먼저 쭉 읽으면 19개 방법의 '무엇'이 잡히고, <b>④ 실제 코드</b>를 펼쳐보면 '어떻게'가 보입니다. 관심 분야(로봇이면 C, LLM이면 D)로 골라 깊이 파세요. 코드는 모두 각 연구의 공식 저장소에서 가져왔으니, 더 보고 싶으면 GitHub 링크로 직접 가면 됩니다.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div style="font-size:15px;color:var(--mut)"><b style="color:var(--txt)">MARL SOTA 튜토리얼</b> — 2025+ 멀티에이전트 강화학습 19개 방법, 실제 코드로 배우기</div>
+  <div class="src">
+    <b>데이터 출처</b> — 각 방법의 공식 GitHub 저장소 · arXiv · OpenReview. 모든 코드 스니펫은 공식 저장소 원문에서 핵심부를 발췌(일부 라인 생략·병합, 한국어 주석은 설명용). 원문 전체는 카드의 GitHub 링크에서 확인.<br>
+    <b>정직성</b> — 코드를 지어내지 않았고, 타 저장소 코드를 상표만 바꿔 빌려오지 않았습니다. venue는 원문에서 확인된 경우만 확정 표기.
+  </div>
+  <div style="margin-top:16px;color:var(--dim);font-size:12px">기준일 2026-06 · 19개 방법 · 4개 RL 패러다임 그룹</div>
+</div></footer>
+<div class="toTop" id="toTop">↑</div>
+<script>
+const links=[...document.querySelectorAll('nav a.navlink')];
+const secs=links.map(l=>document.querySelector(l.getAttribute('href')));
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{const y=window.scrollY+90;let cur=secs.length-1;
+  for(let i=0;i<secs.length;i++){if(secs[i]&&secs[i].offsetTop>y){cur=i-1;break;}}
+  links.forEach(l=>l.classList.remove('active'));if(cur>=0&&links[cur])links[cur].classList.add('active');
+  toTop.classList.toggle('show',window.scrollY>600);},{passive:true});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body></html>

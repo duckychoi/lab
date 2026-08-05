@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadruped Locomotion RL 튜토리얼 · 2024+ 보행 강화학습 (실제 코드)</title>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)']],displayMath:[['\\[','\\]']]},svg:{fontCache:'global'},startup:{typeset:true}};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root{
+  --bg:#0a0e17; --bg2:#0f1521; --panel:#141c2b; --panel2:#1b2535;
+  --line:#26324a; --line2:#33425f;
+  --txt:#e6edf7; --mut:#9fb0c8; --dim:#6d7d96;
+  --acc:#4da6ff; --acc2:#7c5cff; --grn:#34d399; --amb:#fbbf24; --red:#f87171; --pnk:#f472b6;
+  --jepa:#34d399; --gen:#f472b6; --ar:#fbbf24; --hyb:#7c5cff;
+  --radius:14px; --mw:1180px; --shadow:0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(1200px 700px at 80% -10%,#16213a 0%,transparent 55%),var(--bg);color:var(--txt);
+  font-family:"Segoe UI","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .4em}
+.wrap{max-width:var(--mw);margin:0 auto;padding:0 22px}
+.mono{font-family:"Consolas","Courier New",monospace}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,14,23,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:6px;height:56px;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav .brand{font-weight:800;font-size:15px;color:var(--txt);white-space:nowrap;margin-right:10px}
+nav .brand span{color:var(--acc)}
+nav a.navlink{color:var(--mut);font-size:13.5px;padding:7px 11px;border-radius:8px;white-space:nowrap;transition:.15s}
+nav a.navlink:hover{color:var(--txt);background:var(--panel);text-decoration:none}
+nav a.navlink.active{color:#fff;background:linear-gradient(135deg,var(--acc),var(--acc2))}
+.hero{padding:60px 0 42px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:
+  radial-gradient(600px 300px at 15% 20%,rgba(52,211,153,.16),transparent 60%),
+  radial-gradient(600px 300px at 85% 80%,rgba(77,166,255,.12),transparent 60%);pointer-events:none}
+.hero .tag{display:inline-block;font-size:12.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--grn);border:1px solid var(--line2);border-radius:30px;padding:5px 14px;margin-bottom:18px}
+.hero h1{font-size:clamp(27px,4.6vw,44px);font-weight:850;letter-spacing:-.5px;
+  background:linear-gradient(120deg,#fff 20%,#9cc7ff 60%,#b8f5d8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:clamp(15px,2.1vw,17.5px);color:var(--mut);max-width:820px;margin-top:8px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero .meta .chip{font-size:12.5px;color:var(--mut);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px}
+.hero .meta .chip b{color:var(--txt)}
+.statbar{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+.statbar .s{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.statbar .s .n{font-size:24px;font-weight:800;color:var(--txt)}
+.statbar .s .l{font-size:12px;color:var(--dim);margin-top:2px}
+section{padding:54px 0;border-bottom:1px solid var(--line)}
+.shead{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.shead .idx{font-family:"Consolas",monospace;font-size:13px;font-weight:700}
+.shead .idx.A{color:var(--jepa)} .shead .idx.B{color:var(--ar)} .shead .idx.C{color:var(--gen)} .shead .idx.D{color:var(--acc)}
+.shead h2{font-size:clamp(22px,3.3vw,29px);font-weight:800;letter-spacing:-.3px}
+.slead{color:var(--mut);max-width:860px;margin:0 0 24px;font-size:15px}
+.gintro{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-left:4px solid var(--gc,var(--acc));border-radius:12px;padding:18px 20px;margin-bottom:26px;font-size:14.5px;color:var(--mut)}
+.gintro b{color:var(--txt)}
+.mcard{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-bottom:18px;border-top:3px solid var(--gc,var(--acc))}
+.mcard .mh{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
+.mcard .mh .num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:14px;flex:0 0 auto}
+.mcard .mh h3{font-size:19px;margin:0}
+.mcard .mh .vtag{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:20px;padding:3px 10px;margin-left:auto;white-space:nowrap}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;padding:3px 9px;border-radius:20px;text-transform:uppercase}
+.pill.jepa{background:rgba(52,211,153,.14);color:var(--jepa);border:1px solid rgba(52,211,153,.3)}
+.pill.ar{background:rgba(251,191,36,.14);color:var(--ar);border:1px solid rgba(251,191,36,.3)}
+.pill.diff{background:rgba(244,114,182,.14);color:var(--gen);border:1px solid rgba(244,114,182,.3)}
+.pill.rl{background:rgba(77,166,255,.14);color:var(--acc);border:1px solid rgba(77,166,255,.3)}
+.mcard .blk{margin:14px 0 0}
+.mcard .blk .bh{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;margin-bottom:5px}
+.mcard .blk.intuit .bh{color:var(--grn)}
+.mcard .blk.rl .bh{color:var(--acc)}
+.mcard .blk.contrib .bh{color:var(--acc2)}
+.mcard .blk p{margin:0;color:var(--mut);font-size:14.5px}
+.mcard .blk p b{color:var(--txt)}
+.contrib-list{list-style:none;padding:0;margin:0}
+.contrib-list li{position:relative;padding:7px 0 7px 26px;border-bottom:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+.contrib-list li:last-child{border-bottom:0}
+.contrib-list li:before{content:"▶";position:absolute;left:6px;top:10px;color:var(--acc2);font-size:9px}
+.contrib-list li b{color:var(--txt)}
+.codewrap{margin:6px 0 0}
+.codewrap .cw-h{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);border-bottom:0;border-radius:9px 9px 0 0;padding:8px 14px;font-size:12px}
+.codewrap .cw-h .fn{font-family:Consolas,monospace;color:var(--grn);font-weight:600}
+.codewrap .cw-h .srcf{color:var(--dim);font-size:11px;font-family:Consolas,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:60%}
+pre.code{margin:0;background:#0b1018;border:1px solid var(--line);border-radius:0 0 9px 9px;padding:14px 16px;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:12px;line-height:1.6;color:#cfe3ff;white-space:pre;tab-size:4}
+.codec{font-size:12.5px;color:var(--mut);margin:9px 0 0}
+.codec b{color:var(--grn)}
+.mlinks{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+.mlinks a{display:inline-flex;align-items:center;gap:6px;font-size:12px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:5px 11px;color:var(--mut);transition:.15s}
+.mlinks a:hover{color:var(--txt);border-color:var(--acc);text-decoration:none}
+.mlinks a b{color:var(--txt)}
+.note{background:rgba(52,211,153,.07);border:1px solid rgba(52,211,153,.3);border-radius:12px;padding:14px 18px;margin:18px 0;font-size:13.5px;color:#bfe7d6}
+.note b{color:var(--grn)}
+.warn{background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.3);border-radius:12px;padding:14px 18px;margin:18px 0;font-size:13.5px;color:#fde9b8}
+.warn b{color:var(--amb)}
+.callout{background:linear-gradient(120deg,rgba(124,92,255,.1),rgba(52,211,153,.06));border:1px solid var(--line2);border-radius:var(--radius);padding:22px 24px;margin-top:8px}
+.callout h3{font-size:17px} .callout p{color:var(--mut);font-size:14.5px;margin:.5em 0 0}
+.basics-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;font-size:14px;color:var(--mut)}
+.basics-card h4{color:var(--acc2);font-size:15px;margin:0 0 8px}
+.basics-card p{margin:.4em 0} .basics-card b{color:var(--txt)}
+.basics-card code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-family:Consolas,monospace;color:#cfe3ff;font-size:12.5px}
+.fml{background:#0b1018;border:1px solid var(--line);border-left:3px solid var(--acc2);border-radius:10px;padding:13px 18px;margin:10px 0;overflow-x:auto}
+.fml .fl-h{font-size:11.5px;color:#a99bff;font-weight:700;letter-spacing:.4px;margin-bottom:2px;text-transform:uppercase}
+.fml .fl-c{font-size:12px;color:var(--dim);margin-top:4px;line-height:1.6}
+.fml .fl-c b{color:var(--mut)}
+.fml mjx-container{margin:6px 0!important;color:var(--txt)}
+footer{padding:40px 0 60px;color:var(--dim);font-size:13px}
+footer .src{margin-top:14px;font-size:12px;line-height:1.9}
+footer .src a{color:var(--mut)}
+.toTop{position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:50%;background:var(--panel2);border:1px solid var(--line2);color:var(--txt);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:60;font-size:18px}
+.toTop.show{opacity:1;pointer-events:auto}
+@media(max-width:880px){.statbar{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.statbar{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="brand">QUADRUPED<span> RL 튜토리얼</span></div>
+  <a class="navlink" href="#s0">시작</a>
+  <a class="navlink" href="#sA">A · 표현학습</a>
+  <a class="navlink" href="#sB">B · 제약·안전</a>
+  <a class="navlink" href="#sC">C · Diffusion</a>
+  <a class="navlink" href="#sD">D · Parkour·Bio</a>
+  <a class="navlink" href="#sE">정리</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">QUADRUPED LOCOMOTION · 2024+ · 실제 코드 튜토리얼</span>
+  <h1>사족보행 로봇 강화학습 SOTA,<br>코드로 한눈에 읽히는 튜토리얼</h1>
+  <p class="sub">2024년 이후 발표된 사족보행(quadruped) 강화학습 방법 중 <b>공개 코드가 확보된 11개</b>를 RL 패러다임별로 묶어, 직관 설명 → RL 방법 → 핵심 기여 → <b>실제 공식 저장소 원문 코드</b> 순으로 풉니다. 코드는 제가 작성하지 않고 각 연구의 공식 저장소 발췌본을 그대로 실었습니다.</p>
+  <div class="meta">
+    <span class="chip">튜토리얼 방법 <b>11</b></span>
+    <span class="chip">RL 패러다임 그룹 <b>4</b></span>
+    <span class="chip">공개 코드 확보 <b>11 / 20</b></span>
+    <span class="chip">기준 <b>2024-2026</b></span>
+  </div>
+  <div class="statbar">
+    <div class="s"><div class="n" style="color:var(--jepa)">3</div><div class="l">A · 표현학습 (proprio→latent)</div></div>
+    <div class="s"><div class="n" style="color:var(--ar)">2</div><div class="l">B · 제약·안전 PPO</div></div>
+    <div class="s"><div class="n" style="color:var(--gen)">4</div><div class="l">C · Diffusion 정책</div></div>
+    <div class="s"><div class="n" style="color:var(--acc)">2</div><div class="l">D · Parkour·생체모방</div></div>
+  </div>
+</div></header>
+
+<section id="s0"><div class="wrap">
+  <div class="shead"><span class="idx" style="color:var(--acc2)">00</span><h2>읽기 전에 — 사족보행 RL 한 줄 요약</h2></div>
+  <p class="slead">튜토리얼 본문에 들어가기 전, 이 문서 전체를 관통하는 세 가지 핵심 개념을 짚고 갑니다. 아래 개념들이 본문의 모든 방법의 "왜 그렇게 짰는지"를 설명합니다.</p>
+  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px">
+    <div class="basics-card"><h4>① Sim-to-Real &amp; Domain Randomization</h4>
+      <p>사족보행 RL의 가장 큰 난제. 시뮬레이터는 <b>실제 지형·마찰·지연·하중을 정확히 모름</b>. 그래서 학습 때 <b>물리 파라미터를 무작위로 흔들(domain randomization)</b>어, 정책이 어떤 환경에서도 견디도록 만듭니다.</p>
+      <p>본문 대부분 방법이 proprioceptive(관절·IMU만) 관측을 쓰는 이유 — 비전·외부 센서 없이도 흔들리는 환경에 robust하려면 내부 표현을 잘 배워야 하니까요.</p></div>
+    <div class="basics-card"><h4>② PPO (rsl_rl / legged_gym) — 사실상 표준</h4>
+      <p><b>PPO</b>가 quadruped RL의 뼈대. ETH Zurich의 <code>rsl_rl</code>·<code>legged_gym</code> 프레임워크가 사실상 표준이라, 본문 11개 중 8개가 이 위에서 돕니다. 공식: <code>clip=0.2, γ=0.99, GAE λ=0.95</code>, <b>adaptive KL LR</b>(desired KL=0.01).</p>
+      <p>actor/critic MLP <code>[512,256,128]</code> ELU가 기본 구성. 그룹 A·B·D가 모두 PPO 기반이고, 그룹 C도 diffusion 위에 PPO를 얹습니다.</p></div>
+    <div class="basics-card"><h4>③ Teacher-Student · 비대칭 Actor-Critic</h4>
+      <p>학습할 때는 <b>teacher(특권 정보: 지형·속도·외력)를 보는 크리틱</b>으로 학습하고, 실행할 때는 <b>student(proprio만) 액터</b>로 배포하는 구조. 그룹 A(SLR·HIMLoco·TAR)의 공통 뼈대.</p>
+      <p>왜? 특권 정보로 빠르게 학습하되, 배포는 센서 없이 해야 하니까. 표현 학습은 <b>'특권 정보를 proprio만으로 복원하는 압축'</b>으로 해석할 수 있습니다.</p></div>
+  </div>
+  <div class="note" style="margin-top:18px"><b>이 문서의 약속.</b> 각 방법 카드는 <b>① 직관(초보자용 비유) → ② RL 방법(네트워크·학습 신호) → ③ 핵심 기여 → ④ 실제 코드</b> 네 블록으로 구성됩니다. 코드 블록의 <span class="mono" style="color:var(--grn)">초록 헤더</span>는 <b>실제 파일 경로</b>이고, 본문은 해당 파일에서 발췌한 원문입니다(일부 라인 생략).</div>
+  <div class="warn"><b>범위 안내.</b> 원본 허브는 20개 방법을 다루지만, 이 튜토리얼은 <b>공개 코드가 확보된 11개</b>만 다룹니다. 나머지 9개(ANYmal Parkour·SET·ULT·Parkour-in-the-Wild·GPO·Neuromorphic·DreamWaQ++·PUMA·REAL)는 GitHub 코드가 비공개라 원문 코드 발췌가 불가해 제외했습니다. Bio-inspired Gait는 학습 코드 미공개지만 추론 정책·스케줄러 코드가 공개돼 포함했습니다.</div>
+</div></section>
+
+<section id="sA"><div class="wrap">
+  <div class="shead"><span class="idx A">그룹 A</span><h2>표현학습 · Proprioceptive → Latent</h2></div>
+  <div class="gintro" style="--gc:var(--jepa)"><p>비전·특권 센서 없이 <b>고유감각(proprioceptive) 관측 히스토리만으로</b> 환경을 이해하는 잠재표현 z를 학습하는 계열. sim-to-real 격차(지형·마찰·지연을 시뮬레이션처럼 정확히 모를 때)를 극복하기 위해, <b>자기지도·대조학습(contrastive)</b>으로 표현을 다듬어 정책에 먹입니다. quadruped RL에서 가장 활발한 흐름입니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">15</div>
+      <h3>SLR <span class="pill jepa" style="margin-left:6px">A</span></h3>
+      <span class="vtag">표현·증류 · ★70</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>특권 정보(지형·마찰·외력) 없이 <b>관절·IMU 히스토리만</b>으로 환경을 이해하는 잠재표현 z를 자기지도로 학습해 정책에 먹인다. 로봇이 '지금 어떤 땅을 밟고 있는지'를 proprio만으로 짐작하는 셈.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>rsl_rl <b>PPO 백본</b> + 보조 인코더. 인코더 MLP가 proprio 히스토리(10스텝, lin_vel 3차원은 제외)를 <b>z∈R²⁰</b>로 압축. <b>전이망 trans</b>가 (z⊕a)→z'을 예측하고 <b>triplet 자기지도 손실</b>(가중 10⁻³)로 학습. actor는 z⊕prop를 입력. KL adaptive LR(desired KL=0.01).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>triplet 자기지도 전이예측 — 특권정보 없이 robust 표현 학습</li><li>lin_vel 제외 입력으로 정보 누출(leakage) 방지</li><li>latent 20차원으로 경량, 4096 병렬 env에서 50k iter</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 SLR</span><span class="srcf">algorithm/ppo.py</span></div>
+        <pre class="code"># algorithm/ppo.py (lines 159-180)
+                # --------- update: triplet loss ---------
+                obs_hist, prop = self.actor_critic.extract(obs_batch)
+                _, z = self.actor_critic.encode(obs_hist, prop)
+                pred_next_z = self.actor_critic.trans(
+                    torch.cat([z, actions_batch], dim=1))
+                next_obs_hist, next_prop = self.actor_critic.extract(next_obs_batch) 
+                _, targ_next_z = self.actor_critic.encode(next_obs_hist, next_prop)
+                batch_size = z.size(0)
+                perm = np.random.permutation(batch_size)
+                next_neg_z = targ_next_z[perm].detach()
+
+                pos_diff = targ_next_z - pred_next_z
+                neg_diff = targ_next_z - next_neg_z
+
+                pos_loss = (pos_diff.pow(2)).sum(1).mean()
+                neg_loss = (neg_diff.pow(2)).sum(1)
+
+                zeros = torch.zeros_like(pos_loss)
+                neg_loss = torch.max(zeros, 1.0 - neg_loss).mean()
+                triplet_loss = pos_loss + neg_loss
+
+                loss = surrogate_loss + self.value_loss_coef * value_loss + entropy_loss + self.triplet_loss_coef*triplet_loss</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> 인코더와 전이망 — latent z의 다음 상태를 예측(triplet)해 자기지도로 표현을 다듬는 핵심.</p>
+      <div class="mlinks">
+        <a href="https://github.com/11chens/SLR-master" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://11chens.github.io/SLR/" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">03</div>
+      <h3>HIMLoco (Hybrid Internal Model) <span class="pill jepa" style="margin-left:6px">A</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>로봇이 proprio만으로 <b>자기 속도</b>와 <b>'지금 밟고 있는 지형의 종류'</b>를 contrastive prototype으로 배운다. 시뮬레이터가 알려주지 않아도 환경을 내부에서 모델링해 sim-to-real 격차를 극복.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>HIMPPO + HIMEstimator</b>. 인코더가 obs_history(6스텝)에서 base 속도(3)와 latent(16)를 동시 추정. <b>SwAV 방식</b> — 32개 prototype 임베딩과 inner product로 score, <b>sinkhorn</b>으로 균등 할당(q)을 만들고 cross-assignment <b>swap loss</b> + 속도 <b>MSE</b>를 결합. L2 정규화된 표현.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>SwAV/sinkhorn contrastive 내부모델 — 특권정보 없는 표현 학습</li><li>prototype 32개로 지형·상황을 이산적 클러스터로 모델링</li><li>속도 추정 부수 보너스(estimation_loss)로 proprio만으로 base vel 복원</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 HIMLoco (Hybrid Internal Model)</span><span class="srcf">HIMLoco/rsl_rl/rsl_rl/modules/him_estimator.py</span></div>
+        <pre class="code"># HIMLoco/rsl_rl/rsl_rl/modules/him_estimator.py (lines 11-133)
+class HIMEstimator(nn.Module):
+    def __init__(self,
+                 temporal_steps,
+                 num_one_step_obs,
+                 enc_hidden_dims=[128, 64, 16],
+                 tar_hidden_dims=[128, 64],
+                 activation='elu',
+                 learning_rate=1e-3,
+                 max_grad_norm=10.0,
+                 num_prototype=32,
+                 temperature=3.0,
+                 **kwargs):
+        if kwargs:
+            print("Estimator_CL.__init__ got unexpected arguments, which will be ignored: " + str(
+                [key for key in kwargs.keys()]))
+        super(HIMEstimator, self).__init__()
+        activation = get_activation(activation)
+
+        self.temporal_steps = temporal_steps
+        self.num_one_step_obs = num_one_step_obs
+        self.num_latent = enc_hidden_dims[-1]
+        self.max_grad_norm = max_grad_norm
+        self.temperature = temperature
+
+        # Encoder
+        enc_input_dim = self.temporal_steps * self.num_one_step_obs
+        enc_layers = []
+        for l in range(len(enc_hidden_dims) - 1):
+            enc_layers += [nn.Linear(enc_input_dim, enc_hidden_dims[l]), activation]
+            enc_input_dim = enc_hidden_dims[l]
+        enc_layers += [nn.Linear(enc_input_dim, enc_hidden_dims[-1] + 3)]
+        self.encoder = nn.Sequential(*enc_layers)
+
+        # Target
+        tar_input_dim = self.num_one_step_obs
+        tar_layers = []
+        for l in range(len(tar_hidden_dims)):
+            tar_layers += [nn.Linear(tar_input_dim, tar_hidden_dims[l]), activation]
+            tar_input_dim = tar_hidden_dims[l]
+        tar_layers += [nn.Linear(tar_input_dim, enc_hidden_dims[-1])]
+        self.target = nn.Sequential(*tar_layers)
+
+        # Prototype
+        self.proto = nn.Embedding(num_prototype, enc_hidden_dims[-1])
+
+        # Optimizer
+        self.learning_rate = learning_rate
+        self.optimizer = optim.Adam(self.parameters(), lr=self.learning_rate)
+
+    def get_latent(self, obs_history):
+        vel, z = self.encode(obs_history)
+        return vel.detach(), z.detach()
+
+    def forward(self, obs_history):
+        parts = self.encoder(obs_history.detach())
+        vel, z = parts[..., :3], parts[..., 3:]
+        z = F.normalize(z, dim=-1, p=2)
+        return vel.detach(), z.detach()
+
+    def encode(self, obs_history):
+        parts = self.encoder(obs_history.detach())
+        vel, z = parts[..., :3], parts[..., 3:]
+        z = F.normalize(z, dim=-1, p=2)
+        return vel, z
+
+    def update(self, obs_history, next_critic_obs, lr=None):
+        if lr is not None:
+            self.learning_rate = lr
+            for param_group in self.optimizer.param_groups:
+                param_group['lr'] = self.learning_rate
+                
+        vel = next_critic_obs[:, self.num_one_step_obs:self.num_one_step_obs+3].detach()
+        next_obs = next_critic_obs.detach()[:, 3:self.num_one_step_obs+3]
+
+        z_s = self.encoder(obs_history)
+        z_t = self.target(next_obs)
+        pred_vel, z_s = z_s[..., :3], z_s[..., 3:]
+
+        z_s = F.normalize(z_s, dim=-1, p=2)
+        z_t = F.normalize(z_t, dim=-1, p=2)
+
+        with torch.no_grad():
+            w = self.proto.weight.data.clone()
+            w = F.normalize(w, dim=-1, p=2)
+            self.proto.weight.copy_(w)
+
+        score_s = z_s @ self.proto.weight.T
+        score_t = z_t @ self.proto.weight.T
+
+        with torch.no_grad():
+            q_s = sinkhorn(score_s)
+            q_t = sinkhorn(score_t)
+
+        log_p_s = F.log_softmax(score_s / self.temperature, dim=-1)
+        log_p_t = F.log_softmax(score_t / self.temperature, dim=-1)
+
+        swap_loss = -0.5 * (q_s * log_p_t + q_t * log_p_s).mean()
+        estimation_loss = F.mse_loss(pred_vel, vel)
+        losses = estimation_loss + swap_loss
+
+        self.optimizer.zero_grad()
+        losses.backward()
+        nn.utils.clip_grad_norm_(self.parameters(), self.max_grad_norm)
+        self.optimizer.step()
+
+        return estimation_loss.item(), swap_loss.item()
+
+
+@torch.no_grad()
+def sinkhorn(out, eps=0.05, iters=3):
+    Q = torch.exp(out / eps).T
+    K, B = Q.shape[0], Q.shape[1]
+    Q /= Q.sum()
+
+    for it in range(iters):
+        # normalize each row: total weight per prototype must be 1/K
+        Q /= torch.sum(Q, dim=1, keepdim=True)
+        Q /= K
+
+        # normalize each column: total weight per sample must be 1/B
+        Q /= torch.sum(Q, dim=0, keepdim=True)
+        Q /= B
+    return (Q * B).T</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> HIMEstimator.update — prototype 기반 SwAV 대조학습 + sinkhorn 균등 할당 + 속도 MSE가 결합된 갱신.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--jepa)">
+    <div class="mh">
+      <div class="num">07</div>
+      <h3>TAR (Teacher-Aligned Representations) <span class="pill jepa" style="margin-left:6px">A</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>선생(teacher)이 특권 정보(지형·속도)로 배운 표현을, 학생(student)이 <b>proprio 히스토리만으로 모방</b>하도록 대조(contrastive) 정렬해 가르친다. 비전/특권 센서 없이도 견고한 sim-to-real.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>PPOTAR(rsl_rl)</b> 비대칭 actor-critic. <b>CriticCfg가 PolicyCfg를 상속</b>해 더 많은 privileged obs를 봄(teacher). student MLP 인코더(mlp_encoder [256,128,64])가 proprio 히스토리(10)를 latent(45)로 인코딩, 별도 velocity estimator가 단기 히스토리로 속도 추정. teacher 표현과 <b>contrastive 정렬</b>. adaptive LR [5e-5, 1e-3].</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>teacher-aligned contrastive 정렬 — 특권→proprio 지식 전이</li><li>별도 velocity estimator MLP로 명시적 속도 추정</li><li>Isaac Lab manager-based 표준 환경(reward·obs 모듈화)</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 TAR (Teacher-Aligned Representations)</span><span class="srcf">TARLoco/exts/tarloco/tasks/envs/base.py</span></div>
+        <pre class="code"># TARLoco/exts/tarloco/tasks/envs/base.py (lines 126-165)
+class ObservationsCfg:
+    """Observation specifications for the MDP."""
+
+    @configclass
+    class PolicyCfg(ObsGroup):
+        """Observations for policy group."""
+
+        # observation terms (order preserved)
+        base_lin_vel = ObsTerm(func=mdp.base_lin_vel, noise=Unoise(n_min=-0.1, n_max=0.1))
+        base_ang_vel = ObsTerm(func=mdp.base_ang_vel, noise=Unoise(n_min=-0.2, n_max=0.2))
+        projected_gravity = ObsTerm(
+            func=mdp.projected_gravity,
+            noise=Unoise(n_min=-0.05, n_max=0.05),
+        )
+        velocity_commands = ObsTerm(func=mdp.generated_commands, params={"command_name": "base_velocity"})
+        joint_pos = ObsTerm(func=mdp.joint_pos_rel, noise=Unoise(n_min=-0.01, n_max=0.01))
+        joint_vel = ObsTerm(func=mdp.joint_vel_rel, noise=Unoise(n_min=-1.5, n_max=1.5))
+        actions = ObsTerm(func=mdp.last_action)
+        height_scan = ObsTerm(
+            func=mdp.height_scan,
+            params={"sensor_cfg": SceneEntityCfg("height_scanner")},
+            noise=Unoise(n_min=-0.1, n_max=0.1),
+            clip=(-1.0, 1.0),
+        )
+
+        def __post_init__(self):
+            self.enable_corruption = True
+            self.concatenate_terms = True
+
+    @configclass
+    class CriticCfg(PolicyCfg):
+        """Observations for critic group."""
+
+        # Inherits all terms from PolicyCfg
+
+    # observation groups
+    policy: PolicyCfg = PolicyCfg()
+    critic: CriticCfg = CriticCfg()
+
+</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> ObservationsCfg — PolicyCfg(proprio noisy)와 CriticCfg(privileged 상속)의 비대칭 구조가 teacher-student 분리를 구현.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sB"><div class="wrap">
+  <div class="shead"><span class="idx B">그룹 B</span><h2>제약·안전 PPO (Safe Locomotion)</h2></div>
+  <div class="gintro" style="--gc:var(--ar)"><p>PPO에 <b>안전 제약(constraint)</b>을 얹어, 위험한 행동(전복·과토크·충돌)을 억제하면서도 목표(속도·위치) 추종을 놓치지 않는 계열. 핵심은 제약을 <b>보상 페널티로 다루느냐</b>(ABS) vs <b>확률적 종료로 변환하느냐</b>(CaT). 동적 보행에서 '안전'의 정의를 RL 친화적으로 재구성한 것이 차별점입니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--ar)">
+    <div class="mh">
+      <div class="num">17</div>
+      <h3>CaT (Constraints as Terminations) <span class="pill ar" style="margin-left:6px">B</span></h3>
+      <span class="vtag">안전·제약 · ★166</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>안전 규칙(전복 금지, 토크 한계 등)을 어기면 보상에서 점수를 깎는 대신, <b>그 스텝을 '확률적으로 종료'시킨다</b>. 할인된 리턴 안에서 제약이 암묵적으로 페널티화돼, 복잡한 보상 가중치 튜닝 없이 안전을 보장한다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>CleanRL PPO + constraint_manager</b>. 위반 확률 p를 <b>running-max Polyak(τ=0.95)</b>으로 worst-case 추적, 보상을 <b>r·(1−p)</b>로 클리핑. 토크·속도·action-rate·air-time 등 기존 페널티를 <b>보상에서 제거하고 제약으로 이동</b> — 최종 보상은 속도 추종 항 2개만 남음. 커리큘럼으로 p 상한 점진 강화.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>제약 위반 → termination 변환(penalty-free 안전 보장)</li><li>running-max Polyak(τ=0.95)으로 worst-case 위반 추적</li><li>보상 단순화(추종만)로 보상 해킹·가중치 튜닝 부담 제거</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 CaT (Constraints as Terminations)</span><span class="srcf">exts/cat_envs/cat_envs/tasks/utils/cat/constraint_manager.py</span></div>
+        <pre class="code"># exts/cat_envs/cat_envs/tasks/utils/cat/constraint_manager.py (lines 39-76)
+    def add(self, name: str, constraint: torch.Tensor, max_p: float = 0.1):
+        """Add and process a constraint violation."""
+        # Ensure constraint is on the correct device and properly shaped
+        if constraint.device != self._device:
+            constraint = constraint.to(self._device)
+            
+        # Convert to float if needed and ensure proper shape
+        if not torch.is_floating_point(constraint):
+            constraint = constraint.float()
+        if constraint.ndim == 1:
+            constraint = constraint.unsqueeze(1)
+
+        # Store raw constraints
+        self.raw_constraints[name] = constraint
+
+        # Compute constraint max with clamping for numerical stability
+        constraint_max = constraint.max(dim=0, keepdim=True)[0].clamp(min=1e-6)
+
+        # Update running max using in-place operations when possible
+        if name in self.running_maxes:
+            self.running_maxes[name].mul_(self.tau).add_((1.0 - self.tau) * constraint_max)
+        else:
+            self.running_maxes[name] = constraint_max
+
+        # Pre-allocate probability tensor
+        probs = torch.zeros_like(constraint)
+        
+        # Compute mask of violations only once
+        mask = constraint &gt; 0.0
+        if mask.any():
+            # Compute normalized violations with broadcasting
+            normalized = constraint / self.running_maxes[name].expand_as(constraint)
+            # Compute probabilities only for violating samples
+            probs[mask] = self.min_p + torch.clamp(normalized[mask], 0.0, 1.0) * (max_p - self.min_p)
+
+        self.probs[name] = probs
+        self.max_p[name] = torch.full((constraint.shape[1],), max_p,
+                                    dtype=torch.float, device=self._device)</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> constraint_manager — 위반 확률 p의 running-max 추적과 r·(1−p) 보상 클리핑이 CaT의 핵심.</p>
+      <div class="mlinks">
+        <a href="https://github.com/Gepetto/constraints-as-terminations" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://arxiv.org/abs/2403.18765" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--ar)">
+    <div class="mh">
+      <div class="num">02</div>
+      <h3>ABS (Agile But Safe) <span class="pill ar" style="margin-left:6px">B</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>민첩(agile)한 기동을 추구하되, 위험 행동은 <b>별도 cost로 따로 세서 라그랑주 승수</b>로 제약한다. '빠르되 안전하게'를 목표 위치 추종 정책과 안전 정책으로 분리해 다룬다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p>rsl_rl <b>PPO + Lagrangian variant</b>. 기본 ActorCritic에 <b>cost value head</b>를 추가한 ActorCriticCost(PPOLagrangian) 사용. <b>reach_pos_target</b> 보상(가중 60)으로 목표 도달 추종, termination/collision/feet_collision=<b>−100</b>으로 강한 안전 페널티. <b>ERFI 커리큘럼</b>로 토크 한계(erfi_torq_lim) 점진 강화. ray2d 센서로 장애물 인식.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>Lagrangian cost head로 안전 제약(soft) — 민첩·안전 균형</li><li>position-target 보상 구조(soft/tight 2단계 σ)로 정밀 도달</li><li>ERFI exposure 커리큘럼(토크 한계 점진)으로 안전 학습</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 ABS (Agile But Safe)</span><span class="srcf">ABS/training/legged_gym/legged_gym/envs/go1/go1_pos_config.py</span></div>
+        <pre class="code"># ABS/training/legged_gym/legged_gym/envs/go1/go1_pos_config.py (lines 185-218)
+    class rewards():
+        class scales():
+            termination = -100. 
+            reach_pos_target_soft = 60.0
+            reach_pos_target_tight = 60.0
+            reach_heading_target = 30.0
+            reach_pos_target_times_heading = 0.0
+            velo_dir = 10.0
+            torques = -0.0005
+            dof_pos_limits = -20.0
+            dof_vel = -0.0005
+            torque_limits = -20.0
+            dof_vel_limits = -20.0
+            lin_vel_z = -2.0
+            ang_vel_xy = -0.05
+            dof_acc = -2.0e-7
+            collision = -100.
+            feet_collision = -100.
+            action_rate = -0.01
+            stand_still_pos = -10.0
+            orientation = -20.0
+            fly = -20.0
+            nomove = -20.0
+
+        soft_dof_pos_limit = 0.95
+        base_height_target = 0.25
+        only_positive_rewards = False
+        position_target_sigma_soft = 2.0
+        position_target_sigma_tight = 0.5
+        heading_target_sigma = 1.0
+        rew_duration = 2.0
+        soft_dof_vel_limit = 0.9
+        soft_torque_limit = 0.85
+        max_contact_force = 100.</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> rewards class — 안전 페널티(termination/collision/orientation=−100/−100/−20)와 reach target 보상(60)의 공존이 ABS의 'agile but safe'를 규정.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sC"><div class="wrap">
+  <div class="shead"><span class="idx C">그룹 C</span><h2>Diffusion 정책 (오프라인·온라인)</h2></div>
+  <div class="gintro" style="--gc:var(--gen)"><p><b>확산 모델(diffusion)</b>으로 정책 자체를 표현하는 계열. 노이즈에서 점차 행동을 '조각해 내는' 방식으로, <b>멀티모달 행동 분포</b>(같은 상태에서 여러合理적 행동)을 표현할 수 있어 PPO의 단일 가우시안 한계를 넘습니다. 오프라인 BC(DiffuseLoco·locodiff)부터 PPO finetune(Multi-Loco·DMLoco)까지 스펙트럼이 다양합니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--gen)">
+    <div class="mh">
+      <div class="num">04</div>
+      <h3>DiffuseLoco <span class="pill diff" style="margin-left:6px">C</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>로봇 보행 데이터를 모아두고, <b>diffusion 모델이 노이즈에서 점차 행동을 '조각'해 내는</b> 방식으로 정책을 만든다. RL 없이 <b>오프라인 데이터만</b>으로 5가지 보행 스킬을 학습한다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>오프라인 diffusion behavior cloning</b>. <b>TransformerForDiffusion</b> denoiser(n_emb=256, 6층, 8헤드, causal attention)가 obs 8스텝을 조건으로 action 4스텝(horizon 12) 생성. <b>DDPM</b>(cosine schedule squaredcos_cap_v2, 10 스텝, epsilon prediction). 5-skill zarr 데이터셋, separate_goal_conditioning. EMA + cosine LR.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>transformer denoiser 기반 diffusion policy를 quadruped에 적용</li><li>obs-as-condition horizon 분리(obs 8 / action 4)로 부분 관측 처리</li><li>오프라인 다중 스킬 데이터셋(5 skills)으로 RL 없이 다양 보행 학습</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 DiffuseLoco</span><span class="srcf">DiffuseLoco/diffusion_policy/config_files/cyber_diffusion_policy_no_delay.yaml</span></div>
+        <pre class="code"># DiffuseLoco/diffusion_policy/config_files/cyber_diffusion_policy_no_delay.yaml (lines 54-90)
+policy:
+  _target_: diffusion_policy.policy.diffusion_transformer_lowdim_policy.DiffusionTransformerLowdimPolicy
+  action_dim: 12
+  horizon: 12
+  model:
+    _target_: diffusion_policy.model.diffusion.transformer_for_diffusion.TransformerForDiffusion
+    causal_attn: true
+    cond_dim: 45
+    horizon: 12
+    input_dim: 12
+    n_cond_layers: 0
+    n_emb: 256
+    n_head: 8
+    n_layer: 6
+    n_obs_steps: 8
+    obs_as_cond: true
+    output_dim: 12
+    p_drop_attn: 0.3
+    p_drop_emb: 0.0
+    time_as_cond: true
+    separate_goal_conditioning: true
+  n_action_steps: 4
+  n_obs_steps: 8
+  noise_scheduler:
+    _target_: diffusers.schedulers.scheduling_ddpm.DDPMScheduler
+    beta_end: 0.02
+    beta_schedule: squaredcos_cap_v2
+    beta_start: 0.0001
+    clip_sample: true
+    num_train_timesteps: 10
+    prediction_type: epsilon
+    variance_type: fixed_small
+  num_inference_steps: 10
+  obs_as_cond: true
+  obs_dim: 45
+  pred_action_steps_only: false
+pred_action_steps_only: false</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> policy/model/noise_scheduler — TransformerForDiffusion 구조와 DDPM(cosine, epsilon) 설정.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--gen)">
+    <div class="mh">
+      <div class="num">13</div>
+      <h3>locodiff <span class="pill diff" style="margin-left:6px">C</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p><b>얼마나 좋은 보상을 낼지(return)</b>를 조건으로 주면, diffusion이 그 수준에 맞는 행동을 생성한다. 오프라인 데이터에서 '목표 성과'를 정하면 그에 맞는 정책이 나온다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>오프라인 EDM diffusion</b>. EDM 경로(exponential sigma schedule, σ_min=0.001, σ_max=80, σ_data=0.5), <b>DDIM 3스텝</b> 샘플링. 조건: skill(2) + 3D velocity command + <b>return R</b>. <b>CFGWrapper</b>로 return=최대일 때와 비교해 classifier-free guidance(cond_lambda)로 생성 품질 향상. transformer denoiser(d_model=128, 2층).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>EDM 가중 denoising loss로 quadruped diffusion 적용</li><li>return-conditioning으로 목표 성과 제어(R조건부 생성)</li><li>CFGWrapper(cond_mask_prob)로 classifier-free guidance 품질 향상</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 locodiff</span><span class="srcf">locodiff/locodiff/agent.py</span></div>
+        <pre class="code"># locodiff/locodiff/agent.py (lines 59-114)
+    def __call__(self, data_dict: dict, **kwargs) -&gt; tuple:
+        self.eval()
+
+        if data_dict["action"] is None:
+            batch_size = self.num_envs
+        else:
+            batch_size = data_dict["action"].shape[0]
+
+        noise = torch.randn((batch_size, self.T, self.action_dim)).to(
+            self.device
+        )
+        if self.sampler_type == "ddpm":
+            self.noise_scheduler.set_timesteps(self.sampling_steps)
+            kwargs = {"noise_scheduler": self.noise_scheduler}
+        else:
+            noise = noise * self.sigma_max
+            sigmas = get_sigmas_exponential(
+                self.sampling_steps, self.sigma_min, self.sigma_max, self.device
+            )
+            kwargs = {"sigmas": sigmas}
+        x_0 = self.sampler(self.model, noise, data_dict, **kwargs)
+
+        if self.cond_mask_prob &gt; 0:
+            data_dict["return"] = torch.ones_like(data_dict["return"])
+            x_0_max_return = self.sampler(self.model, noise, data_dict, **kwargs)
+            return x_0, x_0_max_return
+        else:
+            return x_0
+
+    def loss(self, data_dict) -&gt; torch.Tensor:
+        self.train()
+
+        action = data_dict["action"]
+        noise = torch.randn_like(action)
+        if self.sampler_type == "ddpm":
+            timesteps = torch.randint(0, self.sampling_steps, (noise.shape[0],))
+            noise_trajectory = self.noise_scheduler.add_noise(action, noise, timesteps)
+            timesteps = timesteps.float().to(self.device)
+            pred = self.model(noise_trajectory, timesteps, data_dict)
+            loss = torch.nn.functional.mse_loss(pred, noise)
+        else:
+            sigma = self.make_sample_density(len(noise))
+            loss = self.model.loss(noise, sigma, data_dict)
+
+        return loss
+
+    @torch.no_grad()
+    def make_sample_density(self, size):
+        """
+        Generate a density function for training sigmas
+        """
+        loc = math.log(self.sigma_data)
+        density = rand_log_logistic(
+            (size,), loc, 0.5, self.sigma_min, self.sigma_max, self.device
+        )
+        return density</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> Agent.__call__/loss — EDM/DDPM 샘플링 분기와 return-conditioned CFG 생성(x_0 vs x_0_max_return).</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--gen)">
+    <div class="mh">
+      <div class="num">10</div>
+      <h3>Multi-Loco <span class="pill diff" style="margin-left:6px">C</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>diffusion 정책을 오프라인으로 미리 학습(pretrain)한 뒤, <b>온라인 PPO로 imitation 보상</b>(전문가 궤적 모방)으로 다듬는 2단계. diffusion의 표현력 + RL의 보상 최적화를 결합.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>2단계</b>: (1) 오프라인 <b>masked EDM diffusion</b>(MaskedDiT1d, d_model=640, depth=2, Mish) pretrain — 누락 데이터(mask)를 가중 처리. (2) 온라인 <b>PPO finetune</b>, <b>imitation reward(가중 10)</b>로 전문가 접촉·궤적 모방 + tracking. critic는 privileged obs(105차원), actor는 proprio(44) history(10).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>masked diffusion(누락 데이터 처리) + PPO finetune 결합</li><li>imitation reward로 diffusion 정책을 RL로 개선(offline→online)</li><li>다중 보행(gait) 통합 정책 — 단일 정책으로 여러 보행</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 Multi-Loco</span><span class="srcf">multi_loco_isaacgym/source/cfg/unified/task/quadruped.yaml</span></div>
+        <pre class="code"># multi_loco_isaacgym/source/cfg/unified/task/quadruped.yaml (lines 1-57)
+name: "biped_locomotion"
+dt: ${..env_dt}
+has_termination_reward: True
+debug_vis: False
+penalize_contacts_on: ["base_Link", "knee", "hip"]
+use_imitation_reward: True
+
+command_ranges:
+  curriculum: False
+  lin_vel_x: [-1.0, 1.0] # min max [m/s]
+  lin_vel_y: [-0.6, 0.6] # min max [m/s]
+  ang_vel_yaw: [-1.0, 1.0] # min max [rad/s]
+  # base_height: [0.5, 0.75] # min max [m]
+
+commands_resampling_time_s: 5.0
+
+ema_rewards:
+  scales:
+    # tracking_lin_vel: 1.0
+    # tracking_ang_vel: 1.0
+    # action_rate: -1.0
+    # action_smooth: -1.0
+    # ang_vel_xy: -1.0
+
+rewards:
+  scales:
+    imitation: 10.0
+    alive: 1.0
+    termination: -0.0
+    lin_vel_z: -0.5
+    ang_vel_xy: -0.05
+    orientation: -10.0
+    base_height: 1.0
+    torques: -8.e-5
+    power: -0.0
+    dof_vel: -0.0
+    dof_acc: -2.5e-7
+    action_rate: -0.01
+    action_smooth: -0.01
+    collision: -1.
+    dof_pos_limits: -2.0
+    dof_vel_limits: 0.0
+    torque_limits: 0.0
+    tracking_lin_vel: 2.0
+    tracking_pos: 0.0
+    tracking_ang_vel: 1.5
+    foot_air_time: 0.0 # 5.
+    foot_slip: -0.0
+    foot_clearance: -0.05
+    # foot_height: 5.0
+    stand_still: -0.0
+    foot_contact_forces: 0.0 # -1.0
+    foot_distance: -100.0
+    default_joint_pos: -0.0
+    foot_landing_vel: -0.15
+    tracking_contacts_shaped_force: -2.0
+    tracking_contacts_shaped_vel: -2.0</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> rewards — imitation=10.0과 tracking/tracking_contacts 항목으로 PPO가 diffusion 정책을 보상 유도.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--gen)">
+    <div class="mh">
+      <div class="num">14</div>
+      <h3>DMLoco <span class="pill diff" style="margin-left:6px">C</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>1D UNet diffusion 정책을 오프라인으로 학습한 뒤, <b>diffusion 과정 자체를 policy로 삼아 PPO로 finetune(DPPO)</b>. denoising 스텝을 100→5(DDIM)로 줄여 실시간 추론까지 가능.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>2단계</b>: (1) 오프라인 <b>UNet1D diffusion</b> pretrain(epsilon, 100스텝, dim_mults [1,2,4]). (2) <b>PPODiffusion(DPPO)</b> — diffusion denoising을 미분 가능한 policy로, <b>gamma_denoising=0.9</b>로 denoising chain에 PPO credit 할당. <b>DDIM 100→5스텝</b> 추론. critic MLP(obs 1470=49×30 history, residual).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>UNet1D diffusion을 PPO로 직접 finetune(DPPO) — diffusion 정책의 RL 개선</li><li>DDIM 100→5 스텝으로 실시간 추론 가능</li><li>gamma_denoising으로 denoising chain의 credit assignment</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 DMLoco</span><span class="srcf">DMLoco/cfg/aliengo/finetune/multi_gait_and_vel/ft_ppo_diffusion_unet.yaml</span></div>
+        <pre class="code"># DMLoco/cfg/aliengo/finetune/multi_gait_and_vel/ft_ppo_diffusion_unet.yaml (lines 74-120)
+model:
+  _target_: model.diffusion.diffusion_ppo.PPODiffusion
+  # HP to tune
+  gamma_denoising: 0.9
+  clip_ploss_coef: 0.001
+  clip_ploss_coef_base: 0.001
+  clip_ploss_coef_rate: 3
+  randn_clip_value: 3
+  min_sampling_denoising_std: 0.04
+  #
+  use_ddim: ${use_ddim}
+  ddim_steps: ${ft_denoising_steps}
+  learn_eta: False
+  eta:
+    base_eta: 1
+    input_dim: ${obs_dim}
+    mlp_dims: [256, 256]
+    action_dim: ${action_dim}
+    min_eta: 0.1
+    max_eta: 1.0
+    _target_: model.diffusion.eta.EtaFixed
+  network_path: ${base_policy_path}
+  actor:
+    _target_: model.diffusion.unet.Unet1D
+    diffusion_step_embed_dim: 16
+    dim: 64
+    dim_mults: [1, 2, 4]
+    kernel_size: 5
+    n_groups: 8
+    smaller_encoder: False
+    cond_mlp_dims: [512, 128]
+    cond_predict_scale: True
+    groupnorm_eps: 1e-4
+    cond_dim: ${eval:'${obs_dim} * ${cond_steps}'}
+    action_dim: ${action_dim}
+  critic:
+    _target_: model.common.critic.CriticObs
+    cond_dim: ${eval:'${obs_dim} * ${cond_steps}'}
+    mlp_dims: [512, 512, 512]
+    activation_type: Mish
+    residual_style: True
+  ft_denoising_steps: ${ft_denoising_steps}
+  horizon_steps: ${horizon_steps}
+  obs_dim: ${obs_dim}
+  action_dim: ${action_dim}
+  denoising_steps: ${denoising_steps}
+  device: ${device}</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> model.PPODiffusion — gamma_denoising, clip_ploss_coef, DDIM 설정, Unet1D actor가 DPPO의 핵심.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sD"><div class="wrap">
+  <div class="shead"><span class="idx D">그룹 D</span><h2>Parkour · 생체모방 (도전적·계층적)</h2></div>
+  <div class="gintro" style="--gc:var(--acc)"><p>평지 보행을 넘어 <b>parkour 장애물</b>(틈·점프·장애물·기어가기)을 넘거나, <b>동물의 보행 전환 원리(Froude 수)</b>를 빌려와 속도에 따라 보행 양식을 바꾸는 계열. 단일 end-to-end 학습보다 <b>2단계 distillation</b>이나 <b>규칙 기반 스케줄러 + 학습 정책</b>의 결합이 두드러집니다.</p></div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">05</div>
+      <h3>SoloParkour <span class="pill rl" style="margin-left:6px">D</span></h3>
+      <span class="vtag"></span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>로봇이 gap(틈)·jump(점프)·hurdle(장애물)·crawl(기어가기) 같은 <b>parkour 장애물</b>을 넘도록 2단계로 가르친다 — 먼저 특권 정보로 PPO 학습, 다음 depth 카메라 비전으로 미세조정.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>2-stage</b>. (1) privileged <b>PPO(rsl_rl, 4096 envs)</b> — 매우 희소한 reward(속도 추종 + <b>survival bonus 0.5</b>), <b>CaT(constraints-as-terminations)</b>로 토크·air-time·action-rate를 제약으로 처리(보상 페널티 아님). terrainProportions로 gap/jump/hurdle/crawl 비율 제어. (2) <b>depth vision DDPG-from-demos</b>로 비전 정책 distillation.</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>다양한 parkour 장애물(gap/jump/hurdle/crawl) 커리큘럼</li><li>2-stage(privileged PPO → depth vision) distillation</li><li>CaT로 희소 reward 환경에서 행동 규제 안정화</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 SoloParkour</span><span class="srcf">SoloParkour/cfg/task/SoloParkour.yaml</span></div>
+        <pre class="code"># SoloParkour/cfg/task/SoloParkour.yaml (lines 37-160)
+    terrainProportions: # Proportions for each kind of terrain
+      gap_parkour: 0.55
+      jump_parkour: 0.3
+      stairs_parkour: 0.0
+      hurdle_parkour: 0.1
+      crawl_parkour: 0.05
+      random_uniform: 0.0
+# ... (생략) ...
+  learn:
+    allowShinContacts: True
+    allowKneeContacts: false
+  
+    # Scales of rewards
+    rewMult: 1.0
+    survivalBonus: 0.5
+
+    # Misc quantities for rewards
+    linearVelocityXYRewardDelta: 0.25
+    angularVelocityZRewardDelta: 0.25
+    feetAirTimeRewardTarget: 0.25
+
+    # Constraints
+    enableConstraints: "cat"  # "none", "cat"
+    constraints_CaT:
+      feetAirTimeConstraint: 0.2
+      tauConstraint: 0.95
+      minPConstraint: 0.0
+      softPConstraint: 0.1
+      useSoftPCurriculum: True
+      trackingConstraint: 1000.0
+
+    limits:
+      torque: 3.0
+      acc: 800.0
+      vel: 16.0
+      action_rate: 80.0
+      base_orientation: 0.1
+      foot_contact_force: 80.0
+      HFE: 1.9
+      HFE_min: -0.2
+      HAA: 0.2
+      min_base_height: 0.06
+      heading: 0.1
+
+    # Other
+    flatTerrainThreshold: 0.001
+    vel_deadzone: 0.2
+    base_height_target: 0.245
+    gait_period: 0.4
+
+    # observations
+    observe:
+      base_lin_vel: false
+      base_ang_vel: true
+      commands: true
+      misc: true
+      heights: true 
+      ceilings: true
+      phases: false
+      imu: false
+    measured_points_step: 0.08
+    measured_points_x: [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    measured_points_y: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    phases_freq: 2.0
+
+    # normalization
+    linearVelocityScale: 2.0
+    angularVelocityScale: 0.25
+    dofPositionScale: 1.0
+    dofVelocityScale: 0.05
+    heightMeasurementScale: 5.0</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> learn 섹션 — terrainProportions(parkour 장애물 비율) + 희소 reward(survivalBonus) + CaT constraints가 parkour 학습을 규정.</p>
+      <div class="mlinks">
+        <a href="" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mcard" style="--gc:var(--acc)">
+    <div class="mh">
+      <div class="num">16</div>
+      <h3>Bio-inspired Gait <span class="pill rl" style="margin-left:6px">D</span></h3>
+      <span class="vtag">계층·민첩 · ★22</span>
+    </div>
+    <div class="blk intuit"><div class="bh">① 직관 — 한 줄로 이해하기</div><p>동물이 속도에 따라 걸음걸이를 바꾸듯(걷기→조깅→뛰기), <b>Froude 수</b>로 보행 양식을 자동 선택하는 생체모방 스케줄러가 사전학습된 두 MLP 정책(이동·보행선택)을 조종한다.</p></div>
+    <div class="blk rl"><div class="bh">② 강화학습 방법 — 어떻게 학습하나</div><p><b>규칙 기반 gait scheduler + 사전학습 MLP 정책(추론만)</b>. <b>Froude 수 Fr=v²/gh</b>로 보행 양식 결정, Fr 경계(fr_bounds, 예 TROT 0.152–0.74, RUN 0.74–1.5)를 넘으면 보행 인덱스 ±1. 전이 길이 <b>B=round((L+L_next)/2·e^(−2Fr))</b>로 블렌딩. 두 정책 모두 MLP [512,256,128] LeakyReLU. 학습 코드는 미공개(가중치만 배포).</p></div>
+    <div class="blk contrib"><div class="bh">③ 핵심 기여</div><ul class="contrib-list"><li>Froude 수 기반 생체모방 보행 자동 전환(걷기/트롯/런)</li><li>규칙 기반 스케줄러로 RL 정책 위계 제어(계층적)</li><li>proprioceptive 전용 — 외부 지각 센서 불필요</li></ul></div>
+    <div class="blk"><div class="bh" style="color:var(--grn)">④ 실제 코드 — 공식 저장소 원문 발췌</div>
+      <div class="codewrap">
+        <div class="cw-h"><span class="fn">📄 Bio-inspired Gait</span><span class="srcf"></span></div>
+        <pre class="code">// src/learning_to_adapt/gait_scheduler.cpp (lines 832-854)
+void GaitScheduler::calcTransParams() {
+    float trans_coeff = 0.2;
+    
+    // Shift up gait transition parameters
+    // linear
+    if (trans_mode_ == "SYNC"){
+        data_.B = ((data_.L + dataNext_.L)/2)*trans_coeff;
+    }
+    // bio
+    if (trans_mode_ == "BIOSYNC"){
+        data_.C = abs(1 - (fr/1.)) * data_.Cmax;
+        data_.B = round(((data_.L + dataNext_.L)/2) * data_.C);
+        
+    }
+    // bio static
+    if (trans_mode_ == "BIOSYNCSTATIC"){
+        data_.C = exp(-2*fr);
+        data_.B = round(((data_.L + dataNext_.L)/2) * data_.C);
+    }
+    if (data_.gait_name == "STAND" or dataNext_.gait_name == "STAND") {
+        data_.B = 1;
+    }
+}</pre>
+      </div>
+      <p class="codec"><b>이 코드가 보여주는 것:</b> gait_scheduler — Froude 수 계산과 fr_bounds 기반 보행 전환·블렌딩 로직.</p>
+      <div class="mlinks">
+        <a href="https://github.com/ihcr/learning_to_adapt" target="_blank"><b>GitHub</b> 저장소</a>
+        <a href="https://www.nature.com/articles/s42256-025-01065-z" target="_blank">📄 논문/링크</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sE"><div class="wrap">
+  <div class="shead"><span class="idx" style="color:var(--acc2)">정리</span><h2>어떤 방법을 언제 쓸까 — 선택 가이드</h2></div>
+  <p class="slead">11개 방법을 "무엇을 하고 싶은가" 기준으로 정리합니다. 모든 판단은 각 방법의 실제 코드·환경·학습 신호에 근거합니다.</p>
+  <div class="grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+    <div class="basics-card"><h4>특권 정보 없이 robust 보행</h4>
+      <p>→ <b>SLR(15)</b>(triplet 자기지도) · <b>HIMLoco(03)</b>(SwAV contrastive) · <b>TAR(07)</b>(teacher 정렬). 비전·특권 센서 없이 proprio만으로 지형 적응. sim-to-real이 핵심일 때.</p></div>
+    <div class="basics-card"><h4>안전 제약이 중요한 환경</h4>
+      <p>→ <b>CaT(17)</b>(제약→종료 변환) 또는 <b>ABS(02)</b>(Lagrangian cost). 전복·충돌·과토크를 절대 피해야 하는 실기체 배포.</p></div>
+    <div class="basics-card"><h4>멀티모달·다중 스킬 보행</h4>
+      <p>→ <b>DiffuseLoco(04)</b>(오프라인 BC) · <b>locodiff(13)</b>(return조건) · <b>Multi-Loco(10)</b>(EDM+PPO imitation) · <b>DMLoco(14)</b>(UNet+DPPO). 같은 상태에서 여러合理적 행동이 필요할 때.</p></div>
+    <div class="basics-card"><h4>도전적 지형 · parkour</h4>
+      <p>→ <b>SoloParkour(05)</b>(gap/jump/hurdle/crawl). 평지를 넘어선 장애물 통과가 목표일 때. 2-stage(privileged→vision) distillation.</p></div>
+    <div class="basics-card"><h4>속도별 보행 자동 전환</h4>
+      <p>→ <b>Bio-inspired Gait(16)</b>(Froude 수 스케줄러). 걷기/트롯/런을 동물처럼 자동 전환. 규칙 기반 위계 제어가 학습보다 효율적일 때.</p></div>
+    <div class="basics-card"><h4>오프라인 데이터로만 학습</h4>
+      <p>→ <b>DiffuseLoco(04)</b> 또는 <b>locodiff(13)</b>. 시뮬레이터 없이 기존 궤적 로그만으로 정책 학습. 실로봇 안전 학습에 유리.</p></div>
+  </div>
+  <div class="callout" style="margin-top:24px"><h3>🎯 튜토리얼을 읽는 순서 추천</h3>
+    <p>처음 quadruped RL을 배운다면 <b>들어가며(00) → 그룹 A(표현학습, 직관적) → 그룹 B(안전)</b> 순으로. 각 카드의 <b>① 직관</b>만 먼저 쭉 읽으면 11개 방법의 '무엇'이 잡히고, <b>④ 실제 코드</b>를 펼쳐보면 '어떻게'가 보입니다. diffusion에 관심이 있으면 그룹 C로, parkour·생체모방은 그룹 D로. 코드는 모두 각 연구의 공식 저장소에서 가져왔으니, 더 보고 싶으면 GitHub 링크로 직접 가면 됩니다.</p>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div style="font-size:15px;color:var(--mut)"><b style="color:var(--txt)">Quadruped Locomotion RL 튜토리얼</b> — 2024+ 사족보행 강화학습 11개 방법, 실제 코드로 배우기</div>
+  <div class="src">
+    <b>데이터 출처</b> — 각 방법의 공식 GitHub 저장소 · arXiv. code 필드가 채워진 3개(SLR·Bio·CaT)는 허브 details JSON 원문 그대로, 나머지 8개는 로컬에 clone된 공식 저장소에서 지정 라인을 발췌(첫 줄 주석에 파일 경로·라인 명시). 원문 전체는 카드의 GitHub 링크에서 확인.<br>
+    <b>정직성</b> — 코드를 지어내지 않았고, 타 저장소 코드를 상표만 바꿔 빌려오지 않았습니다. 공개 코드가 없는 9개 연구는 원문 코드 발췌가 불가해 명시적으로 제외했습니다.
+  </div>
+  <div style="margin-top:16px;color:var(--dim);font-size:12px">기준일 2026-08 · 11개 방법(공개 코드 확보분) · 4개 RL 패러다임 그룹</div>
+</div></footer>
+<div class="toTop" id="toTop">↑</div>
+<script>
+const links=[...document.querySelectorAll('nav a.navlink')];
+const secs=links.map(l=>document.querySelector(l.getAttribute('href')));
+const toTop=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{const y=window.scrollY+90;let cur=secs.length-1;
+  for(let i=0;i<secs.length;i++){if(secs[i]&&secs[i].offsetTop>y){cur=i-1;break;}}
+  links.forEach(l=>l.classList.remove('active'));if(cur>=0&&links[cur])links[cur].classList.add('active');
+  toTop.classList.toggle('show',window.scrollY>600);},{passive:true});
+toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body></html>
