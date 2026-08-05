@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SLAM 5종 종합 벤치마크 — TUM fr1_room</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root{
+    --droid:#2ca02c; --mast:#d62728; --vista:#ff7f0e; --dpv:#9467bd; --gaus:#1f77b4;
+    --bg:#0f1320; --card:#1a2030; --card2:#232b3e; --txt:#e8edf5; --mut:#9aa6bd; --line:#2e384f;
+    --good:#3ddc84; --warn:#ffd166;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Malgun Gothic","Segoe UI",system-ui,sans-serif;background:linear-gradient(180deg,#0c1018,#11162400);background-color:var(--bg);color:var(--txt);line-height:1.65}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+  header{padding:54px 20px 30px;text-align:center;background:radial-gradient(900px 300px at 50% -40px,#23304d55,transparent)}
+  header h1{font-size:30px;margin:0 0 8px;letter-spacing:-.5px}
+  header p{color:var(--mut);margin:4px 0;font-size:15px}
+  .tag{display:inline-block;background:#27314a;color:#bcd0ff;padding:3px 11px;border-radius:20px;font-size:12.5px;margin:6px 4px 0}
+  h2{font-size:21px;margin:46px 0 6px;padding-top:10px;border-top:1px solid var(--line)}
+  h2 .num{color:var(--mut);font-weight:400;margin-right:8px}
+  .sub{color:var(--mut);font-size:14px;margin:0 0 18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:16px 0}
+  table{width:100%;border-collapse:collapse;font-size:14.5px;overflow:hidden;border-radius:10px}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#202842;color:#cfe0ff;font-weight:600;font-size:13px}
+  tr:hover td{background:#1f2740}
+  .pill{display:inline-block;padding:2px 9px;border-radius:20px;font-size:12px;font-weight:600}
+  .rgb{background:#23344d;color:#8fc0ff}.rgbd{background:#2c2440;color:#d3a9ff}
+  .rank{font-weight:800;font-size:15px}
+  /* animated bars */
+  .barrow{display:flex;align-items:center;gap:12px;margin:11px 0}
+  .barlabel{width:148px;font-weight:600;font-size:14px;flex:none}
+  .bartrack{flex:1;background:#11182a;border-radius:8px;height:30px;position:relative;overflow:hidden;border:1px solid var(--line)}
+  .barfill{height:100%;border-radius:7px 0 0 7px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1);display:flex;align-items:center;justify-content:flex-end;padding-right:9px;color:#fff;font-weight:700;font-size:13px;white-space:nowrap}
+  .barrow:hover .barfill{filter:brightness(1.15)}
+  .meta{width:118px;color:var(--mut);font-size:12.5px;flex:none}
+  /* tabs */
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+  .tab{padding:9px 15px;border-radius:10px 10px 0 0;background:#161d2e;border:1px solid var(--line);border-bottom:none;cursor:pointer;font-weight:600;font-size:14px;color:var(--mut);transition:.15s}
+  .tab:hover{color:var(--txt)}
+  .tab.active{color:#fff}
+  .panel{display:none;border:1px solid var(--line);border-radius:0 12px 12px 12px;padding:22px;background:var(--card)}
+  .panel.active{display:block;animation:fade .35s}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+  .panel h3{margin:0 0 4px;font-size:20px}
+  .core{font-size:15px;background:#151b2b;border-left:4px solid;padding:10px 14px;border-radius:0 8px 8px 0;margin:12px 0}
+  .pc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .pc div{background:#151b2b;border-radius:10px;padding:12px 15px}
+  .pc h4{margin:0 0 7px;font-size:14px}
+  .pc ul{margin:0;padding-left:18px;font-size:13.5px;color:#d7deea}
+  .pc li{margin:5px 0}
+  .specs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .spec{background:#1d2538;border:1px solid var(--line);border-radius:8px;padding:7px 11px;font-size:12.5px}
+  .spec b{color:#fff}
+  /* paradigm */
+  .para{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .para .box{border-radius:12px;padding:18px;border:1px solid var(--line)}
+  .pa{background:linear-gradient(160deg,#16331f,#13202a)}
+  .pb{background:linear-gradient(160deg,#33161f,#221327)}
+  .para h3{margin:0 0 6px;font-size:17px}
+  .chip{display:inline-block;background:#0d1422;border:1px solid var(--line);border-radius:7px;padding:4px 9px;margin:4px 4px 0;font-size:13px;font-weight:600}
+  /* callout */
+  .callout{background:linear-gradient(135deg,#2a2410,#241a2e);border:1px solid #5a4a1e;border-radius:14px;padding:20px 24px}
+  .big{font-size:34px;font-weight:800;color:var(--warn)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  figure{margin:0}
+  img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+  figcaption{color:var(--mut);font-size:13px;margin-top:8px;text-align:center}
+  .toggle{display:flex;gap:8px;margin:0 0 14px}
+  .toggle button{background:#1d2538;border:1px solid var(--line);color:var(--mut);padding:7px 14px;border-radius:9px;cursor:pointer;font-weight:600;font-size:13.5px}
+  .toggle button.on{background:#2b3b63;color:#fff;border-color:#3d5286}
+  .insight{display:flex;gap:13px;align-items:flex-start;margin:14px 0}
+  .insight .n{flex:none;width:30px;height:30px;border-radius:50%;background:#2b3b63;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+  canvas{max-width:100%}
+  .note{color:var(--mut);font-size:12.5px;margin-top:10px}
+  footer{text-align:center;color:var(--mut);font-size:12.5px;padding:30px 0 0;border-top:1px solid var(--line);margin-top:50px}
+  @media(max-width:720px){.para,.pc,.grid2{grid-template-columns:1fr}.barlabel{width:96px}.meta{display:none}}
+  /* ===== section 16: survey tabs (scoped, .stab/.spanel — .tab/.panel과 분리) ===== */
+  .stabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+  .stab{padding:9px 14px;border-radius:10px 10px 0 0;background:#161d2e;border:1px solid var(--line);border-bottom:none;cursor:pointer;font-weight:600;font-size:13.5px;color:var(--mut);transition:.15s;border-top:3px solid transparent}
+  .stab:hover{color:var(--txt)}
+  .stab.on{color:#fff;background:#1c2438}
+  .stab .cnt{font-size:11px;color:var(--mut);margin-left:6px}
+  .spanel{display:none;border:1px solid var(--line);border-radius:0 12px 12px 12px;padding:20px;background:var(--card)}
+  .spanel.on{display:block;animation:fade .3s}
+  .srcline{font-size:12.5px;color:var(--mut);margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .srcline code{background:#0d1422;padding:2px 6px;border-radius:5px;color:#9fb4d8;font-size:11.5px}
+  .mcard{background:#151b2b;border:1px solid var(--line);border-left:4px solid;border-radius:0 10px 10px 0;padding:15px 17px;margin:0 0 14px}
+  .mhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:9px}
+  .mhead h4{margin:0;font-size:16.5px}
+  .mhead .venue{font-size:12px;color:var(--mut);font-weight:400}
+  .badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .mone{font-size:13.5px;background:#0f1523;border-radius:8px;padding:9px 12px;margin:10px 0 0;line-height:1.55}
+  .mdesc{font-size:13.5px;margin:9px 0 0;line-height:1.6;color:#d7deea}
+  .fw{background:#131f1a;border:1px solid #24483a;border-radius:8px;padding:10px 13px;margin:12px 0 0}
+  .fw h5{margin:0 0 6px;font-size:13px;color:#7fd9a8}
+  .fw ul{margin:0;padding-left:17px;font-size:13px;color:#cfe4d8}
+  .fw li{margin:5px 0}
+  .filt{display:flex;gap:9px;align-items:center;margin:0 0 14px}
+  .filt input{flex:1;background:#0f1523;border:1px solid var(--line);color:var(--txt);border-radius:9px;padding:8px 12px;font-size:13.5px;font-family:inherit}
+  .filt input:focus{outline:none;border-color:#3d5286}
+  .filt .hit{font-size:12.5px;color:var(--mut);white-space:nowrap}
+  .legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🛰️ 시각 SLAM 5종 종합 벤치마크</h1>
+  <p>오픈 데이터셋 <b>TUM RGB-D fr1_room</b> · RTX 5090(sm_120) · 전체 시퀀스 · ATE는 Sim(3) 정렬</p>
+  <div>
+    <span class="tag">DROID-SLAM</span><span class="tag">MASt3R-SLAM</span>
+    <span class="tag">ViSTA-SLAM</span><span class="tag">DPV-SLAM</span><span class="tag">GauS-SLAM</span>
+  </div>
+</header>
+<div class="wrap">
+
+<!-- 1. TL;DR -->
+<h2><span class="num">1</span>한눈에 보기 — 포즈 정확도 순위</h2>
+<p class="sub">ATE RMSE(절대궤적오차)가 낮을수록 카메라 위치를 정확히 추정한 것입니다. 막대에 마우스를 올려보세요.</p>
+<div class="card" id="bars"></div>
+
+<!-- master table -->
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>순위</th><th>시스템</th><th>센서</th><th>ATE ↓</th><th>키프레임</th><th>망 크기</th><th>속도(체감)</th><th>맵 종류</th></tr></thead>
+<tbody>
+<tr><td class="rank" style="color:var(--droid)">🥇 1</td><td><b>DROID-SLAM</b></td><td><span class="pill rgb">RGB</span></td><td><b>4.94 cm</b></td><td>681</td><td>4.0M</td><td>느림(~8fps)</td><td>dense 점구름</td></tr>
+<tr><td class="rank" style="color:var(--mast)">🥈 2</td><td><b>MASt3R-SLAM</b></td><td><span class="pill rgb">RGB</span></td><td><b>6.12 cm</b></td><td>51</td><td>695.3M</td><td>느림(~6.5fps)</td><td>dense pointmap</td></tr>
+<tr><td class="rank" style="color:var(--vista)">🥉 3</td><td><b>ViSTA-SLAM</b></td><td><span class="pill rgb">RGB</span></td><td><b>6.77 cm</b></td><td>400</td><td>441.8M</td><td>중간(실시간 지향)</td><td>dense pointmap</td></tr>
+<tr><td class="rank" style="color:var(--dpv)">4</td><td><b>DPV-SLAM</b> <span style="color:var(--mut);font-size:12px">(완전판)</span></td><td><span class="pill rgb">RGB</span></td><td><b>8.12 cm</b></td><td>681</td><td>3.5M</td><td>빠름(VO)</td><td>희소 패치</td></tr>
+<tr><td class="rank" style="color:var(--gaus)">5</td><td><b>GauS-SLAM</b></td><td><span class="pill rgbd">RGB-D</span></td><td><b>13.77 cm</b></td><td>1315</td><td>~0(추적망 없음)</td><td>느림(~2-5fps)</td><td>surfel(렌더 가능)</td></tr>
+</tbody>
+</table>
+<p class="note">※ ATE 측정 밀도(키프레임 수)가 시스템마다 다릅니다(51~1315). evo가 타임스탬프로 정합하나 완전히 동일한 프로토콜은 아닙니다.</p>
+</div>
+
+<!-- interactive charts -->
+<h2><span class="num">2</span>다차원 역량 비교 (인터랙티브)</h2>
+<p class="sub">정확도만이 전부가 아닙니다. 속도·맵 품질·경량성·견고성까지 5축으로 비교합니다. (정성 평가 1~5점)</p>
+<div class="card">
+  <div class="toggle">
+    <button id="bt-radar" class="on" onclick="showChart('radar')">📊 역량 레이더</button>
+    <button id="bt-ate" onclick="showChart('ate')">📉 ATE 막대</button>
+  </div>
+  <div id="c-radar" style="height:440px"><canvas id="radar"></canvas></div>
+  <div id="c-ate" style="display:none;height:360px"><canvas id="atec"></canvas></div>
+  <p class="note">레이더가 넓을수록 만능, 한쪽으로 뾰족하면 특화형입니다. 범례를 클릭해 켜고 끌 수 있습니다.</p>
+</div>
+
+<!-- 3. paradigm -->
+<h2><span class="num">3</span>핵심 통찰 ① — 두 개의 딥러닝 패러다임</h2>
+<p class="sub">파라미터 수가 모든 차이를 설명합니다. <b>매칭만 학습</b> vs <b>3D를 통째로 학습</b>.</p>
+<div class="para">
+  <div class="box pa">
+    <h3>🟢 (A) 매칭만 학습 + 고전 기하</h3>
+    <p style="color:#bfe6c8;margin:.3em 0">신경망은 "픽셀이 어디로 갔나(대응)"만 배우고, <b>3D는 고전 번들조정(BA)</b>이 푼다 → 망이 작아도 됨</p>
+    <span class="chip" style="color:#8effb0">DROID-SLAM · 4.0M</span>
+    <span class="chip" style="color:#8effb0">DPVO/DPV-SLAM · 3.5M</span>
+  </div>
+  <div class="box pb">
+    <h3>🔴 (B) 3D 파운데이션 모델</h3>
+    <p style="color:#f0c4cc;margin:.3em 0">신경망이 <b>사진만 보고 3D 좌표를 직접 예측</b> → 망이 거대해짐(수백 M)</p>
+    <span class="chip" style="color:#ff9aa8">MASt3R-SLAM · 695.3M</span>
+    <span class="chip" style="color:#ff9aa8">ViSTA-SLAM · 441.8M</span>
+  </div>
+</div>
+<div class="card" style="margin-top:14px">
+  <b>그리고 예외 한 명:</b> <span style="color:var(--gaus);font-weight:700">GauS-SLAM</span>은 추적용 신경망이 <b>없습니다</b>. 미분가능 <b>렌더링 최적화</b>로 동작하는 거의 비-딥러닝 방식 — 그래서 학습된 "3D 직감"이 없어 긴 루프에서 더 흘렀습니다.
+  <div class="barrow" style="margin-top:14px"><div class="barlabel">MASt3R</div><div class="bartrack"><div class="barfill" data-w="100" style="background:var(--mast)">695.3M</div></div></div>
+  <div class="barrow"><div class="barlabel">ViSTA</div><div class="bartrack"><div class="barfill" data-w="64" style="background:var(--vista)">441.8M</div></div></div>
+  <div class="barrow"><div class="barlabel">DROID</div><div class="bartrack"><div class="barfill" data-w="3" style="background:var(--droid)">4.0M</div></div></div>
+  <div class="barrow"><div class="barlabel">DPV-SLAM</div><div class="bartrack"><div class="barfill" data-w="2.5" style="background:var(--dpv)">3.5M</div></div></div>
+  <p class="note">막대 길이 = 모델 크기(파라미터). 매칭만 배우는 DROID/DPVO는 170배 작습니다.</p>
+</div>
+
+<!-- 3.5 network outputs -->
+<h2><span class="num">3.5</span>딥러닝 모델의 '실제 출력'은 어떻게 생겼나</h2>
+<p class="sub">출력이 <b>이미지 같은가(조밀)</b> vs <b>흩어진 점인가(희소)</b>. 실제 모델 출력을 그렸습니다.</p>
+<div class="card">
+  <figure><img src="same_input_outputs.png" alt="동일 입력 출력 비교">
+  <figcaption><b>동일한 1장 입력</b>에 각 모델의 원본 알고리즘을 직접 실행한 실제 출력. DROID·MASt3R·ViSTA는 <b>픽셀별 조밀 깊이(이미지 형태)</b>라 같은 장면이면 바로 비교 가능, DPV-SLAM은 <b>희소 패치 ~96개</b></figcaption></figure>
+  <figure style="margin-top:16px"><img src="pointmap_vs_pointcloud.png" alt="pointmap vs point cloud">
+  <figcaption><b>dense pointmap vs dense point cloud</b> — pointmap=한 프레임의 격자 정렬 3D(H×W×3), point cloud=여러 프레임 pointmap을 누적·융합한 전체 맵. "같은 점, 정렬 유무 차이"</figcaption></figure>
+  <div class="pc" style="grid-template-columns:1fr 1fr 1fr;margin-top:16px">
+    <div><h4 style="color:var(--good)">조밀(이미지 형태)</h4><ul>
+      <li><b>DROID</b>: 픽셀별 flow→깊이</li>
+      <li><b>MASt3R/ViSTA</b>: 픽셀별 3D(pointmap)</li>
+      <li>화면 전체에 값이 채워짐</li></ul></div>
+    <div><h4 style="color:#c89b2a">flow란?</h4><ul>
+      <li>픽셀마다 "어디로 갔나"</li>
+      <li>2D 움직임 = 색부호화 이미지</li>
+      <li>DROID 망이 이걸 예측</li></ul></div>
+    <div><h4 style="color:#a36ddb">희소(이미지 아님)</h4><ul>
+      <li><b>DPVO</b>: 패치(작은 조각) ~96개</li>
+      <li>정보 많은 곳만 추적</li>
+      <li>가볍지만 맵 빈약</li></ul></div>
+  </div>
+</div>
+
+<!-- 4. method tabs -->
+<h2><span class="num">4</span>방법별 작동 원리 · 장단점</h2>
+<p class="sub">탭을 눌러 각 시스템을 살펴보세요.</p>
+<div class="tabs" id="tabs">
+  <div class="tab active" data-k="droid" style="border-top:3px solid var(--droid)">DROID-SLAM</div>
+  <div class="tab" data-k="mast" style="border-top:3px solid var(--mast)">MASt3R-SLAM</div>
+  <div class="tab" data-k="vista" style="border-top:3px solid var(--vista)">ViSTA-SLAM</div>
+  <div class="tab" data-k="dpv" style="border-top:3px solid var(--dpv)">DPV-SLAM</div>
+  <div class="tab" data-k="gaus" style="border-top:3px solid var(--gaus)">GauS-SLAM</div>
+</div>
+
+<div class="panel active" data-k="droid">
+  <h3 style="color:var(--droid)">DROID-SLAM — 정확도 챔피언</h3>
+  <div class="core" style="border-color:var(--droid)">화면 <b>전체 픽셀의 흐름</b>을 학습망으로 추정하고, 새 정보가 올 때마다 <b>과거 전체 궤적을 한꺼번에 다시 푼다</b>(전역 BA).</div>
+  <p>희소 특징점이 아니라 1/8 해상도 <b>격자 전 픽셀</b>의 대응(flow)을 씁니다. 신경망(4M)은 flow와 신뢰도만 출력하고, 카메라·깊이는 <b>고전 최소제곱(번들조정)</b>이 계산합니다 — 딥러닝이 아니라 수학.</p>
+  <div class="pc">
+    <div><h4 style="color:var(--good)">👍 장점</h4><ul><li>정확도 최고(4.94cm)</li><li>가장 견고 — 잘 안 깨짐</li><li>RGB-D/스테레오도 지원</li></ul></div>
+    <div><h4 style="color:#ff8b8b">👎 단점</h4><ul><li>메모리·연산 매우 무거움</li><li>느림(~8fps, 실시간 아님)</li><li>맵은 밋밋한 점구름</li></ul></div>
+  </div>
+  <div class="specs"><span class="spec">망 <b>4.0M</b></span><span class="spec">속도 <b>~8fps</b></span><span class="spec">맵 <b>dense 점구름</b></span><span class="spec">루프 <b>전역 BA</b></span></div>
+</div>
+
+<div class="panel" data-k="mast">
+  <h3 style="color:var(--mast)">MASt3R-SLAM — 보정 없는 3D 직감</h3>
+  <div class="core" style="border-color:var(--mast)">사진 <b>2장만 보면 3D 좌표를 바로 출력</b>하도록 수백만 장면으로 학습된 파운데이션 모델. 카메라 보정값조차 불필요.</div>
+  <p>아키텍처는 <b>ViT(비전 트랜스포머) encoder-decoder + DPT 헤드</b>(DUSt3R 계열). 695.3M 파라미터로 망이 3D 추론을 직접 수행합니다. 키프레임 51장만으로도 6.12cm.</p>
+  <div class="pc">
+    <div><h4 style="color:var(--good)">👍 장점</h4><ul><li>카메라 보정 불필요</li><li>강한 3D 사전지식 → 적은 키프레임으로 고정확</li><li>임의 카메라 OK</li></ul></div>
+    <div><h4 style="color:#ff8b8b">👎 단점</h4><ul><li>큰 망 → 느림(~6.5fps)</li><li>맵은 pointmap(사진 렌더 불가)</li><li>GPU 메모리 큼</li></ul></div>
+  </div>
+  <div class="specs"><span class="spec">망 <b>695.3M</b></span><span class="spec">속도 <b>~6.5fps</b></span><span class="spec">맵 <b>dense pointmap</b></span><span class="spec">루프 <b>retrieval+PGO</b></span></div>
+</div>
+
+<div class="panel" data-k="vista">
+  <h3 style="color:var(--vista)">ViSTA-SLAM — MASt3R의 경량·실시간판</h3>
+  <div class="core" style="border-color:var(--vista)">같은 "2장→3D" 아이디어를 <b>대칭 2-view(STA)</b>로 단순화해 망을 줄이고(695M→442M) 속도를 높인 실시간 단안 SLAM.</div>
+  <p>두 영상을 같은 방식으로 처리(symmetric)해 디코더를 간소화했습니다. DBoW 루프클로저 + Sim3 포즈그래프 내장. 정확도를 살짝 내주고(6.1→6.8cm) 속도/실시간성을 얻은 트레이드오프.</p>
+  <div class="pc">
+    <div><h4 style="color:var(--good)">👍 장점</h4><ul><li>실시간 지향 단안</li><li>루프클로저 내장</li><li>보정 불필요, MASt3R보다 가벼움</li></ul></div>
+    <div><h4 style="color:#ff8b8b">👎 단점</h4><ul><li>MASt3R보다 살짝 낮은 정확도</li><li>맵은 pointmap</li><li>비교적 최신(생태계 미성숙)</li></ul></div>
+  </div>
+  <div class="specs"><span class="spec">망 <b>441.8M</b></span><span class="spec">속도 <b>실시간 지향</b></span><span class="spec">맵 <b>dense pointmap</b></span><span class="spec">루프 <b>DBoW+Sim3 PGO</b></span></div>
+</div>
+
+<div class="panel" data-k="dpv">
+  <h3 style="color:var(--dpv)">DPV-SLAM — 가볍고 빠른 패치 추적</h3>
+  <div class="core" style="border-color:var(--dpv)">화면 전체가 아닌 <b>작은 패치 ~96개만</b> 추적(매우 가벼움). 드리프트는 <b>루프클로저로 사후 보정</b>한다.</div>
+  <p>특징점 검출기가 아니라, 작은 CNN(3.5M)으로 패치를 뽑고 순환망으로 추적하는 방식. 장기 루프클로저엔 별도로 학습형 검출기 DISK를 사용합니다. 루프클로저가 정확도의 핵심(아래 ⑤ 참고).</p>
+  <div class="pc">
+    <div><h4 style="color:var(--good)">👍 장점</h4><ul><li>압도적으로 빠르고 가벼움(3.5M)</li><li>저사양에서 유리</li><li>루프클로저 켜면 정확도 급회복</li></ul></div>
+    <div><h4 style="color:#ff8b8b">👎 단점</h4><ul><li>루프클로저 없으면 드리프트 큼</li><li>맵이 희소(재구성 빈약)</li><li>빠른 회전/블러에 약함</li></ul></div>
+  </div>
+  <div class="specs"><span class="spec">망 <b>3.5M</b></span><span class="spec">속도 <b>VO 매우 빠름</b></span><span class="spec">맵 <b>희소 패치</b></span><span class="spec">루프 <b>근접+장기 DBoW</b></span></div>
+</div>
+
+<div class="panel" data-k="gaus">
+  <h3 style="color:var(--gaus)">GauS-SLAM — 사진 같은 3D를 그리는 화가</h3>
+  <div class="core" style="border-color:var(--gaus)">장면을 <b>2D 가우시안(surfel)으로 칠한 3D 그림</b>으로 만들고, 그 그림을 렌더해 실제 영상과 맞추며 카메라를 추적(RGB-D).</div>
+  <p>유일하게 추적 신경망이 없는 거의 비-딥러닝 방식. 매 프레임 <b>렌더→오차 역전파→포즈·지도 최적화</b>를 반복해 느립니다(~2-5fps). 전역 BA가 없어 포즈 드리프트는 크지만(5위), 대신 <b>유일하게 사진처럼 다시 렌더되는 맵</b>을 만듭니다(PSNR 19.7).</p>
+  <div class="pc">
+    <div><h4 style="color:var(--good)">👍 장점</h4><ul><li><b>유일한 photorealistic novel-view 렌더</b></li><li>깊이 활용, AR·시각화 최적</li><li>"다시 렌더 가능한" 3D 자산</li></ul></div>
+    <div><h4 style="color:#ff8b8b">👎 단점</h4><ul><li>포즈 드리프트 큼(전역 BA 없음)</li><li>느리고 무거움</li><li>맵 용량 큼(317MB)</li></ul></div>
+  </div>
+  <div class="specs"><span class="spec">추적망 <b>없음</b></span><span class="spec">속도 <b>~2-5fps</b></span><span class="spec">맵 <b>surfel(렌더 가능)</b></span><span class="spec">센서 <b>RGB-D</b></span></div>
+</div>
+
+<!-- 5. loop closure story -->
+<h2><span class="num">5</span>핵심 통찰 ② — "되돌아보기"가 정확도를 가른다</h2>
+<p class="sub">DPV-SLAM으로 직접 증명: 장기 루프클로저를 켜자 정확도가 5배 좋아졌습니다.</p>
+<div class="callout">
+  <div class="grid2" style="align-items:center">
+    <div>
+      <div style="color:var(--mut);font-size:14px">근접 루프만 (출발점 복귀 인식 ✗)</div>
+      <div class="big" style="color:#ff8b8b">41.2 cm</div>
+      <div style="font-size:26px;color:var(--mut);margin:6px 0">⬇️ 장기 DBoW 루프클로저 ON</div>
+      <div style="color:var(--mut);font-size:14px">완전판 (출발점 복귀 인식 ✓, LC COUNT=1)</div>
+      <div class="big" style="color:var(--good)">8.1 cm</div>
+    </div>
+    <div style="font-size:14.5px;color:#e9dfc8">
+      희소 패치 VO는 오차가 쌓이지만, <b>"집에 돌아온 순간"을 인식해 누적 오차를 한꺼번에 펴주면</b> 정확도가 급반전합니다.
+      <br><br>같은 원리로, 과거 전체를 다시 푸는 <b>DROID(전역 BA)</b>가 1위인 것도, 그게 없는 <b>GauS·DPVO(근접만)</b>가 흐르는 것도 설명됩니다.
+      <br><br>👉 <b>DPVO의 약점은 알고리즘 본질이 아니라 "되돌아보기" 메커니즘의 유무였습니다.</b>
+    </div>
+  </div>
+</div>
+
+<!-- 6. visual gallery -->
+<h2><span class="num">6</span>시각 자료 — 궤적 · 맵 · 렌더</h2>
+<p class="sub">수치가 아니라 눈으로 직접 확인하는 차이.</p>
+<div class="card">
+  <figure><img src="ate_barchart.png" alt="ATE 막대"><figcaption>① 5종 포즈 정확도 막대 — DPVO 근접41cm→완전판8cm 개선 포함</figcaption></figure>
+</div>
+<div class="card">
+  <figure><img src="trajectory_overlay.png" alt="궤적 오버레이"><figcaption>② <b>5종을 한 그림에 겹친 궤적</b> (모두 같은 fr1_room 시퀀스, PCA로 방향 정규화). 검정=정답, 색이 검정에 붙을수록 정확</figcaption></figure>
+  <figure style="margin-top:16px"><img src="trajectory_grid5.png" alt="궤적 그리드"><figcaption>②-2 개별 보기 (각 패널은 같은 시퀀스를 독립 정렬해 방향만 다름). DROID/MASt3R/ViSTA 밀착, GauS 중간 드리프트, DPV-SLAM 양호</figcaption></figure>
+</div>
+<div class="card">
+  <figure><img src="map_montage5.png" alt="맵 비교"><figcaption>③ 재구성 맵 비교. DROID/MASt3R/ViSTA = dense 방 재구성, GauS = surfel, DPV-SLAM = 희소 패치(맵이 목적 아님)</figcaption></figure>
+</div>
+<div class="grid2">
+  <figure><img src="gaus_render_sample.png" alt="GauS 렌더"><figcaption>④ GauS-SLAM만 가능한 photorealistic 렌더 (좌:RGB 우:Depth)</figcaption></figure>
+  <figure><img src="pose3d_compare.png" alt="3D 포즈"><figcaption>⑤ 3D 카메라 포즈 시뮬레이션 (맵+궤적+frustum)</figcaption></figure>
+</div>
+<p class="note">🎥 동영상: 같은 폴더의 <b>gaus_flythrough.mp4</b>(사진사실 1인칭), <b>gaus_anim.mp4 / mast3r_anim.mp4</b>(3D 3인칭 궤적)도 함께 보세요.</p>
+
+<!-- 7. when to use -->
+<h2><span class="num">7</span>언제 무엇을 쓰나</h2>
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>목적</th><th>추천</th><th>이유</th></tr></thead>
+<tbody>
+<tr><td>가장 정확한 카메라 궤적</td><td style="color:var(--droid);font-weight:700">DROID-SLAM</td><td>전역 BA로 드리프트 최소</td></tr>
+<tr><td>카메라 보정값이 없을 때</td><td style="color:var(--mast);font-weight:700">MASt3R / ViSTA</td><td>보정 없이 3D 직접 예측</td></tr>
+<tr><td>저사양·실시간·빠른 처리</td><td style="color:var(--dpv);font-weight:700">DPV-SLAM</td><td>희소 패치라 가장 가벼움(+루프클로저 필수)</td></tr>
+<tr><td>사진 같은 3D 재구성 / AR</td><td style="color:var(--gaus);font-weight:700">GauS-SLAM</td><td>유일한 photorealistic 렌더</td></tr>
+<tr><td>정확도+실시간 단안 균형</td><td style="color:var(--vista);font-weight:700">ViSTA-SLAM</td><td>학습 3D + 실시간 + 루프 균형</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- 8. insights -->
+<h2><span class="num">8</span>핵심 통찰 3줄 요약</h2>
+<div class="card">
+  <div class="insight"><div class="n">1</div><div><b>"되돌아보기"가 정확도를 가른다.</b> 전역 BA(DROID)나 장기 루프클로저(DPV-SLAM)가 있으면 정확하고, 없으면(GauS·DPVO 근접만) 드리프트가 쌓인다.</div></div>
+  <div class="insight"><div class="n">2</div><div><b>단안 학습기반이 RGB-D 고전 최적화를 이긴다.</b> MASt3R·ViSTA(RGB만)가 깊이를 받는 GauS보다 포즈가 정확 — "학습된 3D 직감"의 힘.</div></div>
+  <div class="insight"><div class="n">3</div><div><b>정확도와 맵 품질은 다른 목표다.</b> GauS는 포즈 5위지만 <i>유일하게 사진 같은 맵</i>을 만든다. 용도(측위 vs AR)에 따라 정답이 다르다.</div></div>
+</div>
+
+<!-- 9. retrieval correction -->
+<h2><span class="num">9</span>루프클로저 — 흔한 오해 바로잡기</h2>
+<p class="sub">"DBoW vs 이미지 retrieval"은 잘못된 대립입니다. <b>DBoW 자체가 이미지 retrieval</b>(시각 단어 가방).</p>
+<div class="card">
+  <p>루프클로저는 항상 <b>두 단계</b>입니다: ① <b>탐지(retrieval)</b> "여기 와본 곳인가?" → ② <b>보정(PGO/BA)</b> "궤적을 펴자". Sim3 PGO는 retrieval이 아니라 ②단계입니다.</p>
+  <table style="margin-top:8px">
+  <thead><tr><th>탐지 방식</th><th>고전 BoW (DPV-SLAM · ViSTA)</th><th>학습 descriptor (MASt3R)</th></tr></thead>
+  <tbody>
+  <tr><td>원리</td><td>ORB 등 수작업 특징을 시각 단어로 양자화해 검색</td><td>학습된 특징으로 유사 프레임 검색</td></tr>
+  <tr><td>👍 장점</td><td>빠름·가벼움·GPU 불필요</td><td>시점/조명 변화에 강건, 예측 3D로 바로 검증</td></tr>
+  <tr><td>👎 단점</td><td>수작업 특징이라 큰 변화에 약함, vocabulary 필요</td><td>무거움(GPU·큰 모델)</td></tr>
+  </tbody></table>
+</div>
+
+<!-- 10. PSNR -->
+<h2><span class="num">10</span>점구름은 왜 PSNR을 못 재나</h2>
+<div class="card">
+  <p><b>PSNR은 "렌더된 이미지"를 정답 사진과 비교하는 지표</b>입니다. 점구름은 렌더하면 점 사이가 <b>구멍투성이</b>라 PSNR이 무의미합니다. 그래서 표에서 GauS만 PSNR이 있고 나머지는 N/A입니다.</p>
+  <p style="margin:8px 0 0">점구름엔 대신 <b>기하 지표</b>를 씁니다 — <span class="chip">Chamfer distance</span> <span class="chip">Accuracy/Completeness</span> <span class="chip">Depth-RMSE</span></p>
+</div>
+
+<!-- 11. fusion -->
+<h2><span class="num">11</span>장점을 융합해 하나로? — Baseline 선택</h2>
+<p class="sub">벤치마크가 두 관심사를 분리합니다: <b>포즈는 '전역 보정'이, 맵은 'GauS의 렌더 맵'이</b> 이김 → 추적과 매핑을 분리하라.</p>
+<div class="grid2">
+  <div class="card" style="border-left:4px solid var(--good)">
+    <h3 style="margin:0 0 6px">✅ 시스템으로는 명확</h3>
+    <p>목표 = <b>사진사실 재구성 + 쓸만한 포즈</b> →<br><b style="color:var(--gaus)">baseline = GauS-SLAM</b> (렌더 맵은 유일 자산+내 코드).<br>약점인 <b>드리프트</b>를 메우는 모듈 이식:</p>
+    <ul style="font-size:13.5px;margin:6px 0 0">
+      <li>루프클로저 + 포즈그래프 최적화(PGO)/전역 BA</li>
+      <li>학습형 2-view 프론트엔드(MASt3R/ViSTA prior)로 강건한 상대포즈</li>
+    </ul>
+  </div>
+  <div class="card" style="border-left:4px solid var(--warn)">
+    <h3 style="margin:0 0 6px">⚠️ 연구 기여로는 주의</h3>
+    <p>바로 이 융합은 <b>이미 출판됨</b>:<br><a href="https://github.com/PRBonn/2DGS-SLAM" style="color:#8fc0ff">2DGS-SLAM (arXiv 2506.00970, 코드 공개)</a><br>= 2D surfel 맵 + MASt3R 루프클로저 + PGO + 전역 일관성.</p>
+    <p style="margin:6px 0 0;font-size:13.5px">→ <b>"GauS + MASt3R 루프" = 이걸 재현</b>하는 셈. 새 기여를 원하면 미점유 white space로:</p>
+    <p style="margin:4px 0 0"><span class="chip">surfel 방향 SO(3) 정규화</span><span class="chip">4D/동적 surfel</span><span class="chip">신호처리 접목</span></p>
+  </div>
+</div>
+
+<!-- 12. technical analysis of attempted GS-SLAM -->
+<h2><span class="num">12</span>시도한 GS-SLAM 4종 — 기술 분석과 고찰</h2>
+<p class="sub">벤치 확장을 위해 시도한 4종 GS-SLAM. 각 시스템의 <b>핵심 알고리즘·이론·기여</b>를 분석합니다. (실행은 환경 제약으로 막혔으나, 기술적으로는 GS-SLAM 설계 공간의 서로 다른 축을 대표합니다.)</p>
+
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>시스템</th><th>발표</th><th>핵심 한 줄</th><th>추적 베이스</th><th>맵 표현</th><th>실행</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:700;color:#00bfa5">2DGS-SLAM</td><td>arXiv 2506.00970 (PRBonn)</td><td>2D surfel로 depth 일관성 + MASt3R 루프클로저</td><td>렌더-loss(자체)</td><td>2D 가우시안</td><td style="color:#ff8b8b">빌드OK·블록</td></tr>
+<tr><td style="font-weight:700;color:#e8a33d">OpenGS-SLAM</td><td>ICRA 2025 · 2502.15633 (HKUST-GZ)</td><td>RGB-only 야외 무한 장면 GS-SLAM</td><td>pointmap(DUSt3R류)</td><td>3D 가우시안</td><td style="color:#ff8b8b">빌드OK·블록</td></tr>
+<tr><td style="font-weight:700;color:#5aa9ff">DROID-Splat</td><td>arXiv 2411.17660</td><td>DROID 추적 + 3DGS 맵 + 단안 depth prior (분리구조)</td><td>DROID-SLAM</td><td>3D 가우시안</td><td style="color:var(--mut)">미시도</td></tr>
+<tr><td style="font-weight:700;color:#c06bd8">CaRtGS</td><td>arXiv 2410.00486 (SYSU/HKU)</td><td>ORB-SLAM3 + 가우시안 매퍼 + 실시간 계산정렬</td><td>ORB-SLAM3</td><td>3D 가우시안</td><td style="color:var(--mut)">미시도</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- per-system technical cards -->
+<div class="card" style="border-left:4px solid #00bfa5;margin-top:16px">
+  <h3 style="color:#00bfa5;margin:0 0 6px">2DGS-SLAM — 2D surfel로 깊이를 일관되게 <span style="color:var(--mut);font-size:13px;font-weight:400">· RGB-D · arXiv 2506.00970</span></h3>
+  <div class="core" style="border-color:#00bfa5">3DGS RGB-D SLAM의 두 약점 — <b>depth 렌더 비일관성</b>과 <b>효율적 루프클로저 부재</b> — 을 정조준해, 맵을 <b>2D 가우시안(surfel)</b>으로 바꾸고 <b>MASt3R</b>로 전역 일관성을 얻는다.</div>
+  <ul style="font-size:13.5px;margin:10px 0 0">
+    <li><b>2D surfel → depth-consistent rendering (핵심 이론).</b> 3D 타원체는 alpha-blending 깊이가 ray마다 여러 가우시안의 가중평균이라 <b>표면이 시점마다 흔들림</b>(multi-view inconsistent). 2D 디스크는 <b>ray–disk 교차점이 곧 표면</b>이라 깊이가 결정적 → 포토메트릭+기하 추적 손실이 잘 정의되고 표면 재구성이 정확.</li>
+    <li><b>MASt3R(3D 파운데이션) 루프 탐지 + relocalization.</b> 학습된 2-view 3D 예측으로 재방문 인식·재측위 → 전역 일관 맵.</li>
+    <li><b>Local active map.</b> 전체가 아닌 국소 활성 맵만 갱신 → 온라인 효율.</li>
+  </ul>
+</div>
+
+<div class="card" style="border-left:4px solid #e8a33d">
+  <h3 style="color:#e8a33d;margin:0 0 6px">OpenGS-SLAM — 깊이 센서 없이 야외 무한 장면 <span style="color:var(--mut);font-size:13px;font-weight:400">· RGB-only · ICRA 2025</span></h3>
+  <div class="core" style="border-color:#e8a33d">대부분 GS-SLAM이 <b>RGB-D·실내 유한 장면</b>을 가정하는 데 반해, <b>단안 RGB만으로 무한(unbounded) 야외</b>를 다루는 정반대 난제를 공략.</div>
+  <ul style="font-size:13.5px;margin:10px 0 0">
+    <li><b>pointmap 파운데이션 프론트엔드(DUSt3R/CroCo 계열, curope RoPE 커널).</b> 단안의 스케일·기하 모호성을 학습된 3D 예측으로 회복하고 그 위에 3DGS 맵을 올림 — 깊이 센서 부재를 학습 prior로 메움.</li>
+    <li><b>무한 깊이·큰 모션 대응.</b> 실내 bounded 가정을 깨고 야외 도로/주행 시퀀스를 표적. 후속작 S3PO-GS(ICCV 2025)로 성능 개선.</li>
+    <li><b>이론적 의의:</b> "GS 맵 + 학습 3D 프론트엔드" 조합이 단안·야외에서도 작동함을 보임 — 본 벤치의 MASt3R/ViSTA(학습 3D)와 GauS(GS 맵)를 잇는 위치.</li>
+  </ul>
+</div>
+
+<div class="card" style="border-left:4px solid #5aa9ff">
+  <h3 style="color:#5aa9ff;margin:0 0 6px">DROID-Splat — 강한 추적기 + GS 맵을 분리 결합 <span style="color:var(--mut);font-size:13px;font-weight:400">· arXiv 2411.17660</span></h3>
+  <div class="core" style="border-color:#5aa9ff">본 보고서 섹션 11에서 제안한 <b>"추적과 매핑을 분리"</b> 전략의 <b>실제 출판 구현</b>. 우리 5종 1위 <b>DROID(추적)</b>와 GauS류 <b>GS 맵</b>을 합치는 그림 그대로.</div>
+  <ul style="font-size:13.5px;margin:10px 0 0">
+    <li><b>DROID-SLAM dense 추적</b>(SotA) + <b>3DGS dense differentiable 렌더 맵</b> + <b>Metric3D 등 단안 metric depth prior</b>로 <b>unknown-scale 단안 영상에 스케일</b>을 부여 → 포즈+3D 재구성 실시간 전역 최적화.</li>
+    <li><b>DroidCalib</b> 커널로 임의 카메라 모델 + intrinsic까지 맵·포즈그래프 위에서 동시 최적화. <b>DPVO식 전통 루프클로저</b>도 추가(KITTI·ScanNet 등 어려운 야외 강건성).</li>
+    <li><b>★흥미로운 negative result:</b> 저자가 <b>2DGS 브랜치</b>도 넣었으나 "표면 기하는 빨리 수렴해도 <b>refine 후 naive 3DGS보다 낫진 않았다</b>"고 보고 → 2D surfel이 만능은 아니며, 2DGS-SLAM의 이득은 표현 자체보다 <b>depth-consistency 설계</b>에서 온다는 해석을 뒷받침.</li>
+  </ul>
+</div>
+
+<div class="card" style="border-left:4px solid #c06bd8">
+  <h3 style="color:#c06bd8;margin:0 0 6px">CaRtGS — 추적은 빠른데 매핑이 느린 불균형을 정렬 <span style="color:var(--mut);font-size:13px;font-weight:400">· 실시간 · arXiv 2410.00486</span></h3>
+  <div class="core" style="border-color:#c06bd8">실시간 GS-SLAM의 진짜 병목은 <b>추적(빠름)과 가우시안 매핑(느림)의 속도 불일치</b>. 이를 <b>Computational Alignment</b>로 맞춘다.</div>
+  <ul style="font-size:13.5px;margin:10px 0 0">
+    <li><b>ORB-SLAM3(고전 특징 추적·루프클로저)</b> + <b>Gaussian mapper</b>(Photo-SLAM 계보) C++ 시스템 — 검증된 고전 SLAM 위에 GS 맵을 얹는다.</li>
+    <li><b>splat-wise back-propagation for depth rendering</b>(GS_ICP_SLAM 계보 커스텀 rasterizer)로 매핑 역전파를 가속 → 추적과 매핑의 계산량을 정렬해 실시간 달성.</li>
+    <li><b>이론적 의의:</b> GS-SLAM의 한계를 "표현 품질"이 아니라 <b>시스템 스케줄링/계산 균형</b> 문제로 재정의 — 본 벤치 GauS의 ~2-5fps 병목과 직결되는 관점.</li>
+  </ul>
+</div>
+
+<h3 style="margin:22px 0 4px">고찰 — 4종이 말하는 GS-SLAM 설계 공간</h3>
+<div class="card">
+  <div class="insight"><div class="n">1</div><div><b>네 시스템 = 직교하는 4개 설계 축.</b> <span style="color:#00bfa5">2DGS-SLAM=맵 프리미티브(2D surfel)</span> · <span style="color:#e8a33d">OpenGS=입력·도메인(RGB-only 야외 무한)</span> · <span style="color:#5aa9ff">DROID-Splat=추적-매핑 분리(외부 강추적기)</span> · <span style="color:#c06bd8">CaRtGS=시스템 실시간성(계산 정렬)</span>. GS-SLAM을 개선하는 방법이 한 갈래가 아님을 보여준다.</div></div>
+  <div class="insight"><div class="n">2</div><div><b>공통 교훈: GS 렌더만으로는 드리프트를 못 잡는다.</b> 네 시스템 모두 전역 일관성을 <b>GS 외부 장치</b>로 따로 붙인다 — MASt3R(2DGS) / pointmap(OpenGS) / DPVO-LC+DroidCalib(DROID-Splat) / ORB-SLAM3 그래프(CaRtGS). 즉 정확도의 진짜 적은 "가우시안을 어떻게 그리느냐"가 아니라 <b>추적-매핑 결합 + 루프클로저</b>. 본 벤치의 핵심 통찰("되돌아보기가 정확도를 가른다")과 정확히 일치.</div></div>
+  <div class="insight"><div class="n">3</div><div><b>우리 방향 함의.</b> DROID-Splat이 "DROID 추적 + GS 맵" 분리 구조를 이미 출판·구현 → <b>photorealistic 맵 경로는 이미 점유</b>. 따라서 맵을 포기하고 <b>포즈 정확도+속도</b>로 RTAB-Map을 추월하는 현 트랙은 이들과 차별화된 선택이며, 레드오션을 피한다.</div></div>
+  <div class="insight"><div class="n">4</div><div><b>표현 vs 시스템.</b> 2DGS-SLAM(2D surfel)·CaRtGS(계산정렬)·DROID-Splat(분리) 비교는 "더 나은 가우시안 표현"보다 <b>전역 일관성과 계산 균형이라는 시스템 설계</b>가 GS-SLAM의 성패를 가른다는 결론으로 수렴한다. (DROID-Splat의 2DGS negative result가 이를 뒷받침.)</div></div>
+  <p class="note">참고: 4종 모두 실행은 환경 제약(2DGS·OpenGS의 멀티프로세스 CUDA-IPC가 WSL2 미지원, DROID-Splat·CaRtGS의 sm_120 커스텀 빌드 난관)으로 본 벤치에 미포함. 알고리즘 결함이 아니라 배포 복잡도 문제이며, 이것이 5종으로 확정한 실무적 이유이기도 하다.</p>
+</div>
+
+<!-- 13. techniques table -->
+<h2><span class="num">13</span>각 논문별 대표 기술 → 접목 지도</h2>
+<p class="sub">이 경로에서 분석·구현한 <b>모든</b> 논문·시스템의 대표 기술(메커니즘)을 풀어 쓰고, <b>우리 시스템 어디에 접목하면 좋을지 별표(★)로 표시</b>합니다.</p>
+<div class="card" style="padding:12px 16px;margin-bottom:12px">
+  <b style="color:#f5c451">★ 추천도 범례</b> &nbsp;
+  <span style="color:#f5c451">★★★</span> 본선 1순위 접목(즉시·최고 ROI) &nbsp;·&nbsp;
+  <span style="color:#f5c451">★★</span> 유효 접목(다음 후보) &nbsp;·&nbsp;
+  <span style="color:#f5c451">★</span> 참고·조건부(고리스크/트랙 외) &nbsp;·&nbsp;
+  <span style="color:var(--mut)">—</span> 현 본선 부적합
+  <div style="font-size:12.5px;color:var(--mut);margin-top:6px">본선 = "RTAB-Map 추월(포즈+속도)" 트랙(베이스 DPV-SLAM) · GS트랙 = photorealistic 맵 분기(베이스 GauS, 현재 보류)</div>
+</div>
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>논문 / 시스템</th><th>대표 기술 (메커니즘)</th><th>접목 대상</th><th style="text-align:center">추천</th></tr></thead>
+<tbody>
+<tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓐ 추적 백본 — 본선 후보</td></tr>
+<tr><td rowspan="2" style="font-weight:700;color:var(--droid)">DROID-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">NeurIPS'21</span></td><td>dense per-pixel flow + 반복 <b>전역 BA</b> (모든 픽셀 흐름→과거 전체 재최적화)</td><td>정확도 상한 기준</td><td style="text-align:center"><span style="color:#f5c451">★</span><br><span style="font-size:11px;color:var(--mut)">베이스론 과중</span></td></tr>
+<tr><td><b>test-time RGB-D/stereo 모드</b> (재학습 없이 깊이 주입)</td><td>본선 — D455 depth 즉시 주입 검증 경로</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
+<tr><td style="font-weight:700;color:var(--dpv)">DPVO <span style="color:var(--mut);font-weight:400;font-size:12px">NeurIPS'23</span></td><td><b>sparse patch(~96)</b> + recurrent update + differentiable patch-BA (소수 패치만 추적=경량)</td><td>본선 — 경량 코어</td><td style="text-align:center"><span style="color:#f5c451">★★★</span><br><span style="font-size:11px;color:var(--mut)">베이스 코어</span></td></tr>
+<tr><td rowspan="2" style="font-weight:700;color:var(--dpv)">DPV-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">ECCV'24</span></td><td><b>proximity LC</b> (CUDA block-sparse global BA, 근접 edge)</td><td>본선 — 근접 루프클로저</td><td style="text-align:center"><span style="color:#3ddc97">★★★ ✓</span><br><span style="font-size:11px;color:var(--mut)">적용됨</span></td></tr>
+<tr><td><b>classical LC</b> (DBoW2 retrieval + Sim(3) + CPU PGO)</td><td>본선 — 장기 루프클로저</td><td style="text-align:center"><span style="color:#3ddc97">★★★ ✓</span><br><span style="font-size:11px;color:var(--mut)">41→8.1cm</span></td></tr>
+<tr><td style="font-weight:700;color:var(--mast)">MASt3R-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">'24</span></td><td><b>학습 2-view pointmap</b> (보정 불요, 사진 2장→3D 직접 예측)</td><td>본선 — relocalization·강건 상대포즈</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
+<tr><td style="font-weight:700;color:var(--vista)">ViSTA-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">'25</span></td><td><b>대칭 2-view STA</b> 경량화(695→442M) + DBoW/Sim3 PGO</td><td>본선 — 실시간 단안 프론트엔드 참고</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+
+<tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓑ IMU 융합 (VIO) — 딥리서치 ROI#1</td></tr>
+<tr><td style="font-weight:700;color:#ff8b8b">DBA-Fusion <span style="color:var(--mut);font-weight:400;font-size:12px">RA-L'24</span></td><td>deep DBA Hessian → <b>factor graph</b> (Schur-complement로 depth marginalize, IMU tight-couple)</td><td>본선 — D455 IMU 융합</td><td style="text-align:center"><span style="color:#f5c451">★★★</span><br><span style="font-size:11px;color:var(--mut)">ROI#1·최대이득</span></td></tr>
+<tr><td style="font-weight:700;color:#ff8b8b">DVI-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">ICRA'24</span></td><td>re-proj+feature-metric+IMU <b>confidence 가중 end-to-end DBA</b></td><td>본선 — IMU 융합 대안</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
+
+<tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓒ Depth · 스케일</td></tr>
+<tr><td style="font-weight:700;color:#5aa9ff">RoMeO <span style="color:var(--mut);font-weight:400;font-size:12px">'24.12</span></td><td>단안 <b>metric depth(DPT) init + MVS</b> 주입 (스케일 회복)</td><td>본선 — depth 주입 개념(우리는 센서 depth 직접이라 단순화)</td><td style="text-align:center"><span style="color:#f5c451">★★</span><br><span style="font-size:11px;color:var(--mut)">ROI#3</span></td></tr>
+
+<tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓓ 패치 · 키프레임</td></tr>
+<tr><td style="font-weight:700;color:#cdb24a">Salient Sparse VO <span style="color:var(--mut);font-weight:400;font-size:12px">RA-L'24</span></td><td>random patch 기반 <b>salient point 검출</b> (textureless 회피)</td><td>본선 — 패치 선택 개선</td><td style="text-align:center"><span style="color:#f5c451">★</span><br><span style="font-size:11px;color:var(--mut)">이득 불확실</span></td></tr>
+<tr><td style="font-weight:700;color:#cdb24a">DEVO <span style="color:var(--mut);font-weight:400;font-size:12px">3DV'24</span></td><td>learned <b>score-map + multinomial</b> 패치 샘플링 (DPVO 그래프 재사용)</td><td>본선 — 학습형 패치 선택</td><td style="text-align:center"><span style="color:#f5c451">★</span><br><span style="font-size:11px;color:var(--mut)">event-cam</span></td></tr>
+
+<tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓔ Feed-forward · 스트리밍 (속도 survey ADDENDUM)</td></tr>
+<tr><td rowspan="3" style="font-weight:700;color:#46d9c0">LingBot-Map <span style="color:var(--mut);font-weight:400;font-size:12px">Ant '26·VGGT</span></td><td><b>feed-forward 트랜스포머</b> (1회 forward로 3D 직접 예측, 장면별 최적화 제거)</td><td>본선 — 스트리밍 프론트엔드 (MASt3R/ViSTA 상위호환)</td><td style="text-align:center"><span style="color:#f5c451">★★★</span></td></tr>
+<tr><td><b>paged KV cache attention</b> (~20fps@518×378, 1만+ 프레임)</td><td>본선 — 실시간 스트리밍</td><td style="text-align:center"><span style="color:#f5c451">★★</span><br><span style="font-size:11px;color:var(--mut)">가중치 4.6GB 보유</span></td></tr>
+<tr><td><b>geometric context transformer</b> (anchor + pose-ref window + trajectory memory로 drift 보정)</td><td>본선 — 전역 일관성/LC를 학습으로 대체</td><td style="text-align:center"><span style="color:#f5c451">★★★</span><br><span style="font-size:11px;color:var(--mut)">novel 각도</span></td></tr>
+<tr><td style="font-weight:700;color:#8a93a8">GS-LRM / MVSplat <span style="color:var(--mut);font-weight:400;font-size:12px">'24–25</span></td><td>트랜스포머가 <b>가우시안 파라미터를 1회 forward 회귀</b></td><td>GS트랙 — 매핑 패러다임 교체</td><td style="text-align:center"><span style="color:#f5c451">★</span><br><span style="font-size:11px;color:var(--mut)">파이프라인 교체</span></td></tr>
+<tr><td style="font-weight:700;color:#8a93a8">GS4 / Flash-Mono <span style="color:var(--mut);font-weight:400;font-size:12px">'25–26</span></td><td>learned <b>closed-form pose init</b> (feed-forward tracker)</td><td>본선 — 추적 초기화</td><td style="text-align:center"><span style="color:#f5c451">★</span><br><span style="font-size:11px;color:var(--mut)">고리스크</span></td></tr>
+
+<tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓕ GS-맵 분기 4종 <span style="font-weight:400;color:var(--mut)">(현 트랙 외 · 참고)</span></td></tr>
+<tr><td rowspan="3" style="font-weight:700;color:#00bfa5">2DGS-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">2506.00970</span></td><td><b>2D surfel</b> (ray–disk 교차 = 결정적 깊이 → 표면 일관)</td><td>GS트랙 — 기하 정확도</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td><b>MASt3R 루프클로저</b></td><td>(본선 LC로 이미 커버)</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td><b>local active map</b> (국소 활성 맵만 갱신)</td><td>GS트랙 — 온라인 효율</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td style="font-weight:700;color:#e8a33d">OpenGS-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">ICRA'25</span></td><td>RGB-only 야외 무한 + <b>pointmap 프론트엔드</b> (DUSt3R PnP/RANSAC)</td><td>본선 — 학습 3D 프론트엔드 참고</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td rowspan="2" style="font-weight:700;color:#5aa9ff">DROID-Splat <span style="color:var(--mut);font-weight:400;font-size:12px">2411.17660</span></td><td>DROID 추적 + 3DGS 맵 + <b>mono-depth prior</b> (분리구조)</td><td>GS트랙 — photorealistic 원하면 이 경로(이미 점유)</td><td style="text-align:center"><span style="color:var(--mut)">—</span></td></tr>
+<tr><td><b>DroidCalib</b> (임의 카메라 모델 + intrinsic 동시 최적화)</td><td>본선/GS — 보정 자동화 참고</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td rowspan="2" style="font-weight:700;color:#c06bd8">CaRtGS <span style="color:var(--mut);font-weight:400;font-size:12px">2410.00486</span></td><td><b>Computational Alignment</b> (추적↔매핑 속도 불일치 정렬)</td><td>GS트랙 — 계산 균형 기법</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td><b>splat-wise depth back-prop</b> (커스텀 rasterizer)</td><td>GS트랙 — rasterizer 가속</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+
+<tr><td colspan="4" style="background:#11261c;font-weight:700;color:#7fd9a8;letter-spacing:.3px">Ⓖ 우리가 직접 구현·검증 <span style="font-weight:400;color:var(--mut)">(GauS 트랙 — 이 경로의 산물)</span></td></tr>
+<tr><td style="font-weight:700;color:var(--gaus)">GauS-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">3DV'25</span></td><td><b>surface-aware depth rendering</b> (depth blending 표면 간섭 해결) + local map</td><td>GS트랙 — 기하 베이스</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
+<tr><td style="font-weight:700;color:#7fd9a8">GMR voxel-merge <span style="color:var(--mut);font-weight:400;font-size:12px">우리 구현</span></td><td>voxel+normal binning <b>moment-matching merge</b> (중복 surfel 병합, cross-domain GMR)</td><td>GS트랙 — count 제어 (5.9×↓·기하보존·PSNR−1dB)</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
+<tr><td style="font-weight:700;color:#7fd9a8">GN render-and-solve <span style="color:var(--mut);font-weight:400;font-size:12px">우리 구현</span></td><td>Adam+backward 추적 → <b>point-to-plane Gauss-Newton</b> (backward 제거)</td><td>GS트랙 — 렌더기반 추적 가속 (2.2–2.5×)</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
+<tr><td style="font-weight:700;color:#7fd9a8">SnugBox <span style="color:var(--mut);font-weight:400;font-size:12px">우리 구현</span></td><td>tile AABB <b>타이트 rect</b> (빈 코너 타일 제거)</td><td>GS트랙 — 2D surfel rasterizer (lossless +29%)</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- 14. integration interactive -->
+<h2><span class="num">14</span>접목 설계 — RTAB-Map 추월 SLAM 만들기 <span style="font-size:14px;color:var(--mut);font-weight:400">(인터랙티브)</span></h2>
+<p class="sub">베이스 = <b style="color:var(--dpv)">DPV-SLAM</b>(정확도×속도 frontier). 그 위에 검증된 모듈을 ROI 순으로 쌓습니다. <b>모듈을 클릭</b>해 출처·효과·비용·리스크를 보세요.</p>
+<div class="card">
+  <div class="grid2">
+    <div id="modstack"></div>
+    <div id="moddetail" class="core" style="border-color:var(--dpv);align-self:start;min-height:180px"></div>
+  </div>
+</div>
+<div class="card" style="margin-top:14px">
+  <h3 style="margin:0 0 4px">ROI 지도 — (이득 × 성공확률) / 통합비용</h3>
+  <p class="sub" style="margin:0 0 10px">버블 위치=비용(가로)·이득(세로), 크기=성공확률. <b>좌상단·큰 버블일수록 ROI 높음.</b> (딥리서치 기반 합성 추정)</p>
+  <div style="height:340px"><canvas id="roibubble"></canvas></div>
+</div>
+<div class="callout" style="margin-top:14px">
+  <h3 style="margin:0 0 8px">🎯 권장 접목 순서</h3>
+  <div style="font-size:14px;color:#e9dfc8">
+    <b>① 루프클로저</b>(완료, 8.1cm) → <b style="color:#5aa9ff">② RGB-D depth 주입</b>(D455 metric, 스케일 확정) → <b style="color:#ff8b8b">③ IMU 융합</b>(최대 이득 + DPVO엔 미검증=novelty) → <b style="color:#cdb24a">④ saliency 패치</b>(옵션).
+    <br><br>★ <b>전제: Step 0</b> — RTAB-Map fr1_room ATE·fps 실측으로 "이겨야 할 바"를 먼저 고정. 결합 누적 이득은 요소 상호작용·포화 탓에 <b>실측 검증 필요</b>(딥리서치 미해결 항목).
+  </div>
+</div>
+
+<!-- 15. technique → graft-slot matrix -->
+<h2><span class="num">15</span>접목 매트릭스 — 무슨 논문의 무슨 기술을 우리 시스템 어디에</h2>
+<p class="sub"><b>행 = 논문의 대표 기술(무엇을)</b>, <b>열 = 우리 시스템의 접목 슬롯(어디에)</b>. 칠해진 칸이 "이 기술은 여기에 꽂는다"를 뜻합니다. 칸에 마우스를 올리면 설명이 나옵니다.</p>
+<div class="card" style="padding:12px 16px;margin-bottom:12px;font-size:13px">
+  <b>적합도</b> &nbsp;
+  <span style="background:#1f8a4c;padding:2px 8px;border-radius:4px;color:#fff">★★★ 바로 접목(핵심 슬롯)</span>
+  <span style="background:#2f6f7e;padding:2px 8px;border-radius:4px;color:#fff">★★ 접목 가능</span>
+  <span style="background:#404761;padding:2px 8px;border-radius:4px;color:#fff">★ 부분·참고</span>
+  <span style="background:#141b2a;padding:2px 8px;border-radius:4px;color:#5e6b85">빈칸 = 무관</span>
+  <div style="font-size:12.5px;color:var(--mut);margin-top:6px">행 색: <span style="color:#b08be0">보라=본선(포즈+속도) 기술</span> · <span style="color:#7fd9a8">초록=GS맵 트랙 기술</span></div>
+</div>
+<div class="card" style="overflow-x:auto"><div id="graftmx"></div></div>
+<div class="callout" style="margin-top:14px">
+ <h3 style="margin:0 0 8px">🔑 슬롯별 1순위 접목 (열을 따라 읽기)</h3>
+ <div style="font-size:13.5px;color:#e9dfc8;line-height:1.7">
+  <b>추적 코어</b> → DPVO 패치(베이스) · <b>패치 선택</b> → Salient Sparse VO / DEVO · <b>깊이·스케일</b> → RoMeO depth / DROID RGB-D 모드 ·
+  <b>IMU</b> → DBA-Fusion / DVI-SLAM · <b>루프/전역BA</b> → DPV-SLAM LC(✓) / LingBot geometric-context · <b>reloc</b> → MASt3R ·
+  <b>맵</b> → 2D surfel + GMR merge · <b>렌더 가속</b> → SnugBox / CaRtGS splat-wise.
+  <br><br>👉 한 열에 여러 후보가 뜨면 그게 <b>그 슬롯의 선택지</b>. 본선 빈 슬롯(IMU·depth)이 다음 접목 타깃입니다.
+ </div>
+</div>
+
+<!-- 16. survey digest: per-method desc / pros-cons / future work -->
+<h2><span class="num">16</span>서베이 원문 정리 — 방법별 설명 · 장단점 · Future Work</h2>
+<p class="sub"><code style="background:#0d1422;padding:2px 6px;border-radius:5px;font-size:12px">research/*/*.md</code> 조사 본문(딥리서치 5건 + 실험 원장 3건)에서 <b>각 SLAM/기술의 설명 · 👍장점 · 👎단점과 한계 · 🔭추후 개발되면 좋을 Future Work</b>를 방법 단위로 재정리했습니다. 탭으로 카테고리를 넘기고, 검색창으로 방법명을 거를 수 있습니다.</p>
+<div class="card" style="padding:12px 16px;margin-bottom:0">
+  <b style="color:#f5c451">근거 강도 배지</b>
+  <div class="legend">
+    <span class="badge" style="background:#12402c;color:#3ddc97">실측 ✓ — 우리가 직접 돌려 측정</span>
+    <span class="badge" style="background:#16324d;color:#5aa9ff">문헌 검증 — 딥리서치 3-vote 적대검증 통과</span>
+    <span class="badge" style="background:#3a3113;color:#f5c451">1차 조사 — 서베이만, 적대검증 미통과</span>
+    <span class="badge" style="background:#3d2410;color:#e8a33d">실행 블록 — 빌드는 됐으나 환경 제약</span>
+    <span class="badge" style="background:#3d1a1a;color:#ff8b8b">기각/무효 — 검증서 반증되었거나 우리 실측서 사망</span>
+  </div>
+  <p class="note" style="margin-top:9px">지표 방향: ATE↓ · PSNR↑ · fps↑ · Depth-L1↓ · 메모리↓ · 압축률↑ 가 좋음. 각 항목의 수치는 원문 markdown의 값을 그대로 옮겼고, 추정·미확인은 그렇게 명시했습니다.</p>
+</div>
+<div class="stabs" id="stabs"></div>
+<div id="spanels"></div>
+
+<footer>
+  TUM RGB-D fr1_room · RTX 5090 (sm_120, WSL2) · ATE = Sim(3) Umeyama 정렬 · evo 독립 검증<br>
+  파라미터 수는 체크포인트 실측 · 모든 시스템 동일 시퀀스 전체 처리 · 2026
+</footer>
+</div>
+
+<script>
+const SYS = {
+  droid:{name:'DROID-SLAM',c:'#2ca02c',ate:4.94,acc:5,spd:2,map:3,light:5,rob:5},
+  mast :{name:'MASt3R-SLAM',c:'#d62728',ate:6.12,acc:4.3,spd:2.5,map:3.5,light:1.5,rob:4},
+  vista:{name:'ViSTA-SLAM',c:'#ff7f0e',ate:6.77,acc:4,spd:3.5,map:3.5,light:2.2,rob:3.5},
+  dpv  :{name:'DPV-SLAM',c:'#9467bd',ate:8.12,acc:3.5,spd:5,map:1.2,light:5,rob:2.5},
+  gaus :{name:'GauS-SLAM',c:'#1f77b4',ate:13.77,acc:2.5,spd:1.5,map:5,light:4,rob:3},
+};
+// animated horizontal ATE bars
+const maxAte=14.5;
+const order=['droid','mast','vista','dpv','gaus'];
+const meta={droid:'RGB · 681kf',mast:'RGB · 51kf',vista:'RGB · 400kf',dpv:'RGB · 681kf',gaus:'RGB-D · 1315kf'};
+let html='';
+order.forEach(k=>{const s=SYS[k];
+  html+=`<div class="barrow"><div class="barlabel" style="color:${s.c}">${s.name}</div>
+  <div class="bartrack"><div class="barfill" data-w="${(s.ate/maxAte*100).toFixed(1)}" style="background:${s.c}">${s.ate.toFixed(2)} cm</div></div>
+  <div class="meta">${meta[k]}</div></div>`;});
+document.getElementById('bars').innerHTML=html;
+
+// trigger bar widths after load
+function fillBars(){document.querySelectorAll('.barfill').forEach(b=>{b.style.width=b.dataset.w+'%';});}
+window.addEventListener('load',()=>setTimeout(fillBars,150));
+
+// tabs
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelector('.panel[data-k="'+t.dataset.k+'"]').classList.add('active');
+});
+
+// charts
+let radarChart, ateChart;
+function buildCharts(){
+  if(typeof Chart==='undefined')return;
+  const labels=['포즈정확도','속도','맵·렌더 품질','경량성','견고성'];
+  const ds=order.map(k=>{const s=SYS[k];return{label:s.name,
+    data:[s.acc,s.spd,s.map,s.light,s.rob],
+    borderColor:s.c,backgroundColor:s.c+'30',pointBackgroundColor:s.c,
+    borderWidth:3,pointRadius:4,pointHoverRadius:6,fill:true,tension:.05};});
+  radarChart=new Chart(document.getElementById('radar'),{type:'radar',data:{labels,datasets:ds},
+    options:{maintainAspectRatio:false,
+      plugins:{legend:{labels:{color:'#e8edf5',font:{size:13},usePointStyle:true}}},
+      elements:{line:{borderWidth:3}},
+      scales:{r:{min:0,max:5,ticks:{display:false,stepSize:1},grid:{color:'#39435e'},
+        angleLines:{color:'#39435e'},pointLabels:{color:'#dce8ff',font:{size:14,weight:'600'}}}}}});
+  ateChart=new Chart(document.getElementById('atec'),{type:'bar',
+    data:{labels:order.map(k=>SYS[k].name),datasets:[{label:'ATE RMSE (cm) ↓',
+      data:order.map(k=>SYS[k].ate),backgroundColor:order.map(k=>SYS[k].c)}]},
+    options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#e8edf5'}}},
+      scales:{x:{ticks:{color:'#cfe0ff'},grid:{color:'#2e384f'}},
+        y:{ticks:{color:'#cfe0ff'},grid:{color:'#2e384f'},title:{display:true,text:'cm (낮을수록 좋음)',color:'#9aa6bd'}}}}});
+}
+function showChart(w){
+  document.getElementById('c-radar').style.display=w==='radar'?'block':'none';
+  document.getElementById('c-ate').style.display=w==='ate'?'block':'none';
+  document.getElementById('bt-radar').classList.toggle('on',w==='radar');
+  document.getElementById('bt-ate').classList.toggle('on',w==='ate');
+}
+window.addEventListener('load',buildCharts);
+
+// ===== section 14: integration modules (clickable stack + detail) =====
+const MODS=[
+ {name:'DPV-SLAM (베이스)',tag:'기 보유',tagc:'#3ddc97',c:'#9467bd',src:'ECCV 2024',cost:'— (보유)',risk:'—',
+  effect:'sparse patch VO + differentiable BA. EuRoC 0.023m @50FPS, 메모리 1/4 — 정확도×속도 frontier 우위.',
+  apply:'이미 빌드·벤치 완료. 우리 TUM fr1_room 8.1cm.'},
+ {name:'① 루프클로저 / PGO',tag:'✓ 적용됨',tagc:'#3ddc97',c:'#3ddc97',src:'DPV-SLAM (DBoW2 + Sim3 PGO)',cost:'낮음 (60→50fps)',risk:'낮음',
+  effect:'근접 LC + 장기 DBoW 이미지 retrieval + Sim(3) pose-graph. 우리 환경서 41→8.1cm (5×↓) 실측.',
+  apply:'DPRetrieval + ORBvoc로 활성화 완료. 추가 작업 없음.'},
+ {name:'② RGB-D depth 주입',tag:'다음 · ROI#3',tagc:'#5aa9ff',c:'#5aa9ff',src:'RoMeO / DROID RGB-D mode',cost:'중간 (신규 구현)',risk:'중간',
+  effect:'단안 스케일 모호성 제거 → 메트릭 + 상대 ATE >50%↓(RoMeO). D455 metric depth 직결, RTAB-Map과 동일 입력=공정 비교.',
+  apply:'patch inverse-depth를 D455 depth로 초기화 + BA에 depth 잔차 추가.'},
+ {name:'③ IMU 융합 (VIO)',tag:'최대이득 · ROI#1',tagc:'#ff8b8b',c:'#ff6b6b',src:'DBA-Fusion / DVI-SLAM',cost:'높음 (factor graph)',risk:'⚠ DROID서만 검증, DPVO엔 미검증 = 리스크 + novelty',
+  effect:'단일 최대 정확도 이득: ATE 36–45%↓, TUM-VI ~6×↓. D455 IMU 직접 활용. 빠른 회전(fr1_room 약점) 강건.',
+  apply:'patch-BA Hessian을 IMU pre-integration factor와 sliding-window 그래프로 tight-couple.'},
+ {name:'④ saliency 패치 선택',tag:'옵션 · ROI#4',tagc:'#cdb24a',c:'#cdb24a',src:'Salient Sparse VO / DEVO',cost:'낮음',risk:'이득 불확실 (DPVO ablation은 random>gradient)',
+  effect:'random→salient/learned 패치 선택으로 textureless 회피·분산↓. 단 학습형만 유망, 단순 gradient는 역효과.',
+  apply:'learned score-map 선택 도입; 단순 gradient 기반은 비추천.'},
+ {name:'◆ LingBot-Map (대안 경로)',tag:'패러다임 전환',tagc:'#46d9c0',c:'#46d9c0',src:'Ant Robbyant 2026 · VGGT 기반 (Apache 2.0)',cost:'높음 (프론트엔드 교체)',risk:'⚠ 파이프라인 교체급. 단 가중치 4.6GB 보유·sm_120 검증 예정',
+  effect:'feed-forward 트랜스포머로 1회 forward 3D 예측 + paged KV cache(~20fps@518×378, 1만+프레임) + geometric context transformer(anchor+pose-ref+trajectory memory로 drift 보정). MASt3R/ViSTA 상위호환 스트리밍 프론트엔드.',
+  apply:'DPVO 패치 프론트엔드를 LingBot 스트리밍 FF로 교체 → 전역 일관성을 학습 메모리로 흡수. 점진 접목이 아닌 별도 트랙(novelty 高).'},
+];
+const _ms=document.getElementById('modstack'), _md=document.getElementById('moddetail');
+if(_ms&&_md){
+ _ms.innerHTML=MODS.map((m,i)=>`<div class="modrow" data-i="${i}" style="cursor:pointer;background:#121a2b;border:1px solid var(--line);border-left:4px solid ${m.c};border-radius:8px;padding:11px 13px;margin-bottom:8px;transition:.15s">
+   <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+     <span style="font-weight:700;color:${m.c}">${m.name}</span>
+     <span style="font-size:11.5px;font-weight:700;color:${m.tagc};white-space:nowrap">${m.tag}</span>
+   </div></div>`).join('');
+ function showMod(i){const m=MODS[i];
+   _md.style.borderColor=m.c;
+   _md.innerHTML=`<div style="font-size:17px;font-weight:700;color:${m.c}">${m.name}</div>
+     <div style="margin:9px 0 2px"><span class="chip">출처 ${m.src}</span><span class="chip">비용 ${m.cost}</span></div>
+     <p style="font-size:13.5px;margin:9px 0 0;line-height:1.55"><b>효과 ·</b> ${m.effect}</p>
+     <p style="font-size:13.5px;margin:6px 0 0;line-height:1.55"><b>리스크 ·</b> ${m.risk}</p>
+     <p style="font-size:13.5px;margin:6px 0 0;line-height:1.55"><b>적용법 ·</b> ${m.apply}</p>`;
+   _ms.querySelectorAll('.modrow').forEach((r,j)=>{r.style.background=j===i?'#1a2640':'#121a2b';});
+ }
+ _ms.querySelectorAll('.modrow').forEach(r=>r.onclick=()=>showMod(+r.dataset.i));
+ showMod(0);
+}
+
+// ===== ROI bubble chart =====
+function buildROI(){
+ if(typeof Chart==='undefined')return;
+ const el=document.getElementById('roibubble'); if(!el)return;
+ const pts=[
+  {n:'① 루프클로저/PGO',x:1.0,y:4.4,r:22,c:'#3ddc97',note:'✓ 적용됨(41→8.1cm)'},
+  {n:'② RGB-D depth',  x:2.5,y:4.0,r:17,c:'#5aa9ff',note:'ROI#3 · 스케일 회복'},
+  {n:'③ IMU 융합',     x:4.2,y:5.0,r:13,c:'#ff6b6b',note:'ROI#1 · DPVO엔 미검증'},
+  {n:'④ saliency 패치', x:1.6,y:2.0,r:12,c:'#cdb24a',note:'ROI#4 · 이득 불확실'},
+ ];
+ new Chart(el,{type:'bubble',
+  data:{datasets:pts.map(p=>({label:p.n,data:[{x:p.x,y:p.y,r:p.r}],backgroundColor:p.c+'cc',borderColor:p.c,borderWidth:2}))},
+  options:{maintainAspectRatio:false,
+   plugins:{legend:{labels:{color:'#e8edf5',usePointStyle:true,font:{size:12.5}}},
+     tooltip:{callbacks:{label:(ctx)=>{const p=pts[ctx.datasetIndex];return `${p.n} — 비용 ${p.x}/5 · 이득 ${p.y}/5 · ${p.note}`;}}}},
+   scales:{x:{min:0,max:5,title:{display:true,text:'통합 비용 →  (낮을수록 좋음)',color:'#9aa6bd'},ticks:{color:'#cfe0ff'},grid:{color:'#2e384f'}},
+     y:{min:0,max:5.6,title:{display:true,text:'기대 정확도 이득 ↑',color:'#9aa6bd'},ticks:{color:'#cfe0ff'},grid:{color:'#2e384f'}}}}});
+}
+window.addEventListener('load',buildROI);
+
+// ===== section 15: technique → graft-slot matrix =====
+const GCOLS=['추적 코어','패치 선택','깊이·스케일','IMU','루프/전역BA','reloc','맵 표현','렌더 가속'];
+// f: {col:[score, why]}  · cl: P(본선)/G(GS트랙)
+const GROWS=[
+ {p:'DROID-SLAM',t:'dense flow + 전역 BA',cl:'P',f:{0:[3,'정확도 최강 추적 백본'],4:[2,'전역 BA가 드리프트 보정']}},
+ {p:'DROID-SLAM',t:'test-time RGB-D 모드',cl:'P',f:{2:[3,'재학습 없이 D455 depth로 메트릭']}},
+ {p:'DPVO',t:'sparse patch + diff patch-BA',cl:'P',f:{0:[3,'★베이스 추적 코어'],1:[2,'패치 그래프 = 선택 슬롯']}},
+ {p:'DPV-SLAM',t:'proximity LC (block-sparse BA)',cl:'P',f:{4:[3,'근접 루프 전역최적화']}},
+ {p:'DPV-SLAM',t:'classical LC (DBoW2+Sim3 PGO)',cl:'P',f:{4:[3,'✓ 적용됨 41→8.1cm'],5:[2,'retrieval=재측위 겸용']}},
+ {p:'MASt3R-SLAM',t:'학습 2-view pointmap',cl:'P',f:{0:[2,'강건 상대포즈'],5:[3,'재측위 핵심']}},
+ {p:'ViSTA-SLAM',t:'대칭 2-view STA',cl:'P',f:{0:[2,'경량 단안 프론트엔드'],5:[2,'DBoW reloc']}},
+ {p:'DBA-Fusion',t:'DBA Hessian → factor graph',cl:'P',f:{3:[3,'★IMU 결합 핵심 (ROI#1)']}},
+ {p:'DVI-SLAM',t:'multi-factor confidence DBA',cl:'P',f:{3:[3,'IMU+멀티팩터 융합'],0:[2,'추적도 강화']}},
+ {p:'RoMeO',t:'metric depth + MVS 주입',cl:'P',f:{2:[3,'★깊이·스케일 슬롯 (ROI#3)']}},
+ {p:'Salient Sparse VO',t:'salient patch 검출',cl:'P',f:{1:[3,'★패치 선택 개선']}},
+ {p:'DEVO',t:'learned score-map 패치',cl:'P',f:{1:[3,'학습형 패치 선택']}},
+ {p:'LingBot-Map',t:'feed-forward 트랜스포머',cl:'P',f:{0:[3,'★프론트엔드 교체(스트리밍)']}},
+ {p:'LingBot-Map',t:'paged KV cache 스트리밍',cl:'P',f:{0:[2,'실시간 1만+프레임']}},
+ {p:'LingBot-Map',t:'geometric context transformer',cl:'P',f:{4:[3,'drift 보정=전역일관성 학습대체'],5:[2,'trajectory memory 재측위']}},
+ {p:'GS-LRM/MVSplat',t:'FF 가우시안 회귀',cl:'G',f:{6:[2,'맵 생성 패러다임 교체'],0:[2,'장면별 최적화 제거']}},
+ {p:'GS4/Flash-Mono',t:'closed-form pose init',cl:'P',f:{0:[2,'추적 초기화(고리스크)']}},
+ {p:'2DGS-SLAM',t:'2D surfel (결정적 깊이)',cl:'G',f:{6:[3,'★GS맵 표현(표면 일관)'],2:[1,'depth 일관성 부수효과']}},
+ {p:'2DGS-SLAM',t:'MASt3R 루프클로저',cl:'G',f:{4:[2,'GS맵 전역 일관성'],5:[2,'재측위']}},
+ {p:'2DGS-SLAM',t:'local active map',cl:'G',f:{6:[2,'맵 관리·온라인 효율']}},
+ {p:'OpenGS-SLAM',t:'pointmap 프론트엔드',cl:'P',f:{0:[2,'단안 야외 추적'],2:[1,'pointmap 스케일']}},
+ {p:'DROID-Splat',t:'DROID추적 + 3DGS맵 (분리)',cl:'G',f:{0:[2,'분리구조 추적'],6:[2,'GS 렌더 맵(이미 점유)']}},
+ {p:'CaRtGS',t:'computational alignment',cl:'G',f:{7:[2,'추적↔매핑 계산 정렬'],6:[1,'실시간 매핑']}},
+ {p:'CaRtGS',t:'splat-wise depth back-prop',cl:'G',f:{7:[3,'★rasterizer 역전파 가속']}},
+ {p:'GauS-SLAM',t:'surface-aware depth + local map',cl:'G',f:{6:[2,'GS맵 기하 베이스'],2:[1,'깊이 표면 간섭 해결']}},
+ {p:'GMR voxel-merge (우리)',t:'moment-matching surfel merge',cl:'G',f:{6:[3,'★맵 count 제어 5.9×↓']}},
+ {p:'GN render-and-solve (우리)',t:'point-to-plane GN 추적',cl:'G',f:{0:[3,'★렌더기반 추적 2.2–2.5×']}},
+ {p:'SnugBox (우리)',t:'타이트 tile rect',cl:'G',f:{7:[3,'★rasterizer lossless +29%']}},
+];
+function buildHeat(){
+ const el=document.getElementById('graftmx'); if(!el)return;
+ const COL={3:['#1f8a4c','★★★'],2:['#2f6f7e','★★'],1:['#404761','★']};
+ let h='<table style="border-collapse:collapse;font-size:12px"><thead><tr>'+
+   '<th style="position:sticky;left:0;background:#0d1422;z-index:2;text-align:left;padding:6px 10px;min-width:230px">논문 · 기술 ＼ 접목 슬롯</th>';
+ GCOLS.forEach(c=>{h+=`<th style="padding:5px 6px;color:#cfe0ff;font-weight:700;font-size:11.5px;white-space:nowrap">${c}</th>`;});
+ h+='</tr></thead><tbody>';
+ GROWS.forEach(rw=>{const rc=rw.cl==='G'?'#7fd9a8':'#b08be0';
+   h+=`<tr><td style="position:sticky;left:0;background:#0d1422;white-space:nowrap;padding:5px 10px;text-align:left"><b style="color:${rc}">${rw.p}</b> <span style="color:#9fb0cc;font-size:11.5px">${rw.t}</span></td>`;
+   GCOLS.forEach((cn,j)=>{const cell=rw.f[j];
+     if(cell){const cm=COL[cell[0]];
+       h+=`<td title="${rw.p} · ${rw.t} → [${cn}] 슬롯: ${cell[1]}" style="background:${cm[0]};color:#eaf0fb;text-align:center;width:64px;height:30px;border:1px solid #0d1422;font-weight:700;cursor:default">${cm[1]}</td>`;}
+     else{h+='<td style="background:#141b2a;border:1px solid #0d1422;width:64px;height:30px"></td>';}});
+   h+='</tr>';});
+ h+='</tbody></table>';
+ el.innerHTML=h;
+}
+window.addEventListener('load',buildHeat);
+
+// ===== section 16: survey digest (research/*/*.md → 방법별 설명·장단점·future work) =====
+const ST={
+ meas :{t:'실측 ✓',   bg:'#12402c',c:'#3ddc97'},
+ lit  :{t:'문헌 검증', bg:'#16324d',c:'#5aa9ff'},
+ surv :{t:'1차 조사', bg:'#3a3113',c:'#f5c451'},
+ block:{t:'실행 블록', bg:'#3d2410',c:'#e8a33d'},
+ dead :{t:'기각/무효', bg:'#3d1a1a',c:'#ff8b8b'},
+};
+const SURVEY=[
+{cat:'추적 백본', key:'백본', color:'#9467bd',
+ from:'slam_upgrade_rtabmap/REPORT.md · realtime_slam_strategy/STRATEGY.md · PHASE1_RESULTS.md',
+ items:[
+ {n:'DROID-SLAM',v:'NeurIPS 2021 · RGB / RGB-D / stereo',c:'#2ca02c',st:'meas',
+  one:'화면 전 픽셀의 flow를 작은 망(4.0M)이 예측하고, 3D는 고전 전역 BA가 반복적으로 다시 푼다.',
+  d:'1/8 해상도 격자의 dense per-pixel 대응만 학습하고 카메라·깊이는 최소제곱으로 계산하는 "매칭만 학습" 패러다임. 새 관측이 올 때마다 과거 전체 궤적을 재최적화한다.',
+  p:['절대 정확도 최강 — 우리 fr1_room 4.94cm 1위, EuRoC 0.022m','가장 견고, 잘 깨지지 않음','<b>test-time RGB-D/stereo 모드</b> — 재학습 없이 센서 depth 즉시 주입 가능','망이 4.0M로 작음(파운데이션 계열의 170분의 1)'],
+  q:['무겁고 느림 — EuRoC ~20fps도 320×512 다운샘플 + 격프레임 스킵 기준이고, <b>실시간엔 3090 2장</b> 필요','GPU 메모리 20GB (DPV-SLAM의 4배)','맵은 밋밋한 dense 점구름 — 렌더 불가, PSNR 측정 자체가 무의미','검증된 가속 천장 ≈ DPV-SLAM family(블록-스파스 BA) 자체 — 그 이상 가속 경로는 미확인'],
+  f:['<b>Path B(de-risk 폴백)</b>: test-time RGB-D를 즉시 켜고(무재학습) DBA-Fusion/DVI-SLAM의 <b>검증된 IMU 레시피</b>를 얹는 경로. 정확도·강건성은 확보되나 실시간성에서 RTAB-Map 추월이 약해짐','DPVO+IMU(Phase 3)가 sparse-patch BA에서 under-constraint로 실패할 때의 <b>공식 후퇴선</b>. Phase 1(depth) 성과는 폴백과 무관하게 독립 유효','DroidCalib(DROID-Splat)식 intrinsic 동시 최적화로 보정 자동화 — 참고 수준']},
+ {n:'DPVO / DPV-SLAM',v:'NeurIPS 2023 / ECCV 2024 · RGB — <b>현 본선 베이스</b>',c:'#9467bd',st:'meas',
+  one:'화면 전체 대신 sparse patch ~96개만 recurrent로 추적하고(differentiable patch-BA), 드리프트는 루프클로저로 사후에 편다.',
+  d:'DPV-SLAM = DPVO + ① proximity LC(CUDA block-sparse global BA, 근접 edge) + ② classical LC(DBoW2 retrieval + Sim(3) + CPU PGO). 정확도×속도 frontier에서 RTAB-Map 추월에 가장 유리한 베이스로 딥리서치가 판정.',
+  p:['EuRoC 0.023m ≈ DROID 0.022m(1mm 차)인데 <b>2.5배 빠르고(50 vs 20fps) 메모리 1/4(5 vs 20GB)</b>','DPVO 단독도 DROID-VO 대비 EuRoC ATE 0.105 vs 0.186m(43%↓), 60~120fps','루프클로저 효과가 압도적 — 우리 실측 <b>41.2 → 8.12cm (5배↓)</b>','망 3.5M로 가장 가벼워 저사양에 유리'],
+  q:['fr1_room VO 바닥 ~34cm — <b>sparse-patch BA vs DROID dense-BA의 구조적 ~7x 격차</b>. 루프는 34cm 신호 위 보정 레이어라 이 격차를 못 메움','<b>VO 자체가 비결정적</b>: 같은 시드·같은 설정인데 런마다 34.4 / 38.3cm. 원인 = CUDA BA 커널(fastba)의 atomic 연산이 1362f에 걸쳐 ~4cm 누적. → <b>단일런 A/B 신뢰 불가, 모든 판정은 N≥3~4 분포 비교</b>','config 튜닝 near-saturated — opt window 10→20만 일관 이득(0.383→0.338, ~12%), patch 250은 노이즈 경계, keyframe thresh 15→8은 오히려 악화(0.526)','맵이 희소해 재구성 용도로는 빈약, 빠른 회전/블러에 약함'],
+  f:['<b>① IMU preintegration factor를 patch-graph BA에 결합 (Phase 3, 최대 novelty)</b> — 검증 레시피가 전부 DROID dense-BA(DBA-Fusion/DVI-SLAM)뿐이라 <b>DPVO+IMU 공개 변종은 세계 미점유</b>. EuRoC headroom 실측 양성(V2_03 ~9x, V1_02 ~10x, MH_03 ~6x, 평균 ~3x). 아키텍처는 pypose 0.9.5 IMUPreintegrator loosely-coupled v1(pose+vel+bias factor graph)로 시작하고 <b>기존 loop PGO 재사용 금지</b>(pose-only 함정 — IMU엔 velocity 3 + bias 6 상태 필수)','<b>② depth-lifted LC(채택분)를 루프-지배 시퀀스에서 전시</b> — TUM fr2/long, KITTI, EuRoC MH. fr1은 소형·회전지배라 루프 이득이 작다','<b>③ VO SHAPE 정확도 자체 개선</b> — fr1 ATE의 진짜 병목. 학습형 saliency 패치(ROI#4) 또는 dense BA 전환','<b>④ depth-in-VO 갈래는 사망(mechanistically 확정)</b> — <code>DPVO_NO_NORM_SCALE=1</code> + DEPTH_INIT + naive resid 실행 결과 34.74cm = baseline 그대로이고 <b>Sim3 ATE = SE3 ATE = 0.3474</b>. fr1 ATE는 궤적 SHAPE(회전·상대포즈 드리프트)가 100% 결정하고 metric 스케일과 구조적으로 무관 → 완벽히 구현한 CUDA depth-factor도 무효. depth는 <b>루프클로저에만</b> 유효']},
+ {n:'MASt3R-SLAM',v:'2024 · RGB(보정 불필요) · ViT enc-dec + DPT head, 695.3M',c:'#d62728',st:'meas',
+  one:'사진 2장만 보면 3D pointmap을 바로 출력하도록 대규모 학습된 3D 파운데이션 모델.',
+  d:'DUSt3R 계열. 망이 3D 추론을 직접 수행하므로 카메라 보정값조차 필요 없고, 키프레임 51장만으로 6.12cm를 냈다.',
+  p:['카메라 보정 불필요 — 임의 카메라 OK','강한 학습 3D prior → <b>적은 키프레임으로 고정확</b>(51kf, 6.12cm 2위)','retrieval + PGO 루프클로저 내장, 학습 descriptor라 시점/조명 변화에 강건'],
+  q:['695.3M 거대 망 → 느림(~6.5fps), GPU 메모리 큼','맵이 pointmap이라 photorealistic 렌더 불가','루프 탐지가 무거움(GPU + 큰 모델 상주)'],
+  f:['<b>F1 — DPV-SLAM의 DBoW 후보 검출은 유지하고 루프 "검증·상대포즈"만 MASt3R prior로 교체</b>(키프레임 한정 호출로 실시간 유지). 근거: means-ICP 실패의 교훈 = LC 성패는 등록 정확도이며, 2506.00970이 2DGS에서 선례를 만들었고 <b>sparse-patch 쪽은 미점유</b>. 게이트 = fr1_room ATE 추가 ≥15%↓ + LC 정밀도 개선 + fps 저하 <10%, 실패 시 DBoW LC 원복(무손상)','<b>GS-CPR/GSLoc식 재측위</b> — 추적 불확실할 때만 게이트해서 rendered RGB/D ↔ live RGB를 MASt3R로 매칭해 one-shot 포즈 정제']},
+ {n:'ViSTA-SLAM',v:'2025 · RGB · 대칭 2-view STA, 441.8M',c:'#ff7f0e',st:'meas',
+  one:'MASt3R의 "2장→3D"를 대칭 2-view로 단순화해 망을 줄이고(695→442M) 실시간을 노린 경량판.',
+  d:'두 영상을 같은 방식으로 처리(symmetric)해 디코더를 간소화. DBoW 루프클로저 + Sim3 포즈그래프 내장.',
+  p:['실시간 지향 단안 + 루프클로저 내장 + 보정 불필요','MASt3R 대비 40% 가벼우면서 정확도 손실은 0.65cm(6.12→6.77)뿐'],
+  q:['MASt3R보다 낮은 정확도(3위)','맵은 pointmap','최신이라 생태계 미성숙 — 재현 사례 부족'],
+  f:['본선 접목 우선순위는 <b>★(낮음)</b> — 실시간 단안 프론트엔드 설계 참고용. 같은 슬롯을 LingBot-Map(feed-forward 스트리밍)이 상위호환으로 노리고 있음']},
+ {n:'LingBot-Map (VGGT 기반)',v:'Ant/Robbyant 2026-04 · Apache 2.0 · feed-forward 트랜스포머',c:'#46d9c0',st:'meas',
+  one:'장면별 최적화 없이 1회 forward로 3D를 예측하는 스트리밍 3D 파운데이션 — MASt3R/ViSTA의 상위호환 후보였다.',
+  d:'paged KV cache attention으로 ~20fps@518×378, 1만+ 프레임 스트리밍. geometric context transformer(anchor + pose-ref window + trajectory memory)로 drift를 보정한다고 주장. Oxford Spires/T&T/ETH3D/7-Scenes SOTA 보고. 가중치 lingbot-map-long.pt 4.6GB 다운로드 완료.',
+  p:['<b>국소 RPE 1.8cm</b> — 프레임간 상대 정확도는 양호','장면별 반복 최적화 제거 = 속도 패러다임 해결책','Apache 2.0 + 가중치 확보 완료'],
+  q:['<b>장기 드리프트 파국 — TUM 0.92m(SOTA 대비 14배↓), KITTI 17%/333m.</b> 시스템으로는 포즈 비경쟁','이것이 <b>교훈 C</b>의 근거: feed-forward 단독은 포즈에서 못 이기고, 승부처는 여전히 전역 일관성(루프클로저·BA)이다'],
+  f:['<b>F5 — 시스템 기각이 방법 기각은 아니다.</b> FF의 국소 prior(RPE 1.8cm)를 motion init·재측위에만 재활용. 단 ICP-init 교훈상 init 이득은 레짐 의존이므로 <b>Phase 0에서 Amdahl 천장을 먼저 계산하고 <1.3x면 백로그에서 제거</b>','<b>geometric context transformer로 루프클로저를 학습으로 대체</b>하는 각도는 novel — 순수 feed-forward의 미해결점(전역 일관성)을 정면 공략','종합 white space: "<b>feed-forward로 희소 가우시안을 예측하는 스트리밍 3DGS-SLAM</b>" = FF 속도 + sparse 경량 + LingBot식 메모리']},
+]},
+
+{cat:'GS-SLAM 시스템', key:'GS시스템', color:'#00bfa5',
+ from:'3dgs_sota_survey/PLAN.md · SOURCES.md · 3dgs_speed_survey/REPORT.md(ADDENDUM) · phase2_c1_tvgslam · phase2_c2_loopsplat',
+ items:[
+ {n:'GauS-SLAM',v:'3DV 2025 · arXiv 2505.01934 · RGB-D 2D surfel — 우리 GS 트랙 베이스',c:'#1f77b4',st:'meas',
+  one:'장면을 2D 가우시안(surfel)으로 칠하고, 렌더 결과를 실제 영상과 맞추며 카메라를 추적하는 거의 비-딥러닝 방식.',
+  d:'surface-aware depth rendering(깊이 blending의 표면 간섭 해결) + local-map 기반 frontend/backend. 추적 신경망이 없고 매 프레임 렌더→역전파→포즈·지도 최적화를 반복한다.',
+  p:['Replica room0 논문급 재현 — <b>PSNR 38.80 / ATE 0.06cm / Depth-L1 0.10cm / LPIPS 0.020</b>','5종 중 <b>유일하게 photorealistic novel-view 렌더</b>가 되는 맵(TUM PSNR 19.7)','우리 코드 = 자유롭게 수술 가능한 유일 자산'],
+  q:['TUM fr1_room 13.77cm로 포즈 5위 — 전역 BA가 없어 긴 루프에서 드리프트','0.5~2fps, 맵 용량 317MB, frontend의 ~80%가 rasterizer-bound','<b>30fps 트랙 최종 결산: 6주간 레버 8종 → 채택 스택 누적 ~2.6x, 30fps까지 ~11x 부족.</b> 기각된 레버 = 조기종료(GN에 dominated)·FP16·AccuTile(천장 ~5%)·per-splat bwd(~1.1x)·backend GN(TUM 파국)·area-aware GMR(no-op)·FF frontend(Amdahl 천장 ~2.2x)','근본 원인: <b>bwd 비용 ∝ Σ(기여 pixel, splat pair)</b> = 병렬화로 축소 불가한 floor. "맵 표현 자체가 매 프레임 최적화 대상"인 아키텍처는 프레임률에 물리적 한계가 있다'],
+  f:['<b>전략 결론 — 실시간 SLAM의 코어는 렌더링-맵이 아니어야 한다. 렌더맵은 비동기 사이드카 스레드로 분리</b>(키프레임 rate, 포즈 경로와 분리라 무위험)','남은 연구 각도 3개: ① <b>area-aware merge</b>(아래 GMR 항목) ② <b>Riemannian surfel orientation</b>(C1) ③ <b>RGB-D 2D-surfel feed-forward frontend</b>(세상에 없음 = novelty)','Phase 5에서 GauS/GMR 사이드카 매핑으로 렌더맵 데모만 남기는 것이 현 로드맵']},
+ {n:'2DGS-SLAM',v:'arXiv 2506.00970 · PRBonn · RGB-D',c:'#00bfa5',st:'block',
+  one:'3DGS RGB-D SLAM의 두 약점 — depth 렌더 비일관성과 효율적 루프클로저 부재 — 를 2D surfel + MASt3R로 정조준.',
+  d:'3D 타원체는 alpha-blending 깊이가 ray마다 여러 가우시안의 가중평균이라 표면이 시점마다 흔들리지만(multi-view inconsistent), 2D 디스크는 <b>ray–disk 교차점이 곧 표면</b>이라 깊이가 결정적이다. 여기에 MASt3R 루프 탐지·재측위 + local active map을 붙여 전역 일관성을 얻는다.',
+  p:['depth-consistent rendering — 포토메트릭+기하 추적 손실이 잘 정의되고 표면 재구성이 정확','MASt3R 학습 prior로 재방문 인식·재측위 → 전역 일관 맵','local active map으로 온라인 효율 확보','코드 공개 + sm_120 빌드 성공(diff-surfel-rasterization·fused-ssim·simple-knn float.h 패치·asmk·gtsam, MASt3R ckpt 재사용)'],
+  q:['<b>실행 블로커: WSL2가 CUDA IPC를 미지원.</b> slam.py가 backend를 mp.Process(spawn)로 띄우고 CUDA 텐서를 mp.Queue로 공유 → 자식이 <code>_new_shared_cuda: invalid resource handle</code>로 죽고 메인이 대기(스톨, GPU 3%·26분 무진행)','single_thread 플래그가 없음(backend.run = while True 큐 루프)','알고리즘 결함이 아니라 <b>배포 복잡도</b> 문제 — 이것이 벤치를 5종으로 확정한 실무적 이유'],
+  f:['single-process 변환(코드 수술) 또는 <b>CPU-텐서 큐 우회</b> — 둘 중 하나 필요. 미완','DROID-Splat 저자의 negative result를 감안하면 이득은 "2D 표현" 자체보다 <b>depth-consistency 설계</b>에서 온다는 해석 → 표현을 통째로 바꾸기보다 depth 일관성 항만 이식하는 편이 ROI 높음']},
+ {n:'OpenGS-SLAM / S3PO-GS',v:'ICRA 2025 (2502.15633) / ICCV 2025 (2507.03737) · RGB-only 야외',c:'#e8a33d',st:'block',
+  one:'대부분 GS-SLAM이 RGB-D·실내 유한 장면을 가정하는데, 정반대로 단안 RGB만으로 무한(unbounded) 야외를 공략.',
+  d:'pointmap 파운데이션 프론트엔드(DUSt3R/CroCo 계열, curope RoPE 커널)로 단안의 스케일·기하 모호성을 학습 prior로 회복하고 그 위에 3DGS 맵을 올린다. 후속 S3PO-GS는 self-consistent rendered pointmap tracking + patch-based pointmap mapping으로 큰 시점 변화에서 개선.',
+  p:['깊이 센서 부재를 학습 prior로 메우는 설계 — "GS 맵 + 학습 3D 프론트엔드" 조합이 단안·야외에서도 작동함을 입증','실내 bounded 가정을 깬 유일 계열(도로/주행 시퀀스 표적)'],
+  q:['동일한 멀티프로세스 CUDA-IPC 계열 블록으로 우리 환경에서 미실행','야외 스케일 드리프트가 커서 절대 ATE는 실내 계열 대비 열위(Waymo 0.839m)'],
+  f:['본선 접목은 <b>★(참고)</b> — 학습 3D 프론트엔드 설계만 차용','더 나은 상위호환이 이미 존재: <b>TVG-SLAM이 동일 Waymo에서 0.839 → 0.602m</b>로 개선 → tri-view 기하 제약 쪽이 접목 가치가 높음']},
+ {n:'DROID-Splat',v:'arXiv 2411.17660',c:'#5aa9ff',st:'surv',
+  one:'본 보고서 11절이 제안한 "추적과 매핑을 분리" 전략의 실제 출판 구현 — 즉 우리 GS 트랙의 레드오션 증거.',
+  d:'DROID-SLAM dense 추적 + 3DGS dense differentiable 렌더 맵 + Metric3D 등 단안 metric depth prior로 unknown-scale 단안 영상에 스케일을 부여. DroidCalib으로 임의 카메라 모델 + intrinsic까지 맵·포즈그래프 위에서 동시 최적화하고, DPVO식 전통 루프클로저도 추가.',
+  p:['우리 벤치 1위 추적기(DROID)와 렌더 가능 맵을 결합한, 검증된 분리 구조','임의 카메라 + intrinsic 자동 보정(DroidCalib)','KITTI·ScanNet 등 어려운 야외에서 강건'],
+  q:['<b>photorealistic 맵 경로가 이미 점유됨</b> → "GauS + MASt3R 루프"는 사실상 이 논문 재현이 됨','sm_120 커스텀 빌드 난관으로 미시도','DROID 베이스라 무겁고 느린 특성을 그대로 상속'],
+  f:['<b>★핵심 negative result</b>: 저자가 2DGS 브랜치도 넣었으나 "표면 기하는 빨리 수렴해도 <b>refine 후 naive 3DGS보다 낫진 않았다</b>"고 보고 → 2D surfel이 만능이 아니라는 반증 자산','우리 방향 함의: 맵을 포기하고 <b>포즈 정확도+속도로 RTAB-Map을 추월</b>하는 현 트랙이 이들과 차별화되며 레드오션을 피한다']},
+ {n:'CaRtGS',v:'arXiv 2410.00486 · SYSU/HKU · 실시간',c:'#c06bd8',st:'surv',
+  one:'실시간 GS-SLAM의 진짜 병목은 표현 품질이 아니라 추적(빠름)과 가우시안 매핑(느림)의 속도 불일치라고 재정의.',
+  d:'ORB-SLAM3(고전 특징 추적·루프클로저) + Gaussian mapper(Photo-SLAM 계보) C++ 시스템. splat-wise back-propagation for depth rendering(GS_ICP_SLAM 계보 커스텀 rasterizer)으로 매핑 역전파를 가속해 Computational Alignment를 달성.',
+  p:['검증된 고전 SLAM 위에 GS 맵을 얹는 실용적 구성','GS-SLAM의 한계를 <b>시스템 스케줄링/계산 균형</b> 문제로 재정의 — GauS의 ~2-5fps 병목과 직결되는 관점'],
+  q:['미시도(sm_120 커스텀 빌드 난관)','C++ 시스템이라 우리 Python 스택으로의 이식 비용이 큼'],
+  f:['<b>splat-wise depth back-propagation을 2D surfel rasterizer에 이식</b> — 렌더 가속 슬롯의 유력 후보(GauS bwd가 fwd의 5.5x라는 우리 실측과 정확히 맞물림)','Computational Alignment 개념 자체(추적↔매핑 비동기 예산 배분)는 사이드카 매핑 스레드 설계에 그대로 적용 가능']},
+ {n:'LoopSplat',v:'arXiv 2408.10154 · 우리가 직접 재현·검증한 유일한 GS 루프클로저',c:'#3ddc97',st:'dead',
+  one:'상대 변위/회전 임계로 submap을 트리거하고, 3DGS submap끼리 등록해 루프 edge를 만들고 전역 PGO+BA를 돈다.',
+  d:'논문 보고: Replica 평균 ATE 0.26cm(Gaussian-SLAM 0.31 / MonoGS 0.32 / SplaTAM 0.38), ScanNet++ 2.05cm(Gaussian-SLAM 3.08 / SplaTAM 89.41). 우리는 GauS-SLAM 위에 motion-trigger submap + GS-registration + BA pose residual로 이식해 2단계 검증했다.',
+  p:['메커니즘 자체는 end-to-end로 작동 확인 — Replica room0 2000f에서 50 edge, 크래시/NaN 없이 완주','<b>진짜 루프 시퀀스(TUM fr1_room 1315f)에서 드리프트를 실제로 줄임 — ATE 15.30 → 14.62cm (4.4%↓)</b>. room0(0.06cm)에서는 절대 알 수 없던 결론','GauS가 이미 LocalMap·NetVLAD covisibility·backend transform 최적화를 갖고 있어 아키텍처 적합도가 높음'],
+  q:['<b>net-marginal — 작은 ATE 이득이 재구성 악화를 동반</b>: Depth-L1 10.02→13.61cm(+36%), PSNR 19.70→19.13','수락 조건이 너무 헐거움 — adjacency 필터가 gap≤1만 제외, confidence floor 없음 → 수락 edge 대부분이 진짜 재방문이 아니라 인접 중첩 submap(gap 2-5)','등록이 means-only ICP proxy라 변환이 coarse. loop pose loss도 3x3 회전 원소 raw MSE(weight 0.1) + 병진 MSE로 조악','<b>Exp2(render-loss 등록 + PGO)는 실패</b>: 기본 게이트(best_loss≤0.08)에선 실제 렌더 손실이 0.24-0.48이라 <b>0 edge</b>, 게이트를 풀어 34 edge를 발화시키면 <b>ATE 98.42cm(6.4배 악화) 파국</b>','<b>root cause(코드 판독): PGO loop residual의 좌표 프레임 불일치.</b> <code>meas</code>(render/ICP의 transform_source_to_target = Gaussian/world-frame 정렬)와 <code>pred</code>(inv(target.ref2f0) @ target_w2c @ inv(source_w2c) @ source.ref2f0 = ref2f0 상대 포즈)를 <code>se3_log(inv(meas) @ pred)</code>로 비교 → 서로 다른 프레임의 양이라 제약이 기하적으로 틀림','TUM 단일런 ATE 노이즈 ±2-3cm가 modest한 루프 이득을 그대로 삼킴(OFF 15.30 / loose-ICP 14.62 / tight-ICP 18.04 / render-default 17.34)'],
+  f:['<b>① meas/pred 프레임 불일치 수정</b> — 임계 튜닝이 아니라 <b>correctness 디버깅 작업</b>. SE(3) convention self-test 하드 게이트(<code>utils/gn_tracking.py</code>의 검증된 패턴)를 이식해 이 버그 클래스를 격리할 것','<b>② 수락 조건 강화(가장 싸고 ROI 높음)</b> — confidence floor ≥0.3, adjacency index gap을 진짜 재방문 수준으로 상향, min_inliers 상향. 가설 = 더 적고 깨끗한 edge → 재구성 손상 없이 더 큰 ATE 이득','<b>③ 등록을 LoopSplat 원본 수준으로 업그레이드</b> — render-loss 키프레임 localization + robust PGO','<b>④ 모든 재검증은 시드 평균</b>으로. 단일런으로는 어떤 주장도 성립하지 않음','⑤ 시퀀스 확장 — TUM fr1/desk, fr2/xyz, 가능하면 ScanNet++']},
+ {n:'TVG-SLAM',v:'arXiv 2506.23207 · tri-view 기하 제약',c:'#cdb24a',st:'dead',
+  one:'현재 프레임 + 인접 키프레임 2장의 DUSt3R dense tri-view 대응으로, 포토메트릭이 못 믿을 때 기하가 추적을 떠받친다.',
+  d:'2D 재투영(trifocal) 손실 + 3D 정렬 손실을 포토메트릭에 더하고, <b>DART</b>가 매핑/렌더가 불안정할 때 포토메트릭 가중치를 낮춰 강제로 기하에 의존하게 만든다. 조사 랭킹에서 <b>기대 ROI 1위</b>로 꼽혔던 후보.',
+  p:['Waymo 평균 ATE 0.839 → 0.602m, PSNR 23.99 → 25.38, LPIPS 0.434 → 0.361 (vs OpenGS-SLAM)','Small City / Cambridge Landmarks에서 ATE 각각 65.7% / 69.0%↓','GauS의 photometric-only 추적 실패 모드(렌더가 stale·노출 변화·저텍스처)를 정확히 겨냥하고, <b>rasterizer/CUDA 변경 없이</b> 프로토타입 가능'],
+  q:['<b>우리 구현은 TVG-SLAM 재현이 아니라 프로토타입</b> — WSL nerfstudio 환경에 DUSt3R/MASt3R 미설치라 OpenCV Farneback dense flow 대체물로 실행(코드에 stand-in으로 명시)','<b>검증 0건</b> — WSL/PyTorch CUDA 초기화 SIGSEGV(<code>torch.cuda.is_available()</code>부터 죽음, libcuda/cudaGetDeviceCount 스택)로 OFF smoke조차 완주 못함. 하드 제약상 OFF 성공 전엔 ON을 돌리지 않았으므로 ablation 표가 전부 n/a','논문의 코드 공개 링크를 조사 시점에 찾지 못함'],
+  f:['<b>DUSt3R/MASt3R를 실제 설치한 뒤 재검증</b> — 그 전의 어떤 수치도 TVG-SLAM 성능으로 해석 금지','레이턴시 제어: matcher를 <b>키프레임 또는 추적 위험 프레임에만</b> 호출','GauS 기준 기대 이득은 clean Replica에서 0.00-0.02cm(포화)이고, 진짜 이득은 ScanNet++/TUM/핸드헬드 같은 hard 시퀀스에서 ATE 10-25%↓ + 리셋 감소로 예상']},
+ {n:'Feed-forward 추적 계열 (Flash-Mono · GS4 · FlashSLAM · VBGS-SLAM · iGaussian)',v:'2025~2026 · 대부분 preprint',c:'#46d9c0',st:'surv',
+  one:'프레임마다 도는 반복 photometric 최적화 자체를 학습된 1회 예측으로 대체하려는 계열. 천장은 ~10x지만 검증 강도가 낮다.',
+  d:'Flash-Mono(ICLR 2026 poster)가 대표: recurrent multi-frame 집계로 pose와 per-pixel 2DGS 속성을 직접 예측해 per-frame 최적화를 제거한다.',
+  p:['Flash-Mono — ScanNet에서 <b>12.71fps vs MonoGS 1.00fps(~12-13x)</b>, learned init 덕에 mapping 20 iters(MonoGS 250 대비 12.5x↓)인데 품질은 오히려 위(PSNR 21.73 vs 19.24)','FlashSLAM — tracking time −87~90% vs SplaTAM, closed-form(LightGlue+SVD)로 pose <80ms','VBGS-SLAM — closed-form CAVI로 ~2x MonoGS'],
+  q:['<b>Flash-Mono도 단독으론 30fps 불가</b> — runtime breakdown상 backend 77.5ms/frame이 새 병목이 됨. 커널·백엔드 가속과 조합 필수','Flash-Mono는 <b>monocular</b> — RGB-D 2DGS-surfel용 FF frontend는 세상에 없음','GS4 — 10x 주장이나 ICLR 2026 <b>철회</b>, 비교 기준도 GS-semantic-SLAM','FlashSLAM — 저자가 <b>D455 노이즈 depth/무텍스처에 취약하다고 자체 명시</b>(우리 실센서와 정확히 충돌)','VBGS-SLAM — 절대 fps가 0.5~1.9로 낮음','iGaussian — 속도 수치가 <b>적대검증에서 refuted</b>. 설계 아이디어로만 참고','우리 실측 교훈 C: FF 단독은 국소만 좋고 장기 드리프트에서 무너진다'],
+  f:['<b>RGB-D 2D-surfel FF frontend = 확인된 미점유 novelty.</b> 학습 경로는 self-distillation이 현실적 — 우리 GauS full run이 (RGB-D 입력 → 수렴 pose) 쌍을 무한 생성하므로 <b>iterative tracker를 teacher로 작은 CNN pose 회귀기를 학습</b>해 ICP 대신 초기화에 쓴다. 데이터 자급, Replica+TUM으로 착수 가능','더 작고 안전한 준-novelty: <b>iteration-수 예측기</b> — ICP 잔차·모션 크기로 프레임 difficulty를 추정해 per-frame tracking budget을 적응','미해결: 기존 모델(VGGT/Flash-Mono/GS4) distillation으로 되는가 from-scratch인가? 학습 데이터·비용은?']},
+]},
+
+{cat:'속도 · 렌더러 레버', key:'속도', color:'#f5c451',
+ from:'3dgs_realtime_30fps/REPORT.md · 3dgs_speed_survey/REPORT.md',
+ items:[
+ {n:'Speedy-Splat — SnugBox + AccuTile',v:'CVPR 2025 · arXiv 2412.00578',c:'#3ddc97',st:'meas',
+  one:'타일 바운딩을 타이트하게(SnugBox), 가우시안-타일 교차를 정확하게(AccuTile) 만들어 빈 픽셀 연산을 없앤다.',
+  d:'조사에서 first-integration으로 추천됐던 항목. 논문 보고 렌더 6.71x↑, 프리미티브 10.6x↓이고 Sparse Pixels는 <b>provably lossless</b>(PSNR 27.55 → 27.55/27.57).',
+  p:['<b>CVPR 2025 peer-reviewed + provably lossless</b> → 속도와 품질이 얽히지 않아 검증이 깨끗함','기존 CUDA rasterizer에 plug-in, 통합 리스크 2/5로 최저','<b>우리 실측: SnugBox 이식 성공, lossless +29~56%</b>'],
+  q:['<b>AccuTile은 우리 실측서 기각</b> — 천장 ~5%','논문은 표준 3D-GS rasterizer 대상이고 우리 건 2D Gaussian surfel rasterizer(<code>gaus_2dgs_rasterization</code>) → <b>surfel 타일 교차 수식에 맞게 적응</b>해야 하며 lossless 보장도 그 적응이 정확할 때만 유지'],
+  f:['남은 것은 AccuTile이 아니라 <b>backward 쪽 커널</b> — 우리 실측 bwd = fwd의 5.5x라 여기가 제1 타깃']},
+ {n:'LiteGS · DISTWAR — warp-level gradient reduction',v:'arXiv 2503.01199 (ICLR 2026 desk-reject) / 2401.05345',c:'#8a93a8',st:'dead',
+  one:'타일당 1 warp로 묶어 atomic-add를 warp reduction으로 대체해 backward를 가속.',
+  d:'LiteGS 보고: ~5.7M primitives(우리 ~7M과 동급)에서 atomic 17.82ms fwd / 51.84ms bwd → 3.01 / 6.93ms = <b>vs-atomic 7-13x</b>. DISTWAR는 SW-only로 gradient 단계 평균 2.44x(최대 5.7x).',
+  p:['GauS surfel rasterizer가 atomic 계열(SnugBox 패치한 그 커널)이라 vs-atomic 수치가 그대로 기대치가 됨','DISTWAR는 코드 공개'],
+  q:['<b>우리 실측: warp-red TH8의 시스템 기여는 +5.6%뿐</b>(3.05→3.22fps). 커널 배수 ≠ 시스템 배수(Amdahl)','<b>적대검증 기각</b>: "LiteGS 시스템 13.4x 학습 가속" 0-3, "DISTWAR end-to-end 2.0x" 0-3','LiteGS는 ICLR 2026 desk-reject(자가보고) → 자체 재측정 필수','수치가 3DGS 기준이라 2DGS surfel(ray-splat 교차의 추가 gradient 항)에서 재현될지 미확인'],
+  f:['남은 검증 질문: <b>warp-reduction이 2DGS surfel backward에서도 2.4-7x를 내는가</b> — 직접 측정 외에 답이 없음','교훈으로 승격됨: <b>"속도는 커널 튜닝이 아니라 아키텍처에서 나온다"</b> — 커널류(warp 1.1x, SnugBox 1.3x, AccuTile 기각)는 전부 서브-2x인 반면 아키텍처류(GN render-and-solve 2.2-2.5x, DPVO 패치 희소화)는 배수 레버였다']},
+ {n:'Taming 3DGS · SparseSplat — 생성 단계 count 제어',v:'SIGGRAPH Asia 2024 (2406.15643) / arXiv 2604.03069',c:'#cdb24a',st:'lit',
+  one:'사후에 병합해 줄이는 대신, 처음부터 score 기반 예산으로 가우시안을 덜 만든다.',
+  d:'Taming 3DGS: budgeted densification으로 모델 크기·학습시간 4-5x↓, 품질 유지. SparseSplat: entropy 기반 적응 밀도로 count 22%(150k vs 688k)에서 PSNR 동등(24.20 vs 24.17), 150k에서 208.6fps(~3x).',
+  p:['<b>사후 merge(GMR)와 상보적</b> — 생성 단계에서 예산을 제어하므로 GMR의 실패 원인(merge된 surfel의 면적 팽창)을 원천적으로 피함','SparseSplat은 우리 GMR(−2dB)보다 낮은 품질 비용 가능성'],
+  q:['<b>"Taming backward 4-5x lossless"는 0-3 기각</b> — 4-5x는 모델 크기·학습시간이지 backward가 아님','SparseSplat은 LPIPS 소폭 악화 + 256×448 저해상도 + 렌더-only(SLAM 아님)','우리 자체 측정상 count↓ → fps↑ 환산은 sublinear'],
+  f:['SLAM mapping의 densify 단계에 <b>score 기반 budget 제어</b>를 직접 이식 — GMR 재설계와 함께 묶어 평가할 항목']},
+ {n:'AGS · RTGS · Neo — covisibility skip / temporal reuse',v:'ASPLOS 2026 (2509.00433) / MICRO 2025 (2510.06644) / ASPLOS 2026',c:'#ff8b8b',st:'dead',
+  one:'헤드라인 숫자가 전부 전용 하드웨어 몫이라, 소프트웨어로 남는 건 거의 없다.',
+  d:'AGS는 covisibility가 높으면 fine 최적화를 skip(20 vs 200 iters)하고 비기여 가우시안(85.1%) 연산을 회피 — 우리 병목을 정확히 겨냥한 설계다.',
+  p:['AGS의 문제 정의가 우리와 동일','RTGS에서 SW로 이식 가능한 것 2가지: ① 이미 계산된 gradient L2로 pruning ② 비키프레임 temporal 다운샘플'],
+  q:['<b>AGS 논문 자체 ablation에서 GPU SW-only는 1.12x뿐</b> — 헤드라인 6.71-17.12x는 전용 ASIC+CODEC 몫','<b>RTGS의 ≥30fps·에너지 82.5x도 커스텀 HW 필요</b>','"Neo temporal-reuse 정렬 10x"는 1-2 기각(전용 HW 몫) + Neo는 오프라인','<b>이 계열 전체가 "실시간 GS-SLAM 주장은 품질을 크게 깎거나 전용 HW 전제"라는 방증</b>'],
+  f:['미해결: RTX 5090 NVDEC를 async stream으로 쓰면 AGS covisibility 검출의 GPU-only 천장(1.12x)을 얼마나 넘는가 — 실익이 낮아 후순위']},
+ {n:'3DGS-LM · GSReuse · Vulkan HW rasterizer',v:'ICCV 2025 / IEEE VR 2026 Best Paper HM / arXiv 2505.18764',c:'#8a93a8',st:'dead',
+  one:'셋 다 "레버가 아니다"로 판정된 가설들 — 다만 3DGS-LM의 기각 이유가 우리 GN tracking의 근거가 됐다.',
+  d:'3DGS-LM: Levenberg-Marquardt 5회로 수렴하나 Jacobian 캐시 ~53GB로 1회 비용이 거대해 전체 ~20%↑뿐. GSReuse: per-pixel GS motion vector로 이전 렌더를 새 시점에 warp. Vulkan: 미분가능 HW rasterizer.',
+  p:['GSReuse의 warp 메커니즘 자체는 검증됨 — gradient가 불필요한 구간(tracking coarse 초기화, 시각화)에 한정 탐색 가치','Vulkan은 fwd+bwd 전체 3.07x, backward는 naive atomic 대비 10x'],
+  q:['<b>3DGS-LM: 2차 최적화기를 "맵 파라미터"에 쓰는 발상은 비추천</b>','GSReuse의 "drop-in 최소 수정"·"타일 단위 렌더 skip" 주장은 <b>둘 다 0-3 기각</b>','Vulkan은 float32 경로가 오히려 느리고(fwd 0.27x), float16 품질 미측정, CUDA drop-in 불가(from-scratch + surfel 커널 재구현) → 통합 리스크 최상급, 수개월 소요 + 재현 사례 부재로 <b>비추천</b>'],
+  f:['<b>★3DGS-LM 기각의 반전</b>: 메모리 문제는 <i>맵 파라미터</i> 얘기이고 <b>pose 6D는 무관</b>하다 — 이 구분이 곧 우리 GN render-and-solve tracking(2.2-2.5x, 채택)의 출발점이 됐다']},
+ {n:'맵 압축 계열 (MEGS² · GaussianSpa · FlexGaussian · V3DG)',v:'2509.07021 / CVPR 2025 / ACM MM 2025 / SIGGRAPH 2025',c:'#8a93a8',st:'surv',
+  one:'메모리·용량 축의 레버들 — 속도 축과 혼동하면 안 된다.',
+  d:'MEGS²: unified pruning + spherical Gaussian color로 static VRAM 8x↓, 렌더 VRAM 6x↓(GaussianSpa 대비 −40%), 1.5-1.7x 속도. GaussianSpa: 10x 적은 Gaussian에서 +0.9dB. FlexGaussian: 96.4% 압축 <1dB, training-free·초단위. V3DG: Nanite식 LOD로 1억 Gaussian 실시간.',
+  p:['GauS의 local map count 상한(tau_l)·backend BA 비용에 직접 작용','FlexGaussian은 training-free라 착수 비용 거의 0'],
+  q:['<b>MEGS²의 SG-lobe 부분은 우리에 부적용</b> — GauS는 SH가 아니라 직접 RGB(<code>_rgb</code>)를 쓴다. 실행 가능한 건 unified primitive pruning뿐','GaussianSpa/FlexGaussian은 static 3DGS 대상이라 SLAM 이식이 비자명','V3DG는 offline 합성씬 — online submap 이식 비용이 큼'],
+  f:['<code>scene/Gaussians.py</code>의 <code>densify_and_prune()</code>와 <code>slam/Densify.py</code>의 <code>prune_gaussians()</code>에 <b>budget-aware score</b>(opacity + scale + 누적 gradient + view count + 최근 잔차 기여) 도입. 목표 = 20-40% 적은 Gaussian에 PSNR 손실 <0.2dB','단 SG color는 리스크 4/5(renderer·PLY IO·CUDA 연쇄 변경) → 하지 말 것']},
+]},
+
+{cat:'센서 융합 · 강건성 · 동적', key:'융합', color:'#ff8b8b',
+ from:'slam_upgrade_rtabmap/REPORT.md · 3dgs_sota_survey/PLAN.md · 3dgs_contribution_gap/REPORT.md',
+ items:[
+ {n:'DBA-Fusion',v:'RA-L 2024 · IMU tight-coupling — <b>ROI #1</b>',c:'#ff6b6b',st:'lit',
+  one:'deep dense-BA의 Hessian을 factor graph로 넘겨(Schur-complement로 depth marginalize) IMU와 tight-couple.',
+  d:'딥리서치가 단일 최대 정확도 이득으로 랭크한 항목. TUM-VI에서 DBA-VIO 0.42% vs mono DROID 2.64%(~6배↓).',
+  p:['<b>단일 최대 정확도 이득</b> — D455가 IMU를 내장하고 있어 추가 하드웨어 0','fr1_room에서 DPVO를 죽인 <b>빠른 회전</b>을 정확히 보강하고, 회전·중력 성분은 스케일과 달리 <b>Sim3 ATE에 그대로 잡힌다</b>'],
+  q:['<b>중대 주의: 검증된 레시피가 전부 DROID dense-BA 계열</b>(DBA-Fusion, DVI-SLAM). DPVO sparse-patch에 IMU factor를 붙인 공개·검증 변종은 <b>미확인</b> → 리스크이자 곧 novelty','비용 높음(factor graph 신규 구축)'],
+  f:['<b>Phase 3 = 최대 리스크 = 최대 novelty.</b> 착수 전 2게이트: ① focused deep-research로 novelty 최종 적대검증 ② SE(3) convention self-test 하드 게이트(PGO를 깬 버그 클래스 격리)','아키텍처 확정: <b>기존 loop PGO 재사용 금지</b>(pose-only 함정 — velocity 3 + bias 6 상태 필수), pose-writeback 배관만 재사용. <b>pypose 0.9.5 IMUPreintegrator</b>로 loosely-coupled v1, CUDA BA 수술은 v2','<b>isolation test 먼저</b>: DPVO EuRoC 출력포즈 + EuRoC IMU → standalone pypose 융합이 개선되는가? 통과 후에만 DPVO 통합','중간 게이트(2주차): 합성 IMU(GT 미분 + 노이즈 주입)로 factor 수렴 확인. 최종 게이트: EuRoC ATE mono 대비 ≥30%↓ + 실시간 유지','스코프: IMU는 벤치를 EuRoC/TUM-VI로 영구 이동(fr1·5종 비교 불가). Sim3라 스케일 이득은 안 잡히고 회전/중력분만 → 문헌 36-45%보다 modest 예상']},
+ {n:'DVI-SLAM',v:'ICRA 2024 · multi-factor confidence DBA',c:'#ff8b8b',st:'lit',
+  one:'re-projection + feature-metric + IMU를 confidence로 가중해 end-to-end DBA에 통합.',
+  d:'EuRoC mono ATE 0.179 → 0.114m(36%↓, feature-metric 단독 20%보다 큼), 3요소 결합 0.098m(45%↓).',
+  p:['요소별 기여를 분리 측정한 ablation이 있어 <b>상대 기여 순위가 견고</b>','IMU 융합의 대안 레시피로 DBA-Fusion과 상호 검증'],
+  q:['<b>정직한 caveat: 0.179m baseline은 의도적으로 약화한 VO</b>(공개 DROID full-SLAM ~0.022m보다 나쁨) → <b>절대 ATE 외삽 금물</b>','<b>"DVI-SLAM이 EuRoC 최저 ATE"는 0-3 기각</b>'],
+  f:['DBA-Fusion과 함께 Phase 3의 두 후보 레시피. 어느 쪽이든 sparse-patch로의 번역이 진짜 작업량']},
+ {n:'RoMeO',v:'arXiv 2412.11530 · metric depth 주입 — ROI #3',c:'#5aa9ff',st:'dead',
+  one:'단안 metric depth(DPT) 초기화 + MVS를 주입해 스케일 모호성을 없앤다.',
+  d:'DPVO 대비 scale-aligned 상대 ATE >50%↓ 보고. 우리는 모델 depth 대신 D455 센서 depth를 직접 쓰므로 더 단순해진다고 봤던 경로.',
+  p:['RTAB-Map과 동일 입력(RGB-D)이 되어 <b>공정 비교</b>가 성립','저텍스처 구간 강건성 기대'],
+  q:['<b>caveat: 절대 77.8%↓는 DPVO 단안 스케일 붕괴로 부풀려진 값</b>, 공정 비교는 scale-aligned 상대 55.2%↓. self-report·미독립재현이고 depth가 센서가 아니라 모델 출력','<b>우리 fr1 실측 결과는 전부 음성</b>: depth-init = null(BA가 시작점을 덮어씀), naive metric residual = <b>악화</b>(0.365→0.56 단조, <code>pg.normalize()</code>가 patch depth를 mean=1로 재정규화해 metric 앵커와 충돌), scale-corrected shape = 중립(0.365→0.351, 노이즈 내)','진단 확정: DPVO patch inverse-depth 중앙값 ~1.0-1.3 = 센서 metric(0.73)의 1.4~1.7배이고 <b>프레임마다 변동</b> — 이 변동 자체가 로컬 스케일 드리프트인데 <code>normalize()</code> gauge 때문에 cheap 주입으로는 못 건드림'],
+  f:['<b>fr1에서는 사망 판정</b>(위 DPVO 항목의 스모킹건 참조) — 하지만 <b>루프클로저 검증용 depth 역투영은 살아남아 채택됨</b>','실세계용으로 남은 각도는 <b>F2 — 불확실성 가중 depth 잔차</b>(hard depth는 D455 노이즈에 취약하다는 FlashSLAM의 자백 근거). Phase 1b에 내장하고 1a(초기화)와 독립 게이트로 hard-vs-soft ablation을 논문 자산으로 남긴다']},
+ {n:'Salient Sparse VO · DEVO',v:'RA-L 2024 / 3DV 2024 · 패치 선택 — ROI #4',c:'#cdb24a',st:'lit',
+  one:'무작위 패치 대신 salient/learned score-map으로 추적할 패치를 고른다.',
+  d:'Salient Sparse VO는 random patch 기반 salient point 검출로 textureless를 회피, DEVO는 learned score-map + multinomial 샘플링(DPVO 그래프 재사용).',
+  p:['fr1_room의 빠른 회전·모션블러·저텍스처 레짐(DPVO 41cm 붕괴 구간)을 직접 겨냥','비용이 낮음'],
+  q:['<b>이득 불확실 — DPVO 자체 ablation은 random이 SIFT/ORB/SuperPoint/high-gradient를 모두 이긴다고 보고</b> → 단순 gradient 기반은 역효과. "학습형"만 유망','DEVO는 event-camera 입력이라 <b>RGB 일반화 미검증</b>'],
+  f:['<b>조건부 착수(Phase 4)</b> — Phase 0의 시간 분해 프로파일에서 Amdahl 천장을 통과하고, fr1_room 잔여 오차가 실제로 회전·블러 구간에 집중돼 있을 때만. 그 전엔 백로그에 둔다']},
+ {n:'동적 · 4D 계열 (WildGS-SLAM · RU4D-SLAM · D4DGS-SLAM · 4DTAM)',v:'2504.03886 / 2602.20807 / 2504.04844 / CVPR 2025',c:'#c06bd8',st:'surv',
+  one:'사람이 걸어다니는 실제 씬 — RTAB-Map과의 라이브 head-to-head가 벌어질 바로 그 조건인데, 현 전략에 부재한 축.',
+  d:'RU4D-SLAM: per-pixel 불확실성 + 의미 프롬프트로 모션 마스크를 복원하고 adaptive opacity weighting을 적용. D4DGS-SLAM: 4D 가우시안 + 안정/정적 anchor 추출.',
+  p:['D4DGS — TartanAir-Shibuya 평균 ATE <b>73.2 → 3.6cm</b>, PSNR 12.43 → 22.75. BONN ball ablation은 full 3.6cm/27.89 vs dynamics-aware 제거 27.9cm/20.23','RU4D — adaptive opacity weighting 제거 시 PSNR −0.95dB, integrate-and-render 제거 시 −1.26dB; static Gaussian 459k→264k, dynamic 526k→142k','정적 파이프라인용 <b>불확실성 마스크만</b> 떼어내면 리스크 2/5로 착수 가능'],
+  q:['<b>full 4D 확장은 리스크 5/5</b> — 표현·renderer·optimizer·벤치마크가 전부 바뀌고 CUDA fwd/bwd 커널 수정 필요(30+ GPU-hour). 근시일 성공 가능성 2/5','정적 Replica에서는 개선이 없거나 오히려 느려짐','속도 서베이의 <b>커버리지 갭</b>: 4D/동적 축은 검증 통과 claim 0건 — <b>"미조사"이지 "부정 결론"이 아님</b>'],
+  f:['<b>F4 — 경량 세그멘터로 동적 객체 마스킹</b>(패치 샘플링·BA 잔차에서 제외)을 Phase 4에 배치. TUM fr3 walking / BONN으로 검증하고 게이트 = fr3 walking ATE 대폭↓ + fr1_room 무회귀','1단계는 loss/densify 마스킹만(리스크 2/5): <code>slam/Loss.py</code>에서 color/depth/normal 잔차에 불확실성 가중을 곱하고, <code>slam/Densify.py</code>가 고불확실성 픽셀에서 새 surfel을 심지 않게 한다','<b>후속 조사 필요 항목 1순위</b> — 4D/동적 GS-SLAM 품질 축을 타깃 재조사(CVPR/ICCV/NeurIPS 2025-26)']},
+ {n:'GS-CPR / GSLoc · Marigold-DC · MonoSplat',v:'2408.11085 / 2412.13389 / 2505.15185',c:'#5aa9ff',st:'surv',
+  one:'추적 복구(재측위)와 입력 depth 자체를 손보는 보조 모듈들.',
+  d:'GS-CPR: 3DGS로 렌더한 RGB/depth와 live 이미지를 MASt3R로 매칭해 one-shot 2D-3D 포즈 정제. Marigold-DC: 희소 metric depth로 확산 depth prior를 유도하는 zero-shot depth completion.',
+  p:['GS-CPR — 7Scenes 중앙 오차 ACE 1.1cm/0.34° → 0.8cm/0.25°, recall@2cm/2° <b>83.3 → 93.1%</b>','Marigold-DC — zero-shot ScanNet MAE/RMSE <b>0.017/0.057</b>(Prompt Depth Anything 0.042/0.079, Marigold+LS 0.083/0.129)','MonoSplat — frozen Depth Anything 특징으로 cross-dataset Re10K→DTU PSNR 15.25 vs MVSplat 13.94'],
+  q:['GS-CPR — 매 프레임 실행하면 오버헤드가 큼(게이트 필수), SLAM 온라인은 localization보다 레이턴시·분포 제약이 빡빡해 성공 가능성 3/5','Marigold-DC — clean Replica에는 ROI가 없고, <b>완성된 metric 스케일이 오보정되면 오히려 해롭다</b>. 센서 depth의 blind 대체로 쓰면 안 됨'],
+  f:['GS-CPR은 <b>게이트된 복구 모듈</b>로만 — <code>depth_l1 > avg_depth_l1 × k</code>이거나 local-map 생성 시, 혹은 N 키프레임마다','Marigold-DC는 <b>confidence 가중 보조 채널</b>로 — raw depth 신뢰 구간은 raw를 쓰고 결측/노이즈 구간만 완성 depth를 낮은 가중치로. 완성 depth에서 생긴 surfel은 태깅해 후속 raw 관측으로 확인될 때까지 down-weight']},
+ {n:'S³LAM — surfel orientation의 미점유 gap',v:'arXiv 2507.20854',c:'#7fd9a8',st:'lit',
+  one:'우리 C1 novelty의 근거가 된 선행연구 — 정확히 무엇을 안 했는지가 중요하다.',
+  d:'S³LAM은 Lie 대수를 <b>카메라 포즈에만</b> 적용(Sola 2021 인용)하고, surfel은 자유 tangent 벡터 t_u, t_v(법선 = cross product)로 두고 cosine-similarity loss로만 간접 규제한다.',
+  p:['<b>어떤 2D-surfel SLAM도 surfel orientation 자체에 on-manifold 최적화를 하지 않는다</b>는 gap이 3-0 적대검증 통과','매니폴드 처리를 카메라 포즈(완료·표준)에서 맵 프리미티브 orientation(미완료)으로 옮기는 것이라 "재현"이 아님'],
+  q:['gap이 SLAM 한정으로만 깨끗함 — <b>오프라인 2DGS/3DGS 재구성 논문에서 이미 했을 가능성</b>은 커밋 전 별도 확인 필요','필드가 빠르게 움직이므로 논문 전 재서베이 필수'],
+  f:['C1 후보로 승격 → 아래 "우리가 직접 구현" 탭의 Riemannian surfel orientation 항목 참조','비-white-space로 확인된 것들: G2S-ICP SLAM(surfel+GICP)은 이미 존재, spectral·Fourier surfel은 미점유지만 선행 근거가 없어 speculative']},
+]},
+
+{cat:'우리가 직접 구현 · 실측', key:'우리구현', color:'#7fd9a8',
+ from:'3dgs_realtime_30fps/EXPERIMENTS.md · P2_DESIGN.md · 3dgs_contribution_gap/C1_DESIGN.md · realtime_slam_strategy/PHASE1_RESULTS.md',
+ items:[
+ {n:'GN render-and-solve tracking',v:'우리 구현 · <code>utils/gn_tracking.py</code> · TRACK_MODE=gn',c:'#7fd9a8',st:'meas',
+  one:'Adam 렌더+backward 루프(~14 iters/frame)를 맵 1회 렌더 + point-to-plane Gauss-Newton으로 교체 — backward 자체를 제거.',
+  d:'KinectFusion식으로 init pose에서 맵을 한 번만 렌더해 고정 reference로 삼고, live sensor depth와 projective 재대응하며 6D twist를 GN으로 푼다. backward 없음, Adam 없음, rasterizer autograd 없음. 근거는 bwd = fwd의 5.5x라는 자체 프로파일과 "pose 6D는 3DGS-LM의 메모리 문제와 무관"이라는 관찰.',
+  p:['<b>full room0 2000f: 1.47fps — P1 스택(조기종료) 1.03 대비 1.43x, baseline Adam 0.66 대비 2.23x</b>','<b>속도만이 아니라 전 품질지표 우위</b> — ATE 0.09 vs 0.11cm, PSNR 38.11 vs 36.70(+1.41dB), Depth-L1 0.12 vs 0.15, MS-SSIM 0.991 vs 0.989','frontend 비중 87% → 63%로 떨어져 tracking이 더는 지배항이 아님','SE(3) convention 하드 게이트 통과 — 합성 self-test max|err| 1.7e-3으로 <b>PGO를 깬 버그 클래스를 사전 격리</b>'],
+  q:['<b>depth-only는 tangential 모션에 under-constrained</b> — room0는 기하가 풍부해서 잘 되는 함정이 있음. 발산 시 Adam 폴백 필요','조기종료 레버를 dominate해버려 그쪽 6주 작업이 사실상 은퇴 처리됨'],
+  f:['<b>이 경로가 곧 "속도는 아키텍처에서 나온다"의 증거</b> — 반복 gradient descent를 직접해(GN/BA)로 대체하는 것이 배수 레버, 같은 아키텍처 안의 미시 최적화는 잔돈','under-constrained 레짐 보강: photometric 항 또는 tri-view 기하 항과 결합','SE(3) self-test 패턴을 <b>Phase 3 IMU convention 게이트에 그대로 이식</b>']},
+ {n:'GMR voxel-merge',v:'우리 구현 · voxel + normal binning moment-matching merge',c:'#7fd9a8',st:'dead',
+  one:'중복 surfel을 voxel+법선 단위로 moment-matching 병합 — count는 확실히 줄지만, 속도 레버가 아니었다.',
+  d:'cross-domain GMR(Gaussian mixture reduction) 아이디어의 SLAM 이식. count 4.8~5.9x↓ 달성.',
+  p:['count 4.8x↓(7.1M → 1.49M) = 메모리 절감 유효','ATE는 오히려 개선(0.13 → 0.10cm) — 작은 맵이 추적에 유리'],
+  q:['<b>★소급 정정: 속도 레버가 아니었다.</b> FULL_COMBO에서 1.42 → 0.59fps로 <b>역행</b>. 히스테리시스(GMR_GROWTH)로 merge 호출 빈도를 줄여도 0.50fps','<b>진짜 원인 규명</b>: merge 고정비가 아니라 <b>merge된 맵 자체의 rasterize가 3배 느림</b>(ms/iter 32 → 105). GMR이 커버리지 보존을 위해 merge된 surfel scale을 클러스터 범위까지 키우므로(<code>scale = max(orig, cluster spread)</code>) surfel당 화면 면적이 ~10x↑ → rasterizer의 진짜 비용인 <b>Σ(투영 면적)은 오히려 증가</b>(105/32 ≈ 3.3x와 정합)','<b>과거 "GMR 2.1x" 수치 무효</b> — 오염된 기준선 0.50fps 대비였고, 클린 기준 0.97fps로 재계산하면 당시 속도 이득 ≈ 0','레버 독립성 가정도 깨짐 — GMR 이득은 "반복수 × 맵크기"에 비례하는데 조기종료가 반복을 이미 3배 줄여놔서 이득은 축소되고 merge 고정비만 남았다'],
+  f:['<b>연구 통찰로 승격: count-reduction의 목적함수는 "개수"가 아니라 "총 투영 면적"이어야 한다.</b> merge 시 Σ투영면적 비증가를 제약으로 거는 <b>area-aware merge</b>가 미점유 각도로 보임','현재 가치 재정의 = <b>품질/메모리 도구이지 속도 도구가 아님</b>. 사이드카 매핑 스레드에서 맵 용량 제어용으로만 유지']},
+ {n:'SnugBox 이식 (2D surfel rasterizer)',v:'우리 구현 · Speedy-Splat 계열',c:'#7fd9a8',st:'meas',
+  one:'타일 AABB를 타이트한 rect로 잡아 빈 코너 타일을 제거 — lossless로 +29~56%.',
+  d:'우리가 소유한 sm_120 커스텀 CUDA rasterizer에 plug-in한 유일한 렌더 커널 레버.',
+  p:['<b>lossless</b> — 렌더 결과가 bit/PSNR 동일하면서 +29~56%','GS 트랙 rasterizer 자산으로 영구 보존'],
+  q:['같은 논문의 AccuTile은 천장 ~5%로 기각 — 이 계열에서 더 짜낼 것이 거의 없음','시스템 배수로는 서브-2x라 30fps 갭(~11x)에 비하면 잔돈'],
+  f:['CaRtGS의 <b>splat-wise depth back-propagation</b>을 같은 rasterizer에 이식하는 것이 다음 후보 — bwd가 fwd의 5.5x라 여기가 남은 진짜 타깃']},
+ {n:'ICP init (POSE_INIT=icp)',v:'우리 구현 · <code>utils/icp_init.py</code>',c:'#7fd9a8',st:'meas',
+  one:'두 센서 depth로 projective point-to-plane ICP를 풀어 tracking 시작점을 잡는다 — 속도 가설은 틀렸고 정확도 가설이 맞았다.',
+  d:'GN 6D twist, stride 4, 8 iters, Huber 0.05m. velocity를 초기 추정으로 쓰고 유효 대응 <300이면 velocity 폴백. 학습 0, 의존성 0, 비용 ~15ms/frame.',
+  p:['<b>3/3 시드 일관 개선: TUM 500f ATE 4.76/5.33/5.07(평균 5.05) → 3.76/4.16/4.03(평균 3.98), −21%.</b> 풀반복 기준(4.62)보다도 좋음','조기종료와 조합해 "기준선 대비 정확도 동등 이상 + 2.1x 속도"라는 운용점을 만듦','공격적 조기종료 레짐(1e-3)에서 Replica ATE 0.31 → 0.15, PSNR 35.31 → 36.47로 회복'],
+  q:['<b>속도 가설은 기각</b> — track iters 19.3 → 18.6(3.6%)뿐. 이유: <code>converged_th</code>는 "최적점까지의 거리"가 아니라 <b>Adam 스텝 크기의 안정화</b>를 감지하므로, 시작점이 좋아도 lr 스케줄에 따른 초기 스텝이 남아 발화 시점이 거의 안 당겨진다 → <b>수렴 속도의 병목은 초기화가 아니라 optimizer 동역학</b>','frame-to-frame이라 맵 기준이 아님 → 드리프트를 흡수하지 못함'],
+  f:['이 실패가 P2-2(GN render-and-solve)를 낳았다 — "반복을 더 줄이려면 init이 아니라 <b>optimizer를 공격</b>해야 한다"','남은 파생: per-frame 적응 budget(ICP 잔차로 프레임 난이도 예측), stride 8로 비용 절반']},
+ {n:'depth-lifted 루프클로저 (LC_DEPTH=1)',v:'우리 구현 · DPVO 계열 · <b>Phase 1의 유일한 진짜 채택</b>',c:'#7fd9a8',st:'meas',
+  one:'DBoW 장기 루프클로저의 3D 키포인트를 삼각측량 대신 센서 depth 역투영으로 만든다.',
+  d:'DPV-SLAM의 <code>close_loop</code>이 인접 트리플릿(베이스라인 1-2cm) 삼각측량으로 3D 키포인트를 만들다 RANSAC inlier 부족으로 거의 전멸 → LC가 운으로만 발화했다(그래서 "8.12cm"이 재현되지 않았다). 수정: DISK 키포인트를 <b>센서 depth 5×5 nanmedian으로 역투영</b>하고 scale≈1 게이트를 건다(양쪽이 metric이면 진짜 루프는 s≈1, 가짜는 reject).',
+  p:['<b>LC 발화 0 → 2 edge로 재현성 확보</b> — 운에 의존하던 메커니즘을 결정적으로 만듦','문헌 대비 우위: DPVO 문헌값 fr1_room ~41-47cm인데 우리 depth-LC는 재현적으로 ~20cm, 최선 9.72cm','<b>novelty</b>: 2506.00970(2DGS용 depth LC)의 sparse-patch 번역 — sparse-patch VO 쪽은 미점유'],
+  q:['루프 레이어 자체가 고분산 — 루프 param 튜닝(NMS/thresh/coverage)은 포화이고 NMS를 낮추면 오히려 악화','<b>측정으로 확정된 병목 구조</b>: ① 루프 edge는 이미 GT 대비 0.5~3cm 정확 → edge 정밀도는 병목이 아님(ICP refine 기각) ② 정확한 edge(0.6cm)를 넣어도 ATE 17~48cm → 병목은 <b>coverage + PGO 전파 + VO 드리프트</b> ③ VO 바닥 ~34cm의 구조적 7x 격차를 루프가 못 메움'],
+  f:['<b>Path B — 루프-지배 시퀀스에서 이 승리를 전시</b>: TUM fr2/long, KITTI, EuRoC MH에서 멀티시퀀스 평가. fr1은 소형·회전지배라 루프 이득이 원래 작다. 저위험이고 채택된 진짜 기여를 보여주는 경로','coverage(루프 후보를 더 많이 잡기)와 PGO 전파 쪽을 다음 타깃으로']},
+ {n:'C1 — Riemannian surfel-orientation 최적화',v:'우리 설계 · so(3) 접공간 + exp-map retraction · 판정 NOVEL',c:'#7fd9a8',st:'surv',
+  one:'surfel 방향을 SO(3) 매니폴드에서 파라미터화하고 법선을 proper Riemannian gradient로 최적화 — 자유 tangent 벡터 + 코사인 loss 대신.',
+  d:'각 surfel에 고정 base 쿼터니언 q_base(비-leaf 버퍼) + 접공간 증분 ω ∈ so(3)(N×3, leaf, init 0)을 두고 유효 회전 = exp(ω) ⊗ q_base로 렌더. K step마다 retraction으로 q_base를 갱신하고 ω를 0으로 리셋. <b>rasterizer/CUDA 불변</b>인 순수 파라미터화 변경.',
+  p:['적대검증 통과(NOVEL) — 통합 리스크 2-3/5로 ROI 최고 후보였음','검증이 깨끗함: 동일 맵 크기에서 normal 각오차↓ / mesh F-score↑ / 수렴 iteration↓ (노이즈성 cm-ATE가 아님)','사용자의 "회전벡터" 신호처리 관심과 정확히 일치'],
+  q:['<b>⚠ real-but-useless 리스크가 높다</b> — baseline의 <code>F.normalize</code>가 이미 S³로의 <b>radial-projection retraction</b>이라 baseline도 유효한 retraction 기반 매니폴드 최적화다. exp-map과의 차이는 <b>2차(소스텝에서 작음)</b>이고 Adam이 좌표별 스케일 불변으로 conditioning을 이미 제공','정직한 contribution은 blanket이 아니라 "<b>under-constrained 레짐(노이즈 depth/무텍스처/빠른 모션)에서 의미 있다</b>"로 scope될 가능성이 큼','속도 서베이의 <b>또 다른 커버리지 갭</b>: 신호처리 3갈래(복소/Fourier Gaussian·loss / SO(3)·SE(3)·Lie / beamforming aggregation)는 검증 통과 0건 = 미조사'],
+  f:['착수 시 <b>필수 4가지</b>: ① <b>LR confound 차단</b> — so(3)(3D) vs 쿼터니언(4D)은 gradient 스케일이 달라 arm별 LR 스윕 없이는 "수렴" 신호가 LR 아티팩트 ② <b>regime 대조</b> — room0(clean, null이 나올 수 있음) + TUM freiburg1(real-world, under-constrained) 둘 다 ③ <b>retraction에서 ω←0 할 때 Adam moment(m,v)도 반드시 리셋</b>(안 하면 stale moment 오염) ④ densify clone/split의 q_base+ω 일관성을 작은 run에서 먼저 검증','커밋 전 확인: 오프라인 2DGS/3DGS 재구성 논문에서 Gaussian orientation on-manifold 최적화를 이미 했는지 전용 서베이 1회','대안 후보 2 (미탐색): <b>object-level 강체-동적 2D-surfel submap SLAM</b> — 4DTAM은 비강체/deformable, D4DGS는 4DGS 베이스라 <b>강체-동적 on 2D-surfel submap은 미점유</b>']},
+]},
+
+{cat:'🔭 Future Work 로드맵', key:'로드맵', color:'#f5c451',
+ from:'realtime_slam_strategy/STRATEGY.md · slam_upgrade_rtabmap/REPORT.md · PHASE1_RESULTS.md',
+ html:[
+ '<div class="mone" style="margin:0 0 16px;background:#0f1523;border-left:4px solid #f5c451;border-radius:0 8px 8px 0;padding:13px 16px">',
+ '<b>목표 정의</b> — "정말 쓸모있는 실시간 visual SLAM" = <b>소비자 GPU 1장에서 30fps급</b>으로 돌고, 정확도가 기존 실용 시스템(RTAB-Map)과 학습기반 SOTA(DROID)를 <b>동시에 상회</b>하며, 실센서(D455)에서 라이브로 동작하는 시스템. photorealistic 렌더맵은 코어 요건이 아니라 <b>옵션 산출물</b>.',
+ '</div>',
+ '<h3 style="margin:4px 0 8px;font-size:16px">전략의 기둥 — 이 경로에서 확립된 3대 교훈</h3>',
+ '<div class="insight"><div class="n">A</div><div><b>dense 미분렌더링 SLAM은 실시간이 될 수 없다(정량 확정).</b> 6주 레버 8종 → 누적 ~2.6x, 30fps까지 ~11x 부족. 근본 원인은 bwd 비용 ∝ Σ(기여 pixel, splat pair)라는 축소 불가 floor. 방증: 실시간을 주장하는 GS-SLAM은 전부 품질을 크게 깎거나 전용 HW 전제. → <b>렌더맵은 비동기 사이드카로 분리.</b></div></div>',
+ '<div class="insight"><div class="n">B</div><div><b>속도는 커널 튜닝이 아니라 아키텍처에서 나온다.</b> 커널류(warp 1.1x · SnugBox 1.3x · AccuTile 기각)는 전부 서브-2x인 반면, 아키텍처류(GN render-and-solve 2.2-2.5x + 품질 동등 이상, DPVO 패치 희소화 2.5x + 메모리 1/4)는 배수 레버.</div></div>',
+ '<div class="insight"><div class="n">C</div><div><b>feed-forward 단독은 포즈 비경쟁, 승부처는 전역 일관성.</b> LingBot-Map 실측 = 국소 RPE 1.8cm는 양호하나 TUM 0.92m·KITTI 17%/333m로 장기 드리프트 파국. 반대로 DPVO에 장기 DBoW LC만 붙여도 41.2 → 8.12cm(5배). <b>FF의 진짜 가치는 프론트엔드 prior이고, 정확도는 여전히 LC·BA가 결정한다.</b></div></div>',
+ '<h3 style="margin:22px 0 8px;font-size:16px">제안 전략 — "DPV-SLAM++": sparse patch-graph 위 RGB-D-Inertial 확장</h3>',
+ '<p style="font-size:13.5px;color:#d7deea;margin:0 0 10px">논문 포지셔닝: <b>"최초의 RGB-D-inertial sparse patch-graph SLAM — 단일 소비자 GPU 실시간에서 RTAB-Map과 DROID를 정확도·속도 동시 추월."</b> 세 레버가 서로 다른 실패 모드를 정확히 타격하므로(depth = 스케일/저텍스처, IMU = 빠른 회전, LC = 장기 드리프트) 상호 직교해 이득이 곱에 가깝게 누적될 근거가 있다.</p>',
+ '<div style="overflow-x:auto"><table><thead><tr><th>Phase</th><th>내용</th><th>게이트 (falsifiable)</th><th>실패 경로</th></tr></thead><tbody>',
+ '<tr><td><b>0</b> · 1주<br><span style="color:var(--mut);font-size:12px">측정 없이 빌드 없다</span></td><td>RTAB-Map을 fr1_room/EuRoC RGB-D로 <b>직접 실측</b>(딥리서치 미해결 #3) · DPV-SLAM 완전판 stride1 재실행 + 5090 fps/메모리 + 3-seed 노이즈 대역 · <b>시간 분해 프로파일</b>(frontend/BA/LC)로 F3·F5의 Amdahl 천장 계산</td><td>"RTAB-Map 대비 갭" 정량표 완성. 이미 이기면 프레임 = 초격차, 지면 = 추월</td><td>F5(FF init) 천장 &lt;1.3x면 백로그에서 제거</td></tr>',
+ '<tr><td><b>1</b> · 2-3주<br><span style="color:var(--mut);font-size:12px">depth 융합</span></td><td><b>1a</b> TUM depth로 patch inverse-depth <b>초기화만</b>(최소 변경 A/B) · <b>1b</b> RoMeO식 <b>불확실성 가중 depth 잔차</b>를 BA에 추가(D455 노이즈 대비 — hard depth는 취약하다는 FlashSLAM 자백 근거)</td><td>fr1_room ATE 8.12 → <b>5cm대</b>, fps 저하 &lt;10%, 3-seed. 1a/1b 독립 게이트 → hard-vs-soft ablation이 논문 자산</td><td>1b 무개선이면 1a만 채택. <b>실제 결과: fr1에서는 depth-in-VO 전체가 사망 판정</b> → Phase 1의 산출물은 depth-lifted LC로 전환됨</td></tr>',
+ '<tr><td><b>2</b> · 2주<br><span style="color:var(--mut);font-size:12px">전역 일관성</span></td><td><b>F1</b> — DBoW 후보 검출은 유지하고 루프 <b>검증·상대포즈만 MASt3R prior로 교체</b>(키프레임 한정 호출)</td><td>ATE 추가 <b>≥15%↓</b>(노이즈 대역 밖) + LC 정밀도(수락 edge의 inlier 잔차) 개선 + fps 저하 &lt;10%</td><td>DBoW LC로 원복(이미 8.12cm 검증) — 시스템 무손상</td></tr>',
+ '<tr><td><b>3</b> · 4-8주<br><span style="color:#ff8b8b;font-size:12px">최대 리스크 = 최대 novelty</span></td><td>IMU preintegration factor를 patch-graph BA에 결합(DBA-Fusion/DVI-SLAM 레시피의 sparse 번역 — <b>세계 미점유</b>). EuRoC/TUM-VI 트랙이라 <b>Phase 2와 병렬 가능</b></td><td>착수 전 2게이트(novelty 최종 적대검증 + SE(3) self-test) → 2주차 합성 IMU 수렴 확인 → 최종 <b>EuRoC ATE mono 대비 ≥30%↓</b> + 실시간 유지</td><td>Path B(DROID + DBA-Fusion 검증 레시피)로 폴백. Phase 1·2 성과는 독립 유효</td></tr>',
+ '<tr><td><b>4</b> · 2-3주<br><span style="color:var(--mut);font-size:12px">실세계 강건성</span></td><td><b>F4</b> 경량 세그멘터로 동적 객체 마스킹(패치 샘플링·BA 잔차에서 제외) · <b>F3</b>는 조건부(Phase 0 천장 통과 + 잔여 오차가 회전·블러에 집중일 때만, 학습형만)</td><td>fr3 walking ATE가 static baseline 대비 대폭↓ <b>+ fr1_room 무회귀</b></td><td>F3는 미착수로 종료 가능(ROI#4)</td></tr>',
+ '<tr><td><b>5</b> · 2주<br><span style="color:var(--mut);font-size:12px">"쓸모"의 최종 판정</span></td><td>D455 라이브(usbipd 셋업 완료, <b>depth+IMU가 한 센서에</b>) vs RTAB-Map 동일 씬 동시 실행. 동적 요소 포함 씬 1개 필수 · (옵션) GauS/GMR 사이드카 렌더맵 데모</td><td>ATE↓(모션캡처 없으면 폐루프 복귀 오차로 대체) · fps↑ · 메모리↓ 3지표</td><td>—</td></tr>',
+ '</tbody></table></div>',
+ '<h3 style="margin:22px 0 8px;font-size:16px">누적 목표 궤적 (fr1_room ATE↓)</h3>',
+ '<div style="overflow-x:auto"><table><thead><tr><th>시점</th><th>목표</th><th>근거</th></tr></thead><tbody>',
+ '<tr><td>현재</td><td><b>8.12cm</b></td><td>DPV-SLAM 완전판 실측</td></tr>',
+ '<tr><td>Phase 1 후</td><td>~5cm대</td><td>depth 스케일 제거(RoMeO 상대 &gt;50%↓의 보수 적용) — <b>단 fr1에서는 스케일이 ATE에 안 잡힘이 실측으로 확정됨</b></td></tr>',
+ '<tr><td>Phase 2 후</td><td>~4cm대 (DROID 4.94 추월권)</td><td>MASt3R급 LC 등록 정확도</td></tr>',
+ '<tr><td>Phase 3 후</td><td>EuRoC 지표로 별도 판정 (mono 대비 ≥30%↓)</td><td>fr1엔 IMU GT가 없음</td></tr>',
+ '<tr><td>전 구간</td><td>실시간(≥30fps) 유지, RTAB-Map 대비 fps↑·메모리↓</td><td>베이스가 이미 실시간권</td></tr>',
+ '</tbody></table></div>',
+ '<h3 style="margin:22px 0 8px;font-size:16px">미해결 질문 (후속 조사가 필요한 것들)</h3>',
+ '<div class="fw" style="background:#1d1a10;border-color:#5a4a1e"><h5 style="color:#f5c451">아직 답이 없는 항목</h5><ul style="color:#e9dfc8">',
+ '<li><b>RTAB-Map의 TUM/EuRoC ATE·fps가 1차 출처로 확정되지 않았다</b> — 우리가 직접 측정해야 함(Phase 0). "이겨야 할 바"가 아직 숫자로 고정 안 됨</li>',
+ '<li>DPV-SLAM + IMU + RGB-D + saliency의 <b>결합 누적 이득</b> — 요소 상호작용·포화 탓에 실측 검증 필요(딥리서치 미해결). GMR×조기종료가 실제로 부정 상호작용을 일으킨 전례가 있음</li>',
+ '<li><b>4D/동적 GS-SLAM 품질 축</b> — 속도 서베이에서 검증 통과 claim 0건. "미조사"이지 "부정 결론"이 아님 → 타깃 재조사 필요</li>',
+ '<li><b>신호처리 3갈래</b>(복소/Fourier Gaussian·loss / SO(3)·SE(3)·Lie / beamforming aggregation) — 각각 precedent-vs-speculative 정직 평가 미실시</li>',
+ '<li>RGB-D 2DGS-surfel FF frontend를 기존 모델(VGGT/Flash-Mono/GS4) <b>distillation</b>으로 만들 수 있는가, from-scratch인가? 학습 데이터·비용은?</li>',
+ '<li>feed-forward/closed-form 트래커가 <b>D455 실제 노이즈 depth·무텍스처</b>에서 버티는가? 5090에서 보고 속도가 얼마나 남는가?</li>',
+ '<li>warp-reduction이 <b>2DGS surfel backward</b>(ray-splat 교차의 추가 gradient 항)에서도 2.4-7x를 내는가?</li>',
+ '<li>2DGS-SLAM·OpenGS-SLAM의 <b>CUDA-IPC 블록</b>을 single-process 변환 또는 CPU-텐서 큐로 우회할 수 있는가?</li>',
+ '</ul></div>',
+ '<h3 style="margin:22px 0 8px;font-size:16px">연구 수칙 — 이 경로의 메타 교훈 (반복 사고 방지)</h3>',
+ '<div class="fw"><h5>8개 수칙</h5><ul>',
+ '<li><b>1. 빌드 전 천장 측정</b> — counting-probe/Amdahl 계산 먼저(AccuTile·per-splat·FF에서 3회 절약)</li>',
+ '<li><b>2. 타 regime 수치 이식 금물</b> — 3DGS→2D-surfel/Blackwell transplant 4연속 실패</li>',
+ '<li><b>3. 합성(room0) 통과 ≠ 검증, 실데이터(TUM)가 판정</b> — backend GN이 room0 통과 후 TUM 파국</li>',
+ '<li><b>4. 단일런 TUM 노이즈 ±2-3cm → 유의 주장엔 3-seed 필수</b>(ICP 채택이 3/3 재현으로 확정된 방식). DPVO는 CUDA atomic 때문에 같은 시드도 비결정</li>',
+ '<li><b>5. 집계 ATE만 보지 말고 RPE로 발산↔bias 판별</b>(photometric cliff 진단 교훈)</li>',
+ '<li><b>6. 구현 전 novelty 적대검증</b> — 예비검색 → focused deep-research → 착수</li>',
+ '<li><b>7. 장시간 기준 런은 GPU 무경합 모니터 동반</b> — 오염 측정 2회("6.3x", "backend 6004s")가 전부 무효였음</li>',
+ '<li><b>8. 선호-증거 충돌 시 증거를 따른다</b> — 속도 선호 vs 레드오션 증거에서 gap 리서치가 옳았음</li>',
+ '</ul></div>',
+ ].join('')},
+];
+
+function buildSurvey(){
+ const tb=document.getElementById('stabs'), pb=document.getElementById('spanels');
+ if(!tb||!pb)return;
+ tb.innerHTML=SURVEY.map((c,i)=>'<div class="stab'+(i===0?' on':'')+'" data-i="'+i+'" style="border-top-color:'+c.color+'">'+c.cat+
+   (c.items?'<span class="cnt">'+c.items.length+'</span>':'')+'</div>').join('');
+ pb.innerHTML=SURVEY.map((c,i)=>{
+   let body;
+   if(c.html){ body=c.html; }
+   else{
+     body='<div class="filt"><input type="text" placeholder="방법명·키워드로 거르기 (예: IMU, surfel, 루프)" data-f="'+i+'"><span class="hit" data-h="'+i+'"></span></div>'+
+      c.items.map(m=>{const s=ST[m.st];
+       const txt=[m.n,m.v,m.one,m.d].concat(m.p,m.q,m.f).join(' ').replace(/<[^>]*>/g,' ').replace(/["&]/g,' ');
+       return '<div class="mcard" style="border-left-color:'+m.c+'" data-txt="'+txt+'">'+
+        '<div class="mhead"><h4 style="color:'+m.c+'">'+m.n+'</h4>'+
+          '<span class="badge" style="background:'+s.bg+';color:'+s.c+'">'+s.t+'</span>'+
+          '<span class="venue">'+m.v+'</span></div>'+
+        '<div class="mone" style="border-left:3px solid '+m.c+'">'+m.one+'</div>'+
+        '<p class="mdesc">'+m.d+'</p>'+
+        '<div class="pc"><div><h4 style="color:var(--good)">👍 장점</h4><ul>'+m.p.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>'+
+        '<div><h4 style="color:#ff8b8b">👎 단점 · 한계</h4><ul>'+m.q.map(x=>'<li>'+x+'</li>').join('')+'</ul></div></div>'+
+        '<div class="fw"><h5>🔭 Future work — 추후 개발되면 좋을 것</h5><ul>'+m.f.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>'+
+       '</div>';}).join('');
+   }
+   return '<div class="spanel'+(i===0?' on':'')+'" data-i="'+i+'">'+
+     '<p class="srcline">출처 markdown · <code>research/'+c.from+'</code></p>'+body+'</div>';
+ }).join('');
+ tb.querySelectorAll('.stab').forEach(t=>t.onclick=()=>{
+   tb.querySelectorAll('.stab').forEach(x=>x.classList.remove('on'));
+   pb.querySelectorAll('.spanel').forEach(x=>x.classList.remove('on'));
+   t.classList.add('on');
+   pb.querySelector('.spanel[data-i="'+t.dataset.i+'"]').classList.add('on');
+ });
+ pb.querySelectorAll('input[data-f]').forEach(inp=>{
+   const panel=pb.querySelector('.spanel[data-i="'+inp.dataset.f+'"]');
+   const hit=panel.querySelector('.hit[data-h="'+inp.dataset.f+'"]');
+   const cards=panel.querySelectorAll('.mcard');
+   const run=()=>{const q=inp.value.trim().toLowerCase();let n=0;
+     cards.forEach(cd=>{const ok=!q||cd.dataset.txt.toLowerCase().indexOf(q)>=0;
+       cd.style.display=ok?'':'none'; if(ok)n++;});
+     hit.textContent=q?(n+' / '+cards.length+' 건'):'';};
+   inp.oninput=run; run();
+ });
+}
+window.addEventListener('load',buildSurvey);
+</script>
+</body>
+</html>
