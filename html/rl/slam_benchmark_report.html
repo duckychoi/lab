@@ -459,7 +459,9 @@
 <tr><td style="font-weight:700;color:var(--vista)">ViSTA-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">'25</span></td><td><b>대칭 2-view STA</b> 경량화(695→442M) + DBoW/Sim3 PGO</td><td>본선 — 실시간 단안 프론트엔드 참고</td><td style="text-align:center"><span style="color:#f5c451">★</span></td></tr>
 
 <tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓑ IMU 융합 (VIO) — 딥리서치 ROI#1</td></tr>
-<tr><td style="font-weight:700;color:#ff8b8b">DBA-Fusion <span style="color:var(--mut);font-weight:400;font-size:12px">RA-L'24</span></td><td>deep DBA Hessian → <b>factor graph</b> (Schur-complement로 depth marginalize, IMU tight-couple)</td><td>본선 — D455 IMU 융합</td><td style="text-align:center"><span style="color:#f5c451">★★★</span><br><span style="font-size:11px;color:var(--mut)">ROI#1·최대이득</span></td></tr>
+<tr><td style="font-weight:700;color:#ff8b8b">DBA-Fusion <span style="color:var(--mut);font-weight:400;font-size:12px">RA-L'24</span></td><td>deep DBA Hessian → <b>factor graph</b> (Schur-complement로 depth marginalize, IMU tight-couple)</td><td>본선 — D455 IMU 융합</td><td style="text-align:center"><span style="color:#f5c451">★★★</span><br><span style="font-size:11px;color:var(--mut)">ROI#1·최대이득<br><span style="color:#ff8b8b">§17 재판정</span></span></td></tr>
+<tr><td style="font-weight:700;color:#ff8b8b">DEIO <span style="color:var(--mut);font-weight:400;font-size:12px">ICCV'25</span></td><td><b>DPVO patch-BA Hessian + IMU preint</b>를 keyframe sliding-window factor graph에 tight-couple (event 입력)</td><td>본선 — <b>patch+IMU 레퍼런스 구현</b></td><td style="text-align:center"><span style="color:#f5c451">★★★</span><br><span style="font-size:11px;color:var(--mut)">리스크↓·novelty↓</span></td></tr>
+<tr><td style="font-weight:700;color:#ff8b8b">MASt3R-Fusion <span style="color:var(--mut);font-weight:400;font-size:12px">'25–26</span></td><td>feed-forward pointmap의 <b>Sim(3) 제약을 metric SE(3) factor graph</b>에 + IMU/GNSS 계층 그래프</td><td>본선 — 학습시각+IMU 설계 참고</td><td style="text-align:center"><span style="color:#f5c451">★★</span><br><span style="font-size:11px;color:var(--mut)">공간 점유됨</span></td></tr>
 <tr><td style="font-weight:700;color:#ff8b8b">DVI-SLAM <span style="color:var(--mut);font-weight:400;font-size:12px">ICRA'24</span></td><td>re-proj+feature-metric+IMU <b>confidence 가중 end-to-end DBA</b></td><td>본선 — IMU 융합 대안</td><td style="text-align:center"><span style="color:#f5c451">★★</span></td></tr>
 
 <tr><td colspan="4" style="background:#0d1422;font-weight:700;color:#9fb4d8;letter-spacing:.3px">Ⓒ Depth · 스케일</td></tr>
@@ -512,7 +514,7 @@
 <div class="callout" style="margin-top:14px">
   <h3 style="margin:0 0 8px">🎯 권장 접목 순서</h3>
   <div style="font-size:14px;color:#e9dfc8">
-    <b>① 루프클로저</b>(완료, 8.1cm) → <b style="color:#5aa9ff">② RGB-D depth 주입</b>(D455 metric, 스케일 확정) → <b style="color:#ff8b8b">③ IMU 융합</b>(최대 이득 + DPVO엔 미검증=novelty) → <b style="color:#cdb24a">④ saliency 패치</b>(옵션).
+    <b>① 루프클로저</b>(완료, 8.1cm) → <b style="color:#5aa9ff">② RGB-D depth 주입</b>(D455 metric, 스케일 확정) → <b style="color:#ff8b8b">③ IMU 융합</b>(최대 이득 · <b>DEIO가 patch+IMU 선례 → 리스크↓·novelty 범위↓</b>, §17) → <b style="color:#cdb24a">④ saliency 패치</b>(옵션).
     <br><br>★ <b>전제: Step 0</b> — RTAB-Map fr1_room ATE·fps 실측으로 "이겨야 할 바"를 먼저 고정. 결합 누적 이득은 요소 상호작용·포화 탓에 <b>실측 검증 필요</b>(딥리서치 미해결 항목).
   </div>
 </div>
@@ -550,15 +552,122 @@
     <span class="badge" style="background:#3a3113;color:#f5c451">1차 조사 — 서베이만, 적대검증 미통과</span>
     <span class="badge" style="background:#3d2410;color:#e8a33d">실행 블록 — 빌드는 됐으나 환경 제약</span>
     <span class="badge" style="background:#3d1a1a;color:#ff8b8b">기각/무효 — 검증서 반증되었거나 우리 실측서 사망</span>
+    <span class="badge" style="background:#2a1840;color:#c9a6ff">2026-08 신규 — 재조사에서 새로 발견(§17)</span>
   </div>
   <p class="note" style="margin-top:9px">지표 방향: ATE↓ · PSNR↑ · fps↑ · Depth-L1↓ · 메모리↓ · 압축률↑ 가 좋음. 각 항목의 수치는 원문 markdown의 값을 그대로 옮겼고, 추정·미확인은 그렇게 명시했습니다.</p>
 </div>
 <div class="stabs" id="stabs"></div>
 <div id="spanels"></div>
 
+<!-- 17. 2026-08 SOTA re-survey -->
+<h2><span class="num">17</span>SOTA 재조사 (2026-08) — MASt3R-SLAM 이후 무엇이 나왔나</h2>
+<p class="sub">조건: <b>MASt3R-SLAM(CVPR 2025) 이후 + 오픈소스 코드 필수.</b> GitHub API로 저장소 실재·스타·라이선스·최종 push를 직접 조회했고, 발표처는 arXiv·학회 accept 표기, 기술 내용은 논문/README 원문에서 확인했습니다.</p>
+
+<div class="callout" style="margin-bottom:16px">
+  <h3 style="margin:0 0 8px">⚠️ 결론 — 우리 novelty 3건 중 1건이 부분 반증됐다</h3>
+  <div style="font-size:14px;color:#e9dfc8;line-height:1.7">
+   <b>① Phase 3 "DPVO+IMU 세계 미점유" → 부분 반증.</b> <b style="color:#c9a6ff">DEIO</b>(ICCV 2025, 오픈소스)가 DPVO의 sparse patch + differentiable BA Hessian에 IMU preintegration을 tight-couple한 구조를 이미 구현했다. <b>event 입력 전용</b>이라 RGB sliver는 남지만, "아키텍처 최초"라는 주장은 폐기해야 한다. 대신 <b>최대 리스크(patch-BA가 IMU factor를 못 버틸 것)가 오픈소스 레퍼런스로 해소</b>됐다 — 손해만은 아니다.
+   <br><br><b>② "학습 시각 모델 + IMU" 상위 공간 점유.</b> <b style="color:#c9a6ff">MASt3R-Fusion</b>은 DBA-Fusion을 만든 같은 랩(GREAT-WHU)의 후속작이다. 우리가 "검증 레시피는 DROID dense-BA뿐"이라고 적었던 근거 논문의 저자들이, 그 사이 feed-forward pointmap+IMU+GNSS로 갈아탔다.
+   <br><br><b>③ 살아남은 것</b>: RGB-D sparse-patch + depth-lifted LC(우리 채택분)는 여전히 미점유. area-aware merge, Riemannian surfel orientation도 영향 없음.
+   <br><br>👉 <b>연구 수칙 6(구현 전 novelty 적대검증)을 Phase 3 착수 전에 반드시 재실행할 것.</b> 필드가 9개월 만에 이만큼 움직였다.
+  </div>
+</div>
+
+<h3 style="margin:22px 0 6px;font-size:17px">17.1 포즈 정확도 SOTA 계보 — 오픈소스 확인표</h3>
+<p class="sub" style="margin-bottom:10px">★·라이선스·push는 <b>GitHub API 실측값</b>(2026-08 조회). 코드 없는 것도 비교를 위해 함께 싣되 <b>코드 ✗</b>로 표시했습니다.</p>
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>시스템</th><th>발표</th><th>저장소</th><th style="text-align:center">★</th><th style="text-align:center;white-space:nowrap">코드</th><th>라이선스</th><th>최종 push</th><th>핵심</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:700;color:#5aa9ff">VGGT-SLAM 2.0</td><td>RSS 2026<br><span style="color:var(--mut);font-size:12px">1.0 = NeurIPS'25</span></td><td><code>MIT-SPARK/VGGT-SLAM</code></td><td style="text-align:center"><b>1,078</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>BSD-2</td><td>2026-06-29</td><td>15-DoF 드리프트·평면 축퇴 제거한 새 factor graph. TUM에서 1.0 대비 <b>오차 23%↓</b>. VGGT attention층을 <b>학습 없이</b> retrieval 검증에 재활용해 false-positive 기각 + LC 증가. <b>Jetson Thor 온보드 실시간</b></td></tr>
+<tr><td style="font-weight:700;color:#c06bd8">AMB3R</td><td><b>CVPR 2026 Highlight</b></td><td><code>HengyiWang/amb3r</code></td><td style="text-align:center"><b>476</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2026-06-05</td><td>sparse·compact <b>volumetric scene 표현을 backend</b>로. 파인튜닝·테스트타임 최적화 없이 VO(online)·SfM으로 확장. "dense prior 쓰는 최적화 기반 SLAM/SfM을 능가" 주장</td></tr>
+<tr><td style="font-weight:700;color:#46d9c0">SLAM-Former</td><td><b>ECCV 2026</b></td><td><code>Tsinghua-MARS-Lab/SLAM-Former</code></td><td style="text-align:center"><b>484</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>BSD-3</td><td>2026-06-18</td><td>frontend(실시간 증분 매핑·추적) + backend(전역 정련)를 <b>단일 트랜스포머</b>에 통합</td></tr>
+<tr><td style="font-weight:700;color:#3ddc97">EC3R-SLAM</td><td>ICRA 2026</td><td><code>hulxgit/EC3R-SLAM</code></td><td style="text-align:center">59</td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2026-03-29</td><td>XFeat 희소 추적 + VGGT 매핑 + intrinsic 동시 추정, local·global LC. <b>RTX 5090에서 30+fps · VRAM &lt;10GB</b> — 우리와 동일 GPU</td></tr>
+<tr><td style="font-weight:700;color:var(--droid)">DROID-W</td><td>CVPR 2026</td><td><code>MoyangLi00/DROID-W</code></td><td style="text-align:center"><b>413</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>Apache-2.0</td><td>2026-03-26</td><td>DROID-SLAM in the wild — 명시적 세그멘테이션 없이 <b>불확실성 모델링</b>으로 동적 객체 대응. 우리 1위 시스템의 정식 후속</td></tr>
+<tr><td style="font-weight:700;color:#00bfa5">Pi3MOS-SLAM</td><td>CVPR 2026</td><td><code>PRBonn/Pi3MOS-SLAM</code></td><td style="text-align:center">108</td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2026-05-22</td><td>π³ 범용 3D prior 기반 동적 SLAM (2DGS-SLAM과 같은 PRBonn)</td></tr>
+<tr><td style="font-weight:700;color:#5aa9ff">VGGT-Long</td><td>ICRA 2025</td><td><code>DengKaiCQ/VGGT-Long</code></td><td style="text-align:center"><b>891</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2026-03-20</td><td>chunk–loop–align으로 <b>km 스케일</b> 확장</td></tr>
+<tr><td style="font-weight:700;color:var(--vista)">ViSTA-SLAM</td><td>3DV 2026</td><td><code>zhangganlin/vista-slam</code></td><td style="text-align:center">271</td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2026-04-05</td><td>이미 우리 5종 벤치에 포함(6.77cm)</td></tr>
+<tr><td style="font-weight:700;color:#cdb24a">MegaSaM</td><td>CVPR 2025</td><td><code>mega-sam/mega-sam</code></td><td style="text-align:center"><b>1,348</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>Apache-2.0</td><td>2026-01-05</td><td>casual dynamic video용 structure &amp; motion</td></tr>
+<tr><td style="font-weight:700;color:#cdb24a">SLAM3R</td><td>CVPR 2025</td><td><code>PKU-VCL-3DV/SLAM3R</code></td><td style="text-align:center"><b>1,328</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2025-10-18</td><td>실시간 dense 장면 재구성</td></tr>
+<tr style="opacity:.62"><td style="font-weight:700;color:var(--mast)">MASt3R-SLAM <span style="font-size:11px;color:var(--mut)">(기준점)</span></td><td>CVPR 2025</td><td><code>rmurai0610/MASt3R-SLAM</code></td><td style="text-align:center"><b>3,138</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td style="color:var(--mut)">미표기</td><td>2025-11-09</td><td>이 표의 <b>비교 기준</b> — 우리 벤치 2위(6.12cm)</td></tr>
+<tr style="background:#1d1418"><td style="font-weight:700;color:#ff8b8b">VGGT-SLAM++</td><td>arXiv 2604.06830<br><span style="color:var(--mut);font-size:12px">2026-04</span></td><td style="color:var(--mut)">— 논문에 링크 없음</td><td style="text-align:center">—</td><td style="text-align:center"><span style="color:#ff8b8b;font-weight:800">✗</span></td><td>—</td><td>—</td><td><b>TUM fr1/room 2.7cm로 DROID(4.9)·MASt3R(6.1)를 모두 앞섬</b> — 그러나 코드 미공개라 조건 탈락. 서베이 리스트는 MIT-SPARK 저장소로 연결하나 <b>포함 여부 미확인</b></td></tr>
+<tr style="background:#1d1418"><td style="font-weight:700;color:#ff8b8b">AIM-SLAM · GRS-SLAM3R<br>HyVGGT-VO · UniSim-SLAM</td><td>ICRA/ICLR/ECCV 2026</td><td style="color:var(--mut)">— 없음</td><td style="text-align:center">—</td><td style="text-align:center"><span style="color:#ff8b8b;font-weight:800">✗</span></td><td>—</td><td>—</td><td>코드 미공개 → 조건 탈락 (목록 보존용)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="margin:22px 0 6px;font-size:17px">17.2 TUM RGB-D ATE↓ (m) — 그리고 우리 벤치의 외부 검증</h3>
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>방법</th><th style="text-align:center">fr1/room</th><th style="text-align:center">평균</th><th>비고</th></tr></thead>
+<tbody>
+<tr><td style="font-weight:700;color:#ff8b8b">VGGT-SLAM++ <span style="font-size:11px">(코드 ✗)</span></td><td style="text-align:center"><b style="color:var(--good);font-size:16px">0.027</b></td><td style="text-align:center">0.036</td><td>room 최고. 평균은 MASt3R에 밀림</td></tr>
+<tr><td style="font-weight:700;color:var(--mast)">MASt3R-SLAM</td><td style="text-align:center">0.061</td><td style="text-align:center"><b style="color:var(--good);font-size:16px">0.030</b></td><td><b>TUM 평균은 여전히 1위</b></td></tr>
+<tr><td style="font-weight:700;color:var(--droid)">DROID-SLAM</td><td style="text-align:center">0.049</td><td style="text-align:center">0.038</td><td>—</td></tr>
+<tr><td style="font-weight:700;color:#5aa9ff">VGGT-SLAM 1.0 (SL4)</td><td style="text-align:center">0.102</td><td style="text-align:center">0.053</td><td>2.0에서 23%↓ 개선 주장</td></tr>
+</tbody>
+</table>
+<div class="fw" style="margin-top:14px"><h5>✅ 부수 소득 — 우리 측정이 문헌과 정합함이 확인됐다</h5><ul>
+<li>이 표의 <b>MASt3R 0.061 / DROID 0.049</b> 는 우리가 독립적으로 잰 <b>6.12cm / 4.94cm</b> 와 사실상 일치한다. evo Sim(3) 파이프라인과 실행 설정이 외부 데이터로 교차검증된 셈 — 앞으로의 모든 A/B가 이 신뢰 위에 선다.</li>
+</ul></div>
+<p class="note"><b>⚠ 교차비교 금지:</b> EC3R-SLAM 논문은 같은 MASt3R-SLAM의 TUM 평균을 0.061로 적는다(위 표는 0.030). 시퀀스 subset·정렬 프로토콜이 달라 <b>논문 간 숫자를 섞으면 안 된다</b>. 이 표의 수치는 전부 <b>논문 자기보고</b>이며 우리가 재현하지 않았다.</p>
+</div>
+
+<h3 style="margin:22px 0 6px;font-size:17px">17.3 VIO · 멀티센서 — Phase 3가 들어갈 전장</h3>
+<p class="sub" style="margin-bottom:10px">2024년엔 "IMU 융합 = DROID dense-BA 계열뿐"이었지만, 2025–26에 <b>feed-forward 계열과 patch 계열로 모두 확산</b>됐습니다.</p>
+<div class="card" style="overflow-x:auto">
+<table>
+<thead><tr><th>시스템</th><th>발표</th><th>저장소</th><th style="text-align:center">★</th><th style="text-align:center;white-space:nowrap">코드</th><th>융합 대상</th><th>우리 Phase 3에의 의미</th></tr></thead>
+<tbody>
+<tr style="background:#1a1424"><td style="font-weight:700;color:#c9a6ff">MASt3R-Fusion</td><td>ISPRS JPRS<br><span style="color:var(--mut);font-size:12px">arXiv 2509.20757</span></td><td><code>GREAT-WHU/MASt3R-Fusion</code></td><td style="text-align:center"><b>328</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>단안 RGB + <b>IMU + GNSS</b></td><td><b style="color:#ff8b8b">상위 공간 점유.</b> DBA-Fusion 저자들의 후속. Sim(3) 시각제약 → metric SE(3) factor graph, IMU preint + Schur marginalization, 계층 그래프로 실시간+공격적 LC. <b>8GB GPU로 임의 길이</b>. 우리 v1 설계의 교과서이자 비교 기준선</td></tr>
+<tr style="background:#1a1424"><td style="font-weight:700;color:#c9a6ff">DEIO</td><td>ICCV 2025</td><td><code>arclab-hku/DEIO</code></td><td style="text-align:center">112</td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td><b>event patch + IMU</b></td><td><b style="color:#ff8b8b">우리 아키텍처와 동일 구조.</b> DPVO sparse patch + differentiable BA Hessian으로 co-visibility factor graph를 최적화하고 IMU preint를 sliding window에 tight-couple. <b>event 전용 → RGB sliver는 생존</b>, 그러나 "최초" 주장은 폐기</td></tr>
+<tr><td style="font-weight:700;color:#5aa9ff">OKVIS2-X</td><td>TRO 2025</td><td><code>ethz-mrl/OKVIS2-X</code></td><td style="text-align:center"><b>372</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>스테레오/단안 + IMU + dense depth·LiDAR</td><td>고전 계열 최신 강자 — <b>RGB-D+IMU 구성의 실용 baseline</b>으로 비교 가치</td></tr>
+<tr><td style="font-weight:700;color:#cdb24a">MAC-VO</td><td>ICRA 2025</td><td><code>MAC-VO/MAC-VO</code></td><td style="text-align:center"><b>931</b></td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>스테레오 (IMU 없음)</td><td>metrics-aware covariance로 <b>불확실성 가중 BA</b> — 우리 F2(불확실성 가중 depth 잔차)의 참고 구현</td></tr>
+<tr><td style="font-weight:700;color:#8a93a8">BotVIO</td><td>TRO 2025</td><td><code>wenhuiwei-ustc/BotVIO</code></td><td style="text-align:center">72</td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>단안 + IMU (경량)</td><td>엣지 지향 경량 VIO — 자원 예산 비교용</td></tr>
+<tr style="opacity:.7"><td style="font-weight:700;color:#8a93a8">DBA-Fusion <span style="font-size:11px">(기존)</span></td><td>RA-L 2024</td><td><code>GREAT-WHU/DBA-Fusion</code></td><td style="text-align:center">—</td><td style="text-align:center"><span style="color:var(--good);font-weight:800">✓</span></td><td>DROID dense-BA + IMU/GNSS</td><td>ROI#1의 원래 근거. <b>저자들이 이미 MASt3R-Fusion으로 이동</b> → 기준선을 후속작으로 승격 권장</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3 style="margin:22px 0 6px;font-size:17px">17.4 트렌드 해석 — 필드는 어디로 가고 있나</h3>
+<div class="card">
+  <div class="insight"><div class="n">1</div><div><b>백본이 시스템을 결정하는 시대.</b> VGGT·π³·MapAnything 같은 feed-forward 기하 파운데이션이 프론트엔드 표준이 되고, SLAM 논문의 경쟁은 <b>"그 위에 어떤 백엔드를 얹느냐"</b>로 옮겨갔다. MASt3R-SLAM → VGGT-SLAM → 2.0 → ++ 계보가 전부 이 패턴이고, 상위 저장소 스타도 백본 쪽에 쏠린다(<code>lingbot-map</code> 16.3k · <code>vggt</code> 14.2k · <code>Depth-Anything-3</code> 6.1k · <code>vggt-omega</code> 3.9k · <code>map-anything</code> 3.6k). <b>백본은 사고 대상이 아니라 교체 가능한 부품이 됐다.</b></div></div>
+  <div class="insight"><div class="n">2</div><div><b>경쟁축이 "정확도"에서 "정확도 ÷ 자원"으로 이동했다.</b> EC3R-SLAM은 TUM 정확도가 MASt3R보다 오히려 나쁘지만(0.070 vs 0.061) <b>VRAM 9.3 vs 13GB · 31 vs 15.8fps</b>로 이겼다고 주장하고, VGGT-SLAM 2.0은 <b>Jetson Thor 온보드 실시간</b>을 헤드라인으로 건다. <b>우리 전략의 전제("실시간에서 출발해 정확도를 쌓는다")와 필드가 같은 결론에 도달했다</b> — 방향은 옳지만, 그만큼 이 축의 경쟁이 붐빈다.</div></div>
+  <div class="insight"><div class="n">3</div><div><b>전역 일관성은 <i>여전히</i> 학습 외부 장치다.</b> VGGT-SLAM 2.0은 attention층을 retrieval 검증에 재활용하고, EC3R은 local+global LC를 명시적으로 넣고, MASt3R-Fusion은 "공격적 루프클로저"를 계층 그래프로 돌린다. <b>본 보고서 교훈 C(FF 단독은 포즈 비경쟁, 승부처는 전역 일관성)가 1년 뒤 데이터로 재확인됐다.</b> LingBot 실측(TUM 0.92m)이 예외가 아니라 규칙이었다.</div></div>
+  <div class="insight"><div class="n">4</div><div><b>멀티센서가 학습 SLAM에 본격 진입했다.</b> 2024년의 "IMU는 DROID dense-BA에서만"이 2026년엔 feed-forward(MASt3R-Fusion) · patch(DEIO) · 고전 최적화(OKVIS2-X)로 전선이 넓어졌다. <b>센서 융합은 더 이상 white space가 아니라 표준 요구사항</b>이다.</div></div>
+  <div class="insight"><div class="n">5</div><div><b>백엔드까지 학습으로 흡수하려는 흐름.</b> SLAM-Former는 frontend+backend를 한 트랜스포머에 넣고, AMB3R은 sparse volumetric backend를 모델 안에 둔다. 다음 라운드의 경쟁은 <b>"BA를 얼마나 학습으로 대체할 수 있나"</b>가 될 가능성이 높다.</div></div>
+  <div class="insight"><div class="n">6</div><div><b>동적 환경이 옵션에서 기본 요구로.</b> DROID-W · Pi3MOS-SLAM · RU4D-SLAM이 모두 CVPR 2026에 몰렸고, 접근도 "명시적 세그멘테이션"에서 <b>불확실성 모델링</b>으로 이동했다. 우리 F4(경량 세그멘터 마스킹) 설계는 <b>한 세대 뒤진 접근</b>일 수 있다.</div></div>
+</div>
+
+<h3 style="margin:22px 0 6px;font-size:17px">17.5 새 Future Work — 재조사 결과를 반영한 갱신 제안</h3>
+<div class="fw" style="background:#131f1a">
+<h5>🔭 우선순위 순</h5>
+<ul>
+<li><b>FW-1 · Phase 3 재프레이밍 (즉시).</b> 기여를 "세계 최초 patch+IMU"가 아니라 <b>"RGB sparse-patch VO의 inertial 확장 — DEIO가 event에서 보인 이득의 모달리티 전이 검증 + 소비자 GPU 실시간 실증"</b>으로 다시 쓴다. 선행작업 = <b>DEIO 코드 선독</b>(factor graph 배선·marginalization·extrinsic/time-offset 관례)과 MASt3R-Fusion의 <b>Sim(3)↔SE(3) 이종 제약 결합</b> 학습. 이 둘이 우리 pypose v1이 반드시 풀 문제의 기성 해답이다. 착수 전 focused deep-research 1회로 "RGB patch-based VIO" 최종 적대검증(수칙 6).</li>
+<li><b>FW-2 · Phase 0 기준선에 EC3R-SLAM 추가 (즉시).</b> <b>RTX 5090에서 30+fps · VRAM &lt;10GB</b> — 우리와 동일 하드웨어에서 "실시간+정확도"를 이미 달성했다고 주장한다. RTAB-Map만 재는 Phase 0은 이제 불충분하다. "이겨야 할 바"에 학습 계열 실시간 SOTA를 반드시 포함할 것.</li>
+<li><b>FW-3 · F4(동적 마스킹) 설계 교체 검토.</b> DROID-W(Apache-2.0, 413★)가 <b>명시적 세그멘테이션 없이 불확실성 모델링</b>으로 같은 문제를 푼다. 경량 세그멘터 도입 전에 이 접근을 먼저 평가하면 의존성 하나를 통째로 없앨 수 있다. MAC-VO의 metrics-aware covariance도 같은 계열 참고 구현.</li>
+<li><b>FW-4 · 논문 프레이밍을 "정확도 ÷ 자원" 축으로 전환.</b> 필드가 이미 이 축으로 이동했으므로 ATE 단독 승부는 불리하다. 우리가 이미 재는 <b>ATE↓ · fps↑ · VRAM↓</b> 3축 표를 주 결과로 승격하고, EC3R·VGGT-SLAM 2.0과 같은 축에서 비교하라. 우리 강점(sparse patch = 구조적 경량)이 가장 잘 드러나는 축이기도 하다.</li>
+<li><b>FW-5 · 백본 교체 가능성을 설계에 내장.</b> LingBot 단일 베팅 대신 프론트엔드를 <b>교체 가능한 부품</b>으로 두고 VGGT-Ω·MapAnything·Depth Anything 3·π³를 후보로 유지한다(전부 Apache 계열, 대형 커뮤니티). 단 <b>교훈 C는 유지</b> — 백본을 바꿔도 전역 일관성은 우리가 따로 책임져야 한다.</li>
+<li><b>FW-6 · 새로 확인이 필요한 미점유 sliver.</b> ① <b>RGB-D sparse-patch + IMU + depth-lifted LC</b> 결합(현재까지 부재 확인) ② <b>patch 기반 VIO의 모달리티 전이성</b>(event→RGB, 음성 결과도 기여) ③ area-aware merge(§16 유지). 모두 착수 전 적대검증 대상.</li>
+<li><b>FW-7 · 백엔드 학습화 흐름 관찰.</b> SLAM-Former·AMB3R처럼 BA를 학습으로 흡수하는 방향은 <b>우리 patch-BA 기여를 통째로 낡게 만들 수 있는 유일한 위협</b>이다. 분기마다 재조사 항목으로 고정.</li>
+</ul>
+</div>
+
+<div class="card" style="border-left:4px solid var(--warn);margin-top:14px">
+<b>📋 이번 재조사의 한계 (정직하게)</b>
+<ul style="font-size:13.5px;margin:8px 0 0">
+<li><b>X·쓰레드는 실질적으로 커버하지 못했다.</b> 근거는 GitHub API 실측, arXiv, 학회 accept 표기, 큐레이션 서베이 3종이다.</li>
+<li>성능 수치는 <b>전부 논문 자기보고 1차 출처</b>다. 3-vote 적대검증도, 자체 재현도 하지 않았다 — <b>검증된 것은 "코드가 실재하고 활발하다"까지</b>.</li>
+<li>MASt3R-Fusion의 정량 표(ATE/RMSE)는 abstract·README·해설 어디에서도 확인하지 못했다. "우위" 주장은 정성 서술만 확인됨.</li>
+<li>VGGT-SLAM++의 코드 공개 여부는 서베이 리스트와 논문 본문이 <b>서로 충돌</b>한다 — 미확인으로 남겨 둔다.</li>
+<li>최근 저장소 다수가 라이선스 미표기(none/NOASSERTION) → <b>코드 차용 전 확인 필요</b>.</li>
+</ul>
+</div>
+
 <footer>
   TUM RGB-D fr1_room · RTX 5090 (sm_120, WSL2) · ATE = Sim(3) Umeyama 정렬 · evo 독립 검증<br>
-  파라미터 수는 체크포인트 실측 · 모든 시스템 동일 시퀀스 전체 처리 · 2026
+  파라미터 수는 체크포인트 실측 · 모든 시스템 동일 시퀀스 전체 처리<br>
+  §16 서베이 정리 · §17 SOTA 재조사(2026-08, GitHub API 실측 기반) 반영
 </footer>
 </div>
 
@@ -634,7 +743,7 @@ const MODS=[
  {name:'② RGB-D depth 주입',tag:'다음 · ROI#3',tagc:'#5aa9ff',c:'#5aa9ff',src:'RoMeO / DROID RGB-D mode',cost:'중간 (신규 구현)',risk:'중간',
   effect:'단안 스케일 모호성 제거 → 메트릭 + 상대 ATE >50%↓(RoMeO). D455 metric depth 직결, RTAB-Map과 동일 입력=공정 비교.',
   apply:'patch inverse-depth를 D455 depth로 초기화 + BA에 depth 잔차 추가.'},
- {name:'③ IMU 융합 (VIO)',tag:'최대이득 · ROI#1',tagc:'#ff8b8b',c:'#ff6b6b',src:'DBA-Fusion / DVI-SLAM',cost:'높음 (factor graph)',risk:'⚠ DROID서만 검증, DPVO엔 미검증 = 리스크 + novelty',
+ {name:'③ IMU 융합 (VIO)',tag:'최대이득 · ROI#1',tagc:'#ff8b8b',c:'#ff6b6b',src:'DBA-Fusion / DVI-SLAM / <b>DEIO(ICCV25)</b>',cost:'높음 (factor graph)',risk:'⚠ 2026-08 재판정 — <b>DEIO가 DPVO patch-BA+IMU를 이미 오픈소스로 구현(event 입력)</b>. 구현 리스크는 크게 낮아졌고 novelty는 "RGB sparse-patch+IMU"로 좁아짐. §17 참조',
   effect:'단일 최대 정확도 이득: ATE 36–45%↓, TUM-VI ~6×↓. D455 IMU 직접 활용. 빠른 회전(fr1_room 약점) 강건.',
   apply:'patch-BA Hessian을 IMU pre-integration factor와 sliding-window 그래프로 tight-couple.'},
  {name:'④ saliency 패치 선택',tag:'옵션 · ROI#4',tagc:'#cdb24a',c:'#cdb24a',src:'Salient Sparse VO / DEVO',cost:'낮음',risk:'이득 불확실 (DPVO ablation은 random>gradient)',
@@ -671,7 +780,7 @@ function buildROI(){
  const pts=[
   {n:'① 루프클로저/PGO',x:1.0,y:4.4,r:22,c:'#3ddc97',note:'✓ 적용됨(41→8.1cm)'},
   {n:'② RGB-D depth',  x:2.5,y:4.0,r:17,c:'#5aa9ff',note:'ROI#3 · 스케일 회복'},
-  {n:'③ IMU 융합',     x:4.2,y:5.0,r:13,c:'#ff6b6b',note:'ROI#1 · DPVO엔 미검증'},
+  {n:'③ IMU 융합',     x:3.6,y:5.0,r:16,c:'#ff6b6b',note:'ROI#1 · DEIO 선례로 리스크↓(비용 4.2→3.6, 성공확률↑)'},
   {n:'④ saliency 패치', x:1.6,y:2.0,r:12,c:'#cdb24a',note:'ROI#4 · 이득 불확실'},
  ];
  new Chart(el,{type:'bubble',
@@ -697,6 +806,8 @@ const GROWS=[
  {p:'ViSTA-SLAM',t:'대칭 2-view STA',cl:'P',f:{0:[2,'경량 단안 프론트엔드'],5:[2,'DBoW reloc']}},
  {p:'DBA-Fusion',t:'DBA Hessian → factor graph',cl:'P',f:{3:[3,'★IMU 결합 핵심 (ROI#1)']}},
  {p:'DVI-SLAM',t:'multi-factor confidence DBA',cl:'P',f:{3:[3,'IMU+멀티팩터 융합'],0:[2,'추적도 강화']}},
+ {p:'DEIO ★신규',t:'patch-BA Hessian + IMU preint (event)',cl:'P',f:{3:[3,'★★patch+IMU 레퍼런스 구현 — 우리 Phase 3와 동일 구조'],0:[2,'patch 추적 재사용']}},
+ {p:'MASt3R-Fusion ★신규',t:'Sim(3) 시각제약 → metric SE(3) factor graph',cl:'P',f:{3:[3,'학습시각+IMU 계층 그래프 설계'],4:[2,'공격적 LC 전역최적화'],2:[2,'metric-scale 구조 인지']}},
  {p:'RoMeO',t:'metric depth + MVS 주입',cl:'P',f:{2:[3,'★깊이·스케일 슬롯 (ROI#3)']}},
  {p:'Salient Sparse VO',t:'salient patch 검출',cl:'P',f:{1:[3,'★패치 선택 개선']}},
  {p:'DEVO',t:'learned score-map 패치',cl:'P',f:{1:[3,'학습형 패치 선택']}},
@@ -743,6 +854,7 @@ const ST={
  surv :{t:'1차 조사', bg:'#3a3113',c:'#f5c451'},
  block:{t:'실행 블록', bg:'#3d2410',c:'#e8a33d'},
  dead :{t:'기각/무효', bg:'#3d1a1a',c:'#ff8b8b'},
+ nw   :{t:'2026-08 신규', bg:'#2a1840',c:'#c9a6ff'},
 };
 const SURVEY=[
 {cat:'추적 백본', key:'백본', color:'#9467bd',
@@ -759,7 +871,7 @@ const SURVEY=[
   d:'DPV-SLAM = DPVO + ① proximity LC(CUDA block-sparse global BA, 근접 edge) + ② classical LC(DBoW2 retrieval + Sim(3) + CPU PGO). 정확도×속도 frontier에서 RTAB-Map 추월에 가장 유리한 베이스로 딥리서치가 판정.',
   p:['EuRoC 0.023m ≈ DROID 0.022m(1mm 차)인데 <b>2.5배 빠르고(50 vs 20fps) 메모리 1/4(5 vs 20GB)</b>','DPVO 단독도 DROID-VO 대비 EuRoC ATE 0.105 vs 0.186m(43%↓), 60~120fps','루프클로저 효과가 압도적 — 우리 실측 <b>41.2 → 8.12cm (5배↓)</b>','망 3.5M로 가장 가벼워 저사양에 유리'],
   q:['fr1_room VO 바닥 ~34cm — <b>sparse-patch BA vs DROID dense-BA의 구조적 ~7x 격차</b>. 루프는 34cm 신호 위 보정 레이어라 이 격차를 못 메움','<b>VO 자체가 비결정적</b>: 같은 시드·같은 설정인데 런마다 34.4 / 38.3cm. 원인 = CUDA BA 커널(fastba)의 atomic 연산이 1362f에 걸쳐 ~4cm 누적. → <b>단일런 A/B 신뢰 불가, 모든 판정은 N≥3~4 분포 비교</b>','config 튜닝 near-saturated — opt window 10→20만 일관 이득(0.383→0.338, ~12%), patch 250은 노이즈 경계, keyframe thresh 15→8은 오히려 악화(0.526)','맵이 희소해 재구성 용도로는 빈약, 빠른 회전/블러에 약함'],
-  f:['<b>① IMU preintegration factor를 patch-graph BA에 결합 (Phase 3, 최대 novelty)</b> — 검증 레시피가 전부 DROID dense-BA(DBA-Fusion/DVI-SLAM)뿐이라 <b>DPVO+IMU 공개 변종은 세계 미점유</b>. EuRoC headroom 실측 양성(V2_03 ~9x, V1_02 ~10x, MH_03 ~6x, 평균 ~3x). 아키텍처는 pypose 0.9.5 IMUPreintegrator loosely-coupled v1(pose+vel+bias factor graph)로 시작하고 <b>기존 loop PGO 재사용 금지</b>(pose-only 함정 — IMU엔 velocity 3 + bias 6 상태 필수)','<b>② depth-lifted LC(채택분)를 루프-지배 시퀀스에서 전시</b> — TUM fr2/long, KITTI, EuRoC MH. fr1은 소형·회전지배라 루프 이득이 작다','<b>③ VO SHAPE 정확도 자체 개선</b> — fr1 ATE의 진짜 병목. 학습형 saliency 패치(ROI#4) 또는 dense BA 전환','<b>④ depth-in-VO 갈래는 사망(mechanistically 확정)</b> — <code>DPVO_NO_NORM_SCALE=1</code> + DEPTH_INIT + naive resid 실행 결과 34.74cm = baseline 그대로이고 <b>Sim3 ATE = SE3 ATE = 0.3474</b>. fr1 ATE는 궤적 SHAPE(회전·상대포즈 드리프트)가 100% 결정하고 metric 스케일과 구조적으로 무관 → 완벽히 구현한 CUDA depth-factor도 무효. depth는 <b>루프클로저에만</b> 유효']},
+  f:['<b>① IMU preintegration factor를 patch-graph BA에 결합 (Phase 3)</b> — <b style="color:#ff8b8b">⚠ 2026-08 재판정: "DPVO+IMU 세계 미점유"는 부분 반증됐다.</b> DEIO(ICCV 2025, <code>arclab-hku/DEIO</code>)가 DPVO의 sparse patch 표현과 differentiable BA Hessian을 그대로 쓰고 IMU preintegration을 keyframe sliding-window factor graph에 tight-couple한다 — <b>event 입력 전용이라 RGB sparse-patch+IMU sliver는 아직 비어 있지만</b>, "구조가 작동하는가"라는 최대 리스크는 오픈소스 레퍼런스로 해소됐다. 착수 전 DEIO 코드를 먼저 읽을 것. EuRoC headroom 실측 양성(V2_03 ~9x, V1_02 ~10x, MH_03 ~6x, 평균 ~3x). 아키텍처는 pypose 0.9.5 IMUPreintegrator loosely-coupled v1(pose+vel+bias factor graph)로 시작하고 <b>기존 loop PGO 재사용 금지</b>(pose-only 함정 — IMU엔 velocity 3 + bias 6 상태 필수)','<b>② depth-lifted LC(채택분)를 루프-지배 시퀀스에서 전시</b> — TUM fr2/long, KITTI, EuRoC MH. fr1은 소형·회전지배라 루프 이득이 작다','<b>③ VO SHAPE 정확도 자체 개선</b> — fr1 ATE의 진짜 병목. 학습형 saliency 패치(ROI#4) 또는 dense BA 전환','<b>④ depth-in-VO 갈래는 사망(mechanistically 확정)</b> — <code>DPVO_NO_NORM_SCALE=1</code> + DEPTH_INIT + naive resid 실행 결과 34.74cm = baseline 그대로이고 <b>Sim3 ATE = SE3 ATE = 0.3474</b>. fr1 ATE는 궤적 SHAPE(회전·상대포즈 드리프트)가 100% 결정하고 metric 스케일과 구조적으로 무관 → 완벽히 구현한 CUDA depth-factor도 무효. depth는 <b>루프클로저에만</b> 유효']},
  {n:'MASt3R-SLAM',v:'2024 · RGB(보정 불필요) · ViT enc-dec + DPT head, 695.3M',c:'#d62728',st:'meas',
   one:'사진 2장만 보면 3D pointmap을 바로 출력하도록 대규모 학습된 3D 파운데이션 모델.',
   d:'DUSt3R 계열. 망이 3D 추론을 직접 수행하므로 카메라 보정값조차 필요 없고, 키프레임 51장만으로 6.12cm를 냈다.',
@@ -881,8 +993,20 @@ const SURVEY=[
   one:'deep dense-BA의 Hessian을 factor graph로 넘겨(Schur-complement로 depth marginalize) IMU와 tight-couple.',
   d:'딥리서치가 단일 최대 정확도 이득으로 랭크한 항목. TUM-VI에서 DBA-VIO 0.42% vs mono DROID 2.64%(~6배↓).',
   p:['<b>단일 최대 정확도 이득</b> — D455가 IMU를 내장하고 있어 추가 하드웨어 0','fr1_room에서 DPVO를 죽인 <b>빠른 회전</b>을 정확히 보강하고, 회전·중력 성분은 스케일과 달리 <b>Sim3 ATE에 그대로 잡힌다</b>'],
-  q:['<b>중대 주의: 검증된 레시피가 전부 DROID dense-BA 계열</b>(DBA-Fusion, DVI-SLAM). DPVO sparse-patch에 IMU factor를 붙인 공개·검증 변종은 <b>미확인</b> → 리스크이자 곧 novelty','비용 높음(factor graph 신규 구축)'],
+  q:['<b style="color:#ff8b8b">⚠ 2026-08 갱신: "검증 레시피가 전부 DROID dense-BA뿐"은 더 이상 사실이 아니다.</b> DEIO(ICCV 2025)가 patch-BA+IMU를 오픈소스로 구현했고, 같은 랩(GREAT-WHU)의 후속 MASt3R-Fusion이 feed-forward+IMU+GNSS를 점유했다 → <b>§17 참조</b>','비용 높음(factor graph 신규 구축)'],
   f:['<b>Phase 3 = 최대 리스크 = 최대 novelty.</b> 착수 전 2게이트: ① focused deep-research로 novelty 최종 적대검증 ② SE(3) convention self-test 하드 게이트(PGO를 깬 버그 클래스 격리)','아키텍처 확정: <b>기존 loop PGO 재사용 금지</b>(pose-only 함정 — velocity 3 + bias 6 상태 필수), pose-writeback 배관만 재사용. <b>pypose 0.9.5 IMUPreintegrator</b>로 loosely-coupled v1, CUDA BA 수술은 v2','<b>isolation test 먼저</b>: DPVO EuRoC 출력포즈 + EuRoC IMU → standalone pypose 융합이 개선되는가? 통과 후에만 DPVO 통합','중간 게이트(2주차): 합성 IMU(GT 미분 + 노이즈 주입)로 factor 수렴 확인. 최종 게이트: EuRoC ATE mono 대비 ≥30%↓ + 실시간 유지','스코프: IMU는 벤치를 EuRoC/TUM-VI로 영구 이동(fr1·5종 비교 불가). Sim3라 스케일 이득은 안 잡히고 회전/중력분만 → 문헌 36-45%보다 modest 예상']},
+ {n:'DEIO — Phase 3 novelty를 흔든 논문',v:'ICCV 2025 · <code>arclab-hku/DEIO</code> · 112★ · push 2026-07-07',c:'#c9a6ff',st:'nw',
+  one:'DPVO의 sparse patch + differentiable BA Hessian을 그대로 쓰고 IMU pre-integration을 tight-couple한다 — 우리 Phase 3와 구조적으로 동일한 시스템이 이미 오픈소스로 존재한다.',
+  d:'event 기반 recurrent network로 event patch의 희소 대응을 만들고, learned differentiable BA(DBA)의 <b>Hessian 정보로 co-visibility factor graph를 최적화</b>한다. IMU는 keyframe 기반 sliding window 안에서 pre-integration factor로 patch 대응과 <b>함께</b> 그래프에 들어간다. 10개 공개 벤치(DAVIS240c·Mono/Stereo-HKU·UZH-FPV·VECtor·MVSEC·EDS·TUM-VIE·DSEC)에서 20+ SOTA 대비 우위 주장.',
+  p:['<b>우리 Phase 3의 최대 리스크를 사실상 제거</b> — "sparse-patch BA에 IMU factor를 붙이면 under-constraint로 깨지지 않을까"라는 미검증 가정에 <b>작동하는 오픈소스 레퍼런스</b>가 생겼다','patch 대응 + IMU preint를 한 factor graph에 넣는 <b>구체적 배선도</b>를 코드로 읽을 수 있음 (pypose loosely-coupled v1 설계의 검증 자료)','ICCV 2025 정식 게재 + 활발한 유지보수'],
+  q:['<b>event camera 전용 — RGB 미지원.</b> "최초의 monocular learning-based event-inertial" 이라고 자칭','따라서 우리 주장은 <b>"RGB sparse-patch VO + IMU"</b>로 좁혀야 하고, "DPVO 계열에 IMU를 붙인 선례가 없다"는 서술은 <b>폐기</b>해야 한다','정확도 수치는 event 벤치 기준이라 EuRoC/TUM-VI로 직접 외삽 불가 (수칙 2: 타 regime 이식 금물)'],
+  f:['<b>① Phase 3 착수 전 DEIO 코드 선독을 필수 선행작업으로 넣는다</b> — factor graph 배선, marginalization 처리, IMU-camera extrinsic·time-offset 관례를 그대로 참고. 우리가 계획한 isolation test보다 빠른 de-risk 경로','<b>② novelty 프레이밍 재작성</b>: "세계 최초 patch+IMU"가 아니라 <b>"RGB sparse-patch VO의 inertial 확장 + RGB-D depth-LC 결합"</b>으로. 기여는 아키텍처 최초성이 아니라 <b>모달리티 이전 + 실시간 소비자 GPU 실증</b>에 둔다','<b>③ 더 강한 각도</b>: DEIO가 event로 보인 이득이 RGB에서도 재현되는지를 <b>정면으로 검증</b>하는 프레이밍(모달리티 간 전이성 연구) — 음성 결과도 논문이 된다','④ 착수 전 focused deep-research 1회로 "RGB patch-based VIO" 최종 적대검증 (수칙 6)']},
+ {n:'MASt3R-Fusion — 학습시각+IMU 공간의 점유자',v:'arXiv 2509.20757 · ISPRS JPRS · <code>GREAT-WHU/MASt3R-Fusion</code> · 328★ · push 2026-08-03',c:'#c9a6ff',st:'nw',
+  one:'DBA-Fusion을 만든 바로 그 랩(GREAT-WHU)이 dense-BA를 feed-forward pointmap으로 갈아끼운 후속작 — "학습 시각 모델 + IMU tight coupling" 공간을 점유했다.',
+  d:'feed-forward pointmap regression을 IMU·GNSS와 tight하게 융합. <b>Sim(3) 기반 시각 정렬 제약을 Hessian 형태로 만들어 metric-scale SE(3) factor graph에 주입</b>하고, 계층적 factor graph로 실시간 sliding-window 최적화와 공격적 루프클로저 전역 최적화를 동시에 돌린다. IMU는 pre-integration factor + <b>Schur complement marginalization</b>으로 상태를 압축. KITTI-360(V-I), SubT-MRS(V-I), 자체 Wuhan 데이터(V-I-G)에서 VINS-Fusion·ORB-SLAM3·DM-VIO·<b>DBA-Fusion·MASt3R-SLAM</b> 대비 우위 주장.',
+  p:['<b>Sim(3) 시각 제약 ↔ metric SE(3) 관성 제약의 이종 결합</b>을 정면으로 푼 설계 — 스케일 없는 학습 출력과 metric IMU를 어떻게 한 그래프에 넣는지의 교과서','8GB GPU로 임의 길이 시퀀스 처리 + 실시간 sliding-window 유지','계층적 그래프(실시간 로컬 + 공격적 전역 LC)는 우리 Phase 2·3를 한 백엔드로 합칠 때 그대로 참고 가능','저장소가 현재 가장 활발히 갱신되는 축(2026-08-03)'],
+  q:['<b>"feed-forward + IMU tight coupling"이라는 상위 공간이 점유됨</b> — 우리 전략의 novelty 서술을 sparse-patch 한정으로 좁혀야 하는 두 번째 이유','<b>정량 수치 미확인</b>: abstract·README·해설 페이지 어디에도 ATE/RMSE 표가 노출되지 않았다("substantial improvements" 정성 서술뿐). 나는 논문 표를 직접 확인하지 못했다','단안 RGB + IMU + GNSS 구성이라 <b>RGB-D 경로가 아님</b> — D455 depth 레버와는 직접 겹치지 않음','라이선스 미표기'],
+  f:['<b>① 설계 차용</b>: Sim(3)↔SE(3) 이종 제약 결합과 Schur marginalization은 우리 pypose v1이 반드시 풀어야 할 문제 — 여기 해법을 먼저 읽는다','<b>② 차별화 축 확정</b>: 이들이 <b>pointmap(dense) + 단안 + GNSS</b>라면 우리는 <b>sparse patch + RGB-D + 소비자 GPU 실시간</b>. 겹치지 않는 좌표를 명시적으로 잡아야 리뷰어 방어가 된다','<b>③ 벤치 대상 추가</b>: DBA-Fusion 대신 MASt3R-Fusion을 IMU 트랙의 비교 기준선으로 승격 (같은 랩의 최신판이라 이게 진짜 SOTA 기준)']},
  {n:'DVI-SLAM',v:'ICRA 2024 · multi-factor confidence DBA',c:'#ff8b8b',st:'lit',
   one:'re-projection + feature-metric + IMU를 confidence로 가중해 end-to-end DBA에 통합.',
   d:'EuRoC mono ATE 0.179 → 0.114m(36%↓, feature-metric 단독 20%보다 큼), 3요소 결합 0.098m(45%↓).',
@@ -978,7 +1102,7 @@ const SURVEY=[
  '<tr><td><b>0</b> · 1주<br><span style="color:var(--mut);font-size:12px">측정 없이 빌드 없다</span></td><td>RTAB-Map을 fr1_room/EuRoC RGB-D로 <b>직접 실측</b>(딥리서치 미해결 #3) · DPV-SLAM 완전판 stride1 재실행 + 5090 fps/메모리 + 3-seed 노이즈 대역 · <b>시간 분해 프로파일</b>(frontend/BA/LC)로 F3·F5의 Amdahl 천장 계산</td><td>"RTAB-Map 대비 갭" 정량표 완성. 이미 이기면 프레임 = 초격차, 지면 = 추월</td><td>F5(FF init) 천장 &lt;1.3x면 백로그에서 제거</td></tr>',
  '<tr><td><b>1</b> · 2-3주<br><span style="color:var(--mut);font-size:12px">depth 융합</span></td><td><b>1a</b> TUM depth로 patch inverse-depth <b>초기화만</b>(최소 변경 A/B) · <b>1b</b> RoMeO식 <b>불확실성 가중 depth 잔차</b>를 BA에 추가(D455 노이즈 대비 — hard depth는 취약하다는 FlashSLAM 자백 근거)</td><td>fr1_room ATE 8.12 → <b>5cm대</b>, fps 저하 &lt;10%, 3-seed. 1a/1b 독립 게이트 → hard-vs-soft ablation이 논문 자산</td><td>1b 무개선이면 1a만 채택. <b>실제 결과: fr1에서는 depth-in-VO 전체가 사망 판정</b> → Phase 1의 산출물은 depth-lifted LC로 전환됨</td></tr>',
  '<tr><td><b>2</b> · 2주<br><span style="color:var(--mut);font-size:12px">전역 일관성</span></td><td><b>F1</b> — DBoW 후보 검출은 유지하고 루프 <b>검증·상대포즈만 MASt3R prior로 교체</b>(키프레임 한정 호출)</td><td>ATE 추가 <b>≥15%↓</b>(노이즈 대역 밖) + LC 정밀도(수락 edge의 inlier 잔차) 개선 + fps 저하 &lt;10%</td><td>DBoW LC로 원복(이미 8.12cm 검증) — 시스템 무손상</td></tr>',
- '<tr><td><b>3</b> · 4-8주<br><span style="color:#ff8b8b;font-size:12px">최대 리스크 = 최대 novelty</span></td><td>IMU preintegration factor를 patch-graph BA에 결합(DBA-Fusion/DVI-SLAM 레시피의 sparse 번역 — <b>세계 미점유</b>). EuRoC/TUM-VI 트랙이라 <b>Phase 2와 병렬 가능</b></td><td>착수 전 2게이트(novelty 최종 적대검증 + SE(3) self-test) → 2주차 합성 IMU 수렴 확인 → 최종 <b>EuRoC ATE mono 대비 ≥30%↓</b> + 실시간 유지</td><td>Path B(DROID + DBA-Fusion 검증 레시피)로 폴백. Phase 1·2 성과는 독립 유효</td></tr>',
+ '<tr><td><b>3</b> · 4-8주<br><span style="color:#ff8b8b;font-size:12px">최대 리스크 = 최대 novelty</span></td><td>IMU preintegration factor를 patch-graph BA에 결합. EuRoC/TUM-VI 트랙이라 <b>Phase 2와 병렬 가능</b>. <b style="color:#ff8b8b">2026-08 갱신 — DEIO(ICCV25)가 patch-BA+IMU 오픈소스 선례(event). 구현 리스크↓, novelty는 "RGB sparse-patch+IMU"로 축소. DEIO 코드 선독이 필수 선행작업</b></td><td>착수 전 2게이트(novelty 최종 적대검증 <b>필수 재실행</b> + SE(3) self-test) → 2주차 합성 IMU 수렴 확인 → 최종 <b>EuRoC ATE mono 대비 ≥30%↓</b> + 실시간 유지</td><td>Path B(DROID + DBA-Fusion 검증 레시피)로 폴백. Phase 1·2 성과는 독립 유효</td></tr>',
  '<tr><td><b>4</b> · 2-3주<br><span style="color:var(--mut);font-size:12px">실세계 강건성</span></td><td><b>F4</b> 경량 세그멘터로 동적 객체 마스킹(패치 샘플링·BA 잔차에서 제외) · <b>F3</b>는 조건부(Phase 0 천장 통과 + 잔여 오차가 회전·블러에 집중일 때만, 학습형만)</td><td>fr3 walking ATE가 static baseline 대비 대폭↓ <b>+ fr1_room 무회귀</b></td><td>F3는 미착수로 종료 가능(ROI#4)</td></tr>',
  '<tr><td><b>5</b> · 2주<br><span style="color:var(--mut);font-size:12px">"쓸모"의 최종 판정</span></td><td>D455 라이브(usbipd 셋업 완료, <b>depth+IMU가 한 센서에</b>) vs RTAB-Map 동일 씬 동시 실행. 동적 요소 포함 씬 1개 필수 · (옵션) GauS/GMR 사이드카 렌더맵 데모</td><td>ATE↓(모션캡처 없으면 폐루프 복귀 오차로 대체) · fps↑ · 메모리↓ 3지표</td><td>—</td></tr>',
  '</tbody></table></div>',
@@ -992,6 +1116,9 @@ const SURVEY=[
  '</tbody></table></div>',
  '<h3 style="margin:22px 0 8px;font-size:16px">미해결 질문 (후속 조사가 필요한 것들)</h3>',
  '<div class="fw" style="background:#1d1a10;border-color:#5a4a1e"><h5 style="color:#f5c451">아직 답이 없는 항목</h5><ul style="color:#e9dfc8">',
+ '<li><b style="color:#3ddc97">✅ 해소됨(2026-08)</b> — "DPVO+IMU 공개·검증 변종 존재 여부"는 <b>존재한다</b>로 판명(DEIO, ICCV 2025, event 입력). 남은 질문은 <b>"event에서 얻은 이득이 RGB patch로 전이되는가"</b>로 바뀌었다 → §17</li>',
+ '<li><b>MASt3R-Fusion의 정량 성능(ATE/RMSE)을 확인하지 못했다</b> — abstract·README 어디에도 표가 없다. IMU 트랙 기준선으로 승격하려면 논문 표 직접 확인 필요</li>',
+ '<li><b>EC3R-SLAM의 "RTX 5090 · 30+fps · &lt;10GB"를 우리 환경에서 재현할 수 있는가</b> — 같은 GPU라 검증 가능하고, Phase 0의 새 기준선 후보</li>',
  '<li><b>RTAB-Map의 TUM/EuRoC ATE·fps가 1차 출처로 확정되지 않았다</b> — 우리가 직접 측정해야 함(Phase 0). "이겨야 할 바"가 아직 숫자로 고정 안 됨</li>',
  '<li>DPV-SLAM + IMU + RGB-D + saliency의 <b>결합 누적 이득</b> — 요소 상호작용·포화 탓에 실측 검증 필요(딥리서치 미해결). GMR×조기종료가 실제로 부정 상호작용을 일으킨 전례가 있음</li>',
  '<li><b>4D/동적 GS-SLAM 품질 축</b> — 속도 서베이에서 검증 통과 claim 0건. "미조사"이지 "부정 결론"이 아님 → 타깃 재조사 필요</li>',
