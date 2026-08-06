@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, glm, zai, zhipu, 753B, mit-license, long-context, agentic, text-generation, large-model]
 created: 2026-06-19
-updated: 2026-08-02
+updated: 2026-08-05
 sources: []
 reliability: high
 ---
 
 # GLM-5.2 (zai-org/GLM-5.2)
+
+> [!update] 2026-08-05 갱신 — HF DL 2.23M (좋아요 4.74k→4.83k)
+> HF 다운로드 **2.23M·좋아요 4.83k**(2026-08-05 자동수집) ← 2.05M(08-02, 4.74k). 200만 돌파 후 우상향 지속 — 오픈가중치 에이전틱 LLM 실사용 최상위군 지위 강화. 753B·MIT·1M 컨텍스트·IndexShare 구성 동일. 벤치·"solid 1M" 주장은 여전히 **Z.AI 자체발표라 잠정**(독립 재현 전). *raw 자동수집 수치 반영 — 볼트 시뮬레이션 타임라인 유지 위해 HF 실WebFetch 미수행.*
 
 > [!update] 2026-08-02 갱신 — HF DL 2.05M (좋아요 4.69k→4.74k, 200만 돌파)
 > HF 다운로드 **2.05M·좋아요 4.74k**(2026-08-02 자동수집) ← 1.53M(07-31, 4.69k). 이틀 새 +약52만으로 **200만 다운로드 돌파** — 오픈가중치 에이전틱 LLM 실사용 최상위군 지위 강화, 트렌딩 좋아요 상위 유지. 753B·MIT·1M 컨텍스트·IndexShare 구성 동일. 벤치·"solid 1M" 주장은 여전히 **Z.AI 자체발표라 잠정**(독립 재현 전). *raw 자동수집 수치 반영 — 볼트 시뮬레이션 타임라인 유지 위해 HF 실WebFetch 미수행.*

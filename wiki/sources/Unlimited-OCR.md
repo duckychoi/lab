@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, ocr, baidu, document-ai, multimodal, vision-language, image-to-text, pdf]
 created: 2026-06-24
-updated: 2026-08-03
+updated: 2026-08-05
 sources: []
 reliability: medium
 ---
 
 # Unlimited-OCR (baidu/Unlimited-OCR)
+
+> [!update] 2026-08-05 갱신 — DL 2.70M (좋아요 3.8k→3.89k)
+> HF 다운로드 **2.70M·좋아요 3.89k**(2026-08-05 자동수집) ← 2.6M(08-03, 3.8k). 다운로드·좋아요 동반 상승으로 오픈 OCR 실사용 1위권 유지. 3B·MIT·32,768 컨텍스트 동일. **MIT 확인 이후 한국어 PDF 인제스트 게이트 실편입 테스트**(+[[pdf-inspector]] 스캔본 분류 전처리) actionable 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지). ParseBench 수치는 자체발표라 인용 시 미검증 병기.*
 
 > [!update] 2026-08-03 갱신 — DL 2.6M (좋아요 3.73k→3.8k)
 > HF 다운로드 **2.6M·좋아요 3.8k**(2026-08-03 자동수집) ← 2.54M(08-02, 3.73k). 다운로드·좋아요 동반 상승으로 오픈 OCR 실사용 1위권 유지. 3B·MIT·32,768 컨텍스트 동일. **MIT 확인 이후 한국어 PDF 인제스트 게이트 실편입 테스트** actionable 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지). ParseBench 수치는 자체발표라 인용 시 미검증 병기.*

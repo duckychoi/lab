@@ -958,3 +958,31 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **할 것**: [[Progressive-Agent-Skill]]("RL로 스킬 점진 생성·개선")·[[LongHorizon-Harness]]("장기 순차 의사결정 학습·평가")의 아이디어를 내 다수 스킬 하네스(wiki·reat·pptx) 자가개선에 개념 이식 검토 — lint/QA 결과→스킬 프롬프트 개선 루프를 "스킬 레퍼토리 점진 확장"으로, 다단계 워크플로를 "롱호라이즌 신용할당·안정성" 관점으로 자기점검. **원문이 미래형 ID(2608.x)로 재현 전이므로 개념 차용만·수치 인용 금지.**
 - **우선순위**: 낮음
 - **상태**: 대기
+
+## [2026-08-05] 오픈 3D 백본 스팟체크 확장 — Hunyuan3D-Buffalo 편입
+- **도메인**: ai-news (교차 slam-3dgs · video-saas)
+- **출처**: [[Hunyuan3D-Buffalo]] · [[TRELLIS.2]] · [[Meshy-T2]] · [[Meshy]] · [[Tripo]]
+- **할 것**: [[Tencent]] [[Hunyuan3D-Buffalo]](3D 생성·이해·편집 통합)를 기존 [[TRELLIS.2]]·[[Meshy-T2]] "오픈 3D 백본 품질 스팟체크" actionable에 묶어, 가중치·라이선스 공개 시 텍스트/이미지→3D 생성·편집 품질을 [[Meshy]]/[[Tripo]] 폐쇄형과 비교. **미래형 arxiv ID(2608.02711)·데모만 공개·수치 미검증 → 가중치 공개 전 대기, 수치 인용 금지.**
+- **우선순위**: 낮음
+- **상태**: 대기
+
+## [2026-08-05] JoyAI-Video-Edit — 실시간 비디오 편집 품질 스팟체크
+- **도메인**: ai-news (교차 video-saas)
+- **출처**: [[JoyAI-Video-Edit]] · [[Seedance]] · [[Higgsfield]]
+- **할 것**: [[JoyAI-Video-Edit]](AR 디퓨전 실시간 오픈엔디드 비디오 편집)의 코드/데모 공개 시 실시간 편집 품질·지연(fps·해상도·편집 자유도)을 [[Seedance]]/[[Higgsfield]] 편집 기능과 비교 — 내 영상 자동화 후반부(post) 편입 가치 판단. **미래형 arxiv ID(2608.03974)·소속 추정·미검증 → 가중치/코드 공개 전 대기.**
+- **우선순위**: 낮음
+- **상태**: 대기
+
+## [2026-08-06] MiniMax-H3 (ComfyUI판) — 오픈 i2v 품질 스팟체크
+- **도메인**: ai-news (교차 video-saas)
+- **출처**: [[MiniMax-H3]] · [[Seedance]] · [[Higgsfield]]
+- **할 것**: [[MiniMax]]-H3 ComfyUI 배포판(DL 2.3M)으로 짧은 이미지→영상 1건을 생성해 모션 일관성·해상도·길이 한계를 [[Seedance]]/[[Higgsfield]] 폐쇄형과 비교, [[reat-render]]류 자동화와 노드 접목 가능성 탐색. **VRAM 요구·상업 라이선스·원본 스펙 먼저 확인.**
+- **우선순위**: 낮음
+- **상태**: 대기
+
+## [2026-08-06] cloudflare/computer — computer-use 위임 백엔드 후보 등재
+- **도메인**: ai-news
+- **출처**: [[cloudflare-computer]] · [[OpenComputer]]
+- **할 것**: [[Cloudflare]] [[cloudflare-computer]](에이전트용 원격 가상 컴퓨터 실행 위임)의 오픈소스/셀프호스트 가능 여부·격리 모델(컨테이너/마이크로VM)·지연·요금을 확인해, 컴퓨터 조작·브라우저 자동화 위임 백엔드 후보 목록에 등재. **아키텍처·라이선스 미검증(실WebFetch 미수행) → 문서 확인 후 판단.**
+- **우선순위**: 낮음
+- **상태**: 대기

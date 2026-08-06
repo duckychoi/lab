@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, inference, memory-optimization, layer-wise, quantization-alt]
 created: 2026-07-19
-updated: 2026-08-04
+updated: 2026-08-05
 sources: []
 reliability: high
 ---
 
 # airllm (lyogavin/airllm)
+
+> [!update] 2026-08-05 갱신 — ⭐28,687 (당일 +1,711)
+> ⭐**28,687**(2026-08-05 자동수집, 당일 +1,711) ← 27,761(08-04). "레이어 단위(layer-wise) 추론"의 저사양 로컬 추론 유입 지속·급등폭 확대. 가중치 불변·시간↔공간 교환 성격 동일 — "돌아가는가"가 아니라 "쓸 만한 속도인가"로 판단하는 원칙 불변. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-04 갱신 — ⭐27,761 (당일 +1,085)
 > ⭐**27,761**(2026-08-04 자동수집, 당일 +1,085) ← 26,092(08-03). 이틀 새 +약1,670으로 "레이어 단위(layer-wise) 추론"의 저사양 로컬 추론 유입 지속·당일 급등폭 확대. 가중치 불변·시간↔공간 교환 성격 동일 — "돌아가는가"가 아니라 "쓸 만한 속도인가"로 판단하는 원칙 불변. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, coding-agent, skills, engineering, productivity, reference]
 created: 2026-05-07
-updated: 2026-07-07
+updated: 2026-08-06
 sources: []
 reliability: high
 ---
 
 # addyosmani/agent-skills
+
+> [!update] 2026-08-06 갱신 — ⭐82,215 (당일 +226)
+> ⭐**82,215**(2026-08-06 자동수집, 당일 +226) ← 71,362(07-07). 약 한 달 새 +약1.1만으로 "에이전트 스킬 큐레이션" 최상단 허브 지위 강화 — 스킬 자가개선 흐름([[Progressive-Agent-Skill]]·[[book-to-skill]])의 실무 레퍼런스로 계속 유효. verification gate·anti-rationalization 표 구성 동일. reliability high 유지. *raw 자동수집 수치 반영 — 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-07-07 갱신
 > ⭐71,362 (2026-07-07 자동수집; 이전 ⭐58,861 2026-06-14, 약 +12,501). MIT. WebFetch 실측 구성: **24 스킬**(Define·Plan·Build·Verify·Review·Ship 6단계) + 슬래시 커맨드 8(`/spec`·`/plan`·`/build`·`/test`·`/review`·`/ship`) + 스페셜리스트 페르소나 4(코드리뷰어·테스트엔지니어·보안감사·웹성능감사) + 체크리스트 5. 핵심 설계는 "verification gate + anti-rationalization 표"로 에이전트 지름길 차단. [[awesome-claude-code]] 등재 허브.

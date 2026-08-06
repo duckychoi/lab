@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, pdf, rust, ocr, document-pipeline, preprocessing, firecrawl]
 created: 2026-08-04
-updated: 2026-08-04
+updated: 2026-08-05
 sources: []
 reliability: high
 ---
@@ -14,6 +14,9 @@ reliability: high
 **GitHub**: https://github.com/firecrawl/pdf-inspector
 **스타수**: ⭐9,016 (2026-08-04 자동수집, 당일 **+1,699**) · **제작**: [[Firecrawl]]
 **스택**: Rust · **성격**: 문서 파이프라인 전처리 라이브러리
+
+> [!update] 2026-08-05 갱신 — ⭐10,636 (당일 +2,540 급상승)
+> ⭐**10,636**(2026-08-05 자동수집, 당일 +2,540 급상승) ← 9,016(08-04). 하루 새 +2,540으로 **1만 스타 돌파** — [[Firecrawl]] Rust PDF 스캔/텍스트 판별·OCR 분기 전처리의 관심 급확대. [[Unlimited-OCR]] 한국어 PDF 게이트에 "스캔본 분류→OCR 분기" 전처리 편입 actionable 유지. reliability high 유지. *raw 자동수집 수치 반영 — 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **PDF가 "스캔 이미지 기반"인지 "텍스트 레이어 기반"인지 자동 판별하고 텍스트를 추출**하는 Rust 라이브러리. raw 한줄요약 기준 핵심 가치는 *분류*에 있다 — 문서 파이프라인에서 가장 먼저 필요한 결정이 "이 PDF는 그냥 텍스트를 뽑으면 되는가, OCR로 보내야 하는가"인데, 이 분기(OCR routing)를 값싸게 자동화한다. [[Firecrawl]]이 만든 만큼 "웹/문서 → LLM 정제 데이터"라는 그들의 수집 인프라 계보와 정확히 맞물린다 — 크롤링([[Firecrawl]] 코어)의 문서 버전 전처리 말단. OCR 자체를 하는 도구([[Unlimited-OCR]]·olmocr)와 달리, **OCR을 *언제* 부를지 결정하는 게이트키퍼**라는 점이 위치를 가른다.

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, merge, finetune, uncensored, 27b, local-llm, vision]
 created: 2026-07-22
-updated: 2026-08-04
+updated: 2026-08-05
 sources: []
 reliability: medium
 ---
 
 # Qwen3.6-27B-Fable-Fusion (DavidAU)
+
+> [!update] 2026-08-05 갱신 — DL 1.63M 유지 (좋아요 1.47k→1.54k)
+> HF 다운로드 **1.63M·좋아요 1.54k**(2026-08-05 자동수집, 다운로드 거의 보합) ← 1.63M(08-04, 1.47k). 다운로드는 보합·좋아요 지속 상승으로 커뮤니티 머지/GGUF 변종 중 최상위 채택 유지. [[Qwen3.6-27B]] 베이스·무검열·256k·비전·MTP 구성 동일. 자체 **ARC-C 0.711** 주장은 여전히 **재현 불가 → medium 유지, 벤치 인용은 실태스크 검증 후**. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-04 갱신 — DL 1.63M (좋아요 1.38k→1.47k)
 > HF 다운로드 **1.63M·좋아요 1.47k**(2026-08-04 자동수집) ← 1.55M(08-03, 1.38k). 하루 새 +약8만으로 커뮤니티 머지/GGUF 변종 중 최상위 채택 지속. [[Qwen3.6-27B]] 베이스·무검열·256k·비전·MTP 구성 동일. 자체 **ARC-C 0.711** 주장은 여전히 **재현 불가 → medium 유지, 벤치 인용은 실태스크 검증 후**. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*

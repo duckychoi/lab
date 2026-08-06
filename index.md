@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-04 (자동수집 13건 배치 인제스트 — 신규 7·갱신 6 + DeepSeek 엔티티)
-total_pages: 822
-total_sources: 804
+updated: 2026-08-06 (자동수집 26건 배치 인제스트 — 08-05·08-06 2일치, 신규 15·갱신 11, 신규 엔티티 0)
+total_pages: 837
+total_sources: 819
 ---
 
 # Wiki Index
@@ -75,6 +75,34 @@ total_sources: 804
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-06 자동수집 배치 (신규 9 · 갱신 4 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[cloudflare-computer]] — [[Cloudflare]] 에이전트용 원격 가상 컴퓨터(브라우저·셸) 실행 위임 런타임, [[OpenComputer]] 평가 축과 대비되는 실행 인프라 (GitHub ⭐4,060·당일 +891·아키텍처 미검증 medium) *(NEW 2026-08-06)*
+- [[loopx]] — 목표·쿼터 인지 다중 에이전트 루프 오케스트레이션 커널, [[LongHorizon-Harness]]·[[hermes-agent]] 실행 축 (GitHub ⭐2,494·당일 +326·개인 프로젝트 medium) *(NEW 2026-08-06)*
+- [[uber-ADR]] — [[Uber]] 관측성+위협탐지 결합 엔터프라이즈 에이전트 보안·이상행위 탐지, [[agent-governance-toolkit]] 거버넌스 계보 (GitHub ⭐1,154·당일 +354 급상승·오픈범위 미검증 medium) *(NEW 2026-08-06)*
+- [[ToolArtist]] — 도구 사용 통합 멀티모달 모델 기반 에이전트형 이미지 생성, [[Qwen-Image-Agent]] 생성 에이전트화 축 (HF 데일리 #1·업보트 41·미래형 ID 미검증 medium) (2608.04436) *(NEW 2026-08-06)*
+- [[Personalization-Mirage]] — LLM 사용자 프로필 날조 + 자기모니터링 실패 분석, [[AISPA]]·[[CLAUDE.md]] 사실확인 원칙 실증 (HF 데일리·업보트 33·미래형 ID 미검증 medium) (2608.04570) *(NEW 2026-08-06)*
+- [[ABSeeker]] — 정답 역추적 신용할당 장기 탐색 에이전트 학습, [[LongHorizon-Harness]]·[[deer-flow]] 탐색 축 (HF 데일리·업보트 33·미래형 ID 미검증 medium) (2608.05102) *(NEW 2026-08-06)*
+- [[Physics-of-Multimodal-Pretraining]] — 멀티모달 사전학습 지식흐름·시너지·조기통합 원리+레시피, [[ToolArtist]]·[[Kimi-K3]] 통합모델 기반 이론 (HF 데일리·업보트 23·미래형 ID 미검증 medium) (2608.05000) *(NEW 2026-08-06)*
+- [[OneDayAgent]] — 자율 에이전트 롱호라이즌 실행 하네스, [[LongHorizon-Harness]]·[[loopx]] 지속성 계보 (HF 데일리·업보트 22·미래형 ID 미검증 medium) (2608.05013) *(NEW 2026-08-06)*
+- [[MiniMax-H3]] — [[MiniMax]] 이미지+텍스트→비디오 모델 ComfyUI 배포판, [[Seedance]]·[[Higgsfield]] 대비 오픈 i2v 축 (HF DL 2.3M·좋아요 786·원본 스펙 미검증 medium) *(NEW 2026-08-06)*
+- [[agent-skills]] 갱신 — [[Addy Osmani]] 코딩 에이전트 스킬 모음, ⭐71,362→**82,215**(당일 +226)·verification gate 구성 동일(raw API 수치) *(UPDATE 2026-08-06)*
+- [[supervision]] 갱신 — [[roboflow]] 모델 비종속 CV 파이프라인 유틸, ⭐47,714→**49,084**(당일 +146)·검출·추적 후처리 표준(raw API 수치) *(UPDATE 2026-08-06)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T MoE 멀티모달, DL 1.13M→**1.26M**·좋아요 9.91k→**10.2k**(좋아요 1만 돌파·트렌딩 1위)(raw API 수치) *(UPDATE 2026-08-06)*
+- [[DeepSeek-V4-Flash-0731]] 갱신 — [[DeepSeek]] 304B 저지연, DL 433k→**618k**·좋아요 2.15k→**2.56k**·효율 노선 실수요 재확인(raw API 수치) *(UPDATE 2026-08-06)*
+<!-- ── 2026-08-05 자동수집 배치 (신규 6 · 갱신 7 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[DeepSeek-Reasonix]] — 프리픽스 캐시 안정성·장시간 상주 지향 터미널 [[DeepSeek]] 코딩 에이전트, [[jcode]] 터미널 네이티브 축 (GitHub ⭐31,101·당일 +922·Go·MIT·캐시 실효 미검증 medium) *(NEW 2026-08-05)*
+- [[JoyAI-Video-Edit]] — 오토리그레시브 디퓨전 실시간 오픈엔디드 비디오 편집, [[Seedance]]·[[JoyAI-VL-Interaction]] 실시간 축 (HF 데일리 #1·업보트 63·미래형 ID·소속 추정 medium) (2608.03974) *(NEW 2026-08-05)*
+- [[MerchantBench]] — 365일 주문 단위 이커머스 시뮬레이션 장기 일관성 벤치(98,843 상품·26 도구), [[WorldExam]]·[[OneDayAgent]] 평가 계보 (HF 데일리·업보트 52·미래형 ID 미검증 medium) (2607.28956) *(NEW 2026-08-05)*
+- [[AURORA-LM]] — 연속 잠재공간 디퓨전 언어모델 오토인코딩 통합 표현(초록 비공개), AR 대안 생성 패러다임 (HF 데일리·업보트 43·초록 비공개+미래형 ID low) (2608.02602) *(NEW 2026-08-05)*
+- [[Hunyuan3D-Buffalo]] — [[Tencent]] 3D 생성·이해·편집 통합 확장형 멀티모달, [[TRELLIS.2]]·[[Meshy-T2]] 오픈 3D 흐름 (HF 데일리·업보트 43·데모 제공·라이선스 미검증 medium) (2608.02711) *(NEW 2026-08-05)*
+- [[KGD-Knowledge-Geometry-Decoupling]] — 지식·기하 분리 리프레시 가능 산업 추천 전이(드리프트 완화), next-token 순차학습 한계 진단 (HF 데일리·업보트 32·미래형 ID 미검증 medium) (2608.02738) *(NEW 2026-08-05)*
+- [[pdf-inspector]] 갱신 — [[Firecrawl]] Rust PDF 판별, ⭐9,016→**10,636**(당일 +2,540·1만 돌파)·OCR 분기 전처리(raw API 수치) *(UPDATE 2026-08-05)*
+- [[reverse-skill]] 갱신 — 리버스엔지니어링 스킬 AI 라우팅, ⭐16,724→**18,589**(당일 +2,297·사흘째 급상승)·개인 프로젝트 low 유지(raw API 수치) *(UPDATE 2026-08-05)*
+- [[airllm]] 갱신 — 레이어 단위 저사양 로컬 추론, ⭐27,761→**28,687**(당일 +1,711)·"속도 실측" 판단 원칙 유지(raw API 수치) *(UPDATE 2026-08-05)*
+- [[TencentDB-Agent-Memory]] 갱신 — [[Tencent]] 로컬 팀 에이전트 메모리, ⭐12,570→**14,423**(당일 +1,111)·상승 가속 지속(raw API 수치) *(UPDATE 2026-08-05)*
+- [[Unlimited-OCR]] 갱신 — [[Baidu]] 오픈 OCR, DL 2.6M→**2.70M**·좋아요 3.8k→**3.89k**·실사용 1위권(raw API 수치) *(UPDATE 2026-08-05)*
+- [[GLM-5.2]] 갱신 — [[Zhipu AI]] 753B MIT 플래그십, DL 2.05M→**2.23M**·좋아요 4.74k→**4.83k**·200만 돌파 후 우상향(raw API 수치) *(UPDATE 2026-08-05)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 머지 변종, DL 1.63M 보합·좋아요 1.47k→**1.54k**·ARC-C 0.711 재현불가 medium 유지(raw API 수치) *(UPDATE 2026-08-05)*
 <!-- ── 2026-08-04 자동수집 배치 (신규 7 · 갱신 6 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[pdf-inspector]] — [[Firecrawl]] Rust PDF 스캔/텍스트 자동 판별·추출, [[Unlimited-OCR]] 앞단 OCR 분기 게이트 (GitHub ⭐9,016·당일 +1,699·raw API high) *(NEW 2026-08-04)*
 - [[DeepSeek-V4-Flash-0731]] — [[DeepSeek]] 304B 저지연 텍스트 생성(Flash 계열), [[Kimi-K3]]·[[GLM-5.2]] 대비 "규모보다 지연·비용" 축 (HF DL 433k·좋아요 2.15k·스펙/벤치 미검증 medium) *(NEW 2026-08-04)*

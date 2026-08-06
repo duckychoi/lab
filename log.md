@@ -1712,3 +1712,19 @@ HF Trending Models (2026-05-29):
 
 ## [2026-08-05 09:04] ingest
 - 대기 항목 없음
+
+## [2026-08-06] ingest | ai-news 자동수집 26건 배치 (08-05·08-06 2일치 — 신규 15 · 갱신 11)
+- 도메인: ai-news (교차: video-saas — JoyAI-Video-Edit·MiniMax-H3·Hunyuan3D-Buffalo / slam-3dgs — Hunyuan3D-Buffalo / local-llm — DeepSeek-Reasonix·airllm·Kimi-K3·DeepSeek-V4-Flash·GLM-5.2·Fable-Fusion)
+- 추가 페이지: 15개 (신규 소스 15)
+  - 08-06 신규 9: [[cloudflare-computer]](GitHub ⭐4,060 [[Cloudflare]] 에이전트 원격 가상컴퓨터 런타임 medium)·[[loopx]](GitHub ⭐2,494 목표·쿼터 루프 커널 medium)·[[uber-ADR]](GitHub ⭐1,154 [[Uber]] 에이전트 보안·이상탐지 medium)·[[MiniMax-H3]](HF DL 2.3M [[MiniMax]] i2v ComfyUI판 medium)·HF논문 5 [[ToolArtist]] 2608.04436·[[Personalization-Mirage]] 2608.04570·[[ABSeeker]] 2608.05102·[[Physics-of-Multimodal-Pretraining]] 2608.05000·[[OneDayAgent]] 2608.05013 (전량 미래형 ID medium)
+  - 08-05 신규 6: [[DeepSeek-Reasonix]](GitHub ⭐31,101 Go·MIT [[DeepSeek]] 터미널 코딩 에이전트 medium)·HF논문 5 [[JoyAI-Video-Edit]] 2608.03974·[[MerchantBench]] 2607.28956·[[AURORA-LM]] 2608.02602(초록 비공개 **low**)·[[Hunyuan3D-Buffalo]] 2608.02711·[[KGD-Knowledge-Geometry-Decoupling]] 2608.02738 (미래형 ID medium/low)
+- 업데이트 페이지: 15개 (source 갱신 11 + domain 1[ai-news 08-05·08-06 2섹션] + index 1 + actionable 1[4건 추가])
+  - 08-06 갱신 4: [[agent-skills]] ⭐71,362→82,215·[[supervision]] ⭐47,714→49,084·[[Kimi-K3]] DL 1.13M→1.26M 좋아요 9.91k→10.2k(좋아요 1만 돌파)·[[DeepSeek-V4-Flash-0731]] DL 433k→618k
+  - 08-05 갱신 7: [[pdf-inspector]] ⭐9,016→10,636(1만 돌파)·[[reverse-skill]] ⭐16,724→18,589(사흘째 급상승)·[[airllm]] ⭐27,761→28,687·[[TencentDB-Agent-Memory]] ⭐12,570→14,423·[[Unlimited-OCR]] DL 2.6M→2.70M·[[GLM-5.2]] DL 2.05M→2.23M·[[Qwen3.6-27B-Fable-Fusion]] DL 1.63M 보합 좋아요 1.47k→1.54k
+- 핵심 인사이트: 08-05는 HF 논문이 실시간 편집(JoyAI-Video-Edit)·장기 평가(MerchantBench)·3D 통합(Hunyuan3D-Buffalo) 등 응용·평가로, 08-06은 GitHub 3건이 에이전트 운영 3계층(실행환경 cloudflare/computer·루프거버넌스 loopx·보안감시 uber/ADR)을 동시에 채우고 논문 5편이 도구사용 생성·개인화 날조 경고·롱호라이즌 하네스로 메타 계층에 수렴 — 08월 지배 주제가 "에이전트 운영 계층 전용화 + 롱호라이즌 지속성 + 자기감시 신뢰 회의"로 굳음. 오픈 웨이트는 Kimi-K3 좋아요 1만 돌파·GLM-5.2 2.23M로 채택 상단 재경신.
+- 검증: 신규 GitHub 4·HF모델 1·갱신 GitHub 6·HF모델 5 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-04 배치와 동일 처리). HF모델 자체발표 벤치(Kimi-K3 GPQA/BrowseComp·Fable-Fusion ARC-C·GLM-5.2 SWE/Terminal·Unlimited-OCR ParseBench)는 인용 시 미검증 병기. 신규 GitHub/HF모델 세부 스펙(cloudflare/computer 격리모델·loopx 쿼터방식·uber/ADR 탐지규칙·MiniMax-H3 원본 스펙)은 원문 재현 전 → 구체 미기재. **HF논문 10건 전량 미래형 arxiv ID(2608.x·2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium(AURORA-LM 초록 비공개 low), 구체 벤치 수치·저자/소속 미기재**(CLAUDE.md 사실확인 원칙).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: YES (4건 전량 낮음 — Hunyuan3D-Buffalo 오픈 3D 백본 스팟체크 편입 / JoyAI-Video-Edit 실시간 편집 스팟체크 / MiniMax-H3 오픈 i2v 스팟체크 / cloudflare/computer computer-use 위임 백엔드 후보 등재)
+- 신규 entity: 없음 ([[Cloudflare]]·[[Uber]]·[[MiniMax]]·roboflow는 salience 있으나 비-프론티어랩 엔티티 날조 방지 기조 유지 — source 내 wikilink만; [[DeepSeek]]·[[Moonshot AI]]·[[Tencent]] 기존 페이지 wikilink)
+- index.md 업데이트 (total_pages: 822→837, total_sources: 804→819)
+- raw.md: 처리 26건(08-05 13 + 08-06 13) 전체 삭제 완료 (대기 항목 없음)
