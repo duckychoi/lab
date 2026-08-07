@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-framework, skills, open-source, software-methodology, claude-code]
 created: 2026-04-11
-updated: 2026-07-26
+updated: 2026-08-07
 sources: []
 reliability: high
 ---
 
 # obra/superpowers
+
+> [!update] 2026-08-07 갱신 — DL 26.8만 (당일 +858)
+> ⭐**268,380** (2026-08-07 자동수집, 당일 **+858**) ← ⭐261,293 (07-26). 2주 새 +7,087로 에이전트 스킬 카테고리 압도적 1위 유지. 같은 08-07 배치의 [[mattpocock-skills]](⭐207,870·20만 돌파)와 함께 스킬 상단 2강. Anthropic 공식 마켓플레이스 등재·방법론 수준 인정 유지 → reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-07-26 갱신 — 26만 돌파 (WebFetch 실검증)
 > ⭐**261,293** (2026-07-26 WebFetch 실검증) ← ⭐252,676 (07-12). 2주 새 +8,617로 에이전트 스킬 카테고리 압도적 1위·26만 돌파 유지. 같은 배치에서 스킬 발견 레이어([[awesome-claude-skills]])와 벤더 호환 레이어([[open-code-review]]·[[claude-cookbooks]])가 함께 성장 — 스킬=배포 단위 트렌드 지속. reliability high 유지.
@@ -44,5 +47,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/obra/superpowers
-- 스타: ⭐261,293 (2026-07-26 WebFetch 실검증) ← ⭐252,676 (07-12) ← ⭐244,962 (07-03) ← ⭐225,402 (06-13) ← ⭐224,143 (06-11) ← ⭐193,260 (05-16) ← ⭐174,963 (04-30)
+- 스타: ⭐268,380 (2026-08-07 자동수집, 당일 +858) ← ⭐261,293 (07-26 WebFetch 실검증) ← ⭐252,676 (07-12) ← ⭐244,962 (07-03) ← ⭐225,402 (06-13) ← ⭐224,143 (06-11) ← ⭐193,260 (05-16) ← ⭐174,963 (04-30)
 - 신뢰도: ⭐⭐⭐⭐⭐ (24만+ 스타, Anthropic 공식 마켓플레이스 등재, 전임 커뮤니티 엔지니어 채용 — 방법론 수준 인정)

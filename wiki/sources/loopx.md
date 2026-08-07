@@ -4,15 +4,18 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, multi-agent, orchestration, loop-engineering, agent-runtime, long-horizon]
 created: 2026-08-06
-updated: 2026-08-06
+updated: 2026-08-07
 sources: []
 reliability: medium
 ---
 
 # huangruiteng/loopx — 장기 목표·쿼터 인지 루프 엔지니어링 커널
 
+> [!update] 2026-08-07 갱신 — ⭐3,158 (당일 +847)
+> GitHub ⭐**3,158** (2026-08-07 자동수집, 당일 **+847**) ← ⭐2,494 (08-06, +326). 하루 유입이 전날의 2.6배로 가속·3천 돌파 — 08-06 함께 편입된 "에이전트 운영 3계층(실행 [[cloudflare-computer]]·루프 [[loopx]]·보안 [[uber-ADR]])" 중 실행·루프 두 축이 08-07 동반 급상승. 목표·쿼터 인지 루프 커널 구성 동일, 개인 저자 프로젝트라 실체·성숙도는 여전히 미검증. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
+
 **GitHub**: https://github.com/huangruiteng/loopx
-**스타수**: ⭐2,494 (2026-08-06 자동수집, 당일 **+326**)
+**스타수**: ⭐3,158 (2026-08-07 자동수집, 당일 **+847**) ← ⭐2,494 (08-06, +326)
 **성격**: 다중 AI 에이전트 오케스트레이션 런타임(루프 커널)
 
 > [!insight] 핵심 인사이트
@@ -41,6 +44,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/huangruiteng/loopx
-- 스타: ⭐2,494 (2026-08-06 자동수집, 당일 +326)
+- 스타: ⭐3,158 (2026-08-07 자동수집, 당일 +847) ← ⭐2,494 (08-06, +326)
 - 성격: 장기 목표·쿼터 인지 다중 에이전트 루프 오케스트레이션 커널
 - 신뢰도: ⭐⭐ (개인 프로젝트·성숙도 미검증, raw 자동수집 수치)

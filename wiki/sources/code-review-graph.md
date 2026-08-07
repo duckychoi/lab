@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, mcp, cli, code-graph, context, coding-agent, local-first]
 created: 2026-07-18
-updated: 2026-07-21
+updated: 2026-08-07
 sources: []
 reliability: high
 ---
 
 # code-review-graph — 로컬 우선 코드 인텔리전스 그래프
+
+> [!update] 2026-08-07 갱신 — ⭐29,226 (당일 +237)
+> GitHub ⭐**29,226** (2026-08-07 자동수집, 당일 **+237**) ← ⭐24,000 (07-21). 2.4만→2.9만으로 우상향, 유입 속도는 급가속기(사흘 +4천)보다 완만해졌으나 3만 근접. Tree-sitter 지속형 코드 그래프로 컨텍스트만 질의(토큰 82배 감소 자체 주장) 구성 동일 — "그래프로 필요한 것만 읽기" 계보 유지. 82배는 여전히 자체 벤치·실측 필요. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-07-21 갱신 — WebFetch 실검증 + 기능 확인
 > GitHub ⭐**24,000**(WebFetch 실확인, raw ⭐24,010·+1,833/일과 일치) ← ⭐19,905(07-18). 사흘 새 +4천으로 급가속, 2.4만 돌파. 어제 "이름 주의(리뷰 특화 여부 미검증)"가 **해소**: 실제로 **Tree-sitter 파싱으로 코드베이스의 지속형 구조 그래프**를 만들어 AI 코딩 툴이 리뷰 시 관련 컨텍스트만 접근 → **토큰 사용 평균 82배 감소** 주장(자체 벤치). 범용 코드 인텔리전스 그래프가 맞고 리뷰가 그 응용. WebFetch 검증으로 reliability medium→**high 상향**(단 82배는 자체 벤치, 실측 필요).
@@ -38,5 +41,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/tirth8205/code-review-graph
-- GitHub ⭐19,905 (2026-07-18, 당일 +74) — raw 자동수집 수치
+- GitHub ⭐29,226 (2026-08-07 자동수집, 당일 +237) ← ⭐24,000 (07-21 WebFetch 실검증) ← ⭐19,905 (07-18) — raw 자동수집 수치
 - 신뢰도: ⭐⭐⭐ (개인 레포, 원문 미검증)

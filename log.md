@@ -1728,3 +1728,15 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 없음 ([[Cloudflare]]·[[Uber]]·[[MiniMax]]·roboflow는 salience 있으나 비-프론티어랩 엔티티 날조 방지 기조 유지 — source 내 wikilink만; [[DeepSeek]]·[[Moonshot AI]]·[[Tencent]] 기존 페이지 wikilink)
 - index.md 업데이트 (total_pages: 822→837, total_sources: 804→819)
 - raw.md: 처리 26건(08-05 13 + 08-06 13) 전체 삭제 완료 (대기 항목 없음)
+
+## [2026-08-07] ingest | ai-news 자동수집 13건 배치 (신규 5 · 갱신 8)
+- 도메인: ai-news (교차: slam-3dgs — WorldClaw / video-saas — MiniMax-H3·WorldClaw / local-llm — Kimi-K3·Qwen3.6-27B-Fable-Fusion)
+- 추가 페이지: 5개 (신규 소스 5 — HF논문 5 전량 미래형 arxiv ID medium: [[AgentOPSD]] 2608.05987·에이전트 RL 재귀적 자기증류·업보트 51 / [[WorldClaw]] 2608.05248·대규모 에이전트형 3D 오픈월드 생성·업보트 40 / [[OSReward]] 2607.28609·크로스플랫폼 computer-use 리워드 모델 표준 평가·업보트 39 / [[EnvACE]] 2608.06197·월드 리허설 환경 동역학 내재화·업보트 27 / [[Learning-from-Failures]] 2608.06060·하드 네거티브 retrieval-centric CoT·업보트 25)
+- 업데이트 페이지: 11개 (source 갱신 8: GitHub 5 [[mattpocock-skills]] ⭐173,162→207,870(20만 돌파·+1,873)·[[superpowers]] ⭐261,293→268,380(+858)·[[code-review-graph]] ⭐24,000→29,226(+237)·[[cloudflare-computer]] ⭐4,060→5,122(+2,802·이틀째 급상승)·[[loopx]] ⭐2,494→3,158(+847·3천 돌파) / HF모델 3 [[MiniMax-H3]] DL 2.3M→3.14M(+약84만)·[[Kimi-K3]] DL 1.26M→1.31M(트렌딩 좋아요 1위)·[[Qwen3.6-27B-Fable-Fusion]] DL 1.63M→2.22M(보합 후 재급등·200만 돌파) / domain 1: ai-news 2026-08-07 섹션 / index 1 / actionable 1[2건 추가])
+- 핵심 인사이트: 08-07 신규는 HF 논문 5편으로만 들어왔고 전부 "에이전트를 어떻게 학습·평가하나"의 메타 계층에 수렴(자기증류 AgentOPSD·동역학 내재화 EnvACE·롱호라이즌 학습, 리워드 평가 OSReward·검색중심 CoT Learning-from-Failures·월드 스케일 3D WorldClaw) — 08-04·08-06에 이어 "지속성·평가·자기학습"이 3주째 08월 지배 주제로 견고. 반면 갱신 8건은 스킬 상단 2강(superpowers 26.8만·mattpocock 20만 돌파)·에이전트 실행·루프 축 이틀째 급상승(cloudflare-computer·loopx)·오픈 채택 200만 클럽 확장(Qwen-Fable-Fusion 2.22M·MiniMax-H3 3.14M·Kimi-K3 1.31M)을 동시에 끌어올림.
+- 검증: 신규 HF논문 5·갱신 GitHub 5·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-06 배치와 동일 처리). HF모델 자체발표 벤치(Kimi-K3 GPQA/BrowseComp·Fable-Fusion ARC-C)는 인용 시 미검증 병기. **HF논문 5건 전량 미래형 arxiv ID(2608.x·2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 구체 벤치 수치·저자/소속 미기재**([[CLAUDE.md]] 사실확인 원칙).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: YES (2건 전량 낮음 — WorldClaw 가중치 공개 시 오픈 3D 백본 스팟체크 묶음 편입 / AgentOPSD·EnvACE 자기증류·동역학 내재화 안정화 기법 개념 검토)
+- 신규 entity: 없음 ([[Cloudflare]]·[[MiniMax]]·[[Moonshot AI]]·[[Qwen3.6-27B]] 기존 페이지 wikilink만·HF논문 저자/기관 salience 대비 날조 방지 기조 유지)
+- index.md 업데이트 (total_pages: 837→842, total_sources: 819→824)
+- raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)

@@ -4,15 +4,18 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, computer-use, agent-runtime, sandbox, browser, shell, cloudflare]
 created: 2026-08-06
-updated: 2026-08-06
+updated: 2026-08-07
 sources: []
 reliability: medium
 ---
 
 # cloudflare/computer — 에이전트에 붙이는 원격 실행 가상 컴퓨터
 
+> [!update] 2026-08-07 갱신 — ⭐5,122 (당일 +2,802·이틀째 급상승)
+> GitHub ⭐**5,122** (2026-08-07 자동수집, 당일 **+2,802**) ← ⭐4,060 (08-06, +891). 이틀 연속 급상승·당일 유입이 전날의 3배로 가속 — [[Cloudflare]] 브랜드+"에이전트 실행 환경(execution surface)" 계층 상품화 기대가 반영. 아키텍처(격리 방식·지원 OS/브라우저·요금·오픈소스 범위)는 여전히 미검증. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
+
 **GitHub**: https://github.com/cloudflare/computer
-**스타수**: ⭐4,060 (2026-08-06 자동수집, 당일 **+891**) · **제작**: [[Cloudflare]]
+**스타수**: ⭐5,122 (2026-08-07 자동수집, 당일 **+2,802**) ← ⭐4,060 (08-06, +891) · **제작**: [[Cloudflare]]
 **성격**: 에이전트 런타임 (원격 브라우저·셸 가상 환경 위임)
 
 > [!insight] 핵심 인사이트
@@ -41,6 +44,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/cloudflare/computer
-- 스타: ⭐4,060 (2026-08-06 자동수집, 당일 +891)
+- 스타: ⭐5,122 (2026-08-07 자동수집, 당일 +2,802) ← ⭐4,060 (08-06, +891)
 - 성격: 에이전트용 원격 가상 컴퓨터(브라우저·셸) 실행 위임 런타임
 - 신뢰도: ⭐⭐ (Cloudflare 제작·급성장, 아키텍처/라이선스 미검증·raw 자동수집 수치)

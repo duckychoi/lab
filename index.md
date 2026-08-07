@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-06 (자동수집 26건 배치 인제스트 — 08-05·08-06 2일치, 신규 15·갱신 11, 신규 엔티티 0)
-total_pages: 837
-total_sources: 819
+updated: 2026-08-07 (자동수집 13건 배치 인제스트 — GitHub 5·HF논문 5·HF모델 3, 신규 5·갱신 8, 신규 엔티티 0)
+total_pages: 842
+total_sources: 824
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 819
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-07 자동수집 배치 (신규 5 · 갱신 8 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[AgentOPSD]] — 에이전트 RL을 위한 재귀적 자기증류(자기 궤적을 교사 신호로 정책 압축·개선), [[OneDayAgent]]·[[ABSeeker]] 롱호라이즌 학습 계보 (HF 데일리·업보트 51·미래형 ID 미검증 medium) (2608.05987) *(NEW 2026-08-07)*
+- [[WorldClaw]] — 대규모 에이전트형 3D 오픈월드 생성(에셋→월드 스케일), [[Hunyuan3D-Buffalo]]·[[TRELLIS.2]] 오픈 3D 백본 계보·[[slam-3dgs]] 교차 (HF 데일리·업보트 40·미래형 ID 미검증 medium) (2608.05248) *(NEW 2026-08-07)*
+- [[OSReward]] — 크로스플랫폼 computer-use 리워드 모델 표준 평가, [[cloudflare-computer]]·[[OpenComputer]] 실행·평가 계보의 채점 계층 (HF 데일리·업보트 39·미래형 ID 미검증 medium) (2607.28609) *(NEW 2026-08-07)*
+- [[EnvACE]] — 월드 리허설로 환경 동역학 내재화(상상 롤아웃 샘플효율), [[AgentOPSD]]·[[Physics-of-Multimodal-Pretraining]] 학습·원리 축 (HF 데일리·업보트 27·미래형 ID 미검증 medium) (2608.06197) *(NEW 2026-08-07)*
+- [[Learning-from-Failures]] — 하드 네거티브 기반 retrieval-centric CoT(통합 멀티모달 검색), [[code-review-graph]]·[[Personalization-Mirage]] 검색중심·오근거배제 축 (HF 데일리·업보트 25·미래형 ID 미검증 medium) (2608.06060) *(NEW 2026-08-07)*
+- [[mattpocock-skills]] 갱신 — Matt Pocock 실무 Claude 스킬 모음, ⭐173,162→**207,870**(당일 +1,873·20만 돌파)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[superpowers]] 갱신 — [[obra]] 에이전트 스킬·개발 방법론 프레임워크, ⭐261,293→**268,380**(당일 +858·스킬 상단 1위)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[code-review-graph]] 갱신 — Tree-sitter 지속형 코드 인텔리전스 그래프, ⭐24,000→**29,226**(당일 +237·3만 근접)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[cloudflare-computer]] 갱신 — [[Cloudflare]] 에이전트 원격 가상 컴퓨터 실행 위임, ⭐4,060→**5,122**(당일 +2,802·이틀째 급상승)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[loopx]] 갱신 — 목표·쿼터 인지 다중 에이전트 루프 커널, ⭐2,494→**3,158**(당일 +847·3천 돌파)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[MiniMax-H3]] 갱신 — [[MiniMax]] i2v ComfyUI 배포판, DL 2.3M→**3.14M**(하루 +약84만·오픈 i2v 채택 폭증)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T MoE 멀티모달, DL 1.26M→**1.31M**(트렌딩 좋아요 1위 유지)(raw API 수치) *(UPDATE 2026-08-07)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — [[Qwen3.6-27B]] 머지·무검열·비전·256k GGUF, DL 1.63M→**2.22M**(보합 후 재급등·200만 돌파)(raw API 수치) *(UPDATE 2026-08-07)*
 <!-- ── 2026-08-06 자동수집 배치 (신규 9 · 갱신 4 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[cloudflare-computer]] — [[Cloudflare]] 에이전트용 원격 가상 컴퓨터(브라우저·셸) 실행 위임 런타임, [[OpenComputer]] 평가 축과 대비되는 실행 인프라 (GitHub ⭐4,060·당일 +891·아키텍처 미검증 medium) *(NEW 2026-08-06)*
 - [[loopx]] — 목표·쿼터 인지 다중 에이전트 루프 오케스트레이션 커널, [[LongHorizon-Harness]]·[[hermes-agent]] 실행 축 (GitHub ⭐2,494·당일 +326·개인 프로젝트 medium) *(NEW 2026-08-06)*
