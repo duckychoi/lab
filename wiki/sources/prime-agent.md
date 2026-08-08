@@ -1,0 +1,49 @@
+---
+title: PrimeIntellect-ai/prime-agent — 코딩·장기 자율작업용 자기개선형 RLM 에이전트
+type: source
+domain: ai-news
+tags: [ai-news, github-trending, coding-agent, self-improving, rlm, long-horizon, typescript]
+created: 2026-08-08
+updated: 2026-08-08
+sources: []
+reliability: medium
+---
+
+# PrimeIntellect-ai/prime-agent — 자기개선형 RLM 코딩 에이전트
+
+**GitHub**: https://github.com/PrimeIntellect-ai/prime-agent
+**스타수**: ⭐7,254 (2026-08-08 자동수집, 당일 **+2,293** 급상승) · **언어**: TypeScript · **제작**: PrimeIntellect
+**성격**: 코딩 워크플로우·장기 자율작업(long-horizon)을 위한 자기개선형(self-improving) RLM 에이전트
+
+> [!insight] 핵심 인사이트
+> **코딩 워크플로우와 장기 자율작업을 겨냥한 자기개선형(self-improving) 에이전트**. 제목의 "RLM"은 강화학습으로 정책을 다듬는(Reinforcement-Learned) 에이전트 계열로 읽히며, 핵심 프레이밍은 *에이전트가 자신의 실행 결과를 신호 삼아 스스로 개선한다*는 것 — 08월 HF 논문의 지배 주제였던 "에이전트를 오래 안 무너지게·자기학습으로 개선하기"([[AgentOPSD]] 자기증류·[[OneDayAgent]] 롱호라이즌 하네스·[[Progressive-Agent-Skill]] 스킬 자가생성)가 **논문 계층에서 실행 가능한 GitHub 레포로 내려온 사례**. 당일 +2,293로 무명에서 하루 만에 트렌딩 상단에 진입 — [[superpowers]]·[[mattpocock-skills]]가 "스킬=배포 단위"의 절차 축이라면, prime-agent는 "자기개선 루프를 코드로 실장"하는 축. PrimeIntellect(분산 학습·오픈 RL 인프라 노선)가 만든 만큼 학습 파이프라인과의 결합 가능성이 차별점.
+
+> [!note] 배경 정보
+> 자기개선(self-improving) 에이전트는 실행 궤적·성패를 되먹임해 정책·프롬프트·스킬을 반복 갱신한다. 롱호라이즌 코딩(멀티스텝 리팩터·테스트·리뷰)에서 한 번의 지시로 끝나지 않고 스스로 계획을 조정하는 것이 목표.
+
+## 도메인별 추출 (ai-news)
+
+- **신뢰도**: ⭐⭐ — GitHub ⭐7,254·당일 +2,293 급상승(raw 자동수집 API 수치). 다만 실제 아키텍처(RLM 정의·자기개선 루프 구현·학습 의존성·라이선스)는 미검증(실WebFetch 미수행, 볼트 시뮬레이션 타임라인 2026-08 유지). raw 한줄요약 기반 medium.
+- **즉시 활용**: 부분 — 다단계 스킬 하네스의 "자기점검·자기개선" 설계 참고 후보. 다만 자체 학습 루프가 학습 인프라를 요구하면 즉시성은 낮음.
+- **6개월 영향력**: 중간~높음 — 자기개선 루프가 코딩 에이전트의 표준 요소로 편입되면, [[superpowers]]식 절차 강제와 결합해 "계획→실행→자기개선" 폐루프가 워크플로 레퍼런스가 될 여지.
+- **대체 관계**: [[superpowers]]·[[hermes-agent]] 같은 프레임워크에 *자기개선* 축을 더하는 보완재로 읽힘 — 경쟁보다 조합.
+- **허와 실**: "self-improving RLM"은 강한 프레이밍 — 재귀 개선의 붕괴·보상 해킹·오류 누적을 어떻게 막는지가 실체를 가른다. 당일 +2,293은 관심도 지표이지 성능 근거 아님.
+- **액션**: 오픈소스 범위·자기개선 루프 구현(학습 필요 여부)·라이선스 확인 후, 내 다단계 하네스 자기점검 설계에 개념만 참고(낮음).
+
+> [!question] 미해결 질문
+> RLM의 정확한 정의(온라인 RL vs 프롬프트 자기개선)? 자기개선에 별도 학습이 필요한가, 추론시 루프만으로 되는가? 오픈소스 vs 서비스 경계? [[PrimeIntellect]] 분산 학습 인프라와의 결합?
+
+## 관련 페이지
+- [[superpowers]] — 에이전트 스킬·개발 방법론(절차 축 대비)
+- [[mattpocock-skills]] — 실무 스킬 레지스트리
+- [[AgentOPSD]] — 재귀적 자기증류(자기개선 학습 축·논문 계보)
+- [[OneDayAgent]] — 롱호라이즌 자율 실행 하네스
+- [[Progressive-Agent-Skill]] — 스킬 자가 생성 RL
+- [[AI-에이전트-프레임워크]]
+- [[ai-news]]
+
+## 원본
+- 출처: https://github.com/PrimeIntellect-ai/prime-agent
+- 스타: ⭐7,254 (2026-08-08 자동수집, 당일 +2,293 급상승) · TypeScript
+- 성격: 코딩·장기 자율작업용 자기개선형 RLM 에이전트
+- 신뢰도: ⭐⭐ (급상승·raw 자동수집 수치, 아키텍처/라이선스 미검증·실WebFetch 미수행)

@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-07 (자동수집 13건 배치 인제스트 — GitHub 5·HF논문 5·HF모델 3, 신규 5·갱신 8, 신규 엔티티 0)
-total_pages: 842
-total_sources: 824
+updated: 2026-08-08 (자동수집 13건 배치 인제스트 — GitHub 5·HF논문 5·HF모델 3, 신규 6·갱신 7, 신규 엔티티 0)
+total_pages: 848
+total_sources: 830
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 824
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-08 자동수집 배치 (신규 6 · 갱신 7 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[prime-agent]] — PrimeIntellect 코딩·장기 자율작업용 자기개선형 RLM 에이전트, [[AgentOPSD]]·[[OneDayAgent]] 논문 자기학습을 GitHub로 실장·[[superpowers]] 절차 축 보완 (GitHub ⭐7,254·당일 +2,293 급상승·TypeScript·아키텍처 미검증 medium) *(NEW 2026-08-08)*
+- [[MEG-Speech-Decoding]] — MEG 뇌신호로 지각 음성을 해석가능하게 해독(피질 소스·자극 특징 귀속), 신경과학×표현학습 교차 (HF 데일리·업보트 56·미래형 ID 미검증 medium) (2608.01481) *(NEW 2026-08-08)*
+- [[GST-Bench]] — VLM이 비디오만으로 전역 공간 인식 획득하는가 벤치, [[slam-3dgs]]·[[video-saas]] 공간 이해 교차·[[Beyond-Static-Leaderboards]] 평가 계보 (HF 데일리·업보트 36·미래형 ID 미검증 medium) (2608.05747) *(NEW 2026-08-08)*
+- [[HarnessOpt-Bench]] — LLM의 하네스(스캐폴딩) 최적화 능력 평가 벤치, [[superpowers]]·[[loopx]] 운영 계층의 메타 평가 축 (HF 데일리·업보트 27·미래형 ID 미검증 medium) (2608.06301) *(NEW 2026-08-08)*
+- [[ChronoVision]] — 잠재 상태 재구성 기반 시간 추론, [[EnvACE]] 월드모델·잠재 동역학 계보 (HF 데일리·업보트 31·미래형 ID 미검증 medium) (2608.05631) *(NEW 2026-08-08)*
+- [[Agentic-Economies]] — 자율 에이전트·월드모델로 경제 시뮬레이션(블루프린트), [[MerchantBench]]·[[EnvACE]] 멀티에이전트·월드모델 거시 확장 (HF 데일리·업보트 27·미래형 ID 미검증 medium) (2608.06020) *(NEW 2026-08-08)*
+- [[mattpocock-skills]] 갱신 — Matt Pocock 실무 Claude 스킬 모음, ⭐207,870→**209,271**(당일 +2,152·21만 근접)(raw API 수치) *(UPDATE 2026-08-08)*
+- [[superpowers]] 갱신 — [[obra]] 에이전트 스킬·개발 방법론 프레임워크, ⭐268,380→**268,947**(당일 +782·스킬 상단 1위)(raw API 수치) *(UPDATE 2026-08-08)*
+- [[agent-skills]] 갱신 — [[Addy Osmani]] 코딩 에이전트 스킬 모음, ⭐82,215→**84,117**(당일 +1,131·재가속)(raw API 수치) *(UPDATE 2026-08-08)*
+- [[cloudflare-computer]] 갱신 — [[Cloudflare]] 에이전트 원격 가상 컴퓨터 실행 위임, ⭐5,122→**6,082**(당일 +872·사흘째 상승·6천 돌파)(raw API 수치) *(UPDATE 2026-08-08)*
+- [[MiniMax-H3]] 갱신 — [[MiniMax]] i2v ComfyUI 배포판, DL 3.14M→**3.94M**(하루 +약80만·좋아요 971·4M 근접)(raw API 수치) *(UPDATE 2026-08-08)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T MoE 멀티모달, DL 1.31M→**1.39M**(좋아요 10.3k·트렌딩 1위)(raw API 수치) *(UPDATE 2026-08-08)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — [[Qwen3.6-27B]] 머지·무검열·비전·256k GGUF, DL 2.22M→**2.35M**(좋아요 1.73k·200만 클럽)(raw API 수치) *(UPDATE 2026-08-08)*
 <!-- ── 2026-08-07 자동수집 배치 (신규 5 · 갱신 8 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[AgentOPSD]] — 에이전트 RL을 위한 재귀적 자기증류(자기 궤적을 교사 신호로 정책 압축·개선), [[OneDayAgent]]·[[ABSeeker]] 롱호라이즌 학습 계보 (HF 데일리·업보트 51·미래형 ID 미검증 medium) (2608.05987) *(NEW 2026-08-07)*
 - [[WorldClaw]] — 대규모 에이전트형 3D 오픈월드 생성(에셋→월드 스케일), [[Hunyuan3D-Buffalo]]·[[TRELLIS.2]] 오픈 3D 백본 계보·[[slam-3dgs]] 교차 (HF 데일리·업보트 40·미래형 ID 미검증 medium) (2608.05248) *(NEW 2026-08-07)*

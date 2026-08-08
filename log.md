@@ -1740,3 +1740,15 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 없음 ([[Cloudflare]]·[[MiniMax]]·[[Moonshot AI]]·[[Qwen3.6-27B]] 기존 페이지 wikilink만·HF논문 저자/기관 salience 대비 날조 방지 기조 유지)
 - index.md 업데이트 (total_pages: 837→842, total_sources: 819→824)
 - raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)
+
+## [2026-08-08] ingest | ai-news 자동수집 13건 배치 (신규 6 · 갱신 7)
+- 도메인: ai-news (교차: slam-3dgs — GST-Bench / video-saas — GST-Bench·MiniMax-H3 / local-llm — Kimi-K3·Qwen3.6-27B-Fable-Fusion·prime-agent)
+- 추가 페이지: 6개 (신규 소스 6 — GitHub 1 [[prime-agent]](PrimeIntellect ⭐7,254·당일 +2,293·TypeScript·자기개선형 RLM 코딩 에이전트·아키텍처 미검증 medium) / HF논문 5 전량 미래형 arxiv ID medium: [[MEG-Speech-Decoding]] 2608.01481·MEG 지각음성 해석가능 해독·업보트 56 / [[GST-Bench]] 2608.05747·VLM 비디오 전역 공간 인식 벤치·업보트 36 / [[ChronoVision]] 2608.05631·잠재 상태 재구성 시간추론·업보트 31 / [[HarnessOpt-Bench]] 2608.06301·LLM 하네스 최적화 능력 벤치·업보트 27 / [[Agentic-Economies]] 2608.06020·에이전트·월드모델 경제 시뮬레이션 블루프린트·업보트 27)
+- 업데이트 페이지: 11개 (source 갱신 7: GitHub 4 [[mattpocock-skills]] ⭐207,870→209,271(+2,152·21만 근접)·[[superpowers]] ⭐268,380→268,947(+782)·[[agent-skills]] ⭐82,215→84,117(+1,131·재가속)·[[cloudflare-computer]] ⭐5,122→6,082(+872·사흘째·6천 돌파) / HF모델 3 [[MiniMax-H3]] DL 3.14M→3.94M(+약80만·좋아요 971)·[[Kimi-K3]] DL 1.31M→1.39M(좋아요 10.3k·트렌딩 1위)·[[Qwen3.6-27B-Fable-Fusion]] DL 2.22M→2.35M(좋아요 1.73k) / domain 1: ai-news 2026-08-08 섹션 / index 1 / actionable 1[2건 추가])
+- 핵심 인사이트: 08월 3주째 지배 주제 "에이전트 학습·평가·지속성"이 마침내 GitHub 실장([[prime-agent]] 자기개선 RLM — 08-07 [[AgentOPSD]]·[[OneDayAgent]] 논문의 하강)과 메타 평가([[HarnessOpt-Bench]] 하네스 최적화 벤치)로 양쪽에서 구체화. 동시에 신규 HF 논문은 에이전트 밖으로 다시 광폭화(신경과학 MEG·공간지능 GST-Bench·잠재 동역학 ChronoVision·경제 시뮬레이션 Agentic-Economies). 갱신은 스킬 상단 2강(superpowers 26.8만·mattpocock 20.9만)+실행 축(cloudflare-computer 6천 돌파)·오픈 채택 상단(MiniMax-H3 3.94M·Qwen-Fable-Fusion 2.35M·Kimi-K3 1.39M) 동반 우상향.
+- 검증: 신규 GitHub 1·갱신 GitHub 4·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-07 배치와 동일 처리). HF모델 자체발표 벤치(Kimi-K3 GPQA/BrowseComp·Fable-Fusion ARC-C)는 인용 시 미검증 병기. prime-agent 세부(RLM 정의·자기개선 루프 구현·라이선스)는 원문 재현 전 → 구체 미기재. **HF논문 5건 전량 미래형 arxiv ID(2608.x)로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 구체 벤치 수치·저자/소속 미기재**([[CLAUDE.md]] 사실확인 원칙).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: YES (2건 전량 낮음 — prime-agent 자기개선 루프 오픈범위·라이선스 확인 후 하네스 자기점검 설계 개념 참고 / HarnessOpt-Bench 하네스 평가 기준 발췌 개념 참고)
+- 신규 entity: 없음 ([[Cloudflare]]·[[MiniMax]]·[[Moonshot AI]]·[[Qwen3.6-27B]] 기존 페이지 wikilink만; PrimeIntellect는 salience 있으나 08월 "비-프론티어랩 엔티티 날조 방지" 기조 유지·source 내 wikilink만·HF논문 저자/기관 미기재)
+- index.md 업데이트 (total_pages: 842→848, total_sources: 824→830)
+- raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, hf-paper, moonshot, moe, multimodal, frontier-llm, agentic, open-weights]
 created: 2026-07-28
-updated: 2026-08-07
+updated: 2026-08-08
 sources: []
 reliability: medium
 ---
 
 # Kimi K3 (moonshotai/Kimi-K3 · 논문 2607.24653)
+
+> [!update] 2026-08-08 갱신 — DL 1.39M (좋아요 10.3k·트렌딩 좋아요 1위 유지)
+> HF 다운로드 **1.39M·좋아요 10.3k**(2026-08-08 자동수집, 트렌딩 좋아요 1위 유지) ← 1.31M(08-07) ← 1.26M·10.2k(08-06). 100만 돌파 후 완만한 우상향 지속·오픈 프론티어 MoE 커뮤니티 선호 최상위 유지. 2.8T 총/104B 활성 MoE·1M·MoonViT-V2 구성 동일. 자체발표 벤치(GPQA 93.5·BrowseComp 91.2 등)·미래형 논문 ID(2607.24653)로 원문 재현 전 → medium 유지, 초록 스스로 Claude Fable 5·GPT-5.6 Sol 열위 자인. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-07 갱신 — DL 1.31M (트렌딩 좋아요 1위 유지)
 > HF 다운로드 **1.31M**(2026-08-07 자동수집, 트렌딩 좋아요 1위 유지) ← 1.26M(08-06, 10.2k). 100만 돌파 후 완만한 우상향 지속·오픈 프론티어 MoE 커뮤니티 선호 최상위 유지. 2.8T 총/104B 활성 MoE·1M·MoonViT-V2 구성 동일. 자체발표 벤치(GPQA 93.5·BrowseComp 91.2 등)·미래형 논문 ID(2607.24653)로 원문 재현 전 → medium 유지, 초록 스스로 Claude Fable 5·GPT-5.6 Sol 열위 자인. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
@@ -51,7 +54,7 @@ reliability: medium
 - [[ai-news]]
 
 ## 원본
-- 모델: https://huggingface.co/moonshotai/Kimi-K3 — DL 1.31M (2026-08-07 자동수집, 트렌딩 좋아요 1위) ← DL 1.26M·좋아요 10.2k(08-06) ← DL 1.13M·좋아요 9.91k(08-04, 100만 돌파) ← DL 968k·좋아요 9.74k(08-03) ← DL 560k·좋아요 9.35k(08-01) ← DL 99.2k/월·좋아요 8.8k(07-30) ← 8,320(07-29) ← 7.21k(07-28)
+- 모델: https://huggingface.co/moonshotai/Kimi-K3 — DL 1.39M·좋아요 10.3k (2026-08-08 자동수집, 트렌딩 좋아요 1위) ← DL 1.31M(08-07) ← DL 1.26M·좋아요 10.2k(08-06) ← DL 1.13M·좋아요 9.91k(08-04, 100만 돌파) ← DL 968k·좋아요 9.74k(08-03) ← DL 560k·좋아요 9.35k(08-01) ← DL 99.2k/월·좋아요 8.8k(07-30) ← 8,320(07-29) ← 7.21k(07-28)
 - 논문: https://huggingface.co/papers/2607.24653 — 업보트 170·HF 데일리 1위, Kimi Team(380+저자)·Moonshot AI
 - 아키텍처: 2.8T 총/104B 활성 MoE·93레이어·Stable LatentMoE(896중 16 활성)·1M 컨텍스트·MoonViT-V2(401M)·MXFP4/MXFP8·160K 어휘·Kimi Delta Attention+Attention Residuals
 - 벤치(자체): GPQA Diamond 93.5·DeepSWE 67.5·Terminal-Bench 2.1 88.3·Video-MME 90.0·BrowseComp 91.2

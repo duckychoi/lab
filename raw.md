@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-07 (08-07 아침 자동수집 13건 인제스트 완료·삭제 — 신규 5·갱신 8·대기 항목 없음)
+updated: 2026-08-08 (08-08 아침 자동수집 13건 전체 인제스트 완료 후 삭제 — 신규 6·갱신 7, 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -20,11 +20,12 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
 
-<!-- 2026-08-07 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 5·갱신 8. 신규 5(HF논문 전량 미래형 ID medium): [[AgentOPSD]] 2608.05987·[[WorldClaw]] 2608.05248·[[OSReward]] 2607.28609·[[EnvACE]] 2608.06197·[[Learning-from-Failures]] 2608.06060. 갱신 8(전량 기존 페이지): GitHub 5 [[mattpocock-skills]] ⭐173,162→207,870(20만 돌파)·[[superpowers]] ⭐261,293→268,380·[[code-review-graph]] ⭐24,000→29,226·[[cloudflare-computer]] ⭐4,060→5,122(이틀째 급상승)·[[loopx]] ⭐2,494→3,158 / HF모델 3 [[MiniMax-H3]] DL 2.3M→3.14M·[[Kimi-K3]] DL 1.26M→1.31M·[[Qwen3.6-27B-Fable-Fusion]] DL 1.63M→2.22M(200만 돌파). GitHub 5·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0(기존 페이지 wikilink만). actionable 2건 추가(전량 낮음: WorldClaw 오픈 3D 백본 스팟체크·AgentOPSD/EnvACE 자기증류·동역학 내재화 개념 검토). canvas 미갱신(정기 graph 시 일괄). index total_pages 837→842·total_sources 819→824. -->
+<!-- 2026-08-08 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: GitHub 1 [[prime-agent]] ⭐7,254(당일 +2,293) TypeScript 자기개선형 RLM 코딩 에이전트 medium(아키텍처 미검증) + HF논문 5 전량 미래형 arxiv ID medium: [[MEG-Speech-Decoding]] 2608.01481·[[GST-Bench]] 2608.05747·[[ChronoVision]] 2608.05631·[[HarnessOpt-Bench]] 2608.06301·[[Agentic-Economies]] 2608.06020. 갱신 7(전량 기존 페이지): GitHub 4 [[mattpocock-skills]] ⭐207,870→209,271·[[superpowers]] ⭐268,380→268,947·[[agent-skills]] ⭐82,215→84,117·[[cloudflare-computer]] ⭐5,122→6,082(사흘째·6천 돌파) / HF모델 3 [[MiniMax-H3]] DL 3.14M→3.94M·[[Kimi-K3]] DL 1.31M→1.39M·[[Qwen3.6-27B-Fable-Fusion]] DL 2.22M→2.35M. GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0. actionable 2건 추가(전량 낮음). canvas 미갱신(정기 graph 시 일괄). index total_pages 842→848·total_sources 824→830. -->
 
-<!-- 2026-08-06 인제스트: 08-05·08-06 아침 자동수집 26건(각 GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 15·갱신 11. 신규 15: [08-06] GitHub 3 [[cloudflare-computer]](⭐4,060·[[Cloudflare]] 에이전트 원격 가상컴퓨터 런타임 medium)·[[loopx]](⭐2,494·목표·쿼터 루프 커널 medium)·[[uber-ADR]](⭐1,154·[[Uber]] 에이전트 보안·이상탐지 medium) + HF모델 1 [[MiniMax-H3]](DL 2.3M·[[MiniMax]] i2v ComfyUI판 medium) + HF논문 5 [[ToolArtist]] 2608.04436·[[Personalization-Mirage]] 2608.04570·[[ABSeeker]] 2608.05102·[[Physics-of-Multimodal-Pretraining]] 2608.05000·[[OneDayAgent]] 2608.05013 / [08-05] GitHub 1 [[DeepSeek-Reasonix]](⭐31,101·Go·MIT·[[DeepSeek]] 터미널 코딩 에이전트 medium) + HF논문 5 [[JoyAI-Video-Edit]] 2608.03974·[[MerchantBench]] 2607.28956·[[AURORA-LM]] 2608.02602(초록 비공개 low)·[[Hunyuan3D-Buffalo]] 2608.02711·[[KGD-Knowledge-Geometry-Decoupling]] 2608.02738. 갱신 11(전량 기존 페이지): [08-06] [[agent-skills]] ⭐71,362→82,215·[[supervision]] ⭐47,714→49,084·[[Kimi-K3]] DL 1.13M→1.26M 좋아요 9.91k→10.2k(좋아요 1만 돌파)·[[DeepSeek-V4-Flash-0731]] DL 433k→618k / [08-05] [[pdf-inspector]] ⭐9,016→10,636(1만 돌파)·[[reverse-skill]] ⭐16,724→18,589·[[airllm]] ⭐27,761→28,687·[[TencentDB-Agent-Memory]] ⭐12,570→14,423·[[Unlimited-OCR]] DL 2.6M→2.70M·[[GLM-5.2]] DL 2.05M→2.23M·[[Qwen3.6-27B-Fable-Fusion]] DL 1.63M 보합 좋아요 1.47k→1.54k. GitHub 신규4·갱신6 + HF모델 신규1·갱신5 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08과 실소스 현재값 모순 회피, 07-30~08-04 배치와 동일 처리). HF논문 10건 전량 미래형 arxiv ID(2608.x·2607.x)로 원문 초록·수치 재현 불가 → raw 한줄요약 기반 medium(AURORA-LM 초록 비공개까지 겹쳐 low), 구체 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0([[Cloudflare]]·[[Uber]]·[[MiniMax]]·roboflow는 salience 있으나 비-프론티어랩 엔티티 날조 방지 기조 유지·wikilink만; [[DeepSeek]]·[[Moonshot AI]]·[[Tencent]] 기존 페이지 링크). actionable 4건 추가(전량 낮음: Hunyuan3D-Buffalo 오픈 3D 백본 스팟체크·JoyAI-Video-Edit 실시간 편집 스팟체크·MiniMax-H3 오픈 i2v 스팟체크·cloudflare/computer computer-use 위임 백엔드 후보). canvas 미갱신(정기 graph 갱신 시 일괄 반영). index total_pages 822→837·total_sources 804→819. -->
+<!-- 2026-08-07 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 5·갱신 8. 신규 5(HF논문 전량 미래형 ID medium): [[AgentOPSD]] 2608.05987·[[WorldClaw]] 2608.05248·[[OSReward]] 2607.28609·[[EnvACE]] 2608.06197·[[Learning-from-Failures]] 2608.06060. -->
 
-<!-- 2026-08-04 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 7·갱신 6. -->
+<!-- 2026-08-06 인제스트: 08-05·08-06 아침 자동수집 26건 전체 인제스트 완료 후 삭제. 신규 15·갱신 11. (상세는 log.md 참조) -->
+<!-- 2026-08-04 아침 자동수집 13건 전체 인제스트 완료 후 삭제. 신규 7·갱신 6. -->
 <!-- 2026-08-03 아침 자동수집 13건 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. -->
 <!-- 2026-08-02 아침 자동수집 8건 전체 인제스트 완료 후 삭제. 신규 3·갱신 5. -->
 <!-- 2026-08-01 아침 자동수집 8건 전체 인제스트 완료 후 삭제. 신규 0·갱신 8. -->
