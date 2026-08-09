@@ -1,6 +1,6 @@
 ---
 title: Wiki Index
-updated: 2026-08-08 (자동수집 13건 배치 인제스트 — GitHub 5·HF논문 5·HF모델 3, 신규 6·갱신 7, 신규 엔티티 0)
+updated: 2026-08-09 (자동수집 13건 배치 인제스트 — GitHub 5·HF모델 3 갱신·HF논문 5 재수집 중복, 신규 0·갱신 8, 신규 엔티티 0)
 total_pages: 848
 total_sources: 830
 ---
@@ -75,6 +75,15 @@ total_sources: 830
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-09 자동수집 배치 (신규 0 · 갱신 8 / GitHub 5 + HF모델 3 갱신, HF논문 5[AgentOPSD·OSReward·MEG-Speech-Decoding·WorldClaw·GST-Bench]는 이미 인제스트된 재수집 중복→신규 없음. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지]) ── -->
+- [[prime-agent]] 갱신 — PrimeIntellect 자기개선형 RLM 코딩 에이전트, ⭐7,254→**9,620**(당일 +2,483·이틀째 급상승·1만 근접)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[agent-skills]] 갱신 — [[Addy Osmani]] 코딩 에이전트 스킬 모음, ⭐84,117→**84,779**(당일 +779·유입 소폭 둔화)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[google-skills]] 갱신 — [[Google]] 공식 에이전트 스킬 레지스트리, ⭐14,825→**16,913**(당일 +481·빅테크 공식 축 안정 성장)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[TradingAgents]] 갱신 — 멀티에이전트 금융 트레이딩 프레임워크·[[금융-AI]] 앵커, ⭐92,901→**96,723**(당일 +153·10만 근접·안정기)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[mattpocock-skills]] 갱신 — Matt Pocock 실무 스킬 모음, ⭐209,271→**210,434**(당일 +1,359·**21만 돌파**)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T MoE 멀티모달, DL 1.39M→**1.46M**(하루 +약7만·트렌딩 좋아요 1위 유지)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[MiniMax-H3]] 갱신 — [[MiniMax]] i2v ComfyUI 배포판, Comfy-Org 변형 DL 3.94M→**4.95M**(베이스 원본 35.3k·약 140배·5M 근접)(raw API 수치) *(UPDATE 2026-08-09)*
+- [[DeepSeek-V4-Flash-0731]] 갱신 — [[DeepSeek]] 304B 저지연, DL 618k→**869k**(사흘 +약25만·100만 근접·효율 노선 실수요)(raw API 수치) *(UPDATE 2026-08-09)*
 <!-- ── 2026-08-08 자동수집 배치 (신규 6 · 갱신 7 / GitHub 5 + HF논문 5 + HF모델 3, GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[prime-agent]] — PrimeIntellect 코딩·장기 자율작업용 자기개선형 RLM 에이전트, [[AgentOPSD]]·[[OneDayAgent]] 논문 자기학습을 GitHub로 실장·[[superpowers]] 절차 축 보완 (GitHub ⭐7,254·당일 +2,293 급상승·TypeScript·아키텍처 미검증 medium) *(NEW 2026-08-08)*
 - [[MEG-Speech-Decoding]] — MEG 뇌신호로 지각 음성을 해석가능하게 해독(피질 소스·자극 특징 귀속), 신경과학×표현학습 교차 (HF 데일리·업보트 56·미래형 ID 미검증 medium) (2608.01481) *(NEW 2026-08-08)*

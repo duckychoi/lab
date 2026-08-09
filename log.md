@@ -1752,3 +1752,15 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 없음 ([[Cloudflare]]·[[MiniMax]]·[[Moonshot AI]]·[[Qwen3.6-27B]] 기존 페이지 wikilink만; PrimeIntellect는 salience 있으나 08월 "비-프론티어랩 엔티티 날조 방지" 기조 유지·source 내 wikilink만·HF논문 저자/기관 미기재)
 - index.md 업데이트 (total_pages: 842→848, total_sources: 824→830)
 - raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)
+
+## [2026-08-09] ingest | ai-news 자동수집 13건 배치 (신규 0 · 갱신 8 · 재수집중복 skip 5)
+- 도메인: ai-news (교차: video-saas — MiniMax-H3 / local-llm — Kimi-K3·DeepSeek-V4-Flash-0731 / 금융-AI — TradingAgents)
+- 추가 페이지: 0개 (신규 소스 없음 — raw 13건 전량 기존 페이지 존재. HF논문 5 [[AgentOPSD]] 2608.05987·[[OSReward]] 2607.28609·[[MEG-Speech-Decoding]] 2608.01481·[[WorldClaw]] 2608.05248·[[GST-Bench]] 2608.05747는 08-07·08-08 배치에서 이미 인제스트된 **재수집 중복** → dedup, 재처리 없음)
+- 업데이트 페이지: 11개 (source 갱신 8: GitHub 5 [[prime-agent]] ⭐7,254→9,620(당일 +2,483·이틀째 급상승·1만 근접)·[[agent-skills]] ⭐84,117→84,779(+779·유입 소폭 둔화)·[[google-skills]] ⭐14,825→16,913(+481·빅테크 공식 축)·[[TradingAgents]] ⭐92,901→96,723(+153·10만 근접·안정기)·[[mattpocock-skills]] ⭐209,271→210,434(+1,359·**21만 돌파**) / HF모델 3 [[MiniMax-H3]] Comfy-Org 변형 DL 3.94M→4.95M(베이스 원본 35.3k·약140배·5M 근접)·[[Kimi-K3]] DL 1.39M→1.46M(하루 +약7만·트렌딩 좋아요 1위)·[[DeepSeek-V4-Flash-0731]] DL 618k→869k(사흘 +약25만·100만 근접) / domain 1: ai-news 2026-08-09 섹션 / index 1 / raw 1)
+- 핵심 인사이트: 08-04~08-08 5일 연속 매일 신규 5~9건이 편입되던 흐름이 08-09에 **신규 0으로 처음 꺾임** — raw 큐의 HF 논문 5편이 전부 이미 인제스트된 재수집이라 "새 화제 발굴"이 하루 정지, 자동수집 소스(GitHub 트렌딩·HF 데일리)의 중복 필터가 신규를 걸러낸 첫 순수 갱신 배치. 대신 갱신 축에서 (a) 08-08 급상승 신규 [[prime-agent]]가 이튿날도 +2,483로 1만 근접해 **이틀 연속 상단 유지**(하루짜리 화제 아님·단 아키텍처 미검증), (b) [[mattpocock-skills]] 21만 돌파로 스킬 레지스트리 상단 지속 축적, (c) [[MiniMax-H3]] Comfy 변형 4.95M(원본 대비 약140배)로 오픈 i2v 실사용이 사실상 전부 ComfyUI 노드 형태임을 재확인, (d) [[TradingAgents]] 10만 근접으로 [[금융-AI]] 앵커 안정 성장이 확인됨.
+- 검증: GitHub 5·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-08 배치와 동일 처리). HF모델 자체발표 벤치(Kimi-K3 GPQA/BrowseComp·MiniMax-H3 i2v 품질·DeepSeek-V4-Flash 스펙/벤치)는 인용 시 미검증 병기·구체 수치 미기재. prime-agent 아키텍처·자기개선 루프·라이선스 여전히 미검증(관심도≠성능). HF논문 5건은 이미 인제스트된 medium 페이지로 재처리 없음([[CLAUDE.md]] 사실확인 원칙·dedup 원칙).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: NO (신규 소스 0 → 신규 실행 항목 없음, 기존 유지: prime-agent 자기개선 루프 오픈범위·라이선스 확인 / MiniMax-H3 오픈 i2v 스팟체크 / HarnessOpt-Bench 하네스 평가 기준 참고)
+- 신규 entity: 없음 ([[Google]]·[[MiniMax]]·[[Moonshot AI]]·[[DeepSeek]] 기존 페이지 wikilink만)
+- index.md 업데이트 (total_pages: 848 유지·total_sources: 830 유지 — 신규 0)
+- raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)

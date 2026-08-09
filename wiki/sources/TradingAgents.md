@@ -4,15 +4,18 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, github-trending, finance-ai, multi-agent, trading, LLM, reinforcement]
 created: 2026-04-11
-updated: 2026-07-14
+updated: 2026-08-09
 sources: []
 reliability: high
 ---
 
-# TradingAgents (arXiv 2412.20138 / GitHub ⭐92,901)
+# TradingAgents (arXiv 2412.20138 / GitHub ⭐96,723)
 
 **GitHub**: https://github.com/TauricResearch/TradingAgents  
-**스타수**: 92,901 (2026-07-14 기준, 당일 +245) ← 91,188 (07-06) ← 68,332 (05-06)
+**스타수**: 96,723 (2026-08-09 자동수집, 당일 +153) ← 92,901 (07-14) ← 91,188 (07-06) ← 68,332 (05-06)
+
+> [!update] 2026-08-09 갱신 — ⭐96,723 (당일 +153·10만 근접)
+> 스타 92,901→**96,723**(약 4주 +3,822, 당일 +153)로 우상향 지속·10만 근접. 9만대 안착 후 성장 속도는 안정기(하루 +세 자릿수) 유지 — 멀티에이전트 금융 프레임워크의 대표 앵커 위상 견고. [[Vibe-Trading]]·[[ai-hedge-fund]] 대비 여전히 최상위, [[금융-AI]] 기준점. 실거래 백테스트 과적합 주의는 여전히 유효(수익 주장 미검증). *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!note] 2026-07-14 갱신
 > 스타 91,188→**92,901**(당일 +245)로 완만한 우상향 지속. 9만대 안착 후 성장 속도는 둔화(폭발기→안정기). 멀티에이전트 금융 프레임워크의 대표 앵커 위상 유지 — [[Vibe-Trading]](⭐2만대)·[[ai-hedge-fund]](⭐6.1만) 대비 여전히 최상위. [[금융-AI]] 기준점.
@@ -49,5 +52,5 @@ reliability: high
 
 ## 원본
 
-- 출처: https://arxiv.org/abs/2412.20138
+- 출처: https://arxiv.org/abs/2412.20138 · GitHub https://github.com/TauricResearch/TradingAgents (⭐96,723·2026-08-09 자동수집)
 - 신뢰도: ⭐⭐⭐ (논문)

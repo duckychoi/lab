@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, comfyui, minimax, video-saas]
 created: 2026-08-06
-updated: 2026-08-08
+updated: 2026-08-09
 sources: []
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
+
+> [!update] 2026-08-09 갱신 — Comfy-Org 변형 DL 4.95M (베이스 35.3k)
+> HF 다운로드 **4.95M**(2026-08-09 자동수집, Comfy-Org 재패키지 변형 기준·베이스 [[MiniMax]]-H3 원본 35.3k) ← 3.94M·971(08-08) ← 3.14M(08-07). 4M 돌파·5M 근접 — 원본 대비 ComfyUI 통합 변형이 생태계 다운로드의 사실상 전부(35.3k vs 4.95M, 약 140배)라는 점이 재확인. 오픈 i2v 실사용이 "ComfyUI 워크플로 노드" 형태로 소비된다는 신호. [[video-saas]]의 오픈·로컬 i2v 축이 폐쇄형 [[Higgsfield]]·[[Seedance]] 대비 접근성으로 급성장. 원본 스펙·품질 벤치·라이선스는 여전히 미검증(다운로드는 접근성 지표이지 품질 근거 아님). *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-08 갱신 — DL 3.94M (하루 +약80만·좋아요 971)
 > HF 다운로드 **3.94M·좋아요 971**(2026-08-08 자동수집) ← 3.14M·786(08-07) ← 2.3M(08-06). 이틀 연속 하루 +약80만대 유입으로 4M 근접 — ComfyUI 노드화가 낮춘 설치 병목이 오픈 i2v 저변 확대로 계속 직결. [[video-saas]]의 "오픈·로컬 i2v" 축이 폐쇄형 [[Higgsfield]]·[[Seedance]] 대비 접근성으로 급성장. [[MiniMax]]-H3 원본 스펙·품질 벤치·라이선스는 여전히 미검증(다운로드는 접근성 지표이지 품질 근거 아님). *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
@@ -18,7 +21,7 @@ reliability: medium
 > HF 다운로드 **3.14M** (2026-08-07 자동수집) ← 2.3M (08-06). 하루 새 +약84만으로 오픈 i2v 재패키지 채택이 폭증 — ComfyUI 노드화가 낮춘 설치 병목이 저변 확대로 직결되는 신호. [[video-saas]]의 "오픈·로컬 i2v" 축이 폐쇄형 [[Higgsfield]]·[[Seedance]] 대비 접근성으로 빠르게 성장 중. 다만 [[MiniMax]]-H3 원본 스펙·품질 벤치·라이선스는 여전히 미검증(다운로드는 접근성 지표이지 품질 근거 아님). *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 **HuggingFace**: https://huggingface.co/Comfy-Org/MiniMax-H3
-**다운로드**: 3.14M (2026-08-07 자동수집) ← 2.3M (08-06) · **좋아요**: 786
+**다운로드**: 4.95M (2026-08-09 자동수집, Comfy-Org 변형·베이스 원본 35.3k) ← 3.94M (08-08, 좋아요 971) ← 3.14M (08-07) ← 2.3M (08-06)
 **성격**: 이미지+텍스트→비디오 생성 모델 [[MiniMax]]-H3의 ComfyUI 통합 배포판
 
 > [!insight] 핵심 인사이트
@@ -48,6 +51,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://huggingface.co/Comfy-Org/MiniMax-H3
-- 다운로드: 3.94M (2026-08-08 자동수집) ← 3.14M (08-07) ← 2.3M (08-06) · 좋아요 971
+- 다운로드: 4.95M (2026-08-09 자동수집, Comfy-Org 변형·베이스 원본 35.3k) ← 3.94M (08-08, 좋아요 971) ← 3.14M (08-07) ← 2.3M (08-06)
 - 성격: 이미지+텍스트→비디오 MiniMax-H3의 ComfyUI 통합 배포판
 - 신뢰도: ⭐⭐ (실채택 상위, 원본 스펙/품질/라이선스 미검증·raw 자동수집 수치)

@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-08 (08-08 아침 자동수집 13건 전체 인제스트 완료 후 삭제 — 신규 6·갱신 7, 대기 항목 없음)
+updated: 2026-08-09 (08-09 자동수집 13건 인제스트 완료 — 신규 0·갱신 8, HF논문 5 재수집 중복 skip. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -19,6 +19,8 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ---
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+<!-- 2026-08-09 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 0·갱신 8·재수집중복 skip 5. 갱신 8: GitHub 5 [[prime-agent]] ⭐7,254→9,620(당일 +2,483·이틀째 급상승·1만 근접)·[[agent-skills]] ⭐84,117→84,779(+779)·[[google-skills]] ⭐14,825→16,913(+481)·[[TradingAgents]] ⭐92,901→96,723(+153·10만 근접)·[[mattpocock-skills]] ⭐209,271→210,434(+1,359·21만 돌파) / HF모델 3 [[MiniMax-H3]] Comfy변형 DL 3.94M→4.95M(베이스 원본 35.3k·약140배·5M 근접)·[[Kimi-K3]] DL 1.39M→1.46M(트렌딩 좋아요 1위)·[[DeepSeek-V4-Flash-0731]] DL 618k→869k(100만 근접). HF논문 5([[AgentOPSD]] 2608.05987·[[OSReward]] 2607.28609·[[MEG-Speech-Decoding]] 2608.01481·[[WorldClaw]] 2608.05248·[[GST-Bench]] 2608.05747)는 08-07·08-08 배치에서 이미 인제스트된 재수집 중복 → 신규 없음(dedup). GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). 신규 entity 0. actionable 신규 0(기존 유지). index total_pages 848 유지·total_sources 830 유지. -->
 
 <!-- 2026-08-08 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: GitHub 1 [[prime-agent]] ⭐7,254(당일 +2,293) TypeScript 자기개선형 RLM 코딩 에이전트 medium(아키텍처 미검증) + HF논문 5 전량 미래형 arxiv ID medium: [[MEG-Speech-Decoding]] 2608.01481·[[GST-Bench]] 2608.05747·[[ChronoVision]] 2608.05631·[[HarnessOpt-Bench]] 2608.06301·[[Agentic-Economies]] 2608.06020. 갱신 7(전량 기존 페이지): GitHub 4 [[mattpocock-skills]] ⭐207,870→209,271·[[superpowers]] ⭐268,380→268,947·[[agent-skills]] ⭐82,215→84,117·[[cloudflare-computer]] ⭐5,122→6,082(사흘째·6천 돌파) / HF모델 3 [[MiniMax-H3]] DL 3.14M→3.94M·[[Kimi-K3]] DL 1.31M→1.39M·[[Qwen3.6-27B-Fable-Fusion]] DL 2.22M→2.35M. GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0. actionable 2건 추가(전량 낮음). canvas 미갱신(정기 graph 시 일괄). index total_pages 842→848·total_sources 824→830. -->
 

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, coding-agent, self-improving, rlm, long-horizon, typescript]
 created: 2026-08-08
-updated: 2026-08-08
+updated: 2026-08-09
 sources: []
 reliability: medium
 ---
@@ -12,8 +12,11 @@ reliability: medium
 # PrimeIntellect-ai/prime-agent — 자기개선형 RLM 코딩 에이전트
 
 **GitHub**: https://github.com/PrimeIntellect-ai/prime-agent
-**스타수**: ⭐7,254 (2026-08-08 자동수집, 당일 **+2,293** 급상승) · **언어**: TypeScript · **제작**: PrimeIntellect
+**스타수**: ⭐9,620 (2026-08-09 자동수집, 당일 **+2,483** 급상승) · **언어**: TypeScript · **제작**: PrimeIntellect
 **성격**: 코딩 워크플로우·장기 자율작업(long-horizon)을 위한 자기개선형(self-improving) RLM 에이전트
+
+> [!update] 2026-08-09 갱신 — ⭐9,620 (당일 +2,483·이틀째 급상승)
+> GitHub ⭐**9,620**(2026-08-09 자동수집, 당일 +2,483) ← 7,254(08-08, +2,293). 편입 이틀째에도 하루 +2천대 유입 지속으로 1만 근접 — 무명 신규가 이틀 연속 트렌딩 상단에 머무는 것은 이례적. "자기개선 루프를 코드로 실장"([[AgentOPSD]]·[[OneDayAgent]] 논문 하강)이라는 프레이밍의 관심도 자체는 실체이나, 아키텍처·자기개선 루프 구현·라이선스는 여전히 미검증. reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **코딩 워크플로우와 장기 자율작업을 겨냥한 자기개선형(self-improving) 에이전트**. 제목의 "RLM"은 강화학습으로 정책을 다듬는(Reinforcement-Learned) 에이전트 계열로 읽히며, 핵심 프레이밍은 *에이전트가 자신의 실행 결과를 신호 삼아 스스로 개선한다*는 것 — 08월 HF 논문의 지배 주제였던 "에이전트를 오래 안 무너지게·자기학습으로 개선하기"([[AgentOPSD]] 자기증류·[[OneDayAgent]] 롱호라이즌 하네스·[[Progressive-Agent-Skill]] 스킬 자가생성)가 **논문 계층에서 실행 가능한 GitHub 레포로 내려온 사례**. 당일 +2,293로 무명에서 하루 만에 트렌딩 상단에 진입 — [[superpowers]]·[[mattpocock-skills]]가 "스킬=배포 단위"의 절차 축이라면, prime-agent는 "자기개선 루프를 코드로 실장"하는 축. PrimeIntellect(분산 학습·오픈 RL 인프라 노선)가 만든 만큼 학습 파이프라인과의 결합 가능성이 차별점.
@@ -44,6 +47,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/PrimeIntellect-ai/prime-agent
-- 스타: ⭐7,254 (2026-08-08 자동수집, 당일 +2,293 급상승) · TypeScript
+- 스타: ⭐9,620 (2026-08-09 자동수집, 당일 +2,483 급상승) ← ⭐7,254 (08-08, +2,293) · TypeScript
 - 성격: 코딩·장기 자율작업용 자기개선형 RLM 에이전트
 - 신뢰도: ⭐⭐ (급상승·raw 자동수집 수치, 아키텍처/라이선스 미검증·실WebFetch 미수행)
