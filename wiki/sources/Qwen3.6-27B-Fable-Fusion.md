@@ -4,13 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, merge, finetune, uncensored, 27b, local-llm, vision]
 created: 2026-07-22
-updated: 2026-08-08
+updated: 2026-08-10
 sources: []
 reliability: medium
 ---
 
 # Qwen3.6-27B-Fable-Fusion (DavidAU)
 
+> [!update] 2026-08-10 갱신 — DL 2.44M (좋아요 1.83k·200만 클럽 지속)
+> HF 다운로드 **2.44M·좋아요 1.83k**(2026-08-10 자동수집) ← 2.35M(08-08, 1.73k) ← 2.22M(08-07). 하루 +약9만·좋아요 지속 상승으로 200만 돌파 후 우상향 유지 — 커뮤니티 머지/GGUF 변종 중 최상위 채택 재확인([[GLM-5.2]]·[[Unlimited-OCR]]과 함께 오픈 로컬 200만 채택 클럽). [[Qwen3.6-27B]] 베이스·무검열·256k·비전·MTP 구성 동일. 자체 **ARC-C 0.711** 주장은 여전히 **재현 불가 → medium 유지, 벤치 인용은 실태스크 검증 후**. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-08 갱신 — DL 2.35M (좋아요 1.73k·200만 돌파 후 지속)
 > HF 다운로드 **2.35M·좋아요 1.73k**(2026-08-08 자동수집) ← 2.22M(08-07) ← 1.63M·1.54k(08-05). 하루 +약13만·좋아요 지속 상승으로 200만 돌파 후 우상향 유지 — 커뮤니티 머지/GGUF 변종 중 최상위 채택 재확인([[GLM-5.2]]·[[Unlimited-OCR]]과 함께 오픈 로컬 200만 채택 클럽). [[Qwen3.6-27B]] 베이스·무검열·256k·비전·MTP 구성 동일. 자체 **ARC-C 0.711** 주장은 여전히 **재현 불가 → medium 유지, 벤치 인용은 실태스크 검증 후**. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 

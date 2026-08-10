@@ -1764,3 +1764,15 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 없음 ([[Google]]·[[MiniMax]]·[[Moonshot AI]]·[[DeepSeek]] 기존 페이지 wikilink만)
 - index.md 업데이트 (total_pages: 848 유지·total_sources: 830 유지 — 신규 0)
 - raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)
+
+## [2026-08-10] ingest | ai-news 자동수집 13건 배치 (신규 6 · 갱신 7)
+- 도메인: ai-news (교차: local-llm — code-graph-rag·SFT-Conflicts-RL-Coexists·YOLO-PEFT / slam-3dgs — SimWAM / video-saas — StreamArena·MiniMax-H3 / 금융-AI 해당 없음)
+- 추가 페이지: 6개 (신규 소스 6 — GitHub 1 [[code-graph-rag]](vitali87 ⭐3,279·당일 +96·Python·모노레포용 지식그래프 기반 코드 RAG·"그래프로 필요한 것만 읽기" 계보·아키텍처 미검증 medium) / HF논문 5 전량 미래형 arxiv ID medium: [[Beyond-Environment-Scaling]] 2608.03571·환경 분포 설계>스케일링·업보트 23 / [[SFT-Conflicts-RL-Coexists]] 2608.03573·멀티태스크 SFT 충돌·RL 공존·업보트 23 / [[SimWAM]] 2608.07468·자율주행용 단순 월드 액션 모델·업보트 20 / [[StreamArena]] 2608.05703·에이전틱 스트리밍 비디오 이해 벤치·업보트 9 / [[YOLO-PEFT]] 2608.07051·YOLO PEFT·업보트 10)
+- 업데이트 페이지: 11개 (source 갱신 7: GitHub 4 [[prime-agent]] ⭐9,620→**12,204**(당일 +2,356·사흘째 급상승·**1만 돌파**)·[[agency-agents]] ⭐135,000→**141,235**(+858·14만 돌파·07-21 이후 첫 갱신)·[[agent-skills]] ⭐84,779→**85,395**(+680·안정 상승)·[[google-skills]] ⭐16,913→**17,448**(+528·빅테크 공식 축) / HF모델 3 [[MiniMax-H3]] Comfy-Org 변형 DL 4.95M→**6.01M**(하루 +약100만·6M 돌파·좋아요 1.1k)·[[Qwen3.6-27B-Fable-Fusion]] DL 2.35M→**2.44M**(좋아요 1.83k)·[[Kimi-K3]] DL 1.46M→**1.51M**(150만 돌파·트렌딩 좋아요 1위) / domain 1: ai-news 2026-08-10 섹션 / index 1 / actionable 1[2건 추가] / raw 1)
+- 핵심 인사이트: 08-09 신규 0의 정체에서 신규 6으로 회복하되, GitHub 신규는 "그래프 기반 코드 RAG"([[code-graph-rag]]) 단 하나로 좁혀지고(내가 관리하는 볼트 wikilink 그래프와 동형 — 구조 그래프로 컨텍스트 좁히기의 직접 참조점), HF 논문 5편은 08월 내내 좁게 수렴하던 "에이전트 학습·평가"에서 벗어나 학습 이론(환경 분포·SFT/RL 간섭)·자율주행 월드모델·비전 효율(YOLO-PEFT)·스트리밍 비디오 이해로 광폭 분산됨. 갱신 축에서 [[prime-agent]]가 사흘 연속 하루 +2천대(+2,356)로 **1만 돌파(12,204)** — 무명 신규의 사흘 연속 상단 유지는 매우 이례적(실수요 재확인, 단 아키텍처·라이선스 미검증). [[agency-agents]]는 07-21 이후 첫 갱신으로 14만 돌파. 오픈 채택은 [[MiniMax-H3]] Comfy 변형 6M 돌파(오픈 i2v 실사용이 사실상 전부 ComfyUI 노드)·[[Kimi-K3]] 150만·[[Qwen-Fable-Fusion]] 200만 클럽으로 동반 우상향.
+- 검증: 신규 GitHub 1·갱신 GitHub 4·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-09 배치와 동일 처리). HF모델 자체발표 벤치(Kimi-K3 GPQA/BrowseComp·Fable-Fusion ARC-C·MiniMax-H3 i2v 품질)는 인용 시 미검증 병기. [[code-graph-rag]] 세부(그래프 구축 방식·언어 커버리지·편집 안전성·백엔드)는 원문 재현 전 → 구체 미기재. **HF논문 5건 전량 미래형 arxiv ID(2608.x)로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 구체 벤치 수치·저자/소속 미기재**([[CLAUDE.md]] 사실확인 원칙).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: YES (2건 전량 낮음 — code-graph-rag 그래프 기반 컨텍스트 검색 개념 참고 / StreamArena 스트리밍 비디오 이해 에이전트 한계 진단 참조)
+- 신규 entity: 없음 ([[MiniMax]]·[[Moonshot AI]]·[[Qwen3.6-27B]]·[[comma-ai]] 기존 페이지 wikilink만; vitali87은 salience 대비 08월 "비-프론티어랩 엔티티 날조 방지" 기조 유지·source 내 wikilink만·HF논문 저자/기관 미기재)
+- index.md 업데이트 (total_pages: 848→854, total_sources: 830→836)
+- raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)

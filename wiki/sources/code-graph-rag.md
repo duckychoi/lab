@@ -1,0 +1,42 @@
+---
+title: code-graph-rag — 모노레포용 지식그래프 기반 코드 RAG (vitali87)
+type: source
+domain: ai-news
+tags: [ai-news, github-trending, rag, knowledge-graph, code-understanding, monorepo, python, local-llm]
+created: 2026-08-10
+updated: 2026-08-10
+sources: []
+reliability: medium
+---
+
+# vitali87/code-graph-rag — 지식그래프 기반 코드 RAG
+
+**GitHub**: https://github.com/vitali87/code-graph-rag
+**스타수**: ⭐3,279 (2026-08-10 자동수집, 당일 +96) · **언어**: Python · **제작**: vitali87
+
+> [!insight] 핵심 인사이트
+> **모노레포·다중언어 코드베이스를 지식그래프(knowledge graph)로 색인해, 자연어로 질의·이해·편집하게 해주는 코드 RAG**(제목·raw 기반). 임베딩 유사도만으로 청크를 긁어오는 통상 RAG와 달리, 코드의 구조적 관계(호출·정의·의존·상속)를 그래프 간선으로 표현해 "필요한 것만 정확히" 검색하려는 접근으로 읽힌다. 08월 위키에서 반복 확인된 "그래프로 필요한 것만 읽기" 계보([[code-review-graph]]·[[Learning-from-Failures]]의 retrieval-centric CoT)와 직접 맞닿아, 나(다수 스킬 하네스)의 **위키 검색·코드 컨텍스트 합성** 설계에 개념적으로 가장 근접한 신규 항. 특히 나 자신이 관리하는 이 볼트(wikilink 그래프)와 구조가 동형이라, "그래프 RAG로 코드/지식 컨텍스트를 좁혀 읽는" 패턴의 참조점이 된다.
+
+> [!warning] 아키텍처·실사용 미검증
+> ⭐3,279는 화제성·유입 지표이지 검색 품질·정확도의 근거가 아니다. 그래프 구축 방식(파서·언어 커버리지·증분 색인), 편집 기능의 안전성(대규모 리팩터 적용), 백엔드(그래프 DB·임베딩 모델) 의존성은 **미검증**(볼트 시뮬레이션 타임라인 2026-08 유지, 실WebFetch 미수행). raw 한줄요약·제목 기반 medium.
+
+## 도메인별 추출 (ai-news · 교차 local-llm)
+
+- **신뢰도**: medium — GitHub ⭐3,279·당일 +96(raw 자동수집 API 수치). 다중언어 커버리지·편집 안전성·백엔드 요구사항 미검증.
+- **즉시 활용**: 조건부 YES(개념) — 코드/지식 컨텍스트를 임베딩 유사도가 아닌 *구조 그래프*로 좁히는 아이디어는 내 위키 검색 합성에 바로 참고 가능. 실제 설치·적용은 파서/DB 요구사항 확인 후.
+- **6개월 영향력**: 조건부 — "그래프 RAG"가 코드 에이전트의 컨텍스트 수집 표준 중 하나로 굳으면, 순수 벡터 RAG 대비 대형 코드베이스에서의 정확도·토큰 효율 우위를 가늠하는 기준이 됨.
+- **대체 관계**: 순수 벡터 RAG 코드 검색을 *강화/부분 대체*. [[code-review-graph]]("그래프로 필요한 것만 읽기")와 같은 계열.
+- **허와 실**: "지식그래프"는 정의가 넓다 — 실제로 AST/호출그래프까지 정합하는지, 파일-심볼 얕은 인덱스에 그치는지가 실체를 가른다. 원문·코드 필요.
+- **액션**: 코드/문서 확인 시 그래프 구축 파이프라인(파서·언어 커버리지·증분 색인)만 발췌해 내 위키/코드 컨텍스트 검색 설계에 개념 참고(낮음, 수치 인용 금지).
+
+## 관련 페이지
+- [[code-review-graph]] — 그래프로 필요한 코드만 읽기(같은 계보)
+- [[Learning-from-Failures]] — retrieval-centric CoT(검색중심 근거 합성)
+- [[Firecrawl]] — 웹→LLM 정제 데이터 수집 인프라(데이터 층 대비)
+- [[local-llm]] — 로컬 RAG·에이전트 메모리 도메인(교차)
+- [[ai-news]]
+
+## 원본
+- 출처: https://github.com/vitali87/code-graph-rag
+- GitHub ⭐3,279 (2026-08-10 자동수집, 당일 +96) · Python
+- 신뢰도: medium (raw 자동수집 API 수치·실WebFetch 미수행, 아키텍처·검색 품질 미검증)

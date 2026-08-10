@@ -4,13 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, comfyui, minimax, video-saas]
 created: 2026-08-06
-updated: 2026-08-09
+updated: 2026-08-10
 sources: []
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
 
+> [!update] 2026-08-10 갱신 — Comfy-Org 변형 DL 6.01M (좋아요 1.1k·5M→6M)
+> HF 다운로드 **6.01M·좋아요 1.1k**(2026-08-10 자동수집, Comfy-Org 재패키지 변형 기준) ← 4.95M(08-09) ← 3.94M·971(08-08). 하루 +약100만·**6M 돌파**로 오픈 i2v 재패키지 채택이 계속 폭증 — 원본 대비 ComfyUI 통합 변형이 생태계 다운로드의 사실상 전부라는 구도 재확인. 오픈 i2v 실사용이 "ComfyUI 워크플로 노드" 형태로 소비된다는 신호 지속. [[video-saas]]의 오픈·로컬 i2v 축이 폐쇄형 [[Higgsfield]]·[[Seedance]] 대비 접근성으로 급성장. 원본 스펙·품질 벤치·라이선스는 여전히 미검증(다운로드는 접근성 지표이지 품질 근거 아님). *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-09 갱신 — Comfy-Org 변형 DL 4.95M (베이스 35.3k)
 > HF 다운로드 **4.95M**(2026-08-09 자동수집, Comfy-Org 재패키지 변형 기준·베이스 [[MiniMax]]-H3 원본 35.3k) ← 3.94M·971(08-08) ← 3.14M(08-07). 4M 돌파·5M 근접 — 원본 대비 ComfyUI 통합 변형이 생태계 다운로드의 사실상 전부(35.3k vs 4.95M, 약 140배)라는 점이 재확인. 오픈 i2v 실사용이 "ComfyUI 워크플로 노드" 형태로 소비된다는 신호. [[video-saas]]의 오픈·로컬 i2v 축이 폐쇄형 [[Higgsfield]]·[[Seedance]] 대비 접근성으로 급성장. 원본 스펙·품질 벤치·라이선스는 여전히 미검증(다운로드는 접근성 지표이지 품질 근거 아님). *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 

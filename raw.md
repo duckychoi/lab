@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-09 (08-09 자동수집 13건 인제스트 완료 — 신규 0·갱신 8, HF논문 5 재수집 중복 skip. 대기 항목 없음)
+updated: 2026-08-10 (자동수집 13건 배치 인제스트 완료 — 신규 6·갱신 7·신규 entity 0. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -20,12 +20,11 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
 
-<!-- 2026-08-09 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 0·갱신 8·재수집중복 skip 5. 갱신 8: GitHub 5 [[prime-agent]] ⭐7,254→9,620(당일 +2,483·이틀째 급상승·1만 근접)·[[agent-skills]] ⭐84,117→84,779(+779)·[[google-skills]] ⭐14,825→16,913(+481)·[[TradingAgents]] ⭐92,901→96,723(+153·10만 근접)·[[mattpocock-skills]] ⭐209,271→210,434(+1,359·21만 돌파) / HF모델 3 [[MiniMax-H3]] Comfy변형 DL 3.94M→4.95M(베이스 원본 35.3k·약140배·5M 근접)·[[Kimi-K3]] DL 1.39M→1.46M(트렌딩 좋아요 1위)·[[DeepSeek-V4-Flash-0731]] DL 618k→869k(100만 근접). HF논문 5([[AgentOPSD]] 2608.05987·[[OSReward]] 2607.28609·[[MEG-Speech-Decoding]] 2608.01481·[[WorldClaw]] 2608.05248·[[GST-Bench]] 2608.05747)는 08-07·08-08 배치에서 이미 인제스트된 재수집 중복 → 신규 없음(dedup). GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). 신규 entity 0. actionable 신규 0(기존 유지). index total_pages 848 유지·total_sources 830 유지. -->
+<!-- 2026-08-10 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: GitHub 1 [[code-graph-rag]](vitali87 ⭐3,279·+96·Python·모노레포용 지식그래프 기반 코드 RAG·아키텍처 미검증 medium) + HF논문 5 전량 미래형 arxiv ID medium: [[Beyond-Environment-Scaling]] 2608.03571·업보트 23·[[SFT-Conflicts-RL-Coexists]] 2608.03573·업보트 23·[[SimWAM]] 2608.07468·업보트 20·[[StreamArena]] 2608.05703·업보트 9·[[YOLO-PEFT]] 2608.07051·업보트 10. 갱신 7(전량 기존 페이지): GitHub 4 [[prime-agent]] ⭐9,620→12,204(+2,356·사흘째 급상승·1만 돌파)·[[agency-agents]] ⭐135,000→141,235(+858·14만 돌파)·[[agent-skills]] ⭐84,779→85,395(+680)·[[google-skills]] ⭐16,913→17,448(+528) / HF모델 3 [[MiniMax-H3]] Comfy-Org 변형 DL 4.95M→6.01M(하루 +약100만·6M 돌파·좋아요 1.1k)·[[Qwen3.6-27B-Fable-Fusion]] DL 2.35M→2.44M(좋아요 1.83k)·[[Kimi-K3]] DL 1.46M→1.51M(150만 돌파·트렌딩 좋아요 1위). GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0. actionable 신규 2건(전량 낮음 — code-graph-rag 그래프 검색 개념 참고·StreamArena 스트리밍 비디오 한계 진단 참조). index total_pages 848→854·total_sources 830→836. -->
 
-<!-- 2026-08-08 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: GitHub 1 [[prime-agent]] ⭐7,254(당일 +2,293) TypeScript 자기개선형 RLM 코딩 에이전트 medium(아키텍처 미검증) + HF논문 5 전량 미래형 arxiv ID medium: [[MEG-Speech-Decoding]] 2608.01481·[[GST-Bench]] 2608.05747·[[ChronoVision]] 2608.05631·[[HarnessOpt-Bench]] 2608.06301·[[Agentic-Economies]] 2608.06020. 갱신 7(전량 기존 페이지): GitHub 4 [[mattpocock-skills]] ⭐207,870→209,271·[[superpowers]] ⭐268,380→268,947·[[agent-skills]] ⭐82,215→84,117·[[cloudflare-computer]] ⭐5,122→6,082(사흘째·6천 돌파) / HF모델 3 [[MiniMax-H3]] DL 3.14M→3.94M·[[Kimi-K3]] DL 1.31M→1.39M·[[Qwen3.6-27B-Fable-Fusion]] DL 2.22M→2.35M. GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0. actionable 2건 추가(전량 낮음). canvas 미갱신(정기 graph 시 일괄). index total_pages 842→848·total_sources 824→830. -->
-
-<!-- 2026-08-07 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 5·갱신 8. 신규 5(HF논문 전량 미래형 ID medium): [[AgentOPSD]] 2608.05987·[[WorldClaw]] 2608.05248·[[OSReward]] 2607.28609·[[EnvACE]] 2608.06197·[[Learning-from-Failures]] 2608.06060. -->
-
+<!-- 2026-08-09 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 0·갱신 8·재수집중복 skip 5. (상세는 log.md 참조) -->
+<!-- 2026-08-08 아침 자동수집 13건 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. -->
+<!-- 2026-08-07 아침 자동수집 13건 전체 인제스트 완료 후 삭제. 신규 5·갱신 8. -->
 <!-- 2026-08-06 인제스트: 08-05·08-06 아침 자동수집 26건 전체 인제스트 완료 후 삭제. 신규 15·갱신 11. (상세는 log.md 참조) -->
 <!-- 2026-08-04 아침 자동수집 13건 전체 인제스트 완료 후 삭제. 신규 7·갱신 6. -->
 <!-- 2026-08-03 아침 자동수집 13건 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. -->

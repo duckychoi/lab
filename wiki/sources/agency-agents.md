@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, multi-agent, agency, automation, roles, process, claude-code]
 created: 2026-05-07
-updated: 2026-07-21
+updated: 2026-08-10
 sources: []
 reliability: high
 ---
 
 # msitarzewski/agency-agents
+
+> [!update] 2026-08-10 갱신 — ⭐141,235 (당일 +858·14만 돌파)
+> GitHub ⭐**141,235**(2026-08-10 자동수집, 당일 +858) ← 135,000(07-21 WebFetch 실확인). 약 3주 +약6천으로 **14만 돌파** — "AI 에이전시 역할 카탈로그" 수요가 장기 트렌드로 계속 축적, 유입은 완만한 우상향. 08월 스킬·에이전트 상단([[mattpocock-skills]] 21만·[[superpowers]] 27만 근접) 대비 "역할 페르소나 카탈로그" 축의 대표 앵커 지위 유지. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-07-21 갱신 — WebFetch 실검증
 > GitHub ⭐**135,000**(WebFetch 실확인, raw ⭐135,081·+862/일과 일치) ← ⭐126,006(07-03). 18일간 +9천으로 13.5만 돌파, "230+ 역할별 서브에이전트" 규모도 실확인. 12만 후 유입은 완만해졌으나 여전히 성장 — "AI 에이전시 역할 카탈로그" 수요가 장기 트렌드로 굳어짐. 같은 07-21 배치의 [[ai-agent-book]](설계 원리 책)·[[ai-engineering-from-scratch]](구현 커리큘럼)과 함께 "에이전트를 **페르소나·원리·구현** 세 층에서 조립하는 재료" 계열을 형성.
@@ -42,5 +45,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/msitarzewski/agency-agents
-- 스타: ⭐126,006 (2026-07-03, 당일 +3,032) ← ⭐121,603 (07-01, +1,791) ← ⭐119,654 (06-30) ← ⭐111,911 (06-13) ← ⭐94,058 (05-06)
+- 스타: ⭐141,235 (2026-08-10 자동수집, 당일 +858·14만 돌파) ← ⭐135,000 (07-21 WebFetch 실확인) ← ⭐126,006 (07-03, +3,032) ← ⭐119,654 (06-30) ← ⭐94,058 (05-06)
 - 신뢰도: ⭐⭐⭐⭐⭐ (12만+ 스타, 일 유입 재가속 +3.0천, 네이티브 앱 출시)

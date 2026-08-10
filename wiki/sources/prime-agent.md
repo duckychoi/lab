@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, coding-agent, self-improving, rlm, long-horizon, typescript]
 created: 2026-08-08
-updated: 2026-08-09
+updated: 2026-08-10
 sources: []
 reliability: medium
 ---
@@ -12,9 +12,11 @@ reliability: medium
 # PrimeIntellect-ai/prime-agent — 자기개선형 RLM 코딩 에이전트
 
 **GitHub**: https://github.com/PrimeIntellect-ai/prime-agent
-**스타수**: ⭐9,620 (2026-08-09 자동수집, 당일 **+2,483** 급상승) · **언어**: TypeScript · **제작**: PrimeIntellect
+**스타수**: ⭐12,204 (2026-08-10 자동수집, 당일 **+2,356** 급상승·**1만 돌파**) · **언어**: TypeScript · **제작**: PrimeIntellect
 **성격**: 코딩 워크플로우·장기 자율작업(long-horizon)을 위한 자기개선형(self-improving) RLM 에이전트
 
+> [!update] 2026-08-10 갱신 — ⭐12,204 (당일 +2,356·사흘째 급상승·1만 돌파)
+> GitHub ⭐**12,204**(2026-08-10 자동수집, 당일 +2,356) ← 9,620(08-09, +2,483) ← 7,254(08-08, +2,293). 편입 사흘째에도 하루 +2천대 유입 유지로 **1만 돌파** — 무명 신규가 사흘 연속 트렌딩 상단에 +2천대로 머무는 것은 매우 이례적, "자기개선 코딩 에이전트"에 대한 실수요가 단발 화제가 아님을 재확인. 다만 아키텍처·자기개선 루프 구현·라이선스는 여전히 미검증(관심도≠성능). reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-09 갱신 — ⭐9,620 (당일 +2,483·이틀째 급상승)
 > GitHub ⭐**9,620**(2026-08-09 자동수집, 당일 +2,483) ← 7,254(08-08, +2,293). 편입 이틀째에도 하루 +2천대 유입 지속으로 1만 근접 — 무명 신규가 이틀 연속 트렌딩 상단에 머무는 것은 이례적. "자기개선 루프를 코드로 실장"([[AgentOPSD]]·[[OneDayAgent]] 논문 하강)이라는 프레이밍의 관심도 자체는 실체이나, 아키텍처·자기개선 루프 구현·라이선스는 여전히 미검증. reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
@@ -47,6 +49,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/PrimeIntellect-ai/prime-agent
-- 스타: ⭐9,620 (2026-08-09 자동수집, 당일 +2,483 급상승) ← ⭐7,254 (08-08, +2,293) · TypeScript
+- 스타: ⭐12,204 (2026-08-10 자동수집, 당일 +2,356 급상승·1만 돌파) ← ⭐9,620 (08-09, +2,483) ← ⭐7,254 (08-08, +2,293) · TypeScript
 - 성격: 코딩·장기 자율작업용 자기개선형 RLM 에이전트
 - 신뢰도: ⭐⭐ (급상승·raw 자동수집 수치, 아키텍처/라이선스 미검증·실WebFetch 미수행)

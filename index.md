@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-09 (자동수집 13건 배치 인제스트 — GitHub 5·HF모델 3 갱신·HF논문 5 재수집 중복, 신규 0·갱신 8, 신규 엔티티 0)
-total_pages: 848
-total_sources: 830
+updated: 2026-08-10 (자동수집 13건 배치 인제스트 — 신규 6[GitHub 1 code-graph-rag + HF논문 5]·갱신 7[GitHub 4·HF모델 3], 신규 엔티티 0)
+total_pages: 854
+total_sources: 836
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 830
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-10 자동수집 배치 (신규 6 · 갱신 7 / GitHub 5[신규 1 code-graph-rag + 갱신 4] + HF논문 5[신규] + HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[code-graph-rag]] — vitali87 모노레포용 지식그래프 기반 코드 RAG, "그래프로 필요한 것만 읽기"([[code-review-graph]]·[[Learning-from-Failures]] 계보)·내 위키 그래프와 동형 (GitHub ⭐3,279·당일 +96·Python·아키텍처 미검증 medium) *(NEW 2026-08-10)*
+- [[Beyond-Environment-Scaling]] — 멀티모달 에이전트는 환경 수 확장보다 환경 분포 설계가 성능에 더 기여, [[EnvACE]]·[[SFT-Conflicts-RL-Coexists]] 학습 축 (HF 데일리·업보트 23·미래형 ID 미검증 medium) (2608.03571) *(NEW 2026-08-10)*
+- [[SFT-Conflicts-RL-Coexists]] — 멀티태스크 LLM 학습에서 SFT는 태스크 충돌·RL은 공존, [[Beyond-Environment-Scaling]]과 짝(학습 목적함수 간섭 구조) (HF 데일리·업보트 23·미래형 ID 미검증 medium) (2608.03573) *(NEW 2026-08-10)*
+- [[SimWAM]] — 엔드투엔드 자율주행용 단순 구조 월드 액션 모델, [[EnvACE]]·[[ChronoVision]] 잠재 동역학·[[comma-ai]]·[[slam-3dgs]] 교차 (HF 데일리·업보트 20·미래형 ID 미검증 medium) (2608.07468) *(NEW 2026-08-10)*
+- [[StreamArena]] — 연속·상호작용·롱호라이즌 에이전틱 스트리밍 비디오 이해 벤치, [[GST-Bench]] 비디오 이해·[[video-saas]] 교차 (HF 데일리·업보트 9·미래형 ID 미검증 medium) (2608.05703) *(NEW 2026-08-10)*
+- [[YOLO-PEFT]] — YOLO 계열에 파라미터 효율 파인튜닝(PEFT) 적용, 드문 비전 실용 효율화 축·온디바이스 참고 (HF 데일리·업보트 10·미래형 ID 미검증 medium) (2608.07051) *(NEW 2026-08-10)*
+- [[prime-agent]] 갱신 — PrimeIntellect 자기개선형 RLM 코딩 에이전트, ⭐9,620→**12,204**(당일 +2,356·사흘째 급상승·**1만 돌파**)(raw API 수치) *(UPDATE 2026-08-10)*
+- [[agency-agents]] 갱신 — 역할별 서브에이전트 프리셋 카탈로그, ⭐135,000→**141,235**(당일 +858·14만 돌파)(raw API 수치) *(UPDATE 2026-08-10)*
+- [[agent-skills]] 갱신 — [[Addy Osmani]] 코딩 에이전트 스킬 모음, ⭐84,779→**85,395**(당일 +680·안정 상승)(raw API 수치) *(UPDATE 2026-08-10)*
+- [[google-skills]] 갱신 — [[Google]] 공식 에이전트 스킬 레지스트리, ⭐16,913→**17,448**(당일 +528·빅테크 공식 축 안정 성장)(raw API 수치) *(UPDATE 2026-08-10)*
+- [[MiniMax-H3]] 갱신 — [[MiniMax]] i2v ComfyUI 배포판, Comfy-Org 변형 DL 4.95M→**6.01M**(하루 +약100만·**6M 돌파**·좋아요 1.1k)(raw API 수치) *(UPDATE 2026-08-10)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — [[Qwen3.6-27B]] 머지 GGUF 변종, DL 2.35M→**2.44M**(좋아요 1.83k·200만 클럽 지속)(raw API 수치) *(UPDATE 2026-08-10)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 2.8T MoE 멀티모달, DL 1.46M→**1.51M**(하루 +약5만·150만 돌파·트렌딩 좋아요 1위)(raw API 수치) *(UPDATE 2026-08-10)*
 <!-- ── 2026-08-09 자동수집 배치 (신규 0 · 갱신 8 / GitHub 5 + HF모델 3 갱신, HF논문 5[AgentOPSD·OSReward·MEG-Speech-Decoding·WorldClaw·GST-Bench]는 이미 인제스트된 재수집 중복→신규 없음. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지]) ── -->
 - [[prime-agent]] 갱신 — PrimeIntellect 자기개선형 RLM 코딩 에이전트, ⭐7,254→**9,620**(당일 +2,483·이틀째 급상승·1만 근접)(raw API 수치) *(UPDATE 2026-08-09)*
 - [[agent-skills]] 갱신 — [[Addy Osmani]] 코딩 에이전트 스킬 모음, ⭐84,117→**84,779**(당일 +779·유입 소폭 둔화)(raw API 수치) *(UPDATE 2026-08-09)*
