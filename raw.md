@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-10 (자동수집 13건 배치 인제스트 완료 — 신규 6·갱신 7·신규 entity 0. 대기 항목 없음)
+updated: 2026-08-11 (자동수집 13건 인제스트 완료 — 신규 7·갱신 6. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -19,6 +19,8 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ---
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+<!-- 2026-08-11 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 7·갱신 6. 신규 7: GitHub 2 [[semantica]](semantica-agi ⭐4,469·+970·Python·그래프 네이티브 AI 인프라 medium)·[[ComfyUI]](comfyanonymous ⭐126,600·+922·노드 기반 디퓨전 GUI/API/백엔드·오픈 i2v 실행 엔진 high) + HF논문 5 전량 미래형 arxiv ID medium: [[Agent-Memory-Distillation]] 2608.07169·HF데일리1위·업25·[[What-to-Edit-Next]] 2608.07565·업21·[[OasisKV]] 2608.08097·업11·[[Scaling-Interpretable-LLM]] 2608.07594·업6·[[Stealing-Reasoning-Traces]] 2608.09867·업4. 갱신 6(전량 기존 페이지): GitHub 3 [[prime-agent]] ⭐12,204→13,490(+2,642·나흘째·트렌딩 1위 등극)·[[agency-agents]] ⭐141,235→142,148(+1,349)·[[code-graph-rag]] ⭐3,279→3,650(+682·유입 7배 급증) / HF모델 3 [[MiniMax-H3]] Comfy-Org 변형 DL 6.01M→6.80M(+약79만)·[[Qwen3.6-27B-Fable-Fusion]] DL 2.44M→2.52M(좋아요 1.88k)·[[Kimi-K3]] DL 1.51M→1.57M(좋아요 10.5k·트렌딩 1위). GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0. actionable 신규 2건(ComfyUI 오픈 i2v 스팟체크 실행환경 편입[중간]·semantica/code-graph-rag 그래프 RAG 개념 이식 검토[낮음]). index total_pages 854→861·total_sources 836→843. -->
 
 <!-- 2026-08-10 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: GitHub 1 [[code-graph-rag]](vitali87 ⭐3,279·+96·Python·모노레포용 지식그래프 기반 코드 RAG·아키텍처 미검증 medium) + HF논문 5 전량 미래형 arxiv ID medium: [[Beyond-Environment-Scaling]] 2608.03571·업보트 23·[[SFT-Conflicts-RL-Coexists]] 2608.03573·업보트 23·[[SimWAM]] 2608.07468·업보트 20·[[StreamArena]] 2608.05703·업보트 9·[[YOLO-PEFT]] 2608.07051·업보트 10. 갱신 7(전량 기존 페이지): GitHub 4 [[prime-agent]] ⭐9,620→12,204(+2,356·사흘째 급상승·1만 돌파)·[[agency-agents]] ⭐135,000→141,235(+858·14만 돌파)·[[agent-skills]] ⭐84,779→85,395(+680)·[[google-skills]] ⭐16,913→17,448(+528) / HF모델 3 [[MiniMax-H3]] Comfy-Org 변형 DL 4.95M→6.01M(하루 +약100만·6M 돌파·좋아요 1.1k)·[[Qwen3.6-27B-Fable-Fusion]] DL 2.35M→2.44M(좋아요 1.83k)·[[Kimi-K3]] DL 1.46M→1.51M(150만 돌파·트렌딩 좋아요 1위). GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). 신규 entity 0. actionable 신규 2건(전량 낮음 — code-graph-rag 그래프 검색 개념 참고·StreamArena 스트리밍 비디오 한계 진단 참조). index total_pages 848→854·total_sources 830→836. -->
 

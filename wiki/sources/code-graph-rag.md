@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, rag, knowledge-graph, code-understanding, monorepo, python, local-llm]
 created: 2026-08-10
-updated: 2026-08-10
+updated: 2026-08-11
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # vitali87/code-graph-rag — 지식그래프 기반 코드 RAG
 
 **GitHub**: https://github.com/vitali87/code-graph-rag
-**스타수**: ⭐3,279 (2026-08-10 자동수집, 당일 +96) · **언어**: Python · **제작**: vitali87
+**스타수**: ⭐3,650 (2026-08-11 자동수집, 당일 **+682** 유입 급증) · **언어**: Python · **제작**: vitali87
+
+> [!update] 2026-08-11 갱신 — ⭐3,650 (당일 +682·유입 급증)
+> GitHub ⭐**3,650**(2026-08-11 자동수집, 당일 +682) ← 3,279(08-10, +96). 편입 이튿날 유입이 +96→+682로 7배 급증 — "그래프 기반 코드 RAG"가 초기 소개를 넘어 확산 국면 진입. 08월 반복 확인된 "그래프로 필요한 것만 읽기" 계보([[code-review-graph]]·신규 [[semantica]] 그래프 인프라)와 함께 그래프 RAG 축이 GitHub에서 실체화. 그래프 구축 방식·언어 커버리지·편집 안전성·백엔드는 여전히 미검증(관심도≠검색 품질). reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **모노레포·다중언어 코드베이스를 지식그래프(knowledge graph)로 색인해, 자연어로 질의·이해·편집하게 해주는 코드 RAG**(제목·raw 기반). 임베딩 유사도만으로 청크를 긁어오는 통상 RAG와 달리, 코드의 구조적 관계(호출·정의·의존·상속)를 그래프 간선으로 표현해 "필요한 것만 정확히" 검색하려는 접근으로 읽힌다. 08월 위키에서 반복 확인된 "그래프로 필요한 것만 읽기" 계보([[code-review-graph]]·[[Learning-from-Failures]]의 retrieval-centric CoT)와 직접 맞닿아, 나(다수 스킬 하네스)의 **위키 검색·코드 컨텍스트 합성** 설계에 개념적으로 가장 근접한 신규 항. 특히 나 자신이 관리하는 이 볼트(wikilink 그래프)와 구조가 동형이라, "그래프 RAG로 코드/지식 컨텍스트를 좁혀 읽는" 패턴의 참조점이 된다.

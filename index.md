@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-10 (자동수집 13건 배치 인제스트 — 신규 6[GitHub 1 code-graph-rag + HF논문 5]·갱신 7[GitHub 4·HF모델 3], 신규 엔티티 0)
-total_pages: 854
-total_sources: 836
+updated: 2026-08-11 (자동수집 13건 배치 인제스트 — 신규 7[GitHub 2 semantica·ComfyUI + HF논문 5]·갱신 6[GitHub 3·HF모델 3], 신규 엔티티 0)
+total_pages: 861
+total_sources: 843
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 836
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-11 자동수집 배치 (신규 7 · 갱신 6 / GitHub 2[신규 semantica·ComfyUI] + HF논문 5[신규] + GitHub 3[갱신]·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[semantica]] — semantica-agi 컨텍스트·감사가능성용 그래프 네이티브 AI 인프라, [[code-graph-rag]]·[[LLM-Wiki]]와 "그래프로 컨텍스트 좁히기" 동형 (GitHub ⭐4,469·당일 +970 신규 급상승·Python·실사용성 미검증 medium) *(NEW 2026-08-11)*
+- [[ComfyUI]] — comfyanonymous 노드 기반 디퓨전 GUI·API·백엔드, 오픈 i2v 실사용의 공통 실행 엔진([[MiniMax-H3]] 재패키지 채택 집중)·[[video-saas]] 오픈 축 인프라 앵커 (GitHub ⭐126,600·당일 +922·성숙 오픈소스 high) *(NEW 2026-08-11)*
+- [[Agent-Memory-Distillation]] — 대형 교사 에이전트의 계층적 메모리를 소형 학생 에이전트로 학습없이 전이(AMD), [[에이전트-메모리-레이어]]·[[local-llm]] 저비용 저변 (HF 데일리 1위·업보트 25·미래형 ID 미검증 medium) (2608.07169) *(NEW 2026-08-11)*
+- [[What-to-Edit-Next]] — 대화형 이미지 편집의 시각 정합 후속 편집 제안, 텍스트 전용 어시스턴트 한계 보완·[[Higgsfield]]·[[video-saas]] 추천 UX 교차 (HF 데일리·업보트 21·미래형 ID 미검증 medium) (2608.07565) *(NEW 2026-08-11)*
+- [[OasisKV]] — 디코드 KV 캐시를 HBM 너머로 확장(lookahead 희소 프리페칭), 장문맥 메모리 병목 완화·[[MiniMax-Sparse-Attention]]·[[local-llm]] 교차 (HF 데일리·업보트 11·미래형 ID 미검증 medium) (2608.08097) *(NEW 2026-08-11)*
+- [[Scaling-Interpretable-LLM]] — 사후 아닌 학습단계부터 본질적 해석가능 LM 스케일링, "해석성=성능희생" 통념 도전·[[semantica]]·[[Stealing-Reasoning-Traces]] 투명/은닉 축 (HF 데일리·업보트 6·미래형 ID 미검증 medium) (2608.07594) *(NEW 2026-08-11)*
+- [[Stealing-Reasoning-Traces]] — 독점 LLM API의 암호화 CoT에서 추론 트레이스 복원 가능(보안 분석), 추론 은닉 방어 취약성·이중용도·[[Scaling-Interpretable-LLM]] 대비 (HF 데일리·업보트 4·미래형 ID 미검증 medium) (2608.09867) *(NEW 2026-08-11)*
+- [[prime-agent]] 갱신 — PrimeIntellect 자기개선형 RLM 코딩 에이전트, ⭐12,204→**13,490**(당일 +2,642·나흘째 급상승·**트렌딩 1위 등극**)(raw API 수치) *(UPDATE 2026-08-11)*
+- [[agency-agents]] 갱신 — 역할별 서브에이전트 프리셋 카탈로그, ⭐141,235→**142,148**(당일 +1,349·유입 재가속)(raw API 수치) *(UPDATE 2026-08-11)*
+- [[code-graph-rag]] 갱신 — vitali87 지식그래프 기반 코드 RAG, ⭐3,279→**3,650**(당일 +682·유입 7배 급증·확산 국면)(raw API 수치) *(UPDATE 2026-08-11)*
+- [[MiniMax-H3]] 갱신 — Comfy-Org i2v 재패키지, DL 6.01M→**6.80M**(하루 +약79만·[[ComfyUI]] 엔진과 오픈 i2v 노드 경로 재확인)(raw API 수치) *(UPDATE 2026-08-11)*
+- [[Qwen3.6-27B-Fable-Fusion]] 갱신 — DavidAU 다단계 머지 변종, DL 2.44M→**2.52M**(좋아요 1.88k·250만 근접·200만 클럽)(raw API 수치) *(UPDATE 2026-08-11)*
+- [[Kimi-K3]] 갱신 — [[Moonshot AI]] 오픈 프론티어 멀티모달 MoE, DL 1.51M→**1.57M**(좋아요 10.5k·트렌딩 좋아요 1위 유지)(raw API 수치) *(UPDATE 2026-08-11)*
 <!-- ── 2026-08-10 자동수집 배치 (신규 6 · 갱신 7 / GitHub 5[신규 1 code-graph-rag + 갱신 4] + HF논문 5[신규] + HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[code-graph-rag]] — vitali87 모노레포용 지식그래프 기반 코드 RAG, "그래프로 필요한 것만 읽기"([[code-review-graph]]·[[Learning-from-Failures]] 계보)·내 위키 그래프와 동형 (GitHub ⭐3,279·당일 +96·Python·아키텍처 미검증 medium) *(NEW 2026-08-10)*
 - [[Beyond-Environment-Scaling]] — 멀티모달 에이전트는 환경 수 확장보다 환경 분포 설계가 성능에 더 기여, [[EnvACE]]·[[SFT-Conflicts-RL-Coexists]] 학습 축 (HF 데일리·업보트 23·미래형 ID 미검증 medium) (2608.03571) *(NEW 2026-08-10)*

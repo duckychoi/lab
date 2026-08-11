@@ -4,13 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, hf-paper, moonshot, moe, multimodal, frontier-llm, agentic, open-weights]
 created: 2026-07-28
-updated: 2026-08-10
+updated: 2026-08-11
 sources: []
 reliability: medium
 ---
 
 # Kimi K3 (moonshotai/Kimi-K3 · 논문 2607.24653)
 
+> [!update] 2026-08-11 갱신 — DL 1.57M (좋아요 10.5k·트렌딩 좋아요 1위 유지)
+> HF 다운로드 **1.57M·좋아요 10.5k**(2026-08-11 자동수집, 트렌딩 좋아요 1위 유지) ← 1.51M(08-10, 10.4k) ← 1.46M(08-09) ← 1.39M(08-08). 하루 +약5만·완만한 우상향 지속·오픈 프론티어 MoE 커뮤니티 선호 최상위 유지. 2.8T 총/104B 활성 MoE·1M·MoonViT-V2 구성 동일. 자체발표 벤치(GPQA 93.5·BrowseComp 91.2 등)·미래형 논문 ID(2607.24653)로 원문 재현 전 → medium 유지, 초록 스스로 Claude Fable 5·GPT-5.6 Sol 열위 자인. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-10 갱신 — DL 1.51M (좋아요 10.4k·트렌딩 좋아요 1위 유지)
 > HF 다운로드 **1.51M·좋아요 10.4k**(2026-08-10 자동수집, 트렌딩 좋아요 1위 유지) ← 1.46M(08-09) ← 1.39M·10.3k(08-08). 150만 돌파·완만한 우상향 지속(하루 +약5만)·오픈 프론티어 MoE 커뮤니티 선호 최상위 유지. 2.8T 총/104B 활성 MoE·1M·MoonViT-V2 구성 동일. 자체발표 벤치(GPQA 93.5·BrowseComp 91.2 등)·미래형 논문 ID(2607.24653)로 원문 재현 전 → medium 유지, 초록 스스로 Claude Fable 5·GPT-5.6 Sol 열위 자인. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-09 갱신 — DL 1.46M (트렌딩 좋아요 1위 유지)
