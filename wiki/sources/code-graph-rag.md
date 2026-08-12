@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, rag, knowledge-graph, code-understanding, monorepo, python, local-llm]
 created: 2026-08-10
-updated: 2026-08-11
+updated: 2026-08-12
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # vitali87/code-graph-rag — 지식그래프 기반 코드 RAG
 
 **GitHub**: https://github.com/vitali87/code-graph-rag
-**스타수**: ⭐3,650 (2026-08-11 자동수집, 당일 **+682** 유입 급증) · **언어**: Python · **제작**: vitali87
+**스타수**: ⭐3,966 (2026-08-12 자동수집, 당일 **+341**·4천 근접) ← 3,650 (08-11, +682) · **언어**: Python · **제작**: vitali87
+
+> [!update] 2026-08-12 갱신 — ⭐3,966 (당일 +341·4천 근접·확산 지속)
+> GitHub ⭐**3,966**(2026-08-12 자동수집, 당일 +341) ← 3,650(08-11, +682) ← 3,279(08-10, +96). 유입이 +682에서 +341로 반감했으나 여전히 하루 +수백대로 **4천 근접** — "그래프 기반 코드 RAG"가 편입 사흘째에도 확산 지속. 같은 그래프 계보의 [[semantica]](이날 +893로 5천 돌파)와 함께 "구조 그래프로 컨텍스트·근거를 좁히기" 축이 코드·범용 인프라 두 층에서 동반 성장. 그래프 구축 방식·언어 커버리지·편집 안전성·백엔드는 여전히 미검증(관심도≠검색 품질). reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-11 갱신 — ⭐3,650 (당일 +682·유입 급증)
 > GitHub ⭐**3,650**(2026-08-11 자동수집, 당일 +682) ← 3,279(08-10, +96). 편입 이튿날 유입이 +96→+682로 7배 급증 — "그래프 기반 코드 RAG"가 초기 소개를 넘어 확산 국면 진입. 08월 반복 확인된 "그래프로 필요한 것만 읽기" 계보([[code-review-graph]]·신규 [[semantica]] 그래프 인프라)와 함께 그래프 RAG 축이 GitHub에서 실체화. 그래프 구축 방식·언어 커버리지·편집 안전성·백엔드는 여전히 미검증(관심도≠검색 품질). reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
@@ -41,5 +44,5 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/vitali87/code-graph-rag
-- GitHub ⭐3,279 (2026-08-10 자동수집, 당일 +96) · Python
+- GitHub ⭐3,966 (2026-08-12 자동수집, 당일 +341·4천 근접) ← ⭐3,650 (08-11, +682) ← ⭐3,279 (08-10, +96) · Python
 - 신뢰도: medium (raw 자동수집 API 수치·실WebFetch 미수행, 아키텍처·검색 품질 미검증)

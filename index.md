@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-11 (자동수집 13건 배치 인제스트 — 신규 7[GitHub 2 semantica·ComfyUI + HF논문 5]·갱신 6[GitHub 3·HF모델 3], 신규 엔티티 0)
-total_pages: 861
-total_sources: 843
+updated: 2026-08-12 (자동수집 13건 배치 인제스트 — 신규 8[GitHub 1 daily_stock_analysis + HF논문 5 + HF모델 2]·갱신 5[GitHub 4·HF모델 1], 신규 엔티티 0)
+total_pages: 869
+total_sources: 851
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 843
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-12 자동수집 배치 (신규 8 · 갱신 5 / GitHub 1[신규 daily_stock_analysis] + HF논문 5[신규] + HF모델 2[신규 Muse-Glimmer·MiniMax-H3-Turbo-Lora] + GitHub 4·HF모델 1[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[daily_stock_analysis]] — ZhuLinsen LLM 기반 다중 시장 주식 자동 분석 파이프라인, [[TradingAgents]]·[[금융-AI]] 인접(트레이딩보다 분석 리포트 자동화 특화) (GitHub ⭐62,436·당일 +243·Python·투자 판단 신뢰성 미검증 medium) *(NEW 2026-08-12)*
+- [[ComBodied-Agents]] — 인간 중심(human-centric) 에이전틱 AI 새 패러다임 제안, 같은 배치 [[Co-Evolution-Agentic]](인간 초월 자율)과 "통제 vs 초월" 정반대 양극 (HF 데일리 1위·업보트 75·미래형 ID 미검증 medium) (2608.10915) *(NEW 2026-08-12)*
+- [[Co-Evolution-Agentic]] — 인간 설계 초월 자기주도 진화(공진화), [[EvolvingWorld]]·[[AgentOPSD]] 자기개선 계보 정점·[[auto-research]] 참조 (HF 데일리 2위·업보트 63·미래형 ID 미검증 medium) (2608.10299) *(NEW 2026-08-12)*
+- [[Beyond-Pixels-4D]] — 비디오 프라이어에서 4D(공간+시간) 월드 복원, [[World-Infinity]]·[[JEPA-vs-Diffusion-월드모델]]·[[slam-3dgs]]×[[video-saas]] 교차 (HF 데일리 3위·업보트 33·미래형 ID 미검증 medium) (2608.10744) *(NEW 2026-08-12)*
+- [[Articulated-Object-Reconstruction]] — 정지 상태(rest-state) 단일 관측만으로 관절형 객체 3D 복원·가동 구조 추정, [[RoboDojo]]·[[LaMem-VLA]]·[[slam-3dgs]] 교차 (HF 데일리 4위·업보트 29·미래형 ID 미검증 medium) (2607.27749) *(NEW 2026-08-12)*
+- [[AdvFD]] — 평가 지표 Fréchet Distance를 적대적 학습 손실로 전환해 시각 생성 품질 향상, [[Beyond-Environment-Scaling]] 학습 레시피 축·[[MiniMax-H3]] 오픈 i2v 수혜 후보 (HF 데일리 5위·업보트 15·미래형 ID 미검증 medium) (2608.11205) *(NEW 2026-08-12)*
+- [[Muse-Glimmer-30B]] — meta-models 30B 모델, HF 트렌딩 2위(좋아요 1.16k·다운로드 미표시)·모달리티·용도·라이선스 전부 미확인·[[local-llm]] 관찰 후보 (raw 자동수집·정체 미검증 medium) *(NEW 2026-08-12)*
+- [[MiniMax-H3-Turbo-Lora]] — larryvrh [[MiniMax-H3]] 계열 Turbo 가속 LoRA 어댑터, 오픈 i2v "베이스→[[ComfyUI]] 재패키지→가속 LoRA" 파생 계층화 신호 (HF 트렌딩 3위·DL 669·가속효과 미검증 low) *(NEW 2026-08-12)*
+- [[agency-agents]] 갱신 — 역할별 서브에이전트 프리셋 카탈로그, ⭐142,148→**144,026**(당일 +958·14.4만 돌파)(raw API 수치) *(UPDATE 2026-08-12)*
+- [[semantica]] 갱신 — semantica-agi 그래프 네이티브·감사가능성 AI 인프라, ⭐4,469→**5,261**(당일 +893·5천 돌파·이틀째 급상승)(raw API 수치) *(UPDATE 2026-08-12)*
+- [[agent-skills]] 갱신 — [[Addy Osmani]] 코딩 에이전트 스킬 모음, ⭐85,395→**86,408**(당일 +578·안정 상승)(raw API 수치) *(UPDATE 2026-08-12)*
+- [[code-graph-rag]] 갱신 — vitali87 지식그래프 기반 코드 RAG, ⭐3,650→**3,966**(당일 +341·4천 근접·확산 지속)(raw API 수치) *(UPDATE 2026-08-12)*
+- [[MiniMax-H3]] 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL **59.4k**(좋아요 3.64k·HF 트렌딩 모델 1위)·원본 35.3k→59.4k(Comfy-Org 변형 이날 raw 미포함·최근 6.80M)(raw API 수치) *(UPDATE 2026-08-12)*
 <!-- ── 2026-08-11 자동수집 배치 (신규 7 · 갱신 6 / GitHub 2[신규 semantica·ComfyUI] + HF논문 5[신규] + GitHub 3[갱신]·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[semantica]] — semantica-agi 컨텍스트·감사가능성용 그래프 네이티브 AI 인프라, [[code-graph-rag]]·[[LLM-Wiki]]와 "그래프로 컨텍스트 좁히기" 동형 (GitHub ⭐4,469·당일 +970 신규 급상승·Python·실사용성 미검증 medium) *(NEW 2026-08-11)*
 - [[ComfyUI]] — comfyanonymous 노드 기반 디퓨전 GUI·API·백엔드, 오픈 i2v 실사용의 공통 실행 엔진([[MiniMax-H3]] 재패키지 채택 집중)·[[video-saas]] 오픈 축 인프라 앵커 (GitHub ⭐126,600·당일 +922·성숙 오픈소스 high) *(NEW 2026-08-11)*

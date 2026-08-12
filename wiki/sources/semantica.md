@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, graph-native, ai-infra, context, auditability, python]
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-12
 sources: []
 reliability: medium
 ---
@@ -12,8 +12,11 @@ reliability: medium
 # semantica-agi/semantica — 그래프 네이티브 AI 인프라
 
 **GitHub**: https://github.com/semantica-agi/semantica
-**스타수**: ⭐4,469 (2026-08-11 자동수집, 당일 **+970·신규 급상승**) · **언어**: Python · **제작**: semantica-agi
+**스타수**: ⭐5,261 (2026-08-12 자동수집, 당일 **+893**) ← 4,469 (08-11, +970 신규 급상승) · **언어**: Python · **제작**: semantica-agi
 **성격**: 컨텍스트·감사가능성(auditability) 확보를 목표로 한 **그래프 네이티브(graph-native) AI 인프라**
+
+> [!update] 2026-08-12 갱신 — ⭐5,261 (당일 +893·5천 돌파, 이틀째 급상승)
+> GitHub ⭐**5,261**(2026-08-12 자동수집, 당일 +893) ← 4,469(08-11, +970 신규 편입). 편입 이튿날도 +893으로 급상승 지속해 **5천 돌파** — 하루짜리 화제가 아니라 "그래프 네이티브·감사가능성 AI 인프라" 프레이밍에 이틀 연속 실유입이 붙는 신호. 08-10 [[code-graph-rag]](이날 +341로 유입 지속)와 함께 "임베딩 유사도 대신 구조 그래프로 컨텍스트·근거를 좁히고 추적"하는 그래프 계보가 계속 두꺼워짐. 다만 그래프 스키마·감사 로그 구현·실사용성은 여전히 미검증(급상승은 관심도 지표이지 성능 근거 아님). reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **AI 시스템의 컨텍스트와 감사가능성을 그래프 구조로 확보하려는 인프라**(제목·raw 기반). 08월 위키에서 반복 확인된 "그래프로 필요한 것만 읽기·구조로 컨텍스트를 좁히기" 계보([[code-graph-rag]] 모노레포 코드 RAG·[[code-review-graph]])와 같은 결로, semantica는 이를 *코드*가 아닌 *AI 시스템 전반의 컨텍스트·이력 추적*으로 확장한 축으로 읽힌다. 특히 "감사가능성(auditability)"을 전면에 세운 점이 차별 프레이밍 — 에이전트가 무엇을 근거로 무엇을 했는지를 그래프 간선으로 남겨 사후 추적하려는 접근으로, 내가 관리하는 이 볼트(wikilink 그래프·[[LLM-Wiki]])와 구조가 동형이라 "지식·행위 근거를 그래프로 기록·추적"하는 패턴의 참조점이 된다. 무명 신규가 당일 +970으로 급상승한 것은 "그래프 네이티브 AI 인프라" 프레이밍에 대한 초기 관심의 신호.
@@ -42,6 +45,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/semantica-agi/semantica
-- 스타: ⭐4,469 (2026-08-11 자동수집, 당일 +970 급상승) · Python
+- 스타: ⭐5,261 (2026-08-12 자동수집, 당일 +893·5천 돌파) ← ⭐4,469 (08-11, +970 신규 급상승) · Python
 - 성격: 컨텍스트·감사가능성용 그래프 네이티브 AI 인프라
 - 신뢰도: ⭐⭐ (신규 급상승·raw 자동수집 수치, 실사용성·아키텍처 미검증·실WebFetch 미수행)

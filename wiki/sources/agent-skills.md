@@ -4,13 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, coding-agent, skills, engineering, productivity, reference]
 created: 2026-05-07
-updated: 2026-08-10
+updated: 2026-08-12
 sources: []
 reliability: high
 ---
 
 # addyosmani/agent-skills
 
+> [!update] 2026-08-12 갱신 — ⭐86,408 (당일 +578)
+> ⭐**86,408**(2026-08-12 자동수집, 당일 +578) ← 85,395(08-10, +680) ← 84,779(08-09, +779). "에이전트 스킬 큐레이션" 최상단 허브 지위 유지, 유입은 +수백대로 안정 지속 — [[Addy Osmani]] 브랜드+프로덕션 검증 표(verification gate·anti-rationalization) 구성 동일. 커뮤니티 축([[mattpocock-skills]] 21만)·공식 축([[google-skills]] 1.7만)과 함께 "스킬=배포 단위" 상단을 계속 두껍게 유지. reliability high 유지. *raw 자동수집 수치 반영 — 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-10 갱신 — ⭐85,395 (당일 +680)
 > ⭐**85,395**(2026-08-10 자동수집, 당일 +680) ← 84,779(08-09, +779) ← 84,117(08-08). "에이전트 스킬 큐레이션" 최상단 허브 지위 유지, 유입은 +수백대로 안정. [[Addy Osmani]] 브랜드+프로덕션 검증 표(verification gate·anti-rationalization) 구성 동일. reliability high 유지. *raw 자동수집 수치 반영 — 실WebFetch 미수행(타임라인 유지).*
 > [!update] 2026-08-09 갱신 — ⭐84,779 (당일 +779)
@@ -53,5 +55,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/addyosmani/agent-skills
-- 스타: ⭐84,779 (2026-08-09 자동수집, 당일 +779) ← ⭐84,117 (08-08, +1,131) ← ⭐82,215 (08-06) ← ⭐71,362 (07-07) ← ⭐58,861 (06-14)
+- 스타: ⭐86,408 (2026-08-12 자동수집, 당일 +578) ← ⭐85,395 (08-10, +680) ← ⭐84,779 (08-09, +779) ← ⭐84,117 (08-08) ← ⭐82,215 (08-06) ← ⭐71,362 (07-07) ← ⭐58,861 (06-14)
 - 신뢰도: ⭐⭐⭐⭐⭐ (84K 스타, Addy Osmani·raw 자동수집 수치)
