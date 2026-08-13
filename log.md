@@ -1800,3 +1800,16 @@ HF Trending Models (2026-05-29):
 - 신규 entity: 없음 (ZhuLinsen·meta-models·larryvrh·semantica-agi·vitali87은 08월 "비-프론티어랩 엔티티 날조 방지" 기조 유지·source 내 wikilink만; [[MiniMax]]·[[Addy Osmani]] 기존 페이지 wikilink만·HF논문 저자/기관 미기재)
 - index.md 업데이트 (total_pages: 861→869, total_sources: 843→851)
 - raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)
+
+
+## [2026-08-13] ingest | ai-news 자동수집 13건 배치 (신규 6 · 갱신 7)
+- 도메인: ai-news (교차: local-llm — unsloth·AI4AI-Test-Time·DeepSeek-V4-Flash·Kimi-K3 / video-saas — StateFlow·MiniMax-H3·Long-Horizon-Consistency / slam-3dgs — StateFlow / security-agent — OpenART)
+- 추가 페이지: 6개 (신규 소스 6 — GitHub 1 [[unsloth]](unslothai ⭐70,732·당일 +592·Python·오픈 LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화·"소비"가 아닌 "제작·커스터마이징" 축의 표준 진입점·성숙 OSS high·수치 raw 자동수집) / HF논문 5 전량 미래형 arxiv ID medium: [[OpenART]] 2608.00677·개방형 환경 진화로 에이전트 레드팀 확장·HF 데일리 1위·업98 / [[AI4AI-Test-Time]] 2608.12307·하네스로 강→약 능력 테스트타임 전이(학습 없음)·데일리 2위·업71 / [[Spark-to-Paper]] 2608.11924·아이디어→논문 조합형 스킬 자동생성·데일리 3위·업64 / [[Long-Horizon-Consistency]] 2608.08160·인터랙티브 내러티브 LLM 에이전트 장기 일관성 벤치·데일리 4위·업24 / [[StateFlow]] 2608.12314·previz용 3D 월드 상태 구축·진화·접근·데일리 5위·업21)
+- 업데이트 페이지: 9개 (source 갱신 7: GitHub 4 [[semantica]] ⭐5,261→**5,990**(당일 +845·6천 근접·사흘째 급상승)·[[DeepTutor]] ⭐27,105→**35,332**(+651·약 한 달 만 +8천대 누적)·[[Kronos]] ⭐34,707→**37,034**(+266·완만 지속 성장)·[[needle]] ⭐3,132→**4,529**(+315·유입 재가속) / HF모델 3 [[Kimi-K3]] DL 1.57M→**1.87M**(좋아요 10.6k·이틀 새 +약30만·트렌딩 좋아요 1위)·[[MiniMax-H3]] 베이스 원본 DL 59.4k→**1.61M**(좋아요 3.77k·집계 경계 미확정 주의)·[[DeepSeek-V4-Flash-0731]] DL 869k→**1.43M**(좋아요 3.27k·100만 돌파) / domain 1: ai-news 2026-08-13 섹션 / index 1)
+- 핵심 인사이트: 08월 내내 오픈 모델이 "소비"(ComfyUI i2v·Kimi/MiniMax/DeepSeek DL) 신호로만 두꺼워지던 흐름에, 신규 GitHub가 [[unsloth]](⭐7만대·로컬 파인튜닝/추론 최적화) 단 하나로 좁혀지며 "오픈 웨이트를 직접 LoRA로 개조·학습"하는 **제작·커스터마이징 축**이 명시적으로 잡힘(소비↔제작 대비, local-llm 저변). HF 논문 5편은 데일리 1~5위를 다시 쓸어담되 레드팀 안전([[OpenART]])·강약 전이([[AI4AI-Test-Time]])·논문 자동생성([[Spark-to-Paper]])·장기 일관성([[Long-Horizon-Consistency]])·3D previz([[StateFlow]])로 광폭 분산 — 특히 [[Long-Horizon-Consistency]]는 롱컨텍스트 "많이 담기"([[Kimi-K3]] 1M)와 대비되는 "담은 설정을 끝까지 지키나"를 계량화해 내 장편 대본/캐릭터 봇 후반부 이탈과 동형. 갱신 축은 [[MiniMax-H3]] 베이스 원본이 59.4k→1.61M로 하루 새 급증했으나 원본 유입 vs 재패키지 집계 대상 변동일 수 있어 **집계 경계 미확정**으로 표기.
+- 검증: 신규 GitHub 1·갱신 GitHub 4·HF모델 3 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지, 07-30~08-12 배치와 동일 처리). [[unsloth]]는 성숙 OSS로 실재·용도 high이나 스타·증분은 raw 자동수집이며 속도·메모리 절감 배수는 원문 재현 전 → 미기재(인용 시 미검증 병기). HF모델 자체발표 벤치는 인용 시 미검증 병기·구체 수치 미기재. **HF논문 5건 전량 미래형 arxiv ID(2608.x)로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 구체 벤치 수치·저자/소속 미기재**([[CLAUDE.md]] 사실확인 원칙). [[needle]]은 raw 한줄요약("14MB 소형 파운데이션 모델")이 기존 페이지("26M 함수호출 특화")와 상충해 모델 규모·용도를 원문 재현 전까지 미확정으로 둠(모순 명시).
+- canvas 업데이트: NO (대형 JSON — 정기 graph 갱신 시 일괄 반영)
+- actionable 추가: YES (2건 — unsloth 오픈 소형 모델 로컬 QLoRA 파인튜닝 스팟체크[중간] / StateFlow 편집 가능한 3D 월드 상태 previz 파이프라인 개념 참조[낮음])
+- 신규 entity: 없음 (unslothai·HKUDS·cactus-compute·shiyu-coder는 08월 "비-프론티어랩 엔티티 날조 방지" 기조 유지·source 내 wikilink만; [[MiniMax]]·[[DeepSeek]] 기존 페이지 wikilink만·HF논문 저자/기관 미기재)
+- index.md 업데이트 (total_pages: 869→875, total_sources: 851→857)
+- raw.md: 처리 13건 전체 삭제 완료 (대기 항목 없음)

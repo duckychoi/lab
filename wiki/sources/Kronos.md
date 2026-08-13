@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, finance-ai, time-series, financial-llm, trading]
 created: 2026-04-10
-updated: 2026-07-28
+updated: 2026-08-13
 sources: []
 reliability: medium
 ---
 
 # shiyu-coder/Kronos
+
+> [!update] 2026-08-13 갱신 — ⭐37,034 (당일 +266)
+> ⭐**37,034**(2026-08-13 자동수집, 당일 +266) ← 34,707(07-28, +441). 보름 만의 갱신에서 완만한 지속 성장 유지(+2.3천대) — 금융 파운데이션 모델 관심이 폭증기 이후에도 꾸준한 우상향. 구조(45+ 거래소 학습·2단계 이산토큰화→decoder-only AR·mini/small/base/large)는 기존 확인분 동일. 금융 예측 특성상 백테스트↔라이브 괴리 검증 필수라 reliability **medium 유지**. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-07-28 갱신 — ⭐34,707 (+441/일)
 > ⭐**34,707**(2026-07-28, 당일 +441, WebFetch "34.7k" 일치) ← ⭐33,610(07-25). 완만한 지속 성장 유지. WebFetch 재확인: **45+ 글로벌 거래소** 학습·2단계(계층 이산토큰화 → decoder-only AR)·mini/small/base/large 변종·KronosPredictor·Qlib 파인튜닝·BTC/USDT 24h 데모. 금융 예측 특성상 백테스트↔라이브 괴리 검증 필수라 reliability **medium 유지**.

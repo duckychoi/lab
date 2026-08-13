@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, comfyui, minimax, video-saas]
 created: 2026-08-06
-updated: 2026-08-12
+updated: 2026-08-13
 sources: []
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
+
+> [!update] 2026-08-13 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 1.61M (좋아요 3.77k·트렌딩 상위)
+> raw 자동수집이 이날도 원본 저장소 MiniMaxAI/MiniMax-H3를 포착 — DL **1.61M·좋아요 3.77k**(2026-08-13) ← 59.4k(08-12, 3.64k). 하루 새 5.9만→161만으로 급증했는데, 이는 원본 리포 유입 급증이거나 자동수집 집계 대상(원본 vs Comfy-Org 재패키지) 변동일 수 있어 수치 해석에 주의(집계 경계 미확정). 어느 쪽이든 오픈 i2v 실사용이 [[ComfyUI]] 경로로 몰리는 구조는 유지. "베이스→ComfyUI 재패키지→[[MiniMax-H3-Turbo-Lora]] 가속 LoRA" 파생 계층도 유지. i2v 품질은 미검증·medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-12 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 59.4k (좋아요 3.64k·HF 트렌딩 모델 1위)
 > 이날 raw 자동수집은 **원본 베이스 저장소**(https://huggingface.co/MiniMaxAI/MiniMax-H3)를 잡았다 — DL **59.4k·좋아요 3.64k**(2026-08-12, **HF 트렌딩 모델 1위**) ← 원본 35.3k(08-09 관측). 원본 베이스가 35.3k→59.4k로 상승했으나, Comfy-Org 재패키지 변형(08-11 6.80M) 대비 여전히 약 100배 이상 격차 — "오픈 i2v 실사용은 사실상 전부 ComfyUI 노드 경로"라는 구도 재확인([[ComfyUI]] 엔진·재패키지 모델 양쪽 신호 일치, [[video-saas]] 오픈 i2v 축). 다만 트렌딩 **모델 1위·좋아요 3.64k**는 원본 자체에 대한 커뮤니티 관심도 함께 상위임을 보여줌. Comfy-Org 변형 수치는 이날 raw 미포함(최근값 6.80M·08-11). 원본 스펙·품질 벤치·라이선스는 여전히 미검증(다운로드·좋아요는 접근성·관심 지표이지 품질 근거 아님). reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, education-ai, adaptive-learning, personalization, agent]
 created: 2026-04-10
-updated: 2026-07-17
+updated: 2026-08-13
 sources: []
 reliability: high
 ---
 
 # HKUDS/DeepTutor
+
+> [!update] 2026-08-13 갱신 — ⭐35,332 (당일 +651)
+> GitHub ⭐**35,332**(2026-08-13 자동수집, 당일 +651) ← 27,105(07-17, +656). 약 한 달 만의 갱신에서 2.7만→3.5만으로 +8천대 누적 상승 — 완만 채택기라던 개인화 튜터가 여전히 하루 +651대 유입을 유지하며 3.5만을 넘김. EdTech·개인화 학습 에이전트 수요가 08월까지 꺾이지 않고 지속(HKU 데이터인텔리전스랩). 실제 학습 효과 벤치·한국어 지원은 여전히 미검증. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!note] 2026-07-17 갱신
 > GitHub ⭐**27,105 (당일 +656)** ← 26,570 (07-16). 하루 +656로 유입 재가속(+172→+656) — 완만 채택기에 있던 개인화 튜터가 다시 트렌딩 상위로 튀어오름. EdTech AI 수요가 여전히 살아있음을 시사(HKU 데이터인텔리전스랩).

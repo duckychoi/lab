@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-12 (자동수집 13건 인제스트 완료 — 신규 8·갱신 5. 대기 항목 없음)
+updated: 2026-08-13 (자동수집 13건 인제스트 완료 — 신규 6·갱신 7. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -18,7 +18,11 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 ---
 
+---
+
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+<!-- 2026-08-13 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 6·갱신 7. 신규 6: GitHub 1 [[unsloth]](unslothai ⭐70,732·+592·오픈 모델 로컬 파인튜닝/추론 메모리 최적화·성숙 OSS high·수치 raw) + HF논문 5 전량 미래형 ID medium: [[OpenART]] 2608.00677·데일리1위·업98·[[AI4AI-Test-Time]] 2608.12307·2위·업71·[[Spark-to-Paper]] 2608.11924·3위·업64·[[Long-Horizon-Consistency]] 2608.08160·4위·업24·[[StateFlow]] 2608.12314·5위·업21. 갱신 7(전량 기존): GitHub 4 [[semantica]] ⭐5,261→5,990(+845)·[[DeepTutor]] ⭐27,105→35,332(+651)·[[Kronos]] ⭐34,707→37,034(+266)·[[needle]] ⭐3,132→4,529(+315·raw는 '14MB FM' 표기로 26M 함수호출과 상충·규모 미확정) / HF모델 3 [[Kimi-K3]] 1.57M→1.87M·[[MiniMax-H3]] 베이스 원본 59.4k→1.61M(집계 경계 미확정 주의)·[[DeepSeek-V4-Flash-0731]] 869k→1.43M. GitHub·HF모델 전량 raw 자동수집·실WebFetch 미수행(타임라인 2026-08 유지). HF논문 5 미래형 arxiv ID 원문 미재현 medium·벤치/저자 미기재(사실확인 원칙). 신규 entity 0(unslothai·HKUDS·cactus-compute·shiyu-coder 비-프론티어랩 엔티티 날조 방지·source 내 wikilink만). actionable 신규 2(낮음·중간). index total_pages 869→875·total_sources 851→857. -->
 
 <!-- 2026-08-12 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 8·갱신 5. 신규 8: GitHub 1 [[daily_stock_analysis]](ZhuLinsen ⭐62,436·+243·Python·LLM 다중 시장 주식 분석·[[TradingAgents]] 인접·투자 판단 신뢰성 미검증 medium) + HF논문 5 전량 미래형 arxiv ID medium: [[ComBodied-Agents]] 2608.10915·HF데일리1위·업75·[[Co-Evolution-Agentic]] 2608.10299·데일리2위·업63·[[Beyond-Pixels-4D]] 2608.10744·데일리3위·업33·[[Articulated-Object-Reconstruction]] 2607.27749·데일리4위·업29·[[AdvFD]] 2608.11205·데일리5위·업15 + HF모델 2 신규: [[Muse-Glimmer-30B]](meta-models·트렌딩2위·좋아요1.16k·DL미표시·정체 미확인 medium)·[[MiniMax-H3-Turbo-Lora]](larryvrh·트렌딩3위·DL669·[[MiniMax-H3]] Turbo 가속 LoRA·초기단계 low). 갱신 5(전량 기존 페이지): GitHub 4 [[agency-agents]] ⭐142,148→144,026(+958·14.4만 돌파)·[[semantica]] ⭐4,469→5,261(+893·5천 돌파·이틀째 급상승)·[[agent-skills]] ⭐85,395→86,408(+578)·[[code-graph-rag]] ⭐3,650→3,966(+341·4천 근접) / HF모델 1 [[MiniMax-H3]] 베이스 원본 MiniMaxAI/MiniMax-H3 DL 35.3k→59.4k(좋아요 3.64k·트렌딩 모델 1위·이날 raw는 원본 저장소만 포착·Comfy-Org 변형 최근 6.80M). GitHub·HF모델 전량 raw 자동수집 API 수치 반영·실WebFetch 미수행(볼트 시뮬레이션 타임라인 2026-08 유지). HF논문 5건 전량 미래형 arxiv ID로 원문 초록·수치 재현 불가 → raw 한줄요약·제목 기반 medium, 벤치 수치·저자/소속 미기재(사실확인 원칙). Muse-Glimmer-30B는 모달리티·용도·라이선스 미확인으로 이름·규모·순위만 기재. 신규 entity 0(ZhuLinsen·meta-models·larryvrh·비-프론티어랩 엔티티 날조 방지·source 내 wikilink만). actionable 신규 2건 전량 낮음(MiniMax-H3-Turbo-Lora 가속 A·B 비교·daily_stock_analysis 스케줄형 리포트 파이프라인 참조). index total_pages 861→869·total_sources 843→851. -->
 

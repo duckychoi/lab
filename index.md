@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-12 (자동수집 13건 배치 인제스트 — 신규 8[GitHub 1 daily_stock_analysis + HF논문 5 + HF모델 2]·갱신 5[GitHub 4·HF모델 1], 신규 엔티티 0)
-total_pages: 869
-total_sources: 851
+updated: 2026-08-13 (자동수집 13건 배치 인제스트 — 신규 6[GitHub 1 unsloth + HF논문 5]·갱신 7[GitHub 4·HF모델 3], 신규 엔티티 0)
+total_pages: 875
+total_sources: 857
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 851
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-13 자동수집 배치 (신규 6 · 갱신 7 / GitHub 1[신규 unsloth] + HF논문 5[신규] + GitHub 4·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
+- [[unsloth]] — unslothai LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화 프레임워크, [[needle]]·[[ComfyUI]] 소비 축과 대비되는 "오픈 모델 제작·커스터마이징" 표준 진입점·[[local-llm]] 교차 (GitHub ⭐70,732·당일 +592·Python·성숙 OSS이나 수치 raw 자동수집·절감 배수 미검증 high) *(NEW 2026-08-13)*
+- [[OpenART]] — 개방형 환경 진화(open-ended environment evolution)로 에이전트 레드팀 확장, [[Co-Evolution-Agentic]] 자기진화 엔진을 안전성 검증에 접목·공수 이중용도 (HF 데일리 1위·업보트 98·미래형 ID 미검증 medium) (2608.00677) *(NEW 2026-08-13)*
+- [[AI4AI-Test-Time]] — 하네스로 강→약 모델 능력 테스트타임 전이(학습 없음), [[Agent-Memory-Distillation]]·[[HarnessOpt-Bench]] 계보·저비용 약모델 활용 (HF 데일리 2위·업보트 71·미래형 ID 미검증 medium) (2608.12307) *(NEW 2026-08-13)*
+- [[Spark-to-Paper]] — 아이디어→논문 초안 엔드투엔드 자동 생성(조합형 스킬), [[agent-skills]]·[[andrej-karpathy-skills]] 스킬 오케스트레이션 계보 (HF 데일리 3위·업보트 64·미래형 ID 미검증 medium) (2608.11924) *(NEW 2026-08-13)*
+- [[Long-Horizon-Consistency]] — 인터랙티브 내러티브에서 LLM 에이전트 장기 일관성 벤치, [[Long-Horizon-Terminal-Bench]]와 다른 논문·[[shot-wrighter]]/[[reat-script]] 장편 대본 실무 교차 (HF 데일리 4위·업보트 24·미래형 ID 미검증 medium) (2608.08160) *(NEW 2026-08-13)*
+- [[StateFlow]] — 프리비주얼라이제이션용 3D 월드 상태 구축·진화·접근, [[Beyond-Pixels-4D]]·[[slam-3dgs]]×[[video-saas]] 3D/4D 교차·[[reat-render]] 접점 (HF 데일리 5위·업보트 21·미래형 ID 미검증 medium) (2608.12314) *(NEW 2026-08-13)*
+- [[semantica]] 갱신 — semantica-agi 그래프 네이티브·감사가능성 AI 인프라, ⭐5,261→**5,990**(당일 +845·6천 근접·사흘째 급상승)(raw API 수치) *(UPDATE 2026-08-13)*
+- [[DeepTutor]] 갱신 — HKUDS 에이전트 기반 개인화 학습 튜터, ⭐27,105→**35,332**(당일 +651·약 한 달 만 +8천대 누적)(raw API 수치) *(UPDATE 2026-08-13)*
+- [[Kronos]] 갱신 — shiyu-coder 금융시장 특화 파운데이션 모델, ⭐34,707→**37,034**(당일 +266·완만 지속 성장)(raw API 수치) *(UPDATE 2026-08-13)*
+- [[needle]] 갱신 — cactus-compute 온디바이스 초경량 모델, ⭐3,132→**4,529**(당일 +315·유입 재가속·raw는 "14MB 소형 FM" 표기로 26M 함수호출 프레이밍과 상충·규모 미확정)(raw API 수치) *(UPDATE 2026-08-13)*
+- [[Kimi-K3]] 갱신 — Moonshot 오픈 프론티어 멀티모달 MoE, DL 1.57M→**1.87M**(좋아요 10.6k·이틀 새 +약30만·트렌딩 좋아요 1위)(raw API 수치) *(UPDATE 2026-08-13)*
+- [[MiniMax-H3]] 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 59.4k→**1.61M**(좋아요 3.77k·집계 경계 미확정 주의·[[ComfyUI]] 소비 구조 유지)(raw API 수치) *(UPDATE 2026-08-13)*
+- [[DeepSeek-V4-Flash-0731]] 갱신 — DeepSeek 304B 저지연 텍스트 생성, DL 869k→**1.43M**(좋아요 3.27k·100만 돌파·효율 노선 채택 확대)(raw API 수치) *(UPDATE 2026-08-13)*
 <!-- ── 2026-08-12 자동수집 배치 (신규 8 · 갱신 5 / GitHub 1[신규 daily_stock_analysis] + HF논문 5[신규] + HF모델 2[신규 Muse-Glimmer·MiniMax-H3-Turbo-Lora] + GitHub 4·HF모델 1[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[daily_stock_analysis]] — ZhuLinsen LLM 기반 다중 시장 주식 자동 분석 파이프라인, [[TradingAgents]]·[[금융-AI]] 인접(트레이딩보다 분석 리포트 자동화 특화) (GitHub ⭐62,436·당일 +243·Python·투자 판단 신뢰성 미검증 medium) *(NEW 2026-08-12)*
 - [[ComBodied-Agents]] — 인간 중심(human-centric) 에이전틱 AI 새 패러다임 제안, 같은 배치 [[Co-Evolution-Agentic]](인간 초월 자율)과 "통제 vs 초월" 정반대 양극 (HF 데일리 1위·업보트 75·미래형 ID 미검증 medium) (2608.10915) *(NEW 2026-08-12)*
