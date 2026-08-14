@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, deepseek, moe, low-latency, text-generation, open-weights, local-llm]
 created: 2026-08-04
-updated: 2026-08-13
+updated: 2026-08-14
 sources: []
 reliability: medium
 ---
 
 # DeepSeek-V4-Flash-0731 (deepseek-ai)
+
+> [!update] 2026-08-14 갱신 — DL 1.61M (좋아요 3.35k·150만 돌파)
+> HF 다운로드 **1.61M·좋아요 3.35k**(2026-08-14 자동수집) ← 1.43M(08-13, 3.27k) ← 869k(08-09). 전날 100만 돌파에 이어 **150만 돌파** — "규모보다 지연·비용" 저지연 Flash의 채택이 꾸준히 확대. [[Kimi-K3]](2.8T·규모 상단)·[[GLM-5.2]](753B) 규모 축과 대비되는 효율 노선 실수요 지속. 304B 구성 동일. 같은 날 신규 [[LLMRouter]](모델 라우팅 인프라)와 개념 교차 — 저지연 Flash는 라우터가 "빠른 응답이 필요한 요청"을 보낼 후보 축. 활성 파라미터·컨텍스트·라이선스·벤치는 원문 재현 전 → 구체 수치 미기재·medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > [[DeepSeek]]의 **304B 파라미터 텍스트 생성 모델(Flash 계열)**. raw 자동수집 기준 HF 다운로드 **433k·좋아요 2.15k**, "저지연(low-latency) 추론 지향" 신규 릴리스로 소개된다. DeepSeek의 전통적 노선인 **효율(비용·지연) 대비 성능**의 서빙 측 연장으로 읽힌다 — "Flash"는 통상 응답 지연을 줄인 경량/최적화 변종을 뜻하므로, 304B라는 규모에도 *빠른 응답*을 겨냥한 구성으로 추정. 오픈 웨이트 축에서 [[Kimi-K3]](2.8T *규모* 상단)·[[GLM-5.2]](753B 플래그십)와 대비되는 **"규모보다 지연·비용"** 포지션.

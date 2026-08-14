@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-13 (자동수집 13건 배치 인제스트 — 신규 6[GitHub 1 unsloth + HF논문 5]·갱신 7[GitHub 4·HF모델 3], 신규 엔티티 0)
-total_pages: 875
-total_sources: 857
+updated: 2026-08-14 (자동수집 13건 배치 인제스트 — 신규 8[GitHub 2 ragflow·LTX-2 + HF논문 5 + HF모델 1 LTX-2.5]·갱신 5[GitHub 3·HF모델 2], 신규 엔티티 0)
+total_pages: 883
+total_sources: 865
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 857
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-14 자동수집 배치 (신규 8 · 갱신 5 / GitHub 2[신규 ragflow·LTX-2] + HF논문 5[신규] + HF모델 1[신규 LTX-2.5] + GitHub 3·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium·소속 raw 기재 미검증) ── -->
+- [[ragflow]] — infiniflow 에이전트 결합형 문서 파싱·검색 RAG 엔진, 그래프 축([[semantica]]·[[code-graph-rag]])과 대비되는 "문서 파싱·검색 파이프라인" 컨텍스트 축·[[LLM-Wiki]] 원문 인입 후보 (GitHub ⭐88,228·당일 +465·성숙 OSS이나 파싱/검색 벤치 raw·미검증 high) *(NEW 2026-08-14)*
+- [[LTX-2]] — Lightricks 오디오 동반 영상 생성 공식 추론/LoRA 학습 패키지, 오픈 i2v가 [[MiniMax-H3]] 단독에서 "오디오 동반+자체 LoRA" 벤더로 복수화·[[video-saas]] 오픈 축 (GitHub ⭐8,990·당일 +205·공식 리포이나 해상도/오디오 동기/라이선스 미검증 medium) *(NEW 2026-08-14)*
+- [[Alaya-EVOKE]] — 선형 스케일 감독을 넘어 endless world로 확장하는 학습 접근, [[Beyond-Environment-Scaling]] 학습 이론·[[Co-Evolution-Agentic]] 무한 확장 프레이밍 교차 (HF 데일리 1위·업보트 66·미래형 ID 미검증 medium) (2608.13546) *(NEW 2026-08-14)*
+- [[DreamX-Phi]] — 로봇 조작용 행동조건부 비디오 월드모델(행동→미래 프레임 예측), [[SimWAM]]·[[월드모델]]·[[slam-3dgs]]×[[video-saas]] 교차·Alibaba raw 기재 (HF 데일리 2위·업보트 62·미래형 ID·소속 미검증 medium) (2608.13489) *(NEW 2026-08-14)*
+- [[LLMRouter]] — LLM 라우터 개발·평가·배포 통합 인프라(요청→모델 자동 선택), 오픈 웨이트 폭증([[Kimi-K3]]·[[DeepSeek-V4-Flash]]·[[needle]])의 필연적 라우팅 계층·다중 모델 하네스 게이트 참조·UIUC raw (HF 업보트 2,340 최상위·미래형 ID·소속 미검증 medium) (2608.06867) *(NEW 2026-08-14)*
+- [[Intern-S2-Preview]] — 과학 에이전트형 파운데이션 모델 프리뷰, [[Spark-to-Paper]]·[[auto-research]] 연구 자동화 계보·[[InternScience]] 추정 계열·기여자 125명 raw (HF 데일리 상위·업보트 38·미래형 ID 미검증 medium) (2608.13505) *(NEW 2026-08-14)*
+- [[DarwinX]] — 자연선택으로 에이전트 하네스(스캐폴딩)를 진화, [[HarnessOpt-Bench]]·[[AI4AI-Test-Time]] 하네스 축·[[Co-Evolution-Agentic]] 자기진화 계보·Salesforce raw (HF 데일리 상위·업보트 34·미래형 ID·소속 미검증 medium) (2608.07545) *(NEW 2026-08-14)*
+- [[LTX-2.5]] — Lightricks 이미지→비디오 HF 모델, GitHub [[LTX-2]] 패키지와 짝(코드↔가중치)·오픈 i2v 벤더 다변화·[[MiniMax-H3]] 병렬 대안 (HF DL 208k·좋아요 766·i2v·스펙/품질 미검증 medium) *(NEW 2026-08-14)*
+- [[semantica]] 갱신 — semantica-agi 그래프 네이티브·감사가능성 AI 인프라, ⭐5,990→**7,134**(당일 +713·7천 돌파·나흘째 급상승)(raw API 수치) *(UPDATE 2026-08-14)*
+- [[needle]] 갱신 — cactus-compute 온디바이스 초경량 모델, ⭐4,529→**5,199**(당일 +769·5천 돌파·유입 재가속·트렌딩 최상위·raw는 '14MB FM'과 '26M 함수호출' 규모 상충 미확정 유지)(raw API 수치) *(UPDATE 2026-08-14)*
+- [[unsloth]] 갱신 — unslothai 오픈 LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화, ⭐70,732→**71,241**(당일 +328·안정 상승·지원 목록 Qwen3.8·Kimi K3·MiniMax-H3·DeepSeek-V4 명시)(raw API 수치) *(UPDATE 2026-08-14)*
+- [[MiniMax-H3]] 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 1.61M→**2M**(좋아요 3.86k·33B raw 명시·트렌딩 모델 1위·[[LTX-2.5]] 벤더 복수화 신호)(raw API 수치) *(UPDATE 2026-08-14)*
+- [[DeepSeek-V4-Flash-0731]] 갱신 — DeepSeek 304B 저지연 텍스트 생성, DL 1.43M→**1.61M**(좋아요 3.35k·150만 돌파·효율 노선 지속·[[LLMRouter]] 저지연 라우팅 후보)(raw API 수치) *(UPDATE 2026-08-14)*
 <!-- ── 2026-08-13 자동수집 배치 (신규 6 · 갱신 7 / GitHub 1[신규 unsloth] + HF논문 5[신규] + GitHub 4·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium) ── -->
 - [[unsloth]] — unslothai LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화 프레임워크, [[needle]]·[[ComfyUI]] 소비 축과 대비되는 "오픈 모델 제작·커스터마이징" 표준 진입점·[[local-llm]] 교차 (GitHub ⭐70,732·당일 +592·Python·성숙 OSS이나 수치 raw 자동수집·절감 배수 미검증 high) *(NEW 2026-08-13)*
 - [[OpenART]] — 개방형 환경 진화(open-ended environment evolution)로 에이전트 레드팀 확장, [[Co-Evolution-Agentic]] 자기진화 엔진을 안전성 검증에 접목·공수 이중용도 (HF 데일리 1위·업보트 98·미래형 ID 미검증 medium) (2608.00677) *(NEW 2026-08-13)*

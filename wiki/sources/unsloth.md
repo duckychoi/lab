@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, fine-tuning, qlora, peft, memory-efficient, on-device]
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-08-14
 sources: []
 reliability: high
 ---
@@ -12,8 +12,11 @@ reliability: high
 # unslothai/unsloth — 메모리 절감형 로컬 파인튜닝/추론
 
 **GitHub**: https://github.com/unslothai/unsloth
-**스타수**: ⭐70,732 (2026-08-13 자동수집, 당일 **+592**) · **언어**: Python · **제작**: unslothai
+**스타수**: ⭐71,241 (2026-08-14 자동수집, 당일 **+328**) ← 70,732 (08-13, +592) · **언어**: Python · **제작**: unslothai
 **성격**: Qwen·DeepSeek·FLUX 등 **LLM·디퓨전 모델을 로컬에서 파인튜닝·실행**할 때 메모리·속도를 최적화하는 인터페이스
+
+> [!update] 2026-08-14 갱신 — ⭐71,241 (당일 +328·7.1만 돌파)
+> GitHub ⭐**71,241**(2026-08-14 자동수집, 당일 +328) ← 70,732(08-13, +592). 편입 이튿날도 +328로 안정 상승해 **7.1만 돌파** — "오픈 웨이트를 직접 LoRA/QLoRA로 개조·학습"하는 제작·커스터마이징 축의 표준 진입점 위치 유지. raw 한줄요약이 이날 지원 목록으로 "Qwen3.8·[[Kimi-K3]]·[[MiniMax-H3]]·[[DeepSeek-V4-Flash]]·FLUX 등"을 명시해, 위키의 오픈 프론티어 모델들이 곧 unsloth 파인튜닝 대상 저변으로 겹침을 재확인. 속도·메모리 절감 배수는 여전히 원문 재현 전 → 미기재. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **"프론티어 모델을 소비하는" 축(HF 다운로드·[[Kimi-K3]]·[[MiniMax-H3]])과 대비되는, "오픈 모델을 내가 직접 학습·개조하는" 도구 축의 대표 리포.** 08월 위키가 온디바이스 소비([[ComfyUI]] i2v·[[needle]] 도구호출)로 두꺼워지는 동안, unsloth는 그 앞단인 *제작·커스터마이징* 파이프라인을 담당한다 — [[Qwen3.6-27B]]·[[DeepSeek-V4-Flash]] 같은 오픈 웨이트를 LoRA/QLoRA로 도메인 특화하거나, 소비자 GPU(단일 카드) 수준에서 학습·추론 메모리를 크게 줄여 돌리는 것이 핵심 가치. ⭐7만대는 로컬 LLM 생태계에서 "오픈 모델 파인튜닝 = unsloth"가 사실상 표준 진입점으로 굳었음을 시사. 내 [[Hermes]]/ChinameBot류 봇을 오픈 소형 모델로 자체 파인튜닝하려 할 때 **가장 먼저 검토할 학습 스택**.
