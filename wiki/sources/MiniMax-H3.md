@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, comfyui, minimax, video-saas]
 created: 2026-08-06
-updated: 2026-08-14
+updated: 2026-08-15
 sources: []
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
+
+> [!update] 2026-08-15 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2.21M (좋아요 3.94k·33B·트렌딩 모델 1위 유지)
+> raw 자동수집이 이날도 원본 저장소 MiniMaxAI/MiniMax-H3를 포착 — DL **2,212,155(약 2.21M)·좋아요 3.94k**(2026-08-15, **트렌딩 모델 1위 유지**·33B Image-Text-to-Video) ← 2M(08-14, 3.86k) ← 1.61M(08-13). 2M→2.21M(+약21만) 순증 지속하며 오픈 i2v 실사용 확대 — 같은 벤더 다변화 축 [[LTX-2.5]](이날 DL 208k→378k로 급증)와 병행해 "MiniMax 단독→복수 벤더" 흐름이 실수요로 확인. 활성 파라미터·아키텍처 세부는 원문 재현 전(미기재). i2v 품질 미검증·medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-14 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2M (좋아요 3.86k·33B·트렌딩 모델 1위)
 > raw 자동수집이 이날도 원본 저장소 MiniMaxAI/MiniMax-H3를 포착 — DL **2M·좋아요 3.86k**(2026-08-14, **트렌딩 모델 1위**, **33B·Image-Text-to-Video**로 규모·태스크 raw 명시) ← 1.61M(08-13, 3.77k) ← 59.4k(08-12). 전날 1.61M에서 2M로 순증 지속하며 트렌딩 모델 1위 유지 — 오픈 i2v 실사용이 계속 확대되는 구조. 이날 raw에 **33B** 규모가 처음 명시됐으나 활성 파라미터·아키텍처 세부는 여전히 원문 재현 전(미기재). 같은 날 신규 [[LTX-2.5]](Lightricks i2v·DL 208k)가 편입되며 오픈 i2v 벤더가 MiniMax 단독에서 복수로 넓어지는 초기 신호. i2v 품질 미검증·medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*

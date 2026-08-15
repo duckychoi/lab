@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, training, supervision, scaling, endless-world]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # Alaya-EVOKE: From Linear-Scaling Supervision to Endless World
 
 **HF 논문**: https://huggingface.co/papers/2608.13546
-**지표**: HF 데일리 **1위** · 업보트 66 (2026-08-14 자동수집)
+**지표**: HF 데일리 **1위** · 업보트 103 (2026-08-15 자동수집) ← 업보트 66 (08-14)
+
+> [!update] 2026-08-15 갱신 — 업보트 103 (데일리 1위 유지)
+> HF 데일리 **1위 유지**·업보트 **103**(2026-08-15 자동수집) ← 66(08-14). 재수집에서 업보트가 66→103으로 늘며 데일리 최상단 자리 지속 — "선형 감독을 넘어 endless world로"라는 무한 확장형 학습 문제의식이 이틀째 상단 관심. 미래형 ID·원문 미재현 상태 동일(학습 레시피·벤치·저자 미기재). reliability medium 유지.
 
 > [!insight] 핵심 인사이트
 > **"선형 스케일 감독(linear-scaling supervision)을 넘어 끝없는 세계(endless world)로"** — 감독 신호를 데이터에 선형 비례해 늘리는 통상적 학습 스케일링의 한계를 넘어서려는 접근(제목·raw 기반). 08월 위키에서 반복된 "무엇을·어떻게 학습시키나" 이론 축([[Beyond-Environment-Scaling]] 환경 분포>환경 수·[[SFT-Conflicts-RL-Coexists]] 목적함수 간섭·[[EnvACE]] 월드 리허설)의 연장선으로 읽히며, 특히 "endless world"라는 표현은 환경·감독을 무한 생성·자기증식시키는 [[Co-Evolution-Agentic]]·[[EvolvingWorld]] 자기진화 계보와 프레이밍이 겹친다. 데일리 1위·업보트 66으로 이날 배치 최상단 — 학습 감독을 "얼마나"에서 "어떤 구조로 무한 확장하나"로 옮기려는 문제의식이 상단 관심을 받은 신호.
@@ -22,7 +25,7 @@ reliability: medium
 
 ## 도메인별 추출 (ai-news)
 
-- **신뢰도**: ⭐⭐ (medium) — HF 데일리 1위·업보트 66. 원문 미재현.
+- **신뢰도**: ⭐⭐ (medium) — HF 데일리 1위·업보트 103(08-15). 원문 미재현.
 - **즉시 활용**: 낮음(개념) — 학습 이론 담론으로 당장 파이프라인 편입 대상 아님.
 - **6개월 영향력**: 중 — "감독 선형 확장의 한계"가 오픈 학습 레시피 논의의 축이 될 여지([[unsloth]] 커스터마이징 저변과 개념 접점).
 - **허와 실**: "Endless World"는 강한 프레이밍 — 실제 무한 확장 메커니즘·안정성은 원문이 가름.
@@ -35,4 +38,4 @@ reliability: medium
 
 ## 원본
 - 출처: https://huggingface.co/papers/2608.13546
-- 신뢰도: ⭐⭐ (HF 데일리 1위·업보트 66, 미래형 ID·원문 미재현)
+- 신뢰도: ⭐⭐ (HF 데일리 1위·업보트 103, 미래형 ID·원문 미재현)

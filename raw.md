@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-14 (자동수집 13건 인제스트 완료 — 신규 8·갱신 5. 대기 항목 없음)
+updated: 2026-08-15 (자동수집 13건 인제스트 완료 — 신규 0·갱신 13. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -18,11 +18,9 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 ---
 
----
-
----
-
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+<!-- 2026-08-15 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 0·갱신 13(전량 기존 페이지 스탯 갱신). GitHub 5: [[ragflow]] ⭐88,228→88,493(+473)·[[unsloth]] ⭐71,241→71,637(+501)·[[LTX-2]] ⭐8,990→9,016(+161·9천 돌파)·[[semantica]] ⭐7,134→7,683(+1,181·닷새째 급상승 최고조)·[[needle]] ⭐5,199→5,767(+662·트렌딩 최상위·'14MB FM'↔'26M 함수호출' 상충 미확정 유지). HF논문 5 재수집(전량 미래형 ID medium·업보트/순위 갱신): [[Alaya-EVOKE]] 데일리1위 유지·업66→103·[[LLMRouter]] 데일리2위·업2,340→91(전일 raw 자릿수 이상치 정정)·[[DreamX-Phi]] 데일리2위→3위·업62→80·[[DarwinX]] 상위→4위·업34→62·[[Intern-S2-Preview]] 상위→5위·업38→43. HF모델 3: [[MiniMax-H3]] 베이스 원본 DL 2M→2.21M(좋아요3.94k·33B·트렌딩모델1위 유지)·[[DeepSeek-V4-Flash-0731]] DL 1.61M→1.80M(180만 근접)·[[LTX-2.5]] DL 208k→378k(좋아요885·+약17만·오픈 i2v 벤더 다변화 실수요). GitHub·HF모델 전량 raw 자동수집·실WebFetch 미수행(타임라인 2026-08 유지). HF논문 5 미래형 arxiv ID 원문 미재현·벤치/소속 raw 기재 미검증 병기(사실확인 원칙). 신규 entity 0·신규 페이지 0. index total_pages 883 유지·total_sources 865 유지. -->
 
 <!-- 2026-08-14 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 8·갱신 5. 신규 8: GitHub 2 [[ragflow]](infiniflow ⭐88,228·+465·에이전트 결합 문서파싱 RAG·성숙 OSS high·수치 raw)·[[LTX-2]](Lightricks ⭐8,990·+205·오디오 동반 영상생성 공식 추론/LoRA·공식 리포이나 스펙 미검증 medium) + HF논문 5 전량 미래형 ID medium: [[Alaya-EVOKE]] 2608.13546·데일리1위·업66·[[DreamX-Phi]] 2608.13489·데일리2위·업62·Alibaba raw·[[LLMRouter]] 2608.06867·업2,340 최상위·UIUC raw·[[Intern-S2-Preview]] 2608.13505·데일리상위·업38·기여자125명 raw·[[DarwinX]] 2608.07545·데일리상위·업34·Salesforce raw + HF모델 1 신규 [[LTX-2.5]](Lightricks·DL208k·좋아요766·i2v·[[LTX-2]] 생태계·스펙 미검증 medium). 갱신 5(전량 기존): GitHub 3 [[semantica]] ⭐5,990→7,134(+713·7천 돌파)·[[needle]] ⭐4,529→5,199(+769·5천 돌파·raw '14MB FM'↔'26M 함수호출' 규모 상충 미확정 유지)·[[unsloth]] ⭐70,732→71,241(+328) / HF모델 2 [[MiniMax-H3]] 베이스 원본 1.61M→2M(33B raw 명시·트렌딩 모델1위)·[[DeepSeek-V4-Flash-0731]] 1.43M→1.61M(150만 돌파). GitHub·HF모델 전량 raw 자동수집·실WebFetch 미수행(타임라인 2026-08 유지). HF논문 5 미래형 arxiv ID 원문 미재현 medium·벤치 수치 미기재·소속(Alibaba·UIUC·Salesforce·기여자125명)은 raw 기재값 원문 대조 전까지 미검증 병기(사실확인 원칙). 신규 entity 0(infiniflow·Lightricks·semantica-agi·cactus-compute 비-프론티어랩 엔티티 날조 방지·source 내 wikilink만; [[MiniMax]]·[[DeepSeek]]·[[Alibaba]]·[[InternScience]] 기존 페이지만). actionable 신규 2(전량 낮음·LLMRouter 라우팅 게이트/LTX 오디오 동반 i2v 비교군). index total_pages 875→883·total_sources 857→865. -->
 

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, rag, agent, document-parsing, retrieval, local-llm]
 created: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-15
 sources: []
 reliability: high
 ---
@@ -12,8 +12,11 @@ reliability: high
 # infiniflow/ragflow — 문서 파싱·검색 결합 RAG 엔진
 
 **GitHub**: https://github.com/infiniflow/ragflow
-**스타수**: ⭐88,228 (2026-08-14 자동수집, 당일 **+465**) · **제작**: infiniflow
+**스타수**: ⭐88,493 (2026-08-15 자동수집, 당일 **+473**) ← 88,228 (08-14, +465) · **제작**: infiniflow
 **성격**: 문서 파싱·검색 파이프라인 위에 **에이전트 기능을 결합한 오픈소스 검색증강생성(RAG) 엔진**
+
+> [!update] 2026-08-15 갱신 — ⭐88,493 (당일 +473·8.8만대 안착)
+> GitHub ⭐**88,493**(2026-08-15 자동수집, 당일 +473) ← 88,228(08-14, +465). 편입 이튿날도 +473로 유입이 이어져 8.8만대 안착 — 그래프 축([[semantica]]·[[code-graph-rag]])과 대비되는 "문서 파싱·검색 파이프라인 위 에이전트 결합" RAG 축의 대표 리포 위치 유지. 파싱/검색 품질 벤치는 여전히 원문 재현 전 → 미기재. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **딥 문서 이해(deep document understanding) 기반 파싱을 앞세운 성숙 오픈소스 RAG 엔진**(⭐8.8만대·raw 기반). 08월 위키에서 반복 확인된 "컨텍스트를 어떻게 좁히고 근거를 추적하나" 계보 — 그래프 축([[semantica]]·[[code-graph-rag]])과 대비되는 **문서 파싱·청킹·검색 파이프라인 축**의 대표 리포. semantica/code-graph-rag가 *구조 그래프*로 컨텍스트를 좁힌다면, RAGFlow는 *레이아웃 인식 문서 파싱 + 검색*이라는 전통 RAG 파이프라인을 성숙시킨 쪽으로, 최근 "에이전트 기능 결합"으로 확장되며 [[AI-에이전트-프레임워크]] 흐름에 합류. 내 [[LLM-Wiki]] 볼트가 위키링크 그래프로 지식을 조직하는 것과 달리, RAGFlow는 원문서(PDF·표·이미지) 파싱 품질이 핵심 가치 — 이질적 문서를 다량 인입해 검색해야 할 때 1순위 검토 스택.
@@ -38,4 +41,4 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/infiniflow/ragflow
-- 신뢰도: ⭐⭐⭐ (⭐88,228·당일 +465, raw 자동수집 · 실WebFetch 미수행)
+- 신뢰도: ⭐⭐⭐ (⭐88,493·당일 +473, raw 자동수집 · 실WebFetch 미수행)

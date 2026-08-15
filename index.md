@@ -1,6 +1,6 @@
 ---
 title: Wiki Index
-updated: 2026-08-14 (자동수집 13건 배치 인제스트 — 신규 8[GitHub 2 ragflow·LTX-2 + HF논문 5 + HF모델 1 LTX-2.5]·갱신 5[GitHub 3·HF모델 2], 신규 엔티티 0)
+updated: 2026-08-15 (자동수집 13건 배치 인제스트 — 신규 0·갱신 13[GitHub 5 + HF논문 5 재수집 + HF모델 3], 전량 기존 페이지 스탯 갱신. LLMRouter 전일 raw 업보트 2,340→91 자릿수 이상치 정정. 신규 엔티티 0)
 total_pages: 883
 total_sources: 865
 ---
@@ -75,6 +75,20 @@ total_sources: 865
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-15 자동수집 배치 (신규 0 · 갱신 13 / GitHub 5 + HF논문 5 재수집 + HF모델 3, 전량 기존 페이지 스탯 갱신. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 재수집 업보트/순위 갱신·미래형 ID 원문 재현 미검증 medium. LLMRouter 전일 raw 업보트 2,340→91 자릿수 이상치 정정) ── -->
+- [[ragflow]] 갱신 — infiniflow 문서 파싱·검색 결합 RAG 엔진, ⭐88,228→**88,493**(당일 +473·8.8만대 안착)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[unsloth]] 갱신 — unslothai 오픈 LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화, ⭐71,241→**71,637**(당일 +501·유입 재가속)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[LTX-2]] 갱신 — Lightricks 오디오 동반 영상 생성 공식 추론/LoRA 패키지, ⭐8,990→**9,016**(당일 +161·9천 돌파·HF [[LTX-2.5]]와 짝)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[semantica]] 갱신 — semantica-agi 그래프 네이티브·감사가능성 AI 인프라, ⭐7,134→**7,683**(당일 +1,181·닷새째 급상승·유입 최고조)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[needle]] 갱신 — cactus-compute 온디바이스 초경량 모델, ⭐5,199→**5,767**(당일 +662·트렌딩 최상위 유지·raw '14MB FM'↔'26M 함수호출' 규모 상충 미확정 유지)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[Alaya-EVOKE]] 갱신 — 선형 스케일 감독 넘어 endless world 학습 접근, HF 데일리 1위 유지·업보트 66→**103**(미래형 ID 미검증 medium) (2608.13546) *(UPDATE 2026-08-15)*
+- [[LLMRouter]] 갱신 — LLM 라우터 개발·평가·배포 통합 인프라, HF 데일리 **2위**·업보트 **91**(전일 raw 2,340 자릿수 이상치 정정)·UIUC raw (미래형 ID 미검증 medium) (2608.06867) *(UPDATE 2026-08-15)*
+- [[DreamX-Phi]] 갱신 — 로봇 조작용 행동조건부 비디오 월드모델, HF 데일리 2위→**3위**·업보트 62→**80**·Alibaba raw (미래형 ID 미검증 medium) (2608.13489) *(UPDATE 2026-08-15)*
+- [[DarwinX]] 갱신 — 자연선택으로 에이전트 하네스 진화, HF 데일리 상위→**4위**·업보트 34→**62**(약 2배)·Salesforce raw (미래형 ID 미검증 medium) (2608.07545) *(UPDATE 2026-08-15)*
+- [[Intern-S2-Preview]] 갱신 — 과학 에이전트형 파운데이션 모델 프리뷰, HF 데일리 상위→**5위**·업보트 38→**43**·기여자 125명 raw (미래형 ID 미검증 medium) (2608.13505) *(UPDATE 2026-08-15)*
+- [[MiniMax-H3]] 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2M→**2.21M**(좋아요 3.94k·33B raw·트렌딩 모델 1위 유지·[[LTX-2.5]] 벤더 다변화 병행)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[DeepSeek-V4-Flash-0731]] 갱신 — DeepSeek 304B 저지연 텍스트 생성, DL 1.61M→**1.80M**(좋아요 3.40k·180만 근접·[[LLMRouter]] 저지연 라우팅 후보)(raw API 수치) *(UPDATE 2026-08-15)*
+- [[LTX-2.5]] 갱신 — Lightricks 이미지→비디오 HF 모델, DL 208k→**378k**(좋아요 885·하루 +약17만·오픈 i2v 벤더 다변화 실수요 확인)(raw API 수치) *(UPDATE 2026-08-15)*
 <!-- ── 2026-08-14 자동수집 배치 (신규 8 · 갱신 5 / GitHub 2[신규 ragflow·LTX-2] + HF논문 5[신규] + HF모델 1[신규 LTX-2.5] + GitHub 3·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID 원문 재현 미검증 medium·소속 raw 기재 미검증) ── -->
 - [[ragflow]] — infiniflow 에이전트 결합형 문서 파싱·검색 RAG 엔진, 그래프 축([[semantica]]·[[code-graph-rag]])과 대비되는 "문서 파싱·검색 파이프라인" 컨텍스트 축·[[LLM-Wiki]] 원문 인입 후보 (GitHub ⭐88,228·당일 +465·성숙 OSS이나 파싱/검색 벤치 raw·미검증 high) *(NEW 2026-08-14)*
 - [[LTX-2]] — Lightricks 오디오 동반 영상 생성 공식 추론/LoRA 학습 패키지, 오픈 i2v가 [[MiniMax-H3]] 단독에서 "오디오 동반+자체 LoRA" 벤더로 복수화·[[video-saas]] 오픈 축 (GitHub ⭐8,990·당일 +205·공식 리포이나 해상도/오디오 동기/라이선스 미검증 medium) *(NEW 2026-08-14)*

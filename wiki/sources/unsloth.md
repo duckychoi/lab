@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, fine-tuning, qlora, peft, memory-efficient, on-device]
 created: 2026-08-13
-updated: 2026-08-14
+updated: 2026-08-15
 sources: []
 reliability: high
 ---
@@ -12,8 +12,11 @@ reliability: high
 # unslothai/unsloth — 메모리 절감형 로컬 파인튜닝/추론
 
 **GitHub**: https://github.com/unslothai/unsloth
-**스타수**: ⭐71,241 (2026-08-14 자동수집, 당일 **+328**) ← 70,732 (08-13, +592) · **언어**: Python · **제작**: unslothai
+**스타수**: ⭐71,637 (2026-08-15 자동수집, 당일 **+501**) ← 71,241 (08-14, +328) ← 70,732 (08-13, +592) · **언어**: Python · **제작**: unslothai
 **성격**: Qwen·DeepSeek·FLUX 등 **LLM·디퓨전 모델을 로컬에서 파인튜닝·실행**할 때 메모리·속도를 최적화하는 인터페이스
+
+> [!update] 2026-08-15 갱신 — ⭐71,637 (당일 +501·유입 재가속)
+> GitHub ⭐**71,637**(2026-08-15 자동수집, 당일 +501) ← 71,241(08-14, +328) ← 70,732(08-13, +592). 당일 증분이 +328→+501로 재가속 — "오픈 웨이트를 직접 LoRA/QLoRA로 개조·학습"하는 제작·커스터마이징 축의 표준 진입점 위치 강화. 오픈 프론티어 모델([[Kimi-K3]]·[[MiniMax-H3]]·[[DeepSeek-V4-Flash]])이 곧 파인튜닝 대상 저변으로 겹침 유지. 속도·메모리 절감 배수는 원문 재현 전 → 미기재. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-14 갱신 — ⭐71,241 (당일 +328·7.1만 돌파)
 > GitHub ⭐**71,241**(2026-08-14 자동수집, 당일 +328) ← 70,732(08-13, +592). 편입 이튿날도 +328로 안정 상승해 **7.1만 돌파** — "오픈 웨이트를 직접 LoRA/QLoRA로 개조·학습"하는 제작·커스터마이징 축의 표준 진입점 위치 유지. raw 한줄요약이 이날 지원 목록으로 "Qwen3.8·[[Kimi-K3]]·[[MiniMax-H3]]·[[DeepSeek-V4-Flash]]·FLUX 등"을 명시해, 위키의 오픈 프론티어 모델들이 곧 unsloth 파인튜닝 대상 저변으로 겹침을 재확인. 속도·메모리 절감 배수는 여전히 원문 재현 전 → 미기재. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
@@ -45,4 +48,4 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/unslothai/unsloth
-- 신뢰도: ⭐⭐⭐ (⭐70,732·당일 +592, raw 자동수집 · 실WebFetch 미수행)
+- 신뢰도: ⭐⭐⭐ (⭐71,637·당일 +501, raw 자동수집 · 실WebFetch 미수행)
