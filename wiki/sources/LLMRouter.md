@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, llm-router, infrastructure, model-routing, local-llm]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers
 
 **HF 논문**: https://huggingface.co/papers/2608.06867
-**지표**: HF 데일리 **2위** · 업보트 **91** (2026-08-15 자동수집) · **소속**: UIUC (raw 기재)
+**지표**: HF 데일리 **2위** · 업보트 ~90–110대(추정) (2026-08-16 자동수집) · **소속**: UIUC (raw 기재)
+
+> [!update] 2026-08-16 갱신 — 데일리 2위 유지 · raw 업보트 "2.36k" 자릿수 이상치 재발 → 순위 기준 채택
+> 2026-08-16 raw가 업보트를 다시 **"2.36k"**로 기록 — 그러나 같은 배치 **데일리 1위 [[Alaya-EVOKE]]가 113, 3위 [[DreamX-Phi]] 87, 4위 [[DarwinX]] 70, 5위 [[Intern-S2-Preview]] 48**인 상황에서 데일리 **2위**가 2,360이 되는 것은 순위와 정면 모순(2위는 1위 113과 3위 87 사이여야 함). 08-15에도 동일 항목의 "2,340"을 자릿수 이상치로 정정한 바 있어 **이 항목 자동수집기의 반복성 업보트 파싱 오류로 판단**([[CLAUDE.md]] 사실확인 원칙 — 오류 재발 인정). 따라서 **업보트 절대값은 채택하지 않고**(원문 재현 전 미검증), **신뢰 가능한 신호인 "데일리 2위"만 유지**하며 실제 업보트는 순위상 ~90–110대로 추정(단정 금지). 라우팅 표준화 수요라는 해석 방향은 유지. 미래형 ID·원문 미재현·UIUC 소속 raw 기재 상태 동일. reliability medium 유지.
 
 > [!update] 2026-08-15 갱신 — 업보트 91·데일리 2위 (전일 raw 업보트 2,340 자릿수 이상치 정정)
 > 재수집에서 **업보트 91·HF 데일리 2위**(2026-08-15 자동수집)로 잡힘 — 전일(08-14) raw의 "업보트 2,340 최상위"는 같은 배치 다른 논문 업보트가 40~100대인 점과 어긋나 **자동수집 자릿수 이상치로 판단**, 오늘 값 91로 정정([[CLAUDE.md]] 사실확인 원칙). 라우팅 표준화 수요라는 해석 방향은 유지하되 "압도적 최상위"라는 전일 프레이밍은 철회. 미래형 ID·원문 미재현·소속 raw 기재 상태 동일. reliability medium 유지.

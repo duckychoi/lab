@@ -4,16 +4,19 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, 30b, trending, local-llm]
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
 
-# meta-models/Muse-Glimmer-30B — HF 트렌딩 2위 30B 모델
+# meta-models/Muse-Glimmer-30B — 30B image-text-to-text 멀티모달 모델
 
 **HuggingFace**: https://huggingface.co/meta-models/Muse-Glimmer-30B
-**지표**: 좋아요 **1.16k** · 다운로드 **페이지 미표시** (2026-08-12 자동수집, **HF 트렌딩 모델 2위**)
-**규모**: 30B (모델명·raw 기준) · **제작**: meta-models
+**지표**: DL **293k** · 좋아요 **1.59k** (2026-08-16 자동수집) ← 좋아요 1.16k·DL 페이지 미표시 (08-12)
+**규모**: 30B (모델명·raw 기준) · **모달리티**: image-text-to-text (raw 기재) · **제작**: meta-models
+
+> [!update] 2026-08-16 갱신 — DL 293k·좋아요 1.59k, 모달리티 image-text-to-text 확인
+> 08-12 이후 재수집에서 **다운로드 293k·좋아요 1.59k**(2026-08-16)로 잡히며, 그간 "페이지 미표시"였던 실채택 규모가 처음 수치화(29만대)됨. 무엇보다 raw가 모달리티를 **image-text-to-text 멀티모달**로 명시 — 08-12에 "모달리티·용도 전부 미확인"이던 공백이 일부 메워짐(이미지+텍스트 입력→텍스트 출력 VLM 계열). 30B은 양자화 시 워크스테이션에서 다뤄볼 크기라 [[local-llm]]×멀티모달 관찰 가치가 올라감. 다만 **정확한 아키텍처·라이선스·벤치는 여전히 raw 미기재**로, 모달리티·규모·DL 외 품질 근거는 원문 재현 전까지 미검증([[CLAUDE.md]] 사실확인 원칙). reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > **HF 트렌딩 모델 2위에 오른 30B 규모 모델**(raw 기준). 이날 트렌딩 1위는 [[MiniMax-H3]] 원본(DL 59.4k·좋아요 3.64k)이고, 3위가 [[MiniMax-H3-Turbo-Lora]]로 트렌딩 상단이 사실상 MiniMax-H3 생태계에 둘러싸인 가운데 그 사이에 오른 독립 항목. 다운로드가 페이지에 미표시라 실채택 규모는 불명이나, **좋아요 1.16k**만으로 트렌딩 2위에 오른 것은 커뮤니티 관심의 초기 스파이크로 읽힌다. 30B은 로컬/워크스테이션(양자화 시)에서 다뤄볼 만한 크기라 [[local-llm]] 저변 관점에서 잠재 관찰 대상이나, **모달리티·용도·라이선스·벤치가 raw에 전혀 없어** 지금은 "이름과 규모, 트렌딩 순위"만 아는 상태.

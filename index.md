@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-15 (자동수집 13건 배치 인제스트 — 신규 0·갱신 13[GitHub 5 + HF논문 5 재수집 + HF모델 3], 전량 기존 페이지 스탯 갱신. LLMRouter 전일 raw 업보트 2,340→91 자릿수 이상치 정정. 신규 엔티티 0)
-total_pages: 883
-total_sources: 865
+updated: 2026-08-16 (자동수집 13건 배치 인제스트 — 신규 2[GitHub Soup·HF모델 Qwen3.8-27B-GGUF]·갱신 11[GitHub 4 + HF논문 5 + HF모델 2]. LLMRouter raw 업보트 "2.36k" 자릿수 이상치 재발→순위 기준 채택. 신규 엔티티 0)
+total_pages: 885
+total_sources: 867
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 865
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-16 자동수집 배치 (신규 2 · 갱신 11 / GitHub 1[신규 Soup] + HF모델 1[신규 Qwen3.8-27B-GGUF] + GitHub 4·HF논문 5·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. LLMRouter raw 업보트 "2.36k" 자릿수 이상치 재발→순위 기준 채택·절대값 미채택) ── -->
+- [[Soup]] — MakazhanAlpamys YAML 선언형 LLM 파인튜닝, layer streaming으로 4GB 노트북 GPU에서 8B 학습 표방·[[unsloth]] 옆 로컬 파인튜닝 최말단 극단화·[[local-llm]] 저변 (GitHub ⭐1,836·당일 +297·성능 주장 미검증 medium) *(NEW 2026-08-16)*
+- [[Qwen3.8-27B-GGUF]] — [[unsloth]] 재배포 Qwen3.8-27B GGUF 양자화판(로컬 추론용), unsloth "제작(GitHub)→양자화 배포(HF)" 세로 통합 정황·[[LLMRouter]] 로컬 저지연 게이트 후보 (HF DL 1.95M·좋아요 1.31k·벤치/양자화 손실 미검증 medium) *(NEW 2026-08-16)*
+- [[unsloth]] 갱신 — unslothai 오픈 LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화, ⭐71,637→**72,210**(당일 +434·7.2만 돌파·지원 목록 Qwen3.8·Kimi K3·MiniMax-H3·Gemma 4·DeepSeek-V4·FLUX 명시)(raw API 수치) *(UPDATE 2026-08-16)*
+- [[needle]] 갱신 — cactus-compute 온디바이스 초경량 모델, ⭐5,767→**6,210**(당일 +547·6천 돌파·트렌딩 최상위·raw '14MB FM'↔'26M 함수호출' 규모 상충 미확정 유지)(raw API 수치) *(UPDATE 2026-08-16)*
+- [[CLI-Anything]] 갱신 — HKUDS 기존 SW를 에이전트-네이티브 CLI로 래핑, ⭐**47,514**(당일 +118·오랜만 재등장·4.7만대 성숙 정착)(raw API 수치) *(UPDATE 2026-08-16)*
+- [[ego-lite]] 갱신 — citrolabs 로그인 세션 공유 에이전트용 경량 브라우저(인증된 웹 조작), ⭐3,872→**11,203**(당일 +545·1만 돌파·3주 만 약 3배 급성장)(raw API 수치) *(UPDATE 2026-08-16)*
+- [[Alaya-EVOKE]] 갱신 — 선형 스케일 감독 넘어 endless world 학습 접근, HF 데일리 1위 사흘째·업보트 103→**113**(미래형 ID 미검증 medium) (2608.13546) *(UPDATE 2026-08-16)*
+- [[LLMRouter]] 갱신 — LLM 라우터 개발·평가·배포 통합 인프라, HF 데일리 **2위** 유지·**raw 업보트 "2.36k" 자릿수 이상치 재발**(08-15 정정 이후 재발·순위 모순→절대값 미채택·순위 기준 채택·실값 ~90–110대 추정)·UIUC raw (미래형 ID 미검증 medium) (2608.06867) *(UPDATE 2026-08-16)*
+- [[DreamX-Phi]] 갱신 — 로봇 조작용 행동조건부 비디오 월드모델, HF 데일리 3위 유지·업보트 80→**87**·Alibaba raw (미래형 ID 미검증 medium) (2608.13489) *(UPDATE 2026-08-16)*
+- [[DarwinX]] 갱신 — 자연선택으로 에이전트 하네스 진화, HF 데일리 4위 유지·업보트 62→**70**·Salesforce raw (미래형 ID 미검증 medium) (2608.07545) *(UPDATE 2026-08-16)*
+- [[Intern-S2-Preview]] 갱신 — 과학 에이전트형 파운데이션 모델 프리뷰, HF 데일리 5위 유지·업보트 43→**48**·기여자 125명 raw (미래형 ID 미검증 medium) (2608.13505) *(UPDATE 2026-08-16)*
+- [[LTX-2.5]] 갱신 — Lightricks 이미지→비디오 HF 모델, DL 378k→**424k**(좋아요 968·+약4.6만·40만대 안착·오픈 i2v 벤더 다변화 실채택 지속)(raw API 수치) *(UPDATE 2026-08-16)*
+- [[Muse-Glimmer-30B]] 갱신 — meta-models 30B 멀티모달, DL **293k**·좋아요 1.16k→**1.59k**(모달리티 image-text-to-text 처음 확인·라이선스/벤치 여전히 미검증)(raw API 수치) *(UPDATE 2026-08-16)*
 <!-- ── 2026-08-15 자동수집 배치 (신규 0 · 갱신 13 / GitHub 5 + HF논문 5 재수집 + HF모델 3, 전량 기존 페이지 스탯 갱신. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 재수집 업보트/순위 갱신·미래형 ID 원문 재현 미검증 medium. LLMRouter 전일 raw 업보트 2,340→91 자릿수 이상치 정정) ── -->
 - [[ragflow]] 갱신 — infiniflow 문서 파싱·검색 결합 RAG 엔진, ⭐88,228→**88,493**(당일 +473·8.8만대 안착)(raw API 수치) *(UPDATE 2026-08-15)*
 - [[unsloth]] 갱신 — unslothai 오픈 LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화, ⭐71,241→**71,637**(당일 +501·유입 재가속)(raw API 수치) *(UPDATE 2026-08-15)*

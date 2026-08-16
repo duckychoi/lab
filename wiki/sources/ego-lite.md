@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, browser, agent-browser, web-automation, javascript, claude-code, codex]
 created: 2026-07-26
-updated: 2026-07-26
+updated: 2026-08-16
 sources: []
 reliability: high
 ---
 
-# citrolabs/ego-lite (GitHub ⭐3,872)
+# citrolabs/ego-lite (GitHub ⭐11,203)
+
+> [!update] 2026-08-16 갱신 — ⭐11,203 (당일 +545·1만 돌파)
+> GitHub ⭐**11,203**(2026-08-16 자동수집, 당일 +545·**1만 돌파**) ← 3,872(07-26 WebFetch 실검증). 편입 3주 만에 3.9천→1.1만으로 약 3배 누적 급성장하며 당일도 +545 강한 유입 — "로그인된 브라우저 세션을 에이전트와 공유"하는 *인증된 웹 조작* 니치가 실수요로 확대. 에이전트-웹 접근 축([[firecrawl]] 정제·공개 웹 읽기)의 미개척 끝단(인증 벽 뒤 조작)을 채우는 위치 강화. reliability high 유지(신생 citrolabs·보안 격리 강도는 여전히 미검증). *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > AI 에이전트를 위한 **경량 브라우저** — 사람이 이미 로그인해 둔 브라우저 세션 상태를 [[Claude-Code-워크플로우|Claude Code]]·Codex 같은 에이전트와 **공유**해 웹 자동화를 시킨다. ⭐3,872 (2026-07-26, WebFetch 실검증, JavaScript, 당일 +986 급상승, 2026-04-16 생성). 핵심 차별점은 "**로그인된 상태를 방해 없이(without disturbing you) 넘겨준다**" — 에이전트가 인증 벽 뒤 페이지(대시보드·SaaS·소셜)를 사람 재로그인 없이 조작. "제로 비용·제로 설정(zero cost, zero config)"을 표방. 위키의 에이전트-웹 접근 축([[wigolo]] 로컬 검색 MCP·[[crawl4ai]] 크롤러·[[firecrawl]] 정제)이 *공개 웹 읽기*였다면, ego-lite는 *인증된 웹 조작*이라는 미개척 끝단을 채운다.

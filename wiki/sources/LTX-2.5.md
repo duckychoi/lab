@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # Lightricks/LTX-2.5 — 이미지 입력 영상 생성 모델
 
 **HF 모델**: https://huggingface.co/Lightricks/LTX-2.5
-**지표**: DL **378,439(약 378k)** · 좋아요 885 (2026-08-15 자동수집) ← DL 208k·좋아요 766 (08-14) · **태스크**: Image-to-Video · **제작**: Lightricks
+**지표**: DL **424k** · 좋아요 968 (2026-08-16 자동수집) ← DL 378k·좋아요 885 (08-15) ← 208k·766 (08-14) · **태스크**: Image-to-Video · **제작**: Lightricks
+
+> [!update] 2026-08-16 갱신 — DL 424k (좋아요 968·+약4.6만)
+> HF 다운로드 **424k·좋아요 968**(2026-08-16 자동수집) ← 378k·885(08-15) ← 208k·766(08-14). 편입 사흘째 DL이 378k→424k로 +약4.6만 — 08-15의 +약17만 폭증에 비해 증분은 완만해졌으나 40만대 안착하며 실유입 지속. GitHub [[LTX-2]] 공식 패키지와 짝을 이룬 오픈 i2v 대안이 [[MiniMax-H3]] 단독 구도(이날 원본 DL 갱신 대상 아님)에서 **벤더 다변화 실수요**로 자리잡는 흐름 유지. 해상도·길이·품질 벤치는 원문 재현 전 → 미기재. reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-15 갱신 — DL 378k (좋아요 885·하루 새 +약17만)
 > HF 다운로드 **378,439(약 378k)·좋아요 885**(2026-08-15 자동수집) ← 208k·766(08-14). 편입 이튿날 DL이 208k→378k로 **+약17만 급증** — GitHub [[LTX-2]] 공식 패키지와 짝을 이룬 오픈 i2v 대안이 실유입을 빠르게 늘리는 중. [[MiniMax-H3]] 단독(이날 2.21M) 구도의 **벤더 다변화가 실수요로 확인**. 해상도·길이·품질 벤치는 원문 재현 전 → 미기재. reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*

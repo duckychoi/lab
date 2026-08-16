@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-15 (자동수집 13건 인제스트 완료 — 신규 0·갱신 13. 대기 항목 없음)
+updated: 2026-08-16 (자동수집 13건 인제스트 완료·전량 삭제 — 신규 2·갱신 11. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -19,6 +19,8 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ---
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
+
+<!-- 2026-08-16 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 2·갱신 11. 신규 2: GitHub 1 [[Soup]](MakazhanAlpamys ⭐1,836·+297·YAML 선언형 LLM 파인튜닝·layer streaming으로 4GB 노트북 GPU에서 8B 학습 표방·성능 주장 미검증 medium) + HF모델 1 [[Qwen3.8-27B-GGUF]]([[unsloth]] 재배포·DL 1.95M·좋아요 1.31k·Qwen3.8-27B GGUF 양자화·로컬 추론용·벤치/양자화 손실 미검증 medium). 갱신 11(전량 기존): GitHub 4 [[unsloth]] ⭐71,637→72,210(+434·7.2만 돌파·지원 목록 Qwen3.8·Kimi K3·MiniMax-H3·Gemma 4·DeepSeek-V4·FLUX 명시)·[[needle]] ⭐5,767→6,210(+547·6천 돌파·raw '14MB FM'↔'26M 함수호출' 규모 상충 미확정 유지)·[[CLI-Anything]] ⭐47,514(+118·재등장·성숙 정착)·[[ego-lite]] ⭐3,872→11,203(+545·1만 돌파·3주 만 약 3배) / HF논문 5(전량 미래형 ID medium): [[Alaya-EVOKE]] 데일리1위 사흘째·업103→113·[[LLMRouter]] 데일리2위 유지·raw 업보트 "2.36k" 자릿수 이상치 재발(08-15 정정 2,340→91 이후 재발·순위 모순→절대값 미채택·순위 기준 채택·실값 ~90–110대 추정)·[[DreamX-Phi]] 3위·업80→87·[[DarwinX]] 4위·업62→70·[[Intern-S2-Preview]] 5위·업43→48 / HF모델 2 [[LTX-2.5]] DL 378k→424k(좋아요968·+약4.6만)·[[Muse-Glimmer-30B]] DL 293k·좋아요1.16k→1.59k(모달리티 image-text-to-text 처음 확인). GitHub·HF모델 전량 raw 자동수집·실WebFetch 미수행(타임라인 2026-08 유지). HF논문 5 미래형 arxiv ID 원문 미재현 medium·벤치/소속(Alibaba·UIUC·Salesforce·기여자125명) raw 기재 미검증 병기(사실확인 원칙). LLMRouter 업보트 이상치 재발 확정. 신규 entity 0(MakazhanAlpamys·meta-models·HKUDS·citrolabs 비-프론티어랩 엔티티 날조 방지·source 내 wikilink만; [[unsloth]]·[[Alibaba]] 기존 페이지만). actionable 신규 1(낮음·Qwen3.8-27B-GGUF 로컬 GGUF Q4/Q5 스팟체크). index total_pages 883→885·total_sources 865→867. -->
 
 <!-- 2026-08-15 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 0·갱신 13(전량 기존 페이지 스탯 갱신). GitHub 5: [[ragflow]] ⭐88,228→88,493(+473)·[[unsloth]] ⭐71,241→71,637(+501)·[[LTX-2]] ⭐8,990→9,016(+161·9천 돌파)·[[semantica]] ⭐7,134→7,683(+1,181·닷새째 급상승 최고조)·[[needle]] ⭐5,199→5,767(+662·트렌딩 최상위·'14MB FM'↔'26M 함수호출' 상충 미확정 유지). HF논문 5 재수집(전량 미래형 ID medium·업보트/순위 갱신): [[Alaya-EVOKE]] 데일리1위 유지·업66→103·[[LLMRouter]] 데일리2위·업2,340→91(전일 raw 자릿수 이상치 정정)·[[DreamX-Phi]] 데일리2위→3위·업62→80·[[DarwinX]] 상위→4위·업34→62·[[Intern-S2-Preview]] 상위→5위·업38→43. HF모델 3: [[MiniMax-H3]] 베이스 원본 DL 2M→2.21M(좋아요3.94k·33B·트렌딩모델1위 유지)·[[DeepSeek-V4-Flash-0731]] DL 1.61M→1.80M(180만 근접)·[[LTX-2.5]] DL 208k→378k(좋아요885·+약17만·오픈 i2v 벤더 다변화 실수요). GitHub·HF모델 전량 raw 자동수집·실WebFetch 미수행(타임라인 2026-08 유지). HF논문 5 미래형 arxiv ID 원문 미재현·벤치/소속 raw 기재 미검증 병기(사실확인 원칙). 신규 entity 0·신규 페이지 0. index total_pages 883 유지·total_sources 865 유지. -->
 

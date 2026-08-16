@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, training, supervision, scaling, endless-world]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # Alaya-EVOKE: From Linear-Scaling Supervision to Endless World
 
 **HF 논문**: https://huggingface.co/papers/2608.13546
-**지표**: HF 데일리 **1위** · 업보트 103 (2026-08-15 자동수집) ← 업보트 66 (08-14)
+**지표**: HF 데일리 **1위** · 업보트 113 (2026-08-16 자동수집) ← 업보트 103 (08-15) ← 66 (08-14)
+
+> [!update] 2026-08-16 갱신 — 업보트 113 (데일리 1위 사흘째 유지)
+> HF 데일리 **1위 유지**·업보트 **113**(2026-08-16 자동수집) ← 103(08-15) ← 66(08-14). 업보트가 103→113으로 완만히 늘며 데일리 최상단 자리를 사흘째 지킴 — "선형 감독을 넘어 endless world로"라는 무한 확장형 학습 문제의식이 상단 관심으로 안착. 미래형 ID·원문 미재현 상태 동일(학습 레시피·벤치·저자 미기재). reliability medium 유지.
 
 > [!update] 2026-08-15 갱신 — 업보트 103 (데일리 1위 유지)
 > HF 데일리 **1위 유지**·업보트 **103**(2026-08-15 자동수집) ← 66(08-14). 재수집에서 업보트가 66→103으로 늘며 데일리 최상단 자리 지속 — "선형 감독을 넘어 endless world로"라는 무한 확장형 학습 문제의식이 이틀째 상단 관심. 미래형 ID·원문 미재현 상태 동일(학습 레시피·벤치·저자 미기재). reliability medium 유지.

@@ -4,12 +4,18 @@ type: source
 domain: ai-news
 tags: [ai-news, agent, cli, framework, agent-native, HKUDS]
 created: 2026-05-19
-updated: 2026-05-20
+updated: 2026-08-16
 sources: []
 reliability: high
 ---
 
 # CLI-Anything — 모든 소프트웨어를 에이전트 네이티브로 전환하는 CLI 프레임워크
+
+**GitHub**: https://github.com/HKUDS/CLI-Anything
+**스타수**: ⭐47,514 (2026-08-16 자동수집, 당일 **+118**) · **제작**: HKUDS
+
+> [!update] 2026-08-16 갱신 — ⭐47,514 (당일 +118·재수집)
+> 오랜만에 자동수집 배치에 재등장 — GitHub ⭐**47,514**(2026-08-16 자동수집, 당일 +118). 2026-05 편입 이후 누적 크게 성장해 4.7만대 안착, 당일 증분은 완만(+118)해 성숙·정착 국면. "기존 소프트웨어를 수정 없이 에이전트가 조작하도록 CLI로 래핑"이라는 에이전트-네이티브 전환 접근이 여전히 유효 수요. reliability high 유지(성숙 OSS·실재). *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 ## 핵심 인사이트
 

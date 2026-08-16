@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, world-model, video, robotics, manipulation, slam-3dgs, video-saas]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation
 
 **HF 논문**: https://huggingface.co/papers/2608.13489
-**지표**: HF 데일리 **3위** · 업보트 80 (2026-08-15 자동수집) ← 데일리 2위·업보트 62 (08-14) · **소속**: Alibaba Group (raw 기재)
+**지표**: HF 데일리 **3위** · 업보트 87 (2026-08-16 자동수집) ← 데일리 3위·업보트 80 (08-15) ← 2위·62 (08-14) · **소속**: Alibaba Group (raw 기재)
+
+> [!update] 2026-08-16 갱신 — 업보트 87·데일리 3위 유지
+> **업보트 87·HF 데일리 3위 유지**(2026-08-16) ← 80·3위(08-15) ← 62·2위(08-14). 업보트 80→87로 완만 상승하며 상단권 지속 — 행동조건부 비디오 월드모델의 로봇 제어 응용 관심 안정([[slam-3dgs]]×[[video-saas]]·[[임바디드-AI]] 교차 유지). 미래형 ID·원문 미재현·Alibaba 소속 raw 기재 동일. reliability medium 유지.
 
 > [!update] 2026-08-15 갱신 — 업보트 80·데일리 3위
 > 재수집에서 **업보트 80·HF 데일리 3위**(2026-08-15) ← 62·2위(08-14). 업보트는 62→80으로 늘었으나 순위는 [[LLMRouter]] 상승에 밀려 2위→3위 — 행동조건부 비디오 월드모델의 로봇 제어 응용 관심 지속([[slam-3dgs]]×[[video-saas]] 교차 유지). 미래형 ID·원문 미재현·Alibaba 소속 raw 기재 동일. reliability medium 유지.

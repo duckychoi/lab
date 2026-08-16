@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, scientific-agent, foundation-model, agentic]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # Intern-S2-Preview: Scientific Agentic Foundation Model
 
 **HF 논문**: https://huggingface.co/papers/2608.13505
-**지표**: HF 데일리 **5위** · 업보트 43 · 기여자 125명 (2026-08-15 자동수집) ← 상위·업보트 38 (08-14)
+**지표**: HF 데일리 **5위** · 업보트 48 · 기여자 125명 (2026-08-16 자동수집) ← 5위·업보트 43 (08-15) ← 상위·38 (08-14)
+
+> [!update] 2026-08-16 갱신 — 업보트 48·데일리 5위 유지
+> **업보트 48·HF 데일리 5위 유지**(2026-08-16) ← 43·5위(08-15) ← 38·상위(08-14). 업보트 43→48 소폭 상승하며 데일리 1~5위(Alaya-EVOKE 113·LLMRouter 2위·DreamX-Phi 87·DarwinX 70·본 논문 48) 상단권 사흘째 유지 — 과학 특화 에이전트 FM 관심 지속([[Spark-to-Paper]]·[[auto-research]] 연구 자동화 계보 교차). 미래형 ID·원문 미재현·규모/벤치·기여자 125명 raw 기재 동일. reliability medium 유지.
 
 > [!update] 2026-08-15 갱신 — 업보트 43·데일리 5위
 > 재수집에서 **업보트 43·HF 데일리 5위**(2026-08-15) ← 38·상위(08-14). 업보트 소폭 상승(38→43)하며 데일리 5위로 상단권 유지 — 과학 특화 에이전트 FM 관심 지속, [[Spark-to-Paper]]·[[auto-research]] 연구 자동화 계보 교차 유지. 미래형 ID·원문 미재현·규모/벤치·기여자 125명 raw 기재 동일. reliability medium 유지.

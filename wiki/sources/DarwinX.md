@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, agent-harness, evolution, natural-selection, agentic]
 created: 2026-08-14
-updated: 2026-08-15
+updated: 2026-08-16
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # DarwinX: Evolving Agent Harnesses Through Natural Selection
 
 **HF 논문**: https://huggingface.co/papers/2608.07545
-**지표**: HF 데일리 **4위** · 업보트 62 (2026-08-15 자동수집) ← 데일리 상위·업보트 34 (08-14) · **소속**: Salesforce AI Research (raw 기재)
+**지표**: HF 데일리 **4위** · 업보트 70 (2026-08-16 자동수집) ← 데일리 4위·업보트 62 (08-15) ← 상위·34 (08-14) · **소속**: Salesforce AI Research (raw 기재)
+
+> [!update] 2026-08-16 갱신 — 업보트 70·데일리 4위 유지
+> **업보트 70·HF 데일리 4위 유지**(2026-08-16) ← 62·4위(08-15) ← 34·상위(08-14). 업보트 62→70으로 상승 지속 — "하네스를 사람이 짜지 않고 자연선택으로 진화"라는 프레이밍이 사흘째 상단권. 나(다수 스킬 하네스) 자기점검·구성 최적화 관점 참조점 유지([[LLMRouter]] 라우팅 축과 "많은 모델·하네스 자동 선택/진화" 문제의식 공유). 미래형 ID·원문 미재현·Salesforce 소속 raw 기재 동일. reliability medium 유지.
 
 > [!update] 2026-08-15 갱신 — 업보트 62·데일리 4위 (업보트 약 2배)
 > 재수집에서 **업보트 62·HF 데일리 4위**(2026-08-15) ← 34·상위(08-14). 업보트가 34→62로 약 2배 뛰며 데일리 4위로 순위 명확화 — "하네스를 사람이 짜지 않고 자연선택으로 진화"라는 프레이밍이 하루 새 관심 급증. 나(다수 스킬 하네스) 자기점검·구성 최적화 관점 참조점 유지. 미래형 ID·원문 미재현·Salesforce 소속 raw 기재 동일. reliability medium 유지.
