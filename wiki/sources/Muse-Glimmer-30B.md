@@ -36,7 +36,11 @@ reliability: medium
 > [!question] 미해결 질문
 > 무슨 모델인가(텍스트·이미지·멀티모달)? 라이선스(상업 사용)? 왜 다운로드가 미표시인가(게이팅·신규)? 좋아요 1.16k가 실채택으로 이어지나?
 
+> [!note] 2026-08-17 — unsloth GGUF 재배포판 등장
+> [[unsloth]]가 이 모델을 GGUF로 양자화한 [[Muse-Glimmer-30B-GGUF]](DL 755k·좋아요 463, 2026-08-17)를 재배포 — 원본이 image-text-to-text로 실체가 드러난 직후 곧바로 로컬 소비판이 나온 셈으로, unsloth의 "트렌딩 오픈 모델→즉시 GGUF 로컬화" 유통 패턴([[Qwen3.8-27B-GGUF]] 선례)에 편입. 원본 정체·라이선스·벤치는 여전히 미검증.
+
 ## 관련 페이지
+- [[Muse-Glimmer-30B-GGUF]] — unsloth GGUF 양자화 재배포판(로컬 추론용)
 - [[MiniMax-H3]] — 같은 날 트렌딩 1위(원본)·생태계 이웃
 - [[MiniMax-H3-Turbo-Lora]] — 같은 날 트렌딩 3위(생태계 이웃)
 - [[local-llm]] — 로컬/온디바이스 LLM 도메인(교차·30B 클래스)

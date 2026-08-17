@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-16 (자동수집 13건 배치 인제스트 — 신규 2[GitHub Soup·HF모델 Qwen3.8-27B-GGUF]·갱신 11[GitHub 4 + HF논문 5 + HF모델 2]. LLMRouter raw 업보트 "2.36k" 자릿수 이상치 재발→순위 기준 채택. 신규 엔티티 0)
-total_pages: 885
-total_sources: 867
+updated: 2026-08-17 (자동수집 13건 배치 인제스트 — 신규 6[HF논문 5 + HF모델 Muse-Glimmer-30B-GGUF]·갱신 7[GitHub 5 + HF모델 2]. strix·MoneyPrinterTurbo 오랜만 재등장 대폭 상승[+2만·10만 돌파]. 방어·보안 축[strix·Crisis-Video-Attack-Defense] 동반 상단. 신규 엔티티 0)
+total_pages: 891
+total_sources: 873
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 867
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-17 자동수집 배치 (신규 6 · 갱신 7 / HF논문 5[신규] + HF모델 1[신규 Muse-Glimmer-30B-GGUF] + GitHub 5·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. strix·MoneyPrinterTurbo 오랜만 재등장 대폭 상승. 신규 entity 0) ── -->
+- [[Crisis-Video-Attack-Defense]] — 위기 이벤트 겨냥 AI 생성 영상 공격에 대한 탐지기·생성기·소셜 확산 체계적 평가, 오픈 i2v 생성 능력([[MiniMax-H3]]·[[LTX-2.5]]) 확대의 반대편 "방어·탐지" 축·같은 배치 [[strix]]와 함께 보안 축 상단·[[video-saas]] 대칭 (HF 데일리 1위·업보트 52·미래형 ID 미검증 medium) (2608.14391) *(NEW 2026-08-17)*
+- [[Intern-S2-Mobius]] — 지식과 추론을 분리(decoupled)한 파운데이션 모델, [[Intern-S2-Preview]] 계열 확장·[[InternScience]] 추정 계열·[[에이전트-메모리-레이어]] 지식 외부화·[[Scaling-Interpretable-LLM]] 내부 분리 결 (HF 데일리 2위·업보트 26·미래형 ID·소속 미검증 medium) (2608.14290) *(NEW 2026-08-17)*
+- [[Long-Horizon-AI-RnD-Eval]] — 최종 점수 너머 장기 지평 AI R&D 에이전트 체계적 평가, [[DarwinX]]·[[HarnessOpt-Bench]]·[[AI4AI-Test-Time]] 하네스 평가 축·[[auto-research]]·[[Spark-to-Paper]] 연구 자동화 교차 (HF 데일리 3위·업보트 26·미래형 ID 미검증 medium) (2608.13417) *(NEW 2026-08-17)*
+- [[Marionette]] — 월드 스테이트 예측→지오메트리 렌더링→외형 페인팅 단계화 월드모델, [[StateFlow]]·[[Beyond-Pixels-4D]]·[[JEPA-vs-Diffusion-월드모델]]·[[slam-3dgs]]×[[video-saas]] 교차·[[reat-render]] 접점 (HF 데일리 4위·업보트 18·미래형 ID 미검증 medium) (2608.14530) *(NEW 2026-08-17)*
+- [[MobileMem]] — 1년치 모바일 사용 경험으로부터 학습하는 온디바이스 메모리/에이전트, [[에이전트-메모리-레이어]]·[[Agent-Memory-Distillation]]·[[LightMem-Ego]] 계보·[[needle]] 온디바이스 실행 축과 짝·[[local-llm]] 교차 (HF 데일리 5위·업보트 18·미래형 ID 미검증 medium) (2608.13606) *(NEW 2026-08-17)*
+- [[Muse-Glimmer-30B-GGUF]] — [[unsloth]] 재배포 [[Muse-Glimmer-30B]] GGUF 양자화판(로컬 추론용·image-text-to-text), 원본 실체 확인 직후 즉시 로컬화·unsloth "트렌딩 오픈 모델→즉시 GGUF" 유통([[Qwen3.8-27B-GGUF]] 선례) 확증 (HF DL 755k·좋아요 463·원본 정체/벤치·양자화 손실 미검증 medium) *(NEW 2026-08-17)*
+- [[unsloth]] 갱신 — unslothai 오픈 LLM·디퓨전 로컬 파인튜닝/추론 메모리 최적화, ⭐72,210→**72,926**(당일 +572·유입 재가속·7.3만 근접·[[Muse-Glimmer-30B-GGUF]] 재배포로 세로 통합 반복 확증)(raw API 수치) *(UPDATE 2026-08-17)*
+- [[strix]] 갱신 — usestrix 자율 AI 침투 테스트 에이전트, ⭐33,232→**53,527**(당일 +856·이날 배치 트렌딩 최대 급상승·약 한 달 반 만 +2만·보안 방어 축 상단)(raw API 수치) *(UPDATE 2026-08-17)*
+- [[MoneyPrinterTurbo]] 갱신 — harry0703 텍스트→쇼트폼 영상 완성형 자동화 파이프라인, ⭐85,539→**105,044**(당일 +494·**10만 돌파**·약 두 달 만 +2만·결과 품질은 연결 API 의존)(raw API 수치) *(UPDATE 2026-08-17)*
+- [[needle]] 갱신 — cactus-compute 온디바이스 초경량 모델, ⭐6,210→**6,894**(당일 +443·7천 근접·[[MobileMem]] 온디바이스 메모리와 개념 맞물림·raw '14MB FM'↔'26M 함수호출' 규모 상충 미확정 유지)(raw API 수치) *(UPDATE 2026-08-17)*
+- [[CLI-Anything]] 갱신 — HKUDS 기존 SW를 에이전트-네이티브 CLI로 래핑, ⭐47,514→**47,663**(당일 +384·유입 재가속·4.7만대 성숙 정착)(raw API 수치) *(UPDATE 2026-08-17)*
+- [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 Qwen3.8-27B GGUF 양자화판, DL 1.95M→**2.73M**(좋아요 1.52k·하루 +약78만·270만 돌파·로컬 27B 실수요 급증)(raw API 수치) *(UPDATE 2026-08-17)*
+- [[MiniMax-H3]] 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2.21M→**2.4M**(좋아요 4.05k·33B·트렌딩 상위 유지·+약19만 순증)(raw API 수치) *(UPDATE 2026-08-17)*
 <!-- ── 2026-08-16 자동수집 배치 (신규 2 · 갱신 11 / GitHub 1[신규 Soup] + HF모델 1[신규 Qwen3.8-27B-GGUF] + GitHub 4·HF논문 5·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. LLMRouter raw 업보트 "2.36k" 자릿수 이상치 재발→순위 기준 채택·절대값 미채택) ── -->
 - [[Soup]] — MakazhanAlpamys YAML 선언형 LLM 파인튜닝, layer streaming으로 4GB 노트북 GPU에서 8B 학습 표방·[[unsloth]] 옆 로컬 파인튜닝 최말단 극단화·[[local-llm]] 저변 (GitHub ⭐1,836·당일 +297·성능 주장 미검증 medium) *(NEW 2026-08-16)*
 - [[Qwen3.8-27B-GGUF]] — [[unsloth]] 재배포 Qwen3.8-27B GGUF 양자화판(로컬 추론용), unsloth "제작(GitHub)→양자화 배포(HF)" 세로 통합 정황·[[LLMRouter]] 로컬 저지연 게이트 후보 (HF DL 1.95M·좋아요 1.31k·벤치/양자화 손실 미검증 medium) *(NEW 2026-08-16)*

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, quantization, local-inference, qwen, unsloth, local-llm]
 created: 2026-08-16
-updated: 2026-08-16
+updated: 2026-08-17
 sources: []
 reliability: medium
 ---
@@ -12,8 +12,11 @@ reliability: medium
 # unsloth/Qwen3.8-27B-GGUF — 로컬 추론용 GGUF 양자화 재배포
 
 **HF 모델**: https://huggingface.co/unsloth/Qwen3.8-27B-GGUF
-**지표**: DL **1.95M** · 좋아요 **1.31k** (2026-08-16 자동수집) · **형식**: GGUF (양자화) · **재배포**: [[unsloth]]
+**지표**: DL **2.73M** · 좋아요 **1.52k** (2026-08-17 자동수집) ← DL 1.95M·좋아요 1.31k (08-16) · **형식**: GGUF (양자화) · **재배포**: [[unsloth]]
 **원본**: Qwen3.8-27B ([[Alibaba]] Qwen 계열, 모델명·raw 기준)
+
+> [!update] 2026-08-17 갱신 — DL 2.73M·좋아요 1.52k (하루 +약78만·270만 돌파)
+> DL **2.73M·좋아요 1.52k**(2026-08-17 자동수집) ← 1.95M·1.31k(08-16). 편입 이튿날 하루 +약78만으로 **270만 돌파** — "27B 밀집형을 GGUF로 양자화해 워크스테이션에서 로컬 구동"하는 실수요가 편입 직후 급증함을 확인. 같은 배치에서 [[unsloth]]가 [[Muse-Glimmer-30B-GGUF]](DL 755k)까지 GGUF 재배포를 늘리며 "제작→양자화 배포" 세로 통합이 모델을 하나씩 확장하는 반복 패턴임이 확증됨. 다운로드는 접근성 지표이지 품질 근거 아님·양자화 단계별 손실 미기재. reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > [[unsloth]]가 GitHub 프레임워크(제작 축)로만 존재하던 데서, **HF에서도 "Qwen3.8-27B를 GGUF로 양자화한 재배포판"으로 소비 저변까지 직접 잡고 있음**을 보여주는 항목. 즉 unsloth는 "오픈 웨이트를 개조·학습"(GitHub)뿐 아니라 "개조 결과를 로컬에서 바로 굴릴 수 있게 양자화 배포"(HF)까지 세로로 연결하는 위치. DL 1.95M은 이날 배치 최상위급 다운로드로, **GGUF 로컬 추론 수요**([[ComfyUI]]/llama.cpp류 실행 엔진 저변)가 [[MiniMax-H3]]·[[DeepSeek-V4-Flash-0731]] 같은 대형 MoE와 별개로 "27B 밀집형을 양자화해 워크스테이션에서 돌리는" 실채택 축이 두껍다는 신호. [[LLMRouter]]가 라우팅할 후보 스펙트럼에서 "로컬 GGUF 27B"는 저지연·오프라인 게이트로 자연스러운 자리.
@@ -39,5 +42,5 @@ reliability: medium
 
 ## 원본
 - 출처: https://huggingface.co/unsloth/Qwen3.8-27B-GGUF
-- 신뢰도: ⭐⭐⭐ (DL·좋아요 raw 자동수집·벤치/양자화 손실 미검증 medium)
-- 수집: 2026-08-16 아침 자동수집 (HF 모델)
+- 신뢰도: ⭐⭐⭐ (DL 2.73M·좋아요 1.52k raw 자동수집·벤치/양자화 손실 미검증 medium)
+- 수집: 2026-08-16 아침 자동수집 (HF 모델) · 갱신 2026-08-17 (DL 2.73M)

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, comfyui, minimax, video-saas]
 created: 2026-08-06
-updated: 2026-08-15
+updated: 2026-08-17
 sources: []
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
+
+> [!update] 2026-08-17 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2.4M (좋아요 4.05k·33B·트렌딩 상위 유지)
+> raw 자동수집이 이날도 원본 저장소 MiniMaxAI/MiniMax-H3를 포착 — DL **2.4M·좋아요 4.05k**(2026-08-17, 33B Image-Text-to-Video·트렌딩 상위 유지) ← 2.21M(08-15, 3.94k) ← 2M(08-14). 2.21M→2.4M(+약19만) 순증이 이어지며 오픈 i2v 실사용 확대 지속. 같은 축 [[MoneyPrinterTurbo]](10만 돌파·완성형 자동편집 파이프라인)·[[LTX-2.5]](40만대 벤더 다변화)와 함께 오픈 영상 생성·자동편집 레이어가 동반 성숙. 활성 파라미터·아키텍처 세부는 원문 재현 전(미기재). i2v 품질 미검증·medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-15 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2.21M (좋아요 3.94k·33B·트렌딩 모델 1위 유지)
 > raw 자동수집이 이날도 원본 저장소 MiniMaxAI/MiniMax-H3를 포착 — DL **2,212,155(약 2.21M)·좋아요 3.94k**(2026-08-15, **트렌딩 모델 1위 유지**·33B Image-Text-to-Video) ← 2M(08-14, 3.86k) ← 1.61M(08-13). 2M→2.21M(+약21만) 순증 지속하며 오픈 i2v 실사용 확대 — 같은 벤더 다변화 축 [[LTX-2.5]](이날 DL 208k→378k로 급증)와 병행해 "MiniMax 단독→복수 벤더" 흐름이 실수요로 확인. 활성 파라미터·아키텍처 세부는 원문 재현 전(미기재). i2v 품질 미검증·medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
@@ -68,5 +71,5 @@ reliability: medium
 - 출처: https://huggingface.co/Comfy-Org/MiniMax-H3
 - 다운로드: 4.95M (2026-08-09 자동수집, Comfy-Org 변형·베이스 원본 35.3k) ← 3.94M (08-08, 좋아요 971) ← 3.14M (08-07) ← 2.3M (08-06)
 - 성격: 이미지+텍스트→비디오 MiniMax-H3의 ComfyUI 통합 배포판
-- 베이스 원본: [[MiniMax]]AI/MiniMax-H3 DL 59.4k·좋아요 3.64k (2026-08-12 자동수집·HF 트렌딩 모델 1위) ← 35.3k (08-09)
+- 베이스 원본: [[MiniMax]]AI/MiniMax-H3 DL 2.4M·좋아요 4.05k (2026-08-17 자동수집·33B·트렌딩 상위) ← 2.21M (08-15) ← 2M (08-14) ← 59.4k (08-12)
 - 신뢰도: ⭐⭐ (실채택 상위, 원본 스펙/품질/라이선스 미검증·raw 자동수집 수치)
