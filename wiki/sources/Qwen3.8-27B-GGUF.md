@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, quantization, local-inference, qwen, unsloth, local-llm]
 created: 2026-08-16
-updated: 2026-08-17
+updated: 2026-08-18
 sources: []
 reliability: medium
 ---
@@ -12,8 +12,11 @@ reliability: medium
 # unsloth/Qwen3.8-27B-GGUF — 로컬 추론용 GGUF 양자화 재배포
 
 **HF 모델**: https://huggingface.co/unsloth/Qwen3.8-27B-GGUF
-**지표**: DL **2.73M** · 좋아요 **1.52k** (2026-08-17 자동수집) ← DL 1.95M·좋아요 1.31k (08-16) · **형식**: GGUF (양자화) · **재배포**: [[unsloth]]
-**원본**: Qwen3.8-27B ([[Alibaba]] Qwen 계열, 모델명·raw 기준)
+**지표**: DL **2.73M** · 좋아요 **1.71k** (2026-08-18 자동수집) ← DL 2.73M·좋아요 1.52k (08-17) ← 1.95M·1.31k (08-16) · **형식**: GGUF (양자화) · **재배포**: [[unsloth]]
+**원본**: [[Qwen3.8-27B]] ([[Alibaba]] Qwen 계열·이날 베이스 원본도 별도 편입, image-text-to-text)
+
+> [!update] 2026-08-18 갱신 — DL 2.73M 유지·좋아요 1.52k→1.71k (원본 [[Qwen3.8-27B]] 동반 편입)
+> DL **2.73M(유지)·좋아요 1.71k**(2026-08-18 자동수집) ← 2.73M·1.52k(08-17). 다운로드는 270만대에서 안정, 좋아요만 +약19만 관심으로 계속 증가 — 편입 사흘째 로컬 27B GGUF 실수요가 저변으로 안착. 이날 **원본 베이스([[Qwen3.8-27B]]·DL 415k·좋아요 10.9k)가 별도 편입**되며 "원본(좋아요↑·기준점)↔GGUF 재배포(DL↑·실행)"의 [[unsloth]] 세로 통합이 한 모델에서 수치로 드러남 — 다운로드는 GGUF가 6배+, 좋아요는 원본이 6배+인 비대칭. 같은 배치 신규 [[llmfit]](하드웨어 적합성 사전 필터)의 판정 대상 후보. DL·좋아요는 접근성 지표이지 품질 근거 아님·양자화 손실 미기재. reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-17 갱신 — DL 2.73M·좋아요 1.52k (하루 +약78만·270만 돌파)
 > DL **2.73M·좋아요 1.52k**(2026-08-17 자동수집) ← 1.95M·1.31k(08-16). 편입 이튿날 하루 +약78만으로 **270만 돌파** — "27B 밀집형을 GGUF로 양자화해 워크스테이션에서 로컬 구동"하는 실수요가 편입 직후 급증함을 확인. 같은 배치에서 [[unsloth]]가 [[Muse-Glimmer-30B-GGUF]](DL 755k)까지 GGUF 재배포를 늘리며 "제작→양자화 배포" 세로 통합이 모델을 하나씩 확장하는 반복 패턴임이 확증됨. 다운로드는 접근성 지표이지 품질 근거 아님·양자화 단계별 손실 미기재. reliability medium 유지. *raw 자동수집 수치 반영 — HF 실WebFetch 미수행(타임라인 유지).*
@@ -34,13 +37,15 @@ reliability: medium
 - **액션**: llama.cpp류에서 Q4/Q5 스팟체크 후 [[local-llm]] 상비 후보 판정.
 
 ## 관련 페이지
+- [[Qwen3.8-27B]] — 이 재배포판의 베이스 원본(좋아요↑·기준점 vs 이 GGUF DL↑·실행)
 - [[unsloth]] — 재배포 주체·제작 축 프레임워크
 - [[Alibaba]] — Qwen 원본 계열 빅테크
+- [[llmfit]] — 하드웨어 적합성으로 이 GGUF 후보를 사전 필터하는 상류 도구
 - [[Soup]] — 같은 배치 로컬 파인튜닝 제작 축(소비↔제작 대비)
 - [[LLMRouter]] — 로컬 GGUF를 저지연 게이트로 편입할 라우팅 계층
 - [[local-llm]] — 로컬 추론 저변 도메인
 
 ## 원본
 - 출처: https://huggingface.co/unsloth/Qwen3.8-27B-GGUF
-- 신뢰도: ⭐⭐⭐ (DL 2.73M·좋아요 1.52k raw 자동수집·벤치/양자화 손실 미검증 medium)
-- 수집: 2026-08-16 아침 자동수집 (HF 모델) · 갱신 2026-08-17 (DL 2.73M)
+- 신뢰도: ⭐⭐⭐ (DL 2.73M·좋아요 1.71k raw 자동수집·벤치/양자화 손실 미검증 medium)
+- 수집: 2026-08-16 아침 자동수집 (HF 모델) · 갱신 2026-08-17 (DL 2.73M) · 2026-08-18 (좋아요 1.71k·원본 [[Qwen3.8-27B]] 동반 편입)

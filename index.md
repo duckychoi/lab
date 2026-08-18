@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-17 (자동수집 13건 배치 인제스트 — 신규 6[HF논문 5 + HF모델 Muse-Glimmer-30B-GGUF]·갱신 7[GitHub 5 + HF모델 2]. strix·MoneyPrinterTurbo 오랜만 재등장 대폭 상승[+2만·10만 돌파]. 방어·보안 축[strix·Crisis-Video-Attack-Defense] 동반 상단. 신규 엔티티 0)
-total_pages: 891
-total_sources: 873
+updated: 2026-08-18 (자동수집 13건 배치 인제스트 — 신규 7[HF논문 5 + GitHub llmfit + HF모델 Qwen3.8-27B 베이스 원본]·갱신 6[GitHub 4 + HF모델 2]. 보안 축[strix·Anthropic-Cybersecurity-Skills] 병존·MoneyPrinterTurbo 10만 돌파 후 증분 재가속·Qwen3.8-27B 원본↔GGUF 좋아요/DL 비대칭 관측. 신규 엔티티 0)
+total_pages: 898
+total_sources: 880
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 873
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-18 자동수집 배치 (신규 7 · 갱신 6 / HF논문 5[신규] + GitHub 1[신규 llmfit] + HF모델 1[신규 Qwen3.8-27B 베이스 원본] + GitHub 4·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 보안 축[strix·Anthropic-Cybersecurity-Skills] 병존·MoneyPrinterTurbo 10만 돌파 후 증분 재가속·Qwen3.8-27B 원본↔GGUF 비대칭 관측. 신규 entity 0) ── -->
+- [[HarnessEval-W]] — 시각적 월드 생성물 평가를 에이전트화하는 벤치·평가 프레임, [[Marionette]]·[[StateFlow]]·[[Beyond-Pixels-4D]] 월드 생성 축의 평가 하류·[[DarwinX]]·[[Long-Horizon-AI-RnD-Eval]]·[[HarnessOpt-Bench]] 하네스 평가 계보·[[video-saas]]([[reat-render]]) QA 에이전트화 접점 (HF 데일리 1위·업보트 50·미래형 ID·소속 미검증 medium) (2608.16859) *(NEW 2026-08-18)*
+- [[VibeWorlding]] — 멀티모달 에이전트가 3D 오픈월드를 엔드투엔드로 구성 가능한지 탐구, [[Marionette]]·[[StateFlow]] 월드 구조화의 자율 통합 각도·같은 배치 [[HarnessEval-W]]와 데일리 1·2위 짝(생성 자율화↔평가 자율화)·[[Tencent]] raw 소속·[[slam-3dgs]]×[[video-saas]] 교차 (HF 데일리 2위·업보트 41·미래형 ID·소속 미검증 medium) (2608.15265) *(NEW 2026-08-18)*
+- [[ClawGym-II]] — 에이전트 하네스 위의 블랙박스 강화학습 탐구(동명 [[ClawGym]]과 별개 논문), [[DarwinX]] 하네스 진화의 RL 버전·[[HarnessOpt-Bench]]·[[Long-Horizon-AI-RnD-Eval]] 하네스 평가 계보·[[LLMRouter]] 게이트 설계 교차 (HF 데일리 3위·업보트 32·미래형 ID·소속 미검증 medium) (2608.16798) *(NEW 2026-08-18)*
+- [[UI-Mate]] — 인컨텍스트 데모로 오픈웨이트 파운데이션 GUI 에이전트를 강화, 파인튜닝 없이 화면 조작 개선·[[ego-lite]]·[[CLI-Anything]] 에이전트-웹/SW 조작 실수요의 논문 축·[[Tencent]] Hunyuan raw 소속·같은 배치 [[VibeWorlding]]와 짝 (HF 데일리 4위·업보트 26·미래형 ID·소속/베이스 미검증 medium) (2608.15930) *(NEW 2026-08-18)*
+- [[Agentic-Transaction]] — ACID(원자성·일관성·격리성·지속성) 준수 에이전트 시스템 접근, 에이전트 행동을 롤백·격리 가능한 트랜잭션 단위로 규율하는 신뢰성 인프라·[[strix]]·[[UI-Mate]] 시스템 조작 에이전트의 안전성 수요처·[[에이전트-메모리-레이어]] 정합성 교차 (HF 데일리 5위·업보트 20·미래형 ID·소속 미검증 medium) (2608.13900) *(NEW 2026-08-18)*
+- [[llmfit]] — 수백 모델·프로바이더 중 내 하드웨어에서 실제 구동 가능한 것을 한 명령으로 찾는 Rust CLI, [[LLMRouter]] 런타임 라우팅(하류)과 대비되는 배포 이전 후보 축소(상류)·[[Qwen3.8-27B-GGUF]]·[[Muse-Glimmer-30B-GGUF]] 로컬 후보 판정·[[local-llm]] 저변 (GitHub ⭐32,541·당일 +198·판정 로직 미검증 high) *(NEW 2026-08-18)*
+- [[Qwen3.8-27B]] — [[Alibaba]] Qwen3.8-27B 베이스 원본(image-text-to-text), 그간 잡히던 [[Qwen3.8-27B-GGUF]]([[unsloth]] 재배포)의 원본·**DL은 GGUF(2.73M)가 6배+·좋아요는 원본(10.9k)이 6배+인 비대칭**(기준점 vs 실행)·[[Muse-Glimmer-30B]] 멀티모달 축·[[local-llm]] 기준 (HF DL 415k·좋아요 10.9k·아키텍처/벤치 미기재 medium) *(NEW 2026-08-18)*
+- [[strix]] 갱신 — usestrix 자율 AI 침투 테스트 에이전트, ⭐53,527→**54,684**(당일 +598·5.4만 안착·[[Anthropic-Cybersecurity-Skills]]와 보안 축 병존 지속)(raw API 수치) *(UPDATE 2026-08-18)*
+- [[MoneyPrinterTurbo]] 갱신 — harry0703 텍스트→쇼트폼 영상 완성형 자동화, ⭐105,044→**107,097**(당일 +1,189·10만 돌파 후 증분 +494→+1,189 재가속·결과 품질은 연결 API 의존)(raw API 수치) *(UPDATE 2026-08-18)*
+- [[career-ops]] 갱신 — santifer [[Claude-Code-워크플로우]] 기반 구직 자동화, ⭐52,200→**65,150**(당일 +218·약 두 달 만 재등장·+1.3만 누적)(raw API 수치) *(UPDATE 2026-08-18)*
+- [[Anthropic-Cybersecurity-Skills]] 갱신 — mukul975 6개 프레임워크 매핑 817개 사이버보안 스킬(Apache 2.0·비공식), ⭐21,523→**28,701**(당일 +198·약 두 달 만 +약7천·[[strix]]와 보안 축 병존)(raw API 수치) *(UPDATE 2026-08-18)*
+- [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 GGUF 양자화판, DL 2.73M 유지·좋아요 1.52k→**1.71k**(원본 [[Qwen3.8-27B]] 동반 편입·원본↔재배포 비대칭 관측)(raw API 수치) *(UPDATE 2026-08-18)*
+- [[LTX-2.5]] 갱신 — Lightricks 이미지→비디오 HF 모델, DL 424k→**466k**(좋아요 1.15k·+약4.2만·좋아요 1천 돌파·오픈 i2v 벤더 다변화 실채택 지속)(raw API 수치) *(UPDATE 2026-08-18)*
 <!-- ── 2026-08-17 자동수집 배치 (신규 6 · 갱신 7 / HF논문 5[신규] + HF모델 1[신규 Muse-Glimmer-30B-GGUF] + GitHub 5·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. strix·MoneyPrinterTurbo 오랜만 재등장 대폭 상승. 신규 entity 0) ── -->
 - [[Crisis-Video-Attack-Defense]] — 위기 이벤트 겨냥 AI 생성 영상 공격에 대한 탐지기·생성기·소셜 확산 체계적 평가, 오픈 i2v 생성 능력([[MiniMax-H3]]·[[LTX-2.5]]) 확대의 반대편 "방어·탐지" 축·같은 배치 [[strix]]와 함께 보안 축 상단·[[video-saas]] 대칭 (HF 데일리 1위·업보트 52·미래형 ID 미검증 medium) (2608.14391) *(NEW 2026-08-17)*
 - [[Intern-S2-Mobius]] — 지식과 추론을 분리(decoupled)한 파운데이션 모델, [[Intern-S2-Preview]] 계열 확장·[[InternScience]] 추정 계열·[[에이전트-메모리-레이어]] 지식 외부화·[[Scaling-Interpretable-LLM]] 내부 분리 결 (HF 데일리 2위·업보트 26·미래형 ID·소속 미검증 medium) (2608.14290) *(NEW 2026-08-17)*

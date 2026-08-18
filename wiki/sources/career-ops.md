@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, job-automation, ai-agent, go, pdf-generation]
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-08-18
 sources: []
 reliability: high
 ---
 
 # santifer/career-ops
+
+> [!update] 2026-08-18 갱신 — ⭐65,150 (당일 +218·약 두 달 만 재등장·+1.3만 누적)
+> GitHub ⭐**65,150**(2026-08-18 자동수집, 당일 **+218**) ← 52,200(06-10). 약 두 달 만의 재등장에서 5.2만→6.5만으로 **+1.3만 누적** — [[Claude-Code-워크플로우]] 기반으로 채용 포털 스캔·A~F 루브릭(1.0~5.0) 공고 평가·이력서 맞춤화·지원 추적을 로컬 AI 코딩 CLI(Claude Code·Codex·OpenCode 등)에서 돌리는 구직 자동화가 꾸준히 채택 확대. "에이전트를 실생활 반복 업무에 붙이는" 대표 사례로서 스킬 모드 설계 패턴 참조 가치 유지. Claude/LLM API 비용은 배치 규모에 비례. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 ## 핵심 인사이트
 
@@ -34,4 +37,5 @@ reliability: high
 ## 원본
 
 - 출처: https://github.com/santifer/career-ops
-- 신뢰도: ⭐⭐⭐ (GitHub ⭐52,200)
+- 스타: ⭐65,150 (2026-08-18, 당일 +218) ← ⭐52,200 (06-10)
+- 신뢰도: ⭐⭐⭐⭐ (약 두 달 만 +1.3만 누적·구직 자동화 채택 지속·raw 자동수집)
