@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-18 (자동수집 13건 배치 인제스트 — 신규 7[HF논문 5 + GitHub llmfit + HF모델 Qwen3.8-27B 베이스 원본]·갱신 6[GitHub 4 + HF모델 2]. 보안 축[strix·Anthropic-Cybersecurity-Skills] 병존·MoneyPrinterTurbo 10만 돌파 후 증분 재가속·Qwen3.8-27B 원본↔GGUF 좋아요/DL 비대칭 관측. 신규 엔티티 0)
-total_pages: 898
-total_sources: 880
+updated: 2026-08-19 (자동수집 13건 배치 인제스트 — 신규 7[HF논문 5 + GitHub ai-memory + HF모델 Qwen3.8-27B-FP8]·갱신 6[GitHub 4 + HF모델 2]. 에이전트 메모리 축[OpenViking·ai-memory] 병존·MoneyPrinterTurbo 증분 사흘째 배증(+2,304)·Qwen3.8-27B 양자화 GGUF↔FP8 환경별 분화 관측. 신규 엔티티 0)
+total_pages: 905
+total_sources: 887
 ---
 
 # Wiki Index
@@ -75,7 +75,20 @@ total_sources: 880
 
 ## sources
 <!-- 소스별 요약 -->
-<!-- ── 2026-08-18 자동수집 배치 (신규 7 · 갱신 6 / HF논문 5[신규] + GitHub 1[신규 llmfit] + HF모델 1[신규 Qwen3.8-27B 베이스 원본] + GitHub 4·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 보안 축[strix·Anthropic-Cybersecurity-Skills] 병존·MoneyPrinterTurbo 10만 돌파 후 증분 재가속·Qwen3.8-27B 원본↔GGUF 비대칭 관측. 신규 entity 0) ── -->
+<!-- ── 2026-08-19 자동수집 배치 (신규 7 · 갱신 6 / HF논문 5[신규] + GitHub 1[신규 ai-memory] + HF모델 1[신규 Qwen3.8-27B-FP8] + GitHub 4·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 에이전트 메모리 축[OpenViking·ai-memory] 병존·MoneyPrinterTurbo 증분 사흘째 배증·Qwen3.8-27B 양자화 GGUF↔FP8 환경별 분화 관측. 신규 entity 0) ── -->
+- [[ASI-Bench]] — 엔드투엔드·프로젝트 단위 과학연구 수행 능력을 겨루는 초지능(ASI) 지향 벤치, 같은 배치 [[Agentic-ESOpt]]와 "장기 지평 에이전트: 평가↔학습" 짝·[[Long-Horizon-AI-RnD-Eval]]·[[Long-Horizon-Consistency]] 장기 평가 계보·"ASI" 명명 프레이밍 주의 (HF 데일리 1위·업보트 38·미래형 ID·수치 미검증 medium) (2608.17271) *(NEW 2026-08-19)*
+- [[FreeToken]] — 대역폭 적응 실행(bandwidth-adaptive)으로 엣지 디바이스 MoE 서빙 효율 향상, 같은 배치 로컬 실행 계층 [[omlx]]·양자화 웨이트 [[Qwen3.8-27B-FP8]]·[[Qwen3.8-27B-GGUF]]와 "대형 모델 엣지·로컬 구동" 축·MoE 로딩/대역폭 병목 (HF 데일리 2위·업보트 37·미래형 ID·수치 미검증 medium) (2608.16157) *(NEW 2026-08-19)*
+- [[Embodied-Navigator]] — Point·Think·Memorize·Align 4단계 체화형 내비게이션 프레임, Memorize 단계가 [[에이전트-메모리-레이어]]를 로봇 공간 인지로 이식·[[Marionette]] 단계화 접근 인접·[[slam-3dgs]]×[[local-llm]] 교차 (HF 데일리 3위·업보트 32·미래형 ID·벤치 미검증 medium) (2608.17512) *(NEW 2026-08-19)*
+- [[Agentic-ESOpt]] — 최소 GPU로 장기 지평 LLM 에이전트 파인튜닝(진화전략 계열 추정·gradient-free), 같은 배치 [[ASI-Bench]]와 평가↔학습 짝·[[Soup]]·[[llmfit]] 저자원 축·[[local-llm]] 저변 (HF 데일리 4위·업보트 29·미래형 ID·수치 미검증 medium) (2608.17310) *(NEW 2026-08-19)*
+- [[AVA-Encoder]] — 에이전트 친화적(agent-native) 비디오 표현 학습 인코더, 영상을 생성 대상에서 에이전트 작업 입력·상태 표현으로 재정의·[[VibeWorlding]] agent-native 흐름 인접·오픈 i2v 생성([[MiniMax-H3]]) 대비 이해↔생성 상보·[[video-saas]]×[[reat-scene]] 접목 (HF 데일리 5위·업보트 27·미래형 ID·벤치 미검증 medium) (2608.12313) *(NEW 2026-08-19)*
+- [[ai-memory]] — 에이전트 코딩 CLI에 장기 메모리를 붙이고 벤더 간 핸드오프를 돕는 Rust 솔루션, 같은 배치 [[OpenViking]](파일시스템 통합 DB)와 "에이전트 메모리" 축 병존(이식성 특화)·[[에이전트-메모리-레이어]]·[[cognee]] 비교 대상·[[Claude-Code-워크플로우]] 통합 (GitHub ⭐2,979·당일 +648·초기 급상승·저장/핸드오프 스펙 미검증 medium) *(NEW 2026-08-19)*
+- [[Qwen3.8-27B-FP8]] — [[Alibaba]] Qwen 공식 FP8 양자화판(image-text-to-text·GPU 서버 메모리 절감), 동일 베이스 [[Qwen3.8-27B]]가 GGUF([[unsloth]] 재배포·DL 3.56M·CPU/워크스테이션)↔FP8(공식·GPU) 환경별 분화·[[LLMRouter]] GPU 서버 게이트 후보·[[local-llm]] 교차 (HF DL 741k·좋아요 575·FP8 손실/하드웨어 요건 미검증 medium) *(NEW 2026-08-19)*
+- [[MoneyPrinterTurbo]] 갱신 — LLM 기반 쇼트폼 영상 완전 자동 파이프라인, ⭐107,097→**109,357**(당일 +2,304·증분 사흘째 배증·대중 채택 가속)(raw API 수치) *(UPDATE 2026-08-19)*
+- [[OpenViking]] 갱신 — [[Volcengine]] 에이전트용 컨텍스트 DB(`viking://` 파일시스템·티어드 로딩), ⭐27,604→**29,727**(당일 +213·3만 근접·[[ai-memory]]와 메모리 축 병존)(raw API 수치) *(UPDATE 2026-08-19)*
+- [[Anthropic-Cybersecurity-Skills]] 갱신 — 6개 프레임워크 매핑 817 사이버보안 스킬셋(비공식), ⭐28,701→**29,446**(당일 +730·증분 재가속·3만 근접·보안 축 병존)(raw API 수치) *(UPDATE 2026-08-19)*
+- [[omlx]] 갱신 — Apple Silicon 전용 LLM 추론 서버(continuous batching·SSD 캐싱), ⭐13,485→**19,587**(당일 +370·약 석 달 만 재등장·2만 근접·로컬 실행 계층)(raw API 수치) *(UPDATE 2026-08-19)*
+- [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 GGUF 양자화판, DL 2.73M→**3.56M**(좋아요 1.87k·하루 +약83만·350만 돌파·FP8판 [[Qwen3.8-27B-FP8]] 동반 편입·양자화 경로 분화)(raw API 수치) *(UPDATE 2026-08-19)*
+- [[MiniMax-H3]] 갱신 — 베이스 원본 [[MiniMax]]AI/MiniMax-H3 DL 2.4M→**2.86M**(좋아요 4.16k·33B·트렌딩 상위 유지·+약46만 순증)(raw API 수치) *(UPDATE 2026-08-19)*
 - [[HarnessEval-W]] — 시각적 월드 생성물 평가를 에이전트화하는 벤치·평가 프레임, [[Marionette]]·[[StateFlow]]·[[Beyond-Pixels-4D]] 월드 생성 축의 평가 하류·[[DarwinX]]·[[Long-Horizon-AI-RnD-Eval]]·[[HarnessOpt-Bench]] 하네스 평가 계보·[[video-saas]]([[reat-render]]) QA 에이전트화 접점 (HF 데일리 1위·업보트 50·미래형 ID·소속 미검증 medium) (2608.16859) *(NEW 2026-08-18)*
 - [[VibeWorlding]] — 멀티모달 에이전트가 3D 오픈월드를 엔드투엔드로 구성 가능한지 탐구, [[Marionette]]·[[StateFlow]] 월드 구조화의 자율 통합 각도·같은 배치 [[HarnessEval-W]]와 데일리 1·2위 짝(생성 자율화↔평가 자율화)·[[Tencent]] raw 소속·[[slam-3dgs]]×[[video-saas]] 교차 (HF 데일리 2위·업보트 41·미래형 ID·소속 미검증 medium) (2608.15265) *(NEW 2026-08-18)*
 - [[ClawGym-II]] — 에이전트 하네스 위의 블랙박스 강화학습 탐구(동명 [[ClawGym]]과 별개 논문), [[DarwinX]] 하네스 진화의 RL 버전·[[HarnessOpt-Bench]]·[[Long-Horizon-AI-RnD-Eval]] 하네스 평가 계보·[[LLMRouter]] 게이트 설계 교차 (HF 데일리 3위·업보트 32·미래형 ID·소속 미검증 medium) (2608.16798) *(NEW 2026-08-18)*

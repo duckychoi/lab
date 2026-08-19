@@ -1,0 +1,45 @@
+---
+title: akitaonrails/ai-memory — 에이전트 코딩 CLI용 장기 메모리 (Rust)
+type: source
+domain: local-llm
+tags: [ai-news, local-llm, agent-memory, coding-agent, cli, rust, interop, handoff]
+created: 2026-08-19
+updated: 2026-08-19
+sources: []
+reliability: medium
+---
+
+# akitaonrails/ai-memory — 에이전트 코딩 CLI 장기 메모리·벤더 간 핸드오프
+
+**GitHub**: https://github.com/akitaonrails/ai-memory
+**스타**: ⭐2,979 (2026-08-19 자동수집, 당일 **+648**) · **언어**: Rust · **도메인**: local-llm(교차 ai-news)
+
+> [!insight] 핵심 인사이트
+> 에이전트 **코딩 CLI**(Claude Code·Cursor·Codex류)에 **장기 메모리**를 붙이고, 서로 다른 에이전트 벤더 간 **핸드오프**를 돕는 Rust 솔루션. ⭐2,979(당일 **+648**)로 아직 소형이나 하루 증분이 스타의 20%를 넘는 **초기 급상승**. 핵심은 "메모리를 특정 에이전트에 종속시키지 않고 벤더 중립 계층으로 분리"한다는 발상 — 같은 배치 [[OpenViking]](에이전트용 컨텍스트 DB·`viking://` 파일시스템)와 **"에이전트 메모리" 축**을 이날도 함께 형성한다. 다만 OpenViking이 파일시스템 은유의 통합 DB라면, ai-memory는 **코딩 CLI 워크플로에 특화한 얇은 메모리·이식(handoff) 레이어**로 결이 다르다.
+
+> [!warning] 신뢰도 — raw 자동수집·실동작 미검증 (medium)
+> ⭐2,979·+648은 raw 자동수집 수치이며 **실WebFetch 미수행**(타임라인 2026-08 유지). 스타 수는 관심 지표이지 품질 근거가 아니다. 저장 백엔드(파일/DB/벡터), "핸드오프"의 구체 포맷(어떤 벤더 간 무엇을 옮기는지), 실제 CLI 통합 방식은 **raw 미기재 → 원문 재현 전까지 미검증**([[CLAUDE.md]] 사실확인 원칙).
+
+## 도메인별 추출 (local-llm · 교차 ai-news)
+
+- **실용성 판단**: 조건부 — Rust 단일 바이너리라면 CLI 워크플로 삽입 부담이 낮을 가능성. 실배포 가부는 저장/핸드오프 스펙 확인 후 판정.
+- **메모리 아키텍처**: raw상 "장기 메모리 + 벤더 간 핸드오프". [[에이전트-메모리-레이어]] 패턴 중 **이식성(portability)** 축을 특화 — RAG/KV/외부DB 중 무엇을 쓰는지는 미확정.
+- **Hermes 적용**: 코딩 CLI 특화라 [[ChinameBot]]/Hermes 대화 메모리에 직접 이식은 거리가 있으나, "메모리를 에이전트에서 분리해 옮긴다"는 설계 원칙은 차용 검토 가치.
+- **트레이드오프**: 벤더 중립 이식성 이득 vs 얇은 레이어의 표현력 한계. OpenViking류 통합 DB와 역할 분담 관계.
+- **오픈소스 구현체**: 즉시 clone 가능. [[OpenViking]]·[[cognee]]와 "에이전트 메모리" 비교 대상에 신규 편입.
+
+> [!action] 벤더 중립 메모리 핸드오프 관찰
+> 코딩 CLI 간 컨텍스트 이식(handoff)이 실제로 무엇을 옮기는지 확인 — 내 에이전트 스택에서 세션·메모리를 도구 종속 없이 보존하는 설계 참고. 우선순위 낮음.
+
+## 관련 페이지
+- [[OpenViking]] — 같은 배치 에이전트 컨텍스트 DB(파일시스템 은유·통합형 대비)
+- [[에이전트-메모리-레이어]] — 상위 패턴 (이 항목은 이식성 축)
+- [[cognee]] — 에이전트 메모리 비교 대상
+- [[Claude-Code-워크플로우]] — 코딩 CLI 통합 맥락
+- [[local-llm]]
+
+## 원본
+- 출처: https://github.com/akitaonrails/ai-memory
+- 스타: ⭐2,979 (2026-08-19 자동수집, 당일 +648) · Rust
+- 신뢰도: ⭐⭐ (소형·초기 급상승·저장/핸드오프 스펙 미검증·raw 자동수집 medium)
+- 수집: 2026-08-19 아침 자동수집 (GitHub)

@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, apple-silicon, continuous-batching, ssd-cache, macos, edge-ai]
 created: 2026-05-11
-updated: 2026-05-11
+updated: 2026-08-19
 sources: []
 reliability: high
 ---
 
 # jundot/omlx
+
+> [!update] 2026-08-19 갱신 — ⭐19,587 (당일 +370·약 석 달 만 재등장·2만 근접)
+> GitHub ⭐**19,587**(2026-08-19 자동수집, 당일 **+370**) ← 13,485(05-11). 약 석 달 만의 재등장에서 1.35만→1.96만으로 **+약6천 누적·2만 근접** — Apple Silicon 전용 **continuous batching + SSD 캐싱** LLM 추론 서버의 누적 채택이 꾸준. 같은 배치 [[Qwen3.8-27B-GGUF]](DL 3.56M)·신규 [[Qwen3.8-27B-FP8]]처럼 로컬 실행용 양자화 웨이트가 두꺼워지는 흐름과 맞물려, Mac에서 27B급을 로컬 구동하는 실행 계층으로서 상비 후보 유지. SSD 캐시 활용 시 대역폭(~3GB/s) 병목 트레이드오프는 여전. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > ⭐**13,485** (+185 오늘) — Apple Silicon 전용 LLM 추론 서버로 **continuous batching + SSD 캐싱** 조합. macOS 메뉴바에서 직접 관리. Metal GPU 활용 극대화로 Mac 사용자가 로컬에서 대형 모델을 실용적으로 돌릴 수 있는 기반. [[Qwen3.6-35B-A3B-GGUF]] 같은 GGUF 모델과 조합하면 Mac에서 35B MoE 모델 실행이 현실적.
@@ -41,4 +44,5 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/jundot/omlx
-- 신뢰도: ⭐⭐ (⭐13,485 GitHub stars)
+- 스타: ⭐19,587 (2026-08-19, 당일 +370) ← ⭐13,485 (05-11, +185)
+- 신뢰도: ⭐⭐⭐ (⭐19,587 GitHub stars·2만 근접·raw 자동수집)

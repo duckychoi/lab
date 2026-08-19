@@ -4,12 +4,15 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, cybersecurity, agent-skills, MITRE, security, claude-code]
 created: 2026-05-25
-updated: 2026-08-18
+updated: 2026-08-19
 sources: []
 reliability: medium
 ---
 
 # mukul975/Anthropic-Cybersecurity-Skills — AI 에이전트용 사이버보안 스킬 라이브러리
+
+> [!update] 2026-08-19 갱신 — ⭐29,446 (당일 +730·3만 근접·817 스킬 유지)
+> GitHub ⭐**29,446**(2026-08-19 자동수집, 당일 **+730**) ← 28,701(08-18, +198). 하루 증분이 +198→+730으로 재가속하며 **3만 근접** — MITRE ATT&CK·NIST CSF·ATLAS 등 **6개 프레임워크에 매핑한 817개 구조화 사이버보안 스킬셋**(Claude Code·Copilot·Cursor 호환·Apache 2.0)의 확산이 이어짐. 보안 축이 코드 측 상단에 계속 병존. 단 **Anthropic 공식 아님**(커뮤니티 레포)·"817개 스킬"의 실동작 단위는 검증 필요. reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
 
 > [!update] 2026-08-18 갱신 — ⭐28,701 (당일 +198·약 두 달 만 재등장·817 스킬 유지)
 > GitHub ⭐**28,701**(2026-08-18 자동수집, 당일 **+198**) ← 21,523(06-26). 약 두 달 만의 재등장에서 2.15만→2.87만으로 **+약7천 누적** — MITRE ATT&CK·NIST CSF·ATLAS 등 **6개 프레임워크에 매핑한 817개 구조화 사이버보안 스킬셋**(Claude Code·Copilot·Cursor 등 호환·Apache 2.0)이 계속 확산. 같은 배치 [[strix]](자율 침투 테스트·⭐5.4만)와 함께 이날도 **보안 축**이 코드 측 상단에 병존. 단 **Anthropic 공식 아님**(커뮤니티 레포)·"817개 스킬"의 실동작 단위는 검증 필요. reliability medium 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
@@ -33,5 +36,5 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
-- 스타: ⭐28,701 (2026-08-18, 당일 +198) ← ⭐21,523 (06-26, +571) ← ⭐8,709 (05-25, +930)
+- 스타: ⭐29,446 (2026-08-19, 당일 +730) ← ⭐28,701 (08-18, +198) ← ⭐21,523 (06-26, +571) ← ⭐8,709 (05-25, +930)
 - 신뢰도: ⭐⭐⭐ (커뮤니티 레포, Anthropic 공식 아님 — 다만 한 달 2.5배 성장으로 채택 입증)
