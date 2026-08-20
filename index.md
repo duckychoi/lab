@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-19 (자동수집 13건 배치 인제스트 — 신규 7[HF논문 5 + GitHub ai-memory + HF모델 Qwen3.8-27B-FP8]·갱신 6[GitHub 4 + HF모델 2]. 에이전트 메모리 축[OpenViking·ai-memory] 병존·MoneyPrinterTurbo 증분 사흘째 배증(+2,304)·Qwen3.8-27B 양자화 GGUF↔FP8 환경별 분화 관측. 신규 엔티티 0)
-total_pages: 905
-total_sources: 887
+updated: 2026-08-20 (자동수집 13건 배치 인제스트 — 신규 5[HF논문 5]·갱신 8[GitHub 5 + HF모델 3]. 하네스 물리 폐루프↔검증 게이트[Zetta-ζ·SemaPLC] 짝·생성물 평가 영상판[SemComp-Bench]·AI 과학자 능력↔평가[OmniScientist·ASI-Bench]·Qwen3.8-27B 세 경로[GGUF 5.13M·FP8 1.52M·원본 1.37M] 모두 백만대·대형 리포 대관문 3건[MoneyPrinterTurbo 11만·OpenViking·Anthropic-Cyber 3만] 동시 통과. raw 일증분 필드 절대값 불일치→절대값 기준 채택·raw 표기 병기. 신규 엔티티 0)
+total_pages: 910
+total_sources: 892
 ---
 
 # Wiki Index
@@ -76,6 +76,20 @@ total_sources: 887
 ## sources
 <!-- 소스별 요약 -->
 <!-- ── 2026-08-19 자동수집 배치 (신규 7 · 갱신 6 / HF논문 5[신규] + GitHub 1[신규 ai-memory] + HF모델 1[신규 Qwen3.8-27B-FP8] + GitHub 4·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 에이전트 메모리 축[OpenViking·ai-memory] 병존·MoneyPrinterTurbo 증분 사흘째 배증·Qwen3.8-27B 양자화 GGUF↔FP8 환경별 분화 관측. 신규 entity 0) ── -->
+<!-- ── 2026-08-20 자동수집 배치 (신규 5 · 갱신 8 / HF논문 5[신규] + GitHub 5·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 이날 raw "당일 +X" 일증분 필드가 절대값과 전반 불일치→절대값 스냅샷 기준 채택·실증분 전일 페이지값 대비 계산·raw 표기 병기. 하네스 물리 폐루프↔검증 게이트[Zetta-ζ·SemaPLC] 짝·생성물 평가 영상판[SemComp-Bench]·AI 과학자 능력↔평가[OmniScientist·ASI-Bench]·Qwen3.8-27B 세 경로[GGUF·FP8·원본] 모두 백만대·대형 리포 대관문 3건[11만·3만·3만] 동시 통과. 신규 entity 0) ── -->
+- [[Zetta-ζ]] — 물리 세계에서 지각→행동→관측→정책 갱신 루프를 닫아 스스로 진화하는 체화형 하네스, 같은 배치 [[SemaPLC]]와 "하네스 두 결: 물리 폐루프↔검증 게이트 코드" 짝·[[DarwinX]]·[[HarnessEval-W]] 하네스 계보·[[Embodied-Navigator]]·[[Agentic-ESOpt]] 체화·저자원 학습 인접·"자기진화" 명명 프레이밍 주의 (HF 데일리 1위·업보트 96·미래형 ID·수치 미검증 medium) (2608.16590) *(NEW 2026-08-20)*
+- [[SemComp-Bench]] — 비디오 생성이 화질이 아니라 프롬프트가 요구한 의미적 태스크를 실제 완수했는지 채점하는 벤치, [[HarnessEval-W]] 생성물 평가 자율화·[[AVA-Encoder]] agent-native 영상 축·[[video-saas]]([[reat-render]]·[[reat-scene]]) 결과 QA "의미 완료도 자동 채점" 렌즈·[[MoneyPrinterTurbo]] 완성형 파이프라인 검수 대상 (HF 데일리 2위·업보트 78·미래형 ID·채점법 미검증 medium) (2608.17426) *(NEW 2026-08-20)*
+- [[Co-RL]] — 다양 코호트 멀티에이전트 RL에서 라벨 없이 추론이 창발하는 현상, [[Agentic-ESOpt]]·[[FreeToken]] 자원 효율 축을 "감독 신호 자체 축소(비지도·환경 창발)"로 확장·[[온폴리시-증류]] 개선 신호 대안·"창발" 사후 해석 위험 (HF 데일리 3위·업보트 75·미래형 ID·측정법 미검증 medium) (2608.17253) *(NEW 2026-08-20)*
+- [[SemaPLC]] — 프로젝트 기반·검증 게이트를 둔 PLC 산업제어 코드 생성 에이전트 하네스, 같은 배치 [[Zetta-ζ]]와 하네스 두 결 짝·[[Agentic-Transaction]] ACID 신뢰성 축·[[바이브코딩]]·[[Claude-Code-워크플로우]] 안전 게이트 참조·고위험 코드 "게이트드 생성" (HF 데일리 4위·업보트 67·미래형 ID·검증 게이트 미검증 medium) (2608.18565) *(NEW 2026-08-20)*
+- [[OmniScientist]] — 옴니모달·옴니학문 AI 과학자 시스템, 전일 [[ASI-Bench]](프로젝트 단위 자율 연구 채점)와 "AI 과학자: 능력↔평가" 짝·[[Spark-to-Paper]] 연구 산출 자동화 확장·[[LLM-Wiki]] 교차 도메인 합성 맥락·"옴니" 커버리지 주장이지 분야 깊이 보장 아님 (HF 데일리 5위·업보트 63·미래형 ID·평가법 미검증 medium) (2608.13558) *(NEW 2026-08-20)*
+- [[MoneyPrinterTurbo]] 갱신 — LLM 기반 쇼트폼 영상 완전 자동 파이프라인, ⭐109,357→**112,044**(전일比 +2,687·11만 돌파·나흘째 대증분·raw 표기 +2,221 불일치→절대값 기준)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[OpenViking]] 갱신 — [[Volcengine]] 에이전트용 컨텍스트 DB(`viking://` 파일시스템·티어드 로딩), ⭐29,727→**30,650**(전일比 +923·3만 돌파·[[ai-memory]]와 메모리 축 병존·raw 표기 +804 불일치)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[Anthropic-Cybersecurity-Skills]] 갱신 — 6개 프레임워크 매핑 817 사이버보안 스킬셋(비공식), ⭐29,446→**30,127**(전일比 +681·3만 돌파·보안 축 병존·raw 표기 +766 불일치)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[omlx]] 갱신 — Apple Silicon 전용 LLM 추론 서버(continuous batching·SSD 캐싱), ⭐19,587→**19,958**(전일比 +371·2만 목전·로컬 실행 계층·raw 표기 +472 불일치)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[ai-memory]] 갱신 — 에이전트 코딩 CLI 장기 메모리·벤더 간 핸드오프(Rust·이식성 특화), ⭐2,979→**3,320**(전일比 +341·편입 이튿날 안착·[[OpenViking]]과 메모리 축 병존·raw 표기 +606 불일치)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 GGUF 양자화판, DL 3.56M→**5.13M**(좋아요 2.2k·+약1.57M·5백만 돌파·세 경로 중 절대 저변 1위)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[Qwen3.8-27B-FP8]] 갱신 — [[Alibaba]] 공식 FP8 양자화판(GPU 서버), DL 741k→**1.52M**(좋아요 615·약 2배·150만 돌파·GGUF 대비 약 1/3.4 저변)(raw API 수치) *(UPDATE 2026-08-20)*
+- [[Qwen3.8-27B]] 갱신 — [[Alibaba]] Qwen 27B 베이스 원본(image-text-to-text), DL 415k→**1.37M**(좋아요 11.6k·약 3.3배·100만 돌파·좋아요는 세 경로 중 최다=인정·기준점)(raw API 수치) *(UPDATE 2026-08-20)*
 - [[ASI-Bench]] — 엔드투엔드·프로젝트 단위 과학연구 수행 능력을 겨루는 초지능(ASI) 지향 벤치, 같은 배치 [[Agentic-ESOpt]]와 "장기 지평 에이전트: 평가↔학습" 짝·[[Long-Horizon-AI-RnD-Eval]]·[[Long-Horizon-Consistency]] 장기 평가 계보·"ASI" 명명 프레이밍 주의 (HF 데일리 1위·업보트 38·미래형 ID·수치 미검증 medium) (2608.17271) *(NEW 2026-08-19)*
 - [[FreeToken]] — 대역폭 적응 실행(bandwidth-adaptive)으로 엣지 디바이스 MoE 서빙 효율 향상, 같은 배치 로컬 실행 계층 [[omlx]]·양자화 웨이트 [[Qwen3.8-27B-FP8]]·[[Qwen3.8-27B-GGUF]]와 "대형 모델 엣지·로컬 구동" 축·MoE 로딩/대역폭 병목 (HF 데일리 2위·업보트 37·미래형 ID·수치 미검증 medium) (2608.16157) *(NEW 2026-08-19)*
 - [[Embodied-Navigator]] — Point·Think·Memorize·Align 4단계 체화형 내비게이션 프레임, Memorize 단계가 [[에이전트-메모리-레이어]]를 로봇 공간 인지로 이식·[[Marionette]] 단계화 접근 인접·[[slam-3dgs]]×[[local-llm]] 교차 (HF 데일리 3위·업보트 32·미래형 ID·벤치 미검증 medium) (2608.17512) *(NEW 2026-08-19)*

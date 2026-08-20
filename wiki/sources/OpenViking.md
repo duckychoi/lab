@@ -4,12 +4,15 @@ type: source
 domain: local-llm
 tags: [ai-news, local-llm, agent-memory, context-database, rag, filesystem, self-evolving, volcengine]
 created: 2026-07-12
-updated: 2026-08-19
+updated: 2026-08-20
 sources: []
 reliability: high
 ---
 
-# volcengine/OpenViking (GitHub ⭐29,727)
+# volcengine/OpenViking (GitHub ⭐30,650)
+
+> [!update] 2026-08-20 갱신 — ⭐30,650 (전일比 +923·3만 돌파)
+> GitHub ⭐**30,650**(2026-08-20 자동수집) ← 29,727(08-19). 전일 페이지값 대비 **실증분 +923**로 **3만 돌파** — 에이전트 컨텍스트(메모리·리소스·스킬)를 `viking://` 가상 파일시스템 + L0/L1/L2 티어드 로딩으로 통합하는 [[에이전트-메모리-레이어]] 최신 구현의 채택이 3만 대관문을 넘김. 신규 편입됐던 [[ai-memory]](얇은 이식·핸드오프 레이어)와 **"에이전트 메모리" 두 결(통합 DB↔이식 레이어) 병존** 지속 — 위키(index→domain→page 계층) 쿼리 흐름과 동형인 티어드 로딩은 여전히 내 쿼리 엔진 토큰 절감 차용 후보. AGPLv3(코어) 상용 임베딩 라이선스 주의. reliability high 유지. *raw 자동수집 수치 — GitHub 실WebFetch 미수행. raw 일증분 필드 "+804"는 절대값과 불일치(절대값 기준 채택).*
 
 > [!update] 2026-08-19 갱신 — ⭐29,727 (당일 +213·3만 근접)
 > GitHub ⭐**29,727**(2026-08-19 자동수집, 당일 **+213**) ← 27,604(07-29 WebFetch 실측). 약 3주 만의 재등장에서 2.76만→2.97만으로 **+약2천 누적·3만 근접** — 에이전트 컨텍스트(메모리·리소스·스킬)를 `viking://` 가상 파일시스템 + L0/L1/L2 티어드 로딩으로 통합하는 [[에이전트-메모리-레이어]] 최신 구현의 채택이 꾸준히 확대. 같은 배치 신규 [[ai-memory]](에이전트 코딩 CLI 장기 메모리·벤더 간 핸드오프)와 함께 **"에이전트 메모리" 축이 이날도 병존** — 위키(index→domain→page 계층) 쿼리 흐름과 동형인 티어드 로딩은 여전히 내 쿼리 엔진 토큰 절감 차용 후보. AGPLv3(코어) 상용 임베딩 라이선스 주의. reliability high 유지. *raw 자동수집 수치 반영 — GitHub 실WebFetch 미수행(타임라인 유지).*
@@ -43,6 +46,6 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/volcengine/OpenViking
-- 스타: ⭐29,727 (2026-08-19, 당일 +213) ← ⭐27,604 (07-29 갱신, 26,604→27,604 당일 +129 WebFetch 실측), AGPLv3(코어)·Apache 2.0(CLI/예제)
+- 스타: ⭐30,650 (2026-08-20, 전일比 +923·3만 돌파·raw 표기 +804 불일치) ← ⭐29,727 (08-19, +213) ← ⭐27,604 (07-29 갱신, 26,604→27,604 당일 +129 WebFetch 실측), AGPLv3(코어)·Apache 2.0(CLI/예제)
 - 스택: `viking://` 가상 파일시스템·L0/L1/L2 티어드 로딩·벡터+계층 재귀검색·자동 메모리 진화, Python 75.4%+Rust 13.7%
 - 신뢰도: ⭐⭐⭐⭐ (2.6만 스타·Volcengine/ByteDance 공식, README 실측)

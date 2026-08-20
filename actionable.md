@@ -1112,3 +1112,10 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **할 것**: FP8 지원 GPU(Hopper/Ada급) 보유 시, 동일 베이스 [[Qwen3.8-27B]]의 공식 FP8판과 [[unsloth]] GGUF(Q4/Q5)를 동일 프롬프트로 품질·지연·메모리 비교 → "GPU 서버=FP8·CPU/워크스테이션=GGUF" 환경별 라우팅 게이트([[LLMRouter]]) 배치 판정. **FP8 양자화 손실·요구 하드웨어·벤치 미검증(실WebFetch 미수행) → 수치 인용 금지, 스팟체크 우선.**
 - **우선순위**: 낮음
 - **상태**: 대기
+
+## [2026-08-20] SemComp-Bench — 비디오 생성 "의미 완료도" 자동 채점을 video-saas 결과 QA 렌즈로 참조
+- **도메인**: ai-news (교차 video-saas)
+- **출처**: [[SemComp-Bench]] · [[HarnessEval-W]] · [[AVA-Encoder]] · [[MoneyPrinterTurbo]]
+- **할 것**: [[SemComp-Bench]](비디오 생성이 프롬프트가 요구한 의미적 태스크·사건·상태 변화를 실제 구현했는지 채점)의 프레임을 내 [[video-saas]] 파이프라인([[reat-render]]·[[reat-scene]]) 결과 검수에 참조 → "사람 눈 QA"를 "요청 완수도 자동 채점"으로 옮기는 설계 스케치. **벤치 데이터·채점 코드 공개 여부·채점 신뢰도 미검증(미래형 arxiv ID·실WebFetch 미수행) → 프레임 참조만, 수치 인용 금지.**
+- **우선순위**: 낮음
+- **상태**: 대기

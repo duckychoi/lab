@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba]
 created: 2026-08-18
-updated: 2026-08-18
+updated: 2026-08-20
 sources: []
 reliability: medium
 ---
@@ -12,8 +12,11 @@ reliability: medium
 # Qwen/Qwen3.8-27B — 27B 베이스 원본
 
 **HF 모델**: https://huggingface.co/Qwen/Qwen3.8-27B
-**지표**: DL **415k** · 좋아요 **10.9k** (2026-08-18 자동수집) · **태스크**: image-text-to-text · **제작**: [[Alibaba]] (Qwen 계열)
-**파생**: [[Qwen3.8-27B-GGUF]] ([[unsloth]] GGUF 양자화 재배포판)
+**지표**: DL **1.37M** · 좋아요 **11.6k** (2026-08-20 자동수집) ← DL 415k·좋아요 10.9k (08-18) · **태스크**: image-text-to-text · **제작**: [[Alibaba]] (Qwen 계열)
+**파생**: [[Qwen3.8-27B-GGUF]] ([[unsloth]] GGUF 양자화 재배포판) · [[Qwen3.8-27B-FP8]] ([[Alibaba]] 공식 FP8)
+
+> [!update] 2026-08-20 갱신 — DL 1.37M·좋아요 11.6k (전일比 약 3.3배·100만 돌파)
+> DL **1.37M·좋아요 11.6k**(2026-08-20 자동수집) ← 415k·10.9k(08-18). 원본 다운로드가 **약 3.3배·100만 돌파**하며, 그간 415k대에 머물던 "기준점 원본"도 실소비가 급증. 다만 동일 배치에서 재배포 GGUF([[Qwen3.8-27B-GGUF]] DL 5.13M)·공식 FP8([[Qwen3.8-27B-FP8]] DL 1.52M)가 함께 오르며 **"원본↔재배포" 비대칭은 방향 유지** — 다운로드 절대량은 여전히 GGUF>FP8>원본(원본은 GGUF의 약 1/3.7), 좋아요는 원본(11.6k)이 GGUF(2.2k)·FP8(615)를 압도. 즉 "원본=인정·기준점(좋아요↑), GGUF=최다 실행·소비(DL↑)"의 분업은 세 경로가 모두 백만대로 커진 뒤에도 유지됨(집계 경계 주의). image-text-to-text로 27B급 VLM 계열 추정. [[local-llm]]·[[LLMRouter]] 후보 스펙트럼의 기준 위치. *raw 자동수집 수치 — HF 실WebFetch 미수행(타임라인 유지).*
 
 > [!insight] 핵심 인사이트
 > 그간 위키에는 [[unsloth]]가 재배포한 **GGUF 양자화판**([[Qwen3.8-27B-GGUF]]·DL 270만+)만 잡혀 있었는데, 이날 **원본 베이스([[Alibaba]] Qwen/Qwen3.8-27B, DL 415k·좋아요 10.9k)가 별도로 편입**되며 "원본↔양자화 재배포"의 양쪽이 처음으로 함께 관측됨. 흥미로운 비대칭 — **다운로드는 GGUF 재배포판(2.73M)이 원본(415k)의 6배가 넘지만, 좋아요는 원본(10.9k)이 재배포판(1.71k)의 6배 이상**. 즉 원본은 "레퍼런스로 인정·즐겨찾기하는 대상"이고, 실제 로컬 대량 소비는 [[unsloth]] GGUF 경로로 흐른다는, 08월 내내 잡히던 "제작·기준점(원본) vs 소비·실행(GGUF)"의 분업이 한 모델에서 수치로 드러난 사례. 태스크가 image-text-to-text로 잡혀 27B급 VLM 계열로 추정([[Muse-Glimmer-30B]]과 같은 멀티모달 축). [[local-llm]]·[[LLMRouter]] 후보 스펙트럼에서 "27B 밀집 멀티모달 원본"의 기준 위치.
@@ -40,5 +43,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://huggingface.co/Qwen/Qwen3.8-27B
-- 지표: DL 415k·좋아요 10.9k (2026-08-18 자동수집)
-- 신뢰도: medium (원본 베이스·좋아요 1만+ 인정 신호이나 아키텍처/벤치 미기재·raw 자동수집·실WebFetch 미수행)
+- 지표: DL 1.37M·좋아요 11.6k (2026-08-20 자동수집·100만 돌파) ← DL 415k·좋아요 10.9k (08-18)
+- 신뢰도: medium (원본 베이스·좋아요 1.16만 인정 신호·100만 돌파이나 아키텍처/벤치 미기재·raw 자동수집·실WebFetch 미수행)
+- 수집: 2026-08-18 아침 자동수집 (HF 모델) · 갱신 2026-08-20 (DL 1.37M·약 3.3배·100만 돌파)

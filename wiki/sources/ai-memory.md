@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [ai-news, local-llm, agent-memory, coding-agent, cli, rust, interop, handoff]
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-08-20
 sources: []
 reliability: medium
 ---
@@ -12,7 +12,10 @@ reliability: medium
 # akitaonrails/ai-memory — 에이전트 코딩 CLI 장기 메모리·벤더 간 핸드오프
 
 **GitHub**: https://github.com/akitaonrails/ai-memory
-**스타**: ⭐2,979 (2026-08-19 자동수집, 당일 **+648**) · **언어**: Rust · **도메인**: local-llm(교차 ai-news)
+**스타**: ⭐3,320 (2026-08-20 자동수집) ← 2,979(08-19) · **언어**: Rust · **도메인**: local-llm(교차 ai-news)
+
+> [!update] 2026-08-20 갱신 — ⭐3,320 (전일比 +341·편입 이튿날 안착)
+> GitHub ⭐**3,320**(2026-08-20 자동수집) ← 2,979(08-19). 전일 페이지값 대비 **실증분 +341** — 편입 이튿날에도 상승세를 이어가며 소형·초기 급상승 국면 유지. "메모리를 특정 에이전트에 종속시키지 않고 벤더 중립 계층으로 분리"하는 발상은 이날도 통합형 [[OpenViking]](3만 돌파)과 **[[에이전트-메모리-레이어]] 두 결(통합 DB↔얇은 이식 레이어)**을 병존. 저장 백엔드·핸드오프 포맷은 여전히 raw 미기재·미검증. reliability medium 유지. *raw 자동수집 수치 — GitHub 실WebFetch 미수행. raw 일증분 필드 "+606"은 절대값과 불일치(절대값 스냅샷 기준 채택·실증분 전일 페이지값 대비 계산).*
 
 > [!insight] 핵심 인사이트
 > 에이전트 **코딩 CLI**(Claude Code·Cursor·Codex류)에 **장기 메모리**를 붙이고, 서로 다른 에이전트 벤더 간 **핸드오프**를 돕는 Rust 솔루션. ⭐2,979(당일 **+648**)로 아직 소형이나 하루 증분이 스타의 20%를 넘는 **초기 급상승**. 핵심은 "메모리를 특정 에이전트에 종속시키지 않고 벤더 중립 계층으로 분리"한다는 발상 — 같은 배치 [[OpenViking]](에이전트용 컨텍스트 DB·`viking://` 파일시스템)와 **"에이전트 메모리" 축**을 이날도 함께 형성한다. 다만 OpenViking이 파일시스템 은유의 통합 DB라면, ai-memory는 **코딩 CLI 워크플로에 특화한 얇은 메모리·이식(handoff) 레이어**로 결이 다르다.
@@ -40,6 +43,6 @@ reliability: medium
 
 ## 원본
 - 출처: https://github.com/akitaonrails/ai-memory
-- 스타: ⭐2,979 (2026-08-19 자동수집, 당일 +648) · Rust
+- 스타: ⭐3,320 (2026-08-20, 전일比 +341·raw 표기 +606 불일치) ← ⭐2,979 (08-19, +648) · Rust
 - 신뢰도: ⭐⭐ (소형·초기 급상승·저장/핸드오프 스펙 미검증·raw 자동수집 medium)
-- 수집: 2026-08-19 아침 자동수집 (GitHub)
+- 수집: 2026-08-19 아침 자동수집 (GitHub) · 갱신 2026-08-20 (⭐3,320)
