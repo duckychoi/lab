@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-20 (자동수집 13건 배치 인제스트 — 신규 5[HF논문 5]·갱신 8[GitHub 5 + HF모델 3]. 하네스 물리 폐루프↔검증 게이트[Zetta-ζ·SemaPLC] 짝·생성물 평가 영상판[SemComp-Bench]·AI 과학자 능력↔평가[OmniScientist·ASI-Bench]·Qwen3.8-27B 세 경로[GGUF 5.13M·FP8 1.52M·원본 1.37M] 모두 백만대·대형 리포 대관문 3건[MoneyPrinterTurbo 11만·OpenViking·Anthropic-Cyber 3만] 동시 통과. raw 일증분 필드 절대값 불일치→절대값 기준 채택·raw 표기 병기. 신규 엔티티 0)
-total_pages: 910
-total_sources: 892
+updated: 2026-08-21 (자동수집 13건 배치 인제스트 — 신규 7[GitHub 2: Modular-Platform·AI-Infra-Guard / HF논문 5]·갱신 6[GitHub 3 + HF모델 3]. HF논문 데일리 1·2위[EnvHarness·FACET] "환경·태스크 공급 충실도" 짝·인물 중심 비전 3·5위[4DAnyone·WithEveryone] 재구성↔생성 짝·AI 과학자 능력↔평가 3부작[SWE-bench-Science+ASI-Bench+OmniScientist]. Qwen3.8-27B 세 경로[GGUF 5.8M·FP8 1.94M·원본 1.73M] 동반 우상향·FP8↔GGUF 격차 4.8→3배 축소·MoneyPrinterTurbo 11만대 안착. raw 일증분 필드 절대값 불일치 지속→절대값 기준 채택·raw 표기 병기. 신규 엔티티 0)
+total_pages: 917
+total_sources: 899
 ---
 
 # Wiki Index
@@ -75,6 +75,20 @@ total_sources: 892
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-21 자동수집 배치 (신규 7 · 갱신 6 / GitHub 2[신규 Modular-Platform·AI-Infra-Guard] + HF논문 5[신규] + GitHub 3·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. raw 일증분 필드 절대값 불일치 지속(MoneyPrinterTurbo +2,761 vs 실 +1,335·OpenViking +950 vs +654)→절대값 스냅샷 기준 채택·raw 표기 병기. HF논문 데일리 1·2위[EnvHarness·FACET] "환경·태스크 공급 충실도" 짝·3·5위[4DAnyone·WithEveryone] 인물 중심 비전 재구성↔생성 짝·4위 SWE-bench-Science가 ASI-Bench·OmniScientist와 "AI 과학자 능력↔평가" 3부작. Qwen3.8-27B 세 경로 동반 우상향·FP8↔GGUF 격차 4.8→3배 축소. 신규 entity 0) ── -->
+- [[Modular-Platform]] — modular/modular: Mojo 언어 + MAX 추론 엔진을 묶은 AI 인프라 스택(GPU/CPU 이식성 지향 서빙·컴파일 계층), 로컬 실행 계층 [[omlx]]·라우팅 [[LLMRouter]]·적합성 필터 [[llmfit]] 하류의 서빙 백엔드·[[PyTorch]] 대비 추론 이식성 축·[[Qwen3.8-27B-GGUF]]/[[Qwen3.8-27B-FP8]] 서빙 대상 (GitHub ⭐28,271·당일 +268·실재 성숙 OSS·성능 이식성 벤치 미검증 high) *(NEW 2026-08-21)*
+- [[AI-Infra-Guard]] — [[Tencent]] 풀스택 AI 레드팀 플랫폼(AI 생태계 스캔·탈옥jailbreak 평가), 보안 축 [[strix]](일반 침투)·[[Anthropic-Cybersecurity-Skills]](프레임워크 매핑)·[[Crisis-Video-Attack-Defense]](영상 공격 방어)와 병존·AI 스택·모델 탈옥 특화 (GitHub ⭐5,149·당일 +50·스캔/탈옥 커버리지 미검증 medium) *(NEW 2026-08-21)*
+- [[EnvHarness]] — 정적 월드/데이터셋을 에이전트 학습용 상호작용 환경으로 "깨우는" 하네스, [[Zetta-ζ]]·[[DarwinX]] 하네스 계보·[[EnvFactory]]·[[Agentic-Environment-Engineering]]·[[Beyond-Environment-Scaling]] 환경 생성 축·같은 배치 [[FACET]]와 "환경·태스크 공급 충실도" 짝·[[임바디드-AI]] 교차 (HF 데일리 1위·업174·미래형 ID·전환 방법/벤치 미검증 medium) (2608.19880) *(NEW 2026-08-21)*
+- [[FACET]] — 터미널 태스크 합성 시 원 의도·실행 상태(executable state) 보존, [[CLI-Anything]]·[[CLI-Universe]] CLI 에이전트 축·[[SemaPLC]] 실행 가능성 보증 결·같은 배치 [[EnvHarness]]와 공급 충실도 짝·[[Claude-Code-워크플로우]] 실무 (HF 데일리 2위·업61·미래형 ID·합성 기법 미검증 medium) (2608.18580) *(NEW 2026-08-21)*
+- [[4DAnyone]] — 캐주얼 단안(monocular) 비디오로 임의 인물 4D(공간+시간) 재구성, [[4D-Human-Scene-Reconstruction]]·[[Beyond-Pixels-4D]] 4D 축·[[slam-3dgs]]×[[video-saas]] 교차·[[AI-3D-생성]] 에셋 접목·같은 배치 [[WithEveryone]]와 "인물 중심 비전" 짝(재구성↔생성) (HF 데일리 3위·업39·미래형 ID·재구성 품질 미검증 medium) (2608.20335) *(NEW 2026-08-21)*
+- [[SWE-bench-Science]] — 코딩 에이전트가 과학 분야 엔지니어링 태스크를 실제 해결하는 능력 평가 벤치, [[ASI-Bench]]·[[OmniScientist]]와 "AI 과학자 능력↔평가" 3부작·[[Spark-to-Paper]]·[[AI-for-Auto-Research]]·[[Long-Horizon-AI-RnD-Eval]] 연구 자동화 실행 검증 하류 (HF 데일리 4위·업36·미래형 ID·태스크/해결률 미검증 medium) (2608.19799) *(NEW 2026-08-21)*
+- [[WithEveryone]] — 다인원 그룹 이미지 생성에서 계획 수립+인물 정체성 그라운딩 통합, [[video-saas]]([[reat-scene]]) 다인물 씬·다캐릭터 일관성 직결·같은 배치 [[4DAnyone]]와 "인물 중심 비전" 짝(생성↔재구성)·단일 정체성 편집 넘어 다인물 동시 일관성 빈틈 (HF 데일리 5위·업31·미래형 ID·아키텍처/정체성 보존율 미검증 medium) (2608.20336) *(NEW 2026-08-21)*
+- [[MoneyPrinterTurbo]] 갱신 — LLM 기반 쇼트폼 영상 완전 자동 파이프라인, ⭐112,044→**113,379**(전일比 +1,335·11만대 안착·닷새째 증가·raw 표기 +2,761 불일치→절대값 기준)(raw API 수치) *(UPDATE 2026-08-21)*
+- [[OpenViking]] 갱신 — [[Volcengine]] 에이전트용 컨텍스트 DB(`viking://` 파일시스템·티어드 로딩), ⭐30,650→**31,304**(전일比 +654·3만대 안착·[[ai-memory]]와 메모리 축 병존·raw 표기 +950 불일치)(raw API 수치) *(UPDATE 2026-08-21)*
+- [[turbovec]] 갱신 — Rust 벡터 인덱스(ANN·FAISS 대비 메모리 안전성), ⭐13,420→**16,070**(약 한 달 만 재등장·+2,650 누적·raw 일증분 +230·[[Modular-Platform]]·[[ragflow]]와 인덱스·서빙 하부 레이어)(raw API 수치) *(UPDATE 2026-08-21)*
+- [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 GGUF 양자화판, DL 5.13M→**5.8M**(좋아요 2.41k·+약67만·5백만대 안착·세 경로 중 절대 저변 1위 유지)(raw API 수치) *(UPDATE 2026-08-21)*
+- [[Qwen3.8-27B-FP8]] 갱신 — [[Alibaba]] 공식 FP8 양자화판(GPU 서버), DL 1.52M→**1.94M**(좋아요 641·+약42만·200만 목전·GGUF 대비 저변 격차 4.8→약 3배 축소)(raw API 수치) *(UPDATE 2026-08-21)*
+- [[Qwen3.8-27B]] 갱신 — [[Alibaba]] Qwen 27B 베이스 원본(image-text-to-text), DL 1.37M→**1.73M**(좋아요 11.8k·+약36만·100만대 안착·좋아요는 세 경로 중 최다=인정·기준점)(raw API 수치) *(UPDATE 2026-08-21)*
 <!-- ── 2026-08-19 자동수집 배치 (신규 7 · 갱신 6 / HF논문 5[신규] + GitHub 1[신규 ai-memory] + HF모델 1[신규 Qwen3.8-27B-FP8] + GitHub 4·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 에이전트 메모리 축[OpenViking·ai-memory] 병존·MoneyPrinterTurbo 증분 사흘째 배증·Qwen3.8-27B 양자화 GGUF↔FP8 환경별 분화 관측. 신규 entity 0) ── -->
 <!-- ── 2026-08-20 자동수집 배치 (신규 5 · 갱신 8 / HF논문 5[신규] + GitHub 5·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 이날 raw "당일 +X" 일증분 필드가 절대값과 전반 불일치→절대값 스냅샷 기준 채택·실증분 전일 페이지값 대비 계산·raw 표기 병기. 하네스 물리 폐루프↔검증 게이트[Zetta-ζ·SemaPLC] 짝·생성물 평가 영상판[SemComp-Bench]·AI 과학자 능력↔평가[OmniScientist·ASI-Bench]·Qwen3.8-27B 세 경로[GGUF·FP8·원본] 모두 백만대·대형 리포 대관문 3건[11만·3만·3만] 동시 통과. 신규 entity 0) ── -->
 - [[Zetta-ζ]] — 물리 세계에서 지각→행동→관측→정책 갱신 루프를 닫아 스스로 진화하는 체화형 하네스, 같은 배치 [[SemaPLC]]와 "하네스 두 결: 물리 폐루프↔검증 게이트 코드" 짝·[[DarwinX]]·[[HarnessEval-W]] 하네스 계보·[[Embodied-Navigator]]·[[Agentic-ESOpt]] 체화·저자원 학습 인접·"자기진화" 명명 프레이밍 주의 (HF 데일리 1위·업보트 96·미래형 ID·수치 미검증 medium) (2608.16590) *(NEW 2026-08-20)*
