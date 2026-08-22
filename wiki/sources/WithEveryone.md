@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [ai-news, hf-paper, image-generation, group-image, identity-grounding, planning, video-saas]
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-08-22
 sources: []
 reliability: medium
 ---
@@ -13,6 +13,10 @@ reliability: medium
 
 **HF Papers**: https://huggingface.co/papers/2608.20336
 **지표**: 업보트 **31** (HF 데일리 **5위**) · arxiv **2608.20336**(미래형 ID) · **도메인**: video-saas (교차 image-gen)
+
+> [!update] 2026-08-22 업보트 갱신 — 업 38 (**HF API 실검증**·전일 31 대비 +7)
+> HF 업보트 **38** (2026-08-22 HF API 실호출) ← 31(08-21). 데일리 5위 유지. [[4DAnyone]]와 인물 중심 비전 짝 유지·이번 5편 중 상승폭 최소.
+> *본 항목은 2026-08-22 raw에 **재등재되지 않았다**(전일 인제스트분과 동일 항목이므로 중복 방지 규칙 적용) — raw 수집 메모에 기록된 업보트 갱신값만 반영하며, 이번엔 HF API로 직접 대조해 확정. 순위·업보트는 **화제성 지표이지 검증 가능성 지표가 아님**(같은 배치 [[FlashPrefill-V2]]가 데일리 최하위임에도 가장 구체적인 실측 수치를 제시한 사례 참조).*
 
 > [!insight] 핵심 인사이트
 > **다인원(여러 사람) 그룹 이미지 생성에서 "계획 수립(planning)"과 "인물 정체성 그라운딩(identity grounding)"을 하나로 통합** — 여러 인물을 한 장면에 넣을 때 구도·배치를 계획하는 것과, 각 인물의 정체성(얼굴·특징)이 뭉개지지 않게 고정하는 것을 분리된 단계가 아니라 통합 파이프라인으로 다룬다. 단일 인물·객체 편집을 넘어 **"여러 정체성을 한 프레임에 일관되게"**가 생성형 이미지의 다음 난제임을 보여주는 항목으로, [[video-saas]]([[reat-scene]]) 다인물 씬·캐릭터 일관성 요구와 직결. 4D 인물 재구성 [[4DAnyone]](단안→개인 4D)과 함께 "**인물(정체성) 중심 생성·재구성**"이 이 배치의 비전 축을 이룸 — 전자는 재구성, 후자는 다인물 생성 계획.

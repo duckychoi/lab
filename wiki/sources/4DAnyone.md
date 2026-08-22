@@ -4,7 +4,7 @@ type: source
 domain: slam-3dgs
 tags: [ai-news, hf-paper, 4d-reconstruction, monocular, human-reconstruction, slam-3dgs, video]
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-08-22
 sources: []
 reliability: medium
 ---
@@ -13,6 +13,10 @@ reliability: medium
 
 **HF Papers**: https://huggingface.co/papers/2608.20335
 **지표**: 업보트 **39** (HF 데일리 **3위**) · arxiv **2608.20335**(미래형 ID) · **도메인**: slam-3dgs (교차 video-saas)
+
+> [!update] 2026-08-22 업보트 갱신 — 업 61 (**HF API 실검증**·전일 39 대비 +22)
+> HF 업보트 **61** (2026-08-22 HF API 실호출) ← 39(08-21). 데일리 3위 유지. [[WithEveryone]]와 "인물 중심 비전" 짝 유지.
+> *본 항목은 2026-08-22 raw에 **재등재되지 않았다**(전일 인제스트분과 동일 항목이므로 중복 방지 규칙 적용) — raw 수집 메모에 기록된 업보트 갱신값만 반영하며, 이번엔 HF API로 직접 대조해 확정. 순위·업보트는 **화제성 지표이지 검증 가능성 지표가 아님**(같은 배치 [[FlashPrefill-V2]]가 데일리 최하위임에도 가장 구체적인 실측 수치를 제시한 사례 참조).*
 
 > [!insight] 핵심 인사이트
 > **평범한 단안(monocular) 비디오 한 개로 임의 인물의 4D(공간 3D + 시간)를 재구성** — 특수 장비·다중 카메라 없이 일상 영상으로 움직이는 사람을 시공간 볼륨으로 복원한다. 위키의 slam-3dgs·4D 재구성 축([[4D-Human-Scene-Reconstruction]]·[[Beyond-Pixels-4D]] 픽셀 넘어 4D)에 "**캐주얼 촬영본 하나로 누구든**"이라는 입력 문턱 최소화 각도를 더함. 재구성된 4D 인물은 [[video-saas]] 파이프라인의 자산(움직이는 캐릭터·아바타) 공급원이 될 수 있어, 단안 영상→3D/4D 에셋 워크플로우([[AI-3D-생성]])와 접목 지점이 생김. 입력이 "casual monocular"라는 점이 실용성의 핵심 주장이자 검증 포인트.

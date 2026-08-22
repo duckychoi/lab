@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, coding-agent, benchmark, science, evaluation, ai-scientist]
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-08-22
 sources: []
 reliability: medium
 ---
@@ -13,6 +13,10 @@ reliability: medium
 
 **HF Papers**: https://huggingface.co/papers/2608.19799
 **지표**: 업보트 **36** (HF 데일리 **4위**) · arxiv **2608.19799**(미래형 ID) · **도메인**: ai-news (agent-eval)
+
+> [!update] 2026-08-22 업보트 갱신 — 업 58 (**HF API 실검증**·전일 36 대비 +22)
+> HF 업보트 **58** (2026-08-22 HF API 실호출) ← 36(08-21). 데일리 4위 유지. [[ASI-Bench]]·[[OmniScientist]]와 "AI 과학자 능력↔평가" 3부작 유지·같은 배치 신규 [[Repo0]]는 *무에서 구조 짓기* 로 대비축 형성.
+> *본 항목은 2026-08-22 raw에 **재등재되지 않았다**(전일 인제스트분과 동일 항목이므로 중복 방지 규칙 적용) — raw 수집 메모에 기록된 업보트 갱신값만 반영하며, 이번엔 HF API로 직접 대조해 확정. 순위·업보트는 **화제성 지표이지 검증 가능성 지표가 아님**(같은 배치 [[FlashPrefill-V2]]가 데일리 최하위임에도 가장 구체적인 실측 수치를 제시한 사례 참조).*
 
 > [!insight] 핵심 인사이트
 > **코딩 에이전트가 "과학 분야의 엔지니어링 태스크"(연구 코드베이스 수정·재현·실험 파이프라인 등)를 실제로 해결할 수 있는지 재는 벤치** — 일반 소프트웨어 이슈 해결(SWE-bench 계열)을 과학 연구 소프트웨어 맥락으로 옮겨, "AI 과학자"의 능력을 코드 실행 수준에서 검증한다. 08월 상단을 채운 **"AI 과학자: 능력↔평가" 짝**을 3부작으로 확장: 프로젝트 단위 자율 연구 능력 [[ASI-Bench]](능력 지향 벤치)·옴니모달 AI 과학자 [[OmniScientist]](능력 시스템)에 이어, SWE-bench Science는 그 능력을 **"과학 코드 태스크를 실제로 고치는가"**로 좁혀 측정 — 연구 자동화 계열([[Spark-to-Paper]]·[[AI-for-Auto-Research]]·[[Long-Horizon-AI-RnD-Eval]])의 실행 검증 하류에 자리.

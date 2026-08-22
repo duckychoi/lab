@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-08-21 (자동수집 13건 배치 인제스트 완료 — 신규 7·갱신 6. 대기 항목 없음)
+updated: 2026-08-22 (자동수집 13건 전량 인제스트 완료 — 대기 항목 없음. 신규 8·갱신 11·API 실검증 체제 전환·raw 오류 2건 정정)
 ---
 
 # Raw 대기열
@@ -17,6 +17,11 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ```
 
 ---
+
+<!-- 2026-08-22 아침 자동수집 13건(GitHub 5 + HF논문 5 + HF모델 3) 전체 인제스트 완료 후 삭제. 신규 8·갱신 11. 신규 8: GitHub 1 [[cursor-plugins]](cursor/plugins ⭐4,496·포크369·TypeScript·라이선스 미명시·트렌딩8위·Cursor 플러그인 규격+공식 플러그인·벤더 공식이나 규격 초기 high) + HF논문 5 **전량 초록 원문 실검증으로 high**(이전 배치들의 medium 관행에서 전환): [[MemTrapBench]](2608.20202·데일리6위·업31·메모리 유발 인지 함정 Reasoning Fixation/Belief Distortion·평가된 5개 메모리 프레임워크 전부 no-memory보다 못함·최강도 10%+ 하락·완화책 AdaptiveMem)·[[SkillEvo]](2608.13120·7위·업29·멀티턴 피드백 자가갱신 진화 기울기·자기반성 대비 +23.0점·싱글턴QA 대비 +15.4점·9 Skill·98 참조파일)·[[ForgeWM]](2608.14022·8위·업21·few-step 액션조건부 월드모델·Minecraft 4지표 1위·LPIPS 최저·replay-time refinement 궤적 약 3배 근접·절대 지연시간 미기재)·[[Repo0]](2608.19854·9위·업16·Dual-DAG 구조진화 zero-to-all·RepoCraft 6레포·RPG 대비 FC +20.08%p·Pass Rate +29.74%p)·[[FlashPrefill-V2]](2608.19758·10위·업14·블록 희소 prefill·H20 128K에서 FA2 대비 FP8 47.26배/BF16 27.19배·FA3/4 dense 대비 30.49배·SGLang) + HF모델 1 [[Qwen3.8-27B-Uncensored-GGUF]](DL 1,223,422·좋아요585·트렌딩5위·가드레일 제거 축 첫 상위 진입·제거방식/능력손실/라이선스 준수 전량 미검증 low) + 개념 1 [[에이전트-스킬]](스킬 소스 20건+ 누적에도 부재·스키마 3소스 규칙 장기 미이행 해소·생태계 4개 층 정리). 갱신 11: GitHub 4 [[mattpocock-skills]] ⭐210,434→230,381(약13일 +19,947·23만 돌파·트렌딩1위)·[[superpowers]] ⭐268,947→275,812(약2주 +6,865·배치 최대 절대 스타)·[[career-ops]] ⭐65,150→67,635(나흘 +2,485·언어 Go→JavaScript 정정)·[[MoneyPrinterTurbo]] ⭐113,379→114,257(+878·엿새째·증분 3일 연속 둔화) / HF모델 3 [[Qwen3.8-27B-GGUF]] DL 5.8M→6,320,542(좋아요2,542·630만 돌파·증분 +67만→+52만 첫 둔화)·[[Qwen3.8-27B]] DL 1.73M→2,090,699(좋아요12,019·200만 돌파·트렌딩1위 등극)·[[Qwen3.8-27B-FP8]] DL 1.94M→2,306,777(raw 미등재분 교차확인·원본 첫 추월) / HF논문 업보트 5(raw 재등재 없이 수집 메모 반영·API 대조) [[EnvHarness]] 174→242·[[FACET]] 61→111·[[4DAnyone]] 39→61·[[SWE-bench-Science]] 36→58·[[WithEveryone]] 31→38. **검증 체제 전환**: 07-30~08-21 배치가 일관되게 '실WebFetch 미수행(타임라인 유지)'로 처리하던 것과 달리, 이날 GitHub REST API·HF Models/Papers API 실호출이 정상 응답 → 13건 전량 절대 수치·초록·저자·태그 원문 대조 완료. **raw 오류 2건 적발·정정**: ⓐ raw의 'Uncensored가 공식 FP8판을 앞섬'은 거짓(FP8 2,306,777 > Uncensored 1,223,422·약 1.9배), ⓑ raw가 '수치 미기재'로 적은 [[FlashPrefill-V2]](47.26/27.19/30.49배)·[[Repo0]](Pass Rate +29.74%p)는 초록에 명시돼 있었음 → raw 한줄요약의 파생 해석은 절대값·원문 교차확인 후에만 채택. '순위=신뢰도' 반증 실증(데일리 최하위 FlashPrefill-V2가 유일하게 구체 하드웨어·배수·통합 대상 명시). 스킬 생태계 4개 층 동시 노출(자산 mattpocock-skills 1위·방법론 superpowers 6위·벤더규격 cursor-plugins 8위·진화 SkillEvo). [[MemTrapBench]]가 [[에이전트-메모리-레이어]] 전제의 첫 정량 반례. Qwen3.8-27B 파생이 가드레일 제거 축으로 분화·FP8이 원본 첫 추월. 신규 entity 0(cursor·JonathanColetti·논문 저자/소속은 비-프론티어랩·미검증 엔티티 날조 방지 기조 유지·source 내 wikilink만). actionable 신규 3(중간 1: MemTrapBench 메모리 ON/OFF A/B 감사 / 낮음 2: SkillEvo 멀티턴 로그 기반 스킬 개선·ForgeWM 프리뷰↔최종 2-티어 렌더). index total_pages 917→925·total_sources 899→906. -->
+
+<!-- 2026-08-22 수집 메모: HF 데일리 페이퍼 1~5위(EnvHarness 업242·FACET 업111·4DAnyone 업61·SWE-bench Science 업58·WithEveryone 업38)는 08-21 수집·인제스트분과 동일 항목이라 중복 방지 규칙에 따라 재등재하지 않음. 업보트만 갱신(전일 174→242·61→111·39→61·36→58·31→38 전량 상승) — 기존 페이지 스탯 갱신용으로만 사용. 대신 그 아래 신규 진입 5건(6~10위)을 등재. GitHub는 트렌딩 데일리 순위 기준 AI/ML 관련 상위 5개 선별(3위 AprilNEA/OpenLogi=로지텍 드라이버 대체·5위 microsoft/TypeScript는 비AI로 제외, 4위 PostHog는 AI 관측 기능 있으나 제품분석 플랫폼이라 제외). 스타수·다운로드수 전량 GitHub REST API·HF API 실호출 확인값(2026-08-22 09:00 KST 기준). GitHub 트렌딩 "당일 +X"는 페이지 표기값이며 전일 절대값 대비 실증분과 불일치하는 사례 지속(MoneyPrinterTurbo 표기 +1,201 vs 실 +869) → 절대값 스냅샷 우선. 트렌딩 잔여 AI 관련 리포(modular/modular ⭐28,753 +913·affaan-m/ECC ⭐241,916 +357·ruvnet/ruflo ⭐68,752 +140·apache/maka ⭐2,110 +148)는 상위 5 밖이라 미등재. elder-plinius/OBLITERATUS(⭐7,889)는 가드레일 우회 목적 리포라 등재 보류. -->
+
 
 <!-- 처리 완료된 소스는 아래에 남기지 말고 바로 삭제 -->
 

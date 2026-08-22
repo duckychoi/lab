@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, fp8, quantization, local-inference, qwen, alibaba, local-llm]
 created: 2026-08-19
-updated: 2026-08-21
+updated: 2026-08-22
 sources: []
 reliability: medium
 ---
@@ -14,6 +14,11 @@ reliability: medium
 **HF 모델**: https://huggingface.co/Qwen/Qwen3.8-27B-FP8
 **지표**: DL **1.94M** · 좋아요 **641** (2026-08-21 자동수집) ← DL 1.52M·좋아요 615 (08-20) ← 741k·575 (08-19) · **형식**: FP8 (양자화·image-text-to-text) · **배포**: [[Alibaba]] Qwen 공식
 **원본**: [[Qwen3.8-27B]] (베이스 원본·image-text-to-text)
+
+> [!update] 2026-08-22 교차확인 갱신 — DL 2,306,777·좋아요 661 (**API 실검증**·**230만 돌파**)
+> DL **2,306,777·좋아요 661** (2026-08-22 **HF API 실호출 검증**) ← 1.94M·641(08-21). **+약37만으로 200만 돌파를 넘어 230만 도달**. *※ 이 모델은 2026-08-22 raw 자동수집 목록에는 없었으나(트렌딩 상위가 [[Qwen3.8-27B-Uncensored-GGUF]]로 교체), raw의 "Uncensored가 공식 FP8판을 앞섬" 주장을 검증하기 위해 교차 조회하면서 확보한 실측값.*
+> ⚠️**raw.md 주장 정정**: raw는 [[Qwen3.8-27B-Uncensored-GGUF]](DL 1,223,422)가 *"공식 FP8판을 앞섬"* 이라 기재했으나 **사실이 아니다** — FP8 2,306,777로 Uncensored의 **약 1.9배**다. 네 경로 실측 저변 순위는 **[[Qwen3.8-27B-GGUF]] 6.32M > FP8 2.31M > 원본 [[Qwen3.8-27B]] 2.09M > Uncensored 1.22M**. FP8은 오히려 **원본 베이스를 처음으로 추월**했다(2.31M vs 2.09M)는 것이 이날의 실제 뉴스 — GPU 서버 배포에서 공식 FP8이 원본 직접 사용을 넘어선 신호.
+> GGUF와의 저변 격차도 4.8배(08-19) → 약 3배(08-21) → **약 2.7배(08-22)** 로 3주째 연속 축소. FP8 양자화 손실·요구 하드웨어(Hopper/Ada급 등)는 여전히 미기재. reliability medium 유지.
 
 > [!update] 2026-08-21 갱신 — DL 1.94M·좋아요 641 (전일比 +약42만·200만 목전)
 > DL **1.94M·좋아요 641**(2026-08-21 자동수집) ← 1.52M·615(08-20). 150만 돌파 후 하루 **+약42만**으로 **200만 목전** — FP8 지원 GPU 서버 경로의 실수요가 편입 사흘째 계속 확대. 같은 배치에서 GGUF 재배포 [[Qwen3.8-27B-GGUF]]는 DL 5.8M(5백만대 안착)로, **환경별 분화 구도 유지 속 GGUF(CPU/워크스테이션) 저변이 FP8(GPU 서버)의 약 3배** — "실행 환경(CPU/엣지 vs GPU 서버)이 양자화 포맷을 가른다"가 한 모델에서 정량 지속(격차는 4.8배→3배로 다소 좁혀짐). [[LLMRouter]] 후보 스펙트럼에서 FP8은 "GPU 서버 저비용" 게이트, 신규 [[Modular-Platform]] 서빙 백엔드의 FP8 경로 후보. DL·좋아요는 접근성 지표이지 품질 근거 아님·FP8 손실/요구 GPU 미기재. reliability medium 유지. *raw 자동수집 수치 — HF 실WebFetch 미수행(타임라인 유지).*

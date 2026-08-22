@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-21 (자동수집 13건 배치 인제스트 — 신규 7[GitHub 2: Modular-Platform·AI-Infra-Guard / HF논문 5]·갱신 6[GitHub 3 + HF모델 3]. HF논문 데일리 1·2위[EnvHarness·FACET] "환경·태스크 공급 충실도" 짝·인물 중심 비전 3·5위[4DAnyone·WithEveryone] 재구성↔생성 짝·AI 과학자 능력↔평가 3부작[SWE-bench-Science+ASI-Bench+OmniScientist]. Qwen3.8-27B 세 경로[GGUF 5.8M·FP8 1.94M·원본 1.73M] 동반 우상향·FP8↔GGUF 격차 4.8→3배 축소·MoneyPrinterTurbo 11만대 안착. raw 일증분 필드 절대값 불일치 지속→절대값 기준 채택·raw 표기 병기. 신규 엔티티 0)
-total_pages: 917
-total_sources: 899
+updated: 2026-08-22 (자동수집 13건 배치 인제스트 — 신규 8[GitHub 1: cursor-plugins / HF논문 5 / HF모델 1 / **개념 1: 에이전트-스킬**]·갱신 11[GitHub 4 + HF모델 3 + HF논문 업보트 5·중복 항목]. **이 배치부터 GitHub REST·HF Models/Papers API 실호출 검증 체제로 전환** — HF논문 5편 전량 초록 원문 대조로 reliability medium→**high**. raw 오류 2건 적발: Uncensored가 FP8을 앞선다는 주장 거짓[FP8 2.31M > Uncensored 1.22M]·FlashPrefill V2/Repo0의 "수치 미기재"는 실제로 초록에 명시. 스킬 생태계 4개 층[자산·방법론·벤더규격·진화] 동시 노출 → 에이전트-스킬 개념 신설. MemTrapBench가 메모리 축 첫 정량 반례. Qwen3.8-27B 파생이 가드레일 제거 축으로 분화·FP8이 원본 첫 추월. 신규 엔티티 0)
+total_pages: 925
+total_sources: 906
 ---
 
 # Wiki Index
@@ -89,6 +89,25 @@ total_sources: 899
 - [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 GGUF 양자화판, DL 5.13M→**5.8M**(좋아요 2.41k·+약67만·5백만대 안착·세 경로 중 절대 저변 1위 유지)(raw API 수치) *(UPDATE 2026-08-21)*
 - [[Qwen3.8-27B-FP8]] 갱신 — [[Alibaba]] 공식 FP8 양자화판(GPU 서버), DL 1.52M→**1.94M**(좋아요 641·+약42만·200만 목전·GGUF 대비 저변 격차 4.8→약 3배 축소)(raw API 수치) *(UPDATE 2026-08-21)*
 - [[Qwen3.8-27B]] 갱신 — [[Alibaba]] Qwen 27B 베이스 원본(image-text-to-text), DL 1.37M→**1.73M**(좋아요 11.8k·+약36만·100만대 안착·좋아요는 세 경로 중 최다=인정·기준점)(raw API 수치) *(UPDATE 2026-08-21)*
+
+<!-- ── 2026-08-22 자동수집 배치 (신규 8 · 갱신 11 / GitHub 1[신규 cursor-plugins] + HF논문 5[신규] + HF모델 1[신규] + 개념 1[신규 에이전트-스킬] + GitHub 4·HF모델 3·HF논문 업보트 5[갱신]. **검증 체제 전환: GitHub REST API·HF Models/Papers API 실호출로 13건 전량 절대 수치·초록·저자·태그 원문 대조 — HF논문 medium→high**. raw 오류 2건 적발·정정. 순위≠신뢰도 실증(데일리 최하위 FlashPrefill-V2가 유일하게 구체 수치 명시). 신규 entity 0) ── -->
+- [[cursor-plugins]] — Cursor 플러그인 **규격**과 공식 플러그인 저장소, [[에이전트-스킬]] 3층(벤더 계약)·[[claude-plugins-official]]과 경쟁 규격·[[mattpocock-skills]]/[[superpowers]] 자산의 적재 대상·하니스별 규격 분화 시 **스킬 이식성**이 다음 문제 (GitHub ⭐4,496·포크 369·TypeScript·**라이선스 미명시**·트렌딩 8위·API 실검증·규격 안정성 초기 high) *(NEW 2026-08-22)*
+- [[MemTrapBench]] — LLM 메모리의 **인지 함정**(Reasoning Fixation·Belief Distortion) 벤치, **평가된 5개 메모리 프레임워크 전부가 no-memory보다 못했고 최강도 10%+ 하락**·완화책 AdaptiveMem·[[에이전트-메모리-레이어]] 전제의 첫 정량 반례·[[OpenViking]]/[[ai-memory]]/[[MobileMem]] 감사 계층·[[SkillEvo]]와 "에이전트 지식 두 결" 짝 (HF 데일리 6위·업31·**초록 원문 실검증 high**) (2608.20202) *(NEW 2026-08-22)*
+- [[SkillEvo]] — 멀티턴 상호작용 피드백으로 **자가 갱신되는 스킬 진화 기울기**, 싱글턴 QA 피드백은 1라운드 후 기울기 소멸·거버넌스 계층이 사실 열화/구조 비대를 능동 수리·자기반성 대비 **+23.0점**·싱글턴QA 대비 **+15.4점**(9개 프로덕션 Skill·98개 참조파일)·[[에이전트-스킬]] 4층(진화) 대표 (HF 데일리 7위·업29·**초록 원문 실검증 high**) (2608.13120) *(NEW 2026-08-22)*
+- [[ForgeWM]] — 점진적 인과 학습으로 양방향 액션 조건부 생성기를 **1·2·4스텝 월드모델**로 변환, 난점은 속도가 아니라 **이산 키보드·연속 마우스와 압축 latent의 정렬 유지**·Minecraft 4지표 1위·LPIPS 최저·게임패드 FPS 전이·**replay-time refinement로 4-step 품질 필적·궤적 약 3배 근접**([[video-saas]] 프리뷰↔최종 2-티어 동형)·[[월드모델]]/[[Diffusion-월드모델]]/[[온폴리시-증류]] 축 (HF 데일리 8위·업21·**초록 실검증 high**·절대 지연시간 미기재) (2608.14022) *(NEW 2026-08-22)*
+- [[Repo0]] — **Dual-DAG**(요구사항 DAG + 컴포넌트 DAG + 정렬 관계)로 아키텍처 상태를 명시 유지하며 구조 진화 후 TDD 생성하는 zero-to-all 코드 생성, RepoCraft 6레포·GPT-5 mini/DeepSeek V3.2·RPG 대비 **Functionality Coverage +20.08%p·Pass Rate +29.74%p**·[[superpowers]] 방법론의 **알고리즘판**·[[SWE-bench-Science]](기존 레포 수정)와 대비축 (HF 데일리 9위·업16·**초록 실검증 high**·모듈성 지표 정의 미기재) (2608.19854) *(NEW 2026-08-22)*
+- [[FlashPrefill-V2]] — 롱컨텍스트 서빙 prefill 이차 복잡도를 블록 희소 어텐션으로 완화(mean correction·PackGQA/warp specialization/pingpong·FP8·paged KV+continuous batching·SGLang 백엔드), **NVIDIA H20 128K에서 FA2 대비 FP8 47.26배·BF16 27.19배·FA3/4 dense 대비 30.49배**·[[Modular-Platform]]/[[FreeToken]] 서빙 축·**데일리 최하위이나 유일하게 구체 수치 명시 → 순위≠신뢰도 실증** (HF 데일리 10위·업14·**초록 실검증 high**·품질 하락 절대폭 미기재) (2608.19758) *(NEW 2026-08-22)*
+- [[Qwen3.8-27B-Uncensored-GGUF]] — [[Qwen3.8-27B]] **안전 필터 제거** GGUF 재배포(mtp·speculative-decoding·imatrix), 파생 생태계가 실행 최적화 축에서 **가드레일 제거 축으로 분화**한 첫 상위 진입·⚠️**raw의 "FP8 추월" 주장은 거짓**(FP8 2.31M > 본 모델 1.22M, 약 1.9배)·좋아요 585로 DL 대비 인정 신호 현저히 낮음 (HF DL 1,223,422·좋아요 585·트렌딩 5위·API 실검증이나 제거방식/능력손실/라이선스 준수 전량 미검증 **low**) *(NEW 2026-08-22)*
+- [[에이전트-스킬]] **[개념]** — 모델을 바꾸지 않고 행동을 바꾸는 **배포 가능한 지식 자산**, 생태계 4개 층 정리(1층 자산 [[mattpocock-skills]]·2층 방법론 [[superpowers]]·3층 벤더규격 [[cursor-plugins]]/[[claude-plugins-official]]·4층 진화 [[SkillEvo]])·구조적 약점(재현성 벤치 부재·스타≠품질·멀티턴 결함 비가시·규격 이식성 미해결)·스킬 소스 20건+ 누적에도 부재했던 **스키마 "3소스 규칙" 장기 미이행 해소** *(NEW 2026-08-22 · concepts)*
+- [[mattpocock-skills]] 갱신 — 실무 엔지니어용 에이전트 스킬 자산(1층 대표), ⭐210,434→**230,381**(약 13일 +19,947·**23만 돌파**·트렌딩 데일리 1위·포크 19,683·MIT)(**GitHub API 실검증**·raw 표기 230,374/+3,362) *(UPDATE 2026-08-22)*
+- [[superpowers]] 갱신 — 에이전트 스킬 프레임워크+개발 방법론(2층 대표), ⭐268,947→**275,812**(약 2주 +6,865·배치 최대 절대 스타·포크 24,660·MIT)·[[Repo0]]가 동일 신념의 알고리즘판·⚠️"that works" 정량 근거 미제시(**GitHub API 실검증**) *(UPDATE 2026-08-22)*
+- [[career-ops]] 갱신 — 로컬 AI 코딩 CLI 구직 자동화(A-F 루브릭→1.0-5.0), ⭐65,150→**67,635**(나흘 +2,485·재가속·포크 12,883)·⚠️**언어 Go→JavaScript 정정**·지원 하니스에 Antigravity 추가 확인(**GitHub API 실검증**) *(UPDATE 2026-08-22)*
+- [[MoneyPrinterTurbo]] 갱신 — LLM 기반 쇼트폼 영상 완전 자동 파이프라인, ⭐113,379→**114,257**(+878·엿새째 증가·증분 3일 연속 둔화·토픽에 tiktok/instagram-reels 명시)·raw 표기 +1,201 불일치 사흘 연속(**GitHub API 실검증**) *(UPDATE 2026-08-22)*
+- [[Qwen3.8-27B-GGUF]] 갱신 — [[unsloth]] 재배포 GGUF(imatrix), DL 5.8M→**6,320,542**(좋아요 2,542·**630만 돌파**·**증분 +67만→+52만 첫 둔화**·저변 1위 유지·FP8과 격차 3→약 2.7배 축소)(**HF API 실검증**) *(UPDATE 2026-08-22)*
+- [[Qwen3.8-27B]] 갱신 — [[Alibaba]] 27B 베이스 원본(image-text-to-text·qwen3_5), DL 1.73M→**2,090,699**(좋아요 **12,019**·**200만 돌파**·**트렌딩 1위 등극**·좋아요는 GGUF의 4.7배로 인정 기준점 유지)·`eval-results` 태그 존재하나 수치 미수집(**HF API 실검증**) *(UPDATE 2026-08-22)*
+- [[Qwen3.8-27B-FP8]] 갱신 — [[Alibaba]] 공식 FP8(GPU 서버), DL 1.94M→**2,306,777**(좋아요 661·**원본 2.09M을 처음 추월**·raw 미등재분 교차확인으로 확보)·raw의 Uncensored 추월 주장 반증 근거(**HF API 실검증**) *(UPDATE 2026-08-22)*
+- HF논문 업보트 갱신 5 (raw 재등재 없이 수집 메모 반영·API 대조) — [[EnvHarness]] 174→**242** · [[FACET]] 61→**111**(이번 5편 중 최대 상승률 약 1.8배) · [[4DAnyone]] 39→**61** · [[SWE-bench-Science]] 36→**58** · [[WithEveryone]] 31→**38** *(UPDATE 2026-08-22)*
+
 <!-- ── 2026-08-19 자동수집 배치 (신규 7 · 갱신 6 / HF논문 5[신규] + GitHub 1[신규 ai-memory] + HF모델 1[신규 Qwen3.8-27B-FP8] + GitHub 4·HF모델 2[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 에이전트 메모리 축[OpenViking·ai-memory] 병존·MoneyPrinterTurbo 증분 사흘째 배증·Qwen3.8-27B 양자화 GGUF↔FP8 환경별 분화 관측. 신규 entity 0) ── -->
 <!-- ── 2026-08-20 자동수집 배치 (신규 5 · 갱신 8 / HF논문 5[신규] + GitHub 5·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. 이날 raw "당일 +X" 일증분 필드가 절대값과 전반 불일치→절대값 스냅샷 기준 채택·실증분 전일 페이지값 대비 계산·raw 표기 병기. 하네스 물리 폐루프↔검증 게이트[Zetta-ζ·SemaPLC] 짝·생성물 평가 영상판[SemComp-Bench]·AI 과학자 능력↔평가[OmniScientist·ASI-Bench]·Qwen3.8-27B 세 경로[GGUF·FP8·원본] 모두 백만대·대형 리포 대관문 3건[11만·3만·3만] 동시 통과. 신규 entity 0) ── -->
 - [[Zetta-ζ]] — 물리 세계에서 지각→행동→관측→정책 갱신 루프를 닫아 스스로 진화하는 체화형 하네스, 같은 배치 [[SemaPLC]]와 "하네스 두 결: 물리 폐루프↔검증 게이트 코드" 짝·[[DarwinX]]·[[HarnessEval-W]] 하네스 계보·[[Embodied-Navigator]]·[[Agentic-ESOpt]] 체화·저자원 학습 인접·"자기진화" 명명 프레이밍 주의 (HF 데일리 1위·업보트 96·미래형 ID·수치 미검증 medium) (2608.16590) *(NEW 2026-08-20)*

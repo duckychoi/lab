@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, agent-harness, environment-generation, agent-learning, embodied]
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-08-22
 sources: []
 reliability: medium
 ---
@@ -13,6 +13,10 @@ reliability: medium
 
 **HF Papers**: https://huggingface.co/papers/2608.19880
 **지표**: 업보트 **174** (HF 데일리 **1위**) · arxiv **2608.19880**(미래형 ID) · **도메인**: ai-news (교차 임바디드-AI)
+
+> [!update] 2026-08-22 업보트 갱신 — 업 242 (**HF API 실검증**·전일 174 대비 +68)
+> HF 업보트 **242** (2026-08-22 HF API 실호출) ← 174(08-21). 데일리 1위 유지. [[FACET]]와 "환경·태스크 공급 충실도" 짝 유지.
+> *본 항목은 2026-08-22 raw에 **재등재되지 않았다**(전일 인제스트분과 동일 항목이므로 중복 방지 규칙 적용) — raw 수집 메모에 기록된 업보트 갱신값만 반영하며, 이번엔 HF API로 직접 대조해 확정. 순위·업보트는 **화제성 지표이지 검증 가능성 지표가 아님**(같은 배치 [[FlashPrefill-V2]]가 데일리 최하위임에도 가장 구체적인 실측 수치를 제시한 사례 참조).*
 
 > [!insight] 핵심 인사이트
 > **정적 월드/데이터셋을 에이전트가 상호작용하며 배울 수 있는 학습 환경으로 "깨우는(awaken)" 하네스** — 고정된 씬·정지 데이터를 능동적 탐색·시행착오가 가능한 인터랙티브 환경으로 전환해 에이전트 학습의 병목(양질의 상호작용 환경 부족)을 공급 쪽에서 푼다. 08월 내내 상단을 채운 하네스·환경 생성 계보의 최신 정점: 자연선택으로 하네스를 진화시키는 [[DarwinX]], 물리 세계 폐루프 자기진화 [[Zetta-ζ]], 환경 스케일링 [[Beyond-Environment-Scaling]]·[[Agentic-Environment-Engineering]]·[[EnvFactory]]와 한 축을 이루되, EnvHarness는 **"이미 있는 정적 자산을 학습 환경으로 재활용"**한다는 각도에서 환경 공급 비용을 낮추려 함. 데일리 1위·업174는 이 배치 최고 관심으로, "에이전트 학습의 다음 병목은 모델이 아니라 환경"이라는 08월 흐름을 재확인.
