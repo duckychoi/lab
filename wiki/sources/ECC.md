@@ -4,12 +4,19 @@ type: source
 domain: ai-news
 tags: [ai-news, agent-harness, claude-code, skill-management, agent-memory, security, workflow]
 created: 2026-07-29
-updated: 2026-07-31
+updated: 2026-08-23
 sources: []
 reliability: high
 ---
 
-# ECC (affaan-m/ECC · GitHub ⭐236,434)
+# ECC (affaan-m/ECC · GitHub ⭐242,304)
+
+> [!update] 2026-08-23 갱신 — ⭐242,304 (**API 실검증**) + **구성 수치 변동 실측: 67/281 → 68/286**
+> GitHub ⭐**242,304** (2026-08-23 **GitHub API 실호출 검증**) ← 236,434(07-31). **23일 만 +5,870**으로, 이번 배치에서 **절대 스타 2위**([[superpowers]] 276,399 다음)이자 [[mattpocock-skills]](232,854)를 앞선다. 부가 실측(API): 포크 **36,708**·이슈 **148**·**MIT**·JavaScript·생성 2026-01-18·최종 푸시 2026-08-21.
+> **README 원문 재실측 — 07-31에 기록한 내부 수치가 바뀌었다**: `Access to 68 agents, 286 skills, and 94 legacy command shims` 즉 **서브에이전트 67→68·스킬 281→286**으로 증가했고, 슬래시커맨드 94는 수치는 같으나 **표기가 "legacy command shims"(레거시 호환 셰임)로 격하**됐다. 이는 단순 증가가 아니라 **아키텍처 방향 전환의 흔적**이다 — 커맨드를 1급 인터페이스에서 하위 호환 계층으로 내리고 **스킬을 주 인터페이스로 밀고 있다**. [[에이전트-스킬]] 개념 페이지의 "스킬=배포 단위" 명제를 하네스 내부 구조가 따라간 사례로 기록.
+> 추가 실측: **AgentShield가 npm 패키지로 독립 배포**(`ecc-agentshield`, `npx -y ecc-agentshield scan --path .` 또는 `/security-scan`)됐고, 스캔 대상은 *프롬프트·훅·MCP 설정·권한·시크릿·에이전트 파일*로 명시. 07-31에 "정적룰 102개"로 적었던 부분은 **이번 README에서 룰 개수 표기를 찾지 못했다**(항목 자체가 사라졌는지 위치가 바뀐 것인지 미확정 → 개수 주장은 보류). 벤더가 *"공식 채널 외 재배포본은 멀웨어 가능성"*을 README에 명시할 만큼 서드파티 미러가 퍼진 상태.
+> ⚠️**raw 오류 정정**: 2026-08-23 raw 수집 메모는 본 항목을 **"신규"로 분류**했으나, 이 페이지는 **2026-07-29 생성·07-31 갱신 이력이 있는 기존 페이지**다. 신규가 아니라 **23일 만의 갱신**이다.
+> 규모≠품질 원칙 유지 — 68/286/94는 여전히 **자체 표기**이며 기능별 실효성은 미검증. reliability high(수치 API·README 실검증 기준).
 
 > [!update] 2026-07-31 갱신 — ⭐236,434 (당일 +804, WebFetch "236k" 실확인)
 > GitHub 스타 **236,434**(2026-07-31 자동수집, 당일 +804) ← 235,876(07-30). **WebFetch 재확인: 236k·MIT·TypeScript**, 기능 목록(67 서브에이전트·281 스킬·94 슬래시커맨드·AgentShield 102 정적룰) 동일. 규모 이례성·내부 수치 자체표기 판단 유지 — 규모≠품질, **기능 단위 검증** 원칙 지속.
@@ -46,6 +53,6 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/affaan-m/ECC
-- 스타: ⭐**236,434** (2026-07-31, 당일 +804, WebFetch "236k"·MIT·TypeScript 실확인) ← 235,876(07-30) ← 235k(07-29, +636), MIT
-- 스택: Shell·TypeScript·Python·Go·Java·Perl·Markdown / 67 서브에이전트·281 스킬·94 슬래시커맨드·AgentShield 102 정적룰·메모리 볼트·훅 자동화
+- 스타: ⭐**242,304** (2026-08-23 **GitHub API 실호출 검증**·포크 36,708·이슈 148·MIT·JavaScript·최종 푸시 2026-08-21) ← ⭐236,434 (2026-07-31, 당일 +804, WebFetch "236k"·MIT·TypeScript 실확인) ← 235,876(07-30) ← 235k(07-29, +636), MIT
+- 구성(2026-08-23 README 원문 실측): **68 서브에이전트 · 286 스킬 · 94 legacy command shims** + AgentShield 보안 스캔(npm `ecc-agentshield` 독립 배포·프롬프트/훅/MCP설정/권한/시크릿/에이전트파일 대상) + 메모리 · 훅 · 지속학습 ← (07-31 실측) 67 서브에이전트·281 스킬·94 슬래시커맨드·AgentShield 102 정적룰. 언어 표기 JavaScript(API 기준)
 - 신뢰도: ⭐⭐⭐⭐ (스타·라이선스·기능 WebFetch 실확인, 규모 이례적·내부 수치 자체표기로 실사용 검증 별도)

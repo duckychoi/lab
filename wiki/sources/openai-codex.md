@@ -1,0 +1,57 @@
+---
+title: openai/codex — OpenAI 공식 로컬 코딩 에이전트 CLI (Rust·Apache-2.0)
+type: source
+domain: ai-news
+tags: [ai-news, github-trending, coding-agent, openai, cli, rust, terminal, agentic-coding, open-source]
+created: 2026-08-23
+updated: 2026-08-23
+sources: []
+reliability: high
+---
+
+# openai/codex — 터미널에서 도는 OpenAI 공식 코딩 에이전트
+
+**GitHub**: https://github.com/openai/codex
+**지표**: ⭐**114,383** · 포크 **17,459** · 이슈 **13,516** · **Rust** · **Apache-2.0** · 생성 2025-04-13 · 최종 푸시 **2026-08-23**(당일) — 전량 **GitHub API 실호출 검증**(2026-08-23)
+
+> [!insight] 핵심 인사이트
+> **[[anthropic-claude-code]]의 직접 경쟁 구현체 중 유일하게 "본체 소스가 열려 있는" 쪽**이다. 이 대비가 이 페이지의 존재 이유다 — 같은 배치에서 실측한 두 레포는 스타는 codex 114,383 vs claude-code 142,680으로 Anthropic이 앞서지만, **성격이 근본적으로 다르다**: `anthropics/claude-code`는 **라이선스 미명시·Python·사실상 이슈 트래커 겸 배포 채널**인 반면, `openai/codex`는 **Apache-2.0·Rust로 작성된 에이전트 본체 소스**다. 즉 "읽고 뜯어보고 포크할 수 있는 상용급 코딩 에이전트 구현"으로는 codex가 현재 사실상 유일한 대형 레퍼런스다.
+> 배포 형태도 3층으로 갈라져 있다 — **CLI**(`codex`), **IDE 확장**(VS Code·Cursor·Windsurf), **데스크톱 앱**(`codex app`), 그리고 별도의 **클라우드 에이전트 Codex Web**(chatgpt.com/codex). 로컬 CLI가 셸·파일을 직접 조작하는 구조는 [[Claude-Code-워크플로우]]와 동일 계보이며, 과금이 **API 키가 아니라 ChatGPT 요금제(Plus/Pro/Business/Edu/Enterprise)에 묶이는 것**이 실질적 차별점이다(API 키 경로는 별도 설정 필요).
+
+> [!note] 배치 맥락 — 이미 위키에 "codex 주변부"만 쌓여 있었다
+> 이 레포는 2025-04-13 생성으로 **1년 4개월간 존재했으나 위키에는 본체 페이지가 없었다.** 대신 주변부만 쌓여 있었다 — [[codex-plugin-cc]](Claude Code에서 Codex를 서브에이전트로 호출하는 브리지)·[[awesome-codex-skills]](Codex용 스킬 모음)·[[CodexBar]](상태바 도구). **파생 3건이 먼저 인제스트되고 원천이 마지막에 들어온 역순 구조**로, [[Qwen3.8-27B]]에서 GGUF 재배포판이 원본보다 먼저 잡혔던 것과 같은 패턴이다. 자동수집이 "트렌딩 급상승"만 보기 때문에 생기는 구조적 누락이다.
+
+> [!warning] 이슈 13,516건 — 스타 대비 이례적 적체
+> 오픈 이슈 **13,516건**은 스타 114,383 대비 비율이 매우 높다(참고: [[superpowers]] 276,399스타에 이슈 308건, [[mattpocock-skills]] 232,854스타에 385건). 다만 이 수치만으로 품질을 판정할 수는 없다 — 본체 소스가 공개된 실사용 CLI는 **버그·환경 이슈가 실제로 접수되는 채널**을 갖지만, 스킬 모음 레포는 애초에 접수될 버그가 없다. 즉 이 비대칭은 **"실행되는 소프트웨어 vs 복사되는 텍스트 자산"의 구조 차이**이지 codex의 결함 지표로 단정할 수 없다. `anthropics/claude-code`도 이슈 15,113건으로 같은 구간에 있다는 점이 이 해석을 뒷받침한다.
+
+## 도메인별 추출 (ai-news)
+
+- **신뢰도**: ⭐⭐⭐⭐⭐ — 벤더 공식(OpenAI)·**Apache-2.0 명시**·Rust 본체 공개·당일 푸시(2026-08-23)로 활성 확인. 스타/포크/라이선스/푸시일 전량 API 실검증. 단 **성능 벤치마크는 레포에 없음** — 에이전트 성공률 근거는 외부 벤치([[SWE-bench-Science]] 등)에 의존해야 한다.
+- **즉시 활용**: YES — `npm install -g @openai/codex` 또는 `brew install --cask codex`, 혹은 공식 설치 스크립트. 단 **ChatGPT 유료 요금제 로그인이 기본 경로**라 계정이 없으면 API 키 별도 설정 필요.
+- **6개월 영향력**: 높음 — 내가 [[Claude-Code-워크플로우]] 단일 하네스에 의존하는 구조의 **비교군이자 이탈 옵션**. 특히 Rust 소스가 열려 있어 "에이전트가 셸·파일을 어떻게 샌드박싱하는가"를 **문서가 아니라 코드로 확인**할 수 있는 유일 경로다.
+- **대체 관계**: [[anthropic-claude-code]]와 정면 경쟁이나, [[codex-plugin-cc]]가 증명하듯 **대체가 아니라 병렬 조합**이 현실적 — Claude Code를 주 하네스로 두고 codex를 리뷰어/서브에이전트로 붙이는 멀티벤더 구성. [[ECC]]도 "Claude Code 우선 + Codex 동기화 경로"로 같은 판단을 내렸다.
+- **허와 실**: "OpenAI 공식"이 곧 성능 우위는 아니다. 이번 배치의 [[SWE-bench-Science]]는 **최고 성능 에이전트가 Claude Code + Opus-5(max)**라고 실측했고 codex는 상위에 없다. 공식성·오픈소스성과 실제 태스크 성공률은 별개 축이다.
+- **액션**: `codex` 설치 후 **동일 태스크 1건을 Claude Code와 병행 실행**해 셸 조작 방식·승인 흐름·컨텍스트 처리 차이를 직접 대조. 소스가 열려 있으므로 샌드박스 구현부를 읽어 내 하네스 안전 규칙에 이식할 부분 발췌.
+
+> [!question] 미해결 질문
+> ChatGPT 요금제 종속 구조에서 **토큰/요청 한도가 실제로 어떻게 걸리는가**(Claude Code의 사용량 한도와 비교 가능한 수치가 있는가)? Rust 본체의 샌드박싱이 실제로 어떤 격리 수준인가(컨테이너/권한 분리 여부)? 이슈 13,516건의 실제 구성(버그 vs 기능요청 vs 지원문의)?
+
+## 관련 페이지
+- [[anthropic-claude-code]] — 직접 경쟁 구현체(스타 우위·소스 비공개·라이선스 미명시)
+- [[codex-plugin-cc]] — Claude Code ↔ Codex 브리지(대체가 아닌 조합의 근거)
+- [[awesome-codex-skills]] — Codex용 스킬 모음(파생 자산층)
+- [[CodexBar]] — Codex 상태바 도구(파생 도구층)
+- [[ECC]] — Claude Code 우선 + Codex 동기화 경로를 채택한 하네스
+- [[SWE-bench-Science]] — 코딩 에이전트 실측 벤치(공식성≠성능의 근거)
+- [[Claude-Code-워크플로우]]
+- [[에이전트-스킬]]
+- [[OpenAI]]
+- [[AI-에이전트-프레임워크]]
+
+## 원본
+- 출처: https://github.com/openai/codex
+- 스타: ⭐**114,383** (2026-08-23 **GitHub API 실호출 검증**·트렌딩 1위·raw 표기 114,367/당일 +1,544 — API와 +16 실시간 드리프트)
+- 부가 실측(2026-08-23 API): 포크 17,459 · 오픈이슈 13,516 · 언어 Rust · 라이선스 **Apache-2.0** · 생성 2025-04-13 · 최종 푸시 2026-08-23
+- README 실측: CLI·IDE 확장(VS Code/Cursor/Windsurf)·데스크톱 앱(`codex app`)·클라우드 Codex Web 4경로 / 설치 `npm install -g @openai/codex`·`brew install --cask codex`·공식 셸 스크립트 / 인증은 **ChatGPT 요금제 로그인 권장**, API 키는 별도 설정
+- 신뢰도: ⭐⭐⭐⭐⭐ (벤더 공식·Apache-2.0·본체 소스 공개·수치 API 실검증 — 단 성능 벤치는 레포 미제시)
+- 수집: 2026-08-23 아침 자동수집 (GitHub 트렌딩 1위) · **본체 페이지 최초 생성**(파생 [[codex-plugin-cc]]·[[awesome-codex-skills]]·[[CodexBar]]가 선행 인제스트된 역순 구조 해소)
