@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, coding-agent, benchmark, science, evaluation, ai-scientist]
 created: 2026-08-21
-updated: 2026-08-23
+updated: 2026-08-24
 sources: []
 reliability: medium
 ---
@@ -42,11 +42,15 @@ reliability: medium
 - **허와 실**: 데일리 4위는 관심이지 해결 능력 아님 — 과학 태스크 해결률·재현성 실측이 실체.
 - **액션**: 원문/리더보드 공개 시 "과학 코드 태스크" 정의만 발췌해 내 코딩 에이전트 한계 진단 프레임으로 참조(낮음).
 
+> [!note] 2026-08-24 — "능력 주장 ≠ 실측 성공률" 패턴의 세 번째 사례 ([[OmniAssistBench]])
+> 본 벤치의 실측 최고 성능이 **Claude Code + Opus-5(max)이면서도 pass@1 50% 미만**이었던 것과 같은 결의 관측이 2026-08-24에 다시 나왔다 — [[OmniAssistBench]]에서 **상용 최고 Gemini-3-Pro가 66.4/100, 오픈소스 Qwen3-Omni-Instruct가 51.2**로, **1등조차 66.4**다. 두 벤치는 대상(과학 코드 수정 ↔ 실시간 영상 어시스턴트)이 전혀 다른데도 **"화제성 높은 능력 주장과 실제 태스크 성공률 사이의 간극"** 이라는 동일한 결론에 도달한다. 이 패턴을 볼트의 기본 회의 기준으로 삼는다.
+
 ## 관련 페이지
 - [[ASI-Bench]] — 프로젝트 단위 자율 연구 능력 벤치("AI 과학자" 짝)
 - [[OmniScientist]] — 옴니모달·옴니학문 AI 과학자 시스템("AI 과학자" 짝)
 - [[Spark-to-Paper]] · [[AI-for-Auto-Research]] — 연구 산출 자동화(상류)
 - [[Long-Horizon-AI-RnD-Eval]] — 장기 R&D 에이전트 과정 평가(평가 계보)
+- [[OmniAssistBench]] — 실시간 어시스턴트 상호작용 벤치("능력↔실측 간극" 동형 사례)
 - [[ai-news]]
 
 ## 원본
