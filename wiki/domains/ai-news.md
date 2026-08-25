@@ -4,13 +4,38 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-08-21
+updated: 2026-08-25
 sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
 
 목표: 쓸모있는 AI 도구 발굴 + 내 워크플로우에 통합
+
+---
+
+## 최근 흐름 (2026-08-25 배치)
+
+> [!insight] 2026-08-25 — "에이전트 평가의 기준이 '성공률'에서 '재현성'으로 옮겨간 날 — 그리고 인기 지표와 신뢰성 지표가 정반대를 가리킨 날 (13건 전량 API 실검증)"
+> **배치의 뼈대는 [[Thinkingbox]]의 숫자 두 개다: pass@1 65.36% vs pass^20 25.25%.** 같은 태스크에서 "한 번은 된다"와 "스무 번 다 된다" 사이가 **40%p 벌어진다.** 우리가 인용해 온 에이전트 성능 수치 대부분이 **업무 위임 가능성과 무관하다**는 뜻이다. 더 불편한 건 부수 발견 쪽이다 — **실패한 시도들 상당수가 깨끗한 종료와 유효한 상태 변경을 보였다.** 로그상 정상인데 일은 안 된 것으로, **"에러 없이 끝났으니 성공"이라는 관측 방식이 구조적으로 무너진다.**
+> [[MobilePA-Bench]]가 같은 방향에서 보완한다. GUI 벤치는 화면 조작이라는 표면만, 정적 function-calling 벤치는 오프라인 API 매칭만 본다는 **양쪽 맹점을 동시에 지적**하고, 살아있는 앱 DB 위에서 **서브에이전트 협업·메모리 사용·스킬 사용을 별도 차원으로 채점**한다. [[에이전트-스킬]]과 [[에이전트-메모리-레이어]]가 "있으면 좋은 기능"에서 **점수가 매겨지는 축**으로 승격된 첫 사례다. 실패 조건도 특정됐다 — **툴 순서 강제·권한 제한·예기치 못한 런타임 오류.**
+>
+> **정반대 신호: 인기 지표가 신뢰성을 말해주지 않는다.** 이번 GitHub 5건을 나란히 놓으면 선명하다. [[hermes-agent]]는 ⭐**23.6만**으로 배치 최상위인데 **오픈이슈가 35,603건**(포크당 0.75건)으로 역시 배치 최다다. 반대로 [[ai-job-search]]는 포크 11,973에 **이슈 8건**(포크당 0.0007건) — **1,000배 차이**다. 후자가 더 건강해서가 아니라 **성격이 다르기 때문**이다. 프레임워크는 함께 고치는 대상이라 마찰이 축적되고, 개인 워크플로 패키지는 포크해서 각자 고쳐 쓰므로 업스트림에 흔적이 남지 않는다. **이슈 수는 품질 지표가 아니라 참여 양식의 지표다.**
+> [[andrej-karpathy-skills]]는 세 번째 유형이다 — **커밋 0건 4개월, 이슈 129건, 그런데 스타는 4개월 만에 2.8만 → 20.6만(7.4배).** 코드가 아니라 CLAUDE.md 텍스트 파일 하나이기 때문이다. **스타가 "계속 검증되고 있다"가 아니라 "많이 저장해 뒀다"를 뜻하는 전형**이며, 그 사이 Claude Code는 여러 번 바뀌었지만 문서는 4월에 멈춰 있다. 게다가 이번에 **소유자가 `forrestchang` → `multica-ai`로 이전된 사실**을 확인했고 **라이선스는 없다** — 20.6만 스타 자산이 법적으로는 이용 근거가 없는 상태다. 한편 [[free-claude-code]]는 **스타 절대값 최하위(4.9만)인데 트렌딩 1위**로, 트렌딩이 규모가 아니라 **증분 속도**를 본다는 걸 보여준다(당일 +1,123). 네 번째 유형은 [[openai-codex]](⭐117,669·이틀 +3,286)다 — **Rust·Apache-2.0으로 코딩 에이전트 본체 소스가 전면 공개**된, 배치 내 유일하게 *읽히는* 레포다. 이슈 13,741로 포크당 0.77건이라 hermes-agent(0.75건)와 수치는 비슷하지만 **당일 푸시로 계속 대응 중**이라는 점이 다르다 — **이슈 절대값이 아니라 '이슈 대비 처리 활동'이 신뢰성 신호**임을 두 레포의 대비가 보여준다.
+>
+> **관측 방법론에서 얻은 교훈 하나가 확정됐다.** 08-24에 [[Qwen3.8-27B]]·[[Qwen3.8-27B-GGUF]]의 다운로드가 전일과 **바이트 단위로 동일**해 "동결"로 관측됐을 때, 볼트는 이를 *성장 정체가 아니라 집계 지연*으로 판단하고 증분 해석을 보류했다. **이번 회차에 두 모델이 동시에 정상 복귀**하며(GGUF 700만·원본 294만 돌파) **그 판단이 옳았음이 사후 입증**됐다. 두 모델이 같은 회차에 멈추고 같은 회차에 풀린 것은 모델별 현상이 아니라 **HF 파이프라인 차원의 지연**이다. → **단일 회차 동결은 "증분 0"이 아니라 "관측 실패"로 다룬다**는 규칙을 확정한다.
+> 부수 성과로 08-24에 이월했던 질문도 해소됐다: **원본/GGUF 다운로드 비율 0.35 → 0.402**로 반등. 양자화 재배포 쏠림(저점 0.33)이 **완화되는 중**이다 — 다만 절대 증분은 여전히 GGUF가 크므로 역전이 아니라 완화다.
+>
+> **나머지 두 축.** [[EchoWM]](데일리 1위·업48·저자 22인)은 월드모델 경쟁축을 **"화면"에서 "화면+소리+진입성"으로** 넓혔다 — 720p 영상과 환경음·음악·음성을 동시 생성하고, 1인칭/3인칭을 **뷰 전용 컨트롤러 없이 카메라 의도 하나로 통일**한다. 다만 **초록에 정량 수치가 하나도 없다.** 관심 지표만 최상위인 전형적 케이스. [[Block3D]]는 정반대로 **수치가 구체적이다** — 자기회귀의 "수정 불가"와 확산의 "매 스텝 전체 처리"라는 **정반대 병목**을 입도 재조정(블록 간 자기회귀 + 블록 내 동시 디노이즈)으로 우회해 **25.71초 → 4.99초(5.15배)**. [[ERPO]]는 RL 배관을 건드린다 — KL 정규화를 **응답 쪽에서 입력 쪽으로 옮겨** 안정성-탐색 이중구속을 *선택 문제*가 아니라 *대상 교체 문제*로 재정의했고, **코드를 공개**했다.
+>
+> **한 줄 요약**: 이번 배치는 **"숫자를 어떻게 믿을 것인가"** 로 수렴한다. pass@1은 재현성을 말하지 않고, 스타는 최신성을 말하지 않고, 이슈 수는 품질을 말하지 않고, 동결된 카운터는 정체를 말하지 않는다.
+
+> [!action] 이 배치에서 당장 할 것
+> 1. **자동화 워크플로에 pass^k를 적용한다** — 한 번 성공했다고 채택하지 말고 같은 입력으로 5~10회 반복해 **전부** 성공하는지 확인. 반복 실행되는 파이프라인일수록 필수.
+> 2. **"에러 없이 끝남"을 성공 판정으로 쓰고 있다면 최종 상태 직접 확인으로 교체한다** ([[Thinkingbox]]의 부수 발견).
+> 3. **에이전트 실패 주입 체크리스트**: 툴 순서를 강제하면? 권한을 제한하면? 툴이 에러를 뱉으면? ([[MobilePA-Bench]]의 3대 급락 조건).
+> 4. `github.com/alibaba/ERPO`·`github.com/microsoft/thinkingbox` 코드 확인.
+> 5. [[andrej-karpathy-skills]] CLAUDE.md를 통합할 때 **4월 이후 미갱신·라이선스 없음**을 전제로 각 규칙의 최신성을 자체 검증할 것.
 
 ---
 

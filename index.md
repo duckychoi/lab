@@ -75,6 +75,12 @@ total_sources: 874  # 2026-08-24 실측 (신규 소스 7건 반영)
 
 ## sources
 <!-- 소스별 요약 -->
+<!-- ── 2026-08-25 자동수집 배치 (신규 5 · 갱신 8 / GitHub 5[전량 갱신·openai-codex 포함] + HF논문 5[전량 신규] + HF모델 3[전량 갱신]. **13건 전량 API 실호출 검증** — HF 논문 5편 초록 원문 대조·GitHub 5건·HF 모델 3건 지표 실측. 배치 주제: **"에이전트 평가가 '성공률'에서 '재현성'으로 이동"** — Thinkingbox가 pass@1 65.36% vs pass^20 25.25%로 간극을 수치화하고 MobilePA-Bench가 스킬·메모리를 평가 축으로 승격. 3대 정정: (1) andrej-karpathy-skills **소유자 forrestchang→multica-ai 이전 확인**(301 Moved Permanently)·라이선스 없음, (2) 08-24 기록한 Qwen 2건 DL "동결"은 **집계 지연이었음이 확정**(GGUF 700만·원본 294만 돌파)·당시 "증분 해석 금지" 판단이 옳았음이 사후 입증, (3) Block3D 업보트 raw 19→API 20·EchoWM 공개일 08-23→08-24·ERPO 원제 "Beyond the Stability-Exploration Dilemma:" 접두 포함. 원본/GGUF 비율 0.35→**0.402 반등**(08-24 이월 질문 해소). 갱신에 [[openai-codex]] ⭐116,429→117,669(이틀 +3,286·트렌딩 1위→2위·당일 푸시 지속·Rust/Apache-2.0 소스 공개로 배치 내 유일하게 '읽히는 에이전트 본체') 포함. reliability 하향 2건: hermes-agent high→medium(오픈이슈 **35,603** 배치 최다·기능 미재검증)·andrej-karpathy-skills high→medium(커밋 0건 4개월·라이선스 부재). 신규 entity 0) ── -->
+- [[Thinkingbox]] — [[Microsoft]] 상태 유지 업무 워크플로 에이전트 샌드박스+벤치. **pass@1 65.36% vs pass^20 25.25%** — "한 번 성공"과 "매번 성공"의 간극을 수치화한 배치 최고 신뢰도 소스. MCP 호환 격리 툴 세션·전체 실행 트레이스·터미널 백엔드 상태 채점·507 정책 조건부 워크플로(리테일/호텔/자동차보험/네오뱅크 IT/컨설팅 IT·HR). **실패 시도 상당수가 깨끗한 종료+유효한 상태 변경을 보여 툴콜 수준 신호가 완수의 대리 지표가 못 됨을 실증** → [[MobilePA-Bench]]와 같은 문제의식·[[MemTrapBench]] 계보·코드 공개 (HF 데일리 5위·업6·초록+수치 실검증 high⭐5) *(NEW 2026-08-25)*
+- [[MobilePA-Bench]] — 상태 유지 실행 샌드박스 모바일 플래닝 에이전트 벤치(13도메인·212 실제 모바일 툴). GUI 벤치(표면 조작만)와 정적 function-calling 벤치(오프라인 API 매칭)의 **양쪽 맹점을 동시 지적**하고, [[에이전트-스킬]]·[[에이전트-메모리-레이어]]를 **서브에이전트 협업/메모리 사용/스킬 사용 3차원 평가 축으로 승격**. 프론티어 LLM이 툴 순서 강제·권한 제한·런타임 오류에서 급락 (HF 데일리 2위·업31·초록 실검증·모델별 점수 미기재 high) *(NEW 2026-08-25)*
+- [[EchoWM]] — 진입 가능한 옴니모달 월드모델. 720p 영상 + **환경음·음악·음성 동시 생성**·장기 생성 구간 동기 유지. 상호작용을 "카메라 의도"로 통일(1인칭=관찰자 이동/3인칭=카메라-캐릭터 역학을 뷰 컨트롤러 없이 데이터 학습)·이산 명령↔연속 포즈를 **공통 metric-scale 6-DoF 궤적**으로 매핑. [[ForgeWM]](지연시간 공략)과 상보·무음 출력인 [[LTX-2.5]] 대비축 (HF 데일리 1위·업48·저자22인·초록 실검증하나 **정량 벤치 수치 전무** high[서술한정]) *(NEW 2026-08-25)*
+- [[Block3D]] — 블록 단위 확산 text-to-3D. 자기회귀의 "오류 수정 불가"와 확산의 "매 스텝 전체 처리"라는 **정반대 병목을 입도 재조정으로 우회** — 블록 사이는 자기회귀·블록 내부는 동시 디노이즈 + 신뢰도 유도 블록 내 교정. TRELLIS-500K 홀드아웃 **25.71초 → 4.99초(5.15배)**·품질 저하 없음 주장. 이산 토큰 생성 전반에 이식 가능한 일반 레시피 → [[AI-3D-생성]]·[[Hunyuan3D-Buffalo]] (HF 데일리 3위·업20·수치 실검증·품질 지표/확산 비교 미기재 high) *(NEW 2026-08-25)*
+- [[ERPO]] — [[Alibaba]] 정책 최적화. **KL 정규화를 응답 쪽(Policy-KL)에서 입력 쪽(Query-KL)으로 이전** — "유지하면 탐색 예산 잠식/버리면 드리프트 통제 상실"의 이중구속을 *정규화 대상 교체*로 재정의. **QKL 그래디언트가 쿼리 우도로만 흘러 응답 분포에 직접 압력 없음**(탐색 보존) + 데이터셋-정적 참조 유래 쿼리별 가중치. GRPO/PPO/REINFORCE에 **추가 forward pass 없이 삽입**·수학 추론 6종·고온 디코딩/장기 학습 안정성 → [[ProRL]]·[[Co-RL]] 계보·**코드 공개** (HF 데일리 4위·업10·초록+코드링크 실검증·절대 점수 미기재 high) *(NEW 2026-08-25)*
 <!-- ── 2026-08-21 자동수집 배치 (신규 7 · 갱신 6 / GitHub 2[신규 Modular-Platform·AI-Infra-Guard] + HF논문 5[신규] + GitHub 3·HF모델 3[갱신]. GitHub·HF모델 raw API 수치·실WebFetch 미수행[타임라인 유지], HF논문 5 미래형 ID medium. raw 일증분 필드 절대값 불일치 지속(MoneyPrinterTurbo +2,761 vs 실 +1,335·OpenViking +950 vs +654)→절대값 스냅샷 기준 채택·raw 표기 병기. HF논문 데일리 1·2위[EnvHarness·FACET] "환경·태스크 공급 충실도" 짝·3·5위[4DAnyone·WithEveryone] 인물 중심 비전 재구성↔생성 짝·4위 SWE-bench-Science가 ASI-Bench·OmniScientist와 "AI 과학자 능력↔평가" 3부작. Qwen3.8-27B 세 경로 동반 우상향·FP8↔GGUF 격차 4.8→3배 축소. 신규 entity 0) ── -->
 - [[Modular-Platform]] — modular/modular: Mojo 언어 + MAX 추론 엔진을 묶은 AI 인프라 스택(GPU/CPU 이식성 지향 서빙·컴파일 계층), 로컬 실행 계층 [[omlx]]·라우팅 [[LLMRouter]]·적합성 필터 [[llmfit]] 하류의 서빙 백엔드·[[PyTorch]] 대비 추론 이식성 축·[[Qwen3.8-27B-GGUF]]/[[Qwen3.8-27B-FP8]] 서빙 대상 (GitHub ⭐28,271·당일 +268·실재 성숙 OSS·성능 이식성 벤치 미검증 high) *(NEW 2026-08-21)*
 - [[AI-Infra-Guard]] — [[Tencent]] 풀스택 AI 레드팀 플랫폼(AI 생태계 스캔·탈옥jailbreak 평가), 보안 축 [[strix]](일반 침투)·[[Anthropic-Cybersecurity-Skills]](프레임워크 매핑)·[[Crisis-Video-Attack-Defense]](영상 공격 방어)와 병존·AI 스택·모델 탈옥 특화 (GitHub ⭐5,149·당일 +50·스캔/탈옥 커버리지 미검증 medium) *(NEW 2026-08-21)*
@@ -1279,7 +1285,7 @@ total_sources: 874  # 2026-08-24 실측 (신규 소스 7건 반영)
 <!-- 도메인별 누적 인사이트 -->
 
 - video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석
-- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-07-11 업데이트)
+- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-08-25 업데이트)
 
 ---
 
@@ -1293,7 +1299,7 @@ total_sources: 874  # 2026-08-24 실측 (신규 소스 7건 반영)
 ## actionable
 <!-- 당장 실행 가능한 항목 -->
 
-`actionable.md` 참조. 대기 중: RTK CLI, AE MCP 테스트, .claude/ 자동화 훅 구성, VoxCPM TTS 테스트, VOID 모델 통합, Gemma-4-31B 벤치마크, hermes-agent 검토, **andrej-karpathy-skills CLAUDE.md 통합**, **MinerU2.5 wiki 파이프라인 통합**, **markitdown wiki pipeline 통합**, superpowers 테스트, Gemma-4-26B 로컬 실행, Gemma-4-E4B 테스트, **claude-code-best-practice + andrej-karpathy-skills 통합 CLAUDE.md 작성**, **claude-mem 설치 테스트**, **ai-hedge-fund 에이전트 아키텍처 분석** (20개)
+`actionable.md` 참조. 대기 중: RTK CLI, AE MCP 테스트, .claude/ 자동화 훅 구성, VoxCPM TTS 테스트, VOID 모델 통합, Gemma-4-31B 벤치마크, hermes-agent 검토, **andrej-karpathy-skills CLAUDE.md 통합**, **MinerU2.5 wiki 파이프라인 통합**, **markitdown wiki pipeline 통합**, superpowers 테스트, Gemma-4-26B 로컬 실행, Gemma-4-E4B 테스트, **claude-code-best-practice + andrej-karpathy-skills 통합 CLAUDE.md 작성**, **claude-mem 설치 테스트**, **ai-hedge-fund 에이전트 아키텍처 분석**, **자동화 워크플로에 pass^k 재현성 검증 도입(Thinkingbox)**, **에이전트 실패 주입 체크리스트: 툴 순서 강제·권한 제한·런타임 오류(MobilePA-Bench)**, **alibaba/ERPO 코드 확인** (23개)
 
 ---
 
