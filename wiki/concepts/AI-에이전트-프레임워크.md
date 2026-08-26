@@ -4,14 +4,26 @@ type: concept
 domain: ai-news
 tags: [concept, agent-framework, tools, memory, multi-step, open-source, LLM-agent]
 created: 2026-04-10
-updated: 2026-08-24
-sources: [hermes-agent.md, Archon.md, SkillClaw.md, superpowers.md, multica.md, OpenManus.md, Graph-Engineering.md, apache-maka.md]
+updated: 2026-08-26
+sources: [hermes-agent.md, Archon.md, SkillClaw.md, superpowers.md, multica.md, OpenManus.md, Graph-Engineering.md, apache-maka.md, AutoSaddler.md]
 reliability: high
 ---
 
 # AI 에이전트 프레임워크
 
 LLM에 도구(Tools), 메모리(Memory), 멀티스텝 추론 루프를 더해 자율적으로 복잡한 작업을 수행하게 만드는 소프트웨어 구조.
+
+> [!insight] 2026-08-26 — Harness 층이 **자동 최적화 대상**으로 승격 ([[AutoSaddler]])
+> 이 페이지가 08-24에 채택한 **Prompt → Context → Harness → Loop** 4단계 계보에서, [[AutoSaddler]](HF 데일리 3위·업45·저자 13인·**초록 원문 실검증**)가 **Harness 층을 처음으로 자동 최적화의 대상**으로 만든다.
+> **정식화**: 하네스(프롬프트 + 툴 설정 + 제어 로직)를 **오프라인 학습 문제**로 보고, 미니배치 실패 신호로 반복 갱신한다 — **실패 트레이스 진단 → 하네스를 코드로 취급하는 구조적 패치 생성 → 검증 기반 갱신 선택**.
+> **실측**: **GAIA2 +9.0%p · SWE-Bench Pro +9.6%p · Terminal-Bench 2.0 +10.0%p** (각 베이스 하네스 대비). **모델을 그대로 두고 배선만 바꿔 세 벤치 모두 두 자릿수 근처 상승** — 현재 에이전트 실패의 상당 부분이 **모델 능력이 아니라 하네스 설계 부채**임을 시사한다.
+> **어블레이션 3종이 이 페이지에 남길 실무 규칙이다:**
+> 1. **얕은 반성이 아니라 깊은 디버깅** — 모델에게 "왜 실패했지?"를 되묻는 자기반성으로는 부족하다.
+> 2. **무제한 편집이 아니라 표적 수정** — 하네스 전체 재작성은 성능을 깎는다.
+> 3. **궤적 특화 수리가 아니라 일반화 인식 선택** — 한 실패 사례에 맞춘 예외 처리는 과적합이며, 하네스만 부풀리고 일반 성능은 못 올린다.
+>
+> **층위 구분이 중요하다**: [[AutoSaddler]]는 **설계 시점에 하네스 코드를 고치고**, 같은 배치 [[Recuris]]는 **실행 시점에 메모리를 진화**시킨다. 배타적이지 않고 **서로 다른 층**이며, 동시 적용 시 충돌 여부는 미확인.
+> ⚠️ **절대 점수·사용 모델·최적화 비용이 전부 초록에 없다.** +10%p의 출발점이 40%인지 70%인지에 따라 의미가 다르고, **자동 루프를 돌리는 실행 횟수·토큰 비용이 미공개**라 개인 워크플로우에서의 실용성은 판단 불가. [[Thinkingbox]] 기준으로 보면 **하네스 패치가 pass@1만 올리고 pass^k(재현성)는 그대로일 가능성**도 배제할 수 없다.
 
 > [!insight] 2026-08-24 — 에이전트 최적화 패러다임의 4단계 계보 확보 ([[Graph-Engineering]])
 > 볼트가 그동안 개별 소스로 흩어 기록해 온 에이전트 기법들을 **하나의 축 위에 정렬할 어휘**가 들어왔다. [[Graph-Engineering]](HF 데일리 신규 3위·업21·저자 35인·**초록 원문 실검증**·동반 레포 실재 확인)이 정리한 계보는 다음 4단계다.

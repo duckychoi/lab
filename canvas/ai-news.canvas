@@ -689,6 +689,115 @@
       "width": 210,
       "height": 80,
       "color": "4"
+    },
+    {
+      "id": "n0826hub",
+      "type": "group",
+      "x": -560,
+      "y": 2940,
+      "width": 1720,
+      "height": 560,
+      "label": "2026-08-26 배치 — 지표 불일치의 날"
+    },
+    {
+      "id": "n0826a",
+      "type": "text",
+      "x": -540,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[OraRL]]**\nHF 데일리 1위·업65\nadvantage inversion 진단\nCoT 없이 130ms(기존 4,780ms)\nVSI-Bench 73.1 vs GPT-5 55.0",
+      "color": "5"
+    },
+    {
+      "id": "n0826b",
+      "type": "text",
+      "x": -210,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[WeMM-Embedding]]**\n[[Tencent]]·위챗 실배포\n2B가 8B 추월·9B 80.6 SOTA\n온라인 A/B 14건",
+      "color": "5"
+    },
+    {
+      "id": "n0826c",
+      "type": "text",
+      "x": 120,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[AutoSaddler]]**\n하네스=코드, 실패로 패치\nGAIA2 +9.0 / SWE +9.6 / TB2 +10.0%p\n깊은디버깅·표적수정·일반화선택",
+      "color": "5"
+    },
+    {
+      "id": "n0826d",
+      "type": "text",
+      "x": 450,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[DiffusionOPSD]]**\n교사 없는 자가증류\n20설정 중 19개 최고·최대 +44%\n구성 이득 ≠ 실현 이득",
+      "color": "5"
+    },
+    {
+      "id": "n0826e",
+      "type": "text",
+      "x": 780,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[Recuris]]**\n검증 게이트 메모리 진화\n37쌍 중 35쌍·Opus5 87.9%\n최장 태스크 +32.2·코드 공개",
+      "color": "5"
+    },
+    {
+      "id": "n0826f",
+      "type": "text",
+      "x": -540,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "**[[claude-plugins-community]]**\n[[Anthropic]] 공식 레지스트리\n⭐1,957(최하위)인데 트렌딩 2위\n배포/레지스트리 층 등장",
+      "color": "4"
+    },
+    {
+      "id": "n0826g",
+      "type": "text",
+      "x": -210,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "**[[Qwen3.8-27B-OBLITERATED]]**\n가드레일 제거 축 2번째\nDL 389,747 = 원본의 13.2%\n제거방식·능력손실 미검증 ⚠️low",
+      "color": "1"
+    },
+    {
+      "id": "n0826h",
+      "type": "text",
+      "x": 120,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "⚠️ **다운로드 격일 갱신 패턴**\n[[Qwen3.8-27B]]·[[Qwen3.8-27B-GGUF]]\n08-24 동결→08-25 해제→08-26 재동결\n**좋아요는 갱신(+205/+1)**\n→ 증분은 2일 단위로만 해석",
+      "color": "3"
+    },
+    {
+      "id": "n0826i",
+      "type": "text",
+      "x": 450,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "⚠️ **이슈 밀도 2,000배 격차**\n[[apache-maka]] 0.91건/포크(최고)\n[[ai-job-search]] 0.0004건/포크\n[[awesome-gpt-image-2]] 스타+38.5%에 이슈↓\n→ 이슈=품질 아닌 **소프트웨어 종류**",
+      "color": "3"
+    },
+    {
+      "id": "n0826j",
+      "type": "text",
+      "x": 780,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "⚠️ **인기 ≠ 신뢰성 3연속**\n[[TradingAgents]] 10만 돌파·푸시 5주 정체\nclaude-plugins 스타 최하위·트렌딩 2위\n[[Recuris]] 업보트 최하위·코드+수치 최다",
+      "color": "3"
     }
   ],
   "edges": [
@@ -1227,6 +1336,71 @@
       "id": "e2-hub-agent-mem-hub-agent-fw",
       "fromNode": "hub-agent-mem",
       "toNode": "hub-agent-fw"
+    },
+    {
+      "id": "en0826a",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826a",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826b",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826b",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826c",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826c",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826d",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826d",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826e",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826e",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826f",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826f",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826g",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826g",
+      "toSide": "top"
+    },
+    {
+      "id": "e0826x1",
+      "fromNode": "n0826c",
+      "fromSide": "bottom",
+      "toNode": "n0826e",
+      "toSide": "top",
+      "label": "설계시점 vs 실행시점"
+    },
+    {
+      "id": "e0826x2",
+      "fromNode": "n0826d",
+      "fromSide": "bottom",
+      "toNode": "n0826a",
+      "toSide": "bottom",
+      "label": "신호 주입 지점 설계"
     }
   ]
 }

@@ -4,7 +4,7 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-08-25
+updated: 2026-08-26
 sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md]
 ---
 
@@ -15,6 +15,36 @@ sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md,
 ---
 
 ## 최근 흐름 (2026-08-25 배치)
+
+> [!insight] 2026-08-26 배치 — *"지표가 서로 다른 이야기를 할 때 어느 쪽을 믿을 것인가"*
+> **13건 전량 API 실호출 검증**(GitHub 5 · HF 논문 5 **초록 원문 대조** · HF 모델 3). 신규 7 · 갱신 6.
+>
+> **1. 이번 배치 최대 발견 — HF 다운로드 카운터의 격일 갱신 패턴**
+> [[Qwen3.8-27B]]과 [[Qwen3.8-27B-GGUF]]의 다운로드가 **08-25 값과 완전히 동일**하게 재동결됐다. 결정적인 건 **좋아요는 움직였다**는 점이다(원본 12,577→**12,782 +205**, GGUF 2,937→**2,938 +1**). 같은 페이지에서 **한 축은 갱신되고 다른 축만 정확히 얼어 있다** = 두 지표가 서로 다른 집계 파이프라인을 탄다.
+> 이력을 이으면: **08-24 동결 → 08-25 해제 → 08-26 재동결**이고, **두 모델이 3회 연속 완벽히 동기화**됐다. 소유자가 다른 독립 레포가 우연히 같은 날 멎을 확률은 무시할 만하다.
+> → **운영 규칙 정교화**: 08-25에 세운 *"단일 회차 동결 = 관측 실패"* 를 **"다운로드 증분은 최소 2일 단위로 해석하고, 동일값 관측 시 좋아요 축이 함께 멎었는지를 먼저 본다"** 로 갱신. 좋아요가 살아 있으면 집계 지연 확정에 가깝고, 둘 다 멎어야 수요 정체를 의심한다. **이번 회차 다운로드 증분과 GGUF/원본 비율은 해석하지 않는다(미관측).**
+>
+> **2. 이슈 밀도는 품질이 아니라 소프트웨어의 종류를 말한다 — 2,000배 격차**
+> 같은 배치에서 정반대로 움직였다: [[apache-maka]]는 스타 +1,009(+40.4%) 동안 **이슈 239→312(+73)**, 포크당 **0.91건**(볼트 최고 밀도). [[ai-job-search]]는 포크 +252 동안 **이슈 8→5**, 포크당 **0.0004건**. **2,000배 이상 차이**다.
+> 해석: maka는 *실행되고·상태를 갖고·로컬 환경에 의존하는* 인큐베이팅 워크스페이스, ai-job-search는 *개인 데이터로 로컬 실행하는 도구*(공개 트래커에 로그를 붙이기 어려움·미검증 가설). [[awesome-gpt-image-2]]는 스타 +38.5% 동안 이슈 11→**10**으로 감소 — **"실행 소프트웨어 vs 복사되는 텍스트 자산"** 구조 차이가 성장 국면에서도 유지된다.
+>
+> **3. 인기 지표와 신뢰성 지표가 또 정반대를 가리켰다**
+> - [[TradingAgents]] **10만 스타 돌파**(100,564)인데 **최종 푸시 2026-07-18로 5주 정체**. 그 5주간 스타 +3,841 유입. 트렌딩 5위 레포가 **커밋 0**이다.
+> - [[claude-plugins-community]]는 스타 **1,957로 배치 최하위**인데 트렌딩 **2위**(당일 +351 = 절대값의 18%).
+> - [[Recuris]]는 업보트 **16으로 배치 최하위**인데 **코드가 공개돼 있고 수치가 가장 구체적**이다.
+> → **스타는 최신성을 말하지 않고, 순위는 규모를 말하지 않고, 업보트는 재현 가능성을 말하지 않는다.**
+>
+> **4. 에이전트 개선의 층위가 갈라졌다 — 설계 시점 vs 실행 시점**
+> [[AutoSaddler]](오프라인으로 **하네스 코드**를 패치 · GAIA2 +9.0%p·SWE-Bench Pro +9.6%p·Terminal-Bench 2.0 +10.0%p)와 [[Recuris]](런타임에 **메모리**를 진화 · 37쌍 중 35쌍 개선·tau-bench Opus 5 +15.6→87.9%·최장 태스크 +32.2)가 같은 날 나왔다. **둘 다 모델을 건드리지 않고 두 자릿수를 올린다** — 현재 에이전트 실패의 큰 몫이 **모델 능력이 아니라 배선·기억 설계의 부채**라는 뜻이다.
+> 특히 AutoSaddler의 어블레이션 3종(**깊은 디버깅 / 표적 수정 / 일반화 인식 선택**)은 *실패할 때마다 그 케이스에 예외 처리를 덧붙이는* 내 습관이 **정확히 하지 말라는 것**임을 지적한다.
+>
+> **5. "중간 지표 ≠ 최종 결과" 경고가 또 나왔다**
+> [[DiffusionOPSD]]가 **타깃 구성 이득과 실현 이득을 분리 측정**한 결과, 둘은 비례하지 않았다. [[Thinkingbox]](pass@1 ≠ pass^k) · [[apache-maka]](로그 ≠ 완수) · [[OPD-Dual-Nature]](근접 벤치 ≠ 일반화)에 이은 **네 번째 사례**로, 이제 이건 우연한 반복이 아니라 **이 도메인의 구조적 패턴**으로 봐야 한다.
+>
+> **6. 그 외 축**
+> - [[OraRL]]: **advantage inversion** 진단 — *고보상 oracle을 그룹에 넣으면 baseline이 올라가 멀쩡한 시도가 음수로 뒤집힌다*. **CoT 없이 130ms 디코딩**(기존 4,780ms)·VSI-Bench **73.1**(GPT-5 55.0·Gemini-3-Pro 55.1).
+> - [[WeMM-Embedding]]: **2B가 8B를 이긴다** — 임베딩에서 크기 프리미엄 붕괴. **온라인 A/B 14건**이라는 배포 증거.
+> - [[Qwen3.8-27B-OBLITERATED]]: 가드레일 제거 축 **두 번째 상위 진입**. DL 389,747 = 원본의 **13.2%** — 상위 노출되나 **주변부 수요**. 제거 방식·능력 손실 전량 미검증(**low**).
 
 > [!insight] 2026-08-25 — "에이전트 평가의 기준이 '성공률'에서 '재현성'으로 옮겨간 날 — 그리고 인기 지표와 신뢰성 지표가 정반대를 가리킨 날 (13건 전량 API 실검증)"
 > **배치의 뼈대는 [[Thinkingbox]]의 숫자 두 개다: pass@1 65.36% vs pass^20 25.25%.** 같은 태스크에서 "한 번은 된다"와 "스무 번 다 된다" 사이가 **40%p 벌어진다.** 우리가 인용해 온 에이전트 성능 수치 대부분이 **업무 위임 가능성과 무관하다**는 뜻이다. 더 불편한 건 부수 발견 쪽이다 — **실패한 시도들 상당수가 깨끗한 종료와 유효한 상태 변경을 보였다.** 로그상 정상인데 일은 안 된 것으로, **"에러 없이 끝났으니 성공"이라는 관측 방식이 구조적으로 무너진다.**
