@@ -798,6 +798,136 @@
       "height": 180,
       "text": "⚠️ **인기 ≠ 신뢰성 3연속**\n[[TradingAgents]] 10만 돌파·푸시 5주 정체\nclaude-plugins 스타 최하위·트렌딩 2위\n[[Recuris]] 업보트 최하위·코드+수치 최다",
       "color": "3"
+    },
+    {
+      "id": "n0827hdr",
+      "type": "text",
+      "x": -560,
+      "y": 3520,
+      "width": 420,
+      "height": 120,
+      "text": "## 2026-08-27 배치\n**\"결과가 아니라 과정을 채점하라\"**\n무관한 두 도메인에서 **독립적으로 동일 교정**\n13건 전량 API 실호출 검증",
+      "color": "6"
+    },
+    {
+      "id": "n0827a",
+      "type": "text",
+      "x": -100,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[FrontierChallenge]] 🔵 데일리1위\n과학 워크플로 **완수** 채점 (97/300 공개)\n최고 구성 **Pass Rate 20.6%**\n전기화학 Avg.**94.9** 대 Pass **0%**\n⚡ 미통과 트레이스 **75.5%가 \"완료했다\"**\n→ 자기보고 완료 선언 **첫 반증**",
+      "color": "1"
+    },
+    {
+      "id": "n0827b",
+      "type": "text",
+      "x": 260,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[VGI-BENCH]] 🔵 데일리4위\n영상 생성 시각 추론 27과제·810인스턴스\n**전개 과정** 요구(최종 상태 아님)\n[[Seedance]] 2.0 **51.0%**\n⚡ 후반 디노이징 **자기교정 한계**\n→ 스텝 증가로는 추론 오류 못 고침",
+      "color": "1"
+    },
+    {
+      "id": "n0827c",
+      "type": "text",
+      "x": 620,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[JIT-Agent]] 🔵 데일리5위\n하네스 = **고정 4모듈 기계 생성물**\n즉석 합성·수리·**자가진화**\nDeepSeek-V4-Flash가 GPT-5.6 추월(+9.1)\nGLM-5.2 최대 **+20.2**\n주장: 하네스 지능은 **모델 스케일링과 직교**",
+      "color": "1"
+    },
+    {
+      "id": "n0827d",
+      "type": "text",
+      "x": 980,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[VoiceMem]] 🔵 데일리2위\n정보(좌뇌) ∥ 감정(우뇌) **병렬 분리**\n**top-5가 Mem0 top-200보다 +약30점**\n(후보 **40배 감소**인데 더 정확)\n검색 **134ms** = VAD 예산 안쪽\n→ 검색량이 아니라 **구조 분리**",
+      "color": "1"
+    },
+    {
+      "id": "n0827e",
+      "type": "text",
+      "x": -100,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "[[WarpSAC]] 🔵 데일리3위\n안정화 기법 = **데이터 체제의 함수**\nWarpSAC-L(CPU) / WarpSAC-A(GPU 병렬)\n**UnitreeG1 19.8% → 96.4%**\nGPU +23.1% vs CPU +4.5%\n→ 모델 밖 설정이 성능 지배 (RL판)",
+      "color": "1"
+    },
+    {
+      "id": "n0827f",
+      "type": "text",
+      "x": 260,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "[[archify]] ⭐20,152 · 트렌딩1위\n다이어그램 → **자체완결 HTML**\n[[에이전트-스킬]] 1층이되\n*행동*이 아니라 **출력 형식** 규정\n⚠️ \"verifiable\" 자체 서술·근거 없음",
+      "color": "4"
+    },
+    {
+      "id": "n0827g",
+      "type": "text",
+      "x": 620,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "⚡ **하네스 축: 패치 → 생성**\n[[AutoSaddler]] 설계시점 패치\n→ [[Recuris]] 실행시점 진화\n→ [[SkillEvo]] 스킬 자가갱신\n→ **[[JIT-Agent]] 전체 생성**",
+      "color": "5"
+    },
+    {
+      "id": "n0827h",
+      "type": "text",
+      "x": 980,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "❓ **미해결: 하네스의 천장은 어디인가**\n[[JIT-Agent]]: 하네스 바꾸면 크게 오름\n[[FrontierChallenge]]: 스캐폴드 3종 바꿔도\n**20.6% 천장**\n→ 지배 구간↔모델 천장 구간 **경계 미상**",
+      "color": "3"
+    },
+    {
+      "id": "n0827i",
+      "type": "text",
+      "x": -100,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "⚡ **계보 5번째 — 자기보고까지 무너짐**\n[[Thinkingbox]] 툴콜≠완수\n[[apache-maka]] 활동량≠품질\n[[DiffusionOPSD]] 구성이득≠실현이득\n→ **[[FrontierChallenge]] 진술≠완수**",
+      "color": "5"
+    },
+    {
+      "id": "n0827j",
+      "type": "text",
+      "x": 260,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "📊 **HF 격일 갱신 4회 연속 성립**\n[[Qwen3.8-27B]] +353,154 (330만 돌파)\n[[Qwen3.8-27B-GGUF]] +303,896\n**두 저장소 완전 동기 해제**\n원본/GGUF **0.402→0.432** 2연속 상승",
+      "color": "3"
+    },
+    {
+      "id": "n0827k",
+      "type": "text",
+      "x": 620,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "📊 **가드레일 제거 축 선두 교체**\n[[Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF]]\nDL **911,795** = OBLITERATED의 **1.95배**\n3분화 유지: 양자화 ≫ 원본 ≫ 제거\n⚠️ 능력 손실 측정치 이 축 전체 **0건**",
+      "color": "3"
+    },
+    {
+      "id": "n0827l",
+      "type": "text",
+      "x": 980,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "📊 **이슈 밀도 배치 내 470배 격차**\n[[claude-plugins-official]] 0.26건/포크\n(오픈이슈 **1,026**·배치 최다)\n[[ai-job-search]] 0.00056건/포크\n→ 08-26 \"종류의 지표\" 재확인",
+      "color": "3"
     }
   ],
   "edges": [
@@ -1401,6 +1531,93 @@
       "toNode": "n0826a",
       "toSide": "bottom",
       "label": "신호 주입 지점 설계"
+    },
+    {
+      "id": "e0827_1",
+      "fromNode": "n0827hdr",
+      "fromSide": "right",
+      "toNode": "n0827a",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_2",
+      "fromNode": "n0827a",
+      "fromSide": "right",
+      "toNode": "n0827b",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_3",
+      "fromNode": "n0827a",
+      "fromSide": "bottom",
+      "toNode": "n0827i",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_4",
+      "fromNode": "n0827b",
+      "fromSide": "bottom",
+      "toNode": "n0827f",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_5",
+      "fromNode": "n0827c",
+      "fromSide": "bottom",
+      "toNode": "n0827g",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_6",
+      "fromNode": "n0827c",
+      "fromSide": "right",
+      "toNode": "n0827h",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_7",
+      "fromNode": "n0827a",
+      "fromSide": "right",
+      "toNode": "n0827h",
+      "toSide": "left",
+      "label": "20.6% 천장"
+    },
+    {
+      "id": "e0827_8",
+      "fromNode": "n0827d",
+      "fromSide": "bottom",
+      "toNode": "n0827l",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_9",
+      "fromNode": "n0827e",
+      "fromSide": "right",
+      "toNode": "n0827c",
+      "toSide": "bottom",
+      "label": "모델 밖 설정이 지배"
+    },
+    {
+      "id": "e0827_10",
+      "fromNode": "n0827f",
+      "fromSide": "right",
+      "toNode": "n0827c",
+      "toSide": "left",
+      "label": "생성→전달→판정"
+    },
+    {
+      "id": "e0827_11",
+      "fromNode": "n0827j",
+      "fromSide": "right",
+      "toNode": "n0827k",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_12",
+      "fromNode": "n0827hdr",
+      "fromSide": "bottom",
+      "toNode": "n0827e",
+      "toSide": "left"
     }
   ]
 }

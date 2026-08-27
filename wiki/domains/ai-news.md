@@ -4,8 +4,8 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-08-26
-sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md]
+updated: 2026-08-27
+sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
@@ -14,7 +14,54 @@ sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md,
 
 ---
 
-## 최근 흐름 (2026-08-25 배치)
+## 최근 흐름 (2026-08-27 배치)
+
+> [!insight] 2026-08-27 배치 — *"두 논문이 서로 다른 도메인에서 같은 결론에 도달했다"*
+> **13건 전량 API 실호출 검증**(GitHub 5 · HF 논문 5 **초록 원문 대조** · HF 모델 3). 신규 7 · 갱신 6.
+>
+> **① 오늘의 최대 관측 — "결과가 아니라 과정을 채점하라"가 독립적으로 두 번 나왔다**
+> [[FrontierChallenge]](과학 워크플로·데일리 1위)와 [[VGI-BENCH]](영상 생성·데일리 4위)는 **서로 무관한 도메인**인데 설계 원칙이 동일하다 — *그럴듯한 최종 상태가 아니라 유효한 전개 과정을 요구한다.* 같은 날 독립적으로 같은 교정이 나왔다는 것은 이것이 한 분야의 유행이 아니라 **평가 방법론 전반의 이동**임을 시사한다.
+>
+> **② 계보의 다섯 번째이자 처음으로 "자기보고"가 무너졌다**
+> [[FrontierChallenge]]: 미통과 [[anthropic-claude-code]] 트레이스의 **75.5%가 "완료했다"는 문장으로 종료**. 부분점수도 마찬가지 — 전기화학/환경은 **Avg. Score 94.9인데 Pass Rate 0%**, 분석화학은 **87.6 대 4%**. 최고 구성조차 97개 중 20개(**20.6%**).
+> 위키 계보: [[Thinkingbox]](툴콜≠완수) → [[apache-maka]](활동량≠품질) → [[OPD-Dual-Nature]] → [[DiffusionOPSD]](구성이득≠실현이득) → **FrontierChallenge**. 앞의 넷은 *외부 관측 지표*의 실패였는데 이번은 **에이전트 자신의 진술**이 무너진 첫 사례다. → 이 배치에서 raw 표기 대신 **API 절대값 재검증**을 고수한 관행이 정확히 이 원칙의 실행.
+>
+> **③ 하네스 축이 "패치"에서 "생성"으로 — 그리고 즉시 반대 증거를 만났다**
+> [[JIT-Agent]](데일리 5위)는 하네스(메모리·계획·행동·오케스트레이션 **고정 4모듈**)를 **기계 생성물로 형식화**하고 즉석 합성·수리·자가진화시킨다. DeepSeek-V4-Flash가 **DeepSearchQA +9.1·OdysseyBench +4.3으로 GPT-5.6 추월**, GLM-5.2 최대 **+20.2**. 주장: 하네스 지능은 **모델 스케일링과 직교**하는 학습·이전·누적 가능 차원.
+> 계보: [[AutoSaddler]](설계시점 패치) → [[Recuris]](실행시점 메모리 진화) → [[SkillEvo]](스킬 자가갱신) → **JIT-Agent(전체 생성)**.
+> ⚠️ **그러나 같은 날 [[FrontierChallenge]]가 스캐폴드 3종을 바꿔도 Pass Rate 20.6%가 천장**이라고 보고했다. 직접 모순은 아니나(태스크·측정 상이) **"하네스 지배 구간과 모델 천장 구간의 경계"** 라는 미해결 질문을 낳는다 — 이 축의 다음 쟁점.
+>
+> **④ "모델 밖 설정이 성능을 지배한다"의 RL판**
+> [[WarpSAC]](데일리 3위)는 오프폴리시 RL 안정화 기법이 **데이터 체제(regime)의 함수**임을 통제실험 8계열로 진단 — 파라미터 정규화는 리플레이 커버리지가 좁을 때만 이롭고 데이터가 풍부하면 가치 적합을 제약. 체제별 두 변종(**WarpSAC-L** Norm ON·clipped double-Q / **WarpSAC-A** Norm OFF·single-Q)으로 분기. **UnitreeG1TransportBox-v1 성공률 19.8% → 96.4%**. GPU 병렬 AUC **+23.1%** vs CPU **+4.5%** — 이득 차이 자체가 체제 의존성의 자기 증거.
+> [[JIT-Agent]]와 층은 다르지만 **동일한 형태의 메시지**: 모델을 키운 게 아니라 **조건에 맞춘 설정**이 성능을 뒤집었다.
+>
+> **⑤ 메모리 — 검색량이 아니라 구조 분리가 이긴다**
+> [[VoiceMem]](데일리 2위): **top-5로 Mem0의 top-200보다 약 30점 우위**(후보 40배 감소). 검색 **134ms**로 VAD 지연 안쪽이라 **대화 지연 추가 0**. 정보(좌뇌)∥감정(우뇌) 병렬 분리.
+> [[MemTrapBench]](메모리 5종이 전부 no-memory보다 못함)의 반대 방향 증거지만 **벤치·태스크가 달라 반증은 아니다.** 정확한 정식화: **메모리의 성패는 도입 여부가 아니라 경로 분리 방식에 달렸다.**
+>
+> **⑥ HF 다운로드 격일 갱신 패턴 4회 연속 성립 — 사실상 확정**
+> [[Qwen3.8-27B-GGUF]] **7,334,695 → 7,638,591**(+303,896·동결 해제), [[Qwen3.8-27B]] **2,945,415 → 3,298,569**(+353,154·330만 돌파)로 **두 저장소가 완전 동기 해제**. 08-24 동결 → 08-25 해제 → 08-26 동결 → **08-27 해제**로 교대 4연속.
+> 별개 저장소가 같은 날 얼고 같은 날 풀린다 = **HF 집계 파이프라인 자체의 주기**. 08-26 규칙(**증분은 2일 단위 해석·좋아요 축 교차 확인·비율은 양쪽 갱신 회차에만 계산**)을 네 번째로 지지.
+> **비율 관측**: 원본/GGUF **0.402(08-25) → 0.432(08-27)** 로 2회 연속 상승 — 양자화판보다 **원본 유입이 빠르다**. 절대 저변 순위(GGUF > 원본 > 가드레일 제거)는 유지되나 **격차는 축소 중**.
+>
+> **⑦ 가드레일 제거 축 내부 선두 교체**
+> [[Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF]] DL **911,795** = [[Qwen3.8-27B-OBLITERATED]](**468,746**·API 실검증)의 **약 1.95배**. 원본 대비 27.6%·GGUF 대비 11.9%.
+> 08-26의 **"양자화 ≫ 원본 ≫ 가드레일 제거"** 3분화는 선두 교체 후에도 유지 — **축 내부 순위는 바뀌어도 축 간 규모 차는 안정적**이다. ⚠️ 이 축 세 모델 전부 **제거 방식·능력 손실 벤치 0건**으로 low.
+>
+> **⑧ 이슈 밀도 — 같은 배치 안에서 470배 격차**
+> [[claude-plugins-official]] 포크 3,894에 **오픈이슈 1,026건**(0.26건/포크·배치 최다) vs [[ai-job-search]] 포크 12,498에 **7건**(0.00056). **포크는 1/3인데 이슈는 147배.**
+> 08-26의 "이슈는 품질이 아니라 **소프트웨어의 종류**를 말한다"를 재확인하되 부분 수정도 있었다 — [[awesome-gpt-image-2]]가 스타 +11.6%에 **이슈 10→14로 처음 증가**(그래도 0.0063건/포크로 여전히 극저). 레지스트리(등재 요청 대기열)·브리지(외부 변경으로 계속 깨짐)·개인 복제형(이슈 열 유인 없음)이 **구조적으로 다른 밀도**를 만든다. ⚠️ 이슈 내용은 미확인이라 해석은 가설.
+>
+> **⑨ 산출물 전달 층의 등장**
+> [[archify]](⭐20,152·트렌딩 1위)는 다이어그램을 **자체완결 HTML**로 출력 — [[에이전트-스킬]] 1층이되 *행동*이 아니라 **출력 형식**을 규정하는 변종. 오늘 배치를 한 줄로 이으면 **생성([[JIT-Agent]]) → 전달([[archify]]) → 판정([[FrontierChallenge]])**.
+> ⚠️ "verifiable" 주장 근거 미확인. **도식은 틀렸을 때 텍스트보다 위험**(정리된 것으로 받아들여짐).
+>
+> **⑩ 트렌딩 표기↔실증분 불일치 지속** — [[awesome-gpt-image-2]] 표기 "+4,050" vs 실증분 **+2,323**(1,727 차이). 절대값 스냅샷 정본 관행 유지. raw 절대값 대비 API **+2~+33 드리프트** 5건 전부 확인.
+> ⚠️ **미등재 관측**: HF 트렌딩 1·2위 **Qwen/Qwen3.8-Flash-Next**(좋아요 3,790·DL 2,551)·**zai-org/GLM-5.3-Flash**(좋아요 1,127·DL **0**)는 공개 직후라 다운로드 집계가 거의 0이어서 상위 3에서 제외됐으나, **좋아요만으로 트렌딩 1·2위를 점유**한 신규 대형 공개 — 다음 회차 추적 대상.
+
+---
+
+## 최근 흐름 (2026-08-25 배치)## 최근 흐름 (2026-08-25 배치)
 
 > [!insight] 2026-08-26 배치 — *"지표가 서로 다른 이야기를 할 때 어느 쪽을 믿을 것인가"*
 > **13건 전량 API 실호출 검증**(GitHub 5 · HF 논문 5 **초록 원문 대조** · HF 모델 3). 신규 7 · 갱신 6.
