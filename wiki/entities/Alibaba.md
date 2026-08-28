@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, alibaba, qwen, china, big-tech]
 created: 2026-06-26
-updated: 2026-07-10
-sources: [zvec.md, Qwen3.6-27B.md]
+updated: 2026-08-28
+sources: [zvec.md, Qwen3.6-27B.md, Qwen3.8-27B.md, Qwen3.8-Flash-Next.md]
 reliability: high
 ---
 
@@ -29,7 +29,21 @@ reliability: high
 > [!note] 2026-07-11 추가 — 35B-A3B 파생 3종 동시 관측
 > [[Qwen3.6-35B-A3B]] 계열이 **효율·특화·커뮤니티 세 갈래 파생**으로 확장: **[[Qwen3.6-35B-A3B-MTP-GGUF]]**(unsloth, DL 77만·MTP 자기투기 1.5-2배 가속·262K→1M·멀티모달)·**[[Qwopus3.6-35B-A3B-Coder-MTP-GGUF]]**(Jackrong, DL 31.8만·코딩 특화·thinking-off·SWE-bench 자가 62.4%)·**[[Qwen3.6-40B-Deckard-Heretic]]**(DavidAU, DL 42.7만·커뮤니티 병합·⚠️카드 미검증). Qwen 오픈 가중치가 **MTP 가속·코딩·창작**으로 재배포되며 로컬 생태계의 사실상 기반임을 재확인.
 
+## 2026-08-28 — `qwen4_exp` 태그 등장 · 실사용과 트렌딩이 갈라졌다
+
+**[[Qwen3.8-Flash-Next]]** (HF 트렌딩 **1위** · 생성 2026-08-24 · 라이선스 **other**)의 **아키텍처 태그가 `qwen4_exp`** 다. 볼트가 추적해 온 Qwen 계열([[Qwen3.8-27B]]·[[Qwen3.6-27B]]·[[Qwen3.6-35B-A3B]])은 모두 **`qwen3_5`** 를 단다.
+**이름은 3.8인데 내부 식별자는 4세대를 가리킨다.** 차세대 아키텍처를 현 세대 이름으로 선행 배포할 때 나타나는 형태이나 **공식 확인은 없다** — `_exp`가 폐기될 실험 브랜치일 가능성도 동등하다. **계열 전환 신호로 확정하지 않고 매 회차 재확인 대상으로 등록**한다.
+
+> [!insight] 같은 회사의 두 모델이 정반대 지표를 보인다
+> - **[[Qwen3.8-27B]]**: DL **3,457,687** · 좋아요 13,074 → **DL/좋아요 264.5** · 트렌딩 **3위**
+> - **[[Qwen3.8-Flash-Next]]**: DL **4,810** · 좋아요 4,033 → **DL/좋아요 1.19** · 트렌딩 **1위**
+>
+> **222배 차이다.** 트렌딩 1위 모델이 실사용은 3위 모델의 **0.14%** 다. 이번 회차에 볼트가 확정한 규칙 — **HF 트렌딩 순위는 사용량 지표가 아니다** — 을 **같은 벤더 내부에서 보여주는 사례**라 특히 깨끗하다.
+
+**라이선스 노선의 분화**: [[Qwen3.8-27B]]는 **apache-2.0**인데 [[Qwen3.8-Flash-Next]]는 **`other`** 다. 경쟁사 [[Zhipu-AI]]가 같은 주에 **MIT**([[GLM-5.3-Flash]])로 차세대 실험판을 푼 것과 대비된다 — **Alibaba가 신규 실험 계열에서는 개방도를 낮추는지** 관측 대상.
+
 ## 관련 페이지
+- [[Qwen3.8-Flash-Next]] — `qwen4_exp` 태그 · 트렌딩 1위 *(NEW 2026-08-28)* · [[Qwen3.8-27B]] — 실사용 기준선
 
 - [[page-agent]]
 - [[Qwen-Image-Agent]]

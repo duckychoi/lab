@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [entity, zhipu-ai, zai, GLM, chinese-llm, MoE, bilingual, monday-ai]
 created: 2026-04-10
-updated: 2026-07-03
-sources: [GLM-5.1.md, GLM-5.2.md]
+updated: 2026-08-28
+sources: [GLM-5.1.md, GLM-5.2.md, GLM-5.3-Flash.md]
 reliability: high
 ---
 
@@ -31,7 +31,22 @@ reliability: high
 - HuggingFace: https://huggingface.co/zai-org
 - Together AI, Fireworks AI 파트너십
 
+## 2026-08-28 — `glm5_next` 실험 계열을 **MIT로** 공개
+
+**[[GLM-5.3-Flash]]** (HF 트렌딩 **2위** · 생성 2026-08-25 · **MIT** · **fp8**). 아키텍처 태그는 **`glm5_next`**.
+
+> [!insight] MIT 개방 노선이 차세대 실험판에서도 유지된다
+> 같은 배치의 경쟁 모델 [[Qwen3.8-Flash-Next]]는 라이선스가 **`other`** 다. **[[Zhipu-AI]]만 MIT** 로, 볼트가 [[GLM-5]]·[[GLM-5.1]]·[[GLM-5.2]]에서 추적해 온 개방 노선이 **차세대 실험 계열에서도 깨지지 않았다.**
+> **fp8 원본 배포**도 주목할 선택이다 — [[unsloth]] 같은 제3자 양자화 재배포를 거치지 않고 **원본이 곧 저정밀 실행본**이다. 볼트가 관측해 온 *"원본 ≫ 양자화 재배포"* 2단 구조를 **1단으로 접는 시도**다.
+
+> [!warning] 다운로드 34건 — 볼트 사상 가장 극단적인 지표 분리
+> DL **34** · 좋아요 **1,393** → **좋아요가 다운로드의 41배**. [[Qwen3.8-27B]](DL/좋아요 **264.5**) 대비 **약 11,000배 낮다.**
+> **트렌딩 2위가 여기서는 사실상 아무것도 뜻하지 않는다.** 34건은 개발자 본인들과 호기심 몇 명 수준이다.
+> 단 **공개 3일차**라 "안 쓰인다"의 증거는 아니다 — 다음 회차 DL 추이가 *관심 선행 → 사용 후행* 가설을 판정한다. 같은 날의 [[Qwen3.8-Flash-Next]](DL 4,810)와 **자연 대조 실험**이 세팅됐다.
+> ⚠️ **`arxiv:2602.15763` 태그가 API에 있다**(raw 미기재) — 벤치·아키텍처를 확인할 유일한 공개 경로이나 **미확인**. 크기·컨텍스트·MoE 여부 전량 미확인.
+
 ## 관련 페이지
+- [[GLM-5.3-Flash]] — `glm5_next`·MIT·fp8 *(NEW 2026-08-28)* · [[Qwen3.8-Flash-Next]] — 같은 주 경쟁 실험판(라이선스 대비)
 
 - [[GLM-5.2]] — 최신 753B 플래그십(1M 컨텍스트, MIT)
 - [[GLM-5.1]] — MoE 모델

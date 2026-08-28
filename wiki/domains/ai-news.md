@@ -4,13 +4,83 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-08-27
-sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md]
+updated: 2026-08-28
+sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
 
 목표: 쓸모있는 AI 도구 발굴 + 내 워크플로우에 통합
+
+---
+
+## 최근 흐름 (2026-08-28 배치)
+
+**13건 인제스트 · 신규 7 · 갱신 6 · 전량 API 실호출 검증**(GitHub 5 = api.github.com/repos · HF논문 5 = 초록 원문 대조 · HF모델 3 = api/models).
+
+### 1. **최대 발견 — 세 논문이 같은 날 독립적으로 "분포로 이동"했다**
+
+도메인도 저자도 다른 세 편이 **같은 재구성**을 한다:
+- **[[PAWBench]]**(데일리 3위·업69·저자14): 월드모델 평가를 *샘플 품질* → **분포 정렬(probabilistic alignment)** 로. **50 시나리오 × 11 시스템 전멸** — 유효 행동 범위를 포괄하면서 기준 확률까지 맞춘 모델이 **하나도 없음**.
+- **[[TTPO]]**(데일리 4위·업49·저자11): 의사라벨 학습을 *다수결이 맞나* → **불일치 롤아웃의 분포적 비대칭성**으로. 라벨 없이 **벤치 5종에서 라벨 감독 OPSD와 동등**, Qwen3-1.7B **38.0%→45.2%**.
+- **[[ACE-Agentic-Data]]**(데일리 5위·업49·저자14·서베이): 데이터 생성을 *많이 만들기* → **제약된 분포 설계**로. (E,q,τ,v) 4요소 분해 + **Accuracy→Complexity→divErsity** 순차 종속.
+
+**08-27 발견(*"그럴듯한 최종 상태가 아니라 유효한 전개 과정"* — [[FrontierChallenge]]×[[VGI-BENCH]])의 다음 단계다.** 08-27이 **"점(결과) → 과정"** 이었다면 08-28은 **"단일 사례 → 분포"** 다. **이틀 연속 독립 수렴**이 관측됐고, 셋 중 [[ACE-Agentic-Data]]만 서베이라는 점이 결정적이다 — 나머지 둘이 각자 도달한 재구성을 **분야 전체의 이동으로 명시**한다. 우연이 아니라 **이미 진행 중인 전환의 뒤늦은 명명**으로 읽는다.
+
+⚠️ **내부 긴장도 같은 배치 안에 있다**: [[TTPO]]의 전제(*"불일치는 대개 오답"*)는 **정답이 하나인 도메인의 성질**일 수 있는데, [[PAWBench]]는 **"유효한 답이 여럿"** 임을 전제로 분포 재현을 요구한다. **두 논문은 정면으로 긴장한다.**
+
+### 2. **HF 트렌딩 순위는 사용량 지표가 아니다 — 수치로 확정**
+
+**DL/좋아요 비율**로 보면 순위 축과 사용 축이 **완전히 독립**이다:
+- **[[GLM-5.3-Flash]]** 트렌딩 **2위** → DL **34** · 좋아요 1,393 → **0.024** (좋아요가 다운로드의 **41배**)
+- **[[Qwen3.8-Flash-Next]]** 트렌딩 **1위** → DL **4,810** · 좋아요 4,033 → **1.19**
+- **[[Qwen3.8-27B]]** 트렌딩 **3위** → DL **3,457,687** · 좋아요 13,074 → **264.5**
+
+**트렌딩 1·2위의 실사용 합계가 3위의 0.14%** 다. 볼트 규칙 추가: **HF 모델 인제스트 시 DL/좋아요를 [[Qwen3.8-27B]]의 264.5와 대조**해 *실사용형(수백 대)인지 관심형(한 자리 이하)인지* 판별한다. **순위는 그 판별에 쓸 수 없다.**
+**자연 대조 실험 세팅**: [[GLM-5.3-Flash]](DL 34·3일차)와 [[Qwen3.8-Flash-Next]](DL 4,810·4일차)의 다음 회차 DL 추이가 *관심 선행 → 사용 후행* 가설을 판정한다.
+
+### 3. ⚠️ **raw 수집 메모의 기준선 오류 3건 — 볼트 관측 계열을 정본으로 채택**
+
+이번 회차의 **가장 중요한 방법론 교정**이다. raw 메모가 **볼트에 이미 기록된 직전 API 실측값을 건너뛰고** 낡은 기준선으로 증분을 계산한 사례가 3건 나왔다:
+
+| 대상 | raw 주장 | 볼트 관측 정본 |
+|---|---|---|
+| [[Qwen3.8-27B]] | "08-26 동결 → **+512,272** 해제" | 08-27에 이미 3,298,569 기록 → **실제 +159,118** |
+| [[archify]] | "당일 **+4,239**"(baseline 20,729) | 08-27 실측 20,152 → **실제 +4,834(+24.0%)** |
+| [[awesome-gpt-image-2]] | "08-26 대비 **이틀 +3,830**" | 08-27 실측 22,281 → **실제 하루 +1,516** |
+
+**규칙 확립: raw 수집 메모의 증분 서술을 신뢰하지 않고, 항상 볼트 페이지에 기록된 직전 API 실측값을 기준선으로 삼는다.** 08-27에 세운 규칙(*"증분은 최소 2일 단위 해석 + 좋아요 축 교차확인"*)은 **관측을 빠뜨리지 않았을 때만 작동**한다는 것이 드러났다.
+**부수 결과 — 격일 동결 패턴의 강한 형태는 기각**: 08-24 동결 → 25 해제 → 26 동결 → 27 해제 → **28 해제**로 **2회 연속 갱신**이 처음 나왔다. *"항상 교대한다"* 는 폐기하고 *"동결이 발생하면 집계 지연으로 해석한다"* 는 약한 형태만 유지한다.
+
+### 4. **에이전트 스킬에 억제(inhibition) 축이 직교로 열렸다**
+
+[[ponytail]](⭐**114,596** · 배치 최대 · MIT)이 *"가장 게으른 시니어처럼 생각하게 만든다. 최고의 코드는 쓰지 않은 코드다"* 를 상품화했다. 기존 4개 층(자산·방법론·배포 레지스트리·하네스 생성)이 **전부 더하는 축**이었던 데 반해 **처음으로 빼는 축**이다. **5번째 층이 아니라 모든 층에 직교하는 두 번째 차원**으로 기록한다.
+⚠️ **효과 측정 0건**이고 **과소생성 위험이 전혀 측정되지 않았다.** [[archify]](자체완결 HTML까지 만들라)와의 **동시 적용 충돌**도 미확인. 최종 푸시 **08-07로 3주 정체** 중 스타만 유입 — [[TradingAgents]] 텍스트 자산 패턴의 재현.
+
+### 5. **이 볼트의 직접 대조군이 처음 등장했다**
+
+[[claude-obsidian]](⭐**14,215** · MIT · Python)이 README에서 *"**Based on Karpathy's LLM Wiki pattern**"* 을 명시한다. **스택까지 동일**하다 — Obsidian + Claude Code + 순수 마크다운.
+**벤치마킹 대상이 아니라 대조군**이다: 같은 패턴을 남이 구현했을 때 무엇이 자동화됐는지가 **이 볼트 인제스트 루프의 자동화 상한**을 알려준다. 특히 **신규 페이지 vs 기존 갱신 판정**(이 볼트에서 손이 가장 많이 가는 판단, 900+ 페이지에서 확장 한계 지점)을 자동화했는지가 핵심.
+⚠️ **정리 정확도 수치 0건.** 지식그래프 도구의 지배적 실패는 *안 도는 것*이 아니라 **그럴듯하게 잘못 연결하는 것**이고 스타 수로는 안 드러난다 — 같은 배치 [[PAWBench]]·[[FrontierChallenge]]와 동형 경고.
+
+### 6. **이슈 밀도 규칙 4회차 연속 유지 · AGPL 발견**
+
+**이슈/포크**: [[claude-obsidian]] **0.098** > [[OpenMontage]] 0.038 > [[archify]] 0.031 > [[ponytail]] 0.028 > [[awesome-gpt-image-2]] **0.0072** (최대·최소 **13.6배**). *"이슈 밀도는 품질이 아니라 소프트웨어의 종류를 말한다"* 가 네 회차 연속 지지된다.
+**[[OpenMontage]] 62일 만의 재관측**: ⭐24,213(06-27) → **52,780**(+118%). 급등은 끝났고 **일평균 +461의 안정 성장** — 06-27의 "급등 둔화" 판단이 *소멸이 아니라 안정화*였음이 확정됐다.
+⚠️ **배치 내 유일한 카피레프트 [[OpenMontage]](AGPL-3.0)** — 나머지 4건은 전부 MIT. **네트워크 서비스 제공 시 소스 공개 의무**가 발생하므로 [[video-saas]] 관점에서 **코드 이식 대상이 아니라 설계 참고 대상**으로 재분류한다.
+
+### 7. **순위 하락 ≠ 열기 감소 — 같은 날 정반대 조합 2건**
+
+- **[[archify]]**: 트렌딩 **1위 → 4위**인데 증분은 **+4,834로 가속**(볼트 관측 단일 레포 일간 최고)
+- **[[awesome-gpt-image-2]]**: 트렌딩 **2위 → 3위**이고 증가율도 **+11.6% → +6.8%로 감속**
+
+**순위는 상대값이라 다른 레포의 폭등에 밀린다.** 두 사례를 나란히 두면 **순위만으로는 열기를 읽을 수 없다**는 것이 분명해진다 — 2번 항목(트렌딩≠사용량)의 GitHub판이다.
+
+### 8. 논문 관심도 급등 2건 — **관심과 검증 가능성은 무관하다**
+
+[[VoiceMem]] 업보트 **82 → 159**(하루 +77·**거의 2배**·데일리 2위→**1위**·최근 3배치 최고), [[WarpSAC]] **78 → 134**(+56·3위→**2위**). 둘 다 **초록 원문 재대조**했고 **수치는 전량 변경 없음**이며 **한계도 그대로**다(절대점수·벤치명 미기재).
+**업보트가 2배가 됐다고 근거가 늘지는 않는다** — [[GLM-5.3-Flash]]가 같은 날 극단 형태로 보여준 것과 같은 원리다.
+✅ [[WarpSAC]]는 재대조에서 **변종 구성이 보강**됐다: **WarpSAC-L**(Norm ON + clipped double-Q · 데이터 제한 CPU) / **WarpSAC-A**(Norm OFF + **단일 Q** · GPU 병렬). age-biased replay는 **네트워크 용량이 제한적일 때 특히** 이롭다는 조건도 확인.
 
 ---
 
