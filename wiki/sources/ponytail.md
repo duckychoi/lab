@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skills, coding-agent, minimalism, behavior-norm, text-asset]
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-08-29
 sources: []
 reliability: medium
 ---
@@ -14,6 +14,16 @@ reliability: medium
 **GitHub**: https://github.com/DietrichGebert/ponytail
 **지표(2026-08-28)**: ⭐**114,596** · 포크 **6,262** · 이슈 **177** · **JavaScript** · **MIT** · 생성 **2026-06-12** · 최종 푸시 **2026-08-07** — GitHub API 실호출 검증(raw 표기 114,589 대비 **+7 드리프트**) · 트렌딩 데일리 **8위**(당일 +1,613)
 **자기 규정**: *"Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote."* (README description 원문)
+
+> [!update] 2026-08-29 갱신 — ⭐**115,770**(하루 +1,174·**+1.02%**) · 푸시 **22일 정체** · 이슈 177→**180**
+> ⭐114,596 → **115,770** (2026-08-29 **GitHub API 실호출 검증**). 포크 6,262 → **6,325**(+63) · 이슈 177 → **180**(+3).
+> **증가율 +1.02%는 이번 배치 GitHub 5건 중 최저**다([[archify]] +15.3% · [[awesome-gpt-image-2]] +3.2% · [[OpenMontage]] +1.47% · [[scientific-agent-skills]] 장기구간). 그러나 이는 **식었다는 뜻이 아니라 분모가 크다는 뜻**이다 — 절대 증분 +1,174는 [[awesome-gpt-image-2]](+765)·[[OpenMontage]](+778)보다 **오히려 많다.**
+> → 볼트 규칙 추가: **성장률과 절대 증분은 레포 규모가 다르면 반대 방향으로 읽힌다.** 11만 스타 레포의 +1%와 2만 스타 레포의 +3%는 절대값이 뒤집힌다. 순위·비율·절대값 **셋을 같이 보지 않으면 오독한다**(08-28의 *"순위≠열기"* 관측의 확장).
+> ⚠️ **최종 푸시가 여전히 2026-08-07 — 22일째 정체**다. 08-28에 *"텍스트 자산은 완성되면 커밋할 것이 없다"* 는 해석을 [[TradingAgents]] 선례와 함께 기록했는데, **이번 회차가 그 패턴을 한 번 더 지지**한다(정체 3주 돌파 + 스타 +1,174 유입 지속).
+> 다만 같은 배치 [[awesome-gpt-image-2]]는 **정체될 것으로 예상했으나 08-28에 푸시가 찍혔다** — 즉 **"자산형 = 반드시 정체"는 아니다.** 정체는 자산형의 *허용 상태*이지 *필연*이 아니라는 쪽으로 해석을 좁힌다.
+> **이슈/포크 = 180/6,325 = 0.0285건/포크**(08-28 0.028 유지). 배치 내 **중간**([[scientific-agent-skills]] 0.0051 < [[awesome-gpt-image-2]] 0.0070 < **ponytail 0.0285** < [[archify]] 0.0353 < [[OpenMontage]] 0.0388).
+> ⚠️ raw는 *"당일 +1,396"* 으로 적었으나 볼트 실측 기준 **+1,174**. **4회 연속 raw 기준선 오류** — 볼트 계열 정본 유지(raw 절대값 115,766 대비 API **+4 드리프트**).
+> ⚠️ **효과 측정치는 이번 회차에도 0건** — 08-28에 지적한 *"코드가 줄었다는 주장의 근거 부재"* 와 *"과소생성 위험 미측정"* 그대로. medium 유지.
 
 > [!insight] 핵심 인사이트 — 스킬 생태계에서 **금지가 처음으로 상품이 됐다**
 > [[에이전트-스킬]] 1층(자산) 레포는 지금까지 전부 **능력 추가**형이었다 — [[mattpocock-skills]]는 타입스크립트를 더 잘 쓰게, [[archify]]는 다이어그램을 뽑게, [[superpowers]]는 방법론을 얹는다.
