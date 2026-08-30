@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-08-29 (자동수집 13건 배치 인제스트 — **신규 3**[HF논문 3: Agentic-Game-Development·UrbanGround·Self-OPD]·**갱신 10**[GitHub 5: archify·awesome-gpt-image-2·ponytail·OpenMontage·scientific-agent-skills / HF논문 2: PAWBench·TTPO / HF모델 3: Qwen3.8-27B-GGUF·MiniMax-H3·Qwen3.8-27B] + **개념 3 갱신**[월드모델·온폴리시-증류·에이전트-스킬]·**엔티티 1 신규**[MiniMax]·엔티티 1 갱신[Alibaba]·도메인 1 갱신·canvas 16노드 13엣지·actionable 5건 추가. **13건 전량 API 실호출 검증** — HF 논문 5편 초록 원문 대조 + **[[MiniMax-H3]] 모델카드 README 원문 대조**. **최대 발견: 같은 날 HF 데일리 1·2·5위가 "감독 신호를 어디서 얻는가"를 두고 삼각으로 충돌한다** — 08-27의 *점→과정*, 08-28의 *단일 사례→분포*에 이어 08-29의 축은 **"그 판정을 누가 해주는가"** 이며, 이번엔 수렴이 아니라 **충돌**이다. [[Agentic-Game-Development]](1위·업**130**)는 신호를 **밖으로** 민다 — *코드가 잘된 건 컴파일러 때문이니 공간 생성엔 게임 엔진을 검증기로 쓰자*(**RLHEV**), 현행 CLIP류 프록시는 *"fuzzy and biased"*. [[Self-OPD]](5위·업66)는 신호를 **안으로** 접는다 — flow matching에서 **교사를 제거**하고 결정론적 자기참조 기준선 대비 어드밴티지로 학습. [[PAWBench]](2위·업69→**80**)는 신호의 **형태**를 바꾼다 — 유효성이 아니라 **분포 일치** 요구. ⚠️**긴장 1(1위↔5위)**: Self-OPD는 교사를 없앤 대신 **보상을 유일 앵커로 승격**했는데 1위는 바로 그 보상이 부실하다고 진단한다 → **앵커를 더 부실한 곳으로 옮긴 것**일 수 있다. ⚠️**긴장 2(1위↔2위)**: 엔진 검사는 전부 **이진 유효성**이라 *"가능한가"* 는 답해도 *"확률이 맞는가"* 는 못 답한다 → 조밀 유효성 보상은 **최빈 모드로 수렴**해 PAWBench 점수를 **떨어뜨릴 수 있다**. **핵심 구분: 유효성 ≠ 정렬.** 어느 초록도 이 충돌을 인지하지 않는다. 관측 7축: (1) **[[UrbanGround]](3위·저자18)가 "국소 정확·전역 실패"를 공간 도메인에서 재현** — 홍콩 전역 3D 실축척 복제본에서 원자 능력은 쓸 만한데 **장기 탐색에서 합성이 안 되고 오차가 교정 없이 누적**된다. [[FrontierChallenge]] *미통과 75.5%가 "완료했다"로 종료* 의 공간판이며, 동시에 1위의 전제를 **독립 지지**한다 → **"엔진의 이중 용도"**(평가 ↔ 학습) 등재 (2) ⚠️**[[MiniMax-H3]]는 "오픈 가중치 ≠ 오픈 시스템"의 볼트 대표 사례** — 카드가 스스로 **"품질에 결정적"** 이라 밝힌 `H3-Context-IR`이 **공개에서 빠졌다**(API 전용) → **공개 가중치로 공식 품질 재현 불가**. 인코더는 [[Alibaba]] **Qwen3-VL-32B 전체 가중치**(50층 은닉상태)로 **Qwen이 경쟁 벤더 플래그십의 부품으로 확인된 첫 사례**. 희소 어텐션 지원인데 **공개는 full attention만**·`--num-gpus 4`. 확정 스펙 33B 밀집(**약 13B는 AdaLN — 추론 전용 배포엔 로드 불필요**)·4~15초·24FPS·**32kHz 스테레오**·768px 기본·11개 언어. **공개 벤치 4회차 연속 0건** (3) ⚠️**볼트의 "264.5 실사용 기준선"은 천장이 아니라 원본 축의 값이었다** — [[Qwen3.8-27B-GGUF]] **2,646.7** vs [[Qwen3.8-27B]] 원본 **305.8**(**8.7배**)·[[MiniMax-H3]] 1,093.2. GGUF는 다운로드 **2.08배**를 가져가며 좋아요는 **0.24배**만 받는다 → **DL/좋아요 비교는 같은 축 안에서만** (4) ⚠️**비율 추세는 절대 증분이 아니라 증가율로 설명해야 한다** — 원본/GGUF **0.4817**(4회 연속 상승)인데 이번엔 **절대 증분은 GGUF가 더 컸다**(+604,691 > +571,152). 오른 이유는 증가율(원본 **+16.52%** vs GGUF **+7.79%**)이다. **08-28 서술은 결론만 맞고 근거가 틀렸다 — 정정** (5) **"자산 vs 소프트웨어" 판별 축은 언어 태그가 아니다** — 이슈/포크 **연속 스펙트럼 7.6배**([[scientific-agent-skills]] .0051 < [[awesome-gpt-image-2]] .0070 < [[ponytail]] .0285 < [[archify]] .0353 < [[OpenMontage]] .0388)인데 **archify는 JS인데 상단, scientific-agent-skills는 Python인데 최하단**. 축은 **"통째로 실행하는가, 조각을 떼어 쓰는가"** (6) **성장 곡선 두 유형 확보** — **급등-급감쇠형**([[awesome-gpt-image-2]] +38.5%→+11.6%→+6.8%→**+3.2%** 매일 반토막) vs **저속-장기축적형**([[scientific-agent-skills]] **104일 만의 재관측** ⭐23,434→**37,109**·+58.3%·일평균 +131·**배치 유일 2025년생**으로 스킬 생태계에 **반년의 시간 깊이** 확인). ⚠️또한 [[ponytail]]은 **증가율 최저(+1.02%)인데 절대 증분(+1,174)은 더 많다** → **순위·비율·절대값 셋을 같이 본다** (7) ⚠️**raw 기준선 오류 4회 연속 재현** — [[archify]] +4,562→**+3,826** · [[awesome-gpt-image-2]] +1,687→**+765** · [[ponytail]] +1,396→**+1,174** · [[OpenMontage]] +1,144→**+778**로 **전부 raw가 과대**. 단 [[scientific-agent-skills]]는 직전 실측이 104일 전이라 **이번 건만 검증·반박 모두 불가**로 명시. HF 모델 3건은 raw와 **API 완전 일치**. **신뢰도 강등 1건**: [[scientific-agent-skills]] **high→medium** — "validated" 163종·"175,000+ 과학자"의 **검증 주체·기준 전량 미확인**이며, **과학 스킬은 틀린 결과가 그럴듯하게 나온다**([[FrontierChallenge]] 분석화학 **평균 87.6점에 통과율 4%**) → **카탈로그는 실패를 표준화해 배포할 수 있다**)
-total_pages: 962  # 2026-08-29 실측(sources 903 · entities 35 · concepts 18 · synthesis 2 · domains 4 · queries 0)
-total_sources: 903  # 2026-08-29 실측 (신규 소스 3건 반영)
+updated: 2026-08-30
+total_pages: 963  # 2026-08-30 실측(sources 904 · entities 35 · concepts 18 · synthesis 2 · domains 4 · queries 0)
+total_sources: 904  # 2026-08-30 실측 (신규 소스 1건 [[OpenMAIC]] 반영)
 ---
 
 # Wiki Index
@@ -1308,6 +1308,7 @@ total_sources: 903  # 2026-08-29 실측 (신규 소스 3건 반영)
 - [[ACE-Agentic-Data]] — 에이전트 데이터를 (E,q,τ,v)로 분해·ACE 렌즈 서베이(자체 벤치 0건) (2608.27260, 초록 원문 대조) *(NEW 2026-08-28)*
 - [[Qwen3.8-Flash-Next]] — HF 트렌딩 1위인데 DL 4,810(DL/좋아요 **1.19**), 아키텍처 태그 **qwen4_exp**·라이선스 other *(NEW 2026-08-28)*
 - [[GLM-5.3-Flash]] — HF 트렌딩 2위인데 DL **34**·좋아요 1,393(**41배**·DL/좋아요 0.024), 배치 유일 MIT·fp8·glm5_next *(NEW 2026-08-28)*
+- [[OpenMAIC]] — AI 교사 + **AI 동료 학습자**가 실시간 강의·토론·판서하는 멀티에이전트 교실, ⭐22,701 MIT 칭화 THU-MAIC (**배치 유일 동료심사 논문** JCST'26 DOI 실재 · 학습 효과 정량치는 없음) *(NEW 2026-08-30)*
 
 ---
 
@@ -1315,7 +1316,7 @@ total_sources: 903  # 2026-08-29 실측 (신규 소스 3건 반영)
 <!-- 도메인별 누적 인사이트 -->
 
 - video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석
-- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (2026-08-25 업데이트)
+- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (**2026-08-30 업데이트** · ⚠️08-27~29 배치 항목 누락 상태, 소급 복원 대기)
 
 ---
 
@@ -1329,7 +1330,7 @@ total_sources: 903  # 2026-08-29 실측 (신규 소스 3건 반영)
 ## actionable
 <!-- 당장 실행 가능한 항목 -->
 
-`actionable.md` 참조. 대기 중: RTK CLI, AE MCP 테스트, .claude/ 자동화 훅 구성, VoxCPM TTS 테스트, VOID 모델 통합, Gemma-4-31B 벤치마크, hermes-agent 검토, **andrej-karpathy-skills CLAUDE.md 통합**, **MinerU2.5 wiki 파이프라인 통합**, **markitdown wiki pipeline 통합**, superpowers 테스트, Gemma-4-26B 로컬 실행, Gemma-4-E4B 테스트, **claude-code-best-practice + andrej-karpathy-skills 통합 CLAUDE.md 작성**, **claude-mem 설치 테스트**, **ai-hedge-fund 에이전트 아키텍처 분석**, **자동화 워크플로에 pass^k 재현성 검증 도입(Thinkingbox)**, **에이전트 실패 주입 체크리스트: 툴 순서 강제·권한 제한·런타임 오류(MobilePA-Bench)**, **alibaba/ERPO 코드 확인**, **실패 수리 규칙 3종 채택: 깊은 디버깅·표적 수정·일반화 인식 선택(AutoSaddler)**, **평가 비교군에 모범 답안 섞였는지 점검: advantage inversion(OraRL)**, **HF 다운로드 2일 단위 해석 + 좋아요 축 교차 확인 규칙(Qwen 3회 동기 동결)**, **Recuris 레포 검증 게이트 구현 정독**, **WeMM-Embedding 2B 볼트 멀티모달 검색 A/B**, **목표 개선과 실제 개선 분리 측정(DiffusionOPSD)**, **claude-plugins-community 등재 3건 실사용 검증** (30개)
+`actionable.md` 참조. 대기 중: RTK CLI, AE MCP 테스트, .claude/ 자동화 훅 구성, VoxCPM TTS 테스트, VOID 모델 통합, Gemma-4-31B 벤치마크, hermes-agent 검토, **andrej-karpathy-skills CLAUDE.md 통합**, **MinerU2.5 wiki 파이프라인 통합**, **markitdown wiki pipeline 통합**, superpowers 테스트, Gemma-4-26B 로컬 실행, Gemma-4-E4B 테스트, **claude-code-best-practice + andrej-karpathy-skills 통합 CLAUDE.md 작성**, **claude-mem 설치 테스트**, **ai-hedge-fund 에이전트 아키텍처 분석**, **자동화 워크플로에 pass^k 재현성 검증 도입(Thinkingbox)**, **에이전트 실패 주입 체크리스트: 툴 순서 강제·권한 제한·런타임 오류(MobilePA-Bench)**, **alibaba/ERPO 코드 확인**, **실패 수리 규칙 3종 채택: 깊은 디버깅·표적 수정·일반화 인식 선택(AutoSaddler)**, **평가 비교군에 모범 답안 섞였는지 점검: advantage inversion(OraRL)**, **HF 다운로드 2일 단위 해석 + 좋아요 축 교차 확인 규칙(Qwen 3회 동기 동결)**, **Recuris 레포 검증 게이트 구현 정독**, **WeMM-Embedding 2B 볼트 멀티모달 검색 A/B**, **목표 개선과 실제 개선 분리 측정(DiffusionOPSD)**, **claude-plugins-community 등재 3건 실사용 검증**, **domains/ai-news.md 누락 3배치 소급 복원(높음)**, **HF 논문 재관측 주기 3일로 조정**, **원본/GGUF 역전 — FP8 동반 추적으로 서빙수요 가설 판별**, **OpenMAIC 다중에이전트 턴 관리 로직 발췌**, **raw.md 증분 필드 폐기(절대값만 채택)** (35개)
 
 ---
 

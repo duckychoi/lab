@@ -1218,6 +1218,56 @@
       "height": 200,
       "color": "5",
       "text": "⚖️ **규모가 다르면 반대로 읽힌다**\n[[ponytail]] 증가율 **최저(+1.02%)** 인데\n절대 증분 **+1,174**로\n[[awesome-gpt-image-2]](+765)보다 많음\n→ **순위·비율·절대값 셋을 같이 본다**"
+    },
+    {
+      "id": "src-openmaic",
+      "type": "text",
+      "text": "### OpenMAIC\n⭐22,701 · MIT\nAI 교사+**AI 동료 학습자** 교실\n**JCST'26 동료심사 논문 실재**\n[[OpenMAIC]]",
+      "x": -560,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "obs-20260830-hffreeze",
+      "type": "text",
+      "text": "### 관측 2026-08-30\n**HF 데일리 top-5 순위 완전 동결**\n증분 +2~+6(합계 +16)\n→ 유효 관측 창 = 공개 후 3일",
+      "x": -280,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "obs-20260830-ggufflip",
+      "type": "text",
+      "text": "### 관측 2026-08-30\n**원본이 GGUF 증분 첫 추월**\n+482,509 vs +475,672\n원본/GGUF 0.350→0.402→0.482→**0.510**",
+      "x": 0,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "obs-20260830-issuedrop",
+      "type": "text",
+      "text": "### 관측 2026-08-30\n**오픈이슈 첫 감소 관측**\nscientific-agent-skills 18→15\n→ 이슈=단조증가 가정 붕괴",
+      "x": 280,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "act-20260830-domaingap",
+      "type": "text",
+      "text": "### ⚠️ actionable\n**domains/ai-news.md 누락 3배치**\n08-27·08-28·08-29 소급 복원\n우선순위 **높음**",
+      "x": 560,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "3"
     }
   ],
   "edges": [
@@ -2108,6 +2158,43 @@
       "toNode": "n0829c",
       "toSide": "bottom",
       "label": "국소≠전역"
+    },
+    {
+      "id": "e-omaic-cluster",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "src-openmaic",
+      "toSide": "top"
+    },
+    {
+      "id": "e-omaic-freeze",
+      "fromNode": "src-openmaic",
+      "fromSide": "bottom",
+      "toNode": "obs-20260830-issuedrop",
+      "toSide": "top",
+      "label": "같은 배치"
+    },
+    {
+      "id": "e-hf-freeze",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "obs-20260830-hffreeze",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hf-flip",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "obs-20260830-ggufflip",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domaingap",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "act-20260830-domaingap",
+      "toSide": "top",
+      "label": "스키마 미이행"
     }
   ]
 }

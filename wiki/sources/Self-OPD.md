@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, on-policy-distillation, flow-matching, teacher-free, reinforcement-learning, image-generation, video-generation, multi-objective]
 created: 2026-08-29
-updated: 2026-08-29
+updated: 2026-08-30
 reliability: medium
 sources: []
 ---
@@ -14,6 +14,12 @@ sources: []
 **HF 논문**: https://huggingface.co/papers/2608.26872 · **arXiv**: 2608.26872
 **원제**: *Self-OPD: On-Policy Distillation for Flow Matching Models without Teacher*
 **지표(2026-08-29)**: 업보트 **66** · **HF 데일리 5위** · 저자 **11인** · 공개 **2026-08-27** — **HF API 실호출 + 초록 원문 대조 검증**
+
+> [!update] 2026-08-30 갱신 — 업보트 **66 → 69**(+3) · **데일리 5위 유지** · 절대 수치 여전히 미공개
+> 업보트 66 → **69** (2026-08-30 **HF API 실호출**). 저자 11인 · 공개 2026-08-27 동일. **데일리 5위 유지.**
+> 초록 재대조: *교사 없는 OPD · K개 SDE 후보 분기 · 결정론적 자기참조 기준선 대비 정규화 어드밴티지 · 보상 수준 융합으로 그래디언트 충돌 회피* 구조 설명은 그대로이고, **"기존 RL/OPD 상회" 주장의 절대 수치·벤치명은 사흘째 초록 미기재**다.
+> [[온폴리시-증류]] 개념 페이지의 계보에서 이 논문의 위치는 변함없다 — **교사 모델이라는 비용 항목 자체를 제거**하는 방향. 같은 날 [[TTPO]]가 **라벨을 제거**했다는 점과 묶으면, 이번 배치의 두 학습 논문은 공통적으로 **"외부 감독 신호를 하나씩 떼어내는"** 작업을 한다(TTPO는 라벨, Self-OPD는 교사).
+> 증분 +3으로 거의 정지.
 
 > [!insight] 핵심 인사이트 — 교사가 하던 두 역할 중 **하나만 남기고 하나를 버린다**
 > [[온폴리시-증류]]에서 교사는 (1) **조밀한 스텝별 감독 신호**를 주고 (2) 그 신호의 **기준점(앵커)** 이 된다. 초록은 이 구조의 비용을 두 가지로 짚는다 — **목적마다 전용 교사를 새로 학습해야 하고**, **교사·학생 분포 차이가 생성 궤적을 따라 오차를 복리로 키운다**(*compounding errors*).
