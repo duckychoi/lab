@@ -4,12 +4,19 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, omni-modal, audio-video, comfyui, minimax, video-saas, partial-open-source]
 created: 2026-08-06
-updated: 2026-08-30
+updated: 2026-09-02
 sources: []
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
+
+> [!update] 2026-09-02 갱신 — DL 5,263,381 → **5,532,597**(+**269,216**) · 좋아요 **4,775**
+> 08-30 이후 3일 만의 재관측(08-31 배치에는 미포함). **동결 없이 정상 증분** — 같은 배치의 Qwen 두 모델이 동결됐던 08-31 구간에 [[LTX-2.5]]와 더불어 **집계가 전역 문제가 아니었음을 보강하는 관측**이다.
+> **좋아요 4,775는 이번 배치 모델 3건 중 최다가 아니다** — [[Qwen3.8-27B]] 13,619이 압도적 1위이고 H3는 2위다. 다만 **영상 생성 계열 안에서는 최상위**이며, 트렌딩 **14위**는 신규 유입보다 **누적 사용** 성격을 시사한다(DL 5위권 대비 트렌딩 순위가 낮음).
+> **능력 축**: 태그상 text/image/video/audio → audio-video 다입력이며, **오디오-영상 동기 생성(synchronized-audio-video)** 과 **reference-to-audio-video**를 지원 축으로 명시. pipeline_tag는 `image-text-to-video`로 잡힌다.
+> ⚠️ **라이선스 `other`** — Apache가 아니다. [[video-saas]] 도메인에서 상업적 사용을 검토한다면 **조건 확인이 선행 필요**하며, 이 점은 같은 배치 [[OpenClaude]](배포 권한 자체 부인)와 함께 **"오픈 가중치 ≠ 자유 사용"** 사례로 묶인다. 화질·립싱크 정확도 벤치 수치는 **여전히 미확인**.
+> **지표(2026-09-02)**: DL 30일 **5,532,597** · 좋아요 **4,775** · 라이선스 **other** · 생성 2026-07-28 — HF `api/models` 실호출. raw와 **완전 일치**.
 
 > [!update] 2026-08-30 갱신 — DL **5,263,381**(+244,548) · 좋아요 **4,633** · **증분은 배치 3모델 중 최소**
 > DL 5,018,833 → **5,263,381** (2026-08-30 **HF API 실호출**). 하루 **+244,548**. 좋아요 4,591 → **4,633**(+42). 라이선스 `other`(자체 커뮤니티) · 생성 2026-07-28 · 수정 2026-08-13 동일. raw 절대값과 **완전 일치**.

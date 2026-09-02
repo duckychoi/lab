@@ -1268,6 +1268,136 @@
       "width": 240,
       "height": 140,
       "color": "3"
+    },
+    {
+      "id": "batch-20260902",
+      "type": "text",
+      "text": "## 📦 2026-09-02 배치\n**신규 6 · 갱신 7**\n13건 전량 API 실호출\n+ **LICENSE 원문 2건 확인**",
+      "x": -160,
+      "y": 6700,
+      "width": 300,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-openclaude",
+      "type": "text",
+      "text": "### 🚨 OpenClaude\n⭐31,655 · 포크 **8,975**\n포크/스타 **0.284 배치 최고**\nLICENSE: *\"does not have Anthropic's\nauthorization to distribute\"*\n**도입 보류 권고**",
+      "x": 200,
+      "y": 6700,
+      "width": 280,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "src-smelt",
+      "type": "text",
+      "text": "### SMELT\n업55 · 저자 9인\n예산 3종 통제(FLOPs·파라미터·KV)\n**학습 FLOPs 6.8~18.0% 절감**\nCode 최대 · 컨텍스트 길수록 ↑",
+      "x": 520,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "src-qwendrive",
+      "type": "text",
+      "text": "### Qwen-Drive-1.0\n업76 데일리 1위 · 저자 16인\nBEV 헤드 = **탐침(probe)**\n*explicit, inspectable interface*\n⚠️수치 0개",
+      "x": 830,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "src-uivenus2",
+      "type": "text",
+      "text": "### UI-Venus-2\n업50 · **저자 31인 최다**\n**검증을 스케일링 축으로 승격**\n다중모델 투표 평가자\n⚠️벤치 점수 0개",
+      "x": 1140,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "src-safin1",
+      "type": "text",
+      "text": "### Safin-1\n업17 · 저자 18인 · 코드 ⭐1\nMARCH 메모리 라우팅\n**백본 미수정 + 상태만 적응**\n⚠️수치 0개 · 저자 스스로 \"초기 탐색\"",
+      "x": 1450,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "src-diagevo",
+      "type": "text",
+      "text": "### 🎯 DiagEvo\n업9 최저 · **저자 8인 최소**\n실패 이력 → 커리큘럼\n**Active / Mastered**\n**72.3%(+4.5%p) · 57.4%(+1.1%p)**\n= 배치 유일 완전 수치",
+      "x": 1760,
+      "y": 6700,
+      "width": 280,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "concept-inspectability",
+      "type": "text",
+      "text": "## 🎯 검사가능성 공사\n*내부 상태를 밖에서\n검사 가능하게 만들기*\n[[국소-수리-원리]]의 **전제**\n급소: 검사기가 피검사자와\n같은 실패 모드면 **거울**\n⚠️잠정(1배치 3편)",
+      "x": 900,
+      "y": 6960,
+      "width": 300,
+      "height": 210,
+      "color": "6"
+    },
+    {
+      "id": "unfreeze-20260902",
+      "type": "text",
+      "text": "## 🔓 DL 동결 해제\nQwen3.8-27B +449,135\nGGUF +514,904\n→ **GGUF > 원본**\n08-30 \"원본 추월\" **재현 안 됨**\n= 08-31 철회가 **옳았다**\n⚠️1회차 · 판정 계속 보류",
+      "x": -160,
+      "y": 6960,
+      "width": 300,
+      "height": 210,
+      "color": "5"
+    },
+    {
+      "id": "rule-noassertion",
+      "type": "text",
+      "text": "## 🚨 신규 규칙\n**SPDX NOASSERTION =\n\"정보 없음\"이 아니라\n\"표준 식별자로 담기지 않는\n사정이 있음\"**\n→ LICENSE 원문 확인 **필수**\n근거 2/2건 적중",
+      "x": 200,
+      "y": 6960,
+      "width": 280,
+      "height": 210,
+      "color": "1"
+    },
+    {
+      "id": "obs-authors",
+      "type": "text",
+      "text": "### ⚠️ 관찰(판정 보류)\n**저자 수 ↔ 수치 제시 반비례**\n무: 31·18·16인\n유: 9·8인\n**16인 경계 완전 분리** (n=5)",
+      "x": 1500,
+      "y": 6960,
+      "width": 260,
+      "height": 170,
+      "color": "3"
+    },
+    {
+      "id": "obs-issuedensity",
+      "type": "text",
+      "text": "### ⚠️ 관찰(판정 보류)\n**이슈 밀도 = 도메인 특성**\nvideo-use 0.0286 ≫\nminimind 0.0079 ·\nacademic 0.0053\n→ 도메인 통제 후 비교",
+      "x": 1800,
+      "y": 6960,
+      "width": 260,
+      "height": 170,
+      "color": "3"
+    },
+    {
+      "id": "obs-trending",
+      "type": "text",
+      "text": "### ⚠️ 트렌딩 편향\n절대 스타 1위 =\n**minimind ⭐57,495**\n(2024-07 생성)\n나머지 전부 2026년 생성\n→ 누적형 자산 과소평가",
+      "x": 1200,
+      "y": 6960,
+      "width": 260,
+      "height": 170,
+      "color": "3"
     }
   ],
   "edges": [
@@ -2195,6 +2325,118 @@
       "toNode": "act-20260830-domaingap",
       "toSide": "top",
       "label": "스키마 미이행"
+    },
+    {
+      "id": "e-b0902-oc",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-openclaude",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-sm",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-smelt",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-qd",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-qwendrive",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-uv",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-uivenus2",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-sf",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-safin1",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-de",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-diagevo",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-qd-insp",
+      "fromNode": "src-qwendrive",
+      "fromSide": "bottom",
+      "toNode": "concept-inspectability",
+      "toSide": "top",
+      "label": "탐침"
+    },
+    {
+      "id": "e-uv-insp",
+      "fromNode": "src-uivenus2",
+      "fromSide": "bottom",
+      "toNode": "concept-inspectability",
+      "toSide": "top",
+      "label": "검증 축"
+    },
+    {
+      "id": "e-sf-insp",
+      "fromNode": "src-safin1",
+      "fromSide": "bottom",
+      "toNode": "concept-inspectability",
+      "toSide": "top",
+      "label": "능동 기질"
+    },
+    {
+      "id": "e-oc-rule",
+      "fromNode": "src-openclaude",
+      "fromSide": "bottom",
+      "toNode": "rule-noassertion",
+      "toSide": "top",
+      "label": "권한 부인"
+    },
+    {
+      "id": "e-b0902-unf",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "unfreeze-20260902",
+      "toSide": "top",
+      "label": "동결 해제"
+    },
+    {
+      "id": "e-b0902-rule",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "rule-noassertion",
+      "toSide": "top",
+      "label": "규칙 신설"
+    },
+    {
+      "id": "e-uv-auth",
+      "fromNode": "src-uivenus2",
+      "fromSide": "bottom",
+      "toNode": "obs-authors",
+      "toSide": "top",
+      "label": "31인·수치 0"
+    },
+    {
+      "id": "e-de-auth",
+      "fromNode": "src-diagevo",
+      "fromSide": "bottom",
+      "toNode": "obs-authors",
+      "toSide": "top",
+      "label": "8인·수치 O"
     }
   ]
 }
