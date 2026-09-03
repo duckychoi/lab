@@ -4,12 +4,24 @@ type: entity
 domain: ai-news
 tags: [entity, zhipu-ai, zai, GLM, chinese-llm, MoE, bilingual, monday-ai]
 created: 2026-04-10
-updated: 2026-08-28
-sources: [GLM-5.1.md, GLM-5.2.md, GLM-5.3-Flash.md]
+updated: 2026-09-03
+sources: [GLM-5.1.md, GLM-5.2.md, GLM-5.3-Flash.md, GLM-5.3.md]
 reliability: high
 ---
 
 # Zhipu AI (Z.AI)
+
+> [!update] 2026-09-03 — 🚨 **개방 노선이 계열 전체가 아님이 확정됐다**
+> 같은 날(2026-08-25) 공개된 두 모델의 라이선스가 **갈린다**(HF `api/models` 실검증):
+> - **[[GLM-5.3]]**(플래그십 · **753B** · `glm_moe_dsa` · text-generation) → **`other` — 독자 라이선스 `glm-5.3`**
+> - **[[GLM-5.3-Flash]]**(경량 · **321B** · `glm5_next` · **멀티모달** `image-text-to-text`) → **MIT**
+>
+> 볼트는 [[GLM-5]]·[[GLM-5.1]]·[[GLM-5.2]]를 거치며 Zhipu를 **MIT 개방 노선**으로 추적해 왔고, 08-28에도 *"개방 라이선스 노선이 유지되고 있음을 확인"* 이라 적었다. **이제 그 서술을 한정한다 — 개방은 하위 모델에만 적용되고 플래그십은 닫혀 있다.**
+> 📌 같은 주에 [[Alibaba]]도 **[[Qwen3.8-Flash-Next]]에 `qwen-community-1.0`** 을 적용했다([[Qwen3.8-27B]]는 Apache-2.0). **두 중국 프런티어 랩이 동시에 "차세대는 덜 열어 둔다"** 로 움직인 것이 이번 회차의 관측이다. ⚠️ **2건이므로 업계 추세로 확정하지 않는다.**
+>
+> 📌 **사용량은 경량이 가져간다**: [[GLM-5.3-Flash]] DL **517,902** vs [[GLM-5.3]] **151,021** → **3.43배**. 좋아요는 1,990 vs 1,548로 **1.29배에 그친다.**
+> 📌 **주장**: [[GLM-5.2]]와 **동일 베이스에서 사후학습만으로** Terminal Bench 3.0 **4.6 → 28.3**(6.2배). ⚠️ **벤더 자체 표이며 [[Anthropic]] Claude Code 하네스 위 자체 실행** — 제3자 재현 0건.
+> 📌 **미확인**: 두 모델이 공유하는 **`arxiv:2602.15763`** 논문(벤치·아키텍처의 유일한 공개 경로).
 
 중국 베이징 기반 AI 연구 기업. GLM(General Language Model) 시리즈 개발사. 글로벌 브랜드명은 **Z.AI**.
 

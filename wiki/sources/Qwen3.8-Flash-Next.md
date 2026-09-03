@@ -1,19 +1,36 @@
 ---
-title: Qwen/Qwen3.8-Flash-Next — qwen4_exp 아키텍처 태그를 단 신규 멀티모달
+title: Qwen/Qwen3.8-Flash-Next — 180B qwen4_exp 멀티모달, DL 4,810 → 263,287
 type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, alibaba, multimodal, image-text-to-text, trending, local-llm]
 created: 2026-08-28
-updated: 2026-08-28
+updated: 2026-09-03
 sources: []
 reliability: medium
 ---
 
-# Qwen/Qwen3.8-Flash-Next — 다운로드 4,810에 좋아요 4,033
+# Qwen/Qwen3.8-Flash-Next — **180B `qwen4_exp`** · DL 4,810 → **263,287**
+
+> [!note] 08-28 서술(*"좋아요당 다운로드 1.19"*)은 **당시 관측대로 보존**하고 **2026-09-03 갱신에서 정정**했다.
 
 **HF 모델**: https://huggingface.co/Qwen/Qwen3.8-Flash-Next
 **지표(2026-08-28)**: DL **4,810** · 좋아요 **4,033** · **트렌딩 1위** · `image-text-to-text` · 라이선스 **other** · 생성 **2026-08-24** · 최종수정 **2026-08-27** — HF API 실호출 검증(raw 표기와 완전 일치)
 **아키텍처 태그**: **`qwen4_exp`** ⚠️ (계열 표준 `qwen3_5`가 아님) · 기타 태그: `transformers` `safetensors` `conversational` `eval-results` `endpoints_compatible`
+
+> [!update] 2026-09-03 갱신 — **DL 4,810 → 263,287(54.7배)** · **180B 확정** · 08-28 질문 해소
+> **지표(2026-09-03 HF `api/models` 실호출)**: DL **263,287**(30일) · 좋아요 **4,755** · 라이선스 **other(`qwen-community-1.0`)** · 최종수정 **2026-08-27** · **총 파라미터 179,999,981,459(≈180B)** · `image-text-to-text` · dtype BF16+I64
+>
+> **08-28의 질문 — *"다운로드가 뒤늦게 붙나"* → ✅ 붙었다.** 4,810 → **263,287**.
+> **DL/좋아요 비율 1.19 → 55.4.** 같은 배치 대조군 [[GLM-5.3-Flash]]도 0.024 → 260.3으로 함께 움직였다.
+> → **08-28에 이 페이지가 적은 *"트렌딩 순위와 실사용이 애초에 다른 것을 측정한다"* 는 해석을 철회한다.** 집계 지연이 아니라 **집계 공백**이었다 — 공개 4일차의 DL은 *작은 값*이 아니라 *아직 없는 값*이다. 상세 정정은 [[GLM-5.3-Flash]] 09-03 갱신에 기록.
+>
+> 📌 **새로 확정된 사실 2건**
+> - **180B** — 08-28에 *"크기 전량 미확인"* 이었다. [[GLM-5.3-Flash]] 321B의 **56%**, [[GLM-5.3]] 753B의 **24%**. `Flash-Next`라는 이름 그대로 **배치 내 최소 프런티어급**이다.
+> - **라이선스 실체는 `qwen-community-1.0`** — 08-28 표기 `other`의 내용물이 확정됐다. **Apache-2.0([[Qwen3.8-27B]])이 아니다.** [[Alibaba]]가 **차세대 실험 아키텍처에만 별도 커뮤니티 라이선스**를 적용한다는 뜻이며, [[Zhipu-AI]]가 같은 주에 **플래그십만 독자 라이선스로 닫은 것**([[GLM-5.3]])과 **같은 패턴**이다. → **두 중국 프런티어 랩이 동시에 "차세대는 덜 열어 둔다"** 로 움직였다.
+>
+> ⚠️ **raw 대비 드리프트**: raw 207,941 vs API **263,287**(**+26.6%**). API 값 채택.
+> ⚠️ **여전히 미확인**: `qwen4_exp` 아키텍처의 실체, **벤치 수치**(`eval-results` 태그는 있으나 수치 미수집 — raw의 *"모델카드 상단에 벤치마크 없음"* 과 일치), 컨텍스트 길이. raw가 기록한 **Gated DeltaNet · QSA 마이크로블록 희소어텐션 · Gated Residual · n-gram 임베딩 · Muon/AdamW 분리**는 **모델카드 서술이며 본 회차에 원문 재검증하지 않았다.**
+> 📌 **이번 배치 희소어텐션 3중 관측**의 한 축 — QSA(아키텍처 내장) vs [[GLM-5.3]] `glm_moe_dsa`(아키텍처 내장) vs [[Declarative-Attention]](**추론시 선언·학습 불필요·정량 결과 공개**). **셋 중 수치가 공개된 것은 마지막 하나뿐이다.**
 
 > [!insight] 핵심 인사이트 — **아키텍처 태그가 `qwen4_exp`다**
 > 볼트가 추적해 온 Qwen 계열([[Qwen3.8-27B]]·[[Qwen3.6-27B]]·[[Qwen3.6-35B-A3B]])은 모두 **`qwen3_5`** 태그를 단다. 이 모델만 **`qwen4_exp`** — 문자 그대로 읽으면 **Qwen4 실험(experimental)** 이다.

@@ -1398,6 +1398,276 @@
       "width": 260,
       "height": 170,
       "color": "3"
+    },
+    {
+      "id": "batch-0903",
+      "type": "text",
+      "x": -560,
+      "y": 7250,
+      "width": 300,
+      "height": 200,
+      "color": "6",
+      "text": "## 2026-09-03 배치\n**신규 7 · 갱신 6**\n13건 전량 API 실검증\n\n*스킬이 수작업에서\n자동 증류로 넘어간 날*"
+    },
+    {
+      "id": "src-repo2skill",
+      "type": "text",
+      "x": -200,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[Repo-To-Skill]]\nHF 1위·업보트 334\n레포 1,000 → 스킬 5,000+\n**백본 고정·스킬만 토글**\nMLE-bench +134.3%\n⚠️상대치만"
+    },
+    {
+      "id": "src-solarwm",
+      "type": "text",
+      "x": 110,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[SolarWM]]\nHF 2위·저자 18인\n143만 클립 → 단일 계약\n선별결정·출처 필드\n5초 학습 → 시간 롤아웃\n⚠️벤치 수치 0"
+    },
+    {
+      "id": "src-earlyeval",
+      "type": "text",
+      "x": 420,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[EarlyEval]]\nHF 3위\nLightGBM 성패 분류기\n스텝 -13~26%\n토큰 -44.1%/-29.4%\n**교란 1~2%p 자진보고**"
+    },
+    {
+      "id": "src-cogr",
+      "type": "text",
+      "x": 730,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[CoGR]]\nHF 4위\n질의+**아이템 양쪽**\n키워드 생성·역색인 유지\nF1 +10.9%/+36.1%\n⭐raw 결측 API가 복구"
+    },
+    {
+      "id": "src-da",
+      "type": "text",
+      "x": 1040,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[Declarative-Attention]]\nHF 5위\n`<global>/<focus>/<local>`\n자기 선언 → KV 스킵\n**-52.0%** 토큰/-1.27%p\n**학습 불필요**"
+    },
+    {
+      "id": "src-glm53",
+      "type": "text",
+      "x": 1350,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[GLM-5.3]]\n트렌딩 1위·**753B**\n`glm_moe_dsa`·fp8\n**독자 라이선스**\nTB3.0 4.6→28.3 주장\n⚠️벤더 자체 표"
+    },
+    {
+      "id": "src-voicestudio",
+      "type": "text",
+      "x": 1660,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[VoiceStudio]]\n⭐15,454·AGPL-3.0\n**16 TTS + 11 ASR 하네스**\nMCP + OpenAI 호환 API\n⭐배치 유일 즉시 활용"
+    },
+    {
+      "id": "src-glm53flash-u",
+      "type": "text",
+      "x": -200,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[GLM-5.3-Flash]] 갱신\n🚨 DL **34 → 517,902**\n321B·멀티모달·MIT\nDL/좋아요 0.024→**260.3**"
+    },
+    {
+      "id": "src-qwen38fn-u",
+      "type": "text",
+      "x": 110,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[Qwen3.8-Flash-Next]] 갱신\nDL 4,810 → **263,287**\n**180B** 확정\n`qwen-community-1.0`"
+    },
+    {
+      "id": "src-hermes-u",
+      "type": "text",
+      "x": 420,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[hermes-agent]] 갱신\n⭐**240,408**(+1.82%)\n⚠️이슈 **+8.69%**\n= 스타의 **4.8배**"
+    },
+    {
+      "id": "src-ponytail-u",
+      "type": "text",
+      "x": 730,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[ponytail]] 갱신\n⭐**122,495**(+5.81%)\n푸시 **27일 정체**\n일평균 +1,345"
+    },
+    {
+      "id": "src-cdmcp-u",
+      "type": "text",
+      "x": 1040,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[chrome-devtools-mcp]] 갱신\n⭐**50,774** 5만 돌파\n부채밀도 0.0261"
+    },
+    {
+      "id": "src-timesfm-u",
+      "type": "text",
+      "x": 1350,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[TimesFM]] 갱신\n⭐**30,397**·트렌딩 2위\n**3.0 공개**(331M)\nraw DL 0 → **46,862**"
+    },
+    {
+      "id": "obs-dl-lag",
+      "type": "text",
+      "x": -200,
+      "y": 7690,
+      "width": 300,
+      "height": 200,
+      "color": "3",
+      "text": "### 🚨 규칙 정정\n**HF DL은 공개 직후 비어 있다**\n34→517,902 / 4,810→263,287\n/ 0→46,862 — **3벤더·3모달리티**\n08-28 '순위≠사용' **철회**\n→ 시차였다(≈1주 선행)"
+    },
+    {
+      "id": "obs-drift-hf",
+      "type": "text",
+      "x": 140,
+      "y": 7690,
+      "width": 280,
+      "height": 190,
+      "color": "3",
+      "text": "### ⚠️ HF 드리프트 大\nAPI>raw: +60.0/+26.6/+17.3%\nGitHub은 +2~+14(≤0.1%)\n08-30 '완전 일치'와 상반\n→ HF DL은 참고치로만"
+    },
+    {
+      "id": "obs-issue-fast",
+      "type": "text",
+      "x": 460,
+      "y": 7690,
+      "width": 270,
+      "height": 180,
+      "color": "3",
+      "text": "### ⚠️ 이슈>스타 (2건)\nhermes **4.8배**\nponytail **2.1배**\n규모 26배 차이인데 동부호\n→ 판정 보류"
+    },
+    {
+      "id": "obs-license-close",
+      "type": "text",
+      "x": 770,
+      "y": 7690,
+      "width": 270,
+      "height": 170,
+      "color": "3",
+      "text": "### ⚠️ '차세대는 덜 연다'\nZhipu 플래그십 독자\nAlibaba qwen-community-1.0\n→ 2건·추세 미확정"
+    },
+    {
+      "id": "obs-sparse3",
+      "type": "text",
+      "x": 1080,
+      "y": 7690,
+      "width": 270,
+      "height": 190,
+      "color": "3",
+      "text": "### 🔭 희소어텐션 3중\n①선언(학습X·**수치 O**)\n②glm_moe_dsa(자체표)\n③QSA(수치 없음)\n→ 공개된 건 ①뿐"
+    },
+    {
+      "id": "con-skill-axis",
+      "type": "text",
+      "x": -200,
+      "y": 7920,
+      "width": 300,
+      "height": 220,
+      "color": "5",
+      "text": "## [[에이전트-스킬]]\n**생산 방식 축 신설**\n①수작업 ②경험 ③증류\n**규모와 근거가 반비례**\n급소: 증류는 '하지 마라'를\n뽑지 못한다\n+5층(검색) 잠정"
+    },
+    {
+      "id": "con-memory-4",
+      "type": "text",
+      "x": 140,
+      "y": 7920,
+      "width": 280,
+      "height": 190,
+      "color": "5",
+      "text": "## [[에이전트-메모리-레이어]]\n**4번째: 선택적 비독해**\n두지도 압축도 않고\n**읽지 않기로 선택**\n판단 주체 = 모델 자신"
+    },
+    {
+      "id": "con-llmwiki-gap",
+      "type": "text",
+      "x": 460,
+      "y": 7920,
+      "width": 280,
+      "height": 190,
+      "color": "5",
+      "text": "## [[LLM-Wiki]]\n🪞 **queries/ 0건**\n태그를 붙이기만 하고\n유효성을 측정한 적 없다\n= 아이템측 보상 신호 없음"
+    },
+    {
+      "id": "con-worldmodel",
+      "type": "text",
+      "x": 770,
+      "y": 7920,
+      "width": 270,
+      "height": 170,
+      "color": "5",
+      "text": "## [[월드모델]]\n**데이터 계약** 공개\n선별결정·출처가 필드로\nMiniMax-H3 반대 노선"
+    },
+    {
+      "id": "con-tsfm",
+      "type": "text",
+      "x": 1080,
+      "y": 7920,
+      "width": 280,
+      "height": 180,
+      "color": "5",
+      "text": "## [[시계열-예측-파운데이션-모델]]\n331M — GLM-5.3의 1/2275\n스케일 아닌 **배포가능성** 축\n에이전트 일색 배치 2위"
+    },
+    {
+      "id": "act-voice",
+      "type": "text",
+      "x": -200,
+      "y": 8170,
+      "width": 270,
+      "height": 160,
+      "color": "2",
+      "text": "### ⭐ actionable\nVoiceStudio → [[reat-voice]]\n로컬 대체 스팟체크\n**우선순위 높음**"
+    },
+    {
+      "id": "act-queries",
+      "type": "text",
+      "x": 140,
+      "y": 8170,
+      "width": 270,
+      "height": 160,
+      "color": "2",
+      "text": "### ⭐ actionable\n`queries/` 기록 시작\n죽은 태그 판정\n**우선순위 높음**"
+    },
+    {
+      "id": "act-abs",
+      "type": "text",
+      "x": 460,
+      "y": 8170,
+      "width": 270,
+      "height": 160,
+      "color": "2",
+      "text": "### actionable\nRepo-To-Skill 절대점수\n+검증 절차 확인\n**우선순위 높음**"
     }
   ],
   "edges": [
@@ -2437,6 +2707,262 @@
       "toNode": "obs-authors",
       "toSide": "top",
       "label": "8인·수치 O"
+    },
+    {
+      "id": "e0903-1",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-repo2skill",
+      "toSide": "top",
+      "label": "1위·334"
+    },
+    {
+      "id": "e0903-2",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-solarwm",
+      "toSide": "top",
+      "label": "2위"
+    },
+    {
+      "id": "e0903-3",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-earlyeval",
+      "toSide": "top",
+      "label": "3위"
+    },
+    {
+      "id": "e0903-4",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-cogr",
+      "toSide": "top",
+      "label": "4위"
+    },
+    {
+      "id": "e0903-5",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-da",
+      "toSide": "top",
+      "label": "5위"
+    },
+    {
+      "id": "e0903-6",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-glm53",
+      "toSide": "top",
+      "label": "트렌딩1위"
+    },
+    {
+      "id": "e0903-7",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-voicestudio",
+      "toSide": "top",
+      "label": "GH 4위"
+    },
+    {
+      "id": "e0903-8",
+      "fromNode": "src-glm53flash-u",
+      "fromSide": "bottom",
+      "toNode": "obs-dl-lag",
+      "toSide": "top",
+      "label": "34→51.8만"
+    },
+    {
+      "id": "e0903-9",
+      "fromNode": "src-qwen38fn-u",
+      "fromSide": "bottom",
+      "toNode": "obs-dl-lag",
+      "toSide": "top",
+      "label": "54.7배"
+    },
+    {
+      "id": "e0903-10",
+      "fromNode": "src-timesfm-u",
+      "fromSide": "bottom",
+      "toNode": "obs-dl-lag",
+      "toSide": "top",
+      "label": "0→46,862"
+    },
+    {
+      "id": "e0903-11",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "obs-drift-hf",
+      "toSide": "top",
+      "label": "+60.0%"
+    },
+    {
+      "id": "e0903-12",
+      "fromNode": "src-hermes-u",
+      "fromSide": "bottom",
+      "toNode": "obs-issue-fast",
+      "toSide": "top",
+      "label": "4.8배"
+    },
+    {
+      "id": "e0903-13",
+      "fromNode": "src-ponytail-u",
+      "fromSide": "bottom",
+      "toNode": "obs-issue-fast",
+      "toSide": "top",
+      "label": "2.1배"
+    },
+    {
+      "id": "e0903-14",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "obs-license-close",
+      "toSide": "top",
+      "label": "독자"
+    },
+    {
+      "id": "e0903-15",
+      "fromNode": "src-qwen38fn-u",
+      "fromSide": "bottom",
+      "toNode": "obs-license-close",
+      "toSide": "top",
+      "label": "community"
+    },
+    {
+      "id": "e0903-16",
+      "fromNode": "src-da",
+      "fromSide": "bottom",
+      "toNode": "obs-sparse3",
+      "toSide": "top",
+      "label": "①수치 O"
+    },
+    {
+      "id": "e0903-17",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "obs-sparse3",
+      "toSide": "top",
+      "label": "②dsa"
+    },
+    {
+      "id": "e0903-18",
+      "fromNode": "src-qwen38fn-u",
+      "fromSide": "bottom",
+      "toNode": "obs-sparse3",
+      "toSide": "top",
+      "label": "③QSA"
+    },
+    {
+      "id": "e0903-19",
+      "fromNode": "src-repo2skill",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "③증류·근거"
+    },
+    {
+      "id": "e0903-20",
+      "fromNode": "src-ponytail-u",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "①수작업·규모"
+    },
+    {
+      "id": "e0903-21",
+      "fromNode": "src-hermes-u",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "②경험"
+    },
+    {
+      "id": "e0903-22",
+      "fromNode": "src-cogr",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "5층 후보"
+    },
+    {
+      "id": "e0903-23",
+      "fromNode": "src-cogr",
+      "fromSide": "bottom",
+      "toNode": "con-llmwiki-gap",
+      "toSide": "top",
+      "label": "볼트 자신"
+    },
+    {
+      "id": "e0903-24",
+      "fromNode": "src-da",
+      "fromSide": "bottom",
+      "toNode": "con-memory-4",
+      "toSide": "top",
+      "label": "선택적 비독해"
+    },
+    {
+      "id": "e0903-25",
+      "fromNode": "src-solarwm",
+      "fromSide": "bottom",
+      "toNode": "con-worldmodel",
+      "toSide": "top",
+      "label": "데이터 계약"
+    },
+    {
+      "id": "e0903-26",
+      "fromNode": "src-timesfm-u",
+      "fromSide": "bottom",
+      "toNode": "con-tsfm",
+      "toSide": "top",
+      "label": "3.0 공개"
+    },
+    {
+      "id": "e0903-27",
+      "fromNode": "src-voicestudio",
+      "fromSide": "bottom",
+      "toNode": "act-voice",
+      "toSide": "top",
+      "label": "MCP+OpenAI API"
+    },
+    {
+      "id": "e0903-28",
+      "fromNode": "con-llmwiki-gap",
+      "fromSide": "bottom",
+      "toNode": "act-queries",
+      "toSide": "top",
+      "label": "결측 해소"
+    },
+    {
+      "id": "e0903-29",
+      "fromNode": "src-repo2skill",
+      "fromSide": "bottom",
+      "toNode": "act-abs",
+      "toSide": "top",
+      "label": "절대치 필요"
+    },
+    {
+      "id": "e0903-30",
+      "fromNode": "src-solarwm",
+      "fromSide": "bottom",
+      "toNode": "src-voicestudio",
+      "toSide": "top",
+      "label": "이종백본→공통층 (동일 패턴)"
+    },
+    {
+      "id": "e0903-31",
+      "fromNode": "src-earlyeval",
+      "fromSide": "bottom",
+      "toNode": "src-repo2skill",
+      "toSide": "top",
+      "label": "근거 제시 태도 대조"
+    },
+    {
+      "id": "e0903-32",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "src-glm53flash-u",
+      "toSide": "top",
+      "label": "DL 1:3.43 · 라이선스 분기"
     }
   ]
 }

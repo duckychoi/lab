@@ -4,12 +4,19 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, alibaba, qwen, china, big-tech]
 created: 2026-06-26
-updated: 2026-08-29
+updated: 2026-09-03
 sources: [zvec.md, Qwen3.6-27B.md, Qwen3.8-27B.md, Qwen3.8-Flash-Next.md, Qwen3.8-27B-GGUF.md, MiniMax-H3.md]
 reliability: high
 ---
 
 # Alibaba (알리바바)
+
+> [!update] 2026-09-03 — [[Qwen3.8-Flash-Next]] **180B 확정 · 라이선스 `qwen-community-1.0`**
+> HF `api/models` 실검증: **총 파라미터 179,999,981,459(≈180B)** · `image-text-to-text`(**멀티모달**) · 아키텍처 태그 **`qwen4_exp`** · **DL 4,810(08-28) → 263,287(09-03)** · 좋아요 4,755.
+> 📌 **라이선스 실체 확정**: `other`의 내용물이 **`qwen-community-1.0`** 이다. **[[Qwen3.8-27B]]의 Apache-2.0이 아니다** — Alibaba가 **차세대 실험 아키텍처에만 별도 커뮤니티 라이선스**를 적용한다.
+> 같은 주 [[Zhipu-AI]]가 플래그십 [[GLM-5.3]]만 독자 라이선스로 닫은 것과 **같은 패턴**이다(⚠️ 2건 · 추세 미확정).
+> 📌 **`qwen4_exp`** 는 이름(3.8)과 어긋난 **4세대 식별자**다 — 차세대 아키텍처의 선행 배포로 읽힌다. raw 기록 기능(Gated DeltaNet · **QSA 마이크로블록 희소어텐션** · Gated Residual · n-gram 임베딩 · Muon/AdamW 분리)은 **모델카드 서술이며 본 회차 미재검증.**
+> 📌 규모 비교: **180B** = [[GLM-5.3-Flash]] 321B의 56% · [[GLM-5.3]] 753B의 24%. **배치 내 최소 프런티어급.**
 
 > [!insight] 핵심 인사이트
 > 중국 빅테크로, [[Qwen]] 계열 오픈 LLM·멀티모달 모델과 다수 오픈소스 에이전트를 공개해 온 조직. 2026-06-26 기준 GitHub에 **[[page-agent]]**(인페이지 웹 GUI 조작 에이전트, ⭐20,091)를, HF 데일리에 **[[Qwen-Image-Agent]]**(이미지 생성 컨텍스트 보강 에이전트)를 동시에 올리며 *에이전트형 제품군*을 빠르게 확장 중. [[Zhipu AI]]([[GLM-5.2]])와 함께 중국발 오픈 가중치·오픈소스 에이전트 생태계의 양대 축.
