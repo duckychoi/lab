@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-09-03
-total_pages: 983  # 2026-09-03 실측(sources 922 · entities 35 · concepts 20 · synthesis 2 · domains 4 · queries 0)
-total_sources: 922  # 2026-09-03 실측 (신규 소스 7건 반영 — Repo-To-Skill · SolarWM · EarlyEval · CoGR · Declarative-Attention · GLM-5.3 · VoiceStudio)
+updated: 2026-09-04
+total_pages: 998  # 2026-09-04 실측(sources 935 · entities 37 · concepts 22 · synthesis 2 · domains 4 · queries 0)
+total_sources: 935  # 2026-09-04 실측 (신규 소스 13건 — anthropics-skills · humanizer · prompts-chat · magnitude · DeepSWE · Random-Attention · Puffin-World · Compile-by-Training · BCIT · TCR · pyannote-community-1 · sam3 · Minimax-h3-Turbo-lightx2v)
 ---
 
 # Wiki Index
@@ -52,6 +52,9 @@ total_sources: 922  # 2026-09-03 실측 (신규 소스 7건 반영 — Repo-To-S
 
 ---
 
+- [[Salesforce]] — SaaS 기업 사내 AI 연구소, **기존 패러다임을 "무용"으로 증명**하는 형태의 기여([[Random-Attention]] KV 점수화 무용) *(NEW 2026-09-04)*
+- [[University-of-Waterloo]] — [[Program-as-Weights]]→[[Compile-by-Training]] **계보를 4건 연속으로 누적**하는 유일한 기관, "명세를 가중치로 굽기" 축 *(NEW 2026-09-04)*
+
 ## concepts
 
 - [[검사가능성-공사]] — **모델이 잘하는지 묻기 전에, 무엇을 들고 있는지 볼 수 있게 만들어라.** 2026-09-02 배치 3편([[Qwen-Drive-1.0]] BEV 탐침 · [[Safin-1]] 메모리를 능동 기질로 · [[UI-Venus-2]] 검증을 스케일링 축으로)이 독립 도달. [[국소-수리-원리]]의 **전제**를 짓는 층. 급소 = *검사기가 피검사자와 같은 실패 모드를 공유하면 계기판이 아니라 거울이다* — 정답이 모델 **바깥**(기하·실행 결과)에 고정돼야 유효. ⚠️**1배치 3편이므로 잠정**(승격 조건: 다음 배치 2건 추가) *(NEW 2026-09-02)*
@@ -78,6 +81,9 @@ total_sources: 922  # 2026-09-03 실측 (신규 소스 7건 반영 — Repo-To-S
 - [[Diffusion-월드모델]] — 픽셀 생성형 월드모델(Cosmos·Genie·GAIA·DIAMOND) *(NEW 2026-07-12)*
 
 ---
+
+- [[선택비용과-중복성]] — **선택기의 값어치는 대상의 중복성·가역성에 반비례**. 같은 날 [[Random-Attention]](선택 제거로 승)과 [[BCIT]](선택 추가로 승)이 정반대로 이긴 것에서 도출 *(NEW 2026-09-04)*
+- [[암묵을-명시로]] — 모델 안에 숨은 것(타이밍·판정기준·검증기·재사용조건·물리량)을 꺼내면 **성능보다 먼저 제어가 생긴다**. 2026-09-04 배치 13건 중 **5건이 같은 수법** *(NEW 2026-09-04)*
 
 ## sources
 
@@ -1338,13 +1344,29 @@ total_sources: 922  # 2026-09-03 실측 (신규 소스 7건 반영 — Repo-To-S
 - [[GLM-5.3-Flash]] — HF 트렌딩 2위인데 DL **34**·좋아요 1,393(**41배**·DL/좋아요 0.024), 배치 유일 MIT·fp8·glm5_next *(NEW 2026-08-28)*
 - [[OpenMAIC]] — AI 교사 + **AI 동료 학습자**가 실시간 강의·토론·판서하는 멀티에이전트 교실, ⭐22,701 MIT 칭화 THU-MAIC (**배치 유일 동료심사 논문** JCST'26 DOI 실재 · 학습 효과 정량치는 없음) *(NEW 2026-08-30)*
 
+- [[anthropics-skills]] — **스킬 명세의 원본**, ⭐173,849(볼트 최상위권). *"표준은 agentskills.io"* 로 스펙을 레포 밖에 둠 · ⚠️레포 라이선스 **null**, 문서스킬 4종은 **source-available(오픈소스 아님)** *(NEW 2026-09-04)*
+- [[humanizer]] — AI 문체 제거 스킬 ⭐41,974(당일 **+1,208 배치 최고**) MIT. **35패턴 전부 Wikipedia WikiProject AI Cleanup 출처** = 심판을 LLM 밖에 둔 **세 번째 사례**, [[ponytail]]에 이은 **두 번째 "빼는" 스킬** *(NEW 2026-09-04)*
+- [[prompts-chat]] — 최초 프롬프트 라이브러리(2022-12-05)가 **셀프호스팅 제품**으로 전환, ⭐169,220. ⚠️README 배지 *"143k+"* 로 **18.3% 과소** — 배지 규칙 **두 번째 역방향** *(NEW 2026-09-04)*
+- [[magnitude]] — 하드웨어 프로파일링으로 **로컬 모델을 골라 주는** 추론 서버, ⭐2,106 Apache-2.0. Hermes·Claude Code 등 8개 하네스 연결 · ⚠️**벤치마크·tok/s 전무**(medium) *(NEW 2026-09-04)*
+- [[DeepSWE]] — 오염 회피 **창작 113과제** 장기 SWE 벤치마크, ⭐1,604 Apache-2.0. **검증기를 깨끗한 별도 컨테이너로 분리** · ⚠️리더보드 절대 점수 미확인 *(NEW 2026-09-04)*
+- [[Random-Attention]] — **KV 캐시 점수화가 무용**임을 증명(무작위 축출로 동급·vLLM 처리량 **32~43%↑**), HF 데일리 **1위**·[[Salesforce]]·코드공개. 추론 트레이스의 **2층 중복**이 이유 (2609.03430, 초록 검증) *(NEW 2026-09-04)*
+- [[Puffin-World]] — 물리(중력·위도)·기하(깊이)·외형을 **네이티브 3D 월드 상태**로 통합, Omni-Camera·**Puffin-16M(1,500만 트리플렛+100만 궤적)** · 🚨**정량 수치 0건** (2609.04196, 초록 검증) *(NEW 2026-09-04)*
+- [[Compile-by-Training]] — 자연어 명세→**로컬 신경 함수**(교사 증류 어댑터·0.6B 인터프리터), [[Program-as-Weights]] 직접 후속. FuzzyBench-Hard **정확일치 0건 → 의미정확도 83.6%**, 컴파일 수초→**1분** (2609.04199, 초록+저자코멘트 검증) *(NEW 2026-09-04)*
+- [[BCIT]] — 과거 학습 경험을 **조건 검증 후에만 재사용**(`Reject/Validate/Train`), Qwen3-4B·3태스크 **+2.63점(95%CI 2.10~3.16)**. **볼트 09-03 규칙 전복 사고를 설명하는 프레임** (2608.26730, 초록+저자코멘트 검증) *(NEW 2026-09-04)*
+- [[TCR]] — 대본 타이밍을 **영상·오디오 공용 시간축에 라우팅**. Shot Boundary MAE **1.11초→0.042초(96%↓)** · Dialogue Acc@0.5s **28.3→84.1%**. **볼트 `reat-*` 설계의 외부 근거** (2609.02367, 초록 검증) *(NEW 2026-09-04)*
+- [[pyannote-community-1]] — 화자분리 후속, **3.1 대비 12벤치 10승1무1패** DL 5,072,652 cc-by-4.0. 🚨raw의 *"게이트라 미확인"* **반증** · *"세대교체가 DL에서 안 일어난다"* **3회 재현** *(NEW 2026-09-04)*
+- [[sam3]] — 텍스트로 **개방어휘 개념의 모든 인스턴스**를 분할(PCS)+비디오 추적, **SA-CO 인간의 75~80%**·270K개념, DL 2,081,577 🤗Transformers 통합 · ⚠️라이선스 `other`·게이트 manual *(NEW 2026-09-04)*
+- [[Minimax-h3-Turbo-lightx2v]] — FL2V **8스텝 768p** 가속 LoRA, DL **1,117,509 = 베이스의 21.8%** Apache-2.0·Space 85개. 08-12 *"초기 단계"* 판정 **폐기**(3주 만에 1,670배) · ⚠️가속폭·품질손실 **여전히 미공개** *(NEW 2026-09-04)*
+
 ---
 
 ## domains
 <!-- 도메인별 누적 인사이트 -->
 
-- video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석
-- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (**2026-08-30 업데이트** · ⚠️08-27~29 배치 항목 누락 상태, 소급 복원 대기)
+- video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석 (**2026-09-04 업데이트**: 타이밍·마스킹·가속 3부품)
+- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (**2026-09-04 업데이트** · ⚠️08-27~29 배치 항목 누락 상태, 소급 복원 대기)
+- local-llm → `wiki/domains/local-llm.md` — 로컬/엣지 LLM·에이전트 메모리 (**2026-09-04 업데이트**: 서빙·캐시·함수화 3층)
+- slam-3dgs → `wiki/domains/slam-3dgs.md` — SLAM·3DGS·카메라 (**2026-09-04 업데이트**: 통합 월드모델 × 의미분할)
 
 ---
 
