@@ -4,34 +4,183 @@
       "id": "domain-hub",
       "type": "text",
       "text": "# Local/Edge LLM\n\n목표: 경량 모델 실배포 + 에이전트 메모리\n\n[[local-llm]]",
-      "x": -100, "y": -60, "width": 240, "height": 120,
+      "x": -100,
+      "y": -60,
+      "width": 240,
+      "height": 120,
       "color": "2"
     },
     {
       "id": "cluster-models",
       "type": "text",
       "text": "## 모델들\n\n_HuggingFace 기준 신뢰_",
-      "x": -400, "y": 150, "width": 180, "height": 80,
+      "x": -400,
+      "y": 150,
+      "width": 180,
+      "height": 80,
       "color": "5"
     },
     {
       "id": "cluster-memory",
       "type": "text",
       "text": "## 메모리 아키텍처\n\n_RAG, KV-Cache, 압축 등_",
-      "x": -100, "y": 150, "width": 180, "height": 80,
+      "x": -100,
+      "y": 150,
+      "width": 180,
+      "height": 80,
       "color": "3"
     },
     {
       "id": "cluster-hermes",
       "type": "text",
       "text": "## Hermes 적용\n\n_ChinameBot 직접 연동 가능한 것_",
-      "x": 200, "y": 150, "width": 180, "height": 80,
+      "x": 200,
+      "y": 150,
+      "width": 180,
+      "height": 80,
       "color": "6"
+    },
+    {
+      "id": "s-latentpress",
+      "type": "text",
+      "text": "# LatentPress\n\n**6번째 메모리 축**: 연속 잠재 메모리\n동결 디코더가 임베딩으로 직접 읽음\nLongMemEval **0.504@7.7배 > 원문 0.490**\n어댑터 4.2~26.2M (~0.1%)\n⚠️ reader-matched 결박\n\n[[LatentPress]]",
+      "x": -500,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-minima",
+      "type": "text",
+      "text": "# Minima\n\n496개 선형층 전부 NVFP4 W4A4\nBF16 동등(-0.52) · **17.5 GiB**\n🔬 **게이트가 가장 덜 민감**(통념 반전)\nGEMM 11% → 출력 2%\n\n[[Minima]]",
+      "x": -150,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-gsqrco",
+      "type": "text",
+      "text": "# Qwen3.8-27B-GSQ-RCO-GGUF ⭐\n\nIQ3_S **11.8GB**(4.6배 축소)\nAIME25 100.00·LCB 85.71 = BF16\n**카드 내 제3자 대조표 보유**\n\n[[Qwen3.8-27B-GSQ-RCO-GGUF]]",
+      "x": 200,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-flashnext-gguf",
+      "type": "text",
+      "text": "# Qwen3.8-Flash-Next-GGUF\n\nMTP 1.3~1.7배 주장\n⚠️ **카드에 벤치 표 없음**\n⚠️ 라이선스 `other`\n\n[[Qwen3.8-Flash-Next-GGUF]]",
+      "x": 550,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "c-mem-6axis",
+      "type": "text",
+      "text": "# 에이전트-메모리-레이어\n\n**6축으로 확장**\nRAG·KV·압축·외부DB\n·선택적 비독해·**연속 잠재**\n\n[[에이전트-메모리-레이어]]",
+      "x": -500,
+      "y": 790,
+      "width": 320,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "a-gsqrco-run",
+      "type": "text",
+      "text": "# ACTION 높음\nIQ3_S 11.8GB 로컬 실행 + tok/s 측정\n\n⚠️ AIME25 100.00 포화 검증",
+      "x": -150,
+      "y": 790,
+      "width": 320,
+      "height": 200,
+      "color": "2"
     }
   ],
   "edges": [
-    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-models", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-memory", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-hermes", "fromSide": "bottom", "toSide": "top" }
+    {
+      "id": "e1",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-models",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-memory",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-hermes",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-latentpress",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-latentpress",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-minima",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-minima",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-gsqrco",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-gsqrco",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-flashnext-gguf",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-flashnext-gguf",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-latentpress-c-mem-6axis",
+      "fromNode": "s-latentpress",
+      "fromSide": "bottom",
+      "toNode": "c-mem-6axis",
+      "toSide": "top",
+      "label": "6번째 축"
+    },
+    {
+      "id": "e-s-gsqrco-a-gsqrco-run",
+      "fromNode": "s-gsqrco",
+      "fromSide": "bottom",
+      "toNode": "a-gsqrco-run",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-minima-s-gsqrco",
+      "fromNode": "s-minima",
+      "fromSide": "bottom",
+      "toNode": "s-gsqrco",
+      "toSide": "top",
+      "label": "NVFP4 17.5GB vs GGUF 11.8GB"
+    },
+    {
+      "id": "e-s-gsqrco-s-flashnext-gguf",
+      "fromNode": "s-gsqrco",
+      "fromSide": "bottom",
+      "toNode": "s-flashnext-gguf",
+      "toSide": "top",
+      "label": "우위 주장 반박"
+    }
   ]
 }

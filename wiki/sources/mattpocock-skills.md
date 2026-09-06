@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, dotclaude, developer-tools]
 created: 2026-04-27
-updated: 2026-08-24
+updated: 2026-09-06
 sources: []
 reliability: high
 ---
@@ -50,6 +50,13 @@ reliability: high
 - **대체 관계**: [[awesome-agent-skills]]·[[ComposioHQ/awesome-codex-skills]]·[[vercel-skills]]와 직접 경쟁 — TypeScript 특화로 차별화 예상
 - **허와 실**: 스타 급상승이 저자 팔로워 기반일 수 있음 — 스킬 품질은 직접 확인 필요
 - **액션**: 레포 클론 → 스킬 목록 확인 → 현재 .claude/ 워크플로우에 유용한 스킬 추출
+
+---
+## 📊 2026-09-06 재관측 (GitHub API 실측)
+⭐ **253,347** · fork **21,377** · 오픈이슈 **466** · MIT — raw 09-06 수집값 ⭐253,313과 거의 일치.
+**issue/star = 0.0018** — 이 레포의 "작고 조합 가능한 스킬" 주장과 정합적인 낮은 마찰도.
+> [!insight] 비판 대상이 볼트에 들어왔다
+> 이 페이지가 문제 제기한 **Spec-Kit**이 09-05 배치로 인제스트됐다 → **[[spec-kit]]**(GitHub 공식 · ⭐133,645 · issue/star **0.0024**). **두 레포의 마찰 지표가 사실상 같다**(0.0018 vs 0.0024) — "프로세스를 통째로 소유하면 버그를 못 잡는다"는 주장이 **이슈 밀도에서는 드러나지 않는다.** 대립은 [[에이전트-스킬]]에 축으로 기록하되 **판정은 보류**(양쪽 다 대조 실험 없음).
 
 ## 관련 페이지
 - [[Claude-Code-워크플로우]]

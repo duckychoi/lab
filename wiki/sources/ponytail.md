@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skills, coding-agent, minimalism, behavior-norm, text-asset]
 created: 2026-08-28
-updated: 2026-09-03
+updated: 2026-09-06
 sources: []
 reliability: medium
 ---
@@ -65,6 +65,11 @@ reliability: medium
 > - **과소생성 부작용**을 어떻게 막나? "게으름" 규범과 "요구사항 충족" 사이의 조정 규칙이 있나?
 > - 이슈 177건(0.028건/포크)의 성격 — 규범 추가 제안인가, "너무 안 만든다"는 불만인가? **후자라면 이 레포의 반증이 이슈 트래커 안에 있다.**
 > - [[ponytail]] 규범과 [[archify]](산출물 형식 강제)를 **동시 적용하면 충돌하나** — 하나는 덜 만들라 하고 하나는 HTML까지 만들라 한다.
+
+---
+## 📊 2026-09-06 재관측 (GitHub API 실측)
+⭐ **128,466** · fork **6,883** · 오픈이슈 **218** · MIT — raw 09-06 수집값 ⭐128,445와 일치.
+**issue/star = 0.0017**로 배치 최저 수준. fork/star **0.054**는 [[mattpocock-skills]](0.084)보다 낮다 — **규범 1개짜리 자산은 포크해 고칠 것이 적다**는 성격과 정합적.
 
 ## 관련 페이지
 - [[에이전트-스킬]] — 이 레포가 속한 1층(자산), 단 **억제 축이라는 새 변종**

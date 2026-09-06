@@ -1,3415 +1,3715 @@
 {
- "nodes": [
-  {
-   "id": "domain-hub",
-   "type": "text",
-   "text": "# AI 뉴스 / GitHub\n\n목표: 쓸모있는 AI 발굴 + 워크플로우 통합\n\n[[ai-news]]",
-   "x": -100,
-   "y": -60,
-   "width": 240,
-   "height": 120,
-   "color": "4"
-  },
-  {
-   "id": "cluster-github",
-   "type": "text",
-   "text": "## GitHub ⭐1000+\n\n_스타 높은 AI 레포만_",
-   "x": -400,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "5"
-  },
-  {
-   "id": "cluster-hf",
-   "type": "text",
-   "text": "## HuggingFace 모델\n\n_다운로드 수 + 벤치마크 기준_",
-   "x": -100,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "2"
-  },
-  {
-   "id": "cluster-workflow",
-   "type": "text",
-   "text": "## 워크플로우 통합\n\n_내 도구에 실제 적용된 것_",
-   "x": 200,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "src-openspec",
-   "type": "text",
-   "text": "### OpenSpec\n⭐57,292\n스펙 주도 개발(SDD)\n[[OpenSpec]]",
-   "x": -560,
-   "y": 340,
-   "width": 240,
-   "height": 120,
-   "color": "5"
-  },
-  {
-   "id": "src-pptmaster",
-   "type": "text",
-   "text": "### ppt-master\n⭐33,405\n문서→네이티브 PPTX\n[[ppt-master]]",
-   "x": -300,
-   "y": 340,
-   "width": 240,
-   "height": 120,
-   "color": "5"
-  },
-  {
-   "id": "src-strix",
-   "type": "text",
-   "text": "### strix\n⭐️33,232 (+2,137)\n자율 보안·침투 에이전트(PoC 검증)\n[[strix]]",
-   "x": -560,
-   "y": 480,
-   "width": 240,
-   "height": 120,
-   "color": "5"
-  },
-  {
-   "id": "src-bridging",
-   "type": "text",
-   "text": "### Translation-Bridging\nHF 데일리 1위 ↑23\n인간→로봇 조작 전이\n[[Translation-as-Bridging-Action]]",
-   "x": -300,
-   "y": 480,
-   "width": 240,
-   "height": 120,
-   "color": "5"
-  },
-  {
-   "id": "src-kowide",
-   "type": "text",
-   "text": "### Ko-WideSearch\nHF ↑3\n한국어 웹 에이전트 완전열거 벤치\n[[Ko-WideSearch]]",
-   "x": -40,
-   "y": 480,
-   "width": 240,
-   "height": 120,
-   "color": "5"
-  },
-  {
-   "id": "src-videouse",
-   "type": "text",
-   "text": "### video-use\n⭐️14,077 (+554)\nbrowser-use 영상 transcript로 읽기\n[[video-use]]",
-   "x": -560,
-   "y": 620,
-   "width": 240,
-   "height": 120,
-   "color": "5"
-  },
-  {
-   "id": "src-livedit",
-   "type": "text",
-   "text": "### LiveEdit\nHF ↑51\n디퓨전 실시간 스트리밍 영상 편집\n[[LiveEdit]]",
-   "x": -300,
-   "y": 620,
-   "width": 240,
-   "height": 120,
-   "color": "2"
-  },
-  {
-   "id": "src-scalehorizon",
-   "type": "text",
-   "text": "### Scaling-the-Horizon\nHF ↑54\n호라이즌 확장 35B→조단위급 주장\n[[Scaling-the-Horizon]]",
-   "x": -40,
-   "y": 620,
-   "width": 240,
-   "height": 120,
-   "color": "2"
-  },
-  {
-   "id": "src-orca",
-   "type": "text",
-   "x": -560,
-   "y": 760,
-   "width": 250,
-   "height": 110,
-   "color": "2",
-   "text": "### Orca\nHF 데일리 1위 ↑158\n월드 파운데이션 모델\n[[Orca]]"
-  },
-  {
-   "id": "src-dockerless",
-   "type": "text",
-   "x": -300,
-   "y": 760,
-   "width": 250,
-   "height": 110,
-   "color": "2",
-   "text": "### Dockerless\nHF 데일리 2위 ↑75\n환경없는 코딩에이전트 검증\n[[Dockerless]]"
-  },
-  {
-   "id": "src-ornith9b",
-   "type": "text",
-   "x": -40,
-   "y": 760,
-   "width": 250,
-   "height": 110,
-   "color": "2",
-   "text": "### Ornith-1.0-9B\nHF 1.47M DL\n자기개선 에이전틱 코딩\n[[Ornith-1.0-9B]]"
-  },
-  {
-   "id": "src-omniroute",
-   "type": "text",
-   "x": 200,
-   "y": 340,
-   "width": 250,
-   "height": 120,
-   "color": "6",
-   "text": "### OmniRoute\n⭐8,948 (+387)\n236 프로바이더 게이트웨이\n토큰 15~95% 압축\n[[OmniRoute]]"
-  },
-  {
-   "id": "src-olmocr",
-   "type": "text",
-   "x": -560,
-   "y": 900,
-   "width": 250,
-   "height": 130,
-   "color": "5",
-   "text": "### olmocr\n⭐18,454 (+334)\nAI2 PDF→LLM 텍스트 선형화\n[[olmocr]]"
-  },
-  {
-   "id": "src-aibeginners",
-   "type": "text",
-   "x": -300,
-   "y": 900,
-   "width": 250,
-   "height": 130,
-   "color": "5",
-   "text": "### AI-For-Beginners\n⭐50,871 (+1,096)\nMicrosoft 교육 커리큘럼(레퍼런스)\n[[AI-For-Beginners]]"
-  },
-  {
-   "id": "src-vulnclaw",
-   "type": "text",
-   "x": -40,
-   "y": 900,
-   "width": 250,
-   "height": 130,
-   "color": "5",
-   "text": "### VulnClaw\n⭐1,692 (+132)\nMCP+침투스킬 자율 보안\n증거 기반 환각 게이트\n[[VulnClaw]]"
-  },
-  {
-   "id": "src-agentscli",
-   "type": "text",
-   "x": 200,
-   "y": 500,
-   "width": 250,
-   "height": 130,
-   "color": "6",
-   "text": "### agents-cli\n⭐4,609 (+586)\nGoogle ADK 에이전트 배포 CLI\n[[agents-cli]]"
-  },
-  {
-   "id": "src-turboserve",
-   "type": "text",
-   "x": -560,
-   "y": 1050,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### TurboServe\nHF papers\n스트리밍 비디오 저비용 서빙\n[[TurboServe]]"
-  },
-  {
-   "id": "src-memsyco",
-   "type": "text",
-   "x": -300,
-   "y": 1050,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### MemSyco-Bench\nHF papers\n에이전트 메모리 아첨 편향 벤치\n[[MemSyco-Bench]]"
-  },
-  {
-   "id": "src-eldr",
-   "type": "text",
-   "x": -40,
-   "y": 1050,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### ELDR\nHF papers\nMoE expert-locality 디코드 라우팅\n[[ELDR]]"
-  },
-  {
-   "id": "src-caveman",
-   "type": "text",
-   "x": -560,
-   "y": 1200,
-   "width": 250,
-   "height": 120,
-   "color": "5",
-   "text": "### caveman\n⭐️82,003 (+926)\n원시인 말투 압축 토큰 절감 주장(검증필요)\n[[caveman]]"
-  },
-  {
-   "id": "src-paw",
-   "type": "text",
-   "x": -300,
-   "y": 1200,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### Program-as-Weights\nHF ↑92 데일리 1위\n퍼지함수→LoRA 컴파일, 0.6B가 32B급\n[[Program-as-Weights]]"
-  },
-  {
-   "id": "src-flashmorph",
-   "type": "text",
-   "x": -40,
-   "y": 1200,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### FlashMorph\nHF ↑26\n하이브리드 어텐션 층 선택 자동화\n[[FlashMorph]]"
-  },
-  {
-   "id": "src-agenticsts",
-   "type": "text",
-   "x": -560,
-   "y": 1350,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### AgenticSTS\nHF ↑29\nbounded-contract 장기 메모리\n[[AgenticSTS]]"
-  },
-  {
-   "id": "src-evopolicygym",
-   "type": "text",
-   "x": -300,
-   "y": 1350,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### EvoPolicyGym\nHF ↑29\n실행형 정책 반복개선 궁적단위 진단\n[[EvoPolicyGym]]"
-  },
-  {
-   "id": "src-agenticdatabench",
-   "type": "text",
-   "x": -40,
-   "y": 1350,
-   "width": 250,
-   "height": 120,
-   "color": "2",
-   "text": "### AgenticDataBench\nHF ↑19\n344태스크+433스킬 데이터에이전트 평가\n[[AgenticDataBench]]"
-  },
-  {
-   "id": "src-codex-plugin-cc",
-   "type": "text",
-   "text": "### codex-plugin-cc\nOpenAI 공식 Claude Code↔Codex 브리지\n크로스벤더 에이전트 interop\n⭐23,462 (+634)\n[[codex-plugin-cc]]",
-   "x": -560,
-   "y": 1450,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-pytorch",
-   "type": "text",
-   "text": "### pytorch\nGPU 딥러닝 표준 프레임워크\n모든 HF 모델 공통 인프라\n⭐101,471 (+293)\n[[pytorch]]",
-   "x": -300,
-   "y": 1450,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-cs249r",
-   "type": "text",
-   "text": "### cs249r_book\n하버드 ML 시스템 오픈 교재\n배포·엣지 최적화 레퍼런스\n⭐26,336 (+793)\n[[cs249r_book]]",
-   "x": -40,
-   "y": 1450,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-cubesandbox",
-   "type": "text",
-   "text": "### CubeSandbox\nTencent 에이전트 코드 격리 병렬 실행 샌드박스\n⭐7,243 (+60)\n[[CubeSandbox]]",
-   "x": -560,
-   "y": 1630,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-qwen-nvfp4",
-   "type": "text",
-   "text": "### Qwen3.6-27B-NVFP4\nNVIDIA NVFP4 4비트 양자화판\n유효 18B급·하드웨어 종속\nHF 185k DL\n[[Qwen3.6-27B-NVFP4]]",
-   "x": -300,
-   "y": 1630,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "src-mattpocock-skills",
-   "type": "text",
-   "text": "### mattpocock/skills\n⭐156,933 (+973/일)\n개인 .claude 공개=배포단위\n스킬 모음 최상위",
-   "x": -560,
-   "y": 1810,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-agentskills",
-   "type": "text",
-   "text": "### agentskills\n⭐22,425\n에이전트 스킬 표준 규격\n벤더간 이식성",
-   "x": -300,
-   "y": 1810,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-system-prompts-leaks",
-   "type": "text",
-   "text": "### system_prompts_leaks\n⭐49,225\n프론티어 시스템프롬프트 추출\n프롬프트 리버스 참고",
-   "x": -40,
-   "y": 1810,
-   "width": 230,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-skillcoach",
-   "type": "text",
-   "text": "### SkillCoach\nHF ↑14 (미검증)\n자기개선 루브릭 스킬평가\n스킬 생태계 평가층",
-   "x": 220,
-   "y": 1810,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "theme-skills-3layer",
-   "type": "text",
-   "text": "## 스킬 3층 수렴\n모음→표준→평가\n(2026-07-05)",
-   "x": 480,
-   "y": 1810,
-   "width": 230,
-   "height": 140,
-   "color": "6"
-  },
-  {
-   "id": "src-worlddirector",
-   "type": "text",
-   "text": "### WorldDirector\nHF ↑21 (미검증)\n지속메모리 제어가능 월드시뮬",
-   "x": -560,
-   "y": 1990,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "src-mrfm",
-   "type": "text",
-   "text": "### Multi-Res Flow Matching\nHF ↑28 (미검증)\ntraining-free 디퓨전 가속",
-   "x": -300,
-   "y": 1990,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "src-distrewards",
-   "type": "text",
-   "text": "### Distribution-wise Rewards\nHF ↑14 Tencent (미검증)\n분포정렬 보상 시각생성",
-   "x": -40,
-   "y": 1990,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "src-breaking-cascades",
-   "type": "text",
-   "text": "### Breaking Failure Cascades\nHF ↑19 (미검증)\n의료 멀티모달 step-aware RL",
-   "x": 220,
-   "y": 1990,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "src-qwen35b-nvfp4",
-   "type": "text",
-   "text": "### Qwen3.6-35B-A3B-NVFP4\nNVIDIA NVFP4 4비트\n유효~19B 하드웨어 종속",
-   "x": 480,
-   "y": 1990,
-   "width": 230,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "theme-multimodal-embodied-0706",
-   "type": "text",
-   "x": -560,
-   "y": 2240,
-   "width": 520,
-   "height": 120,
-   "color": "6",
-   "text": "## 멀티모달·임바디드 확장 + 스킬 공급망 보안 (2026-07-06)\n에이전트가 보고·듣고·움직이며, 스킬 폭증의 그림자(보안)가 함께 드러남"
-  },
-  {
-   "id": "src-claude-skills-0706",
-   "type": "text",
-   "x": -560,
-   "y": 2420,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### claude-skills\nGitHub ⭐20,831 (+392)\n13개 에이전트용 스킬 355종 통합, stdlib-only 602 도구"
-  },
-  {
-   "id": "src-nanogpt",
-   "type": "text",
-   "x": -300,
-   "y": 2420,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### nanoGPT\nGitHub ⭐60,816 (+246)\nKarpathy GPT-2 재현 교육 레퍼런스 (deprecated→nanochat)"
-  },
-  {
-   "id": "src-claude-video",
-   "type": "text",
-   "x": -40,
-   "y": 2420,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### claude-video /watch\nGitHub ⭐3,704 (+368)\n자막우선+scene-aware 프레임, down-analysis 대조"
-  },
-  {
-   "id": "src-speech2speech",
-   "type": "text",
-   "x": 220,
-   "y": 2420,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### speech-to-speech\nGitHub ⭐5,401 Apache2.0\nHF 로컬 음성 VAD→STT→LLM→TTS, Reachy Mini 실배포"
-  },
-  {
-   "id": "src-mirage-tip",
-   "type": "text",
-   "x": 480,
-   "y": 2420,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### Mirage of Optimizing Training Policies\nHF 데일리 #1\nMIPI/MIPU 추론정책 단조개선"
-  },
-  {
-   "id": "src-vla-corrector",
-   "type": "text",
-   "x": -300,
-   "y": 2620,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### VLA-Corrector\nHF 데일리 #2 ZJU\n잠재공간 비전모니터 감지-수정+적응형 지평"
-  },
-  {
-   "id": "src-embodied-cpp",
-   "type": "text",
-   "x": -40,
-   "y": 2620,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### Embodied.cpp\nHF 데일리 #3 동남대\n로봇용 C++ 임바디드 런타임 5계층, 100%/91%"
-  },
-  {
-   "id": "src-orbitquant",
-   "type": "text",
-   "x": 220,
-   "y": 2620,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### OrbitQuant\nHF papers Cantina\n재캘리브 불필요 DiT 양자화 FLUX/Wan W2A4"
-  },
-  {
-   "id": "src-ai-infra-guard",
-   "type": "text",
-   "x": 480,
-   "y": 2620,
-   "width": 240,
-   "height": 150,
-   "color": "2",
-   "text": "### Multi-Layer Agent Red Teaming\nHF papers Tencent\nAI-Infra-Guard 다층 레드팀+스킬 공급망 감사"
-  },
-  {
-   "id": "wm-cluster",
-   "type": "text",
-   "text": "## 월드모델·JEPA\n\n_2026 최대 연구 트렌드_",
-   "x": 640,
-   "y": 80,
-   "width": 220,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "wm-hub",
-   "type": "text",
-   "text": "**[[월드모델]]**\n미래 예측·계획 모델\n예측형 vs 생성형",
-   "x": 640,
-   "y": 240,
-   "width": 220,
-   "height": 110,
-   "color": "6"
-  },
-  {
-   "id": "wm-jepa",
-   "type": "text",
-   "text": "**[[JEPA]]**\n표현공간 예측(비생성)\nLeCun 철학",
-   "x": 900,
-   "y": 180,
-   "width": 210,
-   "height": 100,
-   "color": "6"
-  },
-  {
-   "id": "wm-diff",
-   "type": "text",
-   "text": "**[[Diffusion-월드모델]]**\n픽셀 생성형\nCosmos·Genie·GAIA",
-   "x": 900,
-   "y": 320,
-   "width": 210,
-   "height": 100,
-   "color": "6"
-  },
-  {
-   "id": "wm-lecun",
-   "type": "text",
-   "text": "**[[Yann-LeCun]]**\nMeta 수석 AI\nJEPA·월드모델 창안",
-   "x": 1180,
-   "y": 180,
-   "width": 200,
-   "height": 100,
-   "color": "4"
-  },
-  {
-   "id": "wm-cjepa",
-   "type": "text",
-   "text": "**[[C-JEPA]]**\n객체/인과 JEPA\n(반사실 +20%)",
-   "x": 1180,
-   "y": 320,
-   "width": 200,
-   "height": 100,
-   "color": "5"
-  },
-  {
-   "id": "wm-survey",
-   "type": "text",
-   "text": "**[[JEPA-월드모델-서베이-2026]]**\n5대 학회 55편",
-   "x": 1180,
-   "y": 460,
-   "width": 220,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "wm-flow",
-   "type": "text",
-   "text": "**[[Flow-JEPA-연구아이디어]]**\nFlow×JEPA + 효율화 교차",
-   "x": 900,
-   "y": 460,
-   "width": 220,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "wm-synth",
-   "type": "text",
-   "text": "**[[JEPA-vs-Diffusion-월드모델]]**\n두 축의 대비·수렴",
-   "x": 640,
-   "y": 420,
-   "width": 220,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "hub-agent-fw",
-   "type": "text",
-   "text": "**[[AI-에이전트-프레임워크]]**\n최대 허브 (227 링크)",
-   "x": 600,
-   "y": 760,
-   "width": 220,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "hub-agent-mem",
-   "type": "text",
-   "text": "**[[에이전트-메모리-레이어]]**\n메모리 인프라 (196)\ncognee·claude-mem",
-   "x": 860,
-   "y": 760,
-   "width": 220,
-   "height": 100,
-   "color": "6"
-  },
-  {
-   "id": "hub-embodied2",
-   "type": "text",
-   "text": "**[[임바디드-AI]]**\n체화 AI 5각 루프 (58)",
-   "x": 1140,
-   "y": 760,
-   "width": 210,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "hub-onpolicy",
-   "type": "text",
-   "text": "**[[온폴리시-증류]]**\nOn-Policy Distillation (70)",
-   "x": 600,
-   "y": 900,
-   "width": 220,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "wave-jul-aug",
-   "type": "text",
-   "text": "## 인제스트 wave\n07-13 ~ 08-03 (일 5~13건)\n[[Kimi-K3]]·[[GLM-5.2]]·[[Unlimited-OCR]]\n[[TRELLIS.2]]·[[generative-ai-for-beginners]]",
-   "x": 860,
-   "y": 900,
-   "width": 280,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "ent-moonshot",
-   "type": "text",
-   "text": "**[[Moonshot AI]]**\nKimi 시리즈 프론티어 랩",
-   "x": 1140,
-   "y": 900,
-   "width": 210,
-   "height": 80,
-   "color": "4"
-  },
-  {
-   "id": "n0826hub",
-   "type": "group",
-   "x": -560,
-   "y": 2940,
-   "width": 1720,
-   "height": 560,
-   "label": "2026-08-26 배치 — 지표 불일치의 날"
-  },
-  {
-   "id": "n0826a",
-   "type": "text",
-   "x": -540,
-   "y": 3020,
-   "width": 300,
-   "height": 200,
-   "text": "**[[OraRL]]**\nHF 데일리 1위·업65\nadvantage inversion 진단\nCoT 없이 130ms(기존 4,780ms)\nVSI-Bench 73.1 vs GPT-5 55.0",
-   "color": "5"
-  },
-  {
-   "id": "n0826b",
-   "type": "text",
-   "x": -210,
-   "y": 3020,
-   "width": 300,
-   "height": 200,
-   "text": "**[[WeMM-Embedding]]**\n[[Tencent]]·위챗 실배포\n2B가 8B 추월·9B 80.6 SOTA\n온라인 A/B 14건",
-   "color": "5"
-  },
-  {
-   "id": "n0826c",
-   "type": "text",
-   "x": 120,
-   "y": 3020,
-   "width": 300,
-   "height": 200,
-   "text": "**[[AutoSaddler]]**\n하네스=코드, 실패로 패치\nGAIA2 +9.0 / SWE +9.6 / TB2 +10.0%p\n깊은디버깅·표적수정·일반화선택",
-   "color": "5"
-  },
-  {
-   "id": "n0826d",
-   "type": "text",
-   "x": 450,
-   "y": 3020,
-   "width": 300,
-   "height": 200,
-   "text": "**[[DiffusionOPSD]]**\n교사 없는 자가증류\n20설정 중 19개 최고·최대 +44%\n구성 이득 ≠ 실현 이득",
-   "color": "5"
-  },
-  {
-   "id": "n0826e",
-   "type": "text",
-   "x": 780,
-   "y": 3020,
-   "width": 300,
-   "height": 200,
-   "text": "**[[Recuris]]**\n검증 게이트 메모리 진화\n37쌍 중 35쌍·Opus5 87.9%\n최장 태스크 +32.2·코드 공개",
-   "color": "5"
-  },
-  {
-   "id": "n0826f",
-   "type": "text",
-   "x": -540,
-   "y": 3260,
-   "width": 300,
-   "height": 180,
-   "text": "**[[claude-plugins-community]]**\n[[Anthropic]] 공식 레지스트리\n⭐1,957(최하위)인데 트렌딩 2위\n배포/레지스트리 층 등장",
-   "color": "4"
-  },
-  {
-   "id": "n0826g",
-   "type": "text",
-   "x": -210,
-   "y": 3260,
-   "width": 300,
-   "height": 180,
-   "text": "**[[Qwen3.8-27B-OBLITERATED]]**\n가드레일 제거 축 2번째\nDL 389,747 = 원본의 13.2%\n제거방식·능력손실 미검증 ⚠️low",
-   "color": "1"
-  },
-  {
-   "id": "n0826h",
-   "type": "text",
-   "x": 120,
-   "y": 3260,
-   "width": 300,
-   "height": 180,
-   "text": "⚠️ **다운로드 격일 갱신 패턴**\n[[Qwen3.8-27B]]·[[Qwen3.8-27B-GGUF]]\n08-24 동결→08-25 해제→08-26 재동결\n**좋아요는 갱신(+205/+1)**\n→ 증분은 2일 단위로만 해석",
-   "color": "3"
-  },
-  {
-   "id": "n0826i",
-   "type": "text",
-   "x": 450,
-   "y": 3260,
-   "width": 300,
-   "height": 180,
-   "text": "⚠️ **이슈 밀도 2,000배 격차**\n[[apache-maka]] 0.91건/포크(최고)\n[[ai-job-search]] 0.0004건/포크\n[[awesome-gpt-image-2]] 스타+38.5%에 이슈↓\n→ 이슈=품질 아닌 **소프트웨어 종류**",
-   "color": "3"
-  },
-  {
-   "id": "n0826j",
-   "type": "text",
-   "x": 780,
-   "y": 3260,
-   "width": 300,
-   "height": 180,
-   "text": "⚠️ **인기 ≠ 신뢰성 3연속**\n[[TradingAgents]] 10만 돌파·푸시 5주 정체\nclaude-plugins 스타 최하위·트렌딩 2위\n[[Recuris]] 업보트 최하위·코드+수치 최다",
-   "color": "3"
-  },
-  {
-   "id": "n0827hdr",
-   "type": "text",
-   "x": -560,
-   "y": 3520,
-   "width": 420,
-   "height": 120,
-   "text": "## 2026-08-27 배치\n**\"결과가 아니라 과정을 채점하라\"**\n무관한 두 도메인에서 **독립적으로 동일 교정**\n13건 전량 API 실호출 검증",
-   "color": "6"
-  },
-  {
-   "id": "n0827a",
-   "type": "text",
-   "x": -100,
-   "y": 3520,
-   "width": 320,
-   "height": 210,
-   "text": "[[FrontierChallenge]] 🔵 데일리1위\n과학 워크플로 **완수** 채점 (97/300 공개)\n최고 구성 **Pass Rate 20.6%**\n전기화학 Avg.**94.9** 대 Pass **0%**\n⚡ 미통과 트레이스 **75.5%가 \"완료했다\"**\n→ 자기보고 완료 선언 **첫 반증**",
-   "color": "1"
-  },
-  {
-   "id": "n0827b",
-   "type": "text",
-   "x": 260,
-   "y": 3520,
-   "width": 320,
-   "height": 210,
-   "text": "[[VGI-BENCH]] 🔵 데일리4위\n영상 생성 시각 추론 27과제·810인스턴스\n**전개 과정** 요구(최종 상태 아님)\n[[Seedance]] 2.0 **51.0%**\n⚡ 후반 디노이징 **자기교정 한계**\n→ 스텝 증가로는 추론 오류 못 고침",
-   "color": "1"
-  },
-  {
-   "id": "n0827c",
-   "type": "text",
-   "x": 620,
-   "y": 3520,
-   "width": 320,
-   "height": 210,
-   "text": "[[JIT-Agent]] 🔵 데일리5위\n하네스 = **고정 4모듈 기계 생성물**\n즉석 합성·수리·**자가진화**\nDeepSeek-V4-Flash가 GPT-5.6 추월(+9.1)\nGLM-5.2 최대 **+20.2**\n주장: 하네스 지능은 **모델 스케일링과 직교**",
-   "color": "1"
-  },
-  {
-   "id": "n0827d",
-   "type": "text",
-   "x": 980,
-   "y": 3520,
-   "width": 320,
-   "height": 210,
-   "text": "[[VoiceMem]] 🔵 데일리2위\n정보(좌뇌) ∥ 감정(우뇌) **병렬 분리**\n**top-5가 Mem0 top-200보다 +약30점**\n(후보 **40배 감소**인데 더 정확)\n검색 **134ms** = VAD 예산 안쪽\n→ 검색량이 아니라 **구조 분리**",
-   "color": "1"
-  },
-  {
-   "id": "n0827e",
-   "type": "text",
-   "x": -100,
-   "y": 3770,
-   "width": 320,
-   "height": 190,
-   "text": "[[WarpSAC]] 🔵 데일리3위\n안정화 기법 = **데이터 체제의 함수**\nWarpSAC-L(CPU) / WarpSAC-A(GPU 병렬)\n**UnitreeG1 19.8% → 96.4%**\nGPU +23.1% vs CPU +4.5%\n→ 모델 밖 설정이 성능 지배 (RL판)",
-   "color": "1"
-  },
-  {
-   "id": "n0827f",
-   "type": "text",
-   "x": 260,
-   "y": 3770,
-   "width": 320,
-   "height": 190,
-   "text": "[[archify]] ⭐20,152 · 트렌딩1위\n다이어그램 → **자체완결 HTML**\n[[에이전트-스킬]] 1층이되\n*행동*이 아니라 **출력 형식** 규정\n⚠️ \"verifiable\" 자체 서술·근거 없음",
-   "color": "4"
-  },
-  {
-   "id": "n0827g",
-   "type": "text",
-   "x": 620,
-   "y": 3770,
-   "width": 320,
-   "height": 190,
-   "text": "⚡ **하네스 축: 패치 → 생성**\n[[AutoSaddler]] 설계시점 패치\n→ [[Recuris]] 실행시점 진화\n→ [[SkillEvo]] 스킬 자가갱신\n→ **[[JIT-Agent]] 전체 생성**",
-   "color": "5"
-  },
-  {
-   "id": "n0827h",
-   "type": "text",
-   "x": 980,
-   "y": 3770,
-   "width": 320,
-   "height": 190,
-   "text": "❓ **미해결: 하네스의 천장은 어디인가**\n[[JIT-Agent]]: 하네스 바꾸면 크게 오름\n[[FrontierChallenge]]: 스캐폴드 3종 바꿔도\n**20.6% 천장**\n→ 지배 구간↔모델 천장 구간 **경계 미상**",
-   "color": "3"
-  },
-  {
-   "id": "n0827i",
-   "type": "text",
-   "x": -100,
-   "y": 4010,
-   "width": 320,
-   "height": 190,
-   "text": "⚡ **계보 5번째 — 자기보고까지 무너짐**\n[[Thinkingbox]] 툴콜≠완수\n[[apache-maka]] 활동량≠품질\n[[DiffusionOPSD]] 구성이득≠실현이득\n→ **[[FrontierChallenge]] 진술≠완수**",
-   "color": "5"
-  },
-  {
-   "id": "n0827j",
-   "type": "text",
-   "x": 260,
-   "y": 4010,
-   "width": 320,
-   "height": 190,
-   "text": "📊 **HF 격일 갱신 4회 연속 성립**\n[[Qwen3.8-27B]] +353,154 (330만 돌파)\n[[Qwen3.8-27B-GGUF]] +303,896\n**두 저장소 완전 동기 해제**\n원본/GGUF **0.402→0.432** 2연속 상승",
-   "color": "3"
-  },
-  {
-   "id": "n0827k",
-   "type": "text",
-   "x": 620,
-   "y": 4010,
-   "width": 320,
-   "height": 190,
-   "text": "📊 **가드레일 제거 축 선두 교체**\n[[Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF]]\nDL **911,795** = OBLITERATED의 **1.95배**\n3분화 유지: 양자화 ≫ 원본 ≫ 제거\n⚠️ 능력 손실 측정치 이 축 전체 **0건**",
-   "color": "3"
-  },
-  {
-   "id": "n0827l",
-   "type": "text",
-   "x": 980,
-   "y": 4010,
-   "width": 320,
-   "height": 190,
-   "text": "📊 **이슈 밀도 배치 내 470배 격차**\n[[claude-plugins-official]] 0.26건/포크\n(오픈이슈 **1,026**·배치 최다)\n[[ai-job-search]] 0.00056건/포크\n→ 08-26 \"종류의 지표\" 재확인",
-   "color": "3"
-  },
-  {
-   "id": "n0828a",
-   "type": "text",
-   "x": -460,
-   "y": 4260,
-   "width": 330,
-   "height": 210,
-   "color": "5",
-   "text": "📄 [[PAWBench]]\nHF 데일리 3위 · 업69 · 저자14\n**월드모델 = 확률 분포 샘플러**\nPAWEval: 반복 롤아웃→경험 분포\n**50 시나리오 × 11 시스템 전멸**\n⚠️ 기준 확률 출처·개별 점수 미공개"
-  },
-  {
-   "id": "n0828b",
-   "type": "text",
-   "x": -100,
-   "y": 4260,
-   "width": 330,
-   "height": 210,
-   "color": "5",
-   "text": "📄 [[TTPO]]\nHF 데일리 4위 · 업49 · 저자11\n**라벨 없는 테스트 시점 학습**\n불일치=대개 오답(비대칭성)\n일치→OPSD 증류 / 불일치→그룹 RL\nQwen3-1.7B **38.0→45.2%**\n⚠️ TTT 비용·벤치명 전량 미기재"
-  },
-  {
-   "id": "n0828c",
-   "type": "text",
-   "x": 260,
-   "y": 4260,
-   "width": 330,
-   "height": 210,
-   "color": "5",
-   "text": "📄 [[ACE-Agentic-Data]]\nHF 데일리 5위 · 업49 · 저자14 · 서베이\n**(E,q,τ,v) 4요소 분해**\nAccuracy→Complexity→divErsity\n\"학습자 상대 복잡도\"\n⚠️ 자체 벤치 수치 **0건**"
-  },
-  {
-   "id": "n0828d",
-   "type": "text",
-   "x": 620,
-   "y": 4260,
-   "width": 330,
-   "height": 210,
-   "color": "5",
-   "text": "🐙 [[ponytail]]\n⭐**114,596** · 배치 최대 · MIT\n\"최고의 코드는 쓰지 않은 코드\"\n**스킬 생태계 첫 억제(빼는) 축**\n⚠️ 푸시 08-07 3주 정체 · 효과 측정 0건\n⚠️ 과소생성 위험 미측정"
-  },
-  {
-   "id": "n0828e",
-   "type": "text",
-   "x": 980,
-   "y": 4260,
-   "width": 330,
-   "height": 210,
-   "color": "5",
-   "text": "🐙 [[claude-obsidian]]\n⭐14,215 · MIT · Python · 트렌딩14위\n**\"Based on Karpathy's LLM Wiki pattern\"**\n= 이 볼트의 **첫 직접 대조군**\n이슈/포크 **0.098 배치 최고**\n⚠️ 정리 정확도 수치 0건"
-  },
-  {
-   "id": "n0828f",
-   "type": "text",
-   "x": -460,
-   "y": 4510,
-   "width": 330,
-   "height": 190,
-   "color": "5",
-   "text": "🤗 [[Qwen3.8-Flash-Next]]\n트렌딩 **1위** · DL 4,810 · 좋아요 4,033\n**DL/좋아요 = 1.19**\n⚠️ 아키텍처 태그 **qwen4_exp**\n(계열 표준 qwen3_5 아님)\n⚠️ 라이선스 other · 벤치 0건"
-  },
-  {
-   "id": "n0828g",
-   "type": "text",
-   "x": -100,
-   "y": 4510,
-   "width": 330,
-   "height": 190,
-   "color": "5",
-   "text": "🤗 [[GLM-5.3-Flash]]\n트렌딩 **2위** · DL **34** · 좋아요 1,393\n**DL/좋아요 = 0.024**\n= 좋아요가 다운로드의 **41배**\n✅ 배치 유일 MIT · fp8 · glm5_next\n⚠️ arxiv:2602.15763 미확인"
-  },
-  {
-   "id": "n0828h",
-   "type": "text",
-   "x": 260,
-   "y": 4510,
-   "width": 370,
-   "height": 230,
-   "color": "6",
-   "text": "🔭 **최대 발견 — 같은 날 \"분포로 이동\" 3인방**\n[[PAWBench]] 평가를 분포 정렬로\n[[TTPO]] 학습 신호를 분포적 비대칭성으로\n[[ACE-Agentic-Data]] 생성을 제약된 분포 설계로\n\n08-27 \"점→과정\"의 다음 단계 = **\"단일 사례→분포\"**\n**이틀 연속 독립 수렴**\n⚠️ 내부 긴장: TTPO(답 하나) ↔ PAWBench(답 여럿)"
-  },
-  {
-   "id": "n0828i",
-   "type": "text",
-   "x": 680,
-   "y": 4510,
-   "width": 360,
-   "height": 230,
-   "color": "6",
-   "text": "📊 **HF 트렌딩 ≠ 사용량 (수치 확정)**\n[[GLM-5.3-Flash]] 2위 → DL/좋아요 **0.024**\n[[Qwen3.8-Flash-Next]] 1위 → **1.19**\n[[Qwen3.8-27B]] 3위 → **264.5**\n\n**1·2위 실사용 = 3위의 0.14%**\n→ 볼트 규칙: **264.5를 실사용 기준선**으로\n순위는 판별에 쓸 수 없다"
-  },
-  {
-   "id": "n0828j",
-   "type": "text",
-   "x": -460,
-   "y": 4760,
-   "width": 380,
-   "height": 250,
-   "color": "2",
-   "text": "⚠️ **raw 기준선 오류 3건 — 정본 교체**\n[[Qwen3.8-27B]] \"+512,272\" → 실제 **+159,118**\n[[archify]] \"+4,239\" → 실제 **+4,834**\n[[awesome-gpt-image-2]] \"이틀+3,830\" → **하루+1,516**\n\n**규칙: raw 증분 서술 불신,\n볼트 페이지의 직전 API 실측을 기준선으로**\n부수: 격일 동결 \"항상 교대\" **기각**\n(2회 연속 갱신 첫 관측)"
-  },
-  {
-   "id": "n0828k",
-   "type": "text",
-   "x": -40,
-   "y": 4760,
-   "width": 350,
-   "height": 210,
-   "color": "6",
-   "text": "🧩 **에이전트 스킬 — 억제 축 직교 개방**\n기존 4층(자산·방법론·배포·하네스생성)\n= **전부 더하는 축**\n[[ponytail]] = **처음으로 빼는 축**\n→ 5번째 층 아님, **두 번째 차원**\n⚠️ [[archify]]와 동시 적용 충돌 미확인"
-  },
-  {
-   "id": "n0828l",
-   "type": "text",
-   "x": 350,
-   "y": 4760,
-   "width": 350,
-   "height": 210,
-   "color": "6",
-   "text": "📐 **순위 하락 ≠ 열기 감소**\n[[archify]] 1위→**4위**인데 **+4,834 가속**\n(볼트 단일 레포 일간 최고 · +24.0%)\n[[awesome-gpt-image-2]] 2위→3위\n+11.6%→**+6.8% 감속**\n→ 순위는 상대값. 트렌딩≠열기(GitHub판)"
-  },
-  {
-   "id": "n0828m",
-   "type": "text",
-   "x": 740,
-   "y": 4760,
-   "width": 350,
-   "height": 210,
-   "color": "2",
-   "text": "⚖️ **[[OpenMontage]] AGPL-3.0 발견**\n⭐24,213(06-27)→**52,780**(+118%·62일)\n배치 5건 중 **유일한 카피레프트**\n(나머지 4건 전부 MIT)\n→ **코드 이식 금지 · 설계 참고만**\n라이선스를 실용 등급에 반영하기로"
-  },
-  {
-   "id": "n0829hdr",
-   "type": "text",
-   "x": -560,
-   "y": 5120,
-   "width": 380,
-   "height": 180,
-   "color": "6",
-   "text": "## 2026-08-29 배치\n**13건 · 신규 3 · 갱신 10**\n전량 API 실호출 검증\n[[MiniMax-H3]]는 모델카드 원문까지 대조"
-  },
-  {
-   "id": "n0829a",
-   "type": "text",
-   "x": -100,
-   "y": 5120,
-   "width": 400,
-   "height": 240,
-   "color": "1",
-   "text": "🔥 **[[Agentic-Game-Development]]** (1위·업130)\n신호를 **밖으로** — 게임 엔진 = 컴파일러\n엔진이 충돌·물리·내비 검사 → **RLHEV**\n\"CLIP류 프록시는 fuzzy and biased\"\n⚠️ **정량 결과 0건 · 포지션 페이퍼**"
-  },
-  {
-   "id": "n0829b",
-   "type": "text",
-   "x": 360,
-   "y": 5120,
-   "width": 400,
-   "height": 240,
-   "color": "1",
-   "text": "🔥 **[[Self-OPD]]** (5위·업66)\n신호를 **안으로** — flow matching **교사 제거**\nK개 SDE 갈래 → 결정론적 자기참조 기준선\n대비 정규화 어드밴티지 → pull-push\n⚠️ **수치·벤치명·K값 전량 미기재**"
-  },
-  {
-   "id": "n0829c",
-   "type": "text",
-   "x": 820,
-   "y": 5120,
-   "width": 380,
-   "height": 240,
-   "color": "1",
-   "text": "🔥 **[[PAWBench]]** 업69→**80** (2위)\n신호의 **형태** — 유효성이 아니라 **분포 일치**\n50시나리오×11시스템 **전멸** 재확인\n초록 재대조: 수치 변경 없음"
-  },
-  {
-   "id": "n0829d",
-   "type": "text",
-   "x": -100,
-   "y": 5420,
-   "width": 400,
-   "height": 220,
-   "color": "2",
-   "text": "⚠️ **긴장 1 — 1위 ↔ 5위**\nSelf-OPD는 교사를 없앤 대신\n**보상을 유일한 앵커로 승격**\n그런데 1위는 그 보상이 **부실**하다고 진단\n→ 앵커를 **더 부실한 곳으로 옮긴** 것일 수 있음"
-  },
-  {
-   "id": "n0829e",
-   "type": "text",
-   "x": 360,
-   "y": 5420,
-   "width": 400,
-   "height": 220,
-   "color": "2",
-   "text": "⚠️ **긴장 2 — 1위 ↔ 2위**\n엔진 검사 = **이진 유효성**\n\"가능한가\"는 답해도 \"확률이 맞는가\"는 못 답함\n→ 조밀 유효성 보상은 **최빈 모드로 수렴**\n**핵심 구분: 유효성 ≠ 정렬**"
-  },
-  {
-   "id": "n0829f",
-   "type": "text",
-   "x": 820,
-   "y": 5420,
-   "width": 380,
-   "height": 220,
-   "color": "4",
-   "text": "🆕 **[[UrbanGround]]** (3위·업71·저자18)\n홍콩 전역 3D 실축척 복제본\n원자 능력은 OK · **합성이 안 됨**\n오차가 **교정 없이 누적**\n= [[FrontierChallenge]] 75.5%의 **공간판**"
-  },
-  {
-   "id": "n0829g",
-   "type": "text",
-   "x": 1260,
-   "y": 5420,
-   "width": 360,
-   "height": 180,
-   "color": "5",
-   "text": "🔁 **엔진의 이중 용도**\n같은 물리 제약 3D 환경을\n[[UrbanGround]] = **평가 장치**\n[[Agentic-Game-Development]] = **학습 신호원**\n→ 3위가 1위의 전제를 **뒷받침**"
-  },
-  {
-   "id": "n0829h",
-   "type": "text",
-   "x": -560,
-   "y": 5740,
-   "width": 420,
-   "height": 280,
-   "color": "1",
-   "text": "⚠️ **[[MiniMax-H3]] — 오픈 가중치 ≠ 오픈 시스템**\n카드가 **\"품질에 결정적\"** 이라 밝힌\n`H3-Context-IR`이 **공개에서 빠짐**(API 전용)\n→ 공개 가중치로 **공식 품질 재현 불가**\n인코더 = [[Alibaba]] **Qwen3-VL-32B 전체**\n희소 어텐션 지원인데 **공개는 full attention만**\n**공개 벤치 4회차 연속 0건**"
-  },
-  {
-   "id": "n0829i",
-   "type": "text",
-   "x": -100,
-   "y": 5740,
-   "width": 400,
-   "height": 240,
-   "color": "3",
-   "text": "📊 **264.5는 천장이 아니었다**\n[[Qwen3.8-27B-GGUF]] **2,646.7**\n[[MiniMax-H3]] **1,093.2**\n[[Qwen3.8-27B]] 원본 **305.8**\n→ GGUF가 원본의 **8.7배**\n**DL/좋아요는 같은 축 안에서만 비교**"
-  },
-  {
-   "id": "n0829j",
-   "type": "text",
-   "x": 360,
-   "y": 5740,
-   "width": 400,
-   "height": 240,
-   "color": "3",
-   "text": "📐 **비율은 증가율로 설명해야 한다**\n원본/GGUF **0.4817** (4회 연속 상승)\n그런데 **절대 증분은 GGUF가 더 큼**\n(+604,691 > +571,152)\n원인 = 증가율 원본 +16.52% vs GGUF +7.79%\n⚠️ **08-28 근거 서술 정정**"
-  },
-  {
-   "id": "n0829k",
-   "type": "text",
-   "x": 820,
-   "y": 5740,
-   "width": 400,
-   "height": 260,
-   "color": "4",
-   "text": "🧭 **자산/소프트웨어 축은 언어가 아니다**\n이슈/포크 **연속 스펙트럼 7.6배**\n[[scientific-agent-skills]] .0051 (Python·최하단)\n< [[awesome-gpt-image-2]] .0070\n< [[ponytail]] .0285 < [[archify]] .0353 (JS·상단)\n< [[OpenMontage]] .0388\n→ **\"통째로 실행 vs 조각을 떼어 씀\"**"
-  },
-  {
-   "id": "n0829l",
-   "type": "text",
-   "x": 1280,
-   "y": 5740,
-   "width": 380,
-   "height": 260,
-   "color": "2",
-   "text": "⚠️ **[[scientific-agent-skills]] high→medium**\n104일 만의 재관측 ⭐23,434→**37,109**\n**배치 유일 2025년생**(2025-10-19)\n\"validated\" 163종 · \"175,000+ 과학자\"\n**검증 주체·기준 전량 미확인**\n과학 스킬은 **틀린 결과가 그럴듯하게 나온다**"
-  },
-  {
-   "id": "n0829m",
-   "type": "text",
-   "x": -560,
-   "y": 6100,
-   "width": 420,
-   "height": 220,
-   "color": "3",
-   "text": "📈 **성장 곡선 두 유형 확보**\n**급등-급감쇠형** [[awesome-gpt-image-2]]\n +38.5%→+11.6%→+6.8%→**+3.2%** (매일 반토막)\n**저속-장기축적형** [[scientific-agent-skills]]\n 104일 +58.3% · 일평균 +131\n중간: [[archify]] 0.79배/일"
-  },
-  {
-   "id": "n0829n",
-   "type": "text",
-   "x": -100,
-   "y": 6100,
-   "width": 400,
-   "height": 200,
-   "color": "2",
-   "text": "⚠️ **raw 기준선 오류 4회 연속**\n[[archify]] +4,562→**+3,826**\n[[awesome-gpt-image-2]] +1,687→**+765**\n[[ponytail]] +1,396→**+1,174**\n[[OpenMontage]] +1,144→**+778**\n**전부 raw가 과대** · 볼트 계열 정본"
-  },
-  {
-   "id": "n0829o",
-   "type": "text",
-   "x": 360,
-   "y": 6100,
-   "width": 400,
-   "height": 200,
-   "color": "5",
-   "text": "⚖️ **규모가 다르면 반대로 읽힌다**\n[[ponytail]] 증가율 **최저(+1.02%)** 인데\n절대 증분 **+1,174**로\n[[awesome-gpt-image-2]](+765)보다 많음\n→ **순위·비율·절대값 셋을 같이 본다**"
-  },
-  {
-   "id": "src-openmaic",
-   "type": "text",
-   "text": "### OpenMAIC\n⭐22,701 · MIT\nAI 교사+**AI 동료 학습자** 교실\n**JCST'26 동료심사 논문 실재**\n[[OpenMAIC]]",
-   "x": -560,
-   "y": 6440,
-   "width": 240,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "obs-20260830-hffreeze",
-   "type": "text",
-   "text": "### 관측 2026-08-30\n**HF 데일리 top-5 순위 완전 동결**\n증분 +2~+6(합계 +16)\n→ 유효 관측 창 = 공개 후 3일",
-   "x": -280,
-   "y": 6440,
-   "width": 240,
-   "height": 140,
-   "color": "6"
-  },
-  {
-   "id": "obs-20260830-ggufflip",
-   "type": "text",
-   "text": "### 관측 2026-08-30\n**원본이 GGUF 증분 첫 추월**\n+482,509 vs +475,672\n원본/GGUF 0.350→0.402→0.482→**0.510**",
-   "x": 0,
-   "y": 6440,
-   "width": 240,
-   "height": 140,
-   "color": "2"
-  },
-  {
-   "id": "obs-20260830-issuedrop",
-   "type": "text",
-   "text": "### 관측 2026-08-30\n**오픈이슈 첫 감소 관측**\nscientific-agent-skills 18→15\n→ 이슈=단조증가 가정 붕괴",
-   "x": 280,
-   "y": 6440,
-   "width": 240,
-   "height": 140,
-   "color": "6"
-  },
-  {
-   "id": "act-20260830-domaingap",
-   "type": "text",
-   "text": "### ⚠️ actionable\n**domains/ai-news.md 누락 3배치**\n08-27·08-28·08-29 소급 복원\n우선순위 **높음**",
-   "x": 560,
-   "y": 6440,
-   "width": 240,
-   "height": 140,
-   "color": "3"
-  },
-  {
-   "id": "batch-20260902",
-   "type": "text",
-   "text": "## 📦 2026-09-02 배치\n**신규 6 · 갱신 7**\n13건 전량 API 실호출\n+ **LICENSE 원문 2건 확인**",
-   "x": -160,
-   "y": 6700,
-   "width": 300,
-   "height": 140,
-   "color": "5"
-  },
-  {
-   "id": "src-openclaude",
-   "type": "text",
-   "text": "### 🚨 OpenClaude\n⭐31,655 · 포크 **8,975**\n포크/스타 **0.284 배치 최고**\nLICENSE: *\"does not have Anthropic's\nauthorization to distribute\"*\n**도입 보류 권고**",
-   "x": 200,
-   "y": 6700,
-   "width": 280,
-   "height": 180,
-   "color": "1"
-  },
-  {
-   "id": "src-smelt",
-   "type": "text",
-   "text": "### SMELT\n업55 · 저자 9인\n예산 3종 통제(FLOPs·파라미터·KV)\n**학습 FLOPs 6.8~18.0% 절감**\nCode 최대 · 컨텍스트 길수록 ↑",
-   "x": 520,
-   "y": 6700,
-   "width": 270,
-   "height": 170,
-   "color": "4"
-  },
-  {
-   "id": "src-qwendrive",
-   "type": "text",
-   "text": "### Qwen-Drive-1.0\n업76 데일리 1위 · 저자 16인\nBEV 헤드 = **탐침(probe)**\n*explicit, inspectable interface*\n⚠️수치 0개",
-   "x": 830,
-   "y": 6700,
-   "width": 270,
-   "height": 170,
-   "color": "2"
-  },
-  {
-   "id": "src-uivenus2",
-   "type": "text",
-   "text": "### UI-Venus-2\n업50 · **저자 31인 최다**\n**검증을 스케일링 축으로 승격**\n다중모델 투표 평가자\n⚠️벤치 점수 0개",
-   "x": 1140,
-   "y": 6700,
-   "width": 270,
-   "height": 170,
-   "color": "2"
-  },
-  {
-   "id": "src-safin1",
-   "type": "text",
-   "text": "### Safin-1\n업17 · 저자 18인 · 코드 ⭐1\nMARCH 메모리 라우팅\n**백본 미수정 + 상태만 적응**\n⚠️수치 0개 · 저자 스스로 \"초기 탐색\"",
-   "x": 1450,
-   "y": 6700,
-   "width": 270,
-   "height": 170,
-   "color": "2"
-  },
-  {
-   "id": "src-diagevo",
-   "type": "text",
-   "text": "### 🎯 DiagEvo\n업9 최저 · **저자 8인 최소**\n실패 이력 → 커리큘럼\n**Active / Mastered**\n**72.3%(+4.5%p) · 57.4%(+1.1%p)**\n= 배치 유일 완전 수치",
-   "x": 1760,
-   "y": 6700,
-   "width": 280,
-   "height": 190,
-   "color": "4"
-  },
-  {
-   "id": "concept-inspectability",
-   "type": "text",
-   "text": "## 🎯 검사가능성 공사\n*내부 상태를 밖에서\n검사 가능하게 만들기*\n[[국소-수리-원리]]의 **전제**\n급소: 검사기가 피검사자와\n같은 실패 모드면 **거울**\n⚠️잠정(1배치 3편)",
-   "x": 900,
-   "y": 6960,
-   "width": 300,
-   "height": 210,
-   "color": "6"
-  },
-  {
-   "id": "unfreeze-20260902",
-   "type": "text",
-   "text": "## 🔓 DL 동결 해제\nQwen3.8-27B +449,135\nGGUF +514,904\n→ **GGUF > 원본**\n08-30 \"원본 추월\" **재현 안 됨**\n= 08-31 철회가 **옳았다**\n⚠️1회차 · 판정 계속 보류",
-   "x": -160,
-   "y": 6960,
-   "width": 300,
-   "height": 210,
-   "color": "5"
-  },
-  {
-   "id": "rule-noassertion",
-   "type": "text",
-   "text": "## 🚨 신규 규칙\n**SPDX NOASSERTION =\n\"정보 없음\"이 아니라\n\"표준 식별자로 담기지 않는\n사정이 있음\"**\n→ LICENSE 원문 확인 **필수**\n근거 2/2건 적중",
-   "x": 200,
-   "y": 6960,
-   "width": 280,
-   "height": 210,
-   "color": "1"
-  },
-  {
-   "id": "obs-authors",
-   "type": "text",
-   "text": "### ⚠️ 관찰(판정 보류)\n**저자 수 ↔ 수치 제시 반비례**\n무: 31·18·16인\n유: 9·8인\n**16인 경계 완전 분리** (n=5)",
-   "x": 1500,
-   "y": 6960,
-   "width": 260,
-   "height": 170,
-   "color": "3"
-  },
-  {
-   "id": "obs-issuedensity",
-   "type": "text",
-   "text": "### ⚠️ 관찰(판정 보류)\n**이슈 밀도 = 도메인 특성**\nvideo-use 0.0286 ≫\nminimind 0.0079 ·\nacademic 0.0053\n→ 도메인 통제 후 비교",
-   "x": 1800,
-   "y": 6960,
-   "width": 260,
-   "height": 170,
-   "color": "3"
-  },
-  {
-   "id": "obs-trending",
-   "type": "text",
-   "text": "### ⚠️ 트렌딩 편향\n절대 스타 1위 =\n**minimind ⭐57,495**\n(2024-07 생성)\n나머지 전부 2026년 생성\n→ 누적형 자산 과소평가",
-   "x": 1200,
-   "y": 6960,
-   "width": 260,
-   "height": 170,
-   "color": "3"
-  },
-  {
-   "id": "batch-0903",
-   "type": "text",
-   "x": -560,
-   "y": 7250,
-   "width": 300,
-   "height": 200,
-   "color": "6",
-   "text": "## 2026-09-03 배치\n**신규 7 · 갱신 6**\n13건 전량 API 실검증\n\n*스킬이 수작업에서\n자동 증류로 넘어간 날*"
-  },
-  {
-   "id": "src-repo2skill",
-   "type": "text",
-   "x": -200,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[Repo-To-Skill]]\nHF 1위·업보트 334\n레포 1,000 → 스킬 5,000+\n**백본 고정·스킬만 토글**\nMLE-bench +134.3%\n⚠️상대치만"
-  },
-  {
-   "id": "src-solarwm",
-   "type": "text",
-   "x": 110,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[SolarWM]]\nHF 2위·저자 18인\n143만 클립 → 단일 계약\n선별결정·출처 필드\n5초 학습 → 시간 롤아웃\n⚠️벤치 수치 0"
-  },
-  {
-   "id": "src-earlyeval",
-   "type": "text",
-   "x": 420,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[EarlyEval]]\nHF 3위\nLightGBM 성패 분류기\n스텝 -13~26%\n토큰 -44.1%/-29.4%\n**교란 1~2%p 자진보고**"
-  },
-  {
-   "id": "src-cogr",
-   "type": "text",
-   "x": 730,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[CoGR]]\nHF 4위\n질의+**아이템 양쪽**\n키워드 생성·역색인 유지\nF1 +10.9%/+36.1%\n⭐raw 결측 API가 복구"
-  },
-  {
-   "id": "src-da",
-   "type": "text",
-   "x": 1040,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[Declarative-Attention]]\nHF 5위\n`<global>/<focus>/<local>`\n자기 선언 → KV 스킵\n**-52.0%** 토큰/-1.27%p\n**학습 불필요**"
-  },
-  {
-   "id": "src-glm53",
-   "type": "text",
-   "x": 1350,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[GLM-5.3]]\n트렌딩 1위·**753B**\n`glm_moe_dsa`·fp8\n**독자 라이선스**\nTB3.0 4.6→28.3 주장\n⚠️벤더 자체 표"
-  },
-  {
-   "id": "src-voicestudio",
-   "type": "text",
-   "x": 1660,
-   "y": 7250,
-   "width": 280,
-   "height": 190,
-   "color": "1",
-   "text": "### [[VoiceStudio]]\n⭐15,454·AGPL-3.0\n**16 TTS + 11 ASR 하네스**\nMCP + OpenAI 호환 API\n⭐배치 유일 즉시 활용"
-  },
-  {
-   "id": "src-glm53flash-u",
-   "type": "text",
-   "x": -200,
-   "y": 7480,
-   "width": 280,
-   "height": 170,
-   "color": "1",
-   "text": "### [[GLM-5.3-Flash]] 갱신\n🚨 DL **34 → 517,902**\n321B·멀티모달·MIT\nDL/좋아요 0.024→**260.3**"
-  },
-  {
-   "id": "src-qwen38fn-u",
-   "type": "text",
-   "x": 110,
-   "y": 7480,
-   "width": 280,
-   "height": 170,
-   "color": "1",
-   "text": "### [[Qwen3.8-Flash-Next]] 갱신\nDL 4,810 → **263,287**\n**180B** 확정\n`qwen-community-1.0`"
-  },
-  {
-   "id": "src-hermes-u",
-   "type": "text",
-   "x": 420,
-   "y": 7480,
-   "width": 280,
-   "height": 170,
-   "color": "1",
-   "text": "### [[hermes-agent]] 갱신\n⭐**240,408**(+1.82%)\n⚠️이슈 **+8.69%**\n= 스타의 **4.8배**"
-  },
-  {
-   "id": "src-ponytail-u",
-   "type": "text",
-   "x": 730,
-   "y": 7480,
-   "width": 280,
-   "height": 170,
-   "color": "1",
-   "text": "### [[ponytail]] 갱신\n⭐**122,495**(+5.81%)\n푸시 **27일 정체**\n일평균 +1,345"
-  },
-  {
-   "id": "src-cdmcp-u",
-   "type": "text",
-   "x": 1040,
-   "y": 7480,
-   "width": 280,
-   "height": 170,
-   "color": "1",
-   "text": "### [[chrome-devtools-mcp]] 갱신\n⭐**50,774** 5만 돌파\n부채밀도 0.0261"
-  },
-  {
-   "id": "src-timesfm-u",
-   "type": "text",
-   "x": 1350,
-   "y": 7480,
-   "width": 280,
-   "height": 170,
-   "color": "1",
-   "text": "### [[TimesFM]] 갱신\n⭐**30,397**·트렌딩 2위\n**3.0 공개**(331M)\nraw DL 0 → **46,862**"
-  },
-  {
-   "id": "obs-dl-lag",
-   "type": "text",
-   "x": -200,
-   "y": 7690,
-   "width": 300,
-   "height": 200,
-   "color": "3",
-   "text": "### 🚨 규칙 정정\n**HF DL은 공개 직후 비어 있다**\n34→517,902 / 4,810→263,287\n/ 0→46,862 — **3벤더·3모달리티**\n08-28 '순위≠사용' **철회**\n→ 시차였다(≈1주 선행)"
-  },
-  {
-   "id": "obs-drift-hf",
-   "type": "text",
-   "x": 140,
-   "y": 7690,
-   "width": 280,
-   "height": 190,
-   "color": "3",
-   "text": "### ⚠️ HF 드리프트 大\nAPI>raw: +60.0/+26.6/+17.3%\nGitHub은 +2~+14(≤0.1%)\n08-30 '완전 일치'와 상반\n→ HF DL은 참고치로만"
-  },
-  {
-   "id": "obs-issue-fast",
-   "type": "text",
-   "x": 460,
-   "y": 7690,
-   "width": 270,
-   "height": 180,
-   "color": "3",
-   "text": "### ⚠️ 이슈>스타 (2건)\nhermes **4.8배**\nponytail **2.1배**\n규모 26배 차이인데 동부호\n→ 판정 보류"
-  },
-  {
-   "id": "obs-license-close",
-   "type": "text",
-   "x": 770,
-   "y": 7690,
-   "width": 270,
-   "height": 170,
-   "color": "3",
-   "text": "### ⚠️ '차세대는 덜 연다'\nZhipu 플래그십 독자\nAlibaba qwen-community-1.0\n→ 2건·추세 미확정"
-  },
-  {
-   "id": "obs-sparse3",
-   "type": "text",
-   "x": 1080,
-   "y": 7690,
-   "width": 270,
-   "height": 190,
-   "color": "3",
-   "text": "### 🔭 희소어텐션 3중\n①선언(학습X·**수치 O**)\n②glm_moe_dsa(자체표)\n③QSA(수치 없음)\n→ 공개된 건 ①뿐"
-  },
-  {
-   "id": "con-skill-axis",
-   "type": "text",
-   "x": -200,
-   "y": 7920,
-   "width": 300,
-   "height": 220,
-   "color": "5",
-   "text": "## [[에이전트-스킬]]\n**생산 방식 축 신설**\n①수작업 ②경험 ③증류\n**규모와 근거가 반비례**\n급소: 증류는 '하지 마라'를\n뽑지 못한다\n+5층(검색) 잠정"
-  },
-  {
-   "id": "con-memory-4",
-   "type": "text",
-   "x": 140,
-   "y": 7920,
-   "width": 280,
-   "height": 190,
-   "color": "5",
-   "text": "## [[에이전트-메모리-레이어]]\n**4번째: 선택적 비독해**\n두지도 압축도 않고\n**읽지 않기로 선택**\n판단 주체 = 모델 자신"
-  },
-  {
-   "id": "con-llmwiki-gap",
-   "type": "text",
-   "x": 460,
-   "y": 7920,
-   "width": 280,
-   "height": 190,
-   "color": "5",
-   "text": "## [[LLM-Wiki]]\n🪞 **queries/ 0건**\n태그를 붙이기만 하고\n유효성을 측정한 적 없다\n= 아이템측 보상 신호 없음"
-  },
-  {
-   "id": "con-worldmodel",
-   "type": "text",
-   "x": 770,
-   "y": 7920,
-   "width": 270,
-   "height": 170,
-   "color": "5",
-   "text": "## [[월드모델]]\n**데이터 계약** 공개\n선별결정·출처가 필드로\nMiniMax-H3 반대 노선"
-  },
-  {
-   "id": "con-tsfm",
-   "type": "text",
-   "x": 1080,
-   "y": 7920,
-   "width": 280,
-   "height": 180,
-   "color": "5",
-   "text": "## [[시계열-예측-파운데이션-모델]]\n331M — GLM-5.3의 1/2275\n스케일 아닌 **배포가능성** 축\n에이전트 일색 배치 2위"
-  },
-  {
-   "id": "act-voice",
-   "type": "text",
-   "x": -200,
-   "y": 8170,
-   "width": 270,
-   "height": 160,
-   "color": "2",
-   "text": "### ⭐ actionable\nVoiceStudio → [[reat-voice]]\n로컬 대체 스팟체크\n**우선순위 높음**"
-  },
-  {
-   "id": "act-queries",
-   "type": "text",
-   "x": 140,
-   "y": 8170,
-   "width": 270,
-   "height": 160,
-   "color": "2",
-   "text": "### ⭐ actionable\n`queries/` 기록 시작\n죽은 태그 판정\n**우선순위 높음**"
-  },
-  {
-   "id": "act-abs",
-   "type": "text",
-   "x": 460,
-   "y": 8170,
-   "width": 270,
-   "height": 160,
-   "color": "2",
-   "text": "### actionable\nRepo-To-Skill 절대점수\n+검증 절차 확인\n**우선순위 높음**"
-  },
-  {
-   "id": "hub-0904",
-   "type": "text",
-   "x": 700,
-   "y": 8590,
-   "width": 420,
-   "height": 130,
-   "color": "6",
-   "text": "# 2026-09-04 배치 (13건)\n**암묵을 명시로 바꾼 날**\nGitHub 5 · HF논문 5 · HF모델 3"
-  },
-  {
-   "id": "con-explicit",
-   "type": "text",
-   "x": 180,
-   "y": 8810,
-   "width": 300,
-   "height": 150,
-   "color": "6",
-   "text": "## 개념 [[암묵을-명시로]]\n타이밍·판정기준·검증기·\n재사용조건·물리량을 꺼냄\n**13건 중 5건 동일 수법**"
-  },
-  {
-   "id": "con-select",
-   "type": "text",
-   "x": 520,
-   "y": 8810,
-   "width": 300,
-   "height": 150,
-   "color": "6",
-   "text": "## 개념 [[선택비용과-중복성]]\n선택기 가치 ∝ 1/중복성\n**같은 날 정반대 2건**"
-  },
-  {
-   "id": "s-anthskills",
-   "type": "text",
-   "x": 140,
-   "y": 9020,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[anthropics-skills]]\n⭐173,849 명세 원본\n라이선스 null·문서스킬\nsource-available"
-  },
-  {
-   "id": "s-human",
-   "type": "text",
-   "x": 460,
-   "y": 9020,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[humanizer]]\n⭐41,974 (+1,208)\nWikipedia 35패턴\n심판을 LLM 밖에 (3번째)"
-  },
-  {
-   "id": "s-prompts",
-   "type": "text",
-   "x": 780,
-   "y": 9020,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[prompts-chat]]\n⭐169,220\n배지 143k = **18% 과소**\n배지규칙 2번째 역방향"
-  },
-  {
-   "id": "s-magnitude",
-   "type": "text",
-   "x": 1100,
-   "y": 9020,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[magnitude]]\n⭐2,106 로컬 추론서버\nHermes 지원\n⚠️수치 전무"
-  },
-  {
-   "id": "s-deepswe",
-   "type": "text",
-   "x": 1420,
-   "y": 9020,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[DeepSWE]]\n⭐1,604 창작 113과제\n검증기 별도 컨테이너"
-  },
-  {
-   "id": "s-randatt",
-   "type": "text",
-   "x": 140,
-   "y": 9220,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[Random-Attention]]\nHF 1위 · Salesforce\nKV 점수화 **무용**\nvLLM +32~43%"
-  },
-  {
-   "id": "s-puffin",
-   "type": "text",
-   "x": 460,
-   "y": 9220,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[Puffin-World]]\n물리·기하·외형 통합\nPuffin-16M 1,500만\n🚨수치 0건"
-  },
-  {
-   "id": "s-compile",
-   "type": "text",
-   "x": 780,
-   "y": 9220,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[Compile-by-Training]]\nPAW 후속 · Waterloo\n0건 → 83.6%\n컴파일 수초→1분"
-  },
-  {
-   "id": "s-bcit",
-   "type": "text",
-   "x": 1100,
-   "y": 9220,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[BCIT]]\nReject/Validate/Train\n+2.63점 (95%CI)\n볼트 09-03 사고 설명"
-  },
-  {
-   "id": "s-tcr",
-   "type": "text",
-   "x": 1420,
-   "y": 9220,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[TCR]]\nMAE 1.11s→0.042s\nDialogue 28.3→84.1%\nreat 설계 근거"
-  },
-  {
-   "id": "s-pyannote",
-   "type": "text",
-   "x": 140,
-   "y": 9420,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[pyannote-community-1]]\nDL 5,072,652\n3.1 대비 10승1무1패\n🚨raw 게이트주장 반증"
-  },
-  {
-   "id": "s-sam3",
-   "type": "text",
-   "x": 460,
-   "y": 9420,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[sam3]]\nDL 2,081,577\n개방어휘 전체 분할\n인간의 75~80%"
-  },
-  {
-   "id": "s-minimax",
-   "type": "text",
-   "x": 780,
-   "y": 9420,
-   "width": 300,
-   "height": 170,
-   "color": "5",
-   "text": "### [[Minimax-h3-Turbo-lightx2v]]\nDL 1,117,509\n= 베이스의 **21.8%**\n08-12 판정 폐기"
-  },
-  {
-   "id": "ent-salesforce",
-   "type": "text",
-   "x": 1160,
-   "y": 8810,
-   "width": 240,
-   "height": 120,
-   "color": "4",
-   "text": "### [[Salesforce]]\n무용을 증명하는 연구"
-  },
-  {
-   "id": "ent-waterloo",
-   "type": "text",
-   "x": 1420,
-   "y": 8810,
-   "width": 240,
-   "height": 120,
-   "color": "4",
-   "text": "### [[University-of-Waterloo]]\nPAW 계보 4건 누적"
-  },
-  {
-   "id": "act-mag",
-   "type": "text",
-   "x": 140,
-   "y": 9450,
-   "width": 300,
-   "height": 140,
-   "color": "2",
-   "text": "### actionable\nmagnitude로 로컬대기 5건\n한꺼번에 판정\n**우선순위 높음**"
-  },
-  {
-   "id": "act-mae",
-   "type": "text",
-   "x": 460,
-   "y": 9450,
-   "width": 300,
-   "height": 140,
-   "color": "2",
-   "text": "### actionable\nreat Shot Boundary MAE\n최초 측정\n**우선순위 높음**"
-  },
-  {
-   "id": "act-ctx",
-   "type": "text",
-   "x": 780,
-   "y": 9450,
-   "width": 300,
-   "height": 140,
-   "color": "2",
-   "text": "### actionable\n볼트 규칙에 `원 맥락` 필드\n(BCIT 형식)\n**우선순위 높음**"
-  },
-  {
-   "id": "act-pyan",
-   "type": "text",
-   "x": 1100,
-   "y": 9450,
-   "width": 300,
-   "height": 140,
-   "color": "2",
-   "text": "### actionable\npyannote community-1 교체\n+ 3.1 A/B\n**우선순위 높음**"
-  },
-  {
-   "id": "act-gated",
-   "type": "text",
-   "x": 1420,
-   "y": 9450,
-   "width": 300,
-   "height": 140,
-   "color": "2",
-   "text": "### actionable\n수집기 gated 오독 수정\n\"미확인\"≠부재\n**우선순위 중간**"
-  }
- ],
- "edges": [
-  {
-   "id": "e1",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-github",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e2",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e3",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-workflow",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-openspec",
-   "fromNode": "cluster-github",
-   "fromSide": "bottom",
-   "toNode": "src-openspec",
-   "toSide": "top"
-  },
-  {
-   "id": "e-pptmaster",
-   "fromNode": "cluster-github",
-   "fromSide": "bottom",
-   "toNode": "src-pptmaster",
-   "toSide": "top"
-  },
-  {
-   "id": "e-strix",
-   "fromNode": "src-strix",
-   "toNode": "domain-hub",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e-bridging",
-   "fromNode": "src-bridging",
-   "toNode": "domain-hub",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e-kowide",
-   "fromNode": "src-kowide",
-   "toNode": "cluster-workflow",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-videouse",
-   "fromNode": "cluster-github",
-   "fromSide": "bottom",
-   "toNode": "src-videouse",
-   "toSide": "top"
-  },
-  {
-   "id": "e-livedit",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-livedit",
-   "toSide": "top"
-  },
-  {
-   "id": "e-scalehorizon",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-scalehorizon",
-   "toSide": "top"
-  },
-  {
-   "id": "e-orca",
-   "fromNode": "cluster-hf",
-   "toNode": "src-orca"
-  },
-  {
-   "id": "e-dockerless",
-   "fromNode": "cluster-hf",
-   "toNode": "src-dockerless"
-  },
-  {
-   "id": "e-ornith9b",
-   "fromNode": "cluster-hf",
-   "toNode": "src-ornith9b"
-  },
-  {
-   "id": "e-omniroute",
-   "fromNode": "src-omniroute",
-   "toNode": "cluster-workflow"
-  },
-  {
-   "id": "e-olmocr",
-   "fromNode": "cluster-github",
-   "toNode": "src-olmocr"
-  },
-  {
-   "id": "e-aibeginners",
-   "fromNode": "cluster-github",
-   "toNode": "src-aibeginners"
-  },
-  {
-   "id": "e-vulnclaw",
-   "fromNode": "cluster-github",
-   "toNode": "src-vulnclaw"
-  },
-  {
-   "id": "e-agentscli",
-   "fromNode": "src-agentscli",
-   "toNode": "cluster-workflow"
-  },
-  {
-   "id": "e-turboserve",
-   "fromNode": "cluster-hf",
-   "toNode": "src-turboserve"
-  },
-  {
-   "id": "e-memsyco",
-   "fromNode": "cluster-hf",
-   "toNode": "src-memsyco"
-  },
-  {
-   "id": "e-eldr",
-   "fromNode": "cluster-hf",
-   "toNode": "src-eldr"
-  },
-  {
-   "id": "e-caveman",
-   "fromNode": "cluster-github",
-   "fromSide": "bottom",
-   "toNode": "src-caveman",
-   "toSide": "top"
-  },
-  {
-   "id": "e-paw",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-paw",
-   "toSide": "top"
-  },
-  {
-   "id": "e-flashmorph",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-flashmorph",
-   "toSide": "top"
-  },
-  {
-   "id": "e-agenticsts",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-agenticsts",
-   "toSide": "top"
-  },
-  {
-   "id": "e-evopolicygym",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-evopolicygym",
-   "toSide": "top"
-  },
-  {
-   "id": "e-agenticdatabench",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "src-agenticdatabench",
-   "toSide": "top"
-  },
-  {
-   "id": "e-sts-memsyco",
-   "fromNode": "src-agenticsts",
-   "fromSide": "right",
-   "toNode": "src-memsyco",
-   "toSide": "left",
-   "label": "메모리"
-  },
-  {
-   "id": "e-paw-flash",
-   "fromNode": "src-paw",
-   "fromSide": "right",
-   "toNode": "src-flashmorph",
-   "toSide": "left",
-   "label": "효율화"
-  },
-  {
-   "id": "e-evo-adb",
-   "fromNode": "src-evopolicygym",
-   "fromSide": "right",
-   "toNode": "src-agenticdatabench",
-   "toSide": "left",
-   "label": "에이전트평가"
-  },
-  {
-   "id": "e-0704-1",
-   "fromNode": "cluster-github",
-   "toNode": "src-codex-plugin-cc",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0704-2",
-   "fromNode": "cluster-github",
-   "toNode": "src-pytorch",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0704-3",
-   "fromNode": "cluster-github",
-   "toNode": "src-cs249r",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0704-4",
-   "fromNode": "cluster-github",
-   "toNode": "src-cubesandbox",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0704-5",
-   "fromNode": "cluster-hf",
-   "toNode": "src-qwen-nvfp4",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0704-6",
-   "fromNode": "src-codex-plugin-cc",
-   "toNode": "src-cubesandbox",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "에이전트 인프라",
-   "color": "6"
-  },
-  {
-   "id": "e-0704-7",
-   "fromNode": "src-pytorch",
-   "toNode": "src-qwen-nvfp4",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "학습·양자화 스택",
-   "color": "6"
-  },
-  {
-   "id": "e-0704-8",
-   "fromNode": "src-cs249r",
-   "toNode": "src-qwen-nvfp4",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "엣지 배포 관점",
-   "color": "6"
-  },
-  {
-   "id": "e-hub-skills3",
-   "fromNode": "domain-hub",
-   "toNode": "theme-skills-3layer",
-   "label": "스킬 표준화",
-   "color": "6"
-  },
-  {
-   "id": "e-s3-matt",
-   "fromNode": "theme-skills-3layer",
-   "toNode": "src-mattpocock-skills",
-   "label": "모음",
-   "color": "6"
-  },
-  {
-   "id": "e-s3-agentskills",
-   "fromNode": "theme-skills-3layer",
-   "toNode": "src-agentskills",
-   "label": "표준",
-   "color": "6"
-  },
-  {
-   "id": "e-s3-skillcoach",
-   "fromNode": "theme-skills-3layer",
-   "toNode": "src-skillcoach",
-   "label": "평가",
-   "color": "6"
-  },
-  {
-   "id": "e-matt-agentskills",
-   "fromNode": "src-mattpocock-skills",
-   "toNode": "src-agentskills",
-   "label": "포맷 정렬",
-   "color": "5"
-  },
-  {
-   "id": "e-hub-worlddir",
-   "fromNode": "domain-hub",
-   "toNode": "src-worlddirector",
-   "label": "월드모델",
-   "color": "4"
-  },
-  {
-   "id": "e-mrfm-dist",
-   "fromNode": "src-mrfm",
-   "toNode": "src-distrewards",
-   "label": "효율·생성",
-   "color": "2"
-  },
-  {
-   "id": "e-qwen-nvfp4-line",
-   "fromNode": "src-qwen35b-nvfp4",
-   "toNode": "src-qwen-nvfp4",
-   "label": "NVFP4 계보",
-   "color": "2"
-  },
-  {
-   "id": "e-hub-qwen35nvfp4",
-   "fromNode": "domain-hub",
-   "toNode": "src-qwen35b-nvfp4",
-   "label": "로컬 양자화",
-   "color": "4"
-  },
-  {
-   "id": "e-sysprompt-matt",
-   "fromNode": "src-system-prompts-leaks",
-   "toNode": "src-mattpocock-skills",
-   "label": "프롬프트↔스킬",
-   "color": "5"
-  },
-  {
-   "id": "e-0706-0",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-claude-skills-0706",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-1",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-nanogpt",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-2",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-claude-video",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-3",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-speech2speech",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-4",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-mirage-tip",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-5",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-vla-corrector",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-6",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-embodied-cpp",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-7",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-orbitquant",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-8",
-   "fromNode": "theme-multimodal-embodied-0706",
-   "toNode": "src-ai-infra-guard",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-0706-x1",
-   "fromNode": "src-claude-skills-0706",
-   "toNode": "theme-skills-3layer",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "스킬 3층 계보"
-  },
-  {
-   "id": "e-0706-x2",
-   "fromNode": "src-ai-infra-guard",
-   "toNode": "src-claude-skills-0706",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "공급망 감사 대상"
-  },
-  {
-   "id": "e-0706-x3",
-   "fromNode": "src-embodied-cpp",
-   "toNode": "src-vla-corrector",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "임바디드 배포"
-  },
-  {
-   "id": "e-0706-x4",
-   "fromNode": "src-embodied-cpp",
-   "toNode": "src-speech2speech",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "온디바이스 런타임"
-  },
-  {
-   "id": "e-0706-x5",
-   "fromNode": "src-vla-corrector",
-   "toNode": "src-mirage-tip",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "학습≠추론 안정성"
-  },
-  {
-   "id": "e-domain-hub-wm-cluster",
-   "fromNode": "domain-hub",
-   "toNode": "wm-cluster"
-  },
-  {
-   "id": "e-wm-cluster-wm-hub",
-   "fromNode": "wm-cluster",
-   "toNode": "wm-hub"
-  },
-  {
-   "id": "e-wm-hub-wm-jepa",
-   "fromNode": "wm-hub",
-   "toNode": "wm-jepa",
-   "label": "예측형"
-  },
-  {
-   "id": "e-wm-hub-wm-diff",
-   "fromNode": "wm-hub",
-   "toNode": "wm-diff",
-   "label": "생성형"
-  },
-  {
-   "id": "e-wm-hub-wm-survey",
-   "fromNode": "wm-hub",
-   "toNode": "wm-survey"
-  },
-  {
-   "id": "e-wm-jepa-wm-lecun",
-   "fromNode": "wm-jepa",
-   "toNode": "wm-lecun"
-  },
-  {
-   "id": "e-wm-jepa-wm-cjepa",
-   "fromNode": "wm-jepa",
-   "toNode": "wm-cjepa"
-  },
-  {
-   "id": "e-wm-jepa-wm-flow",
-   "fromNode": "wm-jepa",
-   "toNode": "wm-flow"
-  },
-  {
-   "id": "e-wm-lecun-wm-cjepa",
-   "fromNode": "wm-lecun",
-   "toNode": "wm-cjepa"
-  },
-  {
-   "id": "e-wm-jepa-wm-synth",
-   "fromNode": "wm-jepa",
-   "toNode": "wm-synth"
-  },
-  {
-   "id": "e-wm-diff-wm-synth",
-   "fromNode": "wm-diff",
-   "toNode": "wm-synth"
-  },
-  {
-   "id": "e-wm-diff-wm-survey",
-   "fromNode": "wm-diff",
-   "toNode": "wm-survey"
-  },
-  {
-   "id": "e2-domain-hub-hub-agent-fw",
-   "fromNode": "domain-hub",
-   "toNode": "hub-agent-fw"
-  },
-  {
-   "id": "e2-domain-hub-hub-agent-mem",
-   "fromNode": "domain-hub",
-   "toNode": "hub-agent-mem"
-  },
-  {
-   "id": "e2-domain-hub-hub-embodied2",
-   "fromNode": "domain-hub",
-   "toNode": "hub-embodied2"
-  },
-  {
-   "id": "e2-domain-hub-hub-onpolicy",
-   "fromNode": "domain-hub",
-   "toNode": "hub-onpolicy"
-  },
-  {
-   "id": "e2-domain-hub-wave-jul-aug",
-   "fromNode": "domain-hub",
-   "toNode": "wave-jul-aug"
-  },
-  {
-   "id": "e2-hub-embodied2-wm-hub",
-   "fromNode": "hub-embodied2",
-   "toNode": "wm-hub",
-   "label": "월드모델"
-  },
-  {
-   "id": "e2-ent-moonshot-wave-jul-aug",
-   "fromNode": "ent-moonshot",
-   "toNode": "wave-jul-aug"
-  },
-  {
-   "id": "e2-hub-agent-mem-hub-agent-fw",
-   "fromNode": "hub-agent-mem",
-   "toNode": "hub-agent-fw"
-  },
-  {
-   "id": "en0826a",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826a",
-   "toSide": "top"
-  },
-  {
-   "id": "en0826b",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826b",
-   "toSide": "top"
-  },
-  {
-   "id": "en0826c",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826c",
-   "toSide": "top"
-  },
-  {
-   "id": "en0826d",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826d",
-   "toSide": "top"
-  },
-  {
-   "id": "en0826e",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826e",
-   "toSide": "top"
-  },
-  {
-   "id": "en0826f",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826f",
-   "toSide": "top"
-  },
-  {
-   "id": "en0826g",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "n0826g",
-   "toSide": "top"
-  },
-  {
-   "id": "e0826x1",
-   "fromNode": "n0826c",
-   "fromSide": "bottom",
-   "toNode": "n0826e",
-   "toSide": "top",
-   "label": "설계시점 vs 실행시점"
-  },
-  {
-   "id": "e0826x2",
-   "fromNode": "n0826d",
-   "fromSide": "bottom",
-   "toNode": "n0826a",
-   "toSide": "bottom",
-   "label": "신호 주입 지점 설계"
-  },
-  {
-   "id": "e0827_1",
-   "fromNode": "n0827hdr",
-   "fromSide": "right",
-   "toNode": "n0827a",
-   "toSide": "left"
-  },
-  {
-   "id": "e0827_2",
-   "fromNode": "n0827a",
-   "fromSide": "right",
-   "toNode": "n0827b",
-   "toSide": "left"
-  },
-  {
-   "id": "e0827_3",
-   "fromNode": "n0827a",
-   "fromSide": "bottom",
-   "toNode": "n0827i",
-   "toSide": "top"
-  },
-  {
-   "id": "e0827_4",
-   "fromNode": "n0827b",
-   "fromSide": "bottom",
-   "toNode": "n0827f",
-   "toSide": "top"
-  },
-  {
-   "id": "e0827_5",
-   "fromNode": "n0827c",
-   "fromSide": "bottom",
-   "toNode": "n0827g",
-   "toSide": "top"
-  },
-  {
-   "id": "e0827_6",
-   "fromNode": "n0827c",
-   "fromSide": "right",
-   "toNode": "n0827h",
-   "toSide": "left"
-  },
-  {
-   "id": "e0827_7",
-   "fromNode": "n0827a",
-   "fromSide": "right",
-   "toNode": "n0827h",
-   "toSide": "left",
-   "label": "20.6% 천장"
-  },
-  {
-   "id": "e0827_8",
-   "fromNode": "n0827d",
-   "fromSide": "bottom",
-   "toNode": "n0827l",
-   "toSide": "top"
-  },
-  {
-   "id": "e0827_9",
-   "fromNode": "n0827e",
-   "fromSide": "right",
-   "toNode": "n0827c",
-   "toSide": "bottom",
-   "label": "모델 밖 설정이 지배"
-  },
-  {
-   "id": "e0827_10",
-   "fromNode": "n0827f",
-   "fromSide": "right",
-   "toNode": "n0827c",
-   "toSide": "left",
-   "label": "생성→전달→판정"
-  },
-  {
-   "id": "e0827_11",
-   "fromNode": "n0827j",
-   "fromSide": "right",
-   "toNode": "n0827k",
-   "toSide": "left"
-  },
-  {
-   "id": "e0827_12",
-   "fromNode": "n0827hdr",
-   "fromSide": "bottom",
-   "toNode": "n0827e",
-   "toSide": "left"
-  },
-  {
-   "id": "e0828a",
-   "fromNode": "n0828a",
-   "fromSide": "right",
-   "toNode": "n0828h",
-   "toSide": "left",
-   "label": "분포 정렬"
-  },
-  {
-   "id": "e0828b",
-   "fromNode": "n0828b",
-   "fromSide": "bottom",
-   "toNode": "n0828h",
-   "toSide": "top",
-   "label": "분포적 비대칭성"
-  },
-  {
-   "id": "e0828c",
-   "fromNode": "n0828c",
-   "fromSide": "bottom",
-   "toNode": "n0828h",
-   "toSide": "top",
-   "label": "제약된 분포 설계"
-  },
-  {
-   "id": "e0828d",
-   "fromNode": "n0828a",
-   "fromSide": "right",
-   "toNode": "n0828b",
-   "toSide": "left",
-   "label": "⚠️ 답 여럿 ↔ 답 하나(긴장)"
-  },
-  {
-   "id": "e0828e",
-   "fromNode": "n0828f",
-   "fromSide": "right",
-   "toNode": "n0828i",
-   "toSide": "left",
-   "label": "1.19"
-  },
-  {
-   "id": "e0828f",
-   "fromNode": "n0828g",
-   "fromSide": "right",
-   "toNode": "n0828i",
-   "toSide": "left",
-   "label": "0.024"
-  },
-  {
-   "id": "e0828g",
-   "fromNode": "n0828d",
-   "fromSide": "bottom",
-   "toNode": "n0828k",
-   "toSide": "top",
-   "label": "억제 축"
-  },
-  {
-   "id": "e0828h",
-   "fromNode": "n0828e",
-   "fromSide": "bottom",
-   "toNode": "n0828j",
-   "toSide": "top",
-   "label": "이 볼트 대조군"
-  },
-  {
-   "id": "e0828i",
-   "fromNode": "n0828d",
-   "fromSide": "right",
-   "toNode": "n0828e",
-   "toSide": "left",
-   "label": "같은 배치 GitHub"
-  },
-  {
-   "id": "e0828j",
-   "fromNode": "n0828f",
-   "fromSide": "right",
-   "toNode": "n0828g",
-   "toSide": "left",
-   "label": "같은 주 차세대 실험 태그"
-  },
-  {
-   "id": "e0828k",
-   "fromNode": "n0828c",
-   "fromSide": "bottom",
-   "toNode": "n0828d",
-   "toSide": "top",
-   "label": "양≠유용성 동형"
-  },
-  {
-   "id": "e0828l",
-   "fromNode": "n0828e",
-   "fromSide": "bottom",
-   "toNode": "n0828k",
-   "toSide": "top",
-   "label": "볼트 구조 규정 자산"
-  },
-  {
-   "id": "e0829a",
-   "fromNode": "n0829hdr",
-   "fromSide": "right",
-   "toNode": "n0829a",
-   "toSide": "left",
-   "label": "배치 최대 발견"
-  },
-  {
-   "id": "e0829b",
-   "fromNode": "n0829a",
-   "fromSide": "bottom",
-   "toNode": "n0829d",
-   "toSide": "top",
-   "label": "보상 신뢰도"
-  },
-  {
-   "id": "e0829c",
-   "fromNode": "n0829b",
-   "fromSide": "bottom",
-   "toNode": "n0829d",
-   "toSide": "top",
-   "label": "유일 앵커 = 보상"
-  },
-  {
-   "id": "e0829d",
-   "fromNode": "n0829a",
-   "fromSide": "right",
-   "toNode": "n0829e",
-   "toSide": "left",
-   "label": "이진 유효성"
-  },
-  {
-   "id": "e0829e",
-   "fromNode": "n0829c",
-   "fromSide": "bottom",
-   "toNode": "n0829e",
-   "toSide": "top",
-   "label": "분포 일치 요구"
-  },
-  {
-   "id": "e0829f",
-   "fromNode": "n0829f",
-   "fromSide": "right",
-   "toNode": "n0829g",
-   "toSide": "left",
-   "label": "평가 측"
-  },
-  {
-   "id": "e0829g",
-   "fromNode": "n0829a",
-   "fromSide": "top",
-   "toNode": "n0829g",
-   "toSide": "left",
-   "label": "학습 측"
-  },
-  {
-   "id": "e0829h",
-   "fromNode": "n0829i",
-   "fromSide": "right",
-   "toNode": "n0829j",
-   "toSide": "left",
-   "label": "같은 두 모델"
-  },
-  {
-   "id": "e0829i",
-   "fromNode": "n0829k",
-   "fromSide": "right",
-   "toNode": "n0829l",
-   "toSide": "left",
-   "label": "최하단 = Python"
-  },
-  {
-   "id": "e0829j",
-   "fromNode": "n0829l",
-   "fromSide": "bottom",
-   "toNode": "n0829m",
-   "toSide": "right",
-   "label": "장기축적형"
-  },
-  {
-   "id": "e0829k",
-   "fromNode": "n0829n",
-   "fromSide": "right",
-   "toNode": "n0829o",
-   "toSide": "left",
-   "label": "해석 규칙"
-  },
-  {
-   "id": "e0829l",
-   "fromNode": "n0829h",
-   "fromSide": "right",
-   "toNode": "n0829i",
-   "toSide": "left",
-   "label": "파생 vs 원본"
-  },
-  {
-   "id": "e0829m",
-   "fromNode": "n0829f",
-   "fromSide": "top",
-   "toNode": "n0829c",
-   "toSide": "bottom",
-   "label": "국소≠전역"
-  },
-  {
-   "id": "e-omaic-cluster",
-   "fromNode": "cluster-github",
-   "fromSide": "bottom",
-   "toNode": "src-openmaic",
-   "toSide": "top"
-  },
-  {
-   "id": "e-omaic-freeze",
-   "fromNode": "src-openmaic",
-   "fromSide": "bottom",
-   "toNode": "obs-20260830-issuedrop",
-   "toSide": "top",
-   "label": "같은 배치"
-  },
-  {
-   "id": "e-hf-freeze",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "obs-20260830-hffreeze",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hf-flip",
-   "fromNode": "cluster-hf",
-   "fromSide": "bottom",
-   "toNode": "obs-20260830-ggufflip",
-   "toSide": "top"
-  },
-  {
-   "id": "e-domaingap",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "act-20260830-domaingap",
-   "toSide": "top",
-   "label": "스키마 미이행"
-  },
-  {
-   "id": "e-b0902-oc",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "src-openclaude",
-   "toSide": "top",
-   "label": "신규"
-  },
-  {
-   "id": "e-b0902-sm",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "src-smelt",
-   "toSide": "top",
-   "label": "신규"
-  },
-  {
-   "id": "e-b0902-qd",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "src-qwendrive",
-   "toSide": "top",
-   "label": "신규"
-  },
-  {
-   "id": "e-b0902-uv",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "src-uivenus2",
-   "toSide": "top",
-   "label": "신규"
-  },
-  {
-   "id": "e-b0902-sf",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "src-safin1",
-   "toSide": "top",
-   "label": "신규"
-  },
-  {
-   "id": "e-b0902-de",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "src-diagevo",
-   "toSide": "top",
-   "label": "신규"
-  },
-  {
-   "id": "e-qd-insp",
-   "fromNode": "src-qwendrive",
-   "fromSide": "bottom",
-   "toNode": "concept-inspectability",
-   "toSide": "top",
-   "label": "탐침"
-  },
-  {
-   "id": "e-uv-insp",
-   "fromNode": "src-uivenus2",
-   "fromSide": "bottom",
-   "toNode": "concept-inspectability",
-   "toSide": "top",
-   "label": "검증 축"
-  },
-  {
-   "id": "e-sf-insp",
-   "fromNode": "src-safin1",
-   "fromSide": "bottom",
-   "toNode": "concept-inspectability",
-   "toSide": "top",
-   "label": "능동 기질"
-  },
-  {
-   "id": "e-oc-rule",
-   "fromNode": "src-openclaude",
-   "fromSide": "bottom",
-   "toNode": "rule-noassertion",
-   "toSide": "top",
-   "label": "권한 부인"
-  },
-  {
-   "id": "e-b0902-unf",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "unfreeze-20260902",
-   "toSide": "top",
-   "label": "동결 해제"
-  },
-  {
-   "id": "e-b0902-rule",
-   "fromNode": "batch-20260902",
-   "fromSide": "bottom",
-   "toNode": "rule-noassertion",
-   "toSide": "top",
-   "label": "규칙 신설"
-  },
-  {
-   "id": "e-uv-auth",
-   "fromNode": "src-uivenus2",
-   "fromSide": "bottom",
-   "toNode": "obs-authors",
-   "toSide": "top",
-   "label": "31인·수치 0"
-  },
-  {
-   "id": "e-de-auth",
-   "fromNode": "src-diagevo",
-   "fromSide": "bottom",
-   "toNode": "obs-authors",
-   "toSide": "top",
-   "label": "8인·수치 O"
-  },
-  {
-   "id": "e0903-1",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-repo2skill",
-   "toSide": "top",
-   "label": "1위·334"
-  },
-  {
-   "id": "e0903-2",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-solarwm",
-   "toSide": "top",
-   "label": "2위"
-  },
-  {
-   "id": "e0903-3",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-earlyeval",
-   "toSide": "top",
-   "label": "3위"
-  },
-  {
-   "id": "e0903-4",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-cogr",
-   "toSide": "top",
-   "label": "4위"
-  },
-  {
-   "id": "e0903-5",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-da",
-   "toSide": "top",
-   "label": "5위"
-  },
-  {
-   "id": "e0903-6",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-glm53",
-   "toSide": "top",
-   "label": "트렌딩1위"
-  },
-  {
-   "id": "e0903-7",
-   "fromNode": "batch-0903",
-   "fromSide": "bottom",
-   "toNode": "src-voicestudio",
-   "toSide": "top",
-   "label": "GH 4위"
-  },
-  {
-   "id": "e0903-8",
-   "fromNode": "src-glm53flash-u",
-   "fromSide": "bottom",
-   "toNode": "obs-dl-lag",
-   "toSide": "top",
-   "label": "34→51.8만"
-  },
-  {
-   "id": "e0903-9",
-   "fromNode": "src-qwen38fn-u",
-   "fromSide": "bottom",
-   "toNode": "obs-dl-lag",
-   "toSide": "top",
-   "label": "54.7배"
-  },
-  {
-   "id": "e0903-10",
-   "fromNode": "src-timesfm-u",
-   "fromSide": "bottom",
-   "toNode": "obs-dl-lag",
-   "toSide": "top",
-   "label": "0→46,862"
-  },
-  {
-   "id": "e0903-11",
-   "fromNode": "src-glm53",
-   "fromSide": "bottom",
-   "toNode": "obs-drift-hf",
-   "toSide": "top",
-   "label": "+60.0%"
-  },
-  {
-   "id": "e0903-12",
-   "fromNode": "src-hermes-u",
-   "fromSide": "bottom",
-   "toNode": "obs-issue-fast",
-   "toSide": "top",
-   "label": "4.8배"
-  },
-  {
-   "id": "e0903-13",
-   "fromNode": "src-ponytail-u",
-   "fromSide": "bottom",
-   "toNode": "obs-issue-fast",
-   "toSide": "top",
-   "label": "2.1배"
-  },
-  {
-   "id": "e0903-14",
-   "fromNode": "src-glm53",
-   "fromSide": "bottom",
-   "toNode": "obs-license-close",
-   "toSide": "top",
-   "label": "독자"
-  },
-  {
-   "id": "e0903-15",
-   "fromNode": "src-qwen38fn-u",
-   "fromSide": "bottom",
-   "toNode": "obs-license-close",
-   "toSide": "top",
-   "label": "community"
-  },
-  {
-   "id": "e0903-16",
-   "fromNode": "src-da",
-   "fromSide": "bottom",
-   "toNode": "obs-sparse3",
-   "toSide": "top",
-   "label": "①수치 O"
-  },
-  {
-   "id": "e0903-17",
-   "fromNode": "src-glm53",
-   "fromSide": "bottom",
-   "toNode": "obs-sparse3",
-   "toSide": "top",
-   "label": "②dsa"
-  },
-  {
-   "id": "e0903-18",
-   "fromNode": "src-qwen38fn-u",
-   "fromSide": "bottom",
-   "toNode": "obs-sparse3",
-   "toSide": "top",
-   "label": "③QSA"
-  },
-  {
-   "id": "e0903-19",
-   "fromNode": "src-repo2skill",
-   "fromSide": "bottom",
-   "toNode": "con-skill-axis",
-   "toSide": "top",
-   "label": "③증류·근거"
-  },
-  {
-   "id": "e0903-20",
-   "fromNode": "src-ponytail-u",
-   "fromSide": "bottom",
-   "toNode": "con-skill-axis",
-   "toSide": "top",
-   "label": "①수작업·규모"
-  },
-  {
-   "id": "e0903-21",
-   "fromNode": "src-hermes-u",
-   "fromSide": "bottom",
-   "toNode": "con-skill-axis",
-   "toSide": "top",
-   "label": "②경험"
-  },
-  {
-   "id": "e0903-22",
-   "fromNode": "src-cogr",
-   "fromSide": "bottom",
-   "toNode": "con-skill-axis",
-   "toSide": "top",
-   "label": "5층 후보"
-  },
-  {
-   "id": "e0903-23",
-   "fromNode": "src-cogr",
-   "fromSide": "bottom",
-   "toNode": "con-llmwiki-gap",
-   "toSide": "top",
-   "label": "볼트 자신"
-  },
-  {
-   "id": "e0903-24",
-   "fromNode": "src-da",
-   "fromSide": "bottom",
-   "toNode": "con-memory-4",
-   "toSide": "top",
-   "label": "선택적 비독해"
-  },
-  {
-   "id": "e0903-25",
-   "fromNode": "src-solarwm",
-   "fromSide": "bottom",
-   "toNode": "con-worldmodel",
-   "toSide": "top",
-   "label": "데이터 계약"
-  },
-  {
-   "id": "e0903-26",
-   "fromNode": "src-timesfm-u",
-   "fromSide": "bottom",
-   "toNode": "con-tsfm",
-   "toSide": "top",
-   "label": "3.0 공개"
-  },
-  {
-   "id": "e0903-27",
-   "fromNode": "src-voicestudio",
-   "fromSide": "bottom",
-   "toNode": "act-voice",
-   "toSide": "top",
-   "label": "MCP+OpenAI API"
-  },
-  {
-   "id": "e0903-28",
-   "fromNode": "con-llmwiki-gap",
-   "fromSide": "bottom",
-   "toNode": "act-queries",
-   "toSide": "top",
-   "label": "결측 해소"
-  },
-  {
-   "id": "e0903-29",
-   "fromNode": "src-repo2skill",
-   "fromSide": "bottom",
-   "toNode": "act-abs",
-   "toSide": "top",
-   "label": "절대치 필요"
-  },
-  {
-   "id": "e0903-30",
-   "fromNode": "src-solarwm",
-   "fromSide": "bottom",
-   "toNode": "src-voicestudio",
-   "toSide": "top",
-   "label": "이종백본→공통층 (동일 패턴)"
-  },
-  {
-   "id": "e0903-31",
-   "fromNode": "src-earlyeval",
-   "fromSide": "bottom",
-   "toNode": "src-repo2skill",
-   "toSide": "top",
-   "label": "근거 제시 태도 대조"
-  },
-  {
-   "id": "e0903-32",
-   "fromNode": "src-glm53",
-   "fromSide": "bottom",
-   "toNode": "src-glm53flash-u",
-   "toSide": "top",
-   "label": "DL 1:3.43 · 라이선스 분기"
-  },
-  {
-   "id": "e-hub-s-anthskills",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-anthskills",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-human",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-human",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-prompts",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-prompts",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-magnitude",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-magnitude",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-deepswe",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-deepswe",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-randatt",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-randatt",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-puffin",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-puffin",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-compile",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-compile",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-bcit",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-bcit",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-tcr",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-tcr",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-pyannote",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-pyannote",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-sam3",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-sam3",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-s-minimax",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "s-minimax",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-exp",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "con-explicit",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-sel",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "con-select",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-sf",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "ent-salesforce",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-uw",
-   "fromNode": "hub-0904",
-   "fromSide": "bottom",
-   "toNode": "ent-waterloo",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-explicit-s-tcr",
-   "fromNode": "con-explicit",
-   "fromSide": "bottom",
-   "toNode": "s-tcr",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-explicit-s-human",
-   "fromNode": "con-explicit",
-   "fromSide": "bottom",
-   "toNode": "s-human",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-explicit-s-deepswe",
-   "fromNode": "con-explicit",
-   "fromSide": "bottom",
-   "toNode": "s-deepswe",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-explicit-s-bcit",
-   "fromNode": "con-explicit",
-   "fromSide": "bottom",
-   "toNode": "s-bcit",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-explicit-s-puffin",
-   "fromNode": "con-explicit",
-   "fromSide": "bottom",
-   "toNode": "s-puffin",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-select-s-randatt",
-   "fromNode": "con-select",
-   "fromSide": "bottom",
-   "toNode": "s-randatt",
-   "toSide": "top"
-  },
-  {
-   "id": "e-con-select-s-bcit",
-   "fromNode": "con-select",
-   "fromSide": "bottom",
-   "toNode": "s-bcit",
-   "toSide": "top"
-  },
-  {
-   "id": "e-sf-rand",
-   "fromNode": "ent-salesforce",
-   "fromSide": "bottom",
-   "toNode": "s-randatt",
-   "toSide": "right"
-  },
-  {
-   "id": "e-uw-comp",
-   "fromNode": "ent-waterloo",
-   "fromSide": "bottom",
-   "toNode": "s-compile",
-   "toSide": "right"
-  },
-  {
-   "id": "e-s-magnitude-act-mag",
-   "fromNode": "s-magnitude",
-   "fromSide": "bottom",
-   "toNode": "act-mag",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-tcr-act-mae",
-   "fromNode": "s-tcr",
-   "fromSide": "bottom",
-   "toNode": "act-mae",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-bcit-act-ctx",
-   "fromNode": "s-bcit",
-   "fromSide": "bottom",
-   "toNode": "act-ctx",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-pyannote-act-pyan",
-   "fromNode": "s-pyannote",
-   "fromSide": "bottom",
-   "toNode": "act-pyan",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-sam3-act-gated",
-   "fromNode": "s-sam3",
-   "fromSide": "bottom",
-   "toNode": "act-gated",
-   "toSide": "top"
-  }
- ]
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# AI 뉴스 / GitHub\n\n목표: 쓸모있는 AI 발굴 + 워크플로우 통합\n\n[[ai-news]]",
+      "x": -100,
+      "y": -60,
+      "width": 240,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "cluster-github",
+      "type": "text",
+      "text": "## GitHub ⭐1000+\n\n_스타 높은 AI 레포만_",
+      "x": -400,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-hf",
+      "type": "text",
+      "text": "## HuggingFace 모델\n\n_다운로드 수 + 벤치마크 기준_",
+      "x": -100,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-workflow",
+      "type": "text",
+      "text": "## 워크플로우 통합\n\n_내 도구에 실제 적용된 것_",
+      "x": 200,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "src-openspec",
+      "type": "text",
+      "text": "### OpenSpec\n⭐57,292\n스펙 주도 개발(SDD)\n[[OpenSpec]]",
+      "x": -560,
+      "y": 340,
+      "width": 240,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "src-pptmaster",
+      "type": "text",
+      "text": "### ppt-master\n⭐33,405\n문서→네이티브 PPTX\n[[ppt-master]]",
+      "x": -300,
+      "y": 340,
+      "width": 240,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "src-strix",
+      "type": "text",
+      "text": "### strix\n⭐️33,232 (+2,137)\n자율 보안·침투 에이전트(PoC 검증)\n[[strix]]",
+      "x": -560,
+      "y": 480,
+      "width": 240,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "src-bridging",
+      "type": "text",
+      "text": "### Translation-Bridging\nHF 데일리 1위 ↑23\n인간→로봇 조작 전이\n[[Translation-as-Bridging-Action]]",
+      "x": -300,
+      "y": 480,
+      "width": 240,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "src-kowide",
+      "type": "text",
+      "text": "### Ko-WideSearch\nHF ↑3\n한국어 웹 에이전트 완전열거 벤치\n[[Ko-WideSearch]]",
+      "x": -40,
+      "y": 480,
+      "width": 240,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "src-videouse",
+      "type": "text",
+      "text": "### video-use\n⭐️14,077 (+554)\nbrowser-use 영상 transcript로 읽기\n[[video-use]]",
+      "x": -560,
+      "y": 620,
+      "width": 240,
+      "height": 120,
+      "color": "5"
+    },
+    {
+      "id": "src-livedit",
+      "type": "text",
+      "text": "### LiveEdit\nHF ↑51\n디퓨전 실시간 스트리밍 영상 편집\n[[LiveEdit]]",
+      "x": -300,
+      "y": 620,
+      "width": 240,
+      "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "src-scalehorizon",
+      "type": "text",
+      "text": "### Scaling-the-Horizon\nHF ↑54\n호라이즌 확장 35B→조단위급 주장\n[[Scaling-the-Horizon]]",
+      "x": -40,
+      "y": 620,
+      "width": 240,
+      "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "src-orca",
+      "type": "text",
+      "x": -560,
+      "y": 760,
+      "width": 250,
+      "height": 110,
+      "color": "2",
+      "text": "### Orca\nHF 데일리 1위 ↑158\n월드 파운데이션 모델\n[[Orca]]"
+    },
+    {
+      "id": "src-dockerless",
+      "type": "text",
+      "x": -300,
+      "y": 760,
+      "width": 250,
+      "height": 110,
+      "color": "2",
+      "text": "### Dockerless\nHF 데일리 2위 ↑75\n환경없는 코딩에이전트 검증\n[[Dockerless]]"
+    },
+    {
+      "id": "src-ornith9b",
+      "type": "text",
+      "x": -40,
+      "y": 760,
+      "width": 250,
+      "height": 110,
+      "color": "2",
+      "text": "### Ornith-1.0-9B\nHF 1.47M DL\n자기개선 에이전틱 코딩\n[[Ornith-1.0-9B]]"
+    },
+    {
+      "id": "src-omniroute",
+      "type": "text",
+      "x": 200,
+      "y": 340,
+      "width": 250,
+      "height": 120,
+      "color": "6",
+      "text": "### OmniRoute\n⭐8,948 (+387)\n236 프로바이더 게이트웨이\n토큰 15~95% 압축\n[[OmniRoute]]"
+    },
+    {
+      "id": "src-olmocr",
+      "type": "text",
+      "x": -560,
+      "y": 900,
+      "width": 250,
+      "height": 130,
+      "color": "5",
+      "text": "### olmocr\n⭐18,454 (+334)\nAI2 PDF→LLM 텍스트 선형화\n[[olmocr]]"
+    },
+    {
+      "id": "src-aibeginners",
+      "type": "text",
+      "x": -300,
+      "y": 900,
+      "width": 250,
+      "height": 130,
+      "color": "5",
+      "text": "### AI-For-Beginners\n⭐50,871 (+1,096)\nMicrosoft 교육 커리큘럼(레퍼런스)\n[[AI-For-Beginners]]"
+    },
+    {
+      "id": "src-vulnclaw",
+      "type": "text",
+      "x": -40,
+      "y": 900,
+      "width": 250,
+      "height": 130,
+      "color": "5",
+      "text": "### VulnClaw\n⭐1,692 (+132)\nMCP+침투스킬 자율 보안\n증거 기반 환각 게이트\n[[VulnClaw]]"
+    },
+    {
+      "id": "src-agentscli",
+      "type": "text",
+      "x": 200,
+      "y": 500,
+      "width": 250,
+      "height": 130,
+      "color": "6",
+      "text": "### agents-cli\n⭐4,609 (+586)\nGoogle ADK 에이전트 배포 CLI\n[[agents-cli]]"
+    },
+    {
+      "id": "src-turboserve",
+      "type": "text",
+      "x": -560,
+      "y": 1050,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### TurboServe\nHF papers\n스트리밍 비디오 저비용 서빙\n[[TurboServe]]"
+    },
+    {
+      "id": "src-memsyco",
+      "type": "text",
+      "x": -300,
+      "y": 1050,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### MemSyco-Bench\nHF papers\n에이전트 메모리 아첨 편향 벤치\n[[MemSyco-Bench]]"
+    },
+    {
+      "id": "src-eldr",
+      "type": "text",
+      "x": -40,
+      "y": 1050,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### ELDR\nHF papers\nMoE expert-locality 디코드 라우팅\n[[ELDR]]"
+    },
+    {
+      "id": "src-caveman",
+      "type": "text",
+      "x": -560,
+      "y": 1200,
+      "width": 250,
+      "height": 120,
+      "color": "5",
+      "text": "### caveman\n⭐️82,003 (+926)\n원시인 말투 압축 토큰 절감 주장(검증필요)\n[[caveman]]"
+    },
+    {
+      "id": "src-paw",
+      "type": "text",
+      "x": -300,
+      "y": 1200,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### Program-as-Weights\nHF ↑92 데일리 1위\n퍼지함수→LoRA 컴파일, 0.6B가 32B급\n[[Program-as-Weights]]"
+    },
+    {
+      "id": "src-flashmorph",
+      "type": "text",
+      "x": -40,
+      "y": 1200,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### FlashMorph\nHF ↑26\n하이브리드 어텐션 층 선택 자동화\n[[FlashMorph]]"
+    },
+    {
+      "id": "src-agenticsts",
+      "type": "text",
+      "x": -560,
+      "y": 1350,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### AgenticSTS\nHF ↑29\nbounded-contract 장기 메모리\n[[AgenticSTS]]"
+    },
+    {
+      "id": "src-evopolicygym",
+      "type": "text",
+      "x": -300,
+      "y": 1350,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### EvoPolicyGym\nHF ↑29\n실행형 정책 반복개선 궁적단위 진단\n[[EvoPolicyGym]]"
+    },
+    {
+      "id": "src-agenticdatabench",
+      "type": "text",
+      "x": -40,
+      "y": 1350,
+      "width": 250,
+      "height": 120,
+      "color": "2",
+      "text": "### AgenticDataBench\nHF ↑19\n344태스크+433스킬 데이터에이전트 평가\n[[AgenticDataBench]]"
+    },
+    {
+      "id": "src-codex-plugin-cc",
+      "type": "text",
+      "text": "### codex-plugin-cc\nOpenAI 공식 Claude Code↔Codex 브리지\n크로스벤더 에이전트 interop\n⭐23,462 (+634)\n[[codex-plugin-cc]]",
+      "x": -560,
+      "y": 1450,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-pytorch",
+      "type": "text",
+      "text": "### pytorch\nGPU 딥러닝 표준 프레임워크\n모든 HF 모델 공통 인프라\n⭐101,471 (+293)\n[[pytorch]]",
+      "x": -300,
+      "y": 1450,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-cs249r",
+      "type": "text",
+      "text": "### cs249r_book\n하버드 ML 시스템 오픈 교재\n배포·엣지 최적화 레퍼런스\n⭐26,336 (+793)\n[[cs249r_book]]",
+      "x": -40,
+      "y": 1450,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-cubesandbox",
+      "type": "text",
+      "text": "### CubeSandbox\nTencent 에이전트 코드 격리 병렬 실행 샌드박스\n⭐7,243 (+60)\n[[CubeSandbox]]",
+      "x": -560,
+      "y": 1630,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-qwen-nvfp4",
+      "type": "text",
+      "text": "### Qwen3.6-27B-NVFP4\nNVIDIA NVFP4 4비트 양자화판\n유효 18B급·하드웨어 종속\nHF 185k DL\n[[Qwen3.6-27B-NVFP4]]",
+      "x": -300,
+      "y": 1630,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "src-mattpocock-skills",
+      "type": "text",
+      "text": "### mattpocock/skills\n⭐156,933 (+973/일)\n개인 .claude 공개=배포단위\n스킬 모음 최상위",
+      "x": -560,
+      "y": 1810,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-agentskills",
+      "type": "text",
+      "text": "### agentskills\n⭐22,425\n에이전트 스킬 표준 규격\n벤더간 이식성",
+      "x": -300,
+      "y": 1810,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-system-prompts-leaks",
+      "type": "text",
+      "text": "### system_prompts_leaks\n⭐49,225\n프론티어 시스템프롬프트 추출\n프롬프트 리버스 참고",
+      "x": -40,
+      "y": 1810,
+      "width": 230,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-skillcoach",
+      "type": "text",
+      "text": "### SkillCoach\nHF ↑14 (미검증)\n자기개선 루브릭 스킬평가\n스킬 생태계 평가층",
+      "x": 220,
+      "y": 1810,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "theme-skills-3layer",
+      "type": "text",
+      "text": "## 스킬 3층 수렴\n모음→표준→평가\n(2026-07-05)",
+      "x": 480,
+      "y": 1810,
+      "width": 230,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "src-worlddirector",
+      "type": "text",
+      "text": "### WorldDirector\nHF ↑21 (미검증)\n지속메모리 제어가능 월드시뮬",
+      "x": -560,
+      "y": 1990,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "src-mrfm",
+      "type": "text",
+      "text": "### Multi-Res Flow Matching\nHF ↑28 (미검증)\ntraining-free 디퓨전 가속",
+      "x": -300,
+      "y": 1990,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "src-distrewards",
+      "type": "text",
+      "text": "### Distribution-wise Rewards\nHF ↑14 Tencent (미검증)\n분포정렬 보상 시각생성",
+      "x": -40,
+      "y": 1990,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "src-breaking-cascades",
+      "type": "text",
+      "text": "### Breaking Failure Cascades\nHF ↑19 (미검증)\n의료 멀티모달 step-aware RL",
+      "x": 220,
+      "y": 1990,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "src-qwen35b-nvfp4",
+      "type": "text",
+      "text": "### Qwen3.6-35B-A3B-NVFP4\nNVIDIA NVFP4 4비트\n유효~19B 하드웨어 종속",
+      "x": 480,
+      "y": 1990,
+      "width": 230,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "theme-multimodal-embodied-0706",
+      "type": "text",
+      "x": -560,
+      "y": 2240,
+      "width": 520,
+      "height": 120,
+      "color": "6",
+      "text": "## 멀티모달·임바디드 확장 + 스킬 공급망 보안 (2026-07-06)\n에이전트가 보고·듣고·움직이며, 스킬 폭증의 그림자(보안)가 함께 드러남"
+    },
+    {
+      "id": "src-claude-skills-0706",
+      "type": "text",
+      "x": -560,
+      "y": 2420,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### claude-skills\nGitHub ⭐20,831 (+392)\n13개 에이전트용 스킬 355종 통합, stdlib-only 602 도구"
+    },
+    {
+      "id": "src-nanogpt",
+      "type": "text",
+      "x": -300,
+      "y": 2420,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### nanoGPT\nGitHub ⭐60,816 (+246)\nKarpathy GPT-2 재현 교육 레퍼런스 (deprecated→nanochat)"
+    },
+    {
+      "id": "src-claude-video",
+      "type": "text",
+      "x": -40,
+      "y": 2420,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### claude-video /watch\nGitHub ⭐3,704 (+368)\n자막우선+scene-aware 프레임, down-analysis 대조"
+    },
+    {
+      "id": "src-speech2speech",
+      "type": "text",
+      "x": 220,
+      "y": 2420,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### speech-to-speech\nGitHub ⭐5,401 Apache2.0\nHF 로컬 음성 VAD→STT→LLM→TTS, Reachy Mini 실배포"
+    },
+    {
+      "id": "src-mirage-tip",
+      "type": "text",
+      "x": 480,
+      "y": 2420,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### Mirage of Optimizing Training Policies\nHF 데일리 #1\nMIPI/MIPU 추론정책 단조개선"
+    },
+    {
+      "id": "src-vla-corrector",
+      "type": "text",
+      "x": -300,
+      "y": 2620,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### VLA-Corrector\nHF 데일리 #2 ZJU\n잠재공간 비전모니터 감지-수정+적응형 지평"
+    },
+    {
+      "id": "src-embodied-cpp",
+      "type": "text",
+      "x": -40,
+      "y": 2620,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### Embodied.cpp\nHF 데일리 #3 동남대\n로봇용 C++ 임바디드 런타임 5계층, 100%/91%"
+    },
+    {
+      "id": "src-orbitquant",
+      "type": "text",
+      "x": 220,
+      "y": 2620,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### OrbitQuant\nHF papers Cantina\n재캘리브 불필요 DiT 양자화 FLUX/Wan W2A4"
+    },
+    {
+      "id": "src-ai-infra-guard",
+      "type": "text",
+      "x": 480,
+      "y": 2620,
+      "width": 240,
+      "height": 150,
+      "color": "2",
+      "text": "### Multi-Layer Agent Red Teaming\nHF papers Tencent\nAI-Infra-Guard 다층 레드팀+스킬 공급망 감사"
+    },
+    {
+      "id": "wm-cluster",
+      "type": "text",
+      "text": "## 월드모델·JEPA\n\n_2026 최대 연구 트렌드_",
+      "x": 640,
+      "y": 80,
+      "width": 220,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "wm-hub",
+      "type": "text",
+      "text": "**[[월드모델]]**\n미래 예측·계획 모델\n예측형 vs 생성형",
+      "x": 640,
+      "y": 240,
+      "width": 220,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "wm-jepa",
+      "type": "text",
+      "text": "**[[JEPA]]**\n표현공간 예측(비생성)\nLeCun 철학",
+      "x": 900,
+      "y": 180,
+      "width": 210,
+      "height": 100,
+      "color": "6"
+    },
+    {
+      "id": "wm-diff",
+      "type": "text",
+      "text": "**[[Diffusion-월드모델]]**\n픽셀 생성형\nCosmos·Genie·GAIA",
+      "x": 900,
+      "y": 320,
+      "width": 210,
+      "height": 100,
+      "color": "6"
+    },
+    {
+      "id": "wm-lecun",
+      "type": "text",
+      "text": "**[[Yann-LeCun]]**\nMeta 수석 AI\nJEPA·월드모델 창안",
+      "x": 1180,
+      "y": 180,
+      "width": 200,
+      "height": 100,
+      "color": "4"
+    },
+    {
+      "id": "wm-cjepa",
+      "type": "text",
+      "text": "**[[C-JEPA]]**\n객체/인과 JEPA\n(반사실 +20%)",
+      "x": 1180,
+      "y": 320,
+      "width": 200,
+      "height": 100,
+      "color": "5"
+    },
+    {
+      "id": "wm-survey",
+      "type": "text",
+      "text": "**[[JEPA-월드모델-서베이-2026]]**\n5대 학회 55편",
+      "x": 1180,
+      "y": 460,
+      "width": 220,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "wm-flow",
+      "type": "text",
+      "text": "**[[Flow-JEPA-연구아이디어]]**\nFlow×JEPA + 효율화 교차",
+      "x": 900,
+      "y": 460,
+      "width": 220,
+      "height": 90,
+      "color": "5"
+    },
+    {
+      "id": "wm-synth",
+      "type": "text",
+      "text": "**[[JEPA-vs-Diffusion-월드모델]]**\n두 축의 대비·수렴",
+      "x": 640,
+      "y": 420,
+      "width": 220,
+      "height": 90,
+      "color": "6"
+    },
+    {
+      "id": "hub-agent-fw",
+      "type": "text",
+      "text": "**[[AI-에이전트-프레임워크]]**\n최대 허브 (227 링크)",
+      "x": 600,
+      "y": 760,
+      "width": 220,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "hub-agent-mem",
+      "type": "text",
+      "text": "**[[에이전트-메모리-레이어]]**\n메모리 인프라 (196)\ncognee·claude-mem",
+      "x": 860,
+      "y": 760,
+      "width": 220,
+      "height": 100,
+      "color": "6"
+    },
+    {
+      "id": "hub-embodied2",
+      "type": "text",
+      "text": "**[[임바디드-AI]]**\n체화 AI 5각 루프 (58)",
+      "x": 1140,
+      "y": 760,
+      "width": 210,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "hub-onpolicy",
+      "type": "text",
+      "text": "**[[온폴리시-증류]]**\nOn-Policy Distillation (70)",
+      "x": 600,
+      "y": 900,
+      "width": 220,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "wave-jul-aug",
+      "type": "text",
+      "text": "## 인제스트 wave\n07-13 ~ 08-03 (일 5~13건)\n[[Kimi-K3]]·[[GLM-5.2]]·[[Unlimited-OCR]]\n[[TRELLIS.2]]·[[generative-ai-for-beginners]]",
+      "x": 860,
+      "y": 900,
+      "width": 280,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "ent-moonshot",
+      "type": "text",
+      "text": "**[[Moonshot AI]]**\nKimi 시리즈 프론티어 랩",
+      "x": 1140,
+      "y": 900,
+      "width": 210,
+      "height": 80,
+      "color": "4"
+    },
+    {
+      "id": "n0826hub",
+      "type": "group",
+      "x": -560,
+      "y": 2940,
+      "width": 1720,
+      "height": 560,
+      "label": "2026-08-26 배치 — 지표 불일치의 날"
+    },
+    {
+      "id": "n0826a",
+      "type": "text",
+      "x": -540,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[OraRL]]**\nHF 데일리 1위·업65\nadvantage inversion 진단\nCoT 없이 130ms(기존 4,780ms)\nVSI-Bench 73.1 vs GPT-5 55.0",
+      "color": "5"
+    },
+    {
+      "id": "n0826b",
+      "type": "text",
+      "x": -210,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[WeMM-Embedding]]**\n[[Tencent]]·위챗 실배포\n2B가 8B 추월·9B 80.6 SOTA\n온라인 A/B 14건",
+      "color": "5"
+    },
+    {
+      "id": "n0826c",
+      "type": "text",
+      "x": 120,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[AutoSaddler]]**\n하네스=코드, 실패로 패치\nGAIA2 +9.0 / SWE +9.6 / TB2 +10.0%p\n깊은디버깅·표적수정·일반화선택",
+      "color": "5"
+    },
+    {
+      "id": "n0826d",
+      "type": "text",
+      "x": 450,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[DiffusionOPSD]]**\n교사 없는 자가증류\n20설정 중 19개 최고·최대 +44%\n구성 이득 ≠ 실현 이득",
+      "color": "5"
+    },
+    {
+      "id": "n0826e",
+      "type": "text",
+      "x": 780,
+      "y": 3020,
+      "width": 300,
+      "height": 200,
+      "text": "**[[Recuris]]**\n검증 게이트 메모리 진화\n37쌍 중 35쌍·Opus5 87.9%\n최장 태스크 +32.2·코드 공개",
+      "color": "5"
+    },
+    {
+      "id": "n0826f",
+      "type": "text",
+      "x": -540,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "**[[claude-plugins-community]]**\n[[Anthropic]] 공식 레지스트리\n⭐1,957(최하위)인데 트렌딩 2위\n배포/레지스트리 층 등장",
+      "color": "4"
+    },
+    {
+      "id": "n0826g",
+      "type": "text",
+      "x": -210,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "**[[Qwen3.8-27B-OBLITERATED]]**\n가드레일 제거 축 2번째\nDL 389,747 = 원본의 13.2%\n제거방식·능력손실 미검증 ⚠️low",
+      "color": "1"
+    },
+    {
+      "id": "n0826h",
+      "type": "text",
+      "x": 120,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "⚠️ **다운로드 격일 갱신 패턴**\n[[Qwen3.8-27B]]·[[Qwen3.8-27B-GGUF]]\n08-24 동결→08-25 해제→08-26 재동결\n**좋아요는 갱신(+205/+1)**\n→ 증분은 2일 단위로만 해석",
+      "color": "3"
+    },
+    {
+      "id": "n0826i",
+      "type": "text",
+      "x": 450,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "⚠️ **이슈 밀도 2,000배 격차**\n[[apache-maka]] 0.91건/포크(최고)\n[[ai-job-search]] 0.0004건/포크\n[[awesome-gpt-image-2]] 스타+38.5%에 이슈↓\n→ 이슈=품질 아닌 **소프트웨어 종류**",
+      "color": "3"
+    },
+    {
+      "id": "n0826j",
+      "type": "text",
+      "x": 780,
+      "y": 3260,
+      "width": 300,
+      "height": 180,
+      "text": "⚠️ **인기 ≠ 신뢰성 3연속**\n[[TradingAgents]] 10만 돌파·푸시 5주 정체\nclaude-plugins 스타 최하위·트렌딩 2위\n[[Recuris]] 업보트 최하위·코드+수치 최다",
+      "color": "3"
+    },
+    {
+      "id": "n0827hdr",
+      "type": "text",
+      "x": -560,
+      "y": 3520,
+      "width": 420,
+      "height": 120,
+      "text": "## 2026-08-27 배치\n**\"결과가 아니라 과정을 채점하라\"**\n무관한 두 도메인에서 **독립적으로 동일 교정**\n13건 전량 API 실호출 검증",
+      "color": "6"
+    },
+    {
+      "id": "n0827a",
+      "type": "text",
+      "x": -100,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[FrontierChallenge]] 🔵 데일리1위\n과학 워크플로 **완수** 채점 (97/300 공개)\n최고 구성 **Pass Rate 20.6%**\n전기화학 Avg.**94.9** 대 Pass **0%**\n⚡ 미통과 트레이스 **75.5%가 \"완료했다\"**\n→ 자기보고 완료 선언 **첫 반증**",
+      "color": "1"
+    },
+    {
+      "id": "n0827b",
+      "type": "text",
+      "x": 260,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[VGI-BENCH]] 🔵 데일리4위\n영상 생성 시각 추론 27과제·810인스턴스\n**전개 과정** 요구(최종 상태 아님)\n[[Seedance]] 2.0 **51.0%**\n⚡ 후반 디노이징 **자기교정 한계**\n→ 스텝 증가로는 추론 오류 못 고침",
+      "color": "1"
+    },
+    {
+      "id": "n0827c",
+      "type": "text",
+      "x": 620,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[JIT-Agent]] 🔵 데일리5위\n하네스 = **고정 4모듈 기계 생성물**\n즉석 합성·수리·**자가진화**\nDeepSeek-V4-Flash가 GPT-5.6 추월(+9.1)\nGLM-5.2 최대 **+20.2**\n주장: 하네스 지능은 **모델 스케일링과 직교**",
+      "color": "1"
+    },
+    {
+      "id": "n0827d",
+      "type": "text",
+      "x": 980,
+      "y": 3520,
+      "width": 320,
+      "height": 210,
+      "text": "[[VoiceMem]] 🔵 데일리2위\n정보(좌뇌) ∥ 감정(우뇌) **병렬 분리**\n**top-5가 Mem0 top-200보다 +약30점**\n(후보 **40배 감소**인데 더 정확)\n검색 **134ms** = VAD 예산 안쪽\n→ 검색량이 아니라 **구조 분리**",
+      "color": "1"
+    },
+    {
+      "id": "n0827e",
+      "type": "text",
+      "x": -100,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "[[WarpSAC]] 🔵 데일리3위\n안정화 기법 = **데이터 체제의 함수**\nWarpSAC-L(CPU) / WarpSAC-A(GPU 병렬)\n**UnitreeG1 19.8% → 96.4%**\nGPU +23.1% vs CPU +4.5%\n→ 모델 밖 설정이 성능 지배 (RL판)",
+      "color": "1"
+    },
+    {
+      "id": "n0827f",
+      "type": "text",
+      "x": 260,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "[[archify]] ⭐20,152 · 트렌딩1위\n다이어그램 → **자체완결 HTML**\n[[에이전트-스킬]] 1층이되\n*행동*이 아니라 **출력 형식** 규정\n⚠️ \"verifiable\" 자체 서술·근거 없음",
+      "color": "4"
+    },
+    {
+      "id": "n0827g",
+      "type": "text",
+      "x": 620,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "⚡ **하네스 축: 패치 → 생성**\n[[AutoSaddler]] 설계시점 패치\n→ [[Recuris]] 실행시점 진화\n→ [[SkillEvo]] 스킬 자가갱신\n→ **[[JIT-Agent]] 전체 생성**",
+      "color": "5"
+    },
+    {
+      "id": "n0827h",
+      "type": "text",
+      "x": 980,
+      "y": 3770,
+      "width": 320,
+      "height": 190,
+      "text": "❓ **미해결: 하네스의 천장은 어디인가**\n[[JIT-Agent]]: 하네스 바꾸면 크게 오름\n[[FrontierChallenge]]: 스캐폴드 3종 바꿔도\n**20.6% 천장**\n→ 지배 구간↔모델 천장 구간 **경계 미상**",
+      "color": "3"
+    },
+    {
+      "id": "n0827i",
+      "type": "text",
+      "x": -100,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "⚡ **계보 5번째 — 자기보고까지 무너짐**\n[[Thinkingbox]] 툴콜≠완수\n[[apache-maka]] 활동량≠품질\n[[DiffusionOPSD]] 구성이득≠실현이득\n→ **[[FrontierChallenge]] 진술≠완수**",
+      "color": "5"
+    },
+    {
+      "id": "n0827j",
+      "type": "text",
+      "x": 260,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "📊 **HF 격일 갱신 4회 연속 성립**\n[[Qwen3.8-27B]] +353,154 (330만 돌파)\n[[Qwen3.8-27B-GGUF]] +303,896\n**두 저장소 완전 동기 해제**\n원본/GGUF **0.402→0.432** 2연속 상승",
+      "color": "3"
+    },
+    {
+      "id": "n0827k",
+      "type": "text",
+      "x": 620,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "📊 **가드레일 제거 축 선두 교체**\n[[Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF]]\nDL **911,795** = OBLITERATED의 **1.95배**\n3분화 유지: 양자화 ≫ 원본 ≫ 제거\n⚠️ 능력 손실 측정치 이 축 전체 **0건**",
+      "color": "3"
+    },
+    {
+      "id": "n0827l",
+      "type": "text",
+      "x": 980,
+      "y": 4010,
+      "width": 320,
+      "height": 190,
+      "text": "📊 **이슈 밀도 배치 내 470배 격차**\n[[claude-plugins-official]] 0.26건/포크\n(오픈이슈 **1,026**·배치 최다)\n[[ai-job-search]] 0.00056건/포크\n→ 08-26 \"종류의 지표\" 재확인",
+      "color": "3"
+    },
+    {
+      "id": "n0828a",
+      "type": "text",
+      "x": -460,
+      "y": 4260,
+      "width": 330,
+      "height": 210,
+      "color": "5",
+      "text": "📄 [[PAWBench]]\nHF 데일리 3위 · 업69 · 저자14\n**월드모델 = 확률 분포 샘플러**\nPAWEval: 반복 롤아웃→경험 분포\n**50 시나리오 × 11 시스템 전멸**\n⚠️ 기준 확률 출처·개별 점수 미공개"
+    },
+    {
+      "id": "n0828b",
+      "type": "text",
+      "x": -100,
+      "y": 4260,
+      "width": 330,
+      "height": 210,
+      "color": "5",
+      "text": "📄 [[TTPO]]\nHF 데일리 4위 · 업49 · 저자11\n**라벨 없는 테스트 시점 학습**\n불일치=대개 오답(비대칭성)\n일치→OPSD 증류 / 불일치→그룹 RL\nQwen3-1.7B **38.0→45.2%**\n⚠️ TTT 비용·벤치명 전량 미기재"
+    },
+    {
+      "id": "n0828c",
+      "type": "text",
+      "x": 260,
+      "y": 4260,
+      "width": 330,
+      "height": 210,
+      "color": "5",
+      "text": "📄 [[ACE-Agentic-Data]]\nHF 데일리 5위 · 업49 · 저자14 · 서베이\n**(E,q,τ,v) 4요소 분해**\nAccuracy→Complexity→divErsity\n\"학습자 상대 복잡도\"\n⚠️ 자체 벤치 수치 **0건**"
+    },
+    {
+      "id": "n0828d",
+      "type": "text",
+      "x": 620,
+      "y": 4260,
+      "width": 330,
+      "height": 210,
+      "color": "5",
+      "text": "🐙 [[ponytail]]\n⭐**114,596** · 배치 최대 · MIT\n\"최고의 코드는 쓰지 않은 코드\"\n**스킬 생태계 첫 억제(빼는) 축**\n⚠️ 푸시 08-07 3주 정체 · 효과 측정 0건\n⚠️ 과소생성 위험 미측정"
+    },
+    {
+      "id": "n0828e",
+      "type": "text",
+      "x": 980,
+      "y": 4260,
+      "width": 330,
+      "height": 210,
+      "color": "5",
+      "text": "🐙 [[claude-obsidian]]\n⭐14,215 · MIT · Python · 트렌딩14위\n**\"Based on Karpathy's LLM Wiki pattern\"**\n= 이 볼트의 **첫 직접 대조군**\n이슈/포크 **0.098 배치 최고**\n⚠️ 정리 정확도 수치 0건"
+    },
+    {
+      "id": "n0828f",
+      "type": "text",
+      "x": -460,
+      "y": 4510,
+      "width": 330,
+      "height": 190,
+      "color": "5",
+      "text": "🤗 [[Qwen3.8-Flash-Next]]\n트렌딩 **1위** · DL 4,810 · 좋아요 4,033\n**DL/좋아요 = 1.19**\n⚠️ 아키텍처 태그 **qwen4_exp**\n(계열 표준 qwen3_5 아님)\n⚠️ 라이선스 other · 벤치 0건"
+    },
+    {
+      "id": "n0828g",
+      "type": "text",
+      "x": -100,
+      "y": 4510,
+      "width": 330,
+      "height": 190,
+      "color": "5",
+      "text": "🤗 [[GLM-5.3-Flash]]\n트렌딩 **2위** · DL **34** · 좋아요 1,393\n**DL/좋아요 = 0.024**\n= 좋아요가 다운로드의 **41배**\n✅ 배치 유일 MIT · fp8 · glm5_next\n⚠️ arxiv:2602.15763 미확인"
+    },
+    {
+      "id": "n0828h",
+      "type": "text",
+      "x": 260,
+      "y": 4510,
+      "width": 370,
+      "height": 230,
+      "color": "6",
+      "text": "🔭 **최대 발견 — 같은 날 \"분포로 이동\" 3인방**\n[[PAWBench]] 평가를 분포 정렬로\n[[TTPO]] 학습 신호를 분포적 비대칭성으로\n[[ACE-Agentic-Data]] 생성을 제약된 분포 설계로\n\n08-27 \"점→과정\"의 다음 단계 = **\"단일 사례→분포\"**\n**이틀 연속 독립 수렴**\n⚠️ 내부 긴장: TTPO(답 하나) ↔ PAWBench(답 여럿)"
+    },
+    {
+      "id": "n0828i",
+      "type": "text",
+      "x": 680,
+      "y": 4510,
+      "width": 360,
+      "height": 230,
+      "color": "6",
+      "text": "📊 **HF 트렌딩 ≠ 사용량 (수치 확정)**\n[[GLM-5.3-Flash]] 2위 → DL/좋아요 **0.024**\n[[Qwen3.8-Flash-Next]] 1위 → **1.19**\n[[Qwen3.8-27B]] 3위 → **264.5**\n\n**1·2위 실사용 = 3위의 0.14%**\n→ 볼트 규칙: **264.5를 실사용 기준선**으로\n순위는 판별에 쓸 수 없다"
+    },
+    {
+      "id": "n0828j",
+      "type": "text",
+      "x": -460,
+      "y": 4760,
+      "width": 380,
+      "height": 250,
+      "color": "2",
+      "text": "⚠️ **raw 기준선 오류 3건 — 정본 교체**\n[[Qwen3.8-27B]] \"+512,272\" → 실제 **+159,118**\n[[archify]] \"+4,239\" → 실제 **+4,834**\n[[awesome-gpt-image-2]] \"이틀+3,830\" → **하루+1,516**\n\n**규칙: raw 증분 서술 불신,\n볼트 페이지의 직전 API 실측을 기준선으로**\n부수: 격일 동결 \"항상 교대\" **기각**\n(2회 연속 갱신 첫 관측)"
+    },
+    {
+      "id": "n0828k",
+      "type": "text",
+      "x": -40,
+      "y": 4760,
+      "width": 350,
+      "height": 210,
+      "color": "6",
+      "text": "🧩 **에이전트 스킬 — 억제 축 직교 개방**\n기존 4층(자산·방법론·배포·하네스생성)\n= **전부 더하는 축**\n[[ponytail]] = **처음으로 빼는 축**\n→ 5번째 층 아님, **두 번째 차원**\n⚠️ [[archify]]와 동시 적용 충돌 미확인"
+    },
+    {
+      "id": "n0828l",
+      "type": "text",
+      "x": 350,
+      "y": 4760,
+      "width": 350,
+      "height": 210,
+      "color": "6",
+      "text": "📐 **순위 하락 ≠ 열기 감소**\n[[archify]] 1위→**4위**인데 **+4,834 가속**\n(볼트 단일 레포 일간 최고 · +24.0%)\n[[awesome-gpt-image-2]] 2위→3위\n+11.6%→**+6.8% 감속**\n→ 순위는 상대값. 트렌딩≠열기(GitHub판)"
+    },
+    {
+      "id": "n0828m",
+      "type": "text",
+      "x": 740,
+      "y": 4760,
+      "width": 350,
+      "height": 210,
+      "color": "2",
+      "text": "⚖️ **[[OpenMontage]] AGPL-3.0 발견**\n⭐24,213(06-27)→**52,780**(+118%·62일)\n배치 5건 중 **유일한 카피레프트**\n(나머지 4건 전부 MIT)\n→ **코드 이식 금지 · 설계 참고만**\n라이선스를 실용 등급에 반영하기로"
+    },
+    {
+      "id": "n0829hdr",
+      "type": "text",
+      "x": -560,
+      "y": 5120,
+      "width": 380,
+      "height": 180,
+      "color": "6",
+      "text": "## 2026-08-29 배치\n**13건 · 신규 3 · 갱신 10**\n전량 API 실호출 검증\n[[MiniMax-H3]]는 모델카드 원문까지 대조"
+    },
+    {
+      "id": "n0829a",
+      "type": "text",
+      "x": -100,
+      "y": 5120,
+      "width": 400,
+      "height": 240,
+      "color": "1",
+      "text": "🔥 **[[Agentic-Game-Development]]** (1위·업130)\n신호를 **밖으로** — 게임 엔진 = 컴파일러\n엔진이 충돌·물리·내비 검사 → **RLHEV**\n\"CLIP류 프록시는 fuzzy and biased\"\n⚠️ **정량 결과 0건 · 포지션 페이퍼**"
+    },
+    {
+      "id": "n0829b",
+      "type": "text",
+      "x": 360,
+      "y": 5120,
+      "width": 400,
+      "height": 240,
+      "color": "1",
+      "text": "🔥 **[[Self-OPD]]** (5위·업66)\n신호를 **안으로** — flow matching **교사 제거**\nK개 SDE 갈래 → 결정론적 자기참조 기준선\n대비 정규화 어드밴티지 → pull-push\n⚠️ **수치·벤치명·K값 전량 미기재**"
+    },
+    {
+      "id": "n0829c",
+      "type": "text",
+      "x": 820,
+      "y": 5120,
+      "width": 380,
+      "height": 240,
+      "color": "1",
+      "text": "🔥 **[[PAWBench]]** 업69→**80** (2위)\n신호의 **형태** — 유효성이 아니라 **분포 일치**\n50시나리오×11시스템 **전멸** 재확인\n초록 재대조: 수치 변경 없음"
+    },
+    {
+      "id": "n0829d",
+      "type": "text",
+      "x": -100,
+      "y": 5420,
+      "width": 400,
+      "height": 220,
+      "color": "2",
+      "text": "⚠️ **긴장 1 — 1위 ↔ 5위**\nSelf-OPD는 교사를 없앤 대신\n**보상을 유일한 앵커로 승격**\n그런데 1위는 그 보상이 **부실**하다고 진단\n→ 앵커를 **더 부실한 곳으로 옮긴** 것일 수 있음"
+    },
+    {
+      "id": "n0829e",
+      "type": "text",
+      "x": 360,
+      "y": 5420,
+      "width": 400,
+      "height": 220,
+      "color": "2",
+      "text": "⚠️ **긴장 2 — 1위 ↔ 2위**\n엔진 검사 = **이진 유효성**\n\"가능한가\"는 답해도 \"확률이 맞는가\"는 못 답함\n→ 조밀 유효성 보상은 **최빈 모드로 수렴**\n**핵심 구분: 유효성 ≠ 정렬**"
+    },
+    {
+      "id": "n0829f",
+      "type": "text",
+      "x": 820,
+      "y": 5420,
+      "width": 380,
+      "height": 220,
+      "color": "4",
+      "text": "🆕 **[[UrbanGround]]** (3위·업71·저자18)\n홍콩 전역 3D 실축척 복제본\n원자 능력은 OK · **합성이 안 됨**\n오차가 **교정 없이 누적**\n= [[FrontierChallenge]] 75.5%의 **공간판**"
+    },
+    {
+      "id": "n0829g",
+      "type": "text",
+      "x": 1260,
+      "y": 5420,
+      "width": 360,
+      "height": 180,
+      "color": "5",
+      "text": "🔁 **엔진의 이중 용도**\n같은 물리 제약 3D 환경을\n[[UrbanGround]] = **평가 장치**\n[[Agentic-Game-Development]] = **학습 신호원**\n→ 3위가 1위의 전제를 **뒷받침**"
+    },
+    {
+      "id": "n0829h",
+      "type": "text",
+      "x": -560,
+      "y": 5740,
+      "width": 420,
+      "height": 280,
+      "color": "1",
+      "text": "⚠️ **[[MiniMax-H3]] — 오픈 가중치 ≠ 오픈 시스템**\n카드가 **\"품질에 결정적\"** 이라 밝힌\n`H3-Context-IR`이 **공개에서 빠짐**(API 전용)\n→ 공개 가중치로 **공식 품질 재현 불가**\n인코더 = [[Alibaba]] **Qwen3-VL-32B 전체**\n희소 어텐션 지원인데 **공개는 full attention만**\n**공개 벤치 4회차 연속 0건**"
+    },
+    {
+      "id": "n0829i",
+      "type": "text",
+      "x": -100,
+      "y": 5740,
+      "width": 400,
+      "height": 240,
+      "color": "3",
+      "text": "📊 **264.5는 천장이 아니었다**\n[[Qwen3.8-27B-GGUF]] **2,646.7**\n[[MiniMax-H3]] **1,093.2**\n[[Qwen3.8-27B]] 원본 **305.8**\n→ GGUF가 원본의 **8.7배**\n**DL/좋아요는 같은 축 안에서만 비교**"
+    },
+    {
+      "id": "n0829j",
+      "type": "text",
+      "x": 360,
+      "y": 5740,
+      "width": 400,
+      "height": 240,
+      "color": "3",
+      "text": "📐 **비율은 증가율로 설명해야 한다**\n원본/GGUF **0.4817** (4회 연속 상승)\n그런데 **절대 증분은 GGUF가 더 큼**\n(+604,691 > +571,152)\n원인 = 증가율 원본 +16.52% vs GGUF +7.79%\n⚠️ **08-28 근거 서술 정정**"
+    },
+    {
+      "id": "n0829k",
+      "type": "text",
+      "x": 820,
+      "y": 5740,
+      "width": 400,
+      "height": 260,
+      "color": "4",
+      "text": "🧭 **자산/소프트웨어 축은 언어가 아니다**\n이슈/포크 **연속 스펙트럼 7.6배**\n[[scientific-agent-skills]] .0051 (Python·최하단)\n< [[awesome-gpt-image-2]] .0070\n< [[ponytail]] .0285 < [[archify]] .0353 (JS·상단)\n< [[OpenMontage]] .0388\n→ **\"통째로 실행 vs 조각을 떼어 씀\"**"
+    },
+    {
+      "id": "n0829l",
+      "type": "text",
+      "x": 1280,
+      "y": 5740,
+      "width": 380,
+      "height": 260,
+      "color": "2",
+      "text": "⚠️ **[[scientific-agent-skills]] high→medium**\n104일 만의 재관측 ⭐23,434→**37,109**\n**배치 유일 2025년생**(2025-10-19)\n\"validated\" 163종 · \"175,000+ 과학자\"\n**검증 주체·기준 전량 미확인**\n과학 스킬은 **틀린 결과가 그럴듯하게 나온다**"
+    },
+    {
+      "id": "n0829m",
+      "type": "text",
+      "x": -560,
+      "y": 6100,
+      "width": 420,
+      "height": 220,
+      "color": "3",
+      "text": "📈 **성장 곡선 두 유형 확보**\n**급등-급감쇠형** [[awesome-gpt-image-2]]\n +38.5%→+11.6%→+6.8%→**+3.2%** (매일 반토막)\n**저속-장기축적형** [[scientific-agent-skills]]\n 104일 +58.3% · 일평균 +131\n중간: [[archify]] 0.79배/일"
+    },
+    {
+      "id": "n0829n",
+      "type": "text",
+      "x": -100,
+      "y": 6100,
+      "width": 400,
+      "height": 200,
+      "color": "2",
+      "text": "⚠️ **raw 기준선 오류 4회 연속**\n[[archify]] +4,562→**+3,826**\n[[awesome-gpt-image-2]] +1,687→**+765**\n[[ponytail]] +1,396→**+1,174**\n[[OpenMontage]] +1,144→**+778**\n**전부 raw가 과대** · 볼트 계열 정본"
+    },
+    {
+      "id": "n0829o",
+      "type": "text",
+      "x": 360,
+      "y": 6100,
+      "width": 400,
+      "height": 200,
+      "color": "5",
+      "text": "⚖️ **규모가 다르면 반대로 읽힌다**\n[[ponytail]] 증가율 **최저(+1.02%)** 인데\n절대 증분 **+1,174**로\n[[awesome-gpt-image-2]](+765)보다 많음\n→ **순위·비율·절대값 셋을 같이 본다**"
+    },
+    {
+      "id": "src-openmaic",
+      "type": "text",
+      "text": "### OpenMAIC\n⭐22,701 · MIT\nAI 교사+**AI 동료 학습자** 교실\n**JCST'26 동료심사 논문 실재**\n[[OpenMAIC]]",
+      "x": -560,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "obs-20260830-hffreeze",
+      "type": "text",
+      "text": "### 관측 2026-08-30\n**HF 데일리 top-5 순위 완전 동결**\n증분 +2~+6(합계 +16)\n→ 유효 관측 창 = 공개 후 3일",
+      "x": -280,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "obs-20260830-ggufflip",
+      "type": "text",
+      "text": "### 관측 2026-08-30\n**원본이 GGUF 증분 첫 추월**\n+482,509 vs +475,672\n원본/GGUF 0.350→0.402→0.482→**0.510**",
+      "x": 0,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "obs-20260830-issuedrop",
+      "type": "text",
+      "text": "### 관측 2026-08-30\n**오픈이슈 첫 감소 관측**\nscientific-agent-skills 18→15\n→ 이슈=단조증가 가정 붕괴",
+      "x": 280,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "act-20260830-domaingap",
+      "type": "text",
+      "text": "### ⚠️ actionable\n**domains/ai-news.md 누락 3배치**\n08-27·08-28·08-29 소급 복원\n우선순위 **높음**",
+      "x": 560,
+      "y": 6440,
+      "width": 240,
+      "height": 140,
+      "color": "3"
+    },
+    {
+      "id": "batch-20260902",
+      "type": "text",
+      "text": "## 📦 2026-09-02 배치\n**신규 6 · 갱신 7**\n13건 전량 API 실호출\n+ **LICENSE 원문 2건 확인**",
+      "x": -160,
+      "y": 6700,
+      "width": 300,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "src-openclaude",
+      "type": "text",
+      "text": "### 🚨 OpenClaude\n⭐31,655 · 포크 **8,975**\n포크/스타 **0.284 배치 최고**\nLICENSE: *\"does not have Anthropic's\nauthorization to distribute\"*\n**도입 보류 권고**",
+      "x": 200,
+      "y": 6700,
+      "width": 280,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "src-smelt",
+      "type": "text",
+      "text": "### SMELT\n업55 · 저자 9인\n예산 3종 통제(FLOPs·파라미터·KV)\n**학습 FLOPs 6.8~18.0% 절감**\nCode 최대 · 컨텍스트 길수록 ↑",
+      "x": 520,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "src-qwendrive",
+      "type": "text",
+      "text": "### Qwen-Drive-1.0\n업76 데일리 1위 · 저자 16인\nBEV 헤드 = **탐침(probe)**\n*explicit, inspectable interface*\n⚠️수치 0개",
+      "x": 830,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "src-uivenus2",
+      "type": "text",
+      "text": "### UI-Venus-2\n업50 · **저자 31인 최다**\n**검증을 스케일링 축으로 승격**\n다중모델 투표 평가자\n⚠️벤치 점수 0개",
+      "x": 1140,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "src-safin1",
+      "type": "text",
+      "text": "### Safin-1\n업17 · 저자 18인 · 코드 ⭐1\nMARCH 메모리 라우팅\n**백본 미수정 + 상태만 적응**\n⚠️수치 0개 · 저자 스스로 \"초기 탐색\"",
+      "x": 1450,
+      "y": 6700,
+      "width": 270,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "src-diagevo",
+      "type": "text",
+      "text": "### 🎯 DiagEvo\n업9 최저 · **저자 8인 최소**\n실패 이력 → 커리큘럼\n**Active / Mastered**\n**72.3%(+4.5%p) · 57.4%(+1.1%p)**\n= 배치 유일 완전 수치",
+      "x": 1760,
+      "y": 6700,
+      "width": 280,
+      "height": 190,
+      "color": "4"
+    },
+    {
+      "id": "concept-inspectability",
+      "type": "text",
+      "text": "## 🎯 검사가능성 공사\n*내부 상태를 밖에서\n검사 가능하게 만들기*\n[[국소-수리-원리]]의 **전제**\n급소: 검사기가 피검사자와\n같은 실패 모드면 **거울**\n⚠️잠정(1배치 3편)",
+      "x": 900,
+      "y": 6960,
+      "width": 300,
+      "height": 210,
+      "color": "6"
+    },
+    {
+      "id": "unfreeze-20260902",
+      "type": "text",
+      "text": "## 🔓 DL 동결 해제\nQwen3.8-27B +449,135\nGGUF +514,904\n→ **GGUF > 원본**\n08-30 \"원본 추월\" **재현 안 됨**\n= 08-31 철회가 **옳았다**\n⚠️1회차 · 판정 계속 보류",
+      "x": -160,
+      "y": 6960,
+      "width": 300,
+      "height": 210,
+      "color": "5"
+    },
+    {
+      "id": "rule-noassertion",
+      "type": "text",
+      "text": "## 🚨 신규 규칙\n**SPDX NOASSERTION =\n\"정보 없음\"이 아니라\n\"표준 식별자로 담기지 않는\n사정이 있음\"**\n→ LICENSE 원문 확인 **필수**\n근거 2/2건 적중",
+      "x": 200,
+      "y": 6960,
+      "width": 280,
+      "height": 210,
+      "color": "1"
+    },
+    {
+      "id": "obs-authors",
+      "type": "text",
+      "text": "### ⚠️ 관찰(판정 보류)\n**저자 수 ↔ 수치 제시 반비례**\n무: 31·18·16인\n유: 9·8인\n**16인 경계 완전 분리** (n=5)",
+      "x": 1500,
+      "y": 6960,
+      "width": 260,
+      "height": 170,
+      "color": "3"
+    },
+    {
+      "id": "obs-issuedensity",
+      "type": "text",
+      "text": "### ⚠️ 관찰(판정 보류)\n**이슈 밀도 = 도메인 특성**\nvideo-use 0.0286 ≫\nminimind 0.0079 ·\nacademic 0.0053\n→ 도메인 통제 후 비교",
+      "x": 1800,
+      "y": 6960,
+      "width": 260,
+      "height": 170,
+      "color": "3"
+    },
+    {
+      "id": "obs-trending",
+      "type": "text",
+      "text": "### ⚠️ 트렌딩 편향\n절대 스타 1위 =\n**minimind ⭐57,495**\n(2024-07 생성)\n나머지 전부 2026년 생성\n→ 누적형 자산 과소평가",
+      "x": 1200,
+      "y": 6960,
+      "width": 260,
+      "height": 170,
+      "color": "3"
+    },
+    {
+      "id": "batch-0903",
+      "type": "text",
+      "x": -560,
+      "y": 7250,
+      "width": 300,
+      "height": 200,
+      "color": "6",
+      "text": "## 2026-09-03 배치\n**신규 7 · 갱신 6**\n13건 전량 API 실검증\n\n*스킬이 수작업에서\n자동 증류로 넘어간 날*"
+    },
+    {
+      "id": "src-repo2skill",
+      "type": "text",
+      "x": -200,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[Repo-To-Skill]]\nHF 1위·업보트 334\n레포 1,000 → 스킬 5,000+\n**백본 고정·스킬만 토글**\nMLE-bench +134.3%\n⚠️상대치만"
+    },
+    {
+      "id": "src-solarwm",
+      "type": "text",
+      "x": 110,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[SolarWM]]\nHF 2위·저자 18인\n143만 클립 → 단일 계약\n선별결정·출처 필드\n5초 학습 → 시간 롤아웃\n⚠️벤치 수치 0"
+    },
+    {
+      "id": "src-earlyeval",
+      "type": "text",
+      "x": 420,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[EarlyEval]]\nHF 3위\nLightGBM 성패 분류기\n스텝 -13~26%\n토큰 -44.1%/-29.4%\n**교란 1~2%p 자진보고**"
+    },
+    {
+      "id": "src-cogr",
+      "type": "text",
+      "x": 730,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[CoGR]]\nHF 4위\n질의+**아이템 양쪽**\n키워드 생성·역색인 유지\nF1 +10.9%/+36.1%\n⭐raw 결측 API가 복구"
+    },
+    {
+      "id": "src-da",
+      "type": "text",
+      "x": 1040,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[Declarative-Attention]]\nHF 5위\n`<global>/<focus>/<local>`\n자기 선언 → KV 스킵\n**-52.0%** 토큰/-1.27%p\n**학습 불필요**"
+    },
+    {
+      "id": "src-glm53",
+      "type": "text",
+      "x": 1350,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[GLM-5.3]]\n트렌딩 1위·**753B**\n`glm_moe_dsa`·fp8\n**독자 라이선스**\nTB3.0 4.6→28.3 주장\n⚠️벤더 자체 표"
+    },
+    {
+      "id": "src-voicestudio",
+      "type": "text",
+      "x": 1660,
+      "y": 7250,
+      "width": 280,
+      "height": 190,
+      "color": "1",
+      "text": "### [[VoiceStudio]]\n⭐15,454·AGPL-3.0\n**16 TTS + 11 ASR 하네스**\nMCP + OpenAI 호환 API\n⭐배치 유일 즉시 활용"
+    },
+    {
+      "id": "src-glm53flash-u",
+      "type": "text",
+      "x": -200,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[GLM-5.3-Flash]] 갱신\n🚨 DL **34 → 517,902**\n321B·멀티모달·MIT\nDL/좋아요 0.024→**260.3**"
+    },
+    {
+      "id": "src-qwen38fn-u",
+      "type": "text",
+      "x": 110,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[Qwen3.8-Flash-Next]] 갱신\nDL 4,810 → **263,287**\n**180B** 확정\n`qwen-community-1.0`"
+    },
+    {
+      "id": "src-hermes-u",
+      "type": "text",
+      "x": 420,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[hermes-agent]] 갱신\n⭐**240,408**(+1.82%)\n⚠️이슈 **+8.69%**\n= 스타의 **4.8배**"
+    },
+    {
+      "id": "src-ponytail-u",
+      "type": "text",
+      "x": 730,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[ponytail]] 갱신\n⭐**122,495**(+5.81%)\n푸시 **27일 정체**\n일평균 +1,345"
+    },
+    {
+      "id": "src-cdmcp-u",
+      "type": "text",
+      "x": 1040,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[chrome-devtools-mcp]] 갱신\n⭐**50,774** 5만 돌파\n부채밀도 0.0261"
+    },
+    {
+      "id": "src-timesfm-u",
+      "type": "text",
+      "x": 1350,
+      "y": 7480,
+      "width": 280,
+      "height": 170,
+      "color": "1",
+      "text": "### [[TimesFM]] 갱신\n⭐**30,397**·트렌딩 2위\n**3.0 공개**(331M)\nraw DL 0 → **46,862**"
+    },
+    {
+      "id": "obs-dl-lag",
+      "type": "text",
+      "x": -200,
+      "y": 7690,
+      "width": 300,
+      "height": 200,
+      "color": "3",
+      "text": "### 🚨 규칙 정정\n**HF DL은 공개 직후 비어 있다**\n34→517,902 / 4,810→263,287\n/ 0→46,862 — **3벤더·3모달리티**\n08-28 '순위≠사용' **철회**\n→ 시차였다(≈1주 선행)"
+    },
+    {
+      "id": "obs-drift-hf",
+      "type": "text",
+      "x": 140,
+      "y": 7690,
+      "width": 280,
+      "height": 190,
+      "color": "3",
+      "text": "### ⚠️ HF 드리프트 大\nAPI>raw: +60.0/+26.6/+17.3%\nGitHub은 +2~+14(≤0.1%)\n08-30 '완전 일치'와 상반\n→ HF DL은 참고치로만"
+    },
+    {
+      "id": "obs-issue-fast",
+      "type": "text",
+      "x": 460,
+      "y": 7690,
+      "width": 270,
+      "height": 180,
+      "color": "3",
+      "text": "### ⚠️ 이슈>스타 (2건)\nhermes **4.8배**\nponytail **2.1배**\n규모 26배 차이인데 동부호\n→ 판정 보류"
+    },
+    {
+      "id": "obs-license-close",
+      "type": "text",
+      "x": 770,
+      "y": 7690,
+      "width": 270,
+      "height": 170,
+      "color": "3",
+      "text": "### ⚠️ '차세대는 덜 연다'\nZhipu 플래그십 독자\nAlibaba qwen-community-1.0\n→ 2건·추세 미확정"
+    },
+    {
+      "id": "obs-sparse3",
+      "type": "text",
+      "x": 1080,
+      "y": 7690,
+      "width": 270,
+      "height": 190,
+      "color": "3",
+      "text": "### 🔭 희소어텐션 3중\n①선언(학습X·**수치 O**)\n②glm_moe_dsa(자체표)\n③QSA(수치 없음)\n→ 공개된 건 ①뿐"
+    },
+    {
+      "id": "con-skill-axis",
+      "type": "text",
+      "x": -200,
+      "y": 7920,
+      "width": 300,
+      "height": 220,
+      "color": "5",
+      "text": "## [[에이전트-스킬]]\n**생산 방식 축 신설**\n①수작업 ②경험 ③증류\n**규모와 근거가 반비례**\n급소: 증류는 '하지 마라'를\n뽑지 못한다\n+5층(검색) 잠정"
+    },
+    {
+      "id": "con-memory-4",
+      "type": "text",
+      "x": 140,
+      "y": 7920,
+      "width": 280,
+      "height": 190,
+      "color": "5",
+      "text": "## [[에이전트-메모리-레이어]]\n**4번째: 선택적 비독해**\n두지도 압축도 않고\n**읽지 않기로 선택**\n판단 주체 = 모델 자신"
+    },
+    {
+      "id": "con-llmwiki-gap",
+      "type": "text",
+      "x": 460,
+      "y": 7920,
+      "width": 280,
+      "height": 190,
+      "color": "5",
+      "text": "## [[LLM-Wiki]]\n🪞 **queries/ 0건**\n태그를 붙이기만 하고\n유효성을 측정한 적 없다\n= 아이템측 보상 신호 없음"
+    },
+    {
+      "id": "con-worldmodel",
+      "type": "text",
+      "x": 770,
+      "y": 7920,
+      "width": 270,
+      "height": 170,
+      "color": "5",
+      "text": "## [[월드모델]]\n**데이터 계약** 공개\n선별결정·출처가 필드로\nMiniMax-H3 반대 노선"
+    },
+    {
+      "id": "con-tsfm",
+      "type": "text",
+      "x": 1080,
+      "y": 7920,
+      "width": 280,
+      "height": 180,
+      "color": "5",
+      "text": "## [[시계열-예측-파운데이션-모델]]\n331M — GLM-5.3의 1/2275\n스케일 아닌 **배포가능성** 축\n에이전트 일색 배치 2위"
+    },
+    {
+      "id": "act-voice",
+      "type": "text",
+      "x": -200,
+      "y": 8170,
+      "width": 270,
+      "height": 160,
+      "color": "2",
+      "text": "### ⭐ actionable\nVoiceStudio → [[reat-voice]]\n로컬 대체 스팟체크\n**우선순위 높음**"
+    },
+    {
+      "id": "act-queries",
+      "type": "text",
+      "x": 140,
+      "y": 8170,
+      "width": 270,
+      "height": 160,
+      "color": "2",
+      "text": "### ⭐ actionable\n`queries/` 기록 시작\n죽은 태그 판정\n**우선순위 높음**"
+    },
+    {
+      "id": "act-abs",
+      "type": "text",
+      "x": 460,
+      "y": 8170,
+      "width": 270,
+      "height": 160,
+      "color": "2",
+      "text": "### actionable\nRepo-To-Skill 절대점수\n+검증 절차 확인\n**우선순위 높음**"
+    },
+    {
+      "id": "hub-0904",
+      "type": "text",
+      "x": 700,
+      "y": 8590,
+      "width": 420,
+      "height": 130,
+      "color": "6",
+      "text": "# 2026-09-04 배치 (13건)\n**암묵을 명시로 바꾼 날**\nGitHub 5 · HF논문 5 · HF모델 3"
+    },
+    {
+      "id": "con-explicit",
+      "type": "text",
+      "x": 180,
+      "y": 8810,
+      "width": 300,
+      "height": 150,
+      "color": "6",
+      "text": "## 개념 [[암묵을-명시로]]\n타이밍·판정기준·검증기·\n재사용조건·물리량을 꺼냄\n**13건 중 5건 동일 수법**"
+    },
+    {
+      "id": "con-select",
+      "type": "text",
+      "x": 520,
+      "y": 8810,
+      "width": 300,
+      "height": 150,
+      "color": "6",
+      "text": "## 개념 [[선택비용과-중복성]]\n선택기 가치 ∝ 1/중복성\n**같은 날 정반대 2건**"
+    },
+    {
+      "id": "s-anthskills",
+      "type": "text",
+      "x": 140,
+      "y": 9020,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[anthropics-skills]]\n⭐173,849 명세 원본\n라이선스 null·문서스킬\nsource-available"
+    },
+    {
+      "id": "s-human",
+      "type": "text",
+      "x": 460,
+      "y": 9020,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[humanizer]]\n⭐41,974 (+1,208)\nWikipedia 35패턴\n심판을 LLM 밖에 (3번째)"
+    },
+    {
+      "id": "s-prompts",
+      "type": "text",
+      "x": 780,
+      "y": 9020,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[prompts-chat]]\n⭐169,220\n배지 143k = **18% 과소**\n배지규칙 2번째 역방향"
+    },
+    {
+      "id": "s-magnitude",
+      "type": "text",
+      "x": 1100,
+      "y": 9020,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[magnitude]]\n⭐2,106 로컬 추론서버\nHermes 지원\n⚠️수치 전무"
+    },
+    {
+      "id": "s-deepswe",
+      "type": "text",
+      "x": 1420,
+      "y": 9020,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[DeepSWE]]\n⭐1,604 창작 113과제\n검증기 별도 컨테이너"
+    },
+    {
+      "id": "s-randatt",
+      "type": "text",
+      "x": 140,
+      "y": 9220,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[Random-Attention]]\nHF 1위 · Salesforce\nKV 점수화 **무용**\nvLLM +32~43%"
+    },
+    {
+      "id": "s-puffin",
+      "type": "text",
+      "x": 460,
+      "y": 9220,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[Puffin-World]]\n물리·기하·외형 통합\nPuffin-16M 1,500만\n🚨수치 0건"
+    },
+    {
+      "id": "s-compile",
+      "type": "text",
+      "x": 780,
+      "y": 9220,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[Compile-by-Training]]\nPAW 후속 · Waterloo\n0건 → 83.6%\n컴파일 수초→1분"
+    },
+    {
+      "id": "s-bcit",
+      "type": "text",
+      "x": 1100,
+      "y": 9220,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[BCIT]]\nReject/Validate/Train\n+2.63점 (95%CI)\n볼트 09-03 사고 설명"
+    },
+    {
+      "id": "s-tcr",
+      "type": "text",
+      "x": 1420,
+      "y": 9220,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[TCR]]\nMAE 1.11s→0.042s\nDialogue 28.3→84.1%\nreat 설계 근거"
+    },
+    {
+      "id": "s-pyannote",
+      "type": "text",
+      "x": 140,
+      "y": 9420,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[pyannote-community-1]]\nDL 5,072,652\n3.1 대비 10승1무1패\n🚨raw 게이트주장 반증"
+    },
+    {
+      "id": "s-sam3",
+      "type": "text",
+      "x": 460,
+      "y": 9420,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[sam3]]\nDL 2,081,577\n개방어휘 전체 분할\n인간의 75~80%"
+    },
+    {
+      "id": "s-minimax",
+      "type": "text",
+      "x": 780,
+      "y": 9420,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "text": "### [[Minimax-h3-Turbo-lightx2v]]\nDL 1,117,509\n= 베이스의 **21.8%**\n08-12 판정 폐기"
+    },
+    {
+      "id": "ent-salesforce",
+      "type": "text",
+      "x": 1160,
+      "y": 8810,
+      "width": 240,
+      "height": 120,
+      "color": "4",
+      "text": "### [[Salesforce]]\n무용을 증명하는 연구"
+    },
+    {
+      "id": "ent-waterloo",
+      "type": "text",
+      "x": 1420,
+      "y": 8810,
+      "width": 240,
+      "height": 120,
+      "color": "4",
+      "text": "### [[University-of-Waterloo]]\nPAW 계보 4건 누적"
+    },
+    {
+      "id": "act-mag",
+      "type": "text",
+      "x": 140,
+      "y": 9450,
+      "width": 300,
+      "height": 140,
+      "color": "2",
+      "text": "### actionable\nmagnitude로 로컬대기 5건\n한꺼번에 판정\n**우선순위 높음**"
+    },
+    {
+      "id": "act-mae",
+      "type": "text",
+      "x": 460,
+      "y": 9450,
+      "width": 300,
+      "height": 140,
+      "color": "2",
+      "text": "### actionable\nreat Shot Boundary MAE\n최초 측정\n**우선순위 높음**"
+    },
+    {
+      "id": "act-ctx",
+      "type": "text",
+      "x": 780,
+      "y": 9450,
+      "width": 300,
+      "height": 140,
+      "color": "2",
+      "text": "### actionable\n볼트 규칙에 `원 맥락` 필드\n(BCIT 형식)\n**우선순위 높음**"
+    },
+    {
+      "id": "act-pyan",
+      "type": "text",
+      "x": 1100,
+      "y": 9450,
+      "width": 300,
+      "height": 140,
+      "color": "2",
+      "text": "### actionable\npyannote community-1 교체\n+ 3.1 A/B\n**우선순위 높음**"
+    },
+    {
+      "id": "act-gated",
+      "type": "text",
+      "x": 1420,
+      "y": 9450,
+      "width": 300,
+      "height": 140,
+      "color": "2",
+      "text": "### actionable\n수집기 gated 오독 수정\n\"미확인\"≠부재\n**우선순위 중간**"
+    },
+    {
+      "id": "s-harnessdev",
+      "type": "text",
+      "text": "# HarnessDev\n\n평가 단위: 태스크 출력 → **실행 인프라**\n능력+효율 이중 측정\n2,207 인스턴스·히든 평가 분리\n\n🔴 하네스 개선 **모델 간 전이 제한**\n\n[[HarnessDev]]",
+      "x": -660,
+      "y": 9850,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-aspire",
+      "type": "text",
+      "text": "# Aspire\n\n모호한 목표만 주고 평가는 숨김\n히든 520문항·6개 목표\n\n🔴 가중치 향상 **희소·불안정**\n🔴 탐색 계속하면 **앞선 개선이 지워짐**\n\n[[Aspire]]",
+      "x": -320,
+      "y": 9850,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-terminal-universe",
+      "type": "text",
+      "text": "# Terminal-Universe\n\n궤적 = 얼어붙은 시연 1회\n환경 = 재질의 가능\n\n툴 실행 이력을 **되감아** 환경 복원\n\n[[Terminal-Universe]]",
+      "x": 20,
+      "y": 9850,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-opd2",
+      "type": "text",
+      "text": "# On-Policy Distillation II\n\n**데이터 과잉·알고리즘 부족**\n상태 커버리지 1개 71.5% → 16개 98.9%\n\n[[On-Policy-Distillation-II]]",
+      "x": 360,
+      "y": 9850,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-llada-image",
+      "type": "text",
+      "text": "# LLaDA-Image\n\n6B DiT·이미지 단독 사전학습 선행\nRMSNorm+Muon·220M 샘플\nQwen-Image-Bench 53.53\n\n[[LLaDA-Image]]",
+      "x": 700,
+      "y": 9850,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-opencode",
+      "type": "text",
+      "text": "# opencode\n\n에이전트 **본체** (나머지는 상부구조)\n⭐204,859 · MIT · 브랜치 `dev`\n⚠️ 성능 근거 0\n\n[[opencode]]",
+      "x": 1040,
+      "y": 9850,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-speckit",
+      "type": "text",
+      "text": "# spec-kit\n\n명세를 **CLI로 강제**\nGitHub 공식 · ⭐133,645\n⚠️ mattpocock-skills가 비판한 대상\n\n[[spec-kit]]",
+      "x": -660,
+      "y": 10080,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-context7",
+      "type": "text",
+      "text": "# context7 ⭐즉시활용\n\n버전별 문서 주입 MCP\nissue/star **0.0011** 배치 최저\n외부 정답 고정 4번째 형태\n\n[[context7]]",
+      "x": -320,
+      "y": 10080,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-diagram",
+      "type": "text",
+      "text": "# diagram-design\n\n자체완결 HTML+SVG (No Mermaid)\n**국소 수리 가능한 출력 형식**\n24h 증가율 2.06% 배치 1위\n\n[[diagram-design]]",
+      "x": 20,
+      "y": 10080,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-miles",
+      "type": "text",
+      "text": "# miles\n\n배치 유일 **학습 층**\n⭐2,636 = 최소 12배 열세\nissue/star 0.368 배치 최악\n\n[[miles]]",
+      "x": 360,
+      "y": 10080,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "s-deepseek-vision",
+      "type": "text",
+      "text": "# DeepSeek-V4-Flash-Vision-Exp\n\n계열 첫 멀티모달 · MIT\nApexBench 26.2→36.5\n⚠️ 승패가 축마다 갈림\n⚠️ **규모 미확인**\n\n[[DeepSeek-V4-Flash-Vision-Exp]]",
+      "x": 700,
+      "y": 10080,
+      "width": 300,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "c-inspectability-promoted",
+      "type": "text",
+      "text": "# 검사가능성-공사 ✅확정\n\n**잠정 → 확정 승격**\n급소가 논증 → **측정**으로\n외부 정답 고정 **5형태**\n\n[[검사가능성-공사]]",
+      "x": 1040,
+      "y": 10080,
+      "width": 300,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "a-context7-install",
+      "type": "text",
+      "text": "# ACTION 높음\ncontext7 설치 + 1주 환각 전후 비교\n\n배치 최저비용·최고확실성",
+      "x": -660,
+      "y": 10310,
+      "width": 300,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "a-queries",
+      "type": "text",
+      "text": "# ACTION 높음\n`queries/` 착수 — 질문부터 쌓기\n\n**3회 연속 외부 지적**",
+      "x": -320,
+      "y": 10310,
+      "width": 300,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "a-dup-filter",
+      "type": "text",
+      "text": "# ACTION 높음\n수집기 URL 중복 필터\n\n**중복률 42%** (26건 중 11건)",
+      "x": 20,
+      "y": 10310,
+      "width": 300,
+      "height": 190,
+      "color": "2"
+    },
+    {
+      "id": "a-ratio-rule",
+      "type": "text",
+      "text": "# ACTION 높음\n비율 주장에 관측 시점 의무화\n\nMiniMax-H3 100배 → **실측 3.92배**",
+      "x": 360,
+      "y": 10310,
+      "width": 300,
+      "height": 190,
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-github",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-workflow",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-openspec",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "src-openspec",
+      "toSide": "top"
+    },
+    {
+      "id": "e-pptmaster",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "src-pptmaster",
+      "toSide": "top"
+    },
+    {
+      "id": "e-strix",
+      "fromNode": "src-strix",
+      "toNode": "domain-hub",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-bridging",
+      "fromNode": "src-bridging",
+      "toNode": "domain-hub",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-kowide",
+      "fromNode": "src-kowide",
+      "toNode": "cluster-workflow",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-videouse",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "src-videouse",
+      "toSide": "top"
+    },
+    {
+      "id": "e-livedit",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-livedit",
+      "toSide": "top"
+    },
+    {
+      "id": "e-scalehorizon",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-scalehorizon",
+      "toSide": "top"
+    },
+    {
+      "id": "e-orca",
+      "fromNode": "cluster-hf",
+      "toNode": "src-orca"
+    },
+    {
+      "id": "e-dockerless",
+      "fromNode": "cluster-hf",
+      "toNode": "src-dockerless"
+    },
+    {
+      "id": "e-ornith9b",
+      "fromNode": "cluster-hf",
+      "toNode": "src-ornith9b"
+    },
+    {
+      "id": "e-omniroute",
+      "fromNode": "src-omniroute",
+      "toNode": "cluster-workflow"
+    },
+    {
+      "id": "e-olmocr",
+      "fromNode": "cluster-github",
+      "toNode": "src-olmocr"
+    },
+    {
+      "id": "e-aibeginners",
+      "fromNode": "cluster-github",
+      "toNode": "src-aibeginners"
+    },
+    {
+      "id": "e-vulnclaw",
+      "fromNode": "cluster-github",
+      "toNode": "src-vulnclaw"
+    },
+    {
+      "id": "e-agentscli",
+      "fromNode": "src-agentscli",
+      "toNode": "cluster-workflow"
+    },
+    {
+      "id": "e-turboserve",
+      "fromNode": "cluster-hf",
+      "toNode": "src-turboserve"
+    },
+    {
+      "id": "e-memsyco",
+      "fromNode": "cluster-hf",
+      "toNode": "src-memsyco"
+    },
+    {
+      "id": "e-eldr",
+      "fromNode": "cluster-hf",
+      "toNode": "src-eldr"
+    },
+    {
+      "id": "e-caveman",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "src-caveman",
+      "toSide": "top"
+    },
+    {
+      "id": "e-paw",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-paw",
+      "toSide": "top"
+    },
+    {
+      "id": "e-flashmorph",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-flashmorph",
+      "toSide": "top"
+    },
+    {
+      "id": "e-agenticsts",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-agenticsts",
+      "toSide": "top"
+    },
+    {
+      "id": "e-evopolicygym",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-evopolicygym",
+      "toSide": "top"
+    },
+    {
+      "id": "e-agenticdatabench",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "src-agenticdatabench",
+      "toSide": "top"
+    },
+    {
+      "id": "e-sts-memsyco",
+      "fromNode": "src-agenticsts",
+      "fromSide": "right",
+      "toNode": "src-memsyco",
+      "toSide": "left",
+      "label": "메모리"
+    },
+    {
+      "id": "e-paw-flash",
+      "fromNode": "src-paw",
+      "fromSide": "right",
+      "toNode": "src-flashmorph",
+      "toSide": "left",
+      "label": "효율화"
+    },
+    {
+      "id": "e-evo-adb",
+      "fromNode": "src-evopolicygym",
+      "fromSide": "right",
+      "toNode": "src-agenticdatabench",
+      "toSide": "left",
+      "label": "에이전트평가"
+    },
+    {
+      "id": "e-0704-1",
+      "fromNode": "cluster-github",
+      "toNode": "src-codex-plugin-cc",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0704-2",
+      "fromNode": "cluster-github",
+      "toNode": "src-pytorch",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0704-3",
+      "fromNode": "cluster-github",
+      "toNode": "src-cs249r",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0704-4",
+      "fromNode": "cluster-github",
+      "toNode": "src-cubesandbox",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0704-5",
+      "fromNode": "cluster-hf",
+      "toNode": "src-qwen-nvfp4",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0704-6",
+      "fromNode": "src-codex-plugin-cc",
+      "toNode": "src-cubesandbox",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "에이전트 인프라",
+      "color": "6"
+    },
+    {
+      "id": "e-0704-7",
+      "fromNode": "src-pytorch",
+      "toNode": "src-qwen-nvfp4",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "학습·양자화 스택",
+      "color": "6"
+    },
+    {
+      "id": "e-0704-8",
+      "fromNode": "src-cs249r",
+      "toNode": "src-qwen-nvfp4",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "엣지 배포 관점",
+      "color": "6"
+    },
+    {
+      "id": "e-hub-skills3",
+      "fromNode": "domain-hub",
+      "toNode": "theme-skills-3layer",
+      "label": "스킬 표준화",
+      "color": "6"
+    },
+    {
+      "id": "e-s3-matt",
+      "fromNode": "theme-skills-3layer",
+      "toNode": "src-mattpocock-skills",
+      "label": "모음",
+      "color": "6"
+    },
+    {
+      "id": "e-s3-agentskills",
+      "fromNode": "theme-skills-3layer",
+      "toNode": "src-agentskills",
+      "label": "표준",
+      "color": "6"
+    },
+    {
+      "id": "e-s3-skillcoach",
+      "fromNode": "theme-skills-3layer",
+      "toNode": "src-skillcoach",
+      "label": "평가",
+      "color": "6"
+    },
+    {
+      "id": "e-matt-agentskills",
+      "fromNode": "src-mattpocock-skills",
+      "toNode": "src-agentskills",
+      "label": "포맷 정렬",
+      "color": "5"
+    },
+    {
+      "id": "e-hub-worlddir",
+      "fromNode": "domain-hub",
+      "toNode": "src-worlddirector",
+      "label": "월드모델",
+      "color": "4"
+    },
+    {
+      "id": "e-mrfm-dist",
+      "fromNode": "src-mrfm",
+      "toNode": "src-distrewards",
+      "label": "효율·생성",
+      "color": "2"
+    },
+    {
+      "id": "e-qwen-nvfp4-line",
+      "fromNode": "src-qwen35b-nvfp4",
+      "toNode": "src-qwen-nvfp4",
+      "label": "NVFP4 계보",
+      "color": "2"
+    },
+    {
+      "id": "e-hub-qwen35nvfp4",
+      "fromNode": "domain-hub",
+      "toNode": "src-qwen35b-nvfp4",
+      "label": "로컬 양자화",
+      "color": "4"
+    },
+    {
+      "id": "e-sysprompt-matt",
+      "fromNode": "src-system-prompts-leaks",
+      "toNode": "src-mattpocock-skills",
+      "label": "프롬프트↔스킬",
+      "color": "5"
+    },
+    {
+      "id": "e-0706-0",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-claude-skills-0706",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-1",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-nanogpt",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-2",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-claude-video",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-3",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-speech2speech",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-4",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-mirage-tip",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-5",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-vla-corrector",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-6",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-embodied-cpp",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-7",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-orbitquant",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-8",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "toNode": "src-ai-infra-guard",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-0706-x1",
+      "fromNode": "src-claude-skills-0706",
+      "toNode": "theme-skills-3layer",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "스킬 3층 계보"
+    },
+    {
+      "id": "e-0706-x2",
+      "fromNode": "src-ai-infra-guard",
+      "toNode": "src-claude-skills-0706",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "공급망 감사 대상"
+    },
+    {
+      "id": "e-0706-x3",
+      "fromNode": "src-embodied-cpp",
+      "toNode": "src-vla-corrector",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "임바디드 배포"
+    },
+    {
+      "id": "e-0706-x4",
+      "fromNode": "src-embodied-cpp",
+      "toNode": "src-speech2speech",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "온디바이스 런타임"
+    },
+    {
+      "id": "e-0706-x5",
+      "fromNode": "src-vla-corrector",
+      "toNode": "src-mirage-tip",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "학습≠추론 안정성"
+    },
+    {
+      "id": "e-domain-hub-wm-cluster",
+      "fromNode": "domain-hub",
+      "toNode": "wm-cluster"
+    },
+    {
+      "id": "e-wm-cluster-wm-hub",
+      "fromNode": "wm-cluster",
+      "toNode": "wm-hub"
+    },
+    {
+      "id": "e-wm-hub-wm-jepa",
+      "fromNode": "wm-hub",
+      "toNode": "wm-jepa",
+      "label": "예측형"
+    },
+    {
+      "id": "e-wm-hub-wm-diff",
+      "fromNode": "wm-hub",
+      "toNode": "wm-diff",
+      "label": "생성형"
+    },
+    {
+      "id": "e-wm-hub-wm-survey",
+      "fromNode": "wm-hub",
+      "toNode": "wm-survey"
+    },
+    {
+      "id": "e-wm-jepa-wm-lecun",
+      "fromNode": "wm-jepa",
+      "toNode": "wm-lecun"
+    },
+    {
+      "id": "e-wm-jepa-wm-cjepa",
+      "fromNode": "wm-jepa",
+      "toNode": "wm-cjepa"
+    },
+    {
+      "id": "e-wm-jepa-wm-flow",
+      "fromNode": "wm-jepa",
+      "toNode": "wm-flow"
+    },
+    {
+      "id": "e-wm-lecun-wm-cjepa",
+      "fromNode": "wm-lecun",
+      "toNode": "wm-cjepa"
+    },
+    {
+      "id": "e-wm-jepa-wm-synth",
+      "fromNode": "wm-jepa",
+      "toNode": "wm-synth"
+    },
+    {
+      "id": "e-wm-diff-wm-synth",
+      "fromNode": "wm-diff",
+      "toNode": "wm-synth"
+    },
+    {
+      "id": "e-wm-diff-wm-survey",
+      "fromNode": "wm-diff",
+      "toNode": "wm-survey"
+    },
+    {
+      "id": "e2-domain-hub-hub-agent-fw",
+      "fromNode": "domain-hub",
+      "toNode": "hub-agent-fw"
+    },
+    {
+      "id": "e2-domain-hub-hub-agent-mem",
+      "fromNode": "domain-hub",
+      "toNode": "hub-agent-mem"
+    },
+    {
+      "id": "e2-domain-hub-hub-embodied2",
+      "fromNode": "domain-hub",
+      "toNode": "hub-embodied2"
+    },
+    {
+      "id": "e2-domain-hub-hub-onpolicy",
+      "fromNode": "domain-hub",
+      "toNode": "hub-onpolicy"
+    },
+    {
+      "id": "e2-domain-hub-wave-jul-aug",
+      "fromNode": "domain-hub",
+      "toNode": "wave-jul-aug"
+    },
+    {
+      "id": "e2-hub-embodied2-wm-hub",
+      "fromNode": "hub-embodied2",
+      "toNode": "wm-hub",
+      "label": "월드모델"
+    },
+    {
+      "id": "e2-ent-moonshot-wave-jul-aug",
+      "fromNode": "ent-moonshot",
+      "toNode": "wave-jul-aug"
+    },
+    {
+      "id": "e2-hub-agent-mem-hub-agent-fw",
+      "fromNode": "hub-agent-mem",
+      "toNode": "hub-agent-fw"
+    },
+    {
+      "id": "en0826a",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826a",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826b",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826b",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826c",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826c",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826d",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826d",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826e",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826e",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826f",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826f",
+      "toSide": "top"
+    },
+    {
+      "id": "en0826g",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "n0826g",
+      "toSide": "top"
+    },
+    {
+      "id": "e0826x1",
+      "fromNode": "n0826c",
+      "fromSide": "bottom",
+      "toNode": "n0826e",
+      "toSide": "top",
+      "label": "설계시점 vs 실행시점"
+    },
+    {
+      "id": "e0826x2",
+      "fromNode": "n0826d",
+      "fromSide": "bottom",
+      "toNode": "n0826a",
+      "toSide": "bottom",
+      "label": "신호 주입 지점 설계"
+    },
+    {
+      "id": "e0827_1",
+      "fromNode": "n0827hdr",
+      "fromSide": "right",
+      "toNode": "n0827a",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_2",
+      "fromNode": "n0827a",
+      "fromSide": "right",
+      "toNode": "n0827b",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_3",
+      "fromNode": "n0827a",
+      "fromSide": "bottom",
+      "toNode": "n0827i",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_4",
+      "fromNode": "n0827b",
+      "fromSide": "bottom",
+      "toNode": "n0827f",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_5",
+      "fromNode": "n0827c",
+      "fromSide": "bottom",
+      "toNode": "n0827g",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_6",
+      "fromNode": "n0827c",
+      "fromSide": "right",
+      "toNode": "n0827h",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_7",
+      "fromNode": "n0827a",
+      "fromSide": "right",
+      "toNode": "n0827h",
+      "toSide": "left",
+      "label": "20.6% 천장"
+    },
+    {
+      "id": "e0827_8",
+      "fromNode": "n0827d",
+      "fromSide": "bottom",
+      "toNode": "n0827l",
+      "toSide": "top"
+    },
+    {
+      "id": "e0827_9",
+      "fromNode": "n0827e",
+      "fromSide": "right",
+      "toNode": "n0827c",
+      "toSide": "bottom",
+      "label": "모델 밖 설정이 지배"
+    },
+    {
+      "id": "e0827_10",
+      "fromNode": "n0827f",
+      "fromSide": "right",
+      "toNode": "n0827c",
+      "toSide": "left",
+      "label": "생성→전달→판정"
+    },
+    {
+      "id": "e0827_11",
+      "fromNode": "n0827j",
+      "fromSide": "right",
+      "toNode": "n0827k",
+      "toSide": "left"
+    },
+    {
+      "id": "e0827_12",
+      "fromNode": "n0827hdr",
+      "fromSide": "bottom",
+      "toNode": "n0827e",
+      "toSide": "left"
+    },
+    {
+      "id": "e0828a",
+      "fromNode": "n0828a",
+      "fromSide": "right",
+      "toNode": "n0828h",
+      "toSide": "left",
+      "label": "분포 정렬"
+    },
+    {
+      "id": "e0828b",
+      "fromNode": "n0828b",
+      "fromSide": "bottom",
+      "toNode": "n0828h",
+      "toSide": "top",
+      "label": "분포적 비대칭성"
+    },
+    {
+      "id": "e0828c",
+      "fromNode": "n0828c",
+      "fromSide": "bottom",
+      "toNode": "n0828h",
+      "toSide": "top",
+      "label": "제약된 분포 설계"
+    },
+    {
+      "id": "e0828d",
+      "fromNode": "n0828a",
+      "fromSide": "right",
+      "toNode": "n0828b",
+      "toSide": "left",
+      "label": "⚠️ 답 여럿 ↔ 답 하나(긴장)"
+    },
+    {
+      "id": "e0828e",
+      "fromNode": "n0828f",
+      "fromSide": "right",
+      "toNode": "n0828i",
+      "toSide": "left",
+      "label": "1.19"
+    },
+    {
+      "id": "e0828f",
+      "fromNode": "n0828g",
+      "fromSide": "right",
+      "toNode": "n0828i",
+      "toSide": "left",
+      "label": "0.024"
+    },
+    {
+      "id": "e0828g",
+      "fromNode": "n0828d",
+      "fromSide": "bottom",
+      "toNode": "n0828k",
+      "toSide": "top",
+      "label": "억제 축"
+    },
+    {
+      "id": "e0828h",
+      "fromNode": "n0828e",
+      "fromSide": "bottom",
+      "toNode": "n0828j",
+      "toSide": "top",
+      "label": "이 볼트 대조군"
+    },
+    {
+      "id": "e0828i",
+      "fromNode": "n0828d",
+      "fromSide": "right",
+      "toNode": "n0828e",
+      "toSide": "left",
+      "label": "같은 배치 GitHub"
+    },
+    {
+      "id": "e0828j",
+      "fromNode": "n0828f",
+      "fromSide": "right",
+      "toNode": "n0828g",
+      "toSide": "left",
+      "label": "같은 주 차세대 실험 태그"
+    },
+    {
+      "id": "e0828k",
+      "fromNode": "n0828c",
+      "fromSide": "bottom",
+      "toNode": "n0828d",
+      "toSide": "top",
+      "label": "양≠유용성 동형"
+    },
+    {
+      "id": "e0828l",
+      "fromNode": "n0828e",
+      "fromSide": "bottom",
+      "toNode": "n0828k",
+      "toSide": "top",
+      "label": "볼트 구조 규정 자산"
+    },
+    {
+      "id": "e0829a",
+      "fromNode": "n0829hdr",
+      "fromSide": "right",
+      "toNode": "n0829a",
+      "toSide": "left",
+      "label": "배치 최대 발견"
+    },
+    {
+      "id": "e0829b",
+      "fromNode": "n0829a",
+      "fromSide": "bottom",
+      "toNode": "n0829d",
+      "toSide": "top",
+      "label": "보상 신뢰도"
+    },
+    {
+      "id": "e0829c",
+      "fromNode": "n0829b",
+      "fromSide": "bottom",
+      "toNode": "n0829d",
+      "toSide": "top",
+      "label": "유일 앵커 = 보상"
+    },
+    {
+      "id": "e0829d",
+      "fromNode": "n0829a",
+      "fromSide": "right",
+      "toNode": "n0829e",
+      "toSide": "left",
+      "label": "이진 유효성"
+    },
+    {
+      "id": "e0829e",
+      "fromNode": "n0829c",
+      "fromSide": "bottom",
+      "toNode": "n0829e",
+      "toSide": "top",
+      "label": "분포 일치 요구"
+    },
+    {
+      "id": "e0829f",
+      "fromNode": "n0829f",
+      "fromSide": "right",
+      "toNode": "n0829g",
+      "toSide": "left",
+      "label": "평가 측"
+    },
+    {
+      "id": "e0829g",
+      "fromNode": "n0829a",
+      "fromSide": "top",
+      "toNode": "n0829g",
+      "toSide": "left",
+      "label": "학습 측"
+    },
+    {
+      "id": "e0829h",
+      "fromNode": "n0829i",
+      "fromSide": "right",
+      "toNode": "n0829j",
+      "toSide": "left",
+      "label": "같은 두 모델"
+    },
+    {
+      "id": "e0829i",
+      "fromNode": "n0829k",
+      "fromSide": "right",
+      "toNode": "n0829l",
+      "toSide": "left",
+      "label": "최하단 = Python"
+    },
+    {
+      "id": "e0829j",
+      "fromNode": "n0829l",
+      "fromSide": "bottom",
+      "toNode": "n0829m",
+      "toSide": "right",
+      "label": "장기축적형"
+    },
+    {
+      "id": "e0829k",
+      "fromNode": "n0829n",
+      "fromSide": "right",
+      "toNode": "n0829o",
+      "toSide": "left",
+      "label": "해석 규칙"
+    },
+    {
+      "id": "e0829l",
+      "fromNode": "n0829h",
+      "fromSide": "right",
+      "toNode": "n0829i",
+      "toSide": "left",
+      "label": "파생 vs 원본"
+    },
+    {
+      "id": "e0829m",
+      "fromNode": "n0829f",
+      "fromSide": "top",
+      "toNode": "n0829c",
+      "toSide": "bottom",
+      "label": "국소≠전역"
+    },
+    {
+      "id": "e-omaic-cluster",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "src-openmaic",
+      "toSide": "top"
+    },
+    {
+      "id": "e-omaic-freeze",
+      "fromNode": "src-openmaic",
+      "fromSide": "bottom",
+      "toNode": "obs-20260830-issuedrop",
+      "toSide": "top",
+      "label": "같은 배치"
+    },
+    {
+      "id": "e-hf-freeze",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "obs-20260830-hffreeze",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hf-flip",
+      "fromNode": "cluster-hf",
+      "fromSide": "bottom",
+      "toNode": "obs-20260830-ggufflip",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domaingap",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "act-20260830-domaingap",
+      "toSide": "top",
+      "label": "스키마 미이행"
+    },
+    {
+      "id": "e-b0902-oc",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-openclaude",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-sm",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-smelt",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-qd",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-qwendrive",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-uv",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-uivenus2",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-sf",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-safin1",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-b0902-de",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "src-diagevo",
+      "toSide": "top",
+      "label": "신규"
+    },
+    {
+      "id": "e-qd-insp",
+      "fromNode": "src-qwendrive",
+      "fromSide": "bottom",
+      "toNode": "concept-inspectability",
+      "toSide": "top",
+      "label": "탐침"
+    },
+    {
+      "id": "e-uv-insp",
+      "fromNode": "src-uivenus2",
+      "fromSide": "bottom",
+      "toNode": "concept-inspectability",
+      "toSide": "top",
+      "label": "검증 축"
+    },
+    {
+      "id": "e-sf-insp",
+      "fromNode": "src-safin1",
+      "fromSide": "bottom",
+      "toNode": "concept-inspectability",
+      "toSide": "top",
+      "label": "능동 기질"
+    },
+    {
+      "id": "e-oc-rule",
+      "fromNode": "src-openclaude",
+      "fromSide": "bottom",
+      "toNode": "rule-noassertion",
+      "toSide": "top",
+      "label": "권한 부인"
+    },
+    {
+      "id": "e-b0902-unf",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "unfreeze-20260902",
+      "toSide": "top",
+      "label": "동결 해제"
+    },
+    {
+      "id": "e-b0902-rule",
+      "fromNode": "batch-20260902",
+      "fromSide": "bottom",
+      "toNode": "rule-noassertion",
+      "toSide": "top",
+      "label": "규칙 신설"
+    },
+    {
+      "id": "e-uv-auth",
+      "fromNode": "src-uivenus2",
+      "fromSide": "bottom",
+      "toNode": "obs-authors",
+      "toSide": "top",
+      "label": "31인·수치 0"
+    },
+    {
+      "id": "e-de-auth",
+      "fromNode": "src-diagevo",
+      "fromSide": "bottom",
+      "toNode": "obs-authors",
+      "toSide": "top",
+      "label": "8인·수치 O"
+    },
+    {
+      "id": "e0903-1",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-repo2skill",
+      "toSide": "top",
+      "label": "1위·334"
+    },
+    {
+      "id": "e0903-2",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-solarwm",
+      "toSide": "top",
+      "label": "2위"
+    },
+    {
+      "id": "e0903-3",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-earlyeval",
+      "toSide": "top",
+      "label": "3위"
+    },
+    {
+      "id": "e0903-4",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-cogr",
+      "toSide": "top",
+      "label": "4위"
+    },
+    {
+      "id": "e0903-5",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-da",
+      "toSide": "top",
+      "label": "5위"
+    },
+    {
+      "id": "e0903-6",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-glm53",
+      "toSide": "top",
+      "label": "트렌딩1위"
+    },
+    {
+      "id": "e0903-7",
+      "fromNode": "batch-0903",
+      "fromSide": "bottom",
+      "toNode": "src-voicestudio",
+      "toSide": "top",
+      "label": "GH 4위"
+    },
+    {
+      "id": "e0903-8",
+      "fromNode": "src-glm53flash-u",
+      "fromSide": "bottom",
+      "toNode": "obs-dl-lag",
+      "toSide": "top",
+      "label": "34→51.8만"
+    },
+    {
+      "id": "e0903-9",
+      "fromNode": "src-qwen38fn-u",
+      "fromSide": "bottom",
+      "toNode": "obs-dl-lag",
+      "toSide": "top",
+      "label": "54.7배"
+    },
+    {
+      "id": "e0903-10",
+      "fromNode": "src-timesfm-u",
+      "fromSide": "bottom",
+      "toNode": "obs-dl-lag",
+      "toSide": "top",
+      "label": "0→46,862"
+    },
+    {
+      "id": "e0903-11",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "obs-drift-hf",
+      "toSide": "top",
+      "label": "+60.0%"
+    },
+    {
+      "id": "e0903-12",
+      "fromNode": "src-hermes-u",
+      "fromSide": "bottom",
+      "toNode": "obs-issue-fast",
+      "toSide": "top",
+      "label": "4.8배"
+    },
+    {
+      "id": "e0903-13",
+      "fromNode": "src-ponytail-u",
+      "fromSide": "bottom",
+      "toNode": "obs-issue-fast",
+      "toSide": "top",
+      "label": "2.1배"
+    },
+    {
+      "id": "e0903-14",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "obs-license-close",
+      "toSide": "top",
+      "label": "독자"
+    },
+    {
+      "id": "e0903-15",
+      "fromNode": "src-qwen38fn-u",
+      "fromSide": "bottom",
+      "toNode": "obs-license-close",
+      "toSide": "top",
+      "label": "community"
+    },
+    {
+      "id": "e0903-16",
+      "fromNode": "src-da",
+      "fromSide": "bottom",
+      "toNode": "obs-sparse3",
+      "toSide": "top",
+      "label": "①수치 O"
+    },
+    {
+      "id": "e0903-17",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "obs-sparse3",
+      "toSide": "top",
+      "label": "②dsa"
+    },
+    {
+      "id": "e0903-18",
+      "fromNode": "src-qwen38fn-u",
+      "fromSide": "bottom",
+      "toNode": "obs-sparse3",
+      "toSide": "top",
+      "label": "③QSA"
+    },
+    {
+      "id": "e0903-19",
+      "fromNode": "src-repo2skill",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "③증류·근거"
+    },
+    {
+      "id": "e0903-20",
+      "fromNode": "src-ponytail-u",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "①수작업·규모"
+    },
+    {
+      "id": "e0903-21",
+      "fromNode": "src-hermes-u",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "②경험"
+    },
+    {
+      "id": "e0903-22",
+      "fromNode": "src-cogr",
+      "fromSide": "bottom",
+      "toNode": "con-skill-axis",
+      "toSide": "top",
+      "label": "5층 후보"
+    },
+    {
+      "id": "e0903-23",
+      "fromNode": "src-cogr",
+      "fromSide": "bottom",
+      "toNode": "con-llmwiki-gap",
+      "toSide": "top",
+      "label": "볼트 자신"
+    },
+    {
+      "id": "e0903-24",
+      "fromNode": "src-da",
+      "fromSide": "bottom",
+      "toNode": "con-memory-4",
+      "toSide": "top",
+      "label": "선택적 비독해"
+    },
+    {
+      "id": "e0903-25",
+      "fromNode": "src-solarwm",
+      "fromSide": "bottom",
+      "toNode": "con-worldmodel",
+      "toSide": "top",
+      "label": "데이터 계약"
+    },
+    {
+      "id": "e0903-26",
+      "fromNode": "src-timesfm-u",
+      "fromSide": "bottom",
+      "toNode": "con-tsfm",
+      "toSide": "top",
+      "label": "3.0 공개"
+    },
+    {
+      "id": "e0903-27",
+      "fromNode": "src-voicestudio",
+      "fromSide": "bottom",
+      "toNode": "act-voice",
+      "toSide": "top",
+      "label": "MCP+OpenAI API"
+    },
+    {
+      "id": "e0903-28",
+      "fromNode": "con-llmwiki-gap",
+      "fromSide": "bottom",
+      "toNode": "act-queries",
+      "toSide": "top",
+      "label": "결측 해소"
+    },
+    {
+      "id": "e0903-29",
+      "fromNode": "src-repo2skill",
+      "fromSide": "bottom",
+      "toNode": "act-abs",
+      "toSide": "top",
+      "label": "절대치 필요"
+    },
+    {
+      "id": "e0903-30",
+      "fromNode": "src-solarwm",
+      "fromSide": "bottom",
+      "toNode": "src-voicestudio",
+      "toSide": "top",
+      "label": "이종백본→공통층 (동일 패턴)"
+    },
+    {
+      "id": "e0903-31",
+      "fromNode": "src-earlyeval",
+      "fromSide": "bottom",
+      "toNode": "src-repo2skill",
+      "toSide": "top",
+      "label": "근거 제시 태도 대조"
+    },
+    {
+      "id": "e0903-32",
+      "fromNode": "src-glm53",
+      "fromSide": "bottom",
+      "toNode": "src-glm53flash-u",
+      "toSide": "top",
+      "label": "DL 1:3.43 · 라이선스 분기"
+    },
+    {
+      "id": "e-hub-s-anthskills",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-anthskills",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-human",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-human",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-prompts",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-prompts",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-magnitude",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-magnitude",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-deepswe",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-deepswe",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-randatt",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-randatt",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-puffin",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-puffin",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-compile",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-compile",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-bcit",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-bcit",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-tcr",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-tcr",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-pyannote",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-pyannote",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-sam3",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-sam3",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-s-minimax",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "s-minimax",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-exp",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "con-explicit",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-sel",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "con-select",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-sf",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "ent-salesforce",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-uw",
+      "fromNode": "hub-0904",
+      "fromSide": "bottom",
+      "toNode": "ent-waterloo",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-explicit-s-tcr",
+      "fromNode": "con-explicit",
+      "fromSide": "bottom",
+      "toNode": "s-tcr",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-explicit-s-human",
+      "fromNode": "con-explicit",
+      "fromSide": "bottom",
+      "toNode": "s-human",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-explicit-s-deepswe",
+      "fromNode": "con-explicit",
+      "fromSide": "bottom",
+      "toNode": "s-deepswe",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-explicit-s-bcit",
+      "fromNode": "con-explicit",
+      "fromSide": "bottom",
+      "toNode": "s-bcit",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-explicit-s-puffin",
+      "fromNode": "con-explicit",
+      "fromSide": "bottom",
+      "toNode": "s-puffin",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-select-s-randatt",
+      "fromNode": "con-select",
+      "fromSide": "bottom",
+      "toNode": "s-randatt",
+      "toSide": "top"
+    },
+    {
+      "id": "e-con-select-s-bcit",
+      "fromNode": "con-select",
+      "fromSide": "bottom",
+      "toNode": "s-bcit",
+      "toSide": "top"
+    },
+    {
+      "id": "e-sf-rand",
+      "fromNode": "ent-salesforce",
+      "fromSide": "bottom",
+      "toNode": "s-randatt",
+      "toSide": "right"
+    },
+    {
+      "id": "e-uw-comp",
+      "fromNode": "ent-waterloo",
+      "fromSide": "bottom",
+      "toNode": "s-compile",
+      "toSide": "right"
+    },
+    {
+      "id": "e-s-magnitude-act-mag",
+      "fromNode": "s-magnitude",
+      "fromSide": "bottom",
+      "toNode": "act-mag",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-tcr-act-mae",
+      "fromNode": "s-tcr",
+      "fromSide": "bottom",
+      "toNode": "act-mae",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-bcit-act-ctx",
+      "fromNode": "s-bcit",
+      "fromSide": "bottom",
+      "toNode": "act-ctx",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pyannote-act-pyan",
+      "fromNode": "s-pyannote",
+      "fromSide": "bottom",
+      "toNode": "act-pyan",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-sam3-act-gated",
+      "fromNode": "s-sam3",
+      "fromSide": "bottom",
+      "toNode": "act-gated",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-harnessdev",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-harnessdev",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-aspire",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-aspire",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-terminal-universe",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-terminal-universe",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-opd2",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-opd2",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-llada-image",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-llada-image",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-opencode",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-opencode",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-speckit",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-speckit",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-context7",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-context7",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-diagram",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-diagram",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-miles",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-miles",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-deepseek-vision",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-deepseek-vision",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-aspire-c-inspectability-promoted",
+      "fromNode": "s-aspire",
+      "fromSide": "bottom",
+      "toNode": "c-inspectability-promoted",
+      "toSide": "top",
+      "label": "급소 실험 확인"
+    },
+    {
+      "id": "e-s-harnessdev-c-inspectability-promoted",
+      "fromNode": "s-harnessdev",
+      "fromSide": "bottom",
+      "toNode": "c-inspectability-promoted",
+      "toSide": "top",
+      "label": "히든 평가 분리"
+    },
+    {
+      "id": "e-s-context7-c-inspectability-promoted",
+      "fromNode": "s-context7",
+      "fromSide": "bottom",
+      "toNode": "c-inspectability-promoted",
+      "toSide": "top",
+      "label": "외부 문서 고정"
+    },
+    {
+      "id": "e-s-context7-a-context7-install",
+      "fromNode": "s-context7",
+      "fromSide": "bottom",
+      "toNode": "a-context7-install",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-terminal-universe-a-queries",
+      "fromNode": "s-terminal-universe",
+      "fromSide": "bottom",
+      "toNode": "a-queries",
+      "toSide": "top",
+      "label": "시연 vs 환경"
+    },
+    {
+      "id": "e-s-harnessdev-s-aspire",
+      "fromNode": "s-harnessdev",
+      "fromSide": "bottom",
+      "toNode": "s-aspire",
+      "toSide": "top",
+      "label": "자매 논문(제1저자 3인 동일)"
+    },
+    {
+      "id": "e-s-speckit-s-opencode",
+      "fromNode": "s-speckit",
+      "fromSide": "bottom",
+      "toNode": "s-opencode",
+      "toSide": "top",
+      "label": "프로세스 vs 본체"
+    },
+    {
+      "id": "e-s-opd2-s-miles",
+      "fromNode": "s-opd2",
+      "fromSide": "bottom",
+      "toNode": "s-miles",
+      "toSide": "top",
+      "label": "이론 vs 인프라"
+    }
+  ]
 }

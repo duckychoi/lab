@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, ai-news, hf-paper, distillation, adapter, program-as-weights, waterloo, local-inference]
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-06
 sources: []
 reliability: high
 ---
@@ -48,6 +48,13 @@ reliability: high
 
 > [!question] 미해결
 > **"의미 정확도"를 누가 채점했는가.** 교사 모델이 데이터도 만들고 채점도 했다면 순환이다. → 논문 본문 확인 필요.
+
+---
+## 📊 2026-09-06 재관측 (HF API 실측)
+업보트 **314** — raw 09-06 수집값 314와 일치. 09-04 인제스트 이후 재관측.
+> [!question] 09-04 미해소 이월 항목 **여전히 미확인**
+> *"의미 정확도 83.6%를 누가 채점했는가"* — 교사 모델이 데이터도 만들고 채점도 했다면 순환이다.
+> **이번 배치가 이 질문의 무게를 키웠다**: [[Aspire]]가 *"에이전트가 좁은 자체평가를 신뢰해 국소 향상이 히든 평가로 전이되지 않는다"* 를 **실험으로 확인**했기 때문이다. 자기채점의 위험이 이제 논증이 아니라 측정된 실패 모드다 → [[검사가능성-공사]] **확정 승격**. **83.6%는 채점 주체가 확인될 때까지 인용 보류.**
 
 ## 관련 페이지
 - [[Program-as-Weights]] · [[PAWBench]] · [[Random-Attention]] · [[magnitude]] · [[온폴리시-증류]] · [[Agent-Memory-Distillation]] · [[Repo-To-Skill]] · [[anthropics-skills]] · [[검사가능성-공사]] · [[에이전트-스킬]] · [[에이전트-메모리-레이어]]

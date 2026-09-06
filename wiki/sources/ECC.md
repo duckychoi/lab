@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, agent-harness, claude-code, skill-management, agent-memory, security, workflow]
 created: 2026-07-29
-updated: 2026-08-23
+updated: 2026-09-06
 sources: []
 reliability: high
 ---
@@ -38,6 +38,13 @@ reliability: high
 - **대체 관계**: [[impeccable]]·[[OpenSpace]](스킬 관리)·[[OpenViking]](메모리)·[[agent-governance-toolkit]](보안/거버넌스)를 **한 툴킷으로 번들**한 상위집합. 부분 기능은 각 전용 툴이 더 깊을 수 있음.
 - **허와 실**: "235k 스타"·"조율된 엔지니어링 시스템"은 강한 프레이밍. 실질 가치는 **워크플로 강제(훅)+스킬 온디맨드 로딩+보안 게이트**라는 검증된 패턴의 통합이지, 마법이 아님.
 - **액션**: AgentShield의 **정적분석 룰 목록**과 **메모리 볼트 구조**를 README/코드로 스팟 확인 → 내 스킬 훅·[[에이전트-메모리-레이어]]에 이식 가능한 결정론 룰만 발췌.
+
+---
+## 📊 2026-09-06 재관측 (GitHub API 실측)
+⭐ **250,338** · fork **37,662** · 오픈이슈 **161** · MIT — raw 09-06 수집값 ⭐250,321과 일치.
+**fork/star = 0.150**(배치 최상위권)인데 **issue/star = 0.00064**로 배치 최저다. 이 조합은 드물다 — **많이 포크되는데 이슈는 거의 안 올라온다.**
+> [!warning] ⚠️ 두 해석이 갈리고 구분할 근거가 없다
+> (a) 포크해서 각자 고쳐 쓰므로 업스트림에 이슈를 안 낸다, (b) 포크만 하고 실제로 안 쓴다. 기존 지적(*"최적화" 주장에 정량 수치 미제시*)이 그대로 유효하며, [[HarnessDev]]가 제시한 기준(**홀드아웃 성공률 + 실행 토큰 비용 + 모델 간 전이**)으로 재평가 대상.
 
 ## 관련 페이지
 - [[impeccable]]

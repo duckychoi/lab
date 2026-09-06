@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, ai-news, hf-paper, kv-cache, inference, vllm, salesforce, reasoning]
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-06
 sources: []
 reliability: high
 ---
@@ -48,6 +48,14 @@ reliability: high
 
 > [!action] 당장 할 것
 > 레포의 vLLM 통합 코드에서 **"프롬프트 보존 경계를 어떻게 정하는지"** 한 곳만 확인. 이 방법의 전체 안전성이 그 경계 정의에 걸려 있고, 그것만 알면 볼트의 로컬 서빙에 이식 가능한지 판정된다.
+
+---
+## 📊 2026-09-06 재관측 (HF API 실측)
+업보트 **161** — raw 09-06 수집값 161과 일치.
+> [!insight] **[[Minima]]가 다른 층에서 같은 원리에 독립 도달했다**
+> 이 논문이 **KV 축출**에서 보인 것(*중복성이 선택 신호를 무의미하게 만든다*)을, [[Minima]](2609.04098)는 **수치 정밀도**에서 보인다: [[Qwen3.8-27B]]의 496개 선형층 전부를 NVFP4 W4A4로 내려도 **BF16과 시드 노이즈 내 동등**(-0.52)이고, **게이트 투영이 가장 덜 민감**하며 **GEMM 오차 ~11% → 출력 오차 ~2%** 로 감쇠된다.
+> **"중복성이 정밀함의 비용을 무효화한다"가 축출 층과 양자화 층에서 각각 관측됐다** → [[선택비용과-중복성]] 근거 보강.
+> ⚠️ 단 같은 배치의 [[LatentPress]]는 **반대 방향**을 가리킨다 — 잠재 압축본이 **무압축 원문을 이겼다**(LongMemEval 0.504 vs 0.490). 대상이 달라 직접 모순은 아니나(축출 vs 쓰기), **"기억에서 선택이 얼마나 중요한가"** 는 미해결로 남는다. 대조 관측 대상 고정.
 
 ## 관련 페이지
 - [[BCIT]] · [[AttentionSink]] · [[OasisKV]] · [[LMCache]] · [[KVPO]] · [[Declarative-Attention]] · [[Full-Attention-to-Sparse]] · [[Hierarchical-Sparse-Attention]] · [[flash-attention]] · [[magnitude]] · [[에이전트-메모리-레이어]] · [[SWE-Pruner-Pro]]

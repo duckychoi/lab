@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, quantization, local-inference, qwen, unsloth, local-llm]
 created: 2026-08-16
-updated: 2026-09-02
+updated: 2026-09-06
 sources: []
 reliability: medium
 ---
@@ -127,6 +127,18 @@ reliability: medium
 - **대체 관계**: 대형 MoE([[MiniMax-H3]]·[[DeepSeek-V4-Flash-0731]]) 원격 서빙 대비, 로컬 오프라인·저지연 27B 밀집 경로로 보완.
 - **허와 실**: DL 1.95M은 "많이 받았다"일 뿐 품질 아님. GGUF 재배포 특성상 원본 품질+양자화 손실이 실체.
 - **액션**: llama.cpp류에서 Q4/Q5 스팟체크 후 [[local-llm]] 상비 후보 판정.
+
+---
+## 📊 2026-09-06 재관측 (HF API 실측) — 그리고 **주장이 반박당했다**
+DL **10,311,462** · 좋아요 **3,554** · `gated=False` · Apache-2.0 — raw 09-06 수집값과 완전 일치. **09-05·09-06 배치 다운로드 1위.**
+
+> [!warning] 🔴 **"동일 크기에서 타 제공자 대비 top-1% 정확도 10%+ 우위" 주장에 대한 반증이 들어왔다**
+> 이 카드의 우위 주장은 **수치 표 없이 외부 문서 링크만** 제시한다. 09-05 배치로 인제스트된 **[[Qwen3.8-27B-GSQ-RCO-GGUF]]**(ISTA-DASLab · Apache-2.0 · DL 348,389)가 **정확히 그 조건에서 반대 결과를 카드에 실었다**:
+> - **동일 파일 크기 8.4GB 고정** · 대조군 **Unsloth UD-IQ2_S**
+> - **AIME25 +10.00** · **GPQA-D +8.59** · **LiveCodeBench +4.57** — 전부 **ISTA-DASLab 쪽이 우위**
+>
+> 즉 Unsloth가 우위를 주장한 바로 그 비교 조건에서, 경쟁자는 **자기 카드에 수치를 넣어** 반대를 보였다. **근거를 카드 안에 둔 쪽과 링크로 미룬 쪽의 차이**가 이 대조의 핵심이다.
+> → **DL 1,033만은 접근성 지표이지 정확도 근거가 아니다.** 정확도 우위 주장은 Unsloth 외부 문서를 직접 확인하기 전까지 **채택하지 않는다.**
 
 ## 관련 페이지
 - [[Qwen3.8-27B]] — 이 재배포판의 베이스 원본(좋아요↑·기준점 vs 이 GGUF DL↑·실행)

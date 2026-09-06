@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skills, anthropic, spec, claude-code, plugins]
 created: 2026-09-04
-updated: 2026-09-04
+updated: 2026-09-06
 sources: []
 reliability: high
 ---
@@ -57,6 +57,14 @@ reliability: high
 
 > [!question] 미해결
 > `agentskills.io` 의 표준과 이 레포 `./spec` 이 **버전이 같은가.** 표준을 밖에 뒀다는 선언은 좋지만, 둘이 갈라지면 크로스벤더 호환의 근거가 무너진다. **다음 회차 확인 대상.**
+
+---
+## 📊 2026-09-06 재관측 (GitHub API 실측)
+⭐ **174,699** · fork **20,684** · 오픈이슈 **1,210** · **라이선스 `None`(레포 레벨 null 재확인)**
+raw 09-06 수집값 ⭐174,695와 일치. 09-04 기록 ⭐173,849 → **+850**.
+> [!warning] ⚠️ 09-04에 기록한 라이선스 함정이 **API로 재확인**됐다
+> 레포 레벨 라이선스가 **여전히 `null`** 이다. ⭐17만을 "오픈소스"로 뭉뚱그리면 틀린다는 기존 경고 유지 — 문서스킬 4종(`docx`/`pdf`/`pptx`/`xlsx`)은 **source-available**.
+> 미해소 이월 항목(*`./spec`과 agentskills.io 표준의 버전 일치 여부*)은 **여전히 미확인**.
 
 ## 관련 페이지
 - [[Anthropic]] · [[에이전트-스킬]] · [[agentskills]] · [[claude-skills]] · [[awesome-claude-skills]] · [[mattpocock-skills]] · [[vercel-skills]] · [[google-skills]] · [[superpowers]] · [[ponytail]] · [[humanizer]] · [[Repo-To-Skill]] · [[claude-obsidian]] · [[LLM-Wiki]]

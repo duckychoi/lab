@@ -4,8 +4,8 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-08-31
-sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md]
+updated: 2026-09-06
+sources: [open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
@@ -2320,3 +2320,62 @@ GitHub 5건 드리프트는 **+0 ~ +6(≤0.4%)** 로 이번에도 미미 — **r
 
 **배치 주제**: *"암묵을 명시로 바꾼 날 — 그리고 볼트가 자기 수집기의 '미확인'을 믿으면 안 된다는 걸 2건으로 배운 날."*
 같은 날 **선택을 없애서 이긴 논문과 선택을 더해서 이긴 논문**이 나란히 올라와 중복성이라는 가르는 변수를 드러냈고, 5개월간 파생물만 보던 **스킬 명세의 원본**이 뒤늦게 들어왔으며, 09-03이 잠정으로 남긴 **HF 드리프트 가설은 100만 규모 3건 전부 일치로 해소**됐다.
+
+---
+
+# [2026-09-06] 09-05·09-06 배치 — **하네스와 스킬이 처음으로 심판대에 섰다**
+
+> 인제스트 **15건 신규**(GitHub 5 · HF논문 7 · HF모델 3) + **11건 재관측 갱신**.
+> ⚠️ raw 대기 26건 중 **11건이 이미 인제스트된 중복**이었다(URL 대조 확인). 수집기 결함 — 아래 별도 항목.
+
+## 이 배치가 남긴 것 5가지
+
+### 1. 🔴 **"에이전트 성능"을 모델 능력으로 귀속시키던 관행이 깨졌다**
+[[HarnessDev]](업보트 240)의 전제: *"모델 가중치를 고정한 채 **하네스만 바꿔도** 태스크 성능이 상당히 달라진다."* 평가 단위를 **태스크 출력 → 실행 가능한 인프라**로 옮겼고, **능력(홀드아웃 성공률)과 효율(실행 토큰 비용)을 함께** 잰다.
+결과가 영역별로 갈린 게 핵심이다 — **코드·검색/리서치에서는 사람이 만든 성숙한 레퍼런스에 크게 못 미치고, 글쓰기·ML 실험에서는 대등하거나 상회**한다. 즉 **LLM이 하네스를 잘 만드는 게 아니라, 사람이 안 만든 곳에서만 이긴다.**
+
+### 2. 🔴 **자기개선 주장이 반증을 받았다 — 그리고 볼트가 그 주장을 ⭐24만짜리로 갖고 있었다**
+[[Aspire]](업보트 210, [[HarnessDev]]와 **제1저자 3인 동일**)는 *"더 나은 물리학자가 돼라"* 같은 **모호한 목표**만 주고 평가는 숨긴다. 결과:
+- 에이전트는 **학습·하네스 편집 루프를 곧잘 완주**한다
+- 그러나 **가중치 수준 향상은 희소하고 불안정**하다
+- **좁은 자체평가를 신뢰**해 국소 향상이 **히든 평가로 전이되지 않는다**
+- **탐색을 계속하면 앞선 개선이 지워진다**
+
+이것이 [[hermes-agent]](⭐242,170)의 핵심 판매점(*경험에서 스킬을 생성하고 사용 중 개선*)에 **직접 걸린다.** ***"루프가 돈다"와 "루프가 개선한다"는 다른 주장이고, 그 레포는 전자만 보여준다.***
+
+### 3. ✅ **[[검사가능성-공사]] 잠정 → 확정 승격** (09-02 승격 조건 충족)
+조건은 *"다음 배치 2건 추가"* 였고 [[Aspire]]·[[HarnessDev]] 2편이 **히든 평가 분리**로 도달했다. 더 중요한 건 개수가 아니라 **급소가 실험으로 확인**됐다는 점 — 09-02의 *"검사기가 피검사자와 같은 실패 모드를 공유하면 거울이다"* 는 **논증**이었는데, [[Aspire]]가 그것을 **부정적 결과로 측정**했다.
+외부 정답 고정의 형태가 **다섯으로 정리**됐고, 마지막 둘이 이번 신규다 — **버전 태그 붙은 공식 문서**([[context7]])와 **개발 중 볼 수 없는 히든 평가**([[Aspire]]·[[HarnessDev]]). 후자는 정답의 *출처*가 아니라 **볼 수 있는 시점**을 외부화한다 — **접근 통제도 외부화의 한 형태**다.
+
+### 4. 🔬 **한 모델(Qwen3.8-27B)에 대해 원본·구현·원리 세 층이 동시에 확보됐다** — 볼트에서 드문 일
+- **원본** [[Qwen3.8-27B]] — 벤더 자체 표(승패 분열)
+- **구현** [[Qwen3.8-27B-GSQ-RCO-GGUF]] — IQ3_S **11.8GB(4.6배 축소)** 에 AIME25 **100.00**·LCB **85.71**로 BF16 동률, GPQA-D만 -0.51
+- **원리** [[Minima]] — **496개 선형층 전부 NVFP4 W4A4**, BF16과 시드 노이즈 내 동등(-0.52), **17.5 GiB**, 프리필 +14~19%. **게이트가 가장 덜 민감**(GEMM 오차 ~11% → 출력 오차 ~2%)하다는 **통념 반전**
+
+그리고 [[Qwen3.8-27B-GSQ-RCO-GGUF]]는 **모델 카드가 [[Repo-To-Skill]] 기준(변수 하나만 토글)을 충족한 첫 사례**다 — 동일 파일 크기 8.4GB를 고정하고 기법만 바꿔 **Unsloth UD-IQ2_S를 AIME25 +10.00으로 이겼다.** 즉 **[[Qwen3.8-27B-GGUF]]의 "정확도 우위" 주장은 반박당했다.**
+
+### 5. 🔴 **볼트 주장 1건 정정 — MiniMax-H3 격차 "약 100배" → 3.92배**
+[[MiniMax-H3]] 페이지가 09-02에 *"원본 대비 재패키지가 약 100배 이상"* 이라 적었으나, 09-06 실측은 **19,570,597 ÷ 4,986,349 = 3.92배**다. 원본이 **59.4k → 498만(약 84배)** 뛰는 동안 재패키지는 **2.9배** 늘었다.
+→ *"오픈 i2v 실사용은 사실상 전부 ComfyUI 경로"* 는 **완화한다.** [[BCIT]]가 지적한 것과 같은 사고다 — **비율 주장이 관측 시점에 결박되지 않은 채 사실처럼 기능했다.**
+⚠️ 좋아요는 **원본 4,943 > 재패키지 1,702** 로 반대 방향 — 기존 규칙(*좋아요는 누적되고 다운로드는 이동한다*)이 정확히 작동했고, **이제 사용도 원본으로 이동 중**이다.
+
+## 관찰 3건
+
+- **담론은 추론 층에, 학습 층은 두 자릿수 배로 작다.** GitHub 9건 중 8건이 추론 시점 도구(에이전트·스킬·문서주입·다이어그램)이고, 유일한 학습 층 [[miles]]는 **⭐2,636** — 나머지(3만~25만)와 **최소 12배** 차이. 그런데 [[On-Policy-Distillation-II]]는 **"데이터 과잉·알고리즘 부족"** 이라며 *질의 16개면 상태 커버리지 98.9%* 라고 한다. **인프라 쪽은 규모를 키우고 이론 쪽은 규모가 병목이 아니라고 한다.**
+- **프로세스 소유권 논쟁의 양쪽이 같은 배치에 들어왔다.** [[mattpocock-skills]]가 비판한 **[[spec-kit]]** 이 직접 인제스트됐는데, **두 레포의 issue/star가 사실상 같다**(0.0018 vs 0.0024). 주장 차이가 마찰 지표로는 안 드러난다 → **판정 보류, 축으로만 기록.**
+- **"외부에 두었지만 모델에 결박된다"가 두 층에서 동시에 관측됐다.** [[HarnessDev]]의 *하네스 개선은 모델 간 전이가 제한적* 과 [[LatentPress]]의 *reader-matched 어댑터*. → [[에이전트-스킬]]에 **"모델을 바꿔 재검증하라"** 기준 추가.
+
+## ⚠️ 수집기 결함 — **중복 검출 부재 (신규 발견)**
+raw 대기 26건 중 **11건이 이미 볼트에 있는 소스**였다. URL 기준 완전 일치:
+[[mattpocock-skills]] · [[ponytail]] · [[ECC]] · [[hermes-agent]] · [[anthropics-skills]] · [[Repo-To-Skill]] · [[Compile-by-Training]] · [[Random-Attention]] · [[Qwen3.8-27B-GGUF]] · [[Qwen3.8-27B]] · [[MiniMax-H3]]
+→ **수집 단계에서 `wiki/sources/` URL 대조가 없다.** 09-04 배치를 인제스트한 지 이틀 만에 같은 소스를 다시 큐에 넣었다. **중복률 42%.**
+⚠️ 09-06 배치는 **"당일 +N" 증분 필드를 다시 포함**했다 — 절대값만 채택 규칙에 따라 **11회 연속 미채택**.
+
+## 미해소 이월
+- [[Repo-To-Skill]] **MLE-bench 절대 점수** — 업보트가 334→**520(+55.7%)** 으로 올랐으나 질문은 그대로
+- [[Compile-by-Training]] **"의미 정확도 83.6%" 채점 주체** — [[Aspire]]의 자기채점 실패 확인으로 **질문의 무게가 커졌다**
+- [[anthropics-skills]] `./spec` ↔ agentskills.io **버전 일치** — 라이선스 `null`은 API로 재확인, 표준 일치는 여전히 미확인
+- **🆕** [[DeepSeek-V4-Flash-Vision-Exp]] **파라미터 규모** — 배치 모델 6건 중 유일하게 규모 미확인. 로컬 가능 여부를 가르는 단일 변수
+- **🆕** [[Minima]] 결론이 **순수 재귀 모델에서도 성립하는가** — 어텐션 16층이 오차를 흡수했을 가능성을 초록이 배제하지 않는다
+
+**배치 주제**: *"하네스와 스킬이 처음으로 심판대에 선 날 — 그리고 볼트가 자기 수집기의 중복 42%와 자기 주장의 25배 오차를 같이 발견한 날."*
