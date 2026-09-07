@@ -1,45 +1,118 @@
 {
-  "nodes": [
-    {
-      "id": "domain-hub",
-      "type": "text",
-      "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
-      "x": -100, "y": -60, "width": 240, "height": 120,
-      "color": "1"
-    },
-    {
-      "id": "cluster-sources",
-      "type": "text",
-      "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
-      "x": -400, "y": 150, "width": 180, "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "cluster-entities",
-      "type": "text",
-      "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
-      "x": -100, "y": 150, "width": 180, "height": 80,
-      "color": "2"
-    },
-    {
-      "id": "cluster-concepts",
-      "type": "text",
-      "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
-      "x": 200, "y": 150, "width": 180, "height": 80,
-      "color": "3"
-    },
-    {
-      "id": "cluster-actionables",
-      "type": "text",
-      "text": "## 실행 항목\n\n_actionable.md 연동_",
-      "x": 500, "y": 150, "width": 180, "height": 80,
-      "color": "6"
-    }
-  ],
-  "edges": [
-    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-sources", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-entities", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-concepts", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e4", "fromNode": "domain-hub", "toNode": "cluster-actionables", "fromSide": "bottom", "toSide": "top" }
-  ]
+ "nodes": [
+  {
+   "id": "domain-hub",
+   "type": "text",
+   "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
+   "x": -100,
+   "y": -60,
+   "width": 240,
+   "height": 120,
+   "color": "1"
+  },
+  {
+   "id": "cluster-sources",
+   "type": "text",
+   "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
+   "x": -400,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "5"
+  },
+  {
+   "id": "cluster-entities",
+   "type": "text",
+   "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
+   "x": -100,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "2"
+  },
+  {
+   "id": "cluster-concepts",
+   "type": "text",
+   "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
+   "x": 200,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "3"
+  },
+  {
+   "id": "cluster-actionables",
+   "type": "text",
+   "text": "## 실행 항목\n\n_actionable.md 연동_",
+   "x": 500,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "6"
+  },
+  {
+   "id": "vs-motionomni",
+   "type": "text",
+   "text": "## [[Motion-Omni]] *(2026-09-07)*\n2609.04250 · 업30\n\n**캐스케이드 2패스 제거**\n음성 hidden state에서\n표정·손·상하반신 **직접 출력**\n\n**RTF 0.78**(실시간 초과) · **5.4배**\nWER **2.62%** · teacher 2% 이내\n\n🔴 음성 경로 얼리면 **정렬 붕괴**\n= 모듈 조립 경로 막힘\n⚠️ teacher를 **이긴 게 아님**",
+   "x": -140,
+   "y": 430,
+   "width": 340,
+   "height": 300,
+   "color": "6"
+  },
+  {
+   "id": "vs-axis0907",
+   "type": "text",
+   "text": "## 🆕 축 분화\n\n**생성(offline)**\n[[Higgsfield]]·[[Seedance]]\n\n**대화(online)**\nRTF < 1 = 경쟁 우위 빈틈\n\n+ SwDA-500 평가 프로토콜\n(*오디오 맞춘 뒤 비교*)\n→ 모델 없이도 **즉시 전용**",
+   "x": 240,
+   "y": 430,
+   "width": 280,
+   "height": 300,
+   "color": "3"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-sources",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e2",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-entities",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e3",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-concepts",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e4",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-actionables",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-vs0907",
+   "fromNode": "domain-hub",
+   "toNode": "vs-motionomni",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-vs0907b",
+   "fromNode": "vs-motionomni",
+   "toNode": "vs-axis0907",
+   "fromSide": "right",
+   "toSide": "left"
+  }
+ ]
 }

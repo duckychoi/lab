@@ -4,8 +4,8 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-06
-sources: [VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md]
+updated: 2026-09-07
+sources: [VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
@@ -157,3 +157,52 @@ Ollama와의 차이를 레포가 FAQ로 직접 답했다 — *"에이전트에�
 
 ### 이 배치가 local-llm에 남긴 것
 메모리 쓰기 형식([[LatentPress]]) → 양자화 원리([[Minima]]) → 배포 가능 산출물([[Qwen3.8-27B-GSQ-RCO-GGUF]])이 **한 스택의 세 층**으로 맞물린다. 그리고 **"모델에 결박된 자산"** 이라는 경고가 메모리 층([[LatentPress]] reader-matched)과 하네스 층([[HarnessDev]] 모델 간 전이 제한)에서 **동시에** 나왔다.
+
+
+---
+# 📦 2026-09-07 배치 (재분류 3건 + 관련 1건)
+
+## 1. 중복성 원리가 **세 번째 층(깊이)** 에서 재현됐다
+
+[[Dont-Drop-Dropout]] — layer dropout(stochastic depth)은 *"정확도를 떨어뜨린다"* 는 통념으로 LLM 사전학습에서 사라졌는데, 논문의 지적이 정확하다: **"그 효과가 정량화된 적조차 없다."**
+
+| 층 | 소스 | 버려도 되는 것 | 결과 |
+|---|---|---|---|
+| KV 축출 | [[Random-Attention]] | 무엇을 남길지 **고르는 것** | 무작위 축출로 동급 · 처리량 32~43%↑ |
+| 수치 정밀도 | [[Minima]] | **비트** | 496층 전부 NVFP4로 BF16 동등(-0.52) |
+| **🆕 깊이** | [[Dont-Drop-Dropout]] | 학습 중 **레이어** | 동일 FLOPs에 loss↓ · FLOPs **-25%** |
+
+**결정적 차이**: 앞의 둘은 추론 시점 절감인데, 이건 **학습 시의 확률적 결손이 추론 시의 구조적 유연성으로 전환**된다 — 모델이 레이어 결손에 익숙해져 **early exit·중간 레이어 스킵·self-speculative decoding** 이 성립(**추론 1.5배**).
+→ **중복성은 발견되는 성질만이 아니라 심어 넣을 수 있는 성질이다.** ([[선택비용과-중복성]] 갱신)
+⚠️ **전 실험 Cerebras CS-3 단일 하드웨어** · HP 탐색 비용이 25% 절감분을 상쇄하는지 미확인 · 볼트 운영자에게 **직접 실행 불가**(모델 생산자용).
+
+## 2. 재배포자 층의 근거 격차가 **극단적으로 벌어졌다**
+
+같은 배치, 같은 GGUF 재배포자 층인데 두 모델의 근거 수준이 정반대다.
+
+**[[Tiel-Coder-35B-A3B-GGUF]]** (DL 238,588 · MIT · 4bit 22GB · MoE)
+- SWE-bench-Live **12/25** — **Opus 4.6(medium)과 동률**, Nail +3, Ornith +4, Sonnet 5(medium) +4
+- **속도가 진짜 무기**: 중앙값 **8.6분/시도** vs [[Qwen3.8-27B]] **50.2분(16/25)** → **5.8배**
+- Claw-Eval 멀티턴 **67.2**(Ornith 65.3 · Nail 60.5)
+- 대가 공개: MMLU-Pro **73.7** vs Nail 84.0 — **저자가 3분해**했다(베이스 상속 대부분 + Sharp 템플릿 4.3점) 그리고 **통제군을 넣었다**(*"같은 quant + Ornith 템플릿 = Ornith 점수 그대로"*)
+- **KV 262k에 5GB 미만**(MoE) → 긴 컨텍스트 로컬 에이전트에 실질 이점
+- 🔴 **n=25 · 전 수치 저자 자체 측정 · 이미지 alt에 수록.** 1문제 = 4%p
+
+**[[Huihui-Qwen3.8-27B-abliterated-GGUF]]** (DL **2,194,861** · Apache-2.0)
+- **이 배치 최대 다운로드**([[Tiel-Coder-35B-A3B-GGUF]]의 9.2배)
+- 🔴 **모델 카드에 벤치마크 수치가 하나도 없다.** 저자 스스로 *"crude, **proof-of-concept**"* 라 부른다
+- 설계는 보존 지향(ablate 범위 축소: 전체→18~51→**23~51**, MTP·비전 미변경)인데 **보존됐는지 아무도 재지 않았다**
+- ⚠️ **비표준 양자화**: ablate 대상 텐서를 Q8_0/BF16로 올려 `_L` 명명 → **`Q2_K_L`이 `Q3_K`보다 클 수 있다.** 양자화 이름으로 크기·품질 추론 금지
+
+> [!insight] 볼트 판정 — **DL 219만은 수요를 재지 성능을 재지 않는다**
+> 생성 2026-08-16(3주)이라 *"공개 직후 DL"* 예외에 해당하지 않으므로 **수요는 실제**다. 다만 이 수요는 **다른 모델이 채우지 않는 공백(거부 제거)** 에서 오고, 그 공백은 **경쟁이 약하다** → **낮은 품질로도 높은 다운로드가 가능한 시장 구조.**
+> **Hermes/ChinameBot 적용 1순위는 [[Tiel-Coder-35B-A3B-GGUF]]** 다. 이유는 성능이 아니라 **측정이 있기 때문**이다.
+
+## 3. 온디바이스 STT — **런타임 배포 정책이 기능을 결정했다**
+
+[[openwhispr]](⭐7,664 · MIT · whisper.cpp + sherpa-onnx) — 로컬 STT로 오디오를 기기 밖에 내보내지 않거나 클라우드(BYOK) 선택.
+🔴 **Intel Mac에서 화자 식별·음성 지문이 사라진다.** 원인은 모델도 앱도 아니고 **ONNX Runtime 1.24가 macOS x86_64 바이너리 배포를 중단**한 것. 노트 검색은 시맨틱 → **키워드로 폴백**.
+→ **모델도 앱도 아닌 "런타임 배포 정책"이 최종 사용자 기능을 결정한 사례.** [[MiniMax-H3]] *"오픈 가중치 ≠ 오픈 시스템"* 의 **런타임판**.
+
+### 이 배치가 local-llm에 남긴 것
+**중복성 원리가 학습 단계로 소급**됐고([[Dont-Drop-Dropout]]), **재배포자 층에서 처음으로 통제군을 가진 자산**이 나왔으며([[Tiel-Coder-35B-A3B-GGUF]]), 동시에 **다운로드 219만과 벤치마크 0의 조합**이 같은 층에 공존했다. → **로컬 모델 선택 기준에서 "측정 여부"가 "지표 크기"보다 앞선다**는 것이 이 배치의 결론.

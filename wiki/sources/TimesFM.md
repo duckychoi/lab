@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, hf-model, github-trending, time-series, foundation-model, zero-shot, forecasting, decoder-only]
 created: 2026-04-11
-updated: 2026-09-03
+updated: 2026-09-07
 sources: []
 reliability: high
 ---
@@ -52,11 +52,31 @@ reliability: high
 - **허와 실**: "SOTA에 근접"은 특정 벤치마크 기준. 실제 비즈니스 데이터 성능은 다를 수 있음
 - **액션**: HF 모델 페이지 확인 → 간단한 예측 파이프라인 실험
 
+---
+## 📊 2026-09-07 갱신 — **가중치 축은 [[timesfm-3.0-pytorch]] 로 분리**, 09-03 질문 1건 해소
+
+> [!insight] ✅ **세대 교체 완료 확인** (09-03에 *"다음 회차 판정"* 으로 남긴 질문)
+> | 모델 | 09-03 DL | **09-07 DL** | 변화 |
+> |---|---|---|---|
+> | timesfm-3.0-pytorch | 46,862 | **144,455** | **+208.3%** |
+> | timesfm-2.5-200m-transformers | 55,036 | **60,209** | +9.4% |
+> | timesfm-1.0-200m | 490 | **636** | +29.8% |
+>
+> **3.0/2.5 비율 0.85배 → 2.40배(4일).** 교체 완료. *"좋아요는 누적되고 다운로드는 이동한다"* 도 재확인 — 1.0은 좋아요 **835로 계열 최다**인데 DL은 **636**.
+> 📌 09-03의 *"공개 직후 DL은 아직 없는 값"* 규칙이 **같은 모델 시계열 추적으로 4번째 근거**를 얻어, **"최소 2주 + 전 세대 상대비"** 로 강화됐다.
+
+> [!warning] 🔴 **`other` 라이선스의 정체 확정: 비상업 전용**
+> `license_name: timesfm-non-commercial-license-v1.0`(HF API 실측). 09-03에 *"코드와 가중치의 라이선스가 다르다"* 고만 적은 것을 **구체 확정**한다 — **가중치는 상업 이용 불가.**
+
+> [!warning] 중복 검출 필터의 빈틈이 드러났다
+> 09-07 raw가 `huggingface.co/google/timesfm-3.0-pytorch` 를 **신규**로 올렸고 URL 필터를 통과했다. 그런데 **이 페이지가 09-03에 이미 그 모델을 실측 기록**하고 있었다. 원인은 이 페이지의 `- 출처:` 가 **arXiv+GitHub URL** 이라는 것 — **같은 대상, 다른 표면.** → `actionable.md` 반영.
+
 ## 관련 페이지
 
 - [[Kronos]] — 금융 특화 시계열 모델
 - [[TradingAgents]] — 금융 AI 활용 사례
 - [[시계열-예측-파운데이션-모델]]
+- [[timesfm-3.0-pytorch]] — **가중치 배포 축 페이지(2026-09-07 분리)**
 
 ## 원본
 

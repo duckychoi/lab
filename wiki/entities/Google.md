@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, organization, bigtech, ai-agent, gemini, google-cloud]
 created: 2026-07-02
-updated: 2026-09-03
+updated: 2026-09-07
 sources: [agents-cli.md]
 reliability: high
 ---
@@ -23,6 +23,21 @@ reliability: high
 ## 관련 소스
 - [[agents-cli]] — ADK 기반 GCP AI 에이전트 배포 CLI (Apache 2.0)
 - [[design-md]] — Google Labs 코딩 에이전트용 비주얼 아이덴티티 명세
+
+---
+## 🔴 2026-09-07 — TimesFM 3.0 가중치의 라이선스가 **비상업**으로 확정됐다
+
+[[timesfm-3.0-pytorch]] HF API 실측: `license: other` → **`license_name: timesfm-non-commercial-license-v1.0`**
+
+> [!warning] 코드와 가중치의 라이선스가 다르다 — 도입 시 결정적 제약
+> - **코드**(google-research/timesfm ⭐30,397): **Apache-2.0** → 상업 이용 가능
+> - **가중치**(timesfm-3.0-pytorch): **비상업 전용** → **상업 이용 불가**
+>
+> 09-03에는 *"라이선스 `other`"* 로만 확인됐던 것이 이번에 정체가 밝혀졌다. **Apache-2.0 레포만 보고 "쓸 수 있다"고 판단하면 틀린다.** [[MiniMax-H3]]·[[anthropics-skills]]·[[VoiceStudio]] 에서 반복된 **2층 라이선스 함정의 네 번째 사례**이며, 이번엔 제약이 **가중치 쪽**이다.
+
+> [!insight] 세대 교체는 **4일 만에 완료**됐다
+> 3.0 DL **46,862(09-03) → 144,455(09-07, +208.3%)**, 2.5 는 55,036 → 60,209(+9.4%). **3.0/2.5 비율 0.85배 → 2.40배.** 09-03에 남긴 미해결 질문 종결. → [[시계열-예측-파운데이션-모델]]
+> ⚠️ **단 모델 카드에 벤치마크 수치가 여전히 없다** — 채택은 확인됐고 성능은 **2회 연속 미확인**.
 
 ## 관련 페이지
 - [[Google-Labs]]

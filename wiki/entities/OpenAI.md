@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, openai, coding-agent, interop, entity]
 created: 2026-07-04
-updated: 2026-08-23
+updated: 2026-09-07
 sources: [codex-plugin-cc.md, openai-codex.md]
 reliability: high
 ---
@@ -18,6 +18,22 @@ reliability: high
 
 > [!insight] 핵심
 > GPT·Codex 개발사. 이 위키 맥락에서 주목점은 **경쟁사(Anthropic) CLI인 [[anthropic-claude-code]]용 플러그인 [[codex-plugin-cc]]를 공식 배포**했다는 것 — 코딩 에이전트 시장을 폐쇄 잠금이 아닌 **상호운용(interop)**으로 넓히려는 전략 신호. [[openai-agents-python]]·[[awesome-codex-skills]]와 함께 에이전트 도구를 Claude Code 생태계로 침투시키는 중.
+
+---
+## 🔴 2026-09-07 — 스킬 카탈로그 레포를 **폐기**하고 플러그인으로 이동
+
+[[openai-skills]](⭐**25,754** · 2026-09-07 API 실측)의 README 최상단이 폐기를 선언한다 — *"This repository is **deprecated**. … use the **OpenAI Plugins repository**. … create a **skill-only plugin**."*
+
+> [!insight] 배포 단위를 한 층 올렸다
+> Codex의 스킬은 사라지지 않고 **플러그인 안으로 들어갔다**. [[Anthropic]] 의 [[claude-plugins-official]] 마켓플레이스와 **같은 방향**이며, 경쟁 벤더 둘이 **독립적으로 같은 배포 단위**에 도달했다. → [[에이전트-스킬]] 3층 재편.
+
+> [!warning] 폐기 신호가 기계 판독 가능한 곳에 없다
+> API `archived` 는 **`false`**, 라이선스는 **`null`**, 최종 push **2026-07-14**(약 2개월 정체)인데 **스타는 계속 붙는다**(raw 25,751 → 실측 25,754). **README를 읽어야만 폐기를 안다.**
+
+> [!note] 폐기됐어도 남긴 관측
+> README가 [[agentskills]](`agentskills.io`)를 **"Agent Skills open standard"** 로 명시 링크한다 — [[Anthropic]] 의 [[anthropics-skills]] 가 *"표준은 밖에 있다"* 고 선언한 것과 **동일한 외부 표준 참조**. **벤더 레포가 폐기돼도 표준 참조는 유지된다.**
+
+⚠️ **추적 공백**: 후속인 `openai/plugins` 가 볼트에 **없다.** 다음 배치 수집 대상.
 
 ## 관련 페이지
 - [[openai-codex]] — **본체 코딩 에이전트 CLI**(⭐114,383·Apache-2.0·Rust)

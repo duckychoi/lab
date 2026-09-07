@@ -1,37 +1,101 @@
 {
-  "nodes": [
-    {
-      "id": "domain-hub",
-      "type": "text",
-      "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
-      "x": -100, "y": -60, "width": 260, "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "cluster-slam",
-      "type": "text",
-      "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
-      "x": -400, "y": 150, "width": 180, "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "cluster-3dgs",
-      "type": "text",
-      "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
-      "x": -100, "y": 150, "width": 180, "height": 80,
-      "color": "2"
-    },
-    {
-      "id": "cluster-camera",
-      "type": "text",
-      "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
-      "x": 200, "y": 150, "width": 180, "height": 80,
-      "color": "6"
-    }
-  ],
-  "edges": [
-    { "id": "e1", "fromNode": "domain-hub", "toNode": "cluster-slam", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e2", "fromNode": "domain-hub", "toNode": "cluster-3dgs", "fromSide": "bottom", "toSide": "top" },
-    { "id": "e3", "fromNode": "domain-hub", "toNode": "cluster-camera", "fromSide": "bottom", "toSide": "top" }
-  ]
+ "nodes": [
+  {
+   "id": "domain-hub",
+   "type": "text",
+   "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
+   "x": -100,
+   "y": -60,
+   "width": 260,
+   "height": 120,
+   "color": "3"
+  },
+  {
+   "id": "cluster-slam",
+   "type": "text",
+   "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
+   "x": -400,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "5"
+  },
+  {
+   "id": "cluster-3dgs",
+   "type": "text",
+   "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
+   "x": -100,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "2"
+  },
+  {
+   "id": "cluster-camera",
+   "type": "text",
+   "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
+   "x": 200,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "6"
+  },
+  {
+   "id": "sl-worldsculpt",
+   "type": "text",
+   "text": "## [[WorldSculpt]] *(2026-09-07)*\n2609.05416 · 업15\n\n**통짜 재구성 → 분해 가능성**\n단일 오브젝트 prior(Pixal3D)만\n학습했는데 **장면 학습 없이**\n수백 오브젝트 가림 장면 일반화\n\n🔗 **3DGS 월드(Marble·HY-World 2.0)\n→ compositional 메시 변환**\n\n**UE-MeshyScene**(GT 메시+주석)\n⚠️ 절대 수치 전무 · 실시간성 불명\n🔴 분할이 선행 전제일 가능성",
+   "x": -140,
+   "y": 430,
+   "width": 340,
+   "height": 300,
+   "color": "6"
+  },
+  {
+   "id": "sl-gap0907",
+   "type": "text",
+   "text": "## ⚠️ 추적 공백 (09-07)\n\n**Pixal3D** — 기반 prior, 1순위\n**Marble** · **HY-World 2.0**\n\n→ [[월드모델]] 축 공백",
+   "x": 240,
+   "y": 430,
+   "width": 260,
+   "height": 300,
+   "color": "3"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-slam",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e2",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-3dgs",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e3",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-camera",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-sl0907",
+   "fromNode": "domain-hub",
+   "toNode": "sl-worldsculpt",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-sl0907b",
+   "fromNode": "sl-worldsculpt",
+   "toNode": "sl-gap0907",
+   "fromSide": "right",
+   "toSide": "left"
+  }
+ ]
 }
