@@ -1,118 +1,179 @@
 {
- "nodes": [
-  {
-   "id": "domain-hub",
-   "type": "text",
-   "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
-   "x": -100,
-   "y": -60,
-   "width": 240,
-   "height": 120,
-   "color": "1"
-  },
-  {
-   "id": "cluster-sources",
-   "type": "text",
-   "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
-   "x": -400,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "5"
-  },
-  {
-   "id": "cluster-entities",
-   "type": "text",
-   "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
-   "x": -100,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "2"
-  },
-  {
-   "id": "cluster-concepts",
-   "type": "text",
-   "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
-   "x": 200,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "3"
-  },
-  {
-   "id": "cluster-actionables",
-   "type": "text",
-   "text": "## 실행 항목\n\n_actionable.md 연동_",
-   "x": 500,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "vs-motionomni",
-   "type": "text",
-   "text": "## [[Motion-Omni]] *(2026-09-07)*\n2609.04250 · 업30\n\n**캐스케이드 2패스 제거**\n음성 hidden state에서\n표정·손·상하반신 **직접 출력**\n\n**RTF 0.78**(실시간 초과) · **5.4배**\nWER **2.62%** · teacher 2% 이내\n\n🔴 음성 경로 얼리면 **정렬 붕괴**\n= 모듈 조립 경로 막힘\n⚠️ teacher를 **이긴 게 아님**",
-   "x": -140,
-   "y": 430,
-   "width": 340,
-   "height": 300,
-   "color": "6"
-  },
-  {
-   "id": "vs-axis0907",
-   "type": "text",
-   "text": "## 🆕 축 분화\n\n**생성(offline)**\n[[Higgsfield]]·[[Seedance]]\n\n**대화(online)**\nRTF < 1 = 경쟁 우위 빈틈\n\n+ SwDA-500 평가 프로토콜\n(*오디오 맞춘 뒤 비교*)\n→ 모델 없이도 **즉시 전용**",
-   "x": 240,
-   "y": 430,
-   "width": 280,
-   "height": 300,
-   "color": "3"
-  }
- ],
- "edges": [
-  {
-   "id": "e1",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-sources",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e2",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-entities",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e3",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-concepts",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e4",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-actionables",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-vs0907",
-   "fromNode": "domain-hub",
-   "toNode": "vs-motionomni",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-vs0907b",
-   "fromNode": "vs-motionomni",
-   "toNode": "vs-axis0907",
-   "fromSide": "right",
-   "toSide": "left"
-  }
- ]
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
+      "x": -100,
+      "y": -60,
+      "width": 240,
+      "height": 120,
+      "color": "1"
+    },
+    {
+      "id": "cluster-sources",
+      "type": "text",
+      "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
+      "x": -400,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-entities",
+      "type": "text",
+      "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
+      "x": -100,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-concepts",
+      "type": "text",
+      "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
+      "x": 200,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "cluster-actionables",
+      "type": "text",
+      "text": "## 실행 항목\n\n_actionable.md 연동_",
+      "x": 500,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "vs-motionomni",
+      "type": "text",
+      "text": "## [[Motion-Omni]] *(2026-09-07)*\n2609.04250 · 업30\n\n**캐스케이드 2패스 제거**\n음성 hidden state에서\n표정·손·상하반신 **직접 출력**\n\n**RTF 0.78**(실시간 초과) · **5.4배**\nWER **2.62%** · teacher 2% 이내\n\n🔴 음성 경로 얼리면 **정렬 붕괴**\n= 모듈 조립 경로 막힘\n⚠️ teacher를 **이긴 게 아님**",
+      "x": -140,
+      "y": 430,
+      "width": 340,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "vs-axis0907",
+      "type": "text",
+      "text": "## 🆕 축 분화\n\n**생성(offline)**\n[[Higgsfield]]·[[Seedance]]\n\n**대화(online)**\nRTF < 1 = 경쟁 우위 빈틈\n\n+ SwDA-500 평가 프로토콜\n(*오디오 맞춘 뒤 비교*)\n→ 모델 없이도 **즉시 전용**",
+      "x": 240,
+      "y": 430,
+      "width": 280,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "v0908-hyper",
+      "type": "text",
+      "text": "## [[hyperframes]] ⭐47,070\n[[HeyGen]] 공식 · Apache-2.0\n\n**모델이 아니라 렌더러**\nHTML→puppeteer→ffmpeg\n\n생성모델 3대 고질병 회피\n(일관성·텍스트·재현성)\n⚠️ Remotion과 **대체재**",
+      "x": -330,
+      "y": 850,
+      "width": 320,
+      "height": 240,
+      "color": "1"
+    },
+    {
+      "id": "v0908-mmx",
+      "type": "text",
+      "text": "## [[Minimax-h3_Singularity]]\nDL 58,060 · Apache-2.0\n\n[[MiniMax-H3]] 융합·프루닝\nComfyUI 4모드\n\n🔴 **정량 지표 전무**\n데모 링크뿐",
+      "x": 30,
+      "y": 850,
+      "width": 320,
+      "height": 240,
+      "color": "1"
+    },
+    {
+      "id": "v0908-ins",
+      "type": "text",
+      "text": "# 축이 갈렸다\n\n**생성 모델** ↔ **결정론적 렌더**\n경쟁이 아니라 **분업**\n\n빈틈 = *수치가 정확한 영상*\n(리포트·대시보드·실적)",
+      "x": -150,
+      "y": 1130,
+      "width": 400,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "v0908-mkt",
+      "type": "text",
+      "text": "## 🔴 관측: 시장 구조\n\n벤치 없이 DL 5.8만\n= [[Huihui-Qwen3.8-27B-abliterated-GGUF]]\n구조가 **영상에서 재현**\n\n영상 품질은 정량화가 어렵고\n데모는 체리피킹 배제 불가",
+      "x": 390,
+      "y": 1130,
+      "width": 380,
+      "height": 200,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-sources",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-entities",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-concepts",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e4",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-actionables",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-vs0907",
+      "fromNode": "domain-hub",
+      "toNode": "vs-motionomni",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-vs0907b",
+      "fromNode": "vs-motionomni",
+      "toNode": "vs-axis0907",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "ev0908-0",
+      "fromNode": "v0908-hyper",
+      "fromSide": "bottom",
+      "toNode": "v0908-ins",
+      "toSide": "top"
+    },
+    {
+      "id": "ev0908-1",
+      "fromNode": "v0908-mmx",
+      "fromSide": "bottom",
+      "toNode": "v0908-ins",
+      "toSide": "top"
+    },
+    {
+      "id": "ev0908-2",
+      "fromNode": "v0908-mmx",
+      "fromSide": "bottom",
+      "toNode": "v0908-mkt",
+      "toSide": "top"
+    }
+  ]
 }
