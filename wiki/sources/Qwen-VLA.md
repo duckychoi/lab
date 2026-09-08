@@ -1,5 +1,5 @@
 ---
-title: Qwen-VLA — 비전-언어-액션 통합 범용 로봇 모델 (HF upvotes: 85)
+title: "Qwen-VLA — 비전-언어-액션 통합 범용 로봇 모델 (HF upvotes: 85)"
 type: source
 domain: ai-news
 tags: [ai-news, slam-3dgs, robotics, VLA, vision-language-action, Qwen, embodied-AI, generalist-policy]

@@ -1,5 +1,5 @@
 ---
-title: World Action Models: A Survey — WAM 분야 정리 서베이
+title: "World Action Models: A Survey — WAM 분야 정리 서베이"
 type: source
 domain: ai-news
 tags: [ai-news, hf-paper, survey, world-action-model, embodied-ai, robotics]
