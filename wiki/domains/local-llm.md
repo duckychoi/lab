@@ -4,8 +4,8 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-07
-sources: [VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md]
+updated: 2026-09-09
+sources: [VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
@@ -242,3 +242,32 @@ AR 가중치는 그대로 두고 **경량 diffusion 가중치만 증류**해 여
 
 ### 참고: [[gpt2]] 는 로컬 모델이 아니라 테스트 픽스처다
 DL 1,475만이나 **7개 런타임 포맷 + DOI + `exbert`** 구성이 말해 주듯 **파이프라인 검증용**이다. 로컬 추론 후보로 비교하면 안 된다. 상세는 ai-news 09-08 절 「생애 단계 3분류」.
+
+---
+
+## [2026-09-09] 배치 — 병목이 옮겨갔다: RAM → 스토리지, 그리고 축 분기
+
+> [!insight] ① 초대형 모델의 병목은 RAM이 아니라 스토리지다 ([[kimi-k3-in-c]])
+> *"2.78T 모델을 8GB RAM으로"* 는 참이지만 **"8GB만 있으면 된다"는 거짓**이다. README 자신이 못박는다 — *"**The gate is storage: the checkpoint is 1.56 TB.** Everything else is ordinary."* 실제 요구 저장공간 **~1.7TB**.
+> 실측 사다리(같은 프롬프트, **출력 byte-identical**): **8GB 26.5s/token → 32GB 24.2 → 64GB 19.8 → 128GB+ 5.6s** (약 4.7배 차이).
+> → **메모리는 정확도가 아니라 속도만 산다**는 주장이 표로 뒷받침된다. 다만 저자도 8GB 경로를 *"proof-of-life"* 라 부른다 — **실배포 불가**.
+> 진짜 재사용 가치는 추론이 아니라 **1.56TB 체크포인트를 헤더만으로 96샤드에서 선택 로드하는 176KB C99 코드**.
+
+> [!insight] ② 에이전트 축 분기 — 두 모델에서 같은 형태 ([[에이전트축-분기]] 신설)
+> **[[Spark-X2.5-4B]]**(4B, vs 9B): BrowseComp **40.9 vs 8.3** · τ³ **30.4 vs 9.3** 로 이기고, GPQA **67.4 vs 77.2** · AA-LCR **56.3 vs 63.0** 로 진다.
+> **[[K2-Horizon-MoVA-36B-A4B]]**(활성 4B, vs 550B): Terminal-Bench **58.6 vs 53.9** · tau3-Banking **26.8 vs 14.2** 로 이기고, GPQA **80.8 vs 86.7** · HLE **25.2 vs 28.4** 로 진다.
+> → **"찾아오는 것"에 이기고 "아는 것"에 진다.** 두 축을 하나의 성능으로 합산하면 두 결론 모두 틀린다.
+
+> [!warning] 축 안에서도 갈린다 — raw보다 좁게 읽어야 한다
+> [[Spark-X2.5-4B]] 은 **단발 함수호출에서는 진다**(BFCL-V4 65.1 vs 66.1 · τ²-bench 75.1 vs 79.1).
+> 정확한 진술: **다단계·탐색형 에이전트 과제에서 우위**, 단발 툴콜은 동급 이하.
+> 그리고 raw가 통째로 빠뜨린 축 — **수학은 전면 우위**(AIME 90.7 vs 88.2 · HMMT 81.2 vs 70.8 · IMO-AnswerBench 74.2 vs 69.8).
+
+### 실무 지침 (잠정)
+- **온디바이스 즉시 후보**: [[Spark-X2.5-4B]] — 4B·Apache-2.0·네이티브 1M·Ollama/LM Studio/MLX/llama.cpp 지원. [[hermes-agent]] 통합이 카드에 명시됨.
+- **보류**: [[K2-Horizon-MoVA-36B-A4B]] — 자체보고 벤치·코드/체크포인트 미공개·생성 8일차. **4주 뒤 재확인**.
+- **받지 말 것**: [[kimi-k3-in-c]] — 1.7TB.
+
+> [!warning] 근거 강도
+> [[에이전트축-분기]] 는 **2개 모델·전부 자체보고 벤치마크**에 기반한다. 09-08에 정착한 규칙(*2점으로 추세를 주장하지 않는다*)을 적용해 **가설로만 보관**한다. reliability medium.
+

@@ -4,8 +4,8 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-09-07
-sources: [instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md]
+updated: 2026-09-09
+sources: [instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md]
 ---
 
 # 영상 AI SaaS 누적 인사이트
@@ -218,3 +218,40 @@ SAM 2까지는 점·박스로 **그 객체 하나**를 분할했다. SAM 3는 **
 2. **배포 형식이 ComfyUI라는 것** — 크리에이터는 HF 카드가 아니라 **노드를 소비**한다. 논문/모델 카드만 보면 실제 유통 경로를 놓친다.
 
 ⚠️ 이 모델은 raw가 **드리프트 가설의 근거**로 쓴 건인데, 볼트 재측정에서 **DL이 58,060에 고정**되어 가설이 반증됐다. 상세는 [[Minimax-h3_Singularity]] 및 ai-news 09-08 절.
+
+---
+
+## [2026-09-09] 배치 — 내 파이프라인과 같은 계열의 레퍼런스가 나왔다
+
+> [!insight] [[video-shotcraft]] ⭐7,860 · Apache-2.0
+> raw는 `ai-news` 로 분류했지만 **이 도메인이 맞다** — Remotion 기반 제품영상 자동제작 에이전트 스킬로, 내 reat-* 파이프라인과 **같은 문제(대본→씬→모션→렌더)** 를 푼다.
+
+### 훔칠 설계 3가지
+
+**① 모션을 "레시피 카드"로 카탈로그화**
+프롬프트가 아니라 **재현 가능한 레시피 + 네이티브 Remotion 컴포넌트**(`demos/<category>/<name>/<Component>.tsx`). 209개 후보 모션에서 **8라운드 프레임 단위 리뷰**로 48개를 추려 넣었다고 밝힘 — **큐레이션 비용을 명시한 드문 사례**.
+
+**② 정규화 진행도 `t` 로 구동되는 결정적 컴포넌트**
+모션이 결정적 함수라서 **프리뷰와 렌더가 프레임 동일**(pixel-parity verified). → 내 파이프라인의 프리뷰/렌더 불일치 문제의 근본 해법.
+
+**③ 납품 후에도 편집 가능한 워크벤치**
+CapCut 스타일 브라우저 편집기. 영상이 **샷/트랜지션/자막/SFX 트랙으로 분해**되어 스키마 기반 인스펙터로 카피·폰트·색 편집, 클립 이동·트림·속도램프, 라이브러리에서 모션 드래그 후 Remotion 렌더.
+→ *"생성으로 끝나지 않고 편집으로 넘긴다"* 는 계약(`references/workbench.md`)이 별도 문서로 존재.
+
+### de-branding 규약
+전 컴포넌트가 **중립 플레이스홀더 카피 + 교체 가능한 단일 `ACCENT` 색 변수**. 템플릿 배포 설계에 그대로 채용할 규약.
+
+> [!warning] 숫자를 인용할 때 — 같은 README 안에 네 개
+> description **152 cards / 209 previews** · 헤드라인 **157 cards / 214 styles / 214 previews** · 워크벤치 **216 demo motions**.
+> 152/209는 2026-08 변경이력의 **과거 값**이고 레포 description이 거기서 멈췄다.
+> → **09-08 규칙 재확인(레포 description은 소스가 아니다) + 신규 규칙: README 헤드라인끼리도 어긋날 수 있으니 "어느 줄에서 왔는지"를 함께 기록한다.**
+
+> [!note] 경쟁 지형
+> 형제 프로젝트 **video-talkcraft**(내레이션 영상 전용)가 이미 존재 — 78 모션 카드, **문자당 median 20–40ms 로컬 워드 정렬**, 7계층 안티-슬라이드쇼 샷 시스템.
+> → **내레이션 영상 축은 이미 깊게 점유돼 있다.** 내가 붙을 자리는 그 사이 또는 **한국어 특화**.
+
+> [!action] 우선순위
+> 1. 갤러리 214개 모션 프리뷰를 내 reat-catalog 모션 프리셋과 **1:1 대조표**로 만든다(코드 안 봐도 됨)
+> 2. `t` 기반 결정적 컴포넌트 규약을 내 Remotion 씬에 적용
+> 3. ⚠️ 워크벤치 가이드는 **중국어**
+

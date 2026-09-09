@@ -109,6 +109,56 @@
       "width": 380,
       "height": 200,
       "color": "3"
+    },
+    {
+      "id": "b0909-vs",
+      "type": "text",
+      "text": "# 2026-09-09 배치\n\n내 파이프라인과 동일 계열 등장",
+      "x": "-100",
+      "y": "1550",
+      "width": "280",
+      "height": "110",
+      "color": "4"
+    },
+    {
+      "id": "s0909vs-vsc",
+      "type": "text",
+      "text": "### video-shotcraft\n⭐7,860·Apache-2.0·Remotion\n**157 레시피 카드 / 214 프리뷰**\n🔴같은 README에 숫자 4개\n(desc 152/209 · 워크벤치 216)\n[[video-shotcraft]]",
+      "x": "-420",
+      "y": "1750",
+      "width": "260",
+      "height": "180",
+      "color": "5"
+    },
+    {
+      "id": "a0909vs-1",
+      "type": "text",
+      "text": "### 🎬 갤러리 214개 ↔ reat-catalog\n1:1 대조표 만들기\n(설치 0 · 코드 안 봐도 됨)\n**우선순위 높음**",
+      "x": "-120",
+      "y": "1750",
+      "width": "250",
+      "height": "150",
+      "color": "2"
+    },
+    {
+      "id": "a0909vs-2",
+      "type": "text",
+      "text": "### ⚙️ `t` 기반 결정적 컴포넌트\n프리뷰/렌더 **픽셀 동일**\n→ 내 Remotion 불일치 해법",
+      "x": "160",
+      "y": "1750",
+      "width": "250",
+      "height": "150",
+      "color": "2"
+    },
+    {
+      "id": "n0909vs-tc",
+      "type": "text",
+      "text": "### ⚠️ video-talkcraft (형제)\n내레이션 축 **이미 점유**\n78카드·문자당 20–40ms 정렬\n→ 내 차별화 = **한국어 특화**",
+      "x": "-280",
+      "y": "1980",
+      "width": "260",
+      "height": "150",
+      "color": "1"
     }
   ],
   "edges": [
@@ -173,6 +223,34 @@
       "fromNode": "v0908-mmx",
       "fromSide": "bottom",
       "toNode": "v0908-mkt",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909vs-1",
+      "fromNode": "b0909-vs",
+      "toNode": "s0909vs-vsc",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909vs-2",
+      "fromNode": "s0909vs-vsc",
+      "toNode": "a0909vs-1",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0909vs-3",
+      "fromNode": "s0909vs-vsc",
+      "toNode": "a0909vs-2",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0909vs-4",
+      "fromNode": "s0909vs-vsc",
+      "toNode": "n0909vs-tc",
+      "fromSide": "bottom",
       "toSide": "top"
     }
   ]

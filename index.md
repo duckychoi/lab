@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-09-08
-total_pages: 1044  # 2026-09-08 실측(sources 975 · entities 40 · concepts 23 · synthesis 2 · domains 4 · queries 0)
-total_sources: 975  # 2026-09-08 실측 (신규 12건 — AutoHedge · hyperframes · browser-use · camofox-browser · Uno · FlowBalance · One-Symptom-Three-Levers · TGOPD · EmbodiedSkills · gpt2 · DavidAU-Qwen3.8-27B-TURBO · Minimax-h3_Singularity / **갱신 1건** OmniVoice — 이름 토큰 대조 히트로 분리 대신 병합 / 중복 0건)
+updated: 2026-09-09
+total_pages: 1062  # 2026-09-09 실측(sources 988 · entities 42 · concepts 26 · synthesis 2 · domains 4 · queries 0)
+total_sources: 988  # 2026-09-09 실측 (신규 13건 전량 — 중복 0건. URL 대조·이름 토큰 대조 모두 통과. 도메인 재분류 4건: raw가 전부 ai-news로 보냈으나 video-shotcraft→video-saas · Marigold-V2→slam-3dgs · kimi-k3-in-c/Spark-X2.5-4B/K2-Horizon→local-llm)
 ---
 
 # Wiki Index
@@ -23,6 +23,8 @@ total_sources: 975  # 2026-09-08 실측 (신규 12건 — AutoHedge · hyperfram
 - [[Meshy]] — 텍스트/이미지 → 3D 모델 생성, 제품 디자인 특화
 - [[Tripo]] — 단일 이미지 → 분리 메시 생성, Blender 연동 강점
 - [[NousResearch]] — 오픈소스 LLM 파인튜닝, Hermes 시리즈, hermes-agent 개발사
+- [[XHToken]] — [[Spark-X2.5-4B]](네이티브 1M·4B) 개발사. **화웨이 Ascend 학습**·20조 토큰·Huawei/Hygon/HOUMO 지원. ⚠️법인 실체 미확인 *(NEW 2026-09-09)*
+- [[IFM]] — [[K2-Horizon-MoVA-36B-A4B]](36B/활성4B MoE+MoVA) 공개 조직. 🔴**조직 실체 전혀 미확인** · 벤치 전부 자체보고 · 코드·체크포인트 예고만 → reliability **low** *(NEW 2026-09-09)*
 - [[Zhipu AI]] — GLM 시리즈 개발사 (Z.AI), Monday AI 기반 모델 제공사, GLM-5.1 (753B MoE)
 - [[Netflix-AI]] — Netflix AI Research, VOID 비디오 인페인팅 오픈소스 공개
 - [[Google-Labs]] — Google 실험 AI 조직(google-labs-code), 에이전트용 디자인 명세 design.md 공개 *(NEW 2026-06-25)*
@@ -92,6 +94,10 @@ total_sources: 975  # 2026-09-08 실측 (신규 12건 — AutoHedge · hyperfram
 - [[암묵을-명시로]] — 모델 안에 숨은 것(타이밍·판정기준·검증기·재사용조건·물리량)을 꺼내면 **성능보다 먼저 제어가 생긴다**. 2026-09-04 배치 13건 중 **5건이 같은 수법** *(NEW 2026-09-04)*
 
 - [[에이전트-웹접근]] — **에이전트가 웹에서 실패하는 이유는 둘이고, 둘은 다른 층에서 풀린다.** ①조작 층(무엇을 클릭할지 — 모델이 좋아지면 같이 좋아짐, [[browser-use]]) ②**접근 층**(클릭 전에 차단됨 — **모델을 키워도 안 풀림**, [[camofox-browser]]·[[CloakBrowser]]). 🔴 접근 층은 **적대적 도메인이라 지표 수명이 짧다**: [[CloakBrowser]](⭐3,551, 05-10)는 *30/30 통과* 수치를 냈는데 **더 크고 최신인 [[camofox-browser]](⭐10,080)는 수치가 없다** → **"수치 + 측정일" 없으면 인용 불가.** 승격 근거는 *같은 날 3건 트렌딩*이 아니라 **2026-05부터 볼트에 이미 쌓여 있었다는 사실**. ⚠️**잠정** — 접근 층 2건뿐이라 조작/접근을 한 개념으로 묶는 것이 옳은지 미확정 *(reliability medium, NEW 2026-09-08)*
+
+- [[측정도구-먼저-반증]] — **결과를 믿기 전에 계측기를 반증하라.** 09-09 배치 5건이 같은 형태: 틀린 지시에 82.6%(정상 84.6%)를 주는 벤치마크([[Language-Transfer-Robot-Policies]]) · 자기 주장 반증 시도까지 싣는 논문([[Cadence]]) · 프로브가 읽히는 레이어는 개입할 곳이 아님([[Encoded-Early-Used-Late]]) · **자기보고 신뢰도를 툴 입력으로 금지**([[Comp-AI-CRM]]) · 난이도 축으로 펼쳐야 붕괴점이 보임([[RoboSPA]]). 🎯**raw 문제의 일반형** — 09-07/08은 과장, 09-09는 **누락**, 원인은 하나(요약자가 자기 요약을 검증 없이 판정) *(NEW 2026-09-09)*
+- [[에이전트축-분기]] — 소형·저활성 모델은 **"찾아오는 것"에 이기고 "아는 것"에 진다.** [[Spark-X2.5-4B]](4B가 9B에 BrowseComp 40.9 vs 8.3 / GPQA 67.4 vs 77.2) · [[K2-Horizon-MoVA-36B-A4B]](4B활성이 550B에 Terminal-Bench 58.6 vs 53.9 / GPQA 80.8 vs 86.7). ⚠️**2모델·전부 자체보고** → 09-08 "2점으로 추세 주장 금지" 규칙 적용, reliability **medium** *(NEW 2026-09-09)*
+- [[출처표시-무력화]] — 표식은 **"붙어 있다"와 "지워지지 않는다"가 다르다.** 내구성 순서: **통계적 텍스트 워터마크 > C2PA/메타데이터 > 비가시 문자**(비가시 문자는 결정적으로 제거됨). 🔴**표식 부재를 "사람이 썼다"의 증거로 쓰지 말 것** — 음성 결과에 정보가 거의 없다. 출처: [[watermarks-remover]](⭐21,458, 한 달) *(NEW 2026-09-09)*
 
 ---
 
@@ -1418,15 +1424,31 @@ total_sources: 975  # 2026-09-08 실측 (신규 12건 — AutoHedge · hyperfram
 - [[DavidAU-Qwen3.8-27B-TURBO]] — DL 348,753·GGUF·Apache-2.0. 파일명에 자체 벤치 점수(`735-882`). 🔴ARC +144 **전부 자체측정·통제군 0**, 🔴**`pipeline_tag` 오등록**(image-text-to-text), 🔴베이스가 자기 리포. → **재배포자 층 인용 기준 신설**(통제군·프로토콜·자기열세 중 2/3)
 - [[Minimax-h3_Singularity]] — DL **58,060**. 🔴🔴**raw의 드리프트 가설을 반증한 건** — raw의 *"3분 +117% = 신선도 함수"* 에 대해 볼트 **3회 재측정 전부 58,060 고정**(대조군 [[gpt2]] 도 불변) → 성장이 아니라 **캐시 불일치**. **2점으로 추세를 주장하지 않는다.** 🔴정량 지표 전무·데모뿐
 
+### 2026-09-09 배치 (13건 — GitHub 5 · HF논문 5 · HF모델 3 · 중복 0)
+
+- [[watermarks-remover]] — ⭐**21,458**(생성 2026-08-11, **한 달 만에 2만** — 배치 최다)·MIT. raw *"로컬 앱"* → 실측 **에이전트 스킬 + HTTP 서비스**(Claude Code에 설치됨). 제거 대상이 **벤더명으로 명시**: Claude·Gemini/SynthID·OpenAI·Kirchenbauer·Aaronson + **C2PA 30종 포맷**. 구명 `remove-claude-marks`. 🔴**소유권 전제는 문서에만 있고 코드엔 없다** → [[출처표시-무력화]]
+- [[qm]] — ⭐14,757·MIT. 🔴**raw가 설계를 뒤집어 적음**: raw *"하나의 세션을 공유·개입"* → README **"각자 격리 워크스페이스, 협업은 2차"**. 진짜 단위는 세션이 아니라 **스코프**(사람·방마다 메모리/파일/키/권한/cron/샌드박스). **하네스 비종속**(Pi·OpenCode·Codex·Claude Code가 같은 코어). 훔칠 것: **스킬 scope-owned → grant 공유 → admin 승격** 3단계
+- [[Comp-AI-CRM]] — ⭐10,122·MIT·pushed 6일 전. raw 유보(*"툴 스키마 재확인 필요"*)를 README가 수치로 답함: **18 tools · 4 skills(마크다운) · 1 schedule · `deny-all` egress**. 🎯**최고 수확**: *"**어떤 툴도 confidence score를 받지 않는다** — 자기 확신을 채점하게 하면 쓸모 있어 보이는 방향으로 틀린다"*. 관찰만 보고→**증거 원장**이 가격 매김→약한 증거는 **사람이 판정할 제안으로 격하**. `FOR UPDATE SKIP LOCKED` 리스 큐 · eve(툴=파일)
+- [[video-shotcraft]] — ⭐7,860·Apache-2.0 · **도메인 재분류 ai-news→video-saas**(내 reat-* 파이프라인과 동일 계열). 🔴**같은 README에 숫자 4개**: description 152/209 · 헤드라인 **157 cards/214 previews** · 워크벤치 **216 demo motions**. raw는 앞 2개 불일치를 잡았고 볼트가 **3번째를 추가 발견** → *"README 헤드라인조차 내부적으로 어긋난다"*. 훔칠 것: **정규화 시간 `t` 기반 결정적 Remotion 컴포넌트**(프리뷰/렌더 **픽셀 동일 검증**) · 단일 `ACCENT` 변수 de-branding · 형제 **video-talkcraft**(내레이션, 78카드, 문자당 20–40ms 정렬)
+- [[kimi-k3-in-c]] — ⭐7,224·Apache-2.0·C99 · **재분류→local-llm**. 🎯**병목은 RAM이 아니라 스토리지**: README 자신이 *"The gate is storage: 1.56TB"* — 필요 저장공간 **~1.7TB**. 실측 사다리 8GB **26.5s/token** → 128GB+ **5.6s**(4.7배), 출력은 전 구간 **byte-identical**. 176KB 엔진·peak RSS **8.24GB(측정)**. 저자도 8GB 경로를 *"proof-of-life"* 라 부름. **raw가 이번 배치에서 가장 정확했던 항목**
+- [[Marigold-V2]] — HF 업보트 **24(데일리 1위)** · **재분류 ai-news→slam-3dgs**. 다단계 flow-matching DiT를 **1-step**으로 깊이추정 전환. 처방 2개: **GT 의미 피처에 내부 표현 정렬** + **Sinkhorn 손실 2단계 파인튜닝**. ⚠️raw 누락 수치: **KITTI·ETH3D AbsRel 16–26% 개선**, 표면법선·본질이미지분해도 SOTA. **HF Space 즉시 사용 가능**(설치 0)
+- [[RoboSPA]] — 업 14·저자 12·**코드/데이터 공개**. 10카테고리·**56 base task × 5 난이도 = 280 변형**·**527K 트래젝토리**. 🎯이식 가능한 설계: **난이도 축으로 펼쳐야 "되는가"가 아니라 "어디서 깨지는가"를 얻는다**. 결론은 **부정적**(현 VLA는 복잡한 공간관계·정밀 저수준 실행·기억집약 계획에서 고전) → 자기홍보 아님
+- [[Language-Transfer-Robot-Policies]] — 업 10·저자 3. *"The main challenge is **measurement** rather than translation."* 계측기 4개가 전부 거짓 결론: 색히스토그램은 **노이즈에 보상**, 단일목표 벤치는 **틀린 지시에 82.6%**(정상 84.6%), 학습손실은 성공률 예측 실패, 단일실행은 시드 지배. ⚠️**raw가 긍정 결과 통째 누락**: **이중언어 학습 6.7–7.1점 우위, 영어의 약 2/5 도달**. 하지 말 것 2개: warm-start·텍스트타워 언프리즈(**둘 다 악화**)
+- [[Encoded-Early-Used-Late]] — 업 9·저자 2. **읽히는 위치 ≠ 쓰이는 위치**가 *추론된 관계 속성*(상대 전문성)에서도 성립. 피크 디코딩 레이어 주입 → 출력 거의 불변 / 중반 이후 주입 → 거의 완전 전파(**한 자릿수 배 이상 차이**). ⚠️raw 누락 한계: 저자 자인 **단일 모델·합성 코퍼스·초기 시연** → reliability **medium**
+- [[Cadence]] — 업 8·**저자 1인**. *"무손실 부호화에서 파운데이션 모델은 무가치"* — 절감비트가 정확도의 **로그**(TimesFM-3의 1.51배 우위 → 20.28비트 중 **0.60비트**, 중앙값 +0.03%). ⚠️**raw가 본 결과를 통째 누락**: EIA-930 **+13.3%** · MTA **+28.3%** · **297쌍 중앙값 +21.4%, 297/297 전승** · 다운샘플링 대비 최악오차 **28–56배 타이트**. 🎯**결정성 결과**: 예측이 **배치 크기 간 비트 동일하지 않고 어떤 PyTorch 설정으로도 못 고침** → 그룹크기·디바이스를 포맷에 박음. **부정결과 3건·철회주장 8건 전면 공개**
+- [[GLM-5.3-CYBERSECURITY-FP8]] — DL **19,433**(3회 고정)·MIT. 🔴🔴**카드의 자기규정과 자기측정이 어긋난 건**. 카드: *"사이버보안 도메인 한정, 범용 uncensor 아님"* ↔ **같은 카드 표**: *"**다른 모든 위해 범주 76–100%**, 거부 방향이 **광범위하게 일반화**됐다"* · *"80–84% 직접 응답, hard-refuse 거의 0"*. 남은 거부는 **저작권뿐**(16/11/20%). → **볼트 판정: 사실상 범용 거부제거 모델.** 🎯교훈: **도메인 한정 abliteration은 성립하지 않는다**(거부 방향이 공유됨). 값진 부분은 운용 제약: `reasoning_effort` **low/high만 반영·나머지는 전부 max로 흐름**(끌 방법 없음) · high/max는 `<think>`로 예산 소진해 **답변 0토큰(finish=length)** · 1M 컨텍스트 막힘, **TP8 H200 실상한 ~131K**
+- [[Spark-X2.5-4B]] — DL 10,661(3회 고정)·♥944·Apache-2.0 · **재분류→local-llm** · 수집시점 **HF 트렌딩 1위**. 4B에 **네이티브 1M**(full 1층+SWA 3층)·200+ 언어·20조 토큰·**Ascend 학습**. ⚠️**볼트가 raw를 한 단계 더 좁힘**: 에이전트 축도 갈린다 — 이김(BrowseComp **40.9 vs 8.3**·τ³ 30.4 vs 9.3·MCP-Atlas 54.6) / **짐(BFCL-V4 65.1 vs 66.1·τ² 75.1 vs 79.1)** = *다단계·탐색형은 우위, **단발 함수호출은 동급 이하***. ⚠️raw 누락: **수학 전면 우위**(AIME 90.7 vs 88.2·HMMT 81.2 vs 70.8). Ollama/LM Studio/MLX 즉시 배포
+- [[K2-Horizon-MoVA-36B-A4B]] — DL 3,205(3회 고정)·Apache-2.0 · **재분류→local-llm**. 36B저장/**활성 4B** MoE+MoVA·512K. vs Nemotron 3 Ultra(550B, **약 15배**): 이김(tau3-Banking **26.8 vs 14.2**·Terminal-Bench **58.6 vs 53.9, 표 내 1위**) / 짐(GPQA 80.8 vs 86.7·HLE 25.2 vs 28.4·AA-LCR 66.3 vs 71.0) → **축 한정 주장 확정** · [[에이전트축-분기]] 2번째 사례. ⚠️raw 누락 축: **비환각률 69.2**인데 같은 표 타 모델은 **13.0~87.0 극단 분산**. 🔴자체보고 벤치·**코드/체크포인트 예고만**·생성 8일차 → reliability **medium**
+
 ---
 
 ## domains
 <!-- 도메인별 누적 인사이트 -->
 
-- video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석 (**2026-09-04 업데이트**: 타이밍·마스킹·가속 3부품)
-- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (**2026-09-04 업데이트** · ⚠️08-27~29 배치 항목 누락 상태, 소급 복원 대기)
-- local-llm → `wiki/domains/local-llm.md` — 로컬/엣지 LLM·에이전트 메모리 (**2026-09-04 업데이트**: 서빙·캐시·함수화 3층)
-- slam-3dgs → `wiki/domains/slam-3dgs.md` — SLAM·3DGS·카메라 (**2026-09-04 업데이트**: 통합 월드모델 × 의미분할)
+- video-saas → `wiki/domains/video-saas.md` — 영상 AI SaaS 기능/워크플로우/경쟁 우위 분석 (**2026-09-09 업데이트**: [[video-shotcraft]] — 레시피 카드 + `t` 기반 결정적 컴포넌트)
+- ai-news → `wiki/domains/ai-news.md` — AI 뉴스, 툴 발굴, 워크플로우 통합 (**2026-09-09 업데이트**: 측정 신뢰성 · 출처표시 무력화 · 도메인 한정 abliteration 반증 · ⚠️08-27~29 배치 항목 누락 상태, 소급 복원 대기)
+- local-llm → `wiki/domains/local-llm.md` — 로컬/엣지 LLM·에이전트 메모리 (**2026-09-09 업데이트**: [[에이전트축-분기]] · 스토리지 병목)
+- slam-3dgs → `wiki/domains/slam-3dgs.md` — SLAM·3DGS·카메라 (**2026-09-09 업데이트**: [[Marigold-V2]] 1-step 깊이추정)
 
 ---
 

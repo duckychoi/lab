@@ -99,6 +99,46 @@
       "width": 340,
       "height": 230,
       "color": "3"
+    },
+    {
+      "id": "b0909-sl",
+      "type": "text",
+      "text": "# 2026-09-09 배치\n\n단안 깊이추정 1-step 하강",
+      "x": "-100",
+      "y": "1570",
+      "width": "260",
+      "height": "110",
+      "color": "4"
+    },
+    {
+      "id": "s0909sl-mar",
+      "type": "text",
+      "text": "### Marigold V2\nHF 데일리 1위(업 24)\n다단계 flow-matching DiT → **1-step**\n**KITTI·ETH3D AbsRel 16–26% 개선**\n표면법선·본질이미지분해도 SOTA\n[[Marigold-V2]]",
+      "x": "-420",
+      "y": "1770",
+      "width": "260",
+      "height": "180",
+      "color": "5"
+    },
+    {
+      "id": "n0909sl-how",
+      "type": "text",
+      "text": "### 처방 2가지\n① 내부 표현을 **GT 의미 피처와 정렬**\n② **Sinkhorn 손실** 2단계 파인튜닝\n(+ 필요시 양자화)",
+      "x": "-120",
+      "y": "1770",
+      "width": "250",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "a0909sl-1",
+      "type": "text",
+      "text": "### 🔬 HF Space 즉시 테스트\n내 소스 이미지로 먼저 실행\n판단 기준: **머리카락·잎사귀 경계**\n⚠️fps 수치 논문에 없음",
+      "x": "160",
+      "y": "1770",
+      "width": "250",
+      "height": "160",
+      "color": "2"
     }
   ],
   "edges": [
@@ -157,6 +197,27 @@
       "fromSide": "bottom",
       "toNode": "s0908-gap",
       "toSide": "top"
+    },
+    {
+      "id": "e0909sl-1",
+      "fromNode": "b0909-sl",
+      "toNode": "s0909sl-mar",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909sl-2",
+      "fromNode": "s0909sl-mar",
+      "toNode": "n0909sl-how",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0909sl-3",
+      "fromNode": "n0909sl-how",
+      "toNode": "a0909sl-1",
+      "fromSide": "right",
+      "toSide": "left"
     }
   ]
 }

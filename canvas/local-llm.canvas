@@ -189,6 +189,56 @@
       "width": 360,
       "height": 240,
       "color": "6"
+    },
+    {
+      "id": "b0909-ll",
+      "type": "text",
+      "text": "# 2026-09-09 배치\n\n병목 이동 + 축 분기",
+      "x": "-100",
+      "y": "2440",
+      "width": "260",
+      "height": "110",
+      "color": "4"
+    },
+    {
+      "id": "s0909ll-k3c",
+      "type": "text",
+      "text": "### kimi-k3-in-c\n⭐7,224·C99 176KB\n🎯**병목=RAM❌ 스토리지 1.7TB**\n8GB 26.5s → 128GB+ 5.6s (4.7배)\n출력 **byte-identical**\n[[kimi-k3-in-c]]",
+      "x": "-560",
+      "y": "2640",
+      "width": "250",
+      "height": "170",
+      "color": "5"
+    },
+    {
+      "id": "s0909ll-spk",
+      "type": "text",
+      "text": "### Spark-X2.5-4B\nDL 10,661·HF 트렌딩 1위\n4B **네이티브 1M**(full1+SWA3)\nBrowseComp 40.9 vs 9B 8.3\n🔴GPQA 67.4 vs 77.2\n[[Spark-X2.5-4B]]",
+      "x": "-280",
+      "y": "2640",
+      "width": "250",
+      "height": "170",
+      "color": "5"
+    },
+    {
+      "id": "s0909ll-k2h",
+      "type": "text",
+      "text": "### K2-Horizon-MoVA-36B-A4B\nDL 3,205·활성 4B MoE+MoVA\nTerminal-Bench 58.6 vs 550B 53.9\n🔴코드·체크포인트 예고만\n[[K2-Horizon-MoVA-36B-A4B]]",
+      "x": "0",
+      "y": "2640",
+      "width": "250",
+      "height": "170",
+      "color": "5"
+    },
+    {
+      "id": "k0909ll-axd",
+      "type": "text",
+      "text": "### 에이전트축 분기\n**\"찾아오는 것\"에 이기고\n\"아는 것\"에 진다**\n⚠️2모델·자체보고 → medium\n[[에이전트축-분기]]",
+      "x": "-140",
+      "y": "2870",
+      "width": "250",
+      "height": "150",
+      "color": "6"
     }
   ],
   "edges": [
@@ -334,6 +384,41 @@
       "fromNode": "l0908-davidau",
       "fromSide": "bottom",
       "toNode": "l0908-mtp",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-1",
+      "fromNode": "b0909-ll",
+      "toNode": "s0909ll-k3c",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-2",
+      "fromNode": "b0909-ll",
+      "toNode": "s0909ll-spk",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-3",
+      "fromNode": "b0909-ll",
+      "toNode": "s0909ll-k2h",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-4",
+      "fromNode": "s0909ll-spk",
+      "toNode": "k0909ll-axd",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-5",
+      "fromNode": "s0909ll-k2h",
+      "toNode": "k0909ll-axd",
+      "fromSide": "bottom",
       "toSide": "top"
     }
   ]

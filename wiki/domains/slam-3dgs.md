@@ -4,8 +4,8 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-09-07
-sources: [WorldSculpt.md]
+updated: 2026-09-09
+sources: [WorldSculpt.md, Marigold-V2.md]
 ---
 
 # 로봇 SLAM / 3DGS / 카메라 누적 인사이트
@@ -134,3 +134,29 @@ _소스 ingest 시 자동 누적_
 
 ### 📌 도메인 간 수렴 — 이번 배치 최대 신호
 [[EmbodiedSkills]](로봇 제어)와 [[TGOPD]](LLM 학습)가 **서로를 인용하지 않고 같은 골격**에 도달했다: *"신뢰할 수 있는지 먼저 검증하고, 통과할 때만 쓴다."* 도메인이 최대한 멀리 떨어져 있는데 처방이 같다 → [[검사가능성-공사]] 가 도메인 특수적 유행이 아니라는 **지금까지 중 가장 강한 근거**.
+
+---
+
+## [2026-09-09] 배치 — 단안 깊이추정이 1-step으로 내려왔다
+
+> [!insight] [[Marigold-V2]] — HF 데일리 1위(업보트 24)
+> raw는 `ai-news` 로 보냈지만 **단안 깊이추정은 이 도메인의 입력단**이다.
+> 기여는 새 모델이 아니라 **레시피**: 사전학습된 **다단계 flow-matching DiT**를 **1-step 추론**으로 돌려 SOTA 깊이추정기로 전환.
+
+### 처방 두 가지 (순진한 학습의 아티팩트 진단 후)
+1. **모델 내부 표현을 GT에서 추출한 의미 피처와 정렬**
+2. **Sinkhorn 기반 신규 손실을 축으로 한 2단계 파인튜닝**
+필요시 **양자화**를 적용해 모델 용량은 보존하면서 실행 비용을 낮춘다.
+
+### 현재 SOTA 수치
+- **KITTI · ETH3D에서 AbsRel 기존 최고 대비 16–26% 개선**
+- **표면 법선 추정 · 본질 이미지 분해** 등 다른 밀집 회귀 과제에서도 SOTA
+- 정성: *"**fur, foliage, and hair-thin edges**"* — 기존 모델이 놓치던 **머리카락 두께 경계**를 해결
+
+> [!action] 즉시 할 것
+> **HF Space에서 내 소스 이미지로 먼저 돌린다**(설치 0): https://hf.co/spaces/huawei-bayerlab/marigold-v2-web
+> 판단 기준은 벤치마크가 아니라 **내 데이터에서 경계 디테일이 실제로 살아나는가**. 3DGS 초기화·깊이 프라이어에서 경계 품질이 병목이었다면 직접적 개선.
+
+> [!question] 미확인
+> **fps 수치가 논문에 없다.** 1-step + 양자화로 "cheap to run"이라 주장하지만 **30fps+ 실시간 가능 여부는 판정 불가** — DiT 백본 크기가 지배할 것으로 보인다. 실측 필요.
+
