@@ -239,6 +239,66 @@
       "width": "250",
       "height": "150",
       "color": "6"
+    },
+    {
+      "id": "hub-llm-0910",
+      "type": "text",
+      "text": "## 2026-09-10 배치\n**local-llm 3건**\n밀집소형 · 양자화 · 속도 파인튜닝\n🎯 실사용비율(다운로드/♥)이 신뢰도를 가름",
+      "x": -100,
+      "y": 3140,
+      "width": 400,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "m-minicpm",
+      "type": "text",
+      "text": "[[MiniCPM5-2B]]\n밀집2B가 4B급 5종 평균 상회(53.9)\nSWE-V 46.4 · NoLiMa 68.1\n⚠️ IFEval 86.7 — 2.6B에도 짐\n🔴 승리축=자체측정 상관\n비율 2.9:1 (검증 없음)",
+      "x": -640,
+      "y": 3370,
+      "width": 400,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "m-nvfp4",
+      "type": "text",
+      "text": "[[Qwen3.8-Flash-Next-NVFP4]]\n4비트가 9개 중 5개서 FP8 상회\n최대상승 +2.5 / 최대하락 −0.7\n🎯 표는 FP8 볼드로 강조\n비율 142:1",
+      "x": -200,
+      "y": 3370,
+      "width": 400,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "m-qwopus",
+      "type": "text",
+      "text": "[[Qwopus3.8-27B-Flash-GGUF]]\n능력 아닌 '지연'을 산 파인튜닝\n+12.8% tok/s · MTP +14.6pp\n↔ MMLU-Pro −1.45pp\n🔴 볼트발견: 멀티모달\n비율 644:1 🔥 최다 실사용",
+      "x": 240,
+      "y": 3370,
+      "width": 400,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "c-llm-bunki",
+      "type": "text",
+      "text": "[[에이전트축-분기]]\n**3번째 재현** — 2점 규칙 조건부 해제\nSpark-X2.5-4B · K2-Horizon · MiniCPM5-2B\n⚠️ 셋 다 자체보고 → medium 유지",
+      "x": -420,
+      "y": 3610,
+      "width": 440,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a-llm-ab",
+      "type": "text",
+      "text": "[[Qwopus3.8-27B-Flash-GGUF]] A/B\n벽시계 시간 측정\n+ Python 들여쓰기 결함 확인\n+ 비전 입력 실측",
+      "x": 120,
+      "y": 3610,
+      "width": 380,
+      "height": 150,
+      "color": "2"
     }
   ],
   "edges": [
@@ -419,6 +479,41 @@
       "fromNode": "s0909ll-k2h",
       "toNode": "k0909ll-axd",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-llm-0910-m-minicpm",
+      "fromNode": "hub-llm-0910",
+      "fromSide": "bottom",
+      "toNode": "m-minicpm",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-llm-0910-m-nvfp4",
+      "fromNode": "hub-llm-0910",
+      "fromSide": "bottom",
+      "toNode": "m-nvfp4",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-llm-0910-m-qwopus",
+      "fromNode": "hub-llm-0910",
+      "fromSide": "bottom",
+      "toNode": "m-qwopus",
+      "toSide": "top"
+    },
+    {
+      "id": "e-m-minicpm-c-llm-bunki",
+      "fromNode": "m-minicpm",
+      "fromSide": "bottom",
+      "toNode": "c-llm-bunki",
+      "toSide": "top"
+    },
+    {
+      "id": "e-m-qwopus-a-llm-ab",
+      "fromNode": "m-qwopus",
+      "fromSide": "bottom",
+      "toNode": "a-llm-ab",
       "toSide": "top"
     }
   ]

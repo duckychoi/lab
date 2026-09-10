@@ -4,13 +4,60 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-09
-sources: [marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md]
+updated: 2026-09-10
+sources: [teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
 
 목표: 쓸모있는 AI 도구 발굴 + 내 워크플로우에 통합
+
+---
+
+
+## 최근 흐름 (2026-09-10 배치)
+
+**13건 인제스트 · ai-news 9 · local-llm 3 · video-saas 1 · 전량 API 실호출 + 원문 대조.**
+GitHub 5(api.github.com/repos + **README·LICENSE 원문 다운로드**) · HF논문 5(**초록 원문 전문 대조**) · HF모델 3(api/models + **모델카드 원문**).
+
+### 🎯 이번 배치의 한 문장
+**"에이전트가 자기 성과를 판정할 수 없다"는 문제와 그 해법이 같은 배치에 들어왔다.**
+[[SAEScientist-Bench]] 가 문제를 실험으로 보이고(*"에이전트는 대조는 설계하지만 **측정치를 빈번히 오해석한다**"*), [[Discovery-Certification-Protocol]] 이 해법을 프로토콜로 형식화한다(*"발견의 증거는 결과가 아니라 **대안 경로의 부재**"*).
+→ 볼트가 raw 오류 4배치에서 경험으로 도달한 규칙과 **1:1로 대응**한다. 새 개념 2개로 승격: [[요약자와-판정자-분리]] · [[파생표기-함정]]
+
+### 흐름 1 — 에이전트 **배포 단위**가 굳어지고 있다 (4건 동시)
+같은 방향의 항목이 **한 배치에 4건** 들어온 것은 우연이 아니다:
+- [[openai-plugins]] — 플러그인 = **스킬+MCP+서브에이전트+커맨드+훅**의 묶음. `.codex-plugin/plugin.json` 매니페스트 필수
+- [[teamai-cli]] — 설정을 **공유 git 레포 + MR 리뷰 + SessionStart 훅 pull** 로 배포
+- [[text-to-cad]] — **스킬 11종 라이브러리**를 단일 패키지로, `requirements.txt` 릴리스 핀 고정
+- [[Pascal-Editor]] — `npx` 한 줄이 앱 + **인증된 MCP 서비스** 동시 기동
+→ **개별 스킬 → 묶음 → 버전관리·리뷰**로 계층이 올라간다. 내 reat-* 도 플러그인 1개로 재포장할 시점.
+
+### 흐름 2 — **자기 한계를 명시하는 문서**가 늘었다 (4건)
+[[Pascal-Editor]] `furniture-fit`(*"높이·개폐·배송 검증을 주장하지 않는다"* + **툴 스키마 런타임 선조회**) · [[PI-Desktop]](*"완전한 OS 샌드박스가 아니라 사용자가 신뢰하는 코드"*) · [[Qwopus3.8-27B-Flash-GGUF]](트레이드오프·수치 등급·결함 자인) · [[text-to-cad]](**조용한 실패 3종** 직접 경고).
+→ 새 개념 [[자기제한-명시]] 로 승격. **판별식: 문서가 자기에게 유리한 방향으로 틀렸는가, 불리한 방향으로 틀렸는가.**
+
+### 흐름 3 — **인터페이스가 능력을 연다**는 주장 2건
+[[Show-Harness]](의미 액션 단위 + 결정적 인터프리터 → *"추가 모델 용량 없이"* VLM 로봇 제어) · [[Programmable-World-Model]](상태 진화를 **시각 생성과 분리**, 비디오 모델을 **렌더러로 강등**).
+→ **같은 구조**: 의미/상태 층과 생성 층을 나누고, 접지는 **결정적으로**. 내 reat-* 파이프라인이 이미 이 구조다.
+⚠️ **둘 다 증거가 약하다** — Show-Harness는 **초록에 정량 수치 0건**, PWM은 **자체 신설 벤치마크에 비교 수치 없음**.
+
+### 흐름 4 — 벤치마크 3건의 신뢰도가 갈렸다
+**판별 기준은 하나 — 정답의 출처가 저자 밖에 있는가.**
+- [[WearableQA]] ⭐⭐⭐ — 외부 실측 데이터(실제 200명·최대 500일) · **직교 2축 16유형** · 14종 스프레드 공개(19.6~72.9%, 기준선 10%) · 저자가 먼저 *"far from solved"*
+- [[SAEScientist-Bench]] ⭐⭐⭐ — **외부 앵커**(Neuronpedia 전문가 특징) · 10구성×20과제 · 코드 공개
+- CombatStateBench([[Programmable-World-Model]]) ⭐⭐ — **저자 자체 신설** · 94%/98%이나 **비교 모델명·수치 부재**
+→ [[측정도구-먼저-반증]] 갱신.
+
+### 🔴 볼트가 raw를 반증·보완한 3건
+1. **반증** — [[teamai-cli]] 라이선스. raw: *"실제 LICENSE는 Tencent 자체 라이선스"* → **틀렸다.** LICENSE 원문은 *"licensed under **MIT**"* + **MIT 전문 수록**. `NOASSERTION` 은 Tencent 인사말 2줄이 자동탐지를 깨뜨린 결과 → [[파생표기-함정]]
+2. **누락 발견** — [[Qwopus3.8-27B-Flash-GGUF]] 는 **멀티모달**(`vision`·`multimodal`·`image-text-to-text` 태그 실측). raw는 벤치마크가 전부 텍스트라 텍스트 전용으로 기술했다.
+3. **누락 발견** — [[text-to-cad]] 의 조용한 실패는 **3종**(raw는 2종). 세 번째: 구버전 Codex(<0.142.0)가 플러그인을 **조용히 건너뛴다**.
+
+### ✅ raw 정확도 평가 — 4배치 만에 크게 개선
+- 논문 5건 **초록 전량 일치** · HF 모델 3건 **수치 전량 일치**(다운로드·♥ 고정 확인) · GitHub 5건 **스타 드리프트만**(+2~+10, 자연 증가)
+- 오류 **1건**(라이선스 역전) + 누락 **2건**
+- 오류 방향 추적: 09-07/08 **과장** → 09-09 **누락** → 09-10 **역전 1건**. **방향은 바뀌고 위치(판정 단계)는 안 바뀐다** → [[요약자와-판정자-분리]]
 
 ---
 

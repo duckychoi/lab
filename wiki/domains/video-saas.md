@@ -4,12 +4,29 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-09-09
-sources: [instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md]
+updated: 2026-09-10
+sources: [Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md]
 ---
 
 # 영상 AI SaaS 누적 인사이트
 
+
+## 최근 흐름 (2026-09-10 배치 · 1건)
+
+### [[Programmable-World-Model]] — 비디오 모델을 **렌더러로 강등**시켰다
+월드 상태 진화를 **시각 관측 생성과 완전히 분리**한다. 에이전트가 자연어를 **실행 가능 프로그램**(엔티티 상태 + 전이 규칙)으로 번역 → 경량 엔진이 **명시적·영속적 전역 상태** 유지(**화면 밖 엔티티·비시각 속성 포함**) → **상태 증강 3D OBB**를 중간표현으로 → 카메라 궤적과 함께 **픽셀 정합 조건신호로 결정적 컴파일** → 사전학습 비디오 모델이 렌더링.
+
+🎯 **내 reat-* 파이프라인과 구조가 같다**: `beats.json`/`scene-plan.json` = 프로그램, Remotion = 결정적 컴파일러, 비디오 모델 = 렌더러.
+**차이는 하나 — 내 쪽엔 영속 전역 상태가 없다.** 씬 간에 유지돼야 할 것(캐릭터 위치·화면 밖 요소·누적 값)이 **암묵적**이다 → [[암묵을-명시로]]
+
+**크리에이터 관점**: 사용자가 영상 AI에 진짜 원하는 건 예쁜 한 컷이 아니라 **"아까 그 캐릭터가 계속 그 캐릭터인 것"**. 상용 툴([[Higgsfield]]·[[Seedance]])은 **영속 상태를 안 준다** → **경쟁 빈틈**.
+
+📊 CombatStateBench **Count 94% / State 98%**.
+⚠️ **그러나 저자가 같은 논문에서 신설한 벤치마크**이고 **비교 모델명·수치가 초록에 없다**. *"substantially outperforming"* 이라는 서술뿐 → **자기 시험지의 자기 점수**. 사전학습 비디오 모델이 **무엇인지도 미명시**라 재현 불가. reliability **medium** → [[측정도구-먼저-반증]]
+
+**함께 볼 것**: 같은 배치 [[Show-Harness]] 가 로봇 쪽에서 **동일한 구조**(의미 층 분리 + 결정적 접지)를 제안했다. 서로 다른 도메인에서 같은 설계가 나온 것은 신호일 수 있다.
+
+---
 목표: Higgsfield 같은 영상 자동화 SaaS 개발
 
 ---

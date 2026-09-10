@@ -2657,3 +2657,60 @@ HF모델 3 — [[Qwen3.8-Flash-Next-GGUF]] · [[Qwen3.8-27B-GSQ-RCO-GGUF]] · [[
 
 추가 신규 규칙 3건: ①**레포 이름에서 기능을 추론하지 말 것**([[qm]] — 09-08 *"description은 소스가 아니다"* 에 이어 *"이름도 소스가 아니다"*) ②**숫자는 "어느 줄에서 왔는지"까지 기록**([[video-shotcraft]] — README 헤드라인끼리도 어긋난다) ③**도메인 분류를 수집 경로가 아니라 내용으로**(13건 전부 `ai-news` 로 와서 4건 오분류).
 ✅ **09-08 규칙 작동 확인**: description↔README 대조가 [[video-shotcraft]] 불일치를 잡았고, 신규 모델 3회 측정이 HF 3건 전부 값 고정을 확인했다.
+
+---
+
+## [2026-09-10] ingest | 2026-09-10 자동수집 13건 (GitHub 5 · HF논문 5 · HF모델 3) — 신규 13 · 중복 0
+
+- **도메인**: ai-news **9** · local-llm **3** · video-saas **1**
+- **추가 페이지**: **17개** (sources 13 · entities 1 · concepts 3) | **업데이트 페이지**: **13개** (entities 5 · concepts 2 · domains 3 · index · actionable · canvas 3)
+- **canvas 업데이트**: **YES** — ai-news(+13노드/+15엣지 → 265노드) · local-llm(+5노드 → 30노드) · video-saas(+3노드 → 19노드)
+- **actionable 추가**: **YES** — 8건
+- **총계 실측**: sources **1001**(988→1001) · entities **43** · concepts **29**(26→29) · synthesis 2 · domains 4 · queries 0 = **1079 페이지**
+
+**검증**: 13건 전량 API 실호출 **+ 원문 파일 직접 다운로드 대조**.
+`api.github.com/repos` 5 · `huggingface.co/api/papers` **초록 전문 대조** 5 · `api/models` 3.
+추가로 **README 4건**(teamai-cli 18,353B · text-to-cad 9,077B · openai-plugins 1,283B · Qwopus 19,400B) · **LICENSE 원문 1건**(teamai-cli 1,418B) · **모델카드 1건**(MiniCPM5-2B 111,167B) 직접 취득.
+
+**드리프트**: GitHub 5건 스타 **+2~+10**(수 시간 자연 증가, 전건 ±10 이내) · HF모델 다운로드 **3건 완전 일치**(♥만 MiniCPM5-2B +2) · HF논문 5건 **완전 일치** → **전부 API값 채택**. **raw 증분 필드 불채택 규칙 8회 연속 재현.**
+
+### 핵심 인사이트 (요약 아님 — 배운 것)
+
+**1. 에이전트가 자기 성과를 판정할 수 없다는 문제와 그 해법이 같은 배치에 들어왔다.**
+[[SAEScientist-Bench]] 가 문제를 실험으로 보이고(*"에이전트는 대조는 설계하지만 **측정치를 빈번히 오해석한다**"*), [[Discovery-Certification-Protocol]] 이 해법을 프로토콜로 형식화한다(*"발견의 증거는 결과가 아니라 **대안 경로의 부재**"*). DCP의 3장치가 볼트가 경험으로 세운 규칙과 **1:1 대응**한다 — 60쌍 널 스터디↔"보장된 null", Gate 2↔"틀린 입력 arm", **LLM 없는 결정적 검증기**↔"요약자가 판정하지 않는다".
+
+**2. 볼트가 raw 판정을 처음으로 "역전"시켰다 — 그리고 그 원인이 개념이 됐다.**
+[[teamai-cli]] 에서 raw는 *"실제 LICENSE는 Tencent 자체 라이선스"* 라 판정했으나, **LICENSE 원문은 `"licensed under MIT"` + MIT 전문을 그대로 싣는다**. `NOASSERTION` 은 **Tencent 인사말 2줄이 GitHub 자동탐지를 깨뜨린 결과**였다.
+→ 09-08 *"description은 소스가 아니다"* → 09-09 *"이름도 소스가 아니다"* 에 이어 **09-10 "API가 계산해준 필드도 소스가 아니다"**. 신규 개념 **[[파생표기-함정]]** 승격(사례 3건: 라이선스 API 분류 · 표의 볼드 서식 · 벤치 구성에서 모달리티 역추론).
+
+**3. 자기 한계를 명시하는 문서가 한 배치에 4건 나왔다.**
+[[Pascal-Editor]] `furniture-fit`(**툴 스키마를 런타임에 선조회**해 없으면 좁은 결과 보고) · [[PI-Desktop]](*"완전한 OS 샌드박스가 아니라 사용자가 신뢰하는 코드"*) · [[Qwopus3.8-27B-Flash-GGUF]](트레이드오프·**수치 등급 구분**·결함 자인) · [[text-to-cad]](**조용한 실패 3종** 직접 경고).
+→ 신규 개념 **[[자기제한-명시]]**. **판별식: 문서가 자기에게 유리한 방향으로 틀렸는가, 불리한 방향으로 틀렸는가.** 09-09 [[GLM-5.3-CYBERSECURITY-FP8]](규정이 측정보다 관대)의 정확한 반대.
+
+**4. 좋은 벤치마크와 나쁜 벤치마크가 같은 배치에 있었고, 판별 기준은 하나였다 — 정답의 출처가 저자 밖에 있는가.**
+[[WearableQA]] ⭐⭐⭐(실제 200명 외부 데이터·직교 2축 16유형·14종 스프레드 19.6~72.9% 공개·저자 자인 *"far from solved"*) · [[SAEScientist-Bench]] ⭐⭐⭐(Neuronpedia 외부 앵커) vs **CombatStateBench**([[Programmable-World-Model]]) ⭐⭐(**저자 자체 신설**·94%/98%이나 **비교 모델명도 수치도 없음** = 자기 시험지의 자기 점수).
+
+**5. [[에이전트축-분기]] 가 3번째 모델에서 재현 — 2점 규칙 조건부 해제.**
+[[Spark-X2.5-4B]](4B vs 9B) · [[K2-Horizon-MoVA-36B-A4B]](활성4B vs 550B) · **[[MiniCPM5-2B]](밀집2B vs 4B급)** — 규모(2B·4B·36B)와 구조(밀집·MoE·MoE+MoVA)가 서로 달라 우연으로 보기 어렵다.
+⚠️ **그러나 볼트가 MiniCPM에서 발견한 상관이 이 분기 전체를 흔든다** — 카드 각주가 *"† 만 제3자(Artificial Analysis), 나머지 전부 내부 재현"* 인데 **† 항목에서는 대체로 진다**(GPQA-D 70.2 vs 77.1 · Terminal-Bench 8.6 vs 25.8). **"이기는 축=자체측정, 지는 축=제3자측정"** 이라면 분기 자체가 **능력 차이가 아니라 측정 주체 차이**일 수 있다 → reliability **medium 유지**.
+
+**6. 실사용 비율(다운로드/♥)이 새 판별 지표가 됐다.**
+[[Qwopus3.8-27B-Flash-GGUF]] **644:1**(113,295/176) 🔥 · [[Qwen3.8-Flash-Next-NVFP4]] **142:1** · [[MiniCPM5-2B]] **2.9:1**(2,879/1,007).
+→ **♥는 기대치, 다운로드는 실사용.** MiniCPM5-2B는 벤치마크가 가장 화려한데 **커뮤니티 검증이 가장 없다**.
+
+**7. 에이전트 배포 단위가 굳어지고 있다 (4건 동시).**
+[[openai-plugins]](플러그인=스킬+MCP+서브에이전트+커맨드+훅 묶음) · [[teamai-cli]](git+MR 배포) · [[text-to-cad]](스킬 11종 단일 패키지) · [[Pascal-Editor]](npx 한 줄로 앱+MCP 기동) → **개별 스킬 → 묶음 → 버전관리**로 계층 상승.
+
+### raw 정확도 평가 — 4배치 만에 크게 개선
+- ✅ **논문 5건 초록 전량 일치** · **HF모델 3건 수치 전량 일치** · GitHub 5건 스타 드리프트만
+- 🔴 **오류 1건**(teamai-cli 라이선스 역전) · **누락 2건**([[Qwopus3.8-27B-Flash-GGUF]] 멀티모달 · [[text-to-cad]] 조용한 실패 3번째)
+- **오류 방향 추적**: 09-07/08 **과장** → 09-09 **누락** → 09-10 **역전**. **방향은 매번 바뀌고 위치(판정 단계)는 안 바뀐다** → [[요약자와-판정자-분리]] 승격
+
+### 도메인 재분류
+raw가 9건을 `ai-news`, 3건을 `local-llm` 으로 보내고 3건에 후보를 병기했다. 볼트 판정:
+- [[Programmable-World-Model]] `ai-news` → **`video-saas` 이동**
+- [[Pascal-Editor]] — raw의 `slam-3dgs` 후보 **기각**(slam-3dgs는 깊이추정·재구성 계열, 이건 저작 도구) → `ai-news` 유지
+- [[PI-Desktop]] — raw의 `local-llm` 후보 **기각**(모델이 아니라 하네스) → `ai-news` 유지, BYOM 축으로 상호링크
+- HF모델 3건 — raw의 `local-llm` 선분류 **승인**
+
+---

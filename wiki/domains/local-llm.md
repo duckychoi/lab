@@ -4,13 +4,51 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-09
-sources: [VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md]
+updated: 2026-09-10
+sources: [MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
 
 목표: 경량 모델 실배포 + Hermes/에이전트에 메모리 심기
+
+---
+
+
+## 최근 흐름 (2026-09-10 배치 · 3건)
+
+### 🎯 한 문장
+**세 모델이 서로 다른 축으로 "작게 쓰는 법"을 보여줬다 — 밀집 소형([[MiniCPM5-2B]]) · 양자화([[Qwen3.8-Flash-Next-NVFP4]]) · 속도 파인튜닝([[Qwopus3.8-27B-Flash-GGUF]]).**
+
+### 실사용 비율이 신뢰도를 갈랐다 (다운로드/♥ 비율)
+- [[Qwopus3.8-27B-Flash-GGUF]] — 113,295 / ♥176 = **644:1** 🔥 GGUF라 **바로 돌아간다**. 이 배치에서 **커뮤니티 검증이 실제로 존재하는 유일한 항목**
+- [[Qwen3.8-Flash-Next-NVFP4]] — 26,302 / ♥185 = **142:1** — 실사용 높음
+- [[MiniCPM5-2B]] — 2,879 / ♥1,007 = **2.9:1** ⚠️ **관심은 큰데 실사용이 적다** — 생성 4일차, 커뮤니티 검증 없음
+→ **♥는 기대치, 다운로드는 실사용.** 비율이 낮으면 "화제성만 있는 상태"다. 새 판별 지표로 채택.
+
+### 1. [[MiniCPM5-2B]] — 밀집 2B가 4B급 5종을 평균에서 상회
+평균 **53.9** vs 4B급(51.1/42.7/32.6/31.2/28.4) · SWE-bench Verified **46.4**(차상위 36.8) · **NoLiMa 68.1**(차상위 43.5, 나머지 0.5~17.1 붕괴) · GAIA **88.7**.
+**밀집 2B는 진짜로 가볍다** — [[K2-Horizon-MoVA-36B-A4B]] 는 활성 4B라도 36B 전체 적재가 필요했다. 배포 백엔드 **9종**(llama.cpp·Ollama·LM Studio·MLX 포함).
+🎯 **코퍼스를 실제로 공개**(Ultra-FineWeb·UltraX·UltraData + 후학습 SFT 400B) — K2의 *"coming"* 예고와 등급이 다르다.
+⚠️ **지시이행 열위 — 더 작은 모델에도 진다**(IFEval 86.7 vs LFM2.5-**2.6B** 93.4). 에이전트엔 치명적일 수 있다.
+🔴 **볼트 발견**: *"† 만 제3자(Artificial Analysis), 나머지 내부 재현"* 인데 **† 항목에서는 대체로 진다** → **"이기는 축=자체측정, 지는 축=제3자측정"** 상관.
+
+### 2. [[Qwen3.8-Flash-Next-NVFP4]] — 4비트가 9개 중 5개에서 FP8을 이겼다
+SciCode +2.5 · AA-LCR +2.2 · MMMU Pro +1.2 · HLE +0.7 · IFBench +0.5. **하락 4개는 전부 1점 미만**(최대 −0.7).
+→ **"4비트는 손해"라는 통념이 성립하지 않는다.** 트레이드오프가 정확도에서 **하드웨어 세대(Blackwell)** 로 이동.
+🎯 카드 표는 **FP8 행을 볼드**로 강조하지만 숫자는 반대 → [[파생표기-함정]]
+⚠️ 분산·시드 정보 없음 — ±1점은 측정 분산일 수 있다.
+
+### 3. [[Qwopus3.8-27B-Flash-GGUF]] — 능력이 아니라 **지연**을 산 파인튜닝
+디코딩 **+12.8%**(9.347 vs 8.284 tok/s) · MTP 수용률 **+14.6pp**(80.7 vs 66.1, 과목별 균일) · 출력 문자수 **−9.9%**(폭주 추론 감소) ↔ **MMLU-Pro −1.45pp**.
+근거 논리가 설득력 있다 — **에이전트 루프는 호출을 수십~수백 회 증폭**한다(턴당 5초 → 50턴에 250초).
+→ **Hermes 적용 1순위 후보.** 내 워크플로우도 호출 증폭형이라 **턴당 지연 절감이 누적**된다.
+🔴 **볼트 발견: 멀티모달이다**(`vision`·`multimodal`·`image-text-to-text`). raw는 텍스트 전용으로 기술했다. **단 비전 성능 측정이 카드에 없다.**
+⚠️ 결함 자인 — 일부 Python 과제에서 **잘못된 들여쓰기** 생성.
+
+### [[에이전트축-분기]] — 3번째 재현, 2점 규칙 조건부 해제
+[[Spark-X2.5-4B]](4B vs 9B) · [[K2-Horizon-MoVA-36B-A4B]](활성4B vs 550B) · **[[MiniCPM5-2B]](밀집2B vs 4B급)** — 규모(2B·4B·36B)와 구조(밀집·MoE·MoE+MoVA)가 서로 달라 우연으로 보기 어렵다.
+⚠️ **다만 셋 다 자체보고**이고, MiniCPM에서 **"승리축=자체측정" 상관**이 나왔으므로 **분기 자체가 측정 주체 차이일 가능성**을 배제 못 한다. reliability **medium 유지**.
 
 ---
 

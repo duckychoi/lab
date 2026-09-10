@@ -159,6 +159,36 @@
       "width": "260",
       "height": "150",
       "color": "1"
+    },
+    {
+      "id": "s-pwm",
+      "type": "text",
+      "text": "[[Programmable-World-Model]]\n업36 · arXiv 2609.10540\n상태 진화를 시각생성과 분리\n비디오 모델 = **렌더러로 강등**\n상태증강 3D OBB 중간표현\n📊 CombatStateBench 94%/98%\n⚠️ 자체 신설 벤치·비교수치 없음",
+      "x": -160,
+      "y": 2250,
+      "width": 420,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "a-pwm-state",
+      "type": "text",
+      "text": "**내 Scene DSL에 영속 상태 추가 검토**\nreat-* 구조는 이미 동일\n(프로그램→결정적 컴파일러→렌더러)\n차이: 영속 전역 상태만 없음",
+      "x": -620,
+      "y": 2530,
+      "width": 400,
+      "height": 160,
+      "color": "2"
+    },
+    {
+      "id": "c-pwm-gap",
+      "type": "text",
+      "text": "**경쟁 빈틈**\nHiggsfield·Seedance는\n영속 상태를 안 준다\n→ 상태 층이 빈 자리",
+      "x": 300,
+      "y": 2530,
+      "width": 340,
+      "height": 150,
+      "color": "6"
     }
   ],
   "edges": [
@@ -251,6 +281,20 @@
       "fromNode": "s0909vs-vsc",
       "toNode": "n0909vs-tc",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pwm-a-pwm-state",
+      "fromNode": "s-pwm",
+      "fromSide": "bottom",
+      "toNode": "a-pwm-state",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pwm-c-pwm-gap",
+      "fromNode": "s-pwm",
+      "fromSide": "bottom",
+      "toNode": "c-pwm-gap",
       "toSide": "top"
     }
   ]

@@ -2518,6 +2518,136 @@
       "width": "235",
       "height": "140",
       "color": "4"
+    },
+    {
+      "id": "hub-0910",
+      "type": "text",
+      "text": "## 2026-09-10 배치\n**ai-news 9건**\n에이전트 배포단위 · 자기제한 명시\n인터페이스가 능력을 연다",
+      "x": -100,
+      "y": 14050,
+      "width": 380,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-teamai",
+      "type": "text",
+      "text": "[[teamai-cli]]\n⭐3,387 · Tencent\ngit+MR+SessionStart 훅 배포\n🔴 볼트가 라이선스 판정 반증(MIT)",
+      "x": -780,
+      "y": 14280,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-pascal",
+      "type": "text",
+      "text": "[[Pascal-Editor]]\n⭐23,176 · MIT\nnpx 한 줄 = 앱+MCP 기동\n🎯 furniture-fit 자기제한 규약",
+      "x": -440,
+      "y": 14280,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-t2c",
+      "type": "text",
+      "text": "[[text-to-cad]]\n⭐15,249 · 스킬 11종\n실제 슬라이서 CLI 검증까지\n⚠️ 조용한 실패 3종",
+      "x": -100,
+      "y": 14280,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-oaip",
+      "type": "text",
+      "text": "[[openai-plugins]]\n⭐6,322 · 라이선스 없음\n플러그인=스킬+MCP+훅 묶음\n⚠️ README 1,283B",
+      "x": 240,
+      "y": 14280,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-pid",
+      "type": "text",
+      "text": "[[PI-Desktop]]\n⭐1,971 · LGPL-3.0\nElectron+Rust 호스트 코어\n🎯 샌드박스 한계 자인",
+      "x": 580,
+      "y": 14280,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-show",
+      "type": "text",
+      "text": "[[Show-Harness]]\n업48 · HF 1위\n의미 액션+결정적 접지\n⚠️ 초록 정량수치 0건",
+      "x": -780,
+      "y": 14470,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-wqa",
+      "type": "text",
+      "text": "[[WearableQA]]\n업24 · 4,084문항/200명\n직교 2축 16유형\n📊 14종 19.6~72.9%",
+      "x": -440,
+      "y": 14470,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-sae",
+      "type": "text",
+      "text": "[[SAEScientist-Bench]]\n업14 · Neuronpedia 앵커\n10구성×20과제\n🎯 '측정치를 오해석한다'",
+      "x": -100,
+      "y": 14470,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "s-dcp",
+      "type": "text",
+      "text": "[[Discovery-Certification-Protocol]]\n업13 · 96에피소드 복구0\nLLM 없는 결정적 검증기\n🎯 대안경로 부재=증거",
+      "x": 240,
+      "y": 14470,
+      "width": 310,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "c-pasik",
+      "type": "text",
+      "text": "[[파생표기-함정]]\nAPI분류·표서식·벤치구성은\n원문이 아니다 (사례 3건)",
+      "x": -620,
+      "y": 14720,
+      "width": 340,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "c-yopan",
+      "type": "text",
+      "text": "[[요약자와-판정자-분리]]\n수집한 주체가\n신뢰도를 판정하지 않는다",
+      "x": -220,
+      "y": 14720,
+      "width": 340,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "c-jagi",
+      "type": "text",
+      "text": "[[자기제한-명시]]\n하지 않는 것을 먼저 밝히는\n문서가 더 신뢰할 만하다 (4건)",
+      "x": 180,
+      "y": 14720,
+      "width": 340,
+      "height": 140,
+      "color": "6"
     }
   ],
   "edges": [
@@ -4606,6 +4736,111 @@
       "toNode": "s0909-k2h",
       "fromSide": "top",
       "toSide": "bottom"
+    },
+    {
+      "id": "e-hub-0910-s-teamai",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-teamai",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-pascal",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-pascal",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-t2c",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-t2c",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-oaip",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-oaip",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-pid",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-pid",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-show",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-show",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-wqa",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-wqa",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-sae",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-sae",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-0910-s-dcp",
+      "fromNode": "hub-0910",
+      "fromSide": "bottom",
+      "toNode": "s-dcp",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-teamai-c-pasik",
+      "fromNode": "s-teamai",
+      "fromSide": "bottom",
+      "toNode": "c-pasik",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-sae-c-yopan",
+      "fromNode": "s-sae",
+      "fromSide": "bottom",
+      "toNode": "c-yopan",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-dcp-c-yopan",
+      "fromNode": "s-dcp",
+      "fromSide": "bottom",
+      "toNode": "c-yopan",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pascal-c-jagi",
+      "fromNode": "s-pascal",
+      "fromSide": "bottom",
+      "toNode": "c-jagi",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pid-c-jagi",
+      "fromNode": "s-pid",
+      "fromSide": "bottom",
+      "toNode": "c-jagi",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-t2c-c-jagi",
+      "fromNode": "s-t2c",
+      "fromSide": "bottom",
+      "toNode": "c-jagi",
+      "toSide": "top"
     }
   ]
 }

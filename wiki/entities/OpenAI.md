@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, openai, coding-agent, interop, entity]
 created: 2026-07-04
-updated: 2026-09-07
+updated: 2026-09-10
 sources: [codex-plugin-cc.md, openai-codex.md]
 reliability: high
 ---
@@ -35,7 +35,15 @@ reliability: high
 
 ⚠️ **추적 공백**: 후속인 `openai/plugins` 가 볼트에 **없다.** 다음 배치 수집 대상.
 
+
+> [!insight] 2026-09-10 — [[openai-plugins]]: 플러그인이 **스킬+MCP+훅의 상위 배포 단위**가 됐다
+> Codex 플러그인 **예제 저장소**(프레임워크 아님). 값은 코드가 아니라 **매니페스트 규약**에 있다 — `plugins/<name>/` 에 `.codex-plugin/plugin.json` **필수** + `skills/`·`.app.json`·`.mcp.json`·`agents/`·`commands/`·`hooks.json` **선택**. 즉 **한 플러그인이 스킬·MCP·서브에이전트·커맨드·훅을 한 묶음으로** 배포한다.
+> 🎯 **놓치기 쉬운 설계**: 기본 마켓플레이스는 `.agents/plugins/marketplace.json` 인데 **API 키 로그인 사용자는 `api_marketplace.json` 로 분리**된다 — **인증 경로에 따라 보이는 플러그인이 다르다**. 배포자는 양쪽에 등록해야 한다.
+> 수록 예제에 **remotion** 포함 — 내 reat-* 파이프라인과 직결.
+> 🔴 **신뢰도 낮음**: README **1,283바이트**(볼트 실측, 이 배치 최소) · **벤치마크 수치 전무** · **라이선스 파일 없음**(API `license: None` 실측 → **재사용 권리 불명**). 당일 +498 스타는 코드 규모가 아니라 **`openai` 조직 신규 공개 이벤트**로 읽어야 한다.
+
 ## 관련 페이지
+- [[openai-plugins]] — Codex 플러그인 공식 예제·매니페스트 규약 *(2026-09-10 신규)*
 - [[openai-codex]] — **본체 코딩 에이전트 CLI**(⭐114,383·Apache-2.0·Rust)
 - [[codex-plugin-cc]] — Claude Code ↔ Codex 브리지 플러그인
 - [[openai-agents-python]]
