@@ -4,7 +4,7 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-10
+updated: 2026-09-11
 sources: [teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md]
 ---
 
@@ -2760,3 +2760,73 @@ raw.md는 이번 배치 최대 발견으로 *"드리프트는 대상의 **신선
 > - [[RoboSPA]] 의 "이진 성공률을 넘는 진단 지표"의 구체적 정의 — 초록에 없음, 레포 확인 필요
 > - [[출처표시-무력화]]: Layer B(통계적 워터마크) 제거율의 **정량 데이터 부재** — "best-effort" 자기 진술뿐
 
+---
+
+# [2026-09-11] 배치 — 8건 (GitHub 3신규 + 2갱신 · HF논문 5)
+
+> [!insight] 이 배치의 결론 한 줄
+> **에이전트 개선 루프를 어떻게 싸게 만들 것인가에 두 논문이 정반대 답을 내놨고, 볼트는 자기 파이프라인이 그중 틀린 쪽을 해왔다는 걸 확인했다.**
+
+## 1. 가장 중요한 대조 — [[WMRL]] vs [[AgentGrad]]
+
+같은 문제(**에이전트 개선 루프에서 실행이 비싸다**)에 정반대 처방:
+- **[[WMRL]]**(업보트 432, 데일리 1위): 실행이 비싸니 **월드모델로 대체**한다 → 학습 3~4배 가속, **4B·9B가 48B·120B를 홀드아웃에서 상회**
+- **[[AgentGrad]]**(업보트 89): 실행을 **더 하되 한 번에 하나씩** 개입해 **인과를 확정**한다 → 5개 MAS SOTA, 벽시계 **2.5배 단축**
+
+모순이 아니라 **적용 조건이 다르다**: 궤적이 길고 보상이 노이즈에 견딜 때 = WMRL / 실패 원인이 다중 후보로 흩어질 때 = AgentGrad.
+공통 전제: **틀린 곳을 모르고 고치면 비용만 든다.** → [[국소-수리-원리]] 의 미해소 급소(*"누가 판정하는가"*)에 AgentGrad가 답을 준다 — **판정하지 말고 개입해서 확인해라.**
+
+> [!action] 🪞 볼트 자기적용 — **볼트가 AgentGrad의 ①번 오류를 4배치째 저질러왔다**
+> AgentGrad가 지적한 추출 단계 결함: *"**그 프롬프트를 고치면 실패가 실제로 해결되는지 검증 없이** 대상을 고른다"*
+> → 볼트는 매 배치 raw에 피드백을 **여러 개 한꺼번에** 적어 보냈고, **어느 항목이 효과가 있었는지 통제된 형태로 확인한 적이 없다.** 집계 단계 결함(무관한 처방 섞기)까지 그대로다.
+> → **다음 배치부터 수집기 지시를 한 번에 하나만 바꾼다.**
+
+## 2. 벤더 주장의 정직성 — 이번 배치는 스펙트럼이 넓다
+
+- 🏆 **[[colibri]]**(⭐27,617): *"**속도에는 SLA가 없고, 의미론에는 하드 개런티**"* — 성능 주장을 **스스로 포기**하고, 실측 **하한(0.05 tok/s)까지 공개**. 게다가 개런티를 **비트 동일성 테스트**로 검증 가능하게 냈다 → [[자기제한-명시]] 의 성숙 형태
+- ✅ **[[NCP-ArchPreview]]**: 유리한 수치(51.3%)와 **불리한 공정 비교(연산 85%)를 나란히** 게시
+- ⚠️ **[[SenseNova-U1.5]]**: 정량 벤치가 **거의 없다**("largely advances" 등 정성 서술) — 코드 공개 전까지 성능 판정 유보
+- 🔴 **[[Clodds]]**(⭐1,884): README 12행에 **자체 토큰 컨트랙트 주소**(`2puc…pump`). **남의 러그풀은 GoPlus로 탐지하면서 자기 토큰은 런칭한다.** reliability **low** — 근거는 코드 품질이 아니라 **인센티브 구조**
+
+> [!action] 규칙 신설 — 이해관계 체크
+> ingest 시 README에서 **토큰 주소·후원 티어·유료 전환 유도**를 먼저 grep 한다. 걸리면 **스타·성능 서술을 신뢰 신호에서 제외**한다.
+> 파생 규칙: **인센티브가 있는 저장소에서는 스타 급상승을 품질 신호로 쓸 수 없다**(토큰 홍보와 스타 증가가 같은 채널을 공유).
+
+## 3. 🪞 [[llm_wiki]] — 이 볼트의 직접 대조군이 결측 층을 짚었다
+
+⭐18,381. [[LLM-Wiki]] 패턴의 **앱 단계**(프롬프트 규약 → 패키지 → 완제품).
+llm_wiki에 있고 **여기에 없는 것**: **4-신호 관련성 모델**(직접링크·출처중첩·**Adamic-Adar ×1.5**·타입친화도) + **Louvain 커뮤니티 탐지 + 응집도 <0.15 경고** + **예상 밖 관계 탐지**.
+→ **볼트는 소스 1,012개를 쌓는 동안 링크 구조를 한 번도 정량 측정한 적이 없다.** 현재 lint는 **차수 0(고아)만** 잡는다.
+→ **synthesis/ 가 2건뿐인 이유**가 이것 — 교차 연결을 찾는 절차가 없다.
+
+## 4. 스킬 생태계 — **패키지 매니저 단계 진입**
+
+[[vercel-skills]] ⭐**31,337**(4.5개월 만에 2.0배). `npx skills use`(**설치 없이 프롬프트만 stdout** → `| claude` 파이프) · `--agent '*'` 와일드카드 · 79개(자기보고) 에이전트.
+계보: 포맷 → 묶음 → 버전관리 → **🆕 의존성 관리 도구**.
+확산 폭도 넓어졌다 — [[llm_wiki]] 같은 **데스크톱 지식베이스 앱이 `SKILL.md` 를 채택**하고, [[Clodds]] 는 **119개 스킬로 자금을 집행**한다(스킬이 권한을 갖는 단계).
+
+[[i-have-adhd]] ⭐**39,550**(당일 **+3,882, 트렌딩 1위**). 7주 만에 5.3배인데 **코드는 그대로**(README 3,461B).
+→ **이 수치는 도구 개선이 아니라 "AI가 말이 너무 많다"는 불만의 누적을 측정한다.**
+→ 🪞 그리고 볼트의 2026-07-22 액션(*규칙 2~3개 선별 적용*)은 **7주간 미이행**이고, 그 사이 볼트 소스 페이지는 오히려 **길어졌다**(이번 배치 평균 6.3KB).
+
+## 5. 검증 방법론 — 새 개념 1건 신설 + 기존 규칙 이틀 연속 적중
+
+- 🆕 **[[단위-불일치]]** — *원문을 정확히 읽어도, 그 수가 세는 단위와 내가 필요한 단위가 다르면 틀린다.* 사례 6건: 패밀리 공용 카드(md5 동일) · 백본 552B vs 체크포인트 763B · 총≠활성 파라미터 · 비교 기준 모델 불일치(51.3% vs 85%) · 자기보고 79 vs 표 78 · description 1000+ markets vs README 10+7
+- ✅ **[[파생표기-함정]] 이틀 연속 적중** — [[llm_wiki]] 도 `NOASSERTION` 이지만 LICENSE 원문 1~4행이 **GPL-3.0**(어제 [[teamai-cli]] 와 동일 원인). 이번엔 **전염성 라이선스**라 실질 함의가 컸다
+- 🔴 **어제의 처방이 오늘의 함정** — 어제 *"`pipeline_tag` 를 보라"* 했는데 [[Nex-N2.5-mini]] 는 **`pipeline_tag` 가 틀렸다**(태그·본문은 멀티모달). → **단일 필드를 지목하는 처방을 피할 것**
+- 🔴 **볼트 자신도 틀렸다** — [[SenseNova-U1.5]]: 볼트의 2026-05 예측 *"SenseTime 특성상 오픈소스 가능성 낮음"* → 초록이 **학습 코드 공개 예고**. **벤더 정체성에서 정책 추론 금지**
+
+## 6. 🔴 raw 오류 위치가 처음으로 바뀌었다 — 판정 → **탐지**
+
+raw는 *"중복 0건"* 이라 보고했으나 **[[vercel-skills]] 가 이미 있었다**(2026-04-23).
+**원인은 구조적이다**: raw의 중복 검사 대상이 **`raw.md` 의 기존 URL**인데, raw.md는 **처리 후 항목을 즉시 삭제**하는 대기열이다 → **처리된 소스는 원리상 탐지 불가**.
+같은 배치 [[i-have-adhd]] 는 raw가 정확히 자기 신고했다 → **raw의 중복 탐지는 조회가 아니라 회상에 의존한다. 오래된 것일수록 못 잡는다.**
+→ **볼트 ingest 1단계에 `ls | grep` 중복 검사를 고정**한다(AgentGrad 처방과 동일: 기대하지 말고 확인하라).
+
+## 7. 미해결
+
+> [!question]
+> - [[SenseNova-U1.5]] 학습 코드 **실제 공개 여부** — "will"은 예고다([[IFM]] 선례). 다음 배치 확인 필요
+> - [[vercel-skills]] 에이전트 수 **79 vs 78** — 같은 README의 두 자동생성 블록이 모순. **어느 원문이 상위인지 정하는 규칙 없음**
+> - [[SpatialBlock]] "significantly outperform"의 **정량 수치 부재** — 코드 공개돼 있으므로 확인 가능
+> - [[DeepSeek-V4.1-Flash]] **TB 2.1(90.6) → TB 4.0(31.2) 붕괴 원인** — 컨텍스트 압축 탓인지 학습 시점 탓인지 카드로 구분 불가

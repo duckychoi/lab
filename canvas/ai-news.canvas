@@ -2648,6 +2648,166 @@
       "width": 340,
       "height": 140,
       "color": "6"
+    },
+    {
+      "id": "n0911-hdr",
+      "type": "text",
+      "text": "# [2026-09-11] 배치\n**신규 11 · 갱신 2**\n🔴 raw 오류 위치가 처음 바뀜:\n판정 → **탐지**(중복 미탐지)",
+      "x": -980,
+      "y": 15040,
+      "width": 340,
+      "height": 170,
+      "color": "1"
+    },
+    {
+      "id": "n0911-wmrl",
+      "type": "text",
+      "text": "[[WMRL]] ⬆432 데일리1위\n병목=계산량 아닌 **공유 불가능성**\n실행→월드모델 대체, 학습 3~4배\n🔥4B·9B가 48B·120B를 홀드아웃서 상회",
+      "x": -600,
+      "y": 15040,
+      "width": 380,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911-agrad",
+      "type": "text",
+      "text": "[[AgentGrad]] ⬆89\n**한 번에 한 에이전트만 개입**해 인과 확정\n(기존: 검증 없이 대상 선택 + 무작위 집계)\n5개 MAS SOTA · 벽시계 2.5배↓",
+      "x": -180,
+      "y": 15040,
+      "width": 380,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911-vs",
+      "type": "text",
+      "text": "⚖️ **정반대 처방**\nWMRL=실행을 모델로 갈음\nAgentGrad=실행을 더 하되 하나씩\n공통전제: *틀린 곳 모르고 고치면 비용만*",
+      "x": 240,
+      "y": 15040,
+      "width": 360,
+      "height": 170,
+      "color": "1"
+    },
+    {
+      "id": "n0911-ncp",
+      "type": "text",
+      "text": "[[NCP-ArchPreview]] ⬆102\n8.9B/5.73T 잠재공간 LM 최대규모\n토큰 51.3%로 OLMo-3-7B 손실 도달\n⚠️공정비교는 **연산 85%** → [[단위-불일치]]",
+      "x": -600,
+      "y": 15250,
+      "width": 380,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911-u15",
+      "type": "text",
+      "text": "[[SenseNova-U1.5]] ⬆78 ([[SenseTime]])\nencoder-free·VAE-free 8B-MoT·4K\n4전문가→**온폴리시 증류로 통합**\n🪞볼트 예측 빗나감(오픈소스 예고)",
+      "x": -180,
+      "y": 15250,
+      "width": 380,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911-sb",
+      "type": "text",
+      "text": "[[SpatialBlock]] ⬆35\n실장면 라벨=**외부 인지 모듈 오염**\n→합성 블록쌓기 15k(정답이 생성규칙서 직접)\n합성·소규모인데 실세계 일반화",
+      "x": 240,
+      "y": 15250,
+      "width": 380,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911-llmwiki",
+      "type": "text",
+      "text": "[[llm_wiki]] ⭐18,381\n🪞**볼트 직접 대조군**\n4-신호(Adamic-Adar×1.5)+Louvain\n**응집도<0.15 경고** ← 볼트엔 없음",
+      "x": -980,
+      "y": 15250,
+      "width": 380,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n0911-vskills",
+      "type": "text",
+      "text": "🔄[[vercel-skills]] ⭐15,695→**31,337**\n레지스트리→**패키지 매니저**\n`skills use`(무설치·파이프)·와일드카드\n🔴raw \"중복0건\" 반증",
+      "x": -980,
+      "y": 15460,
+      "width": 380,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n0911-adhd",
+      "type": "text",
+      "text": "🔄[[i-have-adhd]] ⭐7,400→**39,550**\n당일+3,882 트렌딩1위 / **코드는 그대로**\n→도구개선 아닌 **불만 누적**을 측정\n🪞볼트 07-22 액션 7주 미이행",
+      "x": -600,
+      "y": 15460,
+      "width": 380,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n0911-clodds",
+      "type": "text",
+      "text": "[[Clodds]] ⭐1,884 ⚠️**이해관계**\nREADME 12행 자체 토큰 CA(`2puc…pump`)\n남의 러그풀은 탐지·자기 토큰은 런칭\nreliability **low**(근거=인센티브 구조)",
+      "x": -180,
+      "y": 15460,
+      "width": 380,
+      "height": 170,
+      "color": "1"
+    },
+    {
+      "id": "n0911-danwi",
+      "type": "text",
+      "text": "🆕[[단위-불일치]]\n**원문을 정확히 읽어도 단위가 다르면 틀린다**\n원문대조·API실호출·2회측정을 **전부 통과**\n사례6: 공용카드md5·552B↔763B·79↔78 …",
+      "x": 240,
+      "y": 15460,
+      "width": 380,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0911-meta",
+      "type": "text",
+      "text": "🔴 **어제 처방이 오늘 함정**\n09-10 \"`pipeline_tag`를 보라\"\n→[[Nex-N2.5-mini]]는 그게 틀렸다\n⇒ **단일 필드 지목 처방 금지**",
+      "x": -980,
+      "y": 15670,
+      "width": 380,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0911-detect",
+      "type": "text",
+      "text": "🔴 [[요약자와-판정자-분리]] 신규유형\n**탐지 단계 오류**(5배치 만에 위치 변경)\nraw 중복검사 대상=raw.md인데\nraw.md는 처리후 삭제 ⇒ **원리상 탐지 불가**",
+      "x": -600,
+      "y": 15670,
+      "width": 380,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0911-act",
+      "type": "text",
+      "text": "> [!action] 최우선\n**lint를 카운트→측정으로 교체**\nAdamic-Adar 상위20쌍=synthesis 후보\n응집도<0.15 경고 (재료는 있고 측정만 없음)",
+      "x": -180,
+      "y": 15670,
+      "width": 380,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "n0911-act2",
+      "type": "text",
+      "text": "> [!action] 수집기\n**이번엔 한 가지만 바꾼다**\n중복검사 대상: raw.md → wiki/sources/\n(순차적 개입, [[AgentGrad]])",
+      "x": 240,
+      "y": 15670,
+      "width": 380,
+      "height": 170,
+      "color": "2"
     }
   ],
   "edges": [
@@ -4840,6 +5000,125 @@
       "fromNode": "s-t2c",
       "fromSide": "bottom",
       "toNode": "c-jagi",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-1",
+      "fromNode": "n0911-hdr",
+      "fromSide": "right",
+      "toNode": "n0911-wmrl",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-2",
+      "fromNode": "n0911-wmrl",
+      "fromSide": "right",
+      "toNode": "n0911-agrad",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-3",
+      "fromNode": "n0911-agrad",
+      "fromSide": "right",
+      "toNode": "n0911-vs",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-4",
+      "fromNode": "n0911-wmrl",
+      "fromSide": "bottom",
+      "toNode": "n0911-ncp",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-5",
+      "fromNode": "n0911-agrad",
+      "fromSide": "bottom",
+      "toNode": "n0911-u15",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-6",
+      "fromNode": "n0911-vs",
+      "fromSide": "bottom",
+      "toNode": "n0911-sb",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-7",
+      "fromNode": "n0911-hdr",
+      "fromSide": "bottom",
+      "toNode": "n0911-llmwiki",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-8",
+      "fromNode": "n0911-llmwiki",
+      "fromSide": "bottom",
+      "toNode": "n0911-vskills",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-9",
+      "fromNode": "n0911-vskills",
+      "fromSide": "right",
+      "toNode": "n0911-adhd",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-10",
+      "fromNode": "n0911-adhd",
+      "fromSide": "right",
+      "toNode": "n0911-clodds",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-11",
+      "fromNode": "n0911-ncp",
+      "fromSide": "bottom",
+      "toNode": "n0911-danwi",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-12",
+      "fromNode": "n0911-danwi",
+      "fromSide": "bottom",
+      "toNode": "n0911-meta",
+      "toSide": "right"
+    },
+    {
+      "id": "en0911-13",
+      "fromNode": "n0911-vskills",
+      "fromSide": "bottom",
+      "toNode": "n0911-detect",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-14",
+      "fromNode": "n0911-llmwiki",
+      "fromSide": "bottom",
+      "toNode": "n0911-act",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-15",
+      "fromNode": "n0911-agrad",
+      "fromSide": "bottom",
+      "toNode": "n0911-act2",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911-16",
+      "fromNode": "n0911-detect",
+      "fromSide": "right",
+      "toNode": "n0911-act2",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911-17",
+      "fromNode": "cluster-github",
+      "fromSide": "bottom",
+      "toNode": "n0911-hdr",
       "toSide": "top"
     }
   ]

@@ -3,7 +3,7 @@ title: LLM-Wiki
 type: concept
 tags: [knowledge-management, LLM, PKM, wiki, obsidian, agent-skills]
 created: 2026-04-09
-updated: 2026-09-03
+updated: 2026-09-11
 sources: [llm-wiki-karpathy-2026.md, claude-obsidian.md]
 ---
 
@@ -109,3 +109,38 @@ LLM-Wiki는 다르다: LLM이 **영속적 위키를 점진적으로 구축·유�
 
 - [[RAG vs LLM-Wiki]]
 - [[Andrej Karpathy]]
+
+---
+
+## 🔄 2026-09-11 갱신 — **두 번째 완제품 구현체가 나왔고, 볼트의 결측 층을 정확히 짚는다**
+
+> [!insight] [[llm_wiki]] (⭐18,381·GPL-3.0) — 이 패턴의 **앱 단계**
+> 계보가 3단계를 다 채웠다: **프롬프트 규약**([[llm-wiki-karpathy-2026]]) → **패키지**([[claude-obsidian]]) → **완제품 앱**([[llm_wiki]]).
+> PDF·오피스·EPUB·이미지를 2단계 CoT로 인제스트, entity/concept 페이지 자동 생성, Rust 백엔드 챗 에이전트가 로컬 `SKILL.md` 를 읽는다.
+
+> [!warning] 🪞 볼트에 없는 것이 정확히 드러났다 — **그래프를 측정하지 않는다**
+> llm_wiki가 가진 것(README 146~170행 원문):
+> - **4-신호 관련성 모델**: 직접 링크 · 출처 중첩 · **Adamic-Adar ×1.5**(공통 이웃을 이웃 차수로 가중) · **타입 친화도 ×1.0**
+> - **Louvain 커뮤니티 탐지** + **응집도 점수화**: *"intra-edge density (actual edges / possible edges); **low-cohesion clusters (< 0.15) flagged with warning**"*
+> - **예상 밖 관계 탐지**: cross-community edge · cross-type link · 주변↔허브 결합
+>
+> 이 볼트가 가진 것: `grep -rl "\[\[페이지\]\]" | wc -l` → **고아 페이지 카운트 하나.**
+> → 🎯 **소스 1,012개를 쌓는 동안 링크 구조를 한 번도 정량 측정한 적이 없다.**
+> → 내 lint는 **차수 0만 잡는다.** 차수 1짜리 죽은 클러스터, 끊어진 도메인 간 다리, 연결됐어야 하는데 안 된 쌍은 **전부 보이지 않는다.**
+> → **synthesis/ 가 2건뿐인 이유가 이것이다** — 교차 연결을 찾는 절차가 없어서 **사람이 눈으로 볼 때만** 생긴다.
+
+> [!action] 🔴 최우선 — lint를 측정으로 교체
+> 외부 앱 이관은 불필요하다(볼트는 이미 Obsidian 포맷, 에이전트가 직접 쓴다). **알고리즘만 이식**한다. 입력(`[[링크]]` 그래프)은 이미 있다:
+> 1. 인접행렬 추출 (기존 `grep -roh` 재사용)
+> 2. **Adamic-Adar 상위 20쌍** = "연결됐어야 하는데 안 된 쌍" → **synthesis/ 후보 자동 생성**
+> 3. 커뮤니티별 **intra-edge density**, **<0.15 경고** → 죽은 클러스터 탐지
+> → 이것이 [[검사가능성-공사]] 가 요구한 **외부 정답 고정의 6번째 형태 = 자기 그래프의 정량 지표**다. **재료는 다 있고 측정만 없다.**
+
+> [!question] 이식 시 주의
+> 4-신호 **가중치의 근거가 README에 없다**(Adamic-Adar ×1.5, 타입 친화도 ×1.0). 튜닝값인지 임의값인지 불명 → **그대로 베끼지 말고 내 그래프에서 재조정**할 것.
+
+## 관련 페이지 (2026-09-11 추가)
+- [[llm_wiki]]
+- [[검사가능성-공사]]
+- [[단위-불일치]]
+- [[AgentGrad]]

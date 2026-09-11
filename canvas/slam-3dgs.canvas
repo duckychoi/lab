@@ -139,6 +139,46 @@
       "width": "250",
       "height": "160",
       "color": "2"
+    },
+    {
+      "id": "n0911S-sb",
+      "type": "text",
+      "text": "### [2026-09-11] 교차참조\n[[SpatialBlock]] (도메인 `ai-news`)\n실장면 공간QA 라벨의 급소 =\n**외부 인지 모듈 의존으로 노이즈**",
+      "x": -300,
+      "y": 2020,
+      "width": 330,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n0911S-why",
+      "type": "text",
+      "text": "🎯 이 도메인에 특히 아픔\n깊이추정·SLAM으로 라벨을 만들면\n**그 모듈 오차가 라벨에 섞인다**\n→ [[검사가능성-공사]]",
+      "x": 60,
+      "y": 2020,
+      "width": 330,
+      "height": 170,
+      "color": "1"
+    },
+    {
+      "id": "n0911S-how",
+      "type": "text",
+      "text": "우회로: **합성 블록쌓기 15k**\n3D→2D 투영·시점 변환·구조 결합\n+앵커 유도 색 변조\n**정답이 생성 규칙에서 직접 나온다**",
+      "x": 420,
+      "y": 2020,
+      "width": 330,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911S-act",
+      "type": "text",
+      "text": "> [!action]\n공간 라벨을 만들 일이 생기면 먼저 묻기:\n**외부 인지 모듈로 만들 것인가,\n생성 규칙에서 정답이 나오는 합성 과제인가**\n⚠️정량 수치는 초록에 없음",
+      "x": 60,
+      "y": 2220,
+      "width": 330,
+      "height": 180,
+      "color": "2"
     }
   ],
   "edges": [
@@ -218,6 +258,34 @@
       "toNode": "a0909sl-1",
       "fromSide": "right",
       "toSide": "left"
+    },
+    {
+      "id": "en0911S-1",
+      "fromNode": "n0911S-sb",
+      "fromSide": "right",
+      "toNode": "n0911S-why",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911S-2",
+      "fromNode": "n0911S-why",
+      "fromSide": "right",
+      "toNode": "n0911S-how",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911S-3",
+      "fromNode": "n0911S-why",
+      "fromSide": "bottom",
+      "toNode": "n0911S-act",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911S-4",
+      "fromNode": "cluster-slam",
+      "fromSide": "bottom",
+      "toNode": "n0911S-sb",
+      "toSide": "top"
     }
   ]
 }

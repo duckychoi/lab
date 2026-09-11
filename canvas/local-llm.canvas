@@ -299,6 +299,96 @@
       "width": 380,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "n0911L-hdr",
+      "type": "text",
+      "text": "# [2026-09-11] 배치 4건\n**비용을 깎는 3축이 한 배치에**\n가중치 상주 · KV 캐시 · 호출당 지연",
+      "x": -420,
+      "y": 3910,
+      "width": 360,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "n0911L-colibri",
+      "type": "text",
+      "text": "[[colibri]] ⭐27,613→**27,617** Apache-2.0·순수C\nVRAM·RAM·**NVMe를 단일 계층**, 전문가 디스크 스트리밍\nGLM-5.2 744B: 상주 **9.9GB**/디스크 ~370GB\n⚠️6×5090서도 5.8~6.8 tok/s·TTFT 13s / 25GB박스 **0.05**",
+      "x": -20,
+      "y": 3910,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n0911L-ds",
+      "type": "text",
+      "text": "[[DeepSeek-V4.1-Flash]] DL**6**/♥1,583 MIT\n552B백본·1M·멀티모달 / CED: 프리필8B·디코딩16B\nCSA2+FP4 KV → **토큰당 890바이트**(V1 대비 437배↓)\n⚠️TB2.1 90.6(1위) ↔ **TB4.0 31.2**(Opus 51.8)",
+      "x": -20,
+      "y": 4110,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n0911L-mini",
+      "type": "text",
+      "text": "[[Nex-N2.5-mini]] DL**2,444**/♥667 · 35B\n*비전=입력 아닌 **환경 인지·검증 인터페이스***\n**BrowseComp 83.4**(397B Pro 89.7에 6.3차)\n↔ SWE-Bench Pro 43.8 — 체급이 축마다 다르게 먹힌다",
+      "x": -20,
+      "y": 4310,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n0911L-pro",
+      "type": "text",
+      "text": "[[Nex-N2.5-Pro]] DL**3**/♥589 · 397B\n🔥**이 배치 최대 발견**\nOSWorld-2: Max(1.6T 텍스트기반) **22.3**\n< Pro(397B 멀티모달기반) **56.4** = 34.1점차",
+      "x": -20,
+      "y": 4510,
+      "width": 420,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0911L-axis",
+      "type": "text",
+      "text": "⇒ **기반이 크기를 이긴다**\n같은 날 [[WMRL]]: 4B·9B가 48B·120B 상회\n**두 독립 증거가 같은 방향**\n→ [[에이전트축-분기]]",
+      "x": 440,
+      "y": 4510,
+      "width": 360,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0911L-danwi",
+      "type": "text",
+      "text": "🆕[[단위-불일치]] — 이 배치 공통 주제\n공용카드 md5 동일 · 552B↔763B(Engram 196B)\n총≠활성(Nex 둘 다 미기재)\n`pipeline_tag` 자기모순",
+      "x": 440,
+      "y": 4110,
+      "width": 360,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n0911L-metric",
+      "type": "text",
+      "text": "⚠️ **지표의 적용 조건**\n\"♥=기대치·DL=실사용\"(09-10)이 **무효**\nDL 6·3은 공개당일+763B/397B 탓\n⇒ DL은 **모델 크기와 교란**, 동급끼리만 비교",
+      "x": 440,
+      "y": 4310,
+      "width": 360,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0911L-act",
+      "type": "text",
+      "text": "> [!action]\n**모델 선택 기준에 KV 바이트/토큰 추가**\n+ [[Nex-N2.5-mini]] BrowseComp 로컬 재현\n(①비전 입력 실동작 ②벤치 밖 유지 확인)",
+      "x": 440,
+      "y": 3910,
+      "width": 360,
+      "height": 170,
+      "color": "2"
     }
   ],
   "edges": [
@@ -514,6 +604,69 @@
       "fromNode": "m-qwopus",
       "fromSide": "bottom",
       "toNode": "a-llm-ab",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-1",
+      "fromNode": "n0911L-hdr",
+      "fromSide": "right",
+      "toNode": "n0911L-colibri",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-2",
+      "fromNode": "n0911L-colibri",
+      "fromSide": "bottom",
+      "toNode": "n0911L-ds",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-3",
+      "fromNode": "n0911L-ds",
+      "fromSide": "bottom",
+      "toNode": "n0911L-mini",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-4",
+      "fromNode": "n0911L-mini",
+      "fromSide": "bottom",
+      "toNode": "n0911L-pro",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-5",
+      "fromNode": "n0911L-pro",
+      "fromSide": "right",
+      "toNode": "n0911L-axis",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-6",
+      "fromNode": "n0911L-ds",
+      "fromSide": "right",
+      "toNode": "n0911L-danwi",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-7",
+      "fromNode": "n0911L-mini",
+      "fromSide": "right",
+      "toNode": "n0911L-metric",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-8",
+      "fromNode": "n0911L-colibri",
+      "fromSide": "right",
+      "toNode": "n0911L-act",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-9",
+      "fromNode": "cluster-models",
+      "fromSide": "bottom",
+      "toNode": "n0911L-hdr",
       "toSide": "top"
     }
   ]

@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-09-09
+updated: 2026-09-11
 sources: [WorldSculpt.md, Marigold-V2.md]
 ---
 
@@ -160,3 +160,30 @@ _소스 ingest 시 자동 누적_
 > [!question] 미확인
 > **fps 수치가 논문에 없다.** 1-step + 양자화로 "cheap to run"이라 주장하지만 **30fps+ 실시간 가능 여부는 판정 불가** — DiT 백본 크기가 지배할 것으로 보인다. 실측 필요.
 
+---
+
+## [2026-09-11] 교차 참조 — [[SpatialBlock]] (도메인은 `ai-news`, 축은 여기)
+
+> [!note] 도메인 판정 기록
+> raw는 `ai-news` 로 보냈고 볼트도 **`ai-news` 유지**로 판정했다. 근거: 이 논문은 **재구성 파이프라인이 아니라 LVLM 학습 데이터셋**이라, 이 도메인 템플릿(실시간성·카메라 파이프라인·재구성 SOTA)에 답할 항목이 거의 없다.
+> 2026-09-10 [[Pascal-Editor]] 판정(*"slam-3dgs는 깊이추정·재구성 계열"*)과 **일관된 기준 적용**이다.
+> 다만 주제가 이 도메인의 관심사와 직결되므로 **교차 참조를 남긴다.**
+
+> [!insight] 이 도메인에 주는 함의 — **공간지능 학습에 실데이터가 필수가 아닐 수 있다**
+> [[SpatialBlock]] 초록이 지적하는 기존 방식의 문제:
+> *"constructing such labels is **costly, time-consuming, and often noisy due to reliance on external perception modules**"*
+> → 🎯 **②가 이 도메인에 특히 아프다.** 실장면 공간 QA 라벨을 만들 때 **깊이추정·SLAM 같은 외부 인지 모듈**을 쓰는데, 그 모듈의 오차가 **라벨에 그대로 섞인다.** 정답을 만드는 도구가 피학습자와 같은 실패 모드를 갖는 구조 → [[검사가능성-공사]].
+> 우회로: **합성 블록쌓기 15,000문제**(3D→2D 투영 · 시점 변환 · 구조 결합 + 앵커 추론 유도용 통제 색 변조). **정답이 생성 규칙에서 직접 나오므로 인지 모듈이 개입할 여지가 없다.**
+> 결과: *"**generalize to real-world spatial tasks, despite the dataset's synthetic and compact nature**"* — 직답 학습·추론기반 학습 **둘 다** 효과(견고성 신호).
+
+> [!warning] 정량 수치 부재
+> "significantly outperform"이라는 정성 서술뿐, **벤치 점수가 초록에 없다.** 저자 3명·업보트 35의 소규모 논문. 코드·데이터는 공개(github.com/rsoohyun/SpatialBlock)되어 **검증 가능하나 미검증**.
+
+> [!action] 이 도메인 관점의 액션
+> 공간 인지 라벨을 만들 일이 생기면 **"외부 인지 모듈로 라벨을 만들 것인가, 정답이 생성 규칙에서 나오는 합성 과제를 만들 것인가"** 를 먼저 묻는다. 후자가 가능하면 **비용과 오염을 동시에 없앤다.**
+
+## 관련 페이지
+- [[SpatialBlock]]
+- [[검사가능성-공사]]
+- [[임바디드-AI]]
+- [[Pascal-Editor]]
