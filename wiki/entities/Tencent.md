@@ -44,3 +44,28 @@ reliability: high
 ## 원본
 - 대표 레포: https://github.com/TencentCloud/CubeSandbox
 - 신뢰도: ⭐⭐⭐⭐ (빅테크·다수 오픈 릴리스)
+
+---
+
+## 🔄 2026-09-12 — [[WeKnora]] ⭐22,480, 그리고 **라이선스 관행이 벤더 규칙이 됐다**
+
+> [!insight] [[WeKnora]] — 문서를 RAG·에이전트·**자가유지 위키** 3출구로
+> ⭐**22,480** · fork **3,231** · **Go** · created 2025-07-22 · 당일 푸시 · 이슈 746(2026-09-12 API 실호출).
+> **Wiki Mode 가 핵심이다** — *"agents distill raw documents into a **self-maintaining, interlinked markdown knowledge base** with an interactive knowledge graph, complete with manual editing, **revision history and one-click rollback**."*
+> v0.5.0 GA → v0.5.2 **4만 문서 확장** → v0.7.2 **행 단위 diff + 롤백**.
+> → 🎯 **[[LLM-Wiki]] 패턴이 개인 도구에서 기업 인프라로 넘어간 지점**이고, **이 볼트에 없는 리비전·롤백을 갖고 있다.**
+> v0.8.0은 에이전트 실행 층을 두껍게 했다 — 세션 지속 **Docker / E2B / Cube 스킬 샌드박스**(Local 호스트 프로세스 백엔드는 **제거**), 테넌트 스킬 카탈로그, **교차세션 장기기억**(profile/preference/fact/task/interest + `search_memory`) → [[에이전트-메모리-레이어]].
+> 💡 **v0.3.0에 Korean i18n** 이 이미 들어와 있다.
+
+> [!warning] 🔴 벤더 규칙 승격 — Tencent 레포의 `NOASSERTION` 은 형식의 부작용이다
+> **3일간 같은 일이 두 번 났다**: 09-10 [[teamai-cli]] · 09-12 [[WeKnora]] — **둘 다 API `spdx_id: NOASSERTION` 인데 실제로는 MIT.**
+> 원인이 구조적이다: Tencent는 **서드파티 고지를 LICENSE 파일에 합친다.** WeKnora LICENSE는 **158,420B**이고 MIT 선언은 **8행**에 있다(볼트 실측). 파서가 표준 MIT 텍스트로 인식하지 못한다.
+> → 🎯 **규칙: Tencent 레포의 `NOASSERTION` 은 제약 신호로 읽지 말고, LICENSE 본문 앞부분(8행 근처)을 먼저 확인한다.** → [[파생표기-함정]]
+> ⚠️ 단 **서드파티 컴포넌트는 별도 라이선스**(Apache-2.0 등) — 부분 재사용 시 `THIRD_PARTY_NOTICES.md`·`licenses/` 확인 필요.
+
+## 관련 페이지 (2026-09-12 추가)
+- [[WeKnora]]
+- [[LLM-Wiki]]
+- [[teamai-cli]]
+- [[파생표기-함정]]
+- [[에이전트-메모리-레이어]]

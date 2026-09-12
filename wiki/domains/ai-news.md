@@ -2830,3 +2830,56 @@ raw는 *"중복 0건"* 이라 보고했으나 **[[vercel-skills]] 가 이미 있
 > - [[vercel-skills]] 에이전트 수 **79 vs 78** — 같은 README의 두 자동생성 블록이 모순. **어느 원문이 상위인지 정하는 규칙 없음**
 > - [[SpatialBlock]] "significantly outperform"의 **정량 수치 부재** — 코드 공개돼 있으므로 확인 가능
 > - [[DeepSeek-V4.1-Flash]] **TB 2.1(90.6) → TB 4.0(31.2) 붕괴 원인** — 컨텍스트 압축 탓인지 학습 시점 탓인지 카드로 구분 불가
+
+---
+
+## 🔄 2026-09-12 배치 — 11건 편입 (GitHub 5 · HF논문 5 · HF모델 1) + local-llm 이관 2
+
+> [!insight] 🎯 배치 결론 한 줄 — **오늘 소스들은 「무엇을 만들었나」보다 「그것이 맞는지 누가 검사하나」를 말한다**
+> ([[i-have-adhd]] 규칙 적용: 결론을 맨 앞에)
+> - [[SWE-Bench-Pro-Verified]] — 표준 벤치가 **유출·리워드 해킹으로 오염**됐고, 교정하니 일부 모델 점수가 **크게 떨어졌다**
+> - [[T1]] — 그래서 학습 코퍼스를 벤치와 **분리했다고 선제 방어**(단 자기 신고)
+> - [[hyperresearch]] — 리포트 출고 전 **인용·철회·수치 정합성을 기계가 검사**하고 통과 못 하면 막는다
+> - [[EvoSafeHarness]] — 보안 규칙을 전문가가 한 번 쓰지 않고 **탐색으로 합성**한다(벤치 특화 규칙은 적대적 리뷰로 거른다)
+> - [[VibeVoice-ASR-Streaming-7B]]·[[Mi-Ripple]]·[[YuE2-3B]] — 반대편. **수치가 없거나(2,236B 카드) · 표본이 1건이거나 · 비교군을 골랐다**
+> → **한 배치 안에서 "검사를 설계한 쪽"과 "검사를 생략한 쪽"이 선명하게 갈렸다.** 이것이 오늘의 축이다.
+
+### 🔴 이 볼트에 직접 꽂힌 것 — [[LLM-Wiki]] 패턴 구현체가 하루에 둘
+[[hyperresearch]](파이프라인 결합형 · ⭐2,858 · MIT)와 [[WeKnora]](기업 플랫폼형 · ⭐22,480 · Tencent · MIT)가 **같은 날** 들어왔다. 09-11 [[llm_wiki]] 까지 합치면 **3일 안에 앱형·파이프라인형·플랫폼형이 전부 출현**했다.
+그리고 둘 다 **볼트에 없는 것**을 갖고 있다:
+- hyperresearch → **출고 전 검증 배터리 6종**(quote-integrity · retracted-citations · numeric-consistency · cite-check · locus coverage · patch-only 툴 잠금)
+- WeKnora → **위키 리비전 히스토리 + 행 단위 diff + 원클릭 롤백**, 4만 문서 규모
+
+→ 🎯 **볼트의 만성 지적 3개**([[검사가능성-공사]] · [[llm_wiki]] 그래프 미측정 · [[i-have-adhd]] 자기 산출물 미검사)가 **「출고 전 자동 검사 0개」라는 한 문장으로 합쳐졌다.**
+→ **최우선 개입은 quote-integrity 1개**([[AgentGrad]] 순차 원칙). 나머지는 대기열.
+
+### 🔴 raw 판정 검토 — 개선 요청은 성공, 그러나 오류 위치가 또 바뀌었다
+**✅ 09-11에 요청한 단 하나가 작동했다.** 중복 검사 대조 대상을 `raw.md` → `wiki/sources/` 로 교체한 결과:
+- raw 자기보고: 후보 57건 중 **42건이 기존 인제스트로 탐지되어 제외**
+- 볼트 검증: 남은 13건 **전량 URL 대조 → 기존 페이지 0건 확인**(구 방식으론 한 건도 못 잡았을 건들)
+- 그리고 [[MiniCPM5-2B-GGUF]] 를 *"이미 인제스트된 [[MiniCPM5-2B]] 의 양자화 변형"* 이라고 **정확히 자기 신고**
+→ **09-11 판정 기준**(*"중복이 실제로 존재하는 배치에서 raw가 그것을 표시했는가"*) **충족.**
+
+**🔴 그런데 새 오류 유형이 나왔다 — 수치도 라이선스도 아니고 「조건절」이다.** 3건:
+1. [[hyperresearch]] — *"benchmarked internally"* 를 인용했으나 **6행 아래 "stratified pilot 에서의 forward-looking projection · 제3자 검증 대기"** 를 놓쳤다 → 주장을 **강하게** 만듦
+2. [[OpenResearch]] — *"support is still in beta"* 의 주어가 **「Windows 지원」인데 제품 전체로 확대** → 주장을 **약하게** 만듦
+3. [[MiniCPM5-2B-GGUF]] — 관계는 잡았으나 **BF16 원본 벤치 수치를 양자화 리포에 귀속**
+→ 신규 개념 **[[한정어-탈락]]** 으로 승격. 처방이 [[파생표기-함정]]·[[단위-불일치]] 와 다르기 때문이다 — **원문 대조로는 안 잡힌다.** 인용문이 원문에 실제로 있다.
+
+### 볼트가 추가로 실측한 것 (raw 미기록)
+- [[VibeVoice-ASR-Streaming-7B]] **safetensors 8.67B vs 이름 7B**(+24%) → [[단위-불일치]] ② 재현
+- [[YuE2-3B]] 실제 2위는 **Mureka 9(6.9377)**, 격차 **0.0255**(raw가 인용한 Suno v5 격차의 1/3.6). 게다가 **Q3O·PER은 진다**
+- [[EvoSafeHarness]] **AgentDyn 무수정 전이** · 15셀 중 14셀 최고 — 과적합 반론에 대한 직접 답인데 누락돼 있었다
+- [[X-AuT]] **1.7B 교사 5.55% vs 자기증류 8.45%** · **점진 5.75% vs 직접 6.73%** — 논문 제목의 "Progressive"를 정당화하는 유일한 근거
+- [[MathModelAgent]] **LICENSE 파일 부재 확정**(루트 14파일 실조회) + **Windows 인스톨러 코드 미서명**
+
+### 라이선스 관측
+- 🔴 [[MathModelAgent]] `license: null` + **LICENSE 파일 없음** → **저작권 유보 확정.** `NOASSERTION`(판정 유보)과 **반대로 취급**해야 한다
+- ✅ [[WeKnora]] `NOASSERTION` → 본문 8행 **MIT**. [[Tencent]] 에서 **3일 새 두 번째**([[teamai-cli]]) → **벤더 규칙 승격**
+- 🔴 [[YuE2-3B]] **CC BY-NC 4.0** — 상업 이용 불가. 09-02 [[academic-research-skills]] 이후 NC 반복
+
+### 벤치마크 앵커 등록 (앞으로 이 수치를 기준선으로 쓴다)
+- **Terminal-Bench 2.1**: 베이스 43.8 → [[T1]] 64.0 / **Long-Horizon Terminal Bench**: T1 27.9 (GPT-5.4·GLM-5.1 상회)
+- **DecodingTrust-Agent** ASR 45.6 → 10.0 / **AgentDojo** ASR 0.0에서 유틸 82.8 ([[EvoSafeHarness]])
+- **WildSongBench**(192 프롬프트): YuE2 Bo8 6.9632 · Mureka 9 6.9377 · Suno v5 6.8721
+- ⚠️ **SWE-bench 계열은 변종을 병기할 것** — 원조 / Verified / Pro / **Pro Verified** / Science 는 서로 다른 벤치다
