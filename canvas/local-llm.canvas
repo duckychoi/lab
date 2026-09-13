@@ -1,799 +1,884 @@
 {
- "nodes": [
-  {
-   "id": "domain-hub",
-   "type": "text",
-   "text": "# Local/Edge LLM\n\n목표: 경량 모델 실배포 + 에이전트 메모리\n\n[[local-llm]]",
-   "x": -100,
-   "y": -60,
-   "width": 240,
-   "height": 120,
-   "color": "2"
-  },
-  {
-   "id": "cluster-models",
-   "type": "text",
-   "text": "## 모델들\n\n_HuggingFace 기준 신뢰_",
-   "x": -400,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "5"
-  },
-  {
-   "id": "cluster-memory",
-   "type": "text",
-   "text": "## 메모리 아키텍처\n\n_RAG, KV-Cache, 압축 등_",
-   "x": -100,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "3"
-  },
-  {
-   "id": "cluster-hermes",
-   "type": "text",
-   "text": "## Hermes 적용\n\n_ChinameBot 직접 연동 가능한 것_",
-   "x": 200,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "s-latentpress",
-   "type": "text",
-   "text": "# LatentPress\n\n**6번째 메모리 축**: 연속 잠재 메모리\n동결 디코더가 임베딩으로 직접 읽음\nLongMemEval **0.504@7.7배 > 원문 0.490**\n어댑터 4.2~26.2M (~0.1%)\n⚠️ reader-matched 결박\n\n[[LatentPress]]",
-   "x": -500,
-   "y": 550,
-   "width": 320,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "s-minima",
-   "type": "text",
-   "text": "# Minima\n\n496개 선형층 전부 NVFP4 W4A4\nBF16 동등(-0.52) · **17.5 GiB**\n🔬 **게이트가 가장 덜 민감**(통념 반전)\nGEMM 11% → 출력 2%\n\n[[Minima]]",
-   "x": -150,
-   "y": 550,
-   "width": 320,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "s-gsqrco",
-   "type": "text",
-   "text": "# Qwen3.8-27B-GSQ-RCO-GGUF ⭐\n\nIQ3_S **11.8GB**(4.6배 축소)\nAIME25 100.00·LCB 85.71 = BF16\n**카드 내 제3자 대조표 보유**\n\n[[Qwen3.8-27B-GSQ-RCO-GGUF]]",
-   "x": 200,
-   "y": 550,
-   "width": 320,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "s-flashnext-gguf",
-   "type": "text",
-   "text": "# Qwen3.8-Flash-Next-GGUF\n\nMTP 1.3~1.7배 주장\n⚠️ **카드에 벤치 표 없음**\n⚠️ 라이선스 `other`\n\n[[Qwen3.8-Flash-Next-GGUF]]",
-   "x": 550,
-   "y": 550,
-   "width": 320,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "c-mem-6axis",
-   "type": "text",
-   "text": "# 에이전트-메모리-레이어\n\n**6축으로 확장**\nRAG·KV·압축·외부DB\n·선택적 비독해·**연속 잠재**\n\n[[에이전트-메모리-레이어]]",
-   "x": -500,
-   "y": 790,
-   "width": 320,
-   "height": 200,
-   "color": "6"
-  },
-  {
-   "id": "a-gsqrco-run",
-   "type": "text",
-   "text": "# ACTION 높음\nIQ3_S 11.8GB 로컬 실행 + tok/s 측정\n\n⚠️ AIME25 100.00 포화 검증",
-   "x": -150,
-   "y": 790,
-   "width": 320,
-   "height": 200,
-   "color": "2"
-  },
-  {
-   "id": "ll-0907",
-   "type": "text",
-   "text": "# 📦 2026-09-07\n\n재분류 3건 + 관련 1건",
-   "x": -100,
-   "y": 1190,
-   "width": 260,
-   "height": 100,
-   "color": "4"
-  },
-  {
-   "id": "ll-drop",
-   "type": "text",
-   "text": "## [[Dont-Drop-Dropout]]\n2609.05275 · 업8\n\n**중복성 3번째 층: 깊이**\n학습 FLOPs **-25%**\n추론 **1.5배**(early exit)\n→ 중복성은 **심을 수 있다**\n⚠️ Cerebras CS-3 단독",
-   "x": -500,
-   "y": 1370,
-   "width": 300,
-   "height": 200,
-   "color": "6"
-  },
-  {
-   "id": "ll-tiel",
-   "type": "text",
-   "text": "## [[Tiel-Coder-35B-A3B-GGUF]]\nDL 238,588 · MIT · 22GB\n\nSWE-Live **12/25**=Opus4.6\n중앙 **8.6분**(27B는 50.2분)\n✅ **통제군 보유**(재배포자 첫)\n🔴 n=25 · 자체측정",
-   "x": -150,
-   "y": 1370,
-   "width": 300,
-   "height": 200,
-   "color": "2"
-  },
-  {
-   "id": "ll-huihui",
-   "type": "text",
-   "text": "## [[Huihui-...-abliterated-GGUF]]\nDL **2,194,861**(배치 최대)\n\n🔴 **벤치마크 전무**\n저자: *crude PoC*\n⚠️ Q2_K_L > Q3_K 가능\n**DL은 수요이지 성능 아님**",
-   "x": 200,
-   "y": 1370,
-   "width": 300,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "ll-whis",
-   "type": "text",
-   "text": "## [[openwhispr]]\n⭐7,664\n\n온디바이스 STT\n런타임 배포 정책이\n**기능을 결정**",
-   "x": 550,
-   "y": 1370,
-   "width": 300,
-   "height": 200,
-   "color": "5"
-  },
-  {
-   "id": "l0908-uno",
-   "type": "text",
-   "text": "## [[Uno]] 논문 (업 19)\n\n**draft 모델 불필요** → VRAM 절약\n최대 3배 · 무손실 주장\n8B > 26B DiffusionGemma\n**코드·체크포인트 공개**\n\n→ 볼트가 직접 검증 가능한\n이 배치 **유일** 논문",
-   "x": -330,
-   "y": 1690,
-   "width": 340,
-   "height": 250,
-   "color": "4"
-  },
-  {
-   "id": "l0908-davidau",
-   "type": "text",
-   "text": "## [[DavidAU-Qwen3.8-27B-TURBO]]\nDL 348,753 · GGUF · Apache-2.0\n\n🔴 ARC +144 **자체측정만**\n🔴 `pipeline_tag` **오등록**\n🔴 베이스 = 자기 리포\n\nHermes 적용 **권장 안 함**",
-   "x": 50,
-   "y": 1690,
-   "width": 340,
-   "height": 250,
-   "color": "1"
-  },
-  {
-   "id": "l0908-rule",
-   "type": "text",
-   "text": "# 🔧 재배포자 층 인용 기준 (신설)\n\n**통제군 · 프로토콜 · 자기열세공개**\n중 **2개 이상** → 🟡 조건부 인용\n미만 → 🔴 인용 금지\n\n[[Tiel-Coder-35B-A3B-GGUF]] = 🟡\n[[DavidAU-Qwen3.8-27B-TURBO]] = 🔴\n\n+ `pipeline_tag` 를 성격 판정에 쓰지 않는다",
-   "x": -140,
-   "y": 1980,
-   "width": 480,
-   "height": 240,
-   "color": "3"
-  },
-  {
-   "id": "l0908-mtp",
-   "type": "text",
-   "text": "## 📌 같은 발상, 두 층\n\n[[Uno]] 병렬 토큰(논문)\n[[DavidAU-Qwen3.8-27B-TURBO]] MTP 양자화(배포)\n\n*\"토큰을 여러 개 한꺼번에\"* 가\n논문층·배포층에서 **동시 관측**",
-   "x": 390,
-   "y": 1980,
-   "width": 360,
-   "height": 240,
-   "color": "6"
-  },
-  {
-   "id": "b0909-ll",
-   "type": "text",
-   "text": "# 2026-09-09 배치\n\n병목 이동 + 축 분기",
-   "x": "-100",
-   "y": "2440",
-   "width": "260",
-   "height": "110",
-   "color": "4"
-  },
-  {
-   "id": "s0909ll-k3c",
-   "type": "text",
-   "text": "### kimi-k3-in-c\n⭐7,224·C99 176KB\n🎯**병목=RAM❌ 스토리지 1.7TB**\n8GB 26.5s → 128GB+ 5.6s (4.7배)\n출력 **byte-identical**\n[[kimi-k3-in-c]]",
-   "x": "-560",
-   "y": "2640",
-   "width": "250",
-   "height": "170",
-   "color": "5"
-  },
-  {
-   "id": "s0909ll-spk",
-   "type": "text",
-   "text": "### Spark-X2.5-4B\nDL 10,661·HF 트렌딩 1위\n4B **네이티브 1M**(full1+SWA3)\nBrowseComp 40.9 vs 9B 8.3\n🔴GPQA 67.4 vs 77.2\n[[Spark-X2.5-4B]]",
-   "x": "-280",
-   "y": "2640",
-   "width": "250",
-   "height": "170",
-   "color": "5"
-  },
-  {
-   "id": "s0909ll-k2h",
-   "type": "text",
-   "text": "### K2-Horizon-MoVA-36B-A4B\nDL 3,205·활성 4B MoE+MoVA\nTerminal-Bench 58.6 vs 550B 53.9\n🔴코드·체크포인트 예고만\n[[K2-Horizon-MoVA-36B-A4B]]",
-   "x": "0",
-   "y": "2640",
-   "width": "250",
-   "height": "170",
-   "color": "5"
-  },
-  {
-   "id": "k0909ll-axd",
-   "type": "text",
-   "text": "### 에이전트축 분기\n**\"찾아오는 것\"에 이기고\n\"아는 것\"에 진다**\n⚠️2모델·자체보고 → medium\n[[에이전트축-분기]]",
-   "x": "-140",
-   "y": "2870",
-   "width": "250",
-   "height": "150",
-   "color": "6"
-  },
-  {
-   "id": "hub-llm-0910",
-   "type": "text",
-   "text": "## 2026-09-10 배치\n**local-llm 3건**\n밀집소형 · 양자화 · 속도 파인튜닝\n🎯 실사용비율(다운로드/♥)이 신뢰도를 가름",
-   "x": -100,
-   "y": 3140,
-   "width": 400,
-   "height": 160,
-   "color": "1"
-  },
-  {
-   "id": "m-minicpm",
-   "type": "text",
-   "text": "[[MiniCPM5-2B]]\n밀집2B가 4B급 5종 평균 상회(53.9)\nSWE-V 46.4 · NoLiMa 68.1\n⚠️ IFEval 86.7 — 2.6B에도 짐\n🔴 승리축=자체측정 상관\n비율 2.9:1 (검증 없음)",
-   "x": -640,
-   "y": 3370,
-   "width": 400,
-   "height": 190,
-   "color": "5"
-  },
-  {
-   "id": "m-nvfp4",
-   "type": "text",
-   "text": "[[Qwen3.8-Flash-Next-NVFP4]]\n4비트가 9개 중 5개서 FP8 상회\n최대상승 +2.5 / 최대하락 −0.7\n🎯 표는 FP8 볼드로 강조\n비율 142:1",
-   "x": -200,
-   "y": 3370,
-   "width": 400,
-   "height": 190,
-   "color": "5"
-  },
-  {
-   "id": "m-qwopus",
-   "type": "text",
-   "text": "[[Qwopus3.8-27B-Flash-GGUF]]\n능력 아닌 '지연'을 산 파인튜닝\n+12.8% tok/s · MTP +14.6pp\n↔ MMLU-Pro −1.45pp\n🔴 볼트발견: 멀티모달\n비율 644:1 🔥 최다 실사용",
-   "x": 240,
-   "y": 3370,
-   "width": 400,
-   "height": 190,
-   "color": "5"
-  },
-  {
-   "id": "c-llm-bunki",
-   "type": "text",
-   "text": "[[에이전트축-분기]]\n**3번째 재현** — 2점 규칙 조건부 해제\nSpark-X2.5-4B · K2-Horizon · MiniCPM5-2B\n⚠️ 셋 다 자체보고 → medium 유지",
-   "x": -420,
-   "y": 3610,
-   "width": 440,
-   "height": 150,
-   "color": "6"
-  },
-  {
-   "id": "a-llm-ab",
-   "type": "text",
-   "text": "[[Qwopus3.8-27B-Flash-GGUF]] A/B\n벽시계 시간 측정\n+ Python 들여쓰기 결함 확인\n+ 비전 입력 실측",
-   "x": 120,
-   "y": 3610,
-   "width": 380,
-   "height": 150,
-   "color": "2"
-  },
-  {
-   "id": "n0911L-hdr",
-   "type": "text",
-   "text": "# [2026-09-11] 배치 4건\n**비용을 깎는 3축이 한 배치에**\n가중치 상주 · KV 캐시 · 호출당 지연",
-   "x": -420,
-   "y": 3910,
-   "width": 360,
-   "height": 160,
-   "color": "1"
-  },
-  {
-   "id": "n0911L-colibri",
-   "type": "text",
-   "text": "[[colibri]] ⭐27,613→**27,617** Apache-2.0·순수C\nVRAM·RAM·**NVMe를 단일 계층**, 전문가 디스크 스트리밍\nGLM-5.2 744B: 상주 **9.9GB**/디스크 ~370GB\n⚠️6×5090서도 5.8~6.8 tok/s·TTFT 13s / 25GB박스 **0.05**",
-   "x": -20,
-   "y": 3910,
-   "width": 420,
-   "height": 180,
-   "color": "5"
-  },
-  {
-   "id": "n0911L-ds",
-   "type": "text",
-   "text": "[[DeepSeek-V4.1-Flash]] DL**6**/♥1,583 MIT\n552B백본·1M·멀티모달 / CED: 프리필8B·디코딩16B\nCSA2+FP4 KV → **토큰당 890바이트**(V1 대비 437배↓)\n⚠️TB2.1 90.6(1위) ↔ **TB4.0 31.2**(Opus 51.8)",
-   "x": -20,
-   "y": 4110,
-   "width": 420,
-   "height": 180,
-   "color": "5"
-  },
-  {
-   "id": "n0911L-mini",
-   "type": "text",
-   "text": "[[Nex-N2.5-mini]] DL**2,444**/♥667 · 35B\n*비전=입력 아닌 **환경 인지·검증 인터페이스***\n**BrowseComp 83.4**(397B Pro 89.7에 6.3차)\n↔ SWE-Bench Pro 43.8 — 체급이 축마다 다르게 먹힌다",
-   "x": -20,
-   "y": 4310,
-   "width": 420,
-   "height": 180,
-   "color": "5"
-  },
-  {
-   "id": "n0911L-pro",
-   "type": "text",
-   "text": "[[Nex-N2.5-Pro]] DL**3**/♥589 · 397B\n🔥**이 배치 최대 발견**\nOSWorld-2: Max(1.6T 텍스트기반) **22.3**\n< Pro(397B 멀티모달기반) **56.4** = 34.1점차",
-   "x": -20,
-   "y": 4510,
-   "width": 420,
-   "height": 180,
-   "color": "1"
-  },
-  {
-   "id": "n0911L-axis",
-   "type": "text",
-   "text": "⇒ **기반이 크기를 이긴다**\n같은 날 [[WMRL]]: 4B·9B가 48B·120B 상회\n**두 독립 증거가 같은 방향**\n→ [[에이전트축-분기]]",
-   "x": 440,
-   "y": 4510,
-   "width": 360,
-   "height": 170,
-   "color": "6"
-  },
-  {
-   "id": "n0911L-danwi",
-   "type": "text",
-   "text": "🆕[[단위-불일치]] — 이 배치 공통 주제\n공용카드 md5 동일 · 552B↔763B(Engram 196B)\n총≠활성(Nex 둘 다 미기재)\n`pipeline_tag` 자기모순",
-   "x": 440,
-   "y": 4110,
-   "width": 360,
-   "height": 180,
-   "color": "6"
-  },
-  {
-   "id": "n0911L-metric",
-   "type": "text",
-   "text": "⚠️ **지표의 적용 조건**\n\"♥=기대치·DL=실사용\"(09-10)이 **무효**\nDL 6·3은 공개당일+763B/397B 탓\n⇒ DL은 **모델 크기와 교란**, 동급끼리만 비교",
-   "x": 440,
-   "y": 4310,
-   "width": 360,
-   "height": 180,
-   "color": "1"
-  },
-  {
-   "id": "n0911L-act",
-   "type": "text",
-   "text": "> [!action]\n**모델 선택 기준에 KV 바이트/토큰 추가**\n+ [[Nex-N2.5-mini]] BrowseComp 로컬 재현\n(①비전 입력 실동작 ②벤치 밖 유지 확인)",
-   "x": 440,
-   "y": 3910,
-   "width": 360,
-   "height": 170,
-   "color": "2"
-  },
-  {
-   "id": "n0912L-hdr",
-   "type": "text",
-   "text": "# 2026-09-12 — 2건 이관 편입\n🎯 **둘 다 \"작게 만드는 것의 대가\"를 수치로 보여준다**",
-   "x": "-180",
-   "y": "4900",
-   "width": "560",
-   "height": "120",
-   "color": "4"
-  },
-  {
-   "id": "n0912L-gguf",
-   "type": "text",
-   "text": "**[[MiniCPM5-2B-GGUF]]** DL **70,755**(30일)\nF16/Q4_K_M/Q8_0 · Apache-2.0 · 2.52B\n🔴 카드가 **원본 BF16 것**(md5 diff 확정)\n→ **4비트 성능 측정치 0**\n⚠️ llama.cpp min_p=0.05 반복출력→**0.0**",
-   "x": "-700",
-   "y": "5080",
-   "width": "380",
-   "height": "200",
-   "color": "2"
-  },
-  {
-   "id": "n0912L-xaut",
-   "type": "text",
-   "text": "**[[X-AuT]]** Qwen3-ASR-0.6B\n18→**16층 5.61%→5.27%**(개선)\n18→**14층 5.75%**(악화)+20.7% 절감\n교사1.7B 5.55 vs 자기증류 8.45\n점진 5.75 vs **직접 6.73**\n⚠️ single-run · 코드공개 미확인",
-   "x": "-290",
-   "y": "5080",
-   "width": "380",
-   "height": "200",
-   "color": "2"
-  },
-  {
-   "id": "n0912L-vibe",
-   "type": "text",
-   "text": "[[VibeVoice-ASR-Streaming-7B]] *(교차참조)*\nai-news 유지 · 한국어 지원 MIT\n🔴 이름7B vs **8.67B** → VRAM **17.3GB**\n= 소비자 GPU **경계선**",
-   "x": "120",
-   "y": "5080",
-   "width": "380",
-   "height": "200",
-   "color": "1"
-  },
-  {
-   "id": "n0912L-gap",
-   "type": "text",
-   "text": "🔴 **이 도메인의 반복 구멍**\n오늘 3건 전부 동일:\n· GGUF → 양자화 성능 **없음**\n· VibeVoice → 카드 2,236B **수치 0**\n· X-AuT → **실기기 지연시간 없음**\n🎯 **카드는 벤치는 주고 배치수치는 안 준다**",
-   "x": "530",
-   "y": "5080",
-   "width": "380",
-   "height": "200",
-   "color": "1"
-  },
-  {
-   "id": "n0912L-act",
-   "type": "text",
-   "text": "> [!action] 가장 싼 실험\n**Q4_K_M vs F16, 프롬프트 20개,\n지시이행 실패율만** 비교\n(원본이 이미 지는 축 하나만)\n= 볼트가 \"수치없다\"고 쓴 자리에\n**직접 수치를 만드는 첫 사례**",
-   "x": "-180",
-   "y": "5320",
-   "width": "380",
-   "height": "200",
-   "color": "2"
-  },
-  {
-   "id": "n0912L-dom",
-   "type": "text",
-   "text": "🔀 **도메인 재판정**\nraw `ai-news` → **`local-llm`** 2건\n근거: 09-11 \"온디바이스·자원제약\" 기준\n**양자화판이 원본보다 덜 local일 수 없다**",
-   "x": "240",
-   "y": "5320",
-   "width": "380",
-   "height": "200",
-   "color": "6"
-  }
- ],
- "edges": [
-  {
-   "id": "e1",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-models",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e2",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-memory",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e3",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-hermes",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-domain-hub-s-latentpress",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "s-latentpress",
-   "toSide": "top"
-  },
-  {
-   "id": "e-domain-hub-s-minima",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "s-minima",
-   "toSide": "top"
-  },
-  {
-   "id": "e-domain-hub-s-gsqrco",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "s-gsqrco",
-   "toSide": "top"
-  },
-  {
-   "id": "e-domain-hub-s-flashnext-gguf",
-   "fromNode": "domain-hub",
-   "fromSide": "bottom",
-   "toNode": "s-flashnext-gguf",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-latentpress-c-mem-6axis",
-   "fromNode": "s-latentpress",
-   "fromSide": "bottom",
-   "toNode": "c-mem-6axis",
-   "toSide": "top",
-   "label": "6번째 축"
-  },
-  {
-   "id": "e-s-gsqrco-a-gsqrco-run",
-   "fromNode": "s-gsqrco",
-   "fromSide": "bottom",
-   "toNode": "a-gsqrco-run",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-minima-s-gsqrco",
-   "fromNode": "s-minima",
-   "fromSide": "bottom",
-   "toNode": "s-gsqrco",
-   "toSide": "top",
-   "label": "NVFP4 17.5GB vs GGUF 11.8GB"
-  },
-  {
-   "id": "e-s-gsqrco-s-flashnext-gguf",
-   "fromNode": "s-gsqrco",
-   "fromSide": "bottom",
-   "toNode": "s-flashnext-gguf",
-   "toSide": "top",
-   "label": "우위 주장 반박"
-  },
-  {
-   "id": "e-ll0907",
-   "fromNode": "domain-hub",
-   "toNode": "ll-0907",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-ll-drop",
-   "fromNode": "ll-0907",
-   "toNode": "ll-drop",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-ll-tiel",
-   "fromNode": "ll-0907",
-   "toNode": "ll-tiel",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-ll-huihui",
-   "fromNode": "ll-0907",
-   "toNode": "ll-huihui",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-ll-whis",
-   "fromNode": "ll-0907",
-   "toNode": "ll-whis",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-ll-cmp",
-   "fromNode": "ll-tiel",
-   "toNode": "ll-huihui",
-   "fromSide": "right",
-   "toSide": "left",
-   "label": "근거 격차: 통제군 vs 무측정"
-  },
-  {
-   "id": "el0908-0",
-   "fromNode": "l0908-davidau",
-   "fromSide": "bottom",
-   "toNode": "l0908-rule",
-   "toSide": "top"
-  },
-  {
-   "id": "el0908-1",
-   "fromNode": "l0908-uno",
-   "fromSide": "bottom",
-   "toNode": "l0908-mtp",
-   "toSide": "top"
-  },
-  {
-   "id": "el0908-2",
-   "fromNode": "l0908-davidau",
-   "fromSide": "bottom",
-   "toNode": "l0908-mtp",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909ll-1",
-   "fromNode": "b0909-ll",
-   "toNode": "s0909ll-k3c",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909ll-2",
-   "fromNode": "b0909-ll",
-   "toNode": "s0909ll-spk",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909ll-3",
-   "fromNode": "b0909-ll",
-   "toNode": "s0909ll-k2h",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909ll-4",
-   "fromNode": "s0909ll-spk",
-   "toNode": "k0909ll-axd",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909ll-5",
-   "fromNode": "s0909ll-k2h",
-   "toNode": "k0909ll-axd",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-llm-0910-m-minicpm",
-   "fromNode": "hub-llm-0910",
-   "fromSide": "bottom",
-   "toNode": "m-minicpm",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-llm-0910-m-nvfp4",
-   "fromNode": "hub-llm-0910",
-   "fromSide": "bottom",
-   "toNode": "m-nvfp4",
-   "toSide": "top"
-  },
-  {
-   "id": "e-hub-llm-0910-m-qwopus",
-   "fromNode": "hub-llm-0910",
-   "fromSide": "bottom",
-   "toNode": "m-qwopus",
-   "toSide": "top"
-  },
-  {
-   "id": "e-m-minicpm-c-llm-bunki",
-   "fromNode": "m-minicpm",
-   "fromSide": "bottom",
-   "toNode": "c-llm-bunki",
-   "toSide": "top"
-  },
-  {
-   "id": "e-m-qwopus-a-llm-ab",
-   "fromNode": "m-qwopus",
-   "fromSide": "bottom",
-   "toNode": "a-llm-ab",
-   "toSide": "top"
-  },
-  {
-   "id": "en0911L-1",
-   "fromNode": "n0911L-hdr",
-   "fromSide": "right",
-   "toNode": "n0911L-colibri",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911L-2",
-   "fromNode": "n0911L-colibri",
-   "fromSide": "bottom",
-   "toNode": "n0911L-ds",
-   "toSide": "top"
-  },
-  {
-   "id": "en0911L-3",
-   "fromNode": "n0911L-ds",
-   "fromSide": "bottom",
-   "toNode": "n0911L-mini",
-   "toSide": "top"
-  },
-  {
-   "id": "en0911L-4",
-   "fromNode": "n0911L-mini",
-   "fromSide": "bottom",
-   "toNode": "n0911L-pro",
-   "toSide": "top"
-  },
-  {
-   "id": "en0911L-5",
-   "fromNode": "n0911L-pro",
-   "fromSide": "right",
-   "toNode": "n0911L-axis",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911L-6",
-   "fromNode": "n0911L-ds",
-   "fromSide": "right",
-   "toNode": "n0911L-danwi",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911L-7",
-   "fromNode": "n0911L-mini",
-   "fromSide": "right",
-   "toNode": "n0911L-metric",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911L-8",
-   "fromNode": "n0911L-colibri",
-   "fromSide": "right",
-   "toNode": "n0911L-act",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911L-9",
-   "fromNode": "cluster-models",
-   "fromSide": "bottom",
-   "toNode": "n0911L-hdr",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-0",
-   "fromNode": "n0912L-hdr",
-   "fromSide": "bottom",
-   "toNode": "n0912L-gguf",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-1",
-   "fromNode": "n0912L-hdr",
-   "fromSide": "bottom",
-   "toNode": "n0912L-xaut",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-2",
-   "fromNode": "n0912L-hdr",
-   "fromSide": "bottom",
-   "toNode": "n0912L-vibe",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-3",
-   "fromNode": "n0912L-hdr",
-   "fromSide": "bottom",
-   "toNode": "n0912L-gap",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-a",
-   "fromNode": "n0912L-gguf",
-   "fromSide": "bottom",
-   "toNode": "n0912L-act",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-b",
-   "fromNode": "n0912L-gap",
-   "fromSide": "bottom",
-   "toNode": "n0912L-act",
-   "toSide": "right"
-  },
-  {
-   "id": "e0912L-c",
-   "fromNode": "n0912L-hdr",
-   "fromSide": "bottom",
-   "toNode": "n0912L-dom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0912L-h",
-   "fromNode": "cluster-models",
-   "fromSide": "bottom",
-   "toNode": "n0912L-hdr",
-   "toSide": "top"
-  }
- ]
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# Local/Edge LLM\n\n목표: 경량 모델 실배포 + 에이전트 메모리\n\n[[local-llm]]",
+      "x": -100,
+      "y": -60,
+      "width": 240,
+      "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "cluster-models",
+      "type": "text",
+      "text": "## 모델들\n\n_HuggingFace 기준 신뢰_",
+      "x": -400,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-memory",
+      "type": "text",
+      "text": "## 메모리 아키텍처\n\n_RAG, KV-Cache, 압축 등_",
+      "x": -100,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "cluster-hermes",
+      "type": "text",
+      "text": "## Hermes 적용\n\n_ChinameBot 직접 연동 가능한 것_",
+      "x": 200,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "s-latentpress",
+      "type": "text",
+      "text": "# LatentPress\n\n**6번째 메모리 축**: 연속 잠재 메모리\n동결 디코더가 임베딩으로 직접 읽음\nLongMemEval **0.504@7.7배 > 원문 0.490**\n어댑터 4.2~26.2M (~0.1%)\n⚠️ reader-matched 결박\n\n[[LatentPress]]",
+      "x": -500,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-minima",
+      "type": "text",
+      "text": "# Minima\n\n496개 선형층 전부 NVFP4 W4A4\nBF16 동등(-0.52) · **17.5 GiB**\n🔬 **게이트가 가장 덜 민감**(통념 반전)\nGEMM 11% → 출력 2%\n\n[[Minima]]",
+      "x": -150,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-gsqrco",
+      "type": "text",
+      "text": "# Qwen3.8-27B-GSQ-RCO-GGUF ⭐\n\nIQ3_S **11.8GB**(4.6배 축소)\nAIME25 100.00·LCB 85.71 = BF16\n**카드 내 제3자 대조표 보유**\n\n[[Qwen3.8-27B-GSQ-RCO-GGUF]]",
+      "x": 200,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-flashnext-gguf",
+      "type": "text",
+      "text": "# Qwen3.8-Flash-Next-GGUF\n\nMTP 1.3~1.7배 주장\n⚠️ **카드에 벤치 표 없음**\n⚠️ 라이선스 `other`\n\n[[Qwen3.8-Flash-Next-GGUF]]",
+      "x": 550,
+      "y": 550,
+      "width": 320,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "c-mem-6axis",
+      "type": "text",
+      "text": "# 에이전트-메모리-레이어\n\n**6축으로 확장**\nRAG·KV·압축·외부DB\n·선택적 비독해·**연속 잠재**\n\n[[에이전트-메모리-레이어]]",
+      "x": -500,
+      "y": 790,
+      "width": 320,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "a-gsqrco-run",
+      "type": "text",
+      "text": "# ACTION 높음\nIQ3_S 11.8GB 로컬 실행 + tok/s 측정\n\n⚠️ AIME25 100.00 포화 검증",
+      "x": -150,
+      "y": 790,
+      "width": 320,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "ll-0907",
+      "type": "text",
+      "text": "# 📦 2026-09-07\n\n재분류 3건 + 관련 1건",
+      "x": -100,
+      "y": 1190,
+      "width": 260,
+      "height": 100,
+      "color": "4"
+    },
+    {
+      "id": "ll-drop",
+      "type": "text",
+      "text": "## [[Dont-Drop-Dropout]]\n2609.05275 · 업8\n\n**중복성 3번째 층: 깊이**\n학습 FLOPs **-25%**\n추론 **1.5배**(early exit)\n→ 중복성은 **심을 수 있다**\n⚠️ Cerebras CS-3 단독",
+      "x": -500,
+      "y": 1370,
+      "width": 300,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "ll-tiel",
+      "type": "text",
+      "text": "## [[Tiel-Coder-35B-A3B-GGUF]]\nDL 238,588 · MIT · 22GB\n\nSWE-Live **12/25**=Opus4.6\n중앙 **8.6분**(27B는 50.2분)\n✅ **통제군 보유**(재배포자 첫)\n🔴 n=25 · 자체측정",
+      "x": -150,
+      "y": 1370,
+      "width": 300,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "ll-huihui",
+      "type": "text",
+      "text": "## [[Huihui-...-abliterated-GGUF]]\nDL **2,194,861**(배치 최대)\n\n🔴 **벤치마크 전무**\n저자: *crude PoC*\n⚠️ Q2_K_L > Q3_K 가능\n**DL은 수요이지 성능 아님**",
+      "x": 200,
+      "y": 1370,
+      "width": 300,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "ll-whis",
+      "type": "text",
+      "text": "## [[openwhispr]]\n⭐7,664\n\n온디바이스 STT\n런타임 배포 정책이\n**기능을 결정**",
+      "x": 550,
+      "y": 1370,
+      "width": 300,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "l0908-uno",
+      "type": "text",
+      "text": "## [[Uno]] 논문 (업 19)\n\n**draft 모델 불필요** → VRAM 절약\n최대 3배 · 무손실 주장\n8B > 26B DiffusionGemma\n**코드·체크포인트 공개**\n\n→ 볼트가 직접 검증 가능한\n이 배치 **유일** 논문",
+      "x": -330,
+      "y": 1690,
+      "width": 340,
+      "height": 250,
+      "color": "4"
+    },
+    {
+      "id": "l0908-davidau",
+      "type": "text",
+      "text": "## [[DavidAU-Qwen3.8-27B-TURBO]]\nDL 348,753 · GGUF · Apache-2.0\n\n🔴 ARC +144 **자체측정만**\n🔴 `pipeline_tag` **오등록**\n🔴 베이스 = 자기 리포\n\nHermes 적용 **권장 안 함**",
+      "x": 50,
+      "y": 1690,
+      "width": 340,
+      "height": 250,
+      "color": "1"
+    },
+    {
+      "id": "l0908-rule",
+      "type": "text",
+      "text": "# 🔧 재배포자 층 인용 기준 (신설)\n\n**통제군 · 프로토콜 · 자기열세공개**\n중 **2개 이상** → 🟡 조건부 인용\n미만 → 🔴 인용 금지\n\n[[Tiel-Coder-35B-A3B-GGUF]] = 🟡\n[[DavidAU-Qwen3.8-27B-TURBO]] = 🔴\n\n+ `pipeline_tag` 를 성격 판정에 쓰지 않는다",
+      "x": -140,
+      "y": 1980,
+      "width": 480,
+      "height": 240,
+      "color": "3"
+    },
+    {
+      "id": "l0908-mtp",
+      "type": "text",
+      "text": "## 📌 같은 발상, 두 층\n\n[[Uno]] 병렬 토큰(논문)\n[[DavidAU-Qwen3.8-27B-TURBO]] MTP 양자화(배포)\n\n*\"토큰을 여러 개 한꺼번에\"* 가\n논문층·배포층에서 **동시 관측**",
+      "x": 390,
+      "y": 1980,
+      "width": 360,
+      "height": 240,
+      "color": "6"
+    },
+    {
+      "id": "b0909-ll",
+      "type": "text",
+      "text": "# 2026-09-09 배치\n\n병목 이동 + 축 분기",
+      "x": "-100",
+      "y": "2440",
+      "width": "260",
+      "height": "110",
+      "color": "4"
+    },
+    {
+      "id": "s0909ll-k3c",
+      "type": "text",
+      "text": "### kimi-k3-in-c\n⭐7,224·C99 176KB\n🎯**병목=RAM❌ 스토리지 1.7TB**\n8GB 26.5s → 128GB+ 5.6s (4.7배)\n출력 **byte-identical**\n[[kimi-k3-in-c]]",
+      "x": "-560",
+      "y": "2640",
+      "width": "250",
+      "height": "170",
+      "color": "5"
+    },
+    {
+      "id": "s0909ll-spk",
+      "type": "text",
+      "text": "### Spark-X2.5-4B\nDL 10,661·HF 트렌딩 1위\n4B **네이티브 1M**(full1+SWA3)\nBrowseComp 40.9 vs 9B 8.3\n🔴GPQA 67.4 vs 77.2\n[[Spark-X2.5-4B]]",
+      "x": "-280",
+      "y": "2640",
+      "width": "250",
+      "height": "170",
+      "color": "5"
+    },
+    {
+      "id": "s0909ll-k2h",
+      "type": "text",
+      "text": "### K2-Horizon-MoVA-36B-A4B\nDL 3,205·활성 4B MoE+MoVA\nTerminal-Bench 58.6 vs 550B 53.9\n🔴코드·체크포인트 예고만\n[[K2-Horizon-MoVA-36B-A4B]]",
+      "x": "0",
+      "y": "2640",
+      "width": "250",
+      "height": "170",
+      "color": "5"
+    },
+    {
+      "id": "k0909ll-axd",
+      "type": "text",
+      "text": "### 에이전트축 분기\n**\"찾아오는 것\"에 이기고\n\"아는 것\"에 진다**\n⚠️2모델·자체보고 → medium\n[[에이전트축-분기]]",
+      "x": "-140",
+      "y": "2870",
+      "width": "250",
+      "height": "150",
+      "color": "6"
+    },
+    {
+      "id": "hub-llm-0910",
+      "type": "text",
+      "text": "## 2026-09-10 배치\n**local-llm 3건**\n밀집소형 · 양자화 · 속도 파인튜닝\n🎯 실사용비율(다운로드/♥)이 신뢰도를 가름",
+      "x": -100,
+      "y": 3140,
+      "width": 400,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "m-minicpm",
+      "type": "text",
+      "text": "[[MiniCPM5-2B]]\n밀집2B가 4B급 5종 평균 상회(53.9)\nSWE-V 46.4 · NoLiMa 68.1\n⚠️ IFEval 86.7 — 2.6B에도 짐\n🔴 승리축=자체측정 상관\n비율 2.9:1 (검증 없음)",
+      "x": -640,
+      "y": 3370,
+      "width": 400,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "m-nvfp4",
+      "type": "text",
+      "text": "[[Qwen3.8-Flash-Next-NVFP4]]\n4비트가 9개 중 5개서 FP8 상회\n최대상승 +2.5 / 최대하락 −0.7\n🎯 표는 FP8 볼드로 강조\n비율 142:1",
+      "x": -200,
+      "y": 3370,
+      "width": 400,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "m-qwopus",
+      "type": "text",
+      "text": "[[Qwopus3.8-27B-Flash-GGUF]]\n능력 아닌 '지연'을 산 파인튜닝\n+12.8% tok/s · MTP +14.6pp\n↔ MMLU-Pro −1.45pp\n🔴 볼트발견: 멀티모달\n비율 644:1 🔥 최다 실사용",
+      "x": 240,
+      "y": 3370,
+      "width": 400,
+      "height": 190,
+      "color": "5"
+    },
+    {
+      "id": "c-llm-bunki",
+      "type": "text",
+      "text": "[[에이전트축-분기]]\n**3번째 재현** — 2점 규칙 조건부 해제\nSpark-X2.5-4B · K2-Horizon · MiniCPM5-2B\n⚠️ 셋 다 자체보고 → medium 유지",
+      "x": -420,
+      "y": 3610,
+      "width": 440,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a-llm-ab",
+      "type": "text",
+      "text": "[[Qwopus3.8-27B-Flash-GGUF]] A/B\n벽시계 시간 측정\n+ Python 들여쓰기 결함 확인\n+ 비전 입력 실측",
+      "x": 120,
+      "y": 3610,
+      "width": 380,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "n0911L-hdr",
+      "type": "text",
+      "text": "# [2026-09-11] 배치 4건\n**비용을 깎는 3축이 한 배치에**\n가중치 상주 · KV 캐시 · 호출당 지연",
+      "x": -420,
+      "y": 3910,
+      "width": 360,
+      "height": 160,
+      "color": "1"
+    },
+    {
+      "id": "n0911L-colibri",
+      "type": "text",
+      "text": "[[colibri]] ⭐27,613→**27,617** Apache-2.0·순수C\nVRAM·RAM·**NVMe를 단일 계층**, 전문가 디스크 스트리밍\nGLM-5.2 744B: 상주 **9.9GB**/디스크 ~370GB\n⚠️6×5090서도 5.8~6.8 tok/s·TTFT 13s / 25GB박스 **0.05**",
+      "x": -20,
+      "y": 3910,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n0911L-ds",
+      "type": "text",
+      "text": "[[DeepSeek-V4.1-Flash]] DL**6**/♥1,583 MIT\n552B백본·1M·멀티모달 / CED: 프리필8B·디코딩16B\nCSA2+FP4 KV → **토큰당 890바이트**(V1 대비 437배↓)\n⚠️TB2.1 90.6(1위) ↔ **TB4.0 31.2**(Opus 51.8)",
+      "x": -20,
+      "y": 4110,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n0911L-mini",
+      "type": "text",
+      "text": "[[Nex-N2.5-mini]] DL**2,444**/♥667 · 35B\n*비전=입력 아닌 **환경 인지·검증 인터페이스***\n**BrowseComp 83.4**(397B Pro 89.7에 6.3차)\n↔ SWE-Bench Pro 43.8 — 체급이 축마다 다르게 먹힌다",
+      "x": -20,
+      "y": 4310,
+      "width": 420,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n0911L-pro",
+      "type": "text",
+      "text": "[[Nex-N2.5-Pro]] DL**3**/♥589 · 397B\n🔥**이 배치 최대 발견**\nOSWorld-2: Max(1.6T 텍스트기반) **22.3**\n< Pro(397B 멀티모달기반) **56.4** = 34.1점차",
+      "x": -20,
+      "y": 4510,
+      "width": 420,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0911L-axis",
+      "type": "text",
+      "text": "⇒ **기반이 크기를 이긴다**\n같은 날 [[WMRL]]: 4B·9B가 48B·120B 상회\n**두 독립 증거가 같은 방향**\n→ [[에이전트축-분기]]",
+      "x": 440,
+      "y": 4510,
+      "width": 360,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0911L-danwi",
+      "type": "text",
+      "text": "🆕[[단위-불일치]] — 이 배치 공통 주제\n공용카드 md5 동일 · 552B↔763B(Engram 196B)\n총≠활성(Nex 둘 다 미기재)\n`pipeline_tag` 자기모순",
+      "x": 440,
+      "y": 4110,
+      "width": 360,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n0911L-metric",
+      "type": "text",
+      "text": "⚠️ **지표의 적용 조건**\n\"♥=기대치·DL=실사용\"(09-10)이 **무효**\nDL 6·3은 공개당일+763B/397B 탓\n⇒ DL은 **모델 크기와 교란**, 동급끼리만 비교",
+      "x": 440,
+      "y": 4310,
+      "width": 360,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0911L-act",
+      "type": "text",
+      "text": "> [!action]\n**모델 선택 기준에 KV 바이트/토큰 추가**\n+ [[Nex-N2.5-mini]] BrowseComp 로컬 재현\n(①비전 입력 실동작 ②벤치 밖 유지 확인)",
+      "x": 440,
+      "y": 3910,
+      "width": 360,
+      "height": 170,
+      "color": "2"
+    },
+    {
+      "id": "n0912L-hdr",
+      "type": "text",
+      "text": "# 2026-09-12 — 2건 이관 편입\n🎯 **둘 다 \"작게 만드는 것의 대가\"를 수치로 보여준다**",
+      "x": "-180",
+      "y": "4900",
+      "width": "560",
+      "height": "120",
+      "color": "4"
+    },
+    {
+      "id": "n0912L-gguf",
+      "type": "text",
+      "text": "**[[MiniCPM5-2B-GGUF]]** DL **70,755**(30일)\nF16/Q4_K_M/Q8_0 · Apache-2.0 · 2.52B\n🔴 카드가 **원본 BF16 것**(md5 diff 확정)\n→ **4비트 성능 측정치 0**\n⚠️ llama.cpp min_p=0.05 반복출력→**0.0**",
+      "x": "-700",
+      "y": "5080",
+      "width": "380",
+      "height": "200",
+      "color": "2"
+    },
+    {
+      "id": "n0912L-xaut",
+      "type": "text",
+      "text": "**[[X-AuT]]** Qwen3-ASR-0.6B\n18→**16층 5.61%→5.27%**(개선)\n18→**14층 5.75%**(악화)+20.7% 절감\n교사1.7B 5.55 vs 자기증류 8.45\n점진 5.75 vs **직접 6.73**\n⚠️ single-run · 코드공개 미확인",
+      "x": "-290",
+      "y": "5080",
+      "width": "380",
+      "height": "200",
+      "color": "2"
+    },
+    {
+      "id": "n0912L-vibe",
+      "type": "text",
+      "text": "[[VibeVoice-ASR-Streaming-7B]] *(교차참조)*\nai-news 유지 · 한국어 지원 MIT\n🔴 이름7B vs **8.67B** → VRAM **17.3GB**\n= 소비자 GPU **경계선**",
+      "x": "120",
+      "y": "5080",
+      "width": "380",
+      "height": "200",
+      "color": "1"
+    },
+    {
+      "id": "n0912L-gap",
+      "type": "text",
+      "text": "🔴 **이 도메인의 반복 구멍**\n오늘 3건 전부 동일:\n· GGUF → 양자화 성능 **없음**\n· VibeVoice → 카드 2,236B **수치 0**\n· X-AuT → **실기기 지연시간 없음**\n🎯 **카드는 벤치는 주고 배치수치는 안 준다**",
+      "x": "530",
+      "y": "5080",
+      "width": "380",
+      "height": "200",
+      "color": "1"
+    },
+    {
+      "id": "n0912L-act",
+      "type": "text",
+      "text": "> [!action] 가장 싼 실험\n**Q4_K_M vs F16, 프롬프트 20개,\n지시이행 실패율만** 비교\n(원본이 이미 지는 축 하나만)\n= 볼트가 \"수치없다\"고 쓴 자리에\n**직접 수치를 만드는 첫 사례**",
+      "x": "-180",
+      "y": "5320",
+      "width": "380",
+      "height": "200",
+      "color": "2"
+    },
+    {
+      "id": "n0912L-dom",
+      "type": "text",
+      "text": "🔀 **도메인 재판정**\nraw `ai-news` → **`local-llm`** 2건\n근거: 09-11 \"온디바이스·자원제약\" 기준\n**양자화판이 원본보다 덜 local일 수 없다**",
+      "x": "240",
+      "y": "5320",
+      "width": "380",
+      "height": "200",
+      "color": "6"
+    },
+    {
+      "id": "batch-0913-local-llm",
+      "type": "text",
+      "text": "# 2026-09-13 배치\n\n원문 API 실호출 + 표 전수 대조\n중복 0 · 한정어 탈락 0건",
+      "x": -1200,
+      "y": 5680,
+      "width": 300,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "s-Edge0-35B",
+      "type": "text",
+      "text": "## [[Edge0-35B-A3B-preview]]\nDL 1,596 · ♥626 · 트렌딩 3위\n\n35B를 3GiB에 (prerouter)\n🔴 'phone-class'인데 Mac mini 24GB\n🔴 IFBench 57.9 = 에이전트 부적합",
+      "x": -820,
+      "y": 5680,
+      "width": 340,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-MetroLLM",
+      "type": "text",
+      "text": "## [[MetroLLM-Bench]]\n업보트 29 · 저자 1인\n\n4B가 GPT-5.6 상회 (91.3)\n🔴 단 규칙엔진이 84.6\n🔴 27B에선 PEFT -0.91",
+      "x": -420,
+      "y": 5680,
+      "width": 340,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "c-분포내우위",
+      "type": "text",
+      "text": "## [[분포내-우위]]\n**신설 개념**\n\n벤치 자신의 717케이스로 학습한\n모델 vs 제로샷 모델 비교\n= 결손은 배치에서 생긴다",
+      "x": -20,
+      "y": 5680,
+      "width": 340,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "e-Edge0",
+      "type": "text",
+      "text": "## [[Edge0]]\n조직 (실체 미확인)\n\n모델을 줄이지 않고\n메모리 계층을 바꾼다\nMLX = Apple Silicon 전용",
+      "x": 380,
+      "y": 5680,
+      "width": 340,
+      "height": 200,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-models",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-memory",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-hermes",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-latentpress",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-latentpress",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-minima",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-minima",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-gsqrco",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-gsqrco",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-s-flashnext-gguf",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-flashnext-gguf",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-latentpress-c-mem-6axis",
+      "fromNode": "s-latentpress",
+      "fromSide": "bottom",
+      "toNode": "c-mem-6axis",
+      "toSide": "top",
+      "label": "6번째 축"
+    },
+    {
+      "id": "e-s-gsqrco-a-gsqrco-run",
+      "fromNode": "s-gsqrco",
+      "fromSide": "bottom",
+      "toNode": "a-gsqrco-run",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-minima-s-gsqrco",
+      "fromNode": "s-minima",
+      "fromSide": "bottom",
+      "toNode": "s-gsqrco",
+      "toSide": "top",
+      "label": "NVFP4 17.5GB vs GGUF 11.8GB"
+    },
+    {
+      "id": "e-s-gsqrco-s-flashnext-gguf",
+      "fromNode": "s-gsqrco",
+      "fromSide": "bottom",
+      "toNode": "s-flashnext-gguf",
+      "toSide": "top",
+      "label": "우위 주장 반박"
+    },
+    {
+      "id": "e-ll0907",
+      "fromNode": "domain-hub",
+      "toNode": "ll-0907",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-ll-drop",
+      "fromNode": "ll-0907",
+      "toNode": "ll-drop",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-ll-tiel",
+      "fromNode": "ll-0907",
+      "toNode": "ll-tiel",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-ll-huihui",
+      "fromNode": "ll-0907",
+      "toNode": "ll-huihui",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-ll-whis",
+      "fromNode": "ll-0907",
+      "toNode": "ll-whis",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-ll-cmp",
+      "fromNode": "ll-tiel",
+      "toNode": "ll-huihui",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "근거 격차: 통제군 vs 무측정"
+    },
+    {
+      "id": "el0908-0",
+      "fromNode": "l0908-davidau",
+      "fromSide": "bottom",
+      "toNode": "l0908-rule",
+      "toSide": "top"
+    },
+    {
+      "id": "el0908-1",
+      "fromNode": "l0908-uno",
+      "fromSide": "bottom",
+      "toNode": "l0908-mtp",
+      "toSide": "top"
+    },
+    {
+      "id": "el0908-2",
+      "fromNode": "l0908-davidau",
+      "fromSide": "bottom",
+      "toNode": "l0908-mtp",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-1",
+      "fromNode": "b0909-ll",
+      "toNode": "s0909ll-k3c",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-2",
+      "fromNode": "b0909-ll",
+      "toNode": "s0909ll-spk",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-3",
+      "fromNode": "b0909-ll",
+      "toNode": "s0909ll-k2h",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-4",
+      "fromNode": "s0909ll-spk",
+      "toNode": "k0909ll-axd",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909ll-5",
+      "fromNode": "s0909ll-k2h",
+      "toNode": "k0909ll-axd",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-llm-0910-m-minicpm",
+      "fromNode": "hub-llm-0910",
+      "fromSide": "bottom",
+      "toNode": "m-minicpm",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-llm-0910-m-nvfp4",
+      "fromNode": "hub-llm-0910",
+      "fromSide": "bottom",
+      "toNode": "m-nvfp4",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-llm-0910-m-qwopus",
+      "fromNode": "hub-llm-0910",
+      "fromSide": "bottom",
+      "toNode": "m-qwopus",
+      "toSide": "top"
+    },
+    {
+      "id": "e-m-minicpm-c-llm-bunki",
+      "fromNode": "m-minicpm",
+      "fromSide": "bottom",
+      "toNode": "c-llm-bunki",
+      "toSide": "top"
+    },
+    {
+      "id": "e-m-qwopus-a-llm-ab",
+      "fromNode": "m-qwopus",
+      "fromSide": "bottom",
+      "toNode": "a-llm-ab",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-1",
+      "fromNode": "n0911L-hdr",
+      "fromSide": "right",
+      "toNode": "n0911L-colibri",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-2",
+      "fromNode": "n0911L-colibri",
+      "fromSide": "bottom",
+      "toNode": "n0911L-ds",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-3",
+      "fromNode": "n0911L-ds",
+      "fromSide": "bottom",
+      "toNode": "n0911L-mini",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-4",
+      "fromNode": "n0911L-mini",
+      "fromSide": "bottom",
+      "toNode": "n0911L-pro",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911L-5",
+      "fromNode": "n0911L-pro",
+      "fromSide": "right",
+      "toNode": "n0911L-axis",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-6",
+      "fromNode": "n0911L-ds",
+      "fromSide": "right",
+      "toNode": "n0911L-danwi",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-7",
+      "fromNode": "n0911L-mini",
+      "fromSide": "right",
+      "toNode": "n0911L-metric",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-8",
+      "fromNode": "n0911L-colibri",
+      "fromSide": "right",
+      "toNode": "n0911L-act",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911L-9",
+      "fromNode": "cluster-models",
+      "fromSide": "bottom",
+      "toNode": "n0911L-hdr",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-0",
+      "fromNode": "n0912L-hdr",
+      "fromSide": "bottom",
+      "toNode": "n0912L-gguf",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-1",
+      "fromNode": "n0912L-hdr",
+      "fromSide": "bottom",
+      "toNode": "n0912L-xaut",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-2",
+      "fromNode": "n0912L-hdr",
+      "fromSide": "bottom",
+      "toNode": "n0912L-vibe",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-3",
+      "fromNode": "n0912L-hdr",
+      "fromSide": "bottom",
+      "toNode": "n0912L-gap",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-a",
+      "fromNode": "n0912L-gguf",
+      "fromSide": "bottom",
+      "toNode": "n0912L-act",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-b",
+      "fromNode": "n0912L-gap",
+      "fromSide": "bottom",
+      "toNode": "n0912L-act",
+      "toSide": "right"
+    },
+    {
+      "id": "e0912L-c",
+      "fromNode": "n0912L-hdr",
+      "fromSide": "bottom",
+      "toNode": "n0912L-dom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0912L-h",
+      "fromNode": "cluster-models",
+      "fromSide": "bottom",
+      "toNode": "n0912L-hdr",
+      "toSide": "top"
+    },
+    {
+      "id": "e-batch-0913-local-llm-hub",
+      "fromNode": "batch-0913-local-llm",
+      "toNode": "domain-hub",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-batch-0913-local-llm-s-Edge0-35B",
+      "fromNode": "batch-0913-local-llm",
+      "toNode": "s-Edge0-35B",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-local-llm-s-MetroLLM",
+      "fromNode": "batch-0913-local-llm",
+      "toNode": "s-MetroLLM",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-local-llm-c-분포내우위",
+      "fromNode": "batch-0913-local-llm",
+      "toNode": "c-분포내우위",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-local-llm-e-Edge0",
+      "fromNode": "batch-0913-local-llm",
+      "toNode": "e-Edge0",
+      "fromSide": "right",
+      "toSide": "left"
+    }
+  ]
 }

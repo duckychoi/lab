@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, music-generation, symbolic-planning, consumer-gpu, license-nc, benchmark-framing]
 created: 2026-09-12
-updated: 2026-09-12
+updated: 2026-09-13
 sources: []
 reliability: medium
 ---
@@ -81,3 +81,15 @@ reliability: medium
 - 관련 논문 태그: arXiv **2503.08638**(원 YuE 논문)
 - raw 대비: 다운로드·♥·라이선스·4090 수치·best-of-8·Suno v6 역전 **전부 일치** / 🔴 볼트가 **Mureka 9(6.9377) 및 지는 축(Q3O·PER) 신규 탐지**
 - 신뢰도: ⭐⭐ (수치 원문 대조 / 전부 자체 측정 · 프로토콜 비균일 · 제3자 재현 없음)
+
+---
+
+> [!note] 🔗 2026-09-13 추가 — 짝 아티팩트: 코드 레포
+> 코드 레포 **[[YuE]]**(`multimodal-art-projection/YuE` ⭐7,460)를 별도 인제스트했다.
+> 🔴 **라이선스가 다르다** — 코드는 **Apache-2.0**, 이 가중치는 **CC BY-NC 4.0**(상업 금지). **코드 라이선스만 보고 상업 이용 가능하다고 판단하면 틀린다** → [[짝-아티팩트-조회]]
+>
+> **코드 레포 README 표 실측으로 드러난 추가 사실**:
+> - 전체 **17개 설정** 공개, 벤치 시행일 **2026-09-12**
+> - 🎯 **best-of-8이 기본 YuE2에게 지는 축이 둘 있다** — MuLan **0.5051 < 0.5068** · PER **9.79% > 8.44%**. **Bo8 선별은 SongBench Avg만 올리고 나머지 두 축을 악화시킨다**
+> - 🎯 **제로샷 커버 0.647 CLEWS mAP vs 악보 없을 때 0.006** — **108배**. 기호 계획의 효과를 보여주는 **유일한 직접 어블레이션**이고 SongBench 격차(0.0255)보다 비교할 수 없이 강한 증거다
+

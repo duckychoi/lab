@@ -4,13 +4,41 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-11
+updated: 2026-09-13
 sources: [teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
 
 목표: 쓸모있는 AI 도구 발굴 + 내 워크플로우에 통합
+
+---
+
+## 최근 흐름 (2026-09-13 배치)
+
+**13건 인제스트 · ai-news 8 · local-llm 2 · slam-3dgs 3 · 전량 API 실호출 + 원문 대조. 중복 0.**
+
+> [!insight] 🎯 이번 배치의 축 — **"셀 수 있게 만들어 뒀는가"가 조직을 가른다**
+> 같은 형식·같은 규모인데 갈린다. [[Claude-Red]] 는 배지 `skills-78`/`categories-23` 가 git tree 실카운트와 **정확히 일치**했고, [[CloddsBot]] 은 배지 121+ · 산문 118+ · description 1000+ 가 **세는 대상부터 다르다**(실제 명시 전략은 4개).
+> → **단위 불일치는 규모의 문제가 아니라 문서 습관의 문제다.** "크면 세기 어렵다"는 설명은 이번 대조로 기각된다.
+
+> [!insight] 🎯 두 번째 축 — **한정어는 본문에 없고 가장자리에 있다**
+> 이번 배치에서 확인된 한정어 7건이 **전부 각주 · 경계 섹션 · 표 하단 · 표 바로 위 한 줄**에 있었다. 본문에 있던 것은 0건이다.
+> [[pentagi]] 는 *"Fully Autonomous"* 주장과 그것을 부인하는 `Current Capability Boundaries` 섹션이 **19행 거리**다. 헤드라인만 읽는 독자와 한 화면 더 내린 독자가 **다른 제품을 본다**.
+> → 실무 규칙: **표를 만나면 표 위아래 한 줄과 각주를 먼저 읽는다.**
+
+> [!warning] 🔴 볼트 자신의 오류가 드러났다 — 09-02 [[Qwen-Drive-1.0]]
+> 볼트는 09-02에 *"데일리 1위인데 검증 가능한 수치가 0개"* 라고 적었다. **가중치 레포는 그보다 6일 앞선 08-27에 이미 있었고, 거기 22개 벤치 표가 있었다.**
+> **자료가 없었던 게 아니라 볼트가 찾지 않았다.** → [[짝-아티팩트-조회]] 규칙 신설, 해당 페이지에 취소선 정정 게시.
+
+> [!insight] 라이선스 — 코드와 가중치를 따로 봐야 한다
+> [[YuE]] 코드 레포는 **Apache-2.0**(상업 가능), 가중치 [[YuE2-3B]] 는 **CC BY-NC**(상업 금지). **한쪽만 보면 정반대 결론이 난다.**
+> [[AuK]] 는 base 전용이고 4스텝 증류판 `AuK-Flash` 가 **별도 레포** — 속도 수치를 섞어 쓰면 틀린다.
+> [[Edge0-35B-A3B-preview]] 는 raw가 **라이선스를 아예 적지 않았다**(실제 apache-2.0). 이 배치 HF모델 3건 중 유일한 누락.
+
+> [!warning] 수치 결손이 3단계로 늘어섰다 (업보트는 무관했다)
+> [[FreeFlow]](32) 수치 있음·**대조군 없음** → [[RCWM]](28) **수치 없음** → [[World-in-World]](28) **결과 자체를 안 적음**(*"assessing..."* 으로 끝난다).
+> 업보트 32·28·28. **결손 정도와 관심도는 상관이 없다.**
 
 ---
 

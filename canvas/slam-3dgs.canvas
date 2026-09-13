@@ -179,6 +179,46 @@
       "width": 330,
       "height": 180,
       "color": "2"
+    },
+    {
+      "id": "batch-0913-slam-3dgs",
+      "type": "text",
+      "text": "# 2026-09-13 배치\n\n원문 API 실호출 + 표 전수 대조\n중복 0 · 한정어 탈락 0건",
+      "x": -1200,
+      "y": 2560,
+      "width": 300,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "s-FreeFlow",
+      "type": "text",
+      "text": "## [[FreeFlow]]\n업보트 32 · 저자 4인\n\n플로우 전용부품 전부 제거\n→ 스케일링을 얻음\n🔴 대조군 모델명 없음",
+      "x": -820,
+      "y": 2560,
+      "width": 340,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "s-RCWM",
+      "type": "text",
+      "text": "## [[RCWM]]\n업보트 28 · 저자 3인\n\n전체→국소→전체 재방문 재귀\n🎯 국소수리 후 전역정합 책임\n🔴 정량 수치 0개",
+      "x": -420,
+      "y": 2560,
+      "width": 340,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-WiW",
+      "type": "text",
+      "text": "## [[World-in-World]]\n업보트 28 · 저자 3인\n\n동결 모델 + 입력 형식 번역\n(training-free)\n🔴 결과 자체를 안 적음",
+      "x": -20,
+      "y": 2560,
+      "width": 340,
+      "height": 200,
+      "color": "1"
     }
   ],
   "edges": [
@@ -286,6 +326,34 @@
       "fromSide": "bottom",
       "toNode": "n0911S-sb",
       "toSide": "top"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-hub",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "domain-hub",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-s-FreeFlow",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "s-FreeFlow",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-s-RCWM",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "s-RCWM",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-s-WiW",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "s-WiW",
+      "fromSide": "right",
+      "toSide": "left"
     }
   ]
 }

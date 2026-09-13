@@ -4,13 +4,33 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-11
+updated: 2026-09-13
 sources: [MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
 
 목표: 경량 모델 실배포 + Hermes/에이전트에 메모리 심기
+
+---
+
+## 최근 흐름 (2026-09-13 배치) — **엣지로 가는 두 경로가 같은 날 올라왔다**
+
+> [!insight] 🎯 정반대 전략이 같은 목적지에 도달한다
+> - **[[MetroLLM-Bench]]** — 4B로 **줄인다**. PEFT 증류 → **Q4_K_M 2.6GB**. 좁은 도메인에 적응시켜 GPT-5.6 Tier1을 넘김(91.3 vs 90.6)
+> - **[[Edge0-35B-A3B-preview]]** — 35B를 **그대로 두고 메모리 위치를 바꾼다**. 4비트 전문가를 스토리지에 두고 prerouter로 선예측 스트리밍 → **활성 3 GiB**
+>
+> **"작게 만들기" vs "크게 둔 채 옮기기".** 둘 다 3GB 안쪽에 들어간다.
+
+> [!warning] 🔴 각 경로의 조건을 병기한다
+> **MetroLLM 경로의 함정** — 4B 학생은 **이 벤치 자신의 717 케이스로 생성한 데이터**로 학습됐고 GPT-5.6은 아니다 → [[분포내-우위]]. 그리고 **규칙엔진 베이스라인이 84.6**이라 LLM의 실질 우위는 **6.7점**뿐이다. **PEFT 이득은 2B +7.03 → 27B -0.91** 로 모델이 클수록 사라진다.
+> **Edge0 경로의 함정** — *"phone-class memory"* 인데 실측은 **Mac mini M4 Pro 24GB**. *"3 GiB"* 는 **짧은 컨텍스트 전제**(각주·Limitations 두 곳). **MLX라 Apple Silicon 전용**이고 `preview` 다.
+
+> [!action] 실무 순서가 이 둘에서 나온다
+> 1. **결정적 규칙 베이스라인을 먼저 만들어 점수를 잰다** (MetroLLM에서 84.6)
+> 2. LLM이 얹는 **실제 증분**을 측정한다 (6.7점)
+> 3. 증분이 작으면 규칙엔진을 유지하고, 크면 **작은 모델에 적응**시킨다 (2B에서 이득이 가장 크다)
+> 4. 35B급이 꼭 필요하면 그때 오프로드를 본다 — 단 **에이전트 용도는 제외**([[Edge0-35B-A3B-preview]] IFBench 57.9 + 자인)
 
 ---
 

@@ -2,9 +2,9 @@
 title: Qwen-Drive-1.0 — 자율주행용 비전-언어 파운데이션 모델 (검사 가능한 3D 인터페이스)
 type: source
 domain: ai-news
-tags: [ai-news, hf-daily-paper, autonomous-driving, vlm, bev, multimodal, no-numbers]
+tags: [ai-news, hf-daily-paper, autonomous-driving, vlm, bev, multimodal, no-numbers, 정정됨]
 created: 2026-09-02
-updated: 2026-09-02
+updated: 2026-09-13
 sources: []
 reliability: high
 ---
@@ -52,3 +52,24 @@ reliability: high
 - [[국소-수리-원리]] — 이 축이 그 원리의 **전제 조건**을 짓는다
 - [[Alibaba]] — 명칭 기준 추정 벤더(미확정)
 - [[ai-news]]
+
+---
+
+> [!warning] 🔴 **2026-09-13 정정 — 이 페이지의 "검증 불가" 판정은 틀렸다**
+> 아래 `> [!warning] ⚠️ 성능 주장 검증 불가` 콜아웃의 **핵심 주장을 취소한다.**
+>
+> **취소되는 문장**: *"데일리 1위인데 검증 가능한 수치가 0개"* · *"미기재 항목: 모델 크기 · 베이스 VLM 버전 · 벤치명 · 비교 모델 · 가중치·코드 공개 여부 · 소속 기관"*
+>
+> **사유**: 가중치 레포 `Qwen/Qwen-Drive-1.0-4B` 가 **2026-08-27에 이미 생성**되어 있었다. 이 페이지를 쓴 **09-02보다 6일 앞선다.** 그 모델 카드에는 **22개 벤치 × 15개 비교모델 표**가 있고, 위에 "미기재"로 열거한 **7개 항목이 전부 들어 있다.**
+> - 모델 크기 **4.54B**(safetensors 실측) · 베이스 **Qwen3.5-4B** · 소속 **[[Alibaba]] Qwen 확정**(`Qwen/` 조직) · 가중치 **Apache-2.0 공개** · 벤치 NAVSIM·WOD-E2E·PAI-AV·AlpaSim·LingoQA 등
+>
+> → **자료가 없었던 게 아니라 볼트가 찾지 않았다.** "초록에 없다"를 "저자가 내지 않았다"로 번역한 것이 오류의 정체다.
+> → 실측 결과는 **[[Qwen-Drive-1.0-4B]]** 로. 규칙은 **[[짝-아티팩트-조회]]** 로 신설했다.
+>
+> ✅ **유지되는 판정**: *"업보트 76 데일리 1위"* 와 *"초록 자체에 수치가 없다"* 는 **사실이다**. 틀린 것은 거기서 *"검증 불가"* 로 건너뛴 부분이다.
+
+> [!insight] 🎯 그리고 초록의 한 주장은 이제 **반증됐다**
+> 초록: *"while **largely preserving** general vision-language capability"*
+> 모델 카드 표 실측 — **일반 VLM 15개 과제 중 10개에서 베이스 Qwen3.5-4B보다 낮다**(CountQA -4.2 · RefSpatial -3.7 · MMMU-Pro std -2.2 · MMBench -1.6 ...).
+> *"largely preserving"* 은 거짓은 아니나(대부분 1~2점대) **방향은 일관된 하락**이다. 상세는 [[Qwen-Drive-1.0-4B]].
+
