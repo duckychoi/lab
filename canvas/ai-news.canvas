@@ -3098,6 +3098,76 @@
       "width": 340,
       "height": 200,
       "color": "2"
+    },
+    {
+      "id": "batch-0914-ai-news",
+      "type": "text",
+      "text": "# 2026-09-14 배치\n\n🔴 배달 13건 중 **8건 중복**\n중복필터는 정상 작동했다\n✅ 한정어 병기 13/13 충족",
+      "x": -1200,
+      "y": 17760,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "c-백필우회",
+      "type": "text",
+      "text": "## [[백필-우회]]\n**신설 개념 · 이 배치의 핵심**\n\n필터가 비운 자리를 채울 때\n필터를 다시 안 돌리면\n통과율이 역전된다\n\n🎯 탈락 있던 채널만 중복 100%\n탈락 0인 논문 채널은 0%",
+      "x": -820,
+      "y": 17760,
+      "width": 340,
+      "height": 220,
+      "color": "2"
+    },
+    {
+      "id": "s-BenchRadar",
+      "type": "text",
+      "text": "## [[Benchmark Radar]]\n업보트 46 · 저자 7인\n\n벤치마크 자체를 레코드로\n37소스 · 1,283레코드\n790에 12,916관측\n\n🔴 1,283 중 점수 있는 건 790\n🎯 \"점수 비교의 한계\"를 자기 감사",
+      "x": -420,
+      "y": 17760,
+      "width": 340,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "s-COBRA",
+      "type": "text",
+      "text": "## [[COBRA-Skills]]\n업보트 26 · 저자 9인\n\n스킬 평가를 밴딧으로 배분\nSkillOpt 대비 비용 55~58%↓\n벤치당 예제 50개\n\n🔴 \"평균\" 최고이지 전승 아님",
+      "x": -20,
+      "y": 17760,
+      "width": 340,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "s-PLCDPO",
+      "type": "text",
+      "text": "## [[PLC-DPO]]\n업보트 22 (드리프트 0)\n\n잡음 선호쌍을 거르지 않고\nclean/flip/tie 라우팅으로 교정\n57셀 60.5 vs 55.5\n\n🎯 자기확증 진단을 검증에 포함",
+      "x": 380,
+      "y": 17760,
+      "width": 340,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n0914-selfcorr",
+      "type": "text",
+      "text": "## 🔴 볼트 자기 정정 2건\n\n① [[MiniCPM5-2B]] \"실사용 적다\"\n→ 4일 뒤 DL ×52로 반증\n\n② [[OpenMontage]] \"2주 정체=중단\"\n→ 임계선 하루 뒤 푸시 재개\n임계선 설계는 옳고 값이 틀렸다",
+      "x": 780,
+      "y": 17760,
+      "width": 340,
+      "height": 220,
+      "color": "1"
+    },
+    {
+      "id": "n0914-perfimg",
+      "type": "text",
+      "text": "## 🔴 `## Performance`=이미지\n**3번째 반복 → 관행**\n\n[[AuK]](09-13)\n[[VibeVoice-ASR-Streaming-7B]](09-12)\n[[open-code-review]](09-14)\n\n수치를 이미지에 넣으면\ngrep·인용·검증이 막힌다",
+      "x": 1180,
+      "y": 17760,
+      "width": 340,
+      "height": 220,
+      "color": "1"
     }
   ],
   "edges": [
@@ -5674,6 +5744,48 @@
       "id": "e-batch-0913-ai-news-c-짝아티팩트",
       "fromNode": "batch-0913-ai-news",
       "toNode": "c-짝아티팩트",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-ai-news-c-백필우회",
+      "fromNode": "batch-0914-ai-news",
+      "toNode": "c-백필우회",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-ai-news-s-BenchRadar",
+      "fromNode": "batch-0914-ai-news",
+      "toNode": "s-BenchRadar",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-ai-news-s-COBRA",
+      "fromNode": "batch-0914-ai-news",
+      "toNode": "s-COBRA",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-ai-news-s-PLCDPO",
+      "fromNode": "batch-0914-ai-news",
+      "toNode": "s-PLCDPO",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-ai-news-n0914-selfcorr",
+      "fromNode": "batch-0914-ai-news",
+      "toNode": "n0914-selfcorr",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-ai-news-n0914-perfimg",
+      "fromNode": "batch-0914-ai-news",
+      "toNode": "n0914-perfimg",
       "fromSide": "right",
       "toSide": "left"
     }

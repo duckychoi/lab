@@ -219,6 +219,46 @@
       "width": 340,
       "height": 200,
       "color": "1"
+    },
+    {
+      "id": "batch-0914-slam-3dgs",
+      "type": "text",
+      "text": "# 2026-09-14 배치\n\n신규 1건\nraw ai-news → 재판정",
+      "x": -1200,
+      "y": 2960,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "s-LIT",
+      "type": "text",
+      "text": "## [[LIT]]\n업보트 44 · 저자 4인\n**ai-news → slam-3dgs 재판정**\n\n시각→행동 지름길을 끊는다\n1단계: 이미지 없이 SE(3) 자세로\n2단계: 그 자세 복원 감독 =\n        유일한 시각 통로\n\nLIBERO-Plus +3.87~10.70%p\n실로봇 +13.30~16.70%p",
+      "x": -820,
+      "y": 2960,
+      "width": 340,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n0914-lit-cond",
+      "type": "text",
+      "text": "## 🔴 성립 조건\n\n실로봇 이득 조건 =\n**미학습 카메라·조명·방해물**\n\n통상 LIBERO는\n\"preserving or improving\"\n\n🎯 이득은 분포 외에서만 난다\n→ [[분포내-우위]] 의 거울상",
+      "x": -420,
+      "y": 2960,
+      "width": 340,
+      "height": 220,
+      "color": "1"
+    },
+    {
+      "id": "n0914-iface",
+      "type": "text",
+      "text": "## 🎯 \"인터페이스만 설계\" 계보\n\n[[World-in-World]] (09-13)\n동결 모델 + 입력 형식 번역\n\n[[LIT]] (09-14)\n백본 유지 + 시각 통로 하나\n\n**모델을 재학습하지 않고\n모델이 보는 것의 형태를 바꾼다**",
+      "x": -20,
+      "y": 2960,
+      "width": 340,
+      "height": 220,
+      "color": "4"
     }
   ],
   "edges": [
@@ -352,6 +392,27 @@
       "id": "e-batch-0913-slam-3dgs-s-WiW",
       "fromNode": "batch-0913-slam-3dgs",
       "toNode": "s-WiW",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-slam-3dgs-s-LIT",
+      "fromNode": "batch-0914-slam-3dgs",
+      "toNode": "s-LIT",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-slam-3dgs-n0914-lit-cond",
+      "fromNode": "batch-0914-slam-3dgs",
+      "toNode": "n0914-lit-cond",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-slam-3dgs-n0914-iface",
+      "fromNode": "batch-0914-slam-3dgs",
+      "toNode": "n0914-iface",
       "fromSide": "right",
       "toSide": "left"
     }

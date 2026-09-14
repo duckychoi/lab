@@ -11,6 +11,19 @@ reliability: medium
 
 # asgeirtj/system_prompts_leaks
 
+> [!update] 2026-09-14 갱신 — ⭐**66,373**(71일 **+17,148 · +34.8%**) · 🔴 중복 재배달 · **페이지 대폭 보강**
+> **GitHub API 실호출(2026-09-14)**: ⭐**66,373**(raw 66,368 대비 **+5**) · fork **10,833**(raw 일치) · 이슈 **56** · **CC0-1.0**(일치) · 언어 **JavaScript** · created 2025-05-03(일치) · **pushed 2026-09-13**
+> 🔴 **신규 아님.** 이 페이지는 **2026-07-05 생성**(당시 ⭐49,225). raw가 *"볼트 미보유"* 로 오판 → [[백필-우회]]
+> ⚠️ **볼트 자기 점검**: 이 페이지는 71일간 갱신되지 않은 **40줄짜리 최소 페이지**였다. 그 사이 ⭐가 **+34.8%** 늘었다. **갱신 주기가 없는 페이지는 조용히 낡는다.**
+>
+> 📌 **새로 확인된 것 — 최근 추가분에 날짜가 붙는다**(GitHub description 실확인)
+> description 원문: *"Extracted system prompts from **Anthropic - Claude Fable 5.1, Opus 5, Claude Design, Claude Code**. **OpenAI - ChatGPT GPT-6-Astra, Codex**. **Google - Gemini 3.8 Flash, 3.1 Pro, Antigravity**"*
+> raw 보고 날짜: ChatGPT Work Codex(local)·Gemini 3.8 Flash **2026-09-13** · Claude Code headless(Fable 5.1) **2026-09-05** · Codex GPT-6-Astra **2026-09-04**. **pushed 2026-09-13 이 09-13 추가분과 일치**한다.
+>
+> 🔴 **raw가 가져온 핵심 한정어 — 채택한다**: *"verbatim(원문 그대로)"* 주장을 **레포 내부에서 검증할 수단이 없다.** 항목별 **추출 방법·캡처 시점 로그가 없어** 진위는 전적으로 외부 인용에 의존한다(워싱턴포스트 2026-05-11 인터랙티브 · CEPS AI World 2026-07-10 대시보드).
+> 🎯 **⭐66k를 기능 성숙도로 읽으면 안 된다 — 이건 코드가 아니라 문서 아카이브다.** 별은 *"이 코드가 잘 돈다"* 가 아니라 *"이 자료가 궁금하다"* 를 센다. **같은 지표가 레포 종류에 따라 다른 것을 측정한다.** → [[측정도구-먼저-반증]] · [[단위-불일치]]
+> ⚠️ `reliability: medium` 유지 — 검증 경로 부재가 해소되지 않았다.
+
 Anthropic·OpenAI·Google·xAI 등 주요 LLM 서비스의 시스템 프롬프트 추출본 모음. 프롬프트 엔지니어링 리버스 참고용 레퍼런스.
 
 ## 핵심 인사이트

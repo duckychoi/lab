@@ -4,13 +4,36 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-13
-sources: [MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md]
+updated: 2026-09-14
+sources: [MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
 
 목표: 경량 모델 실배포 + Hermes/에이전트에 메모리 심기
+
+---
+
+## 최근 흐름 (2026-09-14 배치) — **어텐션 예산과 "언제 재야 하나"**
+
+> [!insight] 🎯 신규 1건 + 갱신 2건. **세 소스가 같은 축의 서로 다른 지점에 있다**
+> - **[[SAS]]**(신규·재판정) — *"주어진 예산으로 **무엇을 볼까**"*. 하드 Top-K가 그래디언트를 끊어 dense 분포 증류로 우회했고, 그 순위가 **고정 예산 하 예측 기여도와 정렬되지 않는다**는 진단. 선택기 점수를 **소프트맥스 안쪽에 로그로** 주입해 LM 손실로 직접 학습.
+> - **[[DeepSeek-V4.1-Flash]]**(갱신) — *"KV를 **얼마나 작게 저장**하나"*. CED 구조로 552B에서 **prefill 8B·decode 16B만 활성**, KV V1 대비 **437배** 축소.
+> - **[[MiniCPM5-2B]]**(갱신) — *"2B에 **무엇을 담을까**"*. 배포 10종(LiteRT-LM 포함), 진짜 우위는 **장문맥·도구**(NoLiMa 68.1 vs 2B급 0.7~17.1).
+>
+> 🎯 **SAS와 DeepSeek은 직교한다 — 합성 가능하다.** 하나는 저장 단가, 하나는 예산 배분이다. 엣지에서 긴 컨텍스트를 굴리려면 **둘 다** 필요하다.
+
+> [!warning] 🔴 **이 도메인의 측정 관행이 2건 반증됐다 — 볼트 자기 정정**
+> 볼트는 HF 모델을 볼 때 **♥/다운로드 비율**로 *"관심 대비 실사용"* 을 판정해 왔다. 이번에 두 모델이 동시에 뒤집혔다:
+> - [[DeepSeek-V4.1-Flash]]: **0.004:1 → 106:1** (3일, DL ×40,743)
+> - [[MiniCPM5-2B]]: **2.9:1 → 110:1** (4일, DL ×52)
+>
+> **♥는 공개 즉시 포화하고 다운로드는 며칠 뒤에야 실체를 얻는다 — 시간 상수가 다르다.**
+> ✅ 09-11 [[DeepSeek-V4.1-Flash]] 는 이 한정을 **스스로 달았고 확증**됐다. 🔴 09-10 [[MiniCPM5-2B]] 는 달지 않았고 **반증**됐다.
+> 📌 **규칙 채택: 공개 후 72시간 이내 다운로드는 지표가 아니다. 비율은 +7일 이후에만 계산한다.** → [[측정도구-먼저-반증]]
+
+> [!note] 🔴 이 배치의 local-llm 3건 중 **2건이 중복 재배달**이었다
+> [[DeepSeek-V4.1-Flash]](09-11 기생성) · [[MiniCPM5-2B]](09-10 기생성) · [[colibri]](09-11 기생성, local-llm). 원인 → [[백필-우회]]. **다만 갱신 가치는 컸다** — 위 비율 역전이 바로 그 재방문에서 나왔다.
 
 ---
 

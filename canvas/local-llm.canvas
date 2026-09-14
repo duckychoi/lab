@@ -509,6 +509,46 @@
       "width": 340,
       "height": 200,
       "color": "3"
+    },
+    {
+      "id": "batch-0914-local-llm",
+      "type": "text",
+      "text": "# 2026-09-14 배치\n\n신규 1 · 갱신 2\n🔴 비율 지표 2건 반증",
+      "x": -1200,
+      "y": 6080,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "s-SAS",
+      "type": "text",
+      "text": "## [[SAS]]\n업보트 44 · 저자 9인\n**ai-news → local-llm 재판정**\n\n하드 Top-K가 그래디언트를 끊어\ndense 분포 증류로 우회했다\n→ 선택기 점수를 소프트맥스\n   안쪽에 로그로 주입\n\n🔴 초록에 수치·벤치명 0개",
+      "x": -820,
+      "y": 6080,
+      "width": 340,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n0914-ratio",
+      "type": "text",
+      "text": "## 🔴 72시간 규칙 (신설)\n\n[[DeepSeek-V4.1-Flash]]\n0.004:1 → **106:1** (3일)\nDL ×40,743 · ♥ ×1.45\n\n[[MiniCPM5-2B]]\n2.9:1 → **110:1** (4일)\n\n🎯 두 지표의 시간 상수가 다르다\n비율은 +7일 이후에만",
+      "x": -420,
+      "y": 6080,
+      "width": 340,
+      "height": 220,
+      "color": "2"
+    },
+    {
+      "id": "n0914-orthog",
+      "type": "text",
+      "text": "## 🎯 직교하는 두 축\n\n[[DeepSeek-V4.1-Flash]]\n= KV를 얼마나 작게 저장하나\n(prefill 8B/decode 16B, 437배↓)\n\n[[SAS]]\n= 주어진 예산으로 무엇을 볼까\n\n**합성 가능하다**",
+      "x": -20,
+      "y": 6080,
+      "width": 340,
+      "height": 220,
+      "color": "4"
     }
   ],
   "edges": [
@@ -877,6 +917,27 @@
       "id": "e-batch-0913-local-llm-e-Edge0",
       "fromNode": "batch-0913-local-llm",
       "toNode": "e-Edge0",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-local-llm-s-SAS",
+      "fromNode": "batch-0914-local-llm",
+      "toNode": "s-SAS",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-local-llm-n0914-ratio",
+      "fromNode": "batch-0914-local-llm",
+      "toNode": "n0914-ratio",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-local-llm-n0914-orthog",
+      "fromNode": "batch-0914-local-llm",
+      "toNode": "n0914-orthog",
       "fromSide": "right",
       "toSide": "left"
     }
