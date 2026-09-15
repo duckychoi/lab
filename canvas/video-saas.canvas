@@ -189,6 +189,26 @@
       "width": 340,
       "height": 150,
       "color": "6"
+    },
+    {
+      "id": "b0915-vidus2",
+      "type": "text",
+      "text": "[[Vidu-S2]] 🆕 *(ai-news→video-saas 재판정)*\nS2-Avatar: 540p→**720p** 실시간\nS2-Editing: 스트림 위 **의상·인물·배경 교체**\n+ spatial video 탐색\n🔴 **초록에 수치 0**\n🔴 S1 대비 신뢰도 하락(medium→low)",
+      "x": -620,
+      "y": 2830,
+      "width": 360,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "b0915-vidu-note",
+      "type": "text",
+      "text": "🎯 **편집이 렌더 뒤가 아니라 스트림 위로**\nreat-* 스택 전제와 다른 축\n**프리뷰와 최종본의 구분이 사라진다**\n\n▶ 액션: vidu.com/vidu-stream 직접 실측",
+      "x": -210,
+      "y": 2830,
+      "width": 320,
+      "height": 160,
+      "color": "6"
     }
   ],
   "edges": [
@@ -296,6 +316,13 @@
       "fromSide": "bottom",
       "toNode": "c-pwm-gap",
       "toSide": "top"
+    },
+    {
+      "id": "e0915x-0",
+      "fromNode": "b0915-vidus2",
+      "fromSide": "right",
+      "toNode": "b0915-vidu-note",
+      "toSide": "left"
     }
   ]
 }

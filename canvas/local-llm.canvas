@@ -549,6 +549,26 @@
       "width": 340,
       "height": 220,
       "color": "4"
+    },
+    {
+      "id": "b0915-zgcm",
+      "type": "text",
+      "text": "[[ZGCM-1]] 🆕 *(ai-news→local-llm 재판정)*\n**7B 밀집 · 전 단계 공개**\nFP8 Muon · 16K→64K→256K\n가중치+코드+데이터+W&B 로그\n🔴 235B competitive = 일부 스위트 한정\n🔴 4.2× = 16K time-to-loss 기준",
+      "x": -1200,
+      "y": 6380,
+      "width": 340,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "b0915-zgcm-note",
+      "type": "text",
+      "text": "🎯 **축 이동**\n압축(증류·양자화)이 아니라\n**용량 한계를 도구로 우회하도록 설계**\n→ 파라미터에 지식 대신 **조달 능력**",
+      "x": -810,
+      "y": 6380,
+      "width": 300,
+      "height": 150,
+      "color": "6"
     }
   ],
   "edges": [
@@ -939,6 +959,13 @@
       "fromNode": "batch-0914-local-llm",
       "toNode": "n0914-orthog",
       "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915x-0",
+      "fromNode": "b0915-zgcm",
+      "fromSide": "right",
+      "toNode": "b0915-zgcm-note",
       "toSide": "left"
     }
   ]

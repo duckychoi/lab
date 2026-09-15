@@ -4,13 +4,51 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-14
-sources: [teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md]
+updated: 2026-09-15
+sources: [firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
 
 목표: 쓸모있는 AI 도구 발굴 + 내 워크플로우에 통합
+
+---
+
+## 최근 흐름 (2026-09-15 배치 · 11건) — **바닥이 채워졌고, 화제성과 검증가능성이 정면으로 갈렸다**
+
+> [!insight] 🎯 이번 배치 한 줄
+> **1,043개 소스를 쌓는 동안 한 번도 기록하지 않았던 "바닥"이 들어왔다.** [[huggingface-transformers]] · [[clip-vit-base-patch32]] · [[distilbert-base-uncased]] — 전부 2018~2024년 상시 인프라이고, 전부 볼트에 페이지가 없었다.
+> **가장 많이 참조된 것이 가장 늦게 기록된다.** 인프라는 전제로 쓰이기 때문에 주어가 되지 않는다 → [[암묵을-명시로]] · [[HuggingFace]] 엔티티 신설.
+
+> [!warning] 🔴 **화제성과 검증가능성이 역상관이었다 — 이번 배치의 양 극단**
+> | | 지표 | 신뢰도 | 근거 상태 |
+> |---|---|---|---|
+> | [[MiroFish]] | ★**73,504**(배치 2위) | **low** | 예측 정확도 벤치 **0** · 정성 데모뿐 |
+> | [[DataFlex-RL]] | 업보트 **108**(배치 최하위) | **high** | 신뢰구간·시드·상관계수 전부 명시 |
+>
+> **스타 73,504와 업보트 108이 신뢰도에서는 정반대다.** ★는 "얼마나 많이 봤나"를 재고 검증가능성은 "무엇을 확인할 수 있나"를 잰다 — **두 축은 독립이다.**
+
+> [!insight] 🎯 [[DataFlex-RL]] 이 이 배치 최대 수확이다 (업보트 꼴찌인데)
+> 동일한 9개 런을 **수학 편중 6벤치**와 **균형 12벤치**로 재채점하니 **순위 상관 -0.33 (음의 상관)**.
+> **같은 모델, 같은 점수, 다른 집계 → 순위가 뒤집힌다.**
+> 그리고 **롤아웃 선택·재가중 8개 기법 중 어느 것도 균일 샘플링 대비 95% CI가 0을 배제하지 못했다** — 개선처럼 보이던 것들이 측정 정밀도 안에서 사라진다.
+> → [[측정도구-먼저-반증]] 에 **가장 강한 정량 실증**으로 등재. 볼트 규칙 신설(*평균의 분모를 같은 불릿에*).
+
+> [!insight] 에이전트 축 — **교체 가능성을 어느 레이어에서 푸느냐**
+> 같은 배치에 세 가지 답이 동시에 왔다:
+> - [[firstmate]] — **파일시스템 레이어**. `AGENTS.md`+스킬+스크립트 디렉토리를 통째로 배포. 에이전트마다 **독립 git worktree**. 설치할 앱이 없다
+> - [[all-agentic-architectures]] — **타입 레이어**. 35개 패턴을 동일 `.run(task)` 계약으로 통일해 **클래스 교체만으로 패턴 교체**
+> - [[Dream-RSI]] — **오케스트레이션 레이어**. 기반 코딩 에이전트를 건드리지 않고 **탐색 정책만** 개선
+> 🎯 **셋 다 "모델을 바꾸지 않는다"** — 2026년 하반기 에이전트 작업이 모델 위 레이어로 올라갔다는 신호.
+
+> [!warning] 🔴 재사용성은 스타 수와 무관하다
+> [[ai-engineering-hub]] ★37,549(노트북 복사) vs [[all-agentic-architectures]] ★4,507(통일 계약·PyPI).
+> **스타는 8배 차이인데 재사용성은 역방향이다.** 학습 자료의 인기는 교육 접근성을 재지 재사용성을 재지 않는다.
+
+> [!warning] 🔴 절대 증가량 정렬이 상대 속도를 가린다 → [[상대속도-가림]] 신설
+> [[firstmate]] +978/★6,003 = **16.3%** vs [[huggingface-transformers]] +536/★166,137 = **0.32%**.
+> **절대 증가량 2위가 상대 속도 꼴찌다.** 3개월 레포가 하루에 자기 크기 1/6을 불린 사건과, 8년차 인프라의 기저 유입이 **같은 목록의 이웃 행**에 있다.
+> HF 모델 채널은 더 심하다 — 다운로드 절대량 정렬이라 **배달 3건 전부 신규 릴리스가 아니고, 탈락 21건 쪽에 2026년 신규가 몰려 있었다.**
 
 ---
 

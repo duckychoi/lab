@@ -3168,6 +3168,156 @@
       "width": 340,
       "height": 220,
       "color": "1"
+    },
+    {
+      "id": "b0915-hub",
+      "type": "text",
+      "text": "# 📥 2026-09-15 배치\n\n11건(ai-news) + ZGCM-1(local-llm) + Vidu-S2(video-saas)\n\n**바닥이 채워졌다**",
+      "x": -1400,
+      "y": 18060,
+      "width": 300,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "b0915-firstmate",
+      "type": "text",
+      "text": "[[firstmate]]\n★6,003 +978 (**16.3%**)\n에이전트 배포판·git worktree\n🔴 이슈 23.2%",
+      "x": -1060,
+      "y": 17900,
+      "width": 260,
+      "height": 130,
+      "color": "3"
+    },
+    {
+      "id": "b0915-allagentic",
+      "type": "text",
+      "text": "[[all-agentic-architectures]]\n★4,507 · 35패턴 동일 계약\ndeterministic-picker 13/35\n🔴 배지 자체보고·85일 정체",
+      "x": -1060,
+      "y": 18060,
+      "width": 260,
+      "height": 130,
+      "color": "3"
+    },
+    {
+      "id": "b0915-aihub",
+      "type": "text",
+      "text": "[[ai-engineering-hub]]\n★37,549 · 노트북 93개+\n🔴 재사용성 낮음(복사 구조)\n뉴스레터 유입 채널",
+      "x": -1060,
+      "y": 18220,
+      "width": 260,
+      "height": 130,
+      "color": "6"
+    },
+    {
+      "id": "b0915-mirofish",
+      "type": "text",
+      "text": "[[MiroFish]]\n★73,504 (배치 2위)\n🔴 **예측 벤치 0 · 정성 데모뿐**\nAGPL-3.0 · reliability low",
+      "x": -1060,
+      "y": 18380,
+      "width": 260,
+      "height": 140,
+      "color": "1"
+    },
+    {
+      "id": "b0915-transformers",
+      "type": "text",
+      "text": "[[huggingface-transformers]]\n★166,137 · **상대속도 0.32%**\n호환성 계약 · 8년차 인프라\n📌 1,043소스 중 페이지 부재였음",
+      "x": -1740,
+      "y": 17900,
+      "width": 280,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "b0915-clip",
+      "type": "text",
+      "text": "[[clip-vit-base-patch32]]\nDL 2,150만/월 · DL:♥ 14,046:1\n🔴 라이선스 **미선언**\n🔴 카드: \"배포용 아님\"",
+      "x": -1740,
+      "y": 18060,
+      "width": 280,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "b0915-distil",
+      "type": "text",
+      "text": "[[distilbert-base-uncased]]\nDL 731만/월 · apache-2.0\n🔴 CoLA 51.3 · RTE 59.9\n(평균 79.5가 덮는다)",
+      "x": -1740,
+      "y": 18220,
+      "width": 280,
+      "height": 140,
+      "color": "5"
+    },
+    {
+      "id": "b0915-llama",
+      "type": "text",
+      "text": "[[Llama-3.1-8B-Instruct]]\n`gated: manual` → 카드 **401**\nDL:♥ 750:1 ← **분모가 잘림**\n🔴 벤치 수치 미기재(확인 불가)",
+      "x": -1740,
+      "y": 18380,
+      "width": 280,
+      "height": 140,
+      "color": "2"
+    },
+    {
+      "id": "b0915-atria",
+      "type": "text",
+      "text": "[[Atria-Dawn]]\n업보트 221 · 저자 143인\n16벤치 중 **5개** 최고\n🔴 제목만 \"Superintelligence\"",
+      "x": -1400,
+      "y": 17800,
+      "width": 260,
+      "height": 130,
+      "color": "3"
+    },
+    {
+      "id": "b0915-dream",
+      "type": "text",
+      "text": "[[Dream-RSI]]\n업보트 164 · 탐색 이력→리플레이\n📌 개선 주체 = **탐색 정책**\n(기반 에이전트 불변)",
+      "x": -1400,
+      "y": 18260,
+      "width": 260,
+      "height": 130,
+      "color": "3"
+    },
+    {
+      "id": "b0915-dataflex",
+      "type": "text",
+      "text": "[[DataFlex-RL]]\n업보트 **108(꼴찌)** · 신뢰도 **high**\n🎯 순위 상관 **-0.33**\n8기법 전부 CI가 0 포함",
+      "x": -1400,
+      "y": 18440,
+      "width": 260,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "b0915-meta",
+      "type": "text",
+      "text": "[[메타데이터-부재-추론]] 🆕\n필드 부재 ≠ 사실 부재\ntopics 0 → AI 에이전트 실재\nbasename 38히트 → 오탐",
+      "x": -720,
+      "y": 17980,
+      "width": 270,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "b0915-vel",
+      "type": "text",
+      "text": "[[상대속도-가림]] 🆕\n절대 증가량 정렬 = 큰 것이 위로\nfirstmate 16.3% vs tf 0.32%",
+      "x": -720,
+      "y": 18160,
+      "width": 270,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "b0915-gods",
+      "type": "text",
+      "text": "[[gods-eye-view]] 🔴 **재판정 요청**\n+14,403(배치 최대) ★34,053\nREADME: \"realtime AI agent\"\n→ topics만 보고 제외한 오류",
+      "x": -720,
+      "y": 18340,
+      "width": 280,
+      "height": 140,
+      "color": "1"
     }
   ],
   "edges": [
@@ -5787,6 +5937,181 @@
       "fromNode": "batch-0914-ai-news",
       "toNode": "n0914-perfimg",
       "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-0",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-firstmate",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-1",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-allagentic",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-2",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-aihub",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-3",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-mirofish",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-4",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-transformers",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-5",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-clip",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-6",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-distil",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-7",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-llama",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-8",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-atria",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-9",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-dream",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-10",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-dataflex",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-11",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-meta",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-12",
+      "fromNode": "b0915-transformers",
+      "fromSide": "right",
+      "toNode": "b0915-vel",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-13",
+      "fromNode": "b0915-firstmate",
+      "fromSide": "right",
+      "toNode": "b0915-vel",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-14",
+      "fromNode": "b0915-transformers",
+      "fromSide": "right",
+      "toNode": "b0915-meta",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-15",
+      "fromNode": "b0915-clip",
+      "fromSide": "right",
+      "toNode": "b0915-meta",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-16",
+      "fromNode": "b0915-gods",
+      "fromSide": "right",
+      "toNode": "b0915-meta",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-17",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-meta",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-18",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-vel",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-19",
+      "fromNode": "b0915-dataflex",
+      "fromSide": "right",
+      "toNode": "b0915-distil",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-20",
+      "fromNode": "b0915-llama",
+      "fromSide": "right",
+      "toNode": "b0915-clip",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-21",
+      "fromNode": "b0915-allagentic",
+      "fromSide": "right",
+      "toNode": "b0915-aihub",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-22",
+      "fromNode": "b0915-firstmate",
+      "fromSide": "right",
+      "toNode": "b0915-allagentic",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-23",
+      "fromNode": "b0915-dream",
+      "fromSide": "right",
+      "toNode": "b0915-atria",
+      "toSide": "left"
+    },
+    {
+      "id": "e0915-24",
+      "fromNode": "b0915-hub",
+      "fromSide": "right",
+      "toNode": "b0915-gods",
       "toSide": "left"
     }
   ]

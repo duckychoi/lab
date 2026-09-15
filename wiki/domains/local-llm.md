@@ -4,13 +4,33 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-14
-sources: [MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
+updated: 2026-09-15
+sources: [ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
 
 목표: 경량 모델 실배포 + Hermes/에이전트에 메모리 심기
+
+---
+
+## 최근 흐름 (2026-09-15 배치 · 1건) — **압축이 아니라 "용량 한계를 도구로 우회하도록 설계"**
+
+> [!insight] 🔀 신규 1건 — [[ZGCM-1]] (raw `ai-news` → **local-llm 재판정**)
+> 재판정 근거: **7B 밀집 + 전 단계 가중치·데이터·코드 공개**는 로컬 실행·재현이 핵심 가치다. 선례 [[MiniCPM5-2B]]·[[Spark-X2.5-4B]]·[[Puro-2B]] 와 동일 기준.
+>
+> 🎯 **소형 모델 전략의 축이 이동했다.** 이 도메인이 추적해 온 경로는 주로 **압축**이었다(증류·양자화·GGUF). [[ZGCM-1]] 은 다른 전제에서 출발한다:
+> > *"작은 모델은 웹을 수동 암기할 수 없지만, **내적 사고와 외부 도구 사용을 결합하면 파라미터 용량 한계를 넘을 수 있다**"*
+> 즉 **큰 모델을 줄인 게 아니라, 처음부터 도구를 쓰도록 학습**했다. 파라미터에 지식을 넣는 대신 **조달 능력**을 넣는다 → [[에이전트-메모리-레이어]] 와 직결.
+>
+> **레시피**: 교차 게이트 슬라이딩윈도+풀어텐션 · **FP8 Muon** 옵티마이저 · 컨텍스트 **16K→64K→256K** 점진 커리큘럼 · 상호작용 궤적의 **MDP 재정식화**
+>
+> ✅ **공개 범위가 이 논문의 실질**: 단계별 가중치 + 중간 체크포인트 + 학습 코드 + **단계별 데이터와 데이터 레시피 + W&B 로그** + 경험적 발견 8건.
+> 📌 볼트가 반복 기록해 온 *"오픈 가중치 ≠ 오픈 시스템"*([[MiniMax-H3]])의 **정확한 반대 극단**이다. 이 도메인 최초의 reliability **high** 논문.
+>
+> > [!warning] 🔴 성립 조건 — 두 개의 다른 급을 섞어 읽지 말 것
+> > ① 일반 벤치: *"**7B 패밀리 내** competitive"* ② 일부 수학·에이전틱 검색 스위트: *"**Qwen3-235B-A22B·GLM-5.1** 과 competitive"*
+> > **②를 ①로 확대하면 오독.** 그리고 **4.2× 효율은 "16K 사전학습 time-to-loss" 기준**이지 전체 학습비도 추론비도 아니다 → [[단위-불일치]].
 
 ---
 

@@ -4,12 +4,34 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-09-10
-sources: [Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md]
+updated: 2026-09-15
+sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md]
 ---
 
 # 영상 AI SaaS 누적 인사이트
 
+
+## 최근 흐름 (2026-09-15 배치 · 1건) — **편집이 렌더 뒤가 아니라 스트림 위로 올라왔다**
+
+> [!insight] 🔀 신규 1건 — [[Vidu-S2]] (raw `ai-news` → **video-saas 재판정**)
+> 재판정 근거: **전작 [[Vidu-S1]] 이 이미 이 도메인에 있다.** 같은 계보의 후속작을 다른 도메인에 두면 누적 인사이트가 끊긴다.
+>
+> 🎯 **S1이 "실시간 생성"을 열었다면 S2는 "실시간 편집"을 연다.**
+> **S2-Avatar**: 540p → **720p** 실시간 · **언제든 갱신 가능한 동적 레퍼런스** · 춤 같은 지시 따르기 강화
+> **S2-Editing**(신설): 스트림 상태에서 **스타일 렌더링 · 의상 교체 · 인물 교체 · 배경 교체**
+> 여기에 실시간 **공간(spatial) 비디오** 탐색까지.
+>
+> 📌 **내 reat-\* 스택의 전제와 정면으로 다르다.** 현재 파이프라인은 *프롬프트 → 렌더 → 클립 → 후처리*다. S2는 **편집이 렌더 뒤가 아니라 스트림 위에서** 일어난다 — **프리뷰와 최종본의 구분이 사라진다.**
+>
+> > [!warning] 🔴 성립 조건 **부재** — 초록에 수치가 하나도 없다
+> > 초록 전부: *"Experiments show that Vidu S2 **outperforms all baselines**."* **baseline 이름·벤치마크명·수치 전무.** 확인 가능한 비교 대상은 자사 전작 S1뿐.
+> > 🔴 **S1은 "소비자 GPU 540p·42FPS"를 명시했는데 S2는 하드웨어 조건을 안 적었다** — 720p 향상이 같은 조건인지 알 수 없다 → [[단위-불일치]].
+> > **후속작이 전작보다 신뢰도가 낮다**(S1 medium → S2 **low**). 능력은 올라갔는데 검증가능성은 내려갔다.
+>
+> > [!action] 당장 할 것
+> > **vidu.com/vidu-stream 데모 직접 실측.** 논문이 안 준 수치는 데모에서만 얻는다 — 720p 실시간 실측 · 편집 지연 · 인물 교체 품질.
+
+---
 
 ## 최근 흐름 (2026-09-10 배치 · 1건)
 
