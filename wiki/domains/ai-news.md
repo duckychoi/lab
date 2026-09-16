@@ -4,7 +4,7 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-15
+updated: 2026-09-16
 sources: [firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md]
 ---
 
@@ -2983,3 +2983,51 @@ raw는 *"중복 0건"* 이라 보고했으나 **[[vercel-skills]] 가 이미 있
 - **DecodingTrust-Agent** ASR 45.6 → 10.0 / **AgentDojo** ASR 0.0에서 유틸 82.8 ([[EvoSafeHarness]])
 - **WildSongBench**(192 프롬프트): YuE2 Bo8 6.9632 · Mureka 9 6.9377 · Suno v5 6.8721
 - ⚠️ **SWE-bench 계열은 변종을 병기할 것** — 원조 / Verified / Pro / **Pro Verified** / Science 는 서로 다른 벤치다
+
+---
+
+## 2026-09-16 배치 — **모델을 만드는 사람이 아무도 없다**
+
+**13건 전량 NEW(중복 0%)** · GitHub 5 · HF논문 5 · HF모델 3 + 재판정 1건([[omniget-재판정]])
+
+### 🎯 관찰 1 — GitHub 5건 중 5건이 "모델 위 계층"이다
+
+| 레포 | ★ | 건드리는 층 |
+|---|---|---|
+| [[pi-agent-harness]] | 106,058 | 에이전트 **런타임** |
+| [[LibreChat]] | 44,019 | **접근 UI** (멀티 프로바이더) |
+| [[9router]] | 28,983 | **라우팅 프록시** |
+| [[worktrunk]] | 7,876 | **파일시스템** (worktree) |
+| [[atlas-source-control]] | 4,761 | **버전 관리** (커밋↔세션 역링크) |
+
+📌 **아무도 모델을 학습시키지 않는다.** 경쟁축이 **모델 품질 → 모델을 둘러싼 계층**으로 이동한 정황이다.
+⚠️ **성립 조건**: 이것은 **이 배치 5건 기준의 관찰**이며 GitHub 트렌딩 전체 추세 주장이 아니다. 같은 날 HF 논문 채널에는 32B 영상 모델([[LynnReal-Omni]])과 음성 파운데이션 모델([[StepAudio-3-Realtime]])이 있었다 — **채널이 다르면 보이는 층이 다르다.**
+
+### 🎯 관찰 2 — ★:fork 비율이 배포 모델을 드러낸다
+
+**LibreChat 4.9:1 · 9router 5.5:1 · pi 7.9:1 · atlas 16.6:1 · worktrunk 29:1**
+
+셀프호스트/프록시류는 fork 비율이 **3~6배 높다** — fork가 "기여"가 아니라 **배포 단위**이기 때문이다(자기 인스턴스를 띄우려면 fork한다).
+🔴 **따라서 ★만으로 도구 간 채택을 비교하면 안 된다.** worktrunk(★7,876)는 이 배치 4위지만 fork가 272뿐이라 **설치해서 그대로 쓰는 형태**다 — 사용 밀도는 다를 수 있다.
+
+### 🎯 관찰 3 — 자체 벤치마크가 기본값이다 (논문 5건 중 3건 = 60%)
+
+[[Continual-Learning-Compose]](자체 3개 데이터셋) · [[LynnReal-Omni]](MSAVP) · [[StepAudio-3-Realtime]](StepAudioChat)
+→ [[측정도구-먼저-반증]] 에 **빈도 관찰**로 등재. 개별 논문을 의심하는 문제가 아니라 **읽는 쪽의 기본 자세** 문제.
+
+### 🎯 관찰 4 — 정직성과 신뢰도가 같이 간다
+
+**한정어를 지킨 3건**([[pi-agent-harness]]·[[AI-for-Games-FM-Era]]·[[Continual-Learning-Compose]]) → 전부 **high**
+**떨어뜨린 3건**([[Last-AI-Built-by-Humans]]·[[9router]]·[[worktrunk]] 자평) → **low/medium**
+📌 [[자기제한-명시]] · [[한정어-탈락]] 양쪽에서 같은 결론이 나왔다.
+
+### 🔴 발견 — HF `arxiv:` 태그는 모델의 논문이 아니다
+
+[[electra-base-discriminator]] 의 유일한 arxiv 태그가 **GAN 원논문(1406.2661)** 이다. HF가 **카드 본문 링크를 자동 파싱**하기 때문이며, ELECTRA 원논문은 openreview에만 있어 태그가 될 수 없었다.
+[[bge-small-en-v1.5]] 도 **5개 중 1개**만 자기 논문이다. → [[파생표기-함정]] 네 번째 사례.
+
+### 🏗️ 상시 인프라 3건 — RAG 파이프라인이 통째로 들어왔다
+
+[[bge-small-en-v1.5]](1단계 임베딩 · MIT) → [[ms-marco-MiniLM-L6-v2]](2단계 리랭커 · Apache-2.0)
+🎯 **경쟁 관계가 아니라 직렬 결합이며, 둘 다 허용적 라이선스다.** [[electra-base-discriminator]] 는 그 계보의 상류(2020년 사전학습 혁신)에 있고, ms-marco 성능표 안에 **electra 기반 리랭커가 비교군으로 실재**한다(71.99 · 340 docs/s vs L6 74.30 · 1,800).
+📌 **한 배치에서 계보의 세 지점이 동시에 들어온 것은 처음이다.**

@@ -3318,6 +3318,266 @@
       "width": 280,
       "height": 140,
       "color": "1"
+    },
+    {
+      "id": "hub-0916",
+      "type": "text",
+      "text": "## 2026-09-16 배치\n**13건 전량 NEW · 중복 0%**\n🎯 GitHub 5건 전부 *모델 위 계층*\n🔴 arxiv 태그 = 모델 논문 아님",
+      "x": 0,
+      "y": 18800,
+      "width": 380,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "n-pi",
+      "type": "text",
+      "text": "[[pi-agent-harness]]\n★106,058 · 권한 경계 명시\ntopics 0개",
+      "x": -1000,
+      "y": 19040,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-librechat",
+      "type": "text",
+      "text": "[[LibreChat]]\n★44,019 · 접근 UI\n★:fork 4.9:1",
+      "x": -660,
+      "y": 19040,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-9router",
+      "type": "text",
+      "text": "[[9router]]\n★28,983 · 🔴 주장 3건 검증불가\n도입 금지",
+      "x": -320,
+      "y": 19040,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-worktrunk",
+      "type": "text",
+      "text": "[[worktrunk]]\n★7,876 · worktree\n★:fork 29:1",
+      "x": 20,
+      "y": 19040,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-atlas",
+      "type": "text",
+      "text": "[[atlas-source-control]]\n★4,761 · 커밋↔세션 역링크",
+      "x": 360,
+      "y": 19040,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-omniget",
+      "type": "text",
+      "text": "[[omniget-재판정]]\n⚖️ 제외 유지\ntopics 20개 만석",
+      "x": 700,
+      "y": 19040,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-cl",
+      "type": "text",
+      "text": "[[Continual-Learning-Compose]]\n업보트 273 · 1.2%→34.9%\n⚠️ 자체 3데이터셋",
+      "x": -1000,
+      "y": 19220,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-lastai",
+      "type": "text",
+      "text": "[[Last-AI-Built-by-Humans]]\n🔴 제목발 과장 2배치 연속",
+      "x": -660,
+      "y": 19220,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-games",
+      "type": "text",
+      "text": "[[AI-for-Games-FM-Era]]\n반증조건 자기명시",
+      "x": -320,
+      "y": 19220,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-lynn",
+      "type": "text",
+      "text": "[[LynnReal-Omni]]\n32B MMDiT · 843ms 조건4개",
+      "x": 20,
+      "y": 19220,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-step",
+      "type": "text",
+      "text": "[[StepAudio-3-Realtime]]\n98.9 vs τ-Voice 56.0%",
+      "x": 360,
+      "y": 19220,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-msmarco",
+      "type": "text",
+      "text": "[[ms-marco-MiniLM-L6-v2]]\nDL 8,886만 · 변곡점\nDL:♥ 261,368:1",
+      "x": -1000,
+      "y": 19400,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-bge",
+      "type": "text",
+      "text": "[[bge-small-en-v1.5]]\nDL 6,464만 · MIT\n🔴 드리프트 +62만",
+      "x": -660,
+      "y": 19400,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "n-electra",
+      "type": "text",
+      "text": "[[electra-base-discriminator]]\n🔴 arxiv 태그=GAN 논문",
+      "x": -320,
+      "y": 19400,
+      "width": 300,
+      "height": 110,
+      "color": "5"
+    },
+    {
+      "id": "c-knee",
+      "type": "text",
+      "text": "[[수확체감-변곡점]]\n🆕 3점 비교 규칙",
+      "x": -1000,
+      "y": 19590,
+      "width": 300,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "c-derive",
+      "type": "text",
+      "text": "[[파생표기-함정]]\n4번째: 자동 파싱 태그",
+      "x": -660,
+      "y": 19590,
+      "width": 300,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "c-meta",
+      "type": "text",
+      "text": "[[메타데이터-부재-추론]]\n확장: 포화도 신호 아님",
+      "x": -320,
+      "y": 19590,
+      "width": 300,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "c-measure",
+      "type": "text",
+      "text": "[[측정도구-먼저-반증]]\n빈도: 5건 중 3건",
+      "x": 20,
+      "y": 19590,
+      "width": 300,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "c-hedge",
+      "type": "text",
+      "text": "[[한정어-탈락]]\n변종 4종 추가",
+      "x": 360,
+      "y": 19590,
+      "width": 300,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "c-selflimit",
+      "type": "text",
+      "text": "[[자기제한-명시]]\n제품+논문 동시",
+      "x": 700,
+      "y": 19590,
+      "width": 300,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "e-earendil",
+      "type": "text",
+      "text": "[[earendil-works]]\n경계·무모순·대안 3칸",
+      "x": -1000,
+      "y": 19760,
+      "width": 300,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "e-baai",
+      "type": "text",
+      "text": "[[BAAI]]\n검색 인프라 · MIT",
+      "x": -660,
+      "y": 19760,
+      "width": 300,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "a-rag",
+      "type": "text",
+      "text": "🎯 RAG 2단 구성\nbge-small → ms-marco-L6\n(L12 금지)",
+      "x": -320,
+      "y": 19760,
+      "width": 320,
+      "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "a-wt",
+      "type": "text",
+      "text": "🎯 worktrunk 실측\n검증비용 최저",
+      "x": 20,
+      "y": 19760,
+      "width": 320,
+      "height": 120,
+      "color": "2"
+    },
+    {
+      "id": "a-anchor",
+      "type": "text",
+      "text": "🎯 data anchor+merged LoRA\nHermes 적용",
+      "x": 360,
+      "y": 19760,
+      "width": 320,
+      "height": 120,
+      "color": "2"
     }
   ],
   "edges": [
@@ -6113,6 +6373,286 @@
       "fromSide": "right",
       "toNode": "b0915-gods",
       "toSide": "left"
+    },
+    {
+      "id": "e0916-hub-0916-n-pi",
+      "fromNode": "hub-0916",
+      "toNode": "n-pi",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-librechat",
+      "fromNode": "hub-0916",
+      "toNode": "n-librechat",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-9router",
+      "fromNode": "hub-0916",
+      "toNode": "n-9router",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-worktrunk",
+      "fromNode": "hub-0916",
+      "toNode": "n-worktrunk",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-atlas",
+      "fromNode": "hub-0916",
+      "toNode": "n-atlas",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-omniget",
+      "fromNode": "hub-0916",
+      "toNode": "n-omniget",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-cl",
+      "fromNode": "hub-0916",
+      "toNode": "n-cl",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-lastai",
+      "fromNode": "hub-0916",
+      "toNode": "n-lastai",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-games",
+      "fromNode": "hub-0916",
+      "toNode": "n-games",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-lynn",
+      "fromNode": "hub-0916",
+      "toNode": "n-lynn",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-step",
+      "fromNode": "hub-0916",
+      "toNode": "n-step",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-msmarco",
+      "fromNode": "hub-0916",
+      "toNode": "n-msmarco",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-bge",
+      "fromNode": "hub-0916",
+      "toNode": "n-bge",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-hub-0916-n-electra",
+      "fromNode": "hub-0916",
+      "toNode": "n-electra",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-electra-c-derive",
+      "fromNode": "n-electra",
+      "toNode": "c-derive",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "결정적 증거"
+    },
+    {
+      "id": "e0916-n-bge-c-derive",
+      "fromNode": "n-bge",
+      "toNode": "c-derive",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "5개 중 1개"
+    },
+    {
+      "id": "e0916-n-msmarco-c-knee",
+      "fromNode": "n-msmarco",
+      "toNode": "c-knee",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "원 사례"
+    },
+    {
+      "id": "e0916-n-pi-c-meta",
+      "fromNode": "n-pi",
+      "toNode": "c-meta",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "topics 0"
+    },
+    {
+      "id": "e0916-n-omniget-c-meta",
+      "fromNode": "n-omniget",
+      "toNode": "c-meta",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "topics 20 만석"
+    },
+    {
+      "id": "e0916-n-pi-c-selflimit",
+      "fromNode": "n-pi",
+      "toNode": "c-selflimit",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "전용 섹션"
+    },
+    {
+      "id": "e0916-n-games-c-selflimit",
+      "fromNode": "n-games",
+      "toNode": "c-selflimit",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "반증조건"
+    },
+    {
+      "id": "e0916-n-cl-c-measure",
+      "fromNode": "n-cl",
+      "toNode": "c-measure",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "자체 데이터셋"
+    },
+    {
+      "id": "e0916-n-lynn-c-measure",
+      "fromNode": "n-lynn",
+      "toNode": "c-measure",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "MSAVP"
+    },
+    {
+      "id": "e0916-n-step-c-measure",
+      "fromNode": "n-step",
+      "toNode": "c-measure",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "StepAudioChat"
+    },
+    {
+      "id": "e0916-n-lastai-c-hedge",
+      "fromNode": "n-lastai",
+      "toNode": "c-hedge",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "제목발"
+    },
+    {
+      "id": "e0916-n-9router-c-hedge",
+      "fromNode": "n-9router",
+      "toNode": "c-hedge",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "한정어 부재"
+    },
+    {
+      "id": "e0916-n-worktrunk-c-hedge",
+      "fromNode": "n-worktrunk",
+      "toNode": "c-hedge",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "분모없는 최상급"
+    },
+    {
+      "id": "e0916-n-pi-e-earendil",
+      "fromNode": "n-pi",
+      "toNode": "e-earendil",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-bge-e-baai",
+      "fromNode": "n-bge",
+      "toNode": "e-baai",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-msmarco-a-rag",
+      "fromNode": "n-msmarco",
+      "toNode": "a-rag",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-bge-a-rag",
+      "fromNode": "n-bge",
+      "toNode": "a-rag",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-worktrunk-a-wt",
+      "fromNode": "n-worktrunk",
+      "toNode": "a-wt",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-cl-a-anchor",
+      "fromNode": "n-cl",
+      "toNode": "a-anchor",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": ""
+    },
+    {
+      "id": "e0916-n-electra-n-msmarco",
+      "fromNode": "n-electra",
+      "toNode": "n-msmarco",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "같은 계보"
+    },
+    {
+      "id": "e0916-n-worktrunk-n-atlas",
+      "fromNode": "n-worktrunk",
+      "toNode": "n-atlas",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "공간↔시간 상보"
     }
   ]
 }

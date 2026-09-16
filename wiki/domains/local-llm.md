@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-15
+updated: 2026-09-16
 sources: [ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
 ---
 
@@ -454,3 +454,37 @@ DL 1,475만이나 **7개 런타임 포맷 + DOI + `exbert`** 구성이 말해 �
 - llama.cpp **기본 `min_p=0.05` 는 반복 출력**을 유발 → **`min_p=0.0`**(MiniCPM5 카드 355행)
 - [[OpenBMB]] 는 배포 형식별 리포를 쪼개고 **카드를 공유** → 수치 인용 전 **원본과 md5 비교**
 - **온디바이스 실사용은 원본이 아니라 양자화 리포에서 일어난다**(70,755 vs 원본) — 채택률 볼 때 리포를 합산할 것
+
+---
+
+## 2026-09-16 — 장기 기억: **단일 기법은 전부 실패한다** ([[Continual-Learning-Compose]])
+
+arXiv 2609.06986 · 업보트 **273 (이 배치 1위)** · 저자 4명(Johns Hopkins 계열)
+
+🎯 **이 논문이 local-llm 도메인에 주는 것은 수치가 아니라 설계 축이다.**
+
+**설정**: 100개 QA 과제를 순차 SFT. **제약 2개** — (a) 이전 학습 예시 보관 금지 (b) 추론 시 과제 식별자 없음.
+**출발점**: *"**no single** continual learning mechanism we evaluate maintains strong retention at this horizon."* — 저자가 단일 기법의 실패를 **먼저** 확정한다.
+
+**2축 설계**:
+- **앵커** (data / function / weight) = *무엇을 보존할지*
+- **저랭크 배분 규칙** = *어디에 누적할지*
+
+**결과**: 3앵커 + merged LoRA → 평균 최종 보존율 **1.2% → 34.9% (28배)**
+
+> [!warning] 성립 조건 3개 (반드시 함께)
+> 1. **자체 구성 3개 데이터셋** (공개 벤치 아님) → [[측정도구-먼저-반증]]
+> 2. **리플레이 금지 + 식별자 없음** 제약 하에서만
+> 3. 최적 조합도 *"ranks among the **top 3** methods in all datasets"* — **전 데이터셋 1위가 아니다**
+> 🔴 그리고 **34.9%는 여전히 100과제 중 65개를 잊는다.**
+
+### Hermes/ChinameBot 적용 — 실행 가능한 결론
+
+📌 **"단일 기법에 걸지 말라"가 이 논문의 이식 가능한 부분이다.**
+LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패로 측정한 범주**에 속한다. 앵커를 **겹쳐** 쓰는 방향이 맞다.
+
+> [!action] 우선 시험 대상
+> **`data anchor + merged LoRA` 2개 조합부터.** 초록이 *"The data anchor and merged LoRA provide the..."* 로 **개별 기여가 가장 큰 두 요소**를 지목하기 시작한다. 3앵커 전부보다 **구현 비용이 낮고 효과 대부분을 가져올 가능성**이 있다.
+> ⚠️ 조합은 **탐색 비용**을 만든다 — 저자도 task-level successive halving + 요인실험이 필요했다.
+
+🔗 [[에이전트-메모리-레이어]] 에 **정량 근거**가 처음 붙었다. 지금까지 이 축은 아키텍처 서술 위주였고, 보존율 수치로 비교 가능한 결과는 드물었다.

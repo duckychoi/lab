@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-09-15
-total_pages: 1151  # 2026-09-15 실측(sources 1056 · entities 53 · concepts 36 · synthesis 2 · domains 4 · queries 0)
-total_sources: 1056  # 2026-09-15 실측. ✅ **배치 13건 전건 NEW · 중복 0%** — 09-14 61.5%에서 완전 회복. 볼트 독립 검증(`org/name` 리터럴 + arXiv ID + 파일명) 완료. 수집기가 [[백필-우회]] 를 **순서 변경으로 구조적 제거**(필터를 선발보다 먼저). 🎯 **바닥이 채워졌다** — [[huggingface-transformers]]·[[clip-vit-base-patch32]]·[[distilbert-base-uncased]] 는 1,043소스를 쌓는 동안 페이지가 없던 상시 인프라. 🔴 **볼트 발견: 수집기의 [[gods-eye-view]] 제외는 오판**(topics에 ML 0 → 제외했으나 README 9행에 "realtime AI agent"; 배치 최대 급상승 +14,403 · ★34,053) → [[메타데이터-부재-추론]] 신설. 🎯 화제성↔검증가능성 역상관: [[MiroFish]] ★73,504/low vs [[DataFlex-RL]] 업보트 108/high. 신설 개념 2([[메타데이터-부재-추론]]·[[상대속도-가림]]) · 신설 엔티티 1([[HuggingFace]]). 도메인 재판정 2건: [[ZGCM-1]]→local-llm · [[Vidu-S2]]→video-saas
+updated: 2026-09-16
+total_pages: 1168  # 2026-09-16 실측(sources 1070 · entities 55 · concepts 37 · synthesis 2 · domains 4 · queries 0)
+total_sources: 1070  # 2026-09-16 실측. ✅ **배치 13건 전건 NEW · 중복 0% — 2배치 연속**. 볼트 독립 검증(`org/name` 리터럴 · arXiv ID · HF repo id) 13/13 0히트. 🎯 **GitHub 5건 전부 "모델 위 계층"** — 런타임([[pi-agent-harness]] ★106,058) · 접근UI([[LibreChat]]) · 프록시([[9router]]) · 파일시스템([[worktrunk]]) · 버전관리([[atlas-source-control]]). **아무도 모델을 만들지 않는다**. 🔴 **볼트 최대 발견: HF `arxiv:` 태그는 모델의 논문이 아니다** — [[electra-base-discriminator]] 유일 태그가 **GAN 원논문**(카드 본문 링크 자동 파싱), [[bge-small-en-v1.5]] 는 5개 중 1개만 자기 논문 → [[파생표기-함정]] 4번째. 🎯 **볼트가 표 전체를 읽어 수집기보다 나은 답**: ms-marco L6이 **수확체감 변곡점**(L4→L6 NDCG+1.26/−28% vs L6→L12 **+0.01/−47%**) → [[수확체감-변곡점]] 신설. 🔴 **정정: [[bge-small-en-v1.5]] v1.5의 변경은 프리픽스 *도입*이 아니라 *의존 감소***(카드 2652행). 📌 **논문 5건 중 3건(60%)이 자체 벤치** → [[측정도구-먼저-반증]] 빈도 관찰. ⚖️ **[[omniget-재판정]] 판정: 제외 유지 — 단 근거는 비중이 아니라 "AI를 빼면 기능이 사라지는가"**. 신설 개념 1([[수확체감-변곡점]]) · 신설 엔티티 2([[earendil-works]]·[[BAAI]])
 ---
 
 # Wiki Index
@@ -12,6 +12,10 @@ total_sources: 1056  # 2026-09-15 실측. ✅ **배치 13건 전건 NEW · 중�
 ---
 
 ## entities
+
+- [[earendil-works]] — [[pi-agent-harness]](★**106,058**·TypeScript·fork 13,340) 제작. 🎯 **README 39행에 `## Permissions & Containerization` 전용 섹션**을 두고 *"Pi does not include a built-in permission system..."*(41행)를 먼저 적은 뒤 **격리 패턴 3개**를 준다 — 볼트 자기제한 계열에서 **경계·무모순·대안 3칸을 모두 채운 첫 사례**([[vxcontrol]]은 같은 README에서 "Fully Autonomous" 유지). ⚠️ `topics` **0개** · 신규 기여자 이슈/PR **기본 자동 종료** *(NEW 2026-09-16)*
+
+- [[BAAI]] — [[bge-small-en-v1.5]](DL **6,464만**/월·**MIT**) 제작. 생성 모델이 아니라 **검색 인프라**를 내는 중국 축 — [[Alibaba]]·[[DeepSeek]]·[[MiniMax]] 와 **경쟁 축이 다르다**. 🎯 모델카드 **3,074행**에 `model-index` 68개 결과 + 날짜별 변경 이력을 통째로 싣는다 → **그래서 볼트가 수집기 요약 오류를 잡아냈다**(v1.5는 프리픽스 의존을 *줄인* 버전). ⚠️ **2년 7개월 미수정** *(NEW 2026-09-16)*
 
 - [[HuggingFace]] — 모델 정의와 배포의 **공통 기반**. [[huggingface-transformers]](★166,137·Apache-2.0)는 제품이 아니라 **호환성 계약** — 학습 프레임워크(Axolotl·Unsloth·DeepSpeed)와 추론 엔진(vLLM·SGLang·TGI)이 동일 정의를 재사용. 📌 **1,043개 소스를 쌓는 동안 이 조직의 페이지가 없었다** → [[암묵을-명시로]]. 볼트 측정 규칙 다수가 이 플랫폼 API 특성에서 유래(trendingScore는 목록 API에만 · downloads는 30일 · gated는 401 · license 태그는 선택) *(NEW 2026-09-15)*
 
@@ -87,6 +91,8 @@ total_sources: 1056  # 2026-09-15 실측. ✅ **배치 13건 전건 NEW · 중�
 
 ## concepts
 
+- [[수확체감-변곡점]] — **"가장 많이 쓰이는 크기"는 인기가 아니라 곡선이 꺾이는 지점이다.** 원 사례 [[ms-marco-MiniLM-L6-v2]](DL 8,886만): L4→L6 NDCG **+1.26**/처리량 −28% vs L6→L12 **+0.01**/−47% — **한 칸 사이에 가격이 100배 나빠진다**. 🎯 **볼트 규칙: 2점 비교(내 후보 vs 상위)로 끝내지 말고 최소 3점으로 기울기 변화를 본다** — 수집기가 L6 vs L12 2점만 봐서 *"L12는 손해"* 로 그쳤고, 볼트가 L4를 추가하자 *"L6이 무릎"* 이라는 구조가 나왔다 *(NEW 2026-09-16)*
+
 - [[메타데이터-부재-추론]] — **필드가 비어 있다는 것은 사실이 없다는 뜻이 아니다.** 같은 배치에서 두 채널이 동시에 당했다: ① basename grep 0히트인데 실재 중복(`openai/skills`·`plugins`) / 38히트인데 오탐([[huggingface-transformers]]) ② topics에 ML 0이라 제외했는데 README에 "realtime AI agent"([[gods-eye-view]], 배치 최대 급상승). ✅ 대조군: [[clip-vit-base-patch32]] 라이선스 미선언을 *"없음"*이 아니라 *"확인 필요"*로 적은 올바른 처리. **규칙 확정: `org/name` 리터럴 1순위 · basename 보조 · 일반명사 예외목록 · 도메인 판정에 README 60행 필수** *(NEW 2026-09-15)*
 
 - [[상대속도-가림]] — **절대 증가량 정렬은 큰 것을 항상 위로 올린다.** [[firstmate]] +978/★6,003=**16.3%** vs [[huggingface-transformers]] +536/★166,137=**0.32%** — 절대 2위가 상대 꼴찌. HF모델 채널은 다운로드 절대량 정렬이라 **배달 3건 전부 신규 아님 · 탈락 21건 쪽에 2026년 신규가 몰림**. 🪞 그런데 **가림이 이득을 냈다** — 덕분에 볼트 바닥이 채워졌다. *"편향된 정렬"과 "쓸모없는 정렬"은 다르다* *(NEW 2026-09-15)*
@@ -141,6 +147,32 @@ total_sources: 1056  # 2026-09-15 실측. ✅ **배치 13건 전건 NEW · 중�
 ---
 
 ## sources
+
+### 2026-09-16 배치 (13건 전량 NEW · 중복 0% · + 재판정 1)
+
+**GitHub 5 — 🎯 5건 전부 "모델 위 계층", 아무도 모델을 만들지 않는다**
+
+- [[pi-agent-harness]] — ★**106,058**(+10 드리프트)·fork 13,340·TS. 6패키지 모노레포 에이전트 하네스. 🎯 **README 41행이 권한 모델 부재를 먼저 적고 격리 패턴 3개를 준다** → [[자기제한-명시]] 3칸 완비 첫 사례. 🔴 `topics` **0개**인데 AI 툴킷 — 같은 배치 [[omniget-재판정]](20개 만석) 과 **정반대 극** *(NEW)*
+- [[LibreChat]] — ★**44,019**·fork **9,038(raw 완전일치)**. 멀티프로바이더 셀프호스트 채팅 UI. 🎯 **볼트 발견: ★:fork 비율이 배포 모델을 드러낸다** — 셀프호스트/프록시 4.9~5.5:1 vs CLI 도구 16.6~29:1(fork가 기여가 아니라 **배포 단위**). ⚠️ v0.8.8-**rc3** *(NEW)*
+- [[9router]] — ★**28,983**·JS. 40+ 프로바이더 라우팅 프록시. 🔴 **헤드라인 3건 전부 검증 불가**: *"Unlimited FREE"* = 타사 무료 티어로 **비용 이전** · *"Save 20-40%"* 측정 방법론 **부재** · 다계정 라운드로빈 **약관 회색지대**. ⚠️ **6일간 push 없음**(배치 유일) → **도입 금지 결정** *(NEW·low)*
+- [[worktrunk]] — ★**7,876**·Rust·**★:fork 29:1(배치 최고 = 고쳐 쓰지 않고 그대로 씀)**. 병렬 에이전트용 git worktree CLI. 🎯 **이 배치에서 검증 비용이 가장 싸다**(명령 3개·모델 불변). ⚠️ *"the most popular"* 는 분모 없는 자평 *(NEW)*
+- [[atlas-source-control]] — ★**4,761**(당일 **+91** = 배치 유일 명확한 일간 급상승)·Rust. **커밋을 그것을 만든 세션(프롬프트·툴호출·추론)에 역링크**. 🎯 **에이전트 시대의 `git blame` 문제를 정면으로 다룬다** — [[worktrunk]] 가 *공간*을 나눈다면 이쪽은 *시간*을 보존. ⚠️ 배포 배지 macOS·Win만 *(NEW)*
+- [[omniget-재판정]] — ★**13,299**. ⚖️ **볼트 판정: 제외 유지 — 단 근거를 수집기와 다르게 적는다.** 🎯 **저자가 README 주석에 이유를 직접 적었다**: *"GitHub allows 20 topics. The repository uses **exactly these 20**"* → **AI가 없어서가 아니라 자리가 없어서** topics에 AI가 없다. **신설 판정 기준: "AI를 빼면 그 기능이 사라지는가"**(비중 아님 — 비중 기준은 [[gods-eye-view]] 와 이 건을 구분 못 함) *(재판정)*
+
+**HF 논문 5 — 🔴 3건(60%)이 자체 벤치마크를 함께 도입**
+
+- [[Continual-Learning-Compose]] — 업보트 **273(배치 1위·드리프트 0)**. 100과제 순차 SFT 보존율 **1.2%→34.9%(28배)**. 🎯 **저자가 *"no single mechanism maintains strong retention"* 을 먼저 적고 시작한다.** ⚠️ 성립조건 3: **자체 3개 데이터셋** · 리플레이 금지 제약 · *"ranks among the **top 3**"*(1위 아님). 🔴 **34.9%는 여전히 65개를 잊는다** *(NEW·high)*
+- [[Last-AI-Built-by-Humans]] — 업보트 84. 🔴 **[[한정어-탈락]] 저자 제목발, [[Atria-Dawn]] 이후 2배치 연속**: 제목은 *"**Last**"·"**Genuine**"* 인데 초록 근거는 *"**preliminary** empirical evidence"* 와 *"identify key **challenges**"* — **달성이 아니라 미달성 과제 목록**. ✅ 볼트 09-15 요청(제목 원문 배달)이 **작동해서** 즉시 대조됨 *(NEW·low)*
+- [[AI-for-Games-FM-Era]] — 업보트 84·배치 최신. 게임 AI를 **출력물 용도 기준 6역할**로 재분류한 서베이. 🎯 **가치가 한계 진술에 있다** — 전이 연결을 제시한 직후 *"downstream claims **require validation in the target setting**"* 을 같은 초록에 적는다. 평가는 *"most standardized for **bounded game playing**"*, 나머지 5영역은 *"less established"* *(NEW·high)*
+- [[LynnReal-Omni]] — 업보트 46(드리프트 0). 32B 공유 MMDiT가 **7기능 통합** + 실시간용 **27B Flash 별도 학습**. 🎯 문제 정의가 정확: *"repeated sampling **without guaranteed success**"*. ⚠️ **843ms의 조건 4개**(H100 1장·**warm**·22프레임·540p = 1초 미만 미리보기) · **MSAVP는 자체 지표** *(NEW·medium)*
+- [[StepAudio-3-Realtime]] — 업보트 29·저자 **90명**. Think-While-Speaking(말하며 병렬 추론). 🔴 **같은 초록에 98.9와 56.0%가 함께 있다**: Full-Duplex **98.9** · MMSU **90.6** vs **τ-Voice 56.0%**(도구 사용 과제) — **대화는 풀렸고 대행은 절반**. ⚠️ *"comparable to dedicated reasoning models"* **비교군 없음** · 73.0은 `reasoning mode` 조건 *(NEW·medium)*
+
+**HF 모델 3 — 🏗️ 상시 인프라 · RAG 파이프라인이 통째로 들어왔다**
+
+- [[ms-marco-MiniLM-L6-v2]] — DL **88,865,138**(**드리프트 0**)·♥340·Apache-2.0. 🎯 **볼트가 성능표 16행 전체를 읽어 수집기보다 나은 답을 찾았다** — L6는 **수확체감 변곡점**([[수확체감-변곡점]] 신설). **DL:♥ = 261,368:1 (볼트 최고)** = 아무도 감정을 갖지 않는 **상시 인프라의 지문**. 🔗 이 카드 성능표 안에 **electra 기반 리랭커가 비교군으로 실재**(71.99·340 docs/s) *(NEW·high)*
+- [[bge-small-en-v1.5]] — DL **64,638,739**(🔴 **드리프트 +620,302 = 배치 유일**)·MIT·**2년 7개월 미수정**. 🔴 **볼트 정정: v1.5의 변경은 프리픽스 도입이 아니라 *의존 감소*** (카드 2652행 *"enhance its retrieval ability **without instruction**"*) → [[파생표기-함정]](표 vs 이력). 58.09는 **n=68 비가중 자체 집계**이며 **Retrieval 편중 39.7%** *(NEW·medium)*
+- [[electra-base-discriminator]] — DL **58,507,686**(**드리프트 0**)·Apache-2.0·`pipeline_tag: **None**`. 🔴 **이 배치 최대 발견**: 유일한 arxiv 태그 `1406.2661` 이 **GAN 원논문**이다 — HF가 **카드 본문 링크를 자동 파싱**하고 ELECTRA 원논문은 **openreview에만** 있어 태그가 될 수 없었다. 🎯 **`arxiv:` 태그 = "카드에 등장한 모든 arXiv 링크"이지 "이 모델의 논문"이 아니다** *(NEW·medium)*
+
 
 ### 📥 2026-09-15 배치 (13건 · 전건 NEW)
 

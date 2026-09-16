@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-09-15
+updated: 2026-09-16
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md]
 ---
 
@@ -294,3 +294,42 @@ CapCut 스타일 브라우저 편집기. 영상이 **샷/트랜지션/자막/SFX
 > 2. `t` 기반 결정적 컴포넌트 규약을 내 Remotion 씬에 적용
 > 3. ⚠️ 워크벤치 가이드는 **중국어**
 
+---
+
+## 2026-09-16 — **문제 정의가 제품 설계보다 앞선 논문** ([[LynnReal-Omni]])
+
+arXiv 2609.15863 · 업보트 46 · 32B 공유 멀티모달 확산 트랜스포머(MMDiT)
+
+### 🎯 이 논문이 크리에이터 고통을 정확히 적는다
+
+> *"Video diffusion models are stochastic and hard to control: **precise content often requires repeated sampling without guaranteed success**, and long-horizon scenes **drift** in appearance, interactions, and temporal coherence."*
+
+**"반복 샘플링해도 성공이 보장되지 않는다"** — [[Higgsfield]]·[[Seedance]] 계열을 쓰는 사용자가 실제로 겪는 문제다.
+그리고 저자는 **에이전트 방식만으로도 부족**하다고 적는다 — 명시적 레퍼런스·편집 가능 3D 씬·게임 상태를 줘도 *"does not by itself guarantee high object or character fidelity"*.
+
+### 설계 함의 3가지
+
+**1. 기능별 모델 → 단일 모델 수렴 가능성**
+하나의 32B MMDiT가 **7가지**를 처리한다: t2v · 이미지조건 · 레퍼런스가이드 · 구조제어 · 편집 · 열화복원 · 롱비디오.
+📌 내 SaaS 관점: **기능마다 다른 모델을 붙이는 파이프라인이 단순해질 수 있다.** 단 **32B 서빙 비용**이 전제.
+
+**2. 🎯 프리뷰/최종 2단 UX — 별도 학습이 필요했다는 신호**
+실시간용 **27B Flash를 따로 학습**했다. **후처리·증류로 해결하지 않고 별도 모델을 만들었다**는 것은 이 분리가 구조적임을 시사한다.
+→ **"실시간 프리뷰 + 고품질 최종" 2단 구조를 제품 설계에 반영 검토.**
+
+**3. 프롬프트 중심 → 조건 조립 중심**
+이종 시각 입력(외형 레퍼런스 · 편집 가능 3D 렌더 · 게임 녹화)을 **에이전트가 조합**해 조건으로 넣는다.
+📌 UI 함의: 입력이 텍스트 한 칸이 아니라 **조건 슬롯 여러 개**가 된다.
+
+> [!warning] 843ms의 조건 4개 — 요약하면 전부 사라진다
+> *"on **one H100**, **warm** generation and decoding of a **22-frame 540p** video take **843 ms**"* (Flash는 **377ms**)
+> **H100 1장 · warm(콜드 아님) · 22프레임(24fps 기준 1초 미만) · 540p.**
+> 🎯 **이건 완성 영상이 아니라 미리보기 단위다.** → [[단위-불일치]]
+
+> [!warning] MSAVP는 저자가 이 논문에서 함께 도입한 자체 지표
+> 100프롬프트·20지표. **자기 모델을 자기 자로 잰다** — 09-12 [[m-a-p]]/WildSongBench와 같은 구조 → [[측정도구-먼저-반증]]
+
+### 🎯 경쟁 우위 빈틈 — 진입장벽이 모델이 아닐 수 있다
+
+초록이 **데이터 파이프라인을 별도 기여로** 서술한다: 영상 정제 · 주체 연관 · 멀티모달 주석 · **정렬된 제어 구축** → 멀티샷 오디오비주얼 큐레이션 코퍼스.
+📌 **모델 구조보다 "제어 신호가 정렬된 데이터를 만드는 일"이 복제하기 어려운 부분**일 가능성.
