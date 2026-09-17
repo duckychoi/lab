@@ -3578,6 +3578,186 @@
       "width": 320,
       "height": 120,
       "color": "2"
+    },
+    {
+      "id": "b0917-hub",
+      "type": "text",
+      "x": -240,
+      "y": 20200,
+      "width": 520,
+      "height": 180,
+      "color": "4",
+      "text": "## 2026-09-17 배치 (13건)\n\n**부분인용은 대조를 통과한다**\n리터럴 NEW 13/13 · 3배치 연속 중복 0\n🔴 결론 오류 2건 (인용은 문자 일치)\n\n[[표-부분인용]] · [[파생저장소-식별]] 신설"
+    },
+    {
+      "id": "b17-secaudit",
+      "type": "text",
+      "x": -1700,
+      "y": 20460,
+      "width": 520,
+      "height": 280,
+      "color": "5",
+      "text": "**[[security-audit-skill]]**\n[[Cloudflare]] ★8,529 MIT\n🎯 `needs_validation`\n= \"no severity\" 전용 칸\n✅ 샌드박스 없으면 확인 포기\n⭐⭐⭐"
+    },
+    {
+      "id": "b17-omh",
+      "type": "text",
+      "x": -1120,
+      "y": 20460,
+      "width": 520,
+      "height": 280,
+      "color": "5",
+      "text": "**[[oh-my-hermes]]**\n★2,657 MIT · Hermes 위 층\n🎯 4상태: `reported done`\nvs `Test · verified`\n✅ \"No measured run yet\"\n🔴 정의는 586행 (48행만 읽음)\n⭐⭐⭐"
+    },
+    {
+      "id": "b17-octop",
+      "type": "text",
+      "x": -540,
+      "y": 20460,
+      "width": 520,
+      "height": 280,
+      "color": "5",
+      "text": "**[[Octop]]**\n[[Tencent]] ★3,147 MIT\n상대속도 12.61% = 최고\n🎯 `octop acp` 권한 게이트로\nClaude Code/OpenCode 위임\n🔴 \"digital life form\" 수사\n⭐⭐"
+    },
+    {
+      "id": "b17-cline",
+      "type": "text",
+      "x": 40,
+      "y": 20460,
+      "width": 520,
+      "height": 280,
+      "color": "5",
+      "text": "**[[cline]]**\n★68,506 Apache-2.0\n🔴 **첫 음수 드리프트 −1**\n0.16% = 노이즈와 같은 자릿수\n🔴 헤드리스 섹션 219행\n⭐⭐"
+    },
+    {
+      "id": "b17-wshobson",
+      "type": "text",
+      "x": 620,
+      "y": 20460,
+      "width": 520,
+      "height": 280,
+      "color": "5",
+      "text": "**[[wshobson-agents]]**\n★39,749 MIT · 6하네스 변환\n🎯 \"not lowest-common-\ndenominator translations\"\n🔴 `topics` 20개 = 만석\n⭐⭐"
+    },
+    {
+      "id": "b17-scienceide",
+      "type": "text",
+      "x": -1700,
+      "y": 20800,
+      "width": 520,
+      "height": 280,
+      "color": "6",
+      "text": "**[[ScienceIDE]]**\nHF 1위 · 업보트 63 · 저자 45\n`scientific experience\nbottleneck` 명명\n전문가 정의 합격 기준\n🔴 수치 초록에 없음\n⭐⭐"
+    },
+    {
+      "id": "b17-xconf",
+      "type": "text",
+      "x": -1120,
+      "y": 20800,
+      "width": 520,
+      "height": 280,
+      "color": "6",
+      "text": "**[[XConf]]** 🔀→local-llm\n업보트 44 · HF 2위\n🎯 과거 채점 이력에서 신뢰도\n24/23 AUROC · 비용 1/10\n✅ logit·가중치 불필요\n⭐⭐⭐"
+    },
+    {
+      "id": "b17-progdistill",
+      "type": "text",
+      "x": -540,
+      "y": 20800,
+      "width": 520,
+      "height": 280,
+      "color": "6",
+      "text": "**[[ProgramDistill]]**\n업보트 40 · 4,063 태스크\n사람 개입 0 (replay-verified)\n🔴 GPT-6 Astra 49.2%\nClaude Opus 5 28.8%\n깊이 1→8: 100%→32%\n⭐⭐⭐"
+    },
+    {
+      "id": "b17-sp3o",
+      "type": "text",
+      "x": 40,
+      "y": 20800,
+      "width": 520,
+      "height": 280,
+      "color": "6",
+      "text": "**[[SP3O]]**\n업보트 35 · `Value Flattening`\n응답당 3개 상태만 감독\n✅ 상태공간 클수록 심해짐\n🔴 개선폭 수치 없음\n⭐⭐"
+    },
+    {
+      "id": "b17-actionpiece",
+      "type": "text",
+      "x": 620,
+      "y": 20800,
+      "width": 520,
+      "height": 280,
+      "color": "6",
+      "text": "**[[ActionPiece]]** 🔀→slam-3dgs\n업보트 32 · `PRC` 신설\n🎯 MSE 낮아도 방향 \"reversed\"\nLIBERO 94.8 / Plus 68.8\n🔴 −26.0점 격차\n⭐⭐⭐"
+    },
+    {
+      "id": "b17-r1",
+      "type": "text",
+      "x": -1120,
+      "y": 21160,
+      "width": 520,
+      "height": 300,
+      "color": "2",
+      "text": "**[[DeepSeek-R1]]**\nDL 740,958 · DL:♥ 52:1\n🎯 `cons@64`: 7B 83.3 = 32B 83.3\n(pass@1은 +17.1점)\n열 4/6만 인용 → 결론 전환\n⭐⭐⭐"
+    },
+    {
+      "id": "b17-dau",
+      "type": "text",
+      "x": -460,
+      "y": 21160,
+      "width": 520,
+      "height": 300,
+      "color": "1",
+      "text": "**[[Qwen3.8-27B-TWIN-TURBO-709-GGUF]]**\nDL 114,335 · DL:♥ 762:1\n🔴🔴 카드: THIS REPO = **68/100 거부**\n(수집기 보고 0/100 = STAGE 1 타인)\n🎯 KL↔거부 상충 축 4점\n⭐"
+    },
+    {
+      "id": "b17-yue2",
+      "type": "text",
+      "x": 200,
+      "y": 21160,
+      "width": 520,
+      "height": 300,
+      "color": "1",
+      "text": "**[[Comfy-Org-YuE2]]**\nDL 59,231 · CC-BY-NC\n\"Repackaged for ComfyUI\"\n🔴 채택근거 int8 파일 미문서화\n🔴 tags에 [[YuE2-3B]] 누락·오라벨\n(b)→**(c) 병합 정정**\n⭐"
+    },
+    {
+      "id": "b17-c-table",
+      "type": "text",
+      "x": -1000,
+      "y": 21520,
+      "width": 520,
+      "height": 280,
+      "color": "3",
+      "text": "🆕 **[[표-부분인용]]**\n몇 점을 읽는가가 결론의\n**종류**를 바꾼다\n행(09-16) → 열 → 표 개수\n🎯 부분인용은 대조를 통과한다"
+    },
+    {
+      "id": "b17-c-deriv",
+      "type": "text",
+      "x": -340,
+      "y": 21520,
+      "width": 520,
+      "height": 280,
+      "color": "3",
+      "text": "🆕 **[[파생저장소-식별]]**\n🔴 Qwen3.8-27B 계열\n**28/200 = 트렌딩의 14%**\n`cardData.base_model` ≠ `tags`\nbase_model은 1홉만 기록\n판정: (a)중복 (b)축 (c)병합"
+    },
+    {
+      "id": "b17-sat",
+      "type": "text",
+      "x": 320,
+      "y": 21520,
+      "width": 520,
+      "height": 280,
+      "color": "3",
+      "text": "🔴 **볼트 포화 관찰**\n상위 31위 중 기보유 23 = **74.2%**\n상위 5위 전부 기보유\n→ `trendingScore` 절대값은\n볼트 커버리지의 함수\n배치 간 비교 금지"
+    },
+    {
+      "id": "b17-conv",
+      "type": "text",
+      "x": -1660,
+      "y": 21520,
+      "width": 520,
+      "height": 280,
+      "color": "3",
+      "text": "🎯 **배치의 척추 — 수렴**\n두 독립 생태계가 같은 배치에\n\"확인되지 않음\" 전용 칸을 만들었다\n[[security-audit-skill]] `needs_validation`\n[[oh-my-hermes]] `reported done`\n🔴 볼트엔 그 칸이 없다"
     }
   ],
   "edges": [
@@ -6653,6 +6833,228 @@
       "fromSide": "bottom",
       "toSide": "top",
       "label": "공간↔시간 상보"
+    },
+    {
+      "id": "e0917-hub",
+      "fromNode": "domain-hub",
+      "toNode": "b0917-hub",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-secaudit",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-secaudit",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-omh",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-omh",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-octop",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-octop",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-cline",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-cline",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-wshobson",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-wshobson",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-scienceide",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-scienceide",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-xconf",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-xconf",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-progdistill",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-progdistill",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-sp3o",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-sp3o",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-actionpiece",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-actionpiece",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-r1",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-r1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-dau",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-dau",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-yue2",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-yue2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-c-table",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-c-table",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-c-deriv",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-c-deriv",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-sat",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-sat",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "eb17-conv",
+      "fromNode": "b0917-hub",
+      "toNode": "b17-conv",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0917x0",
+      "fromNode": "b17-secaudit",
+      "toNode": "b17-omh",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "🎯 같은 발명"
+    },
+    {
+      "id": "e0917x1",
+      "fromNode": "b17-omh",
+      "toNode": "b17-conv",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "수렴 증거"
+    },
+    {
+      "id": "e0917x2",
+      "fromNode": "b17-secaudit",
+      "toNode": "b17-conv",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "수렴 증거"
+    },
+    {
+      "id": "e0917x3",
+      "fromNode": "b17-r1",
+      "toNode": "b17-c-table",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "열 축 1번"
+    },
+    {
+      "id": "e0917x4",
+      "fromNode": "b17-dau",
+      "toNode": "b17-c-table",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "표 개수 2번"
+    },
+    {
+      "id": "e0917x5",
+      "fromNode": "b17-yue2",
+      "toNode": "b17-c-deriv",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "질문 촉발"
+    },
+    {
+      "id": "e0917x6",
+      "fromNode": "b17-dau",
+      "toNode": "b17-c-deriv",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "1홉 한계"
+    },
+    {
+      "id": "e0917x7",
+      "fromNode": "b17-cline",
+      "toNode": "b17-sat",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "드리프트"
+    },
+    {
+      "id": "e0917x8",
+      "fromNode": "b17-octop",
+      "toNode": "b17-omh",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "감독층"
+    },
+    {
+      "id": "e0917x9",
+      "fromNode": "b17-progdistill",
+      "toNode": "b17-scienceide",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "반대 자동화 축"
+    },
+    {
+      "id": "e0917x10",
+      "fromNode": "b17-actionpiece",
+      "toNode": "b17-xconf",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "전제 반증 동형"
+    },
+    {
+      "id": "e0917x11",
+      "fromNode": "b17-r1",
+      "toNode": "b17-xconf",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "작은 모델+샘플링"
     }
   ]
 }

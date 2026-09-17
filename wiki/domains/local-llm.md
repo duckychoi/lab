@@ -4,8 +4,8 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-16
-sources: [ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
+updated: 2026-09-17
+sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
@@ -488,3 +488,33 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 > ⚠️ 조합은 **탐색 비용**을 만든다 — 저자도 task-level successive halving + 요인실험이 필요했다.
 
 🔗 [[에이전트-메모리-레이어]] 에 **정량 근거**가 처음 붙었다. 지금까지 이 축은 아키텍처 서술 위주였고, 보존율 수치로 비교 가능한 결과는 드물었다.
+
+---
+
+## 🆕 2026-09-17 — **신뢰도를 과거 채점 이력에서 끌어온다** ([[XConf]] · raw `ai-news` → 재판정 `local-llm`)
+
+> [!insight] 🎯 이 도메인에 즉시 적용 가능한 배치 최고 항목
+> [[XConf]] 는 신뢰도 추정을 **현재 추론이 아니라 모델의 과거 채점 이력**에서 끌어온다. 저장 단위는 **5필드 레코드**(태스크 · 모델의 반성 · 당시 진술한 신뢰도 · 결과 · 채점 후 작성한 교훈).
+> 2단계: **Recall**(유사 태스크 **+ 유사 신뢰도**의 과거 성공률 조회) → **Reflect**(반복 실패 모드를 스스로 지목 후 신뢰도 재진술).
+> 🎯 **핵심 설계는 "유사 신뢰도"로도 검색한다는 점**이다 — *"내가 이 정도로 자신 있다고 말했을 때 실제로 얼마나 맞았나"* 를 조회한다. **캘리브레이션을 데이터로 회수**한다.
+
+> [!action] ✅ **실용 조건이 초록에 명시돼 있다 — Hermes/ChinameBot에 지금 붙는다**
+> *"format-general, requiring **no logit access or weight updates**, and costs only one answer generation"*
+> 🎯 **logit 불필요 + 가중치 업데이트 불필요 + 포맷 무관 → API-only 모델에도 그대로 적용된다.**
+> 필요한 것 3개: ① 태스크 결과 채점 로그 ② 당시 신뢰도 기록 ③ 유사 검색.
+> 📌 **볼트 `log.md` 가 이미 ①의 원형이다** — ingest마다 결과·자기 한계를 기록해 왔다. **없는 것은 ②(당시 신뢰도의 명시적 수치화)** 다.
+
+> [!insight] 🎯 비용이 트레이드오프가 아니다
+> 10샘플 self-consistency 대비 **AUROC 24개 비교 중 23개에서 이기거나 동일 · ECE 더 낮음 · 비용 1/10**(답변 1회 생성).
+> **더 싸고 더 정확하다.** 비용은 사라지지 않고 **저장소로 이동**한다(에피소드 누적).
+> 선택적 예측: 가장 자신 없는 **10%를 포기**하면 에이전트 태스크 성공률 **최대 +8.7점**.
+> 🔴 **볼트가 짚는 산술 불일치**: 9벤치 × 4모델 = 36인데 비교 수가 **24**다. 초록이 24의 구성을 설명하지 않는다.
+
+> [!warning] 🔴 미해결 — 콜드 스타트와 오염
+> - **과거 에피소드가 없을 때의 동작이 초록에 없다** — 실제 도입의 첫 관문
+> - **저장된 교훈이 틀린 경우의 오염**이 다뤄지지 않았다 → [[선택비용과-중복성]] 의 *"나쁜 업데이트가 이후를 오염"* 구조와 같은 위험
+> - 🔴 **코드 링크 초록에 없음** — 확인 불가
+
+> [!note] 🔗 같은 배치 교차 — 로컬 추론 모델 선택 기준이 바뀔 수 있다
+> [[DeepSeek-R1]] 카드 6열 실측: **AIME `cons@64` 에서 7B(83.3) = 32B(83.3)** — 파라미터 4.6배 차이가 **집계 예산으로 교환된다.**
+> 🎯 **이 도메인의 실용 결론**: 다중 샘플링이 가능한 태스크에서는 **작은 모델 + 샘플링**이 **큰 모델 + 1회**와 같을 수 있다. 볼트가 `pass@1` 만 보고 모델 크기를 올려 온 관행을 재검토할 근거다. → [[표-부분인용]] · [[수확체감-변곡점]]

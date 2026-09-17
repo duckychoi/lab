@@ -4,8 +4,8 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-09-14
-sources: [WorldSculpt.md, Marigold-V2.md, LIT.md]
+updated: 2026-09-17
+sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md]
 ---
 
 # 로봇 SLAM / 3DGS / 카메라 누적 인사이트
@@ -234,3 +234,33 @@ _소스 ingest 시 자동 누적_
 - [[검사가능성-공사]]
 - [[임바디드-AI]]
 - [[Pascal-Editor]]
+
+---
+
+## 🆕 2026-09-17 — **액션 토크나이저의 평가 관행을 반증했다** ([[ActionPiece]] · raw `ai-news` → 재판정 `slam-3dgs`)
+
+> [!insight] 🎯 MSE가 낮은데 동작 방향이 뒤집힐 수 있다
+> VLA(vision-language-action) 모델의 액션 토크나이저는 통상 **MSE 같은 점별 복원 오차**로 평가된다. 초록 원문:
+> > *"**small individual errors do not fully characterize how faithfully action adjustments across demonstrations are preserved**. After compression, similar actions may still cluster around a representative motion, while the adjustments needed for different contexts are **diminished, distorted, or even reversed**."*
+>
+> 🎯 **`or even reversed`** — MSE가 낮은 토크나이저가 **로봇을 반대로 움직이게** 만들 수 있다.
+> 📌 **원인**: 압축이 유사 동작을 대표 모션으로 뭉치면 **각 점은 대표값에 가까워져 MSE가 작아진다.** 무너지는 것은 점이 아니라 **점들 사이의 관계**다.
+
+> [!insight] 새 지표 PRC — 구현 비종속으로 설계됐다
+> **PRC(physical rank consistency)**: 복원 후에도 **국소 물리 거리의 순위**가 보존되는지 잰다.
+> ✅ *"Evaluating decoded actions provides a **common reference across token vocabularies and decoder architectures**"* — **디코딩된 액션에서** 재므로 토큰 어휘·디코더 구조가 달라도 비교 가능하다.
+> 방법: 표현학습과 양자화를 **공동 감독**(인코더/양자화 특징의 가까움-멂 순서 + 코드워드 할당 분포에 같은 순서). 복원 손실을 **대체하지 않고 증강**한다.
+
+## 도메인 템플릿 답 (ActionPiece)
+
+- **현재 SOTA**: 동일 **Qwen3-VL-4B** 정책 학습 설정에서 **LIBERO 94.8%** · 미학습 **LIBERO-Plus 68.8%** · SimplerEnv **71.9%** · VLA-Arena L0–L2 **51.5%**. ⚠️ **토크나이저 비교 실험이므로 전역 SOTA 주장이 아니다**
+- **실시간 가능성**: 🔴 **초록에 지연시간·주파수 수치 없음 — 확인 불가.** 구조상(이산 토큰 자기회귀 + frozen decoder) 기존 VLA와 동급 비용
+- **카메라 파이프라인**: 입력 시각+언어 → **이산 액션 토큰** → frozen decoder → 실행 명령
+- **응용 가능성**: 🔴 **직접 응용 경로 없음**(로봇 하드웨어 미보유). 🎯 **발상은 이식 가능** — *"압축 후 관계 순위가 보존되는가"* 는 임베딩·양자화 평가 전반에 적용된다
+- **필수 레퍼런스**: 🔴 **코드 링크 초록에 없음.** LIBERO · LIBERO-Plus · SimplerEnv · VLA-Arena 가 비교 기준선
+
+> [!warning] 🔴 지는 축이 크다 — 일반화는 해결되지 않았다
+> 학습 분포 **94.8%** vs 미학습 **68.8%** = **−26.0점 격차** · VLA-Arena L0–L2 **51.5% = 절반 수준**.
+> 🎯 **토크나이저를 고쳐 얻은 것은 분포 내 충실도이고, 분포 밖 일반화는 여전히 미해결**이다 → [[분포내-우위]] 의 **로보틱스 판본**.
+> 🔗 같은 배치 [[ProgramDistill]] 의 *"프런티어 에이전트 최고 49.2%"* 와 **같은 메시지** — 2026 하반기 에이전트/로봇 벤치가 **절반 근처에서 막혀 있다.**
+> 🔴 **볼트 미확인**: PRC 수식 · 비교 토크나이저 목록 · 어블레이션 수치 · **PRC 값 자체가 초록에 없다**(*"jointly improve PRC"* 까지만). 베이스라인 성능이 없어 **94.8%가 얼마나 개선된 것인지 알 수 없다**

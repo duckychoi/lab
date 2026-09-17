@@ -569,6 +569,16 @@
       "width": 300,
       "height": 150,
       "color": "6"
+    },
+    {
+      "id": "b17-xconf",
+      "type": "text",
+      "x": -260,
+      "y": 6720,
+      "width": 560,
+      "height": 320,
+      "color": "6",
+      "text": "**[[XConf]]** 🆕 2026-09-17\n🎯 신뢰도를 과거 채점 이력에서\n5필드 에피소드(태스크·반성·\n당시신뢰도·결과·교훈)\nRecall(유사 신뢰도)→Reflect\n✅ logit·가중치 불필요 = API-only OK\n24개 중 23개 AUROC 우위 · 비용 1/10\n선택적 예측 10% 포기 → +8.7점\n🔴 콜드스타트 미언급"
     }
   ],
   "edges": [
@@ -967,6 +977,13 @@
       "fromSide": "right",
       "toNode": "b0915-zgcm-note",
       "toSide": "left"
+    },
+    {
+      "id": "eb17-xconf",
+      "fromNode": "ll-0907",
+      "toNode": "b17-xconf",
+      "fromSide": "bottom",
+      "toSide": "top"
     }
   ]
 }

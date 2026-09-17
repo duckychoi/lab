@@ -259,6 +259,16 @@
       "width": 340,
       "height": 220,
       "color": "4"
+    },
+    {
+      "id": "b17-actionpiece",
+      "type": "text",
+      "x": -260,
+      "y": 3300,
+      "width": 560,
+      "height": 320,
+      "color": "6",
+      "text": "**[[ActionPiece]]** 🆕 2026-09-17\n🎯 MSE 반증: 점별 오차 작아도\n문맥 조정이 \"even reversed\"\n🆕 지표 **PRC** (거리 순위 보존)\n= 토큰 어휘·디코더 비종속 비교\nLIBERO 94.8 / 미학습 Plus 68.8\n🔴 **−26.0점** · VLA-Arena 51.5%\n일반화 미해결"
     }
   ],
   "edges": [
@@ -415,6 +425,13 @@
       "toNode": "n0914-iface",
       "fromSide": "right",
       "toSide": "left"
+    },
+    {
+      "id": "eb17-actionpiece",
+      "fromNode": "s0908-emb",
+      "toNode": "b17-actionpiece",
+      "fromSide": "bottom",
+      "toSide": "top"
     }
   ]
 }
