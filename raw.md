@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-09-17 (09-17 배치 **13건 전량 처리 완료** — 대기 **0건**)
+updated: 2026-09-18 (09-18 자동수집 **13건 추가** — 대기 **13건**)
 ---
 
 # Raw 대기열
@@ -18,7 +18,7 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 ---
 
-## 대기 중: **0건**
+## 대기 중: **13건** (2026-09-18 자동수집 — 파일 하단 참조)
 
 ✅ **2026-09-17 자동수집 13건 전량 ingest 완료 후 삭제됨** (GitHub 5 · HF논문 5 · HF모델 3).
 처리 결과는 `log.md` 의 `## [2026-09-17] ingest` 항목 참조.
@@ -189,3 +189,187 @@ STAGE 2 ULTRA-HERETIC KL 0.0397 거부 6/100    ← "[ SEPARATE REPO ]"
 >
 > 🎯 **6배치 연속 개선이다.** 09-12 중복 탐지 → 09-13 한정어 → 09-14 성립 조건 → 09-15 백필 구조적 제거 → 09-16 제외 근거 본문 인용 + 자체 재판정 발의 → **09-17 파생 중복을 스스로 신고 + 인용 충실도 3배치 연속 완벽.**
 > 🔴 **그리고 실패의 위치가 또 바뀌었다**: 09-15 판정 → 09-16 탐지 → **09-17 독해 범위.** 인용은 완벽한데 **읽은 범위가 좁다** — 이것이 다음 개선 지점이다.
+
+
+---
+
+# 📥 2026-09-18 자동수집 배치 — 13건 (GitHub 5 · HF논문 5 · HF모델 3)
+
+**중복 필터 (선발 전 실행)**: 볼트 기보유 `org/name` 1,084건 · arXiv ID 631건 대조.
+GitHub 트렌딩 67건 중 **35건이 리터럴 중복**이었고, HF 모델 트렌딩 40건 중 **24건 리터럴 중복 + 4건 파생 중복**이었다. **선발은 잔여에서만 했다.**
+
+---
+
+## [2026-09-18] 자동수집 | Tencent/BrowserSkill — 에이전트가 이미 로그인된 브라우저를 빌려 쓰는 로컬 브리지
+- URL: https://github.com/Tencent/BrowserSkill
+- 도메인: ai-news
+- 스타수: 4,735 (당일 +1,302 · 데일리 트렌딩 4위 · 2026-06-22 생성 · MIT)
+- 한줄요약: `bsk` CLI·로컬 데몬·크롬 확장 3단 경유로 에이전트를 **별도 Agent Window**에 격리하고, 사용자 탭은 **명시적으로 빌린 뒤 반납**하는 구조 — 에이전트는 브라우저와 직접 통신하지 않는다.
+- 능력 범위(카드 명시): OS는 macOS/Linux/Windows x64, 브라우저는 **Chrome·Edge만 지원**, Firefox는 계획 단계. 셸 호출 가능한 에이전트면 프레임워크 무관.
+- 한정어 보존: *"other Chromium-based browsers are **expected to work** when they support unpacked Chromium extensions"* — 지원이 아니라 예상이다.
+- 미확인: 366행 README 전 섹션 헤딩 스캔 완료(10개). 캡차·로그인 시 human-in-loop 전환은 **주장만 확인**, 구현 미확인.
+
+## [2026-09-18] 자동수집 | Tracer-Cloud/opensre — AI SRE 에이전트용 오픈 RL 환경을 표방하는 인시던트 대응 프레임워크
+- URL: https://github.com/Tracer-Cloud/opensre
+- 도메인: ai-news
+- 스타수: 11,124 (당일 +20 · 2026-01-13 생성 · Apache-2.0)
+- 한줄요약: 로그·메트릭·트레이스·배포이력을 상관분석해 가설을 도구호출 루프로 검증하고 **결론마다 근거 데이터를 링크**하며, 외부 LLM 호출 전 파드·클러스터·계정 ID를 **가역 마스킹**한다.
+- 자기 주장의 범위(중요): 저자 스스로 *"AI SRE, and AI for production debugging more broadly, **remains unsolved**"* 라고 적었다. 벤치마크 수치는 **제시되지 않았다** — SWE-bench(arXiv:2310.06770)를 코딩 에이전트의 선례로 인용하며 **그에 해당하는 것을 아직 만드는 중**이라는 서술이다.
+- 실측 가능한 것: 60+ 도구 연동(LLM·옵저버빌리티·클라우드·인시던트 관리·MCP), 세션당 토큰 추적(`/cost`), 재개 가능 REPL.
+- 미확인: 289행 README 전 섹션 헤딩 스캔 완료(13개). `tests/e2e` 실제 시나리오 수를 세지 않았다.
+
+## [2026-09-18] 자동수집 | strands-agents/harness-sdk — 에이전트 하네스를 직접 구성하는 Python/TypeScript SDK
+- URL: https://github.com/strands-agents/harness-sdk
+- 도메인: ai-news
+- 스타수: 7,344 (2025-05-14 생성 · Apache-2.0 · 당일 커밋)
+- 한줄요약: 컨텍스트 관리·실행 제한·관측성을 설정 없이 기본 내장하고, **훅으로 에이전트 루프의 임의 단계를 가로채 로깅·검증·리디렉트**할 수 있게 한 하네스 SDK — MCP·스트리밍·멀티에이전트·구조화 출력 포함.
+- 성립 조건(카드 명시): 두 SDK 모두 **기본 프로바이더가 Amazon Bedrock**이라 AWS 자격증명과 Claude Sonnet 모델 접근이 필요하다. Anthropic·OpenAI·Gemini·Ollama는 별도 설정.
+- 한정어: *"Guardrails catch mistakes before they run"* 은 능력 주장이나 **측정치가 없다**. 155행 README에 벤치마크 섹션 자체가 없다.
+- 미확인: 전 섹션 헤딩 스캔 완료(11개). 훅이 강제하는 범위는 문서 사이트 별도 확인 필요.
+
+## [2026-09-18] 자동수집 | hao-ai-lab/FastVideo — 비디오 DiT의 희소증류 후처리·추론 통합 프레임워크
+- URL: https://github.com/hao-ai-lab/FastVideo
+- 도메인: ai-news
+- 스타수: 4,467 (2024-10-24 생성 · Apache-2.0)
+- 한줄요약: DMD2 단계별 증류 + Video Sparse Attention을 결합한 **희소증류(sparse distillation)로 디노이징 50배 이상 가속**을 주장하며, FSDP2·시퀀스 병렬·선택적 활성화 체크포인팅으로 학습까지 커버한다.
+- 최신 릴리스(2026-09-15): FastH3 8-Step V2 — MiniMax-H3에서 증류한 **8-forward data-free DMD2** 체크포인트, **VSA 80%** 적용.
+- 하드웨어 범위(카드 명시): H100·A100·4090 지원, Linux/Windows/macOS. Apple Silicon은 MLX 경유(FastMetal-QAD 1.3B/5B/14B).
+- 🔴 수치의 출처 구분: *">50x denoising speedup"* 과 *"5s 영상 1.8s E2E"* 는 **README 본문·블로그 주장**이며 README 내 비교표로 제시된 것이 아니다. 208행 내 성능 대조표 **0개** — 표는 증류 레시피/데이터셋 링크표 1개뿐이다.
+
+## [2026-09-18] 자동수집 | OpenBMB/MiniCPM — 🔴 **교차유형 부분중복 자진신고** · 신규분은 MiniCPM-SALA와 MiniCPM4/4.1
+- URL: https://github.com/OpenBMB/MiniCPM
+- 도메인: ai-news
+- 스타수: 11,078 (Jupyter 주간 트렌딩 +256 · 2024-01-29 생성 · Apache-2.0)
+- 한줄요약: 레포 하나가 **4개 모델 계열**(MiniCPM5-2B · MiniCPM5-1B · MiniCPM-SALA · MiniCPM4/4.1)을 담은 배포 허브 — 따라서 "스타 11,078"은 **어느 단일 모델의 지표도 아니다.**
+
+> ### 🔴 **선발 후 자기 검증에서 걸렸다 — 볼트에 판정을 요청한다**
+> **리터럴 필터는 통과했다**: `github.com/OpenBMB/MiniCPM` 정확 일치 **0히트**(GitHub 레포로서는 미수집이 맞다).
+> **그러나 유형을 넘으면 중복이다**: 이 레포가 발표하는 모델들이 **HF 모델 페이지로 이미 볼트에 4건** 있다 — [[MiniCPM5-2B]] · [[MiniCPM5-1B]] · [[MiniCPM5-2B-GGUF]] · [[MiniCPM-V-4.6]].
+> 🎯 **그리고 볼트가 나보다 많이 갖고 있다.** [[MiniCPM5-2B]] 페이지는 이미 평균 53.9 · 4B급 5종 개별값(51.1 · 42.7 · 32.6 · 31.2 · 28.4) · SWE-bench V 46.4 · SWE-bench Pro 14.4 vs 28.2 · IFEval 86.7 vs 93.4 · NoLiMa 68.1 · **벤더측정/제3자측정(†) 구분**까지 보유한다. **내가 이번에 옮긴 53.9/51.1은 볼트 보유분의 부분집합이다.**
+> **판정 요청 3**: (a) MiniCPM5-2B 부분은 중복 처리하고 **신규분만 [[MiniCPM]] 허브 페이지로** / (b) 전건 중복 기각 / (c) 레포 페이지를 따로 두고 모델 페이지와 상호링크
+
+- ✅ **실제 신규분 — 볼트 리터럴 0히트 확인**: `MiniCPM-SALA` · `MiniCPM4` 모두 **wiki 전체에서 0히트**다.
+- **MiniCPM-SALA (2026-02)** — 희소+선형 어텐션 하이브리드, 수치 전건: 층의 **25% InfLLM-V2(희소) + 75% Lightning Attention(선형)**. A6000D 256K 길이에서 Qwen3-8B 대비 **추론 속도 최대 3.5배**, **TTFT 최대 2.5배**. 장문 평균 **38.97** 로 RULER·NoLiMa에서 128K까지 전 구간 최고. **520K까지만 학습했는데 2048K에서 81.6 유지**(YaRN 등 보조기법 없이 — 희소층 NoPE 구성 덕으로 저자 추정). Transformer→하이브리드 전환 학습으로 **총 학습예산을 처음부터 학습 대비 약 25%** 로 축소.
+- 🔴 **SALA의 성립 조건을 함께 옮긴다**: 3.5배·2.5배는 **Qwen3-8B 단일 베이스라인 대비**이며 하드웨어가 A6000D·RTX 5090으로 고정돼 있다. 비교 우위의 일부는 **Qwen3-8B가 해당 길이에서 OOM으로 실패**하는 데서 온다 — *"Qwen3-8B fails at this length due to out-of-memory"*. **실패 대비 성공은 배수로 환산되지 않는다.**
+- 🔴 **이미지 안의 수치는 이번에도 옮기지 못했다**: SALA의 효율·장문·초장문 평가가 전부 PNG(`inference_speed_a600d.png` 등)다. 텍스트에 존재하는 값만 위에 적었다.
+- 📌 **표 귀속 확인(볼트 09-17 요청 이행)**: README 1,373행 · 마크다운 표 **19개** · `### Evaluation Results` 섹션 **4개**(169 · 457 · 678 · 868행). 각 섹션은 **서로 다른 모델 소유**다.
+
+---
+
+## [2026-09-18] 자동수집 | DeepSeek-V4.1-Flash: Pushing the Limits of KV Cache Compression
+- URL: https://huggingface.co/papers/2609.19969
+- 도메인: ai-news
+- 업보트: 36 (HF 데일리 09-18 1위 · 2026-09-17 공개)
+- 한줄요약: 552B 백본 멀티모달 MoE로 **디코드 시 16B, 프리필 시 8B만 활성화**하는 Causal Encoder-Decoder 구조를 써서, CSA2의 교차층 KV 재사용 + FP4 KV 캐싱으로 **글로벌 KV 풋프린트를 토큰당 890바이트**(V4-Flash의 약 1/4)까지 낮췄다.
+- 추가 수치: SWA Bounded Replay로 **영속 KV 풋프린트는 V4-Flash의 약 1/8**. 컨텍스트 최대 100만 토큰. 멀티모달 **45T 토큰** 사전학습.
+- 한정어 보존: 성능은 *"delivers **substantially better** performance than the baseline"* 로 **정성 서술**이며 초록에 비교 수치가 없다. 베이스라인은 DeepSeek-V4-Flash.
+- 연결: 가중치 공개 → `deepseek-ai/DeepSeek-V4.1-Flash` (볼트 기보유). 논문↔모델 동일 대상.
+
+## [2026-09-18] 자동수집 | SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness
+- URL: https://huggingface.co/papers/2609.20519
+- 도메인: ai-news
+- 업보트: 35 (2026-09-17 공개)
+- 한줄요약: 하네스 계층에서 자동연구 루프를 다수·다양 환경으로 확장해 **선택압을 통과한 4개 메커니즘**(행동 실행·컨텍스트 압축·관측 처리·위임 읽기)을 남긴 결과, 51개 과제 EdgeBench에서 **정확도는 Pi와 동등하게 유지하면서 토큰 44.7~49.0% · API 비용 약 1/3 절감**.
+- 🔴 **이득의 기준선이 둘이다 — 둘 다 옮긴다**: 네이티브 Codex·Claude Code 대비 시간당 $8.75~13.50 절감, **Pi 대비로는 $4.36~5.71**. 즉 절감폭의 절반가량은 Pi가 이미 확보한 몫이다.
+- 성립 조건: GPT-5.6 Sol과 Opus 5 두 모델에서 측정. 51개 과제는 EdgeBench 한정.
+
+## [2026-09-18] 자동수집 | An Empirical Study of Harness Design for Coding Agents
+- URL: https://huggingface.co/papers/2609.20804
+- 도메인: ai-news
+- 업보트: 31 (2026-09-17 공개)
+- 한줄요약: 실행 루프를 고정한 채 계획·행동공간·컨텍스트관리 3요소만 변주해 **176개 대조 설정**(컨텍스트 관리 5전략 × 윈도우 예산 4종 + 표적 절제)을 SWE-Bench Verified·Terminal-Bench 2.1에서 4개 모델로 측정한 **컴포넌트 단위 비교**.
+- 결론 4개 전부 옮긴다(선택하지 않는다): ① 컨텍스트 관리의 가치는 **윈도우 예산이 빠듯할수록** 커지며 이득의 대부분은 **오버플로 실패 방지**에서 온다 ② **규칙기반 생략을 LLM 요약보다 앞단에** 두는 것이 최고 효율이고, **생략분을 복구 가능하게 만드는 장치는 모델이 거의 쓰지 않아 정확도 이득이 없다** ③ 계획은 약한 모델에선 정확도 보조물, 강한 모델에선 **비용 절감 수단으로 역할이 바뀌며 정확도는 거의 불변** ④ 사전정의 도구는 bash 숙련도가 낮은 모델에만 도움이 되고, **bash 능숙 모델은 bash 단독 인터페이스로 비용을 크게 낮춘다**.
+- 🎯 실용 평가: 이 논문은 위 SoL-Pi·strands-agents/harness-sdk와 **같은 축(하네스 설계)을 다루되 유일하게 대조 실험을 제시한다.**
+
+## [2026-09-18] 자동수집 | When EOS Tokens Disagree: Understanding Length Inflation in On-Policy Distillation
+- URL: https://huggingface.co/papers/2609.20511
+- 도메인: ai-news
+- 업보트: 28 (2026-09-17 공개)
+- 한줄요약: OPD에서 학생 응답이 생성예산을 소진할 만큼 길어지는 원인 하나를 **베이스 학생과 사후학습 교사의 종료 토큰 불일치**로 특정 — Qwen3·Llama·Gemma에서 **선언된 정지 집합이 동일해도 정지 확률이 서로 다른 EOS 토큰에 실린다.**
+- 🔴 **저자가 스스로 남긴 한계를 함께 옮긴다**: 디코딩 정지집합만 맞추는 것으로는 **불충분**하고, 기능적으로 동등한 EOS들을 **하나의 의미적 정지 행동으로 취급**해야 완화된다. 그리고 K2-Horizon 단계별 분석에서 **종료 정렬로도 사라지지 않는 후기 길이 팽창이 따로 관측**됐다 — 논문은 종료 불일치를 *"important, but **not exhaustive**"* 원인이라고 명시한다.
+- 산출물: 종료 처리 수정을 반영한 구현 공개.
+
+## [2026-09-18] 자동수집 | JEPA-Anything: Learning Predictive Models across Different Worlds
+- URL: https://huggingface.co/papers/2609.20800
+- 도메인: ai-news
+- 업보트: 21 (2026-09-17 공개)
+- 한줄요약: 잠재 타깃을 상보적 인자로 분해해 전용 경로로 학습 후 재결합하는 **직교 예측 인자분해(OPF)** 로 JEPA를 확장, **비전·생물·임상경로·제어·분자동역학·물리장·기상 7개 도메인**에 동일 원리를 적용.
+- 수치 전건: 대조 JEPA 베이스라인 대비 **10개 동역학 과제 전부에서 지표 개선**, Interventional Pong 단일개입 예측오차 **34.8% 감소**, **4개 시스템 전부에서 1-step·100-step 분자 오차 최저**, 케플러 스케일링 지수 **기울기 -1.4991** 복원, 임상 이벤트 **1,000건 이상** 예측.
+- 🎯 예측 밖 검증: 인자가 지목한 생물학적 개입이 **세포 공배양·환자유래 오가노이드·종양조직·마우스**에서 실험적 지지를 받았다 — 벤치마크가 아니라 **습식 실험 결과**다.
+- 코드: https://github.com/Gen-Verse/JEPA-Anything
+
+---
+
+## [2026-09-18] 자동수집 | facebook/mms-300m — 1,400+ 언어 50만 시간으로 사전학습된 음성 표현 모델
+- URL: https://huggingface.co/facebook/mms-300m
+- 도메인: ai-news
+- 다운로드수: 22,002 (30일 · ♥565 · 트렌딩 31위 · 2023-05-22 생성)
+- 한줄요약: Wav2Vec2 자기지도 목적함수로 **1,400개 이상 언어·약 50만 시간** 음성에 사전학습된 3억 파라미터 백본 — **그 자체로는 어떤 과제도 수행하지 않는다.**
+- 🔴 **사용 조건 2가지를 명시한다**: ① 카드가 직접 적었다 — *"This model **should be fine-tuned** on a downstream task, like Automatic Speech Recognition, Translation, or Classification"*. ASR 완성품이 아니다. ② 라이선스 **CC-BY-NC 4.0 — 비상업 전용**이다.
+- 입력 제약: 16kHz 샘플링 필수. 카드의 `How to finetune` 섹션은 **"Coming soon..." 상태로 비어 있다.**
+- 벤치마크: 모델카드에 **수치 0개**. 출처는 논문 *Scaling Speech Technology to 1,000+ Languages* (Pratap et al., 2023).
+- 📌 선정 근거: 2023년 모델이나 **오늘 HF 트렌딩 상위 40위 내 미수집 독립 모델 중 다운로드 1위**다. 신규 릴리스가 아닌 **상시 인프라의 재부상**으로 분류한다.
+
+## [2026-09-18] 자동수집 | TokenRhythm/NeoHorse-1-4B — Qwen3.5-4B 라우팅 기반 에이전트 사후학습판
+- URL: https://huggingface.co/TokenRhythm/NeoHorse-1-4B
+- 도메인: ai-news
+- 다운로드수: 19,789 (30일 · ♥2,354 · 트렌딩 5위 · 2026-09-05 생성 · Apache-2.0)
+- 한줄요약: Qwen3.5-4B를 도구사용·코딩·지시수행용으로 사후학습해 **10개 벤치마크 매크로 평균 64.87 (베이스 58.94 대비 +5.93)**, 컨텍스트 262,144 네이티브(최대 1,010,000 확장).
+- 🔴 **8열 표를 전부 옮긴다 — Δ열의 기준이 베이스뿐이라는 점이 핵심이다.** 표의 `Δ` 는 **Qwen3.5-4B 대비**이며 최강 경쟁자 대비가 아니다. 경쟁 5종(Qwen3.5-4B·Gemma-4-E4B-it·Nanbeige-4.2-3B·Agents-A1-4B·Spark-X2.5-4B) 기준 **NeoHorse가 지는 축이 6개다**: BFCL v4 61.79(Nanbeige 67.28) · VitaBench 32.00(Agents-A1 39.25) · HumanEval 96.95(Nanbeige 98.78) · LiveCodeBench v6 59.43(Nanbeige 72.50*) · IFBench 65.33(Spark 73.33) · IFEval 88.35(Spark 91.13). **이기는 축은 QwenClawBench 44.68 · WorkBuddy 34.41 · PinchBench 77.33 · tau2-Bench 88.46 — 전부 에이전트 축이다.**
+- `*` 각주 그대로: *"Nanbeige-4.2-3B LiveCodeBench v6 result is **reported in the corresponding model's official blog post or technical report**"* — 자체 측정이 아니라 **타사 자기보고 인용**이다.
+- 🔴 **능력 제한(카드 본문)**: *"This release contains **language-model weights only** and is repackaged for text-only inference. **Vision weights are not included.**"* 베이스의 비전 능력은 이 릴리스에 없다.
+- 측정 프로토콜 명시: SGLang v0.5.17, temperature=1.0/top_p=0.95/top_k=20, thinking 모드 on. **QwenClawBench·WorkBuddy·tau2-Bench는 3회, PinchBench·VitaBench는 1회 실행** — 회차가 다르다. VitaBench는 DeepSeek-V4-Flash를 시뮬레이터 겸 판정자로 쓴다.
+- 마케팅 문구 격하: *"recursive self-improvement(RSI)를 향한 초기 프로토타입"* 은 능력이 아니라 **로드맵 서술**이다. 카드 스스로 *"extending this loop across successive iterations is the **next step**"* 이라 적었다.
+
+## [2026-09-18] 자동수집 | TokenRhythm/NeoHorse-1-9B — 같은 레시피의 9B판, 이득이 에이전트 축에만 몰린다
+- URL: https://huggingface.co/TokenRhythm/NeoHorse-1-9B
+- 도메인: ai-news
+- 다운로드수: 9,856 (30일 · ♥881 · 트렌딩 29위 · 2026-09-05 생성 · Apache-2.0)
+- 한줄요약: Qwen3.5-9B 사후학습판으로 10개 벤치마크 평균 **69.04 (베이스 65.60 대비 +3.44)**, 비교군 6종 중 평균 1위 — 그러나 **이득의 분포가 4B판보다 더 편중돼 있다.**
+- 🔴 **지는 축이 자기 베이스까지 포함한다 — 4B판과 결정적으로 다른 지점이다**: IFEval **89.09로 베이스 Qwen3.5-9B(89.46) 대비 -0.37 하락**. IFBench 66.33 **+0.00**, LiveCodeBench v6 65.14 **+0.00** — 세 지표 모두 **사후학습이 아무것도 더하지 못했거나 깎았다.** 반면 에이전트 축은 VitaBench +11.00 · PinchBench +7.70 · QwenClawBench +4.69.
+- 🎯 **그래서 "+3.44 평균"의 해석이 바뀐다**: 평균 상승은 **에이전트 6개 축이 끌어올린 값**이며, 코딩·지시수행 4개 축은 **정체 또는 후퇴**다. 4B판은 10개 축 전부 양(+)의 Δ였으나 **9B판은 그렇지 않다** — 같은 레시피가 규모를 키우자 **지시수행에서 비용을 치른다.**
+- 절대 최강 대조: Gemma-4-12B-it가 HumanEval 100.00 · LiveCodeBench 73.14 · IFEval 94.27로 3개 축 1위, Muse-Glimmer-30B가 WorkBuddy 45.85 · VitaBench 48.50 · IFBench 78.67로 3개 축 1위. **NeoHorse-1-9B가 1위인 축은 4개(QwenClawBench·PinchBench·BFCL v4·tau2-Bench)다.**
+
+---
+
+## 📤 수집기 → 볼트 : 이번 배치 보고
+
+### ✅ 09-17 볼트 요청 3건 이행 확인
+1. **"표를 옮길 때 열을 선택하지 말 것"** → NeoHorse 4B·9B **8열 전건**, Xing4.0 대조표 확인, 그리고 **지는 축을 먼저 적었다.** 🎯 그 결과 **9B판에서 자기 베이스 대비 IFEval -0.37 하락**을 발견했다 — 평균만 봤으면 "+3.44 개선"으로 끝났을 건이다.
+2. **"표가 여러 개면 각 표의 귀속 대상을 확인할 것"** → [[MiniCPM]] README **표 19개 · `### Evaluation Results` 섹션 4개**를 세고 **레포 1개가 모델 4계열을 담는다**는 사실을 명시했다.
+3. **"채택 건은 `grep '^##'` 로 섹션 헤딩 전수 스캔"** → GitHub 5건 전부 전 섹션 헤딩 스캔 후 관련 섹션을 읽었다(366·155·289·208·1,373행). **60행 상한을 채택 건에 적용하지 않았다.**
+
+### 🔴 그리고 볼트가 준 3차 키가 실제로 2건을 잡았다 — 리터럴 필터는 둘 다 통과시켰다
+```
+ukisai/Swift-Qwen3.8-27B-GGUF      ⬇72,862  ← 미수집 독립 모델 중 다운로드 1위였다
+  base_model = ukisai/Swift-Qwen3.8-27b        ← 🔴 1홉으로는 볼트 기보유와 무관해 보인다
+    └ 그 모델의 base_model = Qwen/Qwen3.8-27B  ← ✅ 2홉에서 볼트 기보유 발견
+dealignai/DeepSeek-V4.1-Flash-UNCENSORED-FP8  ⬇32,011
+  base_model = deepseek-ai/DeepSeek-V4.1-Flash ← ✅ 1홉에서 발견
+prism-ml/Ternary-Bonsai-2-27B-gguf  ⬇0  → Qwen/Qwen3.8-27B 파생
+ukisai/Swift-Qwen3.8-27b            ⬇3,221 → Qwen/Qwen3.8-27B 파생
+```
+🎯 **볼트가 제안한 "기보유 베이스명 부분문자열" 3차 키를 그대로 적용했고, 4건 전부 이 한 줄로 잡혔다.** 그리고 예측대로 **`base_model` 1홉만으로는 첫 건을 놓친다** — 2홉 재귀가 필요했다.
+🔴 **대가를 명시한다**: 이 4건을 빼면서 다운로드 **1·2위를 포기**했다. 그 결과 3번 슬롯이 ⬇9,856까지 내려갔다. **"다운로드 상위 3개"를 문자 그대로 지키면 1·2위는 파생 2건이다.**
+
+> **판정 요청 1 — 이 트레이드오프가 맞나**
+> 수집 기준은 *"trending models 상위 3개(다운로드 수 기준)"* 다. 이번에 나는 **파생 4건을 선발 전에 제외**하고 잔여에서 상위 3개를 뽑았다.
+> (a) 맞다, 계속 제외하라 / (b) 파생도 상위 3개에 넣되 원본 링크를 병기하라 / (c) 파생은 **별도 슬롯**으로 보고하라(상위 3 + 파생 N)
+> 📌 **어느 쪽이든 라이선스는 따로 옮긴다** — 09-17 볼트 지적대로 `ukisai/*` 2건은 `license: other`로 **베이스 Qwen3.8-27B와 분기**한다.
+
+### 📌 이번 배치 자기 한계 — 읽지 못한 것을 센다
+1. 🔴 **"수치가 이미지라 못 옮긴다"는 내 자기 한계는 틀렸다 — 볼트가 이미 반례를 갖고 있다.**
+   나는 [[MiniCPM]] 의 벤치마크가 PNG라서 텍스트의 53.9·51.1 **2개만 옮길 수 있다**고 적었다. 그런데 볼트의 기존 [[MiniCPM5-2B]] 페이지 43행은 이렇게 적혀 있다: *"볼트 실측: 카드 **SVG 레이더 차트에서** `avg 53.9 / 51.1 / 42.7 / 33.2` 라벨 **직접 확인**"*.
+   🎯 **SVG는 텍스트다. 라벨이 마크업 안에 문자로 들어 있으므로 파싱할 수 있다.** 나는 이미지를 보고 포기했고, 볼트는 **같은 자산에서 4개 값을 꺼냈다.**
+   🔴 **그래서 이번 배치에서 내가 놓친 것**: MiniCPM 계열 차트(PNG)와 SALA 차트(PNG)는 실제로 래스터라 못 읽는 게 맞지만, **읽을 수 있는 자산과 못 읽는 자산을 구분하지 않고 "이미지"로 뭉뚱그렸다.** 다음부터는 **자산 확장자를 먼저 확인**한다 — `.svg`면 파싱 시도, `.png/.jpg`면 못 읽는다고 적는다.
+2. **논문 5건 전부 초록만 읽었다.** [[SoL-Pi]] 의 4개 메커니즘 각각의 기여도 분해, [[Harness-Design-Empirical]] 의 176개 설정별 수치, [[JEPA-Anything]] 의 도메인별 절대값이 초록에 없다.
+3. **코드를 읽지 않았다.** [[BrowserSkill]] 의 "탭 빌림/반납" 강제 · [[opensre]] 의 마스킹 가역성 구현 · [[harness-sdk]] 의 훅 가로채기 범위 — 전부 README 수준 확인이다.
+4. **[[FastVideo]] 의 ">50x" 와 "5s→1.8s" 를 대조하지 못했다.** README에 성능 대조표가 **0개**이고 근거는 외부 블로그 링크다. **표가 없다는 사실까지가 이번 범위**다.
+5. **GitHub 트렌딩 별점 총계를 페이지에서 파싱하지 못해 전건 API 재조회했다.** 페이지 값과 API 값의 드리프트는 **대조하지 않았다** — 09-17까지 해 온 지표 드리프트 기록이 이번엔 없다.
+6. **[[mms-300m]] 은 2023년 모델이다.** "당일 급상승"이 아니라 재부상이며, **왜 지금 트렌딩에 올랐는지 원인을 확인하지 못했다.**
+
+> **판정 요청 2 — 오늘 GitHub 트렌딩의 65%가 이미 볼트에 있다**
+> 데일리 20건 중 **13건(65%)**, 4개 페이지 합산 67건 중 **35건(52%)** 이 리터럴 중복이었다. 그래서 AI/ML 신규 5건을 채우려 **python-daily·jupyter-weekly·all-weekly·py-weekly 4개 페이지까지 확장**했고, 그 결과 [[MiniCPM]] 은 **주간** 목록에서 왔다.
+> 🎯 **"데일리 트렌딩 상위 5개"라는 기준이 중복률 상승으로 서서히 무너지고 있다.** 다음 중 무엇인가:
+> (a) 주간·언어별 확장을 정식 절차로 승인 / (b) 데일리만 쓰고 **5건 미달을 그대로 보고** / (c) 중복 건도 **지표 갱신용으로 재배달**(스타 증감만)
+> 📌 (c)는 09-14에 "중복 재배달 8건"으로 **한 번 실패한 경로**다 — 그때와 다르려면 **갱신 전용 형식**이 따로 필요하다.

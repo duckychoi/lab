@@ -2,14 +2,28 @@
 title: NVIDIA
 type: entity
 domain: local-llm
-tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, entity]
+tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, harness, agent, entity]
 created: 2026-07-04
-updated: 2026-09-10
-sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md]
+updated: 2026-09-18
+sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md]
 reliability: high
 ---
 
 # NVIDIA
+
+> [!insight] 2026-09-18 추가 — [[SoL-Pi]]: 🔴 **볼트가 수집기 배달에서 소속을 직접 찾아냈다**
+> ```
+> 볼트 실측 (HF papers API) — raw에 "NVIDIA" 라는 단어가 없었다
+>   githubRepo  : NVlabs/SoL-Pi      githubStars : 2,185
+>   authors     : 14                 upvotes     : 35
+> ```
+> 🎯 **이 회사가 토큰을 줄이는 논문을 썼다.** 하네스 계층에서 자동연구 루프를 확장해 **선택압을 통과한 메커니즘 4개**를 남겼고, 51과제 EdgeBench에서 **토큰 44.7~49.0% · API 비용 약 1/3 절감**(정확도는 Pi와 *동등*).
+> 🔴 **이해관계와 반대 방향의 주장이다** — 토큰이 줄면 연산 수요가 준다. 그래서 이 수치는 벤더 자기이익 보정이 필요 없는 드문 종류다.
+> 🎯 **볼트가 아는 NVIDIA의 자리가 바뀐다**: 기존 2건은 **양자화·하드웨어**([[Qwen3.6-27B-NVFP4]]·[[LocateAnything-3B]]) = *"같은 모델을 내 칩에서 싸게"*. 이번은 **하네스** = *"모델을 안 바꾸고 호출 횟수를 줄인다."* **칩 아래에서 위로 올라왔다.**
+> 🔴 기준선이 둘이다 — 네이티브 Codex·Claude Code 대비 시간당 **$8.75~13.50**, **Pi 대비로는 $4.36~5.71**. **절감폭 절반가량은 Pi가 이미 확보한 몫** → [[표-부분인용]] 의 **기준선 축**
+> ⚠️ ★2,185는 **조직 후광 미분리**(공개 다음 날 조회) — 채택 증거로 쓰기 전에 누적 곡선 필요
+> 📌 [[하네스-설계-축]] 4건 중 **자동탐색 층** 담당. → [[RSI-프레이밍]](*"RSI-inspired"*, 미래형)
+
 
 > [!insight] 핵심
 > GPU·AI 하드웨어·추론 스택(TensorRT-LLM 등) 공급사. 위키 맥락의 주목점은 두 축 — ①**자사 4비트 포맷 NVFP4로 인기 오픈모델을 직접 재양자화·배포**([[Qwen3.6-27B-NVFP4]]·[[Qwen3.6-35B-A3B-NVFP4]]), GGUF 중심 지형에 벤더 네이티브 포맷을 경쟁 축으로 투입. ②**공식 VLM 배포**([[LocateAnything-3B]] HF DL 1.42M로 급증) — visual grounding("어디에 있는가") 수요를 자사 모델로 흡수. 로컬 추론·비전을 자사 하드웨어에 묶는 전략. 앞서 Newton 물리엔진(로봇 훈련 70x)도 이 회사 협업.

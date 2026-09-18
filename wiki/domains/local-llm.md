@@ -4,8 +4,8 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-17
-sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md]
+updated: 2026-09-18
+sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
@@ -13,6 +13,51 @@ sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwop
 목표: 경량 모델 실배포 + Hermes/에이전트에 메모리 심기
 
 ---
+
+
+## 2026-09-18 배치 — **긴 컨텍스트를 싸게 만드는 두 답이 직교한다. 그리고 결합 사례가 없다**
+
+> [!insight] 🎯 이 배치의 구조적 발견 — **저장 vs 계산**
+> ```
+> [[DeepSeek-V4.1-Flash-Paper]]   KV *저장* 을 줄인다
+>   CSA2 교차층 재사용 + FP4 KV → 토큰당 890바이트 (V4-Flash의 1/4)
+>   SWA Bounded Replay → 영속 KV 1/8 · 컨텍스트 100만
+>
+> [[MiniCPM]] SALA               어텐션 *계산* 을 바꾼다
+>   층의 25% InfLLM-V2(희소) + 75% Lightning Attention(선형) — 풀 어텐션 0개
+>   256K에서 Qwen3-8B 대비 3.5배 · TTFT 2.5배 · 장문 평균 38.97
+>   520K까지만 학습했는데 2048K에서 81.6 유지 (YaRN 없이)
+>   전환 학습으로 학습예산 약 25%
+> ```
+> 🎯 **같은 진단(긴 컨텍스트에서 메모리·연산이 비용을 지배한다)에서 출발해 답이 갈렸고, 두 답은 직교하므로 곱할 수 있다.**
+> 🔴 **결합 사례가 볼트에 없다. 이 배치가 만든 가장 큰 빈칸이다.**
+> 📌 **[[에이전트-메모리-레이어]] 분류 갱신**: RAG(외부화) · KV압축(내부 압축) 에 이어 **"어텐션 구조 자체를 교체"** 칸을 추가한다. SALA는 **외부화 없이 2048K에서 81.6** 을 낸다.
+
+> [!warning] 🔴 SALA 의 3.5배 중 일부는 **실패 대비 성공**이다
+> *"Qwen3-8B **fails at this length due to out-of-memory**"* — 256K에서 상대가 OOM이면 *"3.5배 빠르다"* 가 아니라 *"상대는 못 한다"* 다. **두 진술은 다른 종류이고 후자를 배수로 적으면** [[단위-불일치]] 다.
+> 🔴 그리고 **SALA의 품질 비용이 어디에도 없다** — 장문 최고인 모델이 단문·지식에서 무엇을 내줬는지 텍스트에 없다(PNG 내부 가능성). **희소화가 공짜일 수 없다.**
+
+> [!insight] 🎯 [[에이전트축-분기]] 가 잠정을 벗었다 — 표본 5, 그리고 **자기 베이스 대비 음수**
+> [[NeoHorse-1-4B]](4.21B)·[[NeoHorse-1-9B]](8.95B) **2건 동시 편입**. 같은 레시피, 규모만 다르다.
+> - **4B**: 평균 64.87(+5.93) · **10개 축 전부 양(+)** · 이기는 4축 전부 에이전트(QwenClawBench·WorkBuddy·PinchBench·tau2-Bench) · 🔴 지는 6축(BFCL·VitaBench·HumanEval·LCB v6·IFBench·IFEval)
+> - **9B**: 평균 69.04(+3.44) · 🔴 **IFEval 89.09 vs 베이스 89.46 = −0.37 하락** · IFBench·LCB v6 **+0.00** · 반면 VitaBench **+11.00**
+> 📌 **개념 갱신 2건**: ① **베이스 대비 음수 = 분기의 강한 증거**(경쟁 대비 열세는 "우선순위"로 설명되지만 이건 사후학습이 능력을 깎았다는 뜻) ② **규모 의존성** — 4B 전축 +, 9B 3축 정체/후퇴. 🔴 표본 2, 잠정.
+
+> [!warning] 🔴 실용성 — 배치에서 내 하드웨어로 돌아가는 것은 하나다
+> ```
+> NeoHorse-1-4B   4.21B BF16 ≈  8.4GB   ✅ 소비자 GPU · apache-2.0 · 컨텍스트 262K
+> NeoHorse-1-9B   8.95B BF16 ≈ 17.9GB   ⚠️ 24GB VRAM 필요
+> MiniCPM-SALA    체크포인트 공개 여부 미확인   🔴 A6000D·RTX 5090 수치 = 준전문가 대역
+> DeepSeek-V4.1   763B                  🔴 로컬 불가 (09-11 판정 유지)
+> ```
+> 🎯 **4B를 먼저 쓴다.** 9B는 하드웨어 2배 + **지시수행 회귀** + 에이전트 이득은 4B에도 있으므로 **"4B가 부족할 때의 다음 후보"** 로만 둔다.
+> 🔴 **양쪽 다 262K 네이티브의 KV 비용을 카드가 밝히지 않았다** — [[DeepSeek-V4.1-Flash]] 가 세운 기준(토큰당 KV 바이트)으로 보면 결측이다.
+
+> [!warning] 🔴 이 도메인의 미해결
+> 1. **SALA 체크포인트 공개 여부 미확인** — 공개됐으면 **2048K를 준전문가 하드웨어에서** 쓸 수 있다는 뜻
+> 2. **9B의 지시수행 회귀 원인 불명** — 사후학습 데이터가 에이전트 궤적 중심이면 지시수행 분포가 희석된다는 추정뿐. 🎯 **모논문 `arxiv:2609.08183`(업보트 421, 볼트 0히트)에 답이 있을 가능성** → [[선발창-누락]]
+> 3. **NeoHorse 라우팅 하네스가 가중치에 포함되는가** — 논문 제목은 *"with Routing Harness"* 인데 릴리스는 **언어 가중치만**이다(비전 제외). 추론 시에도 라우팅이 필요하면 **이 가중치만으로 논문 결과 재현 불가**
+> 4. **저장×계산 결합 구현 탐색** — 위 빈칸
 
 ## 최근 흐름 (2026-09-15 배치 · 1건) — **압축이 아니라 "용량 한계를 도구로 우회하도록 설계"**
 

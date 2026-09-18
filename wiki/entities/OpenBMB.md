@@ -4,12 +4,22 @@ type: entity
 domain: local-llm
 tags: [local-llm, edge-ai, slm, openbmb, on-device, minicpm]
 created: 2026-07-10
-updated: 2026-09-10
-sources: [MiniCPM5-2B.md, MiniCPM5-1B.md, MiniCPM-V-4.6.md]
+updated: 2026-09-18
+sources: [MiniCPM5-2B.md, MiniCPM5-1B.md, MiniCPM-V-4.6.md, MiniCPM.md]
 reliability: high
 ---
 
 # OpenBMB
+
+> [!insight] 2026-09-18 추가 — [[MiniCPM]] 레포: 🔴 **볼트에 새 중복 유형을 만들었다**
+> ★**11,078**(raw 완전일치) · fork 763 · Apache-2.0 · **open issues 18 = 비율 0.16%, 배치 최저**
+> 🔴 **레포 1개가 모델 4계열을 담는다** — [[MiniCPM5-2B]]·[[MiniCPM5-1B]]·**MiniCPM-SALA**·**MiniCPM4/4.1**. **따라서 ★11,078은 어느 모델의 지표도 아니다.** README **1,373행 · 표 19개 · `### Evaluation Results` 섹션 4개**, 각 섹션 소유 모델이 다르다.
+> ⚖️ **판정: (c) 채택** — 레포 페이지를 두고 4개 모델 페이지와 상호링크. **단 중복분 수치는 복제 금지** → [[컨테이너-중복]] **신설**
+> 🎯 **신규분 MiniCPM-SALA(2026-02)가 이 조직의 노선을 바꿔 보여준다**: 층의 **25% InfLLM-V2(희소) + 75% Lightning Attention(선형)** — **풀 어텐션 층이 0이다.** A6000D 256K에서 Qwen3-8B 대비 **속도 3.5배·TTFT 2.5배**, 장문 평균 **38.97**, **520K까지만 학습했는데 2048K에서 81.6 유지**(YaRN 없이), 전환 학습으로 **학습예산 약 25%**.
+> 🔴 **3.5배의 일부는 실패 대비 성공이다** — *"Qwen3-8B **fails at this length due to out-of-memory**"*. **OOM 대비는 배수로 환산되지 않는다** → [[단위-불일치]]
+> 🎯 **이 조직의 일관성**: [[MiniCPM5-2B]] 가 **작은 모델로 에이전트 축을 이겼고**([[에이전트축-분기]]), SALA는 **긴 컨텍스트를 어텐션 구조 교체로 싸게 만든다.** 둘 다 *"크게 만들지 않고 구조로 푼다"* — **온디바이스 지향이 아키텍처 선택까지 지배한다.**
+> 🔴 **MiniCPM4/4.1 은 이름만 확인됐다** — 볼트·수집기 모두 수치 0개. SALA 핵심 평가도 **전부 PNG**라 못 읽었다.
+
 
 > [!insight] 핵심 인사이트
 > **온디바이스/엣지용 소형 LLM(SLM)에 특화된 오픈 연구·개발 조직**으로, 이 위키에서는 **MiniCPM 시리즈**의 제작사로 등장한다. ①**[[MiniCPM5-1B]]**(1.08B, 131K 컨텍스트, think/fast 2모드, 도구호출, RL+OPD로 수학·코드 +16점) — "1B급 오픈 SOTA"를 표방하는 순수 텍스트 SLM, ②**[[MiniCPM-V-4.6]]** — 동급 스케일 멀티모달 VLM. OpenBMB의 일관된 노선은 "**작게 만들되 도구 사용·추론까지 넣어 실제 온디바이스에서 쓸모 있게**" — BF16/GGUF/MLX 다포맷과 FlagOS 다칩 지원으로 CPU·스마트폰·임베디드 배포를 겨냥. 내 [[에이전트-메모리-레이어]]·경량 에이전트 백엔드 후보 공급원.

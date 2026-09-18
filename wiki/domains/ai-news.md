@@ -4,8 +4,8 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-17
-sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md]
+updated: 2026-09-18
+sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
@@ -3033,6 +3033,81 @@ raw는 *"중복 0건"* 이라 보고했으나 **[[vercel-skills]] 가 이미 있
 📌 **한 배치에서 계보의 세 지점이 동시에 들어온 것은 처음이다.**
 
 ---
+
+
+## 2026-09-18 배치 — **하네스가 축이 됐다. 그리고 그 축의 원인 논문을 볼트가 열흘째 못 받고 있다**
+
+> [!insight] 🎯 이번 배치 한 줄
+> **13건 중 4건(31%)이 하네스 설계다** — 구현([[harness-sdk]]) · 자동탐색([[SoL-Pi]]) · 대조실험([[Harness-Design-Empirical]]) · 학습루프 내재화([[NeoHorse-1-4B]]). 09-16 *"모델 위 계층"*, 09-17 *"실행 통제"* 에 이어 **세 배치 연속 상승**이고, 이번에 처음으로 **같은 축 안에서 층이 갈렸다** → [[하네스-설계-축]] 신설
+
+> [!insight] 🎯 **가장 강한 신호 — 독립된 두 방법이 같은 부품을 지목했다**
+> [[SoL-Pi]] 는 **자동탐색으로 살아남은 메커니즘 4개**를 남겼고 그중 **2개가 컨텍스트 관련**이다. [[Harness-Design-Empirical]] 은 **176개 대조 설정으로 절제 측정**해 **컨텍스트 관리가 가장 중요**하며 이득의 대부분이 **오버플로 실패 방지**에서 온다고 결론했다.
+> **탐색으로 남은 것 = 절제로 재서 중요한 것.** 방법이 완전히 다른 두 연구가 일치한다. 🔴 단 같은 주 공개라 **독립성은 추정이고 확인하지 않았다.**
+> 🎯 **그리고 이 축의 결론은 대체로 "빼라"다** — 복구 장치는 모델이 안 써서 이득 0, 사전정의 도구는 bash 능숙 모델에 무용, 계획은 강한 모델에서 정확도 불변. **기능 추가 경쟁이 아니라 절제 경쟁으로 넘어갔다.**
+
+> [!warning] 🔴🔴 **볼트 최대 발견 — 업보트 421 논문을 열흘 동안 놓쳤다**
+> [[NeoHorse-1-4B]] 의 모델 태그 `arxiv:2609.08183` 을 따라가 보니:
+> ```
+> "NeoHorse-1: Towards Recursive Self-Improvement via Agentic Post-Training
+>  with Routing Harness"   업보트 421 · 공개 2026-09-08 · 코드 ★535
+> 볼트 grep → 0히트
+>
+> 09-18 배치 논문 5건: 36 · 35 · 31 · 28 · 21    → 1위의 11.7배
+> 09-08 배치 논문 1위: [[Uno]] 19                 → 22배
+> ```
+> 🔴 **같은 날 공개된 421 업보트 논문을 놓치고 19를 "배치 1위"로 배달했다.** 이후 열흘 동안에도 배달되지 않았다.
+> ⚠️ **정직한 한정**: 421은 오늘 측정값이고 업보트는 누적된다 — 당일엔 낮았을 수 있다. 🎯 **그러나 데일리 목록은 지나간 날을 되돌아보지 않는다.** → [[선발창-누락]] 신설
+> 🎯 **대가가 크다**: 오늘 하네스 4건 중 2건이 **"RSI + 하네스"** 프레이밍을 쓰고, 그 출처로 보이는 게 그 논문이다. **볼트는 결과를 받고 원인을 못 받았다.**
+
+> [!warning] 🔴 새 중복 유형 — 필터가 *올바르게* 통과시켰다
+> [[MiniCPM]]: `github.com/OpenBMB/MiniCPM` 리터럴 **0히트 = 레포로서 진짜 미수집**. ✅ 필터는 정확히 동작했다.
+> 🔴 **그런데 이 레포가 발표하는 모델이 HF 페이지로 볼트에 4건 있다.** **레포 1 ⊃ 모델 4계열** — 09-17의 파생 중복(원본 1 → 파생 N)과 **구조가 반대**다. 파생은 이름이 갈라져서, 컨테이너는 **이름이 하나여서** 못 잡는다.
+> 🔴 **09-17의 2·3차 키(`cardData.base_model`·이름 부분문자열)가 채널을 넘으면 무력하다** — GitHub 레포에 `base_model` 이 없고, 부분문자열은 오히려 과탐한다.
+> ⚖️ **판정 (c) 채택 + 규약 신설**: 컨테이너 페이지는 **기존 개별 페이지의 수치를 복제하지 않는다.** → [[컨테이너-중복]]
+> ✅ **탐지 경로는 자진신고뿐이고, 수집기가 실제로 자진신고했다 — 이번 배치 최고의 기여다.**
+
+> [!warning] 🔴 지표 3연속 — 볼트는 "트렌딩 N위"를 검증할 수 없다
+> HF 모델 3건 **전부 `trendingScore: None`**([[mms-300m]]·[[NeoHorse-1-4B]]·[[NeoHorse-1-9B]]). [[DeepSeek-V4.1-Flash]](09-14) 포함 **누적 4번째**.
+> 📌 **일시적 API 이상이 아니라 채널 한계로 등록한다.** 수집 기준(*"트렌딩 상위 3개"*)이 **볼트가 대조 불가능한 값에 의존한다.** → [[측정도구-먼저-반증]]
+
+## 🆕 척도 2개 신설
+
+**① `open issues / ★`** — 배치 5건 전수 산출(볼트 API 실측)
+```
+harness-sdk   763/7,345  = 10.39%   ← 🔴 유일한 이상값, 중위값의 9.6배
+FastVideo     192/4,467  =  4.30%
+BrowserSkill   51/4,740  =  1.08%
+opensre        52/11,124 =  0.47%
+MiniCPM        18/11,078 =  0.16%
+```
+🔴 **[[harness-sdk]] 는 "설정 없이 기본 내장"과 "Guardrails catch mistakes"를 주장하는 제품**인데 이 비율이 배치 유일 이상값이다. ⚠️ **품질 판정으로 쓰지 않는다** — 열린 이슈는 버그·기능요청·방치·활발한 사용을 구분 못 한다. **"나쁘다"가 아니라 "확인 필요"** → [[메타데이터-부재-추론]]. 잠정 대역: **0.16~1.1% 정상 · 4%+ 확인 대상**(표본 5, 누적 필요)
+
+**② 논문 배달 필수 필드** — HF papers API가 **무료로 주는데 수집기가 조회하지 않았다**
+```
+논문                        업보트  저자   코드★      볼트 발견
+SoL-Pi                        35    14   2,185   🔴 NVlabs = NVIDIA (raw에 없음)
+DeepSeek-V4.1-Flash           36   592     없음   🔴 저자 592명 = 기업 백서
+Harness-Design-Empirical      31     9     없음   🔴 대조실험인데 코드 없음
+When EOS Tokens Disagree      28     9       1   ✅ 코드 URL 확보
+JEPA-Anything                 21    13       3   ✅ 코드 URL 확보
+```
+🎯 **업보트 순위와 코드 채택 순위가 전혀 다르다.** 업보트 1위는 레포가 없고, 4위가 ★2,185다. **업보트는 "읽고 싶다", ★은 "쓰고 있다"를 잰다.**
+🔴 **단 공개 다음 날 조회이므로 ★1·★3에 [[DeepSeek-V4.1-Flash]] 의 72시간 규칙을 적용한다 — 지표 아님.** 오히려 **★2,185 쪽이 조직 후광 미분리**다.
+📌 **저자 수는 신뢰도가 아니라 *종류* 지표다**: 592명 = 기업 백서(외부 재현 불가) · 9~14명 = 연구 논문. **둘을 같은 채널로 배달하면 근거의 성격 차이가 사라진다.**
+
+## 🎯 이번 배치가 볼트 자신을 바꾼 것
+
+**① 인제스트 규칙 개정(근거 기반)** — [[Harness-Design-Empirical]] 결론 ②(*규칙기반 생략을 LLM 요약 앞단에*)를 채택. 🎯 **오늘 raw.md(454KB·375행) 처리에서 실제로 그 순서를 썼다** — 전문 로드 대신 **헤딩 맵 → 해당 구간(196~375행)만**. **경험이 아니라 176개 설정의 근거가 생겼다.**
+**② "벤치 0개"를 두 종류로 분리** — 주장 있음+근거 없음(감점) vs 주장 없음(성숙도 문제). 🔴 **지금까지 볼트는 일률 감점해 왔고 그건 틀렸다** — [[opensre]]·[[mms-300m]] 은 벤치 0인데 reliability **high**다 → [[자기제한-명시]]
+**③ [[에이전트축-분기]] 가 잠정을 벗었다** — 표본 5, 그리고 처음으로 **자기 베이스 대비 음수**([[NeoHorse-1-9B]] IFEval **−0.37**). **경쟁 대비 열세는 "우선순위"로 설명되지만 베이스 대비 하락은 거래의 직접 증거다.**
+
+## 🔴 이번 배치 미해결
+1. **논문 5건 전부 초록만** — SoL-Pi 메커니즘별 기여도 분해 · Harness-Design 176설정 수치·**4개 모델의 정체** · JEPA 도메인별 절대값
+2. **코드 미확인 3건** — [[BrowserSkill]] 탭 반납 강제 · [[opensre]] 마스킹 가역성 · [[harness-sdk]] 훅 강제 범위
+3. **[[FastVideo]] 의 50배 산술이 닫히지 않는다** — 8-step만으로 6.25배, VSA가 8배를 내야 하는데 **그 수치가 없고 README 성능 대조표는 0개**다. 🔴 **★ 증분도 raw에 결측이라 상대속도 계산 불가**(배치 유일)
+4. **업보트의 시간 상수를 실측하지 않았다** — [[선발창-누락]] 의 "며칠 창이 적정한가"에 답하려면 필요
+5. **[[MiniCPM]] SALA 품질 비용 · MiniCPM4 전량 미확인** — 핵심 수치가 PNG 내부
+6. **[[mms-300m]] 재부상 원인** — ✅ 공급 측 배제(3년 3개월 무변경 실측), 🔴 수요 측 미확인
 
 ## 2026-09-17 배치 — **부분인용은 대조를 통과한다**
 

@@ -2,14 +2,24 @@
 title: Tencent
 type: entity
 domain: ai-news
-tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, entity]
+tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, browser-automation, entity]
 created: 2026-07-04
-updated: 2026-09-10
-sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md]
+updated: 2026-09-18
+sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md]
 reliability: high
 ---
 
 # Tencent (텐센트)
+
+> [!insight] 2026-09-18 추가 — [[BrowserSkill]]: **에이전트에게 브라우저를 주지 않고 탭만 빌려준다**
+> ★**4,740**(볼트 API 실측 · raw 4,735 드리프트 +5) · fork 335 · **MIT** · 2026-06-22 생성 · **당일 커밋(09-18 09:09)**
+> 🎯 **상대속도 27.5%(당일 +1,302) = 볼트 관측 최상위권** — 09-17 최고 [[Octop]](12.61%)의 **2.2배**. 텐센트 레포가 두 배치 연속 상대속도 상위다.
+> **발명은 자동화가 아니라 소유권 분리**: `bsk` CLI → 로컬 데몬 → 크롬 확장 3단 경유로 에이전트를 **별도 Agent Window에 격리**하고 사용자 탭은 **명시적으로 빌린 뒤 반납**한다. **에이전트가 브라우저와 직접 통신하는 경로가 없다.**
+> 🎯 **[[에이전트-웹접근]] 3노선 중 지문 위조가 원리적으로 불필요한 유일한 노선** — [[camofox-browser]]·[[CloakBrowser]] 가 위조로 접근 층을 풀었다면 이쪽은 **진짜 세션을 빌린다.**
+> 🔴 한정어 보존: Chrome·Edge**만** 지원, Firefox는 계획. *"other Chromium-based browsers are **expected to work**"* = **지원이 아니라 예상**이다 → [[한정어-탈락]]
+> 🔴 벤치 수치 0개(366행) · **탭 반납 강제 구현 미확인**(볼트·수집기 모두 못 봄)
+> 📌 텐센트 패턴 재확인: [[CubeSandbox]](샌드박스) · [[Octop]](채널·백엔드 교체) · 이번(브라우저 격리) — 🎯 **셋 다 "에이전트를 무엇으로부터 떼어놓을까"** 다. 이 회사는 **능력이 아니라 경계를 만든다.**
+
 
 > [!insight] 2026-08-26 — **실배포 증거를 동반한** 멀티모달 임베딩 오픈 릴리스 ([[WeMM-Embedding]])
 > `WeMM-Embedding`(HF 데일리 **2위**·업49·저자 6인·arXiv 2608.24053·**초록 원문 실검증**·가중치·코드 공개 https://github.com/Tencent/WeMM-Embedding)이 관측됐다.
