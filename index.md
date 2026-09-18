@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-09-17
-total_pages: 1186  # 2026-09-17 실측(sources 1083 · entities 58 · concepts 39 · synthesis 2 · domains 4 · queries 0)
-total_sources: 1083  # 2026-09-17 실측. ✅ **배치 13건 리터럴 전건 NEW · 중복 0% — 3배치 연속**(`org/name` 5 · arXiv ID 5 · HF repo id 3 → 13/13 0히트). 🔴 **볼트 최대 발견: 부분인용은 원문 대조를 통과한다** — 수집기 인용은 README·초록·모델카드 **전건 문자 일치**였는데 결론이 두 번 틀렸다. [[DeepSeek-R1]] 6열 중 4열만 옮겨 *"70B 하락"* → 볼트가 `cons@64` 를 넣자 **7B(83.3) = 32B(83.3)** 로 격차 소멸(pass@1 격차 +17.1 → 0.0). [[Qwen3.8-27B-TWIN-TURBO-709-GGUF]] 는 4개 표 중 1개만 읽어 🔴 **68점 오류**(*"거부 0/100"* 은 STAGE 1 **타인 작업**이고 카드가 `[ THIS REPO ]` 라 명시한 값은 **68/100**) → 신설 [[표-부분인용]]. 🎯 **배치의 척추 — 두 독립 생태계가 같은 배치에 "확인되지 않음" 전용 칸을 만들었다**: [[security-audit-skill]] `needs_validation`(*"no severity"*) · [[oh-my-hermes]] `Code · reported done`(*"Nobody checked the result"*) → [[검사가능성-공사]] 수렴 증거. 🔴 **볼트엔 그 칸이 없다**(✅/🔴 2값). 🔴 **중복 문제가 채널의 14%다**: HF 트렌딩 상위 200 중 `Qwen3.8-27B` 계열 **28건**(원본 1+파생 27) — 리터럴 필터는 전부 NEW로 통과 → 신설 [[파생저장소-식별]]. `cardData.base_model` ≠ `tags`(후자는 불완전·오라벨) · base_model은 **1홉만** 기록. 🎯 **볼트가 HF 트렌딩 상단을 포화시켰다 — 상위 31위 보유율 74.2%**(상위 5위 전부 기보유) → `trendingScore` 절대값은 **볼트 커버리지의 함수**이므로 배치 간 비교 금지. 🔴 **첫 음수 드리프트**: [[cline]] ★68,507→**68,506(−1)** — 0.16% 레포의 일간 신호는 **언스타 노이즈와 같은 자릿수**. 🔴 **60행 제한이 채택 건에 오적용돼 두 번 대가**: [[oh-my-hermes]] 정의는 **같은 파일 586행**(수집기는 *"별도 문서 필요"* 라 했다) · [[cline]] 헤드리스 섹션은 219행. ⚖️ **수집기 질문 판정: [[Comfy-Org-YuE2]] (b)→(c) 정정** — 채택 근거였던 `int8_convrot` 이 **카드에 미문서화**(파일 존재 ≠ 사용 가능한 축). 🔀 도메인 재판정 2: [[XConf]]→`local-llm` · [[ActionPiece]]→`slam-3dgs`. 신설 개념 2 · 엔티티 3([[Cloudflare]]·[[DavidAU]]·[[Comfy-Org]])
+updated: 2026-09-18
+total_pages: 1187  # 2026-09-18 실측(sources 1084 · entities 58 · concepts 39 · synthesis 2 · domains 4 · queries 0)
+total_sources: 1084  # 2026-09-18: +1 사용자 지정(Threads — MiMo-V2.6). 이전 실측(2026-09-17). ✅ **배치 13건 리터럴 전건 NEW · 중복 0% — 3배치 연속**(`org/name` 5 · arXiv ID 5 · HF repo id 3 → 13/13 0히트). 🔴 **볼트 최대 발견: 부분인용은 원문 대조를 통과한다** — 수집기 인용은 README·초록·모델카드 **전건 문자 일치**였는데 결론이 두 번 틀렸다. [[DeepSeek-R1]] 6열 중 4열만 옮겨 *"70B 하락"* → 볼트가 `cons@64` 를 넣자 **7B(83.3) = 32B(83.3)** 로 격차 소멸(pass@1 격차 +17.1 → 0.0). [[Qwen3.8-27B-TWIN-TURBO-709-GGUF]] 는 4개 표 중 1개만 읽어 🔴 **68점 오류**(*"거부 0/100"* 은 STAGE 1 **타인 작업**이고 카드가 `[ THIS REPO ]` 라 명시한 값은 **68/100**) → 신설 [[표-부분인용]]. 🎯 **배치의 척추 — 두 독립 생태계가 같은 배치에 "확인되지 않음" 전용 칸을 만들었다**: [[security-audit-skill]] `needs_validation`(*"no severity"*) · [[oh-my-hermes]] `Code · reported done`(*"Nobody checked the result"*) → [[검사가능성-공사]] 수렴 증거. 🔴 **볼트엔 그 칸이 없다**(✅/🔴 2값). 🔴 **중복 문제가 채널의 14%다**: HF 트렌딩 상위 200 중 `Qwen3.8-27B` 계열 **28건**(원본 1+파생 27) — 리터럴 필터는 전부 NEW로 통과 → 신설 [[파생저장소-식별]]. `cardData.base_model` ≠ `tags`(후자는 불완전·오라벨) · base_model은 **1홉만** 기록. 🎯 **볼트가 HF 트렌딩 상단을 포화시켰다 — 상위 31위 보유율 74.2%**(상위 5위 전부 기보유) → `trendingScore` 절대값은 **볼트 커버리지의 함수**이므로 배치 간 비교 금지. 🔴 **첫 음수 드리프트**: [[cline]] ★68,507→**68,506(−1)** — 0.16% 레포의 일간 신호는 **언스타 노이즈와 같은 자릿수**. 🔴 **60행 제한이 채택 건에 오적용돼 두 번 대가**: [[oh-my-hermes]] 정의는 **같은 파일 586행**(수집기는 *"별도 문서 필요"* 라 했다) · [[cline]] 헤드리스 섹션은 219행. ⚖️ **수집기 질문 판정: [[Comfy-Org-YuE2]] (b)→(c) 정정** — 채택 근거였던 `int8_convrot` 이 **카드에 미문서화**(파일 존재 ≠ 사용 가능한 축). 🔀 도메인 재판정 2: [[XConf]]→`local-llm` · [[ActionPiece]]→`slam-3dgs`. 신설 개념 2 · 엔티티 3([[Cloudflare]]·[[DavidAU]]·[[Comfy-Org]])
 ---
 
 # Wiki Index
@@ -167,6 +167,10 @@ total_sources: 1083  # 2026-09-17 실측. ✅ **배치 13건 리터럴 전건 NE
 ---
 
 ## sources
+
+### 사용자 지정 소스 (2026-09-18) — Threads 1건 (수집기 경로 아님)
+
+- [[MiMo-V2.6-RL-Livestream]] — 샤오미 MiMo 팀이 **훈련 중인 모델**(mimo-v2.6-pro · mimo-v2.6-flash)의 **강화학습 과정을 실시간 대시보드로 공개**. 🎯 **내용보다 형식이 발견** — 완성 보고가 아니라 **진행 중 러닝의 제3자 관찰 가능성** → [[암묵을-명시로]] 의 극한 형태 · [[검사가능성-공사]] 산업 적용 사례. ✅볼트 실측: mimo.xiaomi.com 존재 + agentic RL 중심 논문 라인(ARL-Tangram · MoE RL 라우터 정합) · **1,568 프롬프트 × 16 롤아웃**(2차 보도 일치) · 1T급(공식 블로그 *"1T-Parameter"* 제목으로 정합) · HN 토론 + Thomas Wolf 호평. 🔴**미검증 2건**: *"스텝당 ~20억 토큰"* · *"몇 주 내 오픈소스 순차 공개"* — Threads 게시물 주장만 존재, 독립 확인 실패(대시보드 JS 렌더링 미표출) → 인용 시 미검증 표기 필수. 🔴**볼트의 샤오미 커버리지가 두 축으로**: 로보틱스([[Xiaomi-Robotics-VLA-Scaling]] · [[Xiaomi-Robotics-U0]]) + LLM·RL 인프라 *(NEW · reliability medium)*
 
 ### 2026-09-18 배치 (13건 리터럴 전량 NEW · 4배치 연속 중복 0% · + 판정 1 · 🔴 볼트 역발견 1)
 

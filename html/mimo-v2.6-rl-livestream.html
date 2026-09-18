@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiMo-V2.6 — 강화학습 훈련 생중계</title>
+<style>
+  :root {
+    --bg: #0a0a0f; --surface: #12121a; --border: #2a2a3e;
+    --accent: #7c6ff7; --accent2: #e879f9; --accent3: #22d3ee; --accent4: #4ade80; --accent5: #fb923c;
+    --text: #e2e8f0; --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.7; }
+  .hero {
+    padding: 72px 32px 48px; text-align: center;
+    background: linear-gradient(135deg, #0a0a1f, #1a0a2e, #0f1a2e);
+    border-bottom: 1px solid var(--border); position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(124,111,247,0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(232,121,249,0.08) 0%, transparent 60%);
+  }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding: 4px 14px; border-radius: 20px; margin-bottom: 18px; position: relative;
+    background: rgba(34,211,238,0.10); color: var(--accent3); border: 1px solid rgba(34,211,238,0.25);
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 52px); font-weight: 800; margin-bottom: 14px; position: relative;
+    background: linear-gradient(135deg, #fff 0%, var(--accent) 55%, var(--accent2) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-sub { color: var(--muted); font-size: 15px; position: relative; }
+  .container { max-width: 880px; margin: 0 auto; padding: 48px 24px 64px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin: 36px 0; }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; text-align: center;
+  }
+  .stat .num { font-size: 24px; font-weight: 800; color: var(--accent3); margin-bottom: 4px; }
+  .stat.warn .num { color: var(--accent5); }
+  .stat .lbl { font-size: 12px; color: var(--muted); }
+  h2 {
+    font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--accent); margin: 44px 0 18px; display: flex; align-items: center; gap: 12px;
+  }
+  h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; }
+  .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--muted); }
+  .card a { color: var(--accent3); text-decoration: none; }
+  .card a:hover { text-decoration: underline; }
+  ul { padding-left: 20px; }
+  li { font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  li strong, .card strong { color: var(--text); }
+  .ok   { color: var(--accent4); font-weight: 700; }
+  .warn { color: var(--accent5); font-weight: 700; }
+  .divider { height: 1px; background: var(--border); margin: 40px 0; }
+  .back { display: inline-block; margin-top: 40px; font-size: 13px; color: var(--accent); text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+  .footer { border-top: 1px solid var(--border); padding: 24px; text-align: center; font-size: 12px; color: #2a3040; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">AI News · 사용자 지정 소스</div>
+  <h1>MiMo-V2.6 — 강화학습 훈련 생중계</h1>
+  <div class="hero-sub">샤오미 MiMo 팀이 훈련 중인 모델의 RL 과정을 실시간 대시보드로 공개 · 2026-09-18 인제스트</div>
+</div>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat"><div class="num">1T+</div><div class="lbl">파라미터 (Pro · 1T급 계열 공식 확인)</div></div>
+    <div class="stat"><div class="num">1,568 × 16</div><div class="lbl">프롬프트 × 롤아웃 (2차 보도 일치)</div></div>
+    <div class="stat warn"><div class="num">~20억</div><div class="lbl">토큰/스텝 — 🔴 미검증 (게시물 주장)</div></div>
+    <div class="stat"><div class="num">LIVE</div><div class="lbl">트레이너 로그 실시간 대시보드</div></div>
+  </div>
+
+  <h2>무슨 일인가</h2>
+  <div class="card">
+    <p>샤오미 MiMo 팀이 <strong>학습이 진행 중인</strong> 모델(mimo-v2.6-pro · mimo-v2.6-flash)의 <strong>강화학습 과정을 실시간 대시보드로 공개</strong>했다. 완성 후 발표가 아니라 <strong>진행 중인 러닝을 제3자가 실시간으로 관찰 가능</strong>하게 한 사례로, 메이저 랩 기준 최초급 형식이다. 대시보드는 트레이너 로그에서 RL 런 메트릭을 라이브 제공한다.</p>
+  </div>
+
+  <h2>검증 상태 (볼트 실측 2026-09-18)</h2>
+  <div class="card">
+    <h3><span class="ok">✅ 확인됨</span></h3>
+    <ul>
+      <li><strong>mimo.xiaomi.com 실존</strong> — 직접 확인. MiMo 팀 공식 사이트, V2.5 라인업(V2.5-Pro · V2.5 · V2.5-TTS)과 agentic RL 중심 논문 목록(ARL-Tangram · MoE RL 라우터 정합) 확인</li>
+      <li><strong>라이브 대시보드</strong> — "mimo-v2.6-pro/flash RL 런 메트릭을 트레이너 로그에서 라이브 제공" 문구가 공식 사이트 발신 스니펫으로 확인</li>
+      <li><strong>1,568 프롬프트 × 16 롤아웃</strong> — Forkast · 36kr · HN 등 2차 보도와 일치</li>
+      <li><strong>1T급</strong> — 공식 블로그 <em>"MiMo-V2.5-Pro-UltraSpeed: Pushing 1T-Parameter Model Generation Speed to 1000 TPS"</em> 로 정합</li>
+      <li><strong>커뮤니티 수신</strong> — HN 토론 존재 · HuggingFace 공동창업자 Thomas Wolf 호평 · 샤오미 LLM 총괄 루푸리 홍보</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3><span class="warn">🔴 미검증 — 게시물 주장만 존재</span></h3>
+    <ul>
+      <li><strong>"스텝당 약 20억 토큰 처리"</strong> — 대시보드가 JS 렌더링이라 정적 확인 불가. 인용 시 미검증 표기 필수</li>
+      <li><strong>"몇 주 내 학습 방식·세부 기술 오픈소스 순차 공개"</strong> — 36kr 보도 방향과는 정합하나 공식 원문 미확인</li>
+    </ul>
+  </div>
+
+  <h2>왜 중요한가</h2>
+  <div class="card">
+    <h3>내용보다 형식이 메시지</h3>
+    <p>공개 대상이 사전학습이 아니라 <strong>포스트트레이닝 RL 러닝</strong>이다. MiMo 팀의 공개 논문 라인(Agentic RL 자원효율 · MoE RL 라우터 정합)이 이미 RL 중심이라, 대시보드는 그 연장선. 주장이 아니라 <strong>측정값을 공개</strong>한다는 점에서 투명성이 마케팅 문구가 아니라 <strong>검증가능성의 인프라</strong>가 되는 선례다.</p>
+  </div>
+  <div class="card">
+    <h3>투명성의 경제학</h3>
+    <p>Hacker News 반응은 "이런 건 어디서도 못 본다" 쪽. 랩 간 신뢰 경쟁에서 <strong>관찰 가능성 자체가 차별화 자산</strong>이 되는 흐름의 신호. Thomas Wolf(HF)의 호평은 오픈 생태계 측의 수신 확인이다.</p>
+  </div>
+  <div class="card">
+    <h3>샤오미 AI의 두 축</h3>
+    <p>기존에 알려진 샤오미 AI는 로보틱스·VLA 축이었다. 이번 라이브 대시보드는 <strong>LLM·RL 인프라 축</strong>을 추가한다 — 같은 회사의 AI 투자가 신체(로봇)와 두뇌(모델) 양쪽에서 동시에 진행 중이라는 교차 확인.</p>
+  </div>
+
+  <h2>남은 질문</h2>
+  <div class="card">
+    <ul>
+      <li><strong>왜 생중계인가</strong> — 채용 마케팅 · 랩 간 신뢰 구축 · 규제 선점 중 동기 미확인. 공식 사이트가 채용 공고를 동시 운영</li>
+      <li><strong>지속 기간</strong> — RL 러닝 종료 시 대시보드가 아카이브로 남는지 미공개. 이것이 "인프라 vs 일회성 이벤트" 판정 기준</li>
+      <li><strong>오픈소스 이행</strong> — "몇 주 내 순차 공개" 예고의 실제 이행 여부 (후속 추적 대상)</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>소스</h2>
+  <div class="card">
+    <ul>
+      <li>Threads 게시물 — @choi.openai, 2026-08-20 (사용자 지정) · <a href="https://www.threads.com/share/_97AJhP1z/" target="_blank" rel="noopener">threads.com/share/_97AJhP1z</a></li>
+      <li>공식 사이트 · 라이브 대시보드 — <a href="https://mimo.xiaomi.com" target="_blank" rel="noopener">mimo.xiaomi.com</a></li>
+      <li>볼트 위키 — <em>MiMo-V2.6-RL-Livestream</em> (wiki/sources/, reliability: medium)</li>
+    </ul>
+  </div>
+
+  <a class="back" href="index.html">← duckychoi · lab</a>
+</div>
+
+<div class="footer">github.com/duckychoi/lab</div>
+</body>
+</html>
