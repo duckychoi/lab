@@ -579,6 +579,76 @@
       "height": 320,
       "color": "6",
       "text": "**[[XConf]]** 🆕 2026-09-17\n🎯 신뢰도를 과거 채점 이력에서\n5필드 에피소드(태스크·반성·\n당시신뢰도·결과·교훈)\nRecall(유사 신뢰도)→Reflect\n✅ logit·가중치 불필요 = API-only OK\n24개 중 23개 AUROC 우위 · 비용 1/10\n선택적 예측 10% 포기 → +8.7점\n🔴 콜드스타트 미언급"
+    },
+    {
+      "id": "b18ll-hdr",
+      "type": "text",
+      "text": "# 📥 2026-09-18\n\n**긴 컨텍스트를 싸게 만드는\n두 답이 직교한다**\n\n🔴 그리고 **결합 사례가 없다**\n= 이 배치가 만든 가장 큰 빈칸",
+      "x": "-1200",
+      "y": "7050",
+      "width": "330",
+      "height": "200",
+      "color": "4"
+    },
+    {
+      "id": "b18ll-store",
+      "type": "text",
+      "text": "## 저장을 줄인다\n### [[DeepSeek-V4.1-Flash-Paper]]\n\nCSA2 교차층 재사용 + **FP4 KV**\n→ 토큰당 **890바이트** (V4-Flash의 1/4)\nSWA Bounded Replay → 영속 KV **1/8**\n컨텍스트 **100만** · 45T 멀티모달\n\n🔴 저자 **592명** = 기업 백서\n🔴 초록에 비교 수치 **0개**",
+      "x": "-820",
+      "y": "7050",
+      "width": "340",
+      "height": "260",
+      "color": "3"
+    },
+    {
+      "id": "b18ll-compute",
+      "type": "text",
+      "text": "## 계산을 바꾼다\n### [[MiniCPM]] SALA\n\n**25% InfLLM-V2(희소) + 75% Lightning(선형)**\n→ **풀 어텐션 층이 0개**\n256K에서 Qwen3-8B 대비 **3.5배**·TTFT 2.5배\n**520K 학습 → 2048K에서 81.6** (YaRN 없이)\n학습예산 **약 25%**\n\n🔴 3.5배 일부는 **OOM 대비**\n🔴 품질 비용 **어디에도 없다**",
+      "x": "-430",
+      "y": "7050",
+      "width": "350",
+      "height": "280",
+      "color": "5"
+    },
+    {
+      "id": "b18ll-gap",
+      "type": "text",
+      "text": "## 🔴 빈칸\n\n**저장 × 계산을 결합한\n구현이 볼트에 없다**\n\n두 답이 직교하므로\n**곱할 수 있다**\n\n📌 [[에이전트-메모리-레이어]] 에\n**\"어텐션 구조 교체\"** 칸 추가\n(RAG=외부화 · KV압축 · **구조교체**)",
+      "x": "-40",
+      "y": "7050",
+      "width": "320",
+      "height": "260",
+      "color": "1"
+    },
+    {
+      "id": "b18ll-neo",
+      "type": "text",
+      "text": "### [[NeoHorse-1-4B]] / [[NeoHorse-1-9B]]\n[[TokenRhythm]] · apache-2.0\n\n4B: 4.21B ≈ **8.4GB** ✅ 소비자 GPU\n9B: 8.95B ≈ 17.9GB ⚠️ 24GB 필요\n\n🎯 **4B를 먼저 쓴다**\n9B는 하드웨어 2배 + **지시수행 회귀**\n+ 에이전트 이득은 4B에도 있다",
+      "x": "-1200",
+      "y": "7350",
+      "width": "340",
+      "height": "250",
+      "color": "2"
+    },
+    {
+      "id": "b18ll-axis",
+      "type": "text",
+      "text": "### 🎯 [[에이전트축-분기]] 잠정 해제\n**표본 5 · 처음으로 베이스 대비 음수**\n\n9B IFEval **89.09 vs 베이스 89.46 = −0.37**\nIFBench **+0.00** · LCB v6 **+0.00**\n↔ VitaBench **+11.00** · PinchBench +7.70\n\n📌 **경쟁 대비 열세 = \"우선순위\"**\n**베이스 대비 하락 = 거래의 직접 증거**\n📌 규모 의존성: 4B 전축+ / 9B 3축 정체",
+      "x": "-820",
+      "y": "7350",
+      "width": "350",
+      "height": "260",
+      "color": "6"
+    },
+    {
+      "id": "b18ll-miss",
+      "type": "text",
+      "text": "### 🔴 이 도메인 미해결\n\n① **SALA 체크포인트 공개 여부 미확인**\n→ 공개면 2048K를 준전문가 HW에서\n\n② **9B 지시수행 회귀 원인 불명**\n🎯 모논문 arxiv:2609.08183 (업보트 421,\n볼트 0히트) 에 답이 있을 가능성\n\n③ 라우팅 하네스가 가중치에 포함되나\n(릴리스는 **언어 가중치만**, 비전 제외)",
+      "x": "-430",
+      "y": "7350",
+      "width": "350",
+      "height": "270",
+      "color": "1"
     }
   ],
   "edges": [
@@ -984,6 +1054,66 @@
       "toNode": "b17-xconf",
       "fromSide": "bottom",
       "toSide": "top"
+    },
+    {
+      "id": "e18ll-0",
+      "fromNode": "b18ll-hdr",
+      "toNode": "b18ll-store",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e18ll-1",
+      "fromNode": "b18ll-store",
+      "toNode": "b18ll-compute",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "🎯 직교"
+    },
+    {
+      "id": "e18ll-2",
+      "fromNode": "b18ll-compute",
+      "toNode": "b18ll-gap",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e18ll-3",
+      "fromNode": "b18ll-store",
+      "toNode": "b18ll-gap",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "곱할 수 있다"
+    },
+    {
+      "id": "e18ll-4",
+      "fromNode": "b18ll-hdr",
+      "toNode": "b18ll-neo",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e18ll-5",
+      "fromNode": "b18ll-neo",
+      "toNode": "b18ll-axis",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "표본 2건 동시"
+    },
+    {
+      "id": "e18ll-6",
+      "fromNode": "b18ll-axis",
+      "toNode": "b18ll-miss",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e18ll-7",
+      "fromNode": "b18ll-compute",
+      "toNode": "b18ll-miss",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "체크포인트?"
     }
   ]
 }
