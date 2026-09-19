@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, agent, harness, context-management, ablation, swe-bench, 대조실험]
 created: 2026-09-18
-updated: 2026-09-18
-sources: []
+updated: 2026-09-19
+sources: [ModularRSI.md]
 reliability: high
 ---
 
@@ -60,7 +60,11 @@ reliability: high
 > **176개 설정별 수치 전량 미확인** · **4개 모델의 정체 불명** · **코드 미공개로 재현 불가**. 🔴 **그래서 결론 ③④를 내 상황에 적용할 때 "내 모델이 bash 능숙인가"를 판단할 기준이 없다.**
 > 그리고 **5개 컨텍스트 전략의 이름이 초록에 없다** — 규칙기반 생략과 LLM 요약 외 3개가 무엇인지 모른다.
 
+
+> [!note] 🆕 2026-09-19 — [[ModularRSI]] 단일 모듈 진화에서 **Context Mgmt 기여가 가장 작다**(Acc +1.87, 윈도우 변주 없음). 결론 ①(컨텍스트 관리 최중요 — 예산 빠듯할 때)의 간접 지지인지 반례인지 **미판정** — 조건 차이 가능성.
+
 ## 관련 페이지
+- [[ModularRSI]]
 - [[하네스-설계-축]]
 - [[SoL-Pi]]
 - [[harness-sdk]]

@@ -4,8 +4,8 @@ type: entity
 domain: local-llm
 tags: [entity, model-publisher, moe, mova, open-weights, 검증대기]
 created: 2026-09-09
-updated: 2026-09-09
-sources: [K2-Horizon-MoVA-36B-A4B.md]
+updated: 2026-09-19
+sources: [K2-Horizon-MoVA-36B-A4B.md, K2-Horizon-7B.md, MBZUAI.md]
 reliability: low
 ---
 
@@ -27,7 +27,13 @@ reliability: low
 > ④ 생성 8일차, 다운로드 3,205로 **커뮤니티 검증이 아직 형성되지 않았다.**
 > → **엔티티로 등록하되 주장은 인용하지 않는다.** 4주 뒤 재확인 대상(→ actionable).
 
+
+> [!note] 🆕 2026-09-19 — **정체 확인: The Institute of Foundation Models at [[MBZUAI]]** (HF fullname · 블로그 푸터 © MBZUAI · GGUF README "MBZUAI-IFM fork"). 2023 LLM360 이래 완전 개방 노선, [[Uno]] 논문도 같은 조직(ifm-ai/uno) → **"정체 미확인" 경고 해제**, reliability 상향 권고.
+> 🎯 [[K2-Horizon-7B]] 중간 체크포인트 69개 태그 실존 · 🔴 코드 `ifm-ai/xllm` 은 빈 레포(파일 3), 보고서 "In Progress 9월 말".
+
 ## 관련 페이지
+- [[K2-Horizon-7B]]
+- [[MBZUAI]]
 - [[K2-Horizon-MoVA-36B-A4B]]
 - [[에이전트축-분기]]
 - [[측정도구-먼저-반증]]

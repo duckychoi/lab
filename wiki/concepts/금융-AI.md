@@ -4,8 +4,8 @@ type: concept
 domain: ai-news
 tags: [concept, finance-ai, trading, time-series, multi-agent, LLM, quant]
 created: 2026-04-11
-updated: 2026-04-11
-sources: [Kronos.md, TradingAgents.md, TimesFM.md]
+updated: 2026-09-19
+sources: [Kronos.md, TradingAgents.md, TimesFM.md, tradingview-mcp.md, Electron-CDP-브리지.md]
 reliability: medium
 ---
 
@@ -38,7 +38,12 @@ LLM·에이전트·파운데이션 모델을 금융 데이터 분석, 트레이�
 > - 특정 기간·시장 최적화된 결과가 일반화될 수 없음
 > - "샤프지수 우수" 클레임은 항상 시기·마켓 컨텍스트 확인
 
+
+> [!note] 🆕 2026-09-19 — **인터페이스 층 사례**: [[tradingview-mcp]] 는 예측·매매 모델이 아니라 기존 트레이딩 앱을 에이전트가 읽게 만드는 층이다(도구 84개, Pine Script 컴파일-수정 루프 주력). 저자가 자동매매·알고리즘 의사결정 사용을 금지하고 평가 체계 없음을 명시 → [[Electron-CDP-브리지]]
+
 ## 관련 페이지
+- [[tradingview-mcp]]
+- [[Electron-CDP-브리지]]
 
 - [[Kronos]]
 - [[TradingAgents]]

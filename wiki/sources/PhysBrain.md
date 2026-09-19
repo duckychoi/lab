@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, physics-reasoning, multimodal, scientific-ai, deepcybo]
 created: 2026-05-19
-updated: 2026-05-19
-sources: []
+updated: 2026-09-19
+sources: [PhysBrain-1.5.md, DeepCybo.md]
 reliability: medium
 ---
 
@@ -29,7 +29,14 @@ reliability: medium
 
 - **액션**: 물리 추론 태스크 있을 때 API/모델 직접 테스트로 범용 LLM과 비교
 
+
+> [!warning] 🔴 2026-09-19 볼트 정정 — **1.0 은 "물리 법칙(역학·열역학·광학) 추론 모델"이 아니다**
+> HF API 초록(09-19): 사람 1인칭 영상 → 구조화된 물리 상식 QA 감독 → **VLA 정책 이전**, 평가는 ERQA · PhysBench · SimplerEnv-WidowX · LIBERO · RoboCasa. **로봇/임바디드 모델을 과학 계산 AI 로 잘못 분류했다.** 업보트 52→61 · GitHub Phys-Brain/PhysBrain-VLA ★42.
+> 후속 → [[PhysBrain-1.5]] · 조직 → [[DeepCybo]]
+
 ## 관련 페이지
+- [[PhysBrain-1.5]]
+- [[DeepCybo]]
 
 - [[scientific-agent-skills]] — 과학·공학 특화 에이전트 스킬 모음
 - [[HY-Embodied]] — 실세계 로봇용 소형 임베디드 모델 (물리 세계 교차)

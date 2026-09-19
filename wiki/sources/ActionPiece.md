@@ -4,8 +4,8 @@ type: source
 domain: slam-3dgs
 tags: [slam-3dgs, paper, vla, robotics, tokenizer, quantization, metric-refutation, embodied]
 created: 2026-09-17
-updated: 2026-09-17
-sources: []
+updated: 2026-09-19
+sources: [PhysBrain-1.5.md, DeepCybo.md]
 reliability: high
 ---
 
@@ -73,7 +73,12 @@ reliability: high
 > - **PRC 값 자체가 초록에 없다** — *"jointly improve PRC"* 라고만 한다. 즉 **새 지표를 제시했는데 그 지표의 수치가 초록에 없다**
 > - 🔴 **베이스라인 토크나이저의 성능이 없어** 94.8%가 얼마나 개선된 것인지 알 수 없다
 
+
+> [!note] 🆕 2026-09-19 — [[PhysBrain-1.5]] 가 ActionPiece 를 **본체 액션 어휘**로 채택(16스텝 세그먼트 2,870만 개 학습 · 512토큰 · 손목당 32토큰), HF 컬렉션 DeepCybo/physbrain-15 에 함께 묶임. 🔴 LIBERO 94.8% 는 토크나이저 단독 정책 실험 값이고 **1.5 본체 성능이 아니다**. 업보트 32→39. 조직 → [[DeepCybo]]
+
 ## 관련 페이지
+- [[PhysBrain-1.5]]
+- [[DeepCybo]]
 - [[측정도구-먼저-반증]] — 🎯 **교과서적 사례**(관행 지표 반증 + 비교가능 대체 지표)
 - [[XConf]] — 같은 배치, 동일 구조(기존 방법의 공유 전제 부정)
 - [[분포내-우위]] — 🔴 **−26.0점 격차 = 로보틱스 판본** · [[ProgramDistill]] — 절반 근처 정체의 같은 메시지

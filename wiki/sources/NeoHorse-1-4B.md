@@ -4,8 +4,8 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, tokenrhythm, qwen, agent, tool-use, post-training, rsi, 짝아티팩트]
 created: 2026-09-18
-updated: 2026-09-18
-sources: []
+updated: 2026-09-19
+sources: [NeoHorse-1-Paper.md]
 reliability: medium
 ---
 
@@ -61,6 +61,13 @@ reliability: medium
 > 🔴 **`trendingScore: None`** — raw의 *"트렌딩 5위"* **검증 불가**([[mms-300m]]·[[DeepSeek-V4.1-Flash]] 와 3연속).
 > **DL:♥ = 8.4:1** 🔴 **이례적으로 낮다.** 비교: [[DeepSeek-R1]] 52:1 · [[mms-300m]] 38.9:1 · [[Qwen3.8-27B-TWIN-TURBO-709-GGUF]] 762:1. 🎯 **공개 13일차이므로 [[DeepSeek-V4.1-Flash]] 의 "+7일 이후 계산" 조건은 만족한다** — 즉 **이 8.4:1은 유효한 측정값이고, "기대가 실사용을 크게 앞선다"는 뜻이다.** ♥2,354는 4B 모델로서 매우 높다. 📌 **업보트 421 모논문의 화제성이 ♥로 흘러들어왔다는 해석과 정합한다.**
 
+
+> [!note] 🆕 2026-09-19 — 모논문 인제스트 완료 → [[NeoHorse-1-Paper]]
+> - 🔴 **정정**: 모논문 업보트 **421 → 09-19 실측 170**(동일 API) · 레포 ★599(GitHub). 아래 "11.7배·22배"는 **4.7배·8.9배**로 읽는다. 레포는 **학습 코드 없음**(추론 예제 2개뿐).
+> - ✅ 본문 표 1이 이 페이지의 10축 수치와 **전건 일치** · 벤치는 **10개**(arXiv 메타 초록의 "eleven"은 오기)
+> - 🎯 본문에서 새로 확인: 학습 궤적 하네스에 **OpenSquilla** 포함 + QwenClaw·PinchBench **평가도 OpenSquilla** → 두 벤치 이득(+6.21·+6.14)은 할인해서 읽는다. 단 공식 하네스 WorkBuddy **+9.79**가 반대 증거.
+> - 🎯 저자 소속: **TokenRhythm Technologies** 외 Infinigence AI·칭화대·베이징대·CUHK·[[Alibaba]] 등 8개 기관, 37명
+
 ## 도메인별 추출 (local-llm)
 
 - **실용성 판단**: ✅ **4.21B BF16 = 약 8.4GB.** 🎯 **소비자 GPU에서 돌아간다** — 배치에서 내 하드웨어로 실제 실행 가능한 유일한 모델급이다. 컨텍스트 262K 네이티브.
@@ -79,6 +86,7 @@ reliability: medium
 > **③ PinchBench 1회 실행값이 이기는 축에 있다** — 재실행 시 순위가 바뀔 수 있다.
 
 ## 관련 페이지
+- [[NeoHorse-1-Paper]]
 - [[NeoHorse-1-9B]]
 - [[선발창-누락]]
 - [[RSI-프레이밍]]

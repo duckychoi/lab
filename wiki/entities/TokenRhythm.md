@@ -4,8 +4,8 @@ type: entity
 domain: local-llm
 tags: [local-llm, hf-model, qwen-derivative, agent, post-training, rsi, 신설]
 created: 2026-09-18
-updated: 2026-09-18
-sources: [NeoHorse-1-4B.md, NeoHorse-1-9B.md]
+updated: 2026-09-19
+sources: [NeoHorse-1-4B.md, NeoHorse-1-9B.md, NeoHorse-1-Paper.md]
 reliability: medium
 ---
 
@@ -32,19 +32,30 @@ reliability: medium
 > ✅ **볼트 판정: 과장이 아니다.** 저자가 달성했다고 쓰지 않았다. 🔴 **위험은 요약 단계에 있다** → [[RSI-프레이밍]]
 > 🎯 **같은 배치 [[SoL-Pi]]([[NVIDIA]] NVlabs)도 *"RSI-inspired"* 를 쓴다.** 두 독립 조직이 같은 달에 같은 프레이밍을 채택했다.
 
-> [!warning] 🔴 볼트가 이 조직에 대해 모르는 것
-> **소속·국적·규모 전부 불명.** 논문 저자 명단을 볼트가 조회하지 않았고, HF 조직 페이지도 확인하지 않았다.
-> 🎯 **그런데 모델 품질 지표는 낮지 않다** — 4B가 ♥2,354(트렌딩 상위), 논문 업보트 421, 코드 ★535. **인지도 대비 볼트의 정보가 가장 적은 조직**이다.
+> [!note] ✅ 2026-09-19 해소 — **소속 확인됨** (모논문 부록 A → [[NeoHorse-1-Paper]])
+> ```
+> 1 TokenRhythm Technologies   2 Infinigence AI   3 Tsinghua University
+> 4 Peking University          5 CUHK             6 Visionplus Capital
+> 7 WX Capital                 8 Alibaba Group
+> 교신저자: Yunhe Wang(1) · Yu Wang(3)    저자 37명(Core 18 · Contributors 18 · "NeoHorse Team")
+> ```
+> - 회사 실체: **TokenRhythm Technologies** · 홈페이지 `tokenrhythm.ai`(README 배지) · 모델은 HF와 **ModelScope** 동시 배포
+> - 🎯 **라우팅 하네스 운영사다** — 논문 데이터가 자사 배포 하네스(OpenSquilla 포함)의 실제 트래픽 궤적 10⁵~10⁶ 개. README가 OpenSquilla X 계정을 함께 링크 → 하네스 제품과 모델 팀이 같은 조직권으로 보인다(🔴 명시 문장 없음, 볼트 추정)
+> - 📌 **[[Alibaba]] 소속 공저자 2명** — 베이스(Qwen3.5) 제작사 인원이 파생 사후학습 논문에 참여
+> - 🔴 **국적·규모(인원·자금)는 여전히 미확인** — 본문에 명시 없음. 투자사 2곳(Visionplus·WX Capital) 소속 저자가 있다는 사실만 확인
+> - 🔴 **정정**: 위 인사이트 박스의 "업보트 421 · 코드 ★535" → 09-19 실측 **170 · ★599**, 그리고 레포는 **학습 코드 없음**(README·PDF·추론 예제 2개)
 
 ## 산출물
 - [[NeoHorse-1-4B]] — 4.21B · DL 19,789 · ♥2,354 · 10벤치 평균 64.87(+5.93) · **10개 축 전부 양(+)**
 - [[NeoHorse-1-9B]] — 8.95B · DL 9,856 · ♥881 · 평균 69.04(+3.44) · 🔴 **IFEval −0.37 · IFBench/LCB +0.00**
-- 논문 `arxiv:2609.08183` (업보트 421 · ★535) — 🔴 **볼트 미보유**
+- [[NeoHorse-1-Paper]] `arxiv:2609.08183` — 업보트 **170**(09-19) · ★599 · ✅ **2026-09-19 인제스트** · 🎯 핵심 증거 = 데이터 출처 대조 +6.26 · 🔴 루프 1회·커리큘럼 절제 없음
 
 > [!action] 당장 할 것
-> **논문 2609.08183 인제스트 + TokenRhythm 조직 정보 조회.** 🎯 볼트가 보유한 모델 2건의 **설계 근거가 전부 그 논문에 있다** — 특히 9B의 지시수행 회귀 원인.
+> ~~논문 2609.08183 인제스트 + 조직 정보 조회~~ ✅ **2026-09-19 완료** → [[NeoHorse-1-Paper]]. 🔴 9B 지시수행 회귀의 **원인은 논문에도 없다**(저자는 하락만 인정).
+> 🎯 **다음**: NeoHorse 루프 **2회차** 공개 추적 — RSI 주장의 유일한 검증 경로.
 
 ## 관련 페이지
+- [[NeoHorse-1-Paper]]
 - [[NeoHorse-1-4B]]
 - [[NeoHorse-1-9B]]
 - [[선발창-누락]]
@@ -60,4 +71,5 @@ reliability: medium
 ## 원본
 - 출처: https://huggingface.co/TokenRhythm
 - 볼트 실측(2026-09-18, HF API): 모델 2종 전건 확인 · `base_model:finetune` 라벨 정합 · 양쪽 `arxiv:2609.08183` 태그 보유
-- 신뢰도: ⭐⭐ (모델 지표는 API 실측 일치 · 라벨 정직 · 🔴 그러나 조직 실체 정보 전무 · 모논문 미인제스트)
+- 모논문: https://arxiv.org/abs/2609.08183 (부록 A 소속 · 2026-09-19 볼트 본문 확인)
+- 신뢰도: ⭐⭐ (모델 지표 API 실측 일치 · 라벨 정직 · 소속 확인 ✅ · 🔴 학습 코드/데이터 비공개 · 국적·규모 미확인)

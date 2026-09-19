@@ -4,8 +4,8 @@ type: concept
 domain: ai-news
 tags: [after-effects, mcp, motion-design, claude-code, automation]
 created: 2026-04-10
-updated: 2026-04-10
-sources: [instagram-저장-2026-02-2026-04.md]
+updated: 2026-09-19
+sources: [instagram-저장-2026-02-2026-04.md, tradingview-mcp.md, Electron-CDP-브리지.md]
 reliability: medium
 ---
 
@@ -68,7 +68,12 @@ AE 타임라인에 키프레임 자동 생성
 
 ---
 
+
+> [!note] 🆕 2026-09-19 — 같은 부류: [[tradingview-mcp]](Electron 앱 CDP 포트 → MCP 도구 84개) → [[Electron-CDP-브리지]] 잠정 개념 신설(표본 2).
+
 ## 관련 페이지
+- [[tradingview-mcp]]
+- [[Electron-CDP-브리지]]
 
 - [[Claude-Blender-MCP]] — Blender에서 동일 MCP 패턴
 - [[Claude-Code-워크플로우]] — MCP 활용 전체 맥락

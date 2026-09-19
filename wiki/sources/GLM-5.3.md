@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, glm, zhipu-ai, moe, sparse-attention, agentic, fp8, local-llm]
 created: 2026-09-03
-updated: 2026-09-03
-sources: []
+updated: 2026-09-19
+sources: [RSIAgent.md, 비매칭-비교.md]
 reliability: medium
 ---
 
@@ -60,7 +60,12 @@ reliability: medium
 > - **독자 라이선스 `glm-5.3`의 제약**은? 상용 사용·재배포 조건 미확인. (볼트 09-02 규칙: **라이선스는 배지가 아니라 원문으로 읽는다.**)
 > - **왜 플래그십만 닫고 Flash는 MIT로 열었나** — 의도적 계층 분리인가?
 
+
+> [!note] 🆕 2026-09-19 — [[RSIAgent]] 에서 actor 역할. "GPT-6 를 넘었다"는 Kimi-K3 와의 **역할 분담 시스템 점수**이고, 폐쇄 모델은 메모리·하네스 없이 보고치 복사 → [[비매칭-비교]]
+
 ## 관련 페이지
+- [[RSIAgent]]
+- [[비매칭-비교]]
 - [[GLM-5.3-Flash]] — **같은 날 공개된 경량·멀티모달 형제** · **DL 3.43배 우세 · MIT** · 논문 공유
 - [[GLM-5]] · [[GLM-5.1]] · [[GLM-5.2]] · [[GLM-5V-Turbo]] — 계열 선행
 - [[Zhipu-AI]] — 제작사 · **개방 노선이 계열 전체가 아님이 확정된 회차**

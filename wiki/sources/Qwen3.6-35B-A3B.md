@@ -5,7 +5,7 @@ type: source
 source_type: huggingface
 url: https://huggingface.co/Qwen/Qwen3.6-35B-A3B
 date_ingested: 2026-04-22
-updated: 2026-07-05
+updated: 2026-09-19
 tags: [llm, moe, multimodal, qwen, local-llm, image-text]
 ---
 
@@ -31,3 +31,5 @@ Qwen3.6 35B MoE 멀티모달 모델. 36B 파라미터 중 3B만 활성화하는 
 - [[Qwen3.6-35B-A3B-GGUF]]
 - [[Qwen3.6-35B-A3B-NVFP4]]
 - [[Qwen3.6-27B-NVFP4]]
+
+> [!note] 🆕 2026-09-19 — [[Xing4.0-29B-A4B]] 카드의 비교 모델로 인용: SWE-bench Verified **76.00**(Xing 75.00 이 굵게 잘못 표시됨) · Tau3 67.20 · AIME2026 92.70 — 9행 중 **4행 1위**. 🔴 측정 주체 미기재.

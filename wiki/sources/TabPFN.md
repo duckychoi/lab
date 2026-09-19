@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, tabular-data, foundation-model, classification, regression, automl, priorlabs]
 created: 2026-05-08
-updated: 2026-05-08
-sources: []
+updated: 2026-09-19
+sources: [LimiX-2.md]
 reliability: high
 ---
 
@@ -34,7 +34,11 @@ reliability: high
 - **허와 실**: 대규모 데이터, 시계열 특화 태스크에서는 전통 방법론 우위 유지
 - **액션**: pip install 후 작은 금융/분석 태스크 즉시 테스트
 
+
+> [!note] 🆕 2026-09-19 — 후속 비교: [[LimiX-2]] 표 7 에서 TabPFN-3 의 인과 골격 F1 이 이산 네트워크에서 0.03~0.14 — 행 수준 표현이 피처 어텐션을 뭉개는 구조적 한계(저자 설명).
+
 ## 관련 페이지
+- [[LimiX-2]]
 
 - [[시계열-예측-파운데이션-모델]]
 - [[금융-AI]]

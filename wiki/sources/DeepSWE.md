@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, benchmark, coding-agent, evaluation, contamination, harbor]
 created: 2026-09-04
-updated: 2026-09-04
-sources: []
+updated: 2026-09-19
+sources: [agent-lightning.md, 하네스형-에이전틱-RL.md]
 reliability: high
 ---
 
@@ -57,7 +57,12 @@ pier run -p deep-swe/tasks --agent mini-swe-agent --n-tasks 10 --sample-seed 0  
 > [!action] 당장 할 것
 > `--n-tasks 10 --sample-seed 0` 로 10과제만 돌려 **동일 시드 2회 반복** — 목적은 모델 순위가 아니라 **같은 시드에서 결과가 재현되는가**다. 재현되지 않으면 이 벤치마크 점수는 인용 불가.
 
+
+> [!note] 🆕 2026-09-19 교차 확인 — [[agent-lightning]] 은 코딩 에이전트 RL 보상해킹 4종 중 **3종이 네트워크 경유**로 관측, K8s 네트워크 정책 허용목록으로 차단 = Pier 와 같은 해법. 📌 코딩 에이전트에서 네트워크 차단은 **보상 신호 성립의 전제**다 → [[하네스형-에이전틱-RL]]
+
 ## 관련 페이지
+- [[agent-lightning]]
+- [[하네스형-에이전틱-RL]]
 - [[검사가능성-공사]] · [[EarlyEval]] · [[SWE-bench-Science]] · [[Long-Horizon-Terminal-Bench]] · [[FrontierChallenge]] · [[Thinkingbox]] · [[Repo-To-Skill]] · [[AI-에이전트-프레임워크]] · [[BCIT]] · [[Anthropic]] · [[OpenAI]]
 
 ## 원본

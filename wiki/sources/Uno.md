@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, diffusion, inference-optimization, speculative-decoding, llm, 무손실가속]
 created: 2026-09-08
-updated: 2026-09-08
-sources: []
+updated: 2026-09-19
+sources: [K2-Horizon-7B.md]
 reliability: high
 ---
 
@@ -60,7 +60,11 @@ reliability: high
 > [!question] 미해결
 > **"lossless"의 판정 지표가 무엇인가** — 초록에 없다. · **Diffusion Distillation의 실제 GPU 비용** · **8B Uno의 베이스 모델** · 26B DiffusionGemma·Mercury 2와의 **벤치별 점수**(요약만 있고 표 없음).
 
+
+> [!note] 🆕 2026-09-19 — **베이스 확정: [[K2-Horizon-7B]]** (HF `IFM/K2-Horizon-7B-Uno`, LoRA 어댑터, DL 50,562 = 베이스의 약 3.9배). 비교 대상 "26B DiffusionGemma" = Diff-Gemma 26B-A4B(활성 4B). 🔴 "무손실"인데 SWE-bench Verified 70.1 vs 베이스 70.6. 시스템 처리량 1위(5,255)지만 요청당 405 < Mercury 2(769)·Diff-Gemma(836) — **배치 서빙용, 단일 사용자 지연용 아님**.
+
 ## 관련 페이지
+- [[K2-Horizon-7B]]
 - [[온폴리시-증류]] — 증류 계보(단 **목적이 다름: 능력 vs 속도**)
 - [[선택비용과-중복성]] — **병렬성 항목 신설 근거**
 - [[FlowBalance]] · [[One-Symptom-Three-Levers]] · [[TGOPD]] — 같은 배치 증류 3건

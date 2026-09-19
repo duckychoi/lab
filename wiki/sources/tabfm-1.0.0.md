@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, huggingface, tabular, foundation-model, zero-shot, google, pytorch]
 created: 2026-07-08
-updated: 2026-07-08
-sources: []
+updated: 2026-09-19
+sources: [LimiX-2.md]
 reliability: medium
 ---
 
@@ -30,7 +30,11 @@ reliability: medium
 - **허와 실**: "GBDT 능가"는 데이터 규모·피처 수 제약(≤500피처·≤10클래스) 안에서의 얘기. 대규모·고차원에는 여전히 GBDT가 유리할 수 있음.
 - **액션**: 내부 표 데이터 1건으로 tabfm 제로샷 vs LightGBM 튜닝 정확도·소요시간 비교(비상업 실험 범위).
 
+
+> [!note] 🆕 2026-09-19 — [[LimiX-2]] 본문에서 TabFM(Kong & Das, 2026)이 모든 벤치 차점권: TabArena Elo TabFM+ 1818 · TabFM(D) 1774 (LimiX-2 1935). 🔴 이 페이지 모델과 동일한지 **미확인**. LimiX-2 도 TALENT 10클래스 초과 12개 데이터셋 제외 — 같은 10클래스 선. 📌 표형 FM 상위권이 비상업으로 닫히는 중(tabfm · LimiX-2).
+
 ## 관련 페이지
+- [[LimiX-2]]
 - [[Google]] — 제작사
 - [[Beyond-Static-Leaderboards]] — 벤치 신뢰성 원칙
 - [[ai-news]]

@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, hf-paper, moonshot, moe, multimodal, frontier-llm, agentic, open-weights]
 created: 2026-07-28
-updated: 2026-08-13
-sources: []
+updated: 2026-09-19
+sources: [RSIAgent.md, 비매칭-비교.md]
 reliability: medium
 ---
 
@@ -54,7 +54,12 @@ reliability: medium
 - **허와 실**: "Open Frontier Intelligence"는 프레이밍 — 초록이 스스로 독점모델 열위를 인정. 실질 가치는 **오픈 웨이트로 1M·멀티모달·에이전틱을 얻는 것**이지 절대 SOTA가 아님. 벤치는 자체발표라 실태스크 검증 필요.
 - **액션**: API 데모로 1M 컨텍스트 롱호라이즌 코딩·멀티모달을 GLM-5.2 대비 스팟체크(자체벤치 GPQA/DeepSWE 인용은 검증 전 보류).
 
+
+> [!note] 🆕 2026-09-19 — [[RSIAgent]] 의 "Kimi-K3·GLM-5.3 이 GPT-6 를 넘음"은 Kimi-K3(verifier·curriculum) + GLM-5.3(actor) **역할 분담 시스템 점수**이고 모델 단독 비교가 아니다 → [[비매칭-비교]]
+
 ## 관련 페이지
+- [[RSIAgent]]
+- [[비매칭-비교]]
 - [[Moonshot AI]]
 - [[Kimi-K2.6]]
 - [[Kimi-K2.7-Code]]

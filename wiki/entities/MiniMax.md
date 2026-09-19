@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, minimax, china, video-generation, omni-modal, hailuo, partial-open-source]
 created: 2026-08-29
-updated: 2026-08-29
-sources: [MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md]
+updated: 2026-09-19
+sources: [MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
 
@@ -37,7 +37,11 @@ reliability: medium
 - **허와 실**: **실** = 33B 옴니 아키텍처와 입출력 스펙이 카드에 상세히 공개돼 있다(이 정도 투명도는 드물다). **허** = *"오픈소스"* 표기와 달리 **품질 결정 모듈이 빠져 있고 벤치가 없다.**
 - **액션**: 768p full-attention 4GPU 전제로 **비용 모델 산출** 후, 내 레퍼런스 캐릭터 3~5장으로 `Ref2VA` 일관성 스팟체크.
 
+
+> [!note] 🆕 2026-09-19 — H3 외부 평가 1건(SR 41.97%, NUS·Fudan·Tencent) → [[MiniMax-H3-Physical-Reasoning]]. 벤더 자체 정량 벤치는 0건 유지.
+
 ## 관련 페이지
+- [[MiniMax-H3-Physical-Reasoning]]
 - [[MiniMax-H3]] — 옴니모달 플래그십(부분 공개) · [[MiniMax-H3-Turbo-Lora]] — 파생
 - [[MiniMax-M2.7]] · [[MiniMax-M3]] — 텍스트 계열 · [[MiniMax-Sparse-Attention]] — 아키텍처 연구
 - [[Alibaba]] — **인코더 공급자**(Qwen3-VL-32B) · 예상 밖의 의존 관계

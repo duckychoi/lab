@@ -545,7 +545,7 @@ HF 모델 3건은 raw 표기와 **API가 완전 일치**했고, 논문은 [[PAWB
 | PPT 수동 제작 | Calamus PPT AI | 테스트 필요 |
 | 디자인 제안서 | Manus AI | @kyeongahko 후기 있음 |
 | AE 수동 키프레임 | After Effects MCP | 테스트 필요 |
-| 거래 분석 | Claude + TradingView MCP | 참고용 |
+| 거래 분석 | Claude + TradingView MCP ([[tradingview-mcp]]? — 🔴 동일 레포 여부 미확인 · 09-19: PR 195건 적체·7주 무병합) | 참고용 |
 
 ---
 
@@ -3199,3 +3199,67 @@ AIME 2024 cons@64:  7B 83.3  →  32B 83.3   =   0.0점
 3. **가중치 해시 미대조** — *"같은 모델"* 판정이 카드 진술·태그에 의존
 4. **[[wshobson-agents]] 배지 실카운트 미대조**(94/202/183/105) — [[vercel-skills]] 이후 해 온 대조를 이번엔 건너뛰었다
 5. **코드 미독** — [[oh-my-hermes]] 4상태의 런타임 강제 · [[Octop]] 권한 게이트 구현 · [[security-audit-skill]] 검증기 내부
+
+---
+
+## 2026-09-19 — 백로그 인제스트: NeoHorse-1 모논문 (볼트 자체 발견 · 수집기 경유 아님)
+
+> [!insight] 한 줄 — **하네스는 실행 계층이면서 동시에 데이터 공장이다.** 그리고 "RSI" 루프는 **아직 한 바퀴**다 → [[NeoHorse-1-Paper]]
+> 라우터의 **예측–행동–결과 분리 기록**이 학습 궤적·커리큘럼 순서·다음 혼합 결손 신호를 한 번에 공급한다. 🎯 **가장 강한 증거는 벤치 표가 아니라 데이터 출처 대조**(같은 레시피, 하네스 궤적 vs 공개 Toucan → **5벤치 평균 +6.26**). 양 스케일링은 +2.14에 그쳤다 — **출처 > 양.**
+
+> [!warning] 🔴🔴 볼트 자기 정정 — **업보트 421 → 170** (같은 HF papers API, 하루 차이)
+> 업보트는 줄 수 없는 누적 지표다. 09-18 기록이 오기였는지 HF 정정인지 **구분 불가.** [[선발창-누락]] 은 유지하되 배수를 **22배→8.9배 · 11.7배→4.7배**로 하향. 🎯 **[[측정도구-먼저-반증]] 을 볼트 자신에게 적용한 첫 사례** — 수집기에 요구하던 기준이 볼트의 측정에서 하루 만에 깨졌다.
+> 📌 **그리고 "코드 ★535/599"는 코드가 아니었다** — 레포 10파일 = README·PDF·이미지·추론 예제 2개. **★ 수는 "코드 채택"이 아니라 "관심"만 잰다** — [[SoL-Pi]] 대조표의 "★는 쓰고 있다를 잰다" 해석은 **레포 내용 확인 후에만** 성립한다.
+
+### 🎯 관찰 — "확인되지 않음" 칸의 세 번째 수렴
+학습 데이터 게이트 6차원 판정 = `PASS · WARN · FAIL · NOT_EVALUATED` + *"증거 결손은 절대 양성 판정으로 바꾸지 않는다"*. [[security-audit-skill]] · [[oh-my-hermes]] 에 이어 **세 도메인(보안·오케스트레이션·학습 데이터)이 같은 칸을 만들었다** → [[검사가능성-공사]]. 🔴 **볼트는 여전히 2값.**
+
+### 🎯 관찰 — 모범적 자기한정 + 재현 불가의 조합
+*"single pass"* · *"initial attempt … rather than a definitive demonstration"* · 9B 지시수행 하락 본문 인정 — [[자기제한-명시]] 최상급. 🔴 **그러나 학습 코드·데이터·교사 모델·커리큘럼 절제가 전부 없다.** 📌 **정직한 서술과 검증 가능성은 별개 축이다** — 볼트의 "한정어를 지킨 소스 = high" 상관은 여기서 깨진다(reliability **medium**).
+
+### 🔴 미해결
+1. 421의 출처(볼트 오기 vs HF 정정)
+2. 라우팅 커리큘럼 절제 부재 — 논문 제목의 핵심 부품이 분리 검증되지 않음
+3. [[SoL-Pi]] 와의 인용 관계(RSI 프레이밍 전파 경로) 미대조
+4. NeoHorse 루프 2회차 — RSI 주장의 유일한 검증 경로
+
+---
+
+## 2026-09-19 배치 (13건 리터럴 전량 NEW · 5배치 연속 중복 0% · 🆕 7일 누적 업보트 창 첫 적용)
+
+> [!insight] 배치의 척추 — **"RSI"가 한 단어에서 네 대상으로 갈라졌고, 모든 논문의 비교 조건이 비대칭이었다**
+> 7일간 RSI 명칭 논문 5건: 가중치([[NeoHorse-1-Paper]]) · 하네스 코드([[ModularRSI]] — **루프 16 에폭·14세대, 최소조건 첫 충족**) · 탐색 정책([[Dream-RSI]]) · 메모리 파일([[RSIAgent]] — 학습 없음) → [[RSI-프레이밍]]
+> 논문 4건 전부 비교가 비대칭: 보고치 복사([[RSIAgent]]) · 폐쇄 모델 최저 추론 설정([[PhysBrain-1.5]]) · 예산 5배([[ModularRSI]] 표 4) · 비교군 0([[MiniMax-H3-Physical-Reasoning]]) → 🆕 [[비매칭-비교]]
+
+### 🎯 관찰 1 — 초록·README 밖에 결정적 정보가 있었다: 13건 중 최소 10건
+수집기 "수치 0개" 3건(LimiX-2 · ModularRSI · RSIAgent) 모두 **본문에 전체 표**가 있었다. [[agent-lightning]] "나머지는 이미지뿐" → 본문 §4 에 텍스트로 3개 도메인 수치. [[marin]] 반례(SFT 43.8 < Tulu 50.0)는 `docs/reports/`. [[gitdiagram]] 은 반대로 **README 가 코드보다 강하게 말한다**(재시도 서술 vs 링크 삭제 후 수용).
+📌 **제안: 기본 열람 단위 = "원본 1개 + 한 단계 아래 1개"**(논문 본문 · 회고 문서 · 코드 핵심 파일).
+
+### 🎯 관찰 2 — 틀린 것은 수집기의 인용이 아니라 원문이었다 (5건)
+카드 594MB FP16(실물 FP32 1.15GB, [[gliner2.5-multi-v1]]) · GLiNER2 논문 *"higher (0.526 vs 0.547)"* · [[LimiX-2]] 결론의 "causal inference" · [[Xing4.0-29B-A4B]] SWE-V 굵은 글씨(75 < 76) · [[tradingview-mcp]] 도구 수 78(코드 84). **충실한 인용은 원문 오류도 충실히 옮긴다** — 실물 메타데이터(safetensors · 파일 트리 · 코드 계수)와 같은 문서의 표로 교차검증.
+
+### 🎯 관찰 3 — `NOT_EVALUATED` 칸이 같은 주에 두 번
+[[NeoHorse-1-Paper]] `NOT_EVALUATED` → [[RSIAgent]] `UNVERIFIED`. [[검사가능성-공사]] 누적 4번째 수렴. 🔴 **볼트는 여전히 2값** — actionable 우선순위 **높음**으로 상향.
+
+### 🎯 관찰 4 — 같은 조직의 긴 글이 카드보다 정직하다
+[[K2-Horizon-7B]]: 카드 8행 전승 ↔ IFM 블로그 표 SciCode 패배 + *SWE-bench 답안 다운로드 → 82점* 자진 공개. [[Xing4.0-29B-A4B]]: HF 카드 굵은 글씨 ↔ 같은 회사 GitHub 본문 *"approaches"*. → [[표-부분인용]] 규칙 개정: **"불리한 수치는 전체 표가 있는 쪽에 있다"**.
+
+### 🎯 관찰 5 — ★와 공개 실체가 무관하다
+[[NeoHorse-1-Paper]] ★599 = README+PDF · [[PhysBrain-1.5]] ★44 = 코드 0 · [[K2-Horizon-7B]] 학습코드 레포 빈 레포 · [[MiniMax-H3-Physical-Reasoning]] 데이터셋 미충전 ↔ **★28 [[ModularRSI]] 가 코드·데이터·궤적을 가장 완결 공개**. [[agent-lightning]] ★는 v0.x 몫. 📌 ★ 인용 전 **파일 트리 확인**.
+
+### 🎯 관찰 6 — `open_issues_count` 는 이슈+PR 이고, 분해하면 뜻이 갈린다
+[[marin]] 500:97(실험 장부) · [[tradingview-mcp]] 61:195(병합 병목) → [[측정도구-먼저-반증]]
+
+### 🔀 도메인 재판정 3건
+[[K2-Horizon-7B]] · [[Xing4.0-29B-A4B]] → `local-llm`(온디바이스/활성 4B) · [[PhysBrain-1.5]] → `slam-3dgs`([[ActionPiece]] 선례)
+
+### 🆕 신설
+엔티티 6: [[Fastino]] · [[Stable-AI]](🔴 Stability AI 아님) · [[MBZUAI]] · [[China-Telecom]] · [[DeepCybo]] · [[Stanford-CRFM]]
+개념 4: [[비매칭-비교]] · [[하네스형-에이전틱-RL]] · [[Electron-CDP-브리지]](잠정) · [[포맷-불일치-오염]](잠정)
+🔴 볼트 자기 정정 2: [[NeoHorse-1-Paper]] 업보트 421→170 · [[PhysBrain]] 1.0 오분류(과학계산 → 임바디드)
+
+### 🔴 미해결
+1. 수집기 판정 요청(7일 창 밖 고업보트 4건 — Feyospace-v1 120 · StepAudio 3 Gen 91 · Occamy-1.0 87 · StepAudio 3 Music 86) → raw.md 판정문 참조
+2. 그림 속 수치 미전사(ModularRSI 세대별 곡선 · RSIAgent 그림 · agent-lightning 학습 곡선)
+3. 코드 미실행 전건 — gliner2.5 한국어 조사 처리 · gitdiagram 미검증 노드 UI 표시
+4. [[tabfm-1.0.0]] ↔ LimiX-2 본문 TabFM 동일성

@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, alibaba, qwen, china, big-tech]
 created: 2026-06-26
-updated: 2026-09-10
-sources: [zvec.md, Qwen3.6-27B.md, Qwen3.8-27B.md, Qwen3.8-Flash-Next.md, Qwen3.8-27B-GGUF.md, MiniMax-H3.md]
+updated: 2026-09-19
+sources: [zvec.md, Qwen3.6-27B.md, Qwen3.8-27B.md, Qwen3.8-Flash-Next.md, Qwen3.8-27B-GGUF.md, MiniMax-H3.md, NeoHorse-1-Paper.md]
 reliability: high
 ---
 
@@ -70,7 +70,14 @@ reliability: high
 > - [[Qwopus3.8-27B-Flash-GGUF]] — 개인 개발자(Jackrong)가 Qwen3.8-27B를 **속도 목적 파인튜닝**. 디코딩 **+12.8%**, MTP 수용률 **+14.6pp**, 대신 MMLU-Pro **−1.45pp**. 다운로드 **113,295**(♥176, **비율 644:1**) — 이 배치 최다 실사용.
 > → **Qwen의 실질 영향력은 Alibaba 자체 릴리스가 아니라 파생 생태계에서 나온다.** 벤더·하드웨어사·개인이 각자 다른 축(양자화/속도)으로 재가공하고, 그 결과물이 원본보다 더 많이 다운로드된다.
 
+## 2026-09-19 — 파생 사후학습 논문에 **베이스 제작사 인원이 공저자로** 참여
+
+[[NeoHorse-1-Paper]]([[TokenRhythm]], Qwen3.5-4B/9B 기반 에이전틱 사후학습) 부록 A: 저자 37명 중 **소속 8 = Alibaba Group 2명**(Core 1 · Contributor 1).
+🎯 **Qwen이 "외부가 가져다 쓰는 베이스"에서 "외부 파생 작업에 Alibaba 인원이 함께 이름을 올리는 베이스"로** — 08-29 "다른 벤더 모델의 부품" 관찰의 다음 단계. 🔴 참여 성격(개인/회사 차원)은 본문에 명시 없음.
+
 ## 관련 페이지
+- [[NeoHorse-1-Paper]]
+- [[TokenRhythm]]
 - [[Qwen3.8-Flash-Next-NVFP4]] · [[Qwopus3.8-27B-Flash-GGUF]] — Qwen 파생 2건 *(2026-09-10 신규)*
 - [[Qwen3.8-Flash-Next]] — `qwen4_exp` 태그 · 트렌딩 1위 *(NEW 2026-08-28)* · [[Qwen3.8-27B]] — 실사용 기준선
 

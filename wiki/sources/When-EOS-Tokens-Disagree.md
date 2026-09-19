@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, on-policy-distillation, eos, length-inflation, qwen, llama, gemma, 자기제한]
 created: 2026-09-18
-updated: 2026-09-18
-sources: []
+updated: 2026-09-19
+sources: [K2-Horizon-7B.md]
 reliability: high
 ---
 
@@ -54,7 +54,11 @@ reliability: high
 > **"후기 길이 팽창"의 원인이 미규명이다** — 저자가 관측만 하고 설명하지 않았다. 🔴 **그리고 그게 남은 절반일 수 있다**(종료 정렬로 안 사라지므로).
 > **본문 미확인**(초록만). 3개 모델 패밀리 각각의 팽창 크기·완화 폭 수치가 초록에 없다 — **"substantially mitigates" 뿐이고 크기가 없다.**
 
+
+> [!note] 🆕 2026-09-19 — K2-Horizon 계열이 단계별 체크포인트 태그(mid/sft/rl, 69개)를 공개 → [[K2-Horizon-7B]]. 이 논문의 "K2-Horizon 단계별 분석"이 어느 크기·태그를 썼는지는 **미확인**(본문 미열람).
+
 ## 관련 페이지
+- [[K2-Horizon-7B]]
 - [[온폴리시-증류]]
 - [[One-Symptom-Three-Levers]]
 - [[자기제한-명시]]

@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, omni-modal, audio-video, comfyui, minimax, video-saas, partial-open-source]
 created: 2026-08-06
-updated: 2026-09-06
-sources: []
+updated: 2026-09-19
+sources: [MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
 
@@ -138,7 +138,13 @@ reliability: medium
 - 라이선스 `minimax-h3-community-license`
 - ⚠️ **전처리 파이프라인 H3-Context-IR과 2K 워크플로는 미공개**(API만) · **카드에 정량 벤치마크 표 없음** → [[MiniMax]] 엔티티의 *"오픈 가중치 ≠ 오픈 시스템"* 규정 **유지**
 
+
+> [!update] 🆕 2026-09-19 — **첫 제3자 정량치** → [[MiniMax-H3-Physical-Reasoning]]: 517건 사람 평가 SR **41.97%**(VDR 56.00 · AVIR 47.89 · MSR 43.50 · ADR 27.40 최저).
+> 🔴 오픈 가중치인지 Context-IR 붙은 API 인지 **미기재** — 이 페이지가 기록한 "Context-IR 미공개"가 수치 해석을 가른다. 비교 모델 0.
+> 지표(09-19): DL(30일) 4,449,605(09-06 4,986,349 에서 감소 — 30일 창이라 누적 아님) · ♥5,476 · Comfy-Org DL 20,277,946 · ♥1,920. **카드 정량 벤치 여전히 0건.**
+
 ## 관련 페이지
+- [[MiniMax-H3-Physical-Reasoning]]
 - [[MiniMax]] — 원본 모델 개발사
 - [[Seedance]] — VFX 특화 비디오 AI (품질 비교 대상)
 - [[Higgsfield]] — 폐쇄형 영상 SaaS (대비)

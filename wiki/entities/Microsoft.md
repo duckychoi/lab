@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, organization, bigtech, education, open-source]
 created: 2026-07-02
-updated: 2026-07-10
-sources: [AI-For-Beginners.md, SkillOpt.md]
+updated: 2026-09-19
+sources: [AI-For-Beginners.md, SkillOpt.md, agent-lightning.md]
 reliability: high
 ---
 
@@ -21,7 +21,11 @@ reliability: high
 - [[AI-For-Beginners]] — 12주 24강 AI 기초 커리큘럼 (MIT, 50+ 언어)
 - [[SkillOpt]] — 프로즌 LLM 스킬 텍스트공간 최적화 툴 (⭐12,019, MIT) *(2026-07-10)*
 
+
+> [!note] 🆕 2026-09-19 — [[agent-lightning]] v1.0(★18,356 · MIT · 기술보고서 arXiv 2608.17528, 저자 10, org microsoft): 하네스형 에이전틱 RL 프레임워크 3,500행 전면 재작성. 🔴 ★는 v0.x 가 쌓은 몫이고 HF v1.0 논문 레코드엔 githubRepo 가 null.
+
 ## 관련 페이지
+- [[agent-lightning]]
 - [[SkillCoach]] · [[agent-skills]] — 스킬 생태계(평가·배포)
 - [[ai-news]]
 

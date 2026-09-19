@@ -4,8 +4,8 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, moe, mova, long-context, agent, terminal-bench]
 created: 2026-09-09
-updated: 2026-09-09
-sources: []
+updated: 2026-09-19
+sources: [K2-Horizon-7B.md]
 reliability: medium
 ---
 
@@ -48,7 +48,11 @@ reliability: medium
 > [!action] 당장 할 것
 > 지금 받지 말고 **4주 뒤 재확인**: ①다운로드가 1만을 넘겼는가 ②예고한 코드·체크포인트가 실제로 공개됐는가 ③제3자 Terminal-Bench 재현이 있는가. 셋 중 둘이면 그때 평가.
 
+
+> [!note] 🆕 2026-09-19 — 09-09 "4주 후 재확인"이 형제 [[K2-Horizon-7B]] 로 조기 도착: 중간 체크포인트 공개(69 태그) ✅ · 학습 코드(ifm-ai/xllm, 빈 레포)·기술보고서는 여전히 "In Progress, 9월 말" 🔴
+
 ## 관련 페이지
+- [[K2-Horizon-7B]]
 - [[Spark-X2.5-4B]]
 - [[에이전트축-분기]]
 - [[Nemotron-3-Nano-Omni]]

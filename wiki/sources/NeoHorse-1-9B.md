@@ -4,8 +4,8 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, tokenrhythm, qwen, agent, tool-use, post-training, 회귀, 에이전트축분기]
 created: 2026-09-18
-updated: 2026-09-18
-sources: []
+updated: 2026-09-19
+sources: [NeoHorse-1-Paper.md]
 reliability: medium
 ---
 
@@ -41,6 +41,12 @@ reliability: medium
 > **DL:♥ = 11.2:1** — 4B판(8.4:1)보다 높다. 🎯 **♥ 2,354 → 881 로 4B의 37%인데 DL은 9,856 로 50%다.** **작은 쪽이 더 주목받고 큰 쪽이 상대적으로 더 쓰인다** — 관심은 화제성을 따르고 사용은 필요를 따른다(🔴 표본 2, 잠정).
 > 📌 **모논문은 4B와 공유한다**: `arxiv:2609.08183`(업보트 **421** · 볼트 **0히트**) → [[NeoHorse-1-4B]] 의 [[선발창-누락]] 항목 참조. **같은 누락이 두 페이지에 걸린다.**
 
+
+> [!note] 🆕 2026-09-19 — 모논문 인제스트 완료, **IFEval −0.37을 저자도 인정했다** → [[NeoHorse-1-Paper]]
+> 본문: *"performance on instruction-following benchmarks remains largely stable, with **one metric showing a minor decrease**"* · *"marginal benefits are concentrated more heavily on interactive execution than on relatively static instruction compliance."*
+> 🎯 [[에이전트축-분기]] 의 볼트 해석과 **같은 방향의 저자 서술** — 단 **원인 분석은 없다**(커리큘럼 절제 없음). 🔴 모논문 업보트 421 → **09-19 실측 170**으로 정정.
+> 📌 궤적 사례(PinchBench 1건): 9B가 막힌 경로를 포기하고 표준 라이브러리로 전환 → 4B 대비 요청 −70.8% · 시간 −76.7% · 토큰 −83.6%.
+
 ## 도메인별 추출 (local-llm)
 
 - **실용성 판단**: **8.95B BF16 ≈ 17.9GB.** 🔴 **24GB VRAM 필요** — 4090급이면 가능하고 그 아래는 양자화 필요. 🎯 **4B(8.4GB)와 실용성 격차가 크다.** 컨텍스트는 카드에 4B와 같은 262K로 추정되나 **볼트 미확인**.
@@ -58,6 +64,7 @@ reliability: medium
 > **③ 측정 회차** — 4B는 3회/1회 혼재가 명시됐는데 9B의 회차를 raw가 옮기지 않았다. **같은 표 구조라면 PinchBench +7.70도 1회짜리일 수 있다** 🔴 — 그러면 이기는 축의 근거가 약해진다.
 
 ## 관련 페이지
+- [[NeoHorse-1-Paper]]
 - [[NeoHorse-1-4B]]
 - [[에이전트축-분기]]
 - [[선발창-누락]]
