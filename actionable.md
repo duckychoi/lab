@@ -4,6 +4,78 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 
 ---
 
+## [2026-09-20] **[[docling]] 으로 Bonsai-2 화이트페이퍼 PDF 파싱** ★최우선
+
+**근거**: 같은 배치의 두 항목이 서로의 빈칸을 정확히 메운다. [[Ternary-Bonsai-2-27B]] 의 성능 근거는 **GitHub의 PDF 화이트페이퍼 단일 출처**이고(v1에 있던 `.eval_results/` 가 v2에서 제거됨 → [[검사가능성-후퇴]]), [[docling]](★67,310)은 PDF 표 추출 도구인데 **README에 정확도 표가 0개**라 볼트가 검증할 방법이 없었다.
+
+- **도메인**: ai-news / local-llm
+- **출처**: [[docling]] · [[Ternary-Bonsai-2-27B]] · [[Prism-ML]]
+- **할 것**: `pip install docling` → `PrismML-Eng/Bonsai-demo/bonsai-2-27b-whitepaper.pdf` 파싱 → **14개 thinking 벤치 표 전사**. 확인할 것: (1) 84.78이 **PTQ1_0 / PQ2_0 중 어느 패킹**의 값인가 (2) 14개 벤치 구성 (3) IQ2_XXS 72.59 의 측정 조건
+- **🎯 세 개가 한 번에 해결된다**: docling 실검증 · 사라진 eval 산출물 대체 · 볼트 자기한계 *"그림/표 속 수치 미전사"* 돌파
+- **우선순위**: 높음
+- **상태**: 대기
+
+## [2026-09-20] **볼트 판정값 3값화 — `⬜ 미검증` 칸 신설**
+
+**근거**: 세 독립 생태계가 같은 칸을 만들었고 볼트만 안 하고 있다. [[security-audit-skill]] `needs_validation`(*"an exact unresolved fact and **no severity**"*) · [[oh-my-hermes]] `Code · reported done`(*"Nobody checked the result"*) · **[[Agora]]** 는 *"the **verification status of each claim**"* 을 **조회 가능한 인덱스 차원**으로 만들었다. 볼트 `log.md`·`index.md` 는 여전히 **✅/🔴 2값**이라, "확인 못 함"이 "문제 없음"과 섞인다.
+
+- **도메인**: 전 도메인 (볼트 자체)
+- **출처**: [[검사가능성-공사]] · [[Agora]] · [[security-audit-skill]] · [[oh-my-hermes]]
+- **할 것**: `log.md`/`index.md` 판정 표기를 **`✅ 확인 · 🔴 틀림 · ⬜ 미검증(심각도 없음)`** 3값으로 확장. **심각도를 붙이지 않는 것이 핵심** — 등급이 아니라 범주다. 겸해서 [[Agora]] 의 *"neglected branches"* 에 대응하는 **방치 항목 뷰**도 검토(코드 없이 규약만으로 가능).
+- **우선순위**: 높음 (09-19에 이어 **2주 연속 제기**)
+- **상태**: 대기
+
+## [2026-09-20] **수집기에 원본 저장소 backlog 요청 — `ukisai/Swift-Qwen3.8-27b`**
+
+**근거**: [[원본-파생-역전]] 실측 — 파생 [[Swift-Qwen3.8-27B-GGUF]] 다운로드 **136,668** vs 원본 **10,962**(12.5배). 🎯 그런데 **좋아요는 원본이 497로 파생 321보다 많다.** 다운로드로 선발하는 채널에서 원본은 **영원히 선발되지 않는다.** 그리고 볼트가 받은 GGUF 카드의 BF16 9행 표는 **실제로 원본 + Swift 어댑터의 측정치**다 — **피측정물의 페이지 없이 측정값을 갖고 있다**([[mem0]] 에서 8개월간 벌어진 일과 같은 형태).
+
+- **도메인**: local-llm
+- **출처**: [[원본-파생-역전]] · [[Swift-Qwen3.8-27B-GGUF]] · [[UkisAI]] · [[파생저장소-식별]]
+- **할 것**: 수집기 요청문에 **"파생 배달 시 `base_model` + `base_model_relation` 으로 원본 지표를 함께 조회하고, 원본이 볼트 미보유면 `backlog` 슬롯으로 배달"** 규약 추가. 이번 대상: `ukisai/Swift-Qwen3.8-27b`.
+- **우선순위**: 높음
+- **상태**: 대기
+
+## [2026-09-20] **[[FastVideo]] E2E 실측 대상을 Comfy 패키지로 교체**
+
+**근거**: 볼트 09-18 actionable 은 *"4090에서 FastH3 8-Step V2 를 돌려 E2E 시간을 재라"* 였는데, 실측 결과 **사용자의 95.6%가 다른 파일을 쓴다** — `FastVideo-FastH3-Comfy` **132,886** vs `FastVideo-FastH3-8-Step-V2` **1,390**. 게다가 Comfy 쪽 파일명에 **`pruned`·`int8_convrot`·`nvfp4_awq`** 가 붙어 있어 **아티팩트 자체가 다르다**(미문서화).
+
+- **도메인**: video-saas
+- **출처**: [[FastVideo]] · [[원본-파생-역전]] · [[파생저장소-식별]]
+- **할 것**: ComfyUI + `fastvideo_fasth3_8step_v2_pruned_bf16` 로 E2E 측정, **디노이징 시간과 총시간을 분리 기록**. 추가 확인: **`pruned` 가 원본 대비 무엇을 얼마나 잘랐는지** — 어느 문서에도 없다.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-09-20] **[[mem0]] OSS SDK 로 LoCoMo 직접 측정 — 8개월 묵은 애매함 종료**
+
+**근거**: [[VoiceMem]] 의 *"top-5로 Mem0의 top-200보다 약 30점 높다"* 가 볼트 [[에이전트-메모리-레이어]] 의 대표 수치인데, mem0 README가 *"Scores reflect Mem0's **managed platform**, which includes proprietary optimizations **not available in the open-source SDK**"* 라고 명시한다. **볼트는 어느 쪽을 이긴 건지 모르는 채 8개월 인용해 왔다.** ✅ 다만 평가 하네스 `mem0ai/memory-benchmarks` 가 **오픈소스라 측정이 가능하다.**
+
+- **도메인**: local-llm
+- **출처**: [[mem0]] · [[VoiceMem]] · [[에이전트-메모리-레이어]] · [[mem0ai]]
+- **할 것**: `mem0ai/memory-benchmarks` 로 **OSS SDK LoCoMo** 측정 → 매니지드 92.5 와의 격차 확인. 그 값이 나와야 볼트의 모든 "vs Mem0" 비교에 분모가 생긴다.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-09-20] **[[ReactHuman]] 데이터셋 장면 1개 열기 — 코드 실행 0건 깨기**
+
+**근거**: 볼트 자기한계 2번(*"코드 실행 0건"*)을 깰 **가장 값싼 후보**다 — **모델 추론이 필요 없다.** `Alan123/reacthuman-benchmark-scaled`(2,111파일 · gated false · 다운로드 567 · **좋아요 1**)를 받아 장면 하나만 열면 *"비트단위 재현"* 이 시드인지·상태덤프인지·궤적인지가 확인된다.
+
+- **도메인**: slam-3dgs
+- **출처**: [[ReactHuman]]
+- **할 것**: 데이터셋 일부 다운로드 → 장면 1개 구조 확인 → [[ReactHuman]] 미해결 질문 2·3 해소 시도
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-09-20] **[[PageIndex]] 정확도 차트 1장 읽기 — "그림 속 수치" 한 건 돌파**
+
+**근거**: 볼트 자기한계 1(*"그림 속 수치 미전사"*)이 09-19에 이어 또 걸렸다. [[PageIndex]] 는 **비용은 텍스트로, 정확도는 차트로**(`results-light.png` = *"Accuracy against average cost per question"*) 냈다. 그림 **1장**이면 된다.
+
+- **도메인**: ai-news
+- **출처**: [[PageIndex]] · [[VectifyAI]]
+- **할 것**: `assets/results-light.png` 내려받아 정확도 값 전사 → [[PageIndex]] 페이지 갱신. 겸해서 **볼트가 그림을 읽을 수 있는지 자체가 확인된다.**
+- **우선순위**: 중간
+- **상태**: 대기
+
+
 ## [2026-09-19] gliner2.5-multi-v1 **한국어 10문장 실측**
 
 **근거**: LLM 호출 없는 로컬 엔티티 추출기(287M, CPU). 한국어는 인코더 사전학습(CC100)까지만 확인 · 공백 분할이라 조사 포함 가능(추정) · 메모리 1.15GB.

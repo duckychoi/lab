@@ -4,12 +4,21 @@ type: source
 domain: local-llm
 tags: [local-llm, agent-memory, hf-paper, speech, streaming, persona, latency, on-device]
 created: 2026-08-27
-updated: 2026-08-28
+updated: 2026-09-20
 sources: []
 reliability: high
 ---
 
 # VoiceMem — 정보(좌뇌)와 감정(우뇌)을 병렬로 두는 음성 메모리
+
+> [!warning] 🔴 2026-09-20 조건부 추가 — **"Mem0 top-200 대비 30점 우위"의 분모가 둘이다**
+> 볼트가 드디어 베이스라인 쪽을 읽었다([[mem0]] 신설). mem0 README 54행 원문:
+> > *"Single-pass retrieval (one call, no agentic loops) at a **top_200 retrieval budget**. ... Scores reflect Mem0's **managed platform**, which includes **proprietary optimizations not available in the open-source SDK**; open-source users should expect directionally similar gains but **not identical numbers**."*
+>
+> ✅ **비교 조건은 정당했다** — `top_200` 은 **Mem0 자신이 공표한 운용점**이다. 이 페이지가 인용한 설정은 자의적이지 않다.
+> 🔴 **그러나 어느 Mem0인지가 미상이다** — OSS SDK를 이겼다면 **더 약한 쪽**을, 매니지드 플랫폼을 이겼다면 강한 쪽을 이긴 것이다. 초록은 어느 쪽인지 말하지 않는다.
+> → **이 페이지의 "약 30점 우위"는 앞으로 반드시 이 조건부와 함께 인용한다.** 해소 방법: `mem0ai/memory-benchmarks`(공개 하네스)로 **OSS SDK LoCoMo를 직접 측정**.
+
 
 **HF 논문**: https://huggingface.co/papers/2608.26005
 **코드**: https://github.com/xzf-thu/VoiceMem (★28 · raw 기재)

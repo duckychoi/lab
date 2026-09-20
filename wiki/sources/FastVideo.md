@@ -2,14 +2,39 @@
 title: "FastVideo — '50배 가속'의 근거표가 레포 안에 0개다"
 type: source
 domain: video-saas
-tags: [video-saas, github, video-generation, distillation, sparse-attention, dit, dmd2, 근거부재]
+tags: [video-saas, github, video-generation, distillation, sparse-attention, dit, dmd2, 근거부재, 파생저장소-식별, 원본-파생-역전]
 created: 2026-09-18
-updated: 2026-09-18
+updated: 2026-09-20
 sources: []
 reliability: medium
 ---
 
 # FastVideo
+
+> [!update] 2026-09-20 병합 — `FastVideo/FastVideo-FastH3-Comfy` (판정 **(c) 병합**, 독립 페이지 생성 안 함)
+> 수집기가 HF 모델로 별도 배달한 **FastVideo-FastH3-Comfy** 를 [[파생저장소-식별]] 판정 절차에 따라 **이 페이지로 병합**한다 — *"새 축이 문서화됐으면 (b)독립채택 · **파일만 있으면 (c)병합** · 순수 재포장이면 (a)중복"*.
+>
+> 🔴 **수집기 판정 정정: "신규 능력 없음 · 가중치를 ComfyUI 폴더 구조에 맞춰 재배치한 배포 편의 패키지" 는 파일명과 어긋난다.** 볼트 파일트리 실측:
+> - `diffusion_models/fastvideo_fasth3_8step_v2_**pruned**_bf16.safetensors`
+> - `diffusion_models/fastvideo_fasth3_8step_v2_pruned_**int8_convrot**.safetensors`
+> - `text_encoders/qwen3vl_32b_minimax_h3_{bf16, **int8_convrot**, **nvfp4_awq**}.safetensors`
+> - `vae/minimax_h3_{audio_vae_fp32, video_vae_fp16, video_vae_**int8_convrot**}.safetensors`
+>
+> **`pruned` · `int8_convrot` · `nvfp4_awq` 는 재배치가 아니라 변형이다.** 순수 재포장이면 (a)여야 하는데 변형이 있으므로 (a)가 아니고, **README 전문이 파일 배치 안내뿐**이라 문서화가 없으므로 (b)도 아니다 → **(c) 병합.**
+> 🎯 **`int8_convrot` 가 두 번째 조직에서 나왔다.** 볼트 09-19 판정 *"[[Comfy-Org-YuE2]] (b)→(c) 정정 — 채택 근거였던 `int8_convrot` 이 카드에 미문서화"* 와 **같은 포맷, 같은 미문서화, 다른 조직**(Comfy-Org → FastVideo). 🔴 **재포장 계층에서 반복되는 무명 포맷**이며 볼트는 아직 이것이 무엇인지 모른다.
+>
+> 🔴 **그리고 여기서 [[파생저장소-식별]] 의 탐지 방법이 깨진다** — 개념은 *"`cardData.base_model` 을 읽어야 한다 · base_model은 **1홉만** 기록한다"* 고 적었다. 실측:
+> - 실제 사슬: `MiniMaxAI/MiniMax-H3` → `FastVideo/FastVideo-FastH3-8-Step-V2` → `FastVideo-FastH3-Comfy`
+> - 🔴 **Comfy 의 `cardData.base_model` = `MiniMaxAI/MiniMax-H3`** — **직전 부모를 건너뛰고 조부모를 가리킨다.**
+> - ✅ 반면 **README 본문은 직전 부모를 정확히 적는다**: *"Original model repository: https://huggingface.co/FastVideo/FastVideo-FastH3-8-Step-V2"*
+> 🎯 **기계판독 필드가 틀리고 산문이 맞다** — [[Comfy-Org-YuE2]](tags가 틀리고 cardData가 맞았다)와 **정반대 방향**이다. **1홉만 기록하는 게 아니라 "틀린 1홉"을 기록할 수 있다.**
+> 🔴 **`base_model_relation` 미설정** → 태그가 `base_model:finetune:MiniMaxAI/MiniMax-H3` 로 떨어진다(**실제는 재포장**). 같은 배치 [[Swift-Qwen3.8-27B-GGUF]] 는 `base_model_relation: quantized` 를 **명시**했다 → **탐지 키를 `base_model` 에서 `base_model_relation` 으로 올려야 한다.**
+>
+> 🔴 **채택이 원본을 95.6배 앞선다**(볼트 실측, 2026-09-20): 재포장 **132,886** 다운로드(수집기 101,020) vs 원본 `FastVideo-FastH3-8-Step-V2` **1,390**. 좋아요는 96 vs 84. → [[원본-파생-역전]] 의 두 번째 사례이자 **가장 극단**([[Swift-Qwen3.8-27B-GGUF]] 12.5배).
+> 🎯 **이 사실 자체가 이 페이지에 대한 답이다**: 위 *"기능 벤치마킹"* 항목이 *"4090에서 FastH3 8-Step V2 를 돌려 E2E 시간을 재라"* 고 적었는데, **실제로 사람들이 돌리는 것은 8-Step-V2가 아니라 ComfyUI 재포장본**이다(95.6:1). **실측 대상을 Comfy 패키지로 바꾸는 것이 맞다.**
+>
+> 🔴 **미해결 질문 2개는 여전히 해소되지 않았다** — Comfy 카드에 **벤치·품질 수치 0개**다. *"VSA 80%의 품질 비용"* 과 *">50x 의 베이스라인"* 은 그대로 빈칸이다. 그리고 **`pruned` 가 원본 대비 무엇을 얼마나 잘라낸 것인지도 어디에도 없다** — 빈칸이 하나 늘었다.
+> 원본 실측: `FastVideo/FastVideo-FastH3-Comfy` 좋아요 96 · created 2026-09-08 · lastMod 2026-09-16 · license `other`(minimax-h3-community-license-agreement) · `library_name: diffusion-single-file` · 파일 10개
 
 > [!insight] 핵심 인사이트 — 두 기법을 곱한 것이 이 프레임워크의 논지다
 > **희소증류(sparse distillation)** = **DMD2 단계별 증류**(스텝 수를 줄인다) × **Video Sparse Attention**(스텝당 연산을 줄인다). 두 축이 **직교하므로 곱해진다** — 여기서 *">50배 디노이징 가속"* 주장이 나온다.
@@ -56,6 +81,11 @@ reliability: medium
 - [[AI-영상-생성-2026]]
 - [[한정어-탈락]]
 - [[검사가능성-공사]]
+- [[파생저장소-식별]]
+- [[원본-파생-역전]]
+- [[Comfy-Org-YuE2]]
+- [[Swift-Qwen3.8-27B-GGUF]]
+- [[TensorRT-LLM]]
 
 ## 원본
 - 출처: https://github.com/hao-ai-lab/FastVideo

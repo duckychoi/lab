@@ -689,6 +689,56 @@
    "height": 220,
    "color": "5",
    "text": "### [[gliner2.5-multi-v1]] 287M CPU 추출기\n🎯 LLM 호출 없는 엔티티 추출 → 인제스트 전처리\n🔴 메모리 1.15GB (카드 594MB 아님)\n⚡ 한국어 10문장 실측 대기"
+  },
+  {
+   "id": "b20ll-hdr",
+   "type": "text",
+   "x": -1200,
+   "y": 8450,
+   "width": 420,
+   "height": 280,
+   "color": "3",
+   "text": "# 📥 2026-09-20 (3건)\n\n**재판정 2건**\n[[mem0]] · [[Grouped-Value-Attention]]\nai-news → local-llm\n\n(스키마 도메인2 = Local/Edge/SLM\n+ **에이전트 메모리**)"
+  },
+  {
+   "id": "b20ll-mem0",
+   "type": "text",
+   "x": -740,
+   "y": 8450,
+   "width": 440,
+   "height": 280,
+   "color": "5",
+   "text": "### 🎯 [[mem0]] ★65,688\n**볼트가 페이지 없이 자로만 써 왔다**\n\n🔴 BEAM 1M 64.1 → 10M **48.6**\n= 규모 10배에 **−15.5**\n\n🎯 [[Hermes]] 롱세션이 노리는\n지점이 **정확히 거기**\n→ 현재 적용 **NO**"
+  },
+  {
+   "id": "b20ll-gva",
+   "type": "text",
+   "x": -260,
+   "y": 8450,
+   "width": 440,
+   "height": 280,
+   "color": "5",
+   "text": "### [[Grouped-Value-Attention]] 업76\n**값만 저장 · 키는 복원**\n캐시 스칼라 **−45~47%**\n\n🎯 KV 축 **세 번째 동사**\n[[Random-Attention]] 고르지 마라\n[[Declarative-Attention]] 읽지 마라\n**GVA 두지 마라**\n\n🔴 GQA에 **0.18 뒤짐** · 속도 미측정"
+  },
+  {
+   "id": "b20ll-swift",
+   "type": "text",
+   "x": 220,
+   "y": 8450,
+   "width": 440,
+   "height": 280,
+   "color": "5",
+   "text": "### [[Swift-Qwen3.8-27B-GGUF]]\n🎯 **드문 실배포 수치**\nKV **64 KiB/token**\n→ 262K 컨텍스트에서 **16 GB**\n**MTP 내장**(투기적 디코딩)\n24 tier × KLD/Top-p\n\n🔴 *\"<1% loss\"* 9행 중 4행 거짓"
+  },
+  {
+   "id": "b20ll-bonsai",
+   "type": "text",
+   "x": 700,
+   "y": 8450,
+   "width": 460,
+   "height": 280,
+   "color": "5",
+   "text": "### [[Ternary-Bonsai-2-27B]] (교차)\n**5.95GB(PTQ1_0)로 27B급**\n\n🔴 **stock llama.cpp 불가**\n`Q2_0` 은 *무경고 쓰레기 출력*\n→ [[Bonsai-27B]] 07-18 actionable **무효**\n\n🎯 같은 베이스 저비트 둘이 같은 배치\nBonsai 1.75bit ↔ Swift IQ2_XXS 9.1GB"
   }
  ],
  "edges": [
@@ -1172,6 +1222,34 @@
    "fromNode": "b19ll-k2",
    "toNode": "l0908-uno",
    "label": "Uno 베이스"
+  },
+  {
+   "id": "e-b20ll-hdr-b20ll-mem0",
+   "fromNode": "b20ll-hdr",
+   "toNode": "b20ll-mem0",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20ll-hdr-b20ll-gva",
+   "fromNode": "b20ll-hdr",
+   "toNode": "b20ll-gva",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20ll-hdr-b20ll-swift",
+   "fromNode": "b20ll-hdr",
+   "toNode": "b20ll-swift",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20ll-hdr-b20ll-bonsai",
+   "fromNode": "b20ll-hdr",
+   "toNode": "b20ll-bonsai",
+   "fromSide": "bottom",
+   "toSide": "top"
   }
  ]
 }

@@ -4,11 +4,42 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-18
+updated: 2026-09-20
 sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
+
+> [!update] 📥 2026-09-20 배치 (13건) — **수집기 요약 오류 6건, 볼트 자체 정정 2건**
+> 처리: **신규 소스 12 · 병합 1**(`FastVideo-FastH3-Comfy` → [[FastVideo]], 판정 **(c)**). 신설 개념 4 · 엔티티 5.
+>
+> ### 🔴 볼트가 수집기 요약을 뒤집은 6건
+> 1. **[[higgsfield-repo]]** — *"동명의 다른 회사"* → **동일 법인**(`higgsfield-ai`.name = **"Higgsfield Inc."**, blog=higgsfield.ai). 볼트 [[Higgsfield]] 가 8개월 추적한 그 회사의 **폐기된 첫 제품**이었다.
+> 2. **[[PageIndex]]** — *"비용이 수치로 제시되지 않았다"* → **README에 3종 있다**($0.001/page · 13초~4.5분 · 420쪽에서 16.6배).
+> 3. **[[Swift-Qwen3.8-27B-GGUF]]** — *"이 GGUF 빌드 자체의 측정치가 아니다"* → **표가 3개이고 3번이 GGUF 전용 24 tier KLD 표다.**
+> 4. **[[Ternary-Bonsai-2-27B]]** — *"실측 1.72 bit/weight · ~5.9GB"* → **`(ideal)` 행**이다. 출하물은 1.75bit/5.95GB와 2.13bit/7.21GB. *"~47 tok/s"* 는 **7.21GB 쪽 값**.
+> 5. **[[FastVideo]] 병합분** — *"신규 능력 없음, 재배치뿐"* → 파일명이 **`pruned`·`int8_convrot`·`nvfp4_awq`** 로 **변형**을 담고 있다(미문서화 → (c)).
+> 6. **논문 5건 전건** — *"게시 MM-DD"* 가 **전부 HF 데일리 등재일**이었다(arXiv 게시와 **6·7·5·5·1일** 차) → 신설 [[게시일-이중화]].
+>
+> ### 🔴 볼트 자체 정정 2건
+> 1. **[[Bonsai-27B]](v1) 의 "1.71bit/7.2GB/9.4배"는 산술이 닫히지 않았다** — 14개월 전 볼트가 두 행을 섞었다. v2 README가 원인을 설명했다.
+> 2. **[[Bonsai-27B]] 의 07-18 actionable 은 실행하면 안 됐다** — stock llama.cpp가 `Q2_0` 을 *"without any warning ... produces garbage"* 로 로드한다. **실행 안 해서 틀린 결론을 피했다.**
+>
+> ### 🎯 배치의 척추 — **볼트가 자(尺)로만 써 온 본체가 없었다**
+> **[[mem0]] ★65,688.** [[VoiceMem]] 의 대표 수치(*"Mem0 top-200 대비 30점 우위"*)와 [[TencentDB-Agent-Memory]] 의 경쟁자 목록에 **이름만** 있었다. [[browser-use]]·[[HuggingFace]] 에 이은 **본체 누락 3번째이자 가장 비싼 것** — 앞의 둘과 달리 **볼트가 그 위에 수치를 올려 뒀다.** 그리고 그 수치의 **분모가 둘**이었다(mem0 점수는 **매니지드 플랫폼**의 것).
+>
+> ### 🎯 새 축 2개
+> - **[[원본-파생-역전]]** — 다운로드는 파생이 **12.5배**([[Swift-Qwen3.8-27B-GGUF]])·**95.6배**([[FastVideo]] Comfy) 앞서고 **좋아요는 원본이 앞선다**. 다운로드 정렬 채널은 **구조적으로 포장을 수집하고 정체를 버린다.**
+> - **[[검사가능성-후퇴]]** — [[Prism-ML]] 이 v1→v2에서 `.eval_results/` 를 **제거**하며 점수는 올렸고, [[Agora]] 는 *"every claim is a commit anyone can check out"* 이라면서 **레포에 코드가 0개**다. [[검사가능성-공사]] 의 반대 방향 첫 실측.
+>
+> ### 📌 그 밖
+> - **[[관련성-판단-주체]]** 신설 — 09-03에 볼트가 연 축이 [[PageIndex]] 로 **두 번째 사례**를 얻었다(층이 다르다: KV 읽기 ↔ 문서 검색). 🔴 표본 2, [[mem0]] 은 반대 방향.
+> - **[[Feyospace-v1]]** 목차 3건이 초록 동사와 다르다(*bypasses* → **`Jailbreak Tech`**). **클릭 1회로 결론의 성격이 바뀌었다** — 볼트 요청 1의 가장 값싼 승리.
+> - **[[Agora]]** 초록 말미 3항목 누락(**사람 1회 개입** · 입증 범위 · **대조실험 미실시**). 저자가 *"아직 입증 안 됨"* 이라 적은 것이 입증된 것처럼 전달됐다.
+> - ✅ **수집기 정확 사례**: 이슈/PR 분해 **5/5 합계 일치** · [[ReactHuman]] 초록 대조 **불일치 0** · `backlog` 배치당 2건 규칙 준수 · 한정어 보존 6배치 연속.
+> - 🔴 **볼트 자기 오류(경미)**: HF `siblings` 가 40개에서 잘린 줄 모르고 *"mmproj 없음"* 결론이 나올 뻔했다(실제 54개, 존재). → [[표-부분인용]] 이 **API 응답에서도 성립**.
+> - 🔀 **도메인 재판정 3**: [[ReactHuman]] → `slam-3dgs` · [[mem0]]·[[Grouped-Value-Attention]] → `local-llm`.
+
 
 목표: 쓸모있는 AI 도구 발굴 + 내 워크플로우에 통합
 

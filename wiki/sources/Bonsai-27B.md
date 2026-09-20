@@ -4,12 +4,28 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, quantization, ternary, 27b, local-llm, edge, text-generation]
 created: 2026-07-17
-updated: 2026-07-26
+updated: 2026-09-20
 sources: []
 reliability: medium
 ---
 
 # Bonsai-27B (prism-ml/Ternary-Bonsai-27B-gguf)
+
+> [!warning] 🔴 2026-09-20 정정 — **이 페이지의 "1.71bit(~7.2GB, 9.4배)"는 서로 다른 행을 섞은 것이다**
+> 후속작 [[Ternary-Bonsai-2-27B]] 의 README가 원인을 설명해 줬다. **산술이 닫히지 않는다**: 27B × 1.71bit ÷ 8 ≈ **5.8GB** 이고 54GB ÷ 5.8GB ≈ **9.4배**다. **7.2GB 라면 배수는 7.5배**여야 한다. 세 수치는 함께 성립할 수 없다.
+> ✅ **v2 README가 같은 구조를 4행 표로 명시한다**: `ideal` 1.72bit/5.8GB/9.3배 · `PTQ1_0`(조밀 패킹) 1.75bit/**5.95GB**/9.0배 · `PQ2_0`(2비트 슬롯) 2.13bit/**7.21GB**/7.5배.
+> 🎯 **v1도 패킹이 여럿이었다** — 이 페이지 원본 파일 목록에 `PQ2_0`·`Q2_0`·`Q2_g64` 가 실재한다. 즉 볼트는 **이상값의 bit/배수**와 **2비트 슬롯 패킹의 파일 크기**를 한 줄에 섞어 적었다. v2의 PQ2_0 이 **7.21GB**로 이 페이지의 "7.2GB"와 거의 일치하는 것이 방증이다.
+> → **읽는 법**: "1.71bit · 9.4배"는 **이상값**, "7.2GB"는 **2비트 슬롯 패킹 파일**. 하나의 스펙이 아니다. → [[단위-불일치]] · [[표-부분인용]]
+
+> [!warning] 🔴 2026-09-20 정정 — **아래 actionable("llama.cpp/Ollama로 받아 실측")은 실행하면 안 된다**
+> v2 README 원문: *"**Stock llama.cpp will not run these files.** It rejects `PQ2_0` and `PTQ1_0` as unknown types, and **it loads `Q2_0` without any warning and produces garbage**, because it has no Hadamard activation runtime."*
+> 🔴 **이 페이지의 파일 목록에 `Ternary-Bonsai-27B-Q2_0.gguf` 가 있다.** stock llama.cpp/Ollama 는 그것을 **경고 없이 로드하고 쓰레기를 출력**한다 — 볼트는 그 출력을 **모델 품질로 오해했을 것**이다.
+> ✅ **실행하지 않아서 틀린 결론을 피했다.** 필요한 것: `PrismML-Eng/llama.cpp` 포크(CUDA/Metal). → [[Prism-ML]]
+
+> [!update] 2026-09-20 실측 갱신 + 후속작 도착
+> `Ternary-Bonsai-27B-gguf` 다운로드 **662,554**(볼트 07-26 기록 631,970 → **+30,584**) · 좋아요 **1,370**.
+> 🎯 **v1이 v2보다 좋아요가 많다**([[Ternary-Bonsai-2-27B]] 1,315). 다운로드는 v2가 1,908,396 으로 압도적인데 좋아요는 v1이 앞선다.
+> 🔴 **v1에는 있고 v2에는 없는 것**: `.eval_results/aime_2026.yaml`·`gsm8k.yaml`·`mmmu_pro.yaml` 과 `eval-results` 태그. **같은 벤더가 더 높은 점수를 주장하며 기계판독 평가 산출물을 뺐다** → [[검사가능성-후퇴]].
 
 > [!update] 2026-07-26 갱신 — 63만 돌파 (WebFetch 실검증)
 > `Ternary-Bonsai-27B-gguf` HF 다운로드 **631,970**(좋아요 **1,034**, base_model `Qwen/Qwen3.6-27B` WebFetch 실확인) ← 07-21 집계 432k(좋아요 873). 닷새 새 +20만·좋아요 +161·**좋아요 1,000 돌파**로 극단 양자화(삼진 1.71bit·~7.2GB) 실사용 관심이 오히려 가속. 태그에서 `ternary`·`2-bit`·`on-device`·`hybrid-attention` 재확인. 이번 배치 신규 [[Nanbeige4.2-3B]](3B 에이전틱)와 함께 "작게 만들기" 로컬 축 지속 — Bonsai는 대형 압축, Nanbeige는 소형 정밀. reliability medium 유지(벤치 자체 리포트·독립 재현 전).
@@ -42,6 +58,10 @@ reliability: medium
 - [[Qwen3.6-27B-NVFP4]]
 - [[MiniCPM5-1B]]
 - [[Nanbeige4.2-3B]]
+- [[Ternary-Bonsai-2-27B]]
+- [[Prism-ML]]
+- [[검사가능성-후퇴]]
+- [[단위-불일치]]
 - [[local-llm]]
 - [[ai-news]]
 

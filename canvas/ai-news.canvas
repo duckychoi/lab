@@ -4148,6 +4148,166 @@
    "height": 260,
    "color": "2",
    "text": "### ⚡ Actionable (09-19 배치)\n① `NOT_EVALUATED` 도입 → **높음**(같은 주 2건)\n② gliner2.5 한국어 10문장 실측 (높음)\n③ 기본 열람 = 원본 + 한 단계 아래\n④ ★ 인용 전 파일 트리 확인\n⑤ 수집기: 이슈/PR 분해 필드 요청"
+  },
+  {
+   "id": "b20-hdr",
+   "type": "text",
+   "x": -2400,
+   "y": 25200,
+   "width": 520,
+   "height": 300,
+   "color": "3",
+   "text": "# 📥 2026-09-20 배치 (13건)\n\n신규 소스 **12** · 병합 **1**([[FastVideo]] (c))\n신설 개념 **4** · 엔티티 **5**\n\n🔴 수집기 요약 오류 **6건**\n🔴 볼트 자체 정정 **2건**\n✅ 이슈/PR 분해 **5/5 일치**"
+  },
+  {
+   "id": "b20-mem0",
+   "type": "text",
+   "x": -1820,
+   "y": 25200,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### 🎯 [[mem0]] ★65,688\n**볼트가 8개월간 자(尺)로만 써 온 본체**\n[[VoiceMem]] *\"Mem0 top-200 대비 30점\"* 의 그 Mem0\n\n🔴 벤치 4행 중 2행만 인용 →\n빠진 행이 **유일한 하락**\nBEAM 1M 64.1 → 10M **48.6**\n\n🔴 점수는 **매니지드 플랫폼** 것\n→ 30점 우위의 **분모가 둘**"
+  },
+  {
+   "id": "b20-docling",
+   "type": "text",
+   "x": -1300,
+   "y": 25200,
+   "width": 420,
+   "height": 300,
+   "color": "5",
+   "text": "### [[docling]] ★67,310 · MIT\n문서 → `DoclingDocument` 단일 표현\nPDF·Office·HTML·EPUB·**오디오**\n✅ LF AI & Data · arXiv 3편\n\n**배치 유일 이슈 적체형**\nissues:PR = 6.4:1\n\n🔴 정확도 표 0개"
+  },
+  {
+   "id": "b20-pageindex",
+   "type": "text",
+   "x": -820,
+   "y": 25200,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[PageIndex]] ★35,766 · MIT\n벡터DB·청킹 **제거**, LLM이 트리 탐색\n*\"similarity ≠ relevance\"*\n\n🔴 수집기 *\"비용 수치 없음\"* 정정\n$0.001/page · 13초~4.5분\n420쪽 **16.6배** · 805쪽 미적재\n\n🔴 정확도는 **그림 안**"
+  },
+  {
+   "id": "b20-higgs",
+   "type": "text",
+   "x": -320,
+   "y": 25200,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### [[higgsfield-repo]] ★5,089\n🔴 *\"동명의 다른 회사\"* **기각**\norg.name = **\"Higgsfield Inc.\"**\n= 볼트 [[Higgsfield]] 와 동일 법인\n\n🎯 진짜 발견: **볼트 페이지 5개월 공백**\nCLI ★555 · skills ★1,070(**evals/**)\nSDK 2종 · MCP 브리지\n\n🔴 ★+196 원인 **미확인**"
+  },
+  {
+   "id": "b20-agora",
+   "type": "text",
+   "x": 200,
+   "y": 25200,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Agora]] 업44/45 · [[NVIDIA]] 포함\nGit append-only DAG · 워커 13 · 12일\n3.39 → **1.899 bits/byte** · 재현 165건\n\n✅ [[검사가능성-공사]] **3번째·최강**\n(미검증·방치 가지가 인덱스 차원)\n\n🔴 **레포 코드 0개**\n🔴 초록 말미 3항목 누락\n(사람 1회 개입·입증범위·**대조실험 미실시**)"
+  },
+  {
+   "id": "b20-feyo",
+   "type": "text",
+   "x": 700,
+   "y": 25200,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Feyospace-v1]] `backlog` 업**133**\n7인 팀 · 궤적 164,269\nCyberGym **+23.76%** · s1 **10위**\n\n🔴 **목차가 초록과 다르다**\n*bypasses* → **`Jailbreak Tech`**\n*analyzes* → **Signature Hack**\n(5개 중 3개)\n\n✅ Ethics Statement 실재"
+  },
+  {
+   "id": "b20-step",
+   "type": "text",
+   "x": 1180,
+   "y": 25200,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[StepAudio-3-Music]] `backlog` 업102\n**ABC-CoT** — 편곡 계획을 먼저 쓴다\n50Hz 단일코드북 · 48kHz · 5분30초\n\n🎯 [[m-a-p]] 와 차이:\n**외부 아레나**(Elo 1105, 3위)\n진 상대를 이름으로 적음\n\n🔴 *\"among the evaluated systems\"* 탈락"
+  },
+  {
+   "id": "b20-bonsai",
+   "type": "text",
+   "x": 1660,
+   "y": 25200,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Ternary-Bonsai-2-27B]] DL 1.91M\n🔴 *\"실측 1.72bit/5.9GB\"* = **`(ideal)` 행**\n출하물 **1.75bit/5.95GB**(PTQ1_0)\n     **2.13bit/7.21GB**(PQ2_0)\n🔴 *\"~47 tok/s\"* 는 **PQ2_0 쪽**\n\n🔴 stock llama.cpp **무경고 쓰레기**\n🔴 v1의 `.eval_results/` **제거**"
+  },
+  {
+   "id": "b20-swift",
+   "type": "text",
+   "x": 2160,
+   "y": 25200,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Swift-Qwen3.8-27B-GGUF]] DL 136,668\n🎯 볼트가 **09-19에 도착 예고**한 항목\n\n🔴 *\"GGUF 자체 측정치 아님\"* 정정\n→ **표 3개**, 3번이 24 tier KLD 표\n🔴 *\"<1% loss\"* 9행 중 **4행 거짓**\n🔴 *\"58.3%\"* = **18셀 중 최댓값**(평균 37.2%)\n🎯 KV **64KiB/token → 16GB** · MTP"
+  },
+  {
+   "id": "b20-c-rev",
+   "type": "text",
+   "x": -1820,
+   "y": 25560,
+   "width": 460,
+   "height": 300,
+   "color": "6",
+   "text": "## 🆕 [[원본-파생-역전]]\n다운로드는 **파생**이 이기고\n좋아요는 **원본**이 이긴다\n\nSwift 136,668 ↔ 10,962 (**12.5배**)\nFastVideo 132,886 ↔ 1,390 (**95.6배**)\n좋아요 321 ↔ **497**\n\n🎯 다운로드 정렬 채널은\n**포장을 수집하고 정체를 버린다**\n🔴 표본 2"
+  },
+  {
+   "id": "b20-c-date",
+   "type": "text",
+   "x": -1300,
+   "y": 25560,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 🆕 [[게시일-이중화]]\n`publishedAt` ↔ `submittedOnDailyAt`\n**5/5 전건** 차이: 6·7·5·5·1일\n\n🔴 [[선발창-누락]] 의 \"7일 창\"이\n**어느 필드인지 미정이었다**\n\n[[Feyospace-v1]]: 데일리 기준 창 안,\narXiv 기준 12일 전 → **실제 backlog 배달**\n\n✅ 신뢰도 high(필드 대조)"
+  },
+  {
+   "id": "b20-c-retreat",
+   "type": "text",
+   "x": -820,
+   "y": 25560,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 🆕 [[검사가능성-후퇴]]\n검사가능성을 **가장 내세우는 쪽**이\n**가장 검사 불가능한 것**을 낸다\n\n[[Prism-ML]]: eval 산출물 **제거** + 점수 상향\n[[Agora]]: \"체크아웃 가능\" ↔ **코드 0**\n\n🎯 Agora가 **양쪽에 동시에**\n설계는 공사 · 출하는 후퇴\n= **악의가 아니라 우선순위**"
+  },
+  {
+   "id": "b20-c-rel",
+   "type": "text",
+   "x": -320,
+   "y": 25560,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 🆕 [[관련성-판단-주체]]\n검색기 → **모델**로 판단 주체 이동\n\n[[Declarative-Attention]] (09-03)\n= **KV 읽기** 층\n[[PageIndex]] (09-20)\n= **문서 검색** 층\n\n🎯 [[하네스-설계-축]] 의 \"빼라\"와 같되\n**빼는 것이 기능이 아니라 중개자**\n🔴 표본 2 · [[mem0]] 은 **반대 방향**"
+  },
+  {
+   "id": "b20-c-table",
+   "type": "text",
+   "x": 200,
+   "y": 25560,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 📌 [[표-부분인용]] 갱신\n**표 개수 축 2번째**([[Swift-Qwen3.8-27B-GGUF]] 3표 중 1표)\n\n🔴 새 축 1: 행 누락이\n**유일한 하락 신호를 지운다**([[mem0]])\n🔴 새 축 2: **`(ideal)` 라벨 행**\n\n🔴 **볼트도 당할 뻔했다 — API 응답**\n`siblings` 40개 절단 → mmproj 오판 직전\n(실제 54개)"
+  },
+  {
+   "id": "b20-act",
+   "type": "text",
+   "x": 700,
+   "y": 25560,
+   "width": 460,
+   "height": 300,
+   "color": "2",
+   "text": "### ⚡ Actionable (09-20)\n① **[[docling]] × Bonsai-2 화이트페이퍼 PDF**\n   → 도구검증 + 사라진 eval 대체 + 그림수치 돌파 **3중** · 높음\n② **log.md 판정 3값화**(⬜ 미검증) · 높음\n③ **원본 backlog 요청**(`ukisai/Swift-Qwen3.8-27b`) · 높음\n④ [[FastVideo]] 실측 대상을 **Comfy 패키지**로 교체 · 중간\n⑤ [[mem0]] OSS SDK LoCoMo 직접 측정 · 중간"
   }
  ],
  "edges": [
@@ -7846,6 +8006,167 @@
    "fromNode": "b19-act2",
    "toNode": "b19-hub",
    "label": "실행 항목"
+  },
+  {
+   "id": "e-b20-hdr-b20-mem0",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-mem0",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-docling",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-docling",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-pageindex",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-pageindex",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-higgs",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-higgs",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-agora",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-agora",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-feyo",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-feyo",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-step",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-step",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-bonsai",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-bonsai",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-swift",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-swift",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-c-rev",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-c-rev",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-c-date",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-c-date",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-c-retreat",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-c-retreat",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-c-rel",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-c-rel",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-c-table",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-c-table",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-hdr-b20-act",
+   "fromNode": "b20-hdr",
+   "toNode": "b20-act",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-mem0-c-rev",
+   "fromNode": "b20-mem0",
+   "toNode": "b20-c-rev",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-swift-c-rev",
+   "fromNode": "b20-swift",
+   "toNode": "b20-c-rev",
+   "fromSide": "bottom",
+   "toSide": "right"
+  },
+  {
+   "id": "e-b20-bonsai-retreat",
+   "fromNode": "b20-bonsai",
+   "toNode": "b20-c-retreat",
+   "fromSide": "bottom",
+   "toSide": "right"
+  },
+  {
+   "id": "e-b20-agora-retreat",
+   "fromNode": "b20-agora",
+   "toNode": "b20-c-retreat",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-pageindex-rel",
+   "fromNode": "b20-pageindex",
+   "toNode": "b20-c-rel",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20-feyo-date",
+   "fromNode": "b20-feyo",
+   "toNode": "b20-c-date",
+   "fromSide": "bottom",
+   "toSide": "right"
+  },
+  {
+   "id": "e-b20-swift-table",
+   "fromNode": "b20-swift",
+   "toNode": "b20-c-table",
+   "fromSide": "bottom",
+   "toSide": "right"
+  },
+  {
+   "id": "e-b20-docling-act",
+   "fromNode": "b20-docling",
+   "toNode": "b20-act",
+   "fromSide": "bottom",
+   "toSide": "left"
   }
  ]
 }

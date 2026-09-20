@@ -4,11 +4,19 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-18
+updated: 2026-09-20
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
+
+> [!update] 📥 2026-09-20 — 3건 편입 (**재판정 2건 포함**)
+> - **[[mem0]]**(★65,688 · 수집기는 `ai-news` → 볼트 **`local-llm` 재판정**, 스키마 도메인 2가 "에이전트 메모리"를 포함) — 🔴 **볼트가 8개월간 페이지 없이 베이스라인으로만 써 온 본체.** 벤치 4행 중 **BEAM 1M 64.1 → 10M 48.6(−15.5)** 이 인용에서 빠져 있었다. 🎯 **[[Hermes]] 롱세션이 노리는 지점이 정확히 거기다** → 현재로선 적용 **NO**.
+> - **[[Grouped-Value-Attention]]**(업보트 76 · 수집기 `ai-news` → **`local-llm` 재판정**) — KV 항 **세 번째 공격법**: [[Random-Attention]] *고르지 마라* · [[Declarative-Attention]] *읽지 마라* · GVA ***두지 마라***(값만 저장, 키는 복원). 캐시 스칼라 **−45~47%**. 🔴 **GQA에 0.18 뒤지고(350M) 속도는 저자가 "평가 중"**. 코드 0.
+> - **[[Swift-Qwen3.8-27B-GGUF]]**(DL 136,668) — 🎯 **실배포 수치가 드물게 갖춰져 있다**: **KV 캐시 토큰당 64 KiB → 262K 컨텍스트에서 16 GB**, **MTP 레이어 내장**(투기적 디코딩), mmproj 동봉, 24 tier × KLD/Top-p. 🔴 단 헤드라인 *"<1% loss"* 는 **자기 표 9행 중 4행에서 거짓**.
+> 📌 **[[Ternary-Bonsai-2-27B]]**(ai-news 주도메인, 교차) — 5.95GB(PTQ1_0)로 27B급. 🔴 **stock llama.cpp 불가, `Q2_0` 은 무경고 쓰레기 출력** — [[Bonsai-27B]] 의 옛 actionable 무효.
+> 🎯 **같은 배치에 같은 베이스(Qwen3.8-27B)의 저비트 빌드가 둘 왔다**: Bonsai 1.75bit/5.95GB(태스크 정확도 84.78 주장) vs Swift IQ2_XXS 9.1GB(원본 충실도 Top-p 78.09%). **두 축의 수치를 동시에 갖게 된 첫 사례**지만 **같은 파일이라는 증거는 없다.**
+
 
 목표: 경량 모델 실배포 + Hermes/에이전트에 메모리 심기
 

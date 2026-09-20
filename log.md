@@ -4,6 +4,91 @@
 
 ---
 
+
+## [2026-09-20] ingest | 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)
+
+- **도메인**: ai-news 9 · local-llm 3 · slam-3dgs 1 (🔀 **재판정 3건**: [[ReactHuman]]→`slam-3dgs` · [[mem0]]·[[Grouped-Value-Attention]]→`local-llm`)
+- **추가 페이지**: **21개** (소스 12 · 엔티티 5 · 개념 4) | **업데이트 페이지**: **16개**
+  - 소스 신설: [[docling]] · [[mem0]] · [[PageIndex]] · [[TensorRT-LLM]] · [[higgsfield-repo]] · [[Feyospace-v1]] · [[StepAudio-3-Music]] · [[Grouped-Value-Attention]] · [[ReactHuman]] · [[Agora]] · [[Ternary-Bonsai-2-27B]] · [[Swift-Qwen3.8-27B-GGUF]]
+  - **(c) 병합 1건**: `FastVideo/FastVideo-FastH3-Comfy` → [[FastVideo]] (독립 페이지 미생성)
+  - 엔티티 신설: [[Prism-ML]] · [[UkisAI]] · [[VectifyAI]] · [[Docling-Project]] · [[mem0ai]]
+  - 개념 신설: [[원본-파생-역전]] · [[게시일-이중화]] · [[검사가능성-후퇴]] · [[관련성-판단-주체]]
+  - 갱신: [[Higgsfield]] · [[Bonsai-27B]](**정정 2건**) · [[FastVideo]] · [[VoiceMem]](**조건부 추가**) · [[파생저장소-식별]] · [[표-부분인용]] · [[검사가능성-공사]] · [[선발창-누락]] · [[한정어-탈락]] · [[단위-불일치]] · [[에이전트-메모리-레이어]] · domains 4 · index.md · actionable.md
+- **중복 판정**: 리터럴 13/13 통과. 🔴 **그러나 2건이 볼트와 실질 연결돼 있었다** — `Ternary-Bonsai-**2**` ↔ 기보유 [[Bonsai-27B]] **세대 관계**, `Swift-...-GGUF` 는 볼트가 **09-19에 "미보유·대기 중"으로 적어 둔 바로 그 항목**(예측 적중).
+
+### 🎯 핵심 인사이트 (요약 아닌 배운 것)
+
+1. 🎯 **볼트가 8개월간 자(尺)로만 써 온 본체에 페이지가 없었다.** [[mem0]] ★65,688 은 [[VoiceMem]] 의 *"Mem0 top-200 대비 30점 우위"* 와 [[TencentDB-Agent-Memory]] 경쟁자 목록에 **이름만** 있었다. [[browser-use]]·[[HuggingFace]] 에 이은 **본체 누락 3번째이자 가장 비싼 것** — 앞의 둘은 "없었다"로 끝나지만 **볼트는 그 위에 수치를 올려 뒀고**, 읽어 보니 그 수치의 **분모가 둘**이었다(*"Scores reflect Mem0's **managed platform**"*). ✅ 동시에 확인된 것: `top_200` 은 **Mem0 자신의 공표 운용점**이라 [[VoiceMem]] 의 비교 설정은 정당했다.
+2. 🎯 **다운로드 정렬은 포장을 수집하고 정체를 버린다.** 파생이 원본을 **12.5배·95.6배** 앞서는데 **좋아요는 원본이 앞선다**(497>321). 두 지표가 다른 것을 센다 → 신설 [[원본-파생-역전]]. **대가를 두 번 실측했다** — [[Swift-Qwen3.8-27B-GGUF]] 수치의 주인이 원본이었고, [[FastVideo]] 09-18 actionable 의 실측 대상이 틀렸다.
+3. 🎯 **검사가능성이 후퇴하는 방향이 처음 측정됐다.** [[Prism-ML]] 이 v1의 `.eval_results/` 를 **제거**하며 점수는 올렸고, [[Agora]] 는 *"every claim is a commit anyone can check out"* 이라면서 **레포 코드가 0개**다. 🎯 **Agora가 양쪽에 동시에 있다 — 설계는 공사, 출하는 후퇴. 후퇴는 악의가 아니라 우선순위의 결과다** → 신설 [[검사가능성-후퇴]].
+4. 🎯 **클릭 1회가 결론의 성격을 바꿨다.** [[Feyospace-v1]] 초록의 *"bypasses API restrictions"* 가 목차에서 **`2.3 Hongzwang: Jailbreak Tech`** 다(5개 중 3개에서 어휘가 바뀐다). PDF도 정독도 아니고 **목차**다 — 볼트 요청 1의 가장 값싼 승리.
+5. 🎯 **"게시일"이 두 개였다.** 논문 **5/5 전건**에서 수집기가 적은 게시일은 `submittedOnDailyAt` 이었다(arXiv와 **6·7·5·5·1일** 차). 🔴 **볼트의 "7일 창" 논의 전체가 어느 필드에 걸리는지 미정이었다** → 신설 [[게시일-이중화]].
+6. 🎯 **[[관련성-판단-주체]] 축이 두 번째 사례를 얻었다** — 볼트가 09-03에 선언한 축에 [[PageIndex]] 가 **다른 층**(문서 검색)에서 도착했다. 🔴 단 표본 2이고 **[[mem0]] 은 반대 방향**(검색기 강화, ★65,688)이라 **이기고 있다는 근거는 없다.**
+
+### 🔴 수집기 요약 오류 6건
+[[higgsfield-repo]] *"동명의 다른 회사"* → **동일 법인** · [[PageIndex]] *"비용 수치 없음"* → **3종 실재** · [[Swift-Qwen3.8-27B-GGUF]] *"GGUF 자체 측정치 아님"* → **24 tier KLD 표 실재** · [[Ternary-Bonsai-2-27B]] *"실측 1.72bit"* → **`(ideal)` 행** · [[FastVideo]] Comfy *"재배치뿐"* → **변형 3종** · 논문 **5/5 게시일 필드 혼동**.
+
+### ✅ 수집기 정확분 (공정하게)
+이슈/PR 분해 **5/5 전건 합계 일치** · [[ReactHuman]] 초록 대조 **불일치 0** · `backlog` 배치당 2건 규약 준수 + 업보트 재조회값 병기 · 한정어 보존 **6배치 연속** · [[Swift-Qwen3.8-27B-GGUF]] 의 *"58.3% = GPQA 중앙값 한 건"* 지적 **정확**(볼트가 "18셀 중 최댓값"으로 한 칸 더 좁혔을 뿐).
+
+### 🔴 볼트 자체 정정 2건 + 자기 오류 1건
+1. **[[Bonsai-27B]] 의 "1.71bit/7.2GB/9.4배" 는 산술이 닫히지 않는다** — 14개월 전 볼트가 이상값 행과 2비트 슬롯 패킹 행을 섞었다. v2 README가 원인을 설명했다.
+2. **그 페이지의 07-18 actionable 은 실행하면 안 됐다** — stock llama.cpp 가 `Q2_0` 을 *"without any warning ... produces garbage"* 로 로드한다. **실행 안 해서 틀린 결론을 피했다.**
+3. 🔴 **볼트가 API 절단에 당할 뻔했다** — HF `siblings` 40개 절단분만 보고 *"mmproj 없음 → 비전 불가"* 직전까지 갔다(실제 54개, 존재). → [[표-부분인용]] 이 **API 응답에서도 성립**함을 반영.
+
+- **canvas 업데이트**: **YES** — ai-news +16노드/+23엣지 · local-llm +5 · slam-3dgs +4 · video-saas +5
+- **actionable 추가**: **YES** — 7건(최우선: **[[docling]] × Bonsai-2 화이트페이퍼 PDF** — 도구검증·사라진 eval 대체·그림수치 돌파가 **한 번에**)
+- **index.md**: 갱신(1229 → **1250**: sources 1123 · entities 70 · concepts 51 · synthesis 2 · domains 4)
+- **raw.md**: **13건 전량 삭제, 대기 0건**. 수집기 요청 4건 기재(`publishedAt` 병기 · 파생 배달 시 원본 1콜 조회 · `base_model_relation` 우선 · **arXiv 목차 1클릭**)
+
+### 🔴 미해결 (다음으로)
+1. **arXiv 본문은 2편만 열었다**([[Agora]]·[[Feyospace-v1]]) — 나머지 3편은 초록까지. **수집기에 요구한 것을 볼트도 전건 하지 못했다.**
+2. **코드 실행 0건 유지** — [[docling]] PDF 파싱 · [[PageIndex]] 차트 · [[ReactHuman]] 데이터셋 셋 다 actionable 로만.
+3. **[[Higgsfield]] ★+196 의 원인 미확인** — 동일 법인과 기본 브랜치 정지는 확인, 급상승 원인은 **양쪽 다 근거 없음**.
+4. **[[선발창-누락]] 의 원래 사례 재확인 필요** — `arxiv:2609.08183` *"공개 09-08"* 이 어느 필드였는지 미확인 → [[NeoHorse-1-Paper]].
+5. **볼트에 `⬜ 미검증` 칸이 아직 없다** — 09-19에 이어 **2주 연속 제기**. 세 생태계가 같은 것을 가리켰다.
+6. **Mureka 가 두 논문에서 상위에 등장했는데 볼트 미보유** — [[mem0]] 형 본체 누락의 초기 징후일 수 있다.
+
+---
+
+## [2026-09-19] ingest | 볼트 백로그 1건 — NeoHorse-1 모논문 (arXiv 2609.08183)
+
+- 발단: raw.md "볼트 자체 백로그"(09-18 볼트가 [[NeoHorse-1-4B]] 모델 태그 추적으로 발견, 수집기 경유 아님) · actionable 🔴🔴 최우선 항목
+- 도메인: ai-news (+ local-llm 교차)
+- 추가 페이지: 1개([[NeoHorse-1-Paper]]) | 업데이트 페이지: 11개([[TokenRhythm]] · [[Alibaba]] · [[선발창-누락]] · [[RSI-프레이밍]] · [[하네스-설계-축]] · [[검사가능성-공사]] · [[NeoHorse-1-4B]] · [[NeoHorse-1-9B]] · domains/ai-news · domains/local-llm · actionable)
+- 읽은 범위: HF papers API · arXiv abs · **arXiv HTML 본문 전문**(표 1·2·3 · §3~§6 · 부록 A 소속) · GitHub API(메타 + 파일 트리 전수)
+- 핵심 인사이트: **배포 중인 라우팅 하네스의 "예측–행동–결과" 기록이 학습 데이터·커리큘럼 순서·결손 신호를 동시에 공급한다** — 최강 증거는 벤치 표가 아니라 **같은 레시피 데이터 출처 대조 +6.26**(양 스케일링은 +2.14 → 출처 > 양). 그리고 RSI 루프는 저자 스스로 **"single pass"** 라고 적었다
+- 🔴🔴 **볼트 자기 정정**: 09-18 기록 업보트 **421 → 09-19 동일 API 실측 170**. 누적 지표가 줄 수 없으므로 볼트 오기 또는 HF 정정(구분 불가) → [[선발창-누락]] 배수 22배→8.9배 · 11.7배→4.7배 하향(개념 유지) · 09-18 원문은 이력으로 보존 + 정정 callout
+- 🔴 기타 정정: "코드 ★535" → 레포 ★599는 **학습 코드 없음**(README·PDF·이미지 3·추론 예제 2 = 파일 10개) · arXiv/HF 초록 "eleven benchmarks" ↔ 본문·표 **10개**(오기)
+- ✅ 해소: [[TokenRhythm]] 소속 — TokenRhythm Technologies + Infinigence AI·칭화대·베이징대·CUHK·Alibaba·VC 2곳(교신 Yunhe Wang·Yu Wang). 국적·규모는 여전히 미확인
+- ✅ 대조: 본문 표 1·2가 볼트 기보유 10축 수치와 **전건 일치** · 9B IFEval −0.37을 **저자도 본문에서 인정**(*"one metric showing a minor decrease"*) — 원인 분석은 없음
+- 🎯 수렴: 데이터 게이트 `PASS/WARN/FAIL/NOT_EVALUATED` + "증거 결손은 양성 판정 불가" = [[검사가능성-공사]] **세 번째 독립 생태계**
+- canvas 업데이트: **YES** (ai-news 397→401 노드 · 482→491 엣지 / local-llm 65→66 · 65→66)
+- actionable 추가: **YES** (3건 신규 — `NOT_EVALUATED` 도입 검토 · 볼트 측정값 필드명+시각 기록 규칙 · 루프 2회차 추적 / 기존 1건 **완료** 처리)
+- raw.md: 백로그 항목 삭제 + 09-18 판정문의 421 정정 callout 추가
+- index.md: "볼트 백로그 소스" 서브섹션 신설 · 헤더 **find 실측 재집계**(sources 1098 · entities 59 · concepts 43 · total 1206 — 09-18 헤더 1084/1187은 과소 기록이었다)
+- 🔴 린트 메모(이번 작업 범위 밖, 기존 결손): index에 wikilink 없는 페이지 9건 — `Higgsfield-심층분석` · `agent-world` · `easyvideor1` · `llm-wiki-karpathy-2026` · `multiworld` · `onevl` · `opengame` · `voxcpm2` · `webcompass`
+- 🔴 볼트 자기 한계: ① 421의 출처 미해명 ② 커리큘럼 절제 부재로 라우팅 부품 기여 미측정 — 볼트도 판정 불가 ③ [[SoL-Pi]] ↔ NeoHorse 인용 관계 미대조 ④ PDF 그림(Figure 7 스케일링 곡선) 미열람
+
+## [2026-09-19] ingest | 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)
+
+- 발단: 볼트 백로그 처리 중(09:09) 수집기가 raw.md 에 13건 추가 → 같은 실행에서 인제스트. 중복 대조: 13건 전부 볼트 0히트(PhysBrain 은 1.0 페이지만, 1.5 신규)
+- 방식: **서브에이전트 4개 병렬** — 각자 신규 소스 페이지만 작성 + 원본 전수 대조(GitHub/HF API · README/카드 원문 · **arXiv 본문 HTML** · 코드 일부) → 공유 파일(개념·엔티티·도메인·canvas·actionable·index·raw)은 오케스트레이터가 단독 통합(충돌 방지)
+- 도메인: ai-news 10 · local-llm 2(🔀 [[K2-Horizon-7B]] · [[Xing4.0-29B-A4B]] 재판정) · slam-3dgs 1(🔀 [[PhysBrain-1.5]] 재판정)
+- 추가 페이지: **23개**(sources 13 · entities 6 [[Fastino]]·[[Stable-AI]]·[[MBZUAI]]·[[China-Telecom]]·[[DeepCybo]]·[[Stanford-CRFM]] · concepts 4 [[비매칭-비교]]·[[하네스형-에이전틱-RL]]·[[Electron-CDP-브리지]](잠정)·[[포맷-불일치-오염]](잠정)) | 업데이트 페이지: **34개**(기존 31개 교차 callout + domains 3)
+- 핵심 인사이트: **"RSI"가 한 주 만에 네 대상(가중치·하네스 코드·탐색 정책·메모리)으로 갈라졌고, 논문 4건 전부 비교 조건이 비대칭이었다** — 그 고지는 초록이 아니라 부록에 있었다. [[ModularRSI]] 가 RSI 최소조건(루프 2회+·세대 기록)을 **처음 형식 충족**(16 에폭·14세대) + 예산 맞춘 기존 방법 ≈ 기준선 = "벤치 위 진화 = 벤치 적응" 첫 통제 증거
+- 🎯 배치 관찰: ① 13건 중 ≥10건에서 결정적 정보가 초록·README 밖 ② **틀린 건 수집기 인용이 아니라 원문 5건**(594MB FP16↔FP32 1.15GB · GLiNER2 논문 부등호 · LimiX-2 결론 과확대 · Xing 굵은 글씨 · tradingview 도구 78↔84) ③ `NOT_EVALUATED` 같은 주 2건([[RSIAgent]] `UNVERIFIED`) ④ 같은 조직의 긴 글이 카드보다 정직([[K2-Horizon-7B]] 블로그의 82점 보상해킹 자백) ⑤ ★ ≠ 공개 실체(★28 ModularRSI 가 가장 완결)
+- 🔴 수집기 정정 주요: [[agent-lightning]] "수치는 이미지뿐" → 본문에 텍스트 3개 도메인 · [[gitdiagram]] "검증 실패 시 재시도" → 경로 오류는 링크만 떼고 수용(코드) · [[tradingview-mcp]] 도구 78 → 84 · [[gliner2.5-multi-v1]] 594MB → 1.15GB · [[K2-Horizon-7B]] "전부 공개" → 코드·보고서 In Progress
+- ✅ 볼트 미해결 해소: [[IFM]] 정체(= [[MBZUAI]] 산하) · [[Uno]] 베이스(= [[K2-Horizon-7B]]) · [[MiniMax-H3]] 첫 제3자 정량치(SR 41.97%)
+- 🔴 볼트 자기 정정: [[PhysBrain]] 1.0 오분류(물리법칙 추론 → 임바디드 VLA)
+- canvas 업데이트: **YES** (ai-news 401→**415** 노드 · 491→**518** 엣지 / local-llm 66→**69** · 66→**68** / slam-3dgs 27→**28** · 23→**24**)
+- actionable 추가: **YES** (9건 — 완료 1 [[PhysBrain]] 정정 · 대기 8, 높음: gliner2.5 한국어 실측 / `NOT_EVALUATED` 도입 **중간→높음 상향**)
+- raw.md: 13건 삭제 → **대기 0건** · 09-18 판정문(수집기 이행 완료) → **09-19 판정문 교체**: 7일 창 밖 4건 = (a) 백로그 슬롯 배치당 ≤2건 승인 · (b) 14일 확장 기각 · 신규 요청 4(1단계 열람 · 이슈/PR 분해 · 파일 트리 · 라벨 불일치 원인)
+- index.md: 09-19 배치 서브섹션 + 엔티티 6 · 개념 4 등재 · [[IFM]]·[[PhysBrain]] 줄 정정 · 총계 **sources 1111 · entities 65 · concepts 47 · total 1229**(find 실측)
+- 🔴 볼트 자기 한계: ① 그림 속 수치 미전사(ModularRSI 세대 곡선 · RSIAgent · agent-lightning) ② 코드 실행 0건 ③ 트렌딩 순위·당일 ★ 증분 시점차로 재현 불가 ④ [[tabfm-1.0.0]] ↔ LimiX-2 본문 TabFM 동일성 미확정 ⑤ [[tradingview-mcp]] ↔ 볼트 기존 instagram 언급 동일성 미확인 ⑥ 서브에이전트 작성 페이지를 오케스트레이터가 전문 재검토하지 않음(링크 실존·프론트매터·도메인만 점검)
+
+---
+
 ## [2026-09-18] ingest | 자동수집 13건 (GitHub 5 · HF논문 5 · HF모델 3) — **전량 신규 · 4배치 연속 중복 0%** + 판정 3 + 🔴 볼트 역발견 1
 
 - **도메인**: ai-news 8 · local-llm 4 · video-saas 1
@@ -3229,39 +3314,3 @@ wiki/sources 파일명 조회: 13건 전부 미존재
 - GitHub Pages(html/) 동시 반영: `mimo-v2.6-rl-livestream.html` 신규 작성 + `index.html` AI Research 그룹에 카드 추가 — 검증/미검증 상태를 페이지에 그대로 표기
 - actionable 추가: **2건** (대시보드 JS 렌더링 재검증 · 오픈소스 공개 추적)
 - 총계: sources 1083→**1084** · total_pages 1186→**1187**
-
-## [2026-09-19] ingest | 볼트 백로그 1건 — NeoHorse-1 모논문 (arXiv 2609.08183)
-
-- 발단: raw.md "볼트 자체 백로그"(09-18 볼트가 [[NeoHorse-1-4B]] 모델 태그 추적으로 발견, 수집기 경유 아님) · actionable 🔴🔴 최우선 항목
-- 도메인: ai-news (+ local-llm 교차)
-- 추가 페이지: 1개([[NeoHorse-1-Paper]]) | 업데이트 페이지: 11개([[TokenRhythm]] · [[Alibaba]] · [[선발창-누락]] · [[RSI-프레이밍]] · [[하네스-설계-축]] · [[검사가능성-공사]] · [[NeoHorse-1-4B]] · [[NeoHorse-1-9B]] · domains/ai-news · domains/local-llm · actionable)
-- 읽은 범위: HF papers API · arXiv abs · **arXiv HTML 본문 전문**(표 1·2·3 · §3~§6 · 부록 A 소속) · GitHub API(메타 + 파일 트리 전수)
-- 핵심 인사이트: **배포 중인 라우팅 하네스의 "예측–행동–결과" 기록이 학습 데이터·커리큘럼 순서·결손 신호를 동시에 공급한다** — 최강 증거는 벤치 표가 아니라 **같은 레시피 데이터 출처 대조 +6.26**(양 스케일링은 +2.14 → 출처 > 양). 그리고 RSI 루프는 저자 스스로 **"single pass"** 라고 적었다
-- 🔴🔴 **볼트 자기 정정**: 09-18 기록 업보트 **421 → 09-19 동일 API 실측 170**. 누적 지표가 줄 수 없으므로 볼트 오기 또는 HF 정정(구분 불가) → [[선발창-누락]] 배수 22배→8.9배 · 11.7배→4.7배 하향(개념 유지) · 09-18 원문은 이력으로 보존 + 정정 callout
-- 🔴 기타 정정: "코드 ★535" → 레포 ★599는 **학습 코드 없음**(README·PDF·이미지 3·추론 예제 2 = 파일 10개) · arXiv/HF 초록 "eleven benchmarks" ↔ 본문·표 **10개**(오기)
-- ✅ 해소: [[TokenRhythm]] 소속 — TokenRhythm Technologies + Infinigence AI·칭화대·베이징대·CUHK·Alibaba·VC 2곳(교신 Yunhe Wang·Yu Wang). 국적·규모는 여전히 미확인
-- ✅ 대조: 본문 표 1·2가 볼트 기보유 10축 수치와 **전건 일치** · 9B IFEval −0.37을 **저자도 본문에서 인정**(*"one metric showing a minor decrease"*) — 원인 분석은 없음
-- 🎯 수렴: 데이터 게이트 `PASS/WARN/FAIL/NOT_EVALUATED` + "증거 결손은 양성 판정 불가" = [[검사가능성-공사]] **세 번째 독립 생태계**
-- canvas 업데이트: **YES** (ai-news 397→401 노드 · 482→491 엣지 / local-llm 65→66 · 65→66)
-- actionable 추가: **YES** (3건 신규 — `NOT_EVALUATED` 도입 검토 · 볼트 측정값 필드명+시각 기록 규칙 · 루프 2회차 추적 / 기존 1건 **완료** 처리)
-- raw.md: 백로그 항목 삭제 + 09-18 판정문의 421 정정 callout 추가
-- index.md: "볼트 백로그 소스" 서브섹션 신설 · 헤더 **find 실측 재집계**(sources 1098 · entities 59 · concepts 43 · total 1206 — 09-18 헤더 1084/1187은 과소 기록이었다)
-- 🔴 린트 메모(이번 작업 범위 밖, 기존 결손): index에 wikilink 없는 페이지 9건 — `Higgsfield-심층분석` · `agent-world` · `easyvideor1` · `llm-wiki-karpathy-2026` · `multiworld` · `onevl` · `opengame` · `voxcpm2` · `webcompass`
-- 🔴 볼트 자기 한계: ① 421의 출처 미해명 ② 커리큘럼 절제 부재로 라우팅 부품 기여 미측정 — 볼트도 판정 불가 ③ [[SoL-Pi]] ↔ NeoHorse 인용 관계 미대조 ④ PDF 그림(Figure 7 스케일링 곡선) 미열람
-
-## [2026-09-19] ingest | 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)
-
-- 발단: 볼트 백로그 처리 중(09:09) 수집기가 raw.md 에 13건 추가 → 같은 실행에서 인제스트. 중복 대조: 13건 전부 볼트 0히트(PhysBrain 은 1.0 페이지만, 1.5 신규)
-- 방식: **서브에이전트 4개 병렬** — 각자 신규 소스 페이지만 작성 + 원본 전수 대조(GitHub/HF API · README/카드 원문 · **arXiv 본문 HTML** · 코드 일부) → 공유 파일(개념·엔티티·도메인·canvas·actionable·index·raw)은 오케스트레이터가 단독 통합(충돌 방지)
-- 도메인: ai-news 10 · local-llm 2(🔀 [[K2-Horizon-7B]] · [[Xing4.0-29B-A4B]] 재판정) · slam-3dgs 1(🔀 [[PhysBrain-1.5]] 재판정)
-- 추가 페이지: **23개**(sources 13 · entities 6 [[Fastino]]·[[Stable-AI]]·[[MBZUAI]]·[[China-Telecom]]·[[DeepCybo]]·[[Stanford-CRFM]] · concepts 4 [[비매칭-비교]]·[[하네스형-에이전틱-RL]]·[[Electron-CDP-브리지]](잠정)·[[포맷-불일치-오염]](잠정)) | 업데이트 페이지: **34개**(기존 31개 교차 callout + domains 3)
-- 핵심 인사이트: **"RSI"가 한 주 만에 네 대상(가중치·하네스 코드·탐색 정책·메모리)으로 갈라졌고, 논문 4건 전부 비교 조건이 비대칭이었다** — 그 고지는 초록이 아니라 부록에 있었다. [[ModularRSI]] 가 RSI 최소조건(루프 2회+·세대 기록)을 **처음 형식 충족**(16 에폭·14세대) + 예산 맞춘 기존 방법 ≈ 기준선 = "벤치 위 진화 = 벤치 적응" 첫 통제 증거
-- 🎯 배치 관찰: ① 13건 중 ≥10건에서 결정적 정보가 초록·README 밖 ② **틀린 건 수집기 인용이 아니라 원문 5건**(594MB FP16↔FP32 1.15GB · GLiNER2 논문 부등호 · LimiX-2 결론 과확대 · Xing 굵은 글씨 · tradingview 도구 78↔84) ③ `NOT_EVALUATED` 같은 주 2건([[RSIAgent]] `UNVERIFIED`) ④ 같은 조직의 긴 글이 카드보다 정직([[K2-Horizon-7B]] 블로그의 82점 보상해킹 자백) ⑤ ★ ≠ 공개 실체(★28 ModularRSI 가 가장 완결)
-- 🔴 수집기 정정 주요: [[agent-lightning]] "수치는 이미지뿐" → 본문에 텍스트 3개 도메인 · [[gitdiagram]] "검증 실패 시 재시도" → 경로 오류는 링크만 떼고 수용(코드) · [[tradingview-mcp]] 도구 78 → 84 · [[gliner2.5-multi-v1]] 594MB → 1.15GB · [[K2-Horizon-7B]] "전부 공개" → 코드·보고서 In Progress
-- ✅ 볼트 미해결 해소: [[IFM]] 정체(= [[MBZUAI]] 산하) · [[Uno]] 베이스(= [[K2-Horizon-7B]]) · [[MiniMax-H3]] 첫 제3자 정량치(SR 41.97%)
-- 🔴 볼트 자기 정정: [[PhysBrain]] 1.0 오분류(물리법칙 추론 → 임바디드 VLA)
-- canvas 업데이트: **YES** (ai-news 401→**415** 노드 · 491→**518** 엣지 / local-llm 66→**69** · 66→**68** / slam-3dgs 27→**28** · 23→**24**)
-- actionable 추가: **YES** (9건 — 완료 1 [[PhysBrain]] 정정 · 대기 8, 높음: gliner2.5 한국어 실측 / `NOT_EVALUATED` 도입 **중간→높음 상향**)
-- raw.md: 13건 삭제 → **대기 0건** · 09-18 판정문(수집기 이행 완료) → **09-19 판정문 교체**: 7일 창 밖 4건 = (a) 백로그 슬롯 배치당 ≤2건 승인 · (b) 14일 확장 기각 · 신규 요청 4(1단계 열람 · 이슈/PR 분해 · 파일 트리 · 라벨 불일치 원인)
-- index.md: 09-19 배치 서브섹션 + 엔티티 6 · 개념 4 등재 · [[IFM]]·[[PhysBrain]] 줄 정정 · 총계 **sources 1111 · entities 65 · concepts 47 · total 1229**(find 실측)
-- 🔴 볼트 자기 한계: ① 그림 속 수치 미전사(ModularRSI 세대 곡선 · RSIAgent · agent-lightning) ② 코드 실행 0건 ③ 트렌딩 순위·당일 ★ 증분 시점차로 재현 불가 ④ [[tabfm-1.0.0]] ↔ LimiX-2 본문 TabFM 동일성 미확정 ⑤ [[tradingview-mcp]] ↔ 볼트 기존 instagram 언급 동일성 미확인 ⑥ 서브에이전트 작성 페이지를 오케스트레이터가 전문 재검토하지 않음(링크 실존·프론트매터·도메인만 점검)

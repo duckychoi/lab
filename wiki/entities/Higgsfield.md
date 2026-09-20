@@ -4,10 +4,22 @@ type: entity
 domain: video-saas
 tags: [video-generation, higgsfield, cinema-studio, ai-video, 영상자동화]
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-09-20
 sources: [instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md]
 reliability: high
 ---
+
+
+> [!update] 2026-09-20 — **이 페이지는 5개월간 회사의 절반만 담고 있었다**
+> 2026-09-20 배치로 `higgsfield-ai/higgsfield` 레포가 도착했고, 볼트가 GitHub org API 로 정체를 확인했다: **`higgsfield-ai` 의 `name` = "Higgsfield Inc." · `blog` = higgsfield.ai · `description` = "AI lab" · US.** 🎯 **이 페이지의 회사와 동일 법인이다**(수집기는 *"동명의 다른 회사"* 로 의심했고 **기각됐다**).
+> 🔴 **그 org의 레포 9개를 보고 나서야 이 페이지의 공백이 드러났다** — 이 페이지는 **웹 UI 기능만** 기록해 왔다:
+> - **`skills` ★1,070**(MIT · 2026-04-09 생성 · 2026-09-14 푸시) — `.claude-plugin` · `.codex-plugin` · `.cursor-plugin` **3종 하네스**, `CLAUDE.md` · `COOKBOOK.md` · `INSTALL_FOR_AGENTS.md`, 🎯 **`evals/` 디렉터리**
+> - **`cli` ★555** · `homebrew-tap` · **`higgsfield-js`**(Node/TS SDK ★54) · **`higgsfield-client`**(Python SDK ★103) · **`fnf-local-pluging-bridge-mcp`**(MCP 브리지) · `cursor-plugin` ★18 · `omagotchi` ★6
+> - `higgsfield` ★5,089 — **2018년 시작한 GPU 학습 오케스트레이터. 기본 브랜치 최종 커밋 2024-02-13.** 피벗 이전의 화석이다.
+>
+> 🎯 **해석**: 이 회사는 **웹 스튜디오 제품 + 에이전트가 호출하는 API/CLI/스킬** 두 표면을 동시에 갖고 있다. [[Vercel]] 이 *"자기 에이전트를 만들지 않고 배급 층을 가져갔다"* 와 **같은 자리**이며, ✅ **`evals/` 를 함께 낸 것은 이 축에서 드물다** → [[검사가능성-공사]].
+> 📌 **볼트 [[Higgsfield-벤치마킹]] 이 UI 기능을 벤치마킹해 왔는데, 벤치마킹 대상이 UI 밖으로 나가는 중이다.**
+> 상세: [[higgsfield-repo]]
 
 # Higgsfield
 

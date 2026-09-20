@@ -4,11 +4,19 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-09-17
+updated: 2026-09-20
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md]
 ---
 
 # 로봇 SLAM / 3DGS / 카메라 누적 인사이트
+
+> [!update] 📥 2026-09-20 — [[ReactHuman]] 편입 (수집기 `ai-news` → 볼트 **`slam-3dgs` 재판정**)
+> 시뮬레이션 휴머노이드 · **240Hz 강체 물리** · 로봇 두뇌 배치이므로 스키마의 로봇/카메라 축이다. 09-19 [[ActionPiece]] → `slam-3dgs` 재판정과 **같은 근거**.
+> 🎯 **볼트 임바디드 계보([[PhysBrain]] → [[ActionPiece]] → [[PhysBrain-1.5]])에 처음 붙는 "평가자"다.** 지금까지 그 계보는 전부 **모델**이었고 **잴 자가 없었다.** 09-19 볼트 기록 *"버전이 오르며 평가가 제어 → 이해로 좁아짐"* 이 문제였는데, ReactHuman은 **이해 → 제어로 되돌린다**(*"physically execute every committed plan"*).
+> 결과: MLLM 7종이 **약 3건 중 1건**의 위험을 오처리하고, 외형을 운동보다 신뢰하며, 요격점을 **미터 단위**로 놓친다. 🔴 ***"none of these failures shrink with model scale"*** — 규모로 안 줄어든다면 **표현·인터페이스 문제**이고, [[하네스-설계-축]] 과 같은 결론에 임바디드 쪽에서 도달한 것이다.
+> ✅ **데이터셋 공개**(`Alan123/reacthuman-benchmark-scaled` · **2,111 파일** · gated false) — 수집기가 *"GitHub 레포 없음"* 으로 끝낸 자리에 아티팩트가 있었다.
+> 🔴 **그런데 거의 쓰이지 않는다**: 논문 업보트 **52** vs 데이터셋 **다운로드 567 · 좋아요 1**. **주목과 채택이 한 대상에서 동시에 측정된 드문 경우**이고, 볼트가 업보트를 신호로 써 온 것에 대한 직접 반례다.
+
 
 목표: SLAM 기술 이해 + 3DGS 렌더링 + 카메라 파이프라인
 

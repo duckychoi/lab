@@ -4,11 +4,18 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-09-18
+updated: 2026-09-20
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
 # 영상 AI SaaS 누적 인사이트
+
+> [!update] 📥 2026-09-20 — [[FastVideo]] 병합 갱신 + [[Higgsfield]] 5개월 공백 해소
+> - **[[FastVideo]]** 에 `FastVideo/FastVideo-FastH3-Comfy` **(c) 병합**. 🔴 *"재배치뿐"* 이 아니다 — 파일명이 **`pruned`·`int8_convrot`·`nvfp4_awq`** 로 **변형**을 담는다(미문서화). 🔴 **`cardData.base_model` 이 직전 부모를 건너뛰고 조부모(MiniMax-H3)를 가리킨다** — 산문은 맞고 메타데이터가 틀렸다.
+> - 🎯 **볼트 09-18 actionable 의 대상이 틀렸다**: *"FastH3 8-Step V2 를 돌려 E2E 를 재라"* 인데 **사용자의 95.6%는 Comfy 재포장본을 쓴다**(132,886 vs 1,390) → 실측 대상을 Comfy 패키지로 교체. → [[원본-파생-역전]]
+> - **[[Higgsfield]] 엔티티가 5개월(04-10 이후) 멈춰 있었다.** [[higgsfield-repo]] 인제스트로 드러났다 — 같은 회사가 **CLI ★555 · `skills` ★1,070(evals/ 포함, Claude·Codex·Cursor 3종 플러그인) · JS/Python SDK · MCP 브리지**를 운영 중이다. 🎯 **볼트 [[Higgsfield-벤치마킹]] 은 UI 기능을 벤치마킹해 왔는데 벤치마킹 대상이 UI 밖으로 나가고 있다.**
+> - **[[TensorRT-LLM]]**(ai-news 주도메인) — 🎯 **[[NVIDIA]] 가 영상 생성 가속으로 범위를 넓혔다**(GEMM/어텐션 양자화·Skip-Softmax). FastVideo와 **같은 문제를 반대쪽에서** 친다(모델 축소 vs 커널 교체). 🔴 볼트는 그 블로그를 **열지 않았다 — 분모 미상.**
+
 
 
 
