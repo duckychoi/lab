@@ -48,7 +48,7 @@ reliability: medium
 
 > [!insight] 📌 부수 발견 — **메모리 회사가 스킬을 배급한다**
 > README 189·192행: `npx skills add https://github.com/mem0ai/mem0 --skill mem0-oss-to-platform` · `/mem0-integrate` · `/mem0-test-integration` · `/mem0-oss-to-platform`
-> 🎯 **스킬 하나가 문자 그대로 "오픈소스 → 유료 플랫폼 이전"이다.** [[Vercel]](vercel-skills ★31,337 배급층) · [[higgsfield]](skills ★1,069) · [[SnailSploit]](Claude-Red) 에 이어 **스킬 배급 축의 네 번째 사례**이자, **상용 퍼널을 에이전트 스킬로 출하한 첫 사례**다.
+> 🎯 **스킬 하나가 문자 그대로 "오픈소스 → 유료 플랫폼 이전"이다.** [[Vercel]](vercel-skills ★31,337 배급층) · [[higgsfield-repo]](skills ★1,069) · [[SnailSploit]](Claude-Red) 에 이어 **스킬 배급 축의 네 번째 사례**이자, **상용 퍼널을 에이전트 스킬로 출하한 첫 사례**다.
 
 > [!note] 📌 볼트 실측 (2026-09-20, GitHub API)
 > ★**65,688**(raw **완전일치**) · fork **7,713** · **Apache-2.0** · Python · created **2023-06-20**(3년 3개월) · pushed 2026-09-19 · archived false

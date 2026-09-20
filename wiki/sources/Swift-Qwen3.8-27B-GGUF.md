@@ -70,7 +70,7 @@ reliability: medium
 > | 라이브러리 | gguf | transformers |
 >
 > 🎯 **다운로드는 파생이 12.5배 많고, 좋아요는 원본이 1.55배 많다.** 수집기 채널은 **다운로드로 선발**하므로 **구조적으로 파생을 고르고 원본을 버린다.** → 신설 [[원본-파생-역전]].
-> ✅ **`base_model_relation: quantized` 를 명시적으로 선언했다** — [[FastVideo-FastH3-Comfy]] 가 이 필드를 비워 `finetune` 으로 오라벨된 것과 대비된다. 🎯 **[[파생저장소-식별]] 의 탐지 키를 `base_model` 에서 `base_model_relation` 으로 한 칸 올려야 한다.**
+> ✅ **`base_model_relation: quantized` 를 명시적으로 선언했다** — [[FastVideo]] 병합분 가 이 필드를 비워 `finetune` 으로 오라벨된 것과 대비된다. 🎯 **[[파생저장소-식별]] 의 탐지 키를 `base_model` 에서 `base_model_relation` 으로 한 칸 올려야 한다.**
 > 🔴 **사슬은 3홉이다**: `Qwen/Qwen3.8-27B` → `ukisai/Swift-Qwen3.8-27b`(**LoRA 어댑터** — 원본 레포 태그에 `lora`, 카드 본문도 *"the Swift **adapter**"*) → 이 GGUF. `base_model` 은 **1홉만** 기록한다(개념 기존 기술과 일치).
 > 수집기 기록 다운로드 120,740 → 볼트 실측 **136,668**(+13.2%) · 좋아요 321 **일치**.
 
