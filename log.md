@@ -5,6 +5,8 @@
 ---
 
 
+## [2026-09-21] ingest | 대기 항목 없음
+
 ## [2026-09-20] ingest | 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)
 
 - **도메인**: ai-news 9 · local-llm 3 · slam-3dgs 1 (🔀 **재판정 3건**: [[ReactHuman]]→`slam-3dgs` · [[mem0]]·[[Grouped-Value-Attention]]→`local-llm`)
