@@ -55,6 +55,7 @@ reliability: high
 > - **[[Minima]]의 NVFP4 경로와 직접 비교** — 같은 모델, 다른 경로. 대조하면 볼트 최초의 양자화 경로 비교가 된다.
 
 ## 관련 페이지
+- [[ISTA-DASLab]]  *(09-22 연결)*
 - [[Qwen3.8-27B]] — **원본 모델**(Apache-2.0)
 - [[Minima]] — **같은 모델의 NVFP4 W4A4 경로**(원인 분석)
 - [[Qwen3.8-27B-GGUF]] · [[Qwen3.8-Flash-Next-GGUF]] — **반박 대상인 Unsloth 계열**

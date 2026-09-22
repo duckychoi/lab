@@ -4308,6 +4308,186 @@
    "height": 300,
    "color": "2",
    "text": "### ⚡ Actionable (09-20)\n① **[[docling]] × Bonsai-2 화이트페이퍼 PDF**\n   → 도구검증 + 사라진 eval 대체 + 그림수치 돌파 **3중** · 높음\n② **log.md 판정 3값화**(⬜ 미검증) · 높음\n③ **원본 backlog 요청**(`ukisai/Swift-Qwen3.8-27b`) · 높음\n④ [[FastVideo]] 실측 대상을 **Comfy 패키지**로 교체 · 중간\n⑤ [[mem0]] OSS SDK LoCoMo 직접 측정 · 중간"
+  },
+  {
+   "id": "b21-hdr",
+   "type": "text",
+   "x": -2400,
+   "y": 26000,
+   "width": 520,
+   "height": 300,
+   "color": "3",
+   "text": "# 📥 2026-09-21 배치 (13건)\n\n신규 소스 **13** · 병합 0\nai-news 11 · 🔀 video-saas 1 · local-llm 1\n🔴 수집기 *'없다'* 주장 **3건** 정정\n🎯 같은 **+11.7%** 가 상대/%p로 동시 도착"
+  },
+  {
+   "id": "b21-jsonrender",
+   "type": "text",
+   "x": -1820,
+   "y": 26000,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[json-render]] ★18,011\n카탈로그 제약형 Generative UI\n`@json-render/remotion` 실재\n🔴 *'every time'* = **사후검증 옵션**\n기본 Renderer는 미등록 타입을 **조용히 null**"
+  },
+  {
+   "id": "b21-bh",
+   "type": "text",
+   "x": -1320,
+   "y": 26000,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[browser-harness]] ★18,007\n로그인된 Chrome을 CDP로 직결\n에이전트가 헬퍼·스킬 누적\n🔴 PR 333 중 **50% 에이전트 흔적**\n🔴 **머지 09-07 이후 0건**"
+  },
+  {
+   "id": "b21-an",
+   "type": "text",
+   "x": -820,
+   "y": 26000,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Agent-Native]] ★6,218\n`defineAction` 1회 → tool·UI·HTTP·MCP·A2A·CLI\n🎯 browser-harness와 **정반대 노선**\n🔴 라이선스 표기 **4곳 불일치**"
+  },
+  {
+   "id": "b21-oc",
+   "type": "text",
+   "x": -320,
+   "y": 26000,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[OpenCreator]] ★12,152\nCodex CLI를 엔진으로 재사용\n🔴 09-05 개명 = **루트 커밋 교체**\n★의 **80%+** 가 구 KrillinAI 시절"
+  },
+  {
+   "id": "b21-qi",
+   "type": "text",
+   "x": 180,
+   "y": 26000,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Qwen-Image-2.1]] (원본)\n7B DiT 생성·편집 · **RGBA**\n🔴 Qwen-Image 계열 **첫 비상업** 라이선스\n원본 DL 6,523 ↔ Comfy **535,365**(82.1배)\n카드 벤치 0개"
+  },
+  {
+   "id": "b21-evo",
+   "type": "text",
+   "x": -2400,
+   "y": 26360,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[EvoOntology]] 업126\n온톨로지 MCP 서버 + 자기진화\n✅ 비용 부록 수치 전건 일치\n🎯 이득 57%가 **Tool 층**\n다른 백본 이식 시 **−6.6~−10.9**"
+  },
+  {
+   "id": "b21-c2s",
+   "type": "text",
+   "x": -1900,
+   "y": 26360,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Code2Skill]] (17일 차)\n소스코드 → 스킬 94.6만 채택\n**+11.7% = 상대**(절대 +5.0)\n🔴 비교 스킬뱅크가 **스킬없음보다 낮다**\n🔴 라이선스 3문서 모순"
+  },
+  {
+   "id": "b21-midas",
+   "type": "text",
+   "x": -1400,
+   "y": 26360,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[CodeMidas]] (Xiaomi MiMo)\n소스코드만으로 코딩 RL 환경 5,545\n**+11.7% = %p**(10.0→21.7)\n🔴 코드·데이터 **공개 0** · low"
+  },
+  {
+   "id": "b21-rw",
+   "type": "text",
+   "x": -900,
+   "y": 26360,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[RecreationWorld]] (Qwen)\n실행 중 앱을 보고 재구현\n평균 **58.06%** / 완전통과 **2.80%**\nGLM-5.3 해킹 시도 1.57× — 단 **텍스트 전용** 교란"
+  },
+  {
+   "id": "b21-paint",
+   "type": "text",
+   "x": -400,
+   "y": 26360,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Paint-Anything]] (ByteDance Seed)\nHEX 색 지정 생성·편집\n37.02→68.58(상대 +85.3%)\n🔴 *'HTML 미제공'* → **v2 HTML 200**\n가중치 미공개"
+  },
+  {
+   "id": "b21-taichu",
+   "type": "text",
+   "x": 100,
+   "y": 26360,
+   "width": 440,
+   "height": 300,
+   "color": "5",
+   "text": "### [[ZDTaichu5.0-9B]]\nQwen3.5-9B + C-RADIOv4-H\n18승 9패 → 일반 시각 **2승 5패**\n🔴 base_model **미설정** · TAU2 조건 상이"
+  },
+  {
+   "id": "b21-c-schema",
+   "type": "text",
+   "x": -2400,
+   "y": 26720,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 🆕 [[스키마-준수-보장]]\n① 제약 디코딩\n② 제공자 구조화 출력\n③ 사후 검증+수리\n[[json-render]] = ③ · [[reat]] = 0층\n🎯 **조용한 실패인가**가 핵심"
+  },
+  {
+   "id": "b21-c-unit",
+   "type": "text",
+   "x": -1900,
+   "y": 26720,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 📌 [[단위-불일치]]\n**같은 +11.7%**\n[[Code2Skill]] 상대 ↔ [[CodeMidas]] %p\n= **10배 차이**\n규칙: 초록 % 는 본문 문구로 확정"
+  },
+  {
+   "id": "b21-c-rev",
+   "type": "text",
+   "x": -1400,
+   "y": 26720,
+   "width": 440,
+   "height": 300,
+   "color": "6",
+   "text": "## 📌 [[원본-파생-역전]] 3번째\n[[Qwen-Image-2.1]] = **설계된 역전**\n(원본 README가 Comfy로 안내)\n반례 2: GGUF·사후학습 파생은 역전 없음"
+  },
+  {
+   "id": "b21-e-remotion",
+   "type": "text",
+   "x": -900,
+   "y": 26720,
+   "width": 440,
+   "height": 300,
+   "color": "4",
+   "text": "## 🆕 [[Remotion]]\n🎯 **본체 누락 4번째**\n13페이지 언급 · 엔티티 0\n= 사용자 [[reat]] 렌더 엔진\n편입 ≠ 채택(remotion DL 0.065%)"
+  },
+  {
+   "id": "b21-e-new",
+   "type": "text",
+   "x": -400,
+   "y": 26720,
+   "width": 440,
+   "height": 300,
+   "color": "4",
+   "text": "## 🆕 엔티티\n[[KrillinAI]] · [[BuilderIO]]\n[[ISTA-DASLab]] · [[TaichuAI]]"
+  },
+  {
+   "id": "b21-act",
+   "type": "text",
+   "x": 100,
+   "y": 26720,
+   "width": 460,
+   "height": 300,
+   "color": "2",
+   "text": "### ⚡ Actionable (09-22)\n① [[reat]] stack_root **zod 검증 루프**\n② 평균+완전통과 병기 규칙\n③ [[autoclip]] 한국어 영상 실측\n④ 초록 % 단위 확정 규칙\n⑤ DL 0 제외 전 **리다이렉트 추적**"
   }
  ],
  "edges": [
@@ -8167,6 +8347,118 @@
    "toNode": "b20-act",
    "fromSide": "bottom",
    "toSide": "left"
+  },
+  {
+   "id": "e-b21-hdr-b21-jsonrender",
+   "fromNode": "b21-hdr",
+   "toNode": "b21-jsonrender",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-hdr-b21-bh",
+   "fromNode": "b21-hdr",
+   "toNode": "b21-bh",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-hdr-b21-an",
+   "fromNode": "b21-hdr",
+   "toNode": "b21-an",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-hdr-b21-oc",
+   "fromNode": "b21-hdr",
+   "toNode": "b21-oc",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-hdr-b21-qi",
+   "fromNode": "b21-hdr",
+   "toNode": "b21-qi",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-jsonrender-b21-c-schema",
+   "fromNode": "b21-jsonrender",
+   "toNode": "b21-c-schema",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-jsonrender-b21-e-remotion",
+   "fromNode": "b21-jsonrender",
+   "toNode": "b21-e-remotion",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-c2s-b21-c-unit",
+   "fromNode": "b21-c2s",
+   "toNode": "b21-c-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-midas-b21-c-unit",
+   "fromNode": "b21-midas",
+   "toNode": "b21-c-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-qi-b21-c-rev",
+   "fromNode": "b21-qi",
+   "toNode": "b21-c-rev",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-oc-b21-e-new",
+   "fromNode": "b21-oc",
+   "toNode": "b21-e-new",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-an-b21-e-new",
+   "fromNode": "b21-an",
+   "toNode": "b21-e-new",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-taichu-b21-e-new",
+   "fromNode": "b21-taichu",
+   "toNode": "b21-e-new",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-jsonrender-b21-act",
+   "fromNode": "b21-jsonrender",
+   "toNode": "b21-act",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-rw-b21-act",
+   "fromNode": "b21-rw",
+   "toNode": "b21-act",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21-hdr-b21-evo",
+   "fromNode": "b21-hdr",
+   "toNode": "b21-evo",
+   "fromSide": "bottom",
+   "toSide": "top"
   }
  ]
 }

@@ -31,6 +31,7 @@ reliability: high
 > stitch-skills의 Build(Remotion) 플러그인 스킬 정의를 읽고, [[reat-render]]/[[reat-slides]]가 참고할 레이아웃·컴포지션 패턴을 추출한다.
 
 ## 관련 페이지
+- [[Remotion]]  *(09-22 연결)*
 - [[Google-Labs]]
 - [[design-md]]
 - [[Claude-Code-워크플로우]]

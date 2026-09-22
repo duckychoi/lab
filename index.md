@@ -1,8 +1,8 @@
 ---
 title: Wiki Index
-updated: 2026-09-20
-total_pages: 1250  # 2026-09-20 find 실측(sources 1123 · entities 70 · concepts 51 · synthesis 2 · domains 4 · queries 0) ← 09-19 1229
-total_sources: 1123  # 2026-09-20: +12 배치(13건 중 1건은 [[FastVideo]] 로 **(c) 병합** — 독립 페이지 미생성) · 신설 엔티티 5 · 개념 4 · 도메인 재판정 3. 🔴 **리터럴 필터 13/13 통과했으나 2건이 볼트와 실질 연결돼 있었다**: `prism-ml/Ternary-Bonsai-**2**-27B-gguf` ↔ 기보유 [[Bonsai-27B]](v1, Qwen3.6 기반) **세대 관계** · `ukisai/Swift-Qwen3.8-27B-GGUF` 는 볼트가 **09-19에 "미보유·대기 중"으로 적어 둔 바로 그 항목**. 🎯 **배치의 척추 — 볼트가 자(尺)로만 써 온 본체에 페이지가 없었다**: [[mem0]] ★65,688 이 [[VoiceMem]] *"Mem0 top-200 대비 30점 우위"* 와 [[TencentDB-Agent-Memory]] 경쟁자 목록에 **이름만** 있었다. [[browser-use]]·[[HuggingFace]] 에 이은 **본체 누락 3번째이자 가장 비싼 것** — 앞의 둘과 달리 **볼트가 그 위에 수치를 올려 뒀고**, 그 수치의 **분모가 둘**이었다(mem0 벤치는 *"Scores reflect Mem0's **managed platform**"*). 🔴 **수집기 요약 오류 6건 적발**: ① [[higgsfield-repo]] *"동명의 다른 회사"* → **동일 법인**(org.name = "Higgsfield Inc.") ② [[PageIndex]] *"비용 수치 없음"* → **README에 3종**($0.001/page·13초~4.5분·16.6배) ③ [[Swift-Qwen3.8-27B-GGUF]] *"GGUF 자체 측정치 아님"* → **표 3개 중 3번이 GGUF 전용 24 tier KLD 표** ④ [[Ternary-Bonsai-2-27B]] *"실측 1.72bit/5.9GB"* → **`(ideal)` 행**(출하물 1.75bit/5.95GB · 2.13bit/7.21GB, *"~47 tok/s"* 는 **7.21GB 쪽**) ⑤ [[FastVideo]] Comfy *"재배치뿐"* → **`pruned`·`int8_convrot`·`nvfp4_awq` 변형** ⑥ **논문 5/5 "게시일"이 전부 HF 데일리 등재일**(arXiv 게시와 6·7·5·5·1일 차) → 신설 [[게시일-이중화]]. 🔴 **볼트 자체 정정 2건**: [[Bonsai-27B]] *"1.71bit/7.2GB/9.4배"* 는 **산술이 닫히지 않는다**(두 행을 섞었다) · **그 페이지의 07-18 actionable 은 실행하면 안 됐다**(stock llama.cpp가 `Q2_0` 을 *"without any warning ... produces garbage"* 로 로드). 🎯 **신설 축 2개**: [[원본-파생-역전]](다운로드는 파생이 **12.5배**·**95.6배** 앞서고 **좋아요는 원본이 앞선다** → 다운로드 정렬 채널은 구조적으로 **포장을 수집하고 정체를 버린다**) · [[검사가능성-후퇴]]([[Prism-ML]] 이 v1→v2에서 `.eval_results/` **제거**하며 점수는 상향 · [[Agora]] 는 *"every claim is a commit anyone can check out"* 이라면서 **레포 코드 0**). ✅ **수집기 정확분**: 이슈/PR 분해 **5/5 합계 일치** · [[ReactHuman]] 초록 대조 **불일치 0** · `backlog` 배치당 2건 규칙 준수 · 한정어 보존 **6배치 연속**. 🔴 **볼트 자기 오류(경미)**: HF `siblings` 가 40개에서 잘린 줄 모르고 *"mmproj 없음"* 결론이 나올 뻔했다(실제 54개, 존재) → [[표-부분인용]] 이 **API 응답에서도 성립**. 🔀 도메인 재판정 3: [[ReactHuman]]→`slam-3dgs` · [[mem0]]·[[Grouped-Value-Attention]]→`local-llm`
+updated: 2026-09-22
+total_pages: 1269  # 2026-09-22 find 실측(sources 1136 · entities 75 · concepts 52 · synthesis 2 · domains 4 · queries 0) ← 09-20 1250
+total_sources: 1136  # 2026-09-22: 09-21 자동수집 13건 전량 신규 페이지(병합 0) · 신설 엔티티 5 · 개념 1 · 도메인 재판정 2([[autoclip]]→video-saas · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]→local-llm). 🎯 **본체 누락 4번째 — [[Remotion]]**(사용자 [[reat]] 렌더 엔진, 13페이지에서 언급만). 🔴 **수집기 "없다" 주장 3건 정정**([[autoclip]] ASR 내장 · [[Paint-Anything]] v2 HTML 존재 · raw DL 0 제외 레포가 개명 리다이렉트). 🎯 **같은 "+11.7%" 가 상대값([[Code2Skill]])과 %p([[CodeMidas]])로 동시 도착** → [[단위-불일치]]. 🔴 **라이선스 표기 문제 13건 중 4건**([[Qwen-Image-2.1]] Qwen-Image 계열 첫 비상업 · [[Agent-Native]] 4곳 불일치 · [[Code2Skill]] 3문서 모순 · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] 메타↔본문). ✅ 수집기 09-20 요청 4건 중 2건 완전 이행(publishedAt 병기 · base_model 3중 기재)
 ---
 
 # Wiki Index
@@ -12,6 +12,12 @@ total_sources: 1123  # 2026-09-20: +12 배치(13건 중 1건은 [[FastVideo]] �
 ---
 
 ## entities
+
+- [[Remotion]] — React 컴포넌트를 프레임 렌더해 영상으로 만드는 프레임워크 = **사용자 [[reat]] 파이프라인의 렌더 엔진**. 🎯 **볼트가 13페이지에서 언급만 하고 페이지가 없던 본체 누락 4번째**. 벤더들이 에이전트 출력 타깃으로 편입 중([[json-render]] · [[stitch-skills]] · [[openai-plugins]] · [[video-shotcraft]]) — 🔴 단 json-render remotion 렌더러 월 DL은 core의 **0.065%**(편입 ≠ 채택) *(NEW 2026-09-22)*
+- [[KrillinAI]] — 영상 번역·더빙 도구 → **2026-09-05 [[OpenCreator]] 로 개명 + 부모 없는 루트 커밋으로 코드 전면 교체**. 🎯 ★는 레포 ID에 붙어 새 제품이 옛 별을 상속(현 ★의 **80%+** 가 개명 전) *(NEW 2026-09-22)*
+- [[BuilderIO]] — [[Agent-Native]] 제작. **앱을 처음부터 에이전트 친화적으로 짓는** 노선(`defineAction` 1회 → 6채널). 🔴 라이선스 표기 4곳 불일치 · npm 버전 1,563개(하루 ~8개) *(NEW 2026-09-22)*
+- [[ISTA-DASLab]] — GSQ+RCO **텐서별 타입 예산 배분** 양자화([[Qwen3.8-27B-GSQ-RCO-GGUF]] high → [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] medium). 🔴 두 번째 카드가 첫 번째보다 약함 → **조직 단위 신뢰도 이전 금지**. ⬜ 소속 미확인 *(NEW 2026-09-22)*
+- [[TaichuAI]] — [[ZDTaichu5.0-9B]] 제작(Qwen3.5-9B + C-RADIOv4-H). 🔴 `base_model` 필드 0 · 카드 *"no trading"* 이 자기 표에 반증됨. ⬜ 법인 실체 미확인 *(NEW 2026-09-22)*
 
 - [[Prism-ML]] — HF `prism-ml`/GitHub `PrismML-Eng`. **삼진(ternary) 양자화 벤더이되 런타임까지 내려간다** — llama.cpp·MLX·mlx-swift **포크 3종**과 커스텀 타입(`PTQ1_0`/`PQ2_0`) + 하다마드 활성 런타임. 🎯 **포맷이 오용을 거부하게 설계**(회전을 메타데이터로 선언, 불일치 시 로드 거부) + *"stock llama.cpp는 `Q2_0` 을 경고 없이 로드하고 쓰레기를 낸다"* 고 **자기가 공개**. 🔴 그런데 v1의 `.eval_results/` 3종을 v2에서 **제거**하며 점수 주장은 올렸다 → [[검사가능성-후퇴]] 사례 1. 🔴 법인 실체·국적 미확인, 근거는 **자사 PDF 화이트페이퍼 단일 출처** *(NEW 2026-09-20)*
 - [[UkisAI]] — `ukisai`. **능력이 아니라 추론 길이를 줄이는** 파생 제작사(Swift = Qwen3.8-27B + **LoRA 어댑터**). 볼트 개입 깊이 축의 새 칸: 재포장 < 양자화 < **추론 예산 재조정** < 사후학습. ✅ **측정 품질 상급** — 표 3개(BF16 9행 · 양자화 · **GGUF 24 tier KLD/Top-p**), 재현 조건 명시, **미완 칸을 사유와 함께 비워 둠**. 🔴 그러나 **헤드라인이 자기 표를 넘는다**(*"<1% loss"* 가 9행 중 4행에서 거짓 · *"58.3%"* 는 18셀 중 최댓값, 평균은 37.2% · *"x1.95 가속"* 근거표 없음) — [[한정어-탈락]] 의 **첫 "저자 자기 탈락"** *(NEW 2026-09-20)*
@@ -111,6 +117,8 @@ total_sources: 1123  # 2026-09-20: +12 배치(13건 중 1건은 [[FastVideo]] �
 - [[Stanford-CRFM]] — [[marin]] 공동 주도(Open Athena 와). 실패·오염·패배를 수치로 공개하는 오픈 개발 · 역방향 오염 사례 → [[포맷-불일치-오염]] *(NEW 2026-09-19)*
 ## concepts
 
+- [[스키마-준수-보장]] — LLM JSON의 스키마 준수는 **① 제약 디코딩 ② 제공자 구조화 출력 ③ 사후 검증+수리** 중 어느 층에서 오는가. [[json-render]] 의 *"every time"* 은 ③(옵션)이고 기본 Renderer는 미등록 타입을 **조용히 null**. 사용자 [[reat]] 는 0층(LLM 자기점검) — 🎯 판정 질문: **어느 층 · 기본값인가 · 실패가 조용한가** *(NEW 2026-09-22)*
+
 - [[원본-파생-역전]] — **HF에서 파생의 다운로드가 원본을 압도하므로, 다운로드로 선발하는 채널은 구조적으로 파생을 고르고 원본을 버린다.** 실측: [[Swift-Qwen3.8-27B-GGUF]] 136,668 ↔ 원본 10,962(**12.5배**) · [[FastVideo]]-Comfy 132,886 ↔ 원본 1,390(**95.6배**). 🎯 **좋아요는 반대로 간다**(Swift 원본 497 > 파생 321) — **다운로드는 "어떤 파일을 쓰는가", 좋아요는 "어떤 모델을 아는가"를 센다.** 대가 2회 실측: [[Swift-Qwen3.8-27B-GGUF]] 수치의 주인이 원본이었고, [[FastVideo]] 09-18 actionable 의 실측 대상이 틀렸다. 🔴 표본 2·같은 유형(무거운 실행 아티팩트) *(NEW 2026-09-20)*
 - [[게시일-이중화]] — **HF 논문 항목에는 날짜가 둘이고(`publishedAt` ↔ `submittedOnDailyAt`) 최대 7일 벌어진다. "게시일"이라 적힌 값은 대개 후자다.** 배치 **5/5 전건** 확인(차이 6·7·5·5·1일). 🔴 **[[선발창-누락]] 의 "7일 창"이 어느 필드에 걸리는지 미정이었다** — [[Feyospace-v1]] 은 데일리 기준이면 창 안, arXiv 기준이면 12일 전이고 **실제로 `backlog` 로 배달됐다**(두 기준이 다른 처리를 낳았다). 🎯 **어느 하나가 옳은 날짜가 아니다** — 업보트 속도는 데일리 기준, 논문 나이는 게시 기준. **둘을 병기한다** *(NEW 2026-09-20)*
 - [[검사가능성-후퇴]] — **검사가능성을 가장 강하게 내세우는 쪽이 가장 검사 불가능한 아티팩트를 출하한다.** [[Prism-ML]]: v1의 `.eval_results/` 3종 + `eval-results` 태그를 **v2에서 제거**하며 점수 주장은 상향(80.49 계열 → 84.78). [[Agora]]: *"every claim is a commit anyone can check out and rerun"* 인데 레포 최상위가 **LICENSE·README·assets·index.html — 코드 0**(본문엔 §3.4 Prototype implementation 존재). 🎯 **Agora가 양쪽에 동시에 있다 — 설계는 공사, 출하는 후퇴. 후퇴는 악의가 아니라 우선순위의 결과다.** 판별: **주장이 아니라 파일 목록을 센다.** 🔴 표본 2 *(NEW 2026-09-20)*
@@ -189,6 +197,22 @@ total_sources: 1123  # 2026-09-20: +12 배치(13건 중 1건은 [[FastVideo]] �
 - [[포맷-불일치-오염]] *(잠정·표본 1)* — 다른 포맷으로 섞인 테스트셋이 점수를 **깎아** 오염을 숨긴다([[marin]] 32B GSM8K −22점). 저점 + 프롬프트 취약성 = 오염 신호 *(NEW 2026-09-19)*
 ## sources
 
+### 2026-09-21 배치 (ingest 2026-09-22 · 13건 전량 신규 · 병합 0 · 서브에이전트 4병렬 원문 대조)
+- [[autoclip]] 🔀`video-saas` — 자막 기반 LLM 하이라이트 자동 클리핑(★8,577·MIT). 🔴 **수집기 "ASR 없음" 정정 — faster-whisper 내장**, 분석 LLM도 qwen-plus 고정 아님. 시각 분석 없음(README 자인) · 🔴 *"Completed · 0 clips"* 조용한 실패 **11개월**
+- [[json-render]] — 카탈로그 제약형 Generative UI([[Vercel]] Labs ★18,011). 🔴 *"every time"* 은 **사후검증 옵션**, 기본 Renderer 무검증 → [[스키마-준수-보장]]. `@json-render/remotion` 실재 — [[reat]] 와 동일 구조
+- [[OpenCreator]] — Codex CLI를 엔진으로 쓰는 크리에이터 워크스페이스(★12,152). 🔴 **09-05 개명 = 루트 커밋 교체**, ★ 80%+ 는 [[KrillinAI]] 시절 · topics 전부 구 제품 기준
+- [[browser-harness]] — 로그인된 Chrome에 CDP 직결, 에이전트가 헬퍼 누적(★18,007·[[browser-use]] 자매). 🔴 수집기 "에이전트 PR 가능성" → **CONTRIBUTING이 에이전트 생성을 요구**, 열린 PR **50%** 흔적 · 🔴 **머지 09-07 이후 0건**
+- [[Agent-Native]] — `defineAction` 1회 → tool·UI·HTTP·MCP·A2A·CLI([[BuilderIO]]). ✅ 라이선스 4곳 불일치 재현(MIT 전문은 vscode-extension에만) · ⚠️ ★ raw 5,496 → 6,218 원인 미확인
+- [[EvoOntology]] — 데이터 에이전트용 자기진화 온톨로지 MCP(업보트 **126**, raw 56). ✅ 비용 부록 전건 일치. 🎯 이득의 **57%가 Tool 층** · 다른 백본 이식 시 **−6.6~−10.9** = 모델별 접근 계층. 🔴 초록 "백본 4" ↔ 본문 6
+- [[Code2Skill]] — GitHub 소스코드 → 스킬 94.6만 채택(🔴 **arXiv 대비 17일 차**). **+11.7% = 상대**(절대 +5.0). 🔴 비교 스킬뱅크 3종이 **스킬없음보다 낮다** · 공개 카드 750,748 · 🔴 라이선스 3문서 모순
+- [[CodeMidas]] — 소스코드만으로 코딩 RL 환경 5,545(Xiaomi MiMo). **+11.7% = %p**(10.0→21.7) → [[단위-불일치]]. 🔴 **코드·데이터 공개 0**(projectPage는 [[MiMo-V2.6-RL-Livestream]] 대시보드) · low
+- [[RecreationWorld]] — 실행 중 앱을 보고 재구현하는 CUA 환경·벤치(Qwen). 평균 **58.06%** / 완전통과 **2.80%**. 🔴 GLM-5.3 해킹 시도 1.57×는 **텍스트 전용·최다 턴** 교란 누락 · D.5 두 사례는 Gemini 3.7 Flash
+- [[Paint-Anything]] — HEX 색 지정 생성·편집(ByteDance Seed). 37.02→68.58(상대 +85.3%). 🔴 **"HTML 미제공" → v2 HTML 200** · FLUX.2-4B는 총 8B · 화질 개선 없음(22/58/20) · 가중치 미공개
+- [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] 🔀`local-llm` — 512전문가 MoE 상주 37.6~47.0GB, IQ3_XXS 99.4%. 🔴 2.40bpw는 트랜스포머만(파일 ~3.0) · 라이선스 메타↔본문 모순. ✅ **`Q2_0` = 업스트림 표준 타입, stock 플래그로 동작** → Bonsai 깨짐은 가중치 회전 탓(추정)
+- [[ZDTaichu5.0-9B]] — Qwen3.5-9B + C-RADIOv4-H 공간추론 VLM([[TaichuAI]]). ✅ 18승 9패 재집계 일치 → 🎯 일반 시각 **2승 5패**가 카드 *"no trading"* 반증. 🔴 원본 미조회분 보충(DL 9.3M) · 컨텍스트 3값 · vLLM 포크 필수
+- [[Qwen-Image-2.1]] — 7B DiT 생성·편집 + **RGBA**(Qwen). 🔴 **Qwen-Image 계열 첫 비상업 라이선스** · 원본 DL 6,523 ↔ Comfy 535,365(**82.1배**, 원본 README가 안내 = 설계된 [[원본-파생-역전]]) · 카드 벤치 0 · 텍스트 인코더 포함 실행 총량 ~16B+
+
+### 2026-09-20 배치 (13건 · 신규 12 · (c) 병합 1)
 - [[docling]] — 문서(PDF·Office·HTML·EPUB·**오디오**)를 `DoclingDocument` 단일 표현으로 수렴(★67,310·MIT·LF AI & Data·arXiv 3편). 🎯 [[하네스-설계-축]] 의 **가장 앞단**. 🔴 README에 정확도 표 0개 · **배치 유일 "이슈 적체형"**(issues:PR 6.4:1)
 - [[mem0]] — 🔴 **볼트가 8개월간 페이지 없이 자로만 써 온 본체**(★65,688). 🔴 **벤치 4행 중 2행만 인용돼 왔고 빠진 행이 유일한 하락 신호**(BEAM 1M 64.1 → 10M **48.6**) → [[Hermes]] 적용 **NO** 근거. 🔴 점수는 **매니지드 플랫폼**의 것 → [[VoiceMem]] "30점 우위"의 **분모가 둘**. 🎯 **하네스는 열고 피측정물은 닫았다** · 상용 퍼널을 스킬로 배급
 - [[PageIndex]] — 벡터DB·청킹 제거, LLM이 트리를 탐색하는 추론 기반 RAG(★35,766·MIT). 🎯 [[관련성-판단-주체]] **두 번째 독립 사례**. 🔴 **수집기 "비용 수치 없음" 정정** — $0.001/page · 13초~4.5분 · 420쪽 **16.6배** 실재. ✅ 벤치가 실패 모드를 격리 · ⚠️ 자기 데이터셋 · 🔴 정확도는 그림 안

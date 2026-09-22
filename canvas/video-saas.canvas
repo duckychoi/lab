@@ -319,6 +319,46 @@
    "height": 300,
    "color": "5",
    "text": "### [[TensorRT-LLM]] ★14,676 (교차)\n[[NVIDIA]] 런타임이 **영상 가속**으로\nGEMM/어텐션 양자화 · Skip-Softmax\n\n🎯 [[FastVideo]] 와 **같은 문제 반대쪽**\n모델 축소 ↔ 커널 교체\n\n🔴 볼트는 그 블로그를 **열지 않았다**\n= [[FastVideo]] 와 같은 **분모 미상**"
+  },
+  {
+   "id": "b21vs-hdr",
+   "type": "text",
+   "x": -620,
+   "y": 3920,
+   "width": 400,
+   "height": 300,
+   "color": "3",
+   "text": "# 📥 2026-09-21\n\n🔀 [[autoclip]] 재판정\n+ [[Remotion]] 엔티티 신설\n+ [[json-render]]·[[Qwen-Image-2.1]] 교차"
+  },
+  {
+   "id": "b21vs-autoclip",
+   "type": "text",
+   "x": -160,
+   "y": 3920,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### [[autoclip]] ★8,577\n자막 기반 LLM 하이라이트 클리핑\n🔴 수집기 *'ASR 없음'* → **faster-whisper 내장**\n시각 분석 **없음**(README 자인)\n🔴 *'0 clips 완료'* 조용한 실패 11개월"
+  },
+  {
+   "id": "b21vs-remotion",
+   "type": "text",
+   "x": 360,
+   "y": 3920,
+   "width": 440,
+   "height": 300,
+   "color": "4",
+   "text": "## 🆕 [[Remotion]]\n사용자 [[reat]] 렌더 엔진\n벤더 편입: json-render · stitch-skills\n· openai-plugins · video-shotcraft"
+  },
+  {
+   "id": "b21vs-schema",
+   "type": "text",
+   "x": 860,
+   "y": 3920,
+   "width": 420,
+   "height": 300,
+   "color": "6",
+   "text": "## 🆕 [[스키마-준수-보장]]\nreat에 **zod → validate → 재프롬프트**\n빨간 박스(시끄러운 실패)는 유지"
   }
  ],
  "edges": [
@@ -503,6 +543,34 @@
    "id": "e-b20vs-hdr-b20vs-trt",
    "fromNode": "b20vs-hdr",
    "toNode": "b20vs-trt",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21vs-hdr-b21vs-autoclip",
+   "fromNode": "b21vs-hdr",
+   "toNode": "b21vs-autoclip",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21vs-hdr-b21vs-remotion",
+   "fromNode": "b21vs-hdr",
+   "toNode": "b21vs-remotion",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21vs-remotion-b21vs-schema",
+   "fromNode": "b21vs-remotion",
+   "toNode": "b21vs-schema",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21vs-autoclip-b21vs-schema",
+   "fromNode": "b21vs-autoclip",
+   "toNode": "b21vs-schema",
    "fromSide": "bottom",
    "toSide": "top"
   }

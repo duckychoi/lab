@@ -3294,3 +3294,29 @@ AIME 2024 cons@64:  7B 83.3  →  32B 83.3   =   0.0점
 2. 그림 속 수치 미전사(ModularRSI 세대별 곡선 · RSIAgent 그림 · agent-lightning 학습 곡선)
 3. 코드 미실행 전건 — gliner2.5 한국어 조사 처리 · gitdiagram 미검증 노드 UI 표시
 4. [[tabfm-1.0.0]] ↔ LimiX-2 본문 TabFM 동일성
+
+---
+
+## 2026-09-22 — 09-21 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)
+
+### 🎯 관찰 1 — "없다/미상"이라는 수집기 주장이 이번에도 가장 많이 틀렸다
+[[autoclip]] *"README에 Whisper/ASR 언급 없음"* → **README 114·161행 + `whisper_runtime.py`** · [[Paint-Anything]] *"arXiv HTML 미제공"* → **v2 HTML 200**(v1만 404) · [[RecreationWorld]] 코드 ★1 → 하루 뒤 ★45. 🎯 **부재 주장은 존재 주장보다 비싸다**(09-20 [[PageIndex]] 교훈) — 3배치 연속 같은 형태.
+
+### 🎯 관찰 2 — 같은 "+11.7%" 가 상대값과 %p 로 동시에 도착했다
+[[Code2Skill]](상대, 절대 +5.0점) ↔ [[CodeMidas]](%p, 상대로는 +117%) → [[단위-불일치]] 최선의 대조 사례. ✅ 수집기가 CodeMidas 쪽을 **본문 §4.2까지 열어서** 먼저 잡았다.
+
+### 🎯 관찰 3 — 평균과 완결은 다른 축이다
+[[RecreationWorld]]: GPT-6 Astra 평균 **58.06%** / 전 테스트 통과 **2.80%**, 논문이 *"평균을 완성 확률로 읽지 말라"* 고 스스로 적음. [[ZDTaichu5.0-9B]] 18승 9패도 **표별로 쪼개면**(일반 시각 2승 5패) 카드의 *"no trading"* 을 반증. 🎯 **집계 한 줄은 분포를 지운다.**
+
+### 🎯 관찰 4 — 에이전트가 쓰는 웹: 사후 개통 vs 선천 설계
+[[browser-harness]](로그인된 Chrome 전체를 CDP로 넘김 · 에이전트가 헬퍼를 누적 · **머지 09-07 이후 0건**) ↔ [[Agent-Native]]([[BuilderIO]] · `defineAction` 1회 → tool/UI/HTTP/MCP/A2A/CLI). 같은 날 트렌딩에 **정반대 노선**이 나란히 섰다.
+
+### 🎯 관찰 5 — 라이선스가 조용히 닫힌다
+[[Qwen-Image-2.1]] — 직전 Qwen-Image 계열 전부 Apache-2.0 → **처음으로 비상업(Qwen Research License)**. [[Agent-Native]] 4곳 불일치 · [[Code2Skill]] 3문서 모순 · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] 메타 apache ↔ 본문 원본 상속(qwen-community-1.0). 🔴 **이번 배치 13건 중 4건이 라이선스 표기에 문제.**
+
+### 🆕 신설
+엔티티 5: [[Remotion]](🎯 **본체 누락 4번째 — 사용자 자신의 렌더 엔진, 13페이지에서 언급만**) · [[KrillinAI]] · [[BuilderIO]] · [[ISTA-DASLab]] · [[TaichuAI]]
+개념 1: [[스키마-준수-보장]](제약 디코딩 / 제공자 구조화 출력 / 사후 검증+수리 — [[json-render]] 는 3층, [[reat]] 는 0층)
+
+### 🔀 도메인 재판정 2건
+[[autoclip]] → `video-saas`(제품 전체가 영상 자동화) · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] → `local-llm`(27B 자매와 동일 분류)

@@ -596,3 +596,15 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 
 > [!action] Hermes/ChinameBot
 > ① gliner2.5 한국어 10문장 실측(whitespace vs char 분할 · 조사 포함 · CPU 지연) ② Xing4.0 llama.cpp#29012 · vllm#57135 병합 추적
+
+---
+
+## 2026-09-22 — [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] (raw `ai-news` → 재판정 `local-llm`)
+
+> [!insight] 🎯 512전문가 MoE를 **상주 37.6~47.0GB** 로
+> 파일 66.4~75.8GB 중 **28.8GB가 n-gram 임베딩 샤드**라 mmap으로 디스크에 둔다. 권장 IQ3_XXS: Task avg 92.57 vs BF16 93.12(**99.4%**). 🔴 단 *"2.40bpw"* 는 트랜스포머 가중치 기준 — 파일 평균은 **약 3.00/3.07/3.43**. 속도(Q2_0 디코드 93.79 t/s)는 **하드웨어 미기재**(카드 228행 전문 확인).
+> ✅ 볼트 미해결 2건 해소: `-lm mmap --lazy-mode on` 은 **stock llama.cpp 플래그**, `Q2_0` 은 **업스트림 GGML 표준 타입**([[Prism-ML]] 기여) → [[Ternary-Bonsai-2-27B]] 의 깨짐은 **타입이 아니라 가중치 회전 탓**으로 추정(⬜ 실행 미검증).
+
+### Hermes/ChinameBot 적용
+**NO(현 하드웨어 기준)** — 상주 37.6GB 최소. 🎯 다만 *"임베딩 테이블을 mmap으로 디스크에"* 는 소형 모델에도 쓰이는 **메모리 계층 설계 패턴**([[Edge0]] 의 전문가 스트리밍과 같은 계열).
+📌 [[ISTA-DASLab]] 신설 — **27B 자매(high)의 판정을 이 카드로 옮기지 않는다**(medium: Unsloth 대조·perplexity 누락, 라이선스 모순 복사).

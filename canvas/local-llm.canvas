@@ -739,6 +739,36 @@
    "height": 280,
    "color": "5",
    "text": "### [[Ternary-Bonsai-2-27B]] (교차)\n**5.95GB(PTQ1_0)로 27B급**\n\n🔴 **stock llama.cpp 불가**\n`Q2_0` 은 *무경고 쓰레기 출력*\n→ [[Bonsai-27B]] 07-18 actionable **무효**\n\n🎯 같은 베이스 저비트 둘이 같은 배치\nBonsai 1.75bit ↔ Swift IQ2_XXS 9.1GB"
+  },
+  {
+   "id": "b21ll-hdr",
+   "type": "text",
+   "x": -1200,
+   "y": 8800,
+   "width": 420,
+   "height": 300,
+   "color": "3",
+   "text": "# 📥 2026-09-21 (1건)\n\n🔀 재판정 `ai-news`→`local-llm`\n[[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]"
+  },
+  {
+   "id": "b21ll-gguf",
+   "type": "text",
+   "x": -720,
+   "y": 8800,
+   "width": 460,
+   "height": 300,
+   "color": "5",
+   "text": "### [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]\n512전문가 MoE · 상주 **37.6~47.0GB**\n28.8GB 임베딩 샤드 → mmap\nIQ3_XXS **99.4%** of BF16\n🔴 2.40bpw는 트랜스포머만(파일 ~3.0)\n✅ Q2_0 = 업스트림 표준 타입"
+  },
+  {
+   "id": "b21ll-ista",
+   "type": "text",
+   "x": -200,
+   "y": 8800,
+   "width": 400,
+   "height": 300,
+   "color": "4",
+   "text": "## 🆕 [[ISTA-DASLab]]\n텐서별 타입 예산 배분(GSQ+RCO)\n🔴 두 번째 카드가 첫 번째보다 약함\n→ 조직 단위 신뢰도 이전 금지"
   }
  ],
  "edges": [
@@ -1248,6 +1278,20 @@
    "id": "e-b20ll-hdr-b20ll-bonsai",
    "fromNode": "b20ll-hdr",
    "toNode": "b20ll-bonsai",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21ll-hdr-b21ll-gguf",
+   "fromNode": "b21ll-hdr",
+   "toNode": "b21ll-gguf",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b21ll-gguf-b21ll-ista",
+   "fromNode": "b21ll-gguf",
+   "toNode": "b21ll-ista",
    "fromSide": "bottom",
    "toSide": "top"
   }

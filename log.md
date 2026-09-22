@@ -5,6 +5,47 @@
 ---
 
 
+## [2026-09-22] ingest | 09-21 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)
+
+- **도메인**: ai-news 11 · video-saas 1 · local-llm 1 (🔀 **재판정 2건**: [[autoclip]]→`video-saas` · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]→`local-llm`)
+- **추가 페이지**: **19개** (소스 13 · 엔티티 5 · 개념 1) | **업데이트 페이지**: **25개**
+  - 소스 신설: [[autoclip]] · [[json-render]] · [[OpenCreator]] · [[browser-harness]] · [[Agent-Native]] · [[EvoOntology]] · [[Code2Skill]] · [[CodeMidas]] · [[RecreationWorld]] · [[Paint-Anything]] · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] · [[ZDTaichu5.0-9B]] · [[Qwen-Image-2.1]]
+  - 엔티티 신설: [[Remotion]] · [[KrillinAI]] · [[BuilderIO]] · [[ISTA-DASLab]] · [[TaichuAI]]
+  - 개념 신설: [[스키마-준수-보장]]
+  - 갱신: 개념 5([[단위-불일치]] · [[원본-파생-역전]] · [[게시일-이중화]] · [[에이전트-스킬]] · [[파생저장소-식별]]) · 소스 역링크 11 · domains 3(ai-news · local-llm · video-saas) · canvas 3 · index.md · actionable.md · raw.md
+- **처리 방식**: 서브에이전트 4병렬로 원문(GitHub API·README 전문·HF API·arXiv HTML/PDF) 대조 → 통합은 직접
+- 📌 참고: 09-21 로그의 *"대기 항목 없음"* 은 raw.md 수정 시각(09-21 09:06)으로 보아 **수집기 배달 전에 실행된 것으로 추정**(⬜ 실행 시각 미기록이라 확인 불가)
+
+### 🎯 핵심 인사이트 (요약 아닌 배운 것)
+1. 🎯 **볼트가 사용자 자신의 렌더 엔진을 페이지 없이 13번 언급했다.** [[Remotion]] — [[browser-use]]·[[HuggingFace]]·[[mem0]] 에 이은 **본체 누락 4번째**. 모아 보니 벤더들이 Remotion을 **에이전트 출력 타깃으로 편입** 중이지만, [[json-render]] remotion 렌더러 월 DL은 core의 **0.065%** — **편입 ≠ 채택**.
+2. 🎯 **"every time"은 어느 층에서 오는가.** [[json-render]] 의 스키마 준수는 **사후검증 옵션**이고 기본 Renderer는 미등록 타입을 **조용히 null**. 사용자 [[reat]] 는 LLM 자기점검(0층)뿐이지만 **빨간 박스(시끄러운 실패)는 json-render보다 낫다** → 신설 [[스키마-준수-보장]], 최우선 actionable.
+3. 🎯 **같은 "+11.7%" 가 10배 다른 뜻으로 같은 날 도착했다** — [[Code2Skill]] 상대(절대 +5.0) ↔ [[CodeMidas]] %p(상대로는 +117%). 저자가 본문에서 *percentage points* 로 정의하고 초록엔 `%` 를 썼다. **초록의 `%` 는 단위가 아니라 기호다.**
+4. 🎯 **평균은 완결을 말하지 않는다** — [[RecreationWorld]] 58.06% / 전 테스트 통과 2.80%. [[ZDTaichu5.0-9B]] 18승 9패도 표별로 쪼개면 일반 시각 **2승 5패**가 카드의 *"no trading"* 을 반증.
+5. 🎯 **스킬 생산이 자동화되자 병목이 검수로 옮겨 갔다** — [[browser-harness]] CONTRIBUTING이 에이전트 생성을 **요구**, 열린 PR 50%에 흔적, **머지는 09-07 이후 0건**. 반대편에 [[Agent-Native]]: 웹을 사후에 뚫지 않고 처음부터 액션층을 준다.
+6. 🎯 **라이선스가 조용히 닫힌다** — 13건 중 **4건** 표기 문제. 최대 뉴스는 [[Qwen-Image-2.1]] **Qwen-Image 계열 첫 비상업** 전환인데 수집기가 놓쳤다.
+7. ✅ **볼트 미해결 해소 1건** — [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] 로 `Q2_0` 이 **업스트림 GGML 표준 타입**임이 확인됨 → 09-20 [[Ternary-Bonsai-2-27B]] 깨짐은 타입이 아니라 **가중치 회전 탓**으로 추정(⬜ 실행 미검증).
+
+### 🔴 수집기 요약 오류 (주요 5 + 경미 3)
+[[autoclip]] *"ASR 없음"* → **faster-whisper 내장** · [[Paint-Anything]] *"HTML 미제공"* → **v2 HTML 200** · Qwen-Image-2.1 파생 *"DL 0"* → **307 리다이렉트(DL 33,232)** · [[RecreationWorld]] GLM-5.3 **교란 2개 누락** · [[Qwen-Image-2.1]] **계열 라이선스 전환 누락**. 경미: HMMT Feb 2026 한정 · EvoOntology 백본 4↔6 · 2.40bpw 트랜스포머 기준.
+
+### ✅ 수집기 정확분 (공정하게)
+09-20 요청 중 **publishedAt 병기 5/5 · base_model 3중 기재 3/3 완전 이행** · 이슈/PR 분해 5/5 · 한정어 보존 **7배치 연속** · 🎯 **[[CodeMidas]] `%`→`%p` 를 본문 §4.2까지 열어 먼저 잡음** · [[json-render]] *"보장 방식 미명시"* 판정 정확 · [[OpenCreator]] *"★ 대부분 전신 시기"* 정확(볼트 실측 80%+) · [[Agent-Native]] 라이선스 4곳 불일치 전부 재현.
+
+- **canvas 업데이트**: **YES** — ai-news 431→**449** 노드 · 541→**557** 엣지 / local-llm 74→77 · 72→74 / video-saas 32→36 · 26→30
+- **actionable 추가**: **YES** — 5건(최우선: **[[reat]] stack_root zod 검증 루프** · 볼트 규칙 2건 완료 처리)
+- **index.md**: 갱신(1250 → **1269**: sources 1136 · entities 75 · concepts 52 · synthesis 2 · domains 4)
+- **raw.md**: **13건 전량 삭제 → 대기 0건** + 09-21 판정(이행 현황 · 오류 · **요청 4건**: 초록 % 단위 태그 · 집계+분포 병기 · DL 0 리다이렉트 추적 · 부재 주장에 확인 범위)
+
+### 🔴 미해결 (다음으로)
+1. **코드 실행 0건 유지** — [[autoclip]] 한국어 실측 · [[reat]] zod 루프 · [[EvoOntology]] Build 단계
+2. **[[json-render]] ↔ [[reat]] 대조가 로컬 사본(03-31) 기준** — 최신 reat 로 재확인 필요
+3. **블로그 미열람** — Qwen-Image-2.1 블로그(벤치 표 존재 시 판정 변경) · browser-use 블로그
+4. **그림 속 수치 미전사** — [[CodeMidas]] SWE-bench Pro·RepoZero
+5. ⬜ [[Agent-Native]] ★ 급증(+722) 원인 · [[ISTA-DASLab]]·[[TaichuAI]] 소속 미확인
+6. 09-20부터 이어진 `⬜ 미검증` 3값 판정 도입 — 이번 로그부터 ⬜ 표기를 **실사용 시작**(규약 명문화는 아직)
+
+---
+
 ## [2026-09-21] ingest | 대기 항목 없음
 
 ## [2026-09-20] ingest | 자동수집 배치 13건 (GitHub 5 · HF논문 5 · HF모델 3)

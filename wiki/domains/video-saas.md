@@ -363,3 +363,17 @@ arXiv 2609.15863 · 업보트 46 · 32B 공유 멀티모달 확산 트랜스포�
 
 초록이 **데이터 파이프라인을 별도 기여로** 서술한다: 영상 정제 · 주체 연관 · 멀티모달 주석 · **정렬된 제어 구축** → 멀티샷 오디오비주얼 큐레이션 코퍼스.
 📌 **모델 구조보다 "제어 신호가 정렬된 데이터를 만드는 일"이 복제하기 어려운 부분**일 가능성.
+
+---
+
+## 2026-09-22 — 자막 기반 자동 클리핑 · 영상 렌더러로서의 Remotion · RGBA 에셋
+
+> [!insight] 🎯 [[autoclip]](raw `ai-news` → 재판정 `video-saas`) — **화면을 보지 않는 하이라이트 추출**
+> 다운로드 → faster-whisper 전사(🔴 수집기 *"ASR 없음"* 정정) → LLM 대강·구간·점수 → FFmpeg. README 175행이 **시각 분석 없음**을 자인. 🔴 *"Completed · 0 clips"* 조용한 실패가 이슈 #11(2025-10-09)부터 **약 11개월**, v1.3(09-20)에서 수정.
+> **기능 벤치마킹**: 내 `/down-video` → `/down-analysis` 는 **시각 분석이 있다** — autoclip 대비 차별점이 바로 그것. 반대로 autoclip의 **"구간 점수 → 합집"** 단계는 쇼츠 자동화에 이식 가치.
+
+> [!insight] 🎯 [[Remotion]] 엔티티 신설 — 벤더들이 Remotion을 에이전트 출력 타깃으로 편입 중
+> [[json-render]] `@json-render/remotion` · [[stitch-skills]] · [[openai-plugins]] · [[video-shotcraft]]. 🔴 단 json-render remotion 렌더러 월 3,290 DL(core의 0.065%) — **편입 ≠ 채택**.
+> 🎯 **[[reat]] 에 바로 쓸 것**: [[스키마-준수-보장]] 3층(zod 스키마 → validate → 재프롬프트 → 최후 수리). reat의 **미등록 타입 빨간 박스**는 json-render의 조용한 `null` 보다 나으니 유지.
+
+> [!note] [[Qwen-Image-2.1]] — RGBA 투명 에셋·9:16(1536×2752)·참조 10장 = 자막/스티커 에셋 생성에 직결. 🔴 **비상업 라이선스라 SaaS 탑재 불가** — 기능 레퍼런스로만. [[Paint-Anything]](HEX 색 지정)은 가중치 미공개. [[OpenCreator]](구 [[KrillinAI]])는 Codex CLI를 엔진으로 쓰는 크리에이터 워크스페이스 — ★의 80%+ 가 개명 전 번역·더빙 도구 시절 것.

@@ -53,6 +53,7 @@ reliability: high
 > **MCP 서버가 실제로 포함돼 있는가**(토픽만 확인, 코드 미확인). · **Remotion 대비 실측 렌더 속도**는 양쪽 다 미공개.
 
 ## 관련 페이지
+- [[Remotion]]  *(09-22 연결)*
 - [[Seedance]] · [[MiniMax-H3]] · [[Higgsfield]] · [[Minimax-h3_Singularity]] — **모델 축**(이 페이지는 렌더 축)
 - [[AI-영상-생성-2026]] · [[국소-수리-원리]] · [[에이전트-스킬]] · [[검사가능성-공사]]
 - [[browser-use]] · [[camofox-browser]] — 같은 배치, **puppeteer/브라우저를 인프라로 쓰는** 공통 축

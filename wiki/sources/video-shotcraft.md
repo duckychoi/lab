@@ -41,6 +41,7 @@ reliability: high
 > 워크벤치 가이드(`workbench/GUIDE.md`)는 **중국어**다. Apache-2.0 이라 라이선스는 문제 없음.
 
 ## 관련 페이지
+- [[Remotion]]  *(09-22 연결)*
 - [[AI-영상-생성-2026]]
 - [[에이전트-스킬]]
 - [[Claude-Code-워크플로우]]
