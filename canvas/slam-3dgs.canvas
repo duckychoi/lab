@@ -1,514 +1,532 @@
 {
- "nodes": [
-  {
-   "id": "domain-hub",
-   "type": "text",
-   "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
-   "x": -100,
-   "y": -60,
-   "width": 260,
-   "height": 120,
-   "color": "3"
-  },
-  {
-   "id": "cluster-slam",
-   "type": "text",
-   "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
-   "x": -400,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "5"
-  },
-  {
-   "id": "cluster-3dgs",
-   "type": "text",
-   "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
-   "x": -100,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "2"
-  },
-  {
-   "id": "cluster-camera",
-   "type": "text",
-   "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
-   "x": 200,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "sl-worldsculpt",
-   "type": "text",
-   "text": "## [[WorldSculpt]] *(2026-09-07)*\n2609.05416 · 업15\n\n**통짜 재구성 → 분해 가능성**\n단일 오브젝트 prior(Pixal3D)만\n학습했는데 **장면 학습 없이**\n수백 오브젝트 가림 장면 일반화\n\n🔗 **3DGS 월드(Marble·HY-World 2.0)\n→ compositional 메시 변환**\n\n**UE-MeshyScene**(GT 메시+주석)\n⚠️ 절대 수치 전무 · 실시간성 불명\n🔴 분할이 선행 전제일 가능성",
-   "x": -140,
-   "y": 430,
-   "width": 340,
-   "height": 300,
-   "color": "6"
-  },
-  {
-   "id": "sl-gap0907",
-   "type": "text",
-   "text": "## ⚠️ 추적 공백 (09-07)\n\n**Pixal3D** — 기반 prior, 1순위\n**Marble** · **HY-World 2.0**\n\n→ [[월드모델]] 축 공백",
-   "x": 240,
-   "y": 430,
-   "width": 260,
-   "height": 300,
-   "color": "3"
-  },
-  {
-   "id": "s0908-emb",
-   "type": "text",
-   "text": "## [[EmbodiedSkills]] (업 5·저자 17)\n\n스킬 결정 = **실행 제안**으로 격하\n제안→사전검사→실행→사후검증\n**고정 인터페이스** = VLA 교체 자유\n\nRoboTwin 86.20% · LIBERO 97.40%",
-   "x": -330,
-   "y": 850,
-   "width": 380,
-   "height": 230,
-   "color": "4"
-  },
-  {
-   "id": "s0908-mem",
-   "type": "text",
-   "text": "## 🔴 RMBench 기억의존 **12.5%**\n\n검증 루프는 전부\n**현재 상태**에 대한 판단\n→ *\"아까 뭘 했나\"* 자리가 없다\n\n→ [[에이전트-메모리-레이어]]\n**검증 잘 지어도 메모리는 별개**",
-   "x": 90,
-   "y": 850,
-   "width": 360,
-   "height": 230,
-   "color": "1"
-  },
-  {
-   "id": "s0908-conv",
-   "type": "text",
-   "text": "# 🎯 2도메인 독립 수렴\n\n[[EmbodiedSkills]] (로봇 제어)\n↕ 서로 인용 안 함\n[[TGOPD]] (LLM 학습)\n\n같은 골격: *\"신뢰되는지 먼저 검증하고\n통과할 때만 쓴다\"*\n→ [[검사가능성-공사]] 최강 근거",
-   "x": -150,
-   "y": 1120,
-   "width": 420,
-   "height": 230,
-   "color": "6"
-  },
-  {
-   "id": "s0908-gap",
-   "type": "text",
-   "text": "## ⚠️ 추적 공백 3건\n\n**RoboTwin 2.0 · LIBERO · RMBench**\n볼트에 페이지 없음\n\n+ 실시간성 **미확인**\n(초록에 지연시간 수치 전무)",
-   "x": 310,
-   "y": 1120,
-   "width": 340,
-   "height": 230,
-   "color": "3"
-  },
-  {
-   "id": "b0909-sl",
-   "type": "text",
-   "text": "# 2026-09-09 배치\n\n단안 깊이추정 1-step 하강",
-   "x": "-100",
-   "y": "1570",
-   "width": "260",
-   "height": "110",
-   "color": "4"
-  },
-  {
-   "id": "s0909sl-mar",
-   "type": "text",
-   "text": "### Marigold V2\nHF 데일리 1위(업 24)\n다단계 flow-matching DiT → **1-step**\n**KITTI·ETH3D AbsRel 16–26% 개선**\n표면법선·본질이미지분해도 SOTA\n[[Marigold-V2]]",
-   "x": "-420",
-   "y": "1770",
-   "width": "260",
-   "height": "180",
-   "color": "5"
-  },
-  {
-   "id": "n0909sl-how",
-   "type": "text",
-   "text": "### 처방 2가지\n① 내부 표현을 **GT 의미 피처와 정렬**\n② **Sinkhorn 손실** 2단계 파인튜닝\n(+ 필요시 양자화)",
-   "x": "-120",
-   "y": "1770",
-   "width": "250",
-   "height": "160",
-   "color": "6"
-  },
-  {
-   "id": "a0909sl-1",
-   "type": "text",
-   "text": "### 🔬 HF Space 즉시 테스트\n내 소스 이미지로 먼저 실행\n판단 기준: **머리카락·잎사귀 경계**\n⚠️fps 수치 논문에 없음",
-   "x": "160",
-   "y": "1770",
-   "width": "250",
-   "height": "160",
-   "color": "2"
-  },
-  {
-   "id": "n0911S-sb",
-   "type": "text",
-   "text": "### [2026-09-11] 교차참조\n[[SpatialBlock]] (도메인 `ai-news`)\n실장면 공간QA 라벨의 급소 =\n**외부 인지 모듈 의존으로 노이즈**",
-   "x": -300,
-   "y": 2020,
-   "width": 330,
-   "height": 170,
-   "color": "4"
-  },
-  {
-   "id": "n0911S-why",
-   "type": "text",
-   "text": "🎯 이 도메인에 특히 아픔\n깊이추정·SLAM으로 라벨을 만들면\n**그 모듈 오차가 라벨에 섞인다**\n→ [[검사가능성-공사]]",
-   "x": 60,
-   "y": 2020,
-   "width": 330,
-   "height": 170,
-   "color": "1"
-  },
-  {
-   "id": "n0911S-how",
-   "type": "text",
-   "text": "우회로: **합성 블록쌓기 15k**\n3D→2D 투영·시점 변환·구조 결합\n+앵커 유도 색 변조\n**정답이 생성 규칙에서 직접 나온다**",
-   "x": 420,
-   "y": 2020,
-   "width": 330,
-   "height": 170,
-   "color": "5"
-  },
-  {
-   "id": "n0911S-act",
-   "type": "text",
-   "text": "> [!action]\n공간 라벨을 만들 일이 생기면 먼저 묻기:\n**외부 인지 모듈로 만들 것인가,\n생성 규칙에서 정답이 나오는 합성 과제인가**\n⚠️정량 수치는 초록에 없음",
-   "x": 60,
-   "y": 2220,
-   "width": 330,
-   "height": 180,
-   "color": "2"
-  },
-  {
-   "id": "batch-0913-slam-3dgs",
-   "type": "text",
-   "text": "# 2026-09-13 배치\n\n원문 API 실호출 + 표 전수 대조\n중복 0 · 한정어 탈락 0건",
-   "x": -1200,
-   "y": 2560,
-   "width": 300,
-   "height": 140,
-   "color": "6"
-  },
-  {
-   "id": "s-FreeFlow",
-   "type": "text",
-   "text": "## [[FreeFlow]]\n업보트 32 · 저자 4인\n\n플로우 전용부품 전부 제거\n→ 스케일링을 얻음\n🔴 대조군 모델명 없음",
-   "x": -820,
-   "y": 2560,
-   "width": 340,
-   "height": 200,
-   "color": "5"
-  },
-  {
-   "id": "s-RCWM",
-   "type": "text",
-   "text": "## [[RCWM]]\n업보트 28 · 저자 3인\n\n전체→국소→전체 재방문 재귀\n🎯 국소수리 후 전역정합 책임\n🔴 정량 수치 0개",
-   "x": -420,
-   "y": 2560,
-   "width": 340,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "s-WiW",
-   "type": "text",
-   "text": "## [[World-in-World]]\n업보트 28 · 저자 3인\n\n동결 모델 + 입력 형식 번역\n(training-free)\n🔴 결과 자체를 안 적음",
-   "x": -20,
-   "y": 2560,
-   "width": 340,
-   "height": 200,
-   "color": "1"
-  },
-  {
-   "id": "batch-0914-slam-3dgs",
-   "type": "text",
-   "text": "# 2026-09-14 배치\n\n신규 1건\nraw ai-news → 재판정",
-   "x": -1200,
-   "y": 2960,
-   "width": 300,
-   "height": 180,
-   "color": "6"
-  },
-  {
-   "id": "s-LIT",
-   "type": "text",
-   "text": "## [[LIT]]\n업보트 44 · 저자 4인\n**ai-news → slam-3dgs 재판정**\n\n시각→행동 지름길을 끊는다\n1단계: 이미지 없이 SE(3) 자세로\n2단계: 그 자세 복원 감독 =\n        유일한 시각 통로\n\nLIBERO-Plus +3.87~10.70%p\n실로봇 +13.30~16.70%p",
-   "x": -820,
-   "y": 2960,
-   "width": 340,
-   "height": 220,
-   "color": "5"
-  },
-  {
-   "id": "n0914-lit-cond",
-   "type": "text",
-   "text": "## 🔴 성립 조건\n\n실로봇 이득 조건 =\n**미학습 카메라·조명·방해물**\n\n통상 LIBERO는\n\"preserving or improving\"\n\n🎯 이득은 분포 외에서만 난다\n→ [[분포내-우위]] 의 거울상",
-   "x": -420,
-   "y": 2960,
-   "width": 340,
-   "height": 220,
-   "color": "1"
-  },
-  {
-   "id": "n0914-iface",
-   "type": "text",
-   "text": "## 🎯 \"인터페이스만 설계\" 계보\n\n[[World-in-World]] (09-13)\n동결 모델 + 입력 형식 번역\n\n[[LIT]] (09-14)\n백본 유지 + 시각 통로 하나\n\n**모델을 재학습하지 않고\n모델이 보는 것의 형태를 바꾼다**",
-   "x": -20,
-   "y": 2960,
-   "width": 340,
-   "height": 220,
-   "color": "4"
-  },
-  {
-   "id": "b17-actionpiece",
-   "type": "text",
-   "x": -260,
-   "y": 3300,
-   "width": 560,
-   "height": 320,
-   "color": "6",
-   "text": "**[[ActionPiece]]** 🆕 2026-09-17\n🎯 MSE 반증: 점별 오차 작아도\n문맥 조정이 \"even reversed\"\n🆕 지표 **PRC** (거리 순위 보존)\n= 토큰 어휘·디코더 비종속 비교\nLIBERO 94.8 / 미학습 Plus 68.8\n🔴 **−26.0점** · VLA-Arena 51.5%\n일반화 미해결"
-  },
-  {
-   "id": "b19s-physbrain",
-   "type": "text",
-   "x": -260,
-   "y": 3750,
-   "width": 460,
-   "height": 280,
-   "color": "5",
-   "text": "### [[PhysBrain-1.5]] [[DeepCybo]] · 8B\n이해·행동·예측 단일 토큰열 · 액션어휘=ActionPiece\n28벤치 72.5 · 오픈 1위 14 / 패배 14 (포인팅 6·궤적 2)\n🔴 제어·미래예측 정량 0 (1.0엔 LIBERO 있었음)\n🔴 폐쇄모델 최저 추론 설정 · 13벤치 학습분할\n🔴 [[PhysBrain]] 1.0 오분류 정정"
-  },
-  {
-   "id": "b20s-hdr",
-   "type": "text",
-   "x": -1200,
-   "y": 4150,
-   "width": 400,
-   "height": 280,
-   "color": "3",
-   "text": "# 📥 2026-09-20 (1건)\n\n[[ReactHuman]]\n수집기 `ai-news` →\n볼트 **`slam-3dgs` 재판정**\n\n(240Hz 강체물리 · 휴머노이드\n= 09-19 [[ActionPiece]] 와 같은 근거)"
-  },
-  {
-   "id": "b20s-react",
-   "type": "text",
-   "x": -740,
-   "y": 4150,
-   "width": 480,
-   "height": 300,
-   "color": "5",
-   "text": "### [[ReactHuman]] 업52 · 저자 8\n**즉시 행동**을 재는 첫 물리 벤치\n17계열 · 1,000+ 장면 · 주석 없음\n**결정을 실제로 실행**\n적대적 객체(폼 모루 · 강철 사과)\n\n🔴 7종이 **약 3건 중 1건** 오처리\n외형>운동 신뢰 · 요격점 **미터 단위**\n🔴 ***규모로 줄지 않는다***"
-  },
-  {
-   "id": "b20s-judge",
-   "type": "text",
-   "x": -220,
-   "y": 4150,
-   "width": 460,
-   "height": 300,
-   "color": "6",
-   "text": "## 🎯 계보에 처음 붙는 **평가자**\n[[PhysBrain]] → [[ActionPiece]] → [[PhysBrain-1.5]]\n전부 **모델**이었고 **잴 자가 없었다**\n\n09-19 기록: *\"버전이 오르며 평가가\n제어 → 이해로 좁아짐\"*\n→ ReactHuman 은 **이해 → 제어로 되돌린다**\n\n🎯 규모 비민감 = **표현·인터페이스 문제**\n→ [[하네스-설계-축]] 과 같은 결론"
-  },
-  {
-   "id": "b20s-gap",
-   "type": "text",
-   "x": 280,
-   "y": 4150,
-   "width": 440,
-   "height": 300,
-   "color": "2",
-   "text": "## 🔴 주목 ↔ 채택 분리 (실측)\n논문 업보트 **52**\n데이터셋 좋아요 **1** · 다운로드 **567**\n(2,111파일 · gated false · 07-11 생성)\n\n🎯 **한 대상에서 동시에 측정된 드문 경우**\n볼트가 업보트를 신호로 써 온 것에 대한\n**직접 반례**\n\n▶ 장면 1개 열기 = **코드 실행 0건 깰 최저비용 후보**"
-  }
- ],
- "edges": [
-  {
-   "id": "e1",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-slam",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e2",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-3dgs",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e3",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-camera",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-sl0907",
-   "fromNode": "domain-hub",
-   "toNode": "sl-worldsculpt",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-sl0907b",
-   "fromNode": "sl-worldsculpt",
-   "toNode": "sl-gap0907",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "es0908-0",
-   "fromNode": "s0908-emb",
-   "fromSide": "bottom",
-   "toNode": "s0908-mem",
-   "toSide": "top"
-  },
-  {
-   "id": "es0908-1",
-   "fromNode": "s0908-emb",
-   "fromSide": "bottom",
-   "toNode": "s0908-conv",
-   "toSide": "top"
-  },
-  {
-   "id": "es0908-2",
-   "fromNode": "s0908-emb",
-   "fromSide": "bottom",
-   "toNode": "s0908-gap",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909sl-1",
-   "fromNode": "b0909-sl",
-   "toNode": "s0909sl-mar",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909sl-2",
-   "fromNode": "s0909sl-mar",
-   "toNode": "n0909sl-how",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e0909sl-3",
-   "fromNode": "n0909sl-how",
-   "toNode": "a0909sl-1",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911S-1",
-   "fromNode": "n0911S-sb",
-   "fromSide": "right",
-   "toNode": "n0911S-why",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911S-2",
-   "fromNode": "n0911S-why",
-   "fromSide": "right",
-   "toNode": "n0911S-how",
-   "toSide": "left"
-  },
-  {
-   "id": "en0911S-3",
-   "fromNode": "n0911S-why",
-   "fromSide": "bottom",
-   "toNode": "n0911S-act",
-   "toSide": "top"
-  },
-  {
-   "id": "en0911S-4",
-   "fromNode": "cluster-slam",
-   "fromSide": "bottom",
-   "toNode": "n0911S-sb",
-   "toSide": "top"
-  },
-  {
-   "id": "e-batch-0913-slam-3dgs-hub",
-   "fromNode": "batch-0913-slam-3dgs",
-   "toNode": "domain-hub",
-   "fromSide": "top",
-   "toSide": "bottom"
-  },
-  {
-   "id": "e-batch-0913-slam-3dgs-s-FreeFlow",
-   "fromNode": "batch-0913-slam-3dgs",
-   "toNode": "s-FreeFlow",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-batch-0913-slam-3dgs-s-RCWM",
-   "fromNode": "batch-0913-slam-3dgs",
-   "toNode": "s-RCWM",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-batch-0913-slam-3dgs-s-WiW",
-   "fromNode": "batch-0913-slam-3dgs",
-   "toNode": "s-WiW",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-batch-0914-slam-3dgs-s-LIT",
-   "fromNode": "batch-0914-slam-3dgs",
-   "toNode": "s-LIT",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-batch-0914-slam-3dgs-n0914-lit-cond",
-   "fromNode": "batch-0914-slam-3dgs",
-   "toNode": "n0914-lit-cond",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-batch-0914-slam-3dgs-n0914-iface",
-   "fromNode": "batch-0914-slam-3dgs",
-   "toNode": "n0914-iface",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "eb17-actionpiece",
-   "fromNode": "s0908-emb",
-   "toNode": "b17-actionpiece",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e19-b19s-physbrain-b17-actionpiece",
-   "fromNode": "b19s-physbrain",
-   "toNode": "b17-actionpiece",
-   "label": "본체 액션 어휘로 채택"
-  },
-  {
-   "id": "e-b20s-hdr-b20s-react",
-   "fromNode": "b20s-hdr",
-   "toNode": "b20s-react",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b20s-hdr-b20s-judge",
-   "fromNode": "b20s-hdr",
-   "toNode": "b20s-judge",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b20s-hdr-b20s-gap",
-   "fromNode": "b20s-hdr",
-   "toNode": "b20s-gap",
-   "fromSide": "bottom",
-   "toSide": "top"
-  }
- ]
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
+      "x": -100,
+      "y": -60,
+      "width": 260,
+      "height": 120,
+      "color": "3"
+    },
+    {
+      "id": "cluster-slam",
+      "type": "text",
+      "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
+      "x": -400,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-3dgs",
+      "type": "text",
+      "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
+      "x": -100,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-camera",
+      "type": "text",
+      "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
+      "x": 200,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "sl-worldsculpt",
+      "type": "text",
+      "text": "## [[WorldSculpt]] *(2026-09-07)*\n2609.05416 · 업15\n\n**통짜 재구성 → 분해 가능성**\n단일 오브젝트 prior(Pixal3D)만\n학습했는데 **장면 학습 없이**\n수백 오브젝트 가림 장면 일반화\n\n🔗 **3DGS 월드(Marble·HY-World 2.0)\n→ compositional 메시 변환**\n\n**UE-MeshyScene**(GT 메시+주석)\n⚠️ 절대 수치 전무 · 실시간성 불명\n🔴 분할이 선행 전제일 가능성",
+      "x": -140,
+      "y": 430,
+      "width": 340,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "sl-gap0907",
+      "type": "text",
+      "text": "## ⚠️ 추적 공백 (09-07)\n\n**Pixal3D** — 기반 prior, 1순위\n**Marble** · **HY-World 2.0**\n\n→ [[월드모델]] 축 공백",
+      "x": 240,
+      "y": 430,
+      "width": 260,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "s0908-emb",
+      "type": "text",
+      "text": "## [[EmbodiedSkills]] (업 5·저자 17)\n\n스킬 결정 = **실행 제안**으로 격하\n제안→사전검사→실행→사후검증\n**고정 인터페이스** = VLA 교체 자유\n\nRoboTwin 86.20% · LIBERO 97.40%",
+      "x": -330,
+      "y": 850,
+      "width": 380,
+      "height": 230,
+      "color": "4"
+    },
+    {
+      "id": "s0908-mem",
+      "type": "text",
+      "text": "## 🔴 RMBench 기억의존 **12.5%**\n\n검증 루프는 전부\n**현재 상태**에 대한 판단\n→ *\"아까 뭘 했나\"* 자리가 없다\n\n→ [[에이전트-메모리-레이어]]\n**검증 잘 지어도 메모리는 별개**",
+      "x": 90,
+      "y": 850,
+      "width": 360,
+      "height": 230,
+      "color": "1"
+    },
+    {
+      "id": "s0908-conv",
+      "type": "text",
+      "text": "# 🎯 2도메인 독립 수렴\n\n[[EmbodiedSkills]] (로봇 제어)\n↕ 서로 인용 안 함\n[[TGOPD]] (LLM 학습)\n\n같은 골격: *\"신뢰되는지 먼저 검증하고\n통과할 때만 쓴다\"*\n→ [[검사가능성-공사]] 최강 근거",
+      "x": -150,
+      "y": 1120,
+      "width": 420,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "s0908-gap",
+      "type": "text",
+      "text": "## ⚠️ 추적 공백 3건\n\n**RoboTwin 2.0 · LIBERO · RMBench**\n볼트에 페이지 없음\n\n+ 실시간성 **미확인**\n(초록에 지연시간 수치 전무)",
+      "x": 310,
+      "y": 1120,
+      "width": 340,
+      "height": 230,
+      "color": "3"
+    },
+    {
+      "id": "b0909-sl",
+      "type": "text",
+      "text": "# 2026-09-09 배치\n\n단안 깊이추정 1-step 하강",
+      "x": "-100",
+      "y": "1570",
+      "width": "260",
+      "height": "110",
+      "color": "4"
+    },
+    {
+      "id": "s0909sl-mar",
+      "type": "text",
+      "text": "### Marigold V2\nHF 데일리 1위(업 24)\n다단계 flow-matching DiT → **1-step**\n**KITTI·ETH3D AbsRel 16–26% 개선**\n표면법선·본질이미지분해도 SOTA\n[[Marigold-V2]]",
+      "x": "-420",
+      "y": "1770",
+      "width": "260",
+      "height": "180",
+      "color": "5"
+    },
+    {
+      "id": "n0909sl-how",
+      "type": "text",
+      "text": "### 처방 2가지\n① 내부 표현을 **GT 의미 피처와 정렬**\n② **Sinkhorn 손실** 2단계 파인튜닝\n(+ 필요시 양자화)",
+      "x": "-120",
+      "y": "1770",
+      "width": "250",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "a0909sl-1",
+      "type": "text",
+      "text": "### 🔬 HF Space 즉시 테스트\n내 소스 이미지로 먼저 실행\n판단 기준: **머리카락·잎사귀 경계**\n⚠️fps 수치 논문에 없음",
+      "x": "160",
+      "y": "1770",
+      "width": "250",
+      "height": "160",
+      "color": "2"
+    },
+    {
+      "id": "n0911S-sb",
+      "type": "text",
+      "text": "### [2026-09-11] 교차참조\n[[SpatialBlock]] (도메인 `ai-news`)\n실장면 공간QA 라벨의 급소 =\n**외부 인지 모듈 의존으로 노이즈**",
+      "x": -300,
+      "y": 2020,
+      "width": 330,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n0911S-why",
+      "type": "text",
+      "text": "🎯 이 도메인에 특히 아픔\n깊이추정·SLAM으로 라벨을 만들면\n**그 모듈 오차가 라벨에 섞인다**\n→ [[검사가능성-공사]]",
+      "x": 60,
+      "y": 2020,
+      "width": 330,
+      "height": 170,
+      "color": "1"
+    },
+    {
+      "id": "n0911S-how",
+      "type": "text",
+      "text": "우회로: **합성 블록쌓기 15k**\n3D→2D 투영·시점 변환·구조 결합\n+앵커 유도 색 변조\n**정답이 생성 규칙에서 직접 나온다**",
+      "x": 420,
+      "y": 2020,
+      "width": 330,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n0911S-act",
+      "type": "text",
+      "text": "> [!action]\n공간 라벨을 만들 일이 생기면 먼저 묻기:\n**외부 인지 모듈로 만들 것인가,\n생성 규칙에서 정답이 나오는 합성 과제인가**\n⚠️정량 수치는 초록에 없음",
+      "x": 60,
+      "y": 2220,
+      "width": 330,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "batch-0913-slam-3dgs",
+      "type": "text",
+      "text": "# 2026-09-13 배치\n\n원문 API 실호출 + 표 전수 대조\n중복 0 · 한정어 탈락 0건",
+      "x": -1200,
+      "y": 2560,
+      "width": 300,
+      "height": 140,
+      "color": "6"
+    },
+    {
+      "id": "s-FreeFlow",
+      "type": "text",
+      "text": "## [[FreeFlow]]\n업보트 32 · 저자 4인\n\n플로우 전용부품 전부 제거\n→ 스케일링을 얻음\n🔴 대조군 모델명 없음",
+      "x": -820,
+      "y": 2560,
+      "width": 340,
+      "height": 200,
+      "color": "5"
+    },
+    {
+      "id": "s-RCWM",
+      "type": "text",
+      "text": "## [[RCWM]]\n업보트 28 · 저자 3인\n\n전체→국소→전체 재방문 재귀\n🎯 국소수리 후 전역정합 책임\n🔴 정량 수치 0개",
+      "x": -420,
+      "y": 2560,
+      "width": 340,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "s-WiW",
+      "type": "text",
+      "text": "## [[World-in-World]]\n업보트 28 · 저자 3인\n\n동결 모델 + 입력 형식 번역\n(training-free)\n🔴 결과 자체를 안 적음",
+      "x": -20,
+      "y": 2560,
+      "width": 340,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "batch-0914-slam-3dgs",
+      "type": "text",
+      "text": "# 2026-09-14 배치\n\n신규 1건\nraw ai-news → 재판정",
+      "x": -1200,
+      "y": 2960,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "s-LIT",
+      "type": "text",
+      "text": "## [[LIT]]\n업보트 44 · 저자 4인\n**ai-news → slam-3dgs 재판정**\n\n시각→행동 지름길을 끊는다\n1단계: 이미지 없이 SE(3) 자세로\n2단계: 그 자세 복원 감독 =\n        유일한 시각 통로\n\nLIBERO-Plus +3.87~10.70%p\n실로봇 +13.30~16.70%p",
+      "x": -820,
+      "y": 2960,
+      "width": 340,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n0914-lit-cond",
+      "type": "text",
+      "text": "## 🔴 성립 조건\n\n실로봇 이득 조건 =\n**미학습 카메라·조명·방해물**\n\n통상 LIBERO는\n\"preserving or improving\"\n\n🎯 이득은 분포 외에서만 난다\n→ [[분포내-우위]] 의 거울상",
+      "x": -420,
+      "y": 2960,
+      "width": 340,
+      "height": 220,
+      "color": "1"
+    },
+    {
+      "id": "n0914-iface",
+      "type": "text",
+      "text": "## 🎯 \"인터페이스만 설계\" 계보\n\n[[World-in-World]] (09-13)\n동결 모델 + 입력 형식 번역\n\n[[LIT]] (09-14)\n백본 유지 + 시각 통로 하나\n\n**모델을 재학습하지 않고\n모델이 보는 것의 형태를 바꾼다**",
+      "x": -20,
+      "y": 2960,
+      "width": 340,
+      "height": 220,
+      "color": "4"
+    },
+    {
+      "id": "b17-actionpiece",
+      "type": "text",
+      "x": -260,
+      "y": 3300,
+      "width": 560,
+      "height": 320,
+      "color": "6",
+      "text": "**[[ActionPiece]]** 🆕 2026-09-17\n🎯 MSE 반증: 점별 오차 작아도\n문맥 조정이 \"even reversed\"\n🆕 지표 **PRC** (거리 순위 보존)\n= 토큰 어휘·디코더 비종속 비교\nLIBERO 94.8 / 미학습 Plus 68.8\n🔴 **−26.0점** · VLA-Arena 51.5%\n일반화 미해결"
+    },
+    {
+      "id": "b19s-physbrain",
+      "type": "text",
+      "x": -260,
+      "y": 3750,
+      "width": 460,
+      "height": 280,
+      "color": "5",
+      "text": "### [[PhysBrain-1.5]] [[DeepCybo]] · 8B\n이해·행동·예측 단일 토큰열 · 액션어휘=ActionPiece\n28벤치 72.5 · 오픈 1위 14 / 패배 14 (포인팅 6·궤적 2)\n🔴 제어·미래예측 정량 0 (1.0엔 LIBERO 있었음)\n🔴 폐쇄모델 최저 추론 설정 · 13벤치 학습분할\n🔴 [[PhysBrain]] 1.0 오분류 정정"
+    },
+    {
+      "id": "b20s-hdr",
+      "type": "text",
+      "x": -1200,
+      "y": 4150,
+      "width": 400,
+      "height": 280,
+      "color": "3",
+      "text": "# 📥 2026-09-20 (1건)\n\n[[ReactHuman]]\n수집기 `ai-news` →\n볼트 **`slam-3dgs` 재판정**\n\n(240Hz 강체물리 · 휴머노이드\n= 09-19 [[ActionPiece]] 와 같은 근거)"
+    },
+    {
+      "id": "b20s-react",
+      "type": "text",
+      "x": -740,
+      "y": 4150,
+      "width": 480,
+      "height": 300,
+      "color": "5",
+      "text": "### [[ReactHuman]] 업52 · 저자 8\n**즉시 행동**을 재는 첫 물리 벤치\n17계열 · 1,000+ 장면 · 주석 없음\n**결정을 실제로 실행**\n적대적 객체(폼 모루 · 강철 사과)\n\n🔴 7종이 **약 3건 중 1건** 오처리\n외형>운동 신뢰 · 요격점 **미터 단위**\n🔴 ***규모로 줄지 않는다***"
+    },
+    {
+      "id": "b20s-judge",
+      "type": "text",
+      "x": -220,
+      "y": 4150,
+      "width": 460,
+      "height": 300,
+      "color": "6",
+      "text": "## 🎯 계보에 처음 붙는 **평가자**\n[[PhysBrain]] → [[ActionPiece]] → [[PhysBrain-1.5]]\n전부 **모델**이었고 **잴 자가 없었다**\n\n09-19 기록: *\"버전이 오르며 평가가\n제어 → 이해로 좁아짐\"*\n→ ReactHuman 은 **이해 → 제어로 되돌린다**\n\n🎯 규모 비민감 = **표현·인터페이스 문제**\n→ [[하네스-설계-축]] 과 같은 결론"
+    },
+    {
+      "id": "b20s-gap",
+      "type": "text",
+      "x": 280,
+      "y": 4150,
+      "width": 440,
+      "height": 300,
+      "color": "2",
+      "text": "## 🔴 주목 ↔ 채택 분리 (실측)\n논문 업보트 **52**\n데이터셋 좋아요 **1** · 다운로드 **567**\n(2,111파일 · gated false · 07-11 생성)\n\n🎯 **한 대상에서 동시에 측정된 드문 경우**\n볼트가 업보트를 신호로 써 온 것에 대한\n**직접 반례**\n\n▶ 장면 1개 열기 = **코드 실행 0건 깰 최저비용 후보**"
+    },
+    {
+      "id": "src-gae",
+      "type": "text",
+      "text": "## [[GAE]]\n\n지오메트리 네이티브 잠재공간\n↑34 · 🔀 재판정 ai-news→slam-3dgs\n\n✅ 잠재만 교체한 통제 비교\nFVD -12.7%/-23.1% (상대)\n카메라 궤적 오차 절반\n⬜ 속도 수치 0 = 실시간성 불명",
+      "x": -900,
+      "y": 4350,
+      "width": 300,
+      "height": 170,
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-slam",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-3dgs",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-camera",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-sl0907",
+      "fromNode": "domain-hub",
+      "toNode": "sl-worldsculpt",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-sl0907b",
+      "fromNode": "sl-worldsculpt",
+      "toNode": "sl-gap0907",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "es0908-0",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "s0908-mem",
+      "toSide": "top"
+    },
+    {
+      "id": "es0908-1",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "s0908-conv",
+      "toSide": "top"
+    },
+    {
+      "id": "es0908-2",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "s0908-gap",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909sl-1",
+      "fromNode": "b0909-sl",
+      "toNode": "s0909sl-mar",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909sl-2",
+      "fromNode": "s0909sl-mar",
+      "toNode": "n0909sl-how",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0909sl-3",
+      "fromNode": "n0909sl-how",
+      "toNode": "a0909sl-1",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911S-1",
+      "fromNode": "n0911S-sb",
+      "fromSide": "right",
+      "toNode": "n0911S-why",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911S-2",
+      "fromNode": "n0911S-why",
+      "fromSide": "right",
+      "toNode": "n0911S-how",
+      "toSide": "left"
+    },
+    {
+      "id": "en0911S-3",
+      "fromNode": "n0911S-why",
+      "fromSide": "bottom",
+      "toNode": "n0911S-act",
+      "toSide": "top"
+    },
+    {
+      "id": "en0911S-4",
+      "fromNode": "cluster-slam",
+      "fromSide": "bottom",
+      "toNode": "n0911S-sb",
+      "toSide": "top"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-hub",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "domain-hub",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-s-FreeFlow",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "s-FreeFlow",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-s-RCWM",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "s-RCWM",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0913-slam-3dgs-s-WiW",
+      "fromNode": "batch-0913-slam-3dgs",
+      "toNode": "s-WiW",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-slam-3dgs-s-LIT",
+      "fromNode": "batch-0914-slam-3dgs",
+      "toNode": "s-LIT",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-slam-3dgs-n0914-lit-cond",
+      "fromNode": "batch-0914-slam-3dgs",
+      "toNode": "n0914-lit-cond",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-batch-0914-slam-3dgs-n0914-iface",
+      "fromNode": "batch-0914-slam-3dgs",
+      "toNode": "n0914-iface",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "eb17-actionpiece",
+      "fromNode": "s0908-emb",
+      "toNode": "b17-actionpiece",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e19-b19s-physbrain-b17-actionpiece",
+      "fromNode": "b19s-physbrain",
+      "toNode": "b17-actionpiece",
+      "label": "본체 액션 어휘로 채택"
+    },
+    {
+      "id": "e-b20s-hdr-b20s-react",
+      "fromNode": "b20s-hdr",
+      "toNode": "b20s-react",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b20s-hdr-b20s-judge",
+      "fromNode": "b20s-hdr",
+      "toNode": "b20s-judge",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b20s-hdr-b20s-gap",
+      "fromNode": "b20s-hdr",
+      "toNode": "b20s-gap",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-domain-hub-src-gae",
+      "fromNode": "domain-hub",
+      "toNode": "src-gae",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "09-23 재판정"
+    }
+  ]
 }
