@@ -4608,6 +4608,146 @@
       "width": 300,
       "height": 170,
       "color": "4"
+    },
+    {
+      "id": "s-nasiko-0924",
+      "type": "text",
+      "text": "**[[nasiko]]** ★8,841 · Rust\nA2A 컨트롤 플레인 — 에이전트에\n진짜 API 키를 주지 않는다\n✅ Apache-2.0 확정(NOASSERTION 정정)",
+      "x": -620,
+      "y": 27320,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-agentbrowser-0924",
+      "type": "text",
+      "text": "**[[agent-browser]]** ★43,140 · Rust\nVercel Labs · 5플랫폼 네이티브\n🎯 ★증분 +62 둔화인데\n**npm 월 532만 DL**",
+      "x": -290,
+      "y": 27320,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-agentdesktop-0924",
+      "type": "text",
+      "text": "**[[agent-desktop]]** ★1,621 · Rust\n접근성 트리 컴퓨터 유즈\n58명령/54동작 fail-closed\n권한 granted/denied/**unknown**",
+      "x": 40,
+      "y": 27320,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-panwatch-0924",
+      "type": "text",
+      "text": "**[[PanWatch]]** ★1,717 · MIT\n[[TradingAgents]] 9-Agent 래퍼\n프레임워크→제품 첫 사례\n노드별 진행률·비용 계측",
+      "x": 370,
+      "y": 27320,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "e-nasikolabs",
+      "type": "text",
+      "text": "**[[Nasiko-Labs]]**\nnasiko 개발\n⬜ 법인 실체 미확인",
+      "x": -620,
+      "y": 27500,
+      "width": 300,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "e-vercellabs",
+      "type": "text",
+      "text": "**[[vercel-labs]]**\nagent-browser 제작\n볼트 npm 실채택 최대 조직",
+      "x": -290,
+      "y": 27500,
+      "width": 300,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "e-lahfir",
+      "type": "text",
+      "text": "**[[lahfir]]**\nagent-desktop 제작(개인)\n작은 레포 · 문서 규율 상급",
+      "x": 40,
+      "y": 27500,
+      "width": 300,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "e-tntlikely",
+      "type": "text",
+      "text": "**[[TNT-Likely]]**\nPanWatch 제작\n수익 주장 안 함(정직)",
+      "x": 370,
+      "y": 27500,
+      "width": 300,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "c-canonical-dedup",
+      "type": "text",
+      "text": "**[[정규명-우선-중복검사]]** 🆕\n리다이렉트 추적 → 정규명 확정\n→ *그다음* 중복검사\n리다이렉트는 **양방향** 오류",
+      "x": -620,
+      "y": 27680,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "c-noassertion-0924",
+      "type": "text",
+      "text": "[[메타데이터-부재-추론]] 갱신\n`NOASSERTION` 이 두 실체를 접는다\nnasiko=Apache(탐지실패) vs\ntreg=진짜 커스텀",
+      "x": -290,
+      "y": 27680,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "c-reversal-0924",
+      "type": "text",
+      "text": "[[원본-파생-역전]] ✅소급완료\n7쌍 전수 재조회 · **방향 역전 0건**\n🆕 trendingScore도 정체 편\n배수는 창에 민감(과대추정)",
+      "x": 40,
+      "y": 27680,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "c-window-0924",
+      "type": "text",
+      "text": "[[지표-창길이]] 갱신\n창 길이 **역산 28.5~31.4일**\n(균일율 가정) — 문서는 여전히 없음",
+      "x": 370,
+      "y": 27680,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a-agentbrowser-run",
+      "type": "text",
+      "text": "🔥 [[agent-browser]] 설치·실행\n**코드 실행 0건 깨기 최저비용**\nnpm i -g 1줄 · 외부스택 0",
+      "x": -620,
+      "y": 27860,
+      "width": 300,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "a-noassertion-audit",
+      "type": "text",
+      "text": "볼트 전체 `NOASSERTION` 페이지\nLICENSE 파일 전수 재확인",
+      "x": -290,
+      "y": 27860,
+      "width": 300,
+      "height": 150,
+      "color": "2"
     }
   ],
   "edges": [
@@ -8677,6 +8817,104 @@
       "fromNode": "concept-window",
       "toNode": "src-ruler-svg",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-nasiko-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "s-nasiko-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-agentbrowser-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "s-agentbrowser-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-agentdesktop-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "s-agentdesktop-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-panwatch-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "s-panwatch-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-e-nasikolabs",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "e-nasikolabs",
+      "toSide": "top"
+    },
+    {
+      "id": "e-e-vercellabs",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "e-vercellabs",
+      "toSide": "top"
+    },
+    {
+      "id": "e-e-lahfir",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "e-lahfir",
+      "toSide": "top"
+    },
+    {
+      "id": "e-e-tntlikely",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "e-tntlikely",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-canonical-dedup",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "c-canonical-dedup",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-noassertion-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "c-noassertion-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-reversal-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "c-reversal-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-window-0924",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "c-window-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-a-agentbrowser-run",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "a-agentbrowser-run",
+      "toSide": "top"
+    },
+    {
+      "id": "e-a-noassertion-audit",
+      "fromNode": "theme-multimodal-embodied-0706",
+      "fromSide": "bottom",
+      "toNode": "a-noassertion-audit",
       "toSide": "top"
     }
   ]

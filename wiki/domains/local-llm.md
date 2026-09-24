@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-20
+updated: 2026-09-24
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -608,3 +608,32 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 ### Hermes/ChinameBot 적용
 **NO(현 하드웨어 기준)** — 상주 37.6GB 최소. 🎯 다만 *"임베딩 테이블을 mmap으로 디스크에"* 는 소형 모델에도 쓰이는 **메모리 계층 설계 패턴**([[Edge0]] 의 전문가 스트리밍과 같은 계열).
 📌 [[ISTA-DASLab]] 신설 — **27B 자매(high)의 판정을 이 카드로 옮기지 않는다**(medium: Unsloth 대조·perplexity 누락, 라이선스 모순 복사).
+
+---
+
+## [2026-09-24] — **에이전트 메모리의 실패가 "검색"이 아니라 "귀속"이라는 진단**
+
+### [[SpeakerMem-R1]] — 이번 배치 논문 5건 중 **유일하게 수치 완비**
+초록이 두 병목을 명명한다: *"**message attribution** and relational understanding in multi-party dialogue, and **state reconstruction** from interleaved histories"*.
+🎯 이 도메인의 메모리 축([[mem0]]·[[VoiceMem]]·[[에이전트-메모리-레이어]])은 그동안 *무엇을 저장·검색하는가* 였다. **다자 대화에서는 내용이 남아도 화자를 잃으면 쓸 수 없다.**
+
+- **이중 트랙**: 화자 라벨 붙은 **원문** + **파생 상태**(person-level / group-level 2뷰) → 질의 시 **엔티티·사건·시간**으로 결합
+- **학습**: Writer-R1 = **SpeakerLevenshtein + speaker-conditioned GRPO**. 🎯 목적이 초록에 명시 — *"to reduce attribution and update errors … **while enabling local deployment**"*. **로컬 배포가 학습 설계의 이유로 적혀 있다** = 도메인 2의 *"실배포 가능?"* 질문에 저자가 선제 응답.
+- **수치**(전부 절대 정확도 %): GroupMemBench **47.9** · SocialMemBench **69.2** · EverMemBench **61.9**(리더보드 62.33) · LoCoMo 1,986문항 **70.85** · 통제 305문항 SFT **57.38 → RL 68.20**(+10.82 절대)
+- ✅ **binary accuracy + token-F1 이중 보고를 초록에 명시** + 어블레이션(원문↔구조 트랙, person↔group 뷰 상호보완)
+
+> **🎯 Hermes/ChinameBot 적용 — 이번 배치 최고 적용성**
+> **GRPO 학습 없이 "이중트랙 저장 + 질의시 결합"만 베끼는 경로가 있다.** 원문에 화자 라벨을 붙여 버리지 않고, 파생 상태를 별도로 쌓고, 질의 시 둘을 합친다. **모델 교체 불필요, 저장 구조 변경만.**
+> 🔴 대가: 저장량 증가 + 질의 시 결합 비용. ⬜ 초록에 수치 없음.
+
+🔴 **진짜 메시지는 점수가 아니라 47.9% 다** — GroupMemBench 절반 이하. **다자 대화 메모리는 아직 대체로 실패한다.**
+
+### 📌 이중값 처리 규약
+**EverMemBench: 자체 61.9% vs 공개 리더보드 62.33%.** 초록만으로 설정 차이가 설명되지 않는다.
+→ **볼트는 대조 시 자체 측정값 61.9% 를 쓴다**(나머지 두 벤치가 자체 측정이라 조건을 맞춘다). 리더보드 62.33%는 *"외부 검증 경로가 존재한다"* 는 사실로만 인용 — 🎯 **이번 배치에서 외부 리더보드 제출 흔적이 있는 논문은 이것뿐이다.**
+
+### 🎯 교차 — 모달리티를 넘어 같은 처방
+[[The-Past-Frames-the-Future]](영상 생성 메모리, `video-saas`)가 `entity identities` 보존을 1급 대상으로 놓는다. **대화는 "누가 말했는지", 영상은 "누가 있었는지"를 잃는다.** 🎯 **둘 다 "요약하면 정체가 사라진다"** 고 말하고, 공통 처방이 **압축이 아니라 이중화**(원문 트랙 유지)다.
+
+### ⚠️ 한계
+🔴 arXiv 본문 미열람 — **모델 크기·VRAM·지연 수치 전부 미확인**이므로 *"로컬 배포 가능"* 은 **저자 의도**이고 볼트 검증값이 아니다. ⬜ 세 벤치 규모·출처 미확인(LoCoMo만 1,986문항 명시). ⬜ `2022hpsk/SpeakerMemR1` ★70 레포 미열람.

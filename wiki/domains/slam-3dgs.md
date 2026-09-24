@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-09-20
+updated: 2026-09-24
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md]
 ---
 
@@ -301,3 +301,34 @@ _소스 ingest 시 자동 누적_
 > [!insight] ✅ 비교 설계가 이 논문의 무기
 > **생성기·학습 프로토콜 고정 + 잠재만 교체** → FVD **−12.7%/−23.1%**(상대), 카메라 궤적 오차 **절반**(RealEstate10K).
 > 📌 볼트가 [[비매칭-비교]] 에서 반복 지적해 온 결함의 **반대 사례**로 등록.
+
+---
+
+## [2026-09-24] — **재판정 2건 유입: 월드모델 평가와 공간 상호작용 학습**
+
+수집기가 둘 다 `ai-news` 로 보내며 재판정 후보로 표시했고, 볼트가 **둘 다 `slam-3dgs` 로 확정**했다. 선례는 [[ReactHuman]]·[[ActionPiece]](*"VLA = 시각+언어+액션 · 로봇 조작 벤치"*).
+
+### ① [[HappyWorld-Bench]] — **자(尺)** (HF 데일리 1위 · 업보트 35 · 3일차)
+재판정 근거: **embodied 트랙 254 케이스 + embodied 후보 8종** · **spatial world models 9종**(배치 정확도·편집 실행 = 공간 조작 지표).
+
+- 규모: video **1,138 프롬프트** / spatial **300 장면** / embodied **254 케이스** · 평가 **14 / 9 / 8종**
+- **W1–W6** 6단 능력 체계 + **HappyWorld-Arena** 인간 A/B **Elo**(자동 지표와 상호보완)
+- 수치(절대 정확도, %p 아님): spatial **최고**(*at best*) 배치 정확도 **70.14%** · 편집 실행 **73.33%**
+
+**현재 SOTA 판정**: 🔴 이 논문은 SOTA를 주장하지 않고 **자를 제안한다.** 그리고 그 자가 내는 답은 *"아직 아니다"* — **공간 월드모델 9종 중 최고가 3할을 틀린다.**
+🎯 **이 도메인에 새 평가 축**: 생성 품질이 아니라 **상호작용·수정·재방문 이후의 상태 보존**. video는 *"긴 롤아웃·재방문에서 일관성 저하"*, embodied는 *"다단계 행동에서 상태 보존 실패"*.
+🔴 한계: **video·embodied 트랙 수치 0개**(서술만) · **분포 지표 없음**(최고값 2개) · **W1~W6 정의 초록에 없음** · `githubRepo` **`null`**(볼트 실측 — "미공개"가 아니라 "HF API 미등록") · arXiv 본문 미열람.
+
+### ② [[Spatial-Interactor]] — **학습 레시피** (업보트 22 · 5일차 · reliability **low**)
+재판정 근거: **시뮬+실제 상호작용 궤적**(LSI-108K) · **L2 = self-state 전이**(자기 시점·자기 운동 = 카메라/신체 축).
+
+- **3단 커리큘럼**: L1 수동 world-state 전이 → L2 능동 self-state 전이 → L3 장기 궤적
+- **2단 학습**: L1·L2 **SFT** → L3 **On-Policy Distillation**. 🎯 내부가 **`privileged self-distillation`** — 교사 분기가 **구간별 전이 설명이라는 특권 정보**를 받아 학생의 온폴리시 CoT를 감독한다. **비대칭이 크기가 아니라 정보 접근에 있다** → [[온폴리시-증류]]
+- 🎯 **데이터 형식 자체가 지도 신호다**: *"interaction trajectories naturally connect a preceding observation, an action, and a subsequent observation"* — 새 손실함수가 아니라 **궤적으로 저장하면 전이가 라벨이 된다.**
+
+**카메라 파이프라인**: 🟡 L2가 시점 변화를 명시적 학습 대상으로 삼는다(*"state transitions caused by object motion **and viewpoint changes**"*). ⬜ 입력 형식(RGB/RGBD/포즈) 미확인.
+🔴 **치명적**: **초록에 정량 수치 0개 · 벤치마크 이름조차 없음**(*"multiple VLMs and spatial benchmarks"*) · 베이스 VLM 미명시 · 성능 주장은 *"consistent gains"* 한 문장. → **성능 비교 인용 금지.** [[BPO]] 동류 처분.
+✅ **단 수집기가 이 부재를 명시했다** — 09-21 요청 3 이행. **수치 0개를 0개라고 밝히고 넘긴 것은 누락이 아니라 규율이다.**
+
+### 📌 이 도메인 한계 (변화 없음)
+🔴 **코드 실행 0건 · 논문 2건 전부 초록만 · 필수 레퍼런스 arXiv 본문 미확보.** [[HappyWorld-Bench]] 는 W1~W6 정의가, [[Spatial-Interactor]] 는 벤치마크명이 **초록에 없어서** 본문 없이는 평가 불가 → actionable 2건 등록.

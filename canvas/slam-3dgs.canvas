@@ -329,6 +329,56 @@
       "width": 300,
       "height": 170,
       "color": "6"
+    },
+    {
+      "id": "s-happyworld-0924",
+      "type": "text",
+      "text": "**[[HappyWorld-Bench]]** 🔀→slam-3dgs\nHF 데일리 **1위** ♥35\n1,138/300/254 · 14/9/8종\nspatial 최고 **70.14%**",
+      "x": -620,
+      "y": 4550,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-spatialinteractor-0924",
+      "type": "text",
+      "text": "**[[Spatial-Interactor]]** 🔀→slam-3dgs\n♥22 · **low**\nL1/L2/L3 커리큘럼 · LSI-108K\n🔴 초록 수치 0개·벤치명 없음",
+      "x": -290,
+      "y": 4550,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "c-privileged-opd",
+      "type": "text",
+      "text": "[[온폴리시-증류]] 갱신\n`privileged self-distillation`\n비대칭이 크기가 아니라\n**정보 접근**에 있다",
+      "x": 40,
+      "y": 4550,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "c-interactconsist",
+      "type": "text",
+      "text": "[[월드모델]] 갱신\n새 축: **상호작용 후 상태 일관성**\n문제제기+측정도구 같은 주 도착",
+      "x": 370,
+      "y": 4550,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a-arxiv-fulltext",
+      "type": "text",
+      "text": "arXiv 본문 2건 확보\n2609.24308(W1~W6 정의)\n2609.23038(벤치마크명)",
+      "x": -620,
+      "y": 4730,
+      "width": 300,
+      "height": 150,
+      "color": "2"
     }
   ],
   "edges": [
@@ -527,6 +577,41 @@
       "fromSide": "bottom",
       "toSide": "top",
       "label": "09-23 재판정"
+    },
+    {
+      "id": "e-s-happyworld-0924",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "s-happyworld-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-spatialinteractor-0924",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "s-spatialinteractor-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-privileged-opd",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "c-privileged-opd",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-interactconsist",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "c-interactconsist",
+      "toSide": "top"
+    },
+    {
+      "id": "e-a-arxiv-fulltext",
+      "fromNode": "s0908-emb",
+      "fromSide": "bottom",
+      "toNode": "a-arxiv-fulltext",
+      "toSide": "top"
     }
   ]
 }

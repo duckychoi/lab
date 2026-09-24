@@ -1,578 +1,663 @@
 {
- "nodes": [
-  {
-   "id": "domain-hub",
-   "type": "text",
-   "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
-   "x": -100,
-   "y": -60,
-   "width": 240,
-   "height": 120,
-   "color": "1"
-  },
-  {
-   "id": "cluster-sources",
-   "type": "text",
-   "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
-   "x": -400,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "5"
-  },
-  {
-   "id": "cluster-entities",
-   "type": "text",
-   "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
-   "x": -100,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "2"
-  },
-  {
-   "id": "cluster-concepts",
-   "type": "text",
-   "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
-   "x": 200,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "3"
-  },
-  {
-   "id": "cluster-actionables",
-   "type": "text",
-   "text": "## 실행 항목\n\n_actionable.md 연동_",
-   "x": 500,
-   "y": 150,
-   "width": 180,
-   "height": 80,
-   "color": "6"
-  },
-  {
-   "id": "vs-motionomni",
-   "type": "text",
-   "text": "## [[Motion-Omni]] *(2026-09-07)*\n2609.04250 · 업30\n\n**캐스케이드 2패스 제거**\n음성 hidden state에서\n표정·손·상하반신 **직접 출력**\n\n**RTF 0.78**(실시간 초과) · **5.4배**\nWER **2.62%** · teacher 2% 이내\n\n🔴 음성 경로 얼리면 **정렬 붕괴**\n= 모듈 조립 경로 막힘\n⚠️ teacher를 **이긴 게 아님**",
-   "x": -140,
-   "y": 430,
-   "width": 340,
-   "height": 300,
-   "color": "6"
-  },
-  {
-   "id": "vs-axis0907",
-   "type": "text",
-   "text": "## 🆕 축 분화\n\n**생성(offline)**\n[[Higgsfield]]·[[Seedance]]\n\n**대화(online)**\nRTF < 1 = 경쟁 우위 빈틈\n\n+ SwDA-500 평가 프로토콜\n(*오디오 맞춘 뒤 비교*)\n→ 모델 없이도 **즉시 전용**",
-   "x": 240,
-   "y": 430,
-   "width": 280,
-   "height": 300,
-   "color": "3"
-  },
-  {
-   "id": "v0908-hyper",
-   "type": "text",
-   "text": "## [[hyperframes]] ⭐47,070\n[[HeyGen]] 공식 · Apache-2.0\n\n**모델이 아니라 렌더러**\nHTML→puppeteer→ffmpeg\n\n생성모델 3대 고질병 회피\n(일관성·텍스트·재현성)\n⚠️ Remotion과 **대체재**",
-   "x": -330,
-   "y": 850,
-   "width": 320,
-   "height": 240,
-   "color": "1"
-  },
-  {
-   "id": "v0908-mmx",
-   "type": "text",
-   "text": "## [[Minimax-h3_Singularity]]\nDL 58,060 · Apache-2.0\n\n[[MiniMax-H3]] 융합·프루닝\nComfyUI 4모드\n\n🔴 **정량 지표 전무**\n데모 링크뿐",
-   "x": 30,
-   "y": 850,
-   "width": 320,
-   "height": 240,
-   "color": "1"
-  },
-  {
-   "id": "v0908-ins",
-   "type": "text",
-   "text": "# 축이 갈렸다\n\n**생성 모델** ↔ **결정론적 렌더**\n경쟁이 아니라 **분업**\n\n빈틈 = *수치가 정확한 영상*\n(리포트·대시보드·실적)",
-   "x": -150,
-   "y": 1130,
-   "width": 400,
-   "height": 200,
-   "color": "6"
-  },
-  {
-   "id": "v0908-mkt",
-   "type": "text",
-   "text": "## 🔴 관측: 시장 구조\n\n벤치 없이 DL 5.8만\n= [[Huihui-Qwen3.8-27B-abliterated-GGUF]]\n구조가 **영상에서 재현**\n\n영상 품질은 정량화가 어렵고\n데모는 체리피킹 배제 불가",
-   "x": 390,
-   "y": 1130,
-   "width": 380,
-   "height": 200,
-   "color": "3"
-  },
-  {
-   "id": "b0909-vs",
-   "type": "text",
-   "text": "# 2026-09-09 배치\n\n내 파이프라인과 동일 계열 등장",
-   "x": "-100",
-   "y": "1550",
-   "width": "280",
-   "height": "110",
-   "color": "4"
-  },
-  {
-   "id": "s0909vs-vsc",
-   "type": "text",
-   "text": "### video-shotcraft\n⭐7,860·Apache-2.0·Remotion\n**157 레시피 카드 / 214 프리뷰**\n🔴같은 README에 숫자 4개\n(desc 152/209 · 워크벤치 216)\n[[video-shotcraft]]",
-   "x": "-420",
-   "y": "1750",
-   "width": "260",
-   "height": "180",
-   "color": "5"
-  },
-  {
-   "id": "a0909vs-1",
-   "type": "text",
-   "text": "### 🎬 갤러리 214개 ↔ reat-catalog\n1:1 대조표 만들기\n(설치 0 · 코드 안 봐도 됨)\n**우선순위 높음**",
-   "x": "-120",
-   "y": "1750",
-   "width": "250",
-   "height": "150",
-   "color": "2"
-  },
-  {
-   "id": "a0909vs-2",
-   "type": "text",
-   "text": "### ⚙️ `t` 기반 결정적 컴포넌트\n프리뷰/렌더 **픽셀 동일**\n→ 내 Remotion 불일치 해법",
-   "x": "160",
-   "y": "1750",
-   "width": "250",
-   "height": "150",
-   "color": "2"
-  },
-  {
-   "id": "n0909vs-tc",
-   "type": "text",
-   "text": "### ⚠️ video-talkcraft (형제)\n내레이션 축 **이미 점유**\n78카드·문자당 20–40ms 정렬\n→ 내 차별화 = **한국어 특화**",
-   "x": "-280",
-   "y": "1980",
-   "width": "260",
-   "height": "150",
-   "color": "1"
-  },
-  {
-   "id": "s-pwm",
-   "type": "text",
-   "text": "[[Programmable-World-Model]]\n업36 · arXiv 2609.10540\n상태 진화를 시각생성과 분리\n비디오 모델 = **렌더러로 강등**\n상태증강 3D OBB 중간표현\n📊 CombatStateBench 94%/98%\n⚠️ 자체 신설 벤치·비교수치 없음",
-   "x": -160,
-   "y": 2250,
-   "width": 420,
-   "height": 220,
-   "color": "5"
-  },
-  {
-   "id": "a-pwm-state",
-   "type": "text",
-   "text": "**내 Scene DSL에 영속 상태 추가 검토**\nreat-* 구조는 이미 동일\n(프로그램→결정적 컴파일러→렌더러)\n차이: 영속 전역 상태만 없음",
-   "x": -620,
-   "y": 2530,
-   "width": 400,
-   "height": 160,
-   "color": "2"
-  },
-  {
-   "id": "c-pwm-gap",
-   "type": "text",
-   "text": "**경쟁 빈틈**\nHiggsfield·Seedance는\n영속 상태를 안 준다\n→ 상태 층이 빈 자리",
-   "x": 300,
-   "y": 2530,
-   "width": 340,
-   "height": 150,
-   "color": "6"
-  },
-  {
-   "id": "b0915-vidus2",
-   "type": "text",
-   "text": "[[Vidu-S2]] 🆕 *(ai-news→video-saas 재판정)*\nS2-Avatar: 540p→**720p** 실시간\nS2-Editing: 스트림 위 **의상·인물·배경 교체**\n+ spatial video 탐색\n🔴 **초록에 수치 0**\n🔴 S1 대비 신뢰도 하락(medium→low)",
-   "x": -620,
-   "y": 2830,
-   "width": 360,
-   "height": 190,
-   "color": "1"
-  },
-  {
-   "id": "b0915-vidu-note",
-   "type": "text",
-   "text": "🎯 **편집이 렌더 뒤가 아니라 스트림 위로**\nreat-* 스택 전제와 다른 축\n**프리뷰와 최종본의 구분이 사라진다**\n\n▶ 액션: vidu.com/vidu-stream 직접 실측",
-   "x": -210,
-   "y": 2830,
-   "width": 320,
-   "height": 160,
-   "color": "6"
-  },
-  {
-   "id": "b18vs-hdr",
-   "type": "text",
-   "text": "# 📥 2026-09-18\n\n### [[FastVideo]] ★4,467\nApache-2.0 · 드리프트 0\n\n희소증류 = DMD2 증류 × VSA\n**곱셈 구조**",
-   "x": "-620",
-   "y": "3050",
-   "width": "320",
-   "height": "200",
-   "color": "4"
-  },
-  {
-   "id": "b18vs-claim",
-   "type": "text",
-   "text": "## 주장\n\n*\">50x denoising speedup\"*\n*\"5s 영상 1.8s E2E\"*\n\nFastH3 8-Step V2 (2026-09-15)\n[[MiniMax-H3]] 에서 증류\n**8-forward data-free DMD2 · VSA 80%**\n\n✅ H100·A100·**4090** 지원 명시",
-   "x": "-260",
-   "y": "3050",
-   "width": "330",
-   "height": "240",
-   "color": "5"
-  },
-  {
-   "id": "b18vs-check",
-   "type": "text",
-   "text": "## 🔴 볼트 검산 — 안 닫힌다\n\n8-step ÷ 50-step = **6.25배**\n→ 50배가 되려면 **VSA가 8배**\n🔴 **그 수치가 없다**\n\n🔴 \">50x\"=디노이징 · \"5s→1.8s\"=E2E\n**같은 분모를 쓰지 않는다**\n\n🔴 README 208행 **성능 대조표 0개**\n(근거는 외부 블로그)",
-   "x": "110",
-   "y": "3050",
-   "width": "340",
-   "height": "260",
-   "color": "1"
-  },
-  {
-   "id": "b18vs-unit",
-   "type": "text",
-   "text": "## 📌 [[단위-불일치]]\n**영상 도메인 첫 사례**\n\n지금까지는 파라미터 수\n(552B ↔ 763B)\n\n여기서는 **가속 배수의 분모**\n\n🎯 *\"무엇을 무엇으로 나눈\n배수인가\"* 가 없으면\n**배수는 숫자가 아니다**",
-   "x": "-620",
-   "y": "3340",
-   "width": "320",
-   "height": "240",
-   "color": "6"
-  },
-  {
-   "id": "b18vs-gap",
-   "type": "text",
-   "text": "## 🎯 경쟁 우위 빈틈\n\n레포가 **조합의 이득을 분해하지 않았다**\n증류 단독 / VSA 단독 / 곱\n**각각 얼마인지 표가 없다**\n\n🎯 같은 배치 [[Harness-Design-Empirical]] 이\n하네스 축에서 **정확히 그 일을 했다**\n(루프 고정 + 부품만 변주, 176설정)\n\n→ **영상 가속 쪽엔 그 논문이 없다**\n= 직접 재면 차별점이 된다",
-   "x": "-260",
-   "y": "3340",
-   "width": "340",
-   "height": "270",
-   "color": "1"
-  },
-  {
-   "id": "b18vs-act",
-   "type": "text",
-   "text": "## ▶ 액션\n\n4090에서 FastH3 8-Step V2\n**E2E 실측 + 디노이징/총시간 분해**\n\n🔴 전제 확인 먼저:\n내 파이프라인이 [[MiniMax-H3]] 계열인가\n(아니면 체크포인트 그대로 못 씀)\n\n🔴 VSA 80% **품질 비용 0개** 관찰",
-   "x": "110",
-   "y": "3340",
-   "width": "340",
-   "height": "250",
-   "color": "6"
-  },
-  {
-   "id": "b20vs-hdr",
-   "type": "text",
-   "x": -620,
-   "y": 3200,
-   "width": 400,
-   "height": 280,
-   "color": "3",
-   "text": "# 📥 2026-09-20\n\n[[FastVideo]] **(c) 병합**\n+ [[Higgsfield]] **5개월 공백 해소**\n+ [[TensorRT-LLM]] 교차"
-  },
-  {
-   "id": "b20vs-comfy",
-   "type": "text",
-   "x": -180,
-   "y": 3200,
-   "width": 460,
-   "height": 300,
-   "color": "5",
-   "text": "### FastVideo-FastH3-Comfy → (c) 병합\n🔴 *\"재배치뿐\"* 아니다\n파일명이 **`pruned`·`int8_convrot`\n·`nvfp4_awq`** = **변형**(미문서화)\n\n🔴 `cardData.base_model` 이\n**직전 부모를 건너뛰고 조부모**\n산문은 맞고 **메타데이터가 틀렸다**\n🎯 `int8_convrot` **2번째 조직**"
-  },
-  {
-   "id": "b20vs-rev",
-   "type": "text",
-   "x": 320,
-   "y": 3200,
-   "width": 440,
-   "height": 300,
-   "color": "6",
-   "text": "## 🔴 [[원본-파생-역전]]\n재포장 **132,886** ↔ 원본 **1,390**\n= **95.6배**\n\n🎯 볼트 09-18 actionable 의\n**실측 대상이 틀렸다**\n*\"FastH3 8-Step V2 를 돌려라\"*\n→ 사용자의 95.6%는 **Comfy 패키지**\n\n▶ 실측 대상 교체"
-  },
-  {
-   "id": "b20vs-higgs",
-   "type": "text",
-   "x": -180,
-   "y": 3560,
-   "width": 480,
-   "height": 300,
-   "color": "4",
-   "text": "### [[Higgsfield]] — 5개월 멈춰 있었다\n[[higgsfield-repo]] 인제스트로 드러남\norg.name = **\"Higgsfield Inc.\"**(동일 법인)\n\nCLI ★555 · **skills ★1,070**(`evals/`,\nClaude·Codex·Cursor 3종) · SDK 2종 · MCP\n\n🎯 [[Higgsfield-벤치마킹]] 이 UI를 재는 동안\n**대상이 UI 밖으로 나가고 있다**"
-  },
-  {
-   "id": "b20vs-trt",
-   "type": "text",
-   "x": 340,
-   "y": 3560,
-   "width": 440,
-   "height": 300,
-   "color": "5",
-   "text": "### [[TensorRT-LLM]] ★14,676 (교차)\n[[NVIDIA]] 런타임이 **영상 가속**으로\nGEMM/어텐션 양자화 · Skip-Softmax\n\n🎯 [[FastVideo]] 와 **같은 문제 반대쪽**\n모델 축소 ↔ 커널 교체\n\n🔴 볼트는 그 블로그를 **열지 않았다**\n= [[FastVideo]] 와 같은 **분모 미상**"
-  },
-  {
-   "id": "b21vs-hdr",
-   "type": "text",
-   "x": -620,
-   "y": 3920,
-   "width": 400,
-   "height": 300,
-   "color": "3",
-   "text": "# 📥 2026-09-21\n\n🔀 [[autoclip]] 재판정\n+ [[Remotion]] 엔티티 신설\n+ [[json-render]]·[[Qwen-Image-2.1]] 교차"
-  },
-  {
-   "id": "b21vs-autoclip",
-   "type": "text",
-   "x": -160,
-   "y": 3920,
-   "width": 460,
-   "height": 300,
-   "color": "5",
-   "text": "### [[autoclip]] ★8,577\n자막 기반 LLM 하이라이트 클리핑\n🔴 수집기 *'ASR 없음'* → **faster-whisper 내장**\n시각 분석 **없음**(README 자인)\n🔴 *'0 clips 완료'* 조용한 실패 11개월"
-  },
-  {
-   "id": "b21vs-remotion",
-   "type": "text",
-   "x": 360,
-   "y": 3920,
-   "width": 440,
-   "height": 300,
-   "color": "4",
-   "text": "## 🆕 [[Remotion]]\n사용자 [[reat]] 렌더 엔진\n벤더 편입: json-render · stitch-skills\n· openai-plugins · video-shotcraft"
-  },
-  {
-   "id": "b21vs-schema",
-   "type": "text",
-   "x": 860,
-   "y": 3920,
-   "width": 420,
-   "height": 300,
-   "color": "6",
-   "text": "## 🆕 [[스키마-준수-보장]]\nreat에 **zod → validate → 재프롬프트**\n빨간 박스(시끄러운 실패)는 유지"
-  }
- ],
- "edges": [
-  {
-   "id": "e1",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-sources",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e2",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-entities",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e3",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-concepts",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e4",
-   "fromNode": "domain-hub",
-   "toNode": "cluster-actionables",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-vs0907",
-   "fromNode": "domain-hub",
-   "toNode": "vs-motionomni",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-vs0907b",
-   "fromNode": "vs-motionomni",
-   "toNode": "vs-axis0907",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "ev0908-0",
-   "fromNode": "v0908-hyper",
-   "fromSide": "bottom",
-   "toNode": "v0908-ins",
-   "toSide": "top"
-  },
-  {
-   "id": "ev0908-1",
-   "fromNode": "v0908-mmx",
-   "fromSide": "bottom",
-   "toNode": "v0908-ins",
-   "toSide": "top"
-  },
-  {
-   "id": "ev0908-2",
-   "fromNode": "v0908-mmx",
-   "fromSide": "bottom",
-   "toNode": "v0908-mkt",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909vs-1",
-   "fromNode": "b0909-vs",
-   "toNode": "s0909vs-vsc",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e0909vs-2",
-   "fromNode": "s0909vs-vsc",
-   "toNode": "a0909vs-1",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e0909vs-3",
-   "fromNode": "s0909vs-vsc",
-   "toNode": "a0909vs-2",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e0909vs-4",
-   "fromNode": "s0909vs-vsc",
-   "toNode": "n0909vs-tc",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-pwm-a-pwm-state",
-   "fromNode": "s-pwm",
-   "fromSide": "bottom",
-   "toNode": "a-pwm-state",
-   "toSide": "top"
-  },
-  {
-   "id": "e-s-pwm-c-pwm-gap",
-   "fromNode": "s-pwm",
-   "fromSide": "bottom",
-   "toNode": "c-pwm-gap",
-   "toSide": "top"
-  },
-  {
-   "id": "e0915x-0",
-   "fromNode": "b0915-vidus2",
-   "fromSide": "right",
-   "toNode": "b0915-vidu-note",
-   "toSide": "left"
-  },
-  {
-   "id": "e18vs-0",
-   "fromNode": "b18vs-hdr",
-   "toNode": "b18vs-claim",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e18vs-1",
-   "fromNode": "b18vs-claim",
-   "toNode": "b18vs-check",
-   "fromSide": "right",
-   "toSide": "left",
-   "label": "🔴 검산"
-  },
-  {
-   "id": "e18vs-2",
-   "fromNode": "b18vs-check",
-   "toNode": "b18vs-unit",
-   "fromSide": "bottom",
-   "toSide": "top",
-   "label": "개념 승격"
-  },
-  {
-   "id": "e18vs-3",
-   "fromNode": "b18vs-check",
-   "toNode": "b18vs-gap",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e18vs-4",
-   "fromNode": "b18vs-gap",
-   "toNode": "b18vs-act",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e18vs-5",
-   "fromNode": "b18vs-unit",
-   "toNode": "b18vs-gap",
-   "fromSide": "right",
-   "toSide": "left"
-  },
-  {
-   "id": "e-b20vs-hdr-b20vs-comfy",
-   "fromNode": "b20vs-hdr",
-   "toNode": "b20vs-comfy",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b20vs-hdr-b20vs-rev",
-   "fromNode": "b20vs-hdr",
-   "toNode": "b20vs-rev",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b20vs-hdr-b20vs-higgs",
-   "fromNode": "b20vs-hdr",
-   "toNode": "b20vs-higgs",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b20vs-hdr-b20vs-trt",
-   "fromNode": "b20vs-hdr",
-   "toNode": "b20vs-trt",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b21vs-hdr-b21vs-autoclip",
-   "fromNode": "b21vs-hdr",
-   "toNode": "b21vs-autoclip",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b21vs-hdr-b21vs-remotion",
-   "fromNode": "b21vs-hdr",
-   "toNode": "b21vs-remotion",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b21vs-remotion-b21vs-schema",
-   "fromNode": "b21vs-remotion",
-   "toNode": "b21vs-schema",
-   "fromSide": "bottom",
-   "toSide": "top"
-  },
-  {
-   "id": "e-b21vs-autoclip-b21vs-schema",
-   "fromNode": "b21vs-autoclip",
-   "toNode": "b21vs-schema",
-   "fromSide": "bottom",
-   "toSide": "top"
-  }
- ]
+  "nodes": [
+    {
+      "id": "domain-hub",
+      "type": "text",
+      "text": "# 영상 AI SaaS\n\n목표: Higgsfield 같은 영상 자동화 SaaS\n\n[[video-saas]]",
+      "x": -100,
+      "y": -60,
+      "width": 240,
+      "height": 120,
+      "color": "1"
+    },
+    {
+      "id": "cluster-sources",
+      "type": "text",
+      "text": "## 소스들\n\n_소스 ingest 시 노드 추가됨_",
+      "x": -400,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "cluster-entities",
+      "type": "text",
+      "text": "## 기업/제품\n\n_Higgsfield, Runway, Kling 등_",
+      "x": -100,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "cluster-concepts",
+      "type": "text",
+      "text": "## 핵심 개념\n\n_Video Generation, LoRA, ControlNet 등_",
+      "x": 200,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "cluster-actionables",
+      "type": "text",
+      "text": "## 실행 항목\n\n_actionable.md 연동_",
+      "x": 500,
+      "y": 150,
+      "width": 180,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "vs-motionomni",
+      "type": "text",
+      "text": "## [[Motion-Omni]] *(2026-09-07)*\n2609.04250 · 업30\n\n**캐스케이드 2패스 제거**\n음성 hidden state에서\n표정·손·상하반신 **직접 출력**\n\n**RTF 0.78**(실시간 초과) · **5.4배**\nWER **2.62%** · teacher 2% 이내\n\n🔴 음성 경로 얼리면 **정렬 붕괴**\n= 모듈 조립 경로 막힘\n⚠️ teacher를 **이긴 게 아님**",
+      "x": -140,
+      "y": 430,
+      "width": 340,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "vs-axis0907",
+      "type": "text",
+      "text": "## 🆕 축 분화\n\n**생성(offline)**\n[[Higgsfield]]·[[Seedance]]\n\n**대화(online)**\nRTF < 1 = 경쟁 우위 빈틈\n\n+ SwDA-500 평가 프로토콜\n(*오디오 맞춘 뒤 비교*)\n→ 모델 없이도 **즉시 전용**",
+      "x": 240,
+      "y": 430,
+      "width": 280,
+      "height": 300,
+      "color": "3"
+    },
+    {
+      "id": "v0908-hyper",
+      "type": "text",
+      "text": "## [[hyperframes]] ⭐47,070\n[[HeyGen]] 공식 · Apache-2.0\n\n**모델이 아니라 렌더러**\nHTML→puppeteer→ffmpeg\n\n생성모델 3대 고질병 회피\n(일관성·텍스트·재현성)\n⚠️ Remotion과 **대체재**",
+      "x": -330,
+      "y": 850,
+      "width": 320,
+      "height": 240,
+      "color": "1"
+    },
+    {
+      "id": "v0908-mmx",
+      "type": "text",
+      "text": "## [[Minimax-h3_Singularity]]\nDL 58,060 · Apache-2.0\n\n[[MiniMax-H3]] 융합·프루닝\nComfyUI 4모드\n\n🔴 **정량 지표 전무**\n데모 링크뿐",
+      "x": 30,
+      "y": 850,
+      "width": 320,
+      "height": 240,
+      "color": "1"
+    },
+    {
+      "id": "v0908-ins",
+      "type": "text",
+      "text": "# 축이 갈렸다\n\n**생성 모델** ↔ **결정론적 렌더**\n경쟁이 아니라 **분업**\n\n빈틈 = *수치가 정확한 영상*\n(리포트·대시보드·실적)",
+      "x": -150,
+      "y": 1130,
+      "width": 400,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "v0908-mkt",
+      "type": "text",
+      "text": "## 🔴 관측: 시장 구조\n\n벤치 없이 DL 5.8만\n= [[Huihui-Qwen3.8-27B-abliterated-GGUF]]\n구조가 **영상에서 재현**\n\n영상 품질은 정량화가 어렵고\n데모는 체리피킹 배제 불가",
+      "x": 390,
+      "y": 1130,
+      "width": 380,
+      "height": 200,
+      "color": "3"
+    },
+    {
+      "id": "b0909-vs",
+      "type": "text",
+      "text": "# 2026-09-09 배치\n\n내 파이프라인과 동일 계열 등장",
+      "x": "-100",
+      "y": "1550",
+      "width": "280",
+      "height": "110",
+      "color": "4"
+    },
+    {
+      "id": "s0909vs-vsc",
+      "type": "text",
+      "text": "### video-shotcraft\n⭐7,860·Apache-2.0·Remotion\n**157 레시피 카드 / 214 프리뷰**\n🔴같은 README에 숫자 4개\n(desc 152/209 · 워크벤치 216)\n[[video-shotcraft]]",
+      "x": "-420",
+      "y": "1750",
+      "width": "260",
+      "height": "180",
+      "color": "5"
+    },
+    {
+      "id": "a0909vs-1",
+      "type": "text",
+      "text": "### 🎬 갤러리 214개 ↔ reat-catalog\n1:1 대조표 만들기\n(설치 0 · 코드 안 봐도 됨)\n**우선순위 높음**",
+      "x": "-120",
+      "y": "1750",
+      "width": "250",
+      "height": "150",
+      "color": "2"
+    },
+    {
+      "id": "a0909vs-2",
+      "type": "text",
+      "text": "### ⚙️ `t` 기반 결정적 컴포넌트\n프리뷰/렌더 **픽셀 동일**\n→ 내 Remotion 불일치 해법",
+      "x": "160",
+      "y": "1750",
+      "width": "250",
+      "height": "150",
+      "color": "2"
+    },
+    {
+      "id": "n0909vs-tc",
+      "type": "text",
+      "text": "### ⚠️ video-talkcraft (형제)\n내레이션 축 **이미 점유**\n78카드·문자당 20–40ms 정렬\n→ 내 차별화 = **한국어 특화**",
+      "x": "-280",
+      "y": "1980",
+      "width": "260",
+      "height": "150",
+      "color": "1"
+    },
+    {
+      "id": "s-pwm",
+      "type": "text",
+      "text": "[[Programmable-World-Model]]\n업36 · arXiv 2609.10540\n상태 진화를 시각생성과 분리\n비디오 모델 = **렌더러로 강등**\n상태증강 3D OBB 중간표현\n📊 CombatStateBench 94%/98%\n⚠️ 자체 신설 벤치·비교수치 없음",
+      "x": -160,
+      "y": 2250,
+      "width": 420,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "a-pwm-state",
+      "type": "text",
+      "text": "**내 Scene DSL에 영속 상태 추가 검토**\nreat-* 구조는 이미 동일\n(프로그램→결정적 컴파일러→렌더러)\n차이: 영속 전역 상태만 없음",
+      "x": -620,
+      "y": 2530,
+      "width": 400,
+      "height": 160,
+      "color": "2"
+    },
+    {
+      "id": "c-pwm-gap",
+      "type": "text",
+      "text": "**경쟁 빈틈**\nHiggsfield·Seedance는\n영속 상태를 안 준다\n→ 상태 층이 빈 자리",
+      "x": 300,
+      "y": 2530,
+      "width": 340,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "b0915-vidus2",
+      "type": "text",
+      "text": "[[Vidu-S2]] 🆕 *(ai-news→video-saas 재판정)*\nS2-Avatar: 540p→**720p** 실시간\nS2-Editing: 스트림 위 **의상·인물·배경 교체**\n+ spatial video 탐색\n🔴 **초록에 수치 0**\n🔴 S1 대비 신뢰도 하락(medium→low)",
+      "x": -620,
+      "y": 2830,
+      "width": 360,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "b0915-vidu-note",
+      "type": "text",
+      "text": "🎯 **편집이 렌더 뒤가 아니라 스트림 위로**\nreat-* 스택 전제와 다른 축\n**프리뷰와 최종본의 구분이 사라진다**\n\n▶ 액션: vidu.com/vidu-stream 직접 실측",
+      "x": -210,
+      "y": 2830,
+      "width": 320,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "b18vs-hdr",
+      "type": "text",
+      "text": "# 📥 2026-09-18\n\n### [[FastVideo]] ★4,467\nApache-2.0 · 드리프트 0\n\n희소증류 = DMD2 증류 × VSA\n**곱셈 구조**",
+      "x": "-620",
+      "y": "3050",
+      "width": "320",
+      "height": "200",
+      "color": "4"
+    },
+    {
+      "id": "b18vs-claim",
+      "type": "text",
+      "text": "## 주장\n\n*\">50x denoising speedup\"*\n*\"5s 영상 1.8s E2E\"*\n\nFastH3 8-Step V2 (2026-09-15)\n[[MiniMax-H3]] 에서 증류\n**8-forward data-free DMD2 · VSA 80%**\n\n✅ H100·A100·**4090** 지원 명시",
+      "x": "-260",
+      "y": "3050",
+      "width": "330",
+      "height": "240",
+      "color": "5"
+    },
+    {
+      "id": "b18vs-check",
+      "type": "text",
+      "text": "## 🔴 볼트 검산 — 안 닫힌다\n\n8-step ÷ 50-step = **6.25배**\n→ 50배가 되려면 **VSA가 8배**\n🔴 **그 수치가 없다**\n\n🔴 \">50x\"=디노이징 · \"5s→1.8s\"=E2E\n**같은 분모를 쓰지 않는다**\n\n🔴 README 208행 **성능 대조표 0개**\n(근거는 외부 블로그)",
+      "x": "110",
+      "y": "3050",
+      "width": "340",
+      "height": "260",
+      "color": "1"
+    },
+    {
+      "id": "b18vs-unit",
+      "type": "text",
+      "text": "## 📌 [[단위-불일치]]\n**영상 도메인 첫 사례**\n\n지금까지는 파라미터 수\n(552B ↔ 763B)\n\n여기서는 **가속 배수의 분모**\n\n🎯 *\"무엇을 무엇으로 나눈\n배수인가\"* 가 없으면\n**배수는 숫자가 아니다**",
+      "x": "-620",
+      "y": "3340",
+      "width": "320",
+      "height": "240",
+      "color": "6"
+    },
+    {
+      "id": "b18vs-gap",
+      "type": "text",
+      "text": "## 🎯 경쟁 우위 빈틈\n\n레포가 **조합의 이득을 분해하지 않았다**\n증류 단독 / VSA 단독 / 곱\n**각각 얼마인지 표가 없다**\n\n🎯 같은 배치 [[Harness-Design-Empirical]] 이\n하네스 축에서 **정확히 그 일을 했다**\n(루프 고정 + 부품만 변주, 176설정)\n\n→ **영상 가속 쪽엔 그 논문이 없다**\n= 직접 재면 차별점이 된다",
+      "x": "-260",
+      "y": "3340",
+      "width": "340",
+      "height": "270",
+      "color": "1"
+    },
+    {
+      "id": "b18vs-act",
+      "type": "text",
+      "text": "## ▶ 액션\n\n4090에서 FastH3 8-Step V2\n**E2E 실측 + 디노이징/총시간 분해**\n\n🔴 전제 확인 먼저:\n내 파이프라인이 [[MiniMax-H3]] 계열인가\n(아니면 체크포인트 그대로 못 씀)\n\n🔴 VSA 80% **품질 비용 0개** 관찰",
+      "x": "110",
+      "y": "3340",
+      "width": "340",
+      "height": "250",
+      "color": "6"
+    },
+    {
+      "id": "b20vs-hdr",
+      "type": "text",
+      "x": -620,
+      "y": 3200,
+      "width": 400,
+      "height": 280,
+      "color": "3",
+      "text": "# 📥 2026-09-20\n\n[[FastVideo]] **(c) 병합**\n+ [[Higgsfield]] **5개월 공백 해소**\n+ [[TensorRT-LLM]] 교차"
+    },
+    {
+      "id": "b20vs-comfy",
+      "type": "text",
+      "x": -180,
+      "y": 3200,
+      "width": 460,
+      "height": 300,
+      "color": "5",
+      "text": "### FastVideo-FastH3-Comfy → (c) 병합\n🔴 *\"재배치뿐\"* 아니다\n파일명이 **`pruned`·`int8_convrot`\n·`nvfp4_awq`** = **변형**(미문서화)\n\n🔴 `cardData.base_model` 이\n**직전 부모를 건너뛰고 조부모**\n산문은 맞고 **메타데이터가 틀렸다**\n🎯 `int8_convrot` **2번째 조직**"
+    },
+    {
+      "id": "b20vs-rev",
+      "type": "text",
+      "x": 320,
+      "y": 3200,
+      "width": 440,
+      "height": 300,
+      "color": "6",
+      "text": "## 🔴 [[원본-파생-역전]]\n재포장 **132,886** ↔ 원본 **1,390**\n= **95.6배**\n\n🎯 볼트 09-18 actionable 의\n**실측 대상이 틀렸다**\n*\"FastH3 8-Step V2 를 돌려라\"*\n→ 사용자의 95.6%는 **Comfy 패키지**\n\n▶ 실측 대상 교체"
+    },
+    {
+      "id": "b20vs-higgs",
+      "type": "text",
+      "x": -180,
+      "y": 3560,
+      "width": 480,
+      "height": 300,
+      "color": "4",
+      "text": "### [[Higgsfield]] — 5개월 멈춰 있었다\n[[higgsfield-repo]] 인제스트로 드러남\norg.name = **\"Higgsfield Inc.\"**(동일 법인)\n\nCLI ★555 · **skills ★1,070**(`evals/`,\nClaude·Codex·Cursor 3종) · SDK 2종 · MCP\n\n🎯 [[Higgsfield-벤치마킹]] 이 UI를 재는 동안\n**대상이 UI 밖으로 나가고 있다**"
+    },
+    {
+      "id": "b20vs-trt",
+      "type": "text",
+      "x": 340,
+      "y": 3560,
+      "width": 440,
+      "height": 300,
+      "color": "5",
+      "text": "### [[TensorRT-LLM]] ★14,676 (교차)\n[[NVIDIA]] 런타임이 **영상 가속**으로\nGEMM/어텐션 양자화 · Skip-Softmax\n\n🎯 [[FastVideo]] 와 **같은 문제 반대쪽**\n모델 축소 ↔ 커널 교체\n\n🔴 볼트는 그 블로그를 **열지 않았다**\n= [[FastVideo]] 와 같은 **분모 미상**"
+    },
+    {
+      "id": "b21vs-hdr",
+      "type": "text",
+      "x": -620,
+      "y": 3920,
+      "width": 400,
+      "height": 300,
+      "color": "3",
+      "text": "# 📥 2026-09-21\n\n🔀 [[autoclip]] 재판정\n+ [[Remotion]] 엔티티 신설\n+ [[json-render]]·[[Qwen-Image-2.1]] 교차"
+    },
+    {
+      "id": "b21vs-autoclip",
+      "type": "text",
+      "x": -160,
+      "y": 3920,
+      "width": 460,
+      "height": 300,
+      "color": "5",
+      "text": "### [[autoclip]] ★8,577\n자막 기반 LLM 하이라이트 클리핑\n🔴 수집기 *'ASR 없음'* → **faster-whisper 내장**\n시각 분석 **없음**(README 자인)\n🔴 *'0 clips 완료'* 조용한 실패 11개월"
+    },
+    {
+      "id": "b21vs-remotion",
+      "type": "text",
+      "x": 360,
+      "y": 3920,
+      "width": 440,
+      "height": 300,
+      "color": "4",
+      "text": "## 🆕 [[Remotion]]\n사용자 [[reat]] 렌더 엔진\n벤더 편입: json-render · stitch-skills\n· openai-plugins · video-shotcraft"
+    },
+    {
+      "id": "b21vs-schema",
+      "type": "text",
+      "x": 860,
+      "y": 3920,
+      "width": 420,
+      "height": 300,
+      "color": "6",
+      "text": "## 🆕 [[스키마-준수-보장]]\nreat에 **zod → validate → 재프롬프트**\n빨간 박스(시끄러운 실패)는 유지"
+    },
+    {
+      "id": "s-comfyui-0924",
+      "type": "text",
+      "text": "**[[ComfyUI]]** 🔀재판정→**video-saas**\n★126,600→**134,790** · **GPL-3.0** 확정\n조직 이관 comfyanonymous→Comfy-Org\n(레포 ID 589831718 승계)",
+      "x": -620,
+      "y": 4120,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-pastframes-0924",
+      "type": "text",
+      "text": "**[[The-Past-Frames-the-Future]]**\nAR 비디오 메모리 서베이 ♥33\n🎯 메모리를 **조작적으로 정의**\n증거 사라진 뒤 남는 것만 메모리",
+      "x": -290,
+      "y": 4120,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "s-rewardverse-0924",
+      "type": "text",
+      "text": "**[[RewardVerse]]** ♥20 · **low**\n`scalar drift` 명명\n루브릭 먼저 생성→그것으로 채점\n🔴 초록 수치 **0개**",
+      "x": 40,
+      "y": 4120,
+      "width": 300,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "c-videomemory-0924",
+      "type": "text",
+      "text": "🆕 영상 생성 **메모리** 축\nOperations 5단 → [[reat]]\n장면간 상태전달 체크리스트",
+      "x": 370,
+      "y": 4120,
+      "width": 300,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "a-rubric-scoring",
+      "type": "text",
+      "text": "루브릭 2단 프롬프트 적용\n(점수 직접 묻지 말고 기준 먼저)\n스택 불필요 · 난이도 낮음",
+      "x": -620,
+      "y": 4300,
+      "width": 300,
+      "height": 150,
+      "color": "2"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-sources",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e2",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-entities",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e3",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-concepts",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e4",
+      "fromNode": "domain-hub",
+      "toNode": "cluster-actionables",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-vs0907",
+      "fromNode": "domain-hub",
+      "toNode": "vs-motionomni",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-vs0907b",
+      "fromNode": "vs-motionomni",
+      "toNode": "vs-axis0907",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "ev0908-0",
+      "fromNode": "v0908-hyper",
+      "fromSide": "bottom",
+      "toNode": "v0908-ins",
+      "toSide": "top"
+    },
+    {
+      "id": "ev0908-1",
+      "fromNode": "v0908-mmx",
+      "fromSide": "bottom",
+      "toNode": "v0908-ins",
+      "toSide": "top"
+    },
+    {
+      "id": "ev0908-2",
+      "fromNode": "v0908-mmx",
+      "fromSide": "bottom",
+      "toNode": "v0908-mkt",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909vs-1",
+      "fromNode": "b0909-vs",
+      "toNode": "s0909vs-vsc",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0909vs-2",
+      "fromNode": "s0909vs-vsc",
+      "toNode": "a0909vs-1",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0909vs-3",
+      "fromNode": "s0909vs-vsc",
+      "toNode": "a0909vs-2",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0909vs-4",
+      "fromNode": "s0909vs-vsc",
+      "toNode": "n0909vs-tc",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pwm-a-pwm-state",
+      "fromNode": "s-pwm",
+      "fromSide": "bottom",
+      "toNode": "a-pwm-state",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pwm-c-pwm-gap",
+      "fromNode": "s-pwm",
+      "fromSide": "bottom",
+      "toNode": "c-pwm-gap",
+      "toSide": "top"
+    },
+    {
+      "id": "e0915x-0",
+      "fromNode": "b0915-vidus2",
+      "fromSide": "right",
+      "toNode": "b0915-vidu-note",
+      "toSide": "left"
+    },
+    {
+      "id": "e18vs-0",
+      "fromNode": "b18vs-hdr",
+      "toNode": "b18vs-claim",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e18vs-1",
+      "fromNode": "b18vs-claim",
+      "toNode": "b18vs-check",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "🔴 검산"
+    },
+    {
+      "id": "e18vs-2",
+      "fromNode": "b18vs-check",
+      "toNode": "b18vs-unit",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "개념 승격"
+    },
+    {
+      "id": "e18vs-3",
+      "fromNode": "b18vs-check",
+      "toNode": "b18vs-gap",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e18vs-4",
+      "fromNode": "b18vs-gap",
+      "toNode": "b18vs-act",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e18vs-5",
+      "fromNode": "b18vs-unit",
+      "toNode": "b18vs-gap",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-b20vs-hdr-b20vs-comfy",
+      "fromNode": "b20vs-hdr",
+      "toNode": "b20vs-comfy",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b20vs-hdr-b20vs-rev",
+      "fromNode": "b20vs-hdr",
+      "toNode": "b20vs-rev",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b20vs-hdr-b20vs-higgs",
+      "fromNode": "b20vs-hdr",
+      "toNode": "b20vs-higgs",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b20vs-hdr-b20vs-trt",
+      "fromNode": "b20vs-hdr",
+      "toNode": "b20vs-trt",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b21vs-hdr-b21vs-autoclip",
+      "fromNode": "b21vs-hdr",
+      "toNode": "b21vs-autoclip",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b21vs-hdr-b21vs-remotion",
+      "fromNode": "b21vs-hdr",
+      "toNode": "b21vs-remotion",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b21vs-remotion-b21vs-schema",
+      "fromNode": "b21vs-remotion",
+      "toNode": "b21vs-schema",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-b21vs-autoclip-b21vs-schema",
+      "fromNode": "b21vs-autoclip",
+      "toNode": "b21vs-schema",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-comfyui-0924",
+      "fromNode": "v0908-ins",
+      "fromSide": "bottom",
+      "toNode": "s-comfyui-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-pastframes-0924",
+      "fromNode": "v0908-ins",
+      "fromSide": "bottom",
+      "toNode": "s-pastframes-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-s-rewardverse-0924",
+      "fromNode": "v0908-ins",
+      "fromSide": "bottom",
+      "toNode": "s-rewardverse-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-c-videomemory-0924",
+      "fromNode": "v0908-ins",
+      "fromSide": "bottom",
+      "toNode": "c-videomemory-0924",
+      "toSide": "top"
+    },
+    {
+      "id": "e-a-rubric-scoring",
+      "fromNode": "v0908-ins",
+      "fromSide": "bottom",
+      "toNode": "a-rubric-scoring",
+      "toSide": "top"
+    }
+  ]
 }

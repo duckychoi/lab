@@ -4,7 +4,7 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-20
+updated: 2026-09-24
 sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md]
 ---
 
@@ -3344,3 +3344,41 @@ AIME 2024 cons@64:  7B 83.3  →  32B 83.3   =   0.0점
 
 > [!insight] 📊 분포 지표 — **4:1로 나쁘다**
 > 볼트 요청 2(집계값 옆에 분포 1개)를 충족한 항목은 **[[Ternary-Bonsai-2-27B]] 하나뿐**(평균 84.78 → 수학 96.57/코딩 89.42/**에이전틱 74.92**). [[ScriptMoE]]·[[HyperQ]]·[[RULER-SVG]]·[[GAE]] 는 전부 평균/집계만.
+
+---
+
+## [2026-09-24] 자동수집 배치 — GitHub 5 · HF논문 5 · HF모델 3(갱신용)
+
+### 🎯 이 배치의 축 — **실행 통제 아래에 "계측" 층이 깔렸다**
+
+09-17에 관찰한 *"GitHub 5건 중 3건이 다른 에이전트를 감독하는 층"* 이 한 단계 내려왔다. **09-24 GitHub 5건 중 4건이 관측성을 1급 기능으로 내장한다**:
+
+| 레포 | ★ | 계측 방식 |
+|---|---|---|
+| [[nasiko]] | 8,841 | OTel 스팬 · `gen_ai.*` 속성에서 **토큰/비용 자동 수집** |
+| [[agent-browser]] | 43,140 | `dashboard start` 포트 4848 — 라이브 뷰포트 + 명령 피드 |
+| [[agent-desktop]] | 1,621 | `trace read/export` — 타임라인+스크린샷 단일 HTML |
+| [[PanWatch]] | 1,717 | `trace_id` 관통 · `agent_runs` · **노드별 진행률·비용** |
+
+📌 **순서가 논리적이다: 먼저 보이게 만들고, 그다음 막는다.** [[nasiko]] 만 게이트(flow guards)까지 갔고 나머지 3건은 관측에 머문다 → [[검사가능성-공사]]
+
+### 🎯 두 번째 축 — **Rust가 에이전트 인프라의 기본 언어가 되고 있다**
+GitHub **5건 중 3건이 Rust**([[nasiko]]·[[agent-browser]]·[[agent-desktop]]), 2건이 Python([[ComfyUI]]·[[PanWatch]]). 🔴 **단 표본 5이고 트렌딩 목록이 Rust 탭을 포함해 교차됐으므로 선발 편향이 있다** — 수집기가 *"데일리 전체/Python/Rust 목록 교차"* 라 밝혔다. **언어 분포를 이 배치로 추정하면 안 된다.**
+📌 유의미한 것은 비율이 아니라 **성격**이다: 셋 다 **단일 바이너리 CLI**이고 런타임 의존을 없애는 것을 강점으로 내세운다.
+
+### 🔴 볼트 정정 3건
+1. **[[ComfyUI]] 는 "본체 누락"이 아니었다** — 2026-08-11부터 페이지 존재. 301 리다이렉트가 중복 검사를 무력화 → 신설 개념 **[[정규명-우선-중복검사]]**. 이 건은 **신규가 아니라 갱신**이고 **도메인도 `video-saas` 로 재판정**됐다.
+2. **[[nasiko]] 라이선스는 Apache-2.0 이다** — `NOASSERTION` 은 탐지 실패였다(LICENSE 196행 Apache 원문 확인). 대조: [[treg]] 는 진짜 커스텀. **같은 값이 두 실체를 접고 있다** → [[메타데이터-부재-추론]]
+3. **[[TradingAgents]] ★108,376 · 오늘 푸시** — 볼트 기록 96,723(08-09)이 낡았고, **"5주 정체" 인사이트가 만료**됐다. [[PanWatch]] README의 *"76k+"* 는 더 낡았다.
+
+### ✅ 수집기 평가 — 인용 정확도는 높고, 판정에서 한 번 틀렸다
+- **GitHub 5/5 · HF모델 5/5 · 논문 5/5 독립 검증 통과.** 드리프트 ★ 0~+6 · 업보트 0~+2 · **HF 모델 수치 전 필드 완전일치**
+- **README 4건 전문 대조 결과 인용 축자 일치** — [[nasiko]] 4대 능력, [[agent-desktop]] 58/54·3값 권한, [[PanWatch]] 9-Agent·3~5분·$0.05 전부 원문 그대로
+- **한정어 보존 9배치 연속** (*"at best 70.14%"* → *"최고"* · *"best **reported** result"* → *"최고 **보고값**"*)
+- 🟡 누락 1건: [[RewardVerse]] 부속 GitHub(`2kxx/RewardVerse` ★3) 미기재 — **필드는 있었다**
+- 🟡 한정어 경미 탈락 1건: [[agent-desktop]] Windows/Linux 를 README는 **`Planned`** 라 쓰는데 수집기는 *"불가"*
+
+### 📌 남은 볼트 한계
+- 🔴 **코드 실행 0건 유지** — 5배치 연속. [[agent-browser]] 가 **설치 1줄로 깰 수 있는 가장 싼 후보**(★최우선 등록)
+- 🔴 **논문 5건 전부 초록만** — 그중 **2건([[Spatial-Interactor]]·[[RewardVerse]])은 초록 수치 0개**로 대조 불가 상태 수록(reliability low)
+- 🔴 **[[agent-browser]] `Commands` 540행 · [[ComfyUI]] 노드 체계 미열람**
