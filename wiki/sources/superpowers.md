@@ -2,14 +2,25 @@
 title: obra/superpowers — 에이전트 스킬·소프트웨어 개발 방법론 프레임워크
 type: source
 domain: ai-news
-tags: [ai-news, github-trending, agent-framework, skills, open-source, software-methodology, claude-code]
+tags: [ai-news, github-trending, agent-framework, skills, open-source, software-methodology, claude-code, 오픈코어, 런타임-이식]
 created: 2026-04-11
-updated: 2026-08-23
+updated: 2026-09-26
 sources: []
 reliability: high
 ---
 
 # obra/superpowers
+
+> [!update] 2026-09-26 갱신 — ★**291,794** · 🔴 **08-23 판정 2건이 만료됐다** · 🆕 **16개 런타임 이식 + 상업 지원 발견**
+> ★**291,794**(2026-09-26 GitHub API 실검증) ← 276,399(08-23). **34일간 +15,395 · 일평균 약 453**(당일 +468과 정합).
+> 🔴 **만료 1 — "나흘째 정체"가 사라졌다.** 08-23에 *"최종 푸시 2026-08-19 — 나흘째 정체"* 로 적었으나 오늘 **`pushed_at` = 2026-09-25T18:08:16Z(어제)** 다.
+> 🔴 **만료 2 — 그래서 "커밋 없이 스타만 늘고 있어 트렌딩 노출의 자기강화 루프"라는 해석의 전제가 무너졌다.** 🎯 09-24 [[TradingAgents]](*"5주 정체"* → 당일 푸시)에 이은 **시점의존 주장 만료 2번째**이고, 같은 배치 [[mattpocock-skills]] 까지 합치면 **3번째**다. 📌 **볼트가 "정체"라고 적은 것들이 예외 없이 되살아났다 — 정체 판정에는 관측 창을 함께 적어야 한다.**
+> 🆕 **볼트 신규 발견 1 — 16개 런타임에 이식된다.** README 399행의 `###` 헤딩 17개 중 16개가 설치 대상 런타임이다: Claude Code · Antigravity · Codex App · Codex CLI · Cursor · Devin CLI · Factory Droid · Gemini CLI · GitHub Copilot CLI · Grok Build CLI · Kimi Code · OpenCode · Pi · Qwen Code · **Hermes Agent** · Muse (+ Skills Library).
+> 🎯 **`Hermes Agent` 가 공식 설치 대상에 들어 있다** — 사용자 [[hermes-agent]] 축에 **직접 적용 가능한 경로**이고, 볼트가 07-03 이래 *"멀티 하니스 지원"* 이라고만 적어 온 것의 **실제 목록을 오늘 처음 확정**했다. 같은 배치 [[hindsight]](MCP 경로)와 함께 **두 건이 같은 날 Hermes 를 가리킨다.**
+> 🆕 **볼트 신규 발견 2 — 상업 지원 창구가 있다.** README 48행 `## Commercial Services`: *"If you're using Superpowers in enterprise … drop us a line at **sales@primeradiant.com**."* → **MIT 오픈소스 + 기업 유료 지원** 구조이고, 볼트 [[mem0ai]](오픈코어 3경로)에 이은 **두 번째 상용 퍼널**이다. [[Prime-Radiant]] 엔티티 신설.
+> 부가 실측: 포크 **26,114**(24,726→+1,388) · 오픈이슈 **404** · watchers **1,082** · MIT · Shell · topics **8개**(`ai,brainstorming,coding,obra,sdlc,skills,subagent-driven-development,superpowers` — 08-23에는 미기록).
+> 🔴 **드리프트가 음수다**: 수집기 ★291,795 → 볼트 **291,794(−1)**. 09-17 [[cline]] 이후 볼트 **2번째 음수 드리프트**이고, 같은 배치 [[claude-plugins-official]] 도 −1이라 **한 배치에 2건**이다 → [[상대속도-가림]] 보강.
+> ⚠️ *"that works"* 정량 근거 미제시는 **여전히 미해소**(07-26 최초 지적 이후 2개월). reliability high 유지(수치 신뢰도).
 
 > [!update] 2026-08-23 갱신 — ⭐276,399 (**API 실검증**·이틀 +587·성장률 역전 고착)
 > GitHub ⭐**276,399** (2026-08-23 **GitHub API 실호출 검증**) ← 275,812(08-22). 이틀 **+587**로 **절대 스타 1위는 유지하나 증분은 하루 300선**까지 내려앉았다. 같은 기간 [[mattpocock-skills]]는 +2,473 — **성장률 역전이 08-22 관측에 이어 이틀째 고착**되며 격차가 약 4.2배로 벌어졌다.
@@ -60,6 +71,8 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/obra/superpowers
-- 스타: ⭐275,812 (2026-08-22 **GitHub API 실호출 검증**·트렌딩 데일리 6위·27.5만 돌파·raw 표기 275,811/당일 +790) ← ⭐268,947 (08-08, +782) ← ⭐268,380 (08-07) ← ⭐261,293 (07-26 WebFetch 실검증) ← ⭐252,676 (07-12) ← ⭐244,962 (07-03) ← ⭐225,402 (06-13) ← ⭐224,143 (06-11) ← ⭐193,260 (05-16) ← ⭐174,963 (04-30)
+- 실측(2026-09-26 GitHub API): ★**291,794** · 포크 26,114 · 오픈이슈 404 · watchers 1,082 · MIT · Shell · 생성 2025-10-09 · 푸시 **2026-09-25T18:08:16Z** · topics 8개 · repo id 1073224795
+- 확인 범위: **README 399행 전문 열람**(16런타임·Commercial Services 확인). 🔴 스킬 코드 미독 · 🔴 미실행
+- 스타: ⭐291,794 (2026-09-26 API) ← ⭐276,399 (08-23) ← ⭐275,812 (2026-08-22 **GitHub API 실호출 검증**·트렌딩 데일리 6위·27.5만 돌파·raw 표기 275,811/당일 +790) ← ⭐268,947 (08-08, +782) ← ⭐268,380 (08-07) ← ⭐261,293 (07-26 WebFetch 실검증) ← ⭐252,676 (07-12) ← ⭐244,962 (07-03) ← ⭐225,402 (06-13) ← ⭐224,143 (06-11) ← ⭐193,260 (05-16) ← ⭐174,963 (04-30)
 - 부가 실측(2026-08-22 API): 포크 24,660 · 이슈 300 · 언어 Shell · 라이선스 MIT · 생성 2025-10-09 · 최종 푸시 2026-08-19
 - 신뢰도: ⭐⭐⭐⭐⭐ (27.5만 스타·Anthropic 공식 마켓플레이스 등재·수치 API 실검증 — 단 "that works" 정량 근거는 리포 미제시)

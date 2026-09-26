@@ -409,6 +409,26 @@
       "width": 300,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "n-wanpe-0926",
+      "type": "text",
+      "text": "### [[WanPE]]\n397B 프롬프트 개선 전용\n\n5~15초 +10.66~18.84\n**30초 +50.86 (3~5배)**\n🎯 역산 > 순방향 재작성",
+      "x": -700,
+      "y": 4520,
+      "width": 260,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "n-qwenimg-0926",
+      "type": "text",
+      "text": "### [[Qwen-Image-2.1]]\n**1:N 역전**\n\n원본 42,469 vs\nComfy 76.9배 · UC 16.9배\n🎯 관심은 원본, 사용은 파생",
+      "x": -400,
+      "y": 4520,
+      "width": 260,
+      "height": 150,
+      "color": "1"
     }
   ],
   "edges": [
@@ -657,6 +677,20 @@
       "fromNode": "v0908-ins",
       "fromSide": "bottom",
       "toNode": "a-rubric-scoring",
+      "toSide": "top"
+    },
+    {
+      "id": "e36-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-wanpe-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e37-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-qwenimg-0926",
+      "fromSide": "bottom",
       "toSide": "top"
     }
   ]

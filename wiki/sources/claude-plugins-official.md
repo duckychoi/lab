@@ -2,9 +2,9 @@
 title: anthropics/claude-plugins-official — Anthropic 공식 Claude Code 플러그인 디렉토리
 type: source
 domain: ai-news
-tags: [ai-news, github-trending, claude-code, plugins, anthropic, workflow]
+tags: [ai-news, github-trending, claude-code, plugins, anthropic, workflow, 자기제한-명시, 검사가능성-공사]
 created: 2026-05-25
-updated: 2026-08-30
+updated: 2026-09-26
 sources: []
 reliability: high
 ---
@@ -13,6 +13,20 @@ reliability: high
 
 **GitHub**: https://github.com/anthropics/claude-plugins-official
 **지표(2026-08-27 최신)**: ⭐**34,474** · 포크 **3,894** · **오픈이슈 1,026**(⚠️**이번 배치 GitHub 최다**) · **Python** · **Apache-2.0** · 생성 **2025-11-20** · 최종 푸시 **2026-08-26** — GitHub API 실호출 검증 · 트렌딩 데일리 **3위**(페이지 표기 당일 +308 · raw 절대값 34,472 대비 API **+2 드리프트**)
+
+> [!update] 2026-09-26 갱신 — 🎯 **08-27에 비워 뒀던 칸이 오늘 채워졌다: 심사 기준 문서는 없고, Anthropic이 스스로 "검증할 수 없다"고 쓴다**
+> ★**37,014**(2026-09-26 GitHub API 실검증) ← 35,536(08-30). **27일간 +1,478 · 일평균 약 54.7.**
+> 🔴 **성장률이 붕괴했다** — 08-27~08-30 일평균 **354** → 오늘까지 **54.7**. **약 6.5배 둔화.** 08-30에 *"배치에서 성장률이 가장 낮다 · 공식성은 관심의 크기를 보장하지 않는다"* 고 적었는데, 그 관측이 **한 달 뒤 더 극단으로 갔다.**
+>
+> 🎯 **가장 중요한 것 — 볼트의 두 미확인 항목이 오늘 확정됐다.**
+> **① 08-27 ⚠️ *"심사 기준 문서 미확인 — 무엇을 통과 기준으로 삼는지 공개 문서를 찾지 못했다"*** → **오늘 README 97행 전문 열람 결과: 기준 문서는 없다.** 28행이 전부다 — *"External plugins must meet **quality and security standards** for approval. To submit a new plugin, use the [plugin directory submission form]."* **기준의 이름만 있고 내용이 없으며, 링크는 제출 폼 하나뿐이다.** ⬜ *"찾지 못했다"* → 🔴 **"레포에 없다"** 로 등급 변경.
+> **② 그리고 레포가 볼트의 질문에 직접 답한다.** README **5행**: *"**Anthropic does not control** what MCP servers, files, or other software are included in plugins and **cannot verify that they will work as intended or that they won't change.**"*
+> 📌 **08-30에 볼트는 *"공식 레지스트리의 가치가 심사 품질에 달려 있는데 그 근거가 비어 있다"* 고 썼다. 오늘 확인된 답은 "근거가 비어 있는 게 아니라, 검증하지 않는다고 공식이 먼저 선언했다" 이다.** → **"공식·큐레이션"이 동작 검증을 뜻하지 않는다.**
+> 🎯 이건 [[자기제한-명시]] 의 **가장 높은 지위 사례**다 — [[earendil-works]]·[[vxcontrol]]·[[lahfir]] 는 개인·스타트업이었고, 이번엔 **플랫폼 소유자가 자기 공식 레지스트리에 면책을 박았다.** 동시에 [[검사가능성-공사]] 의 공백이기도 하다: *"심사했다"* 와 *"동작을 보증한다"* 사이에 **이름 없는 칸**이 있고, 이 README는 그 칸을 경고문으로만 처리한다.
+>
+> 🆕 **오픈이슈가 처음으로 줄었다**: 1,026(08-27) → 1,057(08-30) → **1,035(09-26, −22).** 볼트 가설(*"이슈 = 플러그인 등재 요청·심사 대기열"*)과 **방향이 정합**한다(처리 속도가 유입을 넘어선 첫 구간). ⚠️ **여전히 이슈 목록 미열람이므로 가설은 가설이다.** 🔴 그리고 같은 배치 [[paperclip]] 오픈이슈가 **5,712** 로 등장해 *"배치 최다"* 타이틀을 **5.5배 차이로** 넘겨줬다.
+> 🔴 **음수 드리프트**: 수집기 ★37,015 → 볼트 **37,014(−1)**. 같은 배치 [[superpowers]] 도 −1 → **한 배치에 음수 2건**([[상대속도-가림]] 보강).
+> 부가 실측: 포크 **4,159** · watchers 230 · Apache-2.0 · Python · 푸시 **2026-09-25T23:12:23Z** · topics `claude-code,mcp,skills`(08-30 미기록 — 오늘 확정) · repo id 1100776768.
 
 > [!update] 2026-08-30 갱신 — **사흘 만의 재관측** ⭐**35,536**(+1,062·일평균 +354) · **오픈이슈 1,057**로 배치 최다 유지
 > ⭐34,474(08-27) → **35,536** (2026-08-30 **GitHub API 실호출 검증**). **사흘간 +1,062 · +3.08% · 일평균 +354.** 포크 3,894 → **3,964**(+70) · 오픈이슈 1,026 → **1,057**(+31) · 최종 푸시 **2026-08-29**.
@@ -49,4 +63,7 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/anthropics/claude-plugins-official
-- 신뢰도: ⭐⭐⭐⭐ (Anthropic 공식, 26.9K 스타)
+- 실측(2026-09-26 GitHub API): ★**37,014** · 포크 4,159 · 오픈이슈 **1,035** · watchers 230 · Apache-2.0 · Python · 생성 2025-11-20 · 푸시 2026-09-25T23:12:23Z · topics `claude-code,mcp,skills`
+- 스타 추이: ★**37,014**(09-26) ← 35,536(08-30) ← 34,474(08-27) ← 26,877(05-25)
+- 확인 범위: **README 97행 전문 열람**(5행 면책·28행 심사 기준 확인). 🔴 이슈 목록 미열람 · 🔴 플러그인 목록 미검수
+- 신뢰도: ⭐⭐⭐⭐ (Anthropic 공식·수치 API 실검증 — 🔴 단 **심사 기준 문서 부재 확정**이고 **Anthropic 스스로 동작 검증 불가를 선언**한다)

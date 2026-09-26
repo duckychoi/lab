@@ -4748,6 +4748,66 @@
       "width": 300,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "n-paperclip-0926",
+      "type": "text",
+      "text": "### [[paperclip]]\n★85,666 · 트렌딩 1위\n\n**조직 운영층(5층)**\n\"OpenClaw=직원,\nPaperclip=회사\"\n🔴 오픈이슈 5,712 (사상 최다)",
+      "x": -700,
+      "y": 28080,
+      "width": 260,
+      "height": 150,
+      "color": "1"
+    },
+    {
+      "id": "n-hindsight-0926",
+      "type": "text",
+      "text": "### [[hindsight]]\n★30,382 · MIT\n\n에이전트 메모리\nretain/recall/reflect\n🔴 벤치 수치 전부 PNG\n✅ 제3자 재현 표기",
+      "x": -400,
+      "y": 28080,
+      "width": 260,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "n-aewm-0926",
+      "type": "text",
+      "text": "### [[AEWM]]\nupvote 13\n\n과제 상태 편집 세계모델\nF1 70.5(+10.6)\n→ 실과제 +3.2~6.7\n🎯 감쇠를 자기가 공개",
+      "x": -100,
+      "y": 28080,
+      "width": 260,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "n-superpos-0926",
+      "type": "text",
+      "text": "### [[Superposition-Linearity]]\nupvote 58\n\n선형성은 구조의 성질,\n학습할수록 약해진다\n🔴 초록 수치 0개 (low)",
+      "x": 200,
+      "y": 28080,
+      "width": 260,
+      "height": 150,
+      "color": "6"
+    },
+    {
+      "id": "n-bench-seal-0926",
+      "type": "text",
+      "text": "### [[벤치마크-이미지-봉인]]\n**신설 개념**\n\n주장은 문자로,\n수치는 이미지 안에만\n누적 4건 · 오늘 2건 겹침",
+      "x": 500,
+      "y": 28080,
+      "width": 260,
+      "height": 150,
+      "color": "5"
+    },
+    {
+      "id": "n-prime-radiant-0926",
+      "type": "text",
+      "text": "### [[Prime-Radiant]]\n[[superpowers]] 상업 창구\n\nMIT + 운영 대행 유료\n🔴 근거 README 1줄 (low)",
+      "x": -700,
+      "y": 28260,
+      "width": 260,
+      "height": 150,
+      "color": "4"
     }
   ],
   "edges": [
@@ -8915,6 +8975,48 @@
       "fromNode": "theme-multimodal-embodied-0706",
       "fromSide": "bottom",
       "toNode": "a-noassertion-audit",
+      "toSide": "top"
+    },
+    {
+      "id": "e586-0926",
+      "fromNode": "cluster-github",
+      "toNode": "n-paperclip-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e587-0926",
+      "fromNode": "cluster-github",
+      "toNode": "n-hindsight-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e588-0926",
+      "fromNode": "cluster-github",
+      "toNode": "n-aewm-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e589-0926",
+      "fromNode": "cluster-github",
+      "toNode": "n-superpos-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e590-0926",
+      "fromNode": "cluster-github",
+      "toNode": "n-bench-seal-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e591-0926",
+      "fromNode": "cluster-github",
+      "toNode": "n-prime-radiant-0926",
+      "fromSide": "bottom",
       "toSide": "top"
     }
   ]

@@ -799,6 +799,36 @@
       "width": 300,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "n-hindsight-ll-0926",
+      "type": "text",
+      "text": "### [[hindsight]]\n에이전트 메모리 제품\n\n임베디드/Docker/MCP\n[[mem0]] 이은 오픈코어 2번째\n🔴 LongMemEval 값 봉인",
+      "x": -700,
+      "y": 9220,
+      "width": 260,
+      "height": 150,
+      "color": "2"
+    },
+    {
+      "id": "n-aewm-ll-0926",
+      "type": "text",
+      "text": "### [[AEWM]]\n**편집 처방**\n\n낡은 계획이 결정을 오염\n→ 히스토리를 고쳐 쓴다\n↔ 보존 처방과 정면 대립",
+      "x": -400,
+      "y": 9220,
+      "width": 260,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "n-ternary2-0926",
+      "type": "text",
+      "text": "### [[Ternary-Bonsai-2-27B]]\nDL 310만 (이틀 +62.9%)\n\n🔴 볼트 자기정정:\n기계 대조는 후퇴,\n사람 대조는 전진",
+      "x": -100,
+      "y": 9220,
+      "width": 260,
+      "height": 150,
+      "color": "1"
     }
   ],
   "edges": [
@@ -1344,6 +1374,27 @@
       "fromNode": "l0908-rule",
       "fromSide": "bottom",
       "toNode": "a-chinamebot-dualtrack",
+      "toSide": "top"
+    },
+    {
+      "id": "e78-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-hindsight-ll-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e79-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-aewm-ll-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e80-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-ternary2-0926",
+      "fromSide": "bottom",
       "toSide": "top"
     }
   ]

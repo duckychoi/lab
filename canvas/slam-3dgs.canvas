@@ -379,6 +379,26 @@
       "width": 300,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "n-wrop-0926",
+      "type": "text",
+      "text": "### [[WROP-Object-Permanence]]\nupvote 190 (데일리 1위)\n\n물체 영속성 학습셋 150만\n+ 시험 300문항\n🎯 \"안 보여도 있다\"",
+      "x": -700,
+      "y": 4950,
+      "width": 260,
+      "height": 150,
+      "color": "3"
+    },
+    {
+      "id": "n-omniecho-0926",
+      "type": "text",
+      "text": "### [[OmniEcho]]\nupvote 20\n\nFOA 공간오디오 벤치\n197장면·QA 2,972·내비 900\n🎯 \"안 보여도 들린다\"",
+      "x": -400,
+      "y": 4950,
+      "width": 260,
+      "height": 150,
+      "color": "2"
     }
   ],
   "edges": [
@@ -611,6 +631,20 @@
       "fromNode": "s0908-emb",
       "fromSide": "bottom",
       "toNode": "a-arxiv-fulltext",
+      "toSide": "top"
+    },
+    {
+      "id": "e34-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-wrop-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e35-0926",
+      "fromNode": "domain-hub",
+      "toNode": "n-omniecho-0926",
+      "fromSide": "bottom",
       "toSide": "top"
     }
   ]
