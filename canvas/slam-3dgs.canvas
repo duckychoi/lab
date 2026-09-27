@@ -399,6 +399,36 @@
       "width": 260,
       "height": 150,
       "color": "2"
+    },
+    {
+      "id": "s-tamp-0927",
+      "type": "text",
+      "text": "### Coding Agents for TAMP\n\n**98,000 에피소드**\n56~95% vs 플래너 47%\n🎯 프로그램 **동결** 평가\nClaude Code(Opus 5) 포함\n\n[[Coding-Agents-TAMP]]",
+      "x": -700,
+      "y": 5220,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "e-tomsilver-0927",
+      "type": "text",
+      "text": "### tomsilver\n\nrobocode ★13\n프롬프트 전문 공개\n\n[[tomsilver]]",
+      "x": -380,
+      "y": 5220,
+      "width": 300,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "n-tampwarn-0927",
+      "type": "text",
+      "text": "> 🔴 범위 39%p 폭\n\n하단 56%는 47%를 9%p 넘음\n대조 모집단 28 vs **16**\n환경별 분포 없음",
+      "x": -60,
+      "y": 5220,
+      "width": 300,
+      "height": 180,
+      "color": "1"
     }
   ],
   "edges": [
@@ -644,6 +674,20 @@
       "id": "e35-0926",
       "fromNode": "domain-hub",
       "toNode": "n-omniecho-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e36-0927",
+      "fromNode": "e-tomsilver-0927",
+      "toNode": "s-tamp-0927",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e37-0927",
+      "fromNode": "s-tamp-0927",
+      "toNode": "n-tampwarn-0927",
       "fromSide": "bottom",
       "toSide": "top"
     }

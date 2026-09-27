@@ -429,6 +429,46 @@
       "width": 260,
       "height": 150,
       "color": "1"
+    },
+    {
+      "id": "s-viggle-0927",
+      "type": "text",
+      "text": "### viggle-turbo\n\n40패스 → **6패스** · CFG 없음\n구도 드리프트 **+0.000**\n레이아웃 상이 **0%**(96건)\n🎯 지표 **정의**까지 명시\n\n[[Qwen-Image-2.1-viggle-turbo]]",
+      "x": -700,
+      "y": 4790,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "e-viggleorg-0927",
+      "type": "text",
+      "text": "### Viggle\n\n카드 품질 상위\n한계 3건 자기신고\n*\"mostly vibe-coded\"*\n\n[[Viggle]]",
+      "x": -380,
+      "y": 4790,
+      "width": 300,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "n-reversal-0927",
+      "type": "text",
+      "text": "> 🔴 원본-파생 역전 1:3\n\n약 2.5배 · 18.1배 · 75.3배\n**♥는 원본이 전부 앞선다**\n(2,424 vs 1,983·789·300)",
+      "x": -60,
+      "y": 4790,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n-drift-0927",
+      "type": "text",
+      "text": "> 🔴 downloads +31.2%\n\n수십 분에 101,512→133,151\n관측 사상 최대 드리프트\n→ 배수는 소수 첫째까지만",
+      "x": 260,
+      "y": 4790,
+      "width": 300,
+      "height": 180,
+      "color": "1"
     }
   ],
   "edges": [
@@ -690,6 +730,27 @@
       "id": "e37-0926",
       "fromNode": "domain-hub",
       "toNode": "n-qwenimg-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e38-0927",
+      "fromNode": "e-viggleorg-0927",
+      "toNode": "s-viggle-0927",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e39-0927",
+      "fromNode": "s-viggle-0927",
+      "toNode": "n-reversal-0927",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e40-0927",
+      "fromNode": "s-viggle-0927",
+      "toNode": "n-drift-0927",
       "fromSide": "bottom",
       "toSide": "top"
     }

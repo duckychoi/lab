@@ -4808,6 +4808,126 @@
       "width": 260,
       "height": 150,
       "color": "4"
+    },
+    {
+      "id": "s-buzz-0927",
+      "type": "text",
+      "text": "### buzz ★34,913\n\n키 기반 신원 = 감사추적\n**RBAC 플래그가 아니다**\n서명은 사후 독립검증\n\n[[buzz]]",
+      "x": -700,
+      "y": 28530,
+      "width": 300,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "s-mobilemcp-0927",
+      "type": "text",
+      "text": "### mobile-mcp ★7,569\n\n접근성 트리 1차\n스크린샷 폴백\n이슈비율 0.63% 최저\n\n[[mobile-mcp]]",
+      "x": -380,
+      "y": 28530,
+      "width": 300,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "s-cca-0927",
+      "type": "text",
+      "text": "### claude-code-action ★9,167\n\n공식·MIT·포크율 23.6%\n🎯 README 71행 = 배치 최단\n**유일하게 0행 읽힌 건**\n\n[[claude-code-action]]",
+      "x": -60,
+      "y": 28530,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "s-tf-0927",
+      "type": "text",
+      "text": "### tensorflow ★200,524\n\n🔴 본체 누락 5번째\n소스 1,161개 중 0건\n당일 +46 = 13위\n\n[[tensorflow]]",
+      "x": 260,
+      "y": 28530,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "s-mimo-0927",
+      "type": "text",
+      "text": "### MiMo-V2.6-Pro-RL\n\n**1.024조 실측 · MIT**\n09-18 미검증 2건 해소\n18벤치 중 3승 1무\n\n[[MiMo-V2.6-Pro-RL]]",
+      "x": -700,
+      "y": 28750,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "s-explor-0927",
+      "type": "text",
+      "text": "### ExplorationBench\n\n오염차단을 부재가 아니라\n**상충**으로 한다\n업보트 10→11\n\n[[ExplorationBench]]",
+      "x": -380,
+      "y": 28750,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "s-possae-0927",
+      "type": "text",
+      "text": "### Parts-of-Speech SAE\n\nSAE 1:1 대응 **반증**\n부속 ★0(실측)\n🔴 수치 0개\n\n[[Parts-of-Speech-SAE]]",
+      "x": -60,
+      "y": 28750,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "s-rufus-0927",
+      "type": "text",
+      "text": "### Rufus-Air\n\n8단계 **직렬**\n리워드 신뢰도 = 순서\n🔴 수치 0개\n\n[[Rufus-Air]]",
+      "x": 260,
+      "y": 28750,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "c-cache-0927",
+      "type": "text",
+      "text": "## 캐시된 지표 신선도 🆕\n\nHF 91 vs GitHub 121\n**오차 = 지연 × 변화속도**\n중요한 것에만 틀린다\n\n[[캐시된-지표-신선도]]",
+      "x": -700,
+      "y": 28970,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "c-oppose-0927",
+      "type": "text",
+      "text": "## 대립레시피 동시도착 🆕\n\n직렬 vs 혼합\n둘 다 상대 미언급\n**교집합: pass/fail 부족**\n\n[[대립레시피-동시도착]]",
+      "x": -380,
+      "y": 28970,
+      "width": 300,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "e-block-0927",
+      "type": "text",
+      "text": "### Block\n\nbuzz 제작\n범주 위치 자기신고\n*\"We're sorry\"*\n\n[[Block]]",
+      "x": -60,
+      "y": 28970,
+      "width": 300,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "e-xiaomi-0927",
+      "type": "text",
+      "text": "### Xiaomi\n\n두뇌(MiMo)+신체(로봇)\n9일 추적 확정 첫 사례\n\n[[Xiaomi]]",
+      "x": 260,
+      "y": 28970,
+      "width": 300,
+      "height": 180,
+      "color": "3"
     }
   ],
   "edges": [
@@ -9018,6 +9138,51 @@
       "toNode": "n-prime-radiant-0926",
       "fromSide": "bottom",
       "toSide": "top"
+    },
+    {
+      "id": "e592-0927",
+      "fromNode": "s-cca-0927",
+      "toNode": "c-cache-0927",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e593-0927",
+      "fromNode": "s-mimo-0927",
+      "toNode": "c-oppose-0927",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "YORO"
+    },
+    {
+      "id": "e594-0927",
+      "fromNode": "s-rufus-0927",
+      "toNode": "c-oppose-0927",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "8단계 직렬"
+    },
+    {
+      "id": "e595-0927",
+      "fromNode": "e-block-0927",
+      "toNode": "s-buzz-0927",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e596-0927",
+      "fromNode": "e-xiaomi-0927",
+      "toNode": "s-mimo-0927",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e597-0927",
+      "fromNode": "s-possae-0927",
+      "toNode": "c-cache-0927",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "★0 실측"
     }
   ]
 }

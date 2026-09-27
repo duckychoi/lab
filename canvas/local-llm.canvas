@@ -829,6 +829,46 @@
       "width": 260,
       "height": 150,
       "color": "1"
+    },
+    {
+      "id": "s-modopt-0927",
+      "type": "text",
+      "text": "### Model-Optimizer ★4,853\n\n압축보다 **export 경로**\nTensorRT-LLM·vLLM·SGLang\n🔴 전건 자사 자기보고\n\n[[Model-Optimizer]]",
+      "x": -700,
+      "y": 9490,
+      "width": 300,
+      "height": 180,
+      "color": "4"
+    },
+    {
+      "id": "s-teleocr-0927",
+      "type": "text",
+      "text": "### TeleOCR **1.42B 실측**\n\n카드는 \"약 1.2B\" (18% 차)\n🎯 창길이 3번째 점추정\n**≈31.1일**\n\n[[TeleOCR]]",
+      "x": -380,
+      "y": 9490,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "s-qplanner-0927",
+      "type": "text",
+      "text": "### Qwen-Planner-Agent\n\n모델–하니스 **공진화**\n보존된 실패 trace\n🔴 점수 0개\n\n[[Qwen-Planner-Agent]]",
+      "x": -60,
+      "y": 9490,
+      "width": 300,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "c-window3-0927",
+      "type": "text",
+      "text": "## 지표 창길이 (갱신)\n\n28.5 · **31.1** · 31.4일\n나이 4.75배·규모 1,666배\n→ 모두 30일 감쌈\n\n[[지표-창길이]]",
+      "x": 260,
+      "y": 9490,
+      "width": 300,
+      "height": 180,
+      "color": "2"
     }
   ],
   "edges": [
@@ -1394,6 +1434,21 @@
       "id": "e80-0926",
       "fromNode": "domain-hub",
       "toNode": "n-ternary2-0926",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e81-0927",
+      "fromNode": "s-teleocr-0927",
+      "toNode": "c-window3-0927",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "44일차 역산"
+    },
+    {
+      "id": "e82-0927",
+      "fromNode": "s-modopt-0927",
+      "toNode": "s-teleocr-0927",
       "fromSide": "bottom",
       "toSide": "top"
     }
