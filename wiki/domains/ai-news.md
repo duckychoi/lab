@@ -4,7 +4,7 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-24
+updated: 2026-09-27
 sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md]
 ---
 
@@ -3382,3 +3382,30 @@ GitHub **5건 중 3건이 Rust**([[nasiko]]·[[agent-browser]]·[[agent-desktop]
 - 🔴 **코드 실행 0건 유지** — 5배치 연속. [[agent-browser]] 가 **설치 1줄로 깰 수 있는 가장 싼 후보**(★최우선 등록)
 - 🔴 **논문 5건 전부 초록만** — 그중 **2건([[Spatial-Interactor]]·[[RewardVerse]])은 초록 수치 0개**로 대조 불가 상태 수록(reliability low)
 - 🔴 **[[agent-browser]] `Commands` 540행 · [[ComfyUI]] 노드 체계 미열람**
+
+---
+
+## 📊 [2026-09-27] 배치 누적 인사이트
+
+### 신규 5건 (이 도메인)
+- **[[buzz]]** ★34,913 — 에이전트 권한을 **RBAC 플래그가 아니라 Nostr 키 기반 신원**으로 모델링 → 감사 추적이 구조적으로 따라온다. [[검사가능성-공사]] 의 **암호학판**(어휘는 합의가 필요하고 서명은 필요 없다)
+- **[[mobile-mcp]]** ★7,569 — 접근성 트리 1차, 스크린샷 폴백. [[에이전트-웹접근]] 이 **모바일에서 같은 답**을 얻었다
+- **[[claude-code-action]]** ★9,167 — 공식·MIT. **볼트 git 원격이 실재하므로 즉시 적용 가능**(`duckychoi/lab`). 포크율 23.6% = 배치 최고
+- **[[tensorflow]]** ★200,524 — **본체 누락 5번째, 성격이 다르다**(있는데 못 찾은 게 아니라 정말 없었다) → [[선발창-누락]] 최대 사례
+- **[[MiMo-V2.6-Pro-RL]]** — **1.024조 파라미터 실측 · MIT**. 09-18 사용자 소스의 미검증 2건을 해소
+- **[[ExplorationBench]]** · **[[Parts-of-Speech-SAE]]** · **[[Rufus-Air]]** — 논문 3건(전부 reliability low, 수치 부재)
+
+### 🎯 이 배치의 척추 — **같은 진단, 반대 처방, 그리고 볼트만 미구현**
+오늘 **대립하는 두 RL 레시피**가 같은 날 왔다([[대립레시피-동시도착]] 신설): [[Rufus-Air]] **8단계 직렬** vs [[MiMo-V2.6-Pro-RL]] **단일 혼합 런**. 방법이 정반대인데 **"이진 pass/fail 은 부족하다"는 진단은 같다.**
+거기에 [[buzz]](서명 로그)와 [[ExplorationBench]](결함 매뉴얼)가 **각각 다른 층에서 같은 문제**를 공격한다.
+🔴 **누적 6개 외부 생태계가 "확인되지 않음" 칸을 만들었고 볼트는 9일째 2값이다.** 그리고 오늘 **그 비용이 실현됐다** — [[WROP-Object-Permanence]] 에 HF 캐시값을 `실측` 으로 적은 오기가 발견됐다.
+
+### 🔴 측정론에서 오늘 가장 많이 배웠다
+1. **[[캐시된-지표-신선도]] 신설** — HF `githubStars` 는 캐시. 같은 시각 HF 91 vs GitHub 121. 🎯 **오차 = 지연 × 변화 속도**이므로 **정체된 것에는 정확하고 급상승하는 것에만 틀린다**(5건 중 어긋난 건 급상승 1건뿐)
+2. **HF `downloads` 가 수십 분에 +31.2%** — GitHub ★ 정상 범위(−1~+9)와 **자릿수가 다르다.** 플랫폼별 드리프트 규약 분리
+3. **트렌딩 랭킹 ≠ 순증분** — [[hindsight]] +4,007(2위) vs [[paperclip]] +2,453(**1위**)
+4. **[[지표-창길이]] 3번째 점추정 ≈31.1일** — 나이 4.75배·규모 1,666배 차이의 세 표본이 28.5~31.4일에 수렴
+
+### ✅ 수집기 이행 (11배치 연속 한정어 보존 + 요청 2건 완전 이행)
+- **09-26 요청 1(HTTP 상태 먼저)**: ✅ *"전 요청 HTTP 200 — 4xx·`None` 0건"* 을 수집 메타에 명시. 볼트 재조회 **13/13 HTTP 200 일치**
+- **09-26 요청 2(부속 GitHub 전건 기재)**: ✅ **완전 이행** — 5건 전부 기재(존재 2 · 부재 3), **★0 도 적었다.** 🎯 게다가 **22건 전수 실태**(존재 12·부재 10, ★ 분포 0~121)를 자발적으로 조사하고 **HF 캐시 지연을 스스로 발견**했다

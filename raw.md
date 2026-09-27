@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-09-26 (09-26 자동수집 **13건 전량 ingest 완료 후 삭제** — 대기 **0건**)
+updated: 2026-09-27 (09-27 자동수집 **13건 추가** — GitHub 5 · HF논문 5 · HF모델 3 · 대기 **13건**)
 ---
 
 # Raw 대기열
@@ -18,7 +18,158 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 ---
 
-## 대기 중: **0건**
+## 대기 중: **13건** — 2026-09-27 자동수집
+
+> [!info] 수집 메타 (2026-09-27 09:00~09:10 KST)
+> **전 요청 HTTP 200** — 4xx·`None` 0건. GitHub API 15건 · HF daily_papers 3일치 · HF models `expand[]` 8필드 전부 반환.
+> ⚠️ **HF 데일리 논문은 09-26(토)·09-27(일) 둘 다 HTTP 200 · 0건.** 주말 미발행이며, 가용한 최신 목록은 **09-25(금) 22건** — **어제 배치와 같은 목록**이다. 상위 5건(업보트 200·71·34·21·18)은 09-26에 이미 배달된 [[WROP-Object-Permanence]]·[[Superposition-Linearity]]·[[WanPE]]·[[OmniEcho]]·[[AEWM]] 와 **arXiv ID 기준 완전 중복**이라 제외하고, **업보트 6~9위의 미수록 5건**을 올린다. 업보트 10 3건은 **동점**이다.
+> 중복검사: `wiki/` 전수 grep 으로 GitHub 413·HF 777 URL 색인을 만들어 대조했고, GitHub 5건은 전부 `full_name` 이 요청명과 일치해 **301 리다이렉트 0건**이다.
+
+### GitHub Trending (daily) — AI/ML 5건
+
+## [2026-09-27] 자동수집 | NVIDIA/Model-Optimizer — 양자화·프루닝·NAS·증류·스펙디코딩을 한 라이브러리로 묶은 추론 압축 툴킷
+- URL: https://github.com/NVIDIA/Model-Optimizer
+- 도메인: ai-news
+- 스타수: ★4,853 (당일 +357 · 트렌딩 3위) / 포크 676 · 오픈이슈 426 · Apache-2.0 · created 2024-04-23 · pushed 2026-09-27
+- 한줄요약: HF·PyTorch·ONNX 모델을 입력받아 양자화·프루닝·NAS·증류·speculative decoding·sparsity 를 Python API 로 조합하고, 결과 체크포인트를 TensorRT-LLM·vLLM·SGLang 으로 내보내는 압축 파이프라인. README 가 제시하는 수치는 **Qwen3.6-35B-A3B NVFP4 W4A4 + QAD 로 vLLM 처리량 최대 1.30배 · 체크포인트 3.1배 축소**(2026-09-16), **Nemotron-3-Nano-30B-A3B 프루닝+2단계 증류+FP8 로 처리량 2.6배 · 메모리 2.6배 감소**(2025-05-27), **Nemotron 3 Ultra 550B NVFP4 로 decode-heavy 처리량 GLM-5.1 754B FP4 대비 5.9배**(2026-06-26)다.
+- 실용성: 압축 자체보다 **배포 프레임워크로의 export 경로가 이미 붙어 있다**는 점이 실용값이다. 다만 수치는 전부 **NVIDIA 자사 블로그·자사 모델 기준 자기보고**이고 독립 재현은 확인하지 않았다. 2025-12-08 에 TensorRT Model Optimizer 에서 **개명**한 레포다(구명 검색 시 주의).
+- 확인 범위: GitHub API 전필드 + README **202행 중 상단 60행**(142행 미열람). 벤치마크 원문·`examples/` 미열람, **코드 실행 0건**.
+
+## [2026-09-27] 자동수집 | block/buzz — 사람과 에이전트가 같은 Nostr 릴레이 이벤트 로그를 공유하는 셀프호스팅 워크스페이스
+- URL: https://github.com/block/buzz
+- 도메인: ai-news
+- 스타수: ★34,909 (당일 +339 · 트렌딩 8위) / 포크 4,600 · **오픈이슈 3,663** · Apache-2.0 · created 2026-03-06 · pushed 2026-09-26
+- 한줄요약: 메시지·리액션·워크플로 단계·리뷰 승인·git 이벤트를 **전부 서명된 단일 Nostr 이벤트 로그**에 적어, 작성자가 사람이든 프로세스든 동일한 신원 모델·감사 추적을 쓰게 한 Rust 기반 팀 워크스페이스. 에이전트는 **권한 플래그가 아니라 자기 키·자기 채널 멤버십으로 범위가 정해지고**, 레포 열기·패치 전송·코드 리뷰·워크플로 실행·캔버스 편집·다른 에이전트 오케스트레이션·음성 허들 참여까지 사람과 같은 표면적을 갖는다.
+- 실용성: 에이전트 권한을 **RBAC 플래그가 아니라 키 기반 신원으로 모델링**한 점이 설계상 구분점이고, 대화·패치·CI·승인이 같은 이벤트 종류라 단일 검색면이 된다. ⚠️ 단 **오픈이슈 3,663건**(★34,909 대비 10.5%)은 성격 미확인이고, README 스스로 *"Yes, it's another AI-adjacent developer tool. We're sorry."* 라 적어 **AI 인접 도구임을 자기규정**한다 — AI/ML 코어가 아니라 협업 계층이다.
+- 확인 범위: GitHub API 전필드 + README **288행 중 상단 60행**(228행 미열람). `VISION*.md`·`ARCHITECTURE.md` 4종 **전부 미열람**, 릴레이 실행 0건.
+
+## [2026-09-27] 자동수집 | mobile-next/mobile-mcp — 접근성 트리를 1차 경로로 쓰는 iOS·안드로이드 자동화 MCP 서버
+- URL: https://github.com/mobile-next/mobile-mcp
+- 도메인: ai-news
+- 스타수: ★7,566 (당일 +168 · 트렌딩 14위) / 포크 653 · 오픈이슈 48 · Apache-2.0 · created 2025-03-28 · pushed 2026-09-23
+- 한줄요약: 에뮬레이터·시뮬레이터·실기기(iOS/안드로이드)를 **플랫폼 무관 단일 도구셋**으로 구동하는 MCP 서버. 핵심 선택은 **네이티브 접근성 트리를 먼저 읽고 스크린샷+좌표 탭은 폴백으로만 쓴다**는 것 — 비전 모델·이미지 토큰을 쓰지 않아 비용과 모호성이 함께 줄고, 구조화된 UI 요소를 그대로 추출한다. 탭·스와이프·제스처, 앱 설치·실행·종료, 화면 녹화, 하드웨어 버튼, 딥링크, 화면 회전을 제어한다.
+- 실용성: XCUITest·Espresso 지식 없이 붙는다는 점과 **npm 배포(`@mobilenext/mobile-mcp`)** 라 설치 장벽이 낮은 것이 실용값. Claude Code·Codex·Gemini·Copilot·Antigravity 호환을 명시한다. ⚠️ 제공사 클라우드(Mobile Next Cloud) 유도 링크가 README 상단에 있어 **OSS/상용 경계 확인이 필요**하다.
+- 확인 범위: GitHub API 전필드 + README **577행 중 상단 60행**(517행 미열람). 도구 목록 전체·wiki 미열람, **설치·실행 0건**.
+
+## [2026-09-27] 자동수집 | anthropics/claude-code-action — Claude Code 를 GitHub Actions 워크플로로 돌리는 공식 액션
+- URL: https://github.com/anthropics/claude-code-action
+- 도메인: ai-news
+- 스타수: ★9,166 (당일 +31 · 트렌딩 12위) / 포크 2,167 · **오픈이슈 805** · MIT · created 2025-05-19 · pushed 2026-09-25
+- 한줄요약: Anthropic 공식 GitHub Action 레포. ⚠️ **GitHub API `description` 필드가 `None`** 이다(404 아님, HTTP 200 에 값 자체가 빈 것) — 즉 레포가 스스로 한 줄 설명을 제공하지 않으므로, 기능 요약은 **README 미열람 상태에서 단정하지 않는다**. 확정 사실은 공식 소유(`anthropics`)·MIT·★9,166·포크 2,167·오픈이슈 805·2026-09-25 푸시다.
+- 실용성: 포크/스타 비율 **23.6%** 는 이번 5건 중 최고로, 스타 대비 **실제 복제·개조 비중이 크다**(라이브러리가 아니라 워크플로 템플릿 성격의 신호). 오픈이슈 805건은 성격 미확인. 사용자 본인 하니스(Claude Code)와 직결되는 경로다.
+- 확인 범위: GitHub API 전필드만. **README 0행 열람** — 기능·입력 파라미터·권한 모델 전부 미확인이며, 위 요약은 API 메타데이터에 한정한다.
+
+## [2026-09-27] 자동수집 | tensorflow/tensorflow — 트렌딩에 재등장한 ML 프레임워크 원본 (볼트 미수록)
+- URL: https://github.com/tensorflow/tensorflow
+- 도메인: ai-news
+- 스타수: ★200,523 (당일 +46 · 트렌딩 5위) / 포크 77,672 · 오픈이슈 3,363 · Apache-2.0 · created **2015-11-07** · pushed 2026-09-27
+- 한줄요약: 범용 오픈소스 ML 프레임워크. 기능이 새 소식인 항목이 아니라 **볼트에 1,161개 소스 페이지가 있는데 TensorFlow 본체 페이지가 없다는 사실**이 이번 수집의 값이다 — [[ComfyUI]](09-24)에 이은 **본체 누락 5번째 후보**다.
+- 실용성: 당일 +46 은 트렌딩 15건 중 **13위**(하위권)로, 급상승이 아니라 **누적 ★200,523 으로 진입한 항목**이다. 수집 기준 "★1000 이상"은 충족하되 "당일 급상승"은 충족하지 않으므로 **두 기준이 갈리는 경계 사례**로 올린다. 10년 11개월 된 레포이고 여전히 당일 푸시가 있다.
+- 확인 범위: GitHub API 전필드만. README **0행 열람**, 릴리스 노트·PyPI 버전 미확인. 볼트 부재는 `ls wiki/sources/` + `grep -rli` 양쪽으로 확인했다.
+
+> [!note] GitHub 트렌딩 중 **이미 볼트에 있는 AI/ML 4건 — 신규 항목 아님, ★드리프트만 기록**
+> 어제(09-26) 배달분이 오늘도 트렌딩 상위에 남아 있다. 중복 등재하지 않고 재관측값만 남긴다. 볼트 기준값은 각 페이지 `updated:` 프론트매터를 먼저 확인한 값이다.
+> - [[paperclip]] `paperclipai/paperclip` — 볼트 09-26 ★85,666 → **오늘 ★88,119 (+2,453/1일)** · 트렌딩 **1위**(당일 +2,608) · 오픈이슈 **5,792**(09-26 기록 5,712 대비 **+80**)
+> - [[hindsight]] `vectorize-io/hindsight` — 볼트 09-26 ★30,382 → **오늘 ★34,389 (+4,007/1일)** · 트렌딩 **2위**(당일 +2,147). 🎯 **하루 증분이 paperclip 을 앞선다**(4,007 vs 2,453)는데 트렌딩 순위는 낮다 — 트렌딩 랭킹이 순증분과 일치하지 않는다는 반례다.
+> - [[reverse-skill]] `zhaoxuya520/reverse-skill` — 볼트 **08-05** ★16,724 → **오늘 ★38,186 (+21,462/53일 · 일평균 약 405)**. 기준선이 **53일 낡았으므로** 일평균은 구간 평균이며 최근 속도가 아니다.
+> - [[ai-engineering-from-scratch]] `rohitg00/ai-engineering-from-scratch` — 오늘 **★58,636**(당일 +827 · 트렌딩 6위). ⚠️ **드리프트 계산 불가**: 볼트 페이지(`updated: 2026-07-21`)에 ⭐값이 **34,217·38,834·41,025·64,744 네 개** 있고 어느 것이 이 레포 자신의 관측값인지 구분되지 않는다(비교표로 보임). **없는 값이 아니라 특정 불가**라 적는다 — 오늘 실측 ★58,636 은 그중 64,744 보다 **낮다**.
+> - (참고) [[univer]] `dream-num/univer` ★19,787 은 AI/ML 코어가 아닌 오피스 SDK 로 분류해 5건에서 제외했다. 볼트 페이지에서 추출된 ★값은 `★15` 하나뿐이라 **기준선으로 쓰지 않았다.**
+
+### HuggingFace 데일리 페이퍼 — 09-25(금) 목록 중 미수록 5건
+
+## [2026-09-27] 자동수집 | Rufus-Air: An Open LLM Post-Training Recipe — 8단계 직렬 포스트트레이닝 전 과정을 공개한 레시피
+- URL: https://huggingface.co/papers/2609.29421
+- 도메인: ai-news
+- 업보트: 16 (09-25 목록 6위) / publishedAt **2026-09-24** (데일리 등재 09-23T20:00Z) · 저자 22명
+- **부속 GitHub: `githubRepo` = None · `githubStars` = None** (HTTP 200 응답에 필드 자체가 없음 — 요청 거부 아님)
+- 한줄요약: GLM-4.5-Air-Base(106B-A12B) 위에서 **SFT → Reasoning RL → Coding RL → Instruction-Following RL → General Agent → Coding Agent → Search Agent → RLHF 8단계를 직렬로** 돌린 재현 가능 레시피. 데이터·리워드 설계·인프라·단계 순서·단계별 결과를 문서화했고, **새 사람 주석도 사내 증류 교사 모델도 쓰지 않고** 공개 구성요소와 공개 데이터를 대체로 released 상태 그대로 사용했다. 주장하는 발견은 (i) 다양·고품질 SFT 가 능력 하한선을 만든다 (ii) 난이도 필터링이 RL 프롬프트를 생산적 학습 구간에 유지한다 (iii) **리워드 신뢰도가 단계 순서를 정하는 실용 원칙**이다 (iv) 인프라·엔지니어링 선택이 구현 세부가 아니라 레시피의 일부다.
+- 성능 수치: **초록에 정량 수치가 0개다.** 주장은 *"공식 GLM-4.5-Air 포스트트레이닝 릴리스를 improves over 하고, 유사 규모 공개 모델과 competitive"* 라는 **비교 서술뿐**이며 벤치마크 이름·점수·표는 초록에 없다. 한정어 *"competitive with"* 를 SOTA 로 승격하지 않는다.
+- 확인 범위: HF papers API 메타데이터 + **초록 전문**. **arXiv 본문 0행 열람** — 단계별 결과표가 본문에 있을 가능성이 높으나 미대조다.
+
+## [2026-09-27] 자동수집 | ExplorationBench — 사전학습 회상으로는 풀 수 없게 만든 '외계 세계' 탐색 능력 벤치마크
+- URL: https://huggingface.co/papers/2609.30199
+- 도메인: ai-news
+- 업보트: 10 (09-25 목록 7위 · 업보트 10 **3건 동점**) / publishedAt **2026-09-24** · 저자 20명
+- **부속 GitHub: `githubRepo` = None · `githubStars` = None** (필드 부재)
+- 한줄요약: 과학적 탐색 능력 평가의 두 난점(① 진짜 새 가설이 성립하는지 검증 ② 탐색으로 발견했는지 사전학습 지식 회상인지 구분)을 **실행 가능한 규칙을 가진 Alien Worlds** 로 푼다 — 규칙이 executable 이라 모든 답을 정확히 채점할 수 있고, **친숙한 지식과 상충하게 설계해 회상만으로는 못 풀게** 만든 것이 핵심 장치다. 샌드박스 2종(**AlienCode: 발견 목표 31개·과제 70개**, **AlienLogic: 발견 목표 24개·과제 70개**)이 각각 **결함 있는 매뉴얼**·과제별 환경 피드백·전용 도구호출 스키마를 주고, 시스템이 탐색한 뒤 held-out 과제를 푼다.
+- 성능 수치: **AI 시스템 10종 평가**. 보고된 결과는 *"가장 강한 시스템은 낯선 규칙을 획득·적용할 수 있다"* + **"성능이 trajectory 간에 상당히 변동하고, 탐색을 계속하면 앞선 이득이 정체하거나 역전될 수 있다"**. ⚠️ **모델별·항목별 점수 분포는 초록에 없다**(과제 수·목표 수만 있음) — 수치 0개가 아니라 **구조 수치만 있고 성능 수치가 없는 상태**다.
+- 확인 범위: HF papers API + **초록 전문**. **arXiv 본문·리더보드 0행 열람**, 10종 시스템 명단 미확인.
+
+## [2026-09-27] 자동수집 | Qwen-Planner-Agent — AI 가 AI 를 만드는 폐루프로 개발한 모바일 플래너 에이전트
+- URL: https://huggingface.co/papers/2609.29892
+- 도메인: ai-news
+- 업보트: 10 (09-25 목록 8위 · 동점) / publishedAt **2026-09-24** · 저자 26명
+- **부속 GitHub: `githubRepo` = None · `githubStars` = None** (필드 부재)
+- 한줄요약: 데이터 생산·모델 학습·배포를 **공유된 action-feedback-verification 계약**으로 연결한 AI-for-AI 폐루프 프레임워크. (i) **AI for Data** — 사람이 게이트를 잡는 agentic 데이터 플라이휠에서 전문 에이전트들이 과제를 만들고 상호작용 trajectory 를 모으고 학습 데이터를 큐레이션·균형화하며 **학습 피드백이 다음 데이터 생성을 지시**한다 (ii) **AI for Training** — 지도 플래닝 콜드스타트 + 하이브리드 환경 온라인 agentic RL, 여기에 **CARE(Competence-Aware Reward-and-Advantage Engineering)** 로 추론·도구사용 비용을 줄이면서 성능을 유지한다 (iii) **모델–하니스 공진화** — 런타임에 메모리·스킬·도구를 오케스트레이션하고 구조화된 행동 피드백과 **보존된 실패 trace** 를 모델·하니스 양쪽 적응에 되먹인다. 문제 선택 근거는 모바일 플래닝이 long-horizon 신뢰성을 요구하는 데다 **실기기 상호작용 비용이 개발 확장성을 제약**한다는 점이다.
+- 성능 수치: **MobilePA-Bench 에서 평가 대상 전 모델·시스템 중 최고 종합 성능**이라 주장하며, 베이스 모델 대비 **도구사용·메모리·스킬·서브에이전트 조율** 항목에서 개선. 비모바일 agentic 벤치마크에서도 개선하면서 일반 능력은 *"largely preserving"*(전부 보존이 아님 — 한정어 유지). ⚠️ **초록에 구체 점수·베이스 모델명·경쟁 모델명이 하나도 없다.** "best overall"은 자기보고이고 대조군 미공개다.
+- 확인 범위: HF papers API + **초록 전문**. **arXiv 본문 0행 열람**, MobilePA-Bench 점수표 미대조.
+
+## [2026-09-27] 자동수집 | Parts-of-Speech as Emergent Categories in SAE Latent Space — SAE 잠재변수가 품사를 1:1 로 담지 않는다는 반증
+- URL: https://huggingface.co/papers/2609.29362
+- 도메인: ai-news
+- 업보트: 10 (09-25 목록 9위 · 동점) / publishedAt **2026-09-24** · 저자 4명
+- **부속 GitHub: `githubRepo` = `https://github.com/colinglab/pos-sae-latents` · `githubStars` = 0** — 🎯 **0 은 부재가 아니라 실측 0 이다.** GitHub API 직접 재확인: HTTP **200** · **★0** · pushed **2026-08-26**(논문 publishedAt 09-24 보다 **29일 앞선다**).
+- 한줄요약: SAE 잠재변수가 어떤 언어 구조를 드러내는지 품사(PoS)를 **통제된 시험 사례**로 검증한다. 결과는 세 갈래다 — ① PoS 구분은 SAE 활성값에서 **높은 확률로 복원 가능**하되 ② **잠재변수 1개 ↔ 범주 1개 대응으로는 정렬되지 않고** ③ 이 복원성은 **어휘 암기로 환원되지 않으며** 개방 품사류와 폐쇄 품사류가 **상당히 다르게** 행동한다. 범주들은 **소수의 sparse 잠재변수 묶음**이 지지하고 태그별 변동이 크며, 이 묶음은 held-out 데이터에서도 **안정적으로 유지되는 동시에** 관련 범주 간에 **중첩**을 보인다. 결론: SAE 는 형태통사 정보를 **원자적 문법 자질이 아니라 분산·범주의존적 형태로 국소화**한다.
+- 성능 수치: **초록에 정량 수치가 0개다** — *"highly recoverable"*·*"substantially"*·*"compact groups"* 가 모두 정도 부사이고 정확도·F1·잠재변수 개수가 없다. 해석가능성 논문으로서 **반증 방향의 주장**(1:1 대응 부정)이라 방향성은 명확하나 크기는 미지다.
+- 확인 범위: HF papers API + **초록 전문** + 부속 레포 GitHub API. **arXiv 본문 0행·레포 README 0행 열람**, 코드 실행 0건.
+
+## [2026-09-27] 자동수집 | Coding Agents for Generalized TAMP — 코딩 에이전트가 손으로 만든 플래너를 전부 앞질렀다 (98,000 에피소드)
+- URL: https://huggingface.co/papers/2609.30233
+- 도메인: ai-news
+- 업보트: 9 (09-25 목록 10위) / publishedAt **2026-09-24** · 저자 7명
+- **부속 GitHub: `githubRepo` = `https://github.com/tomsilver/robocode` · `githubStars` = 13** — GitHub API 직접 재확인: HTTP **200** · **★13** · pushed **2026-09-24**(논문 publishedAt 과 동일일).
+- 한줄요약: Task and motion planning(TAMP)은 이산 결정이 기하·운동학·동역학 제약과 강결합돼 어렵고, generalized TAMP 는 인스턴스 간 규칙성을 이용해 부담을 줄이지만 **기존 방법은 TAMP 전용 엔지니어링을 많이 요구**한다. 이 논문은 **코딩 에이전트가 인스턴스를 넘어 일반화되는 프로그램을 합성해 그 과정을 자동화할 수 있는지** 묻는다. 과제 설명과 시뮬레이터 접근권만 주고, 각 에이전트가 **고정된 합성 예산 안에서** 환경과 상호작용하는 방식을 스스로 골라 프로그램을 개발한 뒤, 프로그램을 **동결**해 미지 인스턴스에서 평가한다.
+- 성능 수치: **Claude Code (Opus 5)** 와 **Codex (GPT-5.6 Sol · GPT-6 Astra)** 를 KinDER·PDDLStream 기반 **28개 시뮬레이션 환경**(원 벤치마크보다 많은 물체 수)에서 평가. 규모는 **생성 프로그램 980개 × held-out 인스턴스 100개 = 총 98,000 에피소드**. 결과: **세 에이전트 구성 전부가** 수작업 플래너·원샷 생성·LLM 기반 일반화 플래닝 베이스라인을 평균 성공률에서 앞섰다 — **56%~95% vs 플래너 47%**(플래너가 존재하는 16개 환경 기준). 물체 수가 늘어도 에이전트 프로그램이 플래너보다 높은 성공률을 유지하며 **인스턴스당 평균 계산량은 한 자릿수 차수(order of magnitude) 적다**. 로그상 에이전트가 상호작용으로 물리 모델을 캘리브레이션하고 엣지케이스를 시험하며 전략을 다듬는 것이 관찰됐다. **에이전트에게 준 전체 프롬프트를 포함해 코드 전부 공개**를 명시한다.
+- 실용성/유의: 🎯 **범위 수치가 56%~95% 로 39%p 폭**이다 — *"전부 앞섰다"* 는 평균 기준 주장이고 하단 56% 는 47% 를 근소하게 넘는 수준이라 **환경별 분산이 크다**. 초록에 환경별 분포는 없다. 결론 문장도 *"strong baseline"* 이라는 한정 표현이다.
+- 확인 범위: HF papers API + **초록 전문** + 부속 레포 GitHub API. **arXiv 본문 0행·robocode README 0행 열람**, 프로그램·로그 미검증, 코드 실행 0건.
+
+> [!note] 09-25 목록 중 **부속 GitHub 필드 실태 (22건 전수)** — 09-24·09-26 요청 2 이행
+> 오늘 올린 5건: **존재 2건**(★0·★13) · **부재 3건**(`None`). **비율 2:3.**
+> 목록 22건 전체로는 **존재 12건 · 부재 10건**이며, 존재분의 ★는 **0·1·1·5·5·6·6·12·13·13·17·121** 로 **★0 이 1건 실재**하고 최대값은 [[WROP-Object-Permanence]] 의 121 이다.
+> 🔴 **HF 캐시와 GitHub 실측이 어긋난다** — `object-permanence` 는 HF `githubStars` 가 **91** 인데 GitHub API 직접 조회는 **★121**(+30). 어제 볼트 실측은 **★12** 였다. 즉 **09-26 ★12 → HF캐시 91 → 실측 121**. **HF `githubStars` 는 실시간이 아니라 지연된 캐시값**이므로, 단일 출처로 쓰면 안 된다. 나머지 4건(OmniEcho ★12·AEWM ★6·pos-sae-latents ★0·robocode ★13)은 **HF 값과 GitHub 실측이 일치**했다 — 어긋난 것은 **급상승 중인 1건뿐**이다.
+
+### HuggingFace Trending Models — 다운로드 상위 3건 (미수록분)
+
+## [2026-09-27] 자동수집 | Viggle/Qwen-Image-2.1-viggle-turbo — 40스텝을 6스텝으로 줄이고 구도 드리프트 0% 를 지표로 내건 증류 LoRA
+- URL: https://huggingface.co/Viggle/Qwen-Image-2.1-viggle-turbo
+- 도메인: ai-news
+- 다운로드수: **101,512 (30일)** / 누적 101,512 · ♥300 · trendingScore 294 · pipeline `text-to-image` · 라이선스 `other`(qwen-research) · base_model `Qwen/Qwen-Image-2.1` (relation **adapter**)
+- 한줄요약: Qwen-Image-2.1 을 **Distribution Matching Distillation** 으로 증류한 few-step 학생 모델. text-to-image 와 **참조 이미지 1~3장 기반 지시 편집**을 **트랜스포머 40패스 대신 6패스**로, **classifier-free guidance 없이** 수행한다. 배포물은 런타임에 베이스 트랜스포머 위에 올리는 **LoRA 어댑터**(v0.2.1, rank 256/alpha 256, bf16, 1.3GB)와 rank 128 축소판(680MB)이며, 6스텝 전용 시그마 스케줄 `[1.0, 0.9375, 0.875, 0.75, 0.5, 0.25]` 을 함께 요구한다.
+- 성능 수치: 자체 held-out **사용자 요청 96건**(t2i+편집) 기준으로 40스텝 베이스와 대조한 3지표 표를 제공한다 — **샘플 다양성(베이스 대비 배수): v0.1 LoRA r64 0.75 · v0.1 full FT 0.72 → v0.2.1 0.98** · **구도 드리프트: −0.019 · −0.033 → +0.000** · **베이스와 레이아웃이 눈에 보이게 다른 프롬프트 비율: v0.2.1 0% (v0.2 5스텝 4%)**. 다양성 지표는 *프롬프트당 8시드 · 32프롬프트의 intra-prompt DINOv2 patch distance 평균비*, 드리프트는 *이미지 중심 수평 이동량(이미지 폭 단위)* 로 **정의까지 명시**돼 있다. 속도는 **엔드투엔드 약 5배 빠름**. v0.2.1 은 v0.2(step-600)의 **step-700 체크포인트**이고 v0.2 대비 Laplacian sharpness **0.0199 vs 0.0187**.
+- 한계(카드 자기신고): 품질은 *"very competitive"* 이고 **동등 주장이 아니다.** 가장 뚜렷한 격차는 **작고 밀집한 텍스트**이며 여기선 베이스가 여전히 앞선다(8스텝으로 좁혀짐). **복잡한 편집은 베이스에 못 미칠 수 있다**고 명시. ⚠️ ComfyUI 포팅은 저자가 *"mostly vibe-coded with an AI coding assistant"* 이고 본인이 ComfyUI 상용자가 아니라고 **직접 밝힌다**.
+- 실용성/구조: 🎯 **[[원본-파생-역전]] 사례가 하나 더 늘었다** — 원본 `Qwen/Qwen-Image-2.1` 은 30일 다운로드 **48,361** 인데 이 파생은 **101,512 로 2.10배**다. 같은 원본의 다른 파생 `abenzerps/...-Uncensored-GGUF` 는 **876,673(18.1배)**, `Comfy-Org/Qwen-Image-2.1` 은 **3,641,785(75.3배)** 로, **원본 1개가 오늘 트렌딩 20위 안에서 파생 3개에게 동시 역전**당했다. 반대로 ♥는 원본 2,424 가 세 파생(1,983·789·300)보다 **모두 높다** — 발견/애정 지표와 사용 지표가 갈린다.
+- 확인 범위: HF models API `expand[]` 8필드 + 모델카드 **333행 중 상단 75행**(258행 미열람). Comparison Space·`comfyui/` 워크플로·Known limitations 절 **미열람**, **추론 실행 0건**(수치는 전부 벤더 자기보고).
+
+## [2026-09-27] 자동수집 | XiaomiMiMo/MiMo-V2.6-Pro-RL — 코딩·에이전트·비주얼·사이버보안을 한 번의 혼합 RL 런으로 돌린 1M 컨텍스트 옴니모달
+- URL: https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL
+- 도메인: ai-news
+- 다운로드수: **74,497 (30일)** / 누적 74,497 · ♥534 · trendingScore 522 · pipeline `text-generation` · **MIT**
+- 한줄요약: MiMo-V2.6 계열 플래그십 체크포인트. 구조는 **텍스트·이미지·비디오·오디오 단일 모델 + 1M 토큰 컨텍스트**, LLM 백본 **70층(SWA 60 / GA 10)**·hidden 6144·**라우팅 전문가 384개 중 8개 활성(MoE, 공유 전문가 없음)**·MTP 스펙디코더 5 SWA층, 비전 인코더 **681M**, 오디오 토크나이저 **308M(20 RVQ 코드북)** + 오디오 패치 인코더 127M. 학습 쪽 주장은 네 가지다 — ① **"You Only RL Once"**: 도메인별 분리 런이 아니라 코딩·일반 에이전트·비주얼·사이버보안을 **한 배치에 섞은 단일 혼합 RL 런**으로, 학습에서 본 적 없는 하니스로도 전략이 전이된다 ② **비동기 GRPO** 를 **스텝당 1,568 프롬프트 × 16 롤아웃** 규모로 ③ **Groupwise Agentic Grading** — 이진 pass/fail 로는 통과한 해답들을 서열화할 수 없어 리워드 자체를 확장: **GRS**(대조 롤아웃으로 과제별 루브릭을 오프라인 구성해 루브릭 품질과 테스트 결과를 융합) + **GAR**(통과 trajectory 를 온라인 서열화해 advantage 를 고품질 쪽으로 재분배) ④ 자기수정 콜드스타트와 환경 하드닝·적대적 스크리닝·검증기 교차확인으로 **reward hacking 방어**.
+- 성능 수치: 카드 3절에 **18개 벤치마크 × 6열 대조표**(MiMo-V2.6 Pro/Flash · MiMo-V2.5 Pro · Claude Opus 5 · GPT-5.6 Sol · Claude Fable 5)가 있다. Pro 값과 최강 경쟁값 대조: DeepSWE v1.1 **71.9**(Opus 5 74.0) · ProgramBench **26.5**(Opus 5 37.0) · Toolathlon-Verified **76.9**(Opus 5 80.6) · Terminal Bench 4.0 **34.9**(Opus 5 49.0) · OSWorld-Verified **82.0**(Fable 5 86.0) · ExploitBench **47.9**(GPT-5.6 78.5). 🎯 **Pro 가 앞선 항목은 4개다** — **AutomationBench v1.0.6 53.1 vs Opus 5 50.3** · **Terminal Bench 2.1 89.9 vs Opus 5 89.1** · **Agents' Last Exam 31.6 = Opus 5 31.6(동률)** · **MiMo VisualCoding 72.3 vs Opus 5 70.0**(단 GPT-5.6 73.4 가 더 높다). 세대 내 증분은 크다 — Terminal Bench 4.0 **V2.5 Pro 1.5 → Pro 34.9**, MiMo Cyber Bench **0.0 → 80.2**, CyberGym **40.0 → 94.0**.
+- 유의: ⚠️ **자사 명칭 벤치마크 3개**(MiMo Code Bench · MiMo Cyber Bench · MiMo VisualCoding)가 표에 섞여 있고, 그중 **MiMo Cyber Bench·CyberGym 은 경쟁 모델 열이 `-`(미측정)** 이다 — 자사 벤치에서만 큰 격차가 나는 구조. 종합 우위 주장이 아니라 **항목별로 갈리는 결과**이며, 18개 중 Pro 가 Opus 5 를 넘은 것은 **3개 + 동률 1개**다. 전부 **벤더 자기보고**이고 독립 재현 미확인.
+- 확인 범위: HF models API `expand[]` 8필드 + 모델카드 **237행 중 1~75·90~160행(약 145행)** 열람. **기술보고서 PDF 0행 열람**, 가중치 미다운로드, **추론 실행 0건**.
+
+## [2026-09-27] 자동수집 | StarDoc-AI/TeleOCR — 1.2B 로 디지털·카메라 촬영 문서를 한 프레임워크에서 파싱, OmniDocBench v1.6 종합 96.87
+- URL: https://huggingface.co/StarDoc-AI/TeleOCR
+- 도메인: ai-news
+- 다운로드수: **27,837 (30일)** / 누적 **39,391** · ♥475 · trendingScore 400 · pipeline `image-text-to-text` · **Apache-2.0** · 부속 GitHub `caipeng328/TeleOCR` · 기술보고서 arXiv 2608.12898
+- 한줄요약: **약 1.2B 파라미터** 경량 문서파싱 전용 VLM. 기존 방법이 **디지털 문서 또는 카메라 촬영 문서 한쪽**을 주로 노리는 데 반해 **양쪽을 단일 프레임워크로 통합**한 것이 핵심 주장이다. 구성요소는 의사라벨 자동생성용 **Multi-node Consensus Voting(MCV)**, 촬영 문서용 **기하인식 문서 모델링**, **Curvature-Guided Douglas-Peucker 샘플링(CGDP)**, 데이터 자동정제용 **image-to-image 자기검증**, **4단계 점진 학습**, 표·수식용 **내용-구조 분리 학습**이다. 실용상 의미 있는 부분은 **왜곡 문서를 dewarping 전처리나 별도 교정 모델 없이 직접 파싱**한다는 점(DocUNet·DIR300 에서 시각 평가).
+- 성능 수치: **OmniDocBench v1.6** — TeleOCR(1.2B) **Overall 96.87 · Text Edit 0.027↓ · Formula CDM 96.36 · Table TEDS 97.05 · TEDS-S 98.52 · Read Order Edit 0.122↓**. 대조군: OvisOCR2(0.8B) 96.58 · PaddleOCR-VL-1.6(0.9B) 96.33 · MinerU2.5-Pro(1.2B) 95.75 · GLM-OCR(0.9B) 95.22 · HunyuanOCR-1.5(1B) 94.74. 🎯 **Overall·Table TEDS·TEDS-S 3항목 1위지만 Text Edit(0.025 OvisOCR2)·Formula CDM(97.53 OvisOCR2)·Read Order(0.111 OvisOCR2)는 OvisOCR2 가 앞선다 — 항목별로 갈린다.** **Wild_OmniDocBench**(촬영 문서)에서는 **Overall 88.53 · Text Edit 0.1173 · Table TEDS 89.05 · TEDS-S 92.14 · Read Order 0.2011 로 5항목 1위**이고 Formula CDM 88.26 만 MinerU2.5-Pro 90.15 에 밀린다 — **강점이 촬영/왜곡 문서 쪽에서 더 분명하다.** **Dr.DocBench Challenge**(EMNLP 2026) 자체 평가는 **Overall 67.96 vs MinerU 2.5 Pro 62.26 · OvisOCR2 59.25** 지만 **Table TEDS 는 64.97 로 MinerU 67.75 에 밀리고 order edit 0.398 도 MinerU 0.356 보다 나쁘다.**
+- 유의: ⚠️ **2026-09-10 에 NaviDC-OCR 에서 TeleOCR 로 개명**했다 — 구명으로 검색하면 별개로 보인다([[정규명-우선-중복검사]] 해당 사례). Dr.DocBench 수치는 대회 공식 순위가 아니라 **벤더 자체 평가**임을 카드가 밝힌다. 모든 수치 벤더 자기보고.
+- 확인 범위: HF models API `expand[]` 8필드 + 모델카드 **433행 중 1~75행 및 81~121행(약 116행)** 열람. **기술보고서 arXiv 2608.12898 0행 열람**, 부속 GitHub 미조회, 벤치 이미지(`score.png`·`dir300.png`·`docunet.png`) **미판독**, **추론 실행 0건**.
+
+> [!warning] 수집기 자기신고 한계 (숨기지 않는다)
+> 1. 🔴 **코드 실행 0건 — 9배치 연속.** 오늘도 전부 HTTP API·README·모델카드·초록 조회다. `mobile-mcp`(npm 1줄)·`pos-sae-latents`·`robocode` 셋 다 설치 문턱이 낮은데 실행하지 않았다.
+> 2. 🔴 **논문 5건 전부 초록만, arXiv 본문 0행.** 그중 **3건(Rufus-Air·Qwen-Planner-Agent·Parts-of-Speech)은 초록 정량 수치가 0개**이고 ExplorationBench 는 **구조 수치만 있고 성능 수치가 없다** — 즉 **5건 중 4건이 대조 불가 상태로 수록**된다. 수치가 있는 것은 Coding Agents TAMP 1건뿐이다.
+> 3. 🔴 **`anthropics/claude-code-action` 은 README 0행 열람**으로 기능을 확정하지 못했다. `description` 이 `None` 인 것을 확인한 데서 멈췄다.
+> 4. 🟡 **GitHub 5건 중 2건(tensorflow·claude-code-action)이 README 0행**이다. 나머지 3건도 상단 60행만 봤다(합계 미열람 887행).
+> 5. 🔴 **HF 데일리 논문이 이틀 연속 0건**이라 **오늘 배달은 어제와 같은 09-25 목록의 하위 업보트 구간**이다. 신선도가 구조적으로 낮고, publishedAt 은 전부 **09-24(3일 전)** 이다. 업보트 10 동점 3건의 순서는 API 정렬 그대로 따랐을 뿐 **의미 있는 서열이 아니다**.
+> 6. ⬜ **`block/buzz` 오픈이슈 3,663건 · `claude-code-action` 805건 성격 미확인.** 숫자만 적었다.
+> 7. ⬜ **`ai-engineering-from-scratch` 기준선 특정 불가**(볼트 페이지에 ⭐값 4개). 드리프트를 계산하지 않고 비워 뒀다 — 추정치를 적지 않는 쪽을 택했다.
+
+---
+
+### 이전 배치 처리 이력
 
 ✅ **2026-09-26 자동수집 13건 전량 ingest 완료 후 삭제됨**(GitHub 5 · HF논문 5 · HF모델 3) — 신규 **7**([[paperclip]]·[[hindsight]]·[[WROP-Object-Permanence]]·[[Superposition-Linearity]]·[[WanPE]]·[[OmniEcho]]·[[AEWM]]) · 갱신 **5** · 신설 엔티티 **3**([[paperclipai]]·[[vectorize-io]]·[[Prime-Radiant]]) · 개념 신설 **1**([[벤치마크-이미지-봉인]]) · 개념 갱신 **10** · 도메인 재판정 **1**([[WanPE]]→`video-saas`). 처리 결과는 `log.md` 의 `## [2026-09-26] ingest | 09-26 자동수집 배치 13건` 참조.
 ✅ **2026-09-24 자동수집 13건 전량 ingest 완료 후 삭제됨**(GitHub 5 · HF논문 5 · HF모델 3) — 신규 소스 **9** · 갱신 **4** · 보너스 갱신 1([[TradingAgents]]) · 신설 엔티티 **4** · 개념 **1**([[정규명-우선-중복검사]]) · 도메인 재판정 **3**. 처리 결과는 `log.md` 의 `## [2026-09-24] ingest | 09-24 자동수집 배치 13건` 참조.

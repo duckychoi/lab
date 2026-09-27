@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-24
+updated: 2026-09-27
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -637,3 +637,27 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 
 ### ⚠️ 한계
 🔴 arXiv 본문 미열람 — **모델 크기·VRAM·지연 수치 전부 미확인**이므로 *"로컬 배포 가능"* 은 **저자 의도**이고 볼트 검증값이 아니다. ⬜ 세 벤치 규모·출처 미확인(LoCoMo만 1,986문항 명시). ⬜ `2022hpsk/SpeakerMemR1` ★70 레포 미열람.
+
+---
+
+## 📊 [2026-09-27] 배치 누적 인사이트
+
+### 신규 3건 (도메인 재판정 3건 포함)
+- **[[Model-Optimizer]]** (raw `ai-news` → **`local-llm`**) ★4,853 — 양자화·프루닝·NAS·증류·스펙디코딩 통합. 🎯 **값은 압축이 아니라 export 경로**(TensorRT-LLM·vLLM·SGLang)다. 🔴 수치 전건 자사 자기보고, 품질 손실 미공개
+- **[[Qwen-Planner-Agent]]** (raw `ai-news` → **`local-llm`**) — **모델–하니스 공진화** + **보존된 실패 trace**. 🔴 점수·베이스명·경쟁명 전부 0개
+- **[[TeleOCR]]** (raw `ai-news` → **`local-llm`**) — **1.42B 실측**(카드는 "약 1.2B") · Apache-2.0 · OmniDocBench 96.87
+
+### 🎯 실용성 판단 — 오늘 실배포 가능성 순위
+1. **[[TeleOCR]] 1.42B · Apache-2.0** — 소비자 GPU·CPU 급. 🔴 단 지연시간 수치 없음 · 양자화 배포물 유무 미확인
+2. **[[Model-Optimizer]]** — 도구이므로 규모 무관하나 **엣지가 아니라 데이터센터 지향**(NVFP4 = Blackwell 전제)
+3. **[[MiMo-V2.6-Pro-RL]] 1.024조** — **불가**(가중치만 수백 GB~TB)
+
+### 🔴 Hermes 적용 — 정직하게 쓰면 오늘 적용 가능한 것은 설계 원칙뿐이다
+- [[Qwen-Planner-Agent]] 에서 **2개**: ① **실패 trace 보존**(성공만 남기지 않기) ② **피드백이 다음 입력 생성을 지시**하는 역방향 연결. 둘 다 규모 무관 규약
+- [[MiMo-V2.6-Pro-RL]] **GAR**: *"통과한 것들 사이의 서열화"* → 볼트 3값화에 직접 쓸 수 있다
+- 🔴 **[[TeleOCR]] 은 적용 근거가 약하다** — 볼트 병목은 **OCR 부재가 아니라 arXiv 본문을 열지 않는 것**이다(arXiv 는 HTML/텍스트 제공). **적용 근거를 과장하지 않는다**
+
+### 🎯 트레이드오프 수치 (오늘 확보)
+- **[[TeleOCR]]**: OmniDocBench 에서 **1.78배 크기(1.42B vs 0.8B)로 0.29p** → **비용 대비 이득 나쁨**. 🎯 **반면 Wild(촬영 문서)에서는 5항목 1위로 격차가 실질적** → **용도가 트레이드오프를 결정한다**
+- **[[Model-Optimizer]]**: 체크포인트 **3.1배 축소 ↔ 처리량 1.30배** — 압축비 > 속도비는 정상(메모리 대역폭 이득 > 연산 이득)
+- **[[MiMo-V2.6-Pro-RL]]**: 전문가 **384개 중 8개 활성(2.08%)**. 🔴 활성 파라미터 수는 카드에 없고 **볼트도 계산하지 않았다**(공유 전문가 없음·GA층 때문에 단순 비례 불성립)
