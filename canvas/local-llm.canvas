@@ -869,6 +869,26 @@
       "width": 300,
       "height": 180,
       "color": "2"
+    },
+    {
+      "id": "s-pisa-0928",
+      "type": "text",
+      "text": "## PISA 🆕🔀\n\n**ai-news → local-llm 재판정**\n(VRAM·롱컨텍스트)\n🎯 병목은 어텐션이 아니라\n**블록 고르는 단계(O(N²))**\n피라미드 Top-K → O(N log N)\n🔴 **속도 실측 0개**\n⚠️ 제목이 한정어를 떨어뜨림\n\n[[PISA]]",
+      "x": "-200",
+      "y": "9750",
+      "width": "320",
+      "height": "220",
+      "color": "5"
+    },
+    {
+      "id": "s-hindsight-ll-0928",
+      "type": "text",
+      "text": "## hindsight 🔓\n\n봉인 해제 — Retain 리더보드\n**Qwen3.8-27B 7위 · 30.7s**\nGranite 4.2 3B $0.02/1M\n🔴 SOTA 주장은 미검증\n\n[[hindsight]]",
+      "x": "160",
+      "y": "9750",
+      "width": "300",
+      "height": "200",
+      "color": "5"
     }
   ],
   "edges": [
@@ -1451,6 +1471,21 @@
       "toNode": "s-teleocr-0927",
       "fromSide": "bottom",
       "toSide": "top"
+    },
+    {
+      "id": "e-hub-pisa-0928",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-pisa-0928",
+      "toSide": "top"
+    },
+    {
+      "id": "e-pisa-hindsight-0928",
+      "fromNode": "s-pisa-0928",
+      "fromSide": "bottom",
+      "toNode": "s-hindsight-ll-0928",
+      "toSide": "top",
+      "label": "같은 '긴 맥락', 다른 층위"
     }
   ]
 }

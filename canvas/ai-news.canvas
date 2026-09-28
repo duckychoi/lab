@@ -4928,6 +4928,186 @@
       "width": 300,
       "height": 180,
       "color": "3"
+    },
+    {
+      "id": "s-openrig-0928",
+      "type": "text",
+      "text": "## openrig 🆕\n\n★1,256 · Apache-2.0\n`rig up` 한 줄 · tmux 좌석\n**dry-run 선권장 + 부작용 섹션**\n\n[[openrig]]",
+      "x": "-1500",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-fusereg-0928",
+      "type": "text",
+      "text": "## FuseReg 🆕\n\n업보트 93 · 데일리 1위\n랜덤 레이어 융합 정규화\n**gFID −27%(XL) / −29%(Base)**\n조건 다른 두 실험\n\n[[FuseReg]]",
+      "x": "-1180",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-rayorch-0928",
+      "type": "text",
+      "text": "## RayOrch 🆕\n\n업보트 37 · 12일 전 논문\n계보 보존 데이터플로우\n**15.14배(자기) ≠ −13.1%(경쟁)**\n\n[[RayOrch]]",
+      "x": "-860",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-qwen27b-0928",
+      "type": "text",
+      "text": "## Qwen3.8-27B 📊\n\nDL 6,727,629 **1위**\nsafetensors 27.78B(이름+2.9%)\n🔴 **hindsight 리더보드 7위**\n53.4 · 30.7s\n\n[[Qwen3.8-27B]]",
+      "x": "-540",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-hindsight-0928",
+      "type": "text",
+      "text": "## hindsight 🔓\n\n★39,067 · 당일 +4,520\n**봉인 해제 — 7모델×9지표**\n🔴 SOTA는 여전히 미검증\n(모델내 ≠ 시스템간)\n\n[[hindsight]]",
+      "x": "-220",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-qwenimg-0928",
+      "type": "text",
+      "text": "## Qwen-Image-2.1 🔴\n\n**75.51배 완전역전**\n런타임-파생\n원본 trendingScore 3.1배\n라이선스 원본과 동일 ✅\n\n[[Qwen-Image-2.1]]",
+      "x": "100",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-qwengguf-0928",
+      "type": "text",
+      "text": "## Qwen3.8-27B-GGUF\n\n**0.989배 (−75,967)**\n형식-파생 · 역전 직전\n⚖️ 절대차 병기 규약 발효\n\n[[Qwen3.8-27B-GGUF]]",
+      "x": "420",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-aiefs-0928",
+      "type": "text",
+      "text": "## ai-eng-from-scratch ✅\n\n★59,886 · 귀속 문제 해소\n**64,744는 MS 다른 레포였다**\n단조 증가 복원\n🆕 레슨 503→523\n\n[[ai-engineering-from-scratch]]",
+      "x": "740",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-paperclip-0928",
+      "type": "text",
+      "text": "## paperclip 📊\n\n★91,180 · 트렌딩 1위\nissues 5,792→**5,895**\n6.5/1000★ = VoiceStudio 9.9배\n🔴 성격 3일째 미확인\n\n[[paperclip]]",
+      "x": "1060",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-voicestudio-0928",
+      "type": "text",
+      "text": "## VoiceStudio 📊\n\n★41,201 · issues **27**\n**0.66/1000★ = 오늘 최저**\n🔴 안정? 닫음? 억제? 미확인\n\n[[VoiceStudio]]",
+      "x": "1380",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "s-univer-0928",
+      "type": "text",
+      "text": "## univer ⬜탈락\n\n★20,854 · 당일 +895\n**증분 기준이면 5위 안**\ncreated 2022 = 4년차\n\n[[univer]]",
+      "x": "1700",
+      "y": "29300",
+      "width": "280",
+      "height": "160",
+      "color": "5"
+    },
+    {
+      "id": "c-catchall-0928",
+      "type": "text",
+      "text": "## 캐치올 200 🆕\n\n**SPA는 없는 경로에도 200**\n날조 경로까지 md5 동일\n`735f55c8b878` · 2,352B\n🎯 날조 대조군 규약화\n\n[[캐치올-200]]",
+      "x": "-700",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "c-structzero-0928",
+      "type": "text",
+      "text": "## 구조적 영값 🆕\n\nlaya ♥4,187 · **DL 0**\n(전체기간도 0 · gated 아님)\n**루트 config.json 부재**\n= HF가 셀 수 없는 레이아웃\n\n[[구조적-영값]]",
+      "x": "-380",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "c-seal-0928",
+      "type": "text",
+      "text": "## 봉인 범위 분기 🔴\n\n볼트 한정어-탈락 자백\n**저장소-로컬 / 벤더-전역**\n해제 비용: curl 2번\n\n[[벤치마크-이미지-봉인]]",
+      "x": "-60",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "c-derive-0928",
+      "type": "text",
+      "text": "## 원본-파생 분기 ⚖️\n\n형식-파생 0.989배\n런타임-파생 75.5배\n🔴 Swift 12.5배 충돌 미해소\n\n[[원본-파생-역전]]",
+      "x": "260",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "c-relspeed-0928",
+      "type": "text",
+      "text": "## 상대속도 가림 🎯\n\nDL 1위 = 기능 7위\n정렬 키 바꾸면 순서 역전\nopenrig(+114) vs univer(+895)\n\n[[상대속도-가림]]",
+      "x": "580",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "6"
+    },
+    {
+      "id": "e-mvschwarz-0928",
+      "type": "text",
+      "text": "### mvschwarz\n\nopenrig 소유 **개인 계정**\n★1,256인데 자기 위험을\n★91,180보다 명확히 적는다\n\n[[mvschwarz]]",
+      "x": "900",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "3"
+    },
+    {
+      "id": "act-0928",
+      "type": "text",
+      "text": "## ⬜ 미해소 이월\n\n코드 실행 **0건 11배치**\n부속 GitHub 4건 미열람\npaperclip 이슈 **3일째**\narXiv 2512.12818 **3일째**",
+      "x": "1220",
+      "y": "29530",
+      "width": "280",
+      "height": "160",
+      "color": "2"
     }
   ],
   "edges": [
@@ -9183,6 +9363,123 @@
       "fromSide": "bottom",
       "toSide": "top",
       "label": "★0 실측"
+    },
+    {
+      "id": "e-hub-openrig-0928",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-openrig-0928",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-hindsight-0928",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-hindsight-0928",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hindsight-catchall-0928",
+      "fromNode": "s-hindsight-0928",
+      "fromSide": "bottom",
+      "toNode": "c-catchall-0928",
+      "toSide": "top",
+      "label": "반증 도출"
+    },
+    {
+      "id": "e-hindsight-seal-0928",
+      "fromNode": "s-hindsight-0928",
+      "fromSide": "bottom",
+      "toNode": "c-seal-0928",
+      "toSide": "top",
+      "label": "봉인 해제"
+    },
+    {
+      "id": "e-hindsight-qwen-0928",
+      "fromNode": "s-hindsight-0928",
+      "fromSide": "bottom",
+      "toNode": "s-qwen27b-0928",
+      "toSide": "top",
+      "label": "리더보드 7위"
+    },
+    {
+      "id": "e-qwen-relspeed-0928",
+      "fromNode": "s-qwen27b-0928",
+      "fromSide": "bottom",
+      "toNode": "c-relspeed-0928",
+      "toSide": "top",
+      "label": "DL1위≠기능1위"
+    },
+    {
+      "id": "e-qwenimg-derive-0928",
+      "fromNode": "s-qwenimg-0928",
+      "fromSide": "bottom",
+      "toNode": "c-derive-0928",
+      "toSide": "top",
+      "label": "런타임-파생"
+    },
+    {
+      "id": "e-qwengguf-derive-0928",
+      "fromNode": "s-qwengguf-0928",
+      "fromSide": "bottom",
+      "toNode": "c-derive-0928",
+      "toSide": "top",
+      "label": "형식-파생"
+    },
+    {
+      "id": "e-structzero-derive-0928",
+      "fromNode": "c-structzero-0928",
+      "fromSide": "bottom",
+      "toNode": "c-derive-0928",
+      "toSide": "top",
+      "label": "선발 편향 공유"
+    },
+    {
+      "id": "e-catchall-structzero-0928",
+      "fromNode": "c-catchall-0928",
+      "fromSide": "bottom",
+      "toNode": "c-structzero-0928",
+      "toSide": "top",
+      "label": "같은 뿌리(과대/과소)"
+    },
+    {
+      "id": "e-openrig-mv-0928",
+      "fromNode": "s-openrig-0928",
+      "fromSide": "bottom",
+      "toNode": "e-mvschwarz-0928",
+      "toSide": "top"
+    },
+    {
+      "id": "e-openrig-paperclip-0928",
+      "fromNode": "s-openrig-0928",
+      "fromSide": "bottom",
+      "toNode": "s-paperclip-0928",
+      "toSide": "top",
+      "label": "정면 경쟁"
+    },
+    {
+      "id": "e-paperclip-voice-0928",
+      "fromNode": "s-paperclip-0928",
+      "fromSide": "bottom",
+      "toNode": "s-voicestudio-0928",
+      "toSide": "top",
+      "label": "이슈비율 9.9배"
+    },
+    {
+      "id": "e-univer-relspeed-0928",
+      "fromNode": "s-univer-0928",
+      "fromSide": "bottom",
+      "toNode": "c-relspeed-0928",
+      "toSide": "top",
+      "label": "정렬키 경계선"
+    },
+    {
+      "id": "e-openrig-act-0928",
+      "fromNode": "s-openrig-0928",
+      "fromSide": "bottom",
+      "toNode": "act-0928",
+      "toSide": "top",
+      "label": "등록 보류(소진 우선)"
     }
   ]
 }

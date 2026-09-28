@@ -429,6 +429,26 @@
       "width": 300,
       "height": 180,
       "color": "1"
+    },
+    {
+      "id": "s-internw0-0928",
+      "type": "text",
+      "text": "## InternW0-Δ 🆕🔀\n\n**ai-news → slam-3dgs 재판정**\n(4D 기하·모션 prior)\nWorld Action Model · 저자 48\n**Causal Imprint** = 추론시 롤아웃 없음\n🔴 **정량 수치 0개**\n🟡 공개 전부 미래시제\n\n[[InternW0-Delta]]",
+      "x": "-200",
+      "y": "5480",
+      "width": "320",
+      "height": "200",
+      "color": "5"
+    },
+    {
+      "id": "c-internw0-lint-0928",
+      "type": "text",
+      "text": "## 🔴 lint: 선례 충돌\n\nXiaomi 로보틱스 2건은\n`ai-news` 에 있다\n**같은 계열이 두 도메인에 분산**\n→ 일괄 재판정 별도 결정",
+      "x": "160",
+      "y": "5480",
+      "width": "300",
+      "height": "180",
+      "color": "1"
     }
   ],
   "edges": [
@@ -689,6 +709,20 @@
       "fromNode": "s-tamp-0927",
       "toNode": "n-tampwarn-0927",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-internw0-0928",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-internw0-0928",
+      "toSide": "top"
+    },
+    {
+      "id": "e-internw0-lint-0928",
+      "fromNode": "s-internw0-0928",
+      "fromSide": "bottom",
+      "toNode": "c-internw0-lint-0928",
       "toSide": "top"
     }
   ]

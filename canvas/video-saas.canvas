@@ -469,6 +469,26 @@
       "width": 300,
       "height": 180,
       "color": "1"
+    },
+    {
+      "id": "s-fomo-0928",
+      "type": "text",
+      "text": "## FoMo 🆕🔀\n\n**ai-news → video-saas 재판정**\n(생성물 자동 선별 수요)\n확산 **분기시점**을 지각 거리로\n사람 주석 **0** 으로 점별 라벨\n🔴 수치 0개\n🟡 **순환 위험**(볼트 제기)\n\n[[FoMo]]",
+      "x": "-200",
+      "y": "5050",
+      "width": "320",
+      "height": "220",
+      "color": "5"
+    },
+    {
+      "id": "a-fomo-act-0928",
+      "type": "text",
+      "text": "## 💡 SaaS 적용 후보\n\n생성 N개 → **자동 순위** → 상위 k 노출\n참조 기반이라\n**편집·업스케일·복원**에 바로 맞음\n🔴 비용·지연 미지수",
+      "x": "160",
+      "y": "5050",
+      "width": "300",
+      "height": "180",
+      "color": "2"
     }
   ],
   "edges": [
@@ -752,6 +772,20 @@
       "fromNode": "s-viggle-0927",
       "toNode": "n-drift-0927",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hub-fomo-0928",
+      "fromNode": "domain-hub",
+      "fromSide": "bottom",
+      "toNode": "s-fomo-0928",
+      "toSide": "top"
+    },
+    {
+      "id": "e-fomo-act-0928",
+      "fromNode": "s-fomo-0928",
+      "fromSide": "bottom",
+      "toNode": "a-fomo-act-0928",
       "toSide": "top"
     }
   ]
