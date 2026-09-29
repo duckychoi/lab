@@ -355,3 +355,22 @@ _소스 ingest 시 자동 누적_
 ### 🎯 응용 가능성 — 도구 요구사항을 볼트가 이미 갖고 있다
 평가 대상이 **Claude Code (Opus 5)** 다. 사용자 본인 하니스와 같은 도구가 *"프로그램 합성기"* 로 쓰여 로봇 플래너를 이겼다. **없는 것은 시뮬레이터뿐이다.**
 🎯 **가장 실용적인 부분은 코드가 아니라 프롬프트다** — *"에이전트에게 준 전체 프롬프트를 포함해 코드 전부 공개"* 를 명시한다. **프롬프트 설계가 이전 가능성이 가장 높다** → actionable.
+
+---
+
+## [2026-09-29] 🔀 도메인 재판정 유입 — [[HexaAnything]]
+
+수집기 분류 `ai-news` → **볼트 `slam-3dgs`**. 내용 본체가 **로봇 조작 정책(VLA/WAM) · 듀얼암 실기(AgileX) · RoboCasa365 벤치**다.
+
+> [!insight] 진단이 처방보다 강한 논문 — **"문제는 성능이 아니라 표현이다"**
+> 축자: *"The root cause lies in **representation**: task requirements, conditions, progress, and failure recovery are **implicitly encoded in action sequences, making them difficult to inspect or revise**."*
+> 처방 **Physical Coding**: `Code as World`(객체·관계·제약·진행) + `Code as Policy`(계획·검증·복구·실행). **VLA/WAM 은 폐기가 아니라 호출되는 도구**가 된다.
+> 🎯 **[[암묵을-명시로]] 의 로보틱스판**이며, 같은 날 [[YuE2]](음악 · 악보)·[[hindsight]](메모리 · 증거/추론 분리)와 **독립적으로 같은 처방**이 도착했다.
+
+> [!warning] 🔴 이 도메인에 실질적으로 더해진 수치는 **0개다**
+> *"improves Composite-Unseen and overall success **over XR-1 VLA**"* · *"HexaModel **beats the base on every split**"* · *"**often faster** than published results"* — **개선폭·지연·fps 전부 없다.**
+> 📌 [[벤치마크-이미지-봉인]] 과 효과는 같고 수단이 다르다 — 이미지가 아니라 **본문 유보**다. **채널을 더 찾아도 안 풀리는 유형**(오늘 [[LTX-2.5]] 는 arXiv 우회로 풀렸지만 이건 초록 자체가 비어 있다).
+> 🔴 **평가 전제 미보유**: **XR-1 VLA** 기준선 · **RoboCasa365** · **PhyBench** 셋 다 볼트에 없다.
+
+- 신뢰도 ⭐⭐ **low** · 인용 가능 범위 = **진단·구조·호출관계**만, 성능 주장은 **전부 인용 금지**
+- actionable: arXiv **2609.35432** 본문 수치표 확보(우선순위 중간 — 🎯 오늘 [[무응답-오귀속]] 으로 arXiv 경로가 열렸다)

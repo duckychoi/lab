@@ -889,6 +889,56 @@
       "width": "300",
       "height": "200",
       "color": "5"
+    },
+    {
+      "id": "b0929-hdr-local-llm",
+      "type": "text",
+      "text": "# 📮 2026-09-29\n\n메모리 봉인 해제 +\n증류 2건 대칭",
+      "x": -300,
+      "y": 10150,
+      "width": 420,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n0929l-hindsight",
+      "type": "text",
+      "text": "## 🔓 [[hindsight]] 논문 확보\n\nLongMemEval **91.4%**\nLoCoMo **89.61%** (vs 75.78%)\n20B: 39% → **83.6%**\n4개 논리 네트워크",
+      "x": 180,
+      "y": 10350,
+      "width": 300,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "n0929l-mem",
+      "type": "text",
+      "text": "## [[에이전트-메모리-레이어]]\n\n🎯 이 계열 **첫 system-vs-system 수치**\n증거/추론 분리를 스키마에",
+      "x": 180,
+      "y": 10600,
+      "width": 300,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0929l-distill",
+      "type": "text",
+      "text": "### 증류 논문 2건 대칭\n\n[[DN-MOPD]] 협조·신호과다\n[[Post-Training-Behavioral-Shadows]]\n비협조·단어1개\n→ [[온폴리시-증류]]",
+      "x": -180,
+      "y": 10350,
+      "width": 280,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "n0929l-bonsai",
+      "type": "text",
+      "text": "### [[Ternary-Bonsai-2-27B]]\n\n26.90B 실측 · 5.95GB\nbase [[Qwen3.8-27B]] 27.78B\n**9.0x 축소**",
+      "x": -180,
+      "y": 10600,
+      "width": 280,
+      "height": 170,
+      "color": "1"
     }
   ],
   "edges": [
@@ -1486,6 +1536,41 @@
       "toNode": "s-hindsight-ll-0928",
       "toSide": "top",
       "label": "같은 '긴 맥락', 다른 층위"
+    },
+    {
+      "id": "e0929-local-llm-0",
+      "fromNode": "b0929-hdr-local-llm",
+      "toNode": "n0929l-hindsight",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-local-llm-1",
+      "fromNode": "n0929l-hindsight",
+      "toNode": "n0929l-mem",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-local-llm-2",
+      "fromNode": "b0929-hdr-local-llm",
+      "toNode": "n0929l-distill",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-local-llm-3",
+      "fromNode": "n0929l-distill",
+      "toNode": "n0929l-bonsai",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-local-llm-4",
+      "fromNode": "n0929l-distill",
+      "toNode": "n0929l-hindsight",
+      "fromSide": "right",
+      "toSide": "left"
     }
   ]
 }

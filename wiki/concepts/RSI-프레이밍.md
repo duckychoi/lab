@@ -80,3 +80,15 @@ reliability: medium
 - [[NVIDIA]]
 - [[Dream-RSI]]
 - [[AutoResearchClaw]]
+
+---
+
+> [!insight] 2026-09-29 — **같은 배치에서 RSI 수사의 농도 차이 2단계가 관측됐다**
+> | | [[TraceDance]] | [[HexaAnything]] |
+> |---|---|---|
+> | 분량 | **마지막 한 문장** | **초록의 약 1/4** |
+> | 표현 | *"**could** serve as a key component of the RSI loop"* | *"enabling evolution from tools and Harness to **model weights, architectures, and ultimately hardware and task design**"* |
+> | 뒷받침 | 본문 전체가 정량치(252,557 / 107 / 26.7%) | 🔴 **성능 수치 0개** |
+> | 관측 vs 전망 | 전망임이 조동사로 명시 | *"We observe data, model, and tool self-evolution"* 한 줄이 관측, 나머지는 future work |
+> 🎯 **판별 규칙이 하나 생긴다: RSI 문구의 길이와 본문 정량성이 반비례하는 경향.** 수치가 있는 논문은 RSI 를 한 줄로 끝내고, 수치가 없는 논문은 RSI 로 문단을 채운다.
+> 🔴 **단정하지 않는다** — 표본 2건이다. 다음 배치부터 **RSI 문구 길이 ↔ 초록 내 수치 개수**를 같이 기록해 표본을 쌓는다.

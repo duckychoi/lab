@@ -63,3 +63,67 @@ reliability: medium
 ## 원본
 - 출처: https://huggingface.co/Lightricks/LTX-2.5
 - 신뢰도: ⭐⭐ (DL 466k·좋아요 1.15k, raw 자동수집 · 실WebFetch 미수행 · 스펙/품질 미검증 medium)
+
+---
+
+## 🔓 2026-09-29 — **게이트는 3배치째 닫혀 있다. 그런데 오늘 옆문으로 들어갔다**
+
+DL **1,595,377**(30일 · 수집기와 **완전 일치, 드리프트 0**) · ♥**5,465**(08-31 2,295 → **+138%**) · license `other` · 생성 2026-07-23 · 최종수정 2026-09-01 · pipeline `image-to-video`.
+
+> [!warning] 🔴 게이트 3회 연속 확인 — **볼트 실측**
+> ```
+> GET huggingface.co/Lightricks/LTX-2.5/raw/main/README.md
+>   → HTTP 401, 126 bytes   ("Access to model is restricted")
+> API: gated = "auto"
+> ```
+> 08-25 · 08-31 에 이어 **09-29 세 번째**. 카드 원문 미확보 상태가 **35일째** 유지된다. 수집기의 수집 실패 보고는 **정확했다**(볼트 독립 재현).
+
+> [!insight] 🏆 **그런데 봉인은 전역이 아니었다 — API 태그가 논문 ID를 흘린다**
+> 🎯 **수집기가 "API 태그 목록만" 이라며 성능 주장을 전부 비운 그 태그 목록 안에, 태그가 아닌 것이 섞여 있었다:**
+> ```
+> tags: ..., en, de, es, fr, ja, ko, zh, it, pt, arxiv:2601.03233, license:other, region:us
+>                                                 ^^^^^^^^^^^^^^^^
+> ```
+> **볼트가 그 ID 를 오늘 고친 arXiv 경로로 조회했다**([[무응답-오귀속]]) → **`2601.03233` = *LTX-2: Efficient Joint Audio-Visual Foundation Model*, 게재 2026-01-06, 저자 29인(Yoav HaCohen 외).**
+> 📌 **[[벤치마크-이미지-봉인]] 09-28 판정이 여기서 재확인된다** — *"봉인은 저장소-로컬일 수 있고, 다른 도메인을 한 번 더 찾으면 풀린다."* **게이트가 막은 것은 HF 카드 한 장이었고, 같은 내용의 상당 부분이 arXiv 에 열려 있었다.**
+> 🎯 **그리고 태그에 있던 9개 언어(en/de/es/fr/ja/ko/zh/it/pt)의 정체도 논문이 설명한다** — *"We employ a **multilingual text encoder** for broader prompt understanding."* 태그는 **지원 언어 목록이 아니라 텍스트 인코더의 능력 표기**였다.
+
+### ✅ 논문에서 확보한 것 (LTX-2 기준)
+
+> [!note] 구조 — **비대칭 듀얼 스트림. 영상에 용량을 더 준다**
+> 축자: *"an **asymmetric dual-stream transformer** with a **14B-parameter video stream** and a **5B-parameter audio stream**, coupled through **bidirectional audio-video cross-attention** layers with temporal positional embeddings and **cross-modality AdaLN** for shared timestep conditioning."*
+> - 🎯 **35일간 미확인이던 "파라미터 수"가 나왔다: 영상 14B + 오디오 5B**(합 19B, 단 **아래 한정 주의**)
+> - 설계 의도 명시: *"while **allocating more capacity for video generation than audio generation**"* — 비대칭이 버그가 아니라 선택이다
+> - **modality-CFG**(modality-aware classifier-free guidance) — 오디오·영상 정렬 제어용
+> - 오디오 범위: *"Beyond generating speech, LTX-2 produces rich, coherent audio tracks that follow the **characters, environment, style, and emotion** of each scene — complete with natural **background and foley** elements."* → **말소리만이 아니라 폴리·앰비언스까지**
+> - 성능 주장: *"**state-of-the-art audiovisual quality and prompt adherence among open-source systems**, while delivering results **comparable to proprietary models at a fraction of their computational cost**"* — 🟡 **오픈소스 한정 SOTA + 상용 대비 동급**(우위 아님)
+
+> [!warning] 🔴🔴 **한정어 필수 — 논문은 `LTX-2`, 이 페이지는 `LTX-2.5` 다. 같은 것으로 쓰면 안 된다**
+> 논문 게재 **2026-01-06**, 이 모델 생성 **2026-07-23** — **6개월 반 차이**의 후속 버전이다.
+> 📌 **따라서 14B+5B·modality-CFG 를 LTX-2.5 의 스펙으로 인용하면 [[한정어-탈락]] 이다.** 볼트가 09-28 에 스스로 저지른 그 오류를 **하루 만에 반복하지 않는다.**
+> ✅ 인용 가능: *"LTX-2.5 의 **전신인 LTX-2** 는 14B 영상 + 5B 오디오 비대칭 구조다."*
+> 🔴 인용 금지: *"LTX-2.5 는 19B 다."* — **2.5 의 파라미터 수는 여전히 미확인이다.**
+> ⬜ 미확인: 2.5 가 2 대비 무엇을 바꿨는지(파라미터·해상도·길이·오디오 품질) — **카드가 게이트 뒤라 알 수 없다.**
+
+> [!warning] 🟡 논문과 배포가 어긋난다 — **"All model weights and code are publicly released"**
+> 논문 마지막 문장 축자: *"**All model weights and code are publicly released.**"*
+> 🔴 **그런데 `Lightricks/LTX-2.5` 는 `gated: auto` 이고 라이선스는 `other` 다.** 로그인 게이트 + 비표준 라이선스는 *"publicly released"* 의 통상 의미와 긴장 관계에 있다.
+> 📌 **단정하지 않는다**: ① 논문은 **LTX-2** 를 말하고 게이트는 **LTX-2.5** 에 걸려 있다(버전이 다르다) ② `gated: auto` 는 **거절이 아니라 자동 승인 동의 절차**일 수 있다 ③ LTX-2 쪽 저장소는 게이트가 없을 수 있다(미확인).
+> ⬜ **검정 방법**: `Lightricks/LTX-2` 저장소의 `gated` 값 조회 — 다음 배치 actionable.
+
+## 도메인별 추출 갱신 (video-saas)
+
+- **기능 벤치마킹**: 🎯 **처음으로 구현 난이도를 말할 수 있게 됐다** — 듀얼 스트림 + 양방향 크로스어텐션은 **단일 모델 파인튜닝으로 접근 불가**한 아키텍처다. 볼트 SaaS 관점에서는 **자체 구현이 아니라 API/가중치 소비**가 유일한 경로.
+- **경쟁 우위 빈틈**: 오디오 동반 생성이 *"오픈소스 중 SOTA"* 라면, **무음 영상 + 별도 TTS/BGM 파이프라인**을 쓰는 기존 워크플로우는 **정렬(sync) 품질에서 구조적으로 불리**하다. 같은 배치 [[VoiceStudio]](로컬 TTS)와 **대비되는 접근**: 분리형 vs 통합형.
+- **액션**: [[LTX-2]] 페이지에 논문 구조 반영 + `Lightricks/LTX-2` 게이트 여부 확인.
+
+## 관련 페이지 추가
+- [[무응답-오귀속]] — 🏆 **이 봉인을 푼 도구** · [[벤치마크-이미지-봉인]] · [[한정어-탈락]] · [[검사가능성-공사]]
+- [[LTX-2]] — 🔗 **논문 2601.03233 의 대상. 스펙은 그쪽 소유다**
+- 같은 배치: [[YuE2]] — 🎯 **오디오 생성 통합 축 동시 도착** · [[VoiceStudio]] · [[Qwen3.8-27B]]
+
+## 원본 갱신
+- 실측(2026-09-29 09:08 UTC · HF API): DL **1,595,377**(수집기 일치) · ♥5,465 · `gated: auto` · `safetensors`·`gguf` **둘 다 미제공**(볼트 09-27 요청 2 **수행 불가 확인**) · pipeline `image-to-video` · arxiv 태그 **2601.03233**
+- 🔴 README: **HTTP 401 / 126 bytes** (볼트 직접 재현)
+- 확인 범위: HF API 메타 전체 + **arXiv 2601.03233 초록 전문**. 🔴 모델카드 미확보(35일째) · 🔴 2.5 고유 스펙 미확인 · 🔴 미실행
+- 신뢰도: ⭐⭐⭐ **medium** (⭐⭐ → **상향**) — DL/게이트 API 실검증 + 전신 논문 구조 확보. **단 2.5 자체 스펙은 여전히 미확인**이라 high 가 아니다.

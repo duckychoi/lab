@@ -108,3 +108,34 @@ reliability: high
 
 ### 📌 관련 페이지 추가
 - [[paperclip]] · [[openrig]] · [[PISA]] · [[구조적-영값]]
+
+---
+
+## 📊 2026-09-29 재관측 — **26일 만의 갱신. 카드가 "646개 언어"를 실제로 적고 있다**
+
+★ **45,776**(볼트 09-29 09:07 UTC 실측 · 수집기 45,750 @09:02 → **+26 드리프트**) · **당일 +3,221 · 트렌딩 1위** · fork **5,210** · open issues **51** · AGPL-3.0 · Python · 생성 **2026-04-09** · pushed 2026-09-29T00:58:42Z.
+🔴 **볼트 페이지가 09-03 이후 26일 방치**됐다가 오늘 갱신 — 그 사이 ★가 얼마나 움직였는지는 볼트 기록 부재로 계산 불가([[지표-창길이]]).
+
+> [!insight] 수집기의 "646개 언어" 주장은 **레포 description 축자다** — 출처는 확인됐고, 근거는 여전히 없다
+> GitHub API `description` 전문:
+> *"VoiceStudio is the open-source, **fully-local** ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation **in 646 languages**."*
+> ✅ **수집기가 지어낸 수치가 아니다**(볼트 API 실검증). 🔴 **그러나 수집기 판정 *"언어별 품질 근거는 레포 설명에 없다"* 도 맞다** — description 한 줄이 전부이고 **646 의 산출 근거·언어 목록·품질 편차는 API 메타에 없다.**
+> 📌 **구분해서 기록한다**: *"646 을 주장한다"* = 확인됨 / *"646 을 지원한다"* = **미검증**. 이 둘을 섞으면 [[한정어-탈락]].
+
+> [!note] 🎯 topics 가 배포 전략을 드러낸다 — 수집기가 보지 않은 축
+> `tauri` · `mlx` · `cuda` · `local-first` · `elevenlabs-alternative` · `huggingface` · `omnivoice-studio` · `workflow` (20개 중 발췌)
+> - **`tauri`** = 데스크톱 앱(Rust 셸). 라이브러리가 아니라 **완제품**을 노린다.
+> - **`mlx` + `cuda` 병기** = Apple Silicon **과** NVIDIA 양쪽 로컬 실행. `local-first` 태그와 정합 — **클라우드 없는 배포가 설계 전제**다.
+> - 📌 **이것이 같은 배치 [[LTX-2.5]] 와 정확히 대비된다.** LTX-2.5 는 통합 모델이 오디오까지 생성(게이트 · `other` 라이선스 · 클라우드 지향), VoiceStudio 는 **분리형 로컬 스택**(AGPL · 데스크톱). **오디오 생성 시장이 통합/분리 · 클라우드/로컬 두 축으로 갈라지는 장면이 하루에 같이 도착했다.**
+
+> [!warning] 🟡 AGPL-3.0 은 [[video-saas]] 에 실질 제약이다
+> 오늘 배치 GitHub 5건 중 **유일한 카피레프트**(나머지 MIT 2 · Apache-2.0 2). **SaaS 로 제공하면 네트워크 사용자에게 소스 공개 의무**가 발생한다 → 볼트 SaaS 축에서는 **참조 구현으로만** 쓰고 코드 차용은 하지 않는다는 판단을 유지한다.
+
+## 관련 페이지 추가
+- [[LTX-2.5]] — 🎯 **통합 vs 분리 대비축** · [[YuE2]] — 오디오 생성 통합 계열 · [[한정어-탈락]] · [[지표-창길이]]
+
+## 원본 갱신
+- 실측(2026-09-29 09:07 UTC · GitHub API): ★45,776 · fork 5,210 · issues 51 · AGPL-3.0 · Python · 생성 2026-04-09 · topics 20개
+- 수집기 대조: ★ **+26 드리프트**(5분 간격 정합) · fork 5,207→5,210 · issues·라이선스·언어 **일치** · "646개 언어" **description 축자 확인**
+- 확인 범위: **API 메타만.** 🔴 **README 미열람**(26일째) · 🔴 미실행 · 🔴 언어별 품질 미검증
+- 신뢰도: ⭐⭐⭐ **medium** — 인기·메타는 실검증, **기능 주장은 self-description 1줄이 전부**

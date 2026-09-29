@@ -5108,6 +5108,156 @@
       "width": "280",
       "height": "160",
       "color": "2"
+    },
+    {
+      "id": "b0929-hdr-ai-news",
+      "type": "text",
+      "text": "# 📮 2026-09-29 배치 13건\n\n**계측기를 고쳤더니 3일치가 열렸다**\n\n신규 6 · 갱신 8 · 검증 13/13\n정정 1 · 재판정 1",
+      "x": -300,
+      "y": 29930,
+      "width": 420,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n0929-muungdap",
+      "type": "text",
+      "text": "## 🏆 무응답 오귀속\n\n**대조군이 비면 원인은 나다**\n\nhttp:// 301 미추종 → 0바이트\n3배치 \"무응답\"의 정체\n\n[[무응답-오귀속]]",
+      "x": -820,
+      "y": 30150,
+      "width": 300,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "n0929-3haeso",
+      "type": "text",
+      "text": "## 🔓 한 줄 수정 = 3건 해소\n\n2512.12818 [[hindsight]]\n2601.03233 [[LTX-2.5]]\n2609.29233 손상원문 대조",
+      "x": -420,
+      "y": 30150,
+      "width": 280,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n0929-dnmopd",
+      "type": "text",
+      "text": "### [[DN-MOPD]]\n\n분산 정규화 증류\n🎯 이득=지시following **감쇠**\n🔴 고정가중치와 동등(자기제한)\n업보트 60",
+      "x": 100,
+      "y": 30150,
+      "width": 260,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0929-yue2",
+      "type": "text",
+      "text": "### [[YuE2]]\n\n악보 계획 → 풀송 오디오\n동일 체크포인트 49.3 vs 34.6\n🟡 Suno v5 와 비김",
+      "x": 420,
+      "y": 30150,
+      "width": 260,
+      "height": 170,
+      "color": "1"
+    },
+    {
+      "id": "n0929-tracedance",
+      "type": "text",
+      "text": "### [[TraceDance]]\n\n배포 트레이스 → 벤치 자동생성\n252,557세션 → 107벤치\n🔴 프런티어 9종 **26.7%**",
+      "x": 740,
+      "y": 30150,
+      "width": 260,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0929-shadows",
+      "type": "text",
+      "text": "### [[Post-Training-Behavioral-Shadows]]\n\n단어 1개로 능력 전이 (ATD)\nHumanEval+ **+5.34pp**\n🔴 초록 손상 = **원문 탓**",
+      "x": 1060,
+      "y": 30150,
+      "width": 280,
+      "height": 190,
+      "color": "1"
+    },
+    {
+      "id": "n0929-qwen",
+      "type": "text",
+      "text": "### [[Qwen3.8-27B]] 본체 최초\n\nDL 6,844,348 (드리프트 0)\nsafetensors 27,781,427,952 ✅\n[[원본-파생-역전]] 등록순서판",
+      "x": 100,
+      "y": 30390,
+      "width": 280,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0929-bonsai",
+      "type": "text",
+      "text": "### [[Ternary-Bonsai-2-27B]]\n\ngguf 26,895,998,464 ✅\n1.7% 차이 = 비전타워 0.46B(가설)\nbase_model → [[Qwen3.8-27B]]",
+      "x": 420,
+      "y": 30390,
+      "width": 280,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0929-ltx",
+      "type": "text",
+      "text": "### [[LTX-2.5]] 게이트 3회째\n\n401/126B · 35일째\n🏆 tags 의 arxiv:2601.03233\n→ [[LTX-2]] 14B+5B 확보",
+      "x": 740,
+      "y": 30390,
+      "width": 280,
+      "height": 180,
+      "color": "1"
+    },
+    {
+      "id": "n0929-meta",
+      "type": "text",
+      "text": "## [[메타데이터-부재-추론]]\n\n[[paperclip]] ★93,669 topics **0**\n[[openrig]] ★1,987 topics **11**\n[[univer]] topics 19개 전부 **낡음**",
+      "x": -820,
+      "y": 30390,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n0929-myeongsi",
+      "type": "text",
+      "text": "## 🎯 암묵을 명시로 ×3 도메인\n\n[[YuE2]] 악보 · [[HexaAnything]] 코드\n[[hindsight]] 증거/추론 분리\n\n[[암묵을-명시로]]",
+      "x": -420,
+      "y": 30390,
+      "width": 280,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n0929-gyecheug",
+      "type": "text",
+      "text": "## 계측 오류 3형제 완성\n\n[[구조적-영값]] 과소\n[[캐치올-200]] 과대\n[[무응답-오귀속]] 과소\n↑ [[측정도구-먼저-반증]]",
+      "x": -820,
+      "y": 30630,
+      "width": 300,
+      "height": 190,
+      "color": "6"
+    },
+    {
+      "id": "n0929-act",
+      "type": "text",
+      "text": "### 📋 actionable +2\n\n외부조회 규약 3종 이행(높음)\nLightricks/LTX-2 게이트 조회(중간)\n✅ hindsight 논문 **부분완료**",
+      "x": 1060,
+      "y": 30390,
+      "width": 280,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "n0929-limit",
+      "type": "text",
+      "text": "### 🔴 볼트 한계\n\n코드실행 0건 **12배치**\nREADME 열람 **0건**\n논문 5건 전부 초록만",
+      "x": 1060,
+      "y": 30630,
+      "width": 280,
+      "height": 170,
+      "color": "3"
     }
   ],
   "edges": [
@@ -9480,6 +9630,139 @@
       "toNode": "act-0928",
       "toSide": "top",
       "label": "등록 보류(소진 우선)"
+    },
+    {
+      "id": "e0929-ai-news-0",
+      "fromNode": "b0929-hdr-ai-news",
+      "toNode": "n0929-muungdap",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-ai-news-1",
+      "fromNode": "b0929-hdr-ai-news",
+      "toNode": "n0929-3haeso",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-ai-news-2",
+      "fromNode": "b0929-hdr-ai-news",
+      "toNode": "n0929-dnmopd",
+      "fromSide": "right",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-ai-news-3",
+      "fromNode": "n0929-muungdap",
+      "toNode": "n0929-3haeso",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-4",
+      "fromNode": "n0929-muungdap",
+      "toNode": "n0929-gyecheug",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-ai-news-5",
+      "fromNode": "n0929-3haeso",
+      "toNode": "n0929-ltx",
+      "fromSide": "bottom",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-6",
+      "fromNode": "n0929-dnmopd",
+      "toNode": "n0929-yue2",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-7",
+      "fromNode": "n0929-yue2",
+      "toNode": "n0929-tracedance",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-8",
+      "fromNode": "n0929-tracedance",
+      "toNode": "n0929-shadows",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-9",
+      "fromNode": "n0929-dnmopd",
+      "toNode": "n0929-shadows",
+      "fromSide": "bottom",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e0929-ai-news-10",
+      "fromNode": "n0929-qwen",
+      "toNode": "n0929-bonsai",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-11",
+      "fromNode": "n0929-bonsai",
+      "toNode": "n0929-ltx",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-12",
+      "fromNode": "n0929-meta",
+      "toNode": "n0929-myeongsi",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-13",
+      "fromNode": "n0929-myeongsi",
+      "toNode": "n0929-yue2",
+      "fromSide": "top",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e0929-ai-news-14",
+      "fromNode": "n0929-ltx",
+      "toNode": "n0929-act",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-15",
+      "fromNode": "n0929-act",
+      "toNode": "n0929-limit",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-ai-news-16",
+      "fromNode": "n0929-gyecheug",
+      "toNode": "n0929-meta",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-17",
+      "fromNode": "b0929-hdr-ai-news",
+      "toNode": "n0929-meta",
+      "fromSide": "left",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-ai-news-18",
+      "fromNode": "n0929-shadows",
+      "toNode": "n0929-dnmopd",
+      "fromSide": "left",
+      "toSide": "right"
     }
   ]
 }

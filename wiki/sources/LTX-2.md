@@ -41,3 +41,37 @@ reliability: medium
 ## 원본
 - 출처: https://github.com/Lightricks/LTX-2
 - 신뢰도: ⭐⭐ (⭐9,016·당일 +161, raw 자동수집 · 실WebFetch 미수행, 스펙·품질 미검증)
+
+---
+
+## 🔓 2026-09-29 — **논문 확보. 이 페이지가 스펙의 정당한 소유자다**
+
+> [!insight] arXiv **2601.03233** — *LTX-2: Efficient Joint Audio-Visual Foundation Model*
+> 게재 **2026-01-06T18:24:41Z** · **저자 29인**(Yoav HaCohen, Benny Brazowski, Nisan Chiprut, Yaki Bitterman 외 25).
+> 🎯 **경로가 특이하다**: 이 ID 는 **[[LTX-2.5]] 의 HF API `tags` 배열에 `arxiv:2601.03233` 로 박혀 있었다.** 2.5 카드는 `gated: auto` 로 35일째 막혀 있는데, **메타데이터가 논문 주소를 흘렸고 논문은 열려 있었다** → [[무응답-오귀속]] · [[벤치마크-이미지-봉인]](저장소-로컬 봉인).
+
+### 구조 (초록 축자 기반)
+- **비대칭 듀얼 스트림 트랜스포머**: **영상 14B + 오디오 5B**
+- 결합: **양방향 audio-video cross-attention** + temporal positional embeddings + **cross-modality AdaLN**(공유 타임스텝 조건화)
+- 설계 의도: *"allocating **more capacity for video generation than audio generation**"* — 비대칭은 의도다
+- **modality-CFG**(modality-aware classifier-free guidance) — 오디오·영상 정렬/제어 개선
+- 텍스트 인코더: **multilingual** (🎯 [[LTX-2.5]] 태그의 en/de/es/fr/ja/ko/zh/it/pt 9개 언어와 정합)
+- 오디오 범위: 음성 **이상** — *"rich, coherent audio tracks that follow the characters, environment, style, and emotion of each scene — complete with natural **background and foley** elements"*
+
+> [!warning] 🟡 성능 주장의 범위를 잘라서 읽는다
+> *"state-of-the-art audiovisual quality and prompt adherence **among open-source systems**, while delivering results **comparable to** proprietary models **at a fraction of their computational cost** and inference time."*
+> - ✅ SOTA 주장 = **오픈소스 한정**
+> - ✅ 상용 대비 = **동급(comparable)**, 우위 아님
+> - 🔴 **벤치 이름·점수·평가자 수가 초록에 0개다.** *"In our evaluations"* 가 전부 — 어떤 평가인지 미기술 → [[HexaAnything]](같은 배치)와 **같은 형태의 무수치 결과 보고**다.
+> - 🔴 *"All model weights and code are publicly released"* ↔ **[[LTX-2.5]] 는 `gated: auto`** — 버전이 다르므로 모순으로 단정하지 않되, `Lightricks/LTX-2` 저장소 게이트 여부 확인이 필요하다(actionable).
+
+> [!warning] 🔴 **LTX-2 ≠ LTX-2.5** — 이 스펙을 2.5 에 옮겨 적지 않는다
+> 논문 2026-01-06 / [[LTX-2.5]] 모델 생성 2026-07-23 = **6개월 반 차이.** 14B+5B 는 **이 페이지(LTX-2)의 값**이다. [[한정어-탈락]] 방지.
+
+## 관련 페이지 추가
+- [[LTX-2.5]] — 후속 버전(스펙 미확인) · [[무응답-오귀속]] · [[한정어-탈락]] · [[벤치마크-이미지-봉인]]
+- [[YuE2]] — 🎯 같은 배치 · 오디오 생성 통합 계열 · [[VoiceStudio]] — 분리형 대비축 · [[AI-영상-생성-2026]]
+
+## 원본 갱신
+- 논문: https://arxiv.org/abs/2601.03233 (볼트 2026-09-29 09:09 UTC · arXiv API `totalResults=1` 실확인)
+- 확인 범위: **초록 전문 + 서지(저자 29인·게재일).** 🔴 본문·벤치표·가중치·코드 미확인 · 🔴 미실행

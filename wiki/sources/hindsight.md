@@ -99,3 +99,43 @@ reliability: medium
 
 ### 📌 관련 페이지 추가
 - [[캐치올-200]] · [[구조적-영값]] · [[Qwen3.8-27B]] · [[openrig]] · [[PISA]] · [[MiMo-V2.6-RL-Livestream]]
+
+---
+
+## 🏆 2026-09-29 — **3일째 이월되던 논문을 열었다. 없던 게 아니라 볼트가 못 물었던 것이다**
+
+★ 볼트 실측 **41,749**(09-29 09:07 UTC · 수집기 41,741 @09:02 → **+8 드리프트**) · **당일 +4,561 = 오늘 배치 증분 1위** · fork 5,605 · **open issues 171**(수집기 174 → **-3, 감소**) · MIT · pushed 2026-09-29T09:06:42Z.
+
+> [!insight] 🏆 **arXiv 2512.12818 은 존재한다. 09-26 이후 3배치의 "무응답"은 볼트 `curl` 의 301 미추종이었다**
+> 09-28 로그: *"`export.arxiv.org` API 조회가 **제목·초록 모두 무응답**. 🔴 논문 부재로 단정하지 않는다 — ID 오기, API 인덱싱 지연, **볼트 쿼리 오류**가 전부 가능하다."*
+> **09-29 대조군 검정**: 확실히 존재하는 `1706.03762`(Attention Is All You Need)로 같은 명령을 던졌더니 **똑같이 비었다**(`http=301 bytes=0`). ⇒ **원인은 대상이 아니라 볼트.** `https://` + `-L` 로 바꾸자 **즉시 `totalResults=1`.**
+> 📌 **볼트 자기정정.** 세 가설 중 셋째가 정답이었는데, **가설을 병기만 하고 20초짜리 검정을 3배치 동안 하지 않았다.** → 독립 개념 [[무응답-오귀속]] 신설 + 규약 4항 발효.
+
+### ✅ 논문 확보 — **Hindsight is 20/20: Building Agent Memory that Retains, Recalls, and Reflects**
+
+arXiv **2512.12818** · 게재 **2025-12-14T19:47:23Z** · **저자 7인**(Chris Latimer, Nicoló Boschi, Andrew Neeser, Chris Bartholomew 외 3) — 🎯 **첫 저자가 [[vectorize-io]] 계열 인물로 보이며, README 의 "independently reproduced by Virginia Tech Sanghani Center" 와 저자 Andrew Neeser 의 소속 대조가 필요하다**(미확인).
+
+> [!insight] 🔓 **2배치 연속 최대 공백이던 "system-vs-system 수치"가 드디어 문자로 나왔다**
+> 볼트가 09-26·09-27·09-28 내내 *"SOTA 주장을 뒷받침하는 수치가 README 에 0개"* 로 기록해 온 그 값들이다. 초록 축자:
+> - *"Hindsight with an **open-source 20B model** lifts overall accuracy **from 39% to 83.6%** over a **full-context baseline with the same backbone**"* — 🎯 **동일 백본 대조**다. [[비매칭-비교]] 를 피했다.
+> - *"and **outperforms full context GPT-4o**"*
+> - *"Scaling the backbone further pushes Hindsight to **91.4% on LongMemEval** and up to **89.61% on LoCoMo** (vs. **75.78%** for the strongest prior open system)"*
+> 📌 **이제 *"most accurate agent memory system ever tested"* 는 자칭이 아니라 인용 가능한 주장이 됐다** — 단 **논문 기준이고, 저자 자기보고이며, 비교 대상은 "prior open system"** 이다(상용 전체가 아니다).
+
+> [!insight] 구조 — README 가 3연산만 말할 때 논문은 **4개 네트워크**를 말한다
+> 초록 축자: *"organizing it into **four logical networks** that distinguish **world facts, agent experiences, synthesized entity summaries, and evolving beliefs**."*
+> 🎯 **README 의 "memory bank + mental model" 2층보다 해상도가 높다.** 특히 *"distinguish evidence and inference"* 문제의식이 명시돼 있다 — *"they still **blur the line between evidence and inference**"*(기존 시스템 비판).
+> 📌 **이것이 볼트가 스스로 하는 일과 같다.** 볼트는 소스(증거)와 개념(추론)을 디렉터리로 나누고 `⬜ 미확인` 표기로 둘을 구분한다. **Hindsight 는 그 구분을 메모리 스키마에 넣었다** → [[에이전트-메모리-레이어]] · [[검사가능성-공사]] 에 반영.
+
+> [!warning] 🟡 그래도 남는 것 — **09-28 리더보드와 논문은 서로 다른 질문에 답한다**
+> - 09-28 확보 리더보드(`benchmarks.hindsight.vectorize.io`) = **"Hindsight 안에서 어느 LLM을 쓸까"**(Retain 정확도, 7모델)
+> - 09-29 확보 논문 = **"Hindsight 가 다른 메모리 시스템보다 낫나"**(91.4 vs 75.78)
+> ✅ **두 층이 이제 둘 다 있다.** 🔴 **단 논문 수치는 2025-12 기준**이고, README 는 *"as of January 2026"*, 09-28 리더보드는 *"previous LoComo-based methodology"* 교체를 언급한다 — **세 시점·두 방법론이 섞여 있어 단일 표로 합치면 안 된다** → [[지표-창길이]] · [[캐시된-지표-신선도]].
+> 🔴 **여전히 미해결**: `agentmemorybenchmark.ai` 시스템 간 비교 페이지는 **SPA 라 정적 fetch 불가**([[캐치올-200]] 확정 사례). 논문이 그 공백을 **부분적으로만** 메웠다.
+
+> [!action] 갱신
+> ✅ **해소**: "arXiv 본문 미열람"(3배치 이월) — 초록 확보로 **부분 해소**. 🔴 **잔여**: PDF 본문의 전체 비교표(어느 시스템들과 비교했는지 목록)는 미확보. 우선순위 **중간**으로 하향(초록이 핵심 수치를 이미 줬다).
+
+### 📌 관련 페이지 추가
+- [[무응답-오귀속]] — 🏆 **이 페이지가 신설 계기** · [[측정도구-먼저-반증]] · [[지표-창길이]]
+- 같은 배치: [[TraceDance]] · [[Post-Training-Behavioral-Shadows]] · [[DN-MOPD]] · [[paperclip]] · [[openrig]]

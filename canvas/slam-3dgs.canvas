@@ -449,6 +449,46 @@
       "width": "300",
       "height": "180",
       "color": "1"
+    },
+    {
+      "id": "b0929-hdr-slam-3dgs",
+      "type": "text",
+      "text": "# 📮 2026-09-29\n\n재판정 유입 1건\n[[HexaAnything]]",
+      "x": -300,
+      "y": 5880,
+      "width": 420,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n0929s-hexa",
+      "type": "text",
+      "text": "### [[HexaAnything]] 🔀 재판정\n\nai-news → **slam-3dgs**\nPhysical Coding:\nCode as World + Code as Policy\nVLA/WAM 을 **도구로 호출**",
+      "x": 180,
+      "y": 6080,
+      "width": 300,
+      "height": 200,
+      "color": "1"
+    },
+    {
+      "id": "n0929s-nonum",
+      "type": "text",
+      "text": "## 🔴 수치 0개\n\n\"improves over XR-1 VLA\"\n\"beats base on every split\"\n\"often faster\"\n→ 전부 **폭 없음**",
+      "x": 180,
+      "y": 6330,
+      "width": 300,
+      "height": 190,
+      "color": "3"
+    },
+    {
+      "id": "n0929s-myeongsi",
+      "type": "text",
+      "text": "## [[암묵을-명시로]]\n\n로봇판. 같은 날\n[[YuE2]](악보)·[[hindsight]](메모리)와\n**독립적으로 같은 처방**",
+      "x": -180,
+      "y": 6080,
+      "width": 280,
+      "height": 180,
+      "color": "6"
     }
   ],
   "edges": [
@@ -724,6 +764,34 @@
       "fromSide": "bottom",
       "toNode": "c-internw0-lint-0928",
       "toSide": "top"
+    },
+    {
+      "id": "e0929-slam-3dgs-0",
+      "fromNode": "b0929-hdr-slam-3dgs",
+      "toNode": "n0929s-hexa",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-slam-3dgs-1",
+      "fromNode": "n0929s-hexa",
+      "toNode": "n0929s-nonum",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-slam-3dgs-2",
+      "fromNode": "b0929-hdr-slam-3dgs",
+      "toNode": "n0929s-myeongsi",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-slam-3dgs-3",
+      "fromNode": "n0929s-myeongsi",
+      "toNode": "n0929s-hexa",
+      "fromSide": "right",
+      "toSide": "left"
     }
   ]
 }

@@ -489,6 +489,46 @@
       "width": "300",
       "height": "180",
       "color": "2"
+    },
+    {
+      "id": "b0929-hdr-video-saas",
+      "type": "text",
+      "text": "# 📮 2026-09-29\n\n오디오 생성 통합/분리 축",
+      "x": -300,
+      "y": 5450,
+      "width": 420,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n0929v-ltx",
+      "type": "text",
+      "text": "## 🔓 [[LTX-2]] 구조 확보\n\n비대칭 듀얼스트림\n**영상 14B + 오디오 5B**\nmodality-CFG · 폴리/앰비언스\n⚠️ 2.5 아닌 **2** 의 스펙",
+      "x": 180,
+      "y": 5650,
+      "width": 300,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "n0929v-axis",
+      "type": "text",
+      "text": "## 🎯 오디오 생성 2축 분기\n\n**통합**: [[LTX-2.5]]·[[YuE2]]\n**분리+로컬**: [[VoiceStudio]]\n(게이트/other ↔ AGPL/local-first)",
+      "x": 180,
+      "y": 5900,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n0929v-han",
+      "type": "text",
+      "text": "### 🔴 [[한정어-탈락]] 방지 3건\n\n버전(LTX-2≠2.5)\n조건(Suno best-of-8)\n주장/사실(646개 언어)",
+      "x": -180,
+      "y": 5650,
+      "width": 280,
+      "height": 180,
+      "color": "3"
     }
   ],
   "edges": [
@@ -787,6 +827,34 @@
       "fromSide": "bottom",
       "toNode": "a-fomo-act-0928",
       "toSide": "top"
+    },
+    {
+      "id": "e0929-video-saas-0",
+      "fromNode": "b0929-hdr-video-saas",
+      "toNode": "n0929v-ltx",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e0929-video-saas-1",
+      "fromNode": "n0929v-ltx",
+      "toNode": "n0929v-axis",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-video-saas-2",
+      "fromNode": "b0929-hdr-video-saas",
+      "toNode": "n0929v-han",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "e0929-video-saas-3",
+      "fromNode": "n0929v-han",
+      "toNode": "n0929v-ltx",
+      "fromSide": "right",
+      "toSide": "left"
     }
   ]
 }
