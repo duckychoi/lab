@@ -4,11 +4,26 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-09-27
+updated: 2026-09-30
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
 # 영상 AI SaaS 누적 인사이트
+
+> [!update] 📥 2026-09-30 — 🏆 **볼트가 사례별로만 적어 온 실패에 이름과 측정틀이 생겼다 (P2V gap)**
+> [[MaLiang-Harness]] 유입(수집기 `ai-news` → 볼트 **`video-saas`** 재판정 · upvote 189 데일리 2위). 이 도메인 템플릿의 *"프롬프트↔결과 쌍"* 이 정면으로 적용된다.
+>
+> 🏆 **초록 원문**: *"A program can **execute correctly while violating the requested composition, appearance, or motion**. We define this discrepancy as the **Program-to-Visual (P2V) gap**."*
+> 📌 **이것이 오늘 배치에서 이 도메인에 가장 직접적으로 쓸모 있는 한 문장이다.** 볼트는 지금까지 *"요청한 구도·모션이 안 나온다"* 를 **사례로만** 기록했다. 이제 **정의된 격차**이고 측정 대상이다.
+> ✅ **실측값도 나왔다**: GPT-6-Astra 가 **생성 성공률 100%** 이면서 **비디오 품질 임계 충족 76.9%**(이미지 96.0%). 🎯 **그 23.1%p 격차가 곧 P2V gap 의 크기**이고, **상용 최강 모델에도 남아 있는 공백**이다 — 제품 차별화 지점이 수치로 특정됐다.
+>
+> 🎯 **차용 가치가 높은 설계 — "공통 리비전"**: *"make the evolving visual program, its construction history, and its verification **share a common revision reference**"* (**PEG** 영속화 · **TGP** 편집↔렌더증거 연결 · **REV** 완료 전 리비전 검사).
+> 📌 **볼트 [[reat-render]] 계열 파이프라인에서 씬 정의·편집 이력·렌더 결과가 지금 같은 판본 키를 공유하지 않는다.** → [[검사가능성-공사]] · actionable 등록.
+> 🎯 **논문 자체 결론이 벤치 선택 방식을 부정한다**: *"a **mismatch between general capability scores and visual generation performance**, with similarly scored models differing substantially"* — **폐쇄형 MLLM 11종 대조**가 근거다 → [[측정도구-먼저-반증]]. **범용 벤치로 영상 모델을 고르면 안 된다는 첫 다수 대조 증거.**
+> 🔴 **한계 — 11종 전부 폐쇄형이다.** 오픈웨이트 평가가 초록에 없어 **약한 모델에서도 이 하네스가 이득을 주는지 알 수 없다.** 하네스 축의 핵심 주장(*"층이 기여한다"*)과 *"강한 모델이라 잘 된다"* 를 **구분할 수 없다.**
+>
+> 🔴 **같은 배치 [[LTX-2.5]] 가 이 비교에 들어갈 수 없다** — DL 158만(오픈 i2v 최상위)인데 **README HTTP 401 게이트 5회 연속** · `safetensors` **null**(샤드 역산 경로 **폐기 확정**) · 능력 확인된 것은 `pipeline_tag` 하나. 🎯 **게이트가 실질 비용을 만드는 구체적 사례**: MaLiang 의 23.1%p 격차를 오픈 백본에서 재는 실험을 **스펙 미확인 때문에 설계할 수 없다.** ✅ 우회 경로는 태그 **`arxiv:2601.03233`** 뿐이다.
+
 
 > [!update] 📥 2026-09-20 — [[FastVideo]] 병합 갱신 + [[Higgsfield]] 5개월 공백 해소
 > - **[[FastVideo]]** 에 `FastVideo/FastVideo-FastH3-Comfy` **(c) 병합**. 🔴 *"재배치뿐"* 이 아니다 — 파일명이 **`pruned`·`int8_convrot`·`nvfp4_awq`** 로 **변형**을 담는다(미문서화). 🔴 **`cardData.base_model` 이 직전 부모를 건너뛰고 조부모(MiniMax-H3)를 가리킨다** — 산문은 맞고 메타데이터가 틀렸다.
@@ -430,7 +445,7 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 ### 🔴 원본-파생 역전이 이 도메인에서 또 나왔다
 원본 **[[Qwen-Image-2.1]] 52,804** 에 대해 파생 3개가 동시 역전: **viggle-turbo 약 2.5배** · Uncensored-GGUF **18.1배** · Comfy-Org **75.3배**.
 🎯 **반대로 ♥는 원본이 전부 앞선다**(2,424 vs 1,983·789·300) — **발견/애정 지표와 사용 지표가 갈린다.** → [[원본-파생-역전]]
-⚠️ **배수 정밀도 경고**: 수십 분에 2.10 → 2.5 로 움직였다(HF 카운터 +31.2%). **소수 첫째 자리까지만 적고 관측 시각을 병기한다** → [[캐시된-지표-신선도]]
+⚠️ **배수 정밀도 경고**: 수십 분에 2.10 → 2.5 로 움직였다(HF 카운터 +31.2%). **소수 첫째 자리까지만 적고 관측 시각을 병기한다** → [[캐시된-지표-신선도], MaLiang-Harness.md]
 
 ### ⬜ 미확인 (이 도메인 관점)
 - **프롬프트 패턴 미확인** — 카드 333행 중 258행 미열람, 프롬프트 예시 절 미확인

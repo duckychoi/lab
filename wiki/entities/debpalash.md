@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [github, 개인개발자, TTS, STT, 음성복제, local-first, AGPL]
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-09-30
 sources: [VoiceStudio.md]
 reliability: low
 ---
@@ -36,3 +36,9 @@ reliability: low
 - 출처: https://github.com/debpalash
 - 볼트 실측: `api.github.com/repos/debpalash/VoiceStudio` (2026-09-29 09:07 UTC)
 - 신뢰도: ⭐⭐ (레포 1건 API 메타 기준 · 계정 전반·README 미조회)
+
+> [!update] 2026-09-30 — [[VoiceStudio]] ⭐**49,330** · **트렌딩 1위** · 증가율 오늘 최고(+10.7%/일)
+> 볼트 실측(09-30 09:13): ⭐**49,330**(수집기 49,300, +30) · fork **5,500** · issues **70** · AGPL-3.0 · created 2026-04-09 · pushed 2026-09-29 · 당일 **+4,758**
+> 📈 ⭐15,454(09-03) → 27,850(09-14) → 45,776(09-29) → **49,330** — 27일 만에 **3.2배**.
+> 🔴 **description 의 무한정 *"in 646 languages"* 가 5배치째 그대로다**(오늘 API description 실측) — README 표의 *"실제 커버리지는 선택 엔진 의존"* 한정어가 **여전히 description 에 없다** → [[한정어-탈락]] **고정 상태**.
+> 🎯 이슈 비율 **0.14%**(70/49,330) — 오늘 GitHub 5건 중 **최저**([[paperclip]] 6.46% 의 1/46).

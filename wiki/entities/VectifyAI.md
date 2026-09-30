@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [rag, retrieval, benchmark, 오픈소스]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-09-30
 sources: [PageIndex.md]
 reliability: high
 ---
@@ -30,3 +30,8 @@ GitHub `VectifyAI` · pageindex.ai. **벡터DB 없는 추론 기반 검색을 �
 
 ## 관련 페이지
 - [[PageIndex]] · [[관련성-판단-주체]] · [[m-a-p]] · [[k2-fsa]] · [[docling]] · [[ai-news]]
+
+> [!update] 2026-09-30 — [[PageIndex]] ⭐**37,716** · 🎯 오늘 5건 중 **최고령(18개월)인데 당일 +835**
+> 볼트 실측(09-30 09:13): ⭐**37,716**(수집기 37,711, +5) · fork **3,281**(완전 일치) · issues **108**(완전 일치) · MIT · created **2025-04-01** · pushed 2026-09-30
+> 🎯 **18개월 레포가 당일 +2.2%** — 트렌딩이 신규 레포에 편향된다는 통설과 어긋나는 사례.
+> 🎯 이슈 비율 **0.29%** · **[[관련성-판단-주체]] 가 오늘 세 번째 층을 얻었다**(KV 캐시 읽기 → 문서 검색 → [[Omni-IO-Skills]] 산출물 재사용).

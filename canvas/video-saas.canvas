@@ -529,6 +529,86 @@
       "width": 280,
       "height": 180,
       "color": "3"
+    },
+    {
+      "id": "n0930v-hdr",
+      "text": "# 📥 2026-09-30 — **P2V gap 에 이름이 생겼다**\n\n[[MaLiang-Harness]] 재판정 유입\n(수집기 `ai-news` → 볼트 **`video-saas`**)",
+      "x": -700,
+      "y": 6340,
+      "width": 400,
+      "height": 140,
+      "color": "4",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-maliang",
+      "text": "## [[MaLiang-Harness]] 🆕\n\nupvote 189 · 데일리 2위 · 2609.34309\n\n🏆 *\"A program can **execute correctly\nwhile violating** the requested\ncomposition, appearance, or motion\"*\n= **Program-to-Visual (P2V) gap**",
+      "x": -240,
+      "y": 6340,
+      "width": 400,
+      "height": 200,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-gap",
+      "text": "### 🎯 격차의 크기가 수치로 나왔다\n\nGPT-6-Astra **생성 성공 100%**\n↔ 품질 임계 충족 **이미지 96.0% · 비디오 76.9%**\n\n= **23.1%p 가 상용 최강에도 남은 공백**\n→ 제품 차별화 지점이 특정됐다",
+      "x": -700,
+      "y": 6530,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-rev",
+      "text": "### [[검사가능성-공사]] — **공통 리비전**\n\n프로그램·구성이력·검증이 **같은 판본**\n· **PEG** 영속화\n· **TGP** 편집 ↔ 렌더증거 연결\n· **REV** 완료 전 리비전 검사",
+      "x": -240,
+      "y": 6570,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-bench",
+      "text": "### [[측정도구-먼저-반증]] 첫 다수대조\n\n*\"**mismatch between general capability\nscores and visual generation performance**\"*\n폐쇄형 MLLM **11종** 대조\n→ **범용 벤치로 영상 모델 고르면 안 된다**",
+      "x": -700,
+      "y": 6770,
+      "width": 400,
+      "height": 190,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-ltx",
+      "text": "## [[LTX-2.5]] — 게이트가 **실질 비용**을 만든다\n\nDL 158만(오픈 i2v 최상위)인데\n🔴 README **HTTP 401 · 5회 연속**\n🔴 `safetensors` null → 샤드역산 **폐기**\n\n🎯 **23.1%p 를 오픈 백본에서 재는\n실험을 스펙 미확인으로 설계 불가**",
+      "x": -240,
+      "y": 6790,
+      "width": 400,
+      "height": 210,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-act",
+      "text": "## [!action] 차용 + 우회\n\n🏆 **Asset Registry + 공통 리비전 키**\n→ [[reat-render]] 에 지금 없는 것(높음)\n\n⬜ LTX 경로 교체: 샤드역산 폐기\n→ **arXiv 2601.03233**(버전 라벨 필수)",
+      "x": -700,
+      "y": 7010,
+      "width": 400,
+      "height": 190,
+      "color": "2",
+      "type": "text"
+    },
+    {
+      "id": "n0930v-limit",
+      "text": "## 🔴 한계 — 11종 전부 폐쇄형\n\n오픈웨이트 평가가 초록에 없다\n⇒ *\"층이 기여한다\"* 와\n*\"강한 모델이라 잘 된다\"* 를 **구분 불가**",
+      "x": -240,
+      "y": 7050,
+      "width": 400,
+      "height": 160,
+      "color": "1",
+      "type": "text"
     }
   ],
   "edges": [
@@ -855,6 +935,76 @@
       "toNode": "n0929v-ltx",
       "fromSide": "right",
       "toSide": "left"
+    },
+    {
+      "id": "e0930-video-0",
+      "fromNode": "n0930v-hdr",
+      "toNode": "n0930v-maliang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-1",
+      "fromNode": "n0930v-maliang",
+      "toNode": "n0930v-gap",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-2",
+      "fromNode": "n0930v-maliang",
+      "toNode": "n0930v-rev",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-3",
+      "fromNode": "n0930v-maliang",
+      "toNode": "n0930v-bench",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-4",
+      "fromNode": "n0930v-gap",
+      "toNode": "n0930v-ltx",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-5",
+      "fromNode": "n0930v-rev",
+      "toNode": "n0930v-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-6",
+      "fromNode": "n0930v-gap",
+      "toNode": "n0930v-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-7",
+      "fromNode": "n0930v-ltx",
+      "toNode": "n0930v-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-8",
+      "fromNode": "n0930v-maliang",
+      "toNode": "n0930v-limit",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-video-9",
+      "fromNode": "n0930v-bench",
+      "toNode": "n0930v-limit",
+      "fromSide": "bottom",
+      "toSide": "top"
     }
   ]
 }

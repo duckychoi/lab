@@ -4,11 +4,29 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-09-27
+updated: 2026-09-30
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md]
 ---
 
 # 로봇 SLAM / 3DGS / 카메라 누적 인사이트
+
+> [!update] 📥 2026-09-30 — **로봇 논문 2건 도메인 재판정 유입** · 🏆 두 건이 같은 형태의 결론을 낸다
+> 수집기는 [[PanoVLN]]·[[Simple-WAM]] 을 둘 다 `ai-news` 로 배달했으나 **볼트가 `slam-3dgs` 로 재판정**했다. 근거: 볼트 도메인 3 태그에 **`camera` · `robotics`** 가 명시돼 있고, PanoVLN 은 **파노라마 카메라 입력 + 사족보행 로봇 실기**, Simple-WAM 은 **로봇 행동 정책의 일반화(시뮬+실기)** 다.
+>
+> 🏆 **두 논문이 서로 다른 축에서 같은 결론에 도달한다 — "자원보다 소비 구조"**
+> - **[[PanoVLN]]**: *"simply replacing perspective images with panoramas yields **only limited gains**"* → 시야를 넓혀도 **행동 예측·학습 감독·시각 표현 3가지를 함께 바꿔야** 이득이 난다. 🏆 **자기 전제를 먼저 반증한 구조** → [[측정도구-먼저-반증]] 의 가장 깨끗한 사례.
+> - **[[Simple-WAM]]**: *"the gap arises **almost entirely from the first denoising step**: the benefit comes from **preparing** the future, not **generating** it."* → 비디오 디노이징 다단계를 **1회 순전파**로 축약.
+> 📌 **센서를 키워도, 연산을 늘려도 이득은 특정 부분에만 있다.** [[하네스-설계-축]] 의 *"더 정교하게가 아니라 '덜'"* 이 로봇 축에서 두 번 재현됐다.
+>
+> ✅ **실시간성 판정에 쓸 신호(PanoVLN)** — 🎯 **수집기가 빠뜨린 것을 볼트가 원문에서 보완했다**: ① *"without adding visual tokens"* — **파노라마의 최대 비용(토큰 폭증)을 회피**했다고 초록이 명시 ② **CGE(confidence-guided execution)** — 예측 행동 중 **몇 개를 실행할지 신뢰도가 동적 결정**해 재계획 빈도를 줄인다 ③ **4B 백본 · RGB 전용**(깊이·LiDAR 불필요).
+> 🔴 **그래도 fps·지연시간 수치가 두 논문 모두 0개다.** *"faster navigation with fewer pauses"*(PanoVLN) · *"efficiency comparable to Latent WAMs"*(Simple-WAM) 는 **비교 형용사이고 수치가 아니다. 30fps+ 판정 불가.**
+>
+> ✅ **벤치 수치(PanoVLN)**: 4B 백본·RGB 전용으로 **R2R-CE · RxR-CE Val-Unseen 에서 이전 SOTA 대비 11.9% · 8.7% 성공률 상회**.
+> 🟡 **단위 미확정** — 수집기는 `%p`(절대)로 적었으나 arXiv 원문은 *"by 11.9% and 8.7%"* 로 **포인트라고 쓰지 않았다** → [[단위-불일치]]. 🔴 **이전 SOTA 모델명·절대 성공률이 초록에 없어** 상대/절대 구분이 초록만으로는 불가하다.
+> 🔴 **Simple-WAM 은 정량 수치 0개** — *"consistent degradation"* · *"best of both worlds"* 방향어뿐. **"거의 전부(almost entirely)"** 조차 몇 %인지 없다. ✅ **단 백본·데이터·예산을 맞춘 통제 비교를 명시**했고 결론이 반증 가능한 형태라 `reliability medium`([[Raven]] 은 수치 0개 + 무한정 주장으로 `low`) → [[관심-검증-역상관]] 의 분류 규칙.
+>
+> 🎯 **볼트 응용 접점**: **RGB 파노라마 단일 센서로 내비게이션이 성립**한다면 하드웨어 진입장벽이 낮다. Simple-WAM 은 **미래 프레임을 클린 이미지로 디코딩하지 않으므로** 시각 품질용 디코더를 떼어낼 여지가 있다.
+
 
 > [!update] 📥 2026-09-20 — [[ReactHuman]] 편입 (수집기 `ai-news` → 볼트 **`slam-3dgs` 재판정**)
 > 시뮬레이션 휴머노이드 · **240Hz 강체 물리** · 로봇 두뇌 배치이므로 스키마의 로봇/카메라 축이다. 09-19 [[ActionPiece]] → `slam-3dgs` 재판정과 **같은 근거**.
@@ -358,7 +376,7 @@ _소스 ingest 시 자동 누적_
 
 ---
 
-## [2026-09-29] 🔀 도메인 재판정 유입 — [[HexaAnything]]
+## [2026-09-29] 🔀 도메인 재판정 유입 — [[HexaAnything], PanoVLN.md, Simple-WAM.md]
 
 수집기 분류 `ai-news` → **볼트 `slam-3dgs`**. 내용 본체가 **로봇 조작 정책(VLA/WAM) · 듀얼암 실기(AgileX) · RoboCasa365 벤치**다.
 

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, tts, asr, voice-cloning, local-first, agpl, mcp-server, dubbing]
 created: 2026-09-03
-updated: 2026-09-03
+updated: 2026-09-30
 sources: []
 reliability: high
 ---
@@ -23,6 +23,15 @@ reliability: high
 > ⚠️ 추가 확인: 전체가 **액티브 베타** 표기 · `main`은 릴리스 간 변경 가능 명시 · GPU 선택(CUDA/MPS/ROCm, VRAM 4GB) · CPU 모드 지원 · **앱은 AGPL-3.0이나 내려받는 모델은 각자의 상위 라이선스**(카드 명시) · 구 이름 OmniVoice-Studio.
 > ✅ **09-03 페이지의 "27개 엔진" 표기와 raw의 "TTS 16 + ASR 11" 이 정확히 일치**(16+11=27). 구성 내역이 이번에 처음 분해됐다.
 > 🎯 **GitHub description이 646을 무조건적으로 광고한다** — *"in 646 languages"*. **README 표의 한정어가 description에는 없다.** 같은 레포의 두 표면이 다른 강도로 말한다 → [[한정어-탈락]] 의 전형.
+
+> [!update] 2026-09-30 갱신 — ⭐**49,330** · **트렌딩 1위** · 🎯 description 의 646 주장이 **오늘도 그대로다**
+> **GitHub API 실호출(2026-09-30 09:13 UTC)**: ⭐**49,330**(수집기 09:04 관측 49,300 대비 **+30 드리프트**) · fork **5,500**(수집기 5,498, **+2**) · open issues **70**(**완전 일치**) · **AGPL-3.0**(일치) · Python · created **2026-04-09**(일치) · **pushed 2026-09-29**(일치)
+> 📈 **궤적**: ⭐15,454(09-03) → 27,850(09-14) → **45,776**(볼트 기준선) → **49,330**(오늘). 기준선 대비 **+3,554(1일)** · 수집기 보고 +3,524와 **드리프트 +30 내에서 일치**. 당일 증분 **+4,758 · 트렌딩 데일리 1위**.
+> 🎯 **증가율로는 오늘 5건 중 1위다**: +4,758/49,300 = **+10.7%/일**. 오늘 유일하게 두 자릿수 증가율인 두 건 중 하나([[OpenShell]] +9.8%).
+> 🔴 **description 의 무한정 646 주장이 5배치째 그대로다.** 볼트가 09-14에 확인한 구조 — *"README 표는 '실제 커버리지와 품질은 선택한 엔진에 의존' 이라고 적고, description 은 `in 646 languages` 라고만 쓴다"* — 는 **오늘 API description 실측에서도 동일**하다: *"…voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation **in 646 languages**."* 한정어는 **여전히 description 에 없다** → [[한정어-탈락]] 이 **고정 상태**임을 5회 연속 확인.
+> ✅ **수집기 판정 채택**: *"646개 언어와 ElevenLabs 대안은 벤치마크 없는 자기 주장"*. 볼트가 description 원문을 실측해 **자기 주장임을 재확인**했다(= 제3자 평가가 아니라 레포 자신의 문장).
+> 🎯 **오늘 배치 안에서의 위치**: GitHub 5건 중 **이슈 비율이 가장 낮다** — 70/49,330 = **0.14%**([[hindsight]] 0.40% · [[OpenShell]] 4.49% · [[paperclip]] 6.46%). ★ 대비 이슈가 극히 적은데, **AGPL-3.0 데스크톱 앱**이라는 성격상 유입 경로가 이슈가 아닐 수 있다(⬜ 미확인).
+> ⬜ **README 재열람 안 함** — 27개 엔진 구성(TTS 16 + ASR 11)이 늘었는지 미확인. 09-14 이후 ⭐가 **77% 증가**한 동안 엔진 카탈로그 변화를 볼트가 추적하지 않았다(actionable 등록).
 
 > [!insight] 핵심 인사이트 — **TTS 모델이 아니라 27개 엔진 위의 껍데기다**
 > raw는 이것을 *"ElevenLabs 대체 스택"* 으로 기록했으나, **README 실물을 열자 성격이 달라진다**:

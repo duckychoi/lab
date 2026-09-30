@@ -4,12 +4,21 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-orchestration, multi-agent, governance, budget, org-chart, 계측]
 created: 2026-09-26
-updated: 2026-09-27
+updated: 2026-09-30
 sources: []
 reliability: high
 ---
 
 # paperclipai/paperclip
+
+> [!update] 2026-09-30 갱신 — ⭐**94,879** · 🔴 **오픈이슈 6,129 — 볼트 관측 사상 최다를 또 갱신했고 비율도 최고다**
+> **GitHub API 실호출(2026-09-30 09:13 UTC)**: ⭐**94,879**(수집기 09:04 관측 94,865 대비 **+14 드리프트**) · fork **16,108**(**완전 일치**) · open issues **6,129**(수집기 6,128, **+1**) · **MIT**(일치) · TypeScript · created **2026-03-02**(일치) · **pushed 2026-09-30**
+> 📈 기준선 ★93,669 대비 **+1,210**(볼트 실측 · 수집기 보고 +1,196). 당일 +2,458.
+> 🔴 **이슈 궤적이 이 페이지의 핵심 관측이다**: **5,712**(09-26) → **6,029**(09-29) → **6,129**(09-30). 3배치에 걸쳐 **+417** 이고 감소 국면이 한 번도 없다. ★ 대비 비율 **6.46%**(6,129/94,879) 로 **수집 이래 최고** — 수집기 보고(6.5%)와 일치.
+> 🎯 **오늘 같은 배치에 비교군이 생겨서 이 수치의 의미가 좁혀졌다.** 동일 시점 실측: [[VoiceStudio]] **0.14%** · [[hindsight]] **0.40%** · [[PageIndex]] **0.29%** · [[OpenShell]] **4.49%** · paperclip **6.46%**. **paperclip 은 2위(OpenShell)의 1.4배, 최저(VoiceStudio)의 46배다.** 4배치 연속 미해결이던 *"유입 규모냐 적체냐"* 질문에 대해, **적어도 "동종 소프트웨어 대비 이례적"이라는 판정은 오늘 근거를 얻었다** — Rust 런타임(4.49%)이 유일하게 같은 자릿수다.
+> 🔴 **그래도 원인은 여전히 모른다.** 볼트가 4배치 연속 적어 온 *"이슈 라벨 미조회"* 가 **오늘도 미해소**다. 비율이 이례적이라는 것과 그 이유가 적체라는 것은 다른 주장이고, **라벨·생성일 분포를 보지 않으면 구분되지 않는다**(actionable 우선순위 상향).
+> 📌 **오늘 배치 문맥에서의 위치**: 논문 3건([[Raven]]·[[MaLiang-Harness]]·[[Omni-IO-Skills]])이 **하네스를 자동 조립**하는 이야기이고 [[OpenShell]] 이 **격리 런타임**이라면, paperclip 은 그 사이의 **조직·예산 층**이다. 09-26에 볼트가 적은 축(*"보이게 → 막고 → 직제를 준다"*)에 오늘 **위(자동 조립)와 아래(격리)가 동시에 붙었다.**
+
 
 > [!insight] 핵심 인사이트 — 관리 계층의 은유가 파이프라인에서 **법인**으로 넘어갔다
 > README 33행이 자기를 이렇게 정의한다: *"**If OpenClaw is an _employee_, Paperclip is the _company_.**"* 35행은 *"orchestrates a team of AI agents **to run a business**"*, 37행은 *"Under the hood: **org charts, budgets, governance, goal alignment**, and agent coordination"*.

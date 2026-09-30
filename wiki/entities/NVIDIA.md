@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, harness, agent, entity]
 created: 2026-07-04
-updated: 2026-09-18
+updated: 2026-09-30
 sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md]
 reliability: high
 ---
@@ -48,3 +48,9 @@ reliability: high
 ## 원본
 - 대표 배포: https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4
 - 신뢰도: ⭐⭐⭐⭐⭐ (AI 하드웨어·추론 인프라 표준)
+
+> [!update] 2026-09-30 — **[[OpenShell]] 배달(볼트 첫 등장)** · 오늘 배치 **유일한 1차 벤더 소스**
+> `NVIDIA/OpenShell` — ⭐**11,043**(볼트 실측 09-30 09:13 · 수집기 11,033 대비 +10) · fork **1,456** · issues **496** · **Apache-2.0** · **Rust** · created **2026-02-24** · 당일 푸시 · 당일 +990(**+9.8%/일**)
+> 🎯 **성격**: *"safe, private runtime for autonomous AI agents"* — 자율 에이전트 셸 실행의 **격리·감사 런타임**. [[하네스-설계-축]] 에 **"격리" 층**을 추가했다.
+> 🎯 **오늘 GitHub 5건 중 언어·출처가 유일하다** — Python 3 · TypeScript 1 · **Rust 1(본건)**, 그리고 **스타트업/개인 4 · 벤더 1(본건)**.
+> 🔴 *"safe, private"* 에 **위협모델이 없다** — 반증 불가 문장이며, **벤더 이름이 검증 요구를 약화시킨다**는 점에서 위험이 더 크다. ⬜ README 미열람.

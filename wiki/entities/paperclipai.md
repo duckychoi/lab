@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, agent-orchestration, github, 조직]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-09-30
 sources: [paperclip.md]
 reliability: medium
 ---
@@ -25,3 +25,8 @@ reliability: medium
 
 ## 관련 페이지
 - [[paperclip]] · [[AI-에이전트-프레임워크]] · [[에이전트-스킬]] · [[검사가능성-공사]]
+
+> [!update] 2026-09-30 — [[paperclip]] ⭐**94,879** · 🔴 **오픈이슈 6,129 · 비율 6.46% 로 수집 이래 최고**
+> 볼트 실측(09-30 09:13): ⭐**94,879**(수집기 94,865, +14) · fork **16,108**(완전 일치) · issues **6,129** · MIT · TypeScript · created 2026-03-02 · pushed 2026-09-30 · 당일 +2,458
+> 🔴 **이슈 궤적 5,712(09-26) → 6,029(09-29) → 6,129(09-30)** — 3배치 **+417**, 감소 국면 0회.
+> ✅ **오늘 동일 시점 비교군으로 "이례적"은 확정됐다**: VoiceStudio 0.14% · PageIndex 0.29% · hindsight 0.40% · [[OpenShell]] 4.49% · **paperclip 6.46%**. 🔴 **원인(유입 vs 적체)은 5배치 연속 미해소** — 라벨 미조회.

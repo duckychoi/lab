@@ -5258,6 +5258,266 @@
       "width": 280,
       "height": 170,
       "color": "3"
+    },
+    {
+      "id": "n0930-hdr",
+      "text": "# 📥 2026-09-30 배치 (13건)\n\n신규 6 · 갱신 7 · 재판정 3\n\n🏆 **하네스 비중 최고 38%**(5/13)\n축이 **위아래로 동시에** 늘었다\n검증 13/13 · 5배치 연속",
+      "x": -2400,
+      "y": 31080,
+      "width": 420,
+      "height": 190,
+      "color": "4",
+      "type": "text"
+    },
+    {
+      "id": "n0930-openshell",
+      "text": "## [[OpenShell]] 🆕\n\nNVIDIA · ★11,043 · **Rust**\nApache-2.0 · issues 496\n\n격리·감사 **런타임 층**\n🔴 위협모델 없음 → 반증불가",
+      "x": -1900,
+      "y": 31080,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-raven",
+      "text": "## [[Raven]] 🆕\n\nupvote **254 · 데일리 1위**\n\"The Harness of **Harnesses**\"\n\n단위 재정의: model–harness pair\n🔴🔴 **초록 수치 0개** · low",
+      "x": -1540,
+      "y": 31080,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-maliang",
+      "text": "## [[MaLiang-Harness]] 🆕\n\nupvote 189 · 🔀→`video-saas`\n\n🏆 **P2V gap 정의**\n생성성공 100% ↔ 품질 76.9%\n= **23.1%p 가 격차의 크기**",
+      "x": -1180,
+      "y": 31080,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-omnio",
+      "text": "## [[Omni-IO-Skills]] 🆕\n\nupvote 57 · **수치 7개 최다**\n입력지원 40.00%→**100%**\nSQCS 26.99→74.94\n27 Skills · 38 태스크 · 7 모달",
+      "x": -820,
+      "y": 31080,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-panovln",
+      "text": "## [[PanoVLN]] 🆕\n\nupvote 88 · 🔀→`slam-3dgs`\n**자기 전제를 먼저 반증**\nR2R-CE 11.9% · RxR-CE 8.7%\n🟡 `%p` 는 원문에 없다",
+      "x": -460,
+      "y": 31080,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-swam",
+      "text": "## [[Simple-WAM]] 🆕\n\nupvote 55 · 🔀→`slam-3dgs`\n🏆 이득이 **첫 디노이징 스텝**\n\"preparing, not generating\"\n🔴 수치 0개(단 통제 명시)",
+      "x": -100,
+      "y": 31080,
+      "width": 300,
+      "height": 170,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-voice",
+      "text": "## [[VoiceStudio]] 갱신\n★**49,330** 트렌딩 1위\n+10.7%/일 = 오늘 최고\n🔴 646 무한정 **5배치 고정**",
+      "x": -1900,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-hind",
+      "text": "## [[hindsight]] 갱신\n★43,350 · 당일 +1,593\n📉 증분 **3분의 1로 꺾임**\n🎯 그런데 **순위는 3위 유지**",
+      "x": -1580,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-paper",
+      "text": "## [[paperclip]] 갱신\n★94,879 · issues **6,129**\n비율 **6.46% 사상 최고**\n🔴 원인 5배치 미해소",
+      "x": -1260,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-pageidx",
+      "text": "## [[PageIndex]] 갱신\n★37,716 · **18개월 최고령**\n인데 당일 +2.2%\n이슈 0.29% ↔ paperclip 반대극",
+      "x": -940,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-qwen",
+      "text": "## [[Qwen3.8-27B]] 갱신\nDL **7,020,239** 드리프트 0\n🔴 **47일 정지 · 하루 +17.6만**\n= 신규성 아니라 **기반 수요**",
+      "x": -620,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-bonsai",
+      "text": "## [[Ternary-Bonsai-2-27B]] 갱신\nDL 3,581,027 드리프트 0\n🔴🔴 **\"다른 저장소\" 판정 반박**\n→ 하루 증분 +123,903",
+      "x": -300,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-ltx",
+      "text": "## [[LTX-2.5]] 갱신\nDL 1,589,098 · ♥5,600\n🔴 게이트 **5회 연속**\n= 0행 아니라 **HTTP 401**",
+      "x": 20,
+      "y": 31310,
+      "width": 280,
+      "height": 150,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930-harness",
+      "text": "### [[하네스-설계-축]] 🏆\n\n**5/13 = 38% 최고치**\n논문 3건이 하네스 · 2건은 제목에\n\n🎯 09-18 네 층이 **수직으로 쌓였다**\n위=Raven(자동생성) 아래=OpenShell(격리)\n🔴 5건 중 3건 수치 0개",
+      "x": -1900,
+      "y": 31510,
+      "width": 360,
+      "height": 210,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-deol",
+      "text": "### 🏆 세 층에서 같은 결론\n\n\"**자원을 더하는 게 아니라\n어느 부분이 일하는지**\"\n\n· Simple-WAM: 첫 스텝\n· PanoVLN: 토큰 안 늘림\n· Omni-IO: 모델 안 바꿈",
+      "x": -1500,
+      "y": 31510,
+      "width": 340,
+      "height": 210,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-bunri",
+      "text": "### [[동일대상-분리오판]] 🆕\n\n[[백필-우회]] 의 **거울상**\n거짓 신규 ↔ **거짓 분리**\n\n🔴 그대로 받으면 중복 페이지\n✅ 근거 인용이 grep 역추적 가능케",
+      "x": -1120,
+      "y": 31510,
+      "width": 340,
+      "height": 210,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-yeoksang",
+      "text": "### [[관심-검증-역상관]] 🆕\n\nupvote 1위(254) = **수치 0개**\n수치 최다(7) = **4위(57)**\n\n🔴 n=5 하루치(상관 미성립)\n⚖️ upvote 로 읽기순서 정하지 않기",
+      "x": -740,
+      "y": 31510,
+      "width": 340,
+      "height": 210,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-danwi",
+      "text": "### [[단위-불일치]] 갱신\n\n🔴 **새 유형**: 벤더가 아니라\n**인용자가 없는 단위를 부여**\n`+11.9%p` ↔ 원문 `by 11.9%`\n\n🔴 수치는 일치 → 검증 통과해버림",
+      "x": -360,
+      "y": 31510,
+      "width": 340,
+      "height": 210,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-mueung",
+      "text": "### [[무응답-오귀속]] 갱신\n\n① LTX README = **401 · 126B**\n② 🔴 볼트 자기오류:\n`expand[]` 누락을 \"필드 없음\"으로\n\n= 09-29 `-L` 누락과 같은 계열",
+      "x": 20,
+      "y": 31510,
+      "width": 340,
+      "height": 210,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-chekjeong",
+      "text": "### [[측정도구-먼저-반증]] 갱신\n\n같은 배치 **세 가지 반증**\n· PanoVLN: 자기 전제\n· Simple-WAM: 분포내 동일≠동등\n· MaLiang: 범용점수≠생성성능(11종)",
+      "x": -1900,
+      "y": 31770,
+      "width": 360,
+      "height": 180,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-yeokjeon",
+      "text": "### [[원본-파생-역전]] 갱신\n\n🎯 **\"역전\"이 아니라 \"연동\"**\n파생/본체 50.5%→**51.0% 고정**\n둘이 함께 증가(+17.6만/+12.4만)\n역전은 **등록 순서에서만**",
+      "x": -1500,
+      "y": 31770,
+      "width": 340,
+      "height": 180,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-gwanryeon",
+      "text": "### [[관련성-판단-주체]] 갱신\n\n**세 번째 층**\nKV캐시(09-03) → 문서검색(09-20)\n→ **산출물 재사용**(09-30)\n🔴 갈래 판정 미완(구조 vs 모델)",
+      "x": -1120,
+      "y": 31770,
+      "width": 340,
+      "height": 180,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-hanjeong",
+      "text": "### [[한정어-탈락]] 갱신\n\nVoiceStudio **5배치 고정**\n(★3.2배 늘어도 문장 안 고침)\nOpenShell = **탈락인지 부재인지 미확정**\n🔴 벤더 이름이 검증요구를 약화",
+      "x": -740,
+      "y": 31770,
+      "width": 340,
+      "height": 180,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930-act",
+      "text": "## [!action] 신규 7건\n\n**높음 3**\n① [[Raven]] 본문(최대 공백)\n② Asset Registry + 공통 리비전 차용\n③ paperclip 라벨(**5배치 상향**)\n\n중간 3 · 낮음 1(축 수치보유율 추적)",
+      "x": -360,
+      "y": 31770,
+      "width": 360,
+      "height": 200,
+      "color": "2",
+      "type": "text"
+    },
+    {
+      "id": "n0930-limit",
+      "text": "## 🔴 이 배치가 못 한 것\n\n· 논문 **5건 전부 본문 미열람**\n· README 열람 **0건**(5레포)\n· paperclip 라벨 **5배치 미조회**\n· 코드 실행 **13배치 연속 0건**\n· 하네스 축 38%인데 **3/5 수치 0개**",
+      "x": 20,
+      "y": 31770,
+      "width": 360,
+      "height": 200,
+      "color": "1",
+      "type": "text"
     }
   ],
   "edges": [
@@ -9763,6 +10023,244 @@
       "toNode": "n0929-dnmopd",
       "fromSide": "left",
       "toSide": "right"
+    },
+    {
+      "id": "e0930-ai-0",
+      "fromNode": "n0930-hdr",
+      "toNode": "n0930-openshell",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-1",
+      "fromNode": "n0930-hdr",
+      "toNode": "n0930-raven",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-2",
+      "fromNode": "n0930-hdr",
+      "toNode": "n0930-maliang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-3",
+      "fromNode": "n0930-hdr",
+      "toNode": "n0930-omnio",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-4",
+      "fromNode": "n0930-hdr",
+      "toNode": "n0930-panovln",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-5",
+      "fromNode": "n0930-hdr",
+      "toNode": "n0930-swam",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-6",
+      "fromNode": "n0930-raven",
+      "toNode": "n0930-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-7",
+      "fromNode": "n0930-omnio",
+      "toNode": "n0930-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-8",
+      "fromNode": "n0930-maliang",
+      "toNode": "n0930-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-9",
+      "fromNode": "n0930-openshell",
+      "toNode": "n0930-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-10",
+      "fromNode": "n0930-paper",
+      "toNode": "n0930-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-11",
+      "fromNode": "n0930-swam",
+      "toNode": "n0930-deol",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-12",
+      "fromNode": "n0930-panovln",
+      "toNode": "n0930-deol",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-13",
+      "fromNode": "n0930-omnio",
+      "toNode": "n0930-deol",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-14",
+      "fromNode": "n0930-bonsai",
+      "toNode": "n0930-bunri",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-15",
+      "fromNode": "n0930-raven",
+      "toNode": "n0930-yeoksang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-16",
+      "fromNode": "n0930-omnio",
+      "toNode": "n0930-yeoksang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-17",
+      "fromNode": "n0930-swam",
+      "toNode": "n0930-yeoksang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-18",
+      "fromNode": "n0930-panovln",
+      "toNode": "n0930-danwi",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-19",
+      "fromNode": "n0930-bonsai",
+      "toNode": "n0930-danwi",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-20",
+      "fromNode": "n0930-ltx",
+      "toNode": "n0930-mueung",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-21",
+      "fromNode": "n0930-panovln",
+      "toNode": "n0930-chekjeong",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-22",
+      "fromNode": "n0930-swam",
+      "toNode": "n0930-chekjeong",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-23",
+      "fromNode": "n0930-maliang",
+      "toNode": "n0930-chekjeong",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-24",
+      "fromNode": "n0930-hind",
+      "toNode": "n0930-chekjeong",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-25",
+      "fromNode": "n0930-qwen",
+      "toNode": "n0930-yeokjeon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-26",
+      "fromNode": "n0930-bonsai",
+      "toNode": "n0930-yeokjeon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-27",
+      "fromNode": "n0930-pageidx",
+      "toNode": "n0930-gwanryeon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-28",
+      "fromNode": "n0930-omnio",
+      "toNode": "n0930-gwanryeon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-29",
+      "fromNode": "n0930-voice",
+      "toNode": "n0930-hanjeong",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-30",
+      "fromNode": "n0930-openshell",
+      "toNode": "n0930-hanjeong",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-31",
+      "fromNode": "n0930-harness",
+      "toNode": "n0930-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-32",
+      "fromNode": "n0930-yeoksang",
+      "toNode": "n0930-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-ai-33",
+      "fromNode": "n0930-harness",
+      "toNode": "n0930-limit",
+      "fromSide": "bottom",
+      "toSide": "top"
     }
   ]
 }

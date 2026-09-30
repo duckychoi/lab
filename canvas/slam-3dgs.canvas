@@ -489,6 +489,76 @@
       "width": 280,
       "height": 180,
       "color": "6"
+    },
+    {
+      "id": "n0930s-hdr",
+      "text": "# 📥 2026-09-30 — 로봇 논문 2건 **재판정 유입**\n\n수집기 `ai-news` → 볼트 **`slam-3dgs`**\n근거: 도메인3 태그에 `camera`·`robotics`",
+      "x": -1200,
+      "y": 6780,
+      "width": 400,
+      "height": 150,
+      "color": "4",
+      "type": "text"
+    },
+    {
+      "id": "n0930s-panovln",
+      "text": "## [[PanoVLN]] 🆕\n\nupvote 88(드리프트 0) · 데일리 3위\n**파노라마 카메라 + 사족보행 실기**\n\n✅ 4B 백본 · **RGB 전용**\nR2R-CE 11.9% · RxR-CE Val-Unseen 8.7%",
+      "x": -740,
+      "y": 6780,
+      "width": 380,
+      "height": 180,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930s-swam",
+      "text": "## [[Simple-WAM]] 🆕\n\nupvote 55 · 데일리 4위\n🏆 이득이 **첫 디노이징 스텝에서 거의 전부**\n\"**preparing** the future, not **generating**\"\n→ 완전노이즈 토큰 **1회 순전파**",
+      "x": -320,
+      "y": 6780,
+      "width": 380,
+      "height": 180,
+      "color": "5",
+      "type": "text"
+    },
+    {
+      "id": "n0930s-jawon",
+      "text": "### 🏆 두 논문이 **같은 결론**\n\n\"**자원보다 소비 구조**\"\n· 시야를 넓혀도 이득 제한적\n· 연산을 늘려도 이득은 첫 스텝\n= [[하네스-설계-축]] *\"덜\"* 의 로봇판",
+      "x": -740,
+      "y": 7010,
+      "width": 380,
+      "height": 190,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930s-realtime",
+      "text": "### ⏱️ 실시간성 — 구조는 긍정, 수치는 0\n\n✅ **시각 토큰 증가 없음**(볼트 보완)\n✅ **CGE** 신뢰도로 실행개수 동적결정\n✅ 4B · RGB 전용(깊이·LiDAR 불필요)\n🔴 **fps·지연시간 0개 → 30fps+ 판정 불가**",
+      "x": -320,
+      "y": 7010,
+      "width": 380,
+      "height": 190,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930s-banjeung",
+      "text": "### [[측정도구-먼저-반증]] 🏆\n\nPanoVLN = **가장 깨끗한 사례**\n자기 전제를 먼저 깼다\nSimple-WAM = 분포내 동일 ≠ 동등\n→ **분포내 벤치로는 차이가 안 보인다**",
+      "x": -1200,
+      "y": 7010,
+      "width": 380,
+      "height": 190,
+      "color": "6",
+      "type": "text"
+    },
+    {
+      "id": "n0930s-act",
+      "text": "## [!action] PanoVLN 본문\n\n① `%` vs `%p` 확정 ② 이전 SOTA 절대값\n③ **fps·지연시간** ④ 오픈소스 여부\n⑤ CGE 임계값\n\n🔴 Simple-WAM: 3축 하락폭 · \"almost entirely\" 정량값",
+      "x": -740,
+      "y": 7250,
+      "width": 400,
+      "height": 180,
+      "color": "2",
+      "type": "text"
     }
   ],
   "edges": [
@@ -792,6 +862,76 @@
       "toNode": "n0929s-hexa",
       "fromSide": "right",
       "toSide": "left"
+    },
+    {
+      "id": "e0930-slam-0",
+      "fromNode": "n0930s-hdr",
+      "toNode": "n0930s-panovln",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-1",
+      "fromNode": "n0930s-hdr",
+      "toNode": "n0930s-swam",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-2",
+      "fromNode": "n0930s-panovln",
+      "toNode": "n0930s-jawon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-3",
+      "fromNode": "n0930s-swam",
+      "toNode": "n0930s-jawon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-4",
+      "fromNode": "n0930s-panovln",
+      "toNode": "n0930s-realtime",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-5",
+      "fromNode": "n0930s-swam",
+      "toNode": "n0930s-realtime",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-6",
+      "fromNode": "n0930s-panovln",
+      "toNode": "n0930s-banjeung",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-7",
+      "fromNode": "n0930s-swam",
+      "toNode": "n0930s-banjeung",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-8",
+      "fromNode": "n0930s-jawon",
+      "toNode": "n0930s-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e0930-slam-9",
+      "fromNode": "n0930s-realtime",
+      "toNode": "n0930s-act",
+      "fromSide": "bottom",
+      "toSide": "top"
     }
   ]
 }

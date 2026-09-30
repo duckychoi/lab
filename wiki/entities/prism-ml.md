@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, 양자화, ternary, GGUF, on-device, 검사가능성]
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-09-30
 sources: [Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -45,3 +45,9 @@ reliability: medium
 - 출처: https://huggingface.co/prism-ml
 - 볼트 실측: HF API `models/prism-ml/Ternary-Bonsai-2-27B-gguf` (2026-09-29 09:08 UTC)
 - 신뢰도: ⭐⭐⭐ (모델 메타 실검증 · 조직 전반 미조회)
+
+> [!update] 2026-09-30 — DL **3,581,027** · 🔴 **수집기 "다른 저장소" 판정을 볼트가 반박했다**
+> 볼트 실측(09-30 09:13 · `prism-ml/Ternary-Bonsai-2-27B-gguf`): DL30 **3,581,027**(드리프트 0) · ♥**2,278**(완전 일치) · apache-2.0 · created **2026-09-16**(14일) · modified 2026-09-25 · **`gguf.total` 26,895,998,464**(완전 일치) · **`base_model: ["Qwen/Qwen3.8-27B"]`**
+> 🔴 **수집기 정정**: *"볼트 기록(DL 3,457,124)은 비-gguf 본체이며 다른 저장소"* 라고 했으나 **이 19행이 그 값을 `prism-ml/Ternary-Bonsai-2-27B-gguf` 로 명시**하고 있었다. **같은 저장소이며 3,457,124→3,581,027 은 하루치 증분(+123,903)이다.**
+> 🔴 **`prism-ml/Ternary-Bonsai-2-27B`(비-gguf)는 API 조회 불가**(`Invalid username or password.` 실측) — 수집기가 든 비교 저장소의 실재가 확인되지 않는다.
+> 🏆 **볼트 09-29 가설이 근거를 얻었다**: 카드 27.36B − 비전타워 0.46B = **26.90B** = `gguf.total` 실측. 수집기가 카드에서 **비전타워 별도 Q8_0 mmproj 분리**를 확인해 왔다 → 가설 → **강한 가설**(파일목록 직접 대조는 여전히 미수행).

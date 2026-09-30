@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-09-30
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -41,3 +41,10 @@ reliability: medium
 - 출처: https://huggingface.co/Qwen
 - 볼트 실측: HF API `models/Qwen/Qwen3.8-27B` (2026-09-29 09:08 UTC)
 - 신뢰도: ⭐⭐⭐ (모델 1건 메타 실검증 · 조직 전반·소속 미조회)
+
+> [!update] 2026-09-30 — [[Qwen3.8-27B]] DL **7,020,239**(트렌딩 내 1위) · 🎯 **47일 정지 상태로 하루 +17.6만**
+> 볼트 실측(09-30 09:13): DL30 **7,020,239**(드리프트 0) · allTime **11,744,215**(완전 일치) · ♥**16,590** · apache-2.0 · created 2026-08-05 · **lastModified 2026-08-14(47일 정지)** · `safetensors.total` **27,781,427,952**(완전 일치)
+> 🏆 **파생 계보를 API 로 직접 검증**: [[Ternary-Bonsai-2-27B]] 응답에 `base_model: ["Qwen/Qwen3.8-27B"]` · 태그 `base_model:quantized:…` **실측**.
+> 🎯 **파생/본체 비율이 고정이다**: 50.5%(09-29: 3,457,124/6,844,348) → **51.0%**(09-30: 3,581,027/7,020,239). 하루 사이 본체 +175,891 · 파생 +123,903 — **함께 움직인다**. → [[원본-파생-역전]] 에 **"역전이 아니라 연동"** 추가.
+> 📌 **47일 정지 + 하루 17만 DL** 조합이 [[Omni-IO-Skills]] 의 *"모델 갱신 없이 하네스로 능력 확장"* 과 같은 날 같은 방향을 가리킨다 — **모델은 멈춰도 위층은 움직인다.**
+> 🔴 사내 벤치 문제 미해소(SWEBench 79.0 각주 *"In-house"*) — 오늘 [[Omni-IO-Skills]] 의 **UniM-90 출처 미확인**과 같은 계열.

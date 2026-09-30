@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [기업, HuggingFace, 영상생성, 오디오생성, gated, 이스라엘]
 created: 2026-09-29
-updated: 2026-09-29
+updated: 2026-09-30
 sources: [LTX-2.5.md, LTX-2.md]
 reliability: medium
 ---
@@ -44,3 +44,9 @@ reliability: medium
 - 출처: https://huggingface.co/Lightricks · 논문 https://arxiv.org/abs/2601.03233
 - 볼트 실측: HF API `models/Lightricks/LTX-2.5` + README 401(126B) + arXiv API (2026-09-29 09:08~09:09 UTC)
 - 신뢰도: ⭐⭐⭐ (모델 메타·논문 서지 실검증 · 조직 정보 자체는 미조회)
+
+> [!update] 2026-09-30 — [[LTX-2.5]] DL **1,589,098** · 🔴 **게이트 5회 연속 · 정체는 "0행"이 아니라 HTTP 401**
+> 볼트 실측(09-30 09:13): DL30 **1,589,098**(드리프트 0) · allTime **2,773,856**(완전 일치) · ♥**5,600** · license **other** · created 2026-07-23 · **lastModified 2026-09-01(29일 정지)** · `safetensors` **null**
+> 🔴 **README 실측 = HTTP 401 · 126바이트** *"Access to model … is restricted … Please log in."* — **빈 파일이 아니라 인증 거부**다 → [[무응답-오귀속]].
+> 🔴 `safetensors` null 로 **샤드 역산 경로 폐기 확정**. ✅ 우회는 태그 **`arxiv:2601.03233`** 뿐(09-29에 이 경로로 "영상 14B+오디오 5B" 확보).
+> 🎯 **능력 확인된 것은 `pipeline_tag` 하나**(5회 연속). [[Qwen]] 의 apache-2.0+공개와 **정반대 극**.
