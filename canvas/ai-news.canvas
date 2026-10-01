@@ -5518,6 +5518,246 @@
       "height": 200,
       "color": "1",
       "type": "text"
+    },
+    {
+      "id": "n1001-hub",
+      "type": "text",
+      "text": "# 🗓 2026-10-01 배치 (13건)\n\n신규 **6** · 갱신 **7**\n개념 신설 **2** · 개념 갱신 **9**\n엔티티 신설 **1**\n\n🎯 **축: 5배치 동안 '검증 통과'로 센 것이\n틀린 질문이었다**",
+      "x": -40,
+      "y": 32400,
+      "width": 480,
+      "height": 230,
+      "color": "1"
+    },
+    {
+      "id": "n1001-c1",
+      "type": "text",
+      "text": "## 🏆 [[복합지표-분해]] (신설)\n\n`open_issues_count` = **이슈+PR**\n6/6 레포 자릿수 완전 일치\nPR 비중 **29.1~66.1%**\n\n🔴 순위 역전 1건 실증\n🔴 paperclip '이례적' 1.4배→**1.11배**",
+      "x": -620,
+      "y": 32700,
+      "width": 400,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "n1001-c2",
+      "type": "text",
+      "text": "## 🏆 [[유예-은폐]] (신설)\n\n미룬 검증 안에 **오류가 있었다**\n\n· VoiceStudio README **26일** 해제\n→ 수집기 Tauri 주장 **극성 반전**\n· paperclip 라벨 **4배치** 해제\n→ 그 조회가 분해로 직결",
+      "x": -180,
+      "y": 32700,
+      "width": 400,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "n1001-c3",
+      "type": "text",
+      "text": "## 🔄 [[지표-창길이]] 기전 완성\n\nDL 30일창 **감소** 2건\nQwen −87,425 · LTX −13,729\n누적은 둘 다 **증가**\n\n🎯 Ternary만 0 = **나이 15일**\n창이 안 밀려 감소 불가 · **3/3**",
+      "x": 260,
+      "y": 32700,
+      "width": 400,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "n1001-c4",
+      "type": "text",
+      "text": "## 🔴 [[선발창-누락]] 최대 경신\n\n[[openclaw]] **★391,087**\ntensorflow ★200,524 의 **1.95배**\n\n🎯 당일 증분 +136(최저)\n증가율 0.03% → **증분 선발의\n정의역에 아예 없다**",
+      "x": 700,
+      "y": 32700,
+      "width": 400,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "n1001-c5",
+      "type": "text",
+      "text": "## 🔴 [[측정도구-먼저-반증]] 빈틈\n\n**일치는 '같은 것을 재고 있다'만\n증명한다**\n\n같은 필드 재호출 = 검증 아님\n⚖️ 경로 A(수신) / 경로 B(검증) 분리",
+      "x": 1140,
+      "y": 32700,
+      "width": 400,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "n1001-s1",
+      "type": "text",
+      "text": "### 🆕 [[openclaw]]\n★391,087 · fork 82,233\n🔓 라이선스 **실질 MIT** 확인\n(NOASSERTION = 추가 2행 탓)\nissue 5,857 + PR 3,289",
+      "x": -620,
+      "y": 33020,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-s2",
+      "type": "text",
+      "text": "### 🔄 [[VoiceStudio]]\n★50,903 · **README 26일 해제**\n646언어 **문자 일치** 확증\n🔴 Tauri = **제거됨**(제공 아님)\nissue 59 + PR 41",
+      "x": -220,
+      "y": 33020,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-s3",
+      "type": "text",
+      "text": "### 🔄 [[OpenShell]]\n★13,439 · topics **0개**\nissue 334 + PR 180\n순수 2.49%(6건 중 최고)\n🔴 README 2배치 미열람",
+      "x": 180,
+      "y": 33020,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-s4",
+      "type": "text",
+      "text": "### 🔄 [[openrig]]\n★3,255 · fork 222 일치\nPR 비중 **29.1%(최저)**\n🔴 **3일 연속 배달 · 미설치**\n코드 실행 13배치 0건",
+      "x": 580,
+      "y": 33020,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-s5",
+      "type": "text",
+      "text": "### 🔄 [[PageIndex]]\n★38,287 · PR 비중 **66.1%(최고)**\nissue 37 + PR 72\n🏆 순수 기준 **이슈비율 최저 0.10%**\n→ 수집기 '최저' 주장 역전",
+      "x": 980,
+      "y": 33020,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-p1",
+      "type": "text",
+      "text": "### 🆕 [[RIDE]] ↑178 (1위)\n출력공간 → **표현공간** 외삽\n교사 − pre-RL 잔차 방향\n🔴 **수치 0개** · 저장소 ★1",
+      "x": -620,
+      "y": 33250,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-p2",
+      "type": "text",
+      "text": "### 🆕 [[UniEvo-VL]] ↑119\n교사를 **없앤다**\n자기비평 = **특권정보**\nGenEval 0.747→0.808",
+      "x": -220,
+      "y": 33250,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-p3",
+      "type": "text",
+      "text": "### 🆕 [[False-Frontiers]] ↑68\n🏆 **오늘 유일한 high**\n**co-cheating** 진단\nCrossFit 6.1→3.0% / 8.8→3.7%\n수치 **16개+ (1위)**",
+      "x": 180,
+      "y": 33250,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-p4",
+      "type": "text",
+      "text": "### 🆕 [[AREX-2]] ↑64\n[[AREX]] **후속편**(계보 연결)\n반성 × 장기지평 분해\nMLE 81.8 · GAIA 92.2\n🔴 baseline 부재",
+      "x": 580,
+      "y": 33250,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-p5",
+      "type": "text",
+      "text": "### 🆕 [[EvoDuet]] ↑60\n**파라미터 고정** 공진화\n61.3→82.3(Gemini)\n🔴 Qwen3.5-9B **이득 없음**",
+      "x": 980,
+      "y": 33250,
+      "width": 360,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "n1001-m1",
+      "type": "text",
+      "text": "### 🔄 [[Qwen3.8-27B]]\ndl30 6,950,834 (**−87,425**)\n누적 12,152,111 (+171,203)\nsafetensors 27,781,427,952 일치",
+      "x": -220,
+      "y": 33480,
+      "width": 360,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n1001-m2",
+      "type": "text",
+      "text": "### 🔄 [[Ternary-Bonsai-2-27B]]\nDL 드리프트 **0** — 이유=나이 15일\n🆕 `baseModels.relation`=**quantized**\n원본/파생 배수 1.89배",
+      "x": 180,
+      "y": 33480,
+      "width": 360,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n1001-m3",
+      "type": "text",
+      "text": "### 🔄 [[LTX-2.5]]\ndl30 1,588,619 (**−13,729**)\nsafetensors·gguf **둘 다 null(36일)**\n🔴 `expand[]=license` 무효 → 400",
+      "x": 580,
+      "y": 33480,
+      "width": 360,
+      "height": 170,
+      "color": "5"
+    },
+    {
+      "id": "n1001-e1",
+      "type": "text",
+      "text": "### 🆕 [[OpenClaw-Foundation]]\nLICENSE 저작권자\n*Copyright (c) 2026*\n🔴 재단 실체 미조사",
+      "x": 1380,
+      "y": 33020,
+      "width": 340,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n1001-a1",
+      "type": "text",
+      "text": "## ⚡ actionable (5건)\n\n🔴 CrossFit **채점경로 분리**(최우선)\n🔴 [[openrig]] README+설치(**강제 승격**)\n⚖️ 선발에 **절대규모 경로** 추가\n🟡 paperclip 전수 연령 히스토그램\n🟡 [[RIDE]] PDF 본문",
+      "x": -620,
+      "y": 33700,
+      "width": 480,
+      "height": 230,
+      "color": "2"
+    },
+    {
+      "id": "n1001-a2",
+      "type": "text",
+      "text": "## 🔴 이 배치가 못 한 것\n\n· 코드 실행 **13배치 연속 0건**\n· 논문 PDF **0건**(5건 전부 초록)\n· [[RIDE]] 저장소 URL 있는데 미열람\n· OpenShell/openclaw README 0\n· paperclip 전수 분포 미측정",
+      "x": -100,
+      "y": 33700,
+      "width": 480,
+      "height": 230,
+      "color": "1"
+    },
+    {
+      "id": "n1001-x1",
+      "type": "text",
+      "text": "## 🎯 교차 — 논문이 볼트를 설명했다\n\n[[False-Frontiers]] co-cheating =\n**볼트 수집기↔볼트 일치율**\n\n논문 처방(채점 혈통 분리) ↔\n볼트가 우연히 쓴 Search API **일치**",
+      "x": 420,
+      "y": 33700,
+      "width": 480,
+      "height": 230,
+      "color": "3"
+    },
+    {
+      "id": "n1001-x2",
+      "type": "text",
+      "text": "## 🔴 수집기 정정 3건\n\n① VoiceStudio **Tauri 극성 반전**\n② AREX-2 '수치 최다' → **3위**\n③ VoiceStudio '이슈비율 최저' → PageIndex\n\n🟡 완화 1: OpenShell 분모 경고는 **옳았다**",
+      "x": 940,
+      "y": 33700,
+      "width": 480,
+      "height": 230,
+      "color": "1"
     }
   ],
   "edges": [
@@ -10259,6 +10499,167 @@
       "id": "e0930-ai-33",
       "fromNode": "n0930-harness",
       "toNode": "n0930-limit",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-c1",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-c1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-c2",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-c2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-c3",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-c3",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-c4",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-c4",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-c5",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-c5",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-s1-n1001-c4",
+      "fromNode": "n1001-c4",
+      "toNode": "n1001-s1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-s2-n1001-c2",
+      "fromNode": "n1001-c2",
+      "toNode": "n1001-s2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-s3-n1001-c1",
+      "fromNode": "n1001-c1",
+      "toNode": "n1001-s3",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-s4-n1001-c2",
+      "fromNode": "n1001-c2",
+      "toNode": "n1001-s4",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-s5-n1001-c1",
+      "fromNode": "n1001-c1",
+      "toNode": "n1001-s5",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-m1",
+      "fromNode": "n1001-c3",
+      "toNode": "n1001-m1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-m2",
+      "fromNode": "n1001-c3",
+      "toNode": "n1001-m2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-n1001-m3",
+      "fromNode": "n1001-c3",
+      "toNode": "n1001-m3",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-p3x",
+      "fromNode": "n1001-p3",
+      "toNode": "n1001-x1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-c1x",
+      "fromNode": "n1001-c1",
+      "toNode": "n1001-x1",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e1001-c5x",
+      "fromNode": "n1001-c5",
+      "toNode": "n1001-x1",
+      "fromSide": "bottom",
+      "toSide": "right"
+    },
+    {
+      "id": "e1001-s1e",
+      "fromNode": "n1001-s1",
+      "toNode": "n1001-e1",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e1001-a1",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-a1",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-a2",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-a2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-x2",
+      "fromNode": "n1001-hub",
+      "toNode": "n1001-x2",
+      "fromSide": "right",
+      "toSide": "top"
+    },
+    {
+      "id": "e1001-p1p2",
+      "fromNode": "n1001-p1",
+      "toNode": "n1001-p2",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e1001-p4a",
+      "fromNode": "n1001-p4",
+      "toNode": "n1001-m1",
+      "fromSide": "bottom",
+      "toSide": "right"
+    },
+    {
+      "id": "e1001-prev",
+      "fromNode": "n0930-limit",
+      "toNode": "n1001-hub",
       "fromSide": "bottom",
       "toSide": "top"
     }
