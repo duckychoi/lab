@@ -148,3 +148,31 @@ reliability: high
 - 수집기 대조: ★ **+26 드리프트**(5분 간격 정합) · fork 5,207→5,210 · issues·라이선스·언어 **일치** · "646개 언어" **description 축자 확인**
 - 확인 범위: **API 메타만.** 🔴 **README 미열람**(26일째) · 🔴 미실행 · 🔴 언어별 품질 미검증
 - 신뢰도: ⭐⭐⭐ **medium** — 인기·메타는 실검증, **기능 주장은 self-description 1줄이 전부**
+
+---
+
+## 🏆 2026-10-01 갱신 — **README 26일 봉인 해제**. 그리고 수집기 주장 1건이 반대로 뒤집혔다
+
+✅ **`raw.githubusercontent.com/debpalash/VoiceStudio/main/README.md` → HTTP 200 · 7,039B · 140행 열람 완료.** 09-29·09-30 로그가 *"README 열람 0건 · 26일째"* 로 자기지적한 항목을 해소했다 → [[유예-은폐]] 주 사례.
+
+> [!warning] 🔴 **수집기 정정 — Tauri 는 제공물이 아니라 폐기물이다**
+> 수집기 10-01 요약: *"MLX(Apple)·CUDA 두 백엔드와 **Tauri 데스크톱 셸**을 함께 제공한다"*
+> **README 117행**: *"**Electron is the only desktop app and web UI.** Version 0.5.3 was the final Tauri release. Existing Tauri users must install Electron separately. The retired Tauri shell and legacy UI entry points have been **removed**."*
+> **README 78행**: *"must contain Electron packages; it **never falls back to archived Tauri builds**."*
+> ⚖️ **"함께 제공" ↔ "제거됨" 은 극성이 반대다.** 단위 오류나 과장이 아니라 **방향이 뒤집힌 오류**다. ✅ 볼트 페이지는 Tauri 를 한 번도 적지 않았으므로 **관문에서 차단**됐다(전사 0).
+> 📌 **정정 결과: 데스크톱 셸 = Electron 단일.** Tauri 는 0.5.3 까지의 역사다.
+
+✅ **확증된 주장** (같은 1회 조회):
+- *"646개 언어"* → **README 7행 문자 일치** — *"voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages"*. 🔴 **단 저자 선언이며 언어별 품질은 여전히 미검증.**
+- MLX · CUDA → GitHub topics 20종에 `mlx` · `cuda` **실재**(API 확인)
+
+### 지표 분해 (2026-10-01 09:21 UTC)
+- ★ **50,903**(수집기 50,874 → 드리프트 **+29**) · fork **5,639**(수집기 5,637 → +2) · AGPL-3.0 **일치** · 생성 2026-04-09 · **푸시 2026-09-29**(당일 아님)
+- 🔴 **`open_issues_count` 100 분해: 순수 이슈 59 + PR 41** → 수집기식 0.20% → **순수 0.12%**
+- 🔴 **수집기 *"오늘 5건 중 최저(0.20%)"* 기각**: 순수 이슈 기준 최저는 **[[PageIndex]] 0.10%** 이고 VoiceStudio 는 **0.12% 로 2위**다. PR 비중이 41.0% vs 66.1% 로 갈려 **순서가 교환된다** → [[복합지표-분해]] 순위역전 실증 사례.
+
+### 원본 갱신
+- README: HTTP 200 · 7,039B · 140행 · 2026-10-01 (**26일 만의 첫 열람**)
+- 실측: ★50,903 · fork 5,639 · issue 59 + PR 41 · AGPL-3.0 · topics 20
+- 🔴 **미실행 여전**: 코드 실행 0 · 646언어 품질 검증 0 · Electron 빌드 미시도
+- 신뢰도: ⭐⭐⭐ — 메타 실측 + **기능 주장 근거가 설명문 1줄 → README 140행으로 상향**
