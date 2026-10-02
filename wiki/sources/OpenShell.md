@@ -67,3 +67,64 @@ reliability: high
 ### 원본 갱신
 - 검증: 2026-10-01 09:21~09:30 UTC GitHub REST + Search API · ★+34 드리프트 · fork/라이선스/생성일 **일치** · **이슈·PR 분해 신규**
 - 신뢰도: ⭐⭐⭐ (메타 실측) / 🔴 README·위협모델 **미확인 2배치 연속**
+
+---
+
+## 🏆 2026-10-02 갱신 — **3배치 이월된 "위협모델" 판정이 끝났다. README 에 없다.**
+
+- 실측(2026-10-02): ★ **14,185**(수집기 14,182 → 드리프트 **+3**) · fork **1,638**(수집기 1,637 → +1) · open_issues **525**(**완전 일치**) · Apache-2.0 **일치** · Rust · created 2026-02-24 **일치** · **당일 푸시(2026-10-02)** · 당일 +2,456 — **트렌딩 15건 중 당일 증분 1위** · 랭크 3위
+
+### ✅ **README 봉인 해제 — 09-30 actionable 이 2배치 미실행 후 강제 승격됐고, 오늘 실행했다**
+
+```
+GET raw.githubusercontent.com/NVIDIA/OpenShell/main/README.md
+  → HTTP 200 · 8,050 바이트 · 93행   (수집기 수치와 완전 일치)
+```
+
+🔴 **전수 검색 결과 — 위협모델 어휘가 0개다**
+```
+grep -i -c "threat|attack|adversar|escape|trust boundary"  →  0
+```
+**섹션 9개 전체**: How It Works · Quickstart · Explore Further · **Agent Skills** · SDKs · Community · Telemetry · Notice and Disclaimer · License
+⇒ 📌 **위협모델 섹션이 없다. "무엇으로부터 안전한지"는 README 어디에도 없다.**
+
+> [!insight] 🏆 **09-30 가설이 확정됐다 — 그리고 확정된 쪽은 "최악"이었다**
+> 09-30 에 볼트는 두 가능성을 적었다: *"[[한정어-탈락]] 은 README에 있던 한정어가 description에서 사라지는 것이고, **이건 한정어가 애초에 어디에도 없을 가능성**이다."*
+> ✅ **README 표면에 대해서는 후자로 확정됐다.** *"safe, private"* 를 받쳐 주는 위협모델이 **1차 진입 문서에 존재하지 않는다.**
+> 🟡 **단 범위를 정확히 한정한다** — README 는 *"See [Architecture](docs.nvidia.com/openshell/latest/about/architecture) for how the gateway, supervisor, and sandbox fit together"* 로 **외부 문서를 지목**한다. ⚖️ **따라서 판정은 "제품에 위협모델이 없다"가 아니라 "README 에 없고, 별도 문서 사이트로 밀려 있다"** 이다. 🔴 **독스 사이트 미열람 — 이것이 남은 미확인이다.**
+> 📌 **그럼에도 이 판정에는 실질이 있다**: ★14,185 를 보고 들어오는 사람이 읽는 첫 문서가 **보증은 하고 조건은 말하지 않는다.** 09-30 에 적은 *"신뢰도 높은 출처일수록 검증 요구가 약해진다"* 가 **문서 구조로 뒷받침됐다.**
+
+> [!warning] 🔴 **벤치마크·오버헤드 수치 0개 — 수집기 주장 확증**
+> 수집기: *"벤치마크·오버헤드 수치 **README 에 0개**"*. ✅ **볼트 전수 grep 으로 확증**(`benchmark|overhead|latency|ms|throughput|%` 검색 → 유일한 매치가 89행 **법적 면책 조항**이고 지표가 아니다).
+> 📌 **커널을 계측해 모든 파일 접근·시스템콜·네트워크 연결에 정책을 강제하는 런타임**인데 **오버헤드 수치가 없다.** 🎯 **보안 제품에서 가장 묻게 되는 두 가지 — 무엇으로부터 막나(위협모델), 얼마나 느려지나(오버헤드) — 가 둘 다 README 에 없다.** 3배치에 걸친 이 항목의 결론은 이것이다.
+
+### ✅ README 로 확인된 것 (기능 주장의 실체)
+
+**How It Works — 두 축으로 자기 규정**(원문 대조):
+1. **커널 수준 강제** — *"it **instruments the kernel** to enforce policy on every file access, system call, and network connection at runtime"*. 에이전트는 **실자격증명을 보지 못하고**(*"Agents never see real credentials"*), 게이트웨이가 **승인된 엔드포인트행 요청에만 주입**한다
+2. **형식 검증된 정책 변경** — 정책 변경 **승인 전에** formal verification 으로 *"위험한 신규 접근"*(자격증명을 든 새 호스트 접근 · 새 API 메서드 호출)을 **플래그해 사람 검토로 보낸다**
+
+🎯 **구조는 gateway · supervisor · sandbox 3요소**(README 가 명시).
+
+> [!action] 🏆 **볼트가 오늘 찾은 가장 실행 가능한 한 줄 — `## Agent Skills`**
+> ```shell
+> npx skills add NVIDIA/OpenShell
+> ```
+> README 원문: *"The skills teach your agent to **drive the OpenShell CLI, write sandbox policies, and debug gateways and inference routing**. They live in `skills/` and **work without an OpenShell source checkout**."*
+> 🏆 **이것이 중요한 이유 — 볼트의 "코드 실행 0건 14배치 연속" 을 깨는 가장 싼 경로다.** 전체 런타임을 설치할 필요가 없다(*"without an OpenShell source checkout"*). **스킬만 받아도 된다.**
+> 🎯 **볼트는 Claude Code 기반이고 [[에이전트-스킬]] 개념 페이지를 이미 갖고 있다.** 같은 날 [[ponytail]](스킬 번들)·[[pi-agent-harness]](OpenShell 을 샌드박스 옵션으로 지목)와 **삼각으로 맞물린다.**
+> ⚖️ **actionable 최우선 등록** — 단 🔴 **설치가 곧 검증이 아니다**: 스킬을 받아도 **오버헤드·위협모델은 여전히 미확인**이다.
+
+### 🎯 같은 배치 내부 교차참조 — pi 가 OpenShell 을 지목한다
+
+[[pi-agent-harness]] README 가 샌드박스 옵션으로 **OpenShell 을 직접 호명**한다(Gondolin 마이크로VM · Docker 와 함께 3패턴). 📌 **같은 날 트렌딩 3위와 10위가 의존 관계로 연결돼 있다** — [[하네스-설계-축]] 의 "격리층"과 "하네스층"이 **문서 수준에서 서로를 참조**하는 첫 관측이다.
+
+### 🔴 남은 미확인
+- **독스 사이트**(`docs.nvidia.com/openshell/latest/about/architecture`) **미열람** — 위협모델의 실제 소재지일 가능성이 가장 높은 곳
+- **open_issues 525 의 PR 비중 미분해** — [[복합지표-분해]] 미적용(10-01 에 334+180 으로 분해했으나 오늘 재분해 안 함)
+- `0.1.x` 신규 격리 프리미티브 내역 · **오버헤드 수치 전무** · topics 여전히 **0개**([[메타데이터-부재-추론]] 유지)
+- 🔴 **코드 실행 0건** — `npx skills add` 미실행
+
+### 원본 갱신
+- 검증: 2026-10-02 GitHub REST API + **README 전문 93행 직접 열람** — ★+3 · fork+1 · **issues 완전 일치** · 라이선스·생성일 일치 · 🏆 **3배치 이월 "위협모델" 항목 판정 완료**
+- 신뢰도: ⭐⭐⭐ (★14,185 · Apache-2.0 · 1차 벤더 · **기능 주장 README 로 확인**) / 🔴 **위협모델 README 부재 확정 · 오버헤드 수치 0개 · 독스 미열람**
