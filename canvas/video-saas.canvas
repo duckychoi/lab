@@ -609,6 +609,86 @@
       "height": 160,
       "color": "1",
       "type": "text"
+    },
+    {
+      "id": "n1002v-hub",
+      "type": "text",
+      "text": "# 📦 2026-10-02 배치\n\n**재판정 1건 유입**\n(ai-news → video-saas)",
+      "x": -700,
+      "y": 7400,
+      "width": 260,
+      "height": 130,
+      "color": "1"
+    },
+    {
+      "id": "n1002v-uni",
+      "type": "text",
+      "text": "## [[UniMate]] 🆕\n\n임의 스켈레톤 텍스트→모션\nSIGGRAPH Asia 2026\n★1,154(+217 — **증가율 1위 +23.2%**)\nUniML3D **13,006 쌍** 공개\n토폴로지 증강(관절추가·리프제거·\n체인풀링·본길이교란)\n어텐션×텍스트조건 **4조합 전부**",
+      "x": -380,
+      "y": 7600,
+      "width": 340,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "n1002v-gap",
+      "type": "text",
+      "text": "## 🎯 경쟁 우위 빈틈\n\n**비인간 골격**\n\n*\"사람 모션은 많은데\n내 캐릭터가 사람이 아니다\"*\n이족·사족·조류·해양·곤충·\n뱀형·관절형 강체",
+      "x": 0,
+      "y": 7600,
+      "width": 260,
+      "height": 230,
+      "color": "1"
+    },
+    {
+      "id": "n1002v-bench",
+      "type": "text",
+      "text": "## 🔴 난이도의 본체가 밖에 있다\n\n**UniMate 는 리깅을 만들어 주지 않는다**\n입력이 **이미 리깅된 3D 애셋**\n⇒ 앞단(리깅 파이프라인)이 본체\n\n🔴 프롬프트 패턴 **추출 불가**\n(공개 캡션 ≠ 논문 프롬프트, 저자 명시)\n🔴 Truebones ZOO **상용·재배포 불가**",
+      "x": -380,
+      "y": 7910,
+      "width": 340,
+      "height": 250,
+      "color": "1"
+    },
+    {
+      "id": "n1002v-self",
+      "type": "text",
+      "text": "## [[자기제한-명시]] 🔄\n\n✅ README 가 실패를 **먼저** 적었다\n*\"많은 스켈레톤이 여전히 실패\"*\n*\"손실 스파이크는 최적화가 아니라\n **불량 데이터의 증상**\"*\n\n📌 **수치 0건인데 ⭐⭐⭐인 근거는 이것 하나**\n🔴 정직성 ≠ 성능",
+      "x": 0,
+      "y": 7910,
+      "width": 320,
+      "height": 250,
+      "color": "6"
+    },
+    {
+      "id": "n1002v-amu",
+      "type": "text",
+      "text": "### [[암묵을-명시로]] 🔄\n\n**\"무엇이 움직이는 몸인가\"**\n골격을 입력 스펙으로 올리면\n→ 모델 1개가 **종(species)을 넘는다**",
+      "x": 340,
+      "y": 7910,
+      "width": 260,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n1002v-ego",
+      "type": "text",
+      "text": "## 🎯 간접 유입 — [[EgoTools]] 의 −15.2%p\n\nGemini-3.1-Pro 전체 66.9%\n**but 지각·접지 51.7%**\n\n⚖️ `down-analysis` 규칙:\n**장면 설명은 받아 쓰고\n좌표·지목은 검증한다**\n📌 총점으로 접지를 추정하면 과대평가",
+      "x": -700,
+      "y": 8210,
+      "width": 320,
+      "height": 250,
+      "color": "2"
+    },
+    {
+      "id": "n1002v-lim",
+      "type": "text",
+      "text": "### 🔴 도메인 한계\n\nUniMate 실행 **0건**\n(체크포인트 공개인데 미수령 —\n리깅 애셋 부재가 선행 장벽)\n논문 미열람 → 정량 비교 불가\n🎯 **SaaS·툴 소스 오늘 0건**",
+      "x": -340,
+      "y": 8210,
+      "width": 290,
+      "height": 200,
+      "color": "1"
     }
   ],
   "edges": [
@@ -1004,6 +1084,55 @@
       "fromNode": "n0930v-bench",
       "toNode": "n0930v-limit",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002v-c1",
+      "fromNode": "n1002v-hub",
+      "toNode": "n1002v-uni",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002v-c2",
+      "fromNode": "n1002v-uni",
+      "toNode": "n1002v-gap",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "n1002v-c3",
+      "fromNode": "n1002v-uni",
+      "toNode": "n1002v-bench",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002v-c4",
+      "fromNode": "n1002v-uni",
+      "toNode": "n1002v-self",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002v-c5",
+      "fromNode": "n1002v-uni",
+      "toNode": "n1002v-amu",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002v-c6",
+      "fromNode": "n1002v-bench",
+      "toNode": "n1002v-ego",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002v-c7",
+      "fromNode": "n1002v-bench",
+      "toNode": "n1002v-lim",
+      "fromSide": "right",
       "toSide": "top"
     }
   ]

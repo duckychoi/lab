@@ -939,6 +939,126 @@
       "width": 280,
       "height": 170,
       "color": "1"
+    },
+    {
+      "id": "n1002l-hub",
+      "type": "text",
+      "text": "# 📦 2026-10-02 배치\n\n**재판정 2건 유입**\n(수집기 ai-news → 볼트 local-llm)",
+      "x": -100,
+      "y": 11000,
+      "width": 300,
+      "height": 130,
+      "color": "1"
+    },
+    {
+      "id": "n1002l-nemo",
+      "type": "text",
+      "text": "## [[Nemotron-3-Diarization]] 🆕\n\n**99M** · 최대 8화자 · 상업가능\n지연 **0.32s ~ 30.4s** 단일 체크포인트\n🏆 **0.32s 에서 DER 13.55**\n> 베이스라인 오프라인 **19.09**\n⇒ 실시간이 구세대 배치를 **이긴다**\n✅ DER 수치 **9개 완비**\n🔴 **한국어 불명** ← 채택 선행조건",
+      "x": -1200,
+      "y": 11200,
+      "width": 340,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "n1002l-onestr",
+      "type": "text",
+      "text": "## [[OneStreamer]] 🆕\n\n**4B** · 스트리밍 비디오 LLM\nPHCM 2계층 기억 + PSTL\n✅ 상태토큰 **27.5% 만 감독**\n→ 밀집 감독 상회\n🔴 벤치 8개 이름·비교군·\n   베이스모델 **전부 미기재**\n🔴 코드 **0건**",
+      "x": -820,
+      "y": 11200,
+      "width": 320,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "n1002l-tradeoff",
+      "type": "text",
+      "text": "## 🎯 트레이드오프 — 오늘 유일하게 완비\n\n지연 **0.32s → 30.4s** (**95배**)\n얻는 개선 DER **13.55 → 12.73**\n= **0.82 포인트**\n\n⇒ ⚖️ **실시간을 택하는 비용이 매우 싸다**\n이 도메인 템플릿의 *\"구체적 수치\"* 질문에\n오늘 답한 **유일한** 소스",
+      "x": -1200,
+      "y": 11510,
+      "width": 340,
+      "height": 230,
+      "color": "1"
+    },
+    {
+      "id": "n1002l-mem5",
+      "type": "text",
+      "text": "## [[에이전트-메모리-레이어]] 🔄\n\n🆕 **5번째 분류 추가**\n**자기 생성 텍스트형**\n\nRAG·KV·압축·외부DB 어디에도\n맞지 않는다\n📌 과거 시각특징 **미보관**\n⇒ 메모리가 영상 길이 아니라\n   **텍스트 토큰에 비례**",
+      "x": -820,
+      "y": 11510,
+      "width": 320,
+      "height": 260,
+      "color": "6"
+    },
+    {
+      "id": "n1002l-rag_rev",
+      "type": "text",
+      "text": "### 🎯 RAG 와 반대 방향\n\nRAG: 질문 **뒤에** 찾는다\n스트리밍: 질문 **전에**\n버릴지 남길지 결정\n(되감기 없음)\n⇒ 검색 문제 → **생성 문제**",
+      "x": -460,
+      "y": 11510,
+      "width": 260,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "n1002l-stream2",
+      "type": "text",
+      "text": "### 🎯 스트리밍 2모달리티 동시 도착\n\n[[OneStreamer]] 영상 → **토큰 수** 유한\n[[Nemotron-3-Diarization]] 음성 → **화자 수(8)** 유한\n⇒ **무한 버퍼 포기가 공통 결정**",
+      "x": -170,
+      "y": 11510,
+      "width": 300,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n1002l-amu",
+      "type": "text",
+      "text": "### [[암묵을-명시로]] 🔄\n\nSortformer: **첫 등장 순서**로\n출력 채널 정렬\n⇒ 순열 문제를 **정의에서 제거**\n(PIT 불필요)",
+      "x": 160,
+      "y": 11510,
+      "width": 260,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n1002l-chang",
+      "type": "text",
+      "text": "### [[지표-창길이]] 🔄\n\n🏆 **규칙 정교화**\n나이 31일 > 30일인데 **일치**\n원인: `Release Date` **09-23**\n⇒ 기준은 `createdAt` 아니라 **공개일**\n🆕 trendingScore 는 **감쇠**(3/3 하락)",
+      "x": 430,
+      "y": 11510,
+      "width": 290,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "n1002l-hermes",
+      "type": "text",
+      "text": "## [!action] Hermes 적용 판정\n\n[[OneStreamer]] 🟡 **원리는 즉시 적용 가능**\n📌 볼트 `log.md` 운영이 **이미 동형**\n(원문 대신 판정을 남긴다)\n\n[[Nemotron-3-Diarization]] 🔴 **조건부**\n음성 입력 경로 없음 + 한국어 불명",
+      "x": -640,
+      "y": 11810,
+      "width": 340,
+      "height": 230,
+      "color": "2"
+    },
+    {
+      "id": "n1002l-tl",
+      "type": "text",
+      "text": "### 간접 유입 [[TileLang]]\n\n백엔드 지도:\nCUDA·ROCm·Metal·**LLVM CPU**\nWebGPU·**Ascend 950 NPU**\n→ actionable: 하드웨어 지도 이식\n🔴 \"적혀 있다\"까지만",
+      "x": -1000,
+      "y": 11810,
+      "width": 280,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "n1002l-lim",
+      "type": "text",
+      "text": "### 🔴 도메인 한계\n\nHermes/ChinameBot 적용 **0건**\nNemotron 690행 중 **120행만**\nRTFx·한국어 미확인\n코드 실행 **0건 14배치**",
+      "x": -280,
+      "y": 11810,
+      "width": 260,
+      "height": 180,
+      "color": "1"
     }
   ],
   "edges": [
@@ -1571,6 +1691,90 @@
       "toNode": "n0929l-hindsight",
       "fromSide": "right",
       "toSide": "left"
+    },
+    {
+      "id": "n1002l-a1",
+      "fromNode": "n1002l-hub",
+      "toNode": "n1002l-nemo",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a2",
+      "fromNode": "n1002l-hub",
+      "toNode": "n1002l-onestr",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a3",
+      "fromNode": "n1002l-nemo",
+      "toNode": "n1002l-tradeoff",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a4",
+      "fromNode": "n1002l-onestr",
+      "toNode": "n1002l-mem5",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a5",
+      "fromNode": "n1002l-onestr",
+      "toNode": "n1002l-rag_rev",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a6",
+      "fromNode": "n1002l-onestr",
+      "toNode": "n1002l-stream2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a7",
+      "fromNode": "n1002l-nemo",
+      "toNode": "n1002l-stream2",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a8",
+      "fromNode": "n1002l-nemo",
+      "toNode": "n1002l-amu",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a9",
+      "fromNode": "n1002l-nemo",
+      "toNode": "n1002l-chang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a10",
+      "fromNode": "n1002l-mem5",
+      "toNode": "n1002l-hermes",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002l-a11",
+      "fromNode": "n1002l-tradeoff",
+      "toNode": "n1002l-tl",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "n1002l-a12",
+      "fromNode": "n1002l-hub",
+      "toNode": "n1002l-lim",
+      "fromSide": "right",
+      "toSide": "top"
     }
   ]
 }

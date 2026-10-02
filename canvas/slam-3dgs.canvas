@@ -559,6 +559,106 @@
       "height": 180,
       "color": "2",
       "type": "text"
+    },
+    {
+      "id": "n1002s-hub",
+      "type": "text",
+      "text": "# 📦 2026-10-02 배치\n\n**재판정 2건 유입**\n둘 다 **임바디드 축**\n🟡 경계 사례 명시",
+      "x": -1200,
+      "y": 7600,
+      "width": 280,
+      "height": 140,
+      "color": "1"
+    },
+    {
+      "id": "n1002s-ego",
+      "type": "text",
+      "text": "## [[EgoTools]] 🆕\n\n1인칭 도구사용 벤치·데이터\nupvote **11**(오늘 1위 · +4 드리프트)\nEgoTools-Data **100h**(+보조 3D)\nEgoTools-Bench **1,000 QA · 4트랙**\n\n🏆 **Gemini-3.1-Pro 66.9%**\n**but P&G 만 51.7%** = **−15.2%p**\n🔴 스위트 자급 구조(영상분리만)",
+      "x": -860,
+      "y": 7800,
+      "width": 340,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "n1002s-pyrua",
+      "type": "text",
+      "text": "## [[PyRUA-Lean]] 🆕\n\n로봇 VLM 토큰 절감\nupvote 3 · 드리프트 **0**\n700 인스턴스(LIBERO-PRO·\nRoboTwin 2.0·RoboCasa365)\n✅ **63.1% → 71.7%**\n✅ LLM 호출 **−49%** · 토큰 **−65%**\n🔴 제목은 \"14%\"(상대)",
+      "x": -480,
+      "y": 7800,
+      "width": 320,
+      "height": 280,
+      "color": "5"
+    },
+    {
+      "id": "n1002s-gap",
+      "type": "text",
+      "text": "## 🏆 총점이 약한 성분을 숨긴다\n\n전체 **66.9%** → \"꽤 한다\"\nP&G **51.7%** → \"못 짚는다\"\n\n🎯 [[복합지표-분해]] **벤치마크 축 재현**\n(10-01 open_issues = 이슈+PR 과 동형)\n\n⚖️ **볼트 적용**: 장면 설명은 받아 쓰고\n**좌표·지목은 검증한다**",
+      "x": -860,
+      "y": 8110,
+      "width": 340,
+      "height": 250,
+      "color": "1"
+    },
+    {
+      "id": "n1002s-match",
+      "type": "text",
+      "text": "## [[비매칭-비교]] 🔄\n\n✅ **모범 사례**\n3중 고정: 동일 플래너(GPT-6 Astra)\n· 동일 프리미티브 · **동일 호출 예산**\n⇒ 바뀐 것은 **대화 방식 하나**\n✅ 절감은 *\"both 가 푼 인스턴스\"* 한정",
+      "x": -480,
+      "y": 8110,
+      "width": 320,
+      "height": 230,
+      "color": "6"
+    },
+    {
+      "id": "n1002s-guk",
+      "type": "text",
+      "text": "### [[국소-수리-원리]] 🔄\n\n조건검사·재시도를\n**파이썬 셀 안에서**\n⇒ 호출 **−49%**\n⚖️ 토큰 −65% 는 **별개 원리**\n(선별 관측)",
+      "x": -130,
+      "y": 8110,
+      "width": 260,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "n1002s-unit",
+      "type": "text",
+      "text": "### [[단위-불일치]] 🔄\n\n🆕 **3번째 유형**\n제목 상대 · 본문 절대\n(저자 자신이 원인)\n⚖️ `63.1→71.7` 만 인용",
+      "x": 160,
+      "y": 8110,
+      "width": 250,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "n1002s-cheat",
+      "type": "text",
+      "text": "### [[측정도구-먼저-반증]] 🔄\n\nEgoTools: 데이터+벤치 **같은 팀**\nSFT 검증을 **그 벤치 1,000문항 전체**에서\n✅ 영상 분리 명시 🔴 스위트 분리 없음\n⇒ [[False-Frontiers]] co-cheating 형태",
+      "x": -1200,
+      "y": 8110,
+      "width": 290,
+      "height": 210,
+      "color": "6"
+    },
+    {
+      "id": "n1002s-cam",
+      "type": "text",
+      "text": "## 🎯 카메라 파이프라인 교훈\n\n**선별 관측**\n*\"only explicitly requested\nimages and state\"*\n\n📌 매 스텝 전체 관측을 밀어넣는\n기본 구조가 토큰의 주범\n→ pull 로 바꾸면 **65% 빠진다**",
+      "x": -700,
+      "y": 8410,
+      "width": 300,
+      "height": 230,
+      "color": "2"
+    },
+    {
+      "id": "n1002s-lim",
+      "type": "text",
+      "text": "### 🔴 도메인 구조적 공백\n\n**실로봇 0건**(전부 시뮬)\n**실시간 수치 0건**(30fps 질문 무응답)\nEgoTools **4트랙 중 1트랙만**\n논문 본문 **0건**\n🎯 **SLAM·3DGS 본류 0건 — 2배치 연속**",
+      "x": -340,
+      "y": 8410,
+      "width": 300,
+      "height": 210,
+      "color": "1"
     }
   ],
   "edges": [
@@ -931,6 +1031,69 @@
       "fromNode": "n0930s-realtime",
       "toNode": "n0930s-act",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b1",
+      "fromNode": "n1002s-hub",
+      "toNode": "n1002s-ego",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b2",
+      "fromNode": "n1002s-hub",
+      "toNode": "n1002s-pyrua",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b3",
+      "fromNode": "n1002s-ego",
+      "toNode": "n1002s-gap",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b4",
+      "fromNode": "n1002s-pyrua",
+      "toNode": "n1002s-match",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b5",
+      "fromNode": "n1002s-pyrua",
+      "toNode": "n1002s-guk",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b6",
+      "fromNode": "n1002s-pyrua",
+      "toNode": "n1002s-unit",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b7",
+      "fromNode": "n1002s-ego",
+      "toNode": "n1002s-cheat",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b8",
+      "fromNode": "n1002s-match",
+      "toNode": "n1002s-cam",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002s-b9",
+      "fromNode": "n1002s-gap",
+      "toNode": "n1002s-lim",
+      "fromSide": "right",
       "toSide": "top"
     }
   ]

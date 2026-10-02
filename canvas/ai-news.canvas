@@ -5758,6 +5758,266 @@
       "width": 480,
       "height": 230,
       "color": "1"
+    },
+    {
+      "id": "n1002a-hub",
+      "type": "text",
+      "text": "# 📦 2026-10-02 배치\n\nai-news 8소스\n**신규 4 · 갱신 4**\n도메인 재판정 **5건**",
+      "x": -100,
+      "y": 34100,
+      "width": 280,
+      "height": 140,
+      "color": "1"
+    },
+    {
+      "id": "n1002a-tilelang",
+      "type": "text",
+      "text": "## [[TileLang]] 🆕\n\n커널 DSL (TVM)\n★8,185 · fork 822\n🏆 **NOASSERTION → 실체 MIT**\n(LICENSE 23행 직접 열람)\n🔴 성능 수치 0건\n→ 하네스축 **최하층**",
+      "x": -2400,
+      "y": 34320,
+      "width": 300,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-corrgrpo",
+      "type": "text",
+      "text": "## [[CorrGRPO]] 🆕\n\n다중보상 GRPO 상관정규화\nupvote 8 · 저자 6\n✅ 분산 = 공분산 합 **(항등식)**\n🔴 **성능 수치 0개**\n🔴 레포 **★0**",
+      "x": -2050,
+      "y": 34320,
+      "width": 300,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-agspec",
+      "type": "text",
+      "text": "## [[AgSpec]] 🆕\n\n검색기반 추측 디코딩\nupvote 4 · 드리프트 **0**\n✅ 처리량 **4.37~4.76배**\n🔴 벤치 2종·드래프터 5종 이름 없음",
+      "x": -1700,
+      "y": 34320,
+      "width": 300,
+      "height": 220,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-ucgguf",
+      "type": "text",
+      "text": "## [[Qwen-Image-2.1-Uncensored-GGUF]] 🆕\n\n**독립 페이지 승격**\nDL **1,303,476** (랭크 4위)\n= 베이스의 **16.9배**\n🏆 gguf.total = 베이스 safetensors\n**7,115,124,736 교차 일치**",
+      "x": -1350,
+      "y": 34320,
+      "width": 320,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-openshell",
+      "type": "text",
+      "text": "## [[OpenShell]] 🔄\n\n★14,185 (+2,456 증분 1위)\n🏆 **README 93행 열람**\n🔴 위협모델 **전수검색 0개**\n🔴 오버헤드 **0개**\n🏆 `npx skills add` 발견",
+      "x": -1000,
+      "y": 34320,
+      "width": 300,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-ponytail",
+      "type": "text",
+      "text": "## [[ponytail]] 🔄\n\n★151,003 · 랭크 1위\npushed **18일 동결**인데 +1,194\n🏆 **자기 수치 하향 정정**\n(80~94% → 과제별 상한)\n🆕 topics **10개**(claude-code)",
+      "x": -650,
+      "y": 34320,
+      "width": 300,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-pi",
+      "type": "text",
+      "text": "## [[pi-agent-harness]] 🔄\n\n★111,489 · 7패키지\n🔴 수집기 신규 오판 → 자기정정\n✅ 드리프트 3건 획득\n🎯 **OpenShell 을 직접 지목**\n🔴 topics 0개",
+      "x": -300,
+      "y": 34320,
+      "width": 300,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-qwen21",
+      "type": "text",
+      "text": "## [[Qwen-Image-2.1]] 🔄\n\nDL 76,938 · 랭크 6위\n✅ safetensors **7,115,124,736**\n= 카드 \"7B visual component\"\n🎯 배수 시계열 **3점 완성**\n12.3 → 16.9 → **16.9배**",
+      "x": 50,
+      "y": 34320,
+      "width": 300,
+      "height": 240,
+      "color": "5"
+    },
+    {
+      "id": "n1002a-e-tileai",
+      "type": "text",
+      "text": "### [[tile-ai]] 🆕\n\n커널 DSL 조직\nLICENSE: `Copyright (c) Tile-AI.`\n2년 운영 누적",
+      "x": -2400,
+      "y": 34600,
+      "width": 240,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n1002a-e-aben",
+      "type": "text",
+      "text": "### [[abenzerps]] 🆕\n\n양자화 재배포자\nDL 1,303,476\n🎯 **동봉 전략**(인코더+VAE)\nSHA256SUMS·변환커밋 명시",
+      "x": -2130,
+      "y": 34600,
+      "width": 240,
+      "height": 160,
+      "color": "4"
+    },
+    {
+      "id": "n1002a-e-hkust",
+      "type": "text",
+      "text": "### [[HKUST-KnowComp]] 🆕\n\nCorrGRPO 코드 조직\n🔴 ★0·설명문 None\n신뢰도 **low**",
+      "x": -1860,
+      "y": 34600,
+      "width": 240,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n1002a-e-nvidia",
+      "type": "text",
+      "text": "### [[NVIDIA]] 🔄\n\n**같은 날 2소스**\nOpenShell 🔴 문서 부실\nNemotron-3-Diarization ✅ 성실\n⇒ **벤더 단위 신뢰도 무효**",
+      "x": -1590,
+      "y": 34600,
+      "width": 250,
+      "height": 170,
+      "color": "4"
+    },
+    {
+      "id": "n1002a-e-qwen",
+      "type": "text",
+      "text": "### [[Qwen]] 🔄\n\n유통이 자사 레포에서\n일어나지 않는다\n(파생 16.9× · 2.8×)",
+      "x": -1320,
+      "y": 34600,
+      "width": 240,
+      "height": 140,
+      "color": "4"
+    },
+    {
+      "id": "n1002a-e-earendil",
+      "type": "text",
+      "text": "### [[earendil-works]] 🔄\n\n공급망 경화 10항목\n`min-release-age=2`\n🔴 신규기여자 이슈 자동닫힘",
+      "x": -1050,
+      "y": 34600,
+      "width": 250,
+      "height": 150,
+      "color": "4"
+    },
+    {
+      "id": "n1002a-c-daeche",
+      "type": "text",
+      "text": "## [[대체필드-대조]] 🆕\n\n한 칸이 비었다고\n대조 불가가 아니다\n`safetensors`=None ↔ `gguf`=값\n🎯 [[무응답-오귀속]] **3번째 유형**\n— 유일하게 **신호가 없다**",
+      "x": -700,
+      "y": 34600,
+      "width": 300,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-seoneon",
+      "type": "text",
+      "text": "## [[선언된-구현체-공백]] 🆕\n\n\"code is available\" 은\n**레포 존재만** 보증\n2배치 연속 2건\n(RIDE ★1 · CorrGRPO ★0)\n🔴 오늘 논문 5건 중 쓸 수 있는 것 **0건**",
+      "x": -370,
+      "y": 34600,
+      "width": 300,
+      "height": 210,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-meta",
+      "type": "text",
+      "text": "### [[메타데이터-부재-추론]] 🔄\n\n`NOASSERTION` **2번째**\n🆕 서식·삽입조항 유형\n+ topics 양극(10개 ↔ 0개)",
+      "x": -40,
+      "y": 34600,
+      "width": 250,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-harness",
+      "type": "text",
+      "text": "### [[하네스-설계-축]] 🔄\n\n🆕 최하층 **커널 생성**\n🏆 층들이 서로를\n**문서로 지목**(pi→OpenShell)",
+      "x": 230,
+      "y": 34600,
+      "width": 250,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-boonhae",
+      "type": "text",
+      "text": "### [[복합지표-분해]] 🔄\n\n🆕 유입 필터 변종\n(pi: 신규기여자 자동닫힘\n→ 분자가 정책적 억제)",
+      "x": 500,
+      "y": 34600,
+      "width": 250,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-daeripe",
+      "type": "text",
+      "text": "### [[대립레시피-동시도착]] 🔄\n\n🆕 **직교 쌍**\nponytail(출력↓) ⊥ AgSpec(속도↑)\n곱해진다",
+      "x": 770,
+      "y": 34600,
+      "width": 250,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-skill",
+      "type": "text",
+      "text": "### [[에이전트-스킬]] 🔄\n\n**3소스 동시 도착**\nponytail·OpenShell·pi\n🎯 `yagni` = 규범을 태그로",
+      "x": 1040,
+      "y": 34600,
+      "width": 250,
+      "height": 160,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-c-bench",
+      "type": "text",
+      "text": "### [[벤치마크-이미지-봉인]] 🔄\n\n**다른 2도메인 동시 재발**\nTileLang(커널) ↔ UC-GGUF(이미지)\n⇒ 분야 관행 아니라 **매체 속성**",
+      "x": 1310,
+      "y": 34600,
+      "width": 260,
+      "height": 170,
+      "color": "6"
+    },
+    {
+      "id": "n1002a-act1",
+      "type": "text",
+      "text": "## 🏆 ★최우선 actionable\n\n`npx skills add NVIDIA/OpenShell`\n\n*\"work without an\nOpenShell source checkout\"*\n⇒ **코드 실행 0건 14배치** 깨기\n문턱 **0** · 명령 **1줄**",
+      "x": -100,
+      "y": 34880,
+      "width": 320,
+      "height": 220,
+      "color": "2"
+    },
+    {
+      "id": "n1002a-act2",
+      "type": "text",
+      "text": "### actionable 7건 추가\n\n한국어 지원 확인(Nemotron)\n독스 위협모델\nCorrGRPO 2주 재조회\nPR 비중 분해 4건\nTileLang 백엔드 지도\nEgoTools 4트랙\n**논문 PDF 2건 선별**",
+      "x": 250,
+      "y": 34880,
+      "width": 280,
+      "height": 220,
+      "color": "2"
+    },
+    {
+      "id": "n1002a-lim",
+      "type": "text",
+      "text": "### 🔴 배치 한계\n\n코드 실행 **0건 (14배치)**\n논문 PDF **0건 (15배치)**\nOpenShell 독스 미열람\nPR 비중 미분해 4건\nponytail ★유입 미조사",
+      "x": -480,
+      "y": 34880,
+      "width": 260,
+      "height": 200,
+      "color": "1"
     }
   ],
   "edges": [
@@ -10661,6 +10921,230 @@
       "fromNode": "n0930-limit",
       "toNode": "n1001-hub",
       "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e0",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-tilelang",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e1",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-corrgrpo",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e2",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-agspec",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e3",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-ucgguf",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e4",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-openshell",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e5",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-ponytail",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e6",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-pi",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-e7",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-qwen21",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f1",
+      "fromNode": "n1002a-tilelang",
+      "toNode": "n1002a-e-tileai",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f2",
+      "fromNode": "n1002a-ucgguf",
+      "toNode": "n1002a-e-aben",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f3",
+      "fromNode": "n1002a-corrgrpo",
+      "toNode": "n1002a-e-hkust",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f4",
+      "fromNode": "n1002a-openshell",
+      "toNode": "n1002a-e-nvidia",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f5",
+      "fromNode": "n1002a-qwen21",
+      "toNode": "n1002a-e-qwen",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f6",
+      "fromNode": "n1002a-pi",
+      "toNode": "n1002a-e-earendil",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f7",
+      "fromNode": "n1002a-ucgguf",
+      "toNode": "n1002a-c-daeche",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f8",
+      "fromNode": "n1002a-qwen21",
+      "toNode": "n1002a-c-daeche",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f9",
+      "fromNode": "n1002a-corrgrpo",
+      "toNode": "n1002a-c-seoneon",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f10",
+      "fromNode": "n1002a-tilelang",
+      "toNode": "n1002a-c-meta",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f11",
+      "fromNode": "n1002a-ponytail",
+      "toNode": "n1002a-c-meta",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f12",
+      "fromNode": "n1002a-tilelang",
+      "toNode": "n1002a-c-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f13",
+      "fromNode": "n1002a-pi",
+      "toNode": "n1002a-c-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f14",
+      "fromNode": "n1002a-openshell",
+      "toNode": "n1002a-c-harness",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f15",
+      "fromNode": "n1002a-pi",
+      "toNode": "n1002a-c-boonhae",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f16",
+      "fromNode": "n1002a-agspec",
+      "toNode": "n1002a-c-daeripe",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f17",
+      "fromNode": "n1002a-ponytail",
+      "toNode": "n1002a-c-daeripe",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f18",
+      "fromNode": "n1002a-ponytail",
+      "toNode": "n1002a-c-skill",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f19",
+      "fromNode": "n1002a-openshell",
+      "toNode": "n1002a-c-skill",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f20",
+      "fromNode": "n1002a-tilelang",
+      "toNode": "n1002a-c-bench",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f21",
+      "fromNode": "n1002a-ucgguf",
+      "toNode": "n1002a-c-bench",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f22",
+      "fromNode": "n1002a-c-skill",
+      "toNode": "n1002a-act1",
+      "fromSide": "bottom",
+      "toSide": "right"
+    },
+    {
+      "id": "n1002a-f23",
+      "fromNode": "n1002a-openshell",
+      "toNode": "n1002a-act1",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "n1002a-f24",
+      "fromNode": "n1002a-hub",
+      "toNode": "n1002a-lim",
+      "fromSide": "left",
       "toSide": "top"
     }
   ]
