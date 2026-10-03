@@ -4,12 +4,21 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, design-system, ai-harness, frontend, claude-code, agent-skills, design-tokens]
 created: 2026-07-27
-updated: 2026-07-27
+updated: 2026-10-03
 sources: []
 reliability: high
 ---
 
 # impeccable (pbakaus/impeccable, ⭐51,000)
+
+> [!update] 2026-10-03 갱신 — ★74,563 (볼트 실측) · 🏆 **같은 배치 안에서 진단과 증거가 만났다** · 🔴 **topics 가설 반례 확정**
+> **볼트 독립 실측 ★74,563** ↔ 수집기 ★74,559 = **드리프트 +4**. 기존 베이스라인 ★51,000(2026-07-27) → **+23,563 / 68일 = 일평균 ≈346**.
+> ✅ **전 필드 일치**: fork **4,491** · open_issues **64** · **Apache-2.0**(볼트 기존 기록 일치) · created 2025-11-16 · **pushed 2026-10-03T07:35:50Z = 당일 활성** · 주언어 **JavaScript**(볼트 기존 기록 일치).
+> 🔴 **`topics` 0 확증 — 10-02 가설의 반례가 확정됐다.** 10-02 에 볼트는 *"topics 는 규모가 아니라 배포 의도를 반영한다"* 는 가설을 세웠다. impeccable 은 **★74,563 · `npx impeccable install` 1줄 배포 · 스킬 1 + 커맨드 24개**로 **배포 의도가 명백한데 topics 가 0 이다**. ⇒ ⚖️ **가설 기각. `topics` 는 배포 의도도 규모도 반영하지 않는다 — 메인테이너가 그 칸을 채웠는지만 반영한다.** 📌 같은 배치의 [[Agent-Reach]] topics **17** ↔ impeccable **0** 이고 둘 다 ★7만~8만대 배포형이다 → [[메타데이터-부재-추론]] 에 **"칸이 비어 있음은 대상에 대한 정보가 0"** 유형 추가.
+> 🏆 **오늘 이 레포의 진단이 같은 배치에서 실물로 확인됐다.** impeccable 의 문제 설정은 *"모든 모델이 같은 SaaS 템플릿으로 학습돼 가이던스 없이는 매 프로젝트에 같은 몇 가지 흔적(**전부 Inter 폰트** 등)이 나온다"* 다. 볼트가 오늘 같은 배치의 [[HC-DLM]] 논문 프로젝트 페이지 `hc-dlm.github.io` 를 열람(HTTP 200 · 34,296B)했더니 **외부 폰트 로드가 `family=Inter`(+Fira Code) 단 하나**였다.
+> ⚖️ **그래서 이 주장의 지위가 올라간다**: 마케팅 문구가 아니라 **볼트가 독립 소스에서 1회 관측으로 확인한 패턴**이다. 🔴 **단 n=1 이다. "전부"를 지지하지는 않는다** — 반증 가능한 형태로 적어 둔다(향후 프로젝트 페이지 열람 시 폰트를 기록한다).
+> ✅ **구조적 강점 재확인**: *"61개 **결정론적** 검출 규칙"* 은 LLM 판정이 아니라 **검출기**라 재현 가능성이 높은 쪽이다. 🔴 **효과 수치는 여전히 0개** — 규칙 수(61)는 규모이고 성능이 아니다 → [[복합지표-분해]].
+> 🎯 **계보 자기신고**: *"Anthropic 의 frontend-design 이 Claude 최초의 범용 디자인 스킬이었고 Impeccable 은 거기서 출발했다"* (README 명시) → [[파생저장소-식별]] **자기신고형**.
 
 **GitHub**: https://github.com/pbakaus/impeccable
 **스타수**: ⭐51,000 (2026-07-27, 당일 +413) / JavaScript·TypeScript / Apache 2.0

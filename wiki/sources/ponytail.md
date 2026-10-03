@@ -4,12 +4,40 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skills, coding-agent, minimalism, behavior-norm, text-asset]
 created: 2026-08-28
-updated: 2026-09-06
+updated: 2026-10-03
 sources: []
 reliability: medium
 ---
 
 # DietrichGebert/ponytail — 에이전트에게 "쓰지 마라"를 가르치는 자산
+
+> [!update] 2026-10-03 갱신 — ★152,194 (볼트 실측) · 🏆🏆 **수집기가 넘긴 질문을 커밋 로그로 해소: 푸시는 README/CI 가 아니라 기능 변경 + 릴리스다**
+> **볼트 독립 실측 ★152,194** ↔ 수집기 ★152,185 = **드리프트 +9**. 볼트 전일 실측 ★151,003(2026-10-02) → **+1,191 / 24시간**.
+> ✅ **전 필드 일치**: fork **8,167** · open_issues **208** · **MIT** · topics **10** · created 2026-06-12 · 주언어 **JavaScript** · **pushed 2026-10-03T05:12:55Z**.
+>
+> 🏆 **수집기 미해결 질문 해소 — 볼트가 커밋 API 를 열었다.** 수집기는 *"🔴 커밋 내용 미확인 — 푸시가 기능 변경인지 README/CI 인지 볼트가 판정해야 한다"* 고 남겼다. `GET /repos/DietrichGebert/ponytail/commits` + 커밋별 `files` 조회 결과 **2026-10-03 하루에 15커밋 · 릴리스 `v4.10.3`**:
+> ```
+> feat:  1건  446e4ad  reuse tag → ponytail-review·ponytail-audit  (8파일 +22-6)
+> fix:   7건  그중 9410bcb = __init__.py +20-2  ·  tests/hermes-plugin.test.js +30
+>              (ruleset 을 매 턴이 아니라 1회만 주입 — 동작 변경)
+>              b52dd9b  ponytail-debt 스캔이 /* ponytail: */ 블록 주석 포착 + 의존·빌드 디렉터리 제외 (+58-4)
+>              1564efe  ZCode 에 hookSpecificOutput JSON 을 내보내 규칙이 모델에 도달하게 (버그: 도달하지 않았다)
+> docs:  4건  (CONTRIBUTING.md 신설 +55 · Command Code·Factory Droid 이식 경로 추가 · Codex 호출 문법 수정)
+> chore: 1건  ef8ca48  release v4.10.3 — 매니페스트 9개 동시 버전업
+> ```
+> ⚖️ **판정: 기능 변경이다.** `feat:` 1건이 신규 기능이고, `fix:` 중 최소 3건이 **`__init__.py`·`skills/*/SKILL.md`(규칙 본문)·훅 출력 포맷**을 건드린다. 특히 `1564efe` 는 *"규칙이 모델에 도달하게"* 를 고치는 커밋이다 — ⇒ 🔴 **그 전까지 ZCode 환경에서는 ponytail 규칙이 모델에 도달하지 않았다는 뜻이다. 이 레포의 핵심 효과(규칙 주입)가 특정 하네스에서 작동하지 않고 있었다.**
+>
+> ⚖️ **"18일 동결" 틀의 처분 — 만료가 아니라 재해석이다.** 10-02 에 볼트는 *"pushed 2026-09-14 완전 일치 — 18일째 동결 확증"* 과 *"동결된 코드에 스타가 붙는다"* 를 적었다. 오늘 드러난 실제 모양은 **방치 18일이 아니라 "18일 침묵 → 하루 15커밋 배치 릴리스"** 다. ⇒ 📌 **`pushed` 는 활동량이 아니라 릴리스 리듬을 반영한다. 단일 시점 `pushed` 로 유지보수 상태를 판정할 수 없다** → [[지표-창길이]] **새 축: 활동의 버스트성**. 🎯 같은 배치의 [[Agent-Reach]] 가 **18일 동결을 유지**해 대조군이 된다 — **같은 라벨의 두 레포가 하루에 갈렸다.**
+>
+> 🆕 **볼트 신규 발견 3건(커밋 로그 열람의 부수 수확):**
+> ① **9개 플러그인 매니페스트를 동시 유지한다** — `.claude-plugin/plugin.json`·`.codex-plugin/plugin.json`·`.devin-plugin/plugin.json`·`.github/plugin/plugin.json`·`.qoder-plugin/plugin.json`·`gemini-extension.json`·`package.json`·`plugin.yaml`·`ponytail-mcp/package.json` 이 **릴리스 1건에서 전부 +1-1**. ⇒ ⚖️ **[[하네스-설계-축]] 의 이식성이 두 층으로 분해된다: 문서가 경로를 열거하는 것([[superpowers]] 15종)과 매니페스트를 실제 유지하는 것(ponytail 9종, 커밋으로 증명)은 같은 지표가 아니다.**
+> ② **`.openclaw/skills/` 를 `skills/` 와 이중 유지한다** — 커밋마다 양쪽 SKILL.md 를 동시 수정한다(003cd40·446e4ad·6f7a570·b52dd9b 전부). 📌 [[openclaw]](★391,087) 가 **별도 스킬 디렉터리 규약을 요구하는 플랫폼**임을 벤더 커밋이 증명한다 — 볼트가 분석자로서 묶던 두 층을 또 벤더가 스스로 묶었다.
+> ③ **`README.ko.md` 를 유지한다**(ad14110 에서 `README.md`·`README.es.md` 와 함께 수정) — **한국어 문서가 영어와 같은 커밋에서 갱신된다.** 📌 볼트 입장에서 채택 문턱을 낮추는 실질 요소다.
+>
+> 🏆 **`CONTRIBUTING.md` 신설(+55행)의 내용이 중요하다 — *"benchmark gate for ruleset changes"***: **룰셋 변경에 벤치마크 통과를 요구하는 자발적 장치**다. ⇒ ✅ [[측정도구-먼저-반증]] **벤더 자발적 실행 2번째 사례**(10-02 [[Nemotron-3-Diarization]] 에 이어). 🎯 **이것이 10-02 에 볼트가 기록한 "자기 수치 하향 정정"과 같은 궤적이다** — 이 레포는 자기 효과 주장을 스스로 조이는 쪽으로 움직인다. 🔴 **단 게이트의 기준값·통과 조건은 미열람.**
+>
+> ⚠️ **수치 충돌 1건 — 미해소 유지 + 유형 확정.** 트렌딩 페이지 *"**+1,435** stars today"* ↔ 24시간 API 실차 **+1,182**(수집기) / **+1,191**(볼트 실측 기준) = **차이 약 244~253(+20~21%)**. fork 도 같은 창에서 8,104→**8,167**(+63) 움직였다. 🔴 **원인 미확인 — `stars today` 의 창 정의(UTC 00:00 기준 / 롤링 24h)를 모르므로 어느 쪽이 틀렸다고 적지 않는다.** 📌 다만 [[지표-창길이]] 에 **GitHub 자체 지표 간 불일치**라는 새 유형으로 확정 등록한다(종전 사례는 전부 수집기 대 볼트 간 시점 차였다).
+> 🔴 **미해결 유지**: ★+1,191/일 **유입 경로 미조사**(2배치 연속). 오늘 릴리스가 유입 원인인지 결과인지 판정 불가 — **릴리스가 05:12Z 이고 ★는 하루 내내 붙었다.**
 
 **GitHub**: https://github.com/DietrichGebert/ponytail
 **지표(2026-08-28)**: ⭐**114,596** · 포크 **6,262** · 이슈 **177** · **JavaScript** · **MIT** · 생성 **2026-06-12** · 최종 푸시 **2026-08-07** — GitHub API 실호출 검증(raw 표기 114,589 대비 **+7 드리프트**) · 트렌딩 데일리 **8위**(당일 +1,613)
