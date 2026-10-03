@@ -4,11 +4,50 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-09-30
+updated: 2026-10-03
 sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
+
+> [!insight] 🏆 2026-10-03 배치 (13건 · 신규 6 · 갱신 7) — **배치 축: 볼트가 15배치 동안 본 "초록"이 매체였고, 매체는 숨긴다**
+> **① 🏆🏆 볼트 최대 한계 2개 중 1개가 깨졌다 — 논문 PDF 0건 15배치 연속 종료.**
+> [[Sharpening-Tax]](8.16MB·62p) · [[HC-DLM]](617KB·24p) PDF 획득 후 `pypdf` 로 **187,230자 / 78,992자 추출**. ⇒ **그 즉시 초록이 숨긴 것이 드러났다**:
+> - [[HC-DLM]] 초록 수치 **0개** → 본문 **표 3개 전부 확보**. 🔴 **그리고 초록 주장 3개 중 1개가 과대였다** — Sudoku Easy 에서 **CCDD 94.65 > HC-DLM 94.21 패배**인데 초록은 *"Sudoku 에서 개선"* 이라 적는다. ✅ **본문은 수치까지 적어 인정한다.**
+> - [[Sharpening-Tax]] 초록 *"sufficient test-time budget"* → 본문 **`pass@128`**(37회 = 주 설정). ⚖️ **base 모델이 커버리지로 이기는 조건은 128배 샘플링이다. 초록만 읽으면 오독한다.**
+> ⚖️ **그래서 10-02 에 볼트가 적어 둔 한계 문장의 비용이 실물로 나타났다**: *"초록 대조는 '수집기가 옳게 인용했는가'만 검증하고 '주장이 참인가'는 검증하지 않는다."* **오늘 수집기는 초록을 옳게 인용했고 초록이 과대했다.**
+> 🔴 **그러나 PDF 가 전부를 풀지 않는다** — [[Sharpening-Tax]] 의 tax 수치는 **Figure 6·7·26 에 매장**돼 열어도 안 풀린다 ⇒ 🆕 [[벤치마크-이미지-봉인]] **2종 분해: "미열람형"(열면 풀림) · "그림매장형"(열어도 안 풀림).**
+>
+> **② 🏆🏆 구현체 탐지 방법이 틀렸다 — 초록 기반 탐지가 3/3 거짓 음성.**
+> **HF 논문 API 에 `githubRepo`·`githubStars`·`projectPage` 구조화 필드가 있다.** 5건 전수 조사 결과 **구현체를 가진 3건 모두 초록에 github 링크를 적지 않았다.**
+> ⇒ ⚖️ **[[선언된-구현체-공백]] 판별법 교체: API 필드를 먼저 읽고 초록 검색은 보조로만 쓴다.** 🔴 **소급 영향**: 10-02 의 *"선언 없음 3"* 은 *"초록에 안 적혔음"* 이었고 API 에는 있었을 수 있다 → 재조사 actionable.
+> 🆕 **그리고 3단 층이 확립됐다**: ① 선언 → ② **코드가 있는가**(`languages`) → ③ **쓸 수 있는가**(라이선스 실체).
+> | 논문 | API repo | ★ | 코드 | 라이선스 | 판정 |
+> |---|---|---|---|---|---|
+> | [[Beyond-Memory-PoS]] | ✅ | 21 | ✅ **Python 4.2MB** | **MIT** | 🏆 **쓸 수 있다** |
+> | [[Sharpening-Tax]] | ✅ | 21 | ✅ Python 109KB | 🔴 **CC BY-NC** | 실험만 |
+> | [[HC-DLM]] | ✅ | **52** | 🔴 **0 (`languages`={})** | — | 🔴 **공백** |
+> | [[On-Policy-or-Off-Policy-Distillation]] · [[Adaptive-Reward-Routing]] | 🔴 None | — | — | — | 없음 |
+> ⚖️ **★52 가 ★21 두 건보다 코드가 적다(0이다)** ⇒ 📌 **10-02 결론 *"★0 은 시간 신호"* 보강: ★는 시간 신호도 아니다. ★는 논문 관심을 재고 레포 내용을 재지 않는다.** 🆕 **"활력형 공백" 유형 신설.**
+>
+> **③ 🏆🏆 [[무응답-오귀속]] 4번째 하위유형 "요청 미지정형" 신설 — 가장 위험한 유형.**
+> [[Qwen3.8-27B]] 기본 조회 `trendingScore`=`None`·`downloadsAllTime`=`None` → **`?expand[]=` 재조회에서 352 · 12,626,437**. ⇒ ✅ **수집기가 정확했고 볼트 조회가 틀렸다.**
+> ⚖️ **종전 3유형은 신호(필드 부재·HTTP 400)나 구제 경로(다른 필드)가 있었다. 이 유형은 둘 다 없고 서버가 값을 갖고 있다.** 📌 **`None` 을 "값 없음"으로 읽으면 진짜 값을 영구히 놓치고 놓쳤다는 사실도 남지 않는다.** ⚖️ **규칙: HF 모델 API 는 반드시 `expand[]` 로 조회한다.**
+> ✅ **분리 절차 확립**: [[Comfy-Org-Qwen-Image-2.1]] 은 `expand[]` 재조회에도 `None` ⇒ **진짜 부재** = 수집기 정확.
+>
+> **④ 🏆 [[ponytail]] 푸시 판정 — 수집기가 넘긴 질문을 커밋 로그로 해소.** 10-03 하루에 **15커밋 + 릴리스 v4.10.3**. `feat:` 1 · `fix:` 7(그중 `__init__.py`·`SKILL.md` 규칙 본문·훅 출력 포맷 변경) · `docs:` 4 · `chore:` 1 ⇒ ⚖️ **README/CI 가 아니라 기능 변경이다.** 🔴 **특히 `1564efe` 는 *"규칙이 모델에 도달하게"* 를 고친다 — 그 전까지 ZCode 환경에서 핵심 효과가 작동하지 않았다는 뜻이다.**
+> ⚖️ **"18일 동결" 틀 재해석**: 방치 18일이 아니라 **18일 침묵 → 하루 배치 릴리스**다. 📌 **`pushed` 는 활동량이 아니라 릴리스 리듬을 반영한다.** 🎯 **같은 배치 [[Agent-Reach]] 가 18일 동결을 유지해 대조군이 됐다 — 같은 라벨의 두 레포가 하루에 갈렸다.**
+> 🆕 **부수 수확 3건**: **9개 플러그인 매니페스트 동시 유지**(⇒ [[하네스-설계-축]] 이식성이 *문서 열거*와 *매니페스트 유지* 두 층으로 분해) · **`.openclaw/skills/` 이중 유지**([[openclaw]] 규약을 벤더 커밋이 증명) · **`README.ko.md` 유지**(한국어 문서가 영어와 같은 커밋에서 갱신).
+>
+> **⑤ 🔴 수집기 오판 적발 1건 — "최대 배수 사례"가 두 겹으로 틀렸다.** [[Comfy-Org-Qwen-Image-2.1]] 69.4배를 *"최대"* 로 보고했으나 **볼트 기존 최대는 114.3배**이고 **같은 쌍의 자기 최고치 82.1배(09-22)보다도 낮다**(4점 단조 감소). ⚖️ **규칙: *"최대/최초"* 류 서열 주장은 수집기가 하지 않고 볼트가 한다 — 볼트만 이력을 갖는다.** ✅ **볼트가 09-24 에 *"원본이 상대적으로 회복"* 이라 적어 둔 것이 오판을 막았다.**
+>
+> **⑥ 🔴 가설 1건 기각 — `topics` 는 아무것도 반영하지 않는다.** [[impeccable]] ★74,563 · 배포 의도 명백(`npx impeccable install`) · **topics 0** ↔ [[Agent-Reach]] topics 17. ⇒ **10-02 가설 *"topics 는 배포 의도를 반영한다"* 기각. 메인테이너가 그 칸을 채웠는지만 반영한다.**
+>
+> **⑦ ✅ 독립 검증 13/13 (8배치 연속).** GitHub ★드리프트 **+4~+14** · fork·issues·라이선스·topics·created·pushed **전건 일치** · 주언어 3건 신규 확인(Python·Go·Shell) · HF 모델 DL 2건(드리프트 **−39,750** / **0**) · `safetensors.total` **27,781,427,952** 및 **7,115,124,736** 완전 일치 · `gguf.total` **27,320,697,856** 일치 · 논문 **5건 초록 전문 전수 대조**(1,307~1,802자) 서지·저자수·upvote 전건 일치 · 🔴 **초록 길이 1건 수집기 과대**(1,900 → 실측 1,802 = +5.4%).
+>
+> **⑧ 🎯 교차 패턴 — 오늘 5건 중 2건이 "커버리지"를 같은 통화로, 2건이 "지속되는 단일 상태"를 같은 처방으로.** [[On-Policy-or-Off-Policy-Distillation]] ↔ [[Sharpening-Tax]](커버리지) · [[HC-DLM]] ↔ [[Beyond-Memory-PoS]](지속 상태) ⇒ 🆕 [[대립레시피-동시도착]] **"층간 동형 쌍"** 신설. **무관한 분야가 같은 처방에 독립 도달하는 것은 대립보다 강한 신호다**(🔴 n=2).
+>
+> **⑨ 🔴 볼트 한계(숨기지 않는다)**: **코드 실행 0건 — 15배치 연속**(🔴 10-02 에 찾은 `npx skills add` 경로도, 오늘 찾은 MIT `luoyu100/PoS` 경로도 실행하지 않았다) · [[Adaptive-Reward-Routing]] **PDF 미열람**(수치 0개로 가장 수익이 큰 건인데 안 열었다) · [[Beyond-Memory-PoS]]·[[On-Policy-or-Off-Policy-Distillation]] **PDF 미열람** · [[Sharpening-Tax]] **3번째 벤치·4번째 모델 계열 미확정** · tax 수치 **그림 매장 미우회** · [[superpowers]] `Commercial Services` **2배치 연속 미열람** + **매니페스트 유지 증거 미확인**(ponytail 과 공정 비교 불가) · [[Agent-Reach]] README **ToS/차단 리스크 미열람**(채택 가부를 가르는 단일 항목) · `open_issues` **PR 비중 미분해 5건**(194·143·298·208·64 — 🔴 **10-01 에 이 분해로 5배치치 결론이 뒤집혔는데 2배치 연속 반복했다** = [[Beyond-Memory-PoS]] 가 이름 붙인 **Belief Trapping**).
 
 > [!update] 📥 2026-09-30 배치 (13건) — 🏆 **하네스 비중 최고치(38%)** · 수집기 정정 2 · 볼트 자기정정 1 · 개념 신설 2
 > 처리: **신규 소스 6 · 갱신 7** · 도메인 재판정 **2**([[PanoVLN]]·[[Simple-WAM]] → `slam-3dgs`) · [[MaLiang-Harness]] → `video-saas` · **신설 엔티티 0**(8건 전부 기존) · 개념 신설 **2**([[동일대상-분리오판]]·[[관심-검증-역상관]]) · 개념 갱신 **11**.

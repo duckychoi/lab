@@ -1059,6 +1059,66 @@
       "width": 260,
       "height": 180,
       "color": "1"
+    },
+    {
+      "id": "ll-1003-sharpening",
+      "type": "text",
+      "text": "## Sharpening Tax\n**10-03 · PDF 실측**\n\nRL 후처리가 pass@1↑ / coverage↓\n14쌍 × 3벤치 = **42케이스**\n\n⚖️ [[하네스-설계-축]] 에\n**측정 통화(커버리지)** 를 줬다\n\n🔴 base 가 이기는 조건 = **pass@128**",
+      "x": -1200,
+      "y": 12440,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "ll-1003-onpolicy",
+      "type": "text",
+      "text": "## On-Policy or Off-Policy?\n**10-03 · Cambridge**\n\n설계 규칙:\n**목적함수(KL 방향)를 먼저 고정**\n→ 그 다음에 롤아웃 정책\n\nforward KL 이면 비싼 온폴리시\n롤아웃 비용을 아껴도 안정적\n\n망각은 롤아웃이 아니라 **LR** 로",
+      "x": -750,
+      "y": 12440,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "ll-1003-pos",
+      "type": "text",
+      "text": "## Beyond Memory / PoS\n**10-03 · Alibaba**\n\n🆕 6번째 분류 **\"검증되는 상태형\"**\n= 메모리가 쓰이기 전에 검사받는다\n\n✅ MIT · Python 4.2MB\n`belief/` 가 볼트 log.md 에\n이식 가능한 유일한 부품",
+      "x": -300,
+      "y": 12440,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "ll-1003-hcdlm",
+      "type": "text",
+      "text": "## HC-DLM\n**10-03 · UIUC+Amazon**\n\nSudoku 94.21/**72.41**\nCountdown **84.41/37.52**\nLM1B Gen PPL **75.5**\n\n🔴 Easy 는 CCDD 94.65 에 패배\n🔴 AR Transformer 66.7 이 더 좋다\n(저자가 정확히 한정)",
+      "x": 150,
+      "y": 12440,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "ll-1003-coverage",
+      "type": "text",
+      "text": "## 🎯 커버리지 = 새 공통 통화\n**10-03 교차 발견**\n\n증류 목적함수 쪽(On-Policy)과\nRL 후처리 쪽(Sharpening Tax)이\n**같은 날 같은 비용을 지목했다**\n\n🔴 앞쪽은 정의·측정 지표 없음\n뒤쪽은 pass@K 로 조작화\n→ 같은 단어가 같은 것을 재는지 미확인",
+      "x": -1200,
+      "y": 12780,
+      "width": 420,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "ll-1003-isomorph",
+      "type": "text",
+      "text": "## 🆕 층간 동형 쌍\n**10-03 신설 유형**\n\nHC-DLM(디코딩 층)\n= *\"잠재를 유일한 지속 생성 상태로\"*\n↕\nPoS(에이전트 루프 층)\n= *\"belief 를 지속 유지\"*\n\n**서로 인용 없이 같은 날**\n⚖️ 독립 수렴은 대립보다 강한 신호\n🔴 n=2",
+      "x": -750,
+      "y": 12780,
+      "width": 420,
+      "height": 300,
+      "color": "6"
     }
   ],
   "edges": [
@@ -1775,6 +1835,34 @@
       "toNode": "n1002l-lim",
       "fromSide": "right",
       "toSide": "top"
+    },
+    {
+      "id": "ell-1003-a",
+      "fromNode": "ll-1003-onpolicy",
+      "fromSide": "right",
+      "toNode": "ll-1003-coverage",
+      "toSide": "left"
+    },
+    {
+      "id": "ell-1003-b",
+      "fromNode": "ll-1003-sharpening",
+      "fromSide": "right",
+      "toNode": "ll-1003-coverage",
+      "toSide": "left"
+    },
+    {
+      "id": "ell-1003-c",
+      "fromNode": "ll-1003-hcdlm",
+      "fromSide": "right",
+      "toNode": "ll-1003-isomorph",
+      "toSide": "left"
+    },
+    {
+      "id": "ell-1003-d",
+      "fromNode": "ll-1003-pos",
+      "fromSide": "right",
+      "toNode": "ll-1003-isomorph",
+      "toSide": "left"
     }
   ]
 }

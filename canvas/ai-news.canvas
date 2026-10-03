@@ -6018,6 +6018,116 @@
       "width": 260,
       "height": 200,
       "color": "1"
+    },
+    {
+      "id": "src-1003-sharpening-tax",
+      "type": "text",
+      "text": "## Sharpening Tax (2610.01509)\n**10-03 · Meta+3기관 · upvote 69**\n\n🏆 **볼트 PDF 최초 열람 2건 중 1건**\n8.16MB · 62p · 187,230자\n\n⚖️ 초록 *\"sufficient budget\"*\n= 본문 **pass@128**\n→ base 가 이기는 조건은 **128배 샘플링**\n\n🔴 tax 수치는 Figure 6·7·26 **그림 매장**\n(PDF 열어도 안 풀림)\n\n🔴 구현체 라이선스 **CC BY-NC**\n= 상업 금지",
+      "x": -1200,
+      "y": 35500,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "src-1003-hcdlm",
+      "type": "text",
+      "text": "## HC-DLM (2610.02193)\n**10-03 · UIUC+Amazon · upvote 70**\n\n🏆 PDF 열람 → **표 3개 확보**\n(초록 수치 0개였다)\n\n🔴 **초록 주장 1개 과대**\nSudoku Easy **CCDD 94.65 > 94.21 패배**\n✅ 본문은 수치까지 적어 인정\n\n🔴 레포 ★52 인데 **코드 0**\n`languages` = {}",
+      "x": -750,
+      "y": 35500,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "src-1003-pos",
+      "type": "text",
+      "text": "## Beyond Memory / PoS (2610.01415)\n**10-03 · Alibaba · upvote 71**\n\n🆕 메모리 레이어 **6번째 분류**\n\"검증되는 상태형\"\n\n🏆 **Belief Trapping** 정의가\n볼트 증상에 이름을 줬다\n= *\"진전 없이 계속 행동\"*\n\n✅ **오늘 유일하게 쓸 수 있는 구현체**\n★21 · MIT · Python 4.2MB",
+      "x": -300,
+      "y": 35500,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "src-1003-onpolicy",
+      "type": "text",
+      "text": "## On-Policy or Off-Policy?\n**10-03 · Cambridge · upvote 130(2위)**\n\n🏆 통념 반박: 롤아웃 정책이 아니라\n**KL 방향**이 성능·커버리지 결정\n**학습률**이 망각 지배\n\nforward KL = 롤아웃 변화에 견고\nreverse KL 만 민감\n\n✅ 견고성 3조건 자발 공개\n🔴 수치 0 · 구현체 0",
+      "x": 150,
+      "y": 35500,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "src-1003-arr",
+      "type": "text",
+      "text": "## Adaptive Reward Routing\n**10-03 · Tencent · upvote 118**\n🔄 재판정 → video-saas\n\n교차 어텐션을 영향의 **대리지표**로\n→ 토큰 손실 재가중 + 그래디언트 스케일\n(추가 모델 개입 없음)\n\n🔴 **오늘 최저 대조 가능성**\n수치 0 · 베이스라인 0 · 벤치 0\n데이터셋 0 · 구현체 0",
+      "x": -1200,
+      "y": 35840,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "src-1003-comfyorg",
+      "type": "text",
+      "text": "## Comfy-Org/Qwen-Image-2.1\n**10-03 🔼 승격** · DL 5,674,460\n\n볼트 규칙 2번째 집행\n(파생 DL > 베이스 → 독립 페이지)\n\n🔴 수집기 \"최대 배수\" **기각**\n볼트 최대는 114.3배\n\n🏆 배수 4점 **단조 감소**\n82.07→78.17→76.91→**69.42**\n원인 = **원본 성장**(12.53배 vs 10.60배)",
+      "x": -750,
+      "y": 35840,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "ent-1003-uiuc",
+      "type": "text",
+      "text": "## UIUC\n🆕 10-03 신설 엔티티\n\n[[HC-DLM]] 제1 소속\nAlexander Schwing 등\n\n✅ 오늘 최고의 비교 설계\n(CCDD 6M 재현 + 백본 교체\n+ 파라미터 정의 명시)",
+      "x": -300,
+      "y": 35840,
+      "width": 420,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "ent-1003-amazon",
+      "type": "text",
+      "text": "## Amazon\n🆕 10-03 신설 엔티티\n\n🏆 **존재 자체가 발견이다**\nAPI `organization` 은 UIUC-CS 만 보고\n→ **PDF 저자 각주에서만 발견**\n\n📌 복합지표 분해의 비용은\n\"수치가 틀린다\"가 아니라\n**\"존재를 놓친다\"**",
+      "x": 150,
+      "y": 35840,
+      "width": 420,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "ent-1003-cambridge",
+      "type": "text",
+      "text": "## University of Cambridge\n🆕 10-03 신설 엔티티\n\n[[On-Policy-or-Off-Policy-Distillation]]\n저자 3명 = 오늘 최소 규모인데\n**upvote 2위**\n\n🎯 증류/후처리 축\n= 볼트 local-llm 핵심 관심",
+      "x": -1200,
+      "y": 36180,
+      "width": 420,
+      "height": 300,
+      "color": "4"
+    },
+    {
+      "id": "act-1003-pos-run",
+      "type": "text",
+      "text": "## ★최우선 actionable (10-03)\n**`luoyu100/PoS` 실행으로\n\"코드 실행 0건 15배치\"를 깬다**\n\nMIT · Python 4.2MB · main.py\n① benchmarks/ → 초록이 숨긴\n   벤치 이름·수치 복구\n② belief/ → Belief Trapping 탐지\n   볼트 log.md 에 이식\n\n🔴 2배치 연속 미실행",
+      "x": -750,
+      "y": 36180,
+      "width": 420,
+      "height": 300,
+      "color": "2"
+    },
+    {
+      "id": "act-1003-regress",
+      "type": "text",
+      "text": "## actionable (10-03)\n**[[선언된-구현체-공백]] 소급 재조사**\n\n🔴 초록 기반 탐지가 **3/3 거짓 음성**\n→ 10-02 \"선언 없음 3건\" 판정이\n   틀렸을 수 있다\n\n10-01·10-02 논문 전건에\nAPI githubRepo + languages 조회\n(논문당 2회 · 총 10건)",
+      "x": -300,
+      "y": 36180,
+      "width": 420,
+      "height": 300,
+      "color": "2"
     }
   ],
   "edges": [
@@ -11146,6 +11256,69 @@
       "toNode": "n1002a-lim",
       "fromSide": "left",
       "toSide": "top"
+    },
+    {
+      "id": "e-1003-a",
+      "fromNode": "src-1003-onpolicy",
+      "fromSide": "right",
+      "toNode": "src-1003-sharpening-tax",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-b",
+      "fromNode": "src-1003-hcdlm",
+      "fromSide": "right",
+      "toNode": "src-1003-pos",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-c",
+      "fromNode": "src-1003-pos",
+      "fromSide": "right",
+      "toNode": "act-1003-pos-run",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-d",
+      "fromNode": "ent-1003-uiuc",
+      "fromSide": "right",
+      "toNode": "src-1003-hcdlm",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-e",
+      "fromNode": "ent-1003-amazon",
+      "fromSide": "right",
+      "toNode": "src-1003-hcdlm",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-f",
+      "fromNode": "ent-1003-cambridge",
+      "fromSide": "right",
+      "toNode": "src-1003-onpolicy",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-g",
+      "fromNode": "src-1003-sharpening-tax",
+      "fromSide": "right",
+      "toNode": "act-1003-regress",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-h",
+      "fromNode": "src-1003-hcdlm",
+      "fromSide": "right",
+      "toNode": "act-1003-regress",
+      "toSide": "left"
+    },
+    {
+      "id": "e-1003-i",
+      "fromNode": "src-1003-arr",
+      "fromSide": "right",
+      "toNode": "src-1003-sharpening-tax",
+      "toSide": "left"
     }
   ]
 }

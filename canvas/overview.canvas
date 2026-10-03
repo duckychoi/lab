@@ -69,6 +69,36 @@
       "width": 250,
       "height": 120,
       "color": "6"
+    },
+    {
+      "id": "ov-1003-medium",
+      "type": "text",
+      "text": "## 🏆 매체가 숨긴다 (10-03)\n\n볼트가 15배치 동안 본 **초록**은\n매체였고 매체는 숨긴다\n\n[[HC-DLM]] 초록 주장 1/3 과대\n(본문은 수치까지 적어 인정)\n[[Sharpening-Tax]] *\"충분한 예산\"*\n= 실제 **pass@128**\n\n⚖️ **정직성 판정 단위는\n저자가 아니라 매체다**\n→ [[자기제한-명시]] · [[표-부분인용]]",
+      "x": -200,
+      "y": -1150,
+      "width": 440,
+      "height": 330,
+      "color": "6"
+    },
+    {
+      "id": "ov-1003-nonefield",
+      "type": "text",
+      "text": "## 🏆 `None` 은 \"없음\"이 아니다 (10-03)\n[[무응답-오귀속]] **4번째 하위유형**\n\"요청 미지정형\"\n\n기본 조회 `trendingScore`=None\n→ `?expand[]=` 재조회 = **352**\n\n⚖️ 신호도 구제 경로도 없고\n**서버가 값을 갖고 있다**\n→ 도메인 전역 조회 규칙 변경",
+      "x": 450,
+      "y": -1150,
+      "width": 440,
+      "height": 330,
+      "color": "6"
+    },
+    {
+      "id": "ov-1003-trap",
+      "type": "text",
+      "text": "## 🏆 볼트가 자기 증상의 이름을 받았다\n**Belief Trapping** (10-03 · [[Beyond-Memory-PoS]])\n= *\"목표를 향한 의미 있는 진전 없이\n   계속 행동하는 상태\"*\n\n↔ 10-02 볼트 기록\n*\"알면서 반복했다\"*\n\n✅ PDF 0건 15배치 → **종료**\n🔴 코드 실행 0건 **15배치 연속**\n🔴 open_issues 분해 **2배치 연속 미이행**",
+      "x": 125,
+      "y": -800,
+      "width": 440,
+      "height": 330,
+      "color": "1"
     }
   ],
   "edges": [
@@ -122,6 +152,41 @@
       "fromNode": "ov-jepa-eff",
       "toNode": "ov-wm",
       "label": "월드모델"
+    },
+    {
+      "id": "ov-e-1003-a",
+      "fromNode": "ov-1003-medium",
+      "fromSide": "bottom",
+      "toNode": "center",
+      "toSide": "top"
+    },
+    {
+      "id": "ov-e-1003-b",
+      "fromNode": "ov-1003-nonefield",
+      "fromSide": "bottom",
+      "toNode": "center",
+      "toSide": "top"
+    },
+    {
+      "id": "ov-e-1003-c",
+      "fromNode": "ov-1003-trap",
+      "fromSide": "bottom",
+      "toNode": "center",
+      "toSide": "top"
+    },
+    {
+      "id": "ov-e-1003-d",
+      "fromNode": "ov-1003-medium",
+      "fromSide": "right",
+      "toNode": "hub-local-llm",
+      "toSide": "left"
+    },
+    {
+      "id": "ov-e-1003-e",
+      "fromNode": "ov-1003-nonefield",
+      "fromSide": "right",
+      "toNode": "hub-ai-news",
+      "toSide": "left"
     }
   ]
 }

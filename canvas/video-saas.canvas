@@ -689,6 +689,46 @@
       "width": 290,
       "height": 200,
       "color": "1"
+    },
+    {
+      "id": "vs-1003-arr",
+      "type": "text",
+      "text": "## Adaptive Reward Routing\n**10-03 · Tencent · 🔄 재판정**\n\n🎯 **볼트가 가져갈 것은 평가 축 3개**\n① 모달리티별 품질\n② 교차모달 의미 정합\n③ **시간 동기화** ← down-analysis 에 없다\n\n🔴 수치·베이스라인·벤치·구현체 전부 0",
+      "x": -1200,
+      "y": 8860,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "vs-1003-comfy",
+      "type": "text",
+      "text": "## Comfy-Org/Qwen-Image-2.1\n**10-03 🔼 승격 · 🔄 재판정**\nDL 5,674,460 (원본의 69.42배)\n\n🏆 배포 전략 교훈:\n*사용자 툴 포맷으로 Day-0 재포장 +\n원본 README 에서 거기로 보낸다*\n→ 원본 DL 69배 포기하고 실사용자 획득\n\n🔴 license_name: qwen-research\n= **비상업. 상업 사용 불가**",
+      "x": -750,
+      "y": 8860,
+      "width": 420,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "vs-1003-dlmeaning",
+      "type": "text",
+      "text": "## 🆕 다운로드는 품질이 아니라\n## 배포 편의를 잰다\n**10-03 신설 조항**\n\n성능이 원본과 **동일한 재포장본**이\nDL 69배다\n\n⚖️ HF 다운로드 상위권에\n재포장본이 올라온다\n→ DL 순위를 품질 순위로 읽으면 틀린다\n\n69배의 상당 부분 = **설치 단계 수 차이**",
+      "x": -300,
+      "y": 8860,
+      "width": 420,
+      "height": 300,
+      "color": "6"
+    },
+    {
+      "id": "vs-1003-sync",
+      "type": "text",
+      "text": "## actionable (10-03)\n**down-analysis 에\n\"오디오-영상 동기화\" 항목 추가**\n\n현재 ①②만 본다\n(장면 설명 · 프롬프트↔결과)\n\n📌 동기화는 사용자가 가장 먼저\n알아채는 결함인데 절차에 없다",
+      "x": 150,
+      "y": 8860,
+      "width": 420,
+      "height": 300,
+      "color": "2"
     }
   ],
   "edges": [
@@ -1134,6 +1174,20 @@
       "toNode": "n1002v-lim",
       "fromSide": "right",
       "toSide": "top"
+    },
+    {
+      "id": "evs-1003-a",
+      "fromNode": "vs-1003-arr",
+      "fromSide": "right",
+      "toNode": "vs-1003-sync",
+      "toSide": "left"
+    },
+    {
+      "id": "evs-1003-b",
+      "fromNode": "vs-1003-comfy",
+      "fromSide": "right",
+      "toNode": "vs-1003-dlmeaning",
+      "toSide": "left"
     }
   ]
 }

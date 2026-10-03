@@ -4,11 +4,35 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-09-27
+updated: 2026-10-03
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
+
+> [!insight] 🏆 2026-10-03 — **논문 4건 유입. "커버리지"가 이 도메인의 새 공통 통화가 됐다**
+> 오늘 배치에서 `local-llm` 으로 분류된 신규 4건: [[On-Policy-or-Off-Policy-Distillation]](Cambridge · upvote 130) · [[Sharpening-Tax]](Meta+3기관 · 69) · [[Beyond-Memory-PoS]](Alibaba · 71) · [[HC-DLM]](UIUC+Amazon · 70).
+>
+> **① 🏆 2건이 독립적으로 "커버리지"를 핵심 비용으로 지목했다.**
+> - [[On-Policy-or-Off-Policy-Distillation]]: **KL 방향**이 *"task performance and **output coverage**"* 를 결정한다. **forward KL 은 롤아웃 정책 변화에 견고**하고 **reverse KL 만 민감**하다 ⇒ ⚖️ ***"온폴리시가 낫다"* 는 reverse KL 을 쓸 때만 성립하는 국소 참이었다.**
+> - [[Sharpening-Tax]]: **RL 후처리가 pass@1 을 올리고 solution coverage 를 깎는다.** 기제는 **과제를 "항상 풀림/절대 안 풀림" 두 극단으로 미는 것**(bimodalization). 14쌍 × 3벤치 = **42케이스에서 만연**.
+> ⇒ 📌 **증류 목적함수 쪽과 RL 후처리 쪽에서 같은 날 같은 비용을 발견했다.** 🔴 **단 앞쪽은 커버리지를 정의·측정하지 않고 뒤쪽은 pass@K 로 조작화한다 — 같은 단어가 같은 것을 재는지 미확인.**
+>
+> **② 🏆 실무 설계 규칙 2개가 실제로 나왔다(이 도메인에서 드문 일이다).**
+> - **증류**: **목적함수(KL 방향)를 먼저 고정하고 그 다음에 롤아웃 정책을 고른다.** forward KL 이면 **비싼 온폴리시 롤아웃 생성 비용을 아껴도 성능이 안정적이다.** 그리고 **학습률이 망각을 지배**하므로 망각 문제는 롤아웃이 아니라 LR 로 접근한다.
+> - **배포**: 🔴 **"base 모델 + 경량 하네스"가 커버리지로 이긴다는 결론을 그대로 쓰면 안 된다.** PDF 실측 결과 그 조건은 **`pass@128`** 이다 ⇒ **128배 샘플링 비용**이고 단발 호출과 비교 대상이 아니다.
+>
+> **③ 🆕 [[에이전트-메모리-레이어]] 6번째 분류 "검증되는 상태형" 신설.**
+> [[Beyond-Memory-PoS]] 가 RAG·KV·압축·외부DB·자기생성텍스트형 5분류 어디에도 안 맞는다. 식별 기준: **메모리가 쓰이기 전에 검사받는다**(일관성 검증 + **Belief Trapping** 탐지 + 2축 맞춤 복구).
+> 🏆 **그리고 이것이 볼트 자기 진단 도구가 됐다** — **Belief Trapping = *"목표를 향한 의미 있는 진전 없이 계속 행동하는 상태"*** 가 볼트의 *"알면서 반복했다"*(10-02 자기 기록)와 문자 그대로 일치한다. ✅ **오늘 그 덫 하나가 깨졌다**(PDF 0건 15배치 연속 종료). 🔴 **코드 실행 0건은 15배치 연속으로 유지됐다.**
+>
+> **④ 🎯 [[HC-DLM]] ↔ [[Beyond-Memory-PoS]] 가 다른 층에서 같은 처방을 냈다.** 양쪽 다 *"지속되는 단일 상태"* — 전자는 **생성 과정의 연속 잠재**(*"잠재를 유일한 지속 생성 상태로"*), 후자는 **에이전트의 belief**. 🔴 **서로를 인용하지 않는다**(같은 날·다른 분야·다른 기관) ⇒ 🆕 [[대립레시피-동시도착]] **"층간 동형 쌍"**.
+>
+> **⑤ ✅ Hermes/ChinameBot 적용 후보 1건 — 오늘 유일하게 "쓸 수 있는" 구현체.**
+> `luoyu100/PoS` ★21 · **MIT** · **Python 4.2MB** · `belief/`·`benchmarks/`·`baselines/`·`main.py`·`.env.example`. 📌 **`belief/` 모듈(= 상태 + 미해결 요구 + 정합성 검사)이 볼트 `log.md` 운영에 그대로 이식 가능한 유일한 부품**이고, `benchmarks/` 는 **초록이 숨긴 "four benchmarks" 이름과 수치를 코드로 복구**할 경로다 ⇒ actionable ★최우선.
+> 🔴 **대조 — [[Sharpening-Tax]] 구현체는 CC BY-NC(상업 금지)** · **[[HC-DLM]] 구현체는 코드 0** · 나머지 2건은 **구현체 없음**.
+>
+> **⑥ 🔴 이 도메인의 수치 기근이 심하다.** 4건 **전부 초록 정량 수치 0개**다. PDF 를 연 2건에서만 수치가 나왔고, 그중 1건은 **그림 매장으로 여전히 봉인**이다. ⚖️ **즉 초록만 쌓으면 이 도메인은 "서술의 누적"이 되고 비교가 불가능해진다** → 📌 **PDF 열람을 상시 절차로 승격해야 한다**(오늘 2/4 만 했다).
 
 > [!update] 📥 2026-09-20 — 3건 편입 (**재판정 2건 포함**)
 > - **[[mem0]]**(★65,688 · 수집기는 `ai-news` → 볼트 **`local-llm` 재판정**, 스키마 도메인 2가 "에이전트 메모리"를 포함) — 🔴 **볼트가 8개월간 페이지 없이 베이스라인으로만 써 온 본체.** 벤치 4행 중 **BEAM 1M 64.1 → 10M 48.6(−15.5)** 이 인용에서 빠져 있었다. 🎯 **[[Hermes]] 롱세션이 노리는 지점이 정확히 거기다** → 현재로선 적용 **NO**.
