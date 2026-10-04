@@ -4,12 +4,17 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, 양자화, ternary, GGUF, on-device, 검사가능성]
 created: 2026-09-29
-updated: 2026-09-30
+updated: 2026-10-04
 sources: [Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
 
 # prism-ml
+
+> [!warning] 🔴 2026-10-04 **이 페이지는 중복이다 — 정본은 [[Prism-ML]] 이다**
+> 같은 조직(HF `prism-ml` · GitHub `PrismML-Eng`)에 대한 페이지가 둘 있다: **[[Prism-ML]]**(created 2026-09-20 · **참조 10건**) ↔ **이 페이지**(created 2026-09-29 · 참조 4건).
+> ⇒ 📌 **[[정규명-우선-중복검사]] 실패 사례이고 볼트 자기 볼트에서 발생했다.** ✅ **2026-10-04 최신 관측은 [[Prism-ML]] 에 기록했다** — DL 3,969,867 · 벤치 14종 공개 · `gguf.total` 비전 타워 미집계 발견 등.
+> 🔴 **삭제하지 않는다**(참조 4건이 끊긴다). ⚖️ **통합은 actionable 등록 — 정본을 [[Prism-ML]] 로 두고 대소문자 정규화 규칙을 세운 뒤 수행한다.**
 
 > [!note] 정체
 > [[Ternary-Bonsai-2-27B]] 를 배포하는 **HuggingFace 조직 계정**. 삼진(ternary) 양자화 계열 `Bonsai` 라인을 운영한다(모델 태그 `prismml`·`bonsai`).

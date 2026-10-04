@@ -4,12 +4,29 @@ type: entity
 domain: ai-news
 tags: [quantization, ternary, gguf, local-llm, llama-cpp, mlx]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-10-04
 sources: [Ternary-Bonsai-2-27B.md, Bonsai-27B.md]
 reliability: medium
 ---
 
 # Prism ML
+
+> [!warning] 🔴 2026-10-04 **중복 엔티티 발견 — 같은 조직에 페이지가 두 개다**
+> `wiki/entities/` 에 **`Prism-ML.md`(이 페이지 · created 2026-09-20 · 참조 10건)** 과 **`prism-ml.md`(created 2026-09-29 · 참조 4건)** 이 공존한다. **같은 조직**(HF `prism-ml` · GitHub `PrismML-Eng`)이고 **sources 도 겹친다**([[Ternary-Bonsai-2-27B]]).
+> ⇒ 📌 **[[정규명-우선-중복검사]] 가 다루는 바로 그 실패이고, 볼트 자기 볼트에서 발생했다.** 🔴 **통합하지 않고 남긴다** — 양쪽이 참조되고 있어 삭제하면 링크가 끊긴다. ⚖️ **통합은 별도 작업으로 actionable 등록**(정본 = 참조 많은 `Prism-ML`, 대소문자 정규화 규칙 필요).
+
+> [!update] 2026-10-04 갱신 — 🏆 **[[Ternary-Bonsai-2-27B]] 카드 전문 열람으로 이 벤더의 측정 성향이 확정됐다**
+> **볼트 실측(2026-10-04T09:12:38Z)**: `prism-ml/Ternary-Bonsai-2-27B-gguf` DL **3,969,867**(09-29 실측 3,457,124 → **+512,743 / 5일 · 일평균 ≈102,549**) · likes **2,400** · trendingScore **222** · `gguf.total` **26,895,998,464** · `base_model` **Qwen/Qwen3.8-27B**.
+> 🏆 **측정 성향 — 이 벤더는 자기에게 불리한 것을 적는다(부분적으로)**:
+> - ✅ **벤치 14종을 이름까지 공개**(MMLU-Redux · MuSR · GSM8K · MATH-500 · AIME25 · AIME26 · HumanEval+ · MBPP+ · LiveCodeBench · IFEval · IFBench · BFCL v3 · MMMU-Pro · OCR Bench v2) + **카테고리별 표** + **분모 공개**(FP16 평균 **86.32** → Bonsai **84.78** = **98.2%**)
+> - ✅ **1.72bit 가 이상값이고 출하물은 1.75/2.13 임을 카드가 명시**(`5.8 GB ideal at 1.72 bits/weight` ↔ 실제 **5.95GB / 7.21GB**)
+> - ✅ **집계 평균이 실패 방식을 가린다고 스스로 적는다** — 경쟁 빌드 IQ2_XXS 의 선택적 붕괴를 수치로 보인다(**AIME26 57.5 · LiveCodeBench 56.4** ↔ **MMLU-Redux 88.93**) + *"which is why **casual testing misses the collapse**"* ⇒ [[측정도구-먼저-반증]] 벤더 자발 실행
+> - ✅ **2번째 모델 계열로 일반화 근거 제시**(Gemma-4-31B · *"the collapse is a property of the **methods** rather than of one base model"*)
+> - ✅ **효율 지표 자체 제시**(점수/GB: Bonsai **0.457** ↔ IQ2_XXS **0.257**)
+> 🔴 **그러나 방향이 한쪽이다** — 경쟁자 수치는 분해하고 **자기 수치의 분산은 접는다**: *"98.2% 유지"* 뒤에서 **14종 중 3칸은 양자화본이 FP16 보다 높다**(LiveCodeBench 90.07>90.05 · IFBench 74.00>71.00 · 코딩 89.42>89.07). 🔴 **그리고 tok/s 가 두 개다** — 수집기가 전한 **47 tok/s** 는 **M5 Max** 수치이고, 카드에는 *"standard laptop at **~28 tok/s**"* 도 있다([[한정어-탈락]] 주의).
+> 🏆 **볼트 발견 — 이 벤더의 `gguf.total` 은 비전 타워를 집계하지 않는다**: 카드 성분(24.35B 백본 + 2.54B 임베딩/LM헤드 + **0.46B 비전 타워** = 27.36B) 중 **앞 둘의 합 26.89B 가 `gguf.total` 26.896B 와 일치**한다. ⇒ 📌 **베이스 대비 −3.187% 편차의 절반 이상이 양자화 손실이 아니라 집계 범위 차이다** → [[대체필드-대조]] 결론 수정.
+> - 🔴 **미열람**: 화이트페이퍼 `PrismML-Eng/Bonsai-demo/bonsai-2-27b-whitepaper.pdf` · GGUF 파일 목록(mmproj 분리 여부) · **제3자 재현 0건**(전부 벤더 자체 측정)
+> - ⬆️ **[[Ternary-Bonsai-2-27B]] 신뢰도 medium → high 상향**(카드 공개 범위 근거)
 
 HF `prism-ml` · GitHub `PrismML-Eng` · prismml.com. **삼진(ternary) 양자화 전문 벤더.**
 

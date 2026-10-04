@@ -4,12 +4,33 @@ type: entity
 domain: video-saas
 tags: [기업, HuggingFace, 영상생성, 오디오생성, gated, 이스라엘]
 created: 2026-09-29
-updated: 2026-09-30
+updated: 2026-10-04
 sources: [LTX-2.5.md, LTX-2.md]
 reliability: medium
 ---
 
 # Lightricks
+
+> [!update] 2026-10-04 갱신 — 🏆🏆 **[[LTX-2.5]] 카드를 볼트가 처음 읽었다(5배치 "게이트" 결론은 경로 오류였다)** · 🔴 **게이트의 대가가 맞춤 광고 동의다**
+> **볼트 실측(2026-10-04T09:12:38Z)**: `Lightricks/LTX-2.5` DL(30일) **1,629,984** · 누적 **3,026,027** · likes **6,179** · trendingScore **407**(배치 모델 최고) · license **other** · lastModified **2026-10-02**(09-01 → 갱신됨).
+> 🔴🔴 **볼트 자기 오류 정정**: `raw/main/README.md` 는 **6회 연속 HTTP 401**(126B)이지만 **`https://huggingface.co/Lightricks/LTX-2.5` HTML 페이지는 익명 HTTP 200 · 231,894B 로 카드 본문 전체를 준다.** ⇒ ⚖️ **벤더는 `raw/` 다운로드만 잠갔고 읽기는 열어 뒀다. "벤더가 카드를 잠갔다"는 5배치 결론이 과도했다** → [[무응답-오귀속]] ④경로형.
+>
+> ## 🔴 라이선스 — **이 벤더의 사업 모델이 드러난다**
+> **LTX-2.x Community License** (`cardData.license_name` = `ltx-2.x-community-license-agreement` · 원문 `github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x`):
+> - **연매출 $10M 미만** → 상업·프로덕션 사용 **무료** · **단 *"Transfer of fine-tunes may require a paid license"***
+> - **연매출 $10M 초과** → **유료 상업 라이선스**
+> - 🆕 **매출 산정 범위 명시(볼트 발견)**: *"Revenue is measured **across the whole entity, including subsidiaries and affiliates under common control**."* ⇒ 🔴 **사업부 매출로 $10M 미만을 주장할 수 없다.**
+> - 🆕 **카드 텍스트는 구속력 없음 명시**: *"The full, **binding** terms live in LICENSE."*
+> - ✅ **자기 포지셔닝**: *"No per-generation billing, no per-seat lock-in, no forced API dependency"* + self-host
+> 🔴🔴 **게이트는 안전 장치가 아니라 리드 수집이다** — `extra_gated_description`: *"By clicking **'Agree and Access'** you acknowledge the Privacy Policy and **consent to receive offers and updates including targeted and personalized advertisements.**"* ⇒ 🎯 **읽기는 열고 받기에 마케팅 동의를 붙였다. 게이트의 위치가 목적을 드러낸다.**
+>
+> ## ✅ 기술 스택 (볼트 카드 실측 · 파일 목록 기준)
+> **22B DiT** 2계열(dev / distilled) · 양자화 **bf16 · comfy-int8-convrot**(🆕 **ComfyUI 전용 · ltx-pipelines/PyTorch 불가**) · **nvfp4**(🆕 **Blackwell / ltx-kernels 필요**) · 텍스트 인코더 **gemma4-12b**(+proj) · **영상 VAE(Conv) 와 오디오 VAE(+vocoder) 분리** · **×2 공간·시간 잠재 업스케일러**(다단 파이프라인 필수) · **`duration-head`**(🆕 용도: `--num-frames` 생략 시 자동 길이) · distilled LoRA 450
+> 🆕 **볼트 신규 3건**: ① **확산 비디오 디코더가 VAE 재구성 단계를 대체**(*"sharper faces, textures, on-screen text, better motion, fewer artifacts"*) ② **장면 복잡도·예산에 따른 동적 연산 배분**(고정 압축률 탈피) ③ **네이티브 멀티샷**(*"generate connected scenes in a single pass"*) ⇒ 🏆 **③이 볼트 [[video-saas]] 축에 직접 유효하다 — 컷 연결을 모델 안으로 옮긴다.**
+> ✅ **벤더 자발 한정**: *"applicability to emerging domains such as **robotics and physical AI is developing**"* → [[자기제한-명시]].
+> 🆕 **메타데이터**: `arxiv` **2601.03233**(🔴 **논문 존재 · 수집기 미보고 · 볼트 미열람 — 성능 수치가 여기 있을 수 있다**) · `demo` `app.ltx.studio/ltx-2-playground/i2v` · 카드 언어 **9종(ko 포함)** · 태스크 태그 **11종** · `tags` 에 **`diffusion-single-file`**(⇒ `safetensors.total`·`gguf.total` 둘 다 `None` 인 **이유를 벤더가 태그로 선언**한다 · [[메타데이터-부재-추론]]) · `pinned` true
+> 🔴 **성능 수치 0개 확증** — 231,894B 전문에서 품질 주장이 전부 정성어(*sharper · better motion · fewer artifacts*)이고 벤치·fps·해상도 수치가 없다. 🏆 **같은 배치 [[Video-Generation-Post-Training-Survey]] 가 영상 평가 관행을 서베이로 정리할 만큼 성숙했다고 적는데, 이 벤더(trendingScore 407 = 최고)는 측정값을 0개 낸다** → [[검사가능성-후퇴]] 영상 도메인 사례 확정.
+> 📉 **DL/♥ = 263.8 — 볼트 기준선 264.5 를 교차했다**(09-30 283.8 *"근접"* → 교차). 🔴 기준선 산출 근거는 오늘도 미재확인.
 
 > [!note] 정체
 > [[LTX-2.5]]·[[LTX-2]] 영상/오디오 생성 모델을 배포하는 **HuggingFace 조직 계정**. arXiv 2601.03233 의 저자 **29인** 규모로 보아 **개인이 아닌 연구팀을 갖춘 조직**이다(제1저자 Yoav HaCohen).
