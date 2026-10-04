@@ -4,12 +4,75 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-09-30
+updated: 2026-10-04
 sources: []
 reliability: medium
 ---
 
 # Lightricks/LTX-2.5 — 이미지 입력 영상 생성 모델
+
+> [!update] 2026-10-04 갱신 — DL(30일) **1,629,984** · 누적 **3,026,027**(볼트 실측 · **관측 2026-10-04T09:12:38Z**) · 🏆🏆 **볼트가 5배치 동안 "게이트로 카드 미확인"으로 적어 온 것이 틀렸다 — 게이트는 `raw/` 경로에만 있고 HTML 페이지는 익명 HTTP 200 이다** · 🔴 **게이트의 대가가 맞춤 광고 수신 동의다**
+> **볼트 독립 실측**: downloads(30일) **1,629,984** · downloadsAllTime **3,026,027** · likes **6,179**(수집기 6,178 = **+1**) · trendingScore **407**(일치 · 배치 모델 최고) · `safetensors.total` **None** · `gguf.total` **None** · license **other** · created **2026-07-23** · lastModified **2026-10-02T21:01:57Z**.
+> 🔵 **`lastModified` 가 2026-09-01 → 2026-10-02 로 움직였다** — 09-30 기록의 *"09-01"* 에서 갱신됐다(31일 만).
+>
+> ## 🏆🏆 볼트 자기 오류 4번째 — **게이트는 한 경로에만 있었다**
+> 이 페이지는 **09-30 에 5회 연속 게이트를 확인**하고 *"카드 내용 미확인"* 을 이월해 왔다. ✅ **오늘도 `raw/main/README.md` 는 그대로다**: **HTTP 401 · 126 바이트** · *"Access to model Lightricks/LTX-2.5 is restricted…"*(6회 연속 확인).
+> 🔴🔴 **그런데 볼트가 오늘 처음 다른 경로를 시도했다**: `https://huggingface.co/Lightricks/LTX-2.5` (HTML 렌더 페이지) ⇒ **HTTP 200 · 231,894 바이트 · 카드 본문 전체 포함.**
+> ⇒ ⚖️ **"벤더가 카드를 잠갔다"는 5배치 결론은 과도했다. 벤더는 `raw/` 다운로드만 잠갔고 읽기는 열려 있다.** 🏆 **그리고 이것은 [[무응답-오귀속]] 의 볼트 자기 오류 **4번째**이며 네 건이 전부 같은 구조다:**
+> | # | 날짜 | 증상 | 실제 원인 |
+> |---|---|---|---|
+> | ① | 09-29 | "arXiv 무응답" | **301 리다이렉트를 `-L` 없이 호출** |
+> | ② | 09-30 | `downloadsAllTime` = None | **`?expand[]` 파라미터 누락** |
+> | ③ | 10-02 | `safetensors.total` = None → "대조 불가" | **`gguf.total` 을 안 봄**([[대체필드-대조]]) |
+> | **④** | **10-04** | **"게이트로 카드 미확인"** | **`raw/` 만 막혔고 HTML 은 열려 있음** |
+> 🏆 **공통 구조: 한 경로의 실패를 대상의 속성으로 귀속했다.** ⇒ 📌 **볼트 규약 추가(즉시 발효): 접근 실패를 "대상이 막혔다"로 적기 전에 **최소 2개 경로**를 시도한다. HF 모델이면 `raw/` · HTML 페이지 · `api/models/{id}` 의 `cardData` 세 경로가 있다.** 🎯 **오늘 같은 배치 [[Agent-Reach]] 의 "중국어 README 로 영어 grep 0건"도 같은 계열이다 — 하루에 두 건이 나왔다.**
+>
+> ## ✅ 라이선스 — 수집기 확증 + **볼트가 조항 2개를 더 찾았다**
+> 카드 원문(볼트 HTML 실측):
+> > **Under $10M annual revenue** — Commercial and production use **at no cost** under the LTX-2.x Community License. **Transfer of fine-tunes may require a paid license**, in accordance with the LTX-2.x Community License.
+> > **Over $10M annual revenue** — Paid Commercial [license]
+> 🆕 **① 매출 산정 범위가 적혀 있다(수집기 미보고)**: *"**Revenue is measured across the whole entity, including subsidiaries and affiliates under common control.**"* ⇒ 🔴 **법인 단위 합산이고 자회사·공동지배 계열사를 포함한다. 사업부 매출로 $10M 미만을 주장할 수 없다.**
+> 🆕 **② 카드 텍스트는 구속력이 없다고 명시한다**: *"The full, **binding** terms live in LICENSE."* ⇒ ⚖️ **즉 위의 요약은 마케팅 문구이고 실제 조건은 별도 파일이다** — `cardData.license_link` = `https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x`(🔴 볼트 미열람).
+> 🎯 **수집기가 세운 신규 축 확증**: *"HF `license: other` 는 제한의 유무가 아니라 '제한의 형태'에 대한 정보가 0이다."* ✅ **볼트 보강 — `cardData` 에는 더 있었다**: `license_name` = **`ltx-2.x-community-license-agreement`** · `license_link` = GitHub LICENSE-2_x. ⇒ 📌 **`license` 필드만 보면 `other` 로 0 정보지만 `cardData.license_name`·`license_link` 는 이름과 원문 위치를 준다** — 🏆 **[[대체필드-대조]] 규약 1항(동의어 필드 열거)이 라이선스에서도 작동한다.** ⚖️ **따라서 "정보가 0"은 `license` 필드에 대해서만 참이다** → [[메타데이터-부재-추론]] 수정 등재.
+>
+> ## 🔴🔴 게이트의 정체 — **안전 게이트가 아니라 리드 수집 게이트다**
+> `cardData.extra_gated_description` 원문:
+> > *"By clicking **"Agree and Access"** you acknowledge the [Privacy Policy] and **consent to receive offers and updates including targeted and personalized advertisements.** You can unsubscribe at any time."*
+> ⇒ 🔴 **게이트를 통과하는 대가가 "맞춤·타깃 광고 수신 동의"다.** ⚖️ **통상의 게이트 명분(오용 방지·라이선스 동의 확인)이 아니다.** 📌 **`extra_gated_button_content` = `"Agree and Access"`.**
+> 🎯 **그리고 이것이 위의 경로 발견과 맞물린다: 읽기는 열려 있고 `raw/` 다운로드만 막혀 있다.** ⇒ 🏆 **구조가 설명된다 — 홍보 문구는 누구나 읽게 두고, 파일을 받으려는 사람에게서 마케팅 동의를 받는다. 게이트의 위치가 목적을 드러낸다.**
+>
+> ## ✅ 아키텍처 — 수집기 전건 확증 + 신규 3건 (볼트 카드 실측)
+> ✅ **파일 목록으로 확증**: `text_encoders/gemma4-12b-with-proj-ltx-2.5-bf16.safetensors`(**gemma4-12b 확증**) · `vae/ltx-2.5-video-vae-conv-bf16.safetensors`(Conv VAE — faster/lighter) + `vae/ltx-2.5-audio-vae-bf16.safetensors`(**Audio VAE + vocoder** ⇒ **영상·오디오 VAE 분리 확증**) · `model_patches/ltx-2.5-duration-head-bf16.safetensors`(🆕 **용도: `--num-frames` 생략 시 자동 길이**) · `latent_upscale_models/…spatial-upscaler-x2…` + `…temporal-upsc…`(**×2 공간·시간 업스케일러 확증 · 다단 파이프라인에 필수**) · `diffusion_models/ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors`(🆕 **ComfyUI 전용 · ltx-pipelines/PyTorch 불가**) · `…distilled-transformer-nvfp4.safetensors`(🆕 **Blackwell / ltx-kernels 필요**) · `loras/ltx-2.5-22b-distilled-lora-450-bf16.safetensors`
+> 🆕 **① 확산 비디오 디코더가 VAE 재구성 단계를 대체한다**: *"New diffusion video decoder — **replaces the VAE reconstruction stage**; sharper faces, textures, and on-screen text, better motion, and fewer artifacts."* ⇒ 🎯 **같은 배치 [[Video-Generation-Post-Training-Survey]] 가 정리한 "모션–외형 결합" 난점에 벤더가 디코더 교체로 대응한 사례.**
+> 🆕 **② 장면 복잡도에 따른 동적 연산 배분**: *"instead of locking every scene to one compression rate, our model **dynamically allocates compute by scene complexity and budget**."*
+> 🆕 **③ 네이티브 멀티샷**: *"**Native multishot generation** — generate connected scenes in a single pass."* ⇒ 🏆 **볼트 [[video-saas]] 축에 직접 유효하다 — 연결된 장면을 한 패스에 만드는 것은 영상 자동화 파이프라인의 컷 연결 문제를 모델 안으로 옮긴다.**
+> 🆕 **④ 벤더 자발 한정**: *"applicability to emerging domains such as **robotics and physical AI is developing**."* ⇒ ✅ [[자기제한-명시]] 사례(과대 적용을 스스로 차단).
+> ✅ **배포 철학 명시**: *"No per-generation billing, no per-seat lock-in, no forced API dependency"* + self-host.
+>
+> ## ✅ 성능 수치 0개 — **수집기 주장을 볼트가 독립 확증한다**
+> 수집기: *"🔴 카드에 성능 수치 0개 — 벤치·fps·해상도 수치 없이 라이선스 블록이 카드 상단을 차지한다."*
+> ✅ **볼트 확증**: 231,894B 카드 전문에서 품질 주장은 전부 **정성어**다(*sharper · better motion · fewer artifacts · flawless detail*). **벤치 점수·fps·해상도 수치가 없다.**
+> 🏆 **같은 배치 대조가 날카롭다**: [[Video-Generation-Post-Training-Survey]] 는 영상 평가 관행이 **서베이로 정리될 만큼 성숙**했다고 적는데, **같은 날 도착한 22B 영상 모델(trendingScore 407 = 배치 최고)은 측정값을 0개 공개한다.** ⇒ ⚖️ **[[검사가능성-후퇴]] 영상 도메인 사례로 확정 등재.** 🆕 **다만 볼트 신규 발견 — 논문이 있다**: `cardData.arxiv` = **2601.03233**(수집기 미보고). 📌 **수치는 카드가 아니라 논문에 있을 수 있다** → actionable.
+>
+> ## ✅ `safetensors.total`·`gguf.total` 부재 — **추정이 선언으로 승격됐다**
+> 수집기: *"✅ 둘 다 `None` 이고 `expand[]` 재조회에도 동일 ⇒ **진짜 부재**(단일 파일 분산 배포 구조 **추정** · [[무응답-오귀속]] '요청 미지정형' 아님으로 판정)."*
+> ✅ **볼트 재확증**(expand[] 11필드) 후 🏆 **추정의 근거를 태그에서 찾았다 — `tags` 에 `diffusion-single-file` 이 있다.** ⇒ 📌 **수집기가 "구조 추정"으로 남긴 것을 벤더가 태그로 **선언**한다.** ⚖️ **[[메타데이터-부재-추론]] 의 모범 사례: 한 필드의 부재(`safetensors.total`)가 다른 필드의 존재(`tags`)로 설명된다.**
+> 🆕 **기타 메타데이터(볼트 신규)**: `pinned` **true** · 카드 언어 **9종**(en·de·es·fr·**ko**·ja·zh·it·pt — **한국어 포함**) · 태스크 태그 **11종**(image/text/video/audio 조합 전부: `text-to-audio-video`·`image-text-to-audio-video` 등) · `demo` = `app.ltx.studio/ltx-2-playground/i2v`.
+>
+> ## 📈 지표 — **DL/♥ 가 볼트 기준선을 교차했다**
+> | 시점 | DL(30일) | 누적 | ♥ | **DL/♥** |
+> |---|---|---|---|---|
+> | 08-31 | 1,137,181 | — | 2,295 | 495.5 |
+> | 09-30 | 1,589,098 | 2,773,856 | 5,600 | 283.8 (*"기준선 264.5 에 근접"*) |
+> | **10-04** | **1,629,984** | **3,026,027** | **6,179** | 🔴 **263.8 — 교차했다** |
+> ⇒ ⚖️ **09-30 에 *"관심 우세 쪽으로 이동"* 이라 적은 궤적이 4일 만에 기준선을 넘었다.** 🔴 **단 09-30 기록대로 기준선 264.5 의 산출 근거는 오늘도 재확인하지 않았다** — **교차 자체는 사실이고, 교차의 의미는 기준선의 타당성에 의존한다.**
+> 🏆 **[[지표-창길이]] 정량 사례 — 30일 창이 성장을 6배 과소평가한다.** 09-30→10-04(4일): **30일창 +40,886** ↔ **누적 +252,171**. ⇒ **차이 211,285 가 창 밖으로 빠졌다.** 📌 **창 증분으로 성장률을 재면 실제의 약 16% 로 보인다** — 나이 73일 모델에서 30일 창은 성장 측정에 부적합하다.
+>
+> ### 원본 갱신
+> - 검증: **2026-10-04T09:12:38Z** HF 모델 API(expand[] 11필드) + **HTML 카드 231,894B(HTTP 200)** + `raw/README.md` **401(6회 연속)** 실호출 (볼트)
+> - 🏆 **해소**: 카드 내용 5배치 이월 종결(경로 문제였음) · 라이선스 조항 2건 추가 · 게이트 목적 규명 · `safetensors` 부재 원인(`diffusion-single-file`)
+> - 🔴 **잔존**: `LICENSE-2_x` 원문 미열람 · **arXiv 2601.03233 미열람**(성능 수치가 여기 있을 수 있다) · 기준선 264.5 근거 미재확인 · 볼트 실행 0건
+> - 신뢰도: ⭐⭐⭐ medium 유지 — 메타데이터·카드·라이선스는 실검증, **성능은 측정값 0개로 판정 불가**
 
 > [!update] 2026-09-30 갱신 — DL **1,589,098** · 🔴 **게이트 5회 연속 확인 — 그리고 정체가 "0행"이 아니라 HTTP 401 이다**
 > **HF API 실호출(2026-09-30 09:13 UTC)**: downloads(30일) **1,589,098**(수집기 **완전 일치 · 드리프트 0**) · downloadsAllTime **2,773,856**(수집기 **완전 일치**) · ♥**5,600**(수집기 5,597, **+3**) · license **other**(일치) · `image-to-video`(일치) · createdAt **2026-07-23** · lastModified **2026-09-01** · `safetensors` **null**(수집기 일치)

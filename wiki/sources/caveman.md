@@ -4,12 +4,44 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, skill, token-optimization, prompt-compression, llm-cost]
 created: 2026-07-03
-updated: 2026-10-03
+updated: 2026-10-04
 sources: []
 reliability: medium
 ---
 
 # caveman (JuliusBrussee/caveman)
+
+> [!update] 2026-10-04 갱신 — ★109,666 (볼트 실측 · **관측 2026-10-04T09:12:13Z**) · 🏆🏆 **배치 최대 발견: 수집기가 "신뢰도 보강"으로 전한 제3자 인용이 실제로는 이 레포의 핵심 주장을 반증한다** · 🔴 **65% 와 33.2% 는 시계열이 아니라 같은 레포 안의 동시 불일치다**
+> **볼트 독립 실측 ★109,666** ↔ 수집기 ★109,662 = **드리프트 +4**. 어제 볼트 실측 ★109,249 → **구간 증분 +417**(수집기 *"당일 +507"* 보다 **낮다** · 구간 길이 미확정).
+> ✅ **전 필드 일치**: fork **6,344** · open_issues **115** · **Apache-2.0** · topics **10** · created 2026-04-04 · 주언어 **Go**(10-03 볼트 확인 유지) · **pushed 2026-10-04T07:51:14Z = 관측 1시간 21분 전**. 🆕 watchers **253** · size **16,090KB**.
+>
+> ## 🏆🏆 arXiv 2606.24083 을 볼트가 직접 열었다 — **인용은 추천이 아니라 반박이다**
+> 수집기는 이것을 **신뢰도 자산**으로 전했다: *"🏆 배치 유일 '제3자 독립 인용' 보유 — Adobe Research 논문 arXiv 2606.24083 인용 · JetBrains A/B · Elasticsearch Labs 재구현 · HN 1위."*
+> ✅ **볼트 실검증(arXiv API 실호출)** — 논문은 실재한다:
+> - **제목: `CAVEWOMAN: How Large Language Models Behave Under Linguistic Input and Output Compression`**
+> - 저자 **Morayo Danielle Adeyemi · Ryan A. Rossi · Franck Dernoncourt** (Rossi·Dernoncourt = Adobe Research 소속으로 알려진 연구자 ⇒ 수집기의 "Adobe Research" 귀속은 **정합**)
+> - published **2026-06-23** · cs.CL/cs.AI/cs.LG · 초록 첫 문장이 **이 레포의 홍보문구 그대로**다: *"**Talk short. Drop grammar. Save token.**" This caveman style is widely promoted as a way to cut inference cost, **but whether it actually saves anything depends on which channel** (the user's prompt or the model's response) is being compressed.*
+>
+> 🔴🔴 **그 논문의 결론이 이 레포의 대표 수치와 정면 충돌한다.** 초록 원문:
+> > **"Input compression has the opposite effect, a strict lose-lose: it raises net cost rather than lowering it (~1.15x on the five-benchmark mean, up to 1.8x on the worst dataset and 2.7x under stronger compression), because models compensate with longer responses even as accuracy collapses."**
+> ⇒ ⚖️ **caveman 의 대표 수치는 "입력 토큰 −33.2%"(수집기 전달)이고, 논문이 "strict lose-lose" 라고 특정한 채널이 바로 그 입력 채널이다.**
+> 📌 **논문은 출력 압축은 효과가 있다고 적는다**(API 모델 **1.4~2.4배** 비용 절감 · 최상 3배 · 오픈웨이트 4종 전부). ⇒ 🎯 **즉 반박은 "압축이 무용하다"가 아니라 "채널을 틀렸다"다. 절감은 출력에서 나오고 입력 압축은 순비용을 올린다.**
+> 🏆 **측정 규모가 caveman 자체 측정보다 크다**: **모델 8종 × 데이터셋 5종 × 감축 수준 5단계, 두 채널을 같은 항목에서 측정** ↔ caveman 자체 측정은 **Claude Code 54회 실행 · 과제 18개**(수집기 전달) = 하네스 1종.
+> 🔴 **논문이 caveman 이 재지 않는 축을 하나 더 잰다**: *"non-reasoning 모델에서 생성물의 약 절반이 정답인데도 그 표면 텍스트가 모델 자신의 무제약 베이스라인을 더 이상 함의하지 않는다"*(length-controlled 재채점 · 다중비교 보정 · 대체 의미 척도 복제에서 생존). ⇒ ⚖️ **caveman 의 *"정답 18/18 유지"* 는 정확도를 보증하지만 의미 보존을 보증하지 않는다. 논문은 정확도를 통과한 출력의 절반이 의미적으로 이탈함을 보고한다.**
+>
+> ⚖️ **볼트 판정 — [[측정도구-먼저-반증]] 최상급 사례이자 [[관련성-판단-주체]] 사례다.**
+> 🎯 **"제3자 인용 보유"는 사실이지만 그 인용의 **부호**가 반대다. 인용 수를 신뢰도 지표로 쓰면 부호를 잃는다.** ⇒ 🏆 **볼트 신규 규칙: 제3자 인용은 "있다/없다"로 세지 않고 반드시 그 결론의 부호를 확인한다. 나를 인용한 논문이 나를 반박할 수 있다.**
+> 🔴 **미확인 2건(정직하게 분리)**: ① **논문이 `JuliusBrussee/caveman` 레포를 명시 인용하는지는 확인하지 않았다** — 초록만 읽었고 본문 참고문헌을 열지 않았다. 제목·첫 문장으로 **같은 기법을 다룬다는 것은 확실**하나 **이 레포를 지명했다는 것은 미확정**이다. ② **caveman README 가 이 논문을 어떻게 소개하는지 미열람** — 수집기 표현("인용 보유")이 *"논문이 우리를 인용했다"* 인지 *"우리가 논문을 인용했다"* 인지 구분되지 않는다. ⚖️ **후자라면 이 레포는 자기를 반박하는 논문을 자기 신뢰도 근거로 올린 셈이고, 전자라면 반박 논문에 인용된 것을 실적으로 전시한 셈이다. 어느 쪽이든 부호는 반대다.** → actionable 최우선.
+>
+> ## 🔴 65% vs 33.2% — **수집기가 넘긴 "시계열" 판정 요청에 답한다: 시계열이 아니다**
+> 수집기: *"볼트 [[caveman]] 페이지의 75%→65% 하향과 비교하면 README 대표 수치가 33.2% 로 더 낮다 ⇒ 하향이 이어졌다(⚠️ 단 65%와 33.2%는 측정 대상이 달라 같은 지표의 시계열이 아니다 — 볼트 판정 필요)."*
+> 🏆 **볼트 답: 두 수치는 과거·현재가 아니다. 지금 이 순간 같은 레포에 공존한다.**
+> ✅ **볼트가 GitHub API 로 읽은 `description` 원문(2026-10-04T09:12:13Z)**:
+> > `🪨 why use many token when few token do trick. Viral skill + proxy for coding agents that cuts 65% of tokens by talking like a caveman.`
+> ⇒ 🔴 **레포 설명문은 여전히 "65%"다. README 는 "입력 −33.2%"다**(수집기 전달). **같은 시점, 같은 레포, 두 수치.**
+> ⚖️ **판정: 이것은 [[자기제한-명시]](시간에 따른 자발적 하향)가 아니라 [[단위-불일치]] + [[표-부분인용]] 이다.** 📌 **description 은 전체 토큰 65%, README 는 입력 채널 33.2% — 분모가 다르고 둘 다 현행이다.** 🎯 **그리고 레포의 "첫인상 표면"(검색 결과·트렌딩 목록에 뜨는 것)은 description 이므로, 실질적으로 유통되는 수치는 더 높은 쪽인 65% 다.**
+> ⇒ 🏆 **10-03 에 볼트가 적은 *"자가 제출 수치는 시간이 지나면 내려간다"* 를 수정한다: 내려가는 것은 README 안쪽이고, 바깥 표면은 안 내려간다.** [[한정어-탈락]] 에 **"하향은 문서 깊이에 따라 불균등하다"** 로 등재.
+> 🔴 **그러므로 신뢰도를 올리지 않는다 — medium 유지**(10-03 과 동일). 하향의 존재가 성실성의 증거였는데, **표면이 그대로라면 그 증거가 약해진다.**
 
 > [!update] 2026-10-03 갱신 — ★109,249 (볼트 실측) · 🏆 **볼트가 3개월 전에 적은 경고가 확증됐다**
 > **볼트 독립 실측 ★109,249** ↔ 수집기 ★109,244 = **드리프트 +5**. 기존 베이스라인 ★82,003(2026-07-03) → **+27,246 / 92일 = 일평균 ≈296**.
