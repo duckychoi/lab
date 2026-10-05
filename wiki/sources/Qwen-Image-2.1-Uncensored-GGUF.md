@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, quantization, comfyui, qwen, uncensored, 원본-파생-역전, 파생저장소-식별, 대체필드-대조, 정규명-우선-중복검사]
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-05
 sources: [Qwen-Image-2.1.md]
 reliability: high
 ---
@@ -107,3 +107,25 @@ reliability: high
 - 출처: https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-GGUF
 - 신뢰도: ⭐⭐⭐ (DL 1,303,476 · 선언 관계·재현 커밋·SHA256SUMS / 🔴 벤치 수치 0개 · 무검열 기전 불명 · 상업 조건 미확인)
 - 검증: 2026-10-02 HF models API 실호출 — **DL30·DL누적 완전 일치** · ♥ +1 · trendingScore −3 · 🏆 **`gguf.total` 7,115,124,736 = 베이스 `safetensors.total` 교차 일치(볼트 자체 발견)** · `base_model_relation: quantized` 재확인
+
+---
+
+## 📥 2026-10-05 재관측 (자동수집 10-05 배치 · 갱신)
+
+**볼트 독립 실측 2026-10-05**: `downloads`(30일) **1,553,744** · `likes` **3,174** · `pipeline_tag` **text-to-image** · `gated` **False** · `safetensors` **미노출**(GGUF)
+**드리프트**: `downloads` **일치** · `likes` 수집기 3,173 → 볼트 **+1**
+
+> [!insight] 🎯 이 카드의 실측 가능한 값은 **VRAM 운용 수치**뿐이고, 그것이 결함이 아니다
+> `qwen-image-2.1-UC-Q4_K_M.gguf` ≈**4.6GB VRAM** · 텍스트 인코더를 시스템 RAM 오프로드 시 **VRAM 9~17GB 절감**(인코딩은 프롬프트당 1회라 속도 영향 거의 없음) · OOM 시 `--lowvram`.
+> ⚖️ **양자화 파생 모델에게 품질 벤치는 분모가 애매하다**(원본 대비 열화를 재야 하고, 그것은 원본 저자의 일이다). 📌 **운용 수치는 사용자가 직접 재현 가능한 값이고, 품질 주장보다 검증 가능성이 높다** → [[검사가능성-공사]].
+
+> [!warning] 🔴 "Benchmark" 절이 이미지 1장이다 — **[[벤치마크-이미지-봉인]] 유지**
+> `assets/Qwen-Image-2.1-Benchmark.png` 뿐이고 텍스트 수치가 0개다. **대조 불가.**
+> 🎯 **10-05 배치 맥락에서 이 봉인의 비용이 커졌다** — 같은 배치 [[SimuVerity]] 가 *"구조적 유사도는 공학 성능의 나쁜 대리 지표"* 라 결론 내고 **다차원 채점**을 요구한다. ⚖️ **이미지 1장은 어떤 차원도 제공하지 않는다.**
+
+> [!insight] 🏆 [[원본-파생-역전]] 추적 — 파생이 여전히 상위다
+> 이 GGUF 파생이 **다운로드 1,553,744** 로 10-05 HF 트렌딩 상위 10 중 **다운로드 3위**다. 원본 `Qwen-Image-2.1` 과의 비교는 **이번 배치에서 미수행**(수집기가 원본을 수집하지 않았다).
+> 🔴 **10-04 에 등록한 *"원본/GGUF 역전 — FP8 동반 추적으로 서빙수요 가설 판별"* actionable 이 미실행 이월**이다. ⚖️ **파생이 상위인 것은 확인되고, 이유는 2배치째 미확정이다.**
+
+**검증**: HF API 실측 · `likes` +1 드리프트
+**관련 추가**: [[벤치마크-이미지-봉인]] · [[검사가능성-공사]] · [[SimuVerity]] · [[원본-파생-역전]]

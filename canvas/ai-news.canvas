@@ -6128,6 +6128,106 @@
       "width": 420,
       "height": 300,
       "color": "2"
+    },
+    {
+      "id": "c-1005-hub",
+      "type": "text",
+      "color": "4",
+      "x": -100,
+      "y": 36580,
+      "width": 300,
+      "height": 140,
+      "text": "## 📥 2026-10-05 배치\n\n신규 7 · 갱신 8\n**축: 압축 매체의 유인 부호**\n\n[[ai-news]]"
+    },
+    {
+      "id": "c-1005-concept-sign",
+      "type": "text",
+      "color": "3",
+      "x": -520,
+      "y": 36780,
+      "width": 260,
+      "height": 140,
+      "text": "### 🆕 개념\n**[[숨김유인-부호]]**\n\n매체는 유인을 따른다\n방향은 주장 유형이 정한다\n(지지2·반례2·중립1)"
+    },
+    {
+      "id": "c-1005-concept-rank",
+      "type": "text",
+      "color": "3",
+      "x": -520,
+      "y": 36970,
+      "width": 260,
+      "height": 140,
+      "text": "### 🆕 개념\n**[[표본순위-전수순위]]**\n\n본체 누락 **199건**\n1위 [[reat-render]] 29회\n(10-04 는 2건만 특정)"
+    },
+    {
+      "id": "c-1005-src-motormind",
+      "type": "text",
+      "color": "5",
+      "x": -180,
+      "y": 36780,
+      "width": 240,
+      "height": 130,
+      "text": "**[[MotorMind]]**\n제로샷 조작 66.7%\n(기존 13.3% = 5배)\n실기 xArm6 95%"
+    },
+    {
+      "id": "c-1005-src-pivotsd",
+      "type": "text",
+      "color": "5",
+      "x": 100,
+      "y": 36780,
+      "width": 240,
+      "height": 130,
+      "text": "**[[Pivot-SD]]**\n질문 200개로 확산RL 이김\n2.8h vs 22.9h\nMBPP+ 는 미유의(자기고백)"
+    },
+    {
+      "id": "c-1005-src-hyper",
+      "type": "text",
+      "color": "5",
+      "x": -180,
+      "y": 36950,
+      "width": 240,
+      "height": 130,
+      "text": "**[[HyperBrowseComp]]**\n최고 31.68%\n🏆 인간↔모델 교집합 8문항\n동점 ≠ 동일 능력"
+    },
+    {
+      "id": "c-1005-src-simu",
+      "type": "text",
+      "color": "5",
+      "x": 100,
+      "y": 36950,
+      "width": 240,
+      "height": 130,
+      "text": "**[[SimuVerity]]**\n게이트 94.72→86.47→76.90\n최종 **42.86**\n③과 최종 사이 34점 소실"
+    },
+    {
+      "id": "c-1005-src-cot",
+      "type": "text",
+      "color": "5",
+      "x": -40,
+      "y": 37120,
+      "width": 280,
+      "height": 140,
+      "text": "**[[Efficient-Reasoning-CoT-Faithfulness]]**\n🏆🏆 제목 \"Not Always Harm\"\n↔ 초록 \"대부분 하락\"\n= 제목이 유리한 쪽"
+    },
+    {
+      "id": "c-1005-harness",
+      "type": "text",
+      "color": "2",
+      "x": 400,
+      "y": 36780,
+      "width": 260,
+      "height": 160,
+      "text": "## 🏆 하네스 축 수렴\n\n서로 모르는 **넷**이 같은 날\n\"점수 = 모델 × 하네스\"\n\n[[하네스-설계-축]]"
+    },
+    {
+      "id": "c-1005-action",
+      "type": "text",
+      "color": "6",
+      "x": 400,
+      "y": 37000,
+      "width": 260,
+      "height": 160,
+      "text": "## ⚡ actionable\n★ [[text-to-cad]] `cadgen` 실행\n★ 사용자 자산 20건 페이지화\n★ [[Zhipu AI]] 엔티티 신설\n★ [[reat]] ③ 게이트"
     }
   ],
   "edges": [
@@ -11319,6 +11419,132 @@
       "fromSide": "right",
       "toNode": "src-1003-sharpening-tax",
       "toSide": "left"
+    },
+    {
+      "id": "e1005-1",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-concept-sign",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-2",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-concept-rank",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-3",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-src-motormind",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-4",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-src-pivotsd",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-5",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-src-hyper",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-6",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-src-simu",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-7",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-src-cot",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-8",
+      "fromNode": "c-1005-src-cot",
+      "fromSide": "bottom",
+      "toNode": "c-1005-concept-sign",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-9",
+      "fromNode": "c-1005-src-pivotsd",
+      "fromSide": "bottom",
+      "toNode": "c-1005-concept-sign",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-10",
+      "fromNode": "c-1005-src-hyper",
+      "fromSide": "bottom",
+      "toNode": "c-1005-concept-sign",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-11",
+      "fromNode": "c-1005-src-motormind",
+      "fromSide": "bottom",
+      "toNode": "c-1005-concept-sign",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-12",
+      "fromNode": "c-1005-src-motormind",
+      "fromSide": "bottom",
+      "toNode": "c-1005-harness",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-13",
+      "fromNode": "c-1005-src-hyper",
+      "fromSide": "bottom",
+      "toNode": "c-1005-harness",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-14",
+      "fromNode": "c-1005-src-simu",
+      "fromSide": "bottom",
+      "toNode": "c-1005-harness",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-15",
+      "fromNode": "c-1005-src-simu",
+      "fromSide": "bottom",
+      "toNode": "c-1005-action",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-16",
+      "fromNode": "c-1005-concept-rank",
+      "fromSide": "bottom",
+      "toNode": "c-1005-action",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-17",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-harness",
+      "toSide": "top"
+    },
+    {
+      "id": "e1005-18",
+      "fromNode": "c-1005-hub",
+      "fromSide": "bottom",
+      "toNode": "c-1005-action",
+      "toSide": "top"
     }
   ]
 }

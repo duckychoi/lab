@@ -99,6 +99,26 @@
       "width": 440,
       "height": 330,
       "color": "1"
+    },
+    {
+      "id": "ov-판독규약",
+      "type": "text",
+      "color": "3",
+      "x": -300,
+      "y": 600,
+      "width": 320,
+      "height": 180,
+      "text": "## 🔎 과장 판독 규약 (전 도메인)\n\n[[측정도구-먼저-반증]] (상위 규칙)\n├ [[인용-부호]] — 제3자 인용의 방향\n├ **[[숨김유인-부호]]** 🆕 — 압축 매체의 유인\n├ [[매체가-숨긴다]] — 정직성 단위는 매체\n└ [[한정어-탈락]] · [[표-부분인용]] · [[복합지표-분해]]"
+    },
+    {
+      "id": "ov-자기점검",
+      "type": "text",
+      "color": "1",
+      "x": 100,
+      "y": 600,
+      "width": 320,
+      "height": 180,
+      "text": "## 🔴 볼트 자기 점검\n\n**[[표본순위-전수순위]]** 🆕\n본체 누락 **199건** (표본은 2건)\n사용자 자산 20페이지 / 171회 참조\n├ [[정규명-우선-중복검사]]\n└ [[선발창-누락]] (채널형으로 축소)"
     }
   ],
   "edges": [
@@ -187,6 +207,27 @@
       "fromSide": "right",
       "toNode": "hub-ai-news",
       "toSide": "left"
+    },
+    {
+      "id": "ov-e-판독",
+      "fromNode": "center",
+      "fromSide": "bottom",
+      "toNode": "ov-판독규약",
+      "toSide": "top"
+    },
+    {
+      "id": "ov-e-점검",
+      "fromNode": "center",
+      "fromSide": "bottom",
+      "toNode": "ov-자기점검",
+      "toSide": "top"
+    },
+    {
+      "id": "ov-e-news-판독",
+      "fromNode": "hub-ai-news",
+      "fromSide": "bottom",
+      "toNode": "ov-판독규약",
+      "toSide": "top"
     }
   ]
 }

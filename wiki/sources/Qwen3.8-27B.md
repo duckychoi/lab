@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba]
 created: 2026-08-18
-updated: 2026-10-04
+updated: 2026-10-05
 sources: []
 reliability: medium
 ---
@@ -413,3 +413,33 @@ Qwen/Qwen3.8-27B
 - 실측: HF API `?expand[]=downloads&downloadsAllTime&likes&safetensors&gguf&pipeline_tag&tags&createdAt&lastModified&baseModels&cardData` · 2026-10-01 09:21 UTC
 - dl30 **6,950,834** · 누적 **12,152,111** · ♥16,682 · `safetensors.total` **27,781,427,952**(BF16 단일)
 - 신뢰도: ⭐⭐⭐ (직접 실측 · 파라미터 총량 2일 연속 완전 일치)
+
+---
+
+## 📥 2026-10-05 재관측 (자동수집 10-05 배치 · 갱신)
+
+**볼트 독립 실측 2026-10-05**: `downloads`(30일) **6,821,761** · `likes` **16,960** · `pipeline_tag` **image-text-to-text** · `gated` **False** · `safetensors.total` **27,781,427,952**
+**드리프트**: 수집기와 **전 필드 일치**(관측 2026-10-05 09:02 UTC 병기 ✅)
+
+> [!insight] ✅ 10-04 "집계 결측" 판정이 해소됐다 — **다시 움직였다**
+> 10-04 에 `downloads` 가 전일과 **자릿수까지 동일**해 **「집계 결측」**으로 분류했다(같은 응답의 `likes` 는 +73 움직였음을 근거로 레코드 캐시를 기각).
+> **10-04 → 10-05**: `downloads` **6,895,117 → 6,821,761 = −73,356** · `likes` **16,898 → 16,960 = +62**.
+> ⚖️ **30일 창 지표가 감소하는 것은 정상이다**(창 밖으로 빠진 양 > 새로 들어온 양). 🏆 **즉 10-04 의 "0 증분"은 캐시도 정지도 아니었고, 창 경계 효과와 결측이 겹친 구간이었다** ⇒ 📌 **[[캐시된-지표-신선도]] 규약 유지**(판정 근거 2개 병기)하되, **"0 = 결측" 단정은 약화한다 — 30일 창에서는 0 이 실제값일 수 있다.**
+> 🎯 **그리고 −73,356 은 "인기 하락"이 아니다** — 분모가 30일 창이므로 **9월 초의 큰 유입이 창을 벗어난 것**과 구분되지 않는다 → [[지표-창길이]].
+
+> [!warning] 🔴 벤치 표 **열 귀속 미확정 — 3배치 연속**
+> 수집기가 이번에도 같은 한계를 보고했다: *"NL2Repo-Bench·DeepSWE 1.1·JobBench·WebArena-Verified 는 5열 중 3~4열만 파싱돼 **비교 상대를 특정할 수 없어 인용하지 않았다**"*(자사 1열 값만 기재).
+> ✅ **인용하지 않은 판단은 옳다** → [[표-부분인용]] 회피.
+> 🔴 **그런데 볼트가 10-04 에 *"게이트도 없고 HTML 이 익명 200 이다. 미해소 이유가 어렵다가 아니라 안 했다로 확정됐다"* 고 적고 또 안 했다.** ⚖️ **같은 문장을 두 배치 연속 쓴다 — 이것이 10-03 에 이름 붙인 Belief Trapping 이다.**
+
+> [!insight] 🎯 카드가 스스로 밝힌 평가 조건이 이번에도 그대로다
+> *"SWE-bench Pro·NL2Repo·QwenSWEBench 는 **Claude Code 하네스**로 평가했고 **일부 과제를 수정한 뒤 기준선을 재평가**했다"* ⇒ [[자기제한-명시]] 유지 사례이고, **비교 공정성 판단에 직접 영향**한다.
+> 🏆 **10-05 배치가 이 조건의 의미를 키웠다** — [[HyperBrowseComp]] 가 **모델 × 브라우징 설정 3종**으로 점수를 분해하고 [[SimuVerity]] 가 **게이트 3단 + 6차원**으로 분해한다 ⇒ 📌 **벤치 점수는 `모델 × 하네스` 의 값이라는 것이 같은 날 두 논문에서 독립적으로 전제됐다** → [[하네스-설계-축]].
+> ⚖️ **따라서 "Claude Code 하네스로 평가"는 각주가 아니라 점수의 일부다.**
+
+> [!note] 카드 자체 표 (10-05 수집기 재확인분 · 변동 없음)
+> Qwen3.8-27B vs Opus4.6 Max — **우위**: SWE-bench Pro **61.7 vs 53.4** · OSWorld-Verified **84.3 vs 72.7** · IFBench **79.5 vs 62.5** / **열위**: Terminal Bench 2.1 **73.0 vs 78.2** · GPQA Diamond **89.2 vs 91.3** · HLE **30.8 vs 40.0**
+> 자사 측정: QwenSWEBench 79.0 · LiveCodeBench v6 90.3 · WebArena-Verified 64.8 · Agents' Last Exam Pass@1 20.4
+
+**검증**: HF API 실측(전 필드 일치) · `safetensors.total` 27,781,427,952 재확인
+**관련 추가**: [[하네스-설계-축]] · [[HyperBrowseComp]] · [[SimuVerity]] · [[숨김유인-부호]]
