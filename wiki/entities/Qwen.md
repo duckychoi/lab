@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-10-04
+updated: 2026-10-10
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -82,3 +82,39 @@ reliability: medium
 ### 관련 페이지 추가
 - [[Qwen-Image-2.1]] · [[Qwen-Image-2.1-Uncensored-GGUF]] · [[abenzerps]] — 재배포자
 - [[원본-파생-역전]] · [[한정어-탈락]] — 모범 사례 · [[대체필드-대조]] · [[파생저장소-식별]]
+
+---
+
+## 🔄 2026-10-06/10-10 갱신 — 벤치 표 열 귀속이 확정됐다
+
+> [!insight] 🏆🏆🏆 볼트 3배치 연속 미해소(= 자체 Belief Trapping 선언) 항목이 해소됐다
+> [[Qwen3.8-27B]] 카드 `<th>` 파싱 결과 **열 순서 확정**: ① **Qwen3.8-27B** ② Qwen3.6-27B ③ Qwen3.7-Plus ④ Muse Glimmer-30B ⑤ Opus4.6 Max
+> ⇒ ✅ 10-04 수집기 가정("1열을 이 모델로")은 **옳았다.**
+>
+> **귀속 확정 후 이 조직 플래그십의 위치**
+> - **표 내 1위**: QwenSWEBench 79.0 · OSWorld-Verified 84.3 · LiveCodeBench v6 90.3 · AndroidWorld 81.9 · Terminal Bench 2.1 73.0
+> - **밀리는 축**: GPQA Diamond 89.2(**3위**) · HLE 30.8(**3위**) · NL2Repo-Bench 42.3(2위)
+> ⇒ ⚖️ **코딩·에이전트는 1위이고 프런티어 지식은 3위다.** "1위 모델"이라 쓰면 틀린다 → [[복합지표-분해]]
+
+> [!warning] 🔴 10-04 추측 1건이 틀렸다 — 표가 평평한 5열 격자가 아니다
+> **42.9 는 경쟁 모델 값이 아니라 Qwen3.8-27B 자신의 Agents' Last Exam `Score`** 이고 **같은 칸의 `Pass@1` 이 20.4** 다(40.0 은 Opus4.6 Max 의 HLE 로 추측이 맞았다).
+> ⇒ 🆕 **일부 행은 칸마다 2지표를 담는다**(`Pass@1`/`Score` · `Pass@3`/`Average` · `Without CI`/`With CI`) → 📌 **[[표-부분인용]] 규약 추가: 열 귀속을 확정해도 "칸 내부 지표 수"가 남는다.**
+
+> [!insight] With CI 가 별개 축이다
+> MathVision **90.0 → 94.6** · BabyVision **65.7 → 85.6(+19.9)** · CharXiv **83.7 → 90.2**.
+> ⚖️ **Opus4.6 Max 는 Without CI 만 보고 ⇒ 직접 비교 불가 구간.** → [[비매칭-비교]]
+> 📌 카드 각주 *"HLE: Judged by GPT-4o"*(심판 명시) · 하네스 **Claude Code 자인** → [[하네스-설계-축]]
+
+> [!insight] 📌 파생 생태계 — 이번 2배치에 3건
+> - [[Ternary-Bonsai-2-27B]]([[prism-ml]]) — 삼진 양자화 · `base_model` Qwen3.8-27B
+> - [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]([[ISTA-DASLab]]) — `base_model` Qwen3.8-Flash-Next · **`mmproj` 분리 확인**
+> - [[Qwen-Image-2.1-Uncensored-GGUF]]([[abenzerps]]) — `Qwen/Qwen-Image-2.1` GGUF · `license: other` ⚠️ **원본 라이선스 관계 미확인**
+> ⇒ 📌 **이 조직 모델이 양자화·우회 생태계의 기반이 되는 패턴이 지속된다.**
+
+> [!insight] 외부 측정 — [[Learn2Play]] Table 1
+> **Qwen 3.8 Max: Max 72.5 / Mean 51.1** (11종 중 중위권 · 최고 에이전트는 Claude Opus 5.5+OpenCode 80.1/61.0).
+
+## 관련 페이지 (갱신 추가)
+- [[Qwen3.8-27B]] · [[표-부분인용]] · [[복합지표-분해]] · [[비매칭-비교]]
+- [[Ternary-Bonsai-2-27B]] · [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] · [[Qwen-Image-2.1-Uncensored-GGUF]]
+- [[Learn2Play]] · [[지표-창길이]] · [[Alibaba]]

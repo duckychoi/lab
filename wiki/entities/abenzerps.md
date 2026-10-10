@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, quantization, gguf, comfyui, 원본-파생-역전]
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-10-10
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -32,3 +32,30 @@ reliability: medium
 ## 관련 페이지
 - [[Qwen-Image-2.1-Uncensored-GGUF]] — 주 레포 · [[Qwen]] — 베이스 제공자 · [[Qwen-Image-2.1]]
 - [[원본-파생-역전]] · [[파생저장소-식별]] · [[대체필드-대조]] · [[정규명-우선-중복검사]]
+
+---
+
+## 🔄 2026-10-10 갱신 — trending 5위, 12일 동결
+
+> [!insight] 산출물 갱신 — [[Qwen-Image-2.1-Uncensored-GGUF]]
+> 다운로드 **2,013,268**(30일 = **전체누적 동일**) · likes 3,801 · **trending 5위** · lastModified 2026-09-28 · created 2026-09-20
+> `gguf.total` **7,115,124,736**(71.2억) · 총 파일 **14.23GB** · 아키텍처 `qwen_image21` · `license: other`
+> 📌 금일 다운로드 1위는 [[Qwen3.8-27B]](6,783,589)였으나 **raw.md 10-06 배치에 URL 이 이미 있어 중복 제외**하고 본 모델을 1순위로 올렸다.
+
+> [!insight] ✅ `gguf.total` 우회법 재적용
+> `safetensors.total` 이 **`None`** 이므로 `gguf.total` 로 파라미터를 읽었다 — 볼트 **누적 우회법 ⑤** 재적용. → [[대체필드-대조]]
+
+> [!warning] 🔴 30일 == 전체누적 (2,013,268) — 성장률을 계산할 수 없다
+> ⚖️ **두 해석이 가능하고 단정하지 않는다**: ① 생성 20일째라 전 기간이 30일 창 안 ② `downloadsAllTime` 이 30일 값을 반영
+> 📌 **created 2026-09-20 이므로 ①이 더 그럴듯하지만 확인하지 않았다.**
+> ⇒ 🆕 **규약: `downloads`(30일) == `downloadsAllTime` 인 모델은 "창 길이가 무의미한 구간"이다.** 🔗 **금일 n=3**([[laya]] 41,468 · [[Ternary-Bonsai-2-27B]] 4,120,718) → [[지표-창길이]]
+
+> [!insight] 📌 [[캐시된-지표-신선도]] 역방향 — 모델은 멈췄고 수요만 움직인다
+> **12일간 갱신 없음인데 trending 5위**다. [[Agent-Reach]](21일 동결 · 증분 가속)의 **모델 버전**이고, 이번 2배치에서 **"동결 + 수요 증가"가 3건** 관측됐다.
+
+> [!warning] 🔴 미확인
+> **양자화 품질 손실 측정 0개** · `license: other` 와 **원본 Qwen 라이선스의 관계 미확인** · 제공자 실체 미조회.
+
+## 관련 페이지 (갱신 추가)
+- [[Qwen-Image-2.1-Uncensored-GGUF]] · [[지표-창길이]] · [[대체필드-대조]]
+- [[캐시된-지표-신선도]] · [[laya]] · [[Agent-Reach]] · [[Qwen]]

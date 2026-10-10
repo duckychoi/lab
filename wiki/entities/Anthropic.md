@@ -42,7 +42,7 @@ reliability: high
 
 ## 🔄 2026-10-10 갱신 — 공식 직무별 플러그인 11종 공개
 
-> [!insight] 신규 수집 산출물 — [[knowledge-work-plugins]]
+> [!insight] 산출물 갱신 — [[knowledge-work-plugins]](볼트 2026-05-25 보유 · ★14,447 → **+14,050 · +97.2% · 138일 만의 첫 재관측**)
 > **★28,497**(당일 +709 · 트렌딩 6위) · fork 3,258 · Apache-2.0 · Python · created 2026-01-23 · pushed 2026-10-10
 > 스킬·커넥터·슬래시커맨드·서브에이전트를 **직무 단위로 묶은 플러그인 11종**(productivity · sales · customer-support · product-management · marketing 등)을 Claude Cowork 용으로 공개하고 **Claude Code 호환**도 명시한다.
 >
