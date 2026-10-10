@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-10-05
+updated: 2026-10-10
 sources: []
 reliability: medium
 ---
@@ -263,3 +263,50 @@ DL **1,595,377**(30일 · 수집기와 **완전 일치, 드리프트 0**) · ♥
 
 **검증**: `api.github.com`/HF API 실측 + **HTML 카드 전문 232,827B 직접 열람**
 **관련 추가**: [[무응답-오귀속]] · [[메타데이터-부재-추론]] · [[검사가능성-후퇴]] · [[reat-voice]] · [[video-saas]]
+
+---
+
+## 🔄 2026-10-10 갱신 — 이월 3건은 그대로, 새 정보는 1건
+
+**다운로드 1,687,531**(30일) / **3,457,585**(전체누적) · likes **7,100**(배치 최대) · trending **7위**
+created 2026-07-23 · lastModified 2026-10-02 · `license: other` · 제공 [[Lightricks]]
+라이브러리 `diffusion-single-file` · ComfyUI 지원 · 언어 태그 `en`
+
+> [!insight] 기능 서술 (갱신) — 영상과 오디오를 동시 생성하는 경로를 가진다
+> image-to-video 모델인데 태그에 **text-to-audio · video-to-audio · audio-to-audio · text-to-audio-video · image-to-audio-video · image-text-to-audio-video** 가 함께 선언되어 있다(**태그 18개 중 오디오 관련 6개**).
+> 🎯 **볼트 한계 11번 재확인 — 오디오 동시 생성은 `video-saas.canvas` 에 들어가야 한다는 미처리 항목이 금일 태그로 또 확인됐다.**
+
+> [!warning] 🔴 이월 3건이 금일도 해소되지 않았다
+> 볼트 한계 목록 9번: *"[[LTX-2.5]] arXiv 2601.03233 미열람 2배치째 · 파라미터 수 미확인 · `gated: \"auto\"` 승인 미시도"*
+> - ① **`gated: "auto"` 그대로** — 익명 API 는 통과하지만 가중치 접근은 승인 필요이고 **금일 승인 시도 안 함**
+> - ② **`safetensors.total` 이 `None` 이고 `gguf` 도 `None`** ⇒ 📌 **파라미터 수를 메타데이터에서 얻을 수 없는 구조다**(`diffusion-single-file` 은 safetensors 메타 집계가 안 붙는다)
+> - ③ arXiv **2601.03233 3배치째 미열람**
+>
+> ⇒ 🆕 **누적 우회법 ⑦ 후보: `diffusion-single-file` 모델의 파라미터는 파일 목록(`/tree/main`)의 바이트 크기에서 역산해야 한다. 금일 미시도.**
+> 📌 대조: [[Qwen-Image-2.1-Uncensored-GGUF]] 는 `gguf.total` 로 얻었고([[대체필드-대조]] 우회법 ⑤), [[laya]] 는 `safetensors.total` 이 정상 집계됐다 ⇒ **라이브러리가 메타 집계 가능성을 결정한다.**
+
+> [!insight] 🏆 새 정보 1건 — 30일/전체누적이 분리된 유일한 금일 모델이다
+> **1,687,531 / 3,457,585** ⇒ **최근 30일이 전체의 48.8%**
+> ⇒ 📌 **창 길이가 결론을 바꾸는 실례다.** 10-05 [[marketingskills]] 평탄 성장 사례의 **반대편** — 여기서는 **성장이 최근에 쏠려 있다.**
+> 🎯 **[[지표-창길이]] 에 "쏠림 사례"로 기록한다.** 금일 다른 3건([[laya]] · [[Qwen-Image-2.1-Uncensored-GGUF]] · [[Ternary-Bonsai-2-27B]])은 **30일 == 전체누적(창 무의미 구간)** 이므로, **같은 배치에서 창 길이의 두 극단이 함께 관측됐다.**
+
+> [!warning] 🔴 벤치마크 수치 0개
+> 카드 메타에서 확인 가능한 성능값이 없다. ⚠️ `license: other`.
+
+> [!question] 미해결 (3배치 이월)
+> - arXiv **2601.03233 미열람**(3배치째).
+> - **파라미터 수 미확인** — 파일 목록 바이트 역산 **미시도**.
+> - `gated: "auto"` **승인 미시도** ⇒ 가중치 접근·실행 불가 상태.
+> - 오디오 동시 생성 경로를 **`video-saas.canvas` 에 미반영**(볼트 한계 11번).
+
+## 관련 페이지 (갱신 추가)
+- [[지표-창길이]] — 쏠림 사례(48.8%) · 금일 두 극단 동시 관측
+- [[대체필드-대조]] — 우회법 ⑦ 후보(바이트 역산)
+- [[laya]] · [[Qwen-Image-2.1-Uncensored-GGUF]] · [[Ternary-Bonsai-2-27B]] — 창 무의미 구간 쪽
+- [[marketingskills]] — 평탄 성장의 반대편
+- [[AI-영상-생성-2026]] · [[Lightricks]] · [[video-saas]]
+
+## 원본 (갱신)
+- 수집: 2026-10-10 자동수집 (ai-news)
+- 검증: HF API 실측(`safetensors.total` None · `gguf` None 확인 · 태그 18개)
+- 신뢰도: ⭐⭐⭐ (메타 실측 · 성능 측정 0 · 이월 3건 미해소)

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, anthropic, claude, api, agent-skills, bigtech, llm-vendor]
 created: 2026-07-12
-updated: 2026-08-26
+updated: 2026-10-10
 sources: [claude-cookbooks.md]
 reliability: high
 ---
@@ -37,3 +37,32 @@ reliability: high
 - 조직: Anthropic (Claude 개발사)
 - 대표 공식 레포: [[claude-cookbooks]](⭐48,084, MIT)
 - 신뢰도: ⭐⭐⭐⭐⭐ (LLM 1차 벤더, 공식 자료)
+
+---
+
+## 🔄 2026-10-10 갱신 — 공식 직무별 플러그인 11종 공개
+
+> [!insight] 신규 수집 산출물 — [[knowledge-work-plugins]]
+> **★28,497**(당일 +709 · 트렌딩 6위) · fork 3,258 · Apache-2.0 · Python · created 2026-01-23 · pushed 2026-10-10
+> 스킬·커넥터·슬래시커맨드·서브에이전트를 **직무 단위로 묶은 플러그인 11종**(productivity · sales · customer-support · product-management · marketing 등)을 Claude Cowork 용으로 공개하고 **Claude Code 호환**도 명시한다.
+>
+> 🎯 **"스킬 → 플러그인 → 직무"로 묶음 계층이 공식 공급자 쪽에서 나왔다.** 볼트 관측에서 이 층은 **3개 중 최상층**이다:
+> - 스킬 단위: [[mattpocock-skills]] · [[diagram-design]] · [[rea]]
+> - 하네스 제어면: [[t3code]]
+> - **직무 묶음: [[knowledge-work-plugins]]** ← 본 조직
+>
+> ⇒ ⚖️ 10-06 *"하네스 생태계가 층으로 쌓인다"* 가설의 **보강 증거이고 반증이 아니다.** → [[하네스-설계-축]]
+
+> [!warning] 🔴 공식 조직인데 측정이 없다
+> **플러그인이 업무 품질·시간을 얼마나 바꾸는지 측정이 전혀 없다.** `topics` **0개** · `description` **1줄** → [[메타데이터-부재-추론]].
+> ⚠️ **커넥터 의존이 크다** — 실행에 외부 SaaS 계정 필요(Slack · Notion · Asana · Linear · Jira · HubSpot · Intercom · Figma · Amplitude · Microsoft 365 등) ⇒ **볼트 환경에서는 대부분 돌지 않는다**(Gmail·Drive·Calendar 미인증).
+
+> [!note] 📌 볼트 관련 모델 계보 (이번 배치 교차 확인)
+> [[Learn2Play]] Table 1 에서 **Claude Opus 5.5 + OpenCode 가 최고 에이전트(Max 80.1 / Mean 61.0)** 로 측정됐고 **Claude Opus 5 는 74.5 / 53.8** 이다. 평가 모델 11종 중 이 조직 모델이 **4종**(Opus 5.5 / Opus 5 / Sonnet 5)이다.
+> 🔴 단 **인간 Top-1 이 Max 에서는 더 높다**(84.3) ⇒ 지표 선택으로 순위가 뒤집힌다 → [[복합지표-분해]]
+
+## 관련 페이지 (갱신 추가)
+- [[knowledge-work-plugins]] — 신규 산출물
+- [[하네스-설계-축]] — 3개 층의 최상층
+- [[Learn2Play]] — 모델 성능 외부 측정
+- [[에이전트-스킬]] · [[메타데이터-부재-추론]] · [[mattpocock-skills]]

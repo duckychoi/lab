@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [기업, HuggingFace, 영상생성, 오디오생성, gated, 이스라엘]
 created: 2026-09-29
-updated: 2026-10-04
+updated: 2026-10-10
 sources: [LTX-2.5.md, LTX-2.md]
 reliability: medium
 ---
@@ -71,3 +71,26 @@ reliability: medium
 > 🔴 **README 실측 = HTTP 401 · 126바이트** *"Access to model … is restricted … Please log in."* — **빈 파일이 아니라 인증 거부**다 → [[무응답-오귀속]].
 > 🔴 `safetensors` null 로 **샤드 역산 경로 폐기 확정**. ✅ 우회는 태그 **`arxiv:2601.03233`** 뿐(09-29에 이 경로로 "영상 14B+오디오 5B" 확보).
 > 🎯 **능력 확인된 것은 `pipeline_tag` 하나**(5회 연속). [[Qwen]] 의 apache-2.0+공개와 **정반대 극**.
+
+---
+
+## 🔄 2026-10-10 갱신 — [[LTX-2.5]] 이월 3건 미해소, 새 정보 1건
+
+**다운로드 1,687,531**(30일) / **3,457,585**(전체누적) · likes **7,100**(배치 최대) · trending 7위 · lastModified 2026-10-02
+
+> [!insight] 🏆 새 정보 — 30일/전체누적이 분리된 유일한 금일 모델이다
+> **최근 30일이 전체의 48.8%** ⇒ 📌 **성장이 최근에 쏠려 있다.** 10-05 [[marketingskills]] 평탄 성장의 **반대편 사례**이고, 금일 다른 3건([[laya]]·[[Qwen-Image-2.1-Uncensored-GGUF]]·[[Ternary-Bonsai-2-27B]])은 **30일 == 전체누적(창 무의미 구간)** 이다.
+> ⇒ ⚖️ **같은 배치에서 창 길이의 두 극단이 함께 관측됐다.** → [[지표-창길이]]
+
+> [!warning] 🔴 이월 3건이 금일도 해소되지 않았다
+> ① `gated: "auto"` **승인 미시도**(3배치째) ② `safetensors.total`·`gguf` **둘 다 None = 파라미터 수를 메타데이터에서 얻을 수 없다** ③ arXiv **2601.03233 3배치째 미열람**
+> ⇒ 🆕 **누적 우회법 ⑦ 후보: `diffusion-single-file` 모델의 파라미터는 파일 목록(`/tree/main`) 바이트에서 역산해야 한다. 금일 미시도.** → [[대체필드-대조]]
+
+> [!insight] 🎯 오디오 동시 생성 경로 — 볼트 한계 11번 재확인
+> 태그 **18개 중 오디오 관련 6개**(text-to-audio · video-to-audio · audio-to-audio · text-to-audio-video · image-to-audio-video · image-text-to-audio-video).
+> 📌 **`video-saas.canvas` 에 들어가야 한다는 미처리 항목이 금일 태그로 또 확인됐다.**
+
+## 관련 페이지 (갱신 추가)
+- [[LTX-2.5]] · [[지표-창길이]] — 쏠림 사례 48.8%
+- [[대체필드-대조]] — 우회법 ⑦ 후보
+- [[AI-영상-생성-2026]] · [[video-saas]]

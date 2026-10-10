@@ -2,9 +2,9 @@
 title: thedotmack/claude-mem — Claude Code 세션 간 컨텍스트 지속 플러그인
 type: source
 domain: ai-news
-tags: [ai-news, github-trending, claude-code, memory, context, session, plugin, llm-coding, workflow]
+tags: [ai-news, github-trending, claude-code, memory, context, session, plugin, llm-coding, workflow, 캐시된지표신선도, 관심검증역상관]
 created: 2026-04-13
-updated: 2026-04-17
+updated: 2026-10-10
 sources: []
 reliability: high
 ---
@@ -42,4 +42,54 @@ reliability: high
 
 ## 원본
 - 출처: https://github.com/thedotmack/claude-mem
-- 신뢰도: ⭐⭐⭐ (스타 60,473)
+- 신뢰도: ⭐⭐⭐ (볼트 구기록 ★60,473 → **2026-10-06 실측 ★96,801**)
+
+---
+
+## 🔄 2026-10-06 갱신 (인제스트 2026-10-10)
+
+**★96,801** (당일 +534 · **트렌딩 2위**) · fork 8,537 · watchers 308 · **v13.32.0**
+**open_issues 86 = 순수이슈 25 + PR 61** · Apache-2.0 · TypeScript · created 2025-08-31 · pushed 2026-10-06
+
+> [!warning] 🔴 볼트 기록이 크게 낡았다 — [[캐시된-지표-신선도]] 의 볼트 내부 버전
+> index.md:1609 는 **★60,473** 이고 2026-10-06 실측은 **96,801 = +36,328(+60.1%)** 이다.
+> 📌 **외부 필드 동결만 보지 말고 볼트 자기 기록의 나이도 지표다.** 이 페이지는 2026-04-17 이후 **약 6개월 미갱신**이었다.
+
+> [!insight] 갱신된 기능 서술
+> 세션 중 에이전트 활동을 캡처해 **AI 로 압축 저장**하고 다음 세션 시작 시 관련 컨텍스트를 자동 주입한다. 훅이 없는 하네스(Grok Bot)에는 **채팅 로그 파일 감시**로, OpenClaw 게이트웨이에는 설치 스크립트로 **각각 다른 경로**를 쓴다.
+
+> [!insight] 🏆🏆 배치 내부 교차 — 같은 날 트렌딩 4위 [[t3code]] 전용 설치 경로를 명시한다
+> `npx claude-mem install --ide t3code` · *"T3 Code 의 활성 provider 를 탐색해 각 provider 홈에 네이티브 플러그인 등록"*
+> ⇒ ⚖️ **같은 날 트렌딩 두 레포가 서로를 참조한다 = 하네스 생태계가 층으로 쌓이고 있다는 1차 증거**(t3code = 하네스 제어면 · claude-mem = 그 위 메모리층). 금일(10-10) [[knowledge-work-plugins]] 가 3번째 층이다.
+
+> [!warning] 💰 무료가 아니다 — 2026-04 기록에 없던 사실
+> 기본값이 **CMEM Pro(호스팅 메모리)** 이고 *"최대 14일 무료"* 후 Anthropic 플랜으로 폴백하거나 구독한다. **로컬 observer 는 opt-in**(`--provider host`).
+> ⚠️ **파이프-투-셸 설치 경로 보유**: `curl -fsSL https://install.cmem.ai/openclaw.sh | bash`
+
+> [!warning] 🔴 측정 수치 0개 — ★96,801 에 검증 0
+> 메모리 품질·검색 정확도·토큰 절감에 대한 벤치가 README 에 없다. 유일한 정량 표현은 *"up to 100% more usage from your plan"* 이라는 **플랜 소비 관련 마케팅 문구**이고 **능력 측정이 아니다.**
+> ⇒ 📌 [[관심-검증-역상관]] 후보(★96,801 · 검증 0).
+
+> [!warning] 🔴🔴 두 방향에서 전제가 압박받는다 — 볼트가 이번 배치에서 얻은 핵심
+> ① **[[MemAdapter]](같은 10-06 배치)**: *"올바른 메모리조차 아첨을 유발한다"* 를 측정했다 — 아첨 실패율 80.00 → 53.50 으로 줄이는 도구를 내면서 **claude-mem 의 "주입은 좋다" 전제를 측정 대상으로 만든다.**
+> ② **[[Learn2Play]](10-10 배치)**: **행동·피드백 전체 기록 보존이 규칙·전략으로 요약하는 것보다 효과적**이라고 측정했다 — claude-mem 의 **AI 압축** 설계와 **정면 충돌한다.**
+> ⇒ ⚖️ **즉 "압축 형태"와 "메모리 신뢰도" 두 축에서 동시에 반대 증거가 도착했다.** ★는 6개월간 +60% 늘었고 **검증은 여전히 0이다.**
+> 📌 [[대립레시피-동시도착]] · [[에이전트-메모리-레이어]] **"메모리 신뢰도" 축 신설 후보.**
+
+> [!question] 미해결
+> - 압축 품질 측정 **여전히 없음**(2026-04 기록의 *"압축 품질에 의존"* 우려가 6개월 후에도 미해소).
+> - CMEM Pro **가격·데이터 보존 정책** 미확인.
+> - 로컬 observer 모드의 **기능 동등성** 미확인.
+> - PR 61 / 순수이슈 25 = **PR 비중 71%** 의 의미 미확정.
+
+## 관련 페이지 (갱신 추가)
+- [[t3code]] — 상호 참조하는 하네스 제어면
+- [[MemAdapter]] — 전제를 측정 대상으로 만든 논문
+- [[Learn2Play]] — 압축 vs 원본 보존을 측정한 논문
+- [[캐시된-지표-신선도]] · [[관심-검증-역상관]] · [[대립레시피-동시도착]]
+- [[에이전트-메모리-레이어]] · [[knowledge-work-plugins]]
+
+## 원본 (갱신)
+- 수집: 2026-10-06 자동수집 (ai-news) · 인제스트 2026-10-10
+- 검증: GitHub API 실측 · `open_issues` 분해 86=25+61 검산 통과 · README i18n **26개 언어 이상**(한국어 `docs/i18n/README.ko.md`) — 10-04 [[ECC]] 14개 언어를 넘는다
+- 신뢰도: ⭐⭐⭐ (★96,801 · **능력 측정 0**)

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, alibaba, qwen, china, big-tech]
 created: 2026-06-26
-updated: 2026-09-19
+updated: 2026-10-10
 sources: [zvec.md, Qwen3.6-27B.md, Qwen3.8-27B.md, Qwen3.8-Flash-Next.md, Qwen3.8-27B-GGUF.md, MiniMax-H3.md, NeoHorse-1-Paper.md]
 reliability: high
 ---
@@ -94,3 +94,27 @@ reliability: high
 ## 원본
 - 대표 산출물: [[page-agent]] (GitHub ⭐20,091), [[Qwen-Image-Agent]] (HF papers)
 - 신뢰도: ⭐⭐⭐⭐ (빅테크, Qwen 오픈 모델 계보)
+
+---
+
+## 🔄 2026-10-10 갱신 — 자체 벤치마크를 가진 코드리뷰 도구 공개
+
+> [!insight] 신규 수집 산출물 — [[open-code-review]]
+> **★45,626**(당일 +326 · 트렌딩 5위) · fork 3,293 · Apache-2.0 · **Go** · created 2026-05-18 · pushed 2026-10-10
+> **OpenSSF Best Practices Gold 배지 보유 = 2026-10-10 배치 유일.**
+> 결정론적 파이프라인(NPE·스레드 안전성·XSS·SQL 인젝션 다언어 룰셋)과 LLM 에이전트를 함께 돌리고, **코멘트 위치 모듈과 코멘트 반추 모듈을 외부에 따로 둔다** → [[요약자와-판정자-분리]] 의 코드리뷰 구현체.
+
+> [!insight] 🏆🏆 이 조직이 2026-10-10 배치에서 유일하게 자체 벤치마크를 냈다
+> *"50개 인기 오픈소스 레포 · 실제 PR 200건 · 10개 언어 · 선임 엔지니어 80명+ 교차검증 · 정답 이슈 **1,505건** 주석"*
+> 🏆 **그리고 트레이드오프를 스스로 불리하게 적는다**: 범용 에이전트(Claude Code) 대비 **Precision·F1 은 높고 토큰은 ~1/9, 시간은 더 짧지만 Recall 은 더 낮다** 며 *"노이즈보다 정밀도를 택한 의도적 트레이드오프"* 라 한다.
+> ⇒ ⚖️ **[[복합지표-분해]] 자발적 사례 — 공급자가 지표를 분해해 자기 약점을 지목했다.**
+
+> [!warning] 🔴🔴 그런데 수치 표가 이미지다
+> `imgs/benchmark-en…` — **README 본문 정량값은 `~1/9 토큰` 과 벤치 구성 수치(50/200/10/1,505)뿐**이고 Precision·Recall·F1·Avg Time **실제 값은 텍스트로 없다.**
+> ⇒ 🆕 [[벤치마크-이미지-봉인]] **재발 1건**. **볼트 확인 필요: 이미지 OCR 또는 벤치 레포 원본.**
+
+## 관련 페이지 (갱신 추가)
+- [[open-code-review]] — 신규 산출물
+- [[복합지표-분해]] — 자발적 지표 분해
+- [[벤치마크-이미지-봉인]] — 재발
+- [[요약자와-판정자-분리]] · [[숨김유인-부호]] · [[Qwen]]

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github, agent-skills, cad, robotics, urdf, gcode, 3d-printing]
 created: 2026-09-10
-updated: 2026-10-05
+updated: 2026-10-10
 sources: []
 reliability: high
 ---
@@ -79,3 +79,51 @@ reliability: high
 
 **검증**: `api.github.com/repos/earthtojake/text-to-cad` 실측
 **관련 추가**: [[SimuVerity]] · [[측정도구-먼저-반증]] · [[검사가능성-공사]]
+
+---
+
+## 🔄 2026-10-06 갱신 (인제스트 2026-10-10)
+
+**★17,630** (볼트 구기록 **★17,036** → **+594**) · 당일 +437 · **트렌딩 3위** · fork 1,779 · watchers 92
+**open_issues 35 = 순수이슈 0 + PR 35** · MIT · Python · created 2026-04-22 · pushed 2026-10-06
+
+> [!insight] 🏆🏆 볼트 ★최우선 actionable 1건이 해소됐다 — `cadgen` 은 실존한다
+> **PyPI API 직접 조회(HTTP 200)**:
+> - `cadgen` **0.7.15** · 릴리스 **53개** · wheel **11,547,471B** · sdist **11,320,523B**
+> - 업로드 **2026-10-06**(수집 당일) · MIT · `requires_python >=3.11`
+> - summary: *"STEP-first CAD artifact generation runtime: build123d STEP/GLB/topology generation, validation, and inspection for CAD agent skills."*
+> - 의존성: **build123d >=0.11.1,<0.12 · cadquery-ocp-novtk >=7.9,<8 · ezdxf · shapely · playwright==1.63.0**
+>
+> ⇒ ⚖️ **"선언된 구현체 실존"은 확정이고 "실행 성공"은 아니다.** 볼트가 10-05 에 *"산출물 존재만 확인하면 끝"* 이라 적은 **그 범위까지만 해소됐다.**
+> 📌 [[선언된-구현체-공백]] **반례** — 빈 레포형이 아니다.
+
+> [!insight] 기능 서술 (갱신)
+> 평문/이미지 요청에서 **STEP 을 주 출력**으로 3D 모델을 만들고(STL·3MF·GLB 내보내기), 치수 기입 도면 **PDF·DXF** · **URDF/SRDF/SDF** 로봇 기술 파일 생성과 판금·CNC·사출 **DFM 검토** · OrcaSlicer **G-code** · Bambu 전송까지 **스킬 12종**으로 나눠 제공한다.
+
+> [!warning] 🔴 `has_issues: true` 인데 순수 이슈 0 · PR 35 = open_issues 의 100% 가 PR 이다
+> ⇒ 🆕 **[[지표-창길이]] 와 별개 축: `open_issues_count` 는 두 모집단의 합이고 비율이 레포 운영 방식을 드러낸다.**
+> 10-06 배치 5건 PR 비중: **100% / 71% / 74% / 54% / 54%** — **text-to-cad 가 극단값**이다.
+> 📌 금일(10-10) 배치 분포는 **8.6% / 28.7% / 43.6% / 59.4% / 75.3%** 로 **100% 는 재현되지 않았다.**
+
+> [!warning] 성능·정확도 수치 0개
+> 스킬 표는 **기능 서술만**이고 **CAD 생성 성공률·DFM 검출률 측정이 없다.** ★17,630 에 능력 근거 0.
+
+> [!note] 📌 `skills.sh` 배지 보유 = 배포 경로가 수렴한다
+> 10-05 기록 때와 동일한 스킬 프레임워크 배포 경로이고, **금일(10-10) 트렌딩 AI 5건 중 3건이 같은 경로**다([[rea]] · [[mattpocock-skills]] · [[diagram-design]]).
+> ⇒ ⚖️ **"스킬"이 레포 단위 배포 포맷으로 굳어가는 중이라는 관측의 가장 이른 사례 중 하나.** → [[에이전트-스킬]]
+
+> [!question] 미해결
+> - `cadgen` **실행 성공 미확인** — 실존만 확정됐다(`pip install cadgen` 미시도 · `playwright==1.63.0` 핀이 환경 충돌 가능).
+> - CAD 생성 **성공률·DFM 검출률** 미측정.
+> - 스킬 12종의 **개별 동작 검증** 0건.
+
+## 관련 페이지 (갱신 추가)
+- [[선언된-구현체-공백]] — 반례(PyPI 실존 확정)
+- [[지표-창길이]] — PR 비중 극단값 100%
+- [[에이전트-스킬]] · [[rea]] · [[mattpocock-skills]] · [[diagram-design]] — `skills.sh` 경로
+- [[t3code]] · [[knowledge-work-plugins]]
+
+## 원본 (갱신)
+- 수집: 2026-10-06 자동수집 (ai-news) · 인제스트 2026-10-10
+- 검증: GitHub API 실측 · `open_issues` 분해 35=0+35 검산 통과 · **PyPI API `cadgen` 0.7.15 실존 확정(HTTP 200)**
+- 신뢰도: ⭐⭐⭐⭐ (구현체 실존 확정 · 능력 측정 0)
