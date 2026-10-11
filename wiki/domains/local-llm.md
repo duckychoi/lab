@@ -4,11 +4,24 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-10-03
+updated: 2026-10-11
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
 # Local/Edge LLM + 에이전트 메모리 누적 인사이트
+
+> [!insight] 🔄 2026-10-11 배치 — 3건 재판정 유입([[REMORY]] · [[Underdog-Saluki-27B]] · [[embeddinggemma-2-GGUF]]) · 엔티티 신설 3([[ConwayResearch]] · [[unsloth]] · [[mksglu]])
+> 🎯 **도메인 축 = "메모리의 효과는 정답률이 아니라 재시도 낭비 제거로 먼저 나타난다"**(금일 최대 전환).
+>
+> **① 🏆🏆 [[claude-mem]] 전제에 3번째 압박 축이 생겼다 — 측정 축 자체가 틀렸을 수 있다.** [[REMORY]]: BrowseComp 도구 출력 **반복 25,801 → 18,105(-29.8%)** · **오류 25,244 → 12,698(-49.7%)** · Terminal-Bench 오류 933 → 568(-39.1%). 🎯 **점수 상승(+3.0)보다 오류 감소(-49.7%)가 압도적으로 크다.** ⇒ 📌 **볼트가 [[claude-mem]] 에 요구해 온 측정은 "정답률"이었고, 이 논문은 그 요구가 잘못된 축일 수 있다고 말한다.** 선행 2건: 10-10 [[MemAdapter]](올바른 메모리조차 아첨 유발) · 10-10 [[Learn2Play]](전체 기록 보존 > 요약).
+>
+> **② 🏆 [[REMORY]] 가 [[복합지표-분해]] 최정밀 사례를 만들었다.** SummHay Joint **43.39 vs raw 43.41**(차 **0.02**)로 "동급"이 참인데, 분해하면 **Citation F1 +4.43**(raw 를 넘음) · **Coverage -4.51**(raw 에 못 미침) ⇒ **동급은 두 반대 오차의 상쇄다.** ⚖️ **초록이 스스로 두 축을 쪼개 적었으므로 은폐가 아니다.** 🎯 **실용 번역: 입력의 5.2% 로 약 19배 압축하면서 커버리지를 팔아 인용 정확도를 샀다.** 🔴 **동결 LLM 기준이라 볼트급 적용 가능성이 있으나 소프트 토큰은 API 모델에 못 쓴다** ⇒ **Hermes 직접 적용은 NO, 설계 교훈(요약 + 원문 포인터 2층)은 YES.**
+>
+> **③ 🏆 [[Underdog-Saluki-27B]] — 볼트가 본 양자화 트레이드오프 중 분해가 가장 잘 된 사례.** 크기 **-85.4%**(54GB → **7.89GB** IQ2) · 도구호출 **+4.8%**(84 → **88**/120 BFCL v4) · 병렬 도구호출 **42 vs 35** · 🔴 **추론 -18.1%**(AIME 2025 **96.7 → 79.2**) · MuSR -12.1. 🎯 **패턴: 지시이행·도구호출은 유지되고 수학·다단계 추론이 무너진다.** ⇒ 📌 **용도를 갈라야 한다 — "로컬 에이전트의 손발"로는 후보, "머리"로는 탈락.** 🔴 카드의 *"9개 벤치 96% 평균 보존"* 은 **목록·계산식 부재**(표에 7개)이고 볼트 역산은 BFCL 2종 포함 가정 시 **95.7%**(추정, 확정 아님) ⇒ **도구호출 120% 가 추론 손실을 희석한다.**
+>
+> **④ ✅ [[embeddinggemma-2-GGUF]] — 금일 배치 최저 실행 문턱이고 볼트 용도에 가장 가깝다.** 740M(텍스트 270M + 비전 170M + 오디오 300M) · **768차원 한 공간에 텍스트·이미지·영상·오디오** · GGUF · llama.cpp. 🎯 **볼트 자산(영상·이미지·문서)을 한 인덱스에 넣는 용도 = 조건부 YES.** 🔴 **단 한국어 성능이 카드에 없다** — **볼트 용도의 전제인데 모른다** ⇒ ★최우선 action. 🔴 **GGUF 자체 벤치 0건**(수치는 전부 원본 전정밀도) ⇒ [[배포출처-봉인]]. **차원 절단 실측**: 256d 까지 거의 무손실 · **128d 는 멀티모달 크게 저하**(카드 명시) · code 축이 절단에 가장 취약(-1.44).
+>
+> **⑤ 🔴 볼트 도메인 분류가 GGUF 에 대해 일관되지 않다 — 린트 항목으로 올린다.** 같은 성질의 GGUF 양자화가 [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] 는 `local-llm` 인데 [[Qwen-Image-2.1-Uncensored-GGUF]]·[[Ternary-Bonsai-2-27B]] 는 `ai-news` 다. ⇒ 📌 **금일 2건을 `local-llm` 로 재판정한 근거는 전자 선례인데, 후자와 충돌한다.** ⚖️ **판정 기준을 세워야 한다**(제안: **온디바이스 실행 가능성이 페이지의 주된 내용이면 `local-llm`**).
 
 > [!insight] 🏆 2026-10-03 — **논문 4건 유입. "커버리지"가 이 도메인의 새 공통 통화가 됐다**
 > 오늘 배치에서 `local-llm` 으로 분류된 신규 4건: [[On-Policy-or-Off-Policy-Distillation]](Cambridge · upvote 130) · [[Sharpening-Tax]](Meta+3기관 · 69) · [[Beyond-Memory-PoS]](Alibaba · 71) · [[HC-DLM]](UIUC+Amazon · 70).

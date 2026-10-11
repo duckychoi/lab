@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-10-11 (⏳ **대기 13건** — 10-11 자동수집: GitHub 5 · HF논문 5 · HF모델 3. 전부 당일 API 실측 · 중복 12건 자체 제외(URL 기준) · 본문 열람 5/5. 🔴 **HF 데일리 페이퍼가 2026-10-09 에서 정지** — 논문 5건은 10-09 목록의 비중복 차순위다. 직전 10-10 배치 26건은 전량 처리 완료)
+updated: 2026-10-11 (✅ **대기 0건** — 10-11 자동수집 **13건 전량 처리 완료**: 신규 9 · 갱신 5(+연쇄 2) · 개념 신설 0(의도) · 개념 갱신 13 · 엔티티 신설 4 · 도메인 재판정 5. 🏆 **볼트가 수집기 🏆 주장 1건을 API 재조회로 반증**([[원본-파생-역전]]: 원본 45,605 → 실측 **98,829**, 단일 역전 불성립 → **집계 역전 2.082배**로 재확립) · 🔴 **볼트 자기정정 3건**([[artcraft]] 생성일 의심 · "헤더가 묵었다" 오진 · [[unsloth]] 엔티티 중복 생성) · 🏆 **세션 중 배달 포착 6배치 연속** · ✅ **볼트 API 독립 호출 12회**)
 ---
 
 # Raw 대기열
@@ -18,7 +18,7 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 
 ---
 
-## ✅ 2026-10-10 전량 처리 완료 (26건) — *신규 대기 13건은 파일 하단 `## 대기 중: **13건** — 2026-10-11 자동수집` 참조*
+## ✅ 2026-10-10 전량 처리 완료 (26건) · ✅ **2026-10-11 전량 처리 완료 (13건)** — *대기 0건. 세부는 파일 하단 `## 대기 중: **0건**` 및 `log.md` 참조*
 
 **2026-10-10 일괄 인제스트: 26건**(10-10 자동수집 13건 + 선행 10-06 자동수집 13건 미처리분) → **신규 소스 14 · 갱신 12 · 개념 신설 6 · 엔티티 신설 6 · 엔티티 갱신 8 · 재판정 0.**
 볼트 단일 배치 최대 처리량이다. 세부는 `log.md` 2026-10-10 항목과 `index.md` sources 섹션 참조.
@@ -196,6 +196,8 @@ LLM이 처리(ingest) 완료하면 해당 항목을 즉시 삭제한다.
 ---
 
 ### 이전 배치 처리 이력
+
+✅ **2026-10-11 자동수집 13건 전량 ingest 완료 후 삭제됨**(GitHub 5 · HF논문 5 · HF모델 3) — **신규 9**([[artcraft]]·[[MiMo-V2.6-Tech-Report]]·[[SimpleICL]]·[[ME-World]]·[[OuroWorld]]·[[REMORY]]·[[embeddinggemma-2-GGUF]]·[[Underdog-Saluki-27B]]·[[BFS-Best-Face-Swap]]) · **갱신 5**([[rea]]·[[context-mode]]·[[diagram-design]]·[[mattpocock-skills]]·[[unsloth]]) **+ 연쇄 갱신 2**([[MiMo-V2.6-Pro-RL]]·[[MiMo-V2.6-RL-Livestream]]) · **개념 신설 0**(의도 — 10-10 n=1 조기신설 자기지적 반복 안 함) · **개념 갱신 13** · **엔티티 신설 4**([[storytold]]·[[mksglu]]·[[Alissonerdx]]·[[ConwayResearch]]) — 🔴 unsloth 는 선행 소스 페이지 보유로 **병합** · **도메인 재판정 5**(video-saas 2 · slam-3dgs 3 · local-llm 3 — [[artcraft]]·[[BFS-Best-Face-Swap]]·[[SimpleICL]]·[[ME-World]]·[[OuroWorld]]·[[REMORY]]·[[embeddinggemma-2-GGUF]]·[[Underdog-Saluki-27B]]). 🏆 **볼트 최초 벤더 2산출물 교차검증**([[MiMo-V2.6-Tech-Report]] ↔ [[MiMo-V2.6-Pro-RL]] 7개 벤치 전건 일치) · 🔴 **수집기 정정 1건**(원본 다운로드 45,605 → 실측 **98,829**) · 🔴 **볼트 자기정정 1건**([[artcraft]] 생성일 의심이 틀렸다) · ✅ **볼트 API 독립 호출 12회**(GitHub 5 + `/license` 1 + HF 4 + 파생 열거 1). 처리 결과는 `log.md` 의 `## [2026-10-11] ingest` 참조.
 
 ✅ **2026-10-10 일괄 처리 — 26건 전량 ingest 완료 후 삭제됨**(10-10 자동수집 13건: GitHub 5 · HF논문 5 · HF모델 3 / **10-06 자동수집 13건 미처리 이월분**: GitHub 5 · HF논문 5 · HF모델 3) — **신규 14**([[rea]]·[[AgentGarten]]·[[Learn2Play]]·[[TokenRouter]]·[[Trace2Env]]·[[SuperNav]]·[[laya]]·[[e2e]]·[[t3code]]·[[SearchJev]]·[[Noise-Out-Bias-In]]·[[MemAdapter]]·[[RobotUse]]·[[QuantCode]]) · **갱신 12**([[open-code-review]]·[[mattpocock-skills]]·[[diagram-design]]·[[knowledge-work-plugins]]·[[claude-mem]]·[[text-to-cad]]·[[Agent-Reach]]·[[LTX-2.5]]·[[Qwen3.8-27B]]·[[Ternary-Bonsai-2-27B]]·[[Qwen-Image-2.1-Uncensored-GGUF]]·[[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]) · **개념 신설 6**([[배수-조건분산]]·[[임계-의존-성공률]]·[[유의성-자기제한]]·[[특화-역류]]·[[캘리브레이션-붕괴]]·[[배포출처-봉인]]) · **엔티티 신설 6**([[convaiinnovations]]·[[morluto]]·[[mattpocock]]·[[cathrynlavery]]·[[tester-army]]·[[pingdotgg]]) · 중복 제외 1건([[Qwen3.8-27B]] — HF 다운로드 1위였으나 10-06 배치에 URL 중복). 🎯 **볼트 3배치 연속 미해소 2건 해소**([[Qwen3.8-27B]] 벤치 표 열 귀속 · [[text-to-cad]] `cadgen` PyPI 실존).
 ✅ **2026-09-26 자동수집 13건 전량 ingest 완료 후 삭제됨**(GitHub 5 · HF논문 5 · HF모델 3) — 신규 **7**([[paperclip]]·[[hindsight]]·[[WROP-Object-Permanence]]·[[Superposition-Linearity]]·[[WanPE]]·[[OmniEcho]]·[[AEWM]]) · 갱신 **5** · 신설 엔티티 **3**([[paperclipai]]·[[vectorize-io]]·[[Prime-Radiant]]) · 개념 신설 **1**([[벤치마크-이미지-봉인]]) · 개념 갱신 **10** · 도메인 재판정 **1**([[WanPE]]→`video-saas`). 처리 결과는 `log.md` 의 `## [2026-09-26] ingest | 09-26 자동수집 배치 13건` 참조.
@@ -580,170 +582,19 @@ GitHub 5건 ★드리프트 **−1 ~ +8** · fork 2건 +1 · `open_issues`·라�
 
 ---
 
-## 대기 중: **13건** — 2026-10-11 자동수집 (GitHub 5 · HF논문 5 · HF모델 3)
+## 대기 중: **0건** — ✅ 2026-10-11 전량 처리 완료
 
-**측정 시각: 2026-10-11** · 스타·다운로드는 전부 당일 API 실측(`api.github.com/repos/...`, `huggingface.co/api/models?expand[]=downloads`)이다. 캐시·기억값 사용 0건.
-**중복 제외 12건 명시**(볼트 `grep -rl` 집행 결과, 볼트 10-10 요청 3번 이행): GitHub 0건 제외 / HF논문 5건 제외([[AgentGarten]]·[[Learn2Play]]·[[TokenRouter]]·[[Trace2Env]]·[[SuperNav]] — 전부 10-10 배치 URL 중복) / HF모델 7건 제외([[Qwen3.8-27B]]·[[Ternary-Bonsai-2-27B]]·[[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]]·[[Qwen-Image-2.1-Uncensored-GGUF]]·[[DavidAU-Qwen3.8-27B-TURBO]]·[[Qwen3.8-Flash-Next]]·[[LTX-2.5]] — 전부 URL 중복) ⇒ **차순위를 올렸다.**
+**2026-10-11 일괄 인제스트: 13건**(GitHub 5 · HF논문 5 · HF모델 3) → **신규 소스 9 · 갱신 5**(+MiMo 연쇄 2) **· 개념 신설 0**(의도) **· 개념 갱신 13 · 엔티티 신설 4 · 도메인 재판정 5.**
+🏆 **발단 기록 — 세션 중 배달을 또 포착했다(6배치 연속). 그리고 볼트의 첫 해석은 틀렸다.**
+✅ **볼트 첫 읽기 시점 raw.md 는 진짜로 대기 0건이었다** — 프론트매터 `updated: 2026-10-10 (✅ 대기 0건)` · `## 대기 중: **0건**` · **`grep -c '^- URL:'` = 0**(첫 읽기 원문 보존본으로 교차 확인).
+🎯 **그 직후 수집기가 세션 중에 13건을 배달했다.** 재검사에서 `^- URL:` **13건**이 잡혔고, **수집기는 프론트매터를 `⏳ 대기 13건` 으로, 상단 헤더를 *"신규 대기 13건은 파일 하단 참조"* 로 정확히 갱신해 두었다.**
+⇒ 🏆 **즉 `log.md` 09-27 절차(*"첫 읽기에 0건이어도 즉시 '없음'을 적지 말고 감시로 전환한다"*)가 6배치 연속 값을 했다.** 📌 **지시문대로 즉시 *"대기 항목 없음"* 을 적었다면 금일 13건을 통째로 놓쳤고, 그것이 10-06 의 실패 경로다.**
+🔴 **볼트 자기정정**: 볼트는 이 상황을 처음에 *"상단 헤더가 묵어서 하마터면 10-06 을 반복할 뻔했다"* 로 적었다. **틀렸다.** 헤더는 묵지 않았고 **배달 시점에 정확히 갱신됐다** — 볼트가 본 "0건"은 **오래된 헤더가 아니라 배달 전의 참값**이었다. ⇒ ⚖️ **수집기 책임이 아니라 타이밍이고, 수집기 보고 품질을 깎을 근거가 아니다.**
+🆕 **규약(수정): 대기 여부는 헤더 신뢰 여부와 무관하게 `grep -c '^- URL:'` 로 판정하고, 0건이면 즉시 종료하지 않고 1회 재검사한다.** 📌 **헤더를 의심하는 규약이 아니라 배달 타이밍을 흡수하는 규약이다.**
+세부는 `log.md` 2026-10-11 항목과 `index.md` sources 섹션 참조.
 
----
 
-## [2026-10-11] 자동수집 | rea — 에이전트 기반 역공학 CLI
-- URL: https://github.com/morluto/rea
-- 도메인: ai-news
-- 스타수: ★82,234 (API 실측 2026-10-11) / 당일 트렌딩 1위 · +25,793 stars today
-- 한줄요약: 앱 동작부터 네이티브 바이너리까지 에이전트로 역공학하는 CLI. 기능 서술은 능력 주장이고 자체 벤치는 없다.
-- 볼트 상태: **갱신**(`rea.md` 보유 — 10-10 기준 ★56,977)
-- 🔴 **1일 증분 +25,257 = +44.3%** — 볼트 기록 중 단일 레포 최대 일증분이다. 10-10 수집 시점 56,977 → 금일 82,234. ⇒ [[캐시된-지표-신선도]] **하루 만에 1.44배**이므로 이 레포의 ★ 인용은 날짜 없이는 무효다.
-- 실측 보강: MIT · TypeScript · 생성 2026-04-14 · 푸시 2026-10-11(활동 중) · fork 17,756 · `open_issues` 147
-- ⚖️ 수집 중 2회 조회에서 ★82,143 → ★82,234(+91, 약 6분 간격) — **지표가 실시간으로 움직이는 구간**이다. 볼트 인제스트 시 재조회를 권한다.
-
-## [2026-10-11] 자동수집 | ArtCraft — 생성 전 장면을 구성하는 이미지·비디오 제작 IDE
-- URL: https://github.com/storytold/artcraft
-- 도메인: ai-news
-- 스타수: ★15,441 (API 실측 2026-10-11) / +3,222 stars today (트렌딩 3위)
-- 한줄요약: 프롬프트 대신 2D·3D 컴포지팅·캐릭터 포징·카메라 배치로 **입력을 통제한 뒤** 생성하는 데스크톱 앱. 모델을 만들지 않고 모델 호출의 조건을 만든다.
-- 볼트 상태: **신규**(`grep -rl storytold/artcraft wiki/sources/` → 0건)
-- 실측 보강: Apache-2.0 · Rust · 생성 **2022-03-31**(금일 배치 최고령) · 푸시 2026-10-10 · fork 2,484 · `open_issues` 160 · topics `ai, aivideo, imagegeneration, filmmaking, 3d-graphics` · 홈페이지 getartcraft.com
-- 📌 **생성 4.5년 차 레포가 당일 3위에 올랐다** — 금일 다른 AI 레포 4건은 전부 2026년 생성이다. ⇒ [[관심-검증-역상관]] 검증 후보: 오래된 레포의 트렌딩 진입은 신규성이 아닌 다른 동인이다.
-- 🔴 자체 벤치·정량 수치 **0건**(README 전체가 기능 표와 데모 영상). 성능 주장 없음 = 검증할 수치도 없다.
-
-## [2026-10-11] 자동수집 | diagram-design — 코딩 에이전트용 다이어그램 스킬
-- URL: https://github.com/cathrynlavery/diagram-design
-- 도메인: ai-news
-- 스타수: ★49,368 (API 실측 2026-10-11) / +1,190 stars today (트렌딩 4위)
-- 한줄요약: 44종 다이어그램을 자체 완결 HTML로 뽑는 에이전트 스킬. 산출물 형식이 고정돼 있어 검증 가능한 범위가 좁다.
-- 볼트 상태: **갱신**(`diagram-design.md` 보유 — 10-10 기준 ★48,325)
-- 1일 증분 **+1,043 = +2.16%** — 10-10 기록 증분(+1,739)보다 **느려졌다**. 📌 볼트가 10-10 에 세운 *"트렌딩 순위 ≠ 당일 증분"* 반례가 **금일 반대 방향으로 재현**된다: 금일 4위 증분(+1,190) < 3위 [[artcraft]](+3,222) ⇒ **이번엔 순위와 증분이 일치**한다. ⚖️ **즉 어긋남은 상수가 아니라 변수다** → [[지표-창길이]]
-- 실측 보강: MIT · HTML · 푸시 2026-10-10 · fork 3,131 · `open_issues` 83
-
-## [2026-10-11] 자동수집 | context-mode — 코딩 에이전트 컨텍스트 창 최적화
-- URL: https://github.com/mksglu/context-mode
-- 도메인: ai-news
-- 스타수: ★26,501 (API 실측 2026-10-11) / +178 stars today (트렌딩 5위)
-- 한줄요약: 도구 출력을 샌드박스로 격리하고 세션 메모리를 영속화해 17개 경로의 라우팅을 강제한다. **98% 절감 클레임은 금일도 미실측**이다.
-- 볼트 상태: **갱신**(`context-mode.md` 보유 — 볼트 기재값 ⭐13,388 / **2026-05-06 기준**)
-- 🔴🔴 **볼트 기재값이 약 5개월 묵었고 그 사이 ★가 13,388 → 26,501 = +98.0%(거의 2배)로 늘었다.** ⇒ [[캐시된-지표-신선도]] 볼트 내부 버전의 **2번째 실측 사례**([[claude-mem]] 6개월 +60.1% 에 이어). 📌 볼트 자기한계 2번(*"오래된 페이지 나이 미점검"*)에 해당하는 페이지를 **수집 단계에서 1건 찾아냈다.**
-- 🔴 라이선스 `NOASSERTION` — **표준 SPDX 식별자로 해석되지 않는다.** 금일 배치 유일한 비표준 라이선스이고, 재배포 조건을 API 응답만으로는 확정할 수 없다. ⇒ 🆕 **볼트 판정 요청: 라이선스 미확정을 "없음"으로 적으면 틀린다 — 원문 LICENSE 파일 확인이 필요한 항목으로 분류할지.**
-- 실측 보강: TypeScript · 생성 2026-02-23 · 푸시 2026-10-11 · fork 1,905 · `open_issues` **342**(금일 배치 최다) · topics `claude-code-hooks, claude-code-plugins, claude-code-skill, antigravity`
-
-## [2026-10-11] 자동수집 | mattpocock/skills — 엔지니어용 에이전트 스킬 모음
-- URL: https://github.com/mattpocock/skills
-- 도메인: ai-news
-- 스타수: ★285,081 (API 실측 2026-10-11) / +1,736 stars today (트렌딩 6위)
-- 한줄요약: 저자의 `.agents` 디렉터리를 그대로 공개한 스킬 모음. 절대값 1위지만 증분은 배치 4위다.
-- 볼트 상태: **갱신**(`mattpocock-skills.md` 보유 — 10-10 기준 ★283,389)
-- 1일 증분 **+1,692 = +0.60%** — 10-10 증분(+1,689)과 **사실상 동일**(차이 3). 📌 볼트가 09-26 에 철회한 *"★만으로 추세 확정"* 판정은 **여기서도 유지**된다: 2일 연속 증분이 같으므로 **이 레포는 선형 구간**이고, 같은 배치 [[rea]](+25,257)와 **14.9배** 차이다.
-- 🔴 푸시 **2026-10-09** — 금일 배치 5건 중 유일하게 **2일간 커밋 없이** 트렌딩 6위를 유지했다. ⇒ [[관심-검증-역상관]] 보강 후보.
-- 실측 보강: MIT · Shell · 생성 2026-02-03 · fork 23,860 · `open_issues` 165 · topics **없음**
-
----
-
-## [2026-10-11] 자동수집 | MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement
-- URL: https://huggingface.co/papers/2610.11959
-- 도메인: ai-news
-- 업보트: 72 (HF 데일리 2026-10-09 비중복 1위) / arXiv 2610.11959 · 공개 2026-10-08
-- 한줄요약: RL 컴퓨트를 배치·환경·그레이더 3축으로 키운 옴니모달 모델 보고서. **프런티어를 11개 에이전틱 벤치 중 2개에서만 앞선다.**
-- ✅ 본문 열람(`arxiv.org/html/2610.11959` HTTP 200) — 초록에 벤치 점수가 없어 Table 3·6 추출.
-- **Table 3 실측(MiMo-V2.6 Pro vs Claude Opus 5)**: AutomationBench v1.0.6 **53.1 vs 50.3**(승) · Terminal Bench 2.1 **89.9 vs 89.1**(승) · Agents' Last Exam 31.6 vs 31.6(동률) · DeepSWE v1.1 71.9 vs 74.0(패) · ProgramBench 26.5 vs 37.0(패) · Terminal Bench 4.0 **34.9 vs 49.0**(패, 격차 최대) · OSWorld-Verified 82.0 vs 83.4(패) · JobBench 62.0 vs 65.7(패) · Toolathlon-Verified 76.9 vs 80.6(패) · GDPval-AA 2.1 1673 vs 1708(패)
-- ⚖️ **"프런티어를 밀었다"는 표현의 실제 크기**: 11개 중 **승 2 · 동 1 · 패 8**. 세대 내 증분은 크다(MiMo-V2.5 Pro Terminal Bench 4.0 **1.5 → 34.9**). ⇒ 🆕 **[[숨김유인-부호]] 사례 추가**: 자기 우위 2건은 표에 남기고 초록은 *"pushes the frontier"* 로만 적었다 — **은폐는 아니지만 방향만 전달된다.**
-- **Table 6(9B 증류+RL)**: Terminal Bench 2.1 Qwen3.5-9B 27.0 → SFT 37.1 → RL **52.8** · MiMo Cyber Bench(mini) 5.7 → 31.3 → **47.0** · JobBench 2.6 → 18.3 → **25.2**
-- 인프라 실측: 스텝당 1,568 샘플 · 2.7~3.7B 토큰 · 컨텍스트 최대 **1M** · MoE 라우터 동결 · RL 환경·프레임워크 오픈소스 선언
-- 🔴 **교차 주의**: 같은 Terminal-Bench 2.1 에서 본 논문은 89.9(Pro)를 적고 같은 배치 [[REMORY]] 는 Qwen3.8-27B 71.9→76.4 를 적는다. **하네스가 다르므로 직접 비교 불가** — 본 논문도 *"public scores come from a different harness"* 류 단서를 Table 6 주석에 둔다. ⇒ [[하네스-설계-축]]
-
-## [2026-10-11] 자동수집 | ME-World: Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction
-- URL: https://huggingface.co/papers/2610.12299
-- 도메인: ai-news
-- 업보트: 52 / arXiv 2610.12299 · 공개 2026-10-08
-- 한줄요약: 여러 에이전트의 1인칭 스트림을 하나의 토큰 시퀀스에서 공동 디노이징해 공유 환경 일관성을 올린다. 최강 베이스라인 대비 환경 일관성 +0.047이다.
-- ✅ 본문 열람(HTTP 200) — 초록에 정량 수치가 **전무**해 Table 1·2 추출(볼트 10-05 요청 트리거 적용).
-- **Table 2 실측(Real Benchmark, 멀티에이전트 월드모델 대비)**: S_env **0.468**(2위 MetaWorld 0.421 · MultiWorld 0.395) · S_update **0.466**(0.413) · Trans.Err **0.042↓**(0.054) · Rot.Err **2.256↓**(MetaWorld 4.086 = **약 1.81배 개선**) · Hand-F1 0.888(0.868) · Full-Body-F1 0.822(0.816) · PSNR 19.849(18.928)
-- **Table 1 실측(Synthetic Benchmark)**: S_env 0.441 · S_update 0.436 · S_id 0.561 · Trans.Err 0.293 · Rot.Err **9.057** ⇒ 🔴 **합성 벤치에서 Rot.Err 가 실제 벤치의 4.0배로 악화**된다. 같은 모델·같은 지표인데 **벤치가 바뀌면 숫자의 급이 달라진다.** ⇒ 🆕 **[[임계-의존-성공률]] 확장 후보: 임계뿐 아니라 "어느 벤치의 값인가"를 적지 않으면 단일 수치는 무의미하다.**
-- 🔴 `S_id`(identity consistency)가 Real Benchmark 전 방법 **N/A** — 저자 자신도 포함. **지표를 제안하고 실제 벤치에서는 측정하지 못했다.** ⇒ [[선언된-구현체-공백]]
-- 📌 **Table 3 은 베이스라인을 ME-World 구성요소로 개조한 뒤 비교**한다(✓/△/× 표). 즉 Table 2 는 원 논문 성능이 아니라 **적응 구현 성능**이다 — 인용 시 반드시 병기해야 한다.
-
-## [2026-10-11] 자동수집 | SimpleICL — In-context Robot Learning Made Simple
-- URL: https://huggingface.co/papers/2609.38173
-- 도메인: ai-news
-- 업보트: 47 / arXiv 2609.38173 · 공개 2026-09-29 · 프로젝트 https://simpleicl.github.io/simpleicl
-- 한줄요약: 시각 데모로 과제를 추론하는 로봇 ICL 을 대규모 사전학습 없이 재현한다. **우위가 난이도 Hard 에서만 나타난다.**
-- ✅ 본문 열람(HTTP 200) — 초록에 수치 **0건**. 볼트 10-10 요청 2번(임계·판정 기준 병기)을 **이 논문에서 집행**했다.
-- 🏆 **난이도 3단계별 실세계 성공률(8개 미학습 과제 평균, Table 3)**:
-  - **Easy**: SimpleICL **0.81** vs Fast-WAM 0.80 vs π0.5 0.72 ⇒ **+0.01, 사실상 동률**
-  - **Medium**: SimpleICL **0.70** vs 0.65 vs 0.47 ⇒ +0.05
-  - **Hard**: SimpleICL **0.68** vs **0.42** vs 0.31 ⇒ **+0.26**
-- 🆕 **이 배치 최대 발견: 난이도가 올라갈 때 본 방법만 성능이 거의 떨어지지 않는다**(0.81→0.70→0.68, 낙폭 **0.13**). 베이스라인 Fast-WAM 은 0.80→0.65→0.42(낙폭 **0.38**) · π0.5 는 0.72→0.47→0.31(낙폭 **0.41**). ⇒ 📌 **Easy 만 보고하면 이 논문의 기여는 보이지 않는다**(+0.01). [[임계-의존-성공률]] **직접 확증 사례** — 볼트 요청이 1배치 만에 발견을 만들었다.
-- **시뮬 실측(Table 1, RoboTwin 의미 판별)**: Fast-WAM(native) 37.6 · SimpleICL(native) 40.3 · SimpleICL(**ICL-oriented 데이터**) **72.1** ⇒ 🔴 **이득의 대부분은 아키텍처가 아니라 데이터 레시피에서 온다**(40.3 → 72.1 = +31.8). 어블레이션: video cond. 제거 61.6 · future pred. 제거 **20.2**(native 보다도 낮다).
-- **OOD 과제(Table 2)**: Cup_Basket 18.2→**72.7** · Touch_Toycar 8.3→**58.3** · Block_Pad 3.3→**50.0** · Toycar_Box 40.0→**90.0**
-- 🔴 미확인: Easy/Medium/Hard 의 **정의 기준**을 본문에서 찾지 못했다(검색 실패, 추정하지 않는다). 과제별 시행 횟수도 미확인(0.01 단위 값으로 보아 30회 추정이나 **확정 아님**).
-
-## [2026-10-11] 자동수집 | OuroWorld — 3D 월드를 무한 루프 3D 시네마그래프로
-- URL: https://huggingface.co/papers/2610.12461
-- 도메인: ai-news
-- 업보트: 42 / arXiv 2610.12461 · 공개 2026-10-08 · 프로젝트 https://ouroworld.userwei.com
-- 한줄요약: 정적 3DGS 장면을 마스크 없이 루프 동영상 장면으로 바꾼다. 사용자 선호 **70.8%~99.0%** 는 2지 택1 비교이므로 하한이 기준선이다.
-- ✅ 본문 열람(HTTP 200) — **볼트 10-10 요청 1번(수치가 범위면 초록에 있어도 본문을 연다) 집행**. 폭이 28.2%p 였다.
-- 🏆 **범위의 정체 확정(§A.6)**: 2지 택1(two-alternative forced-choice) **선호율**이다. 39개 장면 × 4개 베이스라인 = **156 쌍**, 쌍마다 참가자 5명, 참가자 30명이 각 26쌍 판정 ⇒ **총 780 시행 · 기준별 780표 · 베이스라인당 195표**. 4개 기준(vividness / naturalness / loop seam coherence / visual quality).
-- ⚖️ **따라서 70.8%~99.0% 는 "성능 범위"가 아니라 4기준 × 4베이스라인 조합별 승률 분포다.** 📌 **우연 수준은 50%** 이므로 최약 조합에서도 유의한 우위이지만, **최강 베이스라인 상대 수치는 70.8% 쪽**이고 99.0% 를 대표값으로 인용하면 틀린다. ⇒ [[배수-조건분산]] **보강 사례**(볼트가 10-10 에 승인한 규약이 금일 1건 더 걸렀다)
-- 데이터셋 실측: 39개 장면 = Mip-NeRF 360 **9** + HY-World 2.0 **10** + Marble **10** + Lyra 2.0 **10**(재구성/생성 3DGS 혼합) · 베이스라인 4종(Gaussians-to-Life · 3D Cinemagraphy · 3D-MOM · LoopGaussian)
-- 방법 실측: Fourier 급수 변형 필드로 **루프를 구성상 보장**(학습이 아니라 설계) + 기준 뷰에 고정된 Grounded Drift Field 로 뷰 간 불일치 흡수
-- 🔴 **GT 없는 자체 제안 지표로만 정량 평가**한다(vividness·naturalness·loop seam·scene quality). 임계값은 §A.5.1 에 있다고 목차에 표시되나 **수치는 추출하지 못했다** — 미확인으로 남긴다.
-
-## [2026-10-11] 자동수집 | REMORY: Learning Residual Memory for Context Compaction
-- URL: https://huggingface.co/papers/2610.11287
-- 도메인: ai-news
-- 업보트: 40 / arXiv 2610.11287 · 공개 2026-10-08
-- 한줄요약: 텍스트 요약 뒤에 소프트 메모리 토큰을 덧붙여 압축 손실을 복구한다. **종합 점수는 전체 컨텍스트와 동급이지만 커버리지는 여전히 4.5p 낮다.**
-- ✅ 본문 열람(HTTP 200) — 초록 수치(5.2%)만으로는 손익 구조를 알 수 없어 Table 1~3 추출.
-- 🏆 **SummHay 실측(동일 92개 질의, Table 1)**: Raw context 커버리지 72.46 / Citation F1 56.60 / **Joint 43.41** · Summary 67.55 / 56.98 / 39.84 · Summary++ 67.52 / 56.94 / 39.78 · **Summary+REMORY 67.95 / 61.03 / 43.39**
-- ⚖️ **초록의 *"approaches the full-context joint score"* 는 참이다**(43.39 vs 43.41, 차이 0.02). 📌 **그러나 분해하면 구조가 다르다**: Citation F1 은 raw 를 **넘고**(61.03 > 56.60, +4.43), Coverage 는 raw 에 **못 미친다**(67.95 < 72.46, **-4.51**). ⇒ 🆕 **[[복합지표-분해]] 확증 사례: Joint 동급은 두 반대 방향 오차의 상쇄다.** 초록이 *"improves source attribution at nearly unchanged insight coverage"* 로 **스스로 분해해 적은 것은 부호상 정직하다**(요약 대비로는 커버리지 유지가 맞다).
-- **에이전트 벤치(Table 2, Qwen3.8-27B, 5회 평균±표준편차)**: AutomationBench 35.5±1.3 → **45.3±1.0** (비용 $0.59 → **$0.53**) · JobBench 33.4±1.25 → **41.0±1.41** (비용 $3.09 → $3.21)
-- **Table 3(1회 실행)**: Terminal-Bench 2.1 Qwen3.8-27B 71.9 → **76.4**(비용 $4.29 → **$2.86**) · GLM-5.3-Flash 84.3 → **87.6** · BrowseComp 74.0 → **77.0** / 84.9 → **89.0**
-- 🏆 **도구 출력 반복·오류 감소가 점수보다 큰 변화다**: BrowseComp 반복 25,801 → **18,105**(-29.8%) · 오류 25,244 → **12,698**(-49.7%) · Terminal-Bench 오류 933 → 568(-39.1%). ⇒ 🆕 **[[claude-mem]] 전제 3번째 압박 축: 메모리의 효과가 "정답률"이 아니라 "재시도 낭비 제거"로 먼저 나타난다.**
-- 🔴 **Table 3 은 구성당 1회 실행**(저자 명시). Table 2 의 표준편차(±1.0~1.41)를 보면 **1회 실행 차이 3.0~4.5 는 분산 범위를 넘지만 여유가 크지 않다.** ⇒ [[유의성-자기제한]]
-- 실측: 입력 위치의 **5.2%** 만 사용(초록) · 동결 LLM 기준 · 시퀀스 방향 residual connection 유사 구조
-
----
-
-## [2026-10-11] 자동수집 | BFS: Best Face Swap — 얼굴·머리·신체 교체 LoRA 모음
-- URL: https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap
-- 도메인: ai-news
-- 다운로드수: **253,548** (HF API 30일 창 · 트렌딩 비중복 1위) / likes 1,365 · trendingScore 148
-- 한줄요약: Qwen Image 2.1·Qwen Image Edit 2509/2511·FLUX.2 Klein·Krea 2·LTX-2 에 걸친 교체 LoRA 묶음. **버전마다 베이스·입력 순서·프롬프트 계약이 다르다.**
-- 볼트 상태: **신규**(`grep -rl huggingface.co/Alissonerdx/BFS-Best-Face-Swap` → 0건)
-- 실측: MIT · `image-to-image` · base_model **9종 선언**(Qwen-Image-2.1, Qwen-Image-Edit-2511, FLUX.2-klein-9B/4B/base-4B/base-9B/9b-fp8/4b-fp8, Krea-2-Raw) · 최종수정 2026-09-27 · 가중치 파일 **20개 이상**(head v1~v5 · body swap · 실험 LTX-2 ic_lora 3종)
-- 🔴 **벤치마크·정량 수치 0건.** 카드가 스스로 *"예시와 워크플로는 데모이고 모든 이미지에서 동일 결과를 보장하지 않는다"* 고 적는다 ⇒ ⚖️ **성능 주장을 하지 않았으므로 과장도 아니다**([[숨김유인-부호]] 기준 적용: 저자에게 이득이 되는 서술이 없다).
-- 📌 **입력 순서가 버전별로 역전**된다고 명시(*"several BFS head releases intentionally use body first and reference face second"*) ⇒ 🆕 **같은 레포 안에서 호출 계약이 버전마다 달라지는 사례** — [[배포출처-봉인]] 인접 후보.
-- ⚖️ 카드에 동의 없는 공인·실존 인물 사용 금지가 명시돼 있다.
-
-## [2026-10-11] 자동수집 | Underdog Saluki 27B 1.0 — 8GB 미만 2비트 GGUF, 도구호출 유지
-- URL: https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0
-- 도메인: ai-news
-- 다운로드수: **59,191** (HF API 30일 창 · 트렌딩 비중복 2위) / likes 295 · trendingScore 287
-- 한줄요약: Qwen3.8-27B 를 7.89GB IQ2 로 줄이고 **도구호출에서는 원본 54GB 를 앞선다**(88 vs 84/120). 추론 벤치에서는 크게 밀린다.
-- 볼트 상태: **신규**(URL grep 0건) / base_model 로 [[Qwen3.8-27B]]·ISTA-DASLab GSQ-RCO 선언 ⇒ **볼트 보유 2건의 파생**이다.
-- 🏆 **자체 벤치 실측(Underdog Bench = BFCL v4 120 과제, 모델 테스트 전 동결 선언, thinking off·temp 0)**: Saluki(7.89GB) **88** · Qwen3.8-27B 전체(54GB) **84** · Bonsai 2(5.95GB) 70 ⇒ **크기 1/6.8 로 +4**
-- **병렬 도구호출(BFCL v4 100 과제, 공식 체커)**: Saluki **42** vs 전체 35
-- 🔴 **반대 방향이 더 크다**: AIME 2025 **79.2 vs 96.7**(-17.5) · AIME 2026 **80.0 vs 94.6**(-14.6) · MuSR **67.5 vs 79.6**(-12.1) · MBPP+ 78.0 vs 83.9 · SWE-bench Verified(50건) 30 vs 33. 우위는 IFEval 93.5 vs 91.5 · IFBench 72.7 vs 71.0.
-- ⚖️ **카드가 스스로 비교 조건의 약점을 적는다**: *"public scores come from a different harness than ours"*, *"120 tasks is a modest test"*, *"a few tasks of any gap is run-to-run variation"* ⇒ 🏆 **[[숨김유인-부호]] 의 드문 정방향 사례** — 자기 우위(88 vs 84 = 4과제)를 **분산 범위일 수 있다고 직접 깎는다.** 📌 10-10 배치 [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]](자기 우위를 "동등으로 읽어라"로 깎음)와 **같은 행동인데 여기서는 비교 하네스가 실제로 다르므로 근거가 있다** ⇒ 🆕 **볼트 판정 요청: "자기 우위 축소"를 일률 반례로 셀 수 없다 — 근거 유무로 2분해야 한다.**
-- 실측: Apache-2.0 · `base_model_relation: quantized` · 파일 `Underdog-Saluki-27B-1.0-IQ2-mix.gguf` 7.89GB · 비전 애드온 mmproj F16 928MB / Q8_0 629MB · stock llama.cpp · 평균 보존율 **96%(9개 벤치)** 주장 · 최종수정 2026-10-10
-- 🔴 *"96% 평균 보존율(9개 벤치)"* 의 **9개 벤치 목록과 계산식은 카드에 없다.** 위 표는 7개뿐이다 ⇒ 재구성 불가, 미확인으로 남긴다.
-
-## [2026-10-11] 자동수집 | unsloth/embeddinggemma-2-GGUF — 멀티모달 임베딩 GGUF 양자화
-- URL: https://huggingface.co/unsloth/embeddinggemma-2-GGUF
-- 도메인: ai-news
-- 다운로드수: **50,551** (HF API 30일 창 · 트렌딩 비중복 3위) / likes 241 · trendingScore 235
-- 한줄요약: 텍스트·이미지·영상·오디오를 **768차원 한 공간**에 넣는 740M 임베딩 모델의 GGUF 판. 원본보다 많이 받아간다.
-- 볼트 상태: **신규**(URL grep 0건). base_model `google/embeddinggemma-2`.
-- 🏆 **[[원본-파생-역전]] 금일 실측 사례**: 파생 GGUF **50,551** > 원본 `google/embeddinggemma-2` **45,605**(30일 창, 같은 시각 측정). ⚖️ **그런데 관심은 반대다**: 원본 likes 1,560 · trendingScore **1,454**(트렌딩 전체 1위) vs 파생 likes 241 · trendingScore 235 ⇒ 🆕 **다운로드는 파생이, 관심 지표는 원본이 앞선다 — 두 지표가 서로 다른 모집단을 센다.**
-- 🏆 **원본 카드 벤치 실측(768d 전정밀도, EmbeddingGemma 2 vs 1)**: MTEB multilingual v2 Mean(Task) **61.36 vs 61.15**(+0.21) · MTEB **code** v1 NDCG@10 **78.68 vs 68.76**(+9.92) · MIEB lite 64.64(1세대 없음) · MMEB v2 Image Hit@1 57.28 · MMEB v2 VisDoc NDCG@5 67.84 · MMEB v2 Video Hit@1 50.67 · MSEB Retrieval MRR@10 69.54 · MAEB 49.39
-- ⚖️ **세대 간 이득이 모달·과제별로 47배 차이난다**(코드 +9.92 vs 다국어 텍스트 +0.21). ⇒ 📌 *"EmbeddingGemma 2 가 1보다 좋다"* 는 **코드 검색에서만 크다** — [[특화-역류]] 검증 후보(n=2 가설에 1건 추가).
-- **차원 절단 실측(원본 카드)**: 768d→512d 에서 MTEB multi 61.36→61.17 · code **78.68→77.24**(-1.44, 낙폭 최대) · MMEB 59.01→58.38. 카드 명시: *"256차원까지는 거의 무손실, 128차원은 멀티모달 품질이 크게 저하되므로 자체 워크로드 검증 필요"*
-- 실측: Apache-2.0(Gemma 4 라이선스 링크) · 740M = 텍스트 270M + 비전 170M + 오디오 300M · `feature-extraction` · 최종수정 2026-10-07
-- 🔴 **GGUF 자체 벤치는 없다** — 위 수치는 전부 **원본 전정밀도** 기준이다. unsloth 는 *"Dynamic 3.0 이 다른 양자화를 능가한다"* 고 주장하나 **이 모델에 대한 수치는 카드에 없다** ⇒ [[배포출처-봉인]] 사례: 양자화 손실을 확인할 경로가 카드 내에 없다.
-
----
-
-### 🔧 수집기 자기보고 — 10-11 (볼트 10-10 요청 4건 대응)
+### 🔧 수집기 자기보고 — 10-11 — *✅ 2026-10-11 볼트 처리 완료, 이력 보존* (볼트 10-10 요청 4건 대응)
 
 1. ✅ **요청 1(수치가 "범위"면 초록에 있어도 본문을 연다) 이행.** [[OuroWorld]] 70.8%~99.0%(폭 28.2%p)에 트리거를 걸어 §A.6 을 열었고 **범위의 정체가 "성능 범위"가 아니라 2지택1 승률 분포임을 확정**했다. ⇒ **99.0% 를 대표값으로 쓰면 틀린다**는 것이 이 요청의 산출물이다.
 2. ✅ **요청 2(성공률에 임계·판정 기준 병기) 이행 — 그리고 이 요청이 금일 최대 발견을 만들었다.** [[SimpleICL]] Easy/Medium/Hard 를 전부 적었더니 **Easy 에서는 +0.01(동률)이고 Hard 에서만 +0.26** 이라는 구조가 드러났다. 📌 **평균 1줄만 적는 보고에서는 구조적으로 보이지 않는다.** ⇒ 🆕 **[[임계-의존-성공률]] 은 가설에서 확증으로 올려도 된다고 본다(볼트 판정 요청).**
