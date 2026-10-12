@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [entity, github, compositing, filmmaking, 3d-graphics, rust]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-12
 sources: [artcraft.md]
 reliability: low
 ---
@@ -34,3 +34,11 @@ reliability: low
 - 대표 산출물: [[artcraft]] (https://github.com/storytold/artcraft)
 - 확인: ✅ **볼트 GitHub API 실측**(★·fork·issues·created·pushed·license·topics) · 🔴 프로필·홈페이지 미열람
 - 신뢰도: ⭐⭐ (저장소 메타 볼트 실측 · **제공자 실체 미확인 · 4.5년 이력 공백**)
+
+
+---
+
+## 🔄 2026-10-12 갱신
+**볼트 실측**: [[artcraft]] ★**19,463** · fork **3,165** · open issues **238** · **1,374,746 KB ≈ 1.31 GB** · Rust · Apache-2.0 · pushed 2026-10-11
+📌 **크기 1.31GB + Rust + 포크 3,165 = 설치형 데스크톱 애플리케이션 형상.** 🎯 [[video-saas]] 경쟁 분석에서 **클라우드 SaaS의 대체재가 아니라 다른 축**이다.
+🔴 **벤치 부재 재확인**(README 14,870 B 전수 검색).

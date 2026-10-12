@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, quantization, gguf, comfyui, 원본-파생-역전]
 created: 2026-10-02
-updated: 2026-10-10
+updated: 2026-10-12
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -59,3 +59,23 @@ reliability: medium
 ## 관련 페이지 (갱신 추가)
 - [[Qwen-Image-2.1-Uncensored-GGUF]] · [[지표-창길이]] · [[대체필드-대조]]
 - [[캐시된-지표-신선도]] · [[laya]] · [[Agent-Reach]] · [[Qwen]]
+
+
+---
+
+## 🔴🏆 2026-10-12 갱신 — **레포를 개명했고, 볼트 중복검사가 3번째로 뚫렸다**
+
+🔴 **`abenzerps/Qwen-Image-2.1-Uncensored-GGUF` → `abenzerps/Qwen-Image-2.1-Uncensored-Quantized`** (볼트 실측: **307 Temporary Redirect**)
+⇒ 📌 수집기는 이를 *"볼트 0건 — 금일 유일한 신규 모델"* 로 배달했고 **틀렸다.** 볼트가 10-02 에 이미 보유. → [[정규명-우선-중복검사]]
+🎯 **이 제공자는 볼트 중복검사를 3번 뚫은 유일한 주체다**: 09-22(307 미추적 → 과소 포함) · 10-02(슬래시 grep → 오판, 자기정정) · **10-12(개명 → URL 검사 무력화, 볼트가 잡음)**.
+
+**볼트 실측(2026-10-12, HF API)**: DL30 **2,188,658** · ♥ **4,026** · lastModified **2026-10-12T07:10:55Z** · `license_name: qwen-research`
+🏆 **원본 대비 역전 추이**: 16.9배(10-02) → **15.37배**(10-12) — 원본 ×1.85 · 파생 ×1.68 ⇒ **격차 축소.** → [[원본-파생-역전]]
+
+> [!note] ✅ 검사가능성은 높다
+> 카드가 **소스 리비전 해시**(`b3179ad355be050328e483a9dfdd9e60cd62adfa`) · **변환 도구 커밋**(`stable-diffusion.cpp` `1330cebae8f2…`) · **SHA256SUMS** 를 공개한다. 📌 **벤치는 봉인(PNG)했지만 재현 경로는 열어 뒀다** — 평가가 양쪽으로 갈린다. → [[검사가능성-공사]] · [[벤치마크-이미지-봉인]]
+> 🔴 **표 내 단위 혼용 2건**(fp8·int8 ConvRot 만 GiB, 나머지 10건 십진 GB) — 볼트 바이트 전수 실측으로 확정. → [[단위-불일치]]
+
+## 관련 페이지 추가 (10-12)
+- [[Qwen-Image-2.1-Uncensored-Quantized]] — 현행 정규 페이지
+- [[정규명-우선-중복검사]] · [[원본-파생-역전]] · [[단위-불일치]] · [[검사가능성-공사]]

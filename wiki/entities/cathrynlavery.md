@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, github, agent-skills, diagram, svg, 접근성, 공급망]
 created: 2026-10-10
-updated: 2026-10-10
+updated: 2026-10-12
 sources: [diagram-design.md]
 reliability: medium
 ---
@@ -43,3 +43,12 @@ reliability: medium
 ## 원본
 - 대표 산출물: [[diagram-design]] (GitHub ★48,325)
 - 신뢰도: ⭐⭐⭐ (저장소 메타 실측 · 제공자 실체 미확인)
+
+
+---
+
+## 🔄 2026-10-12 갱신
+**볼트 실측**: [[diagram-design]] ★**51,331** · fork **3,244** · open issues 87 · HTML · MIT · pushed 2026-10-10
+🏆 **다이어그램 종수 38종(2026-09-06 볼트 기록) → 44종(금일)** = **+6종 / 약 5주.** README 3곳 교차 확인(10행·221행·309행 *"01 to 44"*).
+🆕 **타입당 3변종**(minimal light / minimal dark / full-editorial) ⇒ 실제 산출물 **44 × 3 = 132 파일**.
+📌 **대상 호스트 6종 중 README 언급 비중 1위는 `Pi`(18회)**, 설명 문구 첫 위치는 Claude Code. 호스트별 설치 규약이 분기한다 → [[에이전트-스킬]]

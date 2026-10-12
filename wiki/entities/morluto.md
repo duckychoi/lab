@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, github, mcp, reverse-engineering, agent-skills]
 created: 2026-10-10
-updated: 2026-10-10
+updated: 2026-10-12
 sources: [rea.md]
 reliability: low
 ---
@@ -39,3 +39,13 @@ reliability: low
 ## 원본
 - 대표 산출물: [[rea]] (GitHub ★56,977 · 당일 +14,927)
 - 신뢰도: ⭐⭐ (저장소 메타 실측 · **제공자 실체 미확인**)
+
+
+---
+
+## 🔄 2026-10-12 갱신
+
+**볼트 실측(GitHub API)**: [[rea]] ★**125,931** · fork **28,180** · open issues 220 · 50,748 KB · pushed **2026-10-12T09:09:55Z**
+🏆 **10-10 ★56,977 → 10-12 ★125,931 = 2.21배(2일)** — 볼트가 관측한 가장 빠른 성장이다.
+📌 **금일 트렌딩 1위 재확인** · 🏆 **볼트 신규 측정법**: 동일 시각 일괄 재조회에서 증가분 **+574** 로 금일 GitHub 5건 중 1위(2위 +33 의 17.4배).
+🔴 **벤치 부재 유지** — README 전문 19,400 B 전수 검색에서 성공률·정확도 수치 **0개**. → [[관심-검증-역상관]]

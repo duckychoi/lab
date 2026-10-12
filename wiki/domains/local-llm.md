@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-10-11
+updated: 2026-10-12
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -737,3 +737,44 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - [[Nemotron-3-Diarization]] **690행 중 120행만 열람**(RTFx·AMI 전체 표 미확보) · **한국어 미확인**
 - [[OneStreamer]] **벤치 8개 이름·비교군·베이스모델 전부 미기재** · 코드 없음
 - **코드 실행 0건 14배치 연속**
+
+
+---
+
+# 🔄 2026-10-12 누적 인사이트 (3건 · 신규 1 · 갱신 2)
+
+> [!insight] 🏆 **2026년 로컬 추론의 지배적 설계 패턴이 확정됐다 — "저빈도 대용량 모듈을 느린 저장소로"**
+> 금일 3건이 **같은 원리의 변형**임이 확인됐다:
+> | 소스 | 느린 저장소로 보낸 모듈 | 성격 | 효과 |
+> |---|---|---|---|
+> | [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] | n-gram 임베딩 **51.2B**(28.8GB) → 디스크 mmap | **토큰당 일부만** 조회 | 다운 66.4GB vs 상주 **37.6GB** |
+> | [[airllm]] | 레이어 + **전문가 단위** 스트리밍 | 토큰이 라우팅한 전문가만 | Kimi K3 **2.8T → VRAM 3.72GB** |
+> | [[Qwen-Image-2.1-Uncensored-Quantized]] | 텍스트 인코더 **9.35GB** → 시스템 RAM | **프롬프트당 1회** | VRAM **9–17GB 절약** |
+> 🎯 **공통 조건은 "접근 빈도가 낮다"다.** 📌 프롬프트당 1회(인코더) · 토큰당 일부(n-gram, MoE 전문가) ⇒ **지연이 숨겨지는 구간에만 적용된다.**
+> ⇒ 🔴 **그래서 모두 같은 함정을 공유한다: 다운로드/총 메모리 ≠ VRAM.** → [[단위-불일치]]
+
+> [!warning] 🔴 **그리고 셋 다 "속도 대가"를 정량화하지 않는다**
+> | 소스 | 속도 보고 |
+> |---|---|
+> | [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] | ✅ **있다**(프롬프트 3.4배·지연 1.9배) 🔴 단 하드웨어 미기재 |
+> | [[airllm]] | 🔴 **절대값 0개** — 상대배수만, 그 근거도 PNG 봉인 |
+> | [[Qwen-Image-2.1-Uncensored-Quantized]] | 🔴 *"virtually zero impact"* — **수치 없음** |
+> ⇒ 📌 **메모리 절감은 측정하기 쉽고(파일 크기·VRAM) 속도 대가는 측정하기 어렵다**(하드웨어·워크로드 의존). 🎯 **그 비대칭이 보고 비대칭으로 그대로 나타난다.** → [[상대속도-가림]] · [[숨김유인-부호]]
+
+> [!insight] 🏆 **볼트 축적이 외부 레포를 교정했다 — 이 도메인의 첫 사례**
+> [[airllm]] 이 `Qwen3.8-Flash-Next` 를 **125B(헤드라인)와 ~180B(표)로 모순 기재**했다.
+> ✅ **[[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] 페이지의 2026-09-22 실측**(GGUF 메타 **176,943,899,520** · n-gram **51.2B**)이 심판이 됐다: 176.9 − 51.2 = **125.7B** ⇒ **125B = 트랜스포머만 / ~180B = 전체.**
+> 📌 **3주 전 실측값이 전혀 다른 레포의 오류를 특정했다.** ⇒ 🎯 **"실측값을 페이지에 남긴다"는 규약의 가치 입증.** → [[단위-불일치]] 8번째 유형
+
+> [!warning] 🔴 실용성 판정 — 금일 3건 모두 "조건부" 이상으로 올라가지 못한다
+> | 소스 | 판정 | 결정적 장애 |
+> |---|---|---|
+> | [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] | 🟡 조건부 | 상주 37.6GB+ → 48GB급 GPU 필요 |
+> | [[airllm]] | 🟡 조건부(좁음) | **토큰/초 미지** · 디스크 360GB · **transformers 버전 충돌** |
+> | [[Qwen-Image-2.1-Uncensored-Quantized]] | 🟡 조건부 | **품질 손실폭 봉인** · 총 14.63GB · `leejet` 포크 필요 · 연구용 라이선스 |
+> 🎯 **공통 결론: 메모리 상한을 낮추는 기술은 성숙했고, 그 대가를 알려 주는 문서는 성숙하지 않았다.**
+
+> [!action] 🔴 **22배치 연속 외부 실행 0건 — 금일 처음으로 "어떻게"가 특정됐다**
+> 📌 [[airllm]] README 에 **`profiling_mode=True`**(*"True to output time consumptions"*)가 있다.
+> ⇒ ✅ **최소 실험**: 8B급 모델(`~1–2GB` 주장) + `profiling_mode=True` + `max_new_tokens=20` 벽시계 1회.
+> 🎯 **이것이 [[상대속도-가림]] 를 볼트가 직접 깨는 유일한 경로다.**

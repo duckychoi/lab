@@ -2,7 +2,7 @@
 title: "AAArena / AHL — '금메달 6개'는 2위와 2개 차이고, 그 차이에 하네스가 섞여 있다(논문이 먼저 적는다)"
 type: source
 domain: ai-news
-tags: [ai-news, agent-benchmark, heuristic-learning, ahl, game-agent, elo, claude-code, codex, 하네스-설계-축, 자기제한-명시, 매크로-미치환]
+tags: [ai-news, agent-benchmark, heuristic-learning, ahl, game-agent, elo, claude-code, codex, 하네스-설계-축, 자기제한-명시]
 created: 2026-10-12
 updated: 2026-10-12
 sources: []
@@ -23,7 +23,7 @@ reliability: high
 > 1. *"We evaluate **7** model and harness configurations"*
 > 2. *"We evaluate **seven** AI model–harness configurations on AAArena"*
 > 3. *"We evaluate **seven** model–harness configurations with the default 128-small/16-full budgets"*
-> ⇒ ✅ **7개 확정.** 🆕 **신종 수치 접근 장애**: 값이 없는 것도, 이미지로 봉인된 것도 아니라 **빌드 파이프라인이 삭제했다.** → [[매크로-미치환]](신설) · cf. [[벤치마크-이미지-봉인]] · [[배포출처-봉인]]
+> ⇒ ✅ **7개 확정.** 🆕 **신종 수치 접근 장애**: 값이 없는 것도, 이미지로 봉인된 것도 아니라 **빌드 파이프라인이 삭제했다.** → [[벤치마크-이미지-봉인]] **빌드소실형** · cf. [[벤치마크-이미지-봉인]] · [[배포출처-봉인]]
 
 > [!warning] 🔴🔴 **"금메달 6개"는 압도적 우위가 아니다 — 2위가 4개다**
 > 본문 표 말미 `Gold medals ↑` 행 실측: **6 · 4 · 4 · 2 · 2 · 3 · 1** (7개 구성)
@@ -78,7 +78,7 @@ reliability: high
 > 5. `\val{completedmodels}` 가 **v1 이후 수정됐는지** — 재확인 미실시.
 
 ## 관련 페이지
-- [[매크로-미치환]] — **본 소스가 최초 사례** (신설)
+- [[벤치마크-이미지-봉인]] — **본 소스가 최초 사례** (신설)
 - [[하네스-설계-축]] — Opus5.5만 Claude Code, 나머지 Codex
 - [[자기제한-명시]] · [[숨김유인-부호]] — 하네스 교란 자발 공개
 - [[표-부분인용]] — 금메달 6 vs 2위 4

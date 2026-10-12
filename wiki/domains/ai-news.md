@@ -4,7 +4,7 @@ type: domain
 domain: ai-news
 tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
 created: 2026-04-09
-updated: 2026-10-11
+updated: 2026-10-12
 sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md, rea.md, AgentGarten.md, Learn2Play.md, TokenRouter.md, Trace2Env.md, SuperNav.md, laya.md, e2e.md, t3code.md, SearchJev.md, Noise-Out-Bias-In.md, MemAdapter.md, RobotUse.md, QuantCode.md, Agent-Reach.md, LTX-2.5.md, Ternary-Bonsai-2-27B.md, Qwen-Image-2.1-Uncensored-GGUF.md, Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md]
 ---
 
@@ -3818,3 +3818,54 @@ GitHub 5건 ★드리프트 **−1 ~ +8**(ponytail +5 · impeccable +4 · **mark
 - [[Efficient-Reasoning-CoT-Faithfulness]] **NSG 정의 미확인**(추정을 사실로 적지 않는다)
 - [[LTX-2.5]] **arXiv 2601.03233 미열람 2배치째** · 파라미터 수 미확인 · `gated:auto` 승인 미시도
 - 🔴 **canvas 4종 미갱신 — 2배치 연속**
+
+
+---
+
+# 🔄 2026-10-12 누적 인사이트 (13건 인제스트 · 신규 5 · 갱신 8)
+
+> [!insight] 🏆 **금일 최대 수확 — 수집기가 미확인으로 남긴 3건을 볼트가 뚫었다**
+> | 미확인 항목 | 해소 수단 | 결과 |
+> |---|---|---|
+> | [[AAArena]] `\val{completedmodels}` | **arXiv HTML 본문**(549KB) | ✅ **7** (본문 3곳 교차) |
+> | [[VisionWeave]] 8개 벤치 목록 | **arXiv HTML 본문**(341KB) | ✅ RealWorldQA · DocVQA · InfoVQA · ScreenSpotV2 · HallusionBench · VideoOCR · Video-MME · LongVideoBench |
+> | [[Qwen3.8-27B]] QwenSWEBench 구성 | **카드 전문 582행 각주** | ✅ avg@3 · 8h timeout · 32,768 · temp 1.0 · 256K (🔴 **과제 수는 미해소 이월**) |
+> | [[airllm]] 토큰/초 | **README 전문 461행** | ✅ **"없음"이 확정** — 보고 축 자체가 부재 |
+> 📌 **수단은 전부 "1차 문서를 끝까지 읽기"였다.** 🎯 특히 **arXiv HTML 경로(수집기 10-06 확립 경로 ②)가 2건을 동시에 뚫었다** — 이 경로의 가치가 재입증됐다.
+
+> [!insight] 🏆🏆 **벤치 신뢰도를 "벤더 통제도"로 줄 세우면 부호가 뒤집힌다** ([[Qwen3.8-27B]])
+> **자체 QwenSWEBench +15.2p → 개조된 외부 SWE-bench Pro +8.3p → 외부 원형 Terminal Bench −5.2p · NL2Repo −5.3p · HLE −9.2p** (전부 Opus4.6 Max 대비)
+> ⇒ 📌 **벤더가 통제할 수 있는 정도와 우위 크기가 같은 방향으로 움직인다.** 🎯 **"자체 벤치 수치에서 약 20p를 할인해 읽는다"** 는 실무 감각이 생겼다. → [[분포내-우위]] · [[벤치-개조-재평가]]
+> 🔴 **그리고 외부 벤치마저 외부가 아닐 수 있다**: *"Problematic tasks were corrected, and all baseline models were re-evaluated on the refined benchmark."* — **벤더가 과제를 고치고 전 베이스라인을 재측정했다.**
+
+> [!insight] 🏆 **하네스는 측정 도구가 아니라 피측정 대상의 일부다 — 같은 날 양면 도착**
+> - [[AAArena]]: Opus5.5만 Claude Code, 나머지 Codex ⇒ 논문이 *"the comparison includes both model and harness differences"* 라고 **먼저 선언**(🏆 모범)
+> - [[Qwen3.8-27B]]: 코딩 벤치 5종 전부 Claude Code 로 **통일** ⇒ 비교 가능성은 얻었으나 **경쟁사 하네스**이고 **각주에만 적혀 표 층에 전달되지 않는다**
+> ⇒ 📌 **중립 하네스가 없으므로 모든 에이전트 벤치가 이 부담을 진다.** 평가 기준은 *"교란을 선언했는가"* 다. → [[하네스-설계-축]]
+
+> [!insight] 🏆 **평균은 방향을 가리지 않는다 — 기여도 열위도 함께 지운다** ([[VisionWeave]])
+> *"43.0% 절감 · 98.9% 유지 vs 베이스라인 88%"* 라는 초록을 볼트가 벤치별로 분해했다:
+> - **절감률 16.5%(InfoVQA) ~ 55.1%(ScreenSpotV2)** = 3.3배 분산 ⇒ 🔴 **평균 43.0%는 content-adaptive 라는 기여 자체를 지운다**
+> - **베이스라인은 ScreenSpotV2 에서 −47.5~−47.9%** ⇒ 🔴 **"88% 유지"는 52% 수준의 붕괴를 지운다**
+> ⇒ 🎯 **같은 집계가 자기 강점과 상대 약점을 동시에 평탄화했다.** → [[복합지표-분해]]
+
+> [!warning] 🔴 **금일 수집 품질 — 수집기 자기보고가 정확했고, 볼트가 2건을 보탰다**
+> ✅ **수집기 자기지적 7건 전부 볼트 확인 통과**(모집단 8 · 신규 0 · 날짜 자기정정 · 외부실행 0 · 미확인 4 · pytorch OR통과 · Agent-Reach 이월).
+> 🔴 **볼트가 추가로 찾은 수집기 오류 2건**:
+> 1. 🔴 **[[Qwen-Image-2.1-Uncensored-Quantized]] 를 "신규"로 판정 — 실제는 개명**(307 리다이렉트). **3번째 재발이고 이번엔 자기정정이 없었다.** → [[정규명-우선-중복검사]]
+> 2. 🔴 **"벤치 이미지 봉인 1건" → 실제 3건.** [[airllm]] 속도 그래프도 PNG 봉인이다. → [[벤치마크-이미지-봉인]]
+> 📌 ⚖️ **공정하게 적는다**: 수집기는 규약(전체 URL 판정 + 양성 대조 5건 선검증)을 **지켰다.** 🔴 **그 규약이 개명을 막지 못하는 구조였다.**
+
+> [!note] 📌 **GitHub 축은 금일 정보 가치가 낮았다 — 그러나 측정법 하나를 얻었다**
+> 5건 중 **신규 0 · 벤치 수치 보유 0**. 🔴 [[pytorch]] 는 급상승조차 아니다(구간 증가 **+1**).
+> 🆕 **볼트 신규 측정법**: 동일 시각 일괄 재조회의 **구간 증가분**이 "당일 증가분"보다 노이즈가 적다. 금일 결과 **rea +574 ≫ artcraft +33 > diagram-design +27 > airllm +11 > pytorch +1** ⇒ **트렌딩 1위 신호가 수집 시점 아티팩트가 아님을 독립 확인.**
+
+> [!note] 🆕 반복 측정이 추세를 만든다 — 금일 2건
+> - [[Qwen-Image-2.1-Uncensored-Quantized]]: 원본-파생 역전 **16.9배 → 15.37배**(원본이 더 빨리 성장)
+> - [[diagram-design]]: 다이어그램 **38종 → 44종**(약 5주, +6)
+> ⇒ 📌 **수집기가 "3배치 연속 동일 레포"를 정체로 보고했지만, 반복 측정은 볼트가 가진 유일한 시계열 생성 수단이다.**
+
+## 📌 10-12 기준 도메인 상태
+- 소스 페이지 **1,250건**(신규 5 추가) · 개념 **78건**(신규 3) · 엔티티 **115건**(신규 1: [[lyogavin]])
+- 🔴 **외부 코드 실행 0건 — 22배치 연속.** 🆕 **그러나 금일 해소 경로가 특정됐다**: [[airllm]] `profiling_mode=True`
+- 🔴 [[Agent-Reach]] `封号风险提醒` **9배치 이월**

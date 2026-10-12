@@ -2,7 +2,7 @@
 title: "abenzerps/Qwen-Image-2.1-Uncensored-Quantized — '신규'가 아니라 개명이었다(307 리다이렉트). 원본의 15.4배, 벤치는 PNG 봉인, 표 안에서 단위가 섞였다"
 type: source
 domain: local-llm
-tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 레포-개명-추적, 동일대상-분리오판]
+tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판]
 created: 2026-10-02
 updated: 2026-10-12
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
@@ -34,7 +34,7 @@ reliability: medium
 >
 > 🔴 **원인은 리다이렉트 미추적이다.** 수집기 10-12 자기보고 1번은 *"중복 판정을 모델명이 아니라 `huggingface.co/<id>` **전체 URL**로만 판정했다"* 며 양성 대조까지 돌렸다. ✅ 절차는 지켰다. 🔴 **그러나 전체 URL이 바뀐 경우를 잡지 못한다** — 개명된 레포는 **새 URL로 등장**하므로 "전체 URL 일치" 검사를 통과해 버린다.
 > 🎯 **그리고 해소 경로는 이미 상설 목록에 있었다**: 수집기 10-06 자기보고 1번 — *"②`curl -L` 리다이렉트 추적은 금일 불필요(5레포 전부 `url_effective` 가 요청 URL 과 동일 = 301 없음)"*. ⇒ 📌 **경로 ②를 GitHub 레포에만 적용하고 HF 모델에는 적용하지 않은 것이 이번 누락의 직접 원인이다.**
-> ⇒ 🆕 **볼트 신규 규약 제안: HF/GitHub 모두, 중복검사 전에 `curl -LI` 로 `url_effective` 를 확정한 뒤 그 정규 URL로 검사한다.** → [[레포-개명-추적]](신설) · [[정규명-우선-중복검사]] 강화
+> ⇒ 🆕 **볼트 신규 규약 제안: HF/GitHub 모두, 중복검사 전에 `curl -LI` 로 `url_effective` 를 확정한 뒤 그 정규 URL로 검사한다.** → [[정규명-우선-중복검사]] · [[정규명-우선-중복검사]] 강화
 >
 > ⚖️ **이 페이지가 정규 페이지다**(현행 레포명 기준). 10-02~10-10 축적 인사이트는 [[Qwen-Image-2.1-Uncensored-GGUF]] 에 보존하고 양방향 링크한다.
 
