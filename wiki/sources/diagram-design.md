@@ -1,10 +1,10 @@
 ---
-title: diagram-design — Mermaid를 버리고 자체완결 HTML+SVG로 간 다이어그램 문법 38종
+title: "diagram-design — 자체완결 HTML+SVG 다이어그램, 38종 → 44종으로 늘었다(볼트 2회 측정으로 확인)"
 type: source
 domain: ai-news
 tags: [ai-news, github-trending, diagram, svg, claude-code, design-reference, 접근성, 공급망, 출력매체인식]
 created: 2026-09-06
-updated: 2026-10-11
+updated: 2026-10-12
 sources: []
 reliability: high
 ---
@@ -88,3 +88,39 @@ reliability: high
 ## 원본
 - 출처: https://github.com/cathrynlavery/diagram-design
 - 신뢰도: ⭐⭐⭐⭐ (GitHub API 2026-09-06 실측)
+
+
+---
+
+## 🔄 2026-10-12 갱신 (인제스트 2026-10-12) — **38종 → 44종. 볼트가 같은 레포를 2회 측정해 증가를 확인했다**
+
+**GitHub API 실측(2026-10-12)**: 스타 **51,331**(수집기 51,304 → +27) · 포크 **3,244** · HTML · MIT · created 2026-04-16T18:01:16Z · pushed 2026-10-10T21:10:14Z · open issues 87 · 35,980 KB
+설명(API) 원문: *"Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, and Pi. **44 diagram types**. Self-contained HTML + SVG. No shadows. **No Mermaid slop**."*
+
+> [!insight] 🏆 **종수 증가 확인 — 볼트 제목이 38종이었고 지금은 44종이다**
+> - **2026-09-06**(볼트 최초 인제스트): **38종**
+> - **2026-10-12**(금일 실측): **44종** ⇒ 🎯 **+6종 / 약 5주**
+> 📌 README 전문(**51,640 B**) 교차 확인 2곳: 10행 *"**44 diagram types**. No shadows. No Mermaid slop."* · 221행 *"**44 diagram types**, each in **three static variants**: minimal light, minimal dark, and full-editorial."* · 309행 *"Each type has one number, **01 to 44**"*
+> ⇒ ✅ **44종 확정.** 🆕 **볼트 신규 사실: 타입당 3개 변종**이므로 실제 산출물은 **44 × 3 = 132개 정적 파일**이다(+ 워크드 예시).
+> 🏆 **같은 레포를 두 시점에 측정해 성장을 수치로 잡은 2번째 사례**다(1번째: [[Qwen-Image-2.1-Uncensored-Quantized]] 의 역전 배수 16.9 → 15.37). 📌 **볼트가 반복 수집의 가치를 실증하고 있다** — 수집기가 *"3배치 연속 동일 레포"* 를 정체로 보고했지만, **반복 측정은 추세를 만든다.**
+
+> [!note] ✅ 대상 에이전트 6종 확정 — `Pi` 언급이 가장 많다
+> README 전수 집계: **Pi 18회**(대소문자 합산) · **Claude Code 9회** · **Codex 13회**(합산) · **Factory Droid 5회** · **Cursor 6회**(합산) · **GitHub Copilot 3회**
+> 🎯 ⇒ **설명 문구 순서(Claude Code 먼저)와 본문 비중(Pi 최다)이 다르다.** 📌 설치 지침도 호스트별로 분기한다: *"**Pi**: register the checkout as a local package"* / *"**Claude Code**: symlink the inner skill"* / *"Other Agent Skills hosts: create only the roots you use"*
+> ⇒ 📌 **이것은 [[에이전트-스킬]] 생태계가 "호스트별 설치 규약"으로 분기했음을 보여주는 구체 증거다.** 단일 표준이 없다.
+
+> [!note] 🔴 벤치 부재 재확인 — 수량 외 품질 지표가 없다
+> README 전수 검색(`benchmark|accuracy|%|eval|score`) → 히트 1건이고 그것은 `fixtures/` 설명(*"draw.io, Mermaid and Excalidraw **test** inputs"*)이다.
+> ⇒ ✅ **수집기 판정 *"44종이라는 수량 외에 품질·채택률 수치는 없다"* 가 정확하다.**
+> ⚖️ 성격상 **디자인 에셋 모음**이므로 벤치가 존재하기 어렵다. 📌 **다만 *"No Mermaid slop"* 은 경쟁 산출물에 대한 질적 주장이고, 비교 근거는 제시되지 않는다.** 🎯 `fixtures/` 에 draw.io·Mermaid·Excalidraw 입력이 있다는 것은 **변환·비교 테스트 자산은 있다는 뜻**이다 — 결과 수치만 공개되지 않았다.
+
+## 관련 페이지 (10-12 추가)
+- [[에이전트-스킬]] — **호스트별 설치 규약 분기**의 구체 사례
+- [[Claude-Code-워크플로우]]
+- [[rea]] · [[artcraft]] · [[pytorch]] · [[airllm]] — 금일 동일 배치
+- [[cathrynlavery]]
+
+## 원본 (10-12 갱신)
+- 볼트 실측: GitHub API + README 전문 51,640 B
+- raw 대비: ✅ 스타·44종·HTML·MIT·생성일·Mermaid 미사용 **일치**(+27 성장분) · 🏆 **볼트 신규: 38종 → 44종 증가 확인** · 🆕 **타입당 3변종 = 132 파일** · 🆕 **호스트 6종 언급 비중(Pi 최다)** · ✅ 벤치 부재 재확인
+- 신뢰도: ⭐⭐⭐⭐ (산출물이 전부 열람 가능하고 수량·구조가 검증됨 / 품질 비교 근거 없음)

@@ -2,9 +2,9 @@
 title: Qwen/Qwen3.8-27B — Qwen3.8-27B 베이스 원본 (image-text-to-text)
 type: source
 domain: ai-news
-tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba]
+tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba, 하네스-설계-축, 비매칭-비교, 벤치-개조-재평가, 자체벤치-격차-역전, 표-부분인용, 특화-역류]
 created: 2026-08-18
-updated: 2026-10-10
+updated: 2026-10-12
 sources: []
 reliability: medium
 ---
@@ -499,3 +499,125 @@ Qwen/Qwen3.8-27B
 - 수집: 2026-10-06 자동수집 (ai-news) · 인제스트 2026-10-10
 - 검증: HF API 실측 + **카드 `<th>` 파싱으로 벤치 표 열 머리글 5개 확정**
 - 신뢰도: ⭐⭐⭐⭐ (열 귀속 확정 · 칸 내부 2지표 구조 발견)
+
+
+---
+
+## 🔄 2026-10-12 갱신 (인제스트 2026-10-12) — **카드 582행 전문 + 표 `<th>` 열 귀속 확정. 수집기 경고가 "옳았지만 불충분"했다**
+
+**HF API 실측(2026-10-12)**: DL30 **6,843,108**(수집기 6,843,108 → **완전 일치** ✅) · ♥ **17,532**(수집기 17,532 → **완전 일치** ✅) · created 2026-08-05T08:22:59Z · lastModified 2026-08-14T15:00:01Z · gated false · `license: apache-2.0` · **`safetensors.total` = 27,781,427,952 = 27.78B**(dense 27B 확정 ✅)
+
+> [!note] ✅ **열 귀속 확정 — 수집기 10-06 확립 경로 ⑦ 재집행 성공**
+> 경로 ⑦(*"HF 카드의 벤치 표가 HTML `<table>` 이면 `<th>` 를 파싱해 열 귀속을 확정한다"*)를 다시 집행했다. **열 순서 확정**:
+> **① Qwen3.8-27B · ② Qwen3.6-27B · ③ Qwen3.7-Plus · ④ Muse Glimmer-30B · ⑤ Opus4.6 Max**
+>
+> | 벤치 | **Qwen3.8-27B** | Qwen3.6-27B | Qwen3.7-Plus | Muse Glimmer-30B | **Opus4.6 Max** |
+> |---|---:|---:|---:|---:|---:|
+> | Terminal Bench 2.1 (Terminus) | 73.0 | 63.4 | 64.0 | 51.7 | 🔴 **78.2** |
+> | **SWE-bench Pro** | 🟢 **61.7** | 53.5 | 57.6 | 51.2 | 53.4 |
+> | NL2Repo-Bench | 42.3 | 36.2 | 41.1 | — | 🔴 **47.6** |
+> | DeepSWE 1.1 | 🟢 **42.2** | 13.3 | 14.2 | — | — |
+> | **QwenSWEBench**(자체) | 🟢 **79.0** | 49.3 | 59.2 | — | 63.8 |
+> | CoWorkBench(자체) | 🟢 **70.7** | 61.0 | 65.1 | — | 68.2 |
+> | JobBench | 🟢 **33.4** | 21.8 | 27.6 | — | — |
+> | IFBench | 🟢 **79.5** | 69.1 | 79.1 | 77.0 | 62.5 |
+> | GPQA Diamond | 89.2 | 87.8 | 🔴 90.3 | 83.5 | 🔴 **91.3** |
+> | HLE | 30.8 | 24.0 | 🔴 34.7 | 22.0 | 🔴 **40.0** |
+> | LiveCodeBench v6 | 🟢 **90.3** | 83.9 | 89.6 | — | 88.8 |
+> | OSWorld-Verified | 🟢 **84.3** | 63.9 | 73.3 | 65.9 | 72.7 |
+> | WebArena-Verified | 🟢 **64.8** | 48.8 | 55.3 | — | — |
+> | AndroidWorld | 🟢 **81.9** | 70.3 | 81.0 | — | 62.0 |
+> | RecreationBench | 🟢 **47.1** | 29.8 | 30.2 | — | — |
+> | SWE-MM | 🟢 **38.6** | 25.7 | 30.0 | — | 27.1 |
+> | Vision2Web | 🟢 **62.9** | 45.0 | 42.1 | — | — |
+> | OmniDocBench 1.5 | 91.1 | 89.4 | 🔴 91.4 | 75.8 | 86.6 |
+> | RealWorldQA | 85.9 | 84.1 | 🔴 86.9 | — | 73.9 |
+> | ERQA | 65.5 | 62.5 | 🔴 69.8 | — | 40.8 |
+>
+> ✅ 수집기 보고 6건(73.0 / 61.7 / 42.3 / 42.2 / 79.0 / 70.7 및 대조값 63.4·78.2·13.3) **전건 일치**. DeepSWE 배수 재계산: 42.2 / 13.3 = **3.17배**(수집기 "3.2배" ✅).
+
+> [!warning] 🔴🔴🔴 **금일 배치 최대 발견 — 수집기 경고를 정량화하면 "자체 +15.2p / 외부 −5.2p" 라는 반전 구조가 나온다**
+> 수집기 10-12 한줄요약: *"⚠️ QwenSWEBench는 벤더 자체 벤치이므로 외부 벤치(SWE-bench Pro·Terminal Bench)와 동급 취급하면 안 된다."* ✅ **옳다. 🔴 그러나 불충분하다.**
+> 📌 **볼트가 Opus4.6 Max 열을 기준으로 격차를 계산했다**:
+>
+> | 성격 | 벤치 | Qwen3.8-27B − Opus4.6 Max |
+> |---|---|---:|
+> | **자체 벤치** | QwenSWEBench | 🟢 **+15.2p** (79.0 − 63.8) |
+> | **자체 벤치** | CoWorkBench | 🟢 +2.5p (70.7 − 68.2) |
+> | **외부 벤치** | Terminal Bench 2.1 | 🔴 **−5.2p** (73.0 − 78.2) |
+> | **외부 벤치** | NL2Repo-Bench | 🔴 **−5.3p** (42.3 − 47.6) |
+> | **외부 벤치** | GPQA Diamond | 🔴 −2.1p |
+> | **외부 벤치** | HLE | 🔴 **−9.2p** |
+>
+> 🎯 ⇒ **자체 벤치에서 격차가 가장 크고(+15.2p), 외부 벤치에서는 부호가 뒤집힌다(−5.2 ~ −9.2p).**
+> 📌 **이것이 "동급 취급 금지"의 양적 근거다.** 수집기는 질적으로 경고했고, **볼트가 수치로 입증했다.** 🆕 **[[자체벤치-격차-역전]](신설)**
+> 🔴 **그리고 수집기 한줄요약은 자기에게 유리한 쪽만 인용했다**: *"SWE-bench Pro 61.7 — 표 내 최고값"* 은 맞지만, **같은 표에서 NL2Repo 42.3 < 47.6, Terminal Bench 73.0 < 78.2 로 Opus4.6 Max 에 지는 사실은 적지 않았다.** → [[표-부분인용]]
+
+> [!warning] 🔴🔴 **더 깊은 문제 — SWE-bench Pro 는 이미 "외부 벤치"가 아니다. Qwen 이 과제를 수정하고 전 베이스라인을 재평가했다**
+> 카드 177행 각주 **원문**:
+> > *"SWE-bench Pro: **Except for Opus4.6 Max, which uses the officially reported score**, all models are evaluated with the **Claude Code harness** at temp=1.0, top_p=0.95, and a 256K context window. **Problematic tasks were corrected, and all baseline models were re-evaluated on the refined benchmark.**"*
+>
+> 🔴 **두 가지가 동시에 벌어졌다**:
+> 1. **Opus4.6 Max 만 공식 보고 점수**를 쓰고, 나머지는 **Qwen 이 직접 측정**했다 ⇒ 📌 **동일 조건 비교가 아니다.** → [[비매칭-비교]]
+> 2. **Qwen 이 벤치 과제를 "수정"하고(`Problematic tasks were corrected`) 전 베이스라인을 그 수정판에서 재평가**했다 ⇒ 🔴 **"SWE-bench Pro 61.7"은 원본 SWE-bench Pro 점수가 아니라 Qwen 이 정제한 버전의 점수다.**
+> ⇒ 🆕 **[[벤치-개조-재평가]](신설)**: 벤더가 외부 벤치의 과제를 수정하고 베이스라인을 자기 환경에서 재측정하면, **그 벤치는 외부 대조 기능을 상실한다** — 이름만 외부다.
+> ⚖️ **공정하게 적는다**: 카드는 이 사실을 **각주에 명시했다**(숨기지 않았다). 📌 그러나 **본문 표에는 `SWE-bench Pro` 라는 이름만 나오므로, 표만 보는 독자에게는 전달되지 않는다.** → [[한정어-탈락]]
+
+> [!insight] 🏆🏆 **모든 코딩 벤치가 경쟁사(Anthropic) 하네스로 측정됐다 — 그리고 같은 날 AAArena가 반대 사례를 보냈다**
+> 카드 각주 실측 — **Claude Code 하네스 사용 명시 벤치**:
+> - **SWE-bench Pro** (temp 1.0, top_p 0.95, 256K)
+> - **NL2Repo-Bench** — *"To prevent reward hacking, we **disable Bash commands** that attempt to access the specific repository, such as `pip download`, `pip install`, and `git clone`."* ✅ **리워드 해킹 방지를 명시한 좋은 규율**
+> - **DeepSWE 1.1** (temp 1.0, top_p 0.95, 256K)
+> - **QwenSWEBench** — *"**avg@3** with an **8-hour timeout**, max_tokens=**32,768**, temperature=1.0, **256K** context window"*
+>
+> 🎯 ⇒ **Qwen 이 자사 모델을 Anthropic 의 에이전트 하네스로 평가했다.** 📌 하네스를 **통일**한 것은 비교 가능성 측면에서 **옳다.** 🔴 **그러나 그 하네스가 Opus 계열에 맞춰 개발된 것이라면 교란 방향은 미지다**(어느 쪽에 유리한지 알 수 없다).
+> 🔗 **금일 배치 내 대조가 선명하다**:
+> | 소스 | 하네스 처리 | 결과 |
+> |---|---|---|
+> | [[AAArena]] | **구성마다 다름**(Opus5.5만 Claude Code, 나머지 Codex) | 논문이 *"comparison includes both model and harness differences"* 라고 **스스로 경고** |
+> | **Qwen3.8-27B**(이 페이지) | **전부 Claude Code 로 통일** | 통일했으나 **경쟁사 하네스**이고, 표에는 표시되지 않음 |
+> ⇒ 🏆 **같은 날 [[하네스-설계-축]] 의 양면이 도착했다.** 📌 **하네스는 통일해도, 통일하지 않아도 해석 부담이 남는다** — 중립 하네스가 없다는 것이 이 축의 본질이다.
+
+> [!note] 🏆 **수집기 미확인 해소(부분) — QwenSWEBench 구성 확정, 과제 수는 여전히 미기재**
+> 수집기 10-12 자기보고 5번: *"[[Qwen3.8-27B]] *QwenSWEBench* 의 **구성·과제 수** 미확인"*.
+> ✅ **구성 해소**: in-house · **Claude Code 하네스** · **avg@3** · **8시간 타임아웃** · max_tokens **32,768** · temp **1.0** · **256K** 컨텍스트
+> 🔴 **과제 수는 각주에도 없다** — 카드 582행 전문에서 확인. **미해소로 이월한다.**
+> 📌 **CoWorkBench 도 자체 벤치**임이 각주로 확정됐다: *"**In-house** cowork benchmark … across computer science, finance, law, medical, and other productivity domains."* ⇒ 🔴 **수집기는 CoWorkBench 70.7 을 자체 벤치 표시 없이 적었다.** 자체 벤치는 **2개**다(QwenSWEBench + CoWorkBench).
+
+> [!warning] ⚠️ **자사 상위 모델에게 지는 축이 뚜렷하다 — [[특화-역류]] 패턴**
+> Qwen3.7-Plus(자사 상위) 대비 **27B가 지는 항목**: GPQA Diamond(89.2 < 90.3) · HLE(30.8 < 34.7) · OmniDocBench(91.1 < 91.4) · RealWorldQA(85.9 < 86.9) · **ERQA(65.5 < 69.8, −4.3p)**
+> 반면 **이기는 항목**: 에이전틱/코딩/컴퓨터유즈 전부(OSWorld +11.0p · AndroidWorld +0.9p · DeepSWE +28.0p · QwenSWEBench +19.7p · Vision2Web +20.8p)
+> ⇒ 📌 **27B 는 "에이전트 실행 축"에 특화됐고, "지식·추론·시각 정밀 축"에서는 더 큰 자사 모델에 양보한다.** 🎯 **용도 선택 지침**: 긴 호흡 에이전트 작업엔 27B, 어려운 추론·정밀 시각엔 상위 모델.
+
+> [!note] 🆕 수집기가 적지 않은 벤치 9종이 표에 더 있다
+> JobBench 33.4 · Agents' Last Exam(값 미기재) · IFBench 79.5 · GPQA Diamond 89.2 · HLE 30.8 · LiveCodeBench v6 90.3 · **OSWorld-Verified 84.3** · WebArena-Verified 64.8 · AndroidWorld 81.9 · RecreationBench 47.1 · ClawEval-MM(미기재) · SWE-MM 38.6 · Vision2Web 62.9 · MathVision(미기재) · BabyVision(미기재) · CharXiv RQ 78.8 · OmniDocBench 1.5 91.1 · RealWorldQA 85.9 · ERQA 65.5
+> 🔴 **값이 비어 있는 행 4종**(Agents' Last Exam · ClawEval-MM · MathVision · BabyVision) — **이유 미기재**. ⇒ [[구조적-영값]] 아님, **보고 누락**이다.
+> 🔗 **배치 내 연결**: [[SoftwareGym]] 이 OSWorld Pass@3 **56.97%** 를 성과로 내세우는데, 이 카드는 **OSWorld-Verified 84.3** 이다. 🔴 **변종(`-Verified`)과 지표(Pass@3 vs 미명시)가 달라 직접 비교 불가** — 볼트는 비교하지 않는다. → [[비매칭-비교]]
+
+> [!action] 당장 할 것 (10-12)
+> 🎯 **벤치 인용 규약을 1줄 추가한다**: **Qwen3.8-27B 의 `SWE-bench Pro 61.7` 을 인용할 때는 반드시 "Qwen 정제판·Claude Code 하네스·Opus4.6 Max만 공식점수" 를 병기한다.** 병기 없이 쓰면 외부 벤치 1위로 오독된다.
+> 📌 그리고 **자체 벤치 2종(QwenSWEBench · CoWorkBench)은 모델 선택 근거에서 제외**한다.
+
+> [!question] 미해결 질문 (10-12)
+> 1. 🔴 **QwenSWEBench 과제 수** — 카드 582행 전문에도 없음. **이월.**
+> 2. 🔴 `Problematic tasks were corrected` — **몇 개를, 어떤 기준으로** 수정했나. 카드에 없음.
+> 3. 🔴 Claude Code 하네스가 **어느 모델에 유리한 교란인지** — 판정 불가.
+> 4. 🔴 값이 빈 4개 행(Agents' Last Exam 등)의 **미측정 이유.**
+> 5. 🔴 Muse Glimmer-30B 가 **어느 조직 모델인지** — 볼트 미보유, 미확인.
+
+## 관련 페이지 (10-12 추가)
+- [[자체벤치-격차-역전]](신설) — **자체 +15.2p / 외부 −5.2~−9.2p**
+- [[벤치-개조-재평가]](신설) — SWE-bench Pro 과제 수정 + 베이스라인 재평가
+- [[비매칭-비교]] — Opus4.6 Max 만 공식 점수 / OSWorld 변종 혼동
+- [[하네스-설계-축]] — **[[AAArena]] 와 양면 대조**
+- [[표-부분인용]] — 최고값만 인용, 역행 2건 누락
+- [[특화-역류]] — 자사 상위 모델에 지식·시각 축 양보
+- [[한정어-탈락]] · [[구조적-영값]] · [[검사가능성-공사]]
+- [[AAArena]] · [[VisionWeave]] · [[SoftwareGym]] — 2026-10-12 동일 배치
+- [[Anthropic]] · [[Qwen]] · [[Alibaba]]
+
+## 원본 (10-12 갱신)
+- 수집: 2026-10-12 자동수집(ai-news) · 인제스트 2026-10-12
+- 볼트 실측: HF API(DL·likes **완전 일치** · `safetensors.total` 27.78B) **+ 카드 README 전문 65,012 B / 582행** + `<th>` 열 귀속 파싱(경로 ⑦ 재집행)
+- raw 대비: ✅ 벤치 6건·컨텍스트 262,144·Apache-2.0·DL/likes **전건 일치** · ✅ 수집기 경고(자체 벤치 구분) **타당 확인** · 🏆 **볼트 신규: 자체 +15.2p vs 외부 −5.2/−9.2p 반전 정량화** · 🏆 **볼트 신규: SWE-bench Pro 가 Qwen 정제판이고 Opus만 공식점수** · 🏆 **볼트 신규: 전 코딩벤치 Claude Code 하네스** · 🏆 **볼트 해소: QwenSWEBench 구성(avg@3·8h·32,768·256K)** · 🏆 **볼트 신규: 자체 벤치는 2개(CoWorkBench 포함)** · 🏆 **볼트 신규: 자사 상위 모델 대비 역행 5건** · 🔴 **과제 수 미해소 이월**
+- 신뢰도: ⭐⭐⭐ (각주에 조건을 명시하는 규율은 있음 / **표 층에서 전달되지 않고, 외부 벤치가 정제판이며, 자체 벤치 격차가 가장 큼**)

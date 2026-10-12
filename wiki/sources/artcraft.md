@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, ai-news, github-trending, compositing, 3d-graphics, filmmaking, camera-control, 입력통제, 관심-검증-역상관]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-10-12
 sources: []
 reliability: medium
 ---
@@ -71,3 +71,31 @@ topics: `ai, aivideo, imagegeneration, filmmaking, 3d-graphics`
   - 근거: ✅ **볼트 실측 topics = `['3d-graphics','ai','aivideo','filmmaking','imagegeneration']`** — 5개 중 3개가 영상·이미지 제작이다. 제품도 영상·이미지 제작 IDE. 선례 [[WanPE]](09-26 `ai-news`→`video-saas` 재판정)와 같은 사유다.
 - 신뢰도: ⭐⭐ (★·fork·라이선스는 API 실측 인용 / **능력 측정 0건 · 생성일 미확정 · 데모 미열람 · 코드 미실행**)
 - 확인 범위: 🔴 **볼트 독립 API 재조회 0건** — 본 페이지 수치는 **전부 수집기 인용**이다. README 미열람, 데모 영상 미열람.
+
+
+---
+
+## 🔄 2026-10-12 갱신 (인제스트 2026-10-12) — 벤치 부재 확정, 그리고 레포 규모가 드러났다
+
+**GitHub API 실측(2026-10-12)**: 스타 **19,463**(수집기 19,430 → +33) · 포크 **3,165** · **Rust** · Apache-2.0 · created 2022-03-31T23:19:12Z · pushed 2026-10-11T13:47:59Z · open issues **238** · **크기 1,374,746 KB ≈ 1.31 GB**
+설명(API): *"ArtCraft is an **intentional crafting engine** for artists, designers, and filmmakers"*
+
+> [!note] 🔴 벤치 부재 확정 — README 전문(14,870 B)에 수치 없음
+> `benchmark|accuracy|%|eval|score` 전수 검색 → 히트 **1건**이고 그것은 *"Latest builds on GitHub"* 릴리스 링크다.
+> ⇒ ✅ **수집기 판정 *"벤치마크 수치 자체를 제시하지 않는다(이미지 봉인 아님, 벤치 부재)"* 가 정확하다.** 📌 **성능 비교 불가**는 유지된다.
+
+> [!insight] 🆕 레포 크기 1.31GB — 애플리케이션이지 라이브러리가 아니다
+> 🎯 금일 GitHub 5건 중 **크기 2위**(1위 pytorch 1.57GB). 📌 **Rust + 1.31GB + 포크 3,165 + 이슈 238** 은 **데스크톱 제작 도구**의 형상이다 — [[Higgsfield]] 류 웹 SaaS 와 **배포 모델이 근본적으로 다르다**(설치형 vs 클라우드).
+> ⇒ 📌 **[[video-saas]] 경쟁 분석에서 artcraft 는 "대체재"가 아니라 "다른 축"이다**: 로컬 설치·입력 통제 vs 클라우드·프롬프트. 10-11 이 페이지의 [[입력통제]] 판단과 일관된다.
+
+> [!warning] ⚠️ 4.5년 레포의 트렌딩 진입 — 원인은 여전히 미확인
+> created **2022-03-31** → 당일 **+2,957**. 🔴 **급상승 계기(릴리스·보도·커뮤니티 확산)는 확정되지 않았다.** 📌 pushed 2026-10-11 로 활발하나, 그것만으로 +2,957을 설명할 수 없다. → [[관심-검증-역상관]] 관찰 지속
+
+## 관련 페이지 (10-12 추가)
+- [[rea]] · [[diagram-design]] · [[pytorch]] · [[airllm]] — 금일 동일 배치
+- [[storytold]] · [[video-saas]]
+
+## 원본 (10-12 갱신)
+- 볼트 실측: GitHub API + README 전문 14,870 B
+- raw 대비: ✅ 전건 일치(+33 성장분) · ✅ **벤치 부재 재확인** · 🆕 볼트 추가: **크기 1.31GB·포크 3,165·이슈 238 → 설치형 애플리케이션 형상**
+- 신뢰도: ⭐⭐ (실체는 분명 / 정량 근거 0)
