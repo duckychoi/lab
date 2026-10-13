@@ -4,8 +4,8 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-10-12
-sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md]
+updated: 2026-10-13
+sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
 # 로봇 SLAM / 3DGS / 카메라 누적 인사이트
@@ -467,3 +467,39 @@ _소스 ingest 시 자동 누적_
 > [!note] 🔗 금일 도메인 간 경계선 발견
 > 같은 날 [[VisionWeave]](ai-news)는 *"시각 토큰 43% 절감 · 성능 98.9% 유지"* 를 보고한다. 🔴 **Reflex 와 모순이 아니다.**
 > 🎯 **경계선: 과제가 시간 미분을 요구하는가.** 날아오는 물체의 속도·궤적은 정의상 시간 미분이므로 **단일 프레임에 원리적으로 없다.** ⇒ 📌 **정적 이해에서는 토큰을 줄여도 되고, 동적 반응에서는 시간 이력을 줄이면 붕괴한다.**
+
+---
+
+## 📅 2026-10-13 누적 인사이트 (1건 · 🔄 도메인 재판정 유입)
+
+> [!info] 🔄 **[[GroundingPI]] — 수집기 `ai-news` → 볼트 `slam-3dgs` 재배치**
+> 근거: **nuScenes** 오픈루프 L2 **0.296m**(자율주행) · **RoboTwin 2.0** OOD 4설정 · **RoboCasa-GR1**(로봇 조작) · 자기 규정 *"foundation models of **physical intelligence**"*.
+> 📌 **선례 준수**: 2026-10-12 [[Reflex]](cs.RO)를 같은 사유로 재배치했다 — **2번째 적용**이다.
+
+> [!insight] 🏆 **현재 SOTA 갱신 — 그라운딩 백본이 4B 로 내려왔다**
+> **[[GroundingPI]]** · [[XPENG-AI]](샤오펑) · 저자 26명 · Apache-2.0.
+> **아키텍처(🆕 볼트가 README 265행에서 발굴 — 초록에 없는 정보)**: **MoonViT-V2(Kimi K3) 비전 인코더 + 학습형 멀티모달 프로젝터 + Qwen3-4B 언어 백본** ⇒ 🎯 **자체 설계가 아니라 공개 부품의 조립이다.**
+> **수치**: 34엔트리 평균 **73.68%** > GPT-6 Astra **71.54%**(+2.14%p) · RoboTwin 2.0 OOD **4/4 전부** 최강 백본 대비 최대 **+24.8%(상대)** · RoboCasa-GR1 **시연 50% 학습이 75% 학습 베이스라인 상회** · nuScenes L2 **0.296m**.
+> 📌 **이것이 [[특화-역류]] 의 로보틱스 사례다** — 전용 후학습 4B 가 범용 대형을 그라운딩에서 이긴다. ⚖️ **단 GPT-6 Astra 의 파라미터 수가 공개되지 않아 "작은데 이겼다"의 배수를 모른다.**
+
+> [!warning] 🏆🔴 **볼트 최대 발견 — "34개 벤치"의 분모가 중복 가중돼 있다**
+> 볼트가 `eval/README.md`(10,430 B)로 목록을 뚫었다. **8 태스크 그룹 합계 4+6+7+4+3+4+2+4 = 34 ✅ 검산 통과.**
+> 🔴 **고유 데이터셋은 22개다**: RefCOCOg **5회** · COCO·LVIS·Dense200 **각 3회** · VisDrone·HumanRef 각 2회 재등장.
+> 🎯 ⇒ **COCO 하나가 Detection·Object pointing·Visual prompting 3개 엔트리로 평균에 3번 들어간다.** 📌 **73.68% 를 "34개 서로 다른 벤치의 평균"으로 인용하면 틀린다.**
+> ⚖️ **부정행위는 아니다** — 같은 데이터셋을 다른 과제 형식으로 쓰는 것은 그라운딩 평가의 표준이다. **문제는 표기가 구조를 숨긴다는 것** → [[단위-불일치]].
+> 🔴 **추가 불일치**: 초록 *"11 perceptual capabilities"* ↔ 공개 스위트 **8 그룹**. **확정 못 했다 — 미해결로 올린다.**
+
+> [!warning] 🔴 **실시간성이 공백이다 — 폐루프 제어를 동기로 들면서 지연시간이 없다**
+> 초록: *"it has to be **fast enough for closed-loop control**"*. 🔴 **그런데 FPS·레이턴시 수치가 하나도 없다.** 📌 **본 도메인 템플릿의 핵심 질문("30fps+ 가능?")에 답이 없다.**
+
+> [!warning] 🔴 **SOTA 주장 vs 관심도 — GitHub ★24**
+> 볼트 API 실측: ★**24** · fork **2** · issues **0**. 같은 날 [[rea]] ★179,917 대비 **7,496배** 차.
+> 🆕 ⇒ **[[관심-검증-역상관]] 의 역방향 사례**(검증 풍부 · 관심 없음). ⚖️ **공개 9일차라 절대 비교는 부당하다.**
+
+> [!action] 해소 경로가 특정됐다 (레포 구조 확인 완료 · 미열람)
+> `vla/README.md` → **+24.8% 의 기준 백본명**(StarVLA·OpenWAM 비교 워크플로우) · `eval/README.md#full-suite` → **11 capabilities 분류**.
+
+## 관련 페이지 (10-13)
+- [[GroundingPI]] · [[XPENG-AI]] · [[Reflex]](재판정 선례)
+- [[단위-불일치]] · [[관심-검증-역상관]] · [[특화-역류]] · [[비매칭-비교]]
+- [[임바디드-AI]] · [[월드모델]]

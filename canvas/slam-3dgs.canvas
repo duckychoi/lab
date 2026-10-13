@@ -699,6 +699,66 @@
    "width": 250,
    "height": 150,
    "color": "3"
+  },
+  {
+   "id": "b1013-sl-hub",
+   "type": "text",
+   "text": "# 2026-10-13 유입 (1건)\n🔄 **도메인 재판정** ai-news → slam-3dgs\n(선례: [[Reflex]] 10-12, 2번째 적용)",
+   "x": -1200,
+   "y": 9410,
+   "width": 480,
+   "height": 140,
+   "color": "4"
+  },
+  {
+   "id": "s1013-gpi",
+   "type": "text",
+   "text": "### [[GroundingPI]] 🆕🏆\n업보트 96 · 저자 26 · [[XPENG-AI]]\n**4B** = MoonViT-V2 + Qwen3-4B\n34엔트리 평균 **73.68%**\n> GPT-6 Astra 71.54%(+2.14%p)\nnuScenes L2 **0.296m** ·\nRoboTwin 2.0 OOD 4/4 최대 +24.8%",
+   "x": -1200,
+   "y": 9630,
+   "width": 360,
+   "height": 215,
+   "color": "5"
+  },
+  {
+   "id": "k1013-sl-unit",
+   "type": "text",
+   "text": "🏆 **볼트 최대 발견**\n'34개 벤치'의 34 =\n**22 데이터셋 × 과제형식 엔트리**\nRefCOCOg **5회** · COCO/LVIS/Dense200 각 3회\n⇒ 평균이 **중복 가중**돼 있다\n→ [[단위-불일치]]",
+   "x": -800,
+   "y": 9630,
+   "width": 360,
+   "height": 215,
+   "color": "6"
+  },
+  {
+   "id": "k1013-sl-corr",
+   "type": "text",
+   "text": "🔴 **SOTA 주장 vs GitHub ★24**\nfork 2 · issues 0 (볼트 API 실측)\n[[rea]] ★179,917 대비 **7,496배** 차\n⇒ [[관심-검증-역상관]] **역방향**\n⚖️ 단 공개 9일차 — 절대비교 부당",
+   "x": -400,
+   "y": 9630,
+   "width": 360,
+   "height": 215,
+   "color": "1"
+  },
+  {
+   "id": "e1013-xpeng",
+   "type": "text",
+   "text": "**[[XPENG-AI]]** 🆕\n샤오펑 — 전기차/자율주행\n🆕 볼트가 HF `organization`\n필드에서 발굴(수집기 미수집)\n⇒ 평가 구성이 정체성과 일치",
+   "x": 0,
+   "y": 9630,
+   "width": 340,
+   "height": 215,
+   "color": "4"
+  },
+  {
+   "id": "a1013-sl-1",
+   "type": "text",
+   "text": "🏆 **해소 경로 특정됨**\n`vla/README.md` → +24.8% 기준 백본명\n`eval/README.md#full-suite` → 11 capabilities\n**레포 구조 확인 완료 · 미열람**",
+   "x": -800,
+   "y": 9885,
+   "width": 360,
+   "height": 150,
+   "color": "3"
   }
  ],
  "edges": [
@@ -1157,6 +1217,69 @@
    "toNode": "a1012sl-1",
    "fromSide": "right",
    "toSide": "left"
+  },
+  {
+   "id": "e1013-sl-hub",
+   "fromNode": "domain-hub",
+   "toNode": "b1013-sl-hub",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl0",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "s1013-gpi",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl1",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "k1013-sl-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl2",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "k1013-sl-corr",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl3",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "e1013-xpeng",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sla",
+   "fromNode": "s1013-gpi",
+   "toNode": "a1013-sl-1",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-gpi-k1013-sl-unit",
+   "fromNode": "s1013-gpi",
+   "toNode": "k1013-sl-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-gpi-k1013-sl-corr",
+   "fromNode": "s1013-gpi",
+   "toNode": "k1013-sl-corr",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-gpi-e1013-xpeng",
+   "fromNode": "s1013-gpi",
+   "toNode": "e1013-xpeng",
+   "fromSide": "bottom",
+   "toSide": "top"
   }
  ]
 }

@@ -6528,6 +6528,196 @@
    "width": 280,
    "height": 150,
    "color": "3"
+  },
+  {
+   "id": "b1013-hub",
+   "type": "text",
+   "text": "# 2026-10-13 배치 (13건)\n신규 **5**(논문) · 갱신 **8**\n🎯 배치 축 = **볼트가 자기 이월 장부를 측정 도구로 보고 반증했고,\n9배치짜리 거짓 이월의 발원지가 볼트 자신이었다**\n🏆 라이선스 2건·게이트 1건·34벤치 1건 돌파",
+   "x": -2400,
+   "y": 38840,
+   "width": 560,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "s1013-sspace",
+   "type": "text",
+   "text": "### [[S-Space]] 🆕\n업보트 **266(1위)** · 저자 11\n🎯 병목은 표상 형성이 아니라\n**시점 변환**(지각-계산 분해)\n🔴 초록 수치 **0개** = 벤치 부재",
+   "x": -2400,
+   "y": 39120,
+   "width": 300,
+   "height": 160,
+   "color": "5"
+  },
+  {
+   "id": "s1013-termhz",
+   "type": "text",
+   "text": "### [[TerminalHorizon]] 🆕\n업보트 80 · Qwen3.5-27B SFT\n🎯 환경 합성이 탐색·구현·검증을\n**미리 끝내버리는 문제**를 적발\n🔴 12벤치 '전부 향상' **점수 0**\n🆕 4번째 상태: 주장 有·근거 無",
+   "x": -2060,
+   "y": 39120,
+   "width": 300,
+   "height": 160,
+   "color": "5"
+  },
+  {
+   "id": "s1013-agentswe",
+   "type": "text",
+   "text": "### [[AgentSWE]] 🆕\n업보트 63 · 25 태스크 3단계\n🏆 **동결 제출 + 홀드아웃 + hard gate**\n= 검사가능성을 설계에 박음\n🔴 '아무도 못 했다' 점수 **0개**",
+   "x": -1720,
+   "y": 39120,
+   "width": 300,
+   "height": 160,
+   "color": "5"
+  },
+  {
+   "id": "s1013-thinkin",
+   "type": "text",
+   "text": "### [[Thinking-Inertia]] 🆕\n업보트 42 · 6모델 × 6개입\n🏆 **프록시를 먼저 반증**하고 시작\n🏆 임계변수 **답변 공간**(3번째 재현)\n🔴 3층 지표 **값 0개**",
+   "x": -1380,
+   "y": 39120,
+   "width": 300,
+   "height": 160,
+   "color": "5"
+  },
+  {
+   "id": "s1013-rea",
+   "type": "text",
+   "text": "### [[rea]] 🔄\n★**179,917**(볼트 실측)\n🏆 **일증분 +53,986 = 볼트 신기록**\n포크 +54.0% > 스타 +42.9%(2배치)\n🔴 성능 수치 **4배치 연속 0**",
+   "x": -2400,
+   "y": 39340,
+   "width": 300,
+   "height": 160,
+   "color": "1"
+  },
+  {
+   "id": "s1013-openwebui",
+   "type": "text",
+   "text": "### [[open-webui]] 🔄🏆\n★155,432 · `NOASSERTION`\n🏆 **= Open WebUI License**\nBSD-3 + **브랜딩 제거 금지**\n임계 **50명/30일 롤링**\n⇒ 오픈소스 챗UI 아니다",
+   "x": -2060,
+   "y": 39340,
+   "width": 300,
+   "height": 160,
+   "color": "5"
+  },
+  {
+   "id": "s1013-ltx",
+   "type": "text",
+   "text": "### [[LTX-2.5]] 🔄🏆\n`gated:auto` → **카드 봉인**(전면 아님)\n🏆 게이트 뒤 전수: **22B · 155.93GB**\nBF16 42.02 → NVFP4 18.72(2.24배)\n✅ 역산 검산 42.02÷2=21.0B\n🔴 벤치는 여전히 이월",
+   "x": -1720,
+   "y": 39340,
+   "width": 300,
+   "height": 160,
+   "color": "5"
+  },
+  {
+   "id": "s1013-ctxmode",
+   "type": "text",
+   "text": "### [[context-mode]] 🔄🔴\n★27,659 · **ELv2**(10-11 확정)\n🔴 수집기 '8배치 이월' = **거짓**\n볼트가 2배치 전 종결했음\n🔴 98% 주장 9배치 미측정",
+   "x": -1380,
+   "y": 39340,
+   "width": 300,
+   "height": 160,
+   "color": "1"
+  },
+  {
+   "id": "k1013-falsecarry",
+   "type": "text",
+   "text": "### [[거짓-이월]] 🆕🏆\n해소된 항목이 미해소 장부에\n되살아나 배치를 건너 전파\n**n=3**: Agent-Reach(9) ·\ncontext-mode(8) · Qwen3.8(3)\n🔴 **발원지는 볼트 자신**",
+   "x": -2400,
+   "y": 39560,
+   "width": 320,
+   "height": 190,
+   "color": "6"
+  },
+  {
+   "id": "k1013-unit",
+   "type": "text",
+   "text": "### [[단위-불일치]] 🔄🏆\n**34 벤치 ≠ 22 데이터셋**\nRefCOCOg 5회·COCO 3회 중복가중\n+ 11 capabilities ≠ 8 그룹\n+ 구조수치 vs 성능수치 분리",
+   "x": -2040,
+   "y": 39560,
+   "width": 320,
+   "height": 190,
+   "color": "6"
+  },
+  {
+   "id": "k1013-seal",
+   "type": "text",
+   "text": "### [[벤치마크-이미지-봉인]] 🔄🏆\n**4상태 확정**: 부재(7) ·\n이미지봉인(1) · 🆕**카드봉인**(1) ·\n🆕**주장有근거無**(1)\n🔴 '접근 봉인' 명명 정정",
+   "x": -1680,
+   "y": 39560,
+   "width": 320,
+   "height": 190,
+   "color": "6"
+  },
+  {
+   "id": "k1013-cache",
+   "type": "text",
+   "text": "### [[캐시된-지표-신선도]] 🔄🏆\n**GitHub ★ = 실시간**(+5~+380)\n**HF downloads = 캐시**(드리프트 0)\n⇒ 간격 델타 수단은 GitHub 전용\n🆕 3번째: 카드 60일 고정",
+   "x": -1320,
+   "y": 39560,
+   "width": 320,
+   "height": 190,
+   "color": "6"
+  },
+  {
+   "id": "k1013-corr",
+   "type": "text",
+   "text": "### [[관심-검증-역상관]] 🔄🏆\n🆕 **역방향 사례 도착**\n[[GroundingPI]] 검증↑ ★**24**\nvs [[rea]] ★179,917 검증 0\n⇒ **양방향으로 벌어진다**(7,496배)",
+   "x": -960,
+   "y": 39560,
+   "width": 320,
+   "height": 190,
+   "color": "6"
+  },
+  {
+   "id": "e1013-owinc",
+   "type": "text",
+   "text": "**[[Open-WebUI-Inc]]** 🆕\nTimothy Jaeryang Baek 창시\n🎯 수익화를 기능이 아니라\n**브랜딩 제거권**에 걸었다\n(오픈코어와 다른 모델)",
+   "x": -2400,
+   "y": 39810,
+   "width": 300,
+   "height": 150,
+   "color": "4"
+  },
+  {
+   "id": "a1013-1",
+   "type": "text",
+   "text": "🔴 **open-webui 쓰고 있다면 즉시 확인**\n① 30일 50명 초과? ② 로고 변경?\n둘 다 YES = 라이선스 위반",
+   "x": -2060,
+   "y": 39810,
+   "width": 300,
+   "height": 150,
+   "color": "3"
+  },
+  {
+   "id": "a1013-2",
+   "type": "text",
+   "text": "🏆 **LTX-2.5 게이트 승인 요청 1회**\n`gated: auto` = 자동승인형\n→ 벤치·해상도·속도 한번에 해소\n**가장 비용 낮은 미해결 항목**",
+   "x": -1720,
+   "y": 39810,
+   "width": 300,
+   "height": 150,
+   "color": "3"
+  },
+  {
+   "id": "a1013-3",
+   "type": "text",
+   "text": "🔴 **이월 장부 3단 검증(신규 규약)**\ngrep 으로 **페이지 전문** 확인 후 이월\n`N배치 이월` 카운터 신뢰 금지\n→ 전수 재검증 미실시",
+   "x": -1380,
+   "y": 39810,
+   "width": 300,
+   "height": 150,
+   "color": "3"
+  },
+  {
+   "id": "a1013-4",
+   "type": "text",
+   "text": "🔴 **외부 코드 실행 0건 — 22배치**\n1순위: [[context-mode]] 98% 축소\n(MCP 로컬 기동 가능 · ELv2 무관)\n**볼트 단독 책임**",
+   "x": -1040,
+   "y": 39810,
+   "width": 300,
+   "height": 150,
+   "color": "3"
   }
  ],
  "edges": [
@@ -12151,6 +12341,181 @@
    "id": "e1012-45",
    "fromNode": "s1012-visionweave",
    "toNode": "a1012-3",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-hub",
+   "fromNode": "domain-hub",
+   "toNode": "b1013-hub",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-s0",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-sspace",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-s1",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-termhz",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-s2",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-agentswe",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-s3",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-thinkin",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-u0",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-rea",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-u1",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-openwebui",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-u2",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-ltx",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-u3",
+   "fromNode": "b1013-hub",
+   "toNode": "s1013-ctxmode",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-k0",
+   "fromNode": "b1013-hub",
+   "toNode": "k1013-falsecarry",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-k1",
+   "fromNode": "b1013-hub",
+   "toNode": "k1013-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-k2",
+   "fromNode": "b1013-hub",
+   "toNode": "k1013-seal",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-k3",
+   "fromNode": "b1013-hub",
+   "toNode": "k1013-cache",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-k4",
+   "fromNode": "b1013-hub",
+   "toNode": "k1013-corr",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-e0",
+   "fromNode": "b1013-hub",
+   "toNode": "e1013-owinc",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-a1",
+   "fromNode": "b1013-hub",
+   "toNode": "a1013-1",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-a2",
+   "fromNode": "b1013-hub",
+   "toNode": "a1013-2",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-a3",
+   "fromNode": "b1013-hub",
+   "toNode": "a1013-3",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-a4",
+   "fromNode": "b1013-hub",
+   "toNode": "a1013-4",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-ctxmode-k1013-falsecarry",
+   "fromNode": "s1013-ctxmode",
+   "toNode": "k1013-falsecarry",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-ltx-k1013-seal",
+   "fromNode": "s1013-ltx",
+   "toNode": "k1013-seal",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-termhz-k1013-seal",
+   "fromNode": "s1013-termhz",
+   "toNode": "k1013-seal",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-openwebui-e1013-owinc",
+   "fromNode": "s1013-openwebui",
+   "toNode": "e1013-owinc",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-rea-k1013-corr",
+   "fromNode": "s1013-rea",
+   "toNode": "k1013-corr",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-thinkin-k1013-cache",
+   "fromNode": "s1013-thinkin",
+   "toNode": "k1013-cache",
    "fromSide": "bottom",
    "toSide": "top"
   }
