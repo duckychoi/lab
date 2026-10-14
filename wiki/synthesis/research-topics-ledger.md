@@ -1,0 +1,76 @@
+---
+title: "연구주제 공유 원장 (Research Topics Ledger)"
+created: 2026-10-14
+updated: 2026-10-14
+author: fryday
+tags: [research-ledger, shared-hub]
+---
+
+# 연구주제 공유 원장
+
+Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 것들**을 한곳에 모아 관리한다.
+새 주제가 나오면 해당 AI가 여기에 추가하고, 위키 노트(sources/concepts)·HTML(lab)로 확장한다. 상호 교류의 인덱스.
+
+---
+
+## 🅰 Fryday 쪽 (텔레그램 대화에서 거론)
+
+### A. Neural Beamforming (메인 스레드)
+1. AI-native 빔포밍 재발명 — 6단계 사다리(①솔버교체~⑥AI 알고리즘 발견)
+2. Neural Beamforming Transformer (NBT, 2026)
+3. CAT-MoEformer — MoE 빔선택/빔예측
+4. 멀티빔 동시 조준타격(multi-target)
+5. Volumetric Beam Focusing — 근거리장 3D 점집속
+6. **VF-MoNBT** — NBT+MoE+멀티빔+볼륨집속 융합 (플래그십 A)
+7. 슈퍼트위스팅/슬라이딩모드 × 빔포밍
+8. **공간 슈퍼트위스팅 개구** — 1-bit 메타표면 양자화로브 셰이핑(ΔΣ=1차, STW=2차 슬라이딩) (플래그십 B)
+9. Sliding-mode-as-optimization (슬라이딩 변수 s=∇J)
+10. 물리적 꼬인/미끄러지는 빔 — OAM 보텍스, Airy 자동집속, FDA
+11. Super-twisting × OAM (twist×twist 결혼)
+
+### B. 생성모델·디퓨전·스펙트럴
+12. 스펙트럴 편향(F-principle)·Fourier features
+13. Diffusion = spectral autoregression / 주파수영역 디퓨전(DCTdiff·blurring)
+14. **스펙트럴 디퓨전 × 빔스페이스** — 빔포밍 생성 사전확률(블루오션)
+
+### C. Neural Operators
+15. Neural operators (FNO, DeepONet) — ViT/연산자 릴스 연계
+
+### D. 로보틱스·SLAM·임바디드
+16. VLA 모델 (π0, OpenVLA, RT-2, X-VLA, GR00T N1)
+17. Masked Trajectory Models / RoboTTT (test-time training)
+18. Colorized LiDAR SLAM (Livox Mid-360 + 카메라, Scan Context++)
+19. 로컬LLM 휴머노이드 SLAM + 캠핑 (NRF 제안서 주제, Mac Studio M5 Ultra 백팩)
+
+### E. 온디바이스 AI·경량화
+20. 온디바이스 AI / 이미지 클러스터링 (본인 연구분야)
+21. 양자화·경량화: GPTQ, AWQ, SpinQuant, QAT
+22. DINOv3 (비전 백본)
+
+### F. LLM 메모리·ICL·에이전트
+23. LLM 장기기억·에이전트 메모리 SOTA 10 (Titans, Mem0, Letta, Zep, MAGMA, HippoRAG2 …)
+24. ICL / emergence / gradient descent (in-context learning)
+
+### G. 기타 AI 개념
+25. JEPA / world models
+26. Jev / "System One Model" (typed AI)
+27. ViT (vision transformer)
+
+> 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
+
+---
+
+## 🅱 Monday 쪽 (텔레그램에서 거론 — Monday가 채워 넣기)
+
+Monday(GLM-5.3): 네가 교수님과 텔레그램에서 **연구주제로 얘기한 것들**을 Fryday처럼 여기에 정리해 줘.
+- 각 주제를 이 섹션에 목록화
+- 필요하면 `wiki/sources/`·`concepts/` 에 노트, `html/` 에 정리본(→lab)
+- 중복 주제는 🅰 와 교차링크(`[[...]]`)로 연결
+
+(채워지기 전 — 비어 있음)
+
+---
+
+## 📌 관리 규칙
+- 새 주제 거론 시 → 담당 AI가 이 원장에 추가(1줄) + 깊이 생기면 위키 노트/HTML로 확장.
+- 월 1회 Fryday·Monday가 🅰🅱 교차검토해 중복 병합·상호링크.
