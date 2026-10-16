@@ -2,13 +2,84 @@
 title: AI 뉴스 / GitHub 트렌딩 누적 인사이트
 type: domain
 domain: ai-news
-tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE]
+tags: [ai-news, github-trending, workflow, tool, claude-code, agent-framework, tts, video-inpainting, MoE, 오류본문-계량, 주제재생성-중복, 기준선, 코드실행, 이슈PR분해]
 created: 2026-04-09
-updated: 2026-10-13
+updated: 2026-10-16
 sources: [security-audit-skill.md, Octop.md, cline.md, oh-my-hermes.md, wshobson-agents.md, ScienceIDE.md, ProgramDistill.md, SP3O.md, DeepSeek-R1.md, Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, Comfy-Org-YuE2.md, firstmate.md, MiroFish.md, huggingface-transformers.md, all-agentic-architectures.md, ai-engineering-hub.md, Atria-Dawn.md, Dream-RSI.md, DataFlex-RL.md, clip-vit-base-patch32.md, distilbert-base-uncased.md, Llama-3.1-8B-Instruct.md, teamai-cli.md, Pascal-Editor.md, text-to-cad.md, openai-plugins.md, PI-Desktop.md, Show-Harness.md, WearableQA.md, SAEScientist-Bench.md, Discovery-Certification-Protocol.md, marketingskills.md, openai-skills.md, humanlayer-skills.md, openwhispr.md, open-science.md, Enoki.md, Ask-Before-You-Optimize.md, timesfm-3.0-pytorch.md, open-code-review.md, ego-lite.md, Nanbeige4.2-3B.md, ktransformers.md, AstrBot.md, WrenAI.md, Xiaomi-Robotics-VLA-Scaling.md, RAGU.md, xHC.md, RecGPT-V3.md, Loop-the-Loopies.md, voicebox.md, jcode.md, airllm.md, lingbot-map.md, kimi-cli.md, wigolo.md, posthog.md, lobehub.md, SEED.md, VideoChat3.md, SearchOS-V1.md, KeyFrame-Compass.md, BadWAM.md, Bonsai-27B.md, hallmark.md, openinterpreter.md, Boogu-Image-0.1.md, Ring-Zero.md, Harness-Handbook.md, OvisOCR2.md, KnowAct-GUIClaw.md, verifiers.md, needle.md, Read-It-Back.md, Know-Before-Fix.md, Xiaomi-Robotics-U0.md, AdvancedMathBench.md, Metacognition-LLMs.md, heretic.md, ABot-N1.md, ABot-AgentOS.md, Weak-to-Strong-Generalization-OPD.md, 4D-Human-Scene-Reconstruction.md, LightMem-Ego.md, Qwen-Fixed-Chat-Templates.md, krea2-identity-edit.md, OpenManus.md, claude-cookbooks.md, OpenViking.md, Jet-Long.md, CineMobile.md, meetily.md, awesome-claude-code.md, Morphing-Hybrid-Attention.md, UI-MOPD.md, ResearchStudio-Reel.md, DataComp-VLM.md, OmniOpt.md, mattpocock-skills.md, system_prompts_leaks.md, agentskills.md, Multi-Resolution-Flow-Matching.md, WorldDirector.md, Breaking-Failure-Cascades.md, SkillCoach.md, Distribution-wise-Rewards.md, Qwen3.6-35B-A3B-NVFP4.md, page-agent.md, codex-plugin-cc.md, pytorch.md, cs249r_book.md, CubeSandbox.md, Qwen3.6-27B-NVFP4.md, instagram-저장-2026-02-2026-04.md, hermes-agent.md, DeepTutor.md, VoxCPM.md, Kronos.md, Archon.md, SkillClaw.md, When-Numbers-Speak.md, HY-Embodied.md, OpenSpatial.md, DMax.md, Gemma-4-31B.md, GLM-5.1.md, VOID-model.md, superpowers.md, multica.md, andrej-karpathy-skills.md, VibeVoice.md, TradingAgents.md, TimesFM.md, MinerU2.5.md, Gemma-4-26B.md, FORGE.md, WildDet3D.md, RefineAnything.md, EXAONE-4.5.md, Matrix-Game-3.0.md, claude-code-best-practice.md, claude-mem.md, ai-hedge-fund.md, ralph.md, ClawGUI.md, AttentionSink.md, OmniShow.md, StripsAsTokens.md, PseudoUnification.md, Uni-ViGU.md, MiniMax-M2.7.md, markitdown.md, openai-agents-python.md, cognee.md, HY-World-2.0.md, DR3-Eval.md, RAD-2.md, HiVLA.md, ASGuard.md, HY-Embodied-0.5.md, Qwen3.6-35B-A3B.md, omi.md, how-to-fine-tune-reasoning-model.md, chrome-devtools-mcp.md, DeepGEMM.md, evolver.md, claude-desktop-debian.md, thunderbolt.md, GlobalSplat.md, Dive-into-Claude-Code.md, UniDoc-RL.md, TRACER.md, Switch-KD.md, Representations-Before-Pixels.md, LeapAlign.md, OmniVoice.md, OpenComputer.md, GoLongRL.md, WhenVisionSpeaksForSound.md, AutoResearchClaw.md, EnvFactory.md, Understand-Anything.md, claude-plugins-official.md, ai-engineering-from-scratch.md, knowledge-work-plugins.md, Anthropic-Cybersecurity-Skills.md, DelTA.md, TransitLM.md, MLLM-personality-bias.md, pi-Bench.md, Full-Attention-to-Sparse.md, Lens-Microsoft.md, See-What-I-Mean.md, SkillOpt.md, Cross-Layer-Routing-DiT.md, StepAudio-2.5.md, HRM-Text-1B.md, Marlin-2B.md, Hy-MT2-1.8B.md, Hy-MT2-30B-A3B.md, DVAO.md, Macaron-A2UI.md, Foundation-Protocol.md, WBench.md, ParaVT.md, OpenSpec.md, ppt-master.md, archify.md, FrontierChallenge.md, WarpSAC.md, JIT-Agent.md, PAWBench.md, TTPO.md, ACE-Agentic-Data.md, ponytail.md, claude-obsidian.md, Qwen3.8-Flash-Next.md, GLM-5.3-Flash.md, OpenMontage.md, Qwen3.8-27B.md, VoiceMem.md, Agentic-Game-Development.md, UrbanGround.md, Self-OPD.md, scientific-agent-skills.md, MiniMax-H3.md, Qwen3.8-27B-GGUF.md, awesome-gpt-image-2.md, opencode.md, spec-kit.md, context7.md, diagram-design.md, miles.md, Terminal-Universe.md, LLaDA-Image.md, On-Policy-Distillation-II.md, DeepSeek-V4-Flash-Vision-Exp.md, HarnessDev.md, Aspire.md, watermarks-remover.md, qm.md, Comp-AI-CRM.md, RoboSPA.md, Language-Transfer-Robot-Policies.md, Encoded-Early-Used-Late.md, Cadence.md, GLM-5.3-CYBERSECURITY-FP8.md, Benchmark-Radar.md, COBRA-Skills.md, PLC-DPO.md, VoiceStudio.md, BrowserSkill.md, opensre.md, harness-sdk.md, FastVideo.md, MiniCPM.md, SoL-Pi.md, Harness-Design-Empirical.md, When-EOS-Tokens-Disagree.md, JEPA-Anything.md, mms-300m.md, rea.md, AgentGarten.md, Learn2Play.md, TokenRouter.md, Trace2Env.md, SuperNav.md, laya.md, e2e.md, t3code.md, SearchJev.md, Noise-Out-Bias-In.md, MemAdapter.md, RobotUse.md, QuantCode.md, Agent-Reach.md, LTX-2.5.md, Ternary-Bonsai-2-27B.md, Qwen-Image-2.1-Uncensored-GGUF.md, Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md]
 ---
 
 # AI 뉴스 / GitHub 트렌딩 누적 인사이트
+
+## 최근 흐름 (2026-10-16 배치 · 20건) — 🎯 **배치 축 = 부재는 대상의 속성이 아니라 탐색 깊이의 함수다. 금일 세 번 반대로 뒤집혔다**
+
+> [!insight] 🏆 이 배치의 한 문장
+> **"없다"는 판정 3건이 전부 뒤집혔고, 뒤집은 방법은 매번 같았다 — 같은 자원의 다른 표현을 1회 더 열었다.**
+
+### 🔴🔴🔴 흐름 1 — "부재" 판정 3건이 전부 오판이었고, 비용은 매번 API 1회였다
+
+| 소스 | 수집기 판정 | 볼트 실측 | 해소 비용 |
+|---|---|---|---|
+| [[sam3]] | *"카드 **121 B** = 문서 공백"* | 🔴 **HTTP 401 본문 121 B** · 카드는 HTML 페이지에서 **286,467 B 비인증 열람 가능** | HTML 1회 |
+| [[Self-Evolving-Agent-Harness]] | *"리딩리스트 · **수치 0건 확정**"* | 🔴 `data/` **509 KB** · `claim-audit.tsv` **100개 연구 4축 판정** | `contents/` 1회 |
+| [[OmniCompass]] | *"초록에 URL 없어 **규약 ⑩ 불가**"* | 🔴 arXiv **`comments`** 에 홈페이지 → **리더보드 50종 전수** | arXiv API 1회 |
+
+🎯 **세 사례의 구조가 동일하다**: 초록/README/raw 엔드포인트라는 **한 표현**에서 멈췄고, **인접 표현**에 자료가 있었다. ⇒ 🆕 **메타 규약 확립**: ***"부재를 적기 전에 같은 자원의 다른 표현을 1회 본다."*** 📌 10-11 `/license` · 10-14 `contents/` · 10-15 초록 URL · 10-16 arXiv `comments`(규약 ⑫) · 10-16 HTML 페이지(규약 ⑬) = **다섯 번째 반복이므로 법칙이다.**
+🆕 **개념 신설: [[오류본문-계량]]** — 오류 응답 본문 길이를 자원 내용 길이로 읽는 실패. 1호 [[sam3]] 121 B · 2호 [[OmniCompass]] 404 본문 3,775 B(같은 배치 2건).
+
+### 🔴🔴 흐름 2 — 기준선이 간판을 만든다 (같은 배치 2건, 둘 다 "두 수치 모두 정확")
+
+- **[[Dynamic-Band-Splitting]]**: 간판 **+29.0%**(논문 보고치 7.03 기준) vs **+17.95%**(자체 재학습 128밴드 7.69 기준) ⇒ **11.07%p 소멸.** 🏆 **볼트 신규 산출: 어블레이션 진폭(5.15 dB)이 간판 이득(1.38 dB)의 3.73배** ⇒ 기여는 "경계 학습"이 아니라 **사후 정제** 쪽이다.
+- **[[caveman]]**: 간판 **33.2%** 의 분모가 "아무 지시 없음"이다. 🏆🏆🏆 **볼트가 레포 자체 오프라인 평가를 실행했다** — `Answer concisely.` 한 줄로 **−37.9%(공짜)** 가 나오고 caveman 기본 모드의 고유 기여는 **중앙값 +3% · 최소 −16%** 다.
+⇒ [[표-부분인용]] **④ 기준선 축 4·5호**([[SoL-Pi]]·[[LatentLoop]] 에 이어).
+
+### 🏆🏆🏆 흐름 3 — 26배치 연속 "외부 코드 실행 0건" 적자 종결
+
+`git clone` → `pip install tiktoken` → `python3 evals/measure.py`(커밋 스냅샷 · API 키 불필요). 🎯 **반증 도구가 반증 대상의 저장소 안에 커밋돼 있었다** — 10-04 볼트의 `CAVEWOMAN` *"strict lose-lose"* 추론이 **레포 자신의 계측기로 실증됐다**(2배치 이월 확증) → [[측정도구-먼저-반증]].
+
+### 🔴🔴 흐름 4 — "자사명이면 의심, 표준명이면 신뢰"가 정확히 틀렸다
+
+[[Qwen3.8-27B]] 카드가 `QwenSWEBench` 를 **`In-house`** 라 먼저 적고 **하네스(Claude Code) · avg@3 · 8시간 타임아웃 · max_tokens · temperature** 를 전부 공시한다. 🔴 **반면 "표준" 벤치 SWE-bench Pro 가 비대칭이다**: *"Except for **Opus4.6 Max, which uses the officially reported score**, all models are evaluated with the Claude Code harness"* ⇒ **61.7(자체 측정) vs 53.4(타사 공식 보고치)** 이고 고지는 **각주에만** 있다 → [[비매칭-비교]].
+🎯 **판단 기준은 이름이 아니라 "측정 조건이 적혀 있는가"다.**
+
+### 🏆 흐름 5 — 외부 연구가 볼트 판정 체계를 독립 재발명했다
+
+[[Self-Evolving-Agent-Harness]] 의 `claim-audit-rubric.md` 5기호 체계가 볼트 규약과 1:1 대응한다: `U`(입수 불가) = **"열어서 없음 ≠ 열지 않아 모름"** · `X` 를 분모에서 제외 = [[구조적-영값]] · `scope` 별도 레이어 = [[비매칭-비교]] · *"보고 내용이지 방법 품질이 아니다"* = **"추출 정확도 ≠ 교차대조"**(볼트 10-15).
+🔴 **그리고 그 대장의 결론이 이 도메인 전체에 대한 진단이다**: 하네스 자기진화 문헌 **100건 중 활성화·귀속 충족이 각각 10.2%** — **"좋아졌다"(58.2%)는 보이고 "무엇 때문에"는 못 보인다.**
+
+### 🔴 흐름 6 — 운영 지표를 처음 전수 분해했다 (6배치 적자 해소)
+
+| 레포 | 순이슈 open | PR open | 이슈 해소율 | 검산 |
+|---|---:|---:|---:|---|
+| [[scientific-agent-skills]] | 4 | 37 | **95.8%** | ✅ |
+| [[VoiceStudio]] | 81 | 107 | 92.9% | ✅ |
+| [[caveman]] | 40 | 31 | 92.5% | ✅ |
+| [[rea]] | 619 | 450 | 64.9% | ✅ |
+| **[[claude-plugins-official]]** | **1,038** | 95 | 🔴 **17.3%** | ✅ |
+
+🔴 **Anthropic 공식 레지스트리가 최악이고 2위와 3.75배 차이다.** 스타당 미해소 이슈 2.62% = [[caveman]] 의 **75배**. ⚖️ **다만 레지스트리는 "제출이 이슈로 들어오는" 구조일 수 있어 라벨 분해가 필요하다 — 볼트는 측정했고 분해는 못 했다**(= `O` 부분충족, 볼트가 스스로에게 적용한 첫 `O` 판정).
+🏆 **라이선스 전수 확보**: MIT 2 · Apache-2.0 2 · **AGPL-3.0 1**([[VoiceStudio]] — 유일한 강한 카피레프트, 수집기 *"ElevenLabs 대체"* 요약에 누락).
+
+### 🔴🔴🔴 흐름 7 — 볼트 최대 자기결함: 크론 노트가 3배치 반복됐다
+
+`리서치-*.md` **21건 = 고유 주제 7개 × 3배치**(중복 배수 **정확히 3.0배**). 🔴 **원인: 중복 판정 규약이 `^- URL:` 기준(10-13 확립)이고 크론 노트는 `^- path:` 로 들어온다** ⇒ **제목만 미세하게 바뀌어 전건 "신규"로 통과했다.** 🆕 **개념 신설 [[주제재생성-중복]]** + **`topic:` 슬러그 7건 부여**(제목이 아니라 이 키로 판정).
+🔴 **그리고 중복이 개선분을 덮어쓴다**: 10-15 볼트가 *"유일 실행 항목"* 으로 꼽은 **CVPR 2027** 이 금일 학회 노트에서 소멸하고 **전건 경과한 2026 마감**이 되돌아왔다 → [[경과-마감-배달]] **2배치 연속 재발.**
+
+### ⚖️ 수집기 판정 요청 3건 — 전건 응답
+
+| # | 요청 | 볼트 판정 |
+|---|---|---|
+| ① | 트렌딩 순위 vs 누적 스타 축 유지 | ✅ **유지 승인.** 10-15 판정 ⑥ 일관성 지켜졌다. 🔴 단 **당일증분=속도 / 누적=위치**를 매 배치 병기 → [[지표-창길이]] |
+| ② | `sam3` 121 B = "문서 공백" 4번째 항 신설 | 🔴 **기각.** 전제가 **HTTP 401 본문 오독**이다. 기존 ③접근 봉인에 해당. 🆕 대신 **규약 ⑬**(401/403 → HTML 1회) 신설 |
+| ③ | 갱신/신규 분해 보고 기본 항목화 | ✅ **승인.** 🔴 **단 금일 분해 자체가 틀렸다** — 보고 "갱신 3 · 신규 10" vs 실제 **갱신 8 · 신규 5**(GitHub 5/5·모델 3/3 보유 · 논문 5/5 신규) ⇒ **모델 신규 0건 4배치 연속, 연쇄 안 끊겼다** |
+
+### 📌 볼트 적자 (숨기지 않는다)
+
+- 🔴 **[[rea]] README 미열람 — 5배치 연속** (금일 실행 예산을 caveman 코드 실행·OmniCompass 발굴에 썼다. 선택이지만 5배치는 정당화되지 않는다 ⇒ **다음 배치 1순위 고정**)
+- 🔴 **[[claude-plugins-official]] 이슈 라벨 미분해** — 17.3% 의 의미가 미확정(1배치 이월)
+- 🔴 **[[scientific-agent-skills]] 규약 ⑨ 미집행** — `contents/` 미조회. 금일 같은 미집행이 Harness-RSI 에서 **509 KB 누락**으로 드러났다
+- 🔴 **[[OmniCompass]] `overall_cs` 정의 미확정** · **[[Qwen3.8-27B]] OSWorld 84.3 각주 미확인** (각 1배치 이월)
+- 🔴 **크론 노트 7건 독립 검증 0건** — 전건 `reliability: low` 로 표기했다
+- 🔴 **생활·금융(부동산·NRF) 검증 수단 0** — 10-15 자기한계 재확인, 금일도 미해소
 
 > [!insight] 🔄 2026-10-11 배치 — 13건(GitHub 5 · HF논문 5 · HF모델 3) · 신규 **9** · 갱신 **4**(+MiMo 2건 연쇄) · 개념 신설 **0** · 엔티티 신설 **5** · 🔄 **도메인 재판정 5건**
 > 🎯 **배치 축 = "볼트가 수집기를 처음으로 실측 반증했고, 같은 날 볼트의 추론도 반증됐다."** 금일은 수치 발견보다 **검증 방향이 양쪽으로 작동한 날**이다.
