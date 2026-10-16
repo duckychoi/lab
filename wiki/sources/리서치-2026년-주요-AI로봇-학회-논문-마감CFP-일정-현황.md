@@ -1,0 +1,67 @@
+---
+title: "[리서치] 2026년 주요 AI·로봇 학회 논문 마감·CFP 일정 현황"
+created: 2026-10-16
+updated: 2026-10-16
+author: research-agent
+origin: cron-research-agent
+tags: [research-agent, ai-news]
+---
+주요 AI·로봇 학회의 2026년 논문 마감·CFP 일정을 조사하겠습니다.
+## 2026년 주요 AI·로봇 학회 논문 마감·CFP 일정 현황
+
+**핵심 3줄**
+- 
+CVPR 2026은 11월 13일 페이퍼 마감, 1월 22일 리뷰 공개, 2월 20일 최종 결정
+
+- 
+NeurIPS 2026은 5월 4일 초록, 5월 6일 논문 마감, 9월 24일 작성자 알림
+  
+- 
+ICRA 2026은 5,088편 논문 접수, 약 1,800편 수용(약 35% 수용률), 6월 1-5일 개최
+
+
+**상세**
+- **CVPR 2026** (6월 3-7, 덴버): 
+추상 11/7, 논문 11/13, 보충자료 11/20 마감
+ | 
+이중투고 금지(11/13~2/20)
+
+  
+- **NeurIPS 2026** (12월 6-12, 시드니): 
+초록 5/4, 전체 논문 5/6 마감
+ | 
+메인·평가데이터셋·포지션페이퍼 트랙 분리
+ | 
+회의지 시드니, 파리, 애틀란타 동시 개최
+
+
+- **ICLR 2026** (4월 23-27, 리우데자네이루): 
+추상 9/19, 논문 9/24 마감(2025년)
+ | 
+메인컨퍼런스 4/23-25, 워크숍 4/26-27
+
+
+- **ICRA 2026** (6월 1-5, 빈): 
+논문 마감 9월 15일
+ | 
+기록적 5,088편 논문 투고
+ | 
+최종 결정 1월 31일, 조기등록 3월 31일
+
+
+- **CoRL 2026** (11월 9-12, 오스틴): 
+초록 5/25, 논문 5/28 마감
+ | 
+카메라레디 10월 12일 마감
+
+
+**💡 인사이트/시사점**
+- 2026년은 4개 주요 학회가 봄~초여름 사이 집중된 일정을 보임(CVPR 11월, ICLR 9월, NeurIPS 5월, CoRL 5월). 로보틱스 분야는 ICRA가 이미 마감(9월), CoRL이 마지막(5월)으로 타이밍 전략이 중요
+- ICRA 2026은 5,000편 이상 투고로 경쟁 심화, 35% 수용률은 상위 학회 중 경쟁적 수준. 여러 학회 투고 시 이중투고 금지 정책 확인 필수
+
+**출처**
+- CVPR 2026 Call for Papers — https://cvpr.thecvf.com/Conferences/2026/CallForPapers
+- NeurIPS 2026 Call for Papers — https://neurips.cc/Conferences/2026/CallForPapers
+- ICLR 2026 Dates and Deadlines — https://iclr.cc/Conferences/2026/Dates
+- ICRA 2026 Papers — https://2026.ieee-icra.org/contribute/call-for-icra-2026-papers-now-accepting-submissions/
+- CoRL 2026 Official Site — https://2026.corl.org/

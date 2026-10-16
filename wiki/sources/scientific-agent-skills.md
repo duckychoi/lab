@@ -2,14 +2,44 @@
 title: scientific-agent-skills — 분야별 AI 에이전트 스킬 모음
 type: source
 domain: ai-news
-tags: [ai-news, github-trending, agent-skills, science, engineering, python, workflow, scientific-database, text-asset]
+tags: [ai-news, github-trending, agent-skills, science, engineering, python, workflow, scientific-database, text-asset, 이슈PR분해, 검사가능성-공사, 규약9]
 created: 2026-05-14
-updated: 2026-08-31
+updated: 2026-10-16
 sources: []
 reliability: medium
 ---
 
 # scientific-agent-skills — 분야별 AI 에이전트 스킬 모음
+
+---
+
+## 🔄 2026-10-16 갱신 — **해소율 95.8% 로 금일 1위. 그리고 "25만 명" 주장은 여전히 근거 0건이다**
+
+**볼트 실측(2026-10-16)**: ★**50,948** (수집기 50,930 → +18) · 포크 4,525 · MIT · 최근 푸시 2026-10-15 · 생성 2025-10-19
+
+### ✅ 이슈/PR 분해 — 금일 5개 레포 중 **최고 해소율**
+
+| 항목 | 값 |
+|---|---:|
+| `open_issues_count` | 41 |
+| 순이슈 open | **4** |
+| PR open | 37 |
+| 검산 | 4 + 37 = **41** ✅ |
+| 이슈 closed | 92 ⇒ **해소율 95.8%** |
+| 스타당 미해소 이슈 | 4 / 50,948 = **0.008%** |
+
+🏆 **[[claude-plugins-official]](17.3%) 대비 5.5배, 스타당 미해소는 328배 적다.** 📌 **그런데 PR open 37 이 순이슈 open 4 의 9.25배다** ⇒ 🎯 **이 레포는 "이슈로 신고하고 PR로 고치는" 패턴이 아니라 "PR로 스킬을 추가하는" 패턴이다** — 177개 스킬 라이브러리라는 성격과 정합한다.
+
+> [!warning] 🔴 "25만 명 과학자 사용" — 3배치 이월, 금일도 근거 미제시
+> 수집기 10-16: *"📌 **'25만 명 과학자 사용'은 자체 주장이고 산출 근거가 README 에 없다** — 검증 가능한 수치는 스킬 수(177)·DB 수(100+)·버전(2.72.0)뿐이다."* ✅ **수집기 판정 정확하고, 탐색 범위도 명시했다**(규약 ⑪ 준수).
+> 🔴 **볼트 판정: 이 주장은 [[구조적-영값]] 이 아니라 [[검사가능성-공사]] 다.** 사용자 수는 **원리적으로 측정 가능한 양**인데(텔레메트리·설치 수·다운로드) 어느 것도 제시되지 않았다. 📌 **대조: 포크 4,525 · 스타 50,948 은 공개 상한을 준다** ⇒ 🔴 **250,000 명은 스타 수의 4.9배이므로, GitHub 지표만으로는 뒷받침되지 않는다**(물론 비-GitHub 경로가 있을 수 있다).
+> 🆕 **규약 ⑨ 적용 미집행**: 금일 `GET /repos/K-Dense-AI/scientific-agent-skills/contents/` 를 호출하지 않았다 — [[Self-Evolving-Agent-Harness]] 에서 같은 미집행이 **509 KB 증거 누락**으로 드러났으므로 **이 레포에도 동일 위험이 있다.** ⇒ **1배치 이월(우선순위 상)**.
+
+> [!insight] 📌 177개 스킬 · DB 100종+ — [[카탈로그-등가가정]] 2호 후보
+> 🎯 **10-15 에 [[VoiceStudio]] "646개 언어"로 신설한 개념이 그대로 적용된다**: *"N개 지원"은 N개를 등가 단위로 세지만 항목 뒤 자원이 갈리면 그 셈은 능력을 나타내지 않는다.* 🔴 **177개 스킬의 검증 깊이가 균질하다는 증거는 없다** — 생물·화학·의학·신약개발 4영역에 177개가 어떻게 분포하는지, 각 스킬의 테스트 유무가 미확인이다. ⇒ **`contents/` 조회 시 `skills/` 디렉터리 전수 열거로 분포를 확인한다**(①과 동일 호출로 처리 가능).
+
+> [!action] 당장 할 것 (갱신)
+> ① 🔴 `contents/` + `skills/` 전수 열거 → **177 검산 + 영역별 분포** 산출(규약 ⑨). ② Agent Skills 표준 호환 주장을 [[claude-plugins-official]] 레지스트리 규격과 대조 — **같은 배치에 둘이 같이 들어온 것은 교차검증 기회**다.
 
 **GitHub**: https://github.com/K-Dense-AI/scientific-agent-skills
 **지표(2026-08-29 최신)**: ⭐**37,109** · 포크 **3,521** · 이슈 **18** · **Python** · **MIT** · 생성 **2025-10-19** · 최종 푸시 **2026-08-28** — GitHub API 실호출 검증
