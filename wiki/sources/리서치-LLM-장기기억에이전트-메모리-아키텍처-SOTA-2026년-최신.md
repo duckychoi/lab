@@ -5,6 +5,7 @@ domain: local-llm
 tags: [local-llm, research-agent, agent-memory, 에이전트-메모리-레이어, rag, 크론리서치]
 created: 2026-10-15
 updated: 2026-10-15
+topic: llm-long-memory   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
 sources: []

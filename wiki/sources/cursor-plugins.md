@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, cursor, plugin, agent-skills, typescript, vendor-official]
 created: 2026-08-22
-updated: 2026-08-22
+updated: 2026-10-17
 sources: []
 reliability: high
 ---
@@ -50,3 +50,33 @@ reliability: high
 - 언어: TypeScript · 포크 369 · 이슈 52 · 라이선스 미명시 · 생성 2026-01-23 · 최종 푸시 2026-08-21
 - 신뢰도: ⭐⭐⭐⭐ (벤더 공식 리포·수치 API 실검증 — 단 규격 안정성·서드파티 생태계 규모 미검증, 라이선스 미명시)
 - 수집: 2026-08-22 아침 자동수집 (GitHub 트렌딩 데일리 8위)
+
+---
+
+## 🔄 2026-10-17 갱신 — 벤더 공식 디렉토리 3건 동시 급상승
+
+| 항목 | **2026-10-17T09:12Z 실측** | 수집기 보고 |
+|---|--:|--:|
+| 스타 | **12,125** | 12,118 (+7 시차) |
+| fork | **1,176** | 1,176 ✅ |
+| open_issues | **277** | — |
+| 금일 증분 | **+278** (트렌딩 9위) | +278 ✅ |
+
+- 제원: TypeScript · 🔴 **라이선스 `None`**(SPDX 미지정 — 벤더 공식 레포인데 라이선스가 없다) · created 2026-01-23 · pushed 2026-10-17T08:10Z
+- 🔴 **수집기 "신규" 판정 오류 3호** — 볼트 **2026-08-22 보유분** → [[정규명-우선-중복검사]].
+
+> [!insight] 🏆 금일 관측값 — 같은 날 벤더 공식 플러그인/스킬 디렉토리 **3건**이 동시에 트렌딩 상위
+> | 레포 | 벤더 | 스타 | 금일 증분 | 트렌딩 |
+> |---|---|--:|--:|--:|
+> | `anthropics/claude-plugins-official` | Anthropic | 40,997 | **+1,552** | **1위** |
+> | **`cursor/plugins`** | Cursor | **12,125** | +278 | 9위 |
+> | [[android-skills]] | Google | 8,191 | +36 | 7위 |
+>
+> ⇒ 🎯 **"에이전트에 무엇을 붙일 수 있는가"의 벤더 공식 목록이 동시에 수요를 받고 있다** ⇒ 플러그인/스킬 레이어가 **벤더 경쟁의 전선으로 이동**했다.
+> ⇒ ⚖️ **증분 격차가 56배다**(1,552 vs 36). 동시 급상승은 범주 수준 현상이고 **크기는 벤더 영향력에 비례**한다.
+> 🆕 개념 후보 [[벤더-디렉토리-동시급상승]] — **n=3 이면 신설 요건**이나, 세 건이 **같은 범주의 독립 관측인지**(또는 하나의 트렌딩 알고리즘 효과인지) 판정 전까지 **보류**한다 → [[동일대상-분리오판]] 교훈 적용.
+
+> [!note] 규약 ⑨ — 루트 구조 실측
+> `README.md`(16,053) + `.claude-plugin/` + `.cursor-plugin/` + `schemas/` + 플러그인 디렉터리 18종(`advisor/`·`agent-compatibility/`·`cli-for-agent/`·`continual-learning/`·`cursor-sdk/`·`harness/`·`orchestrate/`·`ralph-loop/`·`teaching/`·`thermos/` 등).
+> 🏆 **`.claude-plugin/` 과 `.cursor-plugin/` 이 같은 레포에 공존한다** ⇒ **Cursor 공식 레포가 Claude 플러그인 규격도 함께 담는다** = 규격 경쟁이 아니라 **상호 수용** 신호다([[android-skills]] 도 동일: Claude Code·Codex·Gemini 3종 설치 경로 제공).
+> 🔴 **수치 0건은 결함이 아니다** — 규격 레포이므로 가치 축이 수치가 아니다([[android-skills]]·[[ai-job-search]] 와 같은 범주).

@@ -2,6 +2,7 @@
 title: "[리서치] 2026년 Neural Beamforming·Neural Operator·Spectral Diffusion 최신 동향"
 created: 2026-10-14
 updated: 2026-10-14
+topic: neural-beamforming   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

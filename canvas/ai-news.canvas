@@ -6928,6 +6928,146 @@
       "width": 320,
       "height": 220,
       "color": "1"
+    },
+    {
+      "id": "b1017-hub",
+      "type": "text",
+      "x": -100,
+      "y": 42000,
+      "width": 420,
+      "height": 180,
+      "color": "4",
+      "text": "# 🎯 2026-10-17 배치 축\n\n**과장은 간판 한 줄에 있고\n본문은 자기 열등을 먼저 적는다**\n\n입고 20건 = 자동수집 13 + 크론 7\n🔴 **신규 7 · 갱신 6** (수집기 보고 \"전건 신규\" 기각)"
+    },
+    {
+      "id": "b1017-xerj",
+      "type": "text",
+      "x": -640,
+      "y": 42260,
+      "width": 300,
+      "height": 220,
+      "color": "5",
+      "text": "### 🏆🏆🏆 xerj\n⭐7,254 (+1,648 = 금일 최고)\n\n🔴 간판 **40x** ↔ 본문 **2.7x**\n= **14.8배 과대**\nREADME 에 \"40x\" **0건**\n유일 출처 = `description`\n\n[[xerj]]"
+    },
+    {
+      "id": "b1017-xerj-honest",
+      "type": "text",
+      "x": -640,
+      "y": 42520,
+      "width": 300,
+      "height": 200,
+      "color": "6",
+      "text": "### 🏆 그런데 본문은 가장 정직하다\n\n`TOKEN_USAGE.md` 첫 문장이\n**자기 불리 프레임을 기각**\n최악사례 **442배** 공시\ngrep 우위 *\"unbeatable\"* 인정\n*\"neutral to harmful\"* 자기무효 공시\n\n[[측정도구-먼저-반증]]"
+    },
+    {
+      "id": "b1017-signboard",
+      "type": "text",
+      "x": -300,
+      "y": 42260,
+      "width": 280,
+      "height": 200,
+      "color": "1",
+      "text": "### 🔴 ②유통형 괴리 = **n=3 법칙**\n\ncaveman 65%↔33.2%\ncontext-mode 98%↔96%/13%\n**xerj 40x↔2.7x**\n\n🆕 간판-지체 = **양방향 확정**\n과소 1호 airllm / 과대 1호 xerj\n\n[[간판-지체]]"
+    },
+    {
+      "id": "b1017-dedup",
+      "type": "text",
+      "x": 20,
+      "y": 42260,
+      "width": 300,
+      "height": 220,
+      "color": "1",
+      "text": "### 🔴🔴 중복검사 **46.2% 실패**\n\n13건 중 **6건 보유분**\nWaypoint-OPD·RoTA-Bench = **어제 생성**\n\n🎯 원인은 구조적\n`raw.md` 는 처리후 삭제됨\n⇒ \"이미 처리한 것\"은 **원리적으로 못 잡음**\n\n[[정규명-우선-중복검사]]"
+    },
+    {
+      "id": "b1017-outeraxis",
+      "type": "text",
+      "x": 360,
+      "y": 42260,
+      "width": 320,
+      "height": 240,
+      "color": "6",
+      "text": "### 🏆 벤치마크-외부축 신설 (n=3)\n\n**OpenGCUA** 8/8 점수↑ ↔ 실기기 **19.4배** 토큰\n**FDE-Gym** 0.56 ↔ 정보 전부 얻은 23건에서도 **10건만** 성공\n**RoTA** 17% ↔ 겹침↑정합↓ **19.4% vs 10.9%**\n\n⇒ 외부축이 의사결정에 더 중요\n[[벤치마크-외부축]]"
+    },
+    {
+      "id": "b1017-stars",
+      "type": "text",
+      "x": -300,
+      "y": 42520,
+      "width": 280,
+      "height": 200,
+      "color": "1",
+      "text": "### 🔴 스타-근거 비동행 신설\n\n**ruflo** 163일 **+30,139★**\n근거 **0 → 0**\n\n↔ **xerj** ★ 1/10 인데\n`benchmarks/` 18 디렉터리\n\n[[스타-근거-비동행]]"
+    },
+    {
+      "id": "b1017-meta",
+      "type": "text",
+      "x": 20,
+      "y": 42520,
+      "width": 300,
+      "height": 220,
+      "color": "6",
+      "text": "### 🏆 메타규약 **6회·6승**\n\n기본 응답 `downloadsAllTime` = **0**\n→ `expand[]` 1회 → **9,338,622**\n(30일의 **6.32배**)\n\n🆕 **규약 ⑭**\n부수: flux **5.55B** 실측 검증\n\n[[메타데이터-부재-추론]]"
+    },
+    {
+      "id": "b1017-papers",
+      "type": "text",
+      "x": 360,
+      "y": 42540,
+      "width": 320,
+      "height": 220,
+      "color": "2",
+      "text": "### 📄 HF 논문 신규 3건\n\n**OpenGCUA** 315up · 코드실행 1급\n**MJev-Spatial** 286up · 생성→분류\n**FDE-Gym** 281up · 저자 26인\n\n✅ 수집기 초록 추출 **3/3 정확**\n🔴 arXiv API 3건 전부 빈 응답\n⇒ HF API 대체"
+    },
+    {
+      "id": "b1017-upvote",
+      "type": "text",
+      "x": 700,
+      "y": 42260,
+      "width": 280,
+      "height": 200,
+      "color": "1",
+      "text": "### 🔴 업보트 하루 **4.18배**\n\nWaypoint-OPD\n158(10-16) → **660**(10-17)\n**2위 → 1위**\n\n↔ RoTA **200 → 200 정지**\n⇒ 전역 아니라 **논문별**\n🆕 규약 ⑮ 제안"
+    },
+    {
+      "id": "b1017-vendor",
+      "type": "text",
+      "x": 700,
+      "y": 42520,
+      "width": 280,
+      "height": 200,
+      "color": "5",
+      "text": "### 🏆 벤더 디렉토리 3건 동시급상승\n\nclaude-plugins ★40,997 **+1,552**\ncursor/plugins ★12,125 +278\nandroid/skills ★8,191 **+36**\n\n🔴 증분 격차 **56배**\n⚖️ 개념 신설 **보류**"
+    },
+    {
+      "id": "b1017-cron",
+      "type": "text",
+      "x": -1020,
+      "y": 42260,
+      "width": 320,
+      "height": 260,
+      "color": "1",
+      "text": "### 🔴🔴🔴 크론 노트 7건 = 재생성분\n\n26파일 / 7주제 = **3.71배**\n🔴 10-16 \"정확히 3.0배\" **정정**\n분포 **불균등 2~5**\n\n✅ **topic 26/26 부여 완료**\n(이월 14건 소급 청산)\n\n[[주제재생성-중복]]"
+    },
+    {
+      "id": "b1017-deadline",
+      "type": "text",
+      "x": -1020,
+      "y": 42560,
+      "width": 320,
+      "height": 240,
+      "color": "1",
+      "text": "### 🔴🔴🔴 마감 **5/5 전건 경과**\n\nICRA 13개월 · ICLR 12 · CVPR 11\nNeurIPS 5 · CoRL 4.6\n⇒ **실행 항목 0건**\nCVPR 2027 **3배치 연속 소멸**\n\n🎯 연도 누락 = **결함 은폐 조건**\n[[경과-마감-배달]]"
+    },
+    {
+      "id": "b1017-act",
+      "type": "text",
+      "x": -640,
+      "y": 42780,
+      "width": 620,
+      "height": 200,
+      "color": "3",
+      "text": "## 🔥 actionable 최우선 2건\n\n**① xerj `benchmarks/grep-vs-retrieval-lucene/run.sh` 실행** — 하네스 전량 동봉(run.py·questions.json·ledger.py·grade.py) ⇒ **외부 코드 실행 적자(26배치) 청산 + 간판 40x ↔ 본문 2.7x 결정적 시험**\n\n**② VLA 1차 논문 1건 열람** — 볼트 보유 **0건** · slam-3dgs 최대 공백"
     }
   ],
   "edges": [
@@ -12889,6 +13029,137 @@
       "toNode": "b1016-fmdefect",
       "fromSide": "right",
       "toSide": "left"
+    },
+    {
+      "id": "e1017-1",
+      "fromNode": "domain-hub",
+      "toNode": "b1017-hub",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-2",
+      "fromNode": "b1017-hub",
+      "toNode": "b1017-xerj",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-3",
+      "fromNode": "b1017-hub",
+      "toNode": "b1017-signboard",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-4",
+      "fromNode": "b1017-hub",
+      "toNode": "b1017-dedup",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-5",
+      "fromNode": "b1017-hub",
+      "toNode": "b1017-outeraxis",
+      "fromSide": "right",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-6",
+      "fromNode": "b1017-xerj",
+      "toNode": "b1017-signboard",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "간판 과대 1호"
+    },
+    {
+      "id": "e1017-7",
+      "fromNode": "b1017-xerj",
+      "toNode": "b1017-xerj-honest",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "같은 레포, 다른 층"
+    },
+    {
+      "id": "e1017-8",
+      "fromNode": "b1017-xerj",
+      "toNode": "b1017-stars",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "★1/10 인데 근거 多"
+    },
+    {
+      "id": "e1017-9",
+      "fromNode": "b1017-stars",
+      "toNode": "b1017-dedup",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e1017-10",
+      "fromNode": "b1017-outeraxis",
+      "toNode": "b1017-papers",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-11",
+      "fromNode": "b1017-hub",
+      "toNode": "b1017-meta",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-12",
+      "fromNode": "b1017-papers",
+      "toNode": "b1017-upvote",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e1017-13",
+      "fromNode": "b1017-hub",
+      "toNode": "b1017-cron",
+      "fromSide": "left",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-14",
+      "fromNode": "b1017-cron",
+      "toNode": "b1017-deadline",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-15",
+      "fromNode": "b1017-cron",
+      "toNode": "b1017-dedup",
+      "fromSide": "right",
+      "toSide": "left",
+      "label": "같은 원인, 다른 표면"
+    },
+    {
+      "id": "e1017-16",
+      "fromNode": "b1017-xerj-honest",
+      "toNode": "b1017-act",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e1017-17",
+      "fromNode": "b1017-vendor",
+      "toNode": "b1017-outeraxis",
+      "fromSide": "left",
+      "toSide": "right"
+    },
+    {
+      "id": "e1017-18",
+      "fromNode": "b1016-cron",
+      "toNode": "b1017-cron",
+      "fromSide": "bottom",
+      "toSide": "left",
+      "label": "4회차 · 3.0배→3.71배 정정"
     }
   ]
 }

@@ -5,6 +5,7 @@ domain: general
 tags: [general, research-agent, cfp, 학회마감, cvpr, neurips, iclr, icra, corl, 크론리서치, 경과-마감-배달]
 created: 2026-10-15
 updated: 2026-10-15
+topic: conference-cfp   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
 sources: []

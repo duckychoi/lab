@@ -2,6 +2,7 @@
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026년 최신 동향)"
 created: 2026-10-14
 updated: 2026-10-14
+topic: llm-long-memory   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

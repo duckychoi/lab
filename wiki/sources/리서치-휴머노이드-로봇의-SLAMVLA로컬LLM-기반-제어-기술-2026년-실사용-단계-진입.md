@@ -5,6 +5,7 @@ domain: slam-3dgs
 tags: [slam-3dgs, research-agent, humanoid, vla, slam, local-llm, 크론리서치, 단위-불일치]
 created: 2026-10-15
 updated: 2026-10-15
+topic: humanoid-slam-vla   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
 sources: []

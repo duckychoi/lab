@@ -2,6 +2,7 @@
 title: "[리서치] 휴머노이드 로봇의 VLA·SLAM·로컬LLM 통합 제어 생태계 형성"
 created: 2026-10-14
 updated: 2026-10-14
+topic: humanoid-slam-vla   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]
