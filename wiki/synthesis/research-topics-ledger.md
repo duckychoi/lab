@@ -1,7 +1,7 @@
 ---
 title: "연구주제 공유 원장 (Research Topics Ledger)"
 created: 2026-10-14
-updated: 2026-10-14
+updated: 2026-10-17
 author: fryday
 tags: [research-ledger, shared-hub]
 ---
@@ -55,6 +55,23 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
 25. JEPA / world models
 26. Jev / "System One Model" (typed AI)
 27. ViT (vision transformer)
+
+### H. 스펙트럼 기억·창의력 (신규 2026-10)
+28. **"창의력 = 아주 긴 기억력" — 푸리에 중첩 기반 기억장치** (교수님 발상)
+    - 르장드르 vs 푸리에 기저: **르장드르=충실한 장기저장**(비주기·무한지평 LegS), **푸리에/복소=재조합·위상**(binding)
+    - HiPPO / LMU / **FRU(푸리에 기저, 유한주기)** / HiPPO-LegS(무한지평·척도불변)
+    - **HRR/FHRR** 홀로그래픽 기억 — 순환합성곱=푸리에 곱, **위상결합·중첩**(= CDMA/FDMA 원리)
+    - **복소/위상 기억** = 대각 복소 SSM(S4D·S5·LRU): 감쇠 복소진동자 $e^{(-\alpha+j\omega)t}$ — 크기=기억길이, 위상=주파수
+    - 🟢 **빈 땅**: 복소SSM(무한지평) + FHRR 위상결합 → **"생성형 홀로그래픽 기억"**, 창의=위상 보강간섭(constructive interference)
+    - ⚠️ 함정: 중첩 용량·누화 천장(무한주기≠무한용량), 순수 푸리에 시간국소성 약함(웨이블릿/Gabor 대안), 창의력 미조작화
+    - 연결: [[스펙트럴 디퓨전 × 빔스페이스]](#14) · 빔포밍 위상/CDMA · 슈퍼트위스팅 강인성
+
+### I. 온디바이스 에이전트·모델 (신규 2026-10)
+29. **메타 Muse 패밀리 — 온디바이스 에이전트·액티브 메모리**
+    - Spark(프런티어 LLM, 1M) / **Glimmer(30B 오픈·온디바이스)** / **Wonder(최고성능, 2026.10.12)**
+    - Glimmer 원리(공개): **logit distillation(Spark→30B) + on-policy distillation+RL + 4bit 양자화 + perception encoder + 제로샷 툴콜**
+    - Wonder: **Active Memory / Active Focus**(기능만 공개, 메커니즘·논문 비공개) · "컨텍스트 길이보다 정보활용"
+    - 연결: [[LLM 장기기억·에이전트 메모리 SOTA]](#23) · 온디바이스 경량화(#20-22)
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 
