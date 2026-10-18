@@ -972,3 +972,38 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 > - 트렌딩 12위 `hmjz100/LinkSwift`(24,127★)는 **AI/ML 무관**(중국 네트워크 드라이브 다운로드 스크립트)으로 제외.
 > - HF 논문 10-16 목록 중 **`OmniCompass`(573up) · `Self-Evolving Agent Harness`(193up) · `Learning Where to Split`=DBS(134up) 3건은 볼트 보유분**이라 제외.
 > - HF 모델 **다운로드 1·2위가 중복이라 제외**: `abenzerps/Qwen-Image-2.1-Uncensored-Quantized`(2,477,554 dl · 볼트 언급 10회) · `Lightricks/LTX-2.5`(1,993,003 dl · 22회) ⇒ 그 다음 순위 3건을 넣었다. ⚖️ **"다운로드 상위 3개" 기준을 중복제거 후로 해석했음을 숨기지 않는다.**
+
+## [에이전트 수집] [리서치] 2026년 온디바이스 AI·엣지 추론·모델 경량화 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-온디바이스-AI엣지-추론모델-경량화-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] 2026년 휴머노이드 로봇 SLAM·VLA·로컬LLM 제어 기술 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-휴머노이드-로봇-SLAMVLA로컬LLM-제어-기술-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] Neural Beamforming·Neural Operator·Spectral Diffusion 2026 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)
+- type: wiki-note
+- path: wiki/sources/리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] 서울 옥수·금호·왕십리·성수 지역 아파트 시장 2026년 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-서울-옥수금호왕십리성수-지역-아파트-시장-2026년-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] 2026년 NRF 신진연구자·우수신진·인프라 구축 사업 공고 현황
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-NRF-신진연구자우수신진인프라-구축-사업-공고-현황.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] AI·로봇 주요 학회의 2026년 논문 마감·CFP 일정 현황
+- type: wiki-note
+- path: wiki/sources/리서치-AI로봇-주요-학회의-2026년-논문-마감CFP-일정-현황.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
