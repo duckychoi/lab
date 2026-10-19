@@ -1007,3 +1007,38 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 - type: wiki-note
 - path: wiki/sources/리서치-AI로봇-주요-학회의-2026년-논문-마감CFP-일정-현황.md
 - 메모: 크론 리서치 에이전트 자동 작성 (2026-10-18)
+
+## [에이전트 수집] [리서치] 2026년 온디바이스 AI·엣지 추론·모델 경량화 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-온디바이스-AI엣지-추론모델-경량화-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
+
+## [에이전트 수집] [리서치] 2026 휴머노이드 로봇 VLA·SLAM·로컬LLM 제어 혁신의 해
+- type: wiki-note
+- path: wiki/sources/리서치-2026-휴머노이드-로봇-VLASLAM로컬LLM-제어-혁신의-해.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
+
+## [에이전트 수집] [리서치] Neural Beamforming·Neural Operator·Spectral Diffusion 2026 신규 동향
+- type: wiki-note
+- path: wiki/sources/리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
+
+## [에이전트 수집] [리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA 2026
+- type: wiki-note
+- path: wiki/sources/리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
+
+## [에이전트 수집] [리서치] 2026년 서울 동부권 아파트 시장의 삼중 압박: 실거래·청약·세제 변화
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-서울-동부권-아파트-시장의-삼중-압박-실거래청약세제-변화.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
+
+## [에이전트 수집] [리서치] 2026년 NRF 신진연구자·우수신진·장비인프라 구축 사업 동향
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-NRF-신진연구자우수신진장비인프라-구축-사업-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
+
+## [에이전트 수집] [리서치] 2026년 AI·로봇 주요 학회 CFP 일정 현황
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-AI로봇-주요-학회-CFP-일정-현황.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-19)
