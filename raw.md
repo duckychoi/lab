@@ -1147,3 +1147,38 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 - type: wiki-note
 - path: wiki/sources/리서치-AI로봇-주요-학회CVPRICRANeurIPSICLRCoRL-2026년-일정-현황.md
 - 메모: 크론 리서치 에이전트 자동 작성 (2026-10-22)
+
+## [에이전트 수집] [리서치] 2026년 온디바이스 AI·엣지 추론·모델 경량화 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-2026년-온디바이스-AI엣지-추론모델-경량화-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
+
+## [에이전트 수집] [리서치] 휴머노이드 로봇의 SLAM·VLA·로컬LLM 기반 자율 제어 2026년 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-자율-제어-2026년-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
+
+## [에이전트 수집] [리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향
+- type: wiki-note
+- path: wiki/sources/리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
+
+## [에이전트 수집] [리서치] LLM 장기기억·에이전트 메모리 아키텍처 2026년 SOTA
+- type: wiki-note
+- path: wiki/sources/리서치-LLM-장기기억에이전트-메모리-아키텍처-2026년-SOTA.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
+
+## [에이전트 수집] [리서치] 서울 성동구(옥수·금호·왕십리·성수) 아파트 시장 2026년 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-서울-성동구옥수금호왕십리성수-아파트-시장-2026년-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
+
+## [에이전트 수집] [리서치] 한국연구재단(NRF) 2026년 신진연구자·우수신진·장비인프라 사업 최신 동향
+- type: wiki-note
+- path: wiki/sources/리서치-한국연구재단NRF-2026년-신진연구자우수신진장비인프라-사업-최신-동향.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
+
+## [에이전트 수집] [리서치] 주요 AI·로봇 학회 CFP·마감 일정 (2026년 현황)
+- type: wiki-note
+- path: wiki/sources/리서치-주요-AI로봇-학회-CFP마감-일정-2026년-현황.md
+- 메모: 크론 리서치 에이전트 자동 작성 (2026-10-23)
