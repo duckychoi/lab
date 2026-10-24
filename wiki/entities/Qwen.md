@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-10-10
+updated: 2026-10-24
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -120,3 +120,5 @@ reliability: medium
 - [[Learn2Play]] · [[지표-창길이]] · [[Alibaba]]
 
 - 🔄 **2026-10-15**: [[Qwen3.8-27B]] dl30d **7,221,327** / 전체 **15,329,568** · likes 17,738 · trendingScore **333** · 🏆 **`safetensors.total` 27,781,427,952 — 12자리 3배치 연속 일치**(10-13·10-14·10-15 ⇒ 신뢰 구간 진입 · 수집기 "재확증"=2배치를 볼트가 3배치로 정정) · 🏆 **`createdAt` 2026-08-05 → `lastModified` 2026-08-14 = 생성 후 9일만 수정, 이후 62일 무수정** ⇒ 🆕 **"정체"가 아니라 완성 후 동결** · 🏆 **30일/전체 = 47.1% ⇒ 채택 가속 중** ⇒ 🔴 **10-14 볼트 "2개월 정체인데 2위" 긴장 판정을 금일 수정** · 🏆 **`image-text-to-text` 태그 = 멀티모달 사실 발굴** · 🔴 **`QwenSWEBench` 구성이 거짓이월 정리 중 양쪽 장부에서 삭제됨 → 이월 복원**(5배치)
+
+- 2026-10-24 — [[WeVisOne-VL]] 베이스 = Qwen3-VL(2B/4B) · [[OpenDS-World]] LLM 판정자 = Qwen3.8-27B · OpenDS 정확도 Qwen3.8-Max 25.5% / Qwen3.8-Flash 12.0%(예산 소진 81.5%).

@@ -2,6 +2,11 @@
 title: "[리서치] 2026년 AI·로봇 주요 학회 논문 마감·CFP 일정 정리"
 created: 2026-10-20
 updated: 2026-10-20
+type: source
+domain: general
+topic: conference-cfp   # 중복 판정 키 — 2026-10-24 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 독립 검증 미실시
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

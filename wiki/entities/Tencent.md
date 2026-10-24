@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, browser-automation, entity]
 created: 2026-07-04
-updated: 2026-09-18
+updated: 2026-10-24
 sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md]
 reliability: high
 ---
@@ -79,3 +79,8 @@ reliability: high
 - [[teamai-cli]]
 - [[파생표기-함정]]
 - [[에이전트-메모리-레이어]]
+
+## 🔄 2026-10-24 추가 — HF 10-23 목록 2건
+- [[WeVisOne-VL]] (WeChat Vision · 2B/4B · ★93): GitHub API `NOASSERTION` 인데 LICENSE 본문은 **Apache-2.0** — 위 벤더 규칙(서드파티 고지 병합 → 파서 실패)의 **3번째 재현**. 레포에 실코드·가중치 실존.
+- [[FAPL]] (Tencent Video 7인 참여): HF `organization`=tencent 이지만 **1저자·교신은 MMLab@HKUST** — 단일 org 필드가 주도 기관을 숨긴다 → [[복합지표-분해]]. 코드 레포는 README 만 → [[선언된-구현체-공백]].
+- [[IQuest-Q1]] 비교표에 [[Hy3]] 등장: Terminal-Bench 2.1 71.7 → 3.0 **3.0**(IQuest 자체측정 *).

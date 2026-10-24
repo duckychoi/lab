@@ -2,6 +2,11 @@
 title: "[리서치] AI·로봇 주요 학회(CVPR·ICRA·NeurIPS·ICLR·CoRL) 2026년 일정 현황"
 created: 2026-10-22
 updated: 2026-10-22
+type: source
+domain: general
+topic: conference-cfp   # 중복 판정 키 — 2026-10-24 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 독립 검증 미실시
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

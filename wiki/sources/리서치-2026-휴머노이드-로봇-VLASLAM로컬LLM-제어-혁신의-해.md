@@ -2,6 +2,11 @@
 title: "[리서치] 2026 휴머노이드 로봇 VLA·SLAM·로컬LLM 제어 혁신의 해"
 created: 2026-10-19
 updated: 2026-10-19
+type: source
+domain: slam-3dgs
+topic: humanoid-slam-vla   # 중복 판정 키 — 2026-10-24 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 독립 검증 미실시
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

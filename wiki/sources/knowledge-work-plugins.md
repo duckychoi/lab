@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, plugins, anthropic, knowledge-work, research, workflow, plugin, connector, cowork, 하네스-설계]
 created: 2026-05-25
-updated: 2026-10-10
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -55,3 +55,24 @@ reliability: high
 ## 원본
 - 출처: https://github.com/anthropics/knowledge-work-plugins
 - 신뢰도: ⭐⭐⭐⭐ (Anthropic 공식, 14.4K 스타)
+
+---
+
+## 🔄 2026-10-24 재수집 업데이트
+
+**관측 시각**: 2026-10-24 09:06 UTC (18:06 KST) · GitHub API 실호출
+
+- 실측: ★ **32,436** · fork **3,584** · open_issues **141 = 순수이슈 88 + PR 53**([[복합지표-분해]]) · Python · Apache-2.0 · created **2026-01-23** · pushed **2026-10-24(당일)** · subscribers 203 · topics **0개**
+- 수집기 대조: ★32,434→**32,436 (+2 드리프트)** · fork **3,584 완전일치** · #3 · 당일 +635 · 라이선스·언어·생성일·푸시일 **전부 일치**.
+
+> [!insight] 14일 만에 +3,939 (+13.8%) — [[security-audit-skill]] 과 정반대의 성장 유형
+> 직전 관측 **2026-10-10 ★28,497** → 오늘 **32,436**, 14일간 **+3,939**(일평균 약 +281, 1.14배). 🎯 이쪽은 **당일 푸시가 찍힌 능동 개발 레포**다. 같은 날 [[security-audit-skill]](코드 정지·외부 유입 5배)과 **성장 메커니즘이 대비된다** — 하나는 *평판이 코드를 앞지른* 경우, 이건 *코드가 꾸준히 도는* 경우. **같은 "트렌딩"이라도 pushed_at 이 둘을 가른다.**
+> 수집기 주장 **"11 role plugins"** 는 10-10 에 이미 확인한 *"직무별 플러그인 11종"* 재포지셔닝과 일치 — 새 드리프트 없음.
+
+> [!warning] 🔴 측정 수치 0개 · 커넥터 의존 — 10-10 판정 그대로
+> 업무 품질·시간 변화 측정 **여전히 전무**(3번째 관측에서도 0). topics 0개 · description 1줄 유지 → [[메타데이터-부재-추론]]. 실행에 외부 SaaS 인증 필요 → 볼트 환경 미실행 벽은 **오늘도 그대로**다.
+> 📌 10-10 미이행 액션 *"각 플러그인 내부 스킬 수 집계"* 는 이번에도 보류 — 당일 푸시로 내용이 더 커졌을 가능성이 있어 재확인 가치는 오히려 올랐다.
+
+### 원본 갱신
+- 검증: 2026-10-24 09:06 UTC GitHub API — ★+2 드리프트 · fork **완전일치** · **당일 푸시** · 이슈/PR 분해 신규(88+53)
+- 신뢰도: ⭐⭐⭐⭐ (Anthropic 공식 · ★32,436 · Apache-2.0 · 능동 개발) / 🔴 효과 측정 0개 · 커넥터 의존

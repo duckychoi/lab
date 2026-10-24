@@ -2,6 +2,11 @@
 title: "[리서치] Neural Beamforming: 임베디드·다중사용자 최적화 중심"
 created: 2026-10-20
 updated: 2026-10-20
+type: source
+domain: general
+topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 독립 검증 미실시
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

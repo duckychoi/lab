@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-paper, deepseek, kv-cache, moe, fp4, long-context, multimodal, 짝아티팩트]
 created: 2026-09-18
-updated: 2026-09-18
+updated: 2026-10-24
 sources: [DeepSeek-V4.1-Flash.md]
 reliability: medium
 ---
@@ -71,3 +71,5 @@ reliability: medium
 - 볼트 실측(2026-09-18, HF papers API): 업보트 **36**(raw **일치**) · published **2026-09-17**(일치) · **authors 592** · **githubRepo `None`** · 제목 raw 일치
 - 볼트 추가 = 🔴 **저자 592명 발견**(배치 나머지 4건 합의 13배 → "논문"이 아니라 **기업 백서**로 종류 구분, 볼트 척도 신설) · 🎯 **논문 초록이 모델 카드보다 *적게* 말한다는 역방향 [[한정어-탈락]]** 규정(카드의 HLE −19.5가 초록에서 *"substantially better"* 로 소거됨) · **SALA(계산) ↔ V4.1-Flash(저장) 직교 결합 빈칸** 기록 · ✅ [[백필-우회]] 재발 없음 확인
 - 신뢰도: ⭐⭐ (지표 API 실측 일치 · 구조 서술은 볼트 기보유 모델 페이지와 정합 · 🔴 그러나 초록에 비교 수치 0개 · 코드 없음 · 저자 592명으로 외부 재현 불가)
+
+- 🔄 **2026-10-24**: 후속 체크포인트 [[DeepSeek-V4.1-Flash-1017]] 의 카드도 **이 보고서 PDF(V4.1-Flash 레포 내)를 그대로 링크**한다 — 1017 전용 보고서 없음 ⇒ 1017 의 *"실행 시간·출력 길이 감소 · 파레토 전진"* 주장은 **이 문서로 뒷받침되지 않는다**(1017 이전 문서).

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, china, frontier-lab, deepseek, moe, open-weights, reasoning]
 created: 2026-08-04
-updated: 2026-09-18
+updated: 2026-10-24
 sources: [DeepSeek-V4-Flash-0731.md, DeepSeek-V4.1-Flash-Paper.md]
 reliability: high
 ---
@@ -44,3 +44,5 @@ reliability: high
 ## 원본
 - 대표 모델(시뮬레이션): https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731
 - 신뢰도: ⭐⭐⭐ (랩·효율 노선·오픈 MoE 이력은 실체, V4-Flash 세부는 시뮬레이션 타임라인 raw 기반 미검증)
+
+- 🔄 **2026-10-24**: [[DeepSeek-V4.1-Flash-1017]] — V4.1-Flash 의 마이너 업데이트(가중치만 · 763B 동일) · 57,715 dl · likes 2,636 · trendingScore 2,053(10-24T09:06Z) · MIT · 자기보고 TB 4.0 31.2→42.3 · ProgramBench 20.3→29.1 · HLE 36.8→42.6 · 🔴 하네스 교체(DSH Minimal→Claude Code)·NL2Repo 기준값 불일치(64.0 vs 65.4)·표 20→11행 축소 → [[비매칭-비교]]

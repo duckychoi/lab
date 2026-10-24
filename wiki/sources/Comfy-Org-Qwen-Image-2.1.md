@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [ai-news, hf-model, comfyui, diffusion-single-file, repackaging, 원본-파생-역전, qwen-image, promoted]
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -145,3 +145,5 @@ reliability: high
 - 볼트 실측 **2건**: HF API `/api/models/Comfy-Org/Qwen-Image-2.1`(HTTP **200**) · **동일 엔드포인트 `?expand[]=downloadsAllTime&expand[]=trendingScore` 재조회**(HTTP 200) 🔴 **base 응답에서는 두 필드가 `None` 으로 와서 expand 가 필요했다**(볼트 기존 규약 재확인 · 110회 사용 이력)
 - raw 대비: ✅ 다운로드 9,798,941 · likes 1,118 · trendingScore 132 · lastModified 2026-10-13 · license other **전건 일치** · 🏆 **볼트 신규 3건**: **"30일=전체"의 원인을 `createdAt` 로 특정**(생성 후 정확히 30일) · **파생 증거 3종 독립 수집**(base_model 태그 2종 · safetensors/gguf 둘 다 None · siblings 17) · **"다운로드 1위 = 가장 설치하기 쉬운 묶음" 해석** · ⚖️ **수집기 판정 요청 ④ 전면 수용**
 - 신뢰도: ⭐⭐⭐ (API 메타데이터 2회 실측 / 🔴 **모델 카드 미열람 — 이월 1건 · "카드에 벤치 없음"은 수집기 보고 인용**)
+
+- 🔄 **2026-10-24**: `library_name` = **diffusion-single-file** · `.safetensors` **15개** · 다운로드 10,048,476(API 실측 09:06Z) ⇒ 🔴 이 라이브러리는 `.safetensors` 요청마다 계수(`model-libraries.ts`) — 원본 대비 배수는 **요청 수 비**이며 사람 수 비가 아니다 → [[계수기-배수]] · [[원본-파생-역전]] 경고 추가

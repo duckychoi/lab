@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, image-generation, flux, distilled, t2i, image-edit, gated, bfl]
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-24
 sources: []
 reliability: medium
 ---
@@ -63,3 +63,12 @@ reliability: medium
 - 열어 본 것: HF API 기본 + `?expand[]=downloadsAllTime,downloads,trendingScore,likes,gated,safetensors`
 - 관측: 2026-10-17T09:12Z (18:12 KST)
 - 신뢰도: ⭐⭐ (벤치마크 0건 · 게이트 조건·라이선스 미확인)
+
+## 🔄 2026-10-24 재수집 업데이트
+
+- **실측(2026-10-24T09:06Z · 18:06 KST)**: 다운로드 **105,768**(수집기 일치 · 10-17 46,123 대비 **×2.29**, ≈7일 ≈8,520/일) · likes **660**(417 → ×1.58) · trendingScore 181(391 → 하락) · `safetensors.total` **5,548,681,984** 불변 · lastModified 10-16T04:58Z 불변
+- 🆕 **형제 레포 실측**: `flux-3-image-klein-base` **106,650** dl · likes 173 · gated auto · diffusers · created 10-13 / `flux-3-image-klein-pup`(프롬프트 업샘플러) **43,391** dl · likes 67 · **gated false** · transformers · created 10-14 ⇒ 🎯 **base 레포가 distilled 원본보다 다운로드가 많다**(106,650 vs 105,768 — 사실상 동률). 카드가 base 를 *"fine-tuning, LoRA training, research"* 용으로 규정하므로, **학습·연구 수요가 추론 수요와 같은 크기**라는 뜻일 수 있다(추정 — 두 레포 모두 diffusers 규칙이라 단위는 같다).
+> [!warning] 🔴 **[[flux-3-image-klein-comfy]] 와의 4.86배(→ 금일 5.06배) 비교는 동일 단위가 아니다**
+> 이 레포는 `diffusers` 필터(`model_index.json`/`modular_model_index.json` + 최상위 `*.safetensors` 만 계수)로, comfy 레포는 `diffusion-single-file` 규칙(**모든 `.safetensors` 파일 요청마다 계수** · 권장 명령 1회 = 4파일)으로 센다. 또 comfy 는 이 레포 + base + pup **3개 레포의 묶음**이다. ⇒ 상세 재계산은 [[flux-3-image-klein-comfy]] 10-24 섹션 · 개념 [[계수기-배수]].
+- 라이선스: comfy 레포 `cardData` 기준 **`flux-kommunity-license`**(비상업 + Qualifying User 상업 출력 예외) — 10-17 미해결 ② 부분 해소. README raw 는 여전히 **HTTP 401**.
+- 관련: [[계수기-배수]] · [[Black-Forest-Labs]] · [[Qwen]](업샘플러 = Qwen3.5-9B 파생 · 텍스트 인코더 = Qwen3-VL-4B)

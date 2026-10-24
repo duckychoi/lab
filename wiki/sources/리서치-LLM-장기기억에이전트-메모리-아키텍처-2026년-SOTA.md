@@ -2,6 +2,11 @@
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 2026년 SOTA"
 created: 2026-10-23
 updated: 2026-10-23
+type: source
+domain: local-llm
+topic: llm-long-memory   # 중복 판정 키 — 2026-10-24 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 독립 검증 미실시
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news]

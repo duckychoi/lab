@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, benchmark, web-browsing, multilingual, multimodal, 에이전트-웹접근, 인간대조]
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -62,3 +62,5 @@ reliability: high
 - 수집: 2026-10-05 자동수집 (ai-news)
 - 검증: HF papers API(업보트 12 일치) + **arXiv HTML 전문 476,987B 직접 열람**
 - 신뢰도: ⭐⭐⭐⭐
+
+> [!note] 2026-10-24 교차 — [[OpenDS-World]]: 같은 계열(라이브 웹 딥서치) · 인간 **무제한 시간** · 채점자 비대칭. 이 페이지의 "동점 ≠ 동일 능력"과 OpenDS 의 "인간 전원 실패 85과제 중 상위 모델 ~25% 해결"이 같은 방향이다 → 신설 [[인간-기준선-조건]].

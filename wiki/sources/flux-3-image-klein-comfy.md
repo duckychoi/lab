@@ -2,9 +2,9 @@
 title: black-forest-labs/flux-3-image-klein-comfy — ComfyUI 재패키징이 원본을 4.86배 앞선다
 type: source
 domain: video-saas
-tags: [video-saas, image-generation, flux, comfyui, repackaging, t2i, image-edit, gated, 배포형태수요]
+tags: [video-saas, image-generation, flux, comfyui, repackaging, t2i, image-edit, gated, 배포형태수요, 계수기-배수]
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-24
 sources: []
 reliability: medium
 ---
@@ -61,7 +61,7 @@ reliability: medium
 ## 관련 페이지
 - [[flux-3-image-klein]] ← 원본 distilled 체크포인트
 - [[선언된-구현체-공백]] ← 반대편 현상(구현체 없는 선언)
-- [[배포형태-수요]]
+- [[계수기-배수]]
 - [[LTX-2.5]] ← 게이트 레포 선례
 - [[캐시된-지표-신선도]]
 
@@ -70,3 +70,72 @@ reliability: medium
 - 열어 본 것: HF API 기본 + `?expand[]=...`(volt) · 사양은 수집기 HTML 1회 열람분 인용
 - 관측: 2026-10-17T09:12Z (18:12 KST)
 - 신뢰도: ⭐⭐ (벤치마크 0건 · 집계 단위 미확인 · 라이선스 미확인)
+
+## 🔄 2026-10-24 재수집 업데이트
+
+> [!warning] 🏆🔴 **10-17 핵심 인사이트("마찰 제거가 4.86배 수요를 만든다")를 철회한다 — 배수의 대부분은 계수기 단위 차이다**
+> 10-17 의 미해결 ③(*"집계 단위 레포 vs 파일 미확인"*)을 **공식 문서 + 계수 규칙 소스 + 파일 트리**로 해소했다.
+> - 이 레포의 `library_name` = **`diffusion-single-file`** (API 실측). `huggingface.js/packages/tasks/src/model-libraries.ts` 의 해당 항목: **`countDownloads: path_extension:"safetensors"`** ⇒ **`.safetensors` 파일 하나하나에 대한 GET/HEAD 가 각각 1 다운로드**다.
+> - 레포 트리 실측: `.safetensors` **12개**(diffusion_models 6 · text_encoders 5 · vae 1).
+> - 🎯 **카드가 직접 권하는 다운로드 명령이 파일 4개를 받는다** — `diffusion_models/…int8-convrot` + `text_encoders/qwen3vl_4b_int8_convrot` + `vae/flux2-vae` + `text_encoders/qwen3.5_9b_flux3_prompt_upsampler_int8_convrot`. ⇒ **ComfyUI 사용자 1명 = 다운로드 4회**(업샘플러 생략 시 3회).
+> - 반면 원본 [[flux-3-image-klein]] 은 `diffusers` 이며, `hub-docs/models-download-stats.md` 의 diffusers 필터는 `model_index.json`·`modular_model_index.json` + **최상위** `*.safetensors` 만 센다(하위 폴더 가중치 제외 = 이중계수 방지 설계). ⇒ diffusers 로 로드하는 사용자 1명 ≈ **1회**(수동으로 최상위 `model.safetensors`+`ae.safetensors` 를 받으면 2회).
+> ⇒ ⚖️ **두 레포의 다운로드는 다른 단위로 센 수다.** 원(raw) 배수 5.06배는 *"사람 수 비"* 가 아니라 *"요청 수 비"* 다 → 신설 [[계수기-배수]] (짝: [[구조적-영값]]).
+
+### 실측 (2026-10-24T09:06Z · 18:06 KST · `expand[]` 사용 — 규약 ⑭)
+
+| 레포 | 10-17T09:12Z (볼트) | **10-24T09:06Z (볼트)** | 배수 | 일평균(≈7.0일) | 수집기(금일) |
+|---|--:|--:|--:|--:|--:|
+| **comfy** (`diffusion-single-file`) | 224,108 | **534,837** | ×2.39 | ≈44,400/일 | 534,837 ✅ 일치 |
+| 원본 klein (`diffusers`) | 46,123 | **105,768** | ×2.29 | ≈8,520/일 | 105,768 ✅ 일치 |
+| 🆕 klein-base (`diffusers`) | — | **106,650** | — | — | (미수집) |
+| 🆕 klein-pup 업샘플러 (`transformers`) | — | **43,391** | — | — | (미수집) |
+
+- likes comfy 520 → **1,436**(×2.76) · 원본 417 → 660(×1.58) · trendingScore comfy 447 → **603** / 원본 391 → 181
+- `downloads == downloadsAllTime`(양쪽) — 생성 10-13/10-14 로 **30일 창 이내** → [[지표-창길이]]
+- comfy `lastModified` **10-17T07:10Z** 에서 멈춤(10-17 이후 무변경)
+- 원(raw) 배수: 3.24 (수집기 10-17) → 4.86 (볼트 10-17) → **5.06 (10-24)** · 구간 증분 비 310,729 / 59,645 = **5.21**
+
+### 🎯 배수 재계산 — 단위를 맞추면 순서가 뒤집힐 수 있다
+
+1. **분모를 바로잡는다**: 카드 원문 *"The original model repositories are FLUX 3 Image Klein, FLUX 3 Image Klein Base and FLUX 3 Image Klein Prompt Upsampler"* · `cardData.base_model` 에도 **3개 레포**가 나열된다. ⇒ comfy 는 원본 1개가 아니라 **3개 레포의 묶음**이다. 원본 패밀리 합 = 105,768 + 106,650 + 43,391 = **255,809** ⇒ 원 배수 **2.09배**(5.06배 아님).
+2. **분자를 사람 단위로 환산(추정)**: 권장 명령 기준 4파일/인 → 534,837 ÷ 4 ≈ **133,700**, 3파일/인 → ≈ **178,300**.
+3. 결과(전부 추정 · 원본 측 1회/인 가정):
+   - vs 원본 klein 단독: **약 1.26~1.69배**
+   - vs 원본 패밀리 합: **약 0.52~0.70배** ⇒ 🔴 **패밀리 기준으로는 comfy 가 오히려 작을 수 있다.**
+> [!warning] 추정의 한계
+> 사용자별 실제 파일 수(BF16 1개만 받는 사람, 여러 정밀도를 받는 사람, 재다운로드)는 **관측 불가**다. 원본 측도 diffusers 로드(1회)와 수동 최상위 파일 다운로드(2회)가 섞여 있다. ⇒ **사람 단위 배수는 이 범위 밖일 수도 있다.** 확정 가능한 것은 *"5.06배는 동일 단위 비교가 아니다"* 하나뿐이다. 사람 단위 수치는 HF Publisher Analytics(조직 전용 원시 로그)로만 나온다 — 볼트는 접근 불가.
+
+> [!insight] 🏆 바뀐 인사이트 — **"배포 형태가 수요를 만든다"가 아니라 "배포 형태가 계수기를 바꾼다"**
+> 10-17 의 *"마찰 제거 쪽이 4.86배 압도"* 는 **단위가 다른 두 계수기의 비**였다. 남는 신호는 약하다: 단위를 대충 맞춰도 comfy 가 klein 단독보다 **1.3~1.7배** 정도일 *수* 있다는 것 — 그러나 패밀리 기준이면 역전된다. ⇒ 📌 **내 SaaS 함의 수정**: *"ComfyUI 노드로 내면 5배 수요"* 는 **근거 없음**. 배포 형태 전략의 근거로 HF 다운로드 비를 쓰지 않는다.
+> ⇒ 🔴 **볼트 파급**: 같은 `diffusion-single-file` 규칙이 [[Comfy-Org-Qwen-Image-2.1]] 에도 적용된다(API 실측: `library_name` = diffusion-single-file · `.safetensors` **15개**). [[원본-파생-역전]] 의 Comfy 분기 배수(69~82배)도 **같은 단위 문제를 안고 있다** — 해당 페이지에 경고를 달았다.
+
+### 10-17 미해결 항목 상태
+- ① 게이트 동의 조건 전문 — ⬜ **여전히 미확인**(`raw/main/README.md` **HTTP 401** 재확인 · 규약 ⑬대로 HTML 1회 열람, 본문 공개 부분에서 게이트 조건 전문은 안 보임)
+- ② 라이선스 — 🟡 **부분 해소**: `cardData.license_name` = **`flux-kommunity-license`** · 카드 본문 *"permits non-commercial use and provides a commercial-output exception for Qualifying Users, subject to its terms"*. ⇒ **비상업 기본 + "Qualifying Users" 상업 출력 예외**. Qualifying User 의 정의(매출 한도 등)는 LICENSE.md 가 게이트 뒤라 **미확인**.
+- ③ 집계 단위 — ✅ **해소**(위)
+
+### HTML 1회 열람으로 새로 확보한 사양 (규약 ⑬)
+- 🆕 **프롬프트 업샘플러 = Qwen3.5-9B 파생**(`qwen3.5_9b_flux3_prompt_upsampler_*` · BF16 18.8GB / int8 9.8GB / w4a8 6.7GB) — 워크플로가 **기본으로 업샘플러를 켠다**. 10-17 *"업샘플러 품질이 최종 품질을 지배"* 가 배포물 설계로 확인됨.
+- 🆕 **바운딩 박스 프롬프트**: 0~1000 그리드로 요소 배치·재색·이동·제거(하드 마스크 아님)
+- 🆕 int8 파일은 **8GB GPU(RTX 3070) · FP8 미지원 GPU(RTX 30 이하)** 에서 동작 · NVFP4 는 **Blackwell 필요**
+- 🆕 *"BF16 트랜스포머와 오토인코더는 원본의 `model.safetensors`·`ae.safetensors` 와 같은 파일"* ⇒ **가중치 동일성 공식 확인**
+- 🆕 워크플로 JSON 12개(t2i / i2i / multi-image i2i × base·distilled × bf16·int8)
+
+> [!action] 액션 후보
+> - (중간) 8GB GPU 에서 int8 distilled + int8 업샘플러 워크플로로 **업샘플러 ON/OFF A/B** — 10-17 항목 유지, 하드웨어 조건(8GB) 확정으로 실행 장벽 낮아짐
+> - (낮음) 다운로드 비교 시 `library_name` 과 `countDownloads` 규칙을 먼저 확인하는 절차를 [[계수기-배수]] 에 규약화(볼트 내부)
+
+> [!question] 남은 미해결
+> ① FLUX Kommunity License 의 "Qualifying User" 정의 ② 게이트 동의 조건 ③ 사람 단위 다운로드(접근 불가 데이터) ④ 벤치마크 수치 **여전히 0건**
+
+### 관련 페이지 (추가)
+- [[계수기-배수]] · [[구조적-영값]] · [[원본-파생-역전]] · [[파생저장소-식별]] · [[컨테이너-중복]] · [[지표-창길이]]
+- [[Comfy-Org-Qwen-Image-2.1]] · [[Comfy-Org]] · [[ComfyUI]] · [[Black-Forest-Labs]] · [[Qwen]]
+
+### 원본 (10-24)
+- HF API `?expand[]=downloads,downloadsAllTime,likes,createdAt,lastModified,cardData,gated,safetensors` (klein-comfy / klein / klein-base / klein-pup)
+- `api/models/…/tree/main?recursive=true` (comfy · klein)
+- https://github.com/huggingface/huggingface.js/blob/main/packages/tasks/src/model-libraries.ts (`diffusion-single-file` 항목)
+- https://github.com/huggingface/hub-docs/blob/main/docs/hub/models-download-stats.md (diffusers 필터)
+- 모델 페이지 HTML 1회(README raw 401)
+- 관측: 2026-10-24T09:06Z (18:06 KST)

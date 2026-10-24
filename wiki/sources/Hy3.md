@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, huggingface, model, moe, long-context, agent, tencent]
 created: 2026-07-09
-updated: 2026-07-13
+updated: 2026-10-24
 sources: []
 reliability: medium
 ---
@@ -39,3 +39,5 @@ reliability: medium
 - HF DL: 9,163 (2026-07-13) ← 5,572 (2026-07-09), likes 579, Apache 2.0, BF16
 - 아키텍처: 295B 총 / 21B 활성 MoE(192e top-8) / 256K 컨텍스트 / FP8판·vLLM·SGLang
 - 신뢰도: ⭐⭐⭐ (DL·아키텍처·라이선스 실측 / SWE-Bench 편차 주장 미검증)
+
+- 2026-10-24 — [[IQuest-Q1]] 비교표(IQuest 자체측정 * 다수): Hy3 Terminal-Bench 2.1 71.7 → 3.0 **3.0*** → 4.0 4.5*. SWE-Bench Pro 57.9 (IQuest 57.5).

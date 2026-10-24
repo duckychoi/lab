@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [ai-news, hf-model, segmentation, meta, sam, video, open-vocabulary, transformers, 오류본문-계량, 볼트-정정, 규약13, gated, 401]
 created: 2026-09-04
-updated: 2026-10-16
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -108,3 +108,5 @@ reliability: high
 - 수집: 2026-09-04 자동수집 (raw 도메인 ai-news → **video-saas 재분류**: 영상 마스킹 파이프라인 부품)
 - 검증: 모델 카드 defuddle 원문 + HF API 실측 (2026-09-04) — **raw의 "미확인" 주장 반증**
 - 신뢰도: ⭐⭐⭐⭐⭐
+
+- 2026-10-24 — [[WeVisOne-VL]] 이 SAM3 를 **라벨 생성 교사**(제안 생성 → Qwen3-VL 검증)로 쓰고, 매팅 비교에서 SAM3 기반 SAM2-Matting 을 이긴다(AM-2K MAD 5.0 vs 12.1). 교사 초과인지 필터 정제 효과인지는 미분리.

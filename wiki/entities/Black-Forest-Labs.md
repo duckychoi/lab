@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [entity, company, image-generation, flux, bfl, 게이트배포]
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-24
 sources: [flux-3-image-klein.md, flux-3-image-klein-comfy.md]
 reliability: medium
 ---
@@ -30,7 +30,7 @@ reliability: medium
 
 **224,108 / 46,123 = 4.86배.** 수집기 측정 시점에는 3.24배였고 **격차가 벌어지는 방향**이다.
 ⇒ ⚖️ **BFL 이 만든 원본보다 제3포맷 변환본이 더 많이 당겨간다** — 단 **두 레포 모두 `black-forest-labs` 조직 소유**이므로 **자사가 자사 포맷 변환본을 함께 배포하고 그쪽이 이긴 것**이다.
-⇒ 🏆 **함의: 모델사의 유통 전략에서 "포맷 어댑터"가 가중치만큼 중요하다.** → [[배포형태-수요]]
+⇒ 🏆 **함의: 모델사의 유통 전략에서 "포맷 어댑터"가 가중치만큼 중요하다.** → [[계수기-배수]] 🔴 **2026-10-24 철회**: 4.86배는 수요가 아니라 계수 단위 차이(single-file 파일당 1회 vs diffusers 1인 1회)였다 → [[계수기-배수]]
 
 ## 제품 (금일 확인분)
 
@@ -59,4 +59,6 @@ reliability: medium
 - [[flux-3-image-klein]] · [[flux-3-image-klein-comfy]]
 - [[Lightricks]] ← 같은 생성모델 배포사 · [[LTX-2.5]] 게이트 선례
 - [[Qwen]] ← 텍스트 인코더 의존
-- [[배포형태-수요]] · [[스타-근거-비동행]]
+- [[계수기-배수]] · [[스타-근거-비동행]]
+
+- 🔄 **2026-10-24**: [[flux-3-image-klein-comfy]] **534,837** dl / [[flux-3-image-klein]] **105,768** / 🆕 klein-base **106,650** / klein-pup **43,391** (10-24T09:06Z 실측) · 라이선스 **`flux-kommunity-license`**(비상업 + Qualifying User 상업 출력 예외 · 정의 미확인) · 🔴 comfy:원본 5.06배는 계수 단위 차이(diffusion-single-file vs diffusers) → [[계수기-배수]] · 미해결 ③ "Base 레포 미확인" **해소**

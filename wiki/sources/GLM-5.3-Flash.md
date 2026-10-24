@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, glm, zhipu-ai, fp8, mit-license, trending, local-llm]
 created: 2026-08-28
-updated: 2026-09-03
+updated: 2026-10-24
 sources: []
 reliability: medium
 ---
@@ -91,3 +91,5 @@ reliability: medium
 - 관련 논문: arxiv 2602.15763 (API 태그 · **raw 미기재 · 미확인**)
 - 신뢰도: medium (수치 실검증 / 벤치·크기·멀티모달 여부 미확인 · DL 34로 실사용 미검증)
 - 수집: 2026-08-28 아침 자동수집 (HF 트렌딩 2위)
+
+- 2026-10-24 — [[IQuest-Q1]](320B/15B) 비교표에서 **Terminal-Bench 2.1/3.0/4.0 세 판 모두 GLM-5.3-Flash 우위**(84.3/30.0*/32.8 vs 83.2/17.9/22.7). 코딩 13칸 합계는 IQuest 8승 5패. [[OpenDS-World]] 딥서치에서는 23.5%(12모델 중 7위).

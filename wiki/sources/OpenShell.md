@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, sandbox, agent-runtime, rust, nvidia, isolation, audit, 위협모델-부재, 하네스-설계-축]
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -128,3 +128,32 @@ grep -i -c "threat|attack|adversar|escape|trust boundary"  →  0
 ### 원본 갱신
 - 검증: 2026-10-02 GitHub REST API + **README 전문 93행 직접 열람** — ★+3 · fork+1 · **issues 완전 일치** · 라이선스·생성일 일치 · 🏆 **3배치 이월 "위협모델" 항목 판정 완료**
 - 신뢰도: ⭐⭐⭐ (★14,185 · Apache-2.0 · 1차 벤더 · **기능 주장 README 로 확인**) / 🔴 **위협모델 README 부재 확정 · 오버헤드 수치 0개 · 독스 미열람**
+
+---
+
+## 🔄 2026-10-24 재수집 업데이트 — **3배치 이월 "위협모델" 항목이 독스 사이트에서 끝났다**
+
+**관측 시각**: 2026-10-24 09:06 UTC (18:06 KST) · GitHub API + docs.nvidia.com(v0.1.5) 실열람
+
+- 실측: ★ **19,017** · fork **1,899** · open_issues **574 = 순수이슈 374 + PR 200**([[복합지표-분해]]) · Rust · Apache-2.0 · created **2026-02-24** · pushed **2026-10-24(당일)** · subscribers 72 · topics **0개**
+- 수집기 대조: ★19,014→**19,017 (+3 드리프트)** · fork **1,899 완전일치** · #4 · 당일 +1,119 · 라이선스·언어·생성일·푸시일 **전부 일치**.
+- 📈 직전 관측 **2026-10-02 ★14,185** → 오늘 **19,017**, 22일간 **+4,832**(일평균 약 +220, 1.34배).
+- 릴리스 cadence 실측: v0.1.2(09-28) → v0.1.3(10-09) → v0.1.4(10-13) → **v0.1.5(10-20)**. PyPI `openshell` 0.1.5(총 97릴리스). ⇒ 🎯 **수집기 주장 "0.1.x stable cadence" · "PyPI openshell" 둘 다 확증.** 10-02 당시 미확인이던 `0.1.x 신규 격리 프리미티브`가 **4개 패치로 실재 확인.**
+
+> [!insight] 🏆 **10-02 최우선 미해결 항목이 해소됐다 — 위협모델은 README 밖 "버전드 독스 사이트"로 이주했고, 이제 실재한다**
+> 10-02 결론은 *"위협모델이 README 에 없고 별도 문서 사이트(docs.nvidia.com/.../architecture)로 밀려 있다. 독스 미열람이 남은 미확인"* 이었다. 오늘 **그 독스를 실제로 열었다**(v0.1.5). 결과:
+> - **신뢰 경계 명시**: Architecture 페이지가 *"supervisor 는 신뢰측에서 결정하고, sandbox 는 untrusted agent 와 경계를 공유하므로 정책 결정을 하지 않는다"* 로 **trust boundary 를 문장으로 규정.** *"sandbox holds nothing worth stealing: no gateway signing key, no JWT, no provider credentials"* — **에이전트 침해 시 무엇이 안 새는지**를 적었다.
+> - **탈출 대비(defense-in-depth)**: Security Best Practices 페이지가 *"even if a container escape vulnerability exists, the attacker lands as an unprivileged host user"* — 즉 **격리 실패를 가정하고 2차 방어선을 선언.** seccomp 가 `mount·pivot_root·ptrace` 등 **컨테이너 탈출 syscall 을 차단**한다고 명시. SSRF 보호(`169.254.169.254` 메타데이터 차단)·`audit vs enforce` 모드까지 **컨트롤별 "완화 시 위험"을 표로 열거.**
+> - **검증 엔진의 한계 자백**: Policy prover 는 SMT solver 기반 boundary check 인데, 모델이 못 다루는 규칙(GraphQL·MCP)은 **조용히 무시하지 않고 `unsupported` 결과를 반환**한다 — *"guarantees apply to policy features represented by its model"*. 🎯 **이것이 [[자기제한-명시]] 의 교과서적 사례다** — [[security-audit-skill]] 의 *"샌드박스 없으면 needs_validation 에 남긴다"* 와 **같은 발명**: 검증기가 못 하는 걸 못 한다고 출력한다.
+> ⚖️ **따라서 09-30~10-02 의 "safe/private 무한정 보증" 판정을 정정한다**: README 표면만 보면 [[한정어-탈락]] 이었으나, **독스까지 보면 위협모델·신뢰경계·검증 한계가 전부 서술돼 있다.** 09-30 가설("최악 = 어디에도 없음")은 **README 범위에서만 참이고, 제품 범위에서는 거짓**이었다. 📌 **첫 진입 문서(README)와 실제 설계 문서의 분리가 문제였지, 위협모델 부재가 문제가 아니었다.**
+
+> [!warning] 🔴 그래도 남는 것 — 오버헤드·탈출 "수치"는 여전히 0개
+> 수집기 *"no overhead/escape numbers"* 는 **확증된다.** Best Practices 는 위험을 **정성적으로**(「완화 시 ~가 샌다」) 적을 뿐, latency/throughput/% 는 없다. 🎯 **보안 제품 2대 질문 중 "무엇으로부터(위협모델)"는 이제 답이 있고, "얼마나 느려지나(오버헤드)"는 아직 없다** — 3배치에 걸친 이 레포의 결론이 반쪽만 닫혔다.
+> 🔴 **코드 실행 0건 유지** — 10-02 액션 `npx skills add NVIDIA/OpenShell` 미실행. v0.1.5 로 스킬도 갱신됐을 것이므로 재확인 가치 상승.
+
+> [!question] 오늘 배치 교차 — 에이전트 보안 스택 3층 동시 트렌딩
+> #1 방어([[security-audit-skill]]) · **#4 격리(본 레포)** · #6 공격([[Claude-Red]]). [[하네스-설계-축]] 의 "격리·감사 층"이 오늘 **방어·격리·공격 삼각으로 동시 관측**됐다. 본 레포는 그중 **유일한 벤더(NVIDIA)·유일한 Rust·당일 푸시**로 가장 능동적이다.
+
+### 원본 갱신
+- 검증: 2026-10-24 09:06 UTC GitHub API + **docs.nvidia.com v0.1.5 Architecture·Prover·Best-Practices·SECURITY.md 실열람** — ★+3 드리프트 · fork·라이선스·생성일·당일푸시 일치 · 🏆 **"위협모델" 3배치 이월 항목 독스에서 판정 완료(실재 확인)** · 릴리스 cadence 실측
+- 신뢰도: ⭐⭐⭐ (★19,017 · Apache-2.0 · 1차 벤더 · **위협모델·신뢰경계·검증한계 독스로 확인**) / 🔴 오버헤드 수치 0개 · 코드 실행 0건 · topics 0개

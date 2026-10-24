@@ -4,7 +4,7 @@ type: source
 domain: slam-3dgs
 tags: [ai-news, hf-paper, benchmark, 3d-reasoning, vlm, spatial, 인간격차, 규약12]
 created: 2026-10-16
-updated: 2026-10-17
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -66,3 +66,5 @@ reliability: high
 > RoTA-Bench: **GPT-5.6-Sol 17% vs 학부생 20명 100%** — 인간이 압도한다.
 > MJev-Spatial(금일 입고): 공간 이해 **종합 65.64% · 12/12 자기베이스 상회** — 모델이 잘한다.
 > ⇒ ⚖️ **둘은 모순이 아니다.** RoTA 는 **대화형 회전 선택 + 투영 정합**(순차 의사결정)을, MJev 는 **단발 공간 질의**(관계·거리·위치)를 잰다. 🎯 **즉 공간지능의 결손은 "인식"이 아니라 "순차 조작"에 있다** — 금일 배치가 만든 교차 결론이다.
+
+- 2026-10-24 — 인간 기준선 사례로 [[인간-기준선-조건]] 에 등재(학부생 20명 · 4회 · 100% = 천장 포화). 대조 사례: [[OpenDS-World]](인간 1회 21.1%).

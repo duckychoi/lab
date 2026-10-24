@@ -1,1389 +1,1453 @@
 {
-  "nodes": [
-    {
-      "id": "domain-hub",
-      "type": "text",
-      "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
-      "x": -100,
-      "y": -60,
-      "width": 260,
-      "height": 120,
-      "color": "3"
-    },
-    {
-      "id": "cluster-slam",
-      "type": "text",
-      "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
-      "x": -400,
-      "y": 150,
-      "width": 180,
-      "height": 80,
-      "color": "5"
-    },
-    {
-      "id": "cluster-3dgs",
-      "type": "text",
-      "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
-      "x": -100,
-      "y": 150,
-      "width": 180,
-      "height": 80,
-      "color": "2"
-    },
-    {
-      "id": "cluster-camera",
-      "type": "text",
-      "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
-      "x": 200,
-      "y": 150,
-      "width": 180,
-      "height": 80,
-      "color": "6"
-    },
-    {
-      "id": "sl-worldsculpt",
-      "type": "text",
-      "text": "## [[WorldSculpt]] *(2026-09-07)*\n2609.05416 · 업15\n\n**통짜 재구성 → 분해 가능성**\n단일 오브젝트 prior(Pixal3D)만\n학습했는데 **장면 학습 없이**\n수백 오브젝트 가림 장면 일반화\n\n🔗 **3DGS 월드(Marble·HY-World 2.0)\n→ compositional 메시 변환**\n\n**UE-MeshyScene**(GT 메시+주석)\n⚠️ 절대 수치 전무 · 실시간성 불명\n🔴 분할이 선행 전제일 가능성",
-      "x": -140,
-      "y": 430,
-      "width": 340,
-      "height": 300,
-      "color": "6"
-    },
-    {
-      "id": "sl-gap0907",
-      "type": "text",
-      "text": "## ⚠️ 추적 공백 (09-07)\n\n**Pixal3D** — 기반 prior, 1순위\n**Marble** · **HY-World 2.0**\n\n→ [[월드모델]] 축 공백",
-      "x": 240,
-      "y": 430,
-      "width": 260,
-      "height": 300,
-      "color": "3"
-    },
-    {
-      "id": "s0908-emb",
-      "type": "text",
-      "text": "## [[EmbodiedSkills]] (업 5·저자 17)\n\n스킬 결정 = **실행 제안**으로 격하\n제안→사전검사→실행→사후검증\n**고정 인터페이스** = VLA 교체 자유\n\nRoboTwin 86.20% · LIBERO 97.40%",
-      "x": -330,
-      "y": 850,
-      "width": 380,
-      "height": 230,
-      "color": "4"
-    },
-    {
-      "id": "s0908-mem",
-      "type": "text",
-      "text": "## 🔴 RMBench 기억의존 **12.5%**\n\n검증 루프는 전부\n**현재 상태**에 대한 판단\n→ *\"아까 뭘 했나\"* 자리가 없다\n\n→ [[에이전트-메모리-레이어]]\n**검증 잘 지어도 메모리는 별개**",
-      "x": 90,
-      "y": 850,
-      "width": 360,
-      "height": 230,
-      "color": "1"
-    },
-    {
-      "id": "s0908-conv",
-      "type": "text",
-      "text": "# 🎯 2도메인 독립 수렴\n\n[[EmbodiedSkills]] (로봇 제어)\n↕ 서로 인용 안 함\n[[TGOPD]] (LLM 학습)\n\n같은 골격: *\"신뢰되는지 먼저 검증하고\n통과할 때만 쓴다\"*\n→ [[검사가능성-공사]] 최강 근거",
-      "x": -150,
-      "y": 1120,
-      "width": 420,
-      "height": 230,
-      "color": "6"
-    },
-    {
-      "id": "s0908-gap",
-      "type": "text",
-      "text": "## ⚠️ 추적 공백 3건\n\n**RoboTwin 2.0 · LIBERO · RMBench**\n볼트에 페이지 없음\n\n+ 실시간성 **미확인**\n(초록에 지연시간 수치 전무)",
-      "x": 310,
-      "y": 1120,
-      "width": 340,
-      "height": 230,
-      "color": "3"
-    },
-    {
-      "id": "b0909-sl",
-      "type": "text",
-      "text": "# 2026-09-09 배치\n\n단안 깊이추정 1-step 하강",
-      "x": -100,
-      "y": 1570,
-      "width": 260,
-      "height": 110,
-      "color": "4"
-    },
-    {
-      "id": "s0909sl-mar",
-      "type": "text",
-      "text": "### Marigold V2\nHF 데일리 1위(업 24)\n다단계 flow-matching DiT → **1-step**\n**KITTI·ETH3D AbsRel 16–26% 개선**\n표면법선·본질이미지분해도 SOTA\n[[Marigold-V2]]",
-      "x": -420,
-      "y": 1770,
-      "width": 260,
-      "height": 180,
-      "color": "5"
-    },
-    {
-      "id": "n0909sl-how",
-      "type": "text",
-      "text": "### 처방 2가지\n① 내부 표현을 **GT 의미 피처와 정렬**\n② **Sinkhorn 손실** 2단계 파인튜닝\n(+ 필요시 양자화)",
-      "x": -120,
-      "y": 1770,
-      "width": 250,
-      "height": 160,
-      "color": "6"
-    },
-    {
-      "id": "a0909sl-1",
-      "type": "text",
-      "text": "### 🔬 HF Space 즉시 테스트\n내 소스 이미지로 먼저 실행\n판단 기준: **머리카락·잎사귀 경계**\n⚠️fps 수치 논문에 없음",
-      "x": 160,
-      "y": 1770,
-      "width": 250,
-      "height": 160,
-      "color": "2"
-    },
-    {
-      "id": "n0911S-sb",
-      "type": "text",
-      "text": "### [2026-09-11] 교차참조\n[[SpatialBlock]] (도메인 `ai-news`)\n실장면 공간QA 라벨의 급소 =\n**외부 인지 모듈 의존으로 노이즈**",
-      "x": -300,
-      "y": 2020,
-      "width": 330,
-      "height": 170,
-      "color": "4"
-    },
-    {
-      "id": "n0911S-why",
-      "type": "text",
-      "text": "🎯 이 도메인에 특히 아픔\n깊이추정·SLAM으로 라벨을 만들면\n**그 모듈 오차가 라벨에 섞인다**\n→ [[검사가능성-공사]]",
-      "x": 60,
-      "y": 2020,
-      "width": 330,
-      "height": 170,
-      "color": "1"
-    },
-    {
-      "id": "n0911S-how",
-      "type": "text",
-      "text": "우회로: **합성 블록쌓기 15k**\n3D→2D 투영·시점 변환·구조 결합\n+앵커 유도 색 변조\n**정답이 생성 규칙에서 직접 나온다**",
-      "x": 420,
-      "y": 2020,
-      "width": 330,
-      "height": 170,
-      "color": "5"
-    },
-    {
-      "id": "n0911S-act",
-      "type": "text",
-      "text": "> [!action]\n공간 라벨을 만들 일이 생기면 먼저 묻기:\n**외부 인지 모듈로 만들 것인가,\n생성 규칙에서 정답이 나오는 합성 과제인가**\n⚠️정량 수치는 초록에 없음",
-      "x": 60,
-      "y": 2220,
-      "width": 330,
-      "height": 180,
-      "color": "2"
-    },
-    {
-      "id": "batch-0913-slam-3dgs",
-      "type": "text",
-      "text": "# 2026-09-13 배치\n\n원문 API 실호출 + 표 전수 대조\n중복 0 · 한정어 탈락 0건",
-      "x": -1200,
-      "y": 2560,
-      "width": 300,
-      "height": 140,
-      "color": "6"
-    },
-    {
-      "id": "s-FreeFlow",
-      "type": "text",
-      "text": "## [[FreeFlow]]\n업보트 32 · 저자 4인\n\n플로우 전용부품 전부 제거\n→ 스케일링을 얻음\n🔴 대조군 모델명 없음",
-      "x": -820,
-      "y": 2560,
-      "width": 340,
-      "height": 200,
-      "color": "5"
-    },
-    {
-      "id": "s-RCWM",
-      "type": "text",
-      "text": "## [[RCWM]]\n업보트 28 · 저자 3인\n\n전체→국소→전체 재방문 재귀\n🎯 국소수리 후 전역정합 책임\n🔴 정량 수치 0개",
-      "x": -420,
-      "y": 2560,
-      "width": 340,
-      "height": 200,
-      "color": "1"
-    },
-    {
-      "id": "s-WiW",
-      "type": "text",
-      "text": "## [[World-in-World]]\n업보트 28 · 저자 3인\n\n동결 모델 + 입력 형식 번역\n(training-free)\n🔴 결과 자체를 안 적음",
-      "x": -20,
-      "y": 2560,
-      "width": 340,
-      "height": 200,
-      "color": "1"
-    },
-    {
-      "id": "batch-0914-slam-3dgs",
-      "type": "text",
-      "text": "# 2026-09-14 배치\n\n신규 1건\nraw ai-news → 재판정",
-      "x": -1200,
-      "y": 2960,
-      "width": 300,
-      "height": 180,
-      "color": "6"
-    },
-    {
-      "id": "s-LIT",
-      "type": "text",
-      "text": "## [[LIT]]\n업보트 44 · 저자 4인\n**ai-news → slam-3dgs 재판정**\n\n시각→행동 지름길을 끊는다\n1단계: 이미지 없이 SE(3) 자세로\n2단계: 그 자세 복원 감독 =\n        유일한 시각 통로\n\nLIBERO-Plus +3.87~10.70%p\n실로봇 +13.30~16.70%p",
-      "x": -820,
-      "y": 2960,
-      "width": 340,
-      "height": 220,
-      "color": "5"
-    },
-    {
-      "id": "n0914-lit-cond",
-      "type": "text",
-      "text": "## 🔴 성립 조건\n\n실로봇 이득 조건 =\n**미학습 카메라·조명·방해물**\n\n통상 LIBERO는\n\"preserving or improving\"\n\n🎯 이득은 분포 외에서만 난다\n→ [[분포내-우위]] 의 거울상",
-      "x": -420,
-      "y": 2960,
-      "width": 340,
-      "height": 220,
-      "color": "1"
-    },
-    {
-      "id": "n0914-iface",
-      "type": "text",
-      "text": "## 🎯 \"인터페이스만 설계\" 계보\n\n[[World-in-World]] (09-13)\n동결 모델 + 입력 형식 번역\n\n[[LIT]] (09-14)\n백본 유지 + 시각 통로 하나\n\n**모델을 재학습하지 않고\n모델이 보는 것의 형태를 바꾼다**",
-      "x": -20,
-      "y": 2960,
-      "width": 340,
-      "height": 220,
-      "color": "4"
-    },
-    {
-      "id": "b17-actionpiece",
-      "type": "text",
-      "x": -260,
-      "y": 3300,
-      "width": 560,
-      "height": 320,
-      "color": "6",
-      "text": "**[[ActionPiece]]** 🆕 2026-09-17\n🎯 MSE 반증: 점별 오차 작아도\n문맥 조정이 \"even reversed\"\n🆕 지표 **PRC** (거리 순위 보존)\n= 토큰 어휘·디코더 비종속 비교\nLIBERO 94.8 / 미학습 Plus 68.8\n🔴 **−26.0점** · VLA-Arena 51.5%\n일반화 미해결"
-    },
-    {
-      "id": "b19s-physbrain",
-      "type": "text",
-      "x": -260,
-      "y": 3750,
-      "width": 460,
-      "height": 280,
-      "color": "5",
-      "text": "### [[PhysBrain-1.5]] [[DeepCybo]] · 8B\n이해·행동·예측 단일 토큰열 · 액션어휘=ActionPiece\n28벤치 72.5 · 오픈 1위 14 / 패배 14 (포인팅 6·궤적 2)\n🔴 제어·미래예측 정량 0 (1.0엔 LIBERO 있었음)\n🔴 폐쇄모델 최저 추론 설정 · 13벤치 학습분할\n🔴 [[PhysBrain]] 1.0 오분류 정정"
-    },
-    {
-      "id": "b20s-hdr",
-      "type": "text",
-      "x": -1200,
-      "y": 4150,
-      "width": 400,
-      "height": 280,
-      "color": "3",
-      "text": "# 📥 2026-09-20 (1건)\n\n[[ReactHuman]]\n수집기 `ai-news` →\n볼트 **`slam-3dgs` 재판정**\n\n(240Hz 강체물리 · 휴머노이드\n= 09-19 [[ActionPiece]] 와 같은 근거)"
-    },
-    {
-      "id": "b20s-react",
-      "type": "text",
-      "x": -740,
-      "y": 4150,
-      "width": 480,
-      "height": 300,
-      "color": "5",
-      "text": "### [[ReactHuman]] 업52 · 저자 8\n**즉시 행동**을 재는 첫 물리 벤치\n17계열 · 1,000+ 장면 · 주석 없음\n**결정을 실제로 실행**\n적대적 객체(폼 모루 · 강철 사과)\n\n🔴 7종이 **약 3건 중 1건** 오처리\n외형>운동 신뢰 · 요격점 **미터 단위**\n🔴 ***규모로 줄지 않는다***"
-    },
-    {
-      "id": "b20s-judge",
-      "type": "text",
-      "x": -220,
-      "y": 4150,
-      "width": 460,
-      "height": 300,
-      "color": "6",
-      "text": "## 🎯 계보에 처음 붙는 **평가자**\n[[PhysBrain]] → [[ActionPiece]] → [[PhysBrain-1.5]]\n전부 **모델**이었고 **잴 자가 없었다**\n\n09-19 기록: *\"버전이 오르며 평가가\n제어 → 이해로 좁아짐\"*\n→ ReactHuman 은 **이해 → 제어로 되돌린다**\n\n🎯 규모 비민감 = **표현·인터페이스 문제**\n→ [[하네스-설계-축]] 과 같은 결론"
-    },
-    {
-      "id": "b20s-gap",
-      "type": "text",
-      "x": 280,
-      "y": 4150,
-      "width": 440,
-      "height": 300,
-      "color": "2",
-      "text": "## 🔴 주목 ↔ 채택 분리 (실측)\n논문 업보트 **52**\n데이터셋 좋아요 **1** · 다운로드 **567**\n(2,111파일 · gated false · 07-11 생성)\n\n🎯 **한 대상에서 동시에 측정된 드문 경우**\n볼트가 업보트를 신호로 써 온 것에 대한\n**직접 반례**\n\n▶ 장면 1개 열기 = **코드 실행 0건 깰 최저비용 후보**"
-    },
-    {
-      "id": "src-gae",
-      "type": "text",
-      "text": "## [[GAE]]\n\n지오메트리 네이티브 잠재공간\n↑34 · 🔀 재판정 ai-news→slam-3dgs\n\n✅ 잠재만 교체한 통제 비교\nFVD -12.7%/-23.1% (상대)\n카메라 궤적 오차 절반\n⬜ 속도 수치 0 = 실시간성 불명",
-      "x": -900,
-      "y": 4350,
-      "width": 300,
-      "height": 170,
-      "color": "6"
-    },
-    {
-      "id": "s-happyworld-0924",
-      "type": "text",
-      "text": "**[[HappyWorld-Bench]]** 🔀→slam-3dgs\nHF 데일리 **1위** ♥35\n1,138/300/254 · 14/9/8종\nspatial 최고 **70.14%**",
-      "x": -620,
-      "y": 4550,
-      "width": 300,
-      "height": 150,
-      "color": "1"
-    },
-    {
-      "id": "s-spatialinteractor-0924",
-      "type": "text",
-      "text": "**[[Spatial-Interactor]]** 🔀→slam-3dgs\n♥22 · **low**\nL1/L2/L3 커리큘럼 · LSI-108K\n🔴 초록 수치 0개·벤치명 없음",
-      "x": -290,
-      "y": 4550,
-      "width": 300,
-      "height": 150,
-      "color": "1"
-    },
-    {
-      "id": "c-privileged-opd",
-      "type": "text",
-      "text": "[[온폴리시-증류]] 갱신\n`privileged self-distillation`\n비대칭이 크기가 아니라\n**정보 접근**에 있다",
-      "x": 40,
-      "y": 4550,
-      "width": 300,
-      "height": 150,
-      "color": "6"
-    },
-    {
-      "id": "c-interactconsist",
-      "type": "text",
-      "text": "[[월드모델]] 갱신\n새 축: **상호작용 후 상태 일관성**\n문제제기+측정도구 같은 주 도착",
-      "x": 370,
-      "y": 4550,
-      "width": 300,
-      "height": 150,
-      "color": "6"
-    },
-    {
-      "id": "a-arxiv-fulltext",
-      "type": "text",
-      "text": "arXiv 본문 2건 확보\n2609.24308(W1~W6 정의)\n2609.23038(벤치마크명)",
-      "x": -620,
-      "y": 4730,
-      "width": 300,
-      "height": 150,
-      "color": "2"
-    },
-    {
-      "id": "n-wrop-0926",
-      "type": "text",
-      "text": "### [[WROP-Object-Permanence]]\nupvote 190 (데일리 1위)\n\n물체 영속성 학습셋 150만\n+ 시험 300문항\n🎯 \"안 보여도 있다\"",
-      "x": -700,
-      "y": 4950,
-      "width": 260,
-      "height": 150,
-      "color": "3"
-    },
-    {
-      "id": "n-omniecho-0926",
-      "type": "text",
-      "text": "### [[OmniEcho]]\nupvote 20\n\nFOA 공간오디오 벤치\n197장면·QA 2,972·내비 900\n🎯 \"안 보여도 들린다\"",
-      "x": -400,
-      "y": 4950,
-      "width": 260,
-      "height": 150,
-      "color": "2"
-    },
-    {
-      "id": "s-tamp-0927",
-      "type": "text",
-      "text": "### Coding Agents for TAMP\n\n**98,000 에피소드**\n56~95% vs 플래너 47%\n🎯 프로그램 **동결** 평가\nClaude Code(Opus 5) 포함\n\n[[Coding-Agents-TAMP]]",
-      "x": -700,
-      "y": 5220,
-      "width": 300,
-      "height": 180,
-      "color": "6"
-    },
-    {
-      "id": "e-tomsilver-0927",
-      "type": "text",
-      "text": "### tomsilver\n\nrobocode ★13\n프롬프트 전문 공개\n\n[[tomsilver]]",
-      "x": -380,
-      "y": 5220,
-      "width": 300,
-      "height": 180,
-      "color": "3"
-    },
-    {
-      "id": "n-tampwarn-0927",
-      "type": "text",
-      "text": "> 🔴 범위 39%p 폭\n\n하단 56%는 47%를 9%p 넘음\n대조 모집단 28 vs **16**\n환경별 분포 없음",
-      "x": -60,
-      "y": 5220,
-      "width": 300,
-      "height": 180,
-      "color": "1"
-    },
-    {
-      "id": "s-internw0-0928",
-      "type": "text",
-      "text": "## InternW0-Δ 🆕🔀\n\n**ai-news → slam-3dgs 재판정**\n(4D 기하·모션 prior)\nWorld Action Model · 저자 48\n**Causal Imprint** = 추론시 롤아웃 없음\n🔴 **정량 수치 0개**\n🟡 공개 전부 미래시제\n\n[[InternW0-Delta]]",
-      "x": -200,
-      "y": 5480,
-      "width": 320,
-      "height": 200,
-      "color": "5"
-    },
-    {
-      "id": "c-internw0-lint-0928",
-      "type": "text",
-      "text": "## 🔴 lint: 선례 충돌\n\nXiaomi 로보틱스 2건은\n`ai-news` 에 있다\n**같은 계열이 두 도메인에 분산**\n→ 일괄 재판정 별도 결정",
-      "x": 160,
-      "y": 5480,
-      "width": 300,
-      "height": 180,
-      "color": "1"
-    },
-    {
-      "id": "b0929-hdr-slam-3dgs",
-      "type": "text",
-      "text": "# 📮 2026-09-29\n\n재판정 유입 1건\n[[HexaAnything]]",
-      "x": -300,
-      "y": 5880,
-      "width": 420,
-      "height": 140,
-      "color": "4"
-    },
-    {
-      "id": "n0929s-hexa",
-      "type": "text",
-      "text": "### [[HexaAnything]] 🔀 재판정\n\nai-news → **slam-3dgs**\nPhysical Coding:\nCode as World + Code as Policy\nVLA/WAM 을 **도구로 호출**",
-      "x": 180,
-      "y": 6080,
-      "width": 300,
-      "height": 200,
-      "color": "1"
-    },
-    {
-      "id": "n0929s-nonum",
-      "type": "text",
-      "text": "## 🔴 수치 0개\n\n\"improves over XR-1 VLA\"\n\"beats base on every split\"\n\"often faster\"\n→ 전부 **폭 없음**",
-      "x": 180,
-      "y": 6330,
-      "width": 300,
-      "height": 190,
-      "color": "3"
-    },
-    {
-      "id": "n0929s-myeongsi",
-      "type": "text",
-      "text": "## [[암묵을-명시로]]\n\n로봇판. 같은 날\n[[YuE2]](악보)·[[hindsight]](메모리)와\n**독립적으로 같은 처방**",
-      "x": -180,
-      "y": 6080,
-      "width": 280,
-      "height": 180,
-      "color": "6"
-    },
-    {
-      "id": "n0930s-hdr",
-      "text": "# 📥 2026-09-30 — 로봇 논문 2건 **재판정 유입**\n\n수집기 `ai-news` → 볼트 **`slam-3dgs`**\n근거: 도메인3 태그에 `camera`·`robotics`",
-      "x": -1200,
-      "y": 6780,
-      "width": 400,
-      "height": 150,
-      "color": "4",
-      "type": "text"
-    },
-    {
-      "id": "n0930s-panovln",
-      "text": "## [[PanoVLN]] 🆕\n\nupvote 88(드리프트 0) · 데일리 3위\n**파노라마 카메라 + 사족보행 실기**\n\n✅ 4B 백본 · **RGB 전용**\nR2R-CE 11.9% · RxR-CE Val-Unseen 8.7%",
-      "x": -740,
-      "y": 6780,
-      "width": 380,
-      "height": 180,
-      "color": "5",
-      "type": "text"
-    },
-    {
-      "id": "n0930s-swam",
-      "text": "## [[Simple-WAM]] 🆕\n\nupvote 55 · 데일리 4위\n🏆 이득이 **첫 디노이징 스텝에서 거의 전부**\n\"**preparing** the future, not **generating**\"\n→ 완전노이즈 토큰 **1회 순전파**",
-      "x": -320,
-      "y": 6780,
-      "width": 380,
-      "height": 180,
-      "color": "5",
-      "type": "text"
-    },
-    {
-      "id": "n0930s-jawon",
-      "text": "### 🏆 두 논문이 **같은 결론**\n\n\"**자원보다 소비 구조**\"\n· 시야를 넓혀도 이득 제한적\n· 연산을 늘려도 이득은 첫 스텝\n= [[하네스-설계-축]] *\"덜\"* 의 로봇판",
-      "x": -740,
-      "y": 7010,
-      "width": 380,
-      "height": 190,
-      "color": "6",
-      "type": "text"
-    },
-    {
-      "id": "n0930s-realtime",
-      "text": "### ⏱️ 실시간성 — 구조는 긍정, 수치는 0\n\n✅ **시각 토큰 증가 없음**(볼트 보완)\n✅ **CGE** 신뢰도로 실행개수 동적결정\n✅ 4B · RGB 전용(깊이·LiDAR 불필요)\n🔴 **fps·지연시간 0개 → 30fps+ 판정 불가**",
-      "x": -320,
-      "y": 7010,
-      "width": 380,
-      "height": 190,
-      "color": "6",
-      "type": "text"
-    },
-    {
-      "id": "n0930s-banjeung",
-      "text": "### [[측정도구-먼저-반증]] 🏆\n\nPanoVLN = **가장 깨끗한 사례**\n자기 전제를 먼저 깼다\nSimple-WAM = 분포내 동일 ≠ 동등\n→ **분포내 벤치로는 차이가 안 보인다**",
-      "x": -1200,
-      "y": 7010,
-      "width": 380,
-      "height": 190,
-      "color": "6",
-      "type": "text"
-    },
-    {
-      "id": "n0930s-act",
-      "text": "## [!action] PanoVLN 본문\n\n① `%` vs `%p` 확정 ② 이전 SOTA 절대값\n③ **fps·지연시간** ④ 오픈소스 여부\n⑤ CGE 임계값\n\n🔴 Simple-WAM: 3축 하락폭 · \"almost entirely\" 정량값",
-      "x": -740,
-      "y": 7250,
-      "width": 400,
-      "height": 180,
-      "color": "2",
-      "type": "text"
-    },
-    {
-      "id": "n1002s-hub",
-      "type": "text",
-      "text": "# 📦 2026-10-02 배치\n\n**재판정 2건 유입**\n둘 다 **임바디드 축**\n🟡 경계 사례 명시",
-      "x": -1200,
-      "y": 7600,
-      "width": 280,
-      "height": 140,
-      "color": "1"
-    },
-    {
-      "id": "n1002s-ego",
-      "type": "text",
-      "text": "## [[EgoTools]] 🆕\n\n1인칭 도구사용 벤치·데이터\nupvote **11**(오늘 1위 · +4 드리프트)\nEgoTools-Data **100h**(+보조 3D)\nEgoTools-Bench **1,000 QA · 4트랙**\n\n🏆 **Gemini-3.1-Pro 66.9%**\n**but P&G 만 51.7%** = **−15.2%p**\n🔴 스위트 자급 구조(영상분리만)",
-      "x": -860,
-      "y": 7800,
-      "width": 340,
-      "height": 280,
-      "color": "5"
-    },
-    {
-      "id": "n1002s-pyrua",
-      "type": "text",
-      "text": "## [[PyRUA-Lean]] 🆕\n\n로봇 VLM 토큰 절감\nupvote 3 · 드리프트 **0**\n700 인스턴스(LIBERO-PRO·\nRoboTwin 2.0·RoboCasa365)\n✅ **63.1% → 71.7%**\n✅ LLM 호출 **−49%** · 토큰 **−65%**\n🔴 제목은 \"14%\"(상대)",
-      "x": -480,
-      "y": 7800,
-      "width": 320,
-      "height": 280,
-      "color": "5"
-    },
-    {
-      "id": "n1002s-gap",
-      "type": "text",
-      "text": "## 🏆 총점이 약한 성분을 숨긴다\n\n전체 **66.9%** → \"꽤 한다\"\nP&G **51.7%** → \"못 짚는다\"\n\n🎯 [[복합지표-분해]] **벤치마크 축 재현**\n(10-01 open_issues = 이슈+PR 과 동형)\n\n⚖️ **볼트 적용**: 장면 설명은 받아 쓰고\n**좌표·지목은 검증한다**",
-      "x": -860,
-      "y": 8110,
-      "width": 340,
-      "height": 250,
-      "color": "1"
-    },
-    {
-      "id": "n1002s-match",
-      "type": "text",
-      "text": "## [[비매칭-비교]] 🔄\n\n✅ **모범 사례**\n3중 고정: 동일 플래너(GPT-6 Astra)\n· 동일 프리미티브 · **동일 호출 예산**\n⇒ 바뀐 것은 **대화 방식 하나**\n✅ 절감은 *\"both 가 푼 인스턴스\"* 한정",
-      "x": -480,
-      "y": 8110,
-      "width": 320,
-      "height": 230,
-      "color": "6"
-    },
-    {
-      "id": "n1002s-guk",
-      "type": "text",
-      "text": "### [[국소-수리-원리]] 🔄\n\n조건검사·재시도를\n**파이썬 셀 안에서**\n⇒ 호출 **−49%**\n⚖️ 토큰 −65% 는 **별개 원리**\n(선별 관측)",
-      "x": -130,
-      "y": 8110,
-      "width": 260,
-      "height": 200,
-      "color": "6"
-    },
-    {
-      "id": "n1002s-unit",
-      "type": "text",
-      "text": "### [[단위-불일치]] 🔄\n\n🆕 **3번째 유형**\n제목 상대 · 본문 절대\n(저자 자신이 원인)\n⚖️ `63.1→71.7` 만 인용",
-      "x": 160,
-      "y": 8110,
-      "width": 250,
-      "height": 180,
-      "color": "6"
-    },
-    {
-      "id": "n1002s-cheat",
-      "type": "text",
-      "text": "### [[측정도구-먼저-반증]] 🔄\n\nEgoTools: 데이터+벤치 **같은 팀**\nSFT 검증을 **그 벤치 1,000문항 전체**에서\n✅ 영상 분리 명시 🔴 스위트 분리 없음\n⇒ [[False-Frontiers]] co-cheating 형태",
-      "x": -1200,
-      "y": 8110,
-      "width": 290,
-      "height": 210,
-      "color": "6"
-    },
-    {
-      "id": "n1002s-cam",
-      "type": "text",
-      "text": "## 🎯 카메라 파이프라인 교훈\n\n**선별 관측**\n*\"only explicitly requested\nimages and state\"*\n\n📌 매 스텝 전체 관측을 밀어넣는\n기본 구조가 토큰의 주범\n→ pull 로 바꾸면 **65% 빠진다**",
-      "x": -700,
-      "y": 8410,
-      "width": 300,
-      "height": 230,
-      "color": "2"
-    },
-    {
-      "id": "n1002s-lim",
-      "type": "text",
-      "text": "### 🔴 도메인 구조적 공백\n\n**실로봇 0건**(전부 시뮬)\n**실시간 수치 0건**(30fps 질문 무응답)\nEgoTools **4트랙 중 1트랙만**\n논문 본문 **0건**\n🎯 **SLAM·3DGS 본류 0건 — 2배치 연속**",
-      "x": -340,
-      "y": 8410,
-      "width": 300,
-      "height": 210,
-      "color": "1"
-    },
-    {
-      "id": "b1012-sl",
-      "type": "text",
-      "text": "# 2026-10-12 배치\n\n시각 반응형 휴머노이드 1건",
-      "x": -100,
-      "y": 8700,
-      "width": 280,
-      "height": 120,
-      "color": "4"
-    },
-    {
-      "id": "s1012sl-reflex",
-      "type": "text",
-      "text": "### Reflex (cs.RO)\n에고센트릭 RGB-D만으로 전신 캐칭\n시뮬 **85.7%** / 특권 87.9%(−2.2p)\n실기 Unitree G1 **2.5m 65% · 5m 40%**\n🏆 인간 대비 **76% → 59% 보존**\n🔴 시간이력 제거 −35.6/−39.8p\n🔴 시행 횟수·제어주기 미기재",
-      "x": -420,
-      "y": 8880,
-      "width": 300,
-      "height": 230,
-      "color": "5"
-    },
-    {
-      "id": "k1012sl-thr",
-      "type": "text",
-      "text": "### [[임계-의존-성공률]]\n거리 2배 → −25p\n🆕 **기준선도 떨어지면 과제 성질**\n유지되면 방법 한계",
-      "x": -80,
-      "y": 8880,
-      "width": 270,
-      "height": 170,
-      "color": "6"
-    },
-    {
-      "id": "a1012sl-1",
-      "type": "text",
-      "text": "본문 1회 열람\n① 실기 시행 횟수(분모)\n② 제어 주기 Hz\n③ RGB-D 해상도·FOV",
-      "x": 220,
-      "y": 8880,
-      "width": 250,
-      "height": 150,
-      "color": "3"
-    },
-    {
-      "id": "b1013-sl-hub",
-      "type": "text",
-      "text": "# 2026-10-13 유입 (1건)\n🔄 **도메인 재판정** ai-news → slam-3dgs\n(선례: [[Reflex]] 10-12, 2번째 적용)",
-      "x": -1200,
-      "y": 9410,
-      "width": 480,
-      "height": 140,
-      "color": "4"
-    },
-    {
-      "id": "s1013-gpi",
-      "type": "text",
-      "text": "### [[GroundingPI]] 🆕🏆\n업보트 96 · 저자 26 · [[XPENG-AI]]\n**4B** = MoonViT-V2 + Qwen3-4B\n34엔트리 평균 **73.68%**\n> GPT-6 Astra 71.54%(+2.14%p)\nnuScenes L2 **0.296m** ·\nRoboTwin 2.0 OOD 4/4 최대 +24.8%",
-      "x": -1200,
-      "y": 9630,
-      "width": 360,
-      "height": 215,
-      "color": "5"
-    },
-    {
-      "id": "k1013-sl-unit",
-      "type": "text",
-      "text": "🏆 **볼트 최대 발견**\n'34개 벤치'의 34 =\n**22 데이터셋 × 과제형식 엔트리**\nRefCOCOg **5회** · COCO/LVIS/Dense200 각 3회\n⇒ 평균이 **중복 가중**돼 있다\n→ [[단위-불일치]]",
-      "x": -800,
-      "y": 9630,
-      "width": 360,
-      "height": 215,
-      "color": "6"
-    },
-    {
-      "id": "k1013-sl-corr",
-      "type": "text",
-      "text": "🔴 **SOTA 주장 vs GitHub ★24**\nfork 2 · issues 0 (볼트 API 실측)\n[[rea]] ★179,917 대비 **7,496배** 차\n⇒ [[관심-검증-역상관]] **역방향**\n⚖️ 단 공개 9일차 — 절대비교 부당",
-      "x": -400,
-      "y": 9630,
-      "width": 360,
-      "height": 215,
-      "color": "1"
-    },
-    {
-      "id": "e1013-xpeng",
-      "type": "text",
-      "text": "**[[XPENG-AI]]** 🆕\n샤오펑 — 전기차/자율주행\n🆕 볼트가 HF `organization`\n필드에서 발굴(수집기 미수집)\n⇒ 평가 구성이 정체성과 일치",
-      "x": 0,
-      "y": 9630,
-      "width": 340,
-      "height": 215,
-      "color": "4"
-    },
-    {
-      "id": "a1013-sl-1",
-      "type": "text",
-      "text": "🏆 **해소 경로 특정됨**\n`vla/README.md` → +24.8% 기준 백본명\n`eval/README.md#full-suite` → 11 capabilities\n**레포 구조 확인 완료 · 미열람**",
-      "x": -800,
-      "y": 9885,
-      "width": 360,
-      "height": 150,
-      "color": "3"
-    },
-    {
-      "id": "b1017-slam-hub",
-      "type": "text",
-      "x": -100,
-      "y": 10685,
-      "width": 440,
-      "height": 180,
-      "color": "4",
-      "text": "# 🎯 2026-10-17 입고\n\n**공간지능의 결손 위치가 특정됐다:\n인식이 아니라 순차 조작**\n\n신규 [[MJev-Spatial]] · 갱신 [[RoTA-Bench]]\n신설 [[VLA]] · [[벤치마크-외부축]]"
-    },
-    {
-      "id": "b1017-mjev",
-      "type": "text",
-      "x": -560,
-      "y": 10945,
-      "width": 300,
-      "height": 240,
-      "color": "2",
-      "text": "### 🏆 MJev-Spatial (286up)\n\n생성 → **분류**로 환원\n백본 query/key 투사 재사용\n**파라미터 0 · 답변토큰 0 · 포워드 1회**\n\n종합 **65.64%** · **12/12 자기베이스 상회**\n속도 **2.5배 / 5.6배** · 학습 +30.8%\n\n[[MJev-Spatial]]"
-    },
-    {
-      "id": "b1017-rota",
-      "type": "text",
-      "x": 260,
-      "y": 10945,
-      "width": 300,
-      "height": 240,
-      "color": "1",
-      "text": "### 🔴 RoTA-Bench (200up)\n\n**GPT-5.6-Sol 17% vs 인간 100%**\n\n겹침↑ 정합↓ **19.4% vs 10.9%**\n⇒ 겹침 지표는 **과대평가**\n이력 제거시 **96.8%가 30도 고정**\n⇒ 순차 의사결정 **붕괴**\n\n[[RoTA-Bench]]"
-    },
-    {
-      "id": "b1017-split",
-      "type": "text",
-      "x": -150,
-      "y": 11245,
-      "width": 420,
-      "height": 200,
-      "color": "6",
-      "text": "## 🏆 교차 결론 — 모순이 아니다\n\n**단발** 공간질의(관계·거리·위치) → 모델 **잘함** (65.64%)\n**순차** 조작(회전선택→투영정합) → 모델 **못함** (17%)\n\n🎯 **VLA 출력은 본질적으로 순차 제어**\n⇒ 단발 벤치 점수는 **VLA 성능을 예측하지 않는다**"
-    },
-    {
-      "id": "b1017-vla",
-      "type": "text",
-      "x": -560,
-      "y": 11505,
-      "width": 320,
-      "height": 240,
-      "color": "3",
-      "text": "### 🔴 VLA 신설 — `reliability: low`\n\n카메라+언어+로봇상태 → **관절각·포즈·손개폐**\n\n🔴 **볼트 1차 논문 0건**\n수치 전부 2차 인용\n*33.5%/18.1%/36.4%* = **인용 불가**\n\n🔥 **도메인 최대 공백**\n[[VLA]]"
-    },
-    {
-      "id": "b1017-slam-act",
-      "type": "text",
-      "x": -150,
-      "y": 11505,
-      "width": 420,
-      "height": 180,
-      "color": "3",
-      "text": "## 🔥 actionable 최우선\n\n**VLA 1차 논문 1건 직접 열람**\nRT-2 / OpenVLA / π0 중 최소 1건\n→ [[VLA]] `low → medium` 상향\n\n(2026년 휴머노이드 출하 5만대+ · 전년 7배 — 2차 인용)"
-    }
-  ],
-  "edges": [
-    {
-      "id": "e1",
-      "fromNode": "domain-hub",
-      "toNode": "cluster-slam",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e2",
-      "fromNode": "domain-hub",
-      "toNode": "cluster-3dgs",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e3",
-      "fromNode": "domain-hub",
-      "toNode": "cluster-camera",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e-sl0907",
-      "fromNode": "domain-hub",
-      "toNode": "sl-worldsculpt",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e-sl0907b",
-      "fromNode": "sl-worldsculpt",
-      "toNode": "sl-gap0907",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "es0908-0",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "s0908-mem",
-      "toSide": "top"
-    },
-    {
-      "id": "es0908-1",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "s0908-conv",
-      "toSide": "top"
-    },
-    {
-      "id": "es0908-2",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "s0908-gap",
-      "toSide": "top"
-    },
-    {
-      "id": "e0909sl-1",
-      "fromNode": "b0909-sl",
-      "toNode": "s0909sl-mar",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0909sl-2",
-      "fromNode": "s0909sl-mar",
-      "toNode": "n0909sl-how",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e0909sl-3",
-      "fromNode": "n0909sl-how",
-      "toNode": "a0909sl-1",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "en0911S-1",
-      "fromNode": "n0911S-sb",
-      "fromSide": "right",
-      "toNode": "n0911S-why",
-      "toSide": "left"
-    },
-    {
-      "id": "en0911S-2",
-      "fromNode": "n0911S-why",
-      "fromSide": "right",
-      "toNode": "n0911S-how",
-      "toSide": "left"
-    },
-    {
-      "id": "en0911S-3",
-      "fromNode": "n0911S-why",
-      "fromSide": "bottom",
-      "toNode": "n0911S-act",
-      "toSide": "top"
-    },
-    {
-      "id": "en0911S-4",
-      "fromNode": "cluster-slam",
-      "fromSide": "bottom",
-      "toNode": "n0911S-sb",
-      "toSide": "top"
-    },
-    {
-      "id": "e-batch-0913-slam-3dgs-hub",
-      "fromNode": "batch-0913-slam-3dgs",
-      "toNode": "domain-hub",
-      "fromSide": "top",
-      "toSide": "bottom"
-    },
-    {
-      "id": "e-batch-0913-slam-3dgs-s-FreeFlow",
-      "fromNode": "batch-0913-slam-3dgs",
-      "toNode": "s-FreeFlow",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e-batch-0913-slam-3dgs-s-RCWM",
-      "fromNode": "batch-0913-slam-3dgs",
-      "toNode": "s-RCWM",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e-batch-0913-slam-3dgs-s-WiW",
-      "fromNode": "batch-0913-slam-3dgs",
-      "toNode": "s-WiW",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e-batch-0914-slam-3dgs-s-LIT",
-      "fromNode": "batch-0914-slam-3dgs",
-      "toNode": "s-LIT",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e-batch-0914-slam-3dgs-n0914-lit-cond",
-      "fromNode": "batch-0914-slam-3dgs",
-      "toNode": "n0914-lit-cond",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e-batch-0914-slam-3dgs-n0914-iface",
-      "fromNode": "batch-0914-slam-3dgs",
-      "toNode": "n0914-iface",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "eb17-actionpiece",
-      "fromNode": "s0908-emb",
-      "toNode": "b17-actionpiece",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e19-b19s-physbrain-b17-actionpiece",
-      "fromNode": "b19s-physbrain",
-      "toNode": "b17-actionpiece",
-      "label": "본체 액션 어휘로 채택"
-    },
-    {
-      "id": "e-b20s-hdr-b20s-react",
-      "fromNode": "b20s-hdr",
-      "toNode": "b20s-react",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e-b20s-hdr-b20s-judge",
-      "fromNode": "b20s-hdr",
-      "toNode": "b20s-judge",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e-b20s-hdr-b20s-gap",
-      "fromNode": "b20s-hdr",
-      "toNode": "b20s-gap",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e-domain-hub-src-gae",
-      "fromNode": "domain-hub",
-      "toNode": "src-gae",
-      "fromSide": "bottom",
-      "toSide": "top",
-      "label": "09-23 재판정"
-    },
-    {
-      "id": "e-s-happyworld-0924",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "s-happyworld-0924",
-      "toSide": "top"
-    },
-    {
-      "id": "e-s-spatialinteractor-0924",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "s-spatialinteractor-0924",
-      "toSide": "top"
-    },
-    {
-      "id": "e-c-privileged-opd",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "c-privileged-opd",
-      "toSide": "top"
-    },
-    {
-      "id": "e-c-interactconsist",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "c-interactconsist",
-      "toSide": "top"
-    },
-    {
-      "id": "e-a-arxiv-fulltext",
-      "fromNode": "s0908-emb",
-      "fromSide": "bottom",
-      "toNode": "a-arxiv-fulltext",
-      "toSide": "top"
-    },
-    {
-      "id": "e34-0926",
-      "fromNode": "domain-hub",
-      "toNode": "n-wrop-0926",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e35-0926",
-      "fromNode": "domain-hub",
-      "toNode": "n-omniecho-0926",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e36-0927",
-      "fromNode": "e-tomsilver-0927",
-      "toNode": "s-tamp-0927",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e37-0927",
-      "fromNode": "s-tamp-0927",
-      "toNode": "n-tampwarn-0927",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e-hub-internw0-0928",
-      "fromNode": "domain-hub",
-      "fromSide": "bottom",
-      "toNode": "s-internw0-0928",
-      "toSide": "top"
-    },
-    {
-      "id": "e-internw0-lint-0928",
-      "fromNode": "s-internw0-0928",
-      "fromSide": "bottom",
-      "toNode": "c-internw0-lint-0928",
-      "toSide": "top"
-    },
-    {
-      "id": "e0929-slam-3dgs-0",
-      "fromNode": "b0929-hdr-slam-3dgs",
-      "toNode": "n0929s-hexa",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e0929-slam-3dgs-1",
-      "fromNode": "n0929s-hexa",
-      "toNode": "n0929s-nonum",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0929-slam-3dgs-2",
-      "fromNode": "b0929-hdr-slam-3dgs",
-      "toNode": "n0929s-myeongsi",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0929-slam-3dgs-3",
-      "fromNode": "n0929s-myeongsi",
-      "toNode": "n0929s-hexa",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e0930-slam-0",
-      "fromNode": "n0930s-hdr",
-      "toNode": "n0930s-panovln",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-1",
-      "fromNode": "n0930s-hdr",
-      "toNode": "n0930s-swam",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-2",
-      "fromNode": "n0930s-panovln",
-      "toNode": "n0930s-jawon",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-3",
-      "fromNode": "n0930s-swam",
-      "toNode": "n0930s-jawon",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-4",
-      "fromNode": "n0930s-panovln",
-      "toNode": "n0930s-realtime",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-5",
-      "fromNode": "n0930s-swam",
-      "toNode": "n0930s-realtime",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-6",
-      "fromNode": "n0930s-panovln",
-      "toNode": "n0930s-banjeung",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-7",
-      "fromNode": "n0930s-swam",
-      "toNode": "n0930s-banjeung",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-8",
-      "fromNode": "n0930s-jawon",
-      "toNode": "n0930s-act",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e0930-slam-9",
-      "fromNode": "n0930s-realtime",
-      "toNode": "n0930s-act",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b1",
-      "fromNode": "n1002s-hub",
-      "toNode": "n1002s-ego",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b2",
-      "fromNode": "n1002s-hub",
-      "toNode": "n1002s-pyrua",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b3",
-      "fromNode": "n1002s-ego",
-      "toNode": "n1002s-gap",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b4",
-      "fromNode": "n1002s-pyrua",
-      "toNode": "n1002s-match",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b5",
-      "fromNode": "n1002s-pyrua",
-      "toNode": "n1002s-guk",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b6",
-      "fromNode": "n1002s-pyrua",
-      "toNode": "n1002s-unit",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b7",
-      "fromNode": "n1002s-ego",
-      "toNode": "n1002s-cheat",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b8",
-      "fromNode": "n1002s-match",
-      "toNode": "n1002s-cam",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "n1002s-b9",
-      "fromNode": "n1002s-gap",
-      "toNode": "n1002s-lim",
-      "fromSide": "right",
-      "toSide": "top"
-    },
-    {
-      "id": "g1",
-      "fromNode": "b1012-sl",
-      "toNode": "s1012sl-reflex",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "g2",
-      "fromNode": "s1012sl-reflex",
-      "toNode": "k1012sl-thr",
-      "fromSide": "right",
-      "toSide": "left",
-      "label": "거리 임계"
-    },
-    {
-      "id": "g3",
-      "fromNode": "s1012sl-reflex",
-      "toNode": "a1012sl-1",
-      "fromSide": "right",
-      "toSide": "left"
-    },
-    {
-      "id": "e1013-sl-hub",
-      "fromNode": "domain-hub",
-      "toNode": "b1013-sl-hub",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1013-sl0",
-      "fromNode": "b1013-sl-hub",
-      "toNode": "s1013-gpi",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1013-sl1",
-      "fromNode": "b1013-sl-hub",
-      "toNode": "k1013-sl-unit",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1013-sl2",
-      "fromNode": "b1013-sl-hub",
-      "toNode": "k1013-sl-corr",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1013-sl3",
-      "fromNode": "b1013-sl-hub",
-      "toNode": "e1013-xpeng",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1013-sla",
-      "fromNode": "s1013-gpi",
-      "toNode": "a1013-sl-1",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "x1013-s1013-gpi-k1013-sl-unit",
-      "fromNode": "s1013-gpi",
-      "toNode": "k1013-sl-unit",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "x1013-s1013-gpi-k1013-sl-corr",
-      "fromNode": "s1013-gpi",
-      "toNode": "k1013-sl-corr",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "x1013-s1013-gpi-e1013-xpeng",
-      "fromNode": "s1013-gpi",
-      "toNode": "e1013-xpeng",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1017s-1",
-      "fromNode": "b1017-slam-hub",
-      "toNode": "b1017-mjev",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1017s-2",
-      "fromNode": "b1017-slam-hub",
-      "toNode": "b1017-rota",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1017s-3",
-      "fromNode": "b1017-mjev",
-      "toNode": "b1017-split",
-      "fromSide": "bottom",
-      "toSide": "left",
-      "label": "단발 = 잘함"
-    },
-    {
-      "id": "e1017s-4",
-      "fromNode": "b1017-rota",
-      "toNode": "b1017-split",
-      "fromSide": "bottom",
-      "toSide": "right",
-      "label": "순차 = 못함"
-    },
-    {
-      "id": "e1017s-5",
-      "fromNode": "b1017-split",
-      "toNode": "b1017-vla",
-      "fromSide": "bottom",
-      "toSide": "top"
-    },
-    {
-      "id": "e1017s-6",
-      "fromNode": "b1017-vla",
-      "toNode": "b1017-slam-act",
-      "fromSide": "right",
-      "toSide": "left"
-    }
-  ]
+ "nodes": [
+  {
+   "id": "domain-hub",
+   "type": "text",
+   "text": "# SLAM / 3DGS / 카메라\n\n목표: SLAM + 가우시안 스플래팅 + 카메라 파이프라인\n\n[[slam-3dgs]]",
+   "x": -100,
+   "y": -60,
+   "width": 260,
+   "height": 120,
+   "color": "3"
+  },
+  {
+   "id": "cluster-slam",
+   "type": "text",
+   "text": "## SLAM 기술\n\n_실시간 지도 생성 + 위치 추정_",
+   "x": -400,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "5"
+  },
+  {
+   "id": "cluster-3dgs",
+   "type": "text",
+   "text": "## 3DGS / NeRF\n\n_가우시안 스플래팅 구현체_",
+   "x": -100,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "2"
+  },
+  {
+   "id": "cluster-camera",
+   "type": "text",
+   "text": "## 카메라 파이프라인\n\n_입력/캘리브레이션/뷰 컨트롤_",
+   "x": 200,
+   "y": 150,
+   "width": 180,
+   "height": 80,
+   "color": "6"
+  },
+  {
+   "id": "sl-worldsculpt",
+   "type": "text",
+   "text": "## [[WorldSculpt]] *(2026-09-07)*\n2609.05416 · 업15\n\n**통짜 재구성 → 분해 가능성**\n단일 오브젝트 prior(Pixal3D)만\n학습했는데 **장면 학습 없이**\n수백 오브젝트 가림 장면 일반화\n\n🔗 **3DGS 월드(Marble·HY-World 2.0)\n→ compositional 메시 변환**\n\n**UE-MeshyScene**(GT 메시+주석)\n⚠️ 절대 수치 전무 · 실시간성 불명\n🔴 분할이 선행 전제일 가능성",
+   "x": -140,
+   "y": 430,
+   "width": 340,
+   "height": 300,
+   "color": "6"
+  },
+  {
+   "id": "sl-gap0907",
+   "type": "text",
+   "text": "## ⚠️ 추적 공백 (09-07)\n\n**Pixal3D** — 기반 prior, 1순위\n**Marble** · **HY-World 2.0**\n\n→ [[월드모델]] 축 공백",
+   "x": 240,
+   "y": 430,
+   "width": 260,
+   "height": 300,
+   "color": "3"
+  },
+  {
+   "id": "s0908-emb",
+   "type": "text",
+   "text": "## [[EmbodiedSkills]] (업 5·저자 17)\n\n스킬 결정 = **실행 제안**으로 격하\n제안→사전검사→실행→사후검증\n**고정 인터페이스** = VLA 교체 자유\n\nRoboTwin 86.20% · LIBERO 97.40%",
+   "x": -330,
+   "y": 850,
+   "width": 380,
+   "height": 230,
+   "color": "4"
+  },
+  {
+   "id": "s0908-mem",
+   "type": "text",
+   "text": "## 🔴 RMBench 기억의존 **12.5%**\n\n검증 루프는 전부\n**현재 상태**에 대한 판단\n→ *\"아까 뭘 했나\"* 자리가 없다\n\n→ [[에이전트-메모리-레이어]]\n**검증 잘 지어도 메모리는 별개**",
+   "x": 90,
+   "y": 850,
+   "width": 360,
+   "height": 230,
+   "color": "1"
+  },
+  {
+   "id": "s0908-conv",
+   "type": "text",
+   "text": "# 🎯 2도메인 독립 수렴\n\n[[EmbodiedSkills]] (로봇 제어)\n↕ 서로 인용 안 함\n[[TGOPD]] (LLM 학습)\n\n같은 골격: *\"신뢰되는지 먼저 검증하고\n통과할 때만 쓴다\"*\n→ [[검사가능성-공사]] 최강 근거",
+   "x": -150,
+   "y": 1120,
+   "width": 420,
+   "height": 230,
+   "color": "6"
+  },
+  {
+   "id": "s0908-gap",
+   "type": "text",
+   "text": "## ⚠️ 추적 공백 3건\n\n**RoboTwin 2.0 · LIBERO · RMBench**\n볼트에 페이지 없음\n\n+ 실시간성 **미확인**\n(초록에 지연시간 수치 전무)",
+   "x": 310,
+   "y": 1120,
+   "width": 340,
+   "height": 230,
+   "color": "3"
+  },
+  {
+   "id": "b0909-sl",
+   "type": "text",
+   "text": "# 2026-09-09 배치\n\n단안 깊이추정 1-step 하강",
+   "x": -100,
+   "y": 1570,
+   "width": 260,
+   "height": 110,
+   "color": "4"
+  },
+  {
+   "id": "s0909sl-mar",
+   "type": "text",
+   "text": "### Marigold V2\nHF 데일리 1위(업 24)\n다단계 flow-matching DiT → **1-step**\n**KITTI·ETH3D AbsRel 16–26% 개선**\n표면법선·본질이미지분해도 SOTA\n[[Marigold-V2]]",
+   "x": -420,
+   "y": 1770,
+   "width": 260,
+   "height": 180,
+   "color": "5"
+  },
+  {
+   "id": "n0909sl-how",
+   "type": "text",
+   "text": "### 처방 2가지\n① 내부 표현을 **GT 의미 피처와 정렬**\n② **Sinkhorn 손실** 2단계 파인튜닝\n(+ 필요시 양자화)",
+   "x": -120,
+   "y": 1770,
+   "width": 250,
+   "height": 160,
+   "color": "6"
+  },
+  {
+   "id": "a0909sl-1",
+   "type": "text",
+   "text": "### 🔬 HF Space 즉시 테스트\n내 소스 이미지로 먼저 실행\n판단 기준: **머리카락·잎사귀 경계**\n⚠️fps 수치 논문에 없음",
+   "x": 160,
+   "y": 1770,
+   "width": 250,
+   "height": 160,
+   "color": "2"
+  },
+  {
+   "id": "n0911S-sb",
+   "type": "text",
+   "text": "### [2026-09-11] 교차참조\n[[SpatialBlock]] (도메인 `ai-news`)\n실장면 공간QA 라벨의 급소 =\n**외부 인지 모듈 의존으로 노이즈**",
+   "x": -300,
+   "y": 2020,
+   "width": 330,
+   "height": 170,
+   "color": "4"
+  },
+  {
+   "id": "n0911S-why",
+   "type": "text",
+   "text": "🎯 이 도메인에 특히 아픔\n깊이추정·SLAM으로 라벨을 만들면\n**그 모듈 오차가 라벨에 섞인다**\n→ [[검사가능성-공사]]",
+   "x": 60,
+   "y": 2020,
+   "width": 330,
+   "height": 170,
+   "color": "1"
+  },
+  {
+   "id": "n0911S-how",
+   "type": "text",
+   "text": "우회로: **합성 블록쌓기 15k**\n3D→2D 투영·시점 변환·구조 결합\n+앵커 유도 색 변조\n**정답이 생성 규칙에서 직접 나온다**",
+   "x": 420,
+   "y": 2020,
+   "width": 330,
+   "height": 170,
+   "color": "5"
+  },
+  {
+   "id": "n0911S-act",
+   "type": "text",
+   "text": "> [!action]\n공간 라벨을 만들 일이 생기면 먼저 묻기:\n**외부 인지 모듈로 만들 것인가,\n생성 규칙에서 정답이 나오는 합성 과제인가**\n⚠️정량 수치는 초록에 없음",
+   "x": 60,
+   "y": 2220,
+   "width": 330,
+   "height": 180,
+   "color": "2"
+  },
+  {
+   "id": "batch-0913-slam-3dgs",
+   "type": "text",
+   "text": "# 2026-09-13 배치\n\n원문 API 실호출 + 표 전수 대조\n중복 0 · 한정어 탈락 0건",
+   "x": -1200,
+   "y": 2560,
+   "width": 300,
+   "height": 140,
+   "color": "6"
+  },
+  {
+   "id": "s-FreeFlow",
+   "type": "text",
+   "text": "## [[FreeFlow]]\n업보트 32 · 저자 4인\n\n플로우 전용부품 전부 제거\n→ 스케일링을 얻음\n🔴 대조군 모델명 없음",
+   "x": -820,
+   "y": 2560,
+   "width": 340,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "s-RCWM",
+   "type": "text",
+   "text": "## [[RCWM]]\n업보트 28 · 저자 3인\n\n전체→국소→전체 재방문 재귀\n🎯 국소수리 후 전역정합 책임\n🔴 정량 수치 0개",
+   "x": -420,
+   "y": 2560,
+   "width": 340,
+   "height": 200,
+   "color": "1"
+  },
+  {
+   "id": "s-WiW",
+   "type": "text",
+   "text": "## [[World-in-World]]\n업보트 28 · 저자 3인\n\n동결 모델 + 입력 형식 번역\n(training-free)\n🔴 결과 자체를 안 적음",
+   "x": -20,
+   "y": 2560,
+   "width": 340,
+   "height": 200,
+   "color": "1"
+  },
+  {
+   "id": "batch-0914-slam-3dgs",
+   "type": "text",
+   "text": "# 2026-09-14 배치\n\n신규 1건\nraw ai-news → 재판정",
+   "x": -1200,
+   "y": 2960,
+   "width": 300,
+   "height": 180,
+   "color": "6"
+  },
+  {
+   "id": "s-LIT",
+   "type": "text",
+   "text": "## [[LIT]]\n업보트 44 · 저자 4인\n**ai-news → slam-3dgs 재판정**\n\n시각→행동 지름길을 끊는다\n1단계: 이미지 없이 SE(3) 자세로\n2단계: 그 자세 복원 감독 =\n        유일한 시각 통로\n\nLIBERO-Plus +3.87~10.70%p\n실로봇 +13.30~16.70%p",
+   "x": -820,
+   "y": 2960,
+   "width": 340,
+   "height": 220,
+   "color": "5"
+  },
+  {
+   "id": "n0914-lit-cond",
+   "type": "text",
+   "text": "## 🔴 성립 조건\n\n실로봇 이득 조건 =\n**미학습 카메라·조명·방해물**\n\n통상 LIBERO는\n\"preserving or improving\"\n\n🎯 이득은 분포 외에서만 난다\n→ [[분포내-우위]] 의 거울상",
+   "x": -420,
+   "y": 2960,
+   "width": 340,
+   "height": 220,
+   "color": "1"
+  },
+  {
+   "id": "n0914-iface",
+   "type": "text",
+   "text": "## 🎯 \"인터페이스만 설계\" 계보\n\n[[World-in-World]] (09-13)\n동결 모델 + 입력 형식 번역\n\n[[LIT]] (09-14)\n백본 유지 + 시각 통로 하나\n\n**모델을 재학습하지 않고\n모델이 보는 것의 형태를 바꾼다**",
+   "x": -20,
+   "y": 2960,
+   "width": 340,
+   "height": 220,
+   "color": "4"
+  },
+  {
+   "id": "b17-actionpiece",
+   "type": "text",
+   "x": -260,
+   "y": 3300,
+   "width": 560,
+   "height": 320,
+   "color": "6",
+   "text": "**[[ActionPiece]]** 🆕 2026-09-17\n🎯 MSE 반증: 점별 오차 작아도\n문맥 조정이 \"even reversed\"\n🆕 지표 **PRC** (거리 순위 보존)\n= 토큰 어휘·디코더 비종속 비교\nLIBERO 94.8 / 미학습 Plus 68.8\n🔴 **−26.0점** · VLA-Arena 51.5%\n일반화 미해결"
+  },
+  {
+   "id": "b19s-physbrain",
+   "type": "text",
+   "x": -260,
+   "y": 3750,
+   "width": 460,
+   "height": 280,
+   "color": "5",
+   "text": "### [[PhysBrain-1.5]] [[DeepCybo]] · 8B\n이해·행동·예측 단일 토큰열 · 액션어휘=ActionPiece\n28벤치 72.5 · 오픈 1위 14 / 패배 14 (포인팅 6·궤적 2)\n🔴 제어·미래예측 정량 0 (1.0엔 LIBERO 있었음)\n🔴 폐쇄모델 최저 추론 설정 · 13벤치 학습분할\n🔴 [[PhysBrain]] 1.0 오분류 정정"
+  },
+  {
+   "id": "b20s-hdr",
+   "type": "text",
+   "x": -1200,
+   "y": 4150,
+   "width": 400,
+   "height": 280,
+   "color": "3",
+   "text": "# 📥 2026-09-20 (1건)\n\n[[ReactHuman]]\n수집기 `ai-news` →\n볼트 **`slam-3dgs` 재판정**\n\n(240Hz 강체물리 · 휴머노이드\n= 09-19 [[ActionPiece]] 와 같은 근거)"
+  },
+  {
+   "id": "b20s-react",
+   "type": "text",
+   "x": -740,
+   "y": 4150,
+   "width": 480,
+   "height": 300,
+   "color": "5",
+   "text": "### [[ReactHuman]] 업52 · 저자 8\n**즉시 행동**을 재는 첫 물리 벤치\n17계열 · 1,000+ 장면 · 주석 없음\n**결정을 실제로 실행**\n적대적 객체(폼 모루 · 강철 사과)\n\n🔴 7종이 **약 3건 중 1건** 오처리\n외형>운동 신뢰 · 요격점 **미터 단위**\n🔴 ***규모로 줄지 않는다***"
+  },
+  {
+   "id": "b20s-judge",
+   "type": "text",
+   "x": -220,
+   "y": 4150,
+   "width": 460,
+   "height": 300,
+   "color": "6",
+   "text": "## 🎯 계보에 처음 붙는 **평가자**\n[[PhysBrain]] → [[ActionPiece]] → [[PhysBrain-1.5]]\n전부 **모델**이었고 **잴 자가 없었다**\n\n09-19 기록: *\"버전이 오르며 평가가\n제어 → 이해로 좁아짐\"*\n→ ReactHuman 은 **이해 → 제어로 되돌린다**\n\n🎯 규모 비민감 = **표현·인터페이스 문제**\n→ [[하네스-설계-축]] 과 같은 결론"
+  },
+  {
+   "id": "b20s-gap",
+   "type": "text",
+   "x": 280,
+   "y": 4150,
+   "width": 440,
+   "height": 300,
+   "color": "2",
+   "text": "## 🔴 주목 ↔ 채택 분리 (실측)\n논문 업보트 **52**\n데이터셋 좋아요 **1** · 다운로드 **567**\n(2,111파일 · gated false · 07-11 생성)\n\n🎯 **한 대상에서 동시에 측정된 드문 경우**\n볼트가 업보트를 신호로 써 온 것에 대한\n**직접 반례**\n\n▶ 장면 1개 열기 = **코드 실행 0건 깰 최저비용 후보**"
+  },
+  {
+   "id": "src-gae",
+   "type": "text",
+   "text": "## [[GAE]]\n\n지오메트리 네이티브 잠재공간\n↑34 · 🔀 재판정 ai-news→slam-3dgs\n\n✅ 잠재만 교체한 통제 비교\nFVD -12.7%/-23.1% (상대)\n카메라 궤적 오차 절반\n⬜ 속도 수치 0 = 실시간성 불명",
+   "x": -900,
+   "y": 4350,
+   "width": 300,
+   "height": 170,
+   "color": "6"
+  },
+  {
+   "id": "s-happyworld-0924",
+   "type": "text",
+   "text": "**[[HappyWorld-Bench]]** 🔀→slam-3dgs\nHF 데일리 **1위** ♥35\n1,138/300/254 · 14/9/8종\nspatial 최고 **70.14%**",
+   "x": -620,
+   "y": 4550,
+   "width": 300,
+   "height": 150,
+   "color": "1"
+  },
+  {
+   "id": "s-spatialinteractor-0924",
+   "type": "text",
+   "text": "**[[Spatial-Interactor]]** 🔀→slam-3dgs\n♥22 · **low**\nL1/L2/L3 커리큘럼 · LSI-108K\n🔴 초록 수치 0개·벤치명 없음",
+   "x": -290,
+   "y": 4550,
+   "width": 300,
+   "height": 150,
+   "color": "1"
+  },
+  {
+   "id": "c-privileged-opd",
+   "type": "text",
+   "text": "[[온폴리시-증류]] 갱신\n`privileged self-distillation`\n비대칭이 크기가 아니라\n**정보 접근**에 있다",
+   "x": 40,
+   "y": 4550,
+   "width": 300,
+   "height": 150,
+   "color": "6"
+  },
+  {
+   "id": "c-interactconsist",
+   "type": "text",
+   "text": "[[월드모델]] 갱신\n새 축: **상호작용 후 상태 일관성**\n문제제기+측정도구 같은 주 도착",
+   "x": 370,
+   "y": 4550,
+   "width": 300,
+   "height": 150,
+   "color": "6"
+  },
+  {
+   "id": "a-arxiv-fulltext",
+   "type": "text",
+   "text": "arXiv 본문 2건 확보\n2609.24308(W1~W6 정의)\n2609.23038(벤치마크명)",
+   "x": -620,
+   "y": 4730,
+   "width": 300,
+   "height": 150,
+   "color": "2"
+  },
+  {
+   "id": "n-wrop-0926",
+   "type": "text",
+   "text": "### [[WROP-Object-Permanence]]\nupvote 190 (데일리 1위)\n\n물체 영속성 학습셋 150만\n+ 시험 300문항\n🎯 \"안 보여도 있다\"",
+   "x": -700,
+   "y": 4950,
+   "width": 260,
+   "height": 150,
+   "color": "3"
+  },
+  {
+   "id": "n-omniecho-0926",
+   "type": "text",
+   "text": "### [[OmniEcho]]\nupvote 20\n\nFOA 공간오디오 벤치\n197장면·QA 2,972·내비 900\n🎯 \"안 보여도 들린다\"",
+   "x": -400,
+   "y": 4950,
+   "width": 260,
+   "height": 150,
+   "color": "2"
+  },
+  {
+   "id": "s-tamp-0927",
+   "type": "text",
+   "text": "### Coding Agents for TAMP\n\n**98,000 에피소드**\n56~95% vs 플래너 47%\n🎯 프로그램 **동결** 평가\nClaude Code(Opus 5) 포함\n\n[[Coding-Agents-TAMP]]",
+   "x": -700,
+   "y": 5220,
+   "width": 300,
+   "height": 180,
+   "color": "6"
+  },
+  {
+   "id": "e-tomsilver-0927",
+   "type": "text",
+   "text": "### tomsilver\n\nrobocode ★13\n프롬프트 전문 공개\n\n[[tomsilver]]",
+   "x": -380,
+   "y": 5220,
+   "width": 300,
+   "height": 180,
+   "color": "3"
+  },
+  {
+   "id": "n-tampwarn-0927",
+   "type": "text",
+   "text": "> 🔴 범위 39%p 폭\n\n하단 56%는 47%를 9%p 넘음\n대조 모집단 28 vs **16**\n환경별 분포 없음",
+   "x": -60,
+   "y": 5220,
+   "width": 300,
+   "height": 180,
+   "color": "1"
+  },
+  {
+   "id": "s-internw0-0928",
+   "type": "text",
+   "text": "## InternW0-Δ 🆕🔀\n\n**ai-news → slam-3dgs 재판정**\n(4D 기하·모션 prior)\nWorld Action Model · 저자 48\n**Causal Imprint** = 추론시 롤아웃 없음\n🔴 **정량 수치 0개**\n🟡 공개 전부 미래시제\n\n[[InternW0-Delta]]",
+   "x": -200,
+   "y": 5480,
+   "width": 320,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "c-internw0-lint-0928",
+   "type": "text",
+   "text": "## 🔴 lint: 선례 충돌\n\nXiaomi 로보틱스 2건은\n`ai-news` 에 있다\n**같은 계열이 두 도메인에 분산**\n→ 일괄 재판정 별도 결정",
+   "x": 160,
+   "y": 5480,
+   "width": 300,
+   "height": 180,
+   "color": "1"
+  },
+  {
+   "id": "b0929-hdr-slam-3dgs",
+   "type": "text",
+   "text": "# 📮 2026-09-29\n\n재판정 유입 1건\n[[HexaAnything]]",
+   "x": -300,
+   "y": 5880,
+   "width": 420,
+   "height": 140,
+   "color": "4"
+  },
+  {
+   "id": "n0929s-hexa",
+   "type": "text",
+   "text": "### [[HexaAnything]] 🔀 재판정\n\nai-news → **slam-3dgs**\nPhysical Coding:\nCode as World + Code as Policy\nVLA/WAM 을 **도구로 호출**",
+   "x": 180,
+   "y": 6080,
+   "width": 300,
+   "height": 200,
+   "color": "1"
+  },
+  {
+   "id": "n0929s-nonum",
+   "type": "text",
+   "text": "## 🔴 수치 0개\n\n\"improves over XR-1 VLA\"\n\"beats base on every split\"\n\"often faster\"\n→ 전부 **폭 없음**",
+   "x": 180,
+   "y": 6330,
+   "width": 300,
+   "height": 190,
+   "color": "3"
+  },
+  {
+   "id": "n0929s-myeongsi",
+   "type": "text",
+   "text": "## [[암묵을-명시로]]\n\n로봇판. 같은 날\n[[YuE2]](악보)·[[hindsight]](메모리)와\n**독립적으로 같은 처방**",
+   "x": -180,
+   "y": 6080,
+   "width": 280,
+   "height": 180,
+   "color": "6"
+  },
+  {
+   "id": "n0930s-hdr",
+   "text": "# 📥 2026-09-30 — 로봇 논문 2건 **재판정 유입**\n\n수집기 `ai-news` → 볼트 **`slam-3dgs`**\n근거: 도메인3 태그에 `camera`·`robotics`",
+   "x": -1200,
+   "y": 6780,
+   "width": 400,
+   "height": 150,
+   "color": "4",
+   "type": "text"
+  },
+  {
+   "id": "n0930s-panovln",
+   "text": "## [[PanoVLN]] 🆕\n\nupvote 88(드리프트 0) · 데일리 3위\n**파노라마 카메라 + 사족보행 실기**\n\n✅ 4B 백본 · **RGB 전용**\nR2R-CE 11.9% · RxR-CE Val-Unseen 8.7%",
+   "x": -740,
+   "y": 6780,
+   "width": 380,
+   "height": 180,
+   "color": "5",
+   "type": "text"
+  },
+  {
+   "id": "n0930s-swam",
+   "text": "## [[Simple-WAM]] 🆕\n\nupvote 55 · 데일리 4위\n🏆 이득이 **첫 디노이징 스텝에서 거의 전부**\n\"**preparing** the future, not **generating**\"\n→ 완전노이즈 토큰 **1회 순전파**",
+   "x": -320,
+   "y": 6780,
+   "width": 380,
+   "height": 180,
+   "color": "5",
+   "type": "text"
+  },
+  {
+   "id": "n0930s-jawon",
+   "text": "### 🏆 두 논문이 **같은 결론**\n\n\"**자원보다 소비 구조**\"\n· 시야를 넓혀도 이득 제한적\n· 연산을 늘려도 이득은 첫 스텝\n= [[하네스-설계-축]] *\"덜\"* 의 로봇판",
+   "x": -740,
+   "y": 7010,
+   "width": 380,
+   "height": 190,
+   "color": "6",
+   "type": "text"
+  },
+  {
+   "id": "n0930s-realtime",
+   "text": "### ⏱️ 실시간성 — 구조는 긍정, 수치는 0\n\n✅ **시각 토큰 증가 없음**(볼트 보완)\n✅ **CGE** 신뢰도로 실행개수 동적결정\n✅ 4B · RGB 전용(깊이·LiDAR 불필요)\n🔴 **fps·지연시간 0개 → 30fps+ 판정 불가**",
+   "x": -320,
+   "y": 7010,
+   "width": 380,
+   "height": 190,
+   "color": "6",
+   "type": "text"
+  },
+  {
+   "id": "n0930s-banjeung",
+   "text": "### [[측정도구-먼저-반증]] 🏆\n\nPanoVLN = **가장 깨끗한 사례**\n자기 전제를 먼저 깼다\nSimple-WAM = 분포내 동일 ≠ 동등\n→ **분포내 벤치로는 차이가 안 보인다**",
+   "x": -1200,
+   "y": 7010,
+   "width": 380,
+   "height": 190,
+   "color": "6",
+   "type": "text"
+  },
+  {
+   "id": "n0930s-act",
+   "text": "## [!action] PanoVLN 본문\n\n① `%` vs `%p` 확정 ② 이전 SOTA 절대값\n③ **fps·지연시간** ④ 오픈소스 여부\n⑤ CGE 임계값\n\n🔴 Simple-WAM: 3축 하락폭 · \"almost entirely\" 정량값",
+   "x": -740,
+   "y": 7250,
+   "width": 400,
+   "height": 180,
+   "color": "2",
+   "type": "text"
+  },
+  {
+   "id": "n1002s-hub",
+   "type": "text",
+   "text": "# 📦 2026-10-02 배치\n\n**재판정 2건 유입**\n둘 다 **임바디드 축**\n🟡 경계 사례 명시",
+   "x": -1200,
+   "y": 7600,
+   "width": 280,
+   "height": 140,
+   "color": "1"
+  },
+  {
+   "id": "n1002s-ego",
+   "type": "text",
+   "text": "## [[EgoTools]] 🆕\n\n1인칭 도구사용 벤치·데이터\nupvote **11**(오늘 1위 · +4 드리프트)\nEgoTools-Data **100h**(+보조 3D)\nEgoTools-Bench **1,000 QA · 4트랙**\n\n🏆 **Gemini-3.1-Pro 66.9%**\n**but P&G 만 51.7%** = **−15.2%p**\n🔴 스위트 자급 구조(영상분리만)",
+   "x": -860,
+   "y": 7800,
+   "width": 340,
+   "height": 280,
+   "color": "5"
+  },
+  {
+   "id": "n1002s-pyrua",
+   "type": "text",
+   "text": "## [[PyRUA-Lean]] 🆕\n\n로봇 VLM 토큰 절감\nupvote 3 · 드리프트 **0**\n700 인스턴스(LIBERO-PRO·\nRoboTwin 2.0·RoboCasa365)\n✅ **63.1% → 71.7%**\n✅ LLM 호출 **−49%** · 토큰 **−65%**\n🔴 제목은 \"14%\"(상대)",
+   "x": -480,
+   "y": 7800,
+   "width": 320,
+   "height": 280,
+   "color": "5"
+  },
+  {
+   "id": "n1002s-gap",
+   "type": "text",
+   "text": "## 🏆 총점이 약한 성분을 숨긴다\n\n전체 **66.9%** → \"꽤 한다\"\nP&G **51.7%** → \"못 짚는다\"\n\n🎯 [[복합지표-분해]] **벤치마크 축 재현**\n(10-01 open_issues = 이슈+PR 과 동형)\n\n⚖️ **볼트 적용**: 장면 설명은 받아 쓰고\n**좌표·지목은 검증한다**",
+   "x": -860,
+   "y": 8110,
+   "width": 340,
+   "height": 250,
+   "color": "1"
+  },
+  {
+   "id": "n1002s-match",
+   "type": "text",
+   "text": "## [[비매칭-비교]] 🔄\n\n✅ **모범 사례**\n3중 고정: 동일 플래너(GPT-6 Astra)\n· 동일 프리미티브 · **동일 호출 예산**\n⇒ 바뀐 것은 **대화 방식 하나**\n✅ 절감은 *\"both 가 푼 인스턴스\"* 한정",
+   "x": -480,
+   "y": 8110,
+   "width": 320,
+   "height": 230,
+   "color": "6"
+  },
+  {
+   "id": "n1002s-guk",
+   "type": "text",
+   "text": "### [[국소-수리-원리]] 🔄\n\n조건검사·재시도를\n**파이썬 셀 안에서**\n⇒ 호출 **−49%**\n⚖️ 토큰 −65% 는 **별개 원리**\n(선별 관측)",
+   "x": -130,
+   "y": 8110,
+   "width": 260,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "n1002s-unit",
+   "type": "text",
+   "text": "### [[단위-불일치]] 🔄\n\n🆕 **3번째 유형**\n제목 상대 · 본문 절대\n(저자 자신이 원인)\n⚖️ `63.1→71.7` 만 인용",
+   "x": 160,
+   "y": 8110,
+   "width": 250,
+   "height": 180,
+   "color": "6"
+  },
+  {
+   "id": "n1002s-cheat",
+   "type": "text",
+   "text": "### [[측정도구-먼저-반증]] 🔄\n\nEgoTools: 데이터+벤치 **같은 팀**\nSFT 검증을 **그 벤치 1,000문항 전체**에서\n✅ 영상 분리 명시 🔴 스위트 분리 없음\n⇒ [[False-Frontiers]] co-cheating 형태",
+   "x": -1200,
+   "y": 8110,
+   "width": 290,
+   "height": 210,
+   "color": "6"
+  },
+  {
+   "id": "n1002s-cam",
+   "type": "text",
+   "text": "## 🎯 카메라 파이프라인 교훈\n\n**선별 관측**\n*\"only explicitly requested\nimages and state\"*\n\n📌 매 스텝 전체 관측을 밀어넣는\n기본 구조가 토큰의 주범\n→ pull 로 바꾸면 **65% 빠진다**",
+   "x": -700,
+   "y": 8410,
+   "width": 300,
+   "height": 230,
+   "color": "2"
+  },
+  {
+   "id": "n1002s-lim",
+   "type": "text",
+   "text": "### 🔴 도메인 구조적 공백\n\n**실로봇 0건**(전부 시뮬)\n**실시간 수치 0건**(30fps 질문 무응답)\nEgoTools **4트랙 중 1트랙만**\n논문 본문 **0건**\n🎯 **SLAM·3DGS 본류 0건 — 2배치 연속**",
+   "x": -340,
+   "y": 8410,
+   "width": 300,
+   "height": 210,
+   "color": "1"
+  },
+  {
+   "id": "b1012-sl",
+   "type": "text",
+   "text": "# 2026-10-12 배치\n\n시각 반응형 휴머노이드 1건",
+   "x": -100,
+   "y": 8700,
+   "width": 280,
+   "height": 120,
+   "color": "4"
+  },
+  {
+   "id": "s1012sl-reflex",
+   "type": "text",
+   "text": "### Reflex (cs.RO)\n에고센트릭 RGB-D만으로 전신 캐칭\n시뮬 **85.7%** / 특권 87.9%(−2.2p)\n실기 Unitree G1 **2.5m 65% · 5m 40%**\n🏆 인간 대비 **76% → 59% 보존**\n🔴 시간이력 제거 −35.6/−39.8p\n🔴 시행 횟수·제어주기 미기재",
+   "x": -420,
+   "y": 8880,
+   "width": 300,
+   "height": 230,
+   "color": "5"
+  },
+  {
+   "id": "k1012sl-thr",
+   "type": "text",
+   "text": "### [[임계-의존-성공률]]\n거리 2배 → −25p\n🆕 **기준선도 떨어지면 과제 성질**\n유지되면 방법 한계",
+   "x": -80,
+   "y": 8880,
+   "width": 270,
+   "height": 170,
+   "color": "6"
+  },
+  {
+   "id": "a1012sl-1",
+   "type": "text",
+   "text": "본문 1회 열람\n① 실기 시행 횟수(분모)\n② 제어 주기 Hz\n③ RGB-D 해상도·FOV",
+   "x": 220,
+   "y": 8880,
+   "width": 250,
+   "height": 150,
+   "color": "3"
+  },
+  {
+   "id": "b1013-sl-hub",
+   "type": "text",
+   "text": "# 2026-10-13 유입 (1건)\n🔄 **도메인 재판정** ai-news → slam-3dgs\n(선례: [[Reflex]] 10-12, 2번째 적용)",
+   "x": -1200,
+   "y": 9410,
+   "width": 480,
+   "height": 140,
+   "color": "4"
+  },
+  {
+   "id": "s1013-gpi",
+   "type": "text",
+   "text": "### [[GroundingPI]] 🆕🏆\n업보트 96 · 저자 26 · [[XPENG-AI]]\n**4B** = MoonViT-V2 + Qwen3-4B\n34엔트리 평균 **73.68%**\n> GPT-6 Astra 71.54%(+2.14%p)\nnuScenes L2 **0.296m** ·\nRoboTwin 2.0 OOD 4/4 최대 +24.8%",
+   "x": -1200,
+   "y": 9630,
+   "width": 360,
+   "height": 215,
+   "color": "5"
+  },
+  {
+   "id": "k1013-sl-unit",
+   "type": "text",
+   "text": "🏆 **볼트 최대 발견**\n'34개 벤치'의 34 =\n**22 데이터셋 × 과제형식 엔트리**\nRefCOCOg **5회** · COCO/LVIS/Dense200 각 3회\n⇒ 평균이 **중복 가중**돼 있다\n→ [[단위-불일치]]",
+   "x": -800,
+   "y": 9630,
+   "width": 360,
+   "height": 215,
+   "color": "6"
+  },
+  {
+   "id": "k1013-sl-corr",
+   "type": "text",
+   "text": "🔴 **SOTA 주장 vs GitHub ★24**\nfork 2 · issues 0 (볼트 API 실측)\n[[rea]] ★179,917 대비 **7,496배** 차\n⇒ [[관심-검증-역상관]] **역방향**\n⚖️ 단 공개 9일차 — 절대비교 부당",
+   "x": -400,
+   "y": 9630,
+   "width": 360,
+   "height": 215,
+   "color": "1"
+  },
+  {
+   "id": "e1013-xpeng",
+   "type": "text",
+   "text": "**[[XPENG-AI]]** 🆕\n샤오펑 — 전기차/자율주행\n🆕 볼트가 HF `organization`\n필드에서 발굴(수집기 미수집)\n⇒ 평가 구성이 정체성과 일치",
+   "x": 0,
+   "y": 9630,
+   "width": 340,
+   "height": 215,
+   "color": "4"
+  },
+  {
+   "id": "a1013-sl-1",
+   "type": "text",
+   "text": "🏆 **해소 경로 특정됨**\n`vla/README.md` → +24.8% 기준 백본명\n`eval/README.md#full-suite` → 11 capabilities\n**레포 구조 확인 완료 · 미열람**",
+   "x": -800,
+   "y": 9885,
+   "width": 360,
+   "height": 150,
+   "color": "3"
+  },
+  {
+   "id": "b1017-slam-hub",
+   "type": "text",
+   "x": -100,
+   "y": 10685,
+   "width": 440,
+   "height": 180,
+   "color": "4",
+   "text": "# 🎯 2026-10-17 입고\n\n**공간지능의 결손 위치가 특정됐다:\n인식이 아니라 순차 조작**\n\n신규 [[MJev-Spatial]] · 갱신 [[RoTA-Bench]]\n신설 [[VLA]] · [[벤치마크-외부축]]"
+  },
+  {
+   "id": "b1017-mjev",
+   "type": "text",
+   "x": -560,
+   "y": 10945,
+   "width": 300,
+   "height": 240,
+   "color": "2",
+   "text": "### 🏆 MJev-Spatial (286up)\n\n생성 → **분류**로 환원\n백본 query/key 투사 재사용\n**파라미터 0 · 답변토큰 0 · 포워드 1회**\n\n종합 **65.64%** · **12/12 자기베이스 상회**\n속도 **2.5배 / 5.6배** · 학습 +30.8%\n\n[[MJev-Spatial]]"
+  },
+  {
+   "id": "b1017-rota",
+   "type": "text",
+   "x": 260,
+   "y": 10945,
+   "width": 300,
+   "height": 240,
+   "color": "1",
+   "text": "### 🔴 RoTA-Bench (200up)\n\n**GPT-5.6-Sol 17% vs 인간 100%**\n\n겹침↑ 정합↓ **19.4% vs 10.9%**\n⇒ 겹침 지표는 **과대평가**\n이력 제거시 **96.8%가 30도 고정**\n⇒ 순차 의사결정 **붕괴**\n\n[[RoTA-Bench]]"
+  },
+  {
+   "id": "b1017-split",
+   "type": "text",
+   "x": -150,
+   "y": 11245,
+   "width": 420,
+   "height": 200,
+   "color": "6",
+   "text": "## 🏆 교차 결론 — 모순이 아니다\n\n**단발** 공간질의(관계·거리·위치) → 모델 **잘함** (65.64%)\n**순차** 조작(회전선택→투영정합) → 모델 **못함** (17%)\n\n🎯 **VLA 출력은 본질적으로 순차 제어**\n⇒ 단발 벤치 점수는 **VLA 성능을 예측하지 않는다**"
+  },
+  {
+   "id": "b1017-vla",
+   "type": "text",
+   "x": -560,
+   "y": 11505,
+   "width": 320,
+   "height": 240,
+   "color": "3",
+   "text": "### 🔴 VLA 신설 — `reliability: low`\n\n카메라+언어+로봇상태 → **관절각·포즈·손개폐**\n\n🔴 **볼트 1차 논문 0건**\n수치 전부 2차 인용\n*33.5%/18.1%/36.4%* = **인용 불가**\n\n🔥 **도메인 최대 공백**\n[[VLA]]"
+  },
+  {
+   "id": "b1017-slam-act",
+   "type": "text",
+   "x": -150,
+   "y": 11505,
+   "width": 420,
+   "height": 180,
+   "color": "3",
+   "text": "## 🔥 actionable 최우선\n\n**VLA 1차 논문 1건 직접 열람**\nRT-2 / OpenVLA / π0 중 최소 1건\n→ [[VLA]] `low → medium` 상향\n\n(2026년 휴머노이드 출하 5만대+ · 전년 7배 — 2차 인용)"
+  },
+  {
+   "id": "b1024-slam-3dgs-hub",
+   "type": "text",
+   "x": -640,
+   "y": 11945,
+   "width": 620,
+   "height": 220,
+   "color": "6",
+   "text": "## 2026-10-24 배치\n🏆 CVPR 2027 초록 11-10 · 논문 11-16 AoE (공식 확인)\n🔴 VLA 1차 논문 0건 이월"
+  },
+  {
+   "id": "b1024-slam-3dgs-0",
+   "type": "file",
+   "file": "wiki/sources/리서치-AI로봇-주요-학회-2026년-CFP-일정-현황.md",
+   "x": 60,
+   "y": 11945,
+   "width": 420,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1024-slam-3dgs-1",
+   "type": "file",
+   "file": "wiki/sources/WeVisOne-VL.md",
+   "x": 520,
+   "y": 11945,
+   "width": 420,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1024-slam-3dgs-2",
+   "type": "file",
+   "file": "wiki/concepts/경과-마감-배달.md",
+   "x": 980,
+   "y": 11945,
+   "width": 420,
+   "height": 200,
+   "color": "6"
+  }
+ ],
+ "edges": [
+  {
+   "id": "e1",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-slam",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e2",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-3dgs",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e3",
+   "fromNode": "domain-hub",
+   "toNode": "cluster-camera",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-sl0907",
+   "fromNode": "domain-hub",
+   "toNode": "sl-worldsculpt",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-sl0907b",
+   "fromNode": "sl-worldsculpt",
+   "toNode": "sl-gap0907",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "es0908-0",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "s0908-mem",
+   "toSide": "top"
+  },
+  {
+   "id": "es0908-1",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "s0908-conv",
+   "toSide": "top"
+  },
+  {
+   "id": "es0908-2",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "s0908-gap",
+   "toSide": "top"
+  },
+  {
+   "id": "e0909sl-1",
+   "fromNode": "b0909-sl",
+   "toNode": "s0909sl-mar",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0909sl-2",
+   "fromNode": "s0909sl-mar",
+   "toNode": "n0909sl-how",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e0909sl-3",
+   "fromNode": "n0909sl-how",
+   "toNode": "a0909sl-1",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "en0911S-1",
+   "fromNode": "n0911S-sb",
+   "fromSide": "right",
+   "toNode": "n0911S-why",
+   "toSide": "left"
+  },
+  {
+   "id": "en0911S-2",
+   "fromNode": "n0911S-why",
+   "fromSide": "right",
+   "toNode": "n0911S-how",
+   "toSide": "left"
+  },
+  {
+   "id": "en0911S-3",
+   "fromNode": "n0911S-why",
+   "fromSide": "bottom",
+   "toNode": "n0911S-act",
+   "toSide": "top"
+  },
+  {
+   "id": "en0911S-4",
+   "fromNode": "cluster-slam",
+   "fromSide": "bottom",
+   "toNode": "n0911S-sb",
+   "toSide": "top"
+  },
+  {
+   "id": "e-batch-0913-slam-3dgs-hub",
+   "fromNode": "batch-0913-slam-3dgs",
+   "toNode": "domain-hub",
+   "fromSide": "top",
+   "toSide": "bottom"
+  },
+  {
+   "id": "e-batch-0913-slam-3dgs-s-FreeFlow",
+   "fromNode": "batch-0913-slam-3dgs",
+   "toNode": "s-FreeFlow",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e-batch-0913-slam-3dgs-s-RCWM",
+   "fromNode": "batch-0913-slam-3dgs",
+   "toNode": "s-RCWM",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e-batch-0913-slam-3dgs-s-WiW",
+   "fromNode": "batch-0913-slam-3dgs",
+   "toNode": "s-WiW",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e-batch-0914-slam-3dgs-s-LIT",
+   "fromNode": "batch-0914-slam-3dgs",
+   "toNode": "s-LIT",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e-batch-0914-slam-3dgs-n0914-lit-cond",
+   "fromNode": "batch-0914-slam-3dgs",
+   "toNode": "n0914-lit-cond",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e-batch-0914-slam-3dgs-n0914-iface",
+   "fromNode": "batch-0914-slam-3dgs",
+   "toNode": "n0914-iface",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "eb17-actionpiece",
+   "fromNode": "s0908-emb",
+   "toNode": "b17-actionpiece",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e19-b19s-physbrain-b17-actionpiece",
+   "fromNode": "b19s-physbrain",
+   "toNode": "b17-actionpiece",
+   "label": "본체 액션 어휘로 채택"
+  },
+  {
+   "id": "e-b20s-hdr-b20s-react",
+   "fromNode": "b20s-hdr",
+   "toNode": "b20s-react",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20s-hdr-b20s-judge",
+   "fromNode": "b20s-hdr",
+   "toNode": "b20s-judge",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-b20s-hdr-b20s-gap",
+   "fromNode": "b20s-hdr",
+   "toNode": "b20s-gap",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-domain-hub-src-gae",
+   "fromNode": "domain-hub",
+   "toNode": "src-gae",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "09-23 재판정"
+  },
+  {
+   "id": "e-s-happyworld-0924",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "s-happyworld-0924",
+   "toSide": "top"
+  },
+  {
+   "id": "e-s-spatialinteractor-0924",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "s-spatialinteractor-0924",
+   "toSide": "top"
+  },
+  {
+   "id": "e-c-privileged-opd",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "c-privileged-opd",
+   "toSide": "top"
+  },
+  {
+   "id": "e-c-interactconsist",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "c-interactconsist",
+   "toSide": "top"
+  },
+  {
+   "id": "e-a-arxiv-fulltext",
+   "fromNode": "s0908-emb",
+   "fromSide": "bottom",
+   "toNode": "a-arxiv-fulltext",
+   "toSide": "top"
+  },
+  {
+   "id": "e34-0926",
+   "fromNode": "domain-hub",
+   "toNode": "n-wrop-0926",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e35-0926",
+   "fromNode": "domain-hub",
+   "toNode": "n-omniecho-0926",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e36-0927",
+   "fromNode": "e-tomsilver-0927",
+   "toNode": "s-tamp-0927",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e37-0927",
+   "fromNode": "s-tamp-0927",
+   "toNode": "n-tampwarn-0927",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e-hub-internw0-0928",
+   "fromNode": "domain-hub",
+   "fromSide": "bottom",
+   "toNode": "s-internw0-0928",
+   "toSide": "top"
+  },
+  {
+   "id": "e-internw0-lint-0928",
+   "fromNode": "s-internw0-0928",
+   "fromSide": "bottom",
+   "toNode": "c-internw0-lint-0928",
+   "toSide": "top"
+  },
+  {
+   "id": "e0929-slam-3dgs-0",
+   "fromNode": "b0929-hdr-slam-3dgs",
+   "toNode": "n0929s-hexa",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e0929-slam-3dgs-1",
+   "fromNode": "n0929s-hexa",
+   "toNode": "n0929s-nonum",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0929-slam-3dgs-2",
+   "fromNode": "b0929-hdr-slam-3dgs",
+   "toNode": "n0929s-myeongsi",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0929-slam-3dgs-3",
+   "fromNode": "n0929s-myeongsi",
+   "toNode": "n0929s-hexa",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e0930-slam-0",
+   "fromNode": "n0930s-hdr",
+   "toNode": "n0930s-panovln",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-1",
+   "fromNode": "n0930s-hdr",
+   "toNode": "n0930s-swam",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-2",
+   "fromNode": "n0930s-panovln",
+   "toNode": "n0930s-jawon",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-3",
+   "fromNode": "n0930s-swam",
+   "toNode": "n0930s-jawon",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-4",
+   "fromNode": "n0930s-panovln",
+   "toNode": "n0930s-realtime",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-5",
+   "fromNode": "n0930s-swam",
+   "toNode": "n0930s-realtime",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-6",
+   "fromNode": "n0930s-panovln",
+   "toNode": "n0930s-banjeung",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-7",
+   "fromNode": "n0930s-swam",
+   "toNode": "n0930s-banjeung",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-8",
+   "fromNode": "n0930s-jawon",
+   "toNode": "n0930s-act",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e0930-slam-9",
+   "fromNode": "n0930s-realtime",
+   "toNode": "n0930s-act",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b1",
+   "fromNode": "n1002s-hub",
+   "toNode": "n1002s-ego",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b2",
+   "fromNode": "n1002s-hub",
+   "toNode": "n1002s-pyrua",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b3",
+   "fromNode": "n1002s-ego",
+   "toNode": "n1002s-gap",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b4",
+   "fromNode": "n1002s-pyrua",
+   "toNode": "n1002s-match",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b5",
+   "fromNode": "n1002s-pyrua",
+   "toNode": "n1002s-guk",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b6",
+   "fromNode": "n1002s-pyrua",
+   "toNode": "n1002s-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b7",
+   "fromNode": "n1002s-ego",
+   "toNode": "n1002s-cheat",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b8",
+   "fromNode": "n1002s-match",
+   "toNode": "n1002s-cam",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "n1002s-b9",
+   "fromNode": "n1002s-gap",
+   "toNode": "n1002s-lim",
+   "fromSide": "right",
+   "toSide": "top"
+  },
+  {
+   "id": "g1",
+   "fromNode": "b1012-sl",
+   "toNode": "s1012sl-reflex",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "g2",
+   "fromNode": "s1012sl-reflex",
+   "toNode": "k1012sl-thr",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "거리 임계"
+  },
+  {
+   "id": "g3",
+   "fromNode": "s1012sl-reflex",
+   "toNode": "a1012sl-1",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1013-sl-hub",
+   "fromNode": "domain-hub",
+   "toNode": "b1013-sl-hub",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl0",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "s1013-gpi",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl1",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "k1013-sl-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl2",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "k1013-sl-corr",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sl3",
+   "fromNode": "b1013-sl-hub",
+   "toNode": "e1013-xpeng",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1013-sla",
+   "fromNode": "s1013-gpi",
+   "toNode": "a1013-sl-1",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-gpi-k1013-sl-unit",
+   "fromNode": "s1013-gpi",
+   "toNode": "k1013-sl-unit",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-gpi-k1013-sl-corr",
+   "fromNode": "s1013-gpi",
+   "toNode": "k1013-sl-corr",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "x1013-s1013-gpi-e1013-xpeng",
+   "fromNode": "s1013-gpi",
+   "toNode": "e1013-xpeng",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1017s-1",
+   "fromNode": "b1017-slam-hub",
+   "toNode": "b1017-mjev",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1017s-2",
+   "fromNode": "b1017-slam-hub",
+   "toNode": "b1017-rota",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1017s-3",
+   "fromNode": "b1017-mjev",
+   "toNode": "b1017-split",
+   "fromSide": "bottom",
+   "toSide": "left",
+   "label": "단발 = 잘함"
+  },
+  {
+   "id": "e1017s-4",
+   "fromNode": "b1017-rota",
+   "toNode": "b1017-split",
+   "fromSide": "bottom",
+   "toSide": "right",
+   "label": "순차 = 못함"
+  },
+  {
+   "id": "e1017s-5",
+   "fromNode": "b1017-split",
+   "toNode": "b1017-vla",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1017s-6",
+   "fromNode": "b1017-vla",
+   "toNode": "b1017-slam-act",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1024-slam-3dgs-0",
+   "fromNode": "b1024-slam-3dgs-hub",
+   "toNode": "b1024-slam-3dgs-0",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "경과-마감 첫 단절"
+  },
+  {
+   "id": "e1024-slam-3dgs-1",
+   "fromNode": "b1024-slam-3dgs-hub",
+   "toNode": "b1024-slam-3dgs-1",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "픽셀 디코더"
+  },
+  {
+   "id": "e1024-slam-3dgs-2",
+   "fromNode": "b1024-slam-3dgs-hub",
+   "toNode": "b1024-slam-3dgs-2",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "갱신"
+  }
+ ]
 }

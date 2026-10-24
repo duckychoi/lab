@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, tts, multilingual, voice-synthesis, speech, k2-fsa, github-trending, 중복검출, 표면분할]
 created: 2026-04-19
-updated: 2026-09-08
+updated: 2026-10-24
 sources: []
 reliability: high
 ---
@@ -86,3 +86,5 @@ reliability: high
 - 수집: 2026-04-19 최초(HF 표면) / **2026-09-08 갱신**(GitHub 표면 — 이름 토큰 대조 히트)
 - 검증: HF 모델 API + GitHub API + README 원문 (2026-09-08 · GitHub ⭐10,549 raw와 **완전 일치** · HF DL 1,153,331)
 - 신뢰도: ⭐⭐⭐⭐ (4월 ⭐⭐⭐⭐ 유지 · 근거 구성이 DL 단일 → 논문+코드+DL로 **두터워짐**)
+
+- 🔄 **2026-10-24 (교차 참조)**: [[drama-3]] 논문 Table 5(LibriSpeech-PC test-clean · OmniVoice 채점 방식)에서 OmniVoice 가 **WER 1.30 · SIM 0.729 로 1위**(Drama 3 1.85 / 0.605). Drama 3 본문은 UTMOS(4.31 vs OmniVoice 4.28)만 언급 · 같은 표 Qwen3-TTS UTMOS 4.41 은 언급 안 함 → [[표-부분인용]]. MiniMax 다국어표 한국어 CER: OmniVoice 2.65 · Drama 3 2.36 · Fish S2 1.18(각자 채점).
