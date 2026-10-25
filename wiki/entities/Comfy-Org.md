@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, comfyui, repackage, distribution, runtime]
 created: 2026-09-17
-updated: 2026-10-24
-sources: [Comfy-Org-YuE2.md]
+updated: 2026-10-25
+sources: [Comfy-Org-YuE2.md, Comfy-Org-MOSS-Image.md]
 reliability: medium
 ---
 
@@ -65,3 +65,7 @@ ComfyUI 생태계의 공식 조직. **모델을 만들지 않고 런타임에 �
 
 - 🔄 **2026-10-15**: [[Comfy-Org-Qwen-Image-2.1]] dl **9,798,941**(30일 = 전체) · likes 1,118 · trendingScore 132 · 🏆 **"30일=전체"의 원인 특정**: `createdAt` **2026-09-15** = 금일 기준 **생성 후 정확히 30일**(집계 오류 아님 · [[지표-창길이]]) 🔴 **내일부터 두 값이 갈라진다 — 변화가 아니라 창이 레포를 추월하는 것** · ✅ **파생 증거 3종 독립 수집**: `base_model:finetune:Qwen/Qwen-Image-2.1` 태그 · `safetensors.total`·`gguf.total` **둘 다 None** · `siblings` 17 ⇒ ⚖️ **수집기 판정 요청 ④ 전면 수용** · 🏆 **"다운로드 1위 = 가장 설치하기 쉬운 묶음"**(성능 최고가 아니다) → [[배포출처-봉인]] · 🔴 **모델 카드 미열람 — 이월 1건**
 - 🔄 **2026-10-24**: 🔴 Comfy 계열 레포(`diffusion-single-file`)는 **`.safetensors` 파일마다 다운로드 1회**로 계수된다 → 원본(diffusers) 대비 배수는 동일 단위가 아니다 · [[Comfy-Org-Qwen-Image-2.1]] `.safetensors` 15개 · [[flux-3-image-klein-comfy]](BFL 자체 Comfy 배포) 사례 → [[계수기-배수]]
+
+## 🔄 2026-10-25 — [[Comfy-Org-MOSS-Image]]: 규약 ⑰ 첫 집행
+- 1,944,278 dl(9일) vs 원본 [[OpenMOSS]] 2레포 합 16,660 ⇒ 원값 **116.7배** · `diffusion-single-file` 파일당 계수 보정 시 **29~39배**(추정) ⇒ [[원본-파생-역전]] 은 남지만 크기는 1/3~1/4 · 좋아요는 원본 1,247 > Comfy 443
+- 📌 Comfy 재패키징 3사례 누적: [[Comfy-Org-Qwen-Image-2.1]] · [[flux-3-image-klein-comfy]] · [[Comfy-Org-MOSS-Image]] → [[계수기-배수]]

@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, china, frontier-lab, deepseek, moe, open-weights, reasoning]
 created: 2026-08-04
-updated: 2026-10-24
-sources: [DeepSeek-V4-Flash-0731.md, DeepSeek-V4.1-Flash-Paper.md]
+updated: 2026-10-25
+sources: [DeepSeek-V4-Flash-0731.md, DeepSeek-V4.1-Flash-Paper.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: high
 ---
 
@@ -46,3 +46,6 @@ reliability: high
 - 신뢰도: ⭐⭐⭐ (랩·효율 노선·오픈 MoE 이력은 실체, V4-Flash 세부는 시뮬레이션 타임라인 raw 기반 미검증)
 
 - 🔄 **2026-10-24**: [[DeepSeek-V4.1-Flash-1017]] — V4.1-Flash 의 마이너 업데이트(가중치만 · 763B 동일) · 57,715 dl · likes 2,636 · trendingScore 2,053(10-24T09:06Z) · MIT · 자기보고 TB 4.0 31.2→42.3 · ProgramBench 20.3→29.1 · HLE 36.8→42.6 · 🔴 하네스 교체(DSH Minimal→Claude Code)·NL2Repo 기준값 불일치(64.0 vs 65.4)·표 20→11행 축소 → [[비매칭-비교]]
+
+## 🔄 2026-10-25
+- [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] — [[ISTA-DASLab]] 서드파티 1.75~2.25bpw GGUF(231~266GB) · 🔴 llama.cpp 미지원(10-23) · Strata 단독 · 백본 551.9B + Engram 196.6B = 748.5B ↔ 763.2B(14.7B 미설명)

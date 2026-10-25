@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, world-action-model, embodied-ai, failure-analysis, vla, world-model]
 created: 2026-07-17
-updated: 2026-07-17
+updated: 2026-10-25
 sources: [2607.15207]
 reliability: medium
 ---
@@ -38,3 +38,6 @@ reliability: medium
 - 출처: https://huggingface.co/papers/2607.15207
 - HF 데일리 upvote 27 (2026-07-17)
 - 신뢰도: ⭐⭐ (미래형 ID·초록 수준 자동수집, 원문 미검증)
+
+## 🔄 2026-10-25
+- WAM 신규 소스: [[FRED]](KAIST · 단일 디노이징 스텝 미래표현 자기증류 · 인간 영상 전용 과제 50.0% vs 19.4%)

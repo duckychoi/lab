@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mixed-precision, gsq, rco, benchmark]
 created: 2026-09-06
-updated: 2026-09-06
+updated: 2026-10-25
 sources: []
 reliability: high
 ---
@@ -66,3 +66,6 @@ reliability: high
 ## 원본
 - 출처: https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF
 - 신뢰도: ⭐⭐⭐⭐ (HF API 2026-09-06 실측 · **카드 내 제3자 대조 벤치마크 표 보유**)
+
+## 🔄 2026-10-25
+- 이 페이지의 *"AIME25 100.00은 그 자체로 경계 신호"*(09-22) 가 3릴리스 누적으로 개념화됐다 → 🆕 [[천장-기준선]] · 3번째 사례 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]]

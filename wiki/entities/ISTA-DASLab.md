@@ -4,8 +4,8 @@ type: entity
 domain: local-llm
 tags: [local-llm, quantization, gguf, research-lab, gsq, rco]
 created: 2026-09-22
-updated: 2026-10-10
-sources: [Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md, Qwen3.8-27B-GSQ-RCO-GGUF.md]
+updated: 2026-10-25
+sources: [Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md, Qwen3.8-27B-GSQ-RCO-GGUF.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
 
@@ -59,3 +59,10 @@ HF `ISTA-DASLab`. 이름으로 보아 오스트리아 IST Austria의 분산 알�
 - [[Qwen3.8-Flash-Next-GSQ-RCO-GGUF]] · [[자기제한-명시]] · [[숨김유인-부호]]
 - [[유의성-자기제한]] · [[배수-조건분산]] · [[단위-불일치]]
 - [[Ternary-Bonsai-2-27B]] · [[Trace2Env]] · [[QuantCode]]
+
+## 🔄 2026-10-25 — 3번째 릴리스: 카드 품질 단조 하락 n=3 · 평가 스위트에 천장 축 고정
+
+> [!warning] 🔴 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] — **카드에 `TBD` HTML 주석 6건**(메모리 요구사항 섹션 본문 공백 · IQ2_XS 미측정 · 실행 명령 공백 · 감사문 *"copied from the Flash-Next card"*)
+> ⇒ 10-10 기록 *"두 번째 카드가 첫 번째보다 약하다"* 의 **3번째 점**: 27B(완비) → Flash-Next(대조군·perplexity 누락) → DeepSeek(근거 섹션 자체 공백). 🎯 **간판 "12GB GPU" 3회 반복 · 그 근거 섹션은 TBD.**
+> 🆕 3릴리스 전부 AIME25 기준선 **100.00** ⇒ [[천장-기준선]] 신설(IQ1_M 회복률 98.7% → 천장 제외 97.97%).
+> 📌 실행 경로가 llama.cpp → **Strata 단독**으로 바뀌었다(*"llama.cpp does not support DeepSeek-V4.1"* · 10-23 기준).

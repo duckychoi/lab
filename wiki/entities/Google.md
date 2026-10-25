@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, organization, bigtech, ai-agent, gemini, google-cloud]
 created: 2026-07-02
-updated: 2026-09-07
-sources: [agents-cli.md]
+updated: 2026-10-25
+sources: [agents-cli.md, gemini-cli.md]
 reliability: high
 ---
 
@@ -50,3 +50,6 @@ reliability: high
 - 조직: Google (Google Cloud · Google Labs · DeepMind)
 - 관련 활동: Gemini·Gemma · Agent Development Kit(ADK) · 코딩 에이전트용 오픈 도구
 - 신뢰도: ⭐⭐⭐ (공식 빅테크)
+
+## 🔄 2026-10-25
+- [[gemini-cli]] — ★108,310 · README 첫 줄에서 자기 대체 공지(*"replaced by Antigravity CLI on June 18th, 2026"* · *"not been optimized for Gemini 4 Argon"*) · 당일 푸시는 계속 ⇒ 지표는 신선, 제품 지위는 레거시

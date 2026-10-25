@@ -4,8 +4,8 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, fine-tuning, qlora, peft, memory-efficient, on-device, 원본-파생-역전, 배포출처-봉인, 세로통합]
 created: 2026-08-13
-updated: 2026-10-11
-sources: [embeddinggemma-2-GGUF.md]
+updated: 2026-10-25
+sources: [embeddinggemma-2-GGUF.md, flint-GGUF.md]
 reliability: high
 ---
 
@@ -74,3 +74,6 @@ reliability: high
 ## 원본
 - 출처: https://github.com/unslothai/unsloth
 - 신뢰도: ⭐⭐⭐ (⭐72,926·당일 +572, raw 자동수집 · 실WebFetch 미수행)
+
+## 🔄 2026-10-25
+- [[flint-GGUF]] — 원본 [[RecursiveSI]]/flint 보다 **하루 먼저 생성**(10-20 < 10-21) · dl **78,891 vs 4,795 = 16.5배** · likes 0.29배 ⇒ 사전 협업형 [[원본-파생-역전]]

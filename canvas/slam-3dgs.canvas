@@ -859,6 +859,86 @@
    "width": 420,
    "height": 200,
    "color": "6"
+  },
+  {
+   "id": "b1025-slam-3dgs-hub",
+   "type": "text",
+   "x": -640,
+   "y": 12365,
+   "width": 620,
+   "height": 220,
+   "color": "6",
+   "text": "## 2026-10-25 배치\nslam-3dgs 0건 해소 (재분류 3)\nJEPA형 LaLa-World vs 확산 WAM FRED 동시 도착"
+  },
+  {
+   "id": "b1025-slam-3dgs-0",
+   "type": "file",
+   "file": "wiki/sources/LaLa-World.md",
+   "x": 60,
+   "y": 12365,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-slam-3dgs-1",
+   "type": "file",
+   "file": "wiki/sources/FRED.md",
+   "x": 520,
+   "y": 12365,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-slam-3dgs-2",
+   "type": "file",
+   "file": "wiki/sources/microduck.md",
+   "x": 980,
+   "y": 12365,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-slam-3dgs-3",
+   "type": "file",
+   "file": "wiki/synthesis/JEPA-vs-Diffusion-월드모델.md",
+   "x": 1440,
+   "y": 12365,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-slam-3dgs-4",
+   "type": "file",
+   "file": "wiki/concepts/대립레시피-동시도착.md",
+   "x": 60,
+   "y": 12605,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-slam-3dgs-5",
+   "type": "file",
+   "file": "wiki/entities/Pollen-Robotics.md",
+   "x": 520,
+   "y": 12605,
+   "width": 400,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "b1025-slam-3dgs-6",
+   "type": "file",
+   "file": "wiki/sources/리서치-휴머노이드-로봇의-VLASLAM로컬LLM-통합-제어-2026-최신-동향.md",
+   "x": 980,
+   "y": 12605,
+   "width": 400,
+   "height": 200,
+   "color": "4"
   }
  ],
  "edges": [
@@ -1448,6 +1528,92 @@
    "fromSide": "right",
    "toSide": "left",
    "label": "갱신"
+  },
+  {
+   "id": "e1025-slam-3dgs-0",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-0",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "13.9배"
+  },
+  {
+   "id": "e1025-slam-3dgs-1",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-1",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "50.0 vs 19.4"
+  },
+  {
+   "id": "e1025-slam-3dgs-2",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-2",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "50Hz · 시뮬"
+  },
+  {
+   "id": "e1025-slam-3dgs-3",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-3",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "갱신"
+  },
+  {
+   "id": "e1025-slam-3dgs-4",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-4",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "월드모델 축"
+  },
+  {
+   "id": "e1025-slam-3dgs-5",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-5",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "🆕"
+  },
+  {
+   "id": "e1025-slam-3dgs-6",
+   "fromNode": "b1025-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-6",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1025-slam-3dgs-x0",
+   "fromNode": "b1025-slam-3dgs-0",
+   "toNode": "b1025-slam-3dgs-1",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "대립"
+  },
+  {
+   "id": "e1025-slam-3dgs-x1",
+   "fromNode": "b1025-slam-3dgs-0",
+   "toNode": "b1025-slam-3dgs-3",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "정합 비교"
+  },
+  {
+   "id": "e1025-slam-3dgs-x2",
+   "fromNode": "b1025-slam-3dgs-2",
+   "toNode": "b1025-slam-3dgs-5",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1025-slam-3dgs-prev",
+   "fromNode": "b1024-slam-3dgs-hub",
+   "toNode": "b1025-slam-3dgs-hub",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "10-24 → 10-25"
   }
  ]
 }

@@ -4,8 +4,8 @@ type: synthesis
 domain: ai-news
 tags: [ai-news, synthesis, world-model, jepa, diffusion, comparison]
 created: 2026-07-12
-updated: 2026-07-12
-sources: [JEPA-월드모델-서베이-2026.md, Flow-JEPA-연구아이디어.md, C-JEPA.md]
+updated: 2026-10-25
+sources: [JEPA-월드모델-서베이-2026.md, Flow-JEPA-연구아이디어.md, C-JEPA.md, LaLa-World.md, FRED.md]
 reliability: high
 ---
 
@@ -40,3 +40,14 @@ reliability: high
 ## 원본
 - 근거 소스: [[JEPA-월드모델-서베이-2026]] · [[Flow-JEPA-연구아이디어]] · [[C-JEPA]]
 - 신뢰도: ⭐⭐⭐⭐ (다수 1차 소스 교차 종합)
+
+## 🔄 2026-10-25 — 3개월 만의 갱신: 정합 비교 1건 · 같은 날 반대편 1건
+> [!insight] [[LaLa-World]] 가 이 페이지의 "수렴 지점" 질문에 처음으로 **정합(matched) 비교** 를 줬다
+> *"In a matched comparison with an RAEv2-based video generation model baseline, LaLa-World reaches **comparable** planning performance with **6× less training cost and 13.9× faster planning**"* ⇒ 🎯 **JEPA 쪽 이점은 성능이 아니라 비용**(동등 성능). 07-12 대비표의 "효율" 행에 첫 정량 근거.
+> 🎯 **수렴의 방향도 보인다**: LaLa 는 비디오 생성 모델의 **언어 조건 인터페이스를 차용**했다(*"adopting the language-conditioned interface of video generation models"*) — JEPA 가 Diffusion 쪽 인터페이스를 흡수.
+
+> [!warning] 반대편 — [[FRED]](같은 날)
+> 확산 WAM 의 약점(추론 지연)을 **단일 디노이징 스텝**으로 공략. 인간 영상 전용 과제 50.0% vs 경쟁 WAM 19.4%. 🔴 **두 논문 모두 상대 노선과 직접 비교하지 않는다** → [[대립레시피-동시도착]]. ⇒ 비용 축은 JEPA 우위 근거 1건, 일반화 축은 확산 개선 근거 1건 — **같은 축 비교가 아니므로 승패 판정 불가.**
+
+### 관련 페이지 추가
+- [[LaLa-World]] · [[FRED]] · [[대립레시피-동시도착]] · [[JEPA효율화-로컬추론]] · [[NAVER]]

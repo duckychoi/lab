@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-10-12
+updated: 2026-10-25
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -860,3 +860,9 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🔴 [[IQuest-Q1]] 320B BF16 ≈ 640GB ⇒ **로컬 불가**, [[GLM-5.3-Flash]] 대체 근거 없음(TB 3판 전패). 커뮤니티 GGUF/FP8 파생은 존재.
 - 🔴 [[DeepSeek-V4.1-Flash-1017]] 763B · 원본과 파라미터 수 완전 동일 = 가중치만 교체. 트렌딩 1위인데 다운로드는 원본 30일치의 3.9%.
 - 📌 크론 `on-device-ai`(7건→3파일) · `llm-long-memory`(7건→5파일) 노트 — 2차 인용 · `reliability: low`. 🔴 `on-device` 파일은 10-16 볼트 판정이 덮어써졌다가 git 복원 → [[크론-덮어쓰기-소실]].
+
+## 🔄 2026-10-25 배치
+- 🆕 [[flint-GGUF]] 39.8B/활성 ~2.5B 코딩 MoE · 파생이 원본보다 **하루 먼저** 생성 · dl 16.5배 · 🔴 비교표 PNG 봉인 · ❓ SWE-bench Pro v2 89.7 > Verified 74.2 역전 · Hermes 툴콜 백엔드 후보
+- 🆕 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 231~266GB · 🔴 llama.cpp 불가(Strata 단독) · 카드 TBD 6건(메모리 요구사항 공백) · 🆕 [[천장-기준선]] — IQ1_M 회복률 98.7% → 천장 제외 97.97%
+- 🆕 [[Deep-Fusion-Memory]] — 메모리 분류의 "증류된 검색" 칸(학습 시 검색 · 추론 시 파라미터) · 구축 비용 32배/2048배 감소 · 🔴 코드 없음 · 12.71% 단위 미확정
+- 📌 크론 `on-device-ai`·`llm-long-memory` 덮어쓰기로 메타데이터·생성일 소실 → 복원([[크론-덮어쓰기-소실]] n=5)

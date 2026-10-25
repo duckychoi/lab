@@ -1,87 +1,98 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)"
-created: 2026-10-22
-updated: 2026-10-22
-type: source
-domain: local-llm
-topic: llm-long-memory   # 중복 판정 키 — 2026-10-24 부여
-sources: []
-reliability: low   # 크론 2차 인용 · 독립 검증 미실시
+created: 2026-10-24
+updated: 2026-10-25
 author: research-agent
 origin: cron-research-agent
-tags: [research-agent, ai-news]
+tags: [research-agent, ai-news, 크론노트, 주제재생성-중복, 볼트판정-2026-10-25]
+type: source
+domain: local-llm
+topic: llm-long-memory   # 중복 판정 키
+sources: []
+reliability: low   # 크론 자동생성 · 볼트 독립 검증 미실시
 ---
+
+> [!warning] ⚖️ 볼트 판정 (2026-10-25 인제스트)
+> 🔴 **[[크론-덮어쓰기-소실]] 재발(메타데이터형)** — 10-24 부여 `topic:`·`domain:`·`reliability:`·`created` 소실 → 볼트 복원. 본문 판정 소실 0.
+> 📌 같은 날 자동수집 [[Deep-Fusion-Memory]](파라메트릭 메모리 · 검색 0회 추론)가 도착 — 이 노트의 SOTA 서술과 대조할 1차 소스. 볼트 독립 검증 미실시.
+
+2026년 LLM 장기기억과 에이전트 메모리 아키텍처의 최신 동향을 조사하겠습니다.
 ## LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)
 
 **핵심 3줄**
 - 
-AI 에이전트 메모리는 2026년에 별도의 벤치마크 스위트, 연구 문헌, 측정 가능한 성능 격차, 전문 생태계를 갖춘 1급 아키텍처 컴포넌트
+메모리 메커니즘이 정보 추출, 메모리 관리, 저장소, 정보 검색의 4개 모듈로 분해되는 통합 프레임워크로 표준화
 
 - 
-프로덕션 메모리 아키텍처는 의미론(semantic), 키워드(keyword), 엔티티(entity), 그래프 기반 검색을 점진적으로 결합
+Google의 Titans 아키텍처는 Transformer 어텐션과 신경 장기기억(LTM) 모듈을 결합해 동적 검색으로 대화/세션/문서 간 지식 누적
 
 - 
-암묵적·명시적·영구적·적응형 메모리 메커니즘을 구분하는 통합 분류체계 제시
+프로덕션 5가지 패턴이 정확도 66.9~72.9%, 응답시간 1.44~17.12초로 트레이드오프 구성
 
 
 **상세**
 
-**아키텍처 진화**
+**아키텍처 패턴 진화**
 - 
-H-Mem: 시간 트리(temporal)와 의미 트리(semantic)라는 2개의 병렬 계층적 데이터 구조로 대화 정보 저장
-
-- 
-H-MEM: 장기 추론을 위한 계층적 메모리로 고효율성 달성(EACL 2026)
+패턴 A: 모놀리식 컨텍스트 (프롬프트 내 메모리, 용량 제한, 요약 편향)
 
 - 
-AgeMem: 단·장기 메모리 관리를 에이전트 정책에 내장, 메모리 작업이 도구화되어 에이전트가 저장·검색·업데이트·요약·삭제 결정
-
-
-**핵심 기술 트렌드**
-- 
-Oblivion: 감쇠 기반 활성화를 통한 자가적응형 에이전트 메모리 제어(arXiv:2604.00131, 2026)
+패턴 B: 컨텍스트+검색 저장소 (working memory는 context window, 장기 기록은 외부 벡터/구조화 저장소) - 현재 생산 시스템의 표준
 
 - 
-Zep: 에이전트 메모리를 위한 시간 지식그래프 아키텍처(arXiv:2501.13956, 2025)
+패턴 C: 계층화 메모리 + 학습된 제어 (context, structured DB, vector store, cold archive) - MemGPT, AgeMem이 예시
+
+
+**핵심 기술 혁신**
+- 
+Mem0: LLM 기반 사실 추출 후 ADD/UPDATE/DELETE/NOOP으로 동적 메모리 일관성 유지
 
 - 
-Memory-R1: 강화학습을 통해 에이전트가 메모리를 관리·활용하도록 향상(ACL 2026)
-
-
-**벤치마크 및 평가**
-- 
-2026년 주요 벤치마크: LoCoMo, LongMemEval, BEAM(Mem0 블로그)
+Zep의 Graphiti 엔진: 시간 기반 노드/엣지에 valid_at/invalid_at 타임스탬프로 과거 에이전트 신념 추적
 
 - 
-Mem0이 LoCoMo 92.5, LongMemEval 94.4로 최고 성능(평균 ~6,900 토큰/쿼리)
+MemoryOS: OS 개념 차용해 단기/중기/장기 메모리 3계층으로 구성, Ebbinghaus 망각곡선 기반 감쇠 처리
 
 - 
-미해결 과제: 시간 추론, 메모리 노후화, 세션간 아이디 추적, 개인정보보호, 삭제, 애플리케이션 특화 평가
+AgeMem(AgentIC): 5개 메모리 작업(store/retrieve/update/summarize/discard)을 강화학습으로 최적화해 선제적 요약 발견
 
 
-**대표 프레임워크**
+**성능 벤치마크**
 - 
-Mem0(하이브리드: 벡터+그래프+KV), Zep/Graphiti(시간 지식그래프), Letta/MemGPT(OS 영감 계층형), LangChain(모듈식)
-
-- 
-Hindsight: 쿼리당 의미검색, BM25 키워드, 엔티티 그래프, 시간 필터링을 병렬 실행하는 4가지 검색 전략
-
-
-**보안/거버넌스**
-- 
-SSGM 프레임워크: LLM 에이전트의 진화하는 메모리를 관리(arXiv:2603.11768, 2026)
+Memori: LoCoMo 벤치마크 81.95% 정확도, 쿼리당 1,294 토큰 사용 (전체 컨텍스트의 ~5%)
 
 - 
-메모리 생명주기 전반에 걸친 공격·방어·거버넌스 설문(arXiv:2604.16548, 2026)
+Mem0 Flat Vector: 최고 속도 1.44초 p95 지연, 72.9% 정확도 (in-process), 90% 토큰 비용 절감
+
+- 
+2026 벤치마크: LoCoMo, LongMemEval, BEAM으로 산업 표준화
 
 
-💡 **인사이트/시사점**
+**멀티모달·보안 확장**
+- 
+MemLens: 대규모 시각-언어 모델의 멀티모달 장기기억 벤치마킹
 
-메모리가 "컨텍스트 윈도우에 대화 내역 덤프"에서 독립적인 아키텍처 계층으로 진화한 것이 2026년의 중대한 변곡점입니다. 단일 검색 방식(벡터 또는 그래프)의 한계를 인식한 업체들이 하이브리드 다중전략(semantic+keyword+temporal+entity) 모델로 수렴 중이며, 강화학습으로 에이전트가 자체 메모리를 최적화하는 자율적 메모리 관리가 차세대 핵심입니다.
+- 
+LLM 에이전트 장기기억 보안: 메모리 라이프사이클 전반의 공격/방어/거버넌스 조사
+
+- 
+도메인별 발전: 의료 VLM의 진단 메모리 진화, GUI 인터랙션 인과관계 기반 상태 메모리
+
+
+**💡 인사이트/시사점**
+
+2026년 메모리 시스템은 '외부 저장소 + 동적 제어' 하이브리드 표준이 되었습니다. 
+에이전트 AI 시장이 2025년 5% 미만에서 2026년 말 40%로 확대되면서, Mem0 같은 범용 메모리 레이어 채택이 필수 인프라화
+되고 있습니다. 
+장기적 비전은 '메모리 관리 기초 모델' - 쓰기/검색/요약/망각/통합을 일반적 역량으로 수행
+하는 방향으로 수렴 중입니다.
 
 **출처**
-- State of AI Agent Memory 2026 — https://mem0.ai/blog/state-of-ai-agent-memory-2026
-- Memory for Large Language Models — https://arxiv.org/pdf/2607.25380
-- H-Mem: Hybrid Multi-Dimensional Memory Management — https://aclanthology.org/2026.eacl-long.363.pdf
-- Best AI Agent Memory Frameworks in 2026 — https://atlan.com/know/best-ai-agent-memory-frameworks-2026/
-- 7 AI Agent Memory Architectures Compared (2026) — https://www.turingpost.com/p/agenticmemory
+- Memory in the LLM Era: Modular Architectures — arxiv.org/html/2604.01707v1
+- Memory for Autonomous LLM Agents: Mechanisms, Evaluation — arxiv.org/html/2603.07670v1
+- Agent Memory Architectures: Patterns and Trade-offs (2026) — atlan.com/know/agent-memory-architectures
+- The State of AI Agent Memory in 2026 — medium.com/@vektormemory
+- Choosing How to Remember: Adaptive Memory Structures — arxiv.org/pdf/2602.14038
+- Memory for Large Language Models (Taxonomy) — arxiv.org/html/2607.25380
+- Mi-Memory: A Lifecycle Memory Framework — arxiv.org/pdf/2607.18975
+- MemChain: Learning Interpretable Memory Traces — arxiv.org/pdf/2607.24097

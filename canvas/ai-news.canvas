@@ -7178,6 +7178,136 @@
    "width": 420,
    "height": 200,
    "color": "6"
+  },
+  {
+   "id": "b1025-ai-news-hub",
+   "type": "text",
+   "x": -640,
+   "y": 44060,
+   "width": 620,
+   "height": 220,
+   "color": "6",
+   "text": "## 2026-10-25 배치\n중복 0/13 · gemini-cli 자기대체 공지\nRSI 서베이 '재귀 이득 미분리' · CFP 노트 CVPR 2027 경과 오기"
+  },
+  {
+   "id": "b1025-ai-news-0",
+   "type": "file",
+   "file": "wiki/sources/gemini-cli.md",
+   "x": 60,
+   "y": 44060,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-1",
+   "type": "file",
+   "file": "wiki/sources/cindy.md",
+   "x": 520,
+   "y": 44060,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-2",
+   "type": "file",
+   "file": "wiki/sources/freellmapi.md",
+   "x": 980,
+   "y": 44060,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-3",
+   "type": "file",
+   "file": "wiki/sources/claude-howto.md",
+   "x": 1440,
+   "y": 44060,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-4",
+   "type": "file",
+   "file": "wiki/sources/Physical-RSI.md",
+   "x": 60,
+   "y": 44300,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-5",
+   "type": "file",
+   "file": "wiki/sources/GAFU.md",
+   "x": 520,
+   "y": 44300,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-6",
+   "type": "file",
+   "file": "wiki/concepts/RSI-프레이밍.md",
+   "x": 980,
+   "y": 44300,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-ai-news-7",
+   "type": "file",
+   "file": "wiki/concepts/경과-마감-배달.md",
+   "x": 1440,
+   "y": 44300,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-ai-news-8",
+   "type": "file",
+   "file": "wiki/sources/리서치-2026년-AI로봇-주요-학회-논문-마감CFP-일정-최신-동향.md",
+   "x": 60,
+   "y": 44540,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-ai-news-9",
+   "type": "file",
+   "file": "wiki/entities/RecursiveSI.md",
+   "x": 520,
+   "y": 44540,
+   "width": 400,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "b1025-ai-news-10",
+   "type": "file",
+   "file": "wiki/concepts/하네스-설계-축.md",
+   "x": 980,
+   "y": 44540,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-ai-news-11",
+   "type": "file",
+   "file": "actionable.md",
+   "x": 1440,
+   "y": 44540,
+   "width": 400,
+   "height": 200,
+   "color": "2"
   }
  ],
  "edges": [
@@ -13358,6 +13488,130 @@
    "fromSide": "bottom",
    "toSide": "top",
    "label": "10-17 → 10-24"
+  },
+  {
+   "id": "e1025-ai-news-0",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-0",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "자기대체"
+  },
+  {
+   "id": "e1025-ai-news-1",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-1",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "하네스 교체"
+  },
+  {
+   "id": "e1025-ai-news-2",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-2",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "쿼터 합산"
+  },
+  {
+   "id": "e1025-ai-news-3",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-3",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "문서형"
+  },
+  {
+   "id": "e1025-ai-news-4",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-4",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "RSI 미입증"
+  },
+  {
+   "id": "e1025-ai-news-5",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-5",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1025-ai-news-6",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-6",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "규칙 보정"
+  },
+  {
+   "id": "e1025-ai-news-7",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-7",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "역방향"
+  },
+  {
+   "id": "e1025-ai-news-8",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-8",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "CVPR 오기"
+  },
+  {
+   "id": "e1025-ai-news-9",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-9",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1025-ai-news-10",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-10",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1025-ai-news-11",
+   "fromNode": "b1025-ai-news-hub",
+   "toNode": "b1025-ai-news-11",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "CVPR D-22"
+  },
+  {
+   "id": "e1025-ai-news-x0",
+   "fromNode": "b1025-ai-news-4",
+   "toNode": "b1025-ai-news-6",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "n=3"
+  },
+  {
+   "id": "e1025-ai-news-x1",
+   "fromNode": "b1025-ai-news-1",
+   "toNode": "b1025-ai-news-10",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1025-ai-news-x2",
+   "fromNode": "b1025-ai-news-8",
+   "toNode": "b1025-ai-news-7",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "역방향 1호"
+  },
+  {
+   "id": "e1025-ai-news-prev",
+   "fromNode": "b1024-ai-news-hub",
+   "toNode": "b1025-ai-news-hub",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "10-24 → 10-25"
   }
  ]
 }

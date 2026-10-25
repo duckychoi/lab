@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, bigtech, naver, korea, video-understanding, research]
 created: 2026-07-10
-updated: 2026-07-10
-sources: [Compositional-Action-Shortcuts.md, Video-Oasis.md]
+updated: 2026-10-25
+sources: [Compositional-Action-Shortcuts.md, Video-Oasis.md, LaLa-World.md]
 reliability: high
 ---
 
@@ -27,3 +27,6 @@ reliability: high
 - 조직: NAVER / NAVER Cloud (한국)
 - 대표 산출물: [[Compositional-Action-Shortcuts]], [[Video-Oasis]] (영상 이해 강건성 연구)
 - 신뢰도: ⭐⭐⭐⭐ (대형 빅테크 연구 조직, 학계 공동 논문)
+
+## 🔄 2026-10-25
+- [[LaLa-World]] — NAVER AI Lab · 행동·시각 변화를 자연어로 기술해 이종 데이터로 JEPA형 잠재 월드모델 공동학습 · 비디오생성(RAEv2) 정합 비교 **동등 성능 · 학습 1/6 · 계획 13.9배** · 같은 날 반대 노선 [[FRED]](KAIST) → [[대립레시피-동시도착]]

@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-10-13
+updated: 2026-10-25
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -572,3 +572,8 @@ _소스 ingest 시 자동 누적_
 
 - 📌 크론 `humanoid-slam-vla` 7건(7파일 · 덮어쓰기 0 — 제목이 매번 달라서) — 2차 인용 · `low`. 🔴 **[[VLA]] 1차 논문 볼트 보유 0건은 여전히 미해소**(10-17 최우선 actionable 이월).
 - 📌 [[WeVisOne-VL]] 의 픽셀 디코더(`<OBJ>` 토큰 → 마스크/알파매트)는 단일 VLM 출력으로 세그멘테이션까지 내는 구조 ⇒ 로봇 인식 파이프라인의 "검출+분할" 이중 모델 대체 가능성(미검증).
+
+## 🔄 2026-10-25 배치 — 🏆 **slam-3dgs 자동수집 0건 지속(10-17~) 해소: 3건 재분류 유입**
+- 🆕 [[LaLa-World]](NAVER) vs 🆕 [[FRED]](KAIST) — **JEPA형 잠재 vs 확산 WAM 이 같은 목록 9·10위로 연달아** → [[대립레시피-동시도착]] · [[JEPA-vs-Diffusion-월드모델]] 3개월 만에 갱신(정합 비교: 동등 성능 · 학습 1/6 · 계획 13.9배)
+- 🆕 [[microduck]] — RK3566 · 50Hz · 서보 15 · ONNX 정책 · **MuJoCo 시뮬로 실제 데몬 구동**(하드웨어 없이 sim2real 파이프라인 실험 가능) → 볼트 최저비용 로봇 실험 경로
+- 🔴 [[VLA]] 1차 논문 볼트 보유 0건은 여전히 미해소(오늘 3건은 월드모델·RL 정책 · VLA 아님)

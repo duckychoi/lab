@@ -1,7 +1,7 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-10-24 (✅ **대기 0건 — 62건 전량 처리**. `^- URL:` **0** · `^- path:` **0**. 크론 노트 49 → 39파일 · 자동수집 13 = 신규 6 · 갱신 7 · 상세는 log.md 2026-10-24)
-collected: 2026-10-24 (✅ 수집분 전량 ingest 완료 · 항목 삭제됨. 🔴 금일 배달분에 수집기 자기보고·조건 B 블록 없음)
+updated: 2026-10-25 (✅ **대기 0건 — 20건 전량 처리**. `^- URL:` **0** · `^- path:` **0**. 자동수집 13 = 신규 13 · 중복 0 · 크론 노트 7 = 신규파일 5 · 덮어쓰기 2 · 상세는 log.md 2026-10-25)
+collected: 2026-10-25 (✅ 처리 완료 — 다음 배달 대기)
 ---
 
 # Raw 대기열
@@ -979,3 +979,24 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 - **자동수집 13건**(GitHub 5 · HF논문 5 · HF모델 3) → 🔴 **신규 6 · 갱신 7**(수집기 "신규 후보" 중 security-audit-skill · knowledge-work-plugins · OpenShell · Claude-Red · VoxCPM · flux-3-image-klein-comfy · DeepSeek-V4.1-Flash 계열 7건이 볼트 보유분) · 수치 독립검증 13/13 일치(최대 ★+9)
 - 📌 **수집기 자기보고·제외분 명시(조건 B) 섹션 없음** — 10-24 배달분에는 자기보고 블록이 없었다(🔴 10-17 대비 후퇴)
 - 📌 **볼트 7일 미처리**(10-18~10-23 ingest 0회) — 크론 중복 배수가 정확히 미처리 일수(7.0배)로 나왔다
+
+# ✅ 2026-10-25 — **대기 20건 전량 처리 완료** · 항목 삭제
+
+- **자동수집 13건**(GitHub 5 · HF논문 5 · HF모델 3) → 🏆 **신규 13 · 중복 0**(수집기 판정 = 볼트 정규명 검사 일치 · 10-24 의 7/13 중복 대비 개선) · 수치 독립검증 **13/13 일치**(최대 ★+5 · upvote +1) · 재분류 7(slam-3dgs 3 · local-llm 3 · video-saas 1)
+- **크론 리서치 노트 7건** → 신규 파일 5 · 같은 파일명 덮어쓰기 2(🔴 10-24 부여 메타데이터·생성일 소실 → 복원) · 전건 `topic:`·`domain:`·`reliability: low` + 볼트 판정
+- 🔴 **수집기 정정 1 · 한정어 탈락 1**: [[microduck]] *"하드웨어 구매 필요"* → MuJoCo `duck-sim` 으로 하드웨어 없이 구동 가능 · [[cindy]] *"로컬 실행"* → 기본 서버 Cindy 클라우드
+- ✅ **조건 B(제외분 명시) 블록 복귀** — 10-24 에 빠졌던 블록이 돌아왔다(아래 보존). 자기보고 블록은 여전히 없음.
+- 상세: `log.md` 2026-10-25
+
+### 수집기 측정 조건·조건 B (2026-10-25 배달분 — *이력 보존*)
+
+> 📌 **측정 시점: 2026-10-25 09:00 (KST) / API 직접 조회.** 스타수 = `api.github.com/repos` 응답값, 다운로드수 = `huggingface.co/api/models?expand[]=downloads…` 응답값(최근 30일).
+>
+> 🔴 **HF 데일리 페이퍼 10-24(토)·10-25(일)자는 미발행** — `api/daily_papers?date=` 두 날짜 모두 `[]`. ⇒ 최신 발행분 **10-23(금, 49편)** 에서 선정.
+>
+> 🔴 **조건 B(제외분 명시):**
+> - GitHub 트렌딩(daily) 1·2·3·4·6위 **볼트 보유로 제외**: `cloudflare/security-audit-skill`(45,446★ · +2,264 today) · `NVIDIA/OpenShell`(19,675★ · +896) · `aws/agent-toolkit-for-aws`(3,238★ · +13) · `Nutlope/hallmark`(32,629★ · +455) · `pbakaus/impeccable`(86,761★ · +619). 9위 `jbiaojerry/ebook-treasure-chest` 는 **AI/ML 무관**(전자책 링크 모음)으로 제외.
+> - daily 트렌딩 미보유 AI 레포가 4개뿐이라 **5번째는 TypeScript daily 트렌딩 19위 `tashfeenahmed/freellmapi`(+715 today)** 로 보충. Python daily 의 `vectorize-io/hindsight`(+329) · `TauricResearch/TradingAgents`(+309) 는 볼트 보유로 제외.
+> - ⚖️ `google-gemini/gemini-cli` 는 daily 8위지만 **당일 +44★로 급상승은 아님**(누적 108,310★ 기준 충족으로 포함).
+> - HF 논문 10-23 upvote **상위 1~5위 전부 볼트 보유로 제외**: WeVisOne-VL(241) · LayerEditor(182) · FAPL(172) · OpenDS-World(160) · IQuest-Q1(93) ⇒ 6~10위(57·48·37·37·37 up) 수록.
+> - HF 트렌딩 모델 상위 20개 중 다운로드순 1·2·3·5·6위 **볼트 보유로 제외**: Qwen3.8-27B(7,851,161) · Qwen-Image-2.1-Uncensored-Quantized(2,303,585) · LTX-2.5(2,087,721) · flux-3-image-klein-comfy(590,742) · embeddinggemma-2(206,909) · DeepSeek-V4.1-Flash-1017(73,215 · 트렌딩 1위).

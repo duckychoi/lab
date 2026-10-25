@@ -1279,6 +1279,116 @@
    "width": 420,
    "height": 200,
    "color": "6"
+  },
+  {
+   "id": "b1025-local-llm-hub",
+   "type": "text",
+   "x": -640,
+   "y": 15730,
+   "width": 620,
+   "height": 220,
+   "color": "6",
+   "text": "## 2026-10-25 배치\nflint 파생 선출시 16.5배 · ISTA TBD 6 · 천장-기준선 신설\nDFM 파라메트릭 메모리"
+  },
+  {
+   "id": "b1025-local-llm-0",
+   "type": "file",
+   "file": "wiki/sources/flint-GGUF.md",
+   "x": 60,
+   "y": 15730,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-local-llm-1",
+   "type": "file",
+   "file": "wiki/sources/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md",
+   "x": 520,
+   "y": 15730,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-local-llm-2",
+   "type": "file",
+   "file": "wiki/concepts/천장-기준선.md",
+   "x": 980,
+   "y": 15730,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-local-llm-3",
+   "type": "file",
+   "file": "wiki/sources/Deep-Fusion-Memory.md",
+   "x": 1440,
+   "y": 15730,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-local-llm-4",
+   "type": "file",
+   "file": "wiki/entities/ISTA-DASLab.md",
+   "x": 60,
+   "y": 15970,
+   "width": 400,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "b1025-local-llm-5",
+   "type": "file",
+   "file": "wiki/entities/RecursiveSI.md",
+   "x": 520,
+   "y": 15970,
+   "width": 400,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "b1025-local-llm-6",
+   "type": "file",
+   "file": "wiki/concepts/원본-파생-역전.md",
+   "x": 980,
+   "y": 15970,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-local-llm-7",
+   "type": "file",
+   "file": "wiki/sources/리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026.md",
+   "x": 1440,
+   "y": 15970,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-local-llm-8",
+   "type": "file",
+   "file": "wiki/sources/리서치-온디바이스-AI엣지-추론모델-경량화-2026년-최신-동향.md",
+   "x": 60,
+   "y": 16210,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-local-llm-9",
+   "type": "file",
+   "file": "wiki/concepts/크론-덮어쓰기-소실.md",
+   "x": 520,
+   "y": 16210,
+   "width": 400,
+   "height": 200,
+   "color": "6"
   }
  ],
  "edges": [
@@ -2140,6 +2250,116 @@
    "fromSide": "right",
    "toSide": "left",
    "label": "🆕"
+  },
+  {
+   "id": "e1025-local-llm-0",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-0",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "16.5배"
+  },
+  {
+   "id": "e1025-local-llm-1",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-1",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "TBD 6"
+  },
+  {
+   "id": "e1025-local-llm-2",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-2",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "🆕"
+  },
+  {
+   "id": "e1025-local-llm-3",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-3",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "검색 0회"
+  },
+  {
+   "id": "e1025-local-llm-4",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-4",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "카드 하락 n=3"
+  },
+  {
+   "id": "e1025-local-llm-5",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-5",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "🆕"
+  },
+  {
+   "id": "e1025-local-llm-6",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-6",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1025-local-llm-7",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-7",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "덮어쓰기"
+  },
+  {
+   "id": "e1025-local-llm-8",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-8",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "덮어쓰기"
+  },
+  {
+   "id": "e1025-local-llm-9",
+   "fromNode": "b1025-local-llm-hub",
+   "toNode": "b1025-local-llm-9",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "n=5"
+  },
+  {
+   "id": "e1025-local-llm-x0",
+   "fromNode": "b1025-local-llm-1",
+   "toNode": "b1025-local-llm-2",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "98.7→97.97"
+  },
+  {
+   "id": "e1025-local-llm-x1",
+   "fromNode": "b1025-local-llm-0",
+   "toNode": "b1025-local-llm-6",
+   "fromSide": "bottom",
+   "toSide": "top"
+  },
+  {
+   "id": "e1025-local-llm-x2",
+   "fromNode": "b1025-local-llm-1",
+   "toNode": "b1024-local-llm-1",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "파생"
+  },
+  {
+   "id": "e1025-local-llm-prev",
+   "fromNode": "b1024-local-llm-hub",
+   "toNode": "b1025-local-llm-hub",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "10-24 → 10-25"
   }
  ]
 }

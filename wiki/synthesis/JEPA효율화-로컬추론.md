@@ -4,8 +4,8 @@ type: synthesis
 domain: local-llm
 tags: [local-llm, slam-3dgs, synthesis, jepa, world-model, edge-ai, on-device, efficiency]
 created: 2026-07-12
-updated: 2026-07-12
-sources: [Flow-JEPA-연구아이디어.md, JEPA.md, Mamba4.md, LMCache.md, Linear-Attention-Architectures.md]
+updated: 2026-10-25
+sources: [Flow-JEPA-연구아이디어.md, JEPA.md, Mamba4.md, LMCache.md, Linear-Attention-Architectures.md, LaLa-World.md]
 reliability: medium
 ---
 
@@ -75,3 +75,6 @@ reliability: medium
 ## 원본
 - 근거 소스: [[Flow-JEPA-연구아이디어]] · [[JEPA]] · [[Mamba4]] · [[LMCache]] · [[Linear-Attention-Architectures]]
 - 신뢰도: ⭐⭐⭐ (실제 효율화 트렌드 종합은 high, JEPA 접목 부분은 검증 안 된 연구 가설 medium)
+
+## 🔄 2026-10-25
+- 실측 근거 추가: [[LaLa-World]] — 비디오생성 베이스라인 대비 **동등 계획 성능 · 학습 1/6 · 계획 13.9배 · 정책 추론 최대 5.5배**(LaLa-Policy) ⇒ "생성하지 않으면 싸다" 가 정합 비교로 나온 첫 사례 · 대립: [[FRED]]

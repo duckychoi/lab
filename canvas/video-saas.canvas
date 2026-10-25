@@ -849,6 +849,56 @@
    "width": 420,
    "height": 200,
    "color": "4"
+  },
+  {
+   "id": "b1025-video-saas-hub",
+   "type": "text",
+   "x": -640,
+   "y": 11460,
+   "width": 620,
+   "height": 220,
+   "color": "6",
+   "text": "## 2026-10-25 배치\nMOSS-Image bbox 레이아웃 T2I\n194만 dl = 파일당 계수 (보정 29~39배)"
+  },
+  {
+   "id": "b1025-video-saas-0",
+   "type": "file",
+   "file": "wiki/sources/Comfy-Org-MOSS-Image.md",
+   "x": 60,
+   "y": 11460,
+   "width": 400,
+   "height": 200,
+   "color": "4"
+  },
+  {
+   "id": "b1025-video-saas-1",
+   "type": "file",
+   "file": "wiki/entities/OpenMOSS.md",
+   "x": 520,
+   "y": 11460,
+   "width": 400,
+   "height": 200,
+   "color": "5"
+  },
+  {
+   "id": "b1025-video-saas-2",
+   "type": "file",
+   "file": "wiki/concepts/계수기-배수.md",
+   "x": 980,
+   "y": 11460,
+   "width": 400,
+   "height": 200,
+   "color": "6"
+  },
+  {
+   "id": "b1025-video-saas-3",
+   "type": "file",
+   "file": "wiki/entities/Comfy-Org.md",
+   "x": 1440,
+   "y": 11460,
+   "width": 400,
+   "height": 200,
+   "color": "5"
   }
  ],
  "edges": [
@@ -1392,6 +1442,61 @@
    "fromSide": "right",
    "toSide": "left",
    "label": "한국어 공식"
+  },
+  {
+   "id": "e1025-video-saas-0",
+   "fromNode": "b1025-video-saas-hub",
+   "toNode": "b1025-video-saas-0",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "레이아웃 T2I"
+  },
+  {
+   "id": "e1025-video-saas-1",
+   "fromNode": "b1025-video-saas-hub",
+   "toNode": "b1025-video-saas-1",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "🆕"
+  },
+  {
+   "id": "e1025-video-saas-2",
+   "fromNode": "b1025-video-saas-hub",
+   "toNode": "b1025-video-saas-2",
+   "fromSide": "right",
+   "toSide": "left",
+   "label": "⑰ 집행"
+  },
+  {
+   "id": "e1025-video-saas-3",
+   "fromNode": "b1025-video-saas-hub",
+   "toNode": "b1025-video-saas-3",
+   "fromSide": "right",
+   "toSide": "left"
+  },
+  {
+   "id": "e1025-video-saas-x0",
+   "fromNode": "b1025-video-saas-0",
+   "toNode": "b1025-video-saas-2",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "116.7→29~39"
+  },
+  {
+   "id": "e1025-video-saas-x1",
+   "fromNode": "b1025-video-saas-0",
+   "toNode": "b1025-video-saas-1",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "원본"
+  },
+  {
+   "id": "e1025-video-saas-prev",
+   "fromNode": "b1024-video-saas-hub",
+   "toNode": "b1025-video-saas-hub",
+   "fromSide": "bottom",
+   "toSide": "top",
+   "label": "10-24 → 10-25"
   }
  ]
 }

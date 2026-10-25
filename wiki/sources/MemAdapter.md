@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, agent-memory, sycophancy, 숨김유인부호, 측정도구먼저반증, benchmark]
 created: 2026-10-10
-updated: 2026-10-10
+updated: 2026-10-25
 sources: []
 reliability: high
 ---
@@ -78,3 +78,6 @@ reliability: high
 - 수집: 2026-10-06 자동수집 (ai-news) · 인제스트 2026-10-10
 - 검증: HF papers API(업보트 6) + **arXiv HTML 본문 1,274,063B 직접 열람(157,209자)**
 - 신뢰도: ⭐⭐⭐⭐
+
+## 🔄 2026-10-25
+- 같은 계열(얼린 백본 + 부착 메모리) 신규: [[Deep-Fusion-Memory]] — 청크 단위 파라메트릭 메모리 · 구축 비용 검색 쿼리 32배·항목 2048배 감소 · 추론 시 검색 0회 · 🔴 코드 미공개

@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-10-11
+updated: 2026-10-25
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -623,3 +623,6 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 - 🆕 [[LayerEditor]] — 편집 결과를 **순서 있는 RGBA 레이어(최대 10)** 로 출력 ⇒ Remotion 합성 파이프라인과 직결. Crello Comp.FID 33.86 vs Seedream5-Pro 55.33. 🔴 루브릭은 Gemini 단일 판정(인간 대조 없음 · 저자 명시) · 텍스트는 래스터 · **코드 공개 문구 없음**.
 - 🆕 [[WeVisOne-VL]] — 진짜 차별점은 "30+ 벤치 선두"가 아니라 **대상 부재 시 거부**(Ref-ZOM 86.0 vs 기존 0.3~1.3) + 매팅 MAD 5.0(SAM3 12.1) ⇒ 자동 누끼·마스킹 단계의 오탐 방지 후보. 🔴 COCO 2B 55.2 < GroundingDINO-T 56.6(굵은 글씨가 "VLM 중" 기준).
 - 🔴 TTS: [[drama-3]] **카드는 속도만, 품질은 논문에만** — 첫 테이크 en WER 2.20(재생성 후 1.54) · 한국어 CER 2.36(S2 1.18) · 자기 연출평가 3중 2패. ✅ **라이선스: 자체 콘텐츠 내레이션·더빙은 가능, 사용자에게 TTS 제공(Hosted Service)은 매출 무관 별도 계약** ⇒ reat-voice 용도는 OK, SaaS 탑재는 불가. [[VoxCPM]] 은 한국어 공식 지원·~8GB VRAM·SIM 최상 ⇒ **ElevenLabs 대체 1순위 실측 후보**.
+
+## 🔄 2026-10-25 배치
+- 🆕 [[Comfy-Org-MOSS-Image]] — **bbox/JSON 레이아웃 T2I**(텍스트·객체 위치 제어) · ComfyUI 템플릿 4종 중 2종이 Layout-Guided ⇒ 썸네일·카드뉴스 자동 레이아웃 후보 · 🔴 194만 dl 은 파일당 계수(보정 29~39배 · [[계수기-배수]]) · 벤치 0건 · 텍스트 인코더 Qwen3.5-9B(w4a8 제공)

@@ -4,8 +4,8 @@ type: concept
 domain: ai-news
 tags: [ai-news, concept, rsi, 한정어, 마케팅, 신설]
 created: 2026-09-18
-updated: 2026-09-19
-sources: [SoL-Pi.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, TokenRhythm.md, NeoHorse-1-Paper.md, ModularRSI.md, RSIAgent.md]
+updated: 2026-10-25
+sources: [SoL-Pi.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, TokenRhythm.md, NeoHorse-1-Paper.md, ModularRSI.md, RSIAgent.md, Physical-RSI.md]
 reliability: medium
 ---
 
@@ -92,3 +92,9 @@ reliability: medium
 > | 관측 vs 전망 | 전망임이 조동사로 명시 | *"We observe data, model, and tool self-evolution"* 한 줄이 관측, 나머지는 future work |
 > 🎯 **판별 규칙이 하나 생긴다: RSI 문구의 길이와 본문 정량성이 반비례하는 경향.** 수치가 있는 논문은 RSI 를 한 줄로 끝내고, 수치가 없는 논문은 RSI 로 문단을 채운다.
 > 🔴 **단정하지 않는다** — 표본 2건이다. 다음 배치부터 **RSI 문구 길이 ↔ 초록 내 수치 개수**를 같이 기록해 표본을 쌓는다.
+
+## 🔄 2026-10-25 — 표본 3: **RSI 를 제목에 단 서베이가 RSI 부재를 결론으로 적었다**
+- [[Physical-RSI]](NUS · 57 up): *"the physical studies reviewed here **have yet to isolate gains attributable to recursion**"* · 초록 전체가 RSI · **수치 0개** · 코드 = Awesome 리딩리스트
+- 09-19 판별 규칙(*RSI 문구 길이 ↔ 수치 개수 반비례*)과 **형식상 부합**. 🔴 **그러나 이것은 과장이 아니다** — 서베이는 원래 수치가 없고, RSI 를 미래형 동기가 아니라 **미입증 상태**로 서술한다.
+- ⇒ 🆕 **규칙 보정**: 반비례 규칙은 **실험 논문에만** 적용한다. 서베이·포지션 페이퍼는 제외하고, 대신 *"RSI 를 관측으로 쓰는가, 미입증으로 쓰는가"* 를 본다.
+- 부록: 같은 배치 [[RecursiveSI]] — 조직명에 RSI 어휘, 카드 본문엔 RSI 주장 0 · 수치 3개(이름만 차용).

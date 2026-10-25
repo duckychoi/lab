@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mixed-precision, gsq, rco, moe, qwen4exp, llama.cpp, 단위-불일치, 파생저장소-식별]
 created: 2026-09-22
-updated: 2026-10-12
+updated: 2026-10-25
 sources: []
 reliability: medium
 ---
@@ -203,3 +203,6 @@ created 2026-09-07 · lastModified 2026-09-29 · 제공 [[ISTA-DASLab]]
 - 볼트 실측(2026-10-12, HF API): DL30 **4,189,006**(완전 일치) · ♥ 811(+1) · lastModified **변동 없음**(2026-09-29)
 - raw 대비: ✅ 벤치·속도·크기 **전건 일치**(이 페이지 10-06 갱신분과 동일) · 🆕 **DL 1.87배 증가(카드 무변경)** · 🏆 **볼트 축적 효과: 이 페이지 실측(176.9B·51.2B)이 [[airllm]] 의 자기모순을 판정**
 - 신뢰도: ⭐⭐⭐⭐⭐ (유지 — 카드 자기제한 규율이 가장 강한 소스)
+
+## 🔄 2026-10-25
+- BF16 AIME25 100.00 = 천장 축 → 🆕 [[천장-기준선]] (n=3 · 같은 랩) · 후속 릴리스 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]]
