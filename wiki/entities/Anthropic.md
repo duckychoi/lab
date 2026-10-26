@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, anthropic, claude, api, agent-skills, bigtech, llm-vendor]
 created: 2026-07-12
-updated: 2026-10-10
+updated: 2026-10-26
 sources: [claude-cookbooks.md]
 reliability: high
 ---
@@ -66,3 +66,7 @@ reliability: high
 - [[하네스-설계-축]] — 3개 층의 최상층
 - [[Learn2Play]] — 모델 성능 외부 측정
 - [[에이전트-스킬]] · [[메타데이터-부재-추론]] · [[mattpocock-skills]]
+
+## 🔄 2026-10-26 — [[sandbox-runtime]] (★6,647 · Beta Research Preview)
+- 컨테이너 없는 OS 네이티브 샌드박스(macOS `sandbox-exec` · Linux bubblewrap · **Windows 알파** — 수집기 "Windows 미지원"은 오류, README 원문 확인) · README 가 위협모델과 한계를 스스로 적는다 → [[자기제한-명시]].
+- 🎯 볼트 "외부 코드 실행 0건" 문제의 **격리 수단 후보** — actionable 참조.

@@ -4,7 +4,7 @@ type: concept
 domain: ai-news
 tags: [ai-news, concept, rsi, 한정어, 마케팅, 신설]
 created: 2026-09-18
-updated: 2026-10-25
+updated: 2026-10-26
 sources: [SoL-Pi.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, TokenRhythm.md, NeoHorse-1-Paper.md, ModularRSI.md, RSIAgent.md, Physical-RSI.md]
 reliability: medium
 ---
@@ -98,3 +98,7 @@ reliability: medium
 - 09-19 판별 규칙(*RSI 문구 길이 ↔ 수치 개수 반비례*)과 **형식상 부합**. 🔴 **그러나 이것은 과장이 아니다** — 서베이는 원래 수치가 없고, RSI 를 미래형 동기가 아니라 **미입증 상태**로 서술한다.
 - ⇒ 🆕 **규칙 보정**: 반비례 규칙은 **실험 논문에만** 적용한다. 서베이·포지션 페이퍼는 제외하고, 대신 *"RSI 를 관측으로 쓰는가, 미입증으로 쓰는가"* 를 본다.
 - 부록: 같은 배치 [[RecursiveSI]] — 조직명에 RSI 어휘, 카드 본문엔 RSI 주장 0 · 수치 3개(이름만 차용).
+
+## 🔄 2026-10-26 — [[RSIHub]]: 동일 조건 비교가 처음 나왔다 (n=4 같은 방향)
+- AHE·Hyperagents·A-Evolve·GEPA 를 **공통 인프라에서 재구현**(ByteDance · 27 up · 코드 ★196). 최대 +13.5%p 는 **4×4 셀 중 1개**(MiniSWE·TB2) · 강한 시드(Codex)에선 TB2 최대 +2.2%p · A-Evolve 는 TB2 공동 1위인데 Banking·MiniSWE 전 split **+0.0** · sealed split **−2.1~−4.1%p 퇴행** · 1회 시행(저자 명시).
+- 🎯 볼트 RSI 계열 4건([[ModularRSI]] · [[RSIAgent]] · [[Physical-RSI]] · [[RSIHub]])이 **전부 '보고된 이득 ≠ 일반적 우위'** 방향. ⇒ 규칙 강화: 진화/RSI 기법 이득은 **시드 강도·벤치·sealed split** 3축을 확인하기 전 인용하지 않는다.

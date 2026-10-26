@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-10-23
+updated: 2026-10-26
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -126,3 +126,97 @@ CNN 기반 스파스 어레이 설계로 90% 이상의 테스트 정확도를 �
 
 ### 📌 볼트 연결점
 [[리서치-온디바이스-AI엣지-추론모델-경량화-2026년-최신-동향]](`on-device-ai`)와 같은 축이다 — **MCU 급에서 Transformer 가 실시간으로 돈다**는 주장이 두 노트에서 독립적으로 나온다.
+
+---
+
+## 🔄 2026-10-26 — 크론 재생성본 (🔴 덮어쓰기 → git `2f8751a` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 10-25 커밋 시점 판본이다. 크론이 2026-10-26 09:02 같은 파일명으로 덮어썼고, 볼트가 [[크론-덮어쓰기-소실]] 규약 ①(git 이전판 확인)으로 복원했다. 아래는 금일 재생성본과 금일 볼트 판정이다.
+
+> [!warning] 🔴 볼트 판정 (2026-10-26) — [[주제재생성-중복]] · arXiv ID 다수 보유(재조회 0회)
+> - `topic: neural-beamforming` 파일 수 **5 유지** — 🔴 **덮어쓰기**(동명 파일 10-14·10-16 · index 431·470행) ⇒ [[크론-덮어쓰기-소실]] · 🔴 이전판의 STOI 97.65% · SI-SNR 20.26dB · 100mAh/16h 항목이 **금일판에 없다**(FID 142.48→100.45 만 생존) ⇒ git 이전판 복원으로 위 본문에 보존. 이 주제 노트 중 1차 출처(arXiv ID 11개)가 가장 많다 — 단 볼트는 **한 건도 열지 않았다**.
+> - 🔴 **[[문서내-값충돌]] 2건**: ① SCR 항목 `arXiv:2609.29505` 인데 본문 "2026년 8월"(ID 접두 2609 = 9월) ② 핵심 3줄 1행(GNN 하이브리드 빔포밍)은 본문 상세에 없고 출처 목록에만 `2609.09708` 로 있다 — PISD `2602.09708` 과 끝자리가 같아 ID 혼동 가능성.
+> - ⚖️ "2026 최신동향"에 **2025(Latent Mamba 2505.19105)·2021(NeurIPS 멀티웨이블릿)** 항목 혼입.
+> - 📌 수치 1건(DCT 확산 FID 142.48→100.45, 2610.07206)은 ID가 있어 검증 가능 — 필요 시 1회 조회.
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026년 최신동향
+
+**핵심 3줄**
+- 
+6G 대역폭 환경에서 그래프신경망(GNN) 기반 하이브리드 빔포밍이 beam squinting 영향에 견디면서 불완전 채널정보에 대해서도 강건성을 제시
+
+- 
+Physics-informed spectral diffusion (PISD)으로 매개변수 편미분방정식(PDE) 해족을 스펙트럼 공간에서 생성모델로 학습
+
+- 
+시간-주파수 게이팅 spectral neural operators (TF-SNO)로 비정상 편미분방정식 학습 중점
+
+
+**상세**
+- **Neural Beamforming**
+  - 
+Physics-guided neural Airy beamforming: 근거리 blockage 완화를 위해 3GPP TR 38.901 blocker 모델 기반 궤적-경계 결합 메커니즘 분석(arXiv:2608.04388, 2026년 8월)
+
+  - 
+CNN 기반 sparse array 설계로 동적 환경에서 source/interference 각도 변화에 대해 90% 이상 테스트 정확도 달성(arXiv:2606.06723, IEEE Radar Conference 2026)
+
+  - 
+멀티모달 융합: 카메라·LiDAR·RF pilot 통합으로 3D 기하정보·물질정보 기반 빔포밍(arXiv:2609.21193, 2026년 9월)
+
+  - 
+연속 개구면 배열(CAPA) 에너지효율: aperture sizing과 빔포밍 동시 최적화(arXiv:2607.12321, 2026년 7월)
+
+  - 
+생성 사이트별 빔포밍(GenSSBF): 구조화되지 않은 예측에서 joint-structure modeling으로 패러다임 전환(arXiv:2601.02219, 2026년 1월)
+
+
+- **Neural Operator**
+  - 
+자기회귀 없는 시간종속 PDE용 신경연산자(arXiv:2605.25413, 2026년)
+
+  - 
+Latent Mamba operator: 편미분방정식 해결용 Mamba 기반 잠재연산자(arXiv:2505.19105, 2025년)
+
+  - 
+신경연산자를 함수공간 간 매핑 학습으로 재정의, 보조 기저공간 도입(arXiv:2605.07792, 2026년 5월)
+
+  - 
+멀티웨이블릿 기반 연산자 학습으로 미분방정식 해결(NeurIPS 2021)
+
+
+- **Spectral Diffusion**
+  - 
+PISD: scaled spectral 표현으로 차원감소, forward/inverse 문제·희소/잡음 측정 재구성 지원(arXiv:2602.09708, 2026년 2월)
+
+  - 
+Spectral Progressive Diffusion: 저주파→고주파 자기회귀 특성 활용하여 해상도를 점진적 성장(arXiv:2605.18736, 2026년 5월)
+
+  - 
+Spectral Concentration Ratio (SCR): 가중치의 특이값 에너지로 재계산 필요도 식별(arXiv:2609.29505, 2026년 8월)
+
+  - 
+단백질동역학 (DynaMode): Fourier 변환을 귀납적편향으로 slow/fast 모드 분리, 온도별 예측(arXiv:2607.04134, 2026년 7월)
+
+  - 
+에너지조건화 noise 스케줄: DCT 기반 확산모델에서 FID 142.48→100.45 개선(arXiv:2610.07206, 2026년 10월)
+
+
+**💡 인사이트/시사점**
+- **6G 통신**: GNN 기반 빔포밍이 beam squinting 불확실성 환경에서 classical beamforming보다 우월하며, 멀티모달 센서 통합이 새로운 표준으로 부상 중
+- **AI 과학계산**: Spectral 표현(PDE 솔루션, 확산모델)과 neural operator의 결합으로 계산 효율성(차원감소) 및 물리정보 통합이 핵심 화두
+
+**출처**
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming Optimization — https://arxiv.org/abs/2609.09708
+- Physics-Guided Neural Airy Beamforming for Near-Field Blockage Mitigation — https://arxiv.org/html/2608.04388
+- Deep Learning Based Sparse Array Design with Pre-Steering for Adaptive Beamforming — https://arxiv.org/abs/2606.06723
+- Multimodal Learning for Beamforming Using Camera, LiDAR, and Radio-Frequency Pilots — https://arxiv.org/abs/2609.21193
+- Learning-Based Beamforming for Energy Efficiency of Continuous Aperture Array Systems — https://arxiv.org/abs/2607.12321
+- Beam-Brainstorm: A Generative Site-Specific Beamforming Approach — https://arxiv.org/abs/2601.02219
+- Physics-informed diffusion models in spectral space — https://arxiv.org/pdf/2602.09708
+- Spectral Progressive Diffusion for Efficient Image and Video Generation — https://arxiv.org/abs/2605.18736
+- Spectral-Guided Diffusion: Accelerating Inference via Static Spectral Layer Scheduling — https://arxiv.org/abs/2609.29505
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+- Energy-Conditioned Noise Schedule and Whitening for Spectral Diffusion — https://arxiv.org/abs/2610.07206
+- Geometry-aware Incremental Neural Operator
+
+## 관련 페이지
+- [[주제재생성-중복]] · [[경과-마감-배달]]

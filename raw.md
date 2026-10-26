@@ -1,7 +1,7 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-10-25 (✅ **대기 0건 — 20건 전량 처리**. `^- URL:` **0** · `^- path:` **0**. 자동수집 13 = 신규 13 · 중복 0 · 크론 노트 7 = 신규파일 5 · 덮어쓰기 2 · 상세는 log.md 2026-10-25)
-collected: 2026-10-25 (✅ 처리 완료 — 다음 배달 대기)
+updated: 2026-10-26 (✅ **대기 0건 — 20건 전량 처리**. `^- URL:` **0** · `^- path:` **0**. 자동수집 13 = 신규 13 · 중복 0 · 크론 노트 7 = 신규파일 4 · 덮어쓰기 3(git 복원) · 상세는 log.md 2026-10-26)
+collected: 2026-10-26 (✅ 처리 완료 — 다음 배달 대기)
 ---
 
 # Raw 대기열
@@ -1000,3 +1000,22 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 > - ⚖️ `google-gemini/gemini-cli` 는 daily 8위지만 **당일 +44★로 급상승은 아님**(누적 108,310★ 기준 충족으로 포함).
 > - HF 논문 10-23 upvote **상위 1~5위 전부 볼트 보유로 제외**: WeVisOne-VL(241) · LayerEditor(182) · FAPL(172) · OpenDS-World(160) · IQuest-Q1(93) ⇒ 6~10위(57·48·37·37·37 up) 수록.
 > - HF 트렌딩 모델 상위 20개 중 다운로드순 1·2·3·5·6위 **볼트 보유로 제외**: Qwen3.8-27B(7,851,161) · Qwen-Image-2.1-Uncensored-Quantized(2,303,585) · LTX-2.5(2,087,721) · flux-3-image-klein-comfy(590,742) · embeddinggemma-2(206,909) · DeepSeek-V4.1-Flash-1017(73,215 · 트렌딩 1위).
+
+## ✅ 2026-10-26 전량 처리 완료 (20건 = 자동수집 13 · 크론 노트 7) — 대기 항목 없음
+
+> 신규 소스 13 · 크론 신규 4 · 🔴 크론 덮어쓰기 3(git 이전판 복원 후 병합) · 엔티티 신설 1([[Mistral-AI]]). 세부는 `log.md` 2026-10-26.
+
+### 수집기 측정 조건·조건 B (2026-10-26 배달분 — *✅ 볼트 처리 완료, 이력 보존*)
+
+> 📌 **측정 시점: 2026-10-26 09:00 (KST) / API 직접 조회.** 스타수 = `api.github.com/repos` 응답값, 다운로드수 = `huggingface.co/api/models?sort=trendingScore&expand[]=downloads` 응답값(최근 30일). 한줄요약은 README·모델카드·초록 원문 확인 후 작성.
+>
+> ✅ **HF 데일리 페이퍼 10-26(월)자 발행 확인** — `api/daily_papers?date=2026-10-26` = 27편. (10-24·10-25 는 `[]`.) upvote 상위 1~5위 전부 볼트 미보유라 그대로 수록.
+>
+> 🔴 **조건 B(제외분 명시):**
+> - GitHub 트렌딩(daily 전체) 1~6·10위 **볼트 보유로 제외**: `makecindy/cindy`(+675 today) · `Nutlope/hallmark`(+1,317) · `debpalash/VoiceStudio`(+1,592) · `pbakaus/impeccable`(+1,092) · `pollen-robotics/microduck`(+647) · `TauricResearch/TradingAgents`(+381) · `cloudflare/security-audit-skill`(+2,878). 7위 `ziwei-doushu`(자미두수 명리) · 9위 `coolify`(PaaS) 는 **AI/ML 무관**으로 제외.
+> - 전체 daily 미보유 AI 레포가 2개(`thinkrail` +51 · `claude-seo` +197)뿐이라 **Python·TypeScript daily 트렌딩에서 보충**하고, 미보유분을 **당일증분순**으로 5개 선정. `thinkrail`(2,183★ · +51)은 증분 하위로 탈락.
+> - Python/TS daily 볼트 보유 제외: `video-use` · `DeepTutor` · `unsloth` · `awesome-llm-apps` · `AstrBot` · `Claude-Red` · `aws/agent-toolkit-for-aws` · `gemini-cli` · `claude-mem` · `freellmapi` · `firecrawl` · `stitch-skills` · `moeru-ai/airi`.
+> - HF 트렌딩 모델 상위 25개 다운로드순 중 **볼트 보유로 제외**: Qwen3.8-27B(7,762,014) · Qwen-Image-2.1-Uncensored-Quantized(2,235,846) · Comfy-Org/MOSS-Image(2,161,961) · LTX-2.5(2,107,108) · DavidAU Qwen3.8-27B-…-Cold-Fusion GGUF(1,671,015) · flux-3-image-klein-comfy(660,874) · ISTA-DASLab DeepSeek-V4.1-Flash GSQ-RCO GGUF(412,392) · embeddinggemma-2(212,769) · unsloth/flint-GGUF(103,369) · DeepSeek-V4.1-Flash-1017(85,275 · 트렌딩 1위) · fishaudio/drama-3(21,375).
+> - ⚖️ `OpenMOSS-Team/MOSS-Image-SFT`(10,757)는 볼트 `OpenMOSS`·`MOSS-Image` 패밀리에서 이미 언급돼 **중복으로 간주·제외**(소스 노트는 없음 — 판정 요청) ⇒ 다음 순위 `mistralai/Timestral-209M`(9,765) 수록.
+
+> ✅ **볼트 판정(수집기 요청)**: `MOSS-Image-SFT` 중복 간주 **수용** — 단독 페이지 없이 [[OpenMOSS]]·[[Comfy-Org-MOSS-Image]] 에 원본으로 추적([[파생저장소-식별]] (c)).

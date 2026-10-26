@@ -5030,3 +5030,50 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 투고 결정 — 11-03 까지(D-9)** · 초록 11-10(D-16) · 논문 11-16(D-22)
 2. 크론 프롬프트: 날짜 대조 지시 + 파일명 날짜 접미사(2건 묶어 1회 전달)
 3. [[microduck]] duck-sim 1회 실행 또는 OpenShell 스킬 설치 — 외부 코드 실행 0건 돌파
+
+## [2026-10-26] ingest | **대기 20건 전량 처리** (자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: ai-news 9 · video-saas 3 · slam-3dgs 1 (자동수집 · 재분류 4) · 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 13 · 중복 0**(`find -iname` 정규명 + 본문 grep) · 크론 노트 **신규 4 · 🔴 덮어쓰기 3**(git `HEAD:` 존재 확인)
+- **추가 페이지**: **18개** (sources 17 = 자동 13 + 크론 신규 4 · entities 1 [[Mistral-AI]]) | **업데이트 페이지**: 26개 (entities 3 [[Comfy-Org]]·[[OpenMOSS]]·[[Anthropic]] · concepts 10 · domains 4 · 크론 노트 7 판정 부여 · 덮어쓰기 3 git 복원 병합 · index · actionable)
+- **페이지 수**: 1592 → **1610** ✅ `find wiki -name '*.md' | wc -l` (sources 1381 · entities 129 · concepts 92 · synthesis 4 · domains 4) · 증분 검산 통과(1차 −3 불일치 → 덮어쓰기 3건 발견으로 해소)
+- **canvas 업데이트**: **YES** — ai-news +15노드/+18엣지 · video-saas +6/+8 · slam-3dgs +4/+5 · local-llm +4/+5 · 끊어진 엣지 0
+- **actionable 추가**: **YES** — 5항목(높음 2: [[sandbox-runtime]] 격리 실행 · 크론 CFP 주제 "향후 90일 마감"으로 교체 / 중간 2: RSIHub 식 3분할 · [[Kromoss]] 썸네일 대조 / 낮음 묶음 1) · CVPR 2027 항목 D-15/D-21 · 결정 D-8 갱신
+- **독립 검증**: **13/13** — GitHub API 5 + README 원문 5 · HF `api/papers` 5 + arXiv HTML 일부 + 코드 레포 API 4 · HF `api/models` expand 3 + 카드 원문 3 + 원본 레포(BRIA 2 · OpenMOSS 2 · Timestral 패밀리 3) · 최대 드리프트 ★+12(claude-seo) · ★+10(RSIHub) · upvote +1(UserArena 37 · Omni-Woodpecker 21) · 볼트 직접 재확인 2건(sandbox-runtime Windows · RynnUnify Cosmos3 Nano 베이스)
+- **위키링크 검사**: 금일 작성분 깨진 링크 **0**
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**"SOTA"·"대비"·"지원 안 함"의 기준점을 먼저 연다.** [[RynnUnify]] +9.75 의 비교 대상 Cosmos3 Nano 는 자기 베이스이고, [[HiSTEVE]] "SOTA" 는 기준선 +0.6%p, [[UserArena]] 의 실 A/B 대조는 정책 쌍 1개, [[RSIHub]] 최대 +13.5%p 는 16셀 중 1셀이다. 반대 방향으로 수집기는 [[sandbox-runtime]] 에 *있는* Windows 지원을 "미지원"으로 적었다. 숫자가 맞아도 기준점이 틀리면 결론이 틀린다.
+
+### 🏆 주요 발견
+
+1. 🔴🔴 **[[크론-덮어쓰기-소실]] n=6 본문+판정형 → git 복원**: 크론 노트 3건(온디바이스 · Beamforming · 메모리)이 `created: 2026-10-26` 으로 동명 파일을 덮어썼다. 1차 판정 "전건 신규"는 **페이지 수 검산 −3** 에서 깨졌고, `git show HEAD(2f8751a)` 로 이전판(STOI 97.65% 등 수치 + 10-24 볼트 판정)을 복원한 뒤 금일판을 `🔄 2026-10-26` 섹션으로 병합했다.
+2. 🔴 **[[경과-마감-배달]] 무표기형(3번째 유형)**: CFP 노트의 마감 **6/6 경과(151~406일)** 인데 "지났다"는 표기가 0회다. 실제로 다가오는 CVPR 2027(D-15/D-21)은 빠졌다. 10-15 자각형 → 10-25 역방향 → 10-26 무표기형으로 퇴행 중 ⇒ 해결책은 날짜 대조 지시가 아니라 **주제 교체**다(actionable).
+3. 🏆 **[[RSI-프레이밍]] n=4 같은 방향**: [[RSIHub]] 가 진화 4기법을 동일 조건에서 비교했다. A-Evolve 는 TB2 공동 1위인데 다른 벤치에서는 +0.0이고, sealed split 에서 퇴행이 나왔다. ModularRSI · RSIAgent · Physical-RSI · RSIHub 4건 모두 "보고된 이득 ≠ 일반적 우위" 방향이다.
+4. 🆕 **[[계수기-배수]] 게이트 변수**: [[Comfy-Org-Fibo-2.0]] 원본 BRIA 는 `gated: auto`, 재패키징은 게이트가 없다. 역전 배수(보정 후 15~20배)에 계수기만이 아니라 접근 마찰 차이도 섞여 있다. 대조 사례 [[Kromoss]] 는 양쪽 모두 diffusers 라 2.23배를 보정 없이 읽을 수 있다.
+5. [[하네스-설계-축]]: [[HiSTEVE]] 하네스 이득은 장기과제 전용(원자 −0.4 · Long +14.3)이다. 하네스 층이 [[sandbox-runtime]](실행 격리)까지 내려왔다 · [[gstack]] README 의 OpenClaw 247K★ 는 낡은 수치(실측 393,100) → [[캐시된-지표-신선도]].
+6. [[Mistral-AI]] 엔티티 신설(소스 2건) — [[Timestral-209M]] "Modified MIT" = 월매출 $20M 상한 → [[한정어-탈락]].
+
+### 🔴 수집기 평가
+
+- ✅ 수치 13/13 일치 · 중복 0 정확 · 조건 B 블록 유지 · 주말 페이퍼 미발행 처리 명시 · MOSS-Image-SFT 판정 요청 → **수용**(단독 페이지 없이 [[OpenMOSS]] 추적)
+- 🔴 정정 3: [[sandbox-runtime]] "Windows 미지원"(부정 오기) · [[RynnUnify]] "Cosmos 3 Nano 대비"(자기 베이스 맥락 탈락) · "RoboCasa 20개 과제"(*selected* 탈락) · 경미 2: UserArena "5단계" → 5개 수준(L0~L4) · Kromoss "70.4만 장" = 11,000 스텝 × 배치 64(고유 이미지 수인지 미확인)
+
+### 🔴 볼트 자기 결함 (숨기지 않는다)
+
+1. 🔴 **덮어쓰기 탐지를 처음에 놓쳤다** — 파일명만 보고 "전건 신규"로 판정했고, 주제별 파일 수도 +1로 잘못 적었다(검산 후 정정). 🔴 한때 개념 페이지에 *"볼트는 git 아님 · 복원 불가"* 라고 **사실과 다르게** 적었다가, 규약 ①(`git log`)을 다시 읽고 정정·복원했다. ⇒ 크론 노트는 처리 전에 `git cat-file -e HEAD:<path>` 를 먼저 실행한다.
+2. 🔴 `sed -i` glob 이 기존 크론 노트 다수의 mtime 을 바꿨다(내용 변경 0 — 일치 행 없음). `ls -t` 기반 탐색이 오늘 하루 왜곡될 수 있다.
+3. 🔴 크론 노트 7건 출처 재조회 **0회** ⇒ 전건 `reliability: low`. 실존 확인 필요 명칭 2건(Snapdragon 9 Gen 3 · LLaMA-Lite) · Anthropic Dreaming / Opus 4.7 주장은 미확인.
+4. 🔴 **외부 코드 실행 0건 지속** — 대신 격리 수단([[sandbox-runtime]])이 생겼다.
+5. ⚖️ RynnUnify 실로봇 46.7% 의 분모는 미확인이다(arXiv HTML 변환본이 잘려 있음).
+
+### 🆕 신설 규약
+
+- **㉑** 크론 노트는 처리 전에 `git cat-file -e HEAD:<path>` 로 동명 선행본을 확인한다. 있으면 이전판을 본문으로 복원하고 금일판은 `🔄 날짜` 섹션으로 병합한다. `created:` 필드는 신뢰하지 않는다.
+- **㉒** "SOTA / X 대비 +n" 인용 전에 **비교 대상이 자기 베이스·자체 벤치·n=1 인지** 먼저 확인하고 병기한다([[비매칭-비교]]).
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 투고 결정 — 11-03 까지(D-8)** · 초록 11-10(D-15) · 논문 11-16(D-21)
+2. 크론 프롬프트 3건 묶음 전달: 날짜 대조 + **주제 "향후 90일 마감"으로 교체** + 파일명 날짜 접미사(덮어쓰기 n=6)
+3. [[sandbox-runtime]] 으로 [[microduck]] duck-sim 1회 격리 실행 — 외부 코드 실행 0건 돌파

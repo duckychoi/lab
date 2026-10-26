@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA"
 created: 2026-10-24
-updated: 2026-10-24
+updated: 2026-10-26
 type: source
 domain: local-llm
 topic: llm-long-memory   # 중복 판정 키 — 2026-10-24 부여
@@ -76,3 +76,66 @@ LLM이 단일 턴 QA에서 다단계 추론·도구 활용·장기 작업 실행
 - ArXiv 2607.25380 (Memory for Large Language Models) — https://arxiv.org/pdf/2607.25380
 - ArXiv 2603.07670 (Memory for Autonomous LLM Agents) — https://arxiv.org/html/2603.07670v1
 - DEV Community Best AI Memory Layers 2026 — https://dev.to/jonathanfarrow/the-10-best-ai-memory-layers-for-agents-in-2026-448
+
+---
+
+## 🔄 2026-10-26 — 크론 재생성본 (🔴 덮어쓰기 → git `2f8751a` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 10-25 커밋 시점 판본이다. 크론이 2026-10-26 09:02 같은 파일명으로 덮어썼고, 볼트가 [[크론-덮어쓰기-소실]] 규약 ①(git 이전판 확인)으로 복원했다. 아래는 금일 재생성본과 금일 볼트 판정이다.
+
+> [!warning] 🔴 볼트 판정 (2026-10-26) — [[주제재생성-중복]] · 검증 0회
+> - `topic: llm-long-memory` 파일 수 **8 유지** — 🔴 **덮어쓰기**(동명 파일 index 376행 · 10-24 39파일 목록) ⇒ [[크론-덮어쓰기-소실]]. 볼트 [[에이전트-메모리-레이어]] 와 축 동일(계층 메모리·Mem0·Letta·Zep).
+> - 🔢 볼트 재계산: 토큰 26,031 → 1,764 는 **93.2% 감소**(노트 "90%"는 내림 표기 — 방향은 맞음). 정확도 72.9%/p95 17.12초 vs 66.9%/1.44초 = **정확도 +6.0%p 에 지연 11.9배** — 노트의 "트레이드오프 존재"를 숫자로 쓰면 이렇다. 출처 = mem0 블로그(이해당사자 자가 벤치) ⇒ [[스타-근거-비동행]] 류 주의.
+> - ❓ "Anthropic Dreaming(2026-05)" · "Claude Opus 4.7 1M flat-priced context" — 볼트 미확인 제품 주장. 인용 전 공식 발표 대조.
+> - 📌 금일 1차 소스 연결: [[Deep-Fusion-Memory]](10-25) — 크론 노트는 이를 다루지 않는다.
+## LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA
+
+**핵심 3줄**
+- 
+AI 에이전트 메모리는 2026년에 벤치마크, 연구 문헌, 성능 갭, 전용 생태계를 갖춘 1급 아키텍처 컴포넌트로 확립됨
+
+- 
+계층 메모리(Hierarchical Memory)는 Core(항상 context 포함), Recall, Archive 3계층 구조로 MemGPT/Letta에서 시작해 프로덕션 시스템의 표준
+
+- 
+5월 2026년 Anthropic Dreaming(비동기 메모리 통합), Google Memory Bank 출시로 메모리 아키텍처 근본 변화 발생
+
+
+**상세**
+- **아키텍처 3계열**: 
+Curated Working Views(PEEK의 Distiller·Cartographer·Evictor 패턴), Retrieval over Unbounded Stores(벡터 검색·그래프 기반), 상용 시스템(Mem0·Zep의 temporal KG)
+
+- **프로덕션 5가지 패턴**: 
+In-process(72.9% 정확도/17.12초 p95), Flat Vector(66.9% 정확도/1.44초), 조합형 패턴들 — 정확도-지연시간 트레이드오프 존재
+
+- **다중신호 검색 혁신**: 
+2026년 프로덕션 메모리는 의미/키워드/엔티티/그래프 기반 검색 조합, Mem0의 entity linking 방식 주목(외부 그래프 스토어 교체)
+
+- **메모리 관리 강화**: 
+RAPTOR·Memwalker의 트리 기반 계층 구조, MemoryBank·SAGE의 Ebbinghaus 망각곡선 적용으로 정보 프루닝
+
+- **보안·평가 성장**: 
+Memtrace(장기기억 정확도 평가), 메모리 중독 공격 방어, MemProbe(숨은 사용자 상태 복구) 등 2026 연구
+
+- **주요 프레임워크**: 
+Mem0(벡터+지식그래프 이중 스토어, Qdrant/Chroma/milvus/pgvector 지원), Hindsight(4중 검색 전략 병렬), Letta(OS 영감 3계층), Zep(temporal KG)
+
+- **컨텍스트 윈도우 시프트**: 
+Anthropic Dreaming(비동기 hippocampal 재생), Claude Opus 4.7의 1M flat-priced context로 장문맥 메모리 아키텍처 경쟁력 재평가
+
+- **토큰 효율**: 
+전체 context 사용 ~26,031 tokens/대화 vs 선택적 ~1,764 tokens — 90% 감소, 기업 수준 생산성 향상
+
+
+**💡 인사이트/시사점**
+2026년 LLM 에이전트 메모리는 단순 벡터 검색에서 **계층·멀티신호·적응형 하이브리드로 진화**했으며, Anthropic·Google·OpenAI가 각각 고유한 기본 패턴(Dreaming/Memory Bank/file\_search)을 강제하는 벤더 분화 발생. 토큰 효율과 정확도 간 **명확한 트레이드오프**가 벤치마크로 정량화되어 엔지니어링 의사결정 기준이 됨. 메모리 보안(중독 방어, 구원력), 평가 방법론(Memtrace, MemProbe) 등 **거버넌스 레이어**가 새로운 연구 영역으로 부상.
+
+**출처**
+- Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers — https://arxiv.org/html/2603.07670v1
+- Always-OnAgents: A Survey of Persistent Memory, State, and Governance in LLMAgents — https://arxiv.org/pdf/2606.30306
+- State of AI Agent Memory 2026: Benchmarks & Trends — https://mem0.ai/blog/state-of-ai-agent-memory-2026
+- Agent Memory Architectures: Patterns and Trade-offs (2026) — https://atlan.com/know/agent-memory-architectures/
+- Agent Memory in 2026: Dreaming, Memory Bank, and the Long-Context Shift — https://www.digitalapplied.com/blog/ai-agent-memory-vector-graph-episodic-2026
+
+## 관련 페이지
+- [[주제재생성-중복]] · [[local-llm]]

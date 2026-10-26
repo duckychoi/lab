@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, comfyui, repackage, distribution, runtime]
 created: 2026-09-17
-updated: 2026-10-25
+updated: 2026-10-26
 sources: [Comfy-Org-YuE2.md, Comfy-Org-MOSS-Image.md]
 reliability: medium
 ---
@@ -69,3 +69,8 @@ ComfyUI 생태계의 공식 조직. **모델을 만들지 않고 런타임에 �
 ## 🔄 2026-10-25 — [[Comfy-Org-MOSS-Image]]: 규약 ⑰ 첫 집행
 - 1,944,278 dl(9일) vs 원본 [[OpenMOSS]] 2레포 합 16,660 ⇒ 원값 **116.7배** · `diffusion-single-file` 파일당 계수 보정 시 **29~39배**(추정) ⇒ [[원본-파생-역전]] 은 남지만 크기는 1/3~1/4 · 좋아요는 원본 1,247 > Comfy 443
 - 📌 Comfy 재패키징 3사례 누적: [[Comfy-Org-Qwen-Image-2.1]] · [[flux-3-image-klein-comfy]] · [[Comfy-Org-MOSS-Image]] → [[계수기-배수]]
+
+## 🔄 2026-10-26 — [[Comfy-Org-Fibo-2.0]]: 규약 ⑰ 2번째 사전 집행 + 🆕 게이트 우회 축
+- 124,557 dl vs 원본 BRIA 2레포(dev 1,115 + edit-turbo 955) ⇒ 원값 **60.2배** · 파일당 보정(3~4파일/인) **15~20배(추정)** ⇒ 역전은 남는다 · 좋아요는 원본 우위(278 vs 186).
+- 🆕 원본은 `gated: auto`(회사명·용도 양식) · Comfy 재패키징은 **게이트 없음** ⇒ 역전 일부는 계수기가 아니라 **접근 마찰 차이**일 수 있다(몫 분리 불가). 🔴 CC BY-NC 4.0 은 재패키징에도 그대로.
+- 📌 Comfy 재패키징 누적 4사례 → [[계수기-배수]]

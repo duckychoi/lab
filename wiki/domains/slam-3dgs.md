@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-10-25
+updated: 2026-10-26
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -577,3 +577,7 @@ _소스 ingest 시 자동 누적_
 - 🆕 [[LaLa-World]](NAVER) vs 🆕 [[FRED]](KAIST) — **JEPA형 잠재 vs 확산 WAM 이 같은 목록 9·10위로 연달아** → [[대립레시피-동시도착]] · [[JEPA-vs-Diffusion-월드모델]] 3개월 만에 갱신(정합 비교: 동등 성능 · 학습 1/6 · 계획 13.9배)
 - 🆕 [[microduck]] — RK3566 · 50Hz · 서보 15 · ONNX 정책 · **MuJoCo 시뮬로 실제 데몬 구동**(하드웨어 없이 sim2real 파이프라인 실험 가능) → 볼트 최저비용 로봇 실험 경로
 - 🔴 [[VLA]] 1차 논문 볼트 보유 0건은 여전히 미해소(오늘 3건은 월드모델·RL 정책 · VLA 아님)
+
+## 🔄 2026-10-26 배치
+- 🆕 [[RynnUnify]] — DAMO 16B 통합 임바디드(Cosmos3 Nano 기반 MoT) · +9.75 = **자기 베이스 대비** · RoboCasa365 **20선별** 과제 51.5% · 가중치 3종 HF 공개 → [[VLA]] · [[임바디드-AI]]
+- 📚 크론 노트 [[리서치-휴머노이드-로봇-VLASLAM로컬LLM-제어의-2026-최신-동향]] — humanoid 주제 12번째 파일 · 1차 논문은 오늘 자동수집 쪽에 있다

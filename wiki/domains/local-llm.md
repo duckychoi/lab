@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-10-25
+updated: 2026-10-26
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -866,3 +866,7 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🆕 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 231~266GB · 🔴 llama.cpp 불가(Strata 단독) · 카드 TBD 6건(메모리 요구사항 공백) · 🆕 [[천장-기준선]] — IQ1_M 회복률 98.7% → 천장 제외 97.97%
 - 🆕 [[Deep-Fusion-Memory]] — 메모리 분류의 "증류된 검색" 칸(학습 시 검색 · 추론 시 파라미터) · 구축 비용 32배/2048배 감소 · 🔴 코드 없음 · 12.71% 단위 미확정
 - 📌 크론 `on-device-ai`·`llm-long-memory` 덮어쓰기로 메타데이터·생성일 소실 → 복원([[크론-덮어쓰기-소실]] n=5)
+
+## 🔄 2026-10-26 배치
+- 자동수집 local-llm 0건 · 📚 크론 노트 2: [[리서치-2026년-온디바이스-AI엣지-추론모델-경량화-최신-동향]](실존 확인 필요 명칭 2) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-SOTA]](정확도 +6.0%p 에 지연 11.9배 · mem0 자가 벤치)
+- 📌 [[experiential]] 로컬 `exp` 는 OpenAI 호환만(Anthropic 호환은 호스티드) — 로컬 모델 라우팅 후보로 볼 때 주의

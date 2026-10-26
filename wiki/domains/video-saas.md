@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-10-25
+updated: 2026-10-26
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -626,3 +626,8 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 
 ## 🔄 2026-10-25 배치
 - 🆕 [[Comfy-Org-MOSS-Image]] — **bbox/JSON 레이아웃 T2I**(텍스트·객체 위치 제어) · ComfyUI 템플릿 4종 중 2종이 Layout-Guided ⇒ 썸네일·카드뉴스 자동 레이아웃 후보 · 🔴 194만 dl 은 파일당 계수(보정 29~39배 · [[계수기-배수]]) · 벤치 0건 · 텍스트 인코더 Qwen3.5-9B(w4a8 제공)
+
+## 🔄 2026-10-26 배치
+- 🆕 [[Comfy-Org-Fibo-2.0]] — BRIA Fibo-2.0 재패키징 · 60.2배 → 파일당 보정 15~20배 · 🆕 원본 게이트 우회 축 · 🔴 CC BY-NC 4.0 = 상업 SaaS 불가
+- 🆕 [[Kromoss]] — MOSS-Image-Base 풀 FT(Apache-2.0) · DMD2 8스텝 LoRA · SFT 비교 없는 CLIP n=100 → 썸네일 실험 후보 · [[OpenMOSS]] 파생 생태계
+- 🆕 [[infinite-canvas]] — 무한 캔버스 + MCP Canvas Agent · 노드형 제작 UI 벤치마크(reat 스튜디오 UI 참고) · 🔴 스폰서 대부분 API 중계상
