@@ -7458,6 +7458,136 @@
 			"width": 400,
 			"height": 200,
 			"color": "2"
+		},
+		{
+			"id": "b1027-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-10-27 배치\n성공 ≠ 신뢰: 숨은 하네스 결함 31.1%\n수집기가 부정 결론 누락 · 볼트 자기 정정 1",
+			"x": -640,
+			"y": 46140,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1027-ai-news-0",
+			"type": "file",
+			"file": "wiki/sources/Trial-by-Trace.md",
+			"x": 60,
+			"y": 46140,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/Trajectory2Gym.md",
+			"x": 520,
+			"y": 46140,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/StreamVibe.md",
+			"x": 980,
+			"y": 46140,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/DynaFlow.md",
+			"x": 1440,
+			"y": 46140,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/InteractiveWorld.md",
+			"x": 60,
+			"y": 46380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/thinkrail.md",
+			"x": 520,
+			"y": 46380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/cindy.md",
+			"x": 980,
+			"y": 46380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/ECC.md",
+			"x": 1440,
+			"y": 46380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/flux-3-image-klein-comfy.md",
+			"x": 60,
+			"y": 46620,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1027-ai-news-9",
+			"type": "file",
+			"file": "wiki/concepts/하네스-설계-축.md",
+			"x": 520,
+			"y": 46620,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1027-ai-news-10",
+			"type": "file",
+			"file": "wiki/concepts/크론-덮어쓰기-소실.md",
+			"x": 980,
+			"y": 46620,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1027-ai-news-11",
+			"type": "file",
+			"file": "actionable.md",
+			"x": 1440,
+			"y": 46620,
+			"width": 400,
+			"height": 200,
+			"color": "2"
 		}
 	],
 	"edges": [
@@ -13905,6 +14035,142 @@
 			"fromSide": "bottom",
 			"toSide": "top",
 			"label": "10-25 → 10-26"
+		},
+		{
+			"id": "e1027-ai-news-0",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-0",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "성공인데 위반 31.1%"
+		},
+		{
+			"id": "e1027-ai-news-1",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "근거 있는 행동만"
+		},
+		{
+			"id": "e1027-ai-news-2",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "하네스 +12.3%"
+		},
+		{
+			"id": "e1027-ai-news-3",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "Forced 88.08%"
+		},
+		{
+			"id": "e1027-ai-news-4",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "최강 ≤20%/25%"
+		},
+		{
+			"id": "e1027-ai-news-5",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "pi 위 IDE"
+		},
+		{
+			"id": "e1027-ai-news-6",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "issues 2,066"
+		},
+		{
+			"id": "e1027-ai-news-7",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "README 값충돌"
+		},
+		{
+			"id": "e1027-ai-news-8",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "배수 5.88"
+		},
+		{
+			"id": "e1027-ai-news-9",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "관측 가능한 실패 축"
+		},
+		{
+			"id": "e1027-ai-news-10",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "16h→20h 정정"
+		},
+		{
+			"id": "e1027-ai-news-11",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1027-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "CVPR D-14"
+		},
+		{
+			"id": "e1027-ai-news-x09",
+			"fromNode": "b1027-ai-news-0",
+			"toNode": "b1027-ai-news-9",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "2층 평가"
+		},
+		{
+			"id": "e1027-ai-news-x06",
+			"fromNode": "b1027-ai-news-0",
+			"toNode": "b1027-ai-news-6",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "하네스 교체"
+		},
+		{
+			"id": "e1027-ai-news-x13",
+			"fromNode": "b1027-ai-news-1",
+			"toNode": "b1027-ai-news-3",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "결함 필터 동일 처방"
+		},
+		{
+			"id": "e1027-ai-news-x20",
+			"fromNode": "b1027-ai-news-2",
+			"toNode": "b1027-ai-news-0",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "모델 위 하네스 이득"
+		},
+		{
+			"id": "e1027-ai-news-prev",
+			"fromNode": "b1026-ai-news-hub",
+			"toNode": "b1027-ai-news-hub",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "10-26 → 10-27"
 		}
 	]
 }

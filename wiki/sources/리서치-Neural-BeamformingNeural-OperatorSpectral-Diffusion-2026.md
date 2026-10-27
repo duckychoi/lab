@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-10-26
+updated: 2026-10-27
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -134,7 +134,7 @@ CNN 기반 스파스 어레이 설계로 90% 이상의 테스트 정확도를 �
 > [!note] 위 본문은 10-25 커밋 시점 판본이다. 크론이 2026-10-26 09:02 같은 파일명으로 덮어썼고, 볼트가 [[크론-덮어쓰기-소실]] 규약 ①(git 이전판 확인)으로 복원했다. 아래는 금일 재생성본과 금일 볼트 판정이다.
 
 > [!warning] 🔴 볼트 판정 (2026-10-26) — [[주제재생성-중복]] · arXiv ID 다수 보유(재조회 0회)
-> - `topic: neural-beamforming` 파일 수 **5 유지** — 🔴 **덮어쓰기**(동명 파일 10-14·10-16 · index 431·470행) ⇒ [[크론-덮어쓰기-소실]] · 🔴 이전판의 STOI 97.65% · SI-SNR 20.26dB · 100mAh/16h 항목이 **금일판에 없다**(FID 142.48→100.45 만 생존) ⇒ git 이전판 복원으로 위 본문에 보존. 이 주제 노트 중 1차 출처(arXiv ID 11개)가 가장 많다 — 단 볼트는 **한 건도 열지 않았다**.
+> - `topic: neural-beamforming` 파일 수 **5 유지** — 🔴 **덮어쓰기**(동명 파일 10-14·10-16 · index 431·470행) ⇒ [[크론-덮어쓰기-소실]] · 🔴 이전판의 STOI 97.65% · SI-SNR 20.26dB · 100mAh/~~16h~~ **20h**(🔴 10-26 볼트 전사 오류 · 10-27 정정 — 원문 전부 20시간) 항목이 **금일판에 없다**(FID 142.48→100.45 만 생존) ⇒ git 이전판 복원으로 위 본문에 보존. 이 주제 노트 중 1차 출처(arXiv ID 11개)가 가장 많다 — 단 볼트는 **한 건도 열지 않았다**.
 > - 🔴 **[[문서내-값충돌]] 2건**: ① SCR 항목 `arXiv:2609.29505` 인데 본문 "2026년 8월"(ID 접두 2609 = 9월) ② 핵심 3줄 1행(GNN 하이브리드 빔포밍)은 본문 상세에 없고 출처 목록에만 `2609.09708` 로 있다 — PISD `2602.09708` 과 끝자리가 같아 ID 혼동 가능성.
 > - ⚖️ "2026 최신동향"에 **2025(Latent Mamba 2505.19105)·2021(NeurIPS 멀티웨이블릿)** 항목 혼입.
 > - 📌 수치 1건(DCT 확산 FID 142.48→100.45, 2610.07206)은 ID가 있어 검증 가능 — 필요 시 1회 조회.
@@ -220,3 +220,80 @@ Spectral Concentration Ratio (SCR): 가중치의 특이값 에너지로 재계�
 
 ## 관련 페이지
 - [[주제재생성-중복]] · [[경과-마감-배달]]
+
+## 🔄 2026-10-27 — 크론 재생성본 (🔴 덮어쓰기 → git `68f3fe4` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 68f3fe4(10-26 커밋) 시점 판본이다. 크론이 2026-10-27 09:02 같은 파일명으로 덮어썼고, 볼트가 규약 ㉑(`git cat-file -e HEAD:<path>`)로 탐지·복원했다. 아래는 금일 재생성본과 금일 볼트 판정이다.
+
+> [!warning] 🔴 볼트 판정 (2026-10-27) — [[주제재생성-중복]] · 🔴 **2일 연속 덮어쓰기**
+> - `topic: neural-beamforming` 파일 수 **5 유지** — 🔴 10-26 에 이어 **이틀 연속 같은 파일명 덮어쓰기** ⇒ [[크론-덮어쓰기-소실]] n 증가
+> - ✅ 10-26 판본에서 사라졌던 **STOI 97.65% · SI-SNR 20.26dB · 100mAh 20시간** 이 금일판에 복귀 + 🆕 PESQ 3.676 · 45.9mW
+> - 🔴 **볼트 자기 정정**: 10-26 판정이 이 항목을 '100mAh/**16h**' 로 적었으나 원문(이전판·동주제 2파일)은 전부 **20시간** — 볼트 전사 오류 · [[크론-덮어쓰기-소실]]·[[ai-news]] 2곳 함께 정정
+> - 🔴 [[문서내-값충돌]] 지속: GNN 하이브리드 빔포밍 `2609.09708` ↔ PISD `2602.09708` — 끝 5자리 동일 · 하나는 ID 오기일 가능성(재조회 0회)
+> - 📌 '2026 최신' 범위 준수는 개선 — 10-26 판본의 2021·2025 혼입 항목이 금일판에는 없다
+
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026 최신 논문 동향
+
+**핵심 3줄**
+- 
+Transformer 기반 신경 빔포밍이 MCU급 저전력 장치에 최초 실시간 배포
+되면서 엣지 컴퓨팅 실용화 가속
+- 
+그래프 신경망(GNN)을 활용한 광대역 하이브리드 빔포밍이 빔 스쿠팅 문제 해결 및 완전 디지털 설계보다 우수한 강건성 제시
+
+- 
+스펙트럼 정규화 프레임워크가 푸리에·웨이블릿 손실을 추가하여 고해상도 생성 품질 개선
+
+
+**상세**
+- **Neural Beamforming 신규 방향**
+  - 
+Transformer 기반 신경 빔포밍 파이프라인이 STOI 97.65%, SI-SNR 20.26dB, PESQ 3.676 달성하며 45.9mW 전력 소비로 100mAh 배터리 20시간 작동
+(2026년 9월)
+  - 
+카메라·LiDAR·RF 파일럿을 통합한 다중 모달 학습 방식으로 3D 기하학적·물질 정보 활용
+(2026년 9월)
+  - 
+CNN을 이용한 희소 배열 설계가 광원·간섭각 범위에서 90% 이상 테스트 정확도 달성
+(2026년 6월)
+  
+- **Neural Operator 고도화**
+  - 
+확산 마지막 계층(DLL)이 Karhunen-Loève 전개 기반 저랭크 확장으로 불확실성 정량화
+(2026년 5월)
+  - 
+신경 연산자의 도메인·크기 변화 적응성 향상을 위해 국소 사전 학습과 구성 레벨 전이를 제안
+(2026년 9월)
+  - 
+시간-주파수 게이트 스펙트럼 신경 연산자(TF-SNO)로 비정상 편미분방정식 학습
+(2026년)
+  
+- **Spectral Diffusion 응용 확산**
+  - 
+물리-정보 스펙트럼 확산(PISD)이 부분 관측 조건에서 편미분방정식 해를 생성
+(2026년 2월~6월)
+  - 
+단백질 역학용 스펙트럼 확산이 푸리에 변환을 귀납 편향으로 사용하여 느린 구조변화와 빠른 원자 진동 분리
+(2026년 7월)
+  - 
+적응 스펙트럼 특성 예측으로 FLUX.1에서 4.79배, Wan2.1-14B에서 4.67배 속도 향상
+(CVPR 2026)
+  - 
+에너지 조건화 노이즈 스케줄과 스펙트럼 백화가 CIFAR-10 FID를 142.48에서 100.45로 개선
+(2026년 10월)
+
+**💡 인사이트/시사점**
+- **실용 배포 전환**: 저전력 엣지 기기상 Transformer 빔포밍 구현으로 5G/6G 이동통신과 청각보조기 같은 실제 하드웨어에 신경망 신호처리 통합 가시화
+- **다중 모달 + 스펙트럼 설계**: 카메라/LiDAR 정보와 스펙트럼 규제를 결합하는 방향으로, 전통적 신호처리와 딥러닝의 교집합 강화 추세 확인
+- **생성 모델의 물리 제약**: 확산 모델이 편미분방정식, 단백질 동역학 등 물리계에 적용되면서 "데이터만으로는 부족, 스펙트럼·기하학적 구조 명시" 철학 강조
+
+**출처**
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming Optimization — https://arxiv.org/abs/2609.09708
+- Multimodal Learning for Beamforming Using Camera, LiDAR, and Radio-Frequency Pilots — https://arxiv.org/abs/2609.21193
+- Hypernetwork-Parameterized Spatially Adaptive Neural Operators for PDE Learning — https://arxiv.org/abs/2609.20309
+- Generative Neural Operators through Diffusion Last Layer — https://arxiv.org/abs/2602.04139
+- Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+- Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration — https://arxiv.org/abs/2603.01623
+- Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.02447

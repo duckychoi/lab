@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, agent-harness, claude-code, skill-management, agent-memory, security, workflow]
 created: 2026-07-29
-updated: 2026-10-04
+updated: 2026-10-27
 sources: []
 reliability: high
 ---
@@ -91,3 +91,12 @@ reliability: high
 - 스타: ⭐**242,304** (2026-08-23 **GitHub API 실호출 검증**·포크 36,708·이슈 148·MIT·JavaScript·최종 푸시 2026-08-21) ← ⭐236,434 (2026-07-31, 당일 +804, WebFetch "236k"·MIT·TypeScript 실확인) ← 235,876(07-30) ← 235k(07-29, +636), MIT
 - 구성(2026-08-23 README 원문 실측): **68 서브에이전트 · 286 스킬 · 94 legacy command shims** + AgentShield 보안 스캔(npm `ecc-agentshield` 독립 배포·프롬프트/훅/MCP설정/권한/시크릿/에이전트파일 대상) + 메모리 · 훅 · 지속학습 ← (07-31 실측) 67 서브에이전트·281 스킬·94 슬래시커맨드·AgentShield 102 정적룰. 언어 표기 JavaScript(API 기준)
 - 신뢰도: ⭐⭐⭐⭐ (스타·라이선스·기능 WebFetch 실확인, 규모 이례적·내부 수치 자체표기로 실사용 검증 별도)
+
+## 🔄 2026-10-27 갱신 (인제스트 2026-10-27) — **★ 29만 돌파 · README 내부 수치 3종 모두 증가 — 그리고 README 가 스스로 엇갈린다**
+
+**GitHub API 실측(2026-10-27T09:05Z)**: ★ **290,195**(수집기 290,187 · +8) · fork **43,006** · open issues 249 · MIT · JavaScript · 🔴 pushed **10-26**
+- 10-04 ★272,500 → **+17,695 / 23일 ≈ 769/일**(10-04 산출 791/일과 거의 같음 · 감속 없음).
+- README 원문 재실측(115,595B): `71 agents` · `311 skills` · `97 legacy command shims`(144·148행) ← 08-23 **68 / 286 / 94** ⇒ **+3 / +25 / +3**.
+- 🔴 **[[문서내-값충돌]] 2건**: 같은 README 390행 `95 legacy command shims` · 1842행 `281 skills` — 상단 표기와 불일치(갱신 안 된 하단 구획). ⇒ **ECC 규모 인용 시 144행 기준 + 날짜 병기**.
+
+> [!insight] 스킬 25개 증가 = 23일에 1개 이상. ECC 는 "필요한 것만 선별"이 볼트 기존 권고였고, 같은 배치 [[Trial-by-Trace]] 는 **하네스에 얹는 구성요소가 많을수록 lifecycle·governance 기준 위반 표면이 커진다**는 평가 축을 제시했다(ECC 자체는 미평가). 권고 유지·강화: **전체 설치 금지, 스킬 단위 차용.**

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-client, harness, electron, mcp, telemetry, coding-plan, 신생레포]
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-10-27
 sources: []
 reliability: low
 ---
@@ -39,3 +39,13 @@ reliability: low
 ## 원본
 - 출처: https://github.com/makecindy/cindy
 - 신뢰도: ⭐⭐ (GitHub 스타 4,338 · 신생)
+
+## 🔄 2026-10-27 갱신 (인제스트 2026-10-27) — **2일 만에 ★ +2,656. 🔴 열린 이슈 2,066 = ★ 의 29.5%**
+
+**GitHub API 실측(2026-10-27T09:05Z)**: ★ **6,994**(수집기 6,989 · +5) · fork 841 · 🔴 **open issues 2,066** · Apache-2.0 · TypeScript · pushed 10-27(당일)
+- 10-25 ★4,338 → **+2,656 / 2일** · 금일 +1,296(수집기) — 트렌딩 10위(10-25) → 상위 재진입.
+- 🔴 **이슈/★ 29.5%** — 같은 배치 [[thinkrail]] 6.7%, [[TradingAgents]] 0.07% 대비 이례적. `open_issues_count` 는 **PR 포함**이므로 봇 PR·자동 리포트 가능성 → 분해 미실시(10-06 해소 경로: GitHub Search `is:issue`/`is:pr`).
+- ✅ README 재확인: *"Cindy runs locally on your own machine"* + 로그인 표의 **"Skip Sign-In … Server-backed capabilities are unavailable"** ⇒ 10-25 볼트 판정(🔴 *'로컬 실행'이지만 기본 서버는 Cindy 클라우드*) **유지**. 수집기 금일 요약은 이 단서를 빠뜨렸다(*"로컬 권한이 넓어 보안 설정 확인 필요"* 만 언급).
+- 하네스: Claude Code · Codex 지원 · *"a native harness is in the works"* — 수집기 일치.
+
+> [!insight] 같은 배치 [[Trial-by-Trace]] 기준: Claude Code(Agent 1위)와 Codex(Harness Macro 최하 59.8 · Clean 2.8%)는 **하네스 신뢰성 격차가 12%p** 다. cindy 의 가치 제안(*"작업 도중 하네스를 바꿔도 메모리·스킬 유지"*)은 **하네스 선택이 결과를 바꾼다는 실측**을 얻었다 — 단 교체 시 신뢰도도 같이 바뀐다.

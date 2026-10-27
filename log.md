@@ -5077,3 +5077,44 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 투고 결정 — 11-03 까지(D-8)** · 초록 11-10(D-15) · 논문 11-16(D-21)
 2. 크론 프롬프트 3건 묶음 전달: 날짜 대조 + **주제 "향후 90일 마감"으로 교체** + 파일명 날짜 접미사(덮어쓰기 n=6)
 3. [[sandbox-runtime]] 으로 [[microduck]] duck-sim 1회 격리 실행 — 외부 코드 실행 0건 돌파
+
+## [2026-10-27] ingest | **대기 20건 전량 처리** (자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: ai-news 13 (자동수집 · 재분류 0) · 크론 7 = general 3(신규) · 기존 4파일 domain 유지
+- **분해**: 자동수집 🔴 **신규 6 · 갱신 7**(GitHub 4 [[hallmark]]·[[TradingAgents]]·[[cindy]]·[[ECC]] + HF모델 3 [[Qwen3.8-27B]]·[[LTX-2.5]]·[[flux-3-image-klein-comfy]] 볼트 보유) · 크론 노트 **신규 3 · 🔴 덮어쓰기 4**(규약 ㉑ `git cat-file -e HEAD:` 로 처리 전 탐지 → `68f3fe4` 이전판 복원 + `🔄 2026-10-27` 섹션 병합 · numstat 삭제 1~2행 = `updated:` 만 ✅)
+- **추가 페이지**: **9개** (sources 6 [[Trial-by-Trace]]·[[Trajectory2Gym]]·[[StreamVibe]]·[[DynaFlow]]·[[InteractiveWorld]]·[[thinkrail]] + 크론 신규 3) | **업데이트 페이지**: 소스 7 + 크론 4 + concepts 1([[크론-덮어쓰기-소실]]) + domains 1([[ai-news]])
+- **페이지 수**: 1610 → **1619** ✅ `find wiki -name '*.md' | wc -l` (sources 1390 · entities 129 · concepts 92 · synthesis 4 · domains 4) · 증분 검산 통과
+- **canvas 업데이트**: **YES** — ai-news +13노드/+17엣지(허브 1 + 파일 12 · 교차 4 · 이전 배치 연결 1)
+- **actionable 추가**: **YES** — 4항목(최상 1: CVPR 2027 D-7/D-14/D-20 / 높음 1: 크론 로그 TraceTrial 2층 감사 + 쓰기 전 존재 확인 / 중간 1: NRF 12-03~12-16 실존 확인 / 낮음 묶음)
+- **독립 검증**: **13/13** — GitHub API 5 + README 원문 4(hallmark · ECC · cindy · thinkrail) · HF `api/papers` 5 + 코드 레포 API 4(contents·languages) + TraceTrial README 표 · HF `api/models` expand 3 + 원본 klein 1 · 🔴 arXiv API 응답 공백(1회 · 재시도 안 함)
+- **위키링크 검사**: 금일 작성분 깨진 링크 **0**(표 안 `\|` 이스케이프 오탐 3건 확인 후 제외)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**성공은 신뢰를 보증하지 않는다 — 평가에서도, 학습 데이터에서도, 요약에서도.** [[Trial-by-Trace]] 에서 과제 성공 런의 **31.1%** 가 하네스 기준을 하나 이상 어겼고, 두 층을 다 통과한 런은 8.4% 뿐이다(Clean 최대 OpenClaw 11.7% · Codex 2.8%). [[Trajectory2Gym]] 은 *"성공 궤적이 곧 유용한 감독은 아니다"* 를 학습 쪽에서 같은 날 주장했고, [[DynaFlow]] 도 증류 궤적에서 근거 없는 전제·편향 검증을 걸러냈다(같은 처방). 요약 층에서는 수집기 한줄요약이 [[InteractiveWorld]] 의 결론(최강 Claude Fable 5.1 도 장기 과제 ≤20%/25%)과 [[StreamVibe]] 의 하네스 +12.3% 를 지웠다.
+
+### 🏆 주요 발견
+
+1. 🏆 **하네스 축에 "관측 가능한 실패"가 빠져 있었다** — [[Trial-by-Trace]] 1위가 축마다 다르다(Agent: Claude Code 44.0 / Harness Macro: OpenClaw 72.0). [[하네스-설계-축]] 에 2층 평가 연결. ⚖️ 제작사가 트레이스 도구 회사라 결론 방향은 [[인용-부호]] 로 따로 의심한다.
+2. 🔴 **[[크론-덮어쓰기-소실]] — 이틀 연속 같은 파일 4건**(Beamforming 은 10-26 에 이어 2일 연속). 규약 ㉑ 덕분에 처리 전에 탐지했다(10-26 은 사후 발견).
+3. 🔴 **볼트 자기 정정 1건** — 10-26 판정이 Beamforming 항목을 "100mAh/**16h**" 로 적었는데, 원문(이전판 · 동주제 2파일)은 전부 **20시간**이다. 볼트 전사 오류였다. 3곳(크론 노트 판정 · [[크론-덮어쓰기-소실]] · [[ai-news]])을 취소선 + 정정 표기로 고쳤다.
+4. 📈 **[[원본-파생-역전]] 가속** — [[flux-3-image-klein-comfy]] 배수 5.06 → **5.88**(3일) · 구간 증분 비 **12.4** · 원본 일평균 8,520 → 4,470 반감. 계수 규칙 차이로는 시계열 변화를 설명할 수 없다 ⇒ 수요가 실제로 ComfyUI 패키지 쪽으로 옮겨 가고 있다(추정 강도 중).
+5. [[문서내-값충돌]] +3: [[ECC]] README(311 vs 281 skills · 97 vs 95 shims) · 메모리 노트("29.6~23.1" 중 29.6 출처 없음) · NRF 노트(공모 12.03~12.16 ↔ 신청 2025.12.5~12.17 시점 혼재).
+6. 🔴 [[cindy]] open issues **2,066**(★의 29.5% · PR 포함 미분해) · [[thinkrail]] 은 JetBrains **incubator**(정식 제품 아님).
+
+### 🔴 수집기 평가
+- ✅ 수치 정확도 높음: dl 3/3 **정확히 일치** · ★ 드리프트 +5~+13 · upvote +0~+6.
+- 🔴 **부정적 결론 누락 2건**(InteractiveWorld ≤20/25% · StreamVibe 하네스 +12.3%) — 10-06 요청 3 위반 ⇒ raw.md 📮 로 재요청했다.
+- ⚖️ **조건 B 블록이 없다** — 10-26 에 "볼트 보유 제외"로 걸러 낸 hallmark·cindy·TradingAgents 가 금일엔 들어왔다. 선발 기준이 바뀐 이유가 미기재 ⇒ 판정을 요청했다.
+- ✅ 모드·한정어 보존 양호: DynaFlow "Forced 모드" · thinkrail "확장 기능은 예정" · LTX "수치 확인 못 함".
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 크론 노트 7건 출처 재조회 **0회** ⇒ 전건 `reliability: low`. 미확인 명칭·주장: Snapdragon 9 Gen 3 · Anthropic Dreaming(5/6) · Atlas "인수" · 세제개편안 국회 통과 여부.
+2. 🔴 논문 5건 모두 **초록·README 까지만** 읽었다(본문 표 미열람). Trajectory2Gym 의 비교 기준과 DynaFlow 의 비-Forced 모드 수치는 미확인으로 남는다.
+3. 🔴 외부 코드 실행 0건이 이어진다.
+4. ⚖️ canvas 는 ai-news 만 갱신했다(금일 slam-3dgs·video-saas 접점은 소스 본문 링크로만 처리).
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 투고 결정 — 11-03 까지(D-7)** · 초록 11-10(D-14) · 논문 11-16(D-20) — 크론 CFP 노트 2회차 동일 값
+2. 크론 프롬프트 묶음 전달(날짜 대조 · "향후 90일 마감" 주제 · **쓰기 전 존재 확인/날짜 접미사**) — 덮어쓰기가 2일 연속 4건이다
+3. NRF FY2027 신진연구 접수창(12-03~12-16 추정) IRIS 실존 확인

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-10-14
+updated: 2026-10-27
 sources: []
 reliability: medium
 ---
@@ -436,3 +436,11 @@ created 2026-07-23 · lastModified 2026-10-02 · `license: other` · 제공 [[Li
 - 볼트 실측: HF API 2회 — `api/models/Lightricks/LTX-2.5`(HTTP 200) · `api/models?sort=trendingScore&limit=8`(HTTP 200)
 - raw 대비: ✅ **다운로드 1,724,548 정확히 동일** · ✅ **trendingScore 423 자리수까지 일치** · ✅ `gated: auto` · license other · 파이프라인 수치 **전건 일치** · ✅ **볼트 10-04 "카드 봉인" 판정 10일 만에 독립 재확증** · 🏆 **볼트 추가 3건**: ③→② **첫 이동 사례** 등재 · 같은 배치 반대 방향([[context-mode]])과 묶어 **"분류 = 탐색 깊이의 관측"** 결론 도출 · `gated: auto` 가 카드 봉인의 기술적 메커니즘임을 특정 · 🔴 **22B 는 간접 추론으로 격하**(safetensors None)
 - 신뢰도: ⭐⭐⭐ (지표 **정확히 일치** · 기능 변경점 명확 / 🔴 **벤치 수치 부재 확정 · 파라미터 미확정 · `siblings` 미확인**)
+
+## 🔄 2026-10-27 갱신 (인제스트 2026-10-27) — **13일에 30일창 +22.8% · 누적 480만 · 카드 수치 여전히 0건**
+
+**HF API 실측(2026-10-27T09:05Z · expand)**: `downloads`(30일) **2,117,147**(수집기 **정확히 일치**) · 🆕 `downloadsAllTime` **4,799,718** · likes **9,494**(수집기 9,493 · +1) · `gated: auto`(유지) · `lastModified` **2026-10-11**(16일 무변경)
+- 10-14 대비: 30일창 1,724,548 → **2,117,147(+22.8%)** · likes 7,687 → 9,494(+23.5%)
+- ✅ 수집기 *"모델 카드에 공개 벤치 수치는 확인 못 함"* — 10-14 볼트 판정(*게이트를 뚫은 결과가 "수치 없음"*)과 일치. **3배치 연속 수치 0건** ⇒ [[벤치마크-이미지-봉인]] 이 아니라 **수치 자체 미공개**.
+- 📌 수집기 신규 서술(1920×1088·121프레임 · 공간 업스케일 2회 → 3840×2176)은 카드 변경 없음(lastModified 10-11) 기준 기존 카드 내용 — 볼트 재열람 생략.
+- 🎯 [[video-saas]]: 동결 없이 성장 중인 유일한 오픈 오디오-비디오 생성 가중치 — 같은 배치 [[flux-3-image-klein-comfy]] 와 함께 Comfy 생태계 수요가 주도.

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, github-trending, finance-ai, multi-agent, trading, LLM, reinforcement]
 created: 2026-04-11
-updated: 2026-09-24
+updated: 2026-10-27
 sources: []
 reliability: high
 ---
@@ -90,3 +90,11 @@ reliability: high
 📌 그리고 PanWatch는 **노드별 진행률·비용을 자체 계측**한다(README 204·210행) — 프레임워크가 제품이 되면 **비용 가시성이 필수 기능이 된다**는 신호.
 
 ⚠️ 확인 범위: **GitHub API 실측**(★·forks·issues·pushed_at·license). 🔴 레포 README·코드 미열람(이번 갱신은 지표 교정 목적).
+
+## 🔄 2026-10-27 갱신 (인제스트 2026-10-27) — **33일 +8,376★ · 열린 이슈가 167 → 87 로 절반**
+
+**GitHub API 실측(2026-10-27T09:05Z)**: ★ **116,752**(수집기 116,743 · +9) · fork **22,364** · 🆕 open issues **87**(09-24: 167 → **−80**) · Apache-2.0 · pushed **10-27T08:43Z**(당일)
+- 09-24 ★108,376 → **+8,376 / 33일 ≈ 254/일** — 10만 돌파 후에도 둔화 없음.
+- ⚖️ 이슈 절반 감소는 정리(일괄 close)일 수도 해결일 수도 있다 — closed 사유 미확인.
+
+> [!insight] 같은 배치 [[DynaFlow]] 가 이 프레임워크의 설계 전제를 정면으로 비교 대상으로 만든다 — TradingAgents 는 **역할·순서를 사전 고정**(애널리스트→리서처 토론→트레이더→리스크→PM)하고, DynaFlow 는 **협업 구조 자체를 메인 에이전트가 매번 코드로 생성**한다. 금융 의사결정처럼 감사 추적이 필요한 영역에선 고정 구조가 오히려 장점일 수 있다(추정) — 수익성 미검증이라는 수집기 판단 유지.

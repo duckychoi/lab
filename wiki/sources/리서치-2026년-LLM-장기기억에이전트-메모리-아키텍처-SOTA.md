@@ -1,7 +1,7 @@
 ---
 title: "[리서치] 2026년 LLM 장기기억·에이전트 메모리 아키텍처 SOTA"
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-10-27
 topic: llm-long-memory   # 중복 판정 키 (제목 아님) — 2026-10-17 부여
 reliability: low   # 독립 검증 미실시
 author: research-agent
@@ -96,3 +96,74 @@ RATE(Recurrent Action Transformer with Memory): 학습된 메모리 임베딩, �
 > arXiv 4건(2604.01707 · 2603.07670 · 2603.21096 · ICLR 2026 proceedings)은 1차 자료지만, **medium.com · dev.to · atlan.com · graphlit.com 4건은 블로그/벤더 마케팅**이다.
 > 🔴 **"IDC 2026 추정 기업 업무앱 80% 코파일럿 내장 · Gartner 예측 40% 에이전트 통합"은 2차 인용의 2차 인용**이고 원 보고서 미확인 ⇒ **시장 수치로 쓰지 말 것.**
 > 🔴 **Mem0 의 91.6 / 93.4 는 자체 보고치**이며 독립 재현 미확인 → [[간판-지체]] 경계 대상.
+
+## 🔄 2026-10-27 — 크론 재생성본 (🔴 덮어쓰기 → git `68f3fe4` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 68f3fe4(10-26 커밋) 시점 판본이다. 크론이 2026-10-27 09:02 같은 파일명으로 덮어썼고, 볼트가 규약 ㉑(`git cat-file -e HEAD:<path>`)로 탐지·복원했다. 아래는 금일 재생성본과 금일 볼트 판정이다.
+
+> [!warning] 🔴 볼트 판정 (2026-10-27) — [[주제재생성-중복]] · 출처 재조회 0회
+> - `topic: llm-long-memory` 파일 수 **8 유지**(덮어쓰기 · 이전판 10-17)
+> - 🔴 'Anthropic Dreaming(5월 6일)' · 'Google Memory Bank(I/O 2026 5월 19일)' — 10-26 에 이어 **공식 발표 원문 미확인** · 2차 블로그(digitalapplied) 단일 경유
+> - 🔴 [[문서내-값충돌]]: 인사이트의 **'29.6~23.1 포인트 개선'** 중 29.6 은 상세 본문 어디에도 없다(상세엔 23.1 만)
+> - ⚖️ 'Harvey 작업 완료율 6배' 는 원문 스스로 '공급사 제공' 표기 — 자기보고
+> - 📌 Memori LoCoMo **81.95%** 는 arXiv 2603.19935 로 검증 가능 — 볼트 [[local-llm]] 메모리 아키텍처 비교 시 1회 조회 후보
+
+## 2026년 LLM 장기기억·에이전트 메모리 아키텍처 SOTA
+
+**핵심 3줄**
+- 
+Anthropic의 Dreaming(5월 6일 발표)은 에이전트 세션 간 비동기적으로 메모리를 재정리하는 해마-모델링 기반 메모리 통합 패러다임
+
+- 
+프로덕션 메모리는 의미론적·키워드·엔티티·그래프 기반 검색을 결합하며, 다중 신호 검색으로 개별 신호보다 성능 향상
+
+- 
+2025-2026 학습 기반 메모리 제어(Agentic Memory)가 주요 방향으로, RL 파이프라인으로 저장·검색·갱신·요약·폐기를 정책 액션화
+
+
+**상세**
+
+- **아키텍처 패턴**: 
+메인 컨텍스트(RAM), 회상 저장소(disk), 아카이브 저장소(콜드 스토리지) 세 계층 구조
+
+
+- **Anthropic Dreaming**: 
+세션 간 비동기 프로세스로 세션 트랜스크립트 검토, 패턴 추출, 중복 통합, 오래된 항목 교체, 새로운 메모리 작성 수행
+. 
+Harvey(법률 AI)는 활성화 후 작업 완료율 6배 향상 보고(공급사 제공)
+
+
+- **Google Memory Bank**: 
+I/O 2026(5월 19일)에서 Gemini Enterprise Agent Platform과 함께 출시, ADK 2.0(Agent Development Kit)과 동일 날짜 GA
+
+
+- **학습 기반 메모리 제어**: 
+AgeMem은 저장·검색·갱신·요약·폐기를 에이전트 정책의 호출 가능 도구로 취급, 강화학습으로 전체 파이프라인 최적화
+
+
+- **평가 벤치마크**: 
+Mem0의 LoCoMo, LongMemEval, BEAM 2026 메모리 벤치마크. 23.1 포인트 다중 홉 추론 개선
+
+
+- **멀티모달 메모리**: 
+WorldMemArena는 액션-월드 상호작용을 통한 멀티모달 에이전트 메모리 평가
+
+
+- **구조화된 표현**: 
+Memori는 LoCoMo에서 81.95% 달성, 비구조화 채팅 로그를 의미론적 트리플과 요약으로 변환하여 고신호 지식 분리
+
+
+- **보안·거버넌스**: 
+SSGM(안정성 및 안전성 거버 메모리) 프레임워크가 진화하는 LLM 에이전트 메모리 위험 관리
+
+
+**💡 인사이트/시사점**
+
+메모리 아키텍처의 패러다임이 "저장소 중심"에서 "활성 학습 기반"으로 전환되고 있습니다. Dreaming의 해마 모델링과 RL 기반 정책 학습은 인지과학 영감의 실제 구현을 보여줍니다. 다중 신호 검색 융합(29.6~23.1 포인트 개선)과 멀티모달·그래프 기반 표현이 SOTA를 주도하는 반면, 메모리 중독(유용한 메모리가 지속 갱신으로 훼손)과 보안은 미해결 과제입니다.
+
+**출처**
+- Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers — https://arxiv.org/html/2603.07670v1
+- AI Agent Memory 2026: Dreaming, Memory Bank, and the Long-Context Shift — https://www.digitalapplied.com/blog/ai-agent-memory-vector-graph-episodic-2026
+- State of AI Agent Memory 2026: Benchmarks & Trends — https://mem0.ai/blog/state-of-ai-agent-memory-2026
+- Always-On Agents: A Survey of Persistent Memory, State, and Governance in LLM Agents — https://arxiv.org/pdf/2606.30306
+- Memori: A Persistent Memory Layer for Efficient, Context-Aware LLM Agents — https://arxiv.org/html/2603.19935v1

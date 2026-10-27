@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, image-generation, flux, comfyui, repackaging, t2i, image-edit, gated, 배포형태수요, 계수기-배수]
 created: 2026-10-17
-updated: 2026-10-24
+updated: 2026-10-27
 sources: []
 reliability: medium
 ---
@@ -139,3 +139,16 @@ reliability: medium
 - https://github.com/huggingface/hub-docs/blob/main/docs/hub/models-download-stats.md (diffusers 필터)
 - 모델 페이지 HTML 1회(README raw 401)
 - 관측: 2026-10-24T09:06Z (18:06 KST)
+
+## 🔄 2026-10-27 갱신 (인제스트 2026-10-27) — **3일 만에 원본 대비 배수 5.06 → 5.88. 구간 증분 비는 12.4배**
+
+**HF API 실측(2026-10-27T09:05Z · expand)**: comfy `downloads` **700,652**(수집기 **정확히 일치**) = all-time(30일 창 이내 지속) · likes **1,723**(수집기 일치) · `lastModified` 10-17T07:10Z(10일 무변경) · 원본 [[flux-3-image-klein]] **119,172** · likes 728
+
+| 레포 | 10-24T09:06Z | **10-27T09:05Z** | 3일 증분 | 일평균 |
+|---|--:|--:|--:|--:|
+| **comfy** | 534,837 | **700,652** | +165,815 | ≈55,300 |
+| 원본 klein | 105,768 | **119,172** | +13,404 | ≈4,470 |
+
+- 원(raw) 배수: 4.86(10-17) → 5.06(10-24) → **5.88(10-27)** · 구간 증분 비 5.21 → **12.4** ⇒ **역전 폭이 가속**. 원본 일평균은 10-17~24 의 8,520 → **4,470 으로 반감**, comfy 는 44,400 → 55,300 으로 증가.
+- ⚖️ 10-24 볼트 지적 유지: comfy(`diffusion-single-file`)와 원본(`diffusers`)은 **계수 규칙이 달라** 배수를 사용자 수 비로 읽으면 안 된다 → [[계수기-배수]] · [[원본-파생-역전]]. 단 **같은 규칙 안의 시계열 변화**(원본 반감 · comfy 증가)는 규칙 차이로 설명되지 않는다 ⇒ **수요가 ComfyUI 패키지로 실제 이동 중**(추정 강도 중).
+- ✅ 수집기 요약(5.6B · Qwen3-VL-4B 텍스트 인코더 · 최대 10장 참조 · 0~1000 그리드 bbox · 16스텝 증류 · BF16/int8/NVFP4 · 업샘플러 필수 · 벤치 없음) — 10-24 판과 모순 없음.
