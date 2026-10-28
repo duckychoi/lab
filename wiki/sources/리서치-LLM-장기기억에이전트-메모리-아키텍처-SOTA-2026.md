@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)"
 created: 2026-10-24
-updated: 2026-10-25
+updated: 2026-10-28
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news, 크론노트, 주제재생성-중복, 볼트판정-2026-10-25]
@@ -96,3 +96,26 @@ LLM 에이전트 장기기억 보안: 메모리 라이프사이클 전반의 공
 - Memory for Large Language Models (Taxonomy) — arxiv.org/html/2607.25380
 - Mi-Memory: A Lifecycle Memory Framework — arxiv.org/pdf/2607.18975
 - MemChain: Learning Interpretable Memory Traces — arxiv.org/pdf/2607.24097
+
+## 🔄 2026-10-28 크론 갱신 (🔴 덮어쓰기 → git `88ef0a0` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 `88ef0a0`(10-27 커밋) 시점 판본(최종 갱신 10-25)이다. 크론이 2026-10-28 같은 파일명으로 덮어썼다(10-25 메타데이터형에 이어 **2번째**) → [[크론-덮어쓰기-소실]]. 금일판은 출처 목록이 **1건 뒤에서 잘렸다**(`2604.01707` 외 빈 항목).
+
+> [!warning] 🔴 볼트 판정 (2026-10-28) — [[주제재생성-중복]] `llm-long-memory` · 재조회 0회
+> - 📌 "**시간 쿼리 +29.6 · 다중홉 +23.1 포인트**" — 동주제 이전 노트 4건([[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026년-최신]] · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-현황-2026]] · [[리서치-2026년-LLM-장기기억에이전트-메모리-아키텍처-SOTA]] 등)과 **값 일치**. 🆕 금일판은 이를 **Mem0(2026년 4월) 다중신호 검색**에 귀속했다(이전 노트는 "벡터+BM25+엔티티 융합 검색" 으로만 서술). 🔴 여전히 **벤치마크·기준선·단위 미상** → [[단위-불일치]] · [[비매칭-비교]].
+> - ⚖️ 이전판(위 본문)의 정량 항목 Memori LoCoMo **81.95%**/1,294 토큰 · Mem0 Flat **72.9%**/1.44s p95 · 패턴별 66.9~72.9% 는 금일판에 없다 — 위 본문에 보존.
+> - 🔴 [[동일대상-분리오판]] 의심: "Agentic Memory(5개 작업 · 3단계 RL)" 와 "AgeMem(store/retrieve/update/summarize/discard 를 callable tool 로 RL 최적화)" 을 **별개 항목으로** 나열 — 작업 5종이 동일하다. 위 본문은 "AgeMem(AgentIC)" 하나로 적었다.
+> - 🔴 과장 의심: "Jamba 가 **무한 컨텍스트 윈도우**와 GPT-4급 정밀도" — 수치 없는 최상급 표현 · 공식 사양과 대조 안 함(미확인).
+> - ⚖️ '2026 SOTA' 범위 혼입 가능: RETRO · RAPTOR · MemWalker · MemoryBank 는 볼트 기억상 2021~2024 발표 항목이다(연도 재확인 필요).
+> - ⚖️ "Mem0 (2026년 4월)" 시점은 [[mem0ai]] 의 어느 릴리스/논문인지 미상.
+
+### 금일판 신규 항목 (2차 인용 · 미검증)
+- **다층 메모리**: working(최근 상호작용) · episodic(세션 요약) · semantic(엔티티 추상화) 3층으로 장기 대화 의미 표류 제어.
+- **Titans**: 단기 = 표준 어텐션 · 장기 = 신경 LTM 모듈(위 본문과 동일 방향) · 🆕 **Jamba**(Mamba+Transformer 교차 배치).
+- **정책 학습형 메모리**: 메모리 연산을 RL 액션으로 학습 — 사전 요약 같은 비자명 전략 발견 · **훈련 비용 큼**(한계 명시는 좋은 신호).
+- 🆕 **MemoryArena**: LoCoMo 에서 거의 만점인 모델이 MemoryArena 에서 **40~60% 로 급락** ⇒ 수동 회상 ↔ 행동 연계 메모리 사용의 간극. 🎯 이 노트에서 가장 쓸 만한 주장(벤치 포화 경고)이나 원 논문 미확인.
+- 🆕 **ClawVM**: 에이전트 메모리를 관리형 가상메모리로 — 페이지 테이블 · fault observer · writeback journal 로 결정론적·감사 가능. (동주제 [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026년-최신-동향]] 에도 등장)
+- 🆕 메모리 보안 서베이(Lin et al., 2026) · 벤치 MemBench · MemoryAgentBench · LoCoMo · LongMemEval · BEAM.
+
+> [!insight] 금일판의 유일한 신규 방향
+> **"LoCoMo 만점 ≠ 행동 메모리"** (MemoryArena 40~60%). [[에이전트-메모리-레이어]] 선택 시 LoCoMo 점수(위 Memori 81.95% 등)를 근거로 쓰면 안 된다는 반증 후보 — 단 원 논문 확인 전.

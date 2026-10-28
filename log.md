@@ -5118,3 +5118,43 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 투고 결정 — 11-03 까지(D-7)** · 초록 11-10(D-14) · 논문 11-16(D-20) — 크론 CFP 노트 2회차 동일 값
 2. 크론 프롬프트 묶음 전달(날짜 대조 · "향후 90일 마감" 주제 · **쓰기 전 존재 확인/날짜 접미사**) — 덮어쓰기가 2일 연속 4건이다
 3. NRF FY2027 신진연구 접수창(12-03~12-16 추정) IRIS 실존 확인
+
+## [2026-10-28] ingest | **대기 20건 전량 처리** (자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: ai-news 13 (자동수집 · PDRVLA·Rollback 은 slam-3dgs 접점) · 크론 7 = 신규 3(slam-3dgs 1 · general 2) · 기존 4파일 domain 유지
+- **분해**: 자동수집 **신규 7 · 갱신 6**(GitHub 3 [[hallmark]]·[[superpowers]]·[[impeccable]] + HF모델 3 [[Qwen3.8-27B]]·[[Qwen-Image-2.1-Uncensored-Quantized]]·[[LTX-2.5]]) · 크론 노트 **신규 3 · 🔴 덮어쓰기 4**(규약 ㉑ — HEAD 이전판 복원 + `🔄 2026-10-28` 병합 · numstat 삭제 1행 = `updated:` 만 ✅)
+- **추가 페이지**: **10개** (sources 7 [[ChronoReplay]]·[[The-Trinity]]·[[PDRVLA]]·[[Hy-Nomas]]·[[Rollback]]·[[ai-design-skills]]·[[openbot]] + 크론 신규 3) | **업데이트 페이지**: 소스 6 + 크론 4 + 기타 소스 2([[OVO-S-Bench]]·[[taste-skill]]) + concepts 6([[크론-덮어쓰기-소실]]·[[원본-파생-역전]]·[[월드모델]]·[[VLA]]·[[RSI-프레이밍]]·[[하네스-설계-축]]) + entities 3([[Tencent]]·[[Anthropic]]·[[Prime-Radiant]]) + domains 1([[ai-news]])
+- **페이지 수**: 1619 → **1629** ✅ `find wiki -name '*.md' | wc -l` (sources 1400 · entities 129 · concepts 92 · synthesis 4 · domains 4) · 증분 검산 통과
+- **canvas 업데이트**: **YES** — ai-news +14노드/+19엣지(허브 1 + 파일 13 · 교차 5 · 이전 배치 연결 1)
+- **actionable 추가**: **YES** — 5항목(최상 1: CVPR 2027 D-6/D-13/D-19 / 높음 1: 크론 프롬프트 수정(덮어쓰기+잘림) / 중간 2: Hy-Nomas 4090 실행 · arXiv ID 3건 / 낮음 묶음)
+- **독립 검증**: **13/13** — GitHub API 5 + README 5 · HF `api/papers` 5 + arXiv HTML 4 + 코드 레포 2 · HF `api/models` expand 3 + 원본 Qwen-Image-2.1 1
+- **위키링크 검사**: 금일 공용 파일 추가분 깨진 링크 **0** · 서브 페이지 신규 링크 0 (기존 본문의 기존 깨진 링크 5종은 미수정)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**헤드라인은 가장 좋은 조건의 값이다.** [[The-Trinity]] 의 +34/+26 은 Oracle 라우팅값이고(실배포 +32.2/+23.5), 28벤치 중 11개가 에이전트 자작이라 기존 17벤치만 보면 **+4.4** 다. [[PDRVLA]] 는 1위 격차가 전부 1점 미만이고 핵심 셀링포인트(지연 없음)의 수치가 없다. [[Hy-Nomas]] 는 공간기억에서 Genie 3 에 졌는데(승 13.3/패 30.0) 수집기 요약에서 빠졌다. 반대로 [[superpowers]] 는 릴리스노트에서 스스로 실패율(24/24 → 3/24)을 밝혔다 — 자백하는 소스가 오히려 신뢰도가 높다.
+
+### 🏆 주요 발견
+1. 🏆 **월드모델 3종 같은 날** — 생성([[Hy-Nomas]]) · 학습 시 교사([[PDRVLA]]) · 되감기 반사실 신용할당([[Rollback]], 되감기 단독 +11.21, 실로봇) → [[월드모델]] 축 3분화.
+2. 🔴 **[[RSI-프레이밍]] n=5** — The Trinity 도 "보고 이득 ≠ 일반 우위" 패턴.
+3. 🔴 **[[크론-덮어쓰기-소실]] 4일 연속**(2→3→4→4) · Beamforming **3일 연속** · NRF 는 생성 다음 날 · 🆕 크론 노트 3건 **출력 잘림**(출처 목록 소실).
+4. 📉 [[원본-파생-역전]] 수렴 — Uncensored-Quantized 원본 대비 16.9x → 11.2x · likes 비는 오히려 1.24 → 1.50(개념 페이지 패턴과 반대) · [[Qwen3.8-27B]] dl30 첫 감소.
+5. ⚖️ 디자인 스킬 규칙 충돌 — [[ai-design-skills]] 권장(Geist·그라디언트 헤드라인·em dash·opacity 0 페이드인)을 [[impeccable]] 이 slop 으로 판정. [[ai-design-skills]] 는 ★ 급등 구간에 2번째 스킬을 추가했다 제거했다.
+6. 🔴 [[openbot]] — 무승인 전권 실행 + 공개 8일 만에 Apache→PolyForm-NC + CLA.
+7. 🔴 볼트 자체 오차 1 — on-device·beamforming topic 파일 실측 6개를 10-26·27 판정이 "5 유지"로 적음(해당 섹션에 정정 기록).
+
+### 🔴 수집기 평가
+- ✅ 수치: dl 3/3 정확 일치 · ★ 드리프트 +5~+8(Hy-Nomas +54) · upvote PDRVLA +4.
+- 🔴 오류 4: LTX "fps·해상도 없음"(볼트 상태를 거꾸로 인용) · Qwen "8개 값"/"누적 효과" · Uncensored 방식 · superpowers "속도 느림".
+- 🔴 부정 결론 누락 3(3일 연속) ⇒ raw.md 📮 재요청.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 크론 노트 7건 출처 재조회 0회 ⇒ 전건 `reliability: low`. 잘린 3건은 출처 자체가 없다.
+2. 🔴 외부 코드 실행 0건(Hy-Nomas 포함).
+3. ⚖️ canvas 는 ai-news 만 갱신(slam-3dgs 접점은 본문 링크로만).
+4. ⚖️ [[Qwen-Image-2.1]] 페이지는 미갱신(10-03 값 유지 · 금일 원본 수치는 파생본 페이지에만 기록).
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 투고 결정 — 11-03 까지(D-6)** · 초록 11-10 · 논문 11-16 (3회차 동일 값)
+2. 크론 프롬프트 수정(쓰기 전 존재 확인 + 날짜 접미사 + 잘림 검사) — 4일 연속 덮어쓰기
+3. Hy-Nomas INT8 4090 실행 · arXiv ID 3건 조회로 Beamforming 값충돌 종결

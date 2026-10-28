@@ -55,3 +55,6 @@ reliability: low
 ## 관련 페이지
 - [[MJev-Spatial]] · [[RoTA-Bench]] · [[벤치마크-외부축]] · [[공간추론-벤치마크]]
 - [[리서치.md|크론 노트 humanoid-slam-vla 4회차]] · [[주제재생성-중복]]
+
+## 🔄 2026-10-28
+- [[PDRVLA]] — 미래 RGB·깊이·광류 특징 예측으로 물리 토큰을 만들어 VLA를 조건화한다(LIBERO 99.3 · 전부 시뮬 · 코드 없음) · [[Rollback]] — 월드모델 반사실 분기로 정책을 개선한다(실로봇) · [[ChronoReplay]] — 공간 VLM의 interface lock-in

@@ -70,3 +70,5 @@ reliability: high
 ## 🔄 2026-10-26 — [[sandbox-runtime]] (★6,647 · Beta Research Preview)
 - 컨테이너 없는 OS 네이티브 샌드박스(macOS `sandbox-exec` · Linux bubblewrap · **Windows 알파** — 수집기 "Windows 미지원"은 오류, README 원문 확인) · README 가 위협모델과 한계를 스스로 적는다 → [[자기제한-명시]].
 - 🎯 볼트 "외부 코드 실행 0건" 문제의 **격리 수단 후보** — actionable 참조.
+
+- 2026-10-28: [[The-Trinity]](NUS) — **동결된 Claude Opus 5** 백본 위에서 하니스만 재귀 진화시킨다(Base 39.06 → Oracle 73.16).

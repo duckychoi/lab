@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, design-system, ai-harness, frontend, claude-code, agent-skills, design-tokens]
 created: 2026-07-27
-updated: 2026-10-05
+updated: 2026-10-28
 sources: []
 reliability: high
 ---
@@ -100,3 +100,33 @@ reliability: high
 
 **검증**: `api.github.com/repos/pbakaus/impeccable` 실측
 **관련 추가**: [[SimuVerity]] · [[검사가능성-공사]] · [[표본순위-전수순위]]
+
+---
+
+## 🔄 2026-10-28 갱신 (인제스트 2026-10-28) — ★91,124 · 🏆 **규칙 목록을 5배치 만에 열었다(62개)** · 🔴 **주언어가 JavaScript → Rust로 바뀌었고, 볼트의 'topics 0' 기록 2건이 만료됐다**
+
+**GitHub API 실측(2026-10-28T09:10Z)**: ★**91,124**(수집기 91,116 · **+8**) · fork **5,399** · open issues **46** · **Apache-2.0** ✅ · created 2025-11-16 · pushed **2026-10-28T08:57:03Z**(관측 13분 전) · 주언어 🔴 **Rust** · topics 🔴 **5** · size **888,336KB** · watchers 200
+- 볼트 기준선 ★76,638(10-05) → **+14,486 / 23일 ≈ 630/일**(10-03 구간 ≈346/일의 1.8배).
+- 🔴 **만료 1 — "topics 0"(10-03·10-04 두 번 확증)**: 지금 `agent-skills, ai, anti-slop, design, slop` **5개**다. 10-03 결론 *"topics는 메인테이너가 그 칸을 채웠는지만 반영한다"* 는 오히려 강화된다. 메인테이너가 칸을 채우자 값이 바뀌었다. 다만 "impeccable은 topics 0"이라는 **사례 서술은 만료** → [[메타데이터-부재-추론]]에 시점 표기 필요.
+- 🔴 **만료 2 — 주언어 JavaScript**: GitHub languages API 바이트 기준 Rust 11.07MB · JavaScript 3.06MB · TypeScript 0.26MB. README: *"Every skill copy ships a small launcher… that runs the Impeccable engine, **a self-contained binary** that either sits next to the launcher or is **downloaded once on first run into `~/.impeccable/bin/`**. Node is only involved if you use the `npx impeccable` installer."* ⇒ **JS 스킬에서 Rust 엔진 + 런처 구조로 바뀌었다.** 릴리스도 `skill-v4.8.0` · `cli-v4.8.0` · `engine-v0.1.18`(10-26) 세 갈래로 나뉜다.
+
+> [!insight] 🏆 규칙 62개 목록 — 10-02부터 5배치 연속 "미열람"이던 항목 해소
+> 출처: `crates/live/assets/antipatterns.json`(23,755B, 데이터로만 읽음). **62개 = `slop` 31 + `quality` 31.** severity: 기본 44 · `advisory` 16 · **`error` 2**(`script-error`, `content-hidden-at-rest`).
+> - 📌 **error 2개는 둘 다 "취향"이 아니라 "깨짐"이다**: 스크립트 예외, 리빌 실패로 텍스트가 opacity 0에 남는 것. 슬롭 31개는 전부 기본 또는 advisory다. ⇒ impeccable도 hallmark Floor/Reflex처럼 **"깨짐은 차단, 취향은 권고"** 2층 구조다.
+> - 🎯 **벤더 이름이 붙은 규칙이 있다**: `gpt-thin-border-wide-shadow`(헤어라인 테두리 + 넓은 그림자 카드 행) · `codex-grid-background`(장식용 격자선 배경). 특정 모델/하니스의 생성 습관을 규칙 ID로 박제했다. 🔴 귀속 근거(정말 그 모델에서 더 자주 나오는지)는 파일에 없다.
+> - `overused-font` 대상: *"Inter, Roboto, Fraunces, **Geist**, Plus Jakarta Sans, Space Grotesk"*. ⇒ 10-03/10-04의 "Inter 가설"을 볼트가 검증하려면 이 6종을 세면 된다.
+> - 문구 규칙도 있다: `em-dash-overuse` · `marketing-buzzword` · `aphoristic-cadence` · `theater-slop-phrase`(*"Dismissing something as 'theater' is a recurring generated-copy tic"*). 시각 규칙만 있는 게 아니다.
+> - 🔴 **같은 배치 충돌**: [[ai-design-skills]] `landing-page-design`은 Geist를 **권장 폰트 1순위**로, 히어로 그라디언트 텍스트를 **필수**로 지시한다. 둘 다 이 규칙 세트에서 슬롭이다. [[hallmark]]의 tell 목록과는 `kicker-above-heading`·`hero-eyebrow-chip`·`wide-tracking`이 겹친다.
+
+> [!note] 📦 10-04 "size 384MB, 이유 모름" 중간 해소
+> 지금 `size`는 **888,336KB(≈868MiB, 10-04의 2.3배)**다. HEAD 트리 전체 blob 합계(재귀 트리 5,037항목, 잘림 없음)는 **86.4MB**뿐이다. ⇒ **`size`의 대부분은 현재 파일이 아니라 git 이력(팩)이다.** HEAD 기준 상위: `tests/` 16.6MB(2,375파일) · `crates/` 16.1MB(Rust 494파일, 최대 파일 `detect-antipatterns-browser.js` 3.2MB) · 그리고 **하니스별 스킬 복사본 23벌**(`.claude` `.cursor` `.codex`계 `.agents` `.gemini` `.grok` `.hermes` `.kiro` `.trae` `.veto` … 각 ≈2.2MB, `font-index.json` 1.1MB가 23번 중복). 🔴 이력 쪽 무엇이 큰지는 조회하지 않았다. 10-04 가설 ①(브라우저 확장 번들)·②(테스트 픽스처)·③(에셋)이 **모두 HEAD에 일부씩 있다**는 것까지만 확인했다.
+> 📌 23벌 복사본은 [[superpowers]] 10-03의 "README 열거 ≠ 유지되는 매니페스트" 구분에서 **②(실제로 파일을 유지)** 쪽 증거다. [[ponytail]] 9종보다 많다 → [[하네스-설계-축]].
+
+> [!warning] 🔴 수집기 요약이 빠뜨린 것
+> 1. **바이너리 다운로드**: 첫 실행 때 엔진 바이너리를 `~/.impeccable/bin/`에 내려받는다. "API 키 없이 돈다"는 맞지만 **네이티브 바이너리를 실행한다.** CI에 넣을 때는 버전 고정과 체크섬 확인이 필요하다(README에서 체크섬 언급은 확인하지 못했다).
+> 2. **프로젝트에 훅을 설치한다**: *"On Claude Code, Cursor, Codex, GitHub Copilot, and Grok Build, it also installs the provider-native hook manifest for the current project."* Codex는 `/hooks`에서 승인해야 하고 *"updates that change `.codex/hooks.json` can require approval again"*. 스킬 설치가 **편집 시점 훅 설치**까지 포함한다.
+> 3. 규칙 62개 중 **error는 2개뿐**이다. "62개 결정론 규칙으로 CI 차단"을 기대하면 안 된다. 대부분은 advisory이거나 severity 미지정이다.
+> 4. ✅ 수집기 서술 일치: 커맨드 24 · 규칙 62(10-05의 61에서 +1) · `/impeccable init` → `PRODUCT.md` · Anthropic `frontend-design`에서 출발(README *"Impeccable started from there"*).
+
+**검증**: `api.github.com/repos/pbakaus/impeccable` · `/languages` · `/git/trees/HEAD?recursive=1` · `/releases` · README 30,624B · `antipatterns.json` (전부 데이터로만 읽음, 🔴 미실행)
+**관련 추가**: [[ai-design-skills]] · [[hallmark]] · [[하네스-설계-축]] · [[메타데이터-부재-추론]] · [[검사가능성-공사]]

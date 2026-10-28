@@ -7588,6 +7588,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "2"
+		},
+		{
+			"id": "b1028-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-10-28 배치\n헤드라인 = 가장 좋은 조건의 값\nOracle · <1점 격차 · 지워진 패배 · 크론 덮어쓰기 4일 연속",
+			"x": -640,
+			"y": 47020,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1028-ai-news-0",
+			"type": "file",
+			"file": "wiki/sources/ChronoReplay.md",
+			"x": 60,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/The-Trinity.md",
+			"x": 520,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/PDRVLA.md",
+			"x": 980,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/Hy-Nomas.md",
+			"x": 1440,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/Rollback.md",
+			"x": 1900,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/ai-design-skills.md",
+			"x": 2360,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/openbot.md",
+			"x": 2820,
+			"y": 47020,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/hallmark.md",
+			"x": 60,
+			"y": 47280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/superpowers.md",
+			"x": 520,
+			"y": 47280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/impeccable.md",
+			"x": 980,
+			"y": 47280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-27B.md",
+			"x": 1440,
+			"y": 47280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Quantized.md",
+			"x": 1900,
+			"y": 47280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1028-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/LTX-2.5.md",
+			"x": 2360,
+			"y": 47280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -14171,6 +14311,158 @@
 			"fromSide": "bottom",
 			"toSide": "top",
 			"label": "10-26 → 10-27"
+		},
+		{
+			"id": "e1028-ai-news-0",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-0",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "interface lock-in"
+		},
+		{
+			"id": "e1028-ai-news-1",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "Oracle +34"
+		},
+		{
+			"id": "e1028-ai-news-2",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "시뮬 격차<1"
+		},
+		{
+			"id": "e1028-ai-news-3",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "공간기억 패"
+		},
+		{
+			"id": "e1028-ai-news-4",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "되감기 +11.21"
+		},
+		{
+			"id": "e1028-ai-news-5",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "스킬 1개"
+		},
+		{
+			"id": "e1028-ai-news-6",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "무승인 실행"
+		},
+		{
+			"id": "e1028-ai-news-7",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "★39,652"
+		},
+		{
+			"id": "e1028-ai-news-8",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "24/24 자백"
+		},
+		{
+			"id": "e1028-ai-news-9",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "규칙 62"
+		},
+		{
+			"id": "e1028-ai-news-10",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "dl30 첫 감소"
+		},
+		{
+			"id": "e1028-ai-news-11",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "11.2x 수렴"
+		},
+		{
+			"id": "e1028-ai-news-12",
+			"fromNode": "b1028-ai-news-hub",
+			"toNode": "b1028-ai-news-12",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "유일 증가"
+		},
+		{
+			"id": "e1028-ai-news-x24",
+			"fromNode": "b1028-ai-news-2",
+			"toNode": "b1028-ai-news-4",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "월드모델 교사 vs 되감기"
+		},
+		{
+			"id": "e1028-ai-news-x34",
+			"fromNode": "b1028-ai-news-3",
+			"toNode": "b1028-ai-news-4",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "월드모델"
+		},
+		{
+			"id": "e1028-ai-news-x59",
+			"fromNode": "b1028-ai-news-5",
+			"toNode": "b1028-ai-news-9",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "규칙 충돌"
+		},
+		{
+			"id": "e1028-ai-news-x57",
+			"fromNode": "b1028-ai-news-5",
+			"toNode": "b1028-ai-news-7",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "디자인 스킬"
+		},
+		{
+			"id": "e1028-ai-news-x1110",
+			"fromNode": "b1028-ai-news-11",
+			"toNode": "b1028-ai-news-10",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "Qwen 계열"
+		},
+		{
+			"id": "e1028-ai-news-prev",
+			"fromNode": "b1027-ai-news-hub",
+			"toNode": "b1028-ai-news-hub",
+			"fromSide": "bottom",
+			"toSide": "top",
+			"label": "10-27 → 10-28"
 		}
 	]
 }

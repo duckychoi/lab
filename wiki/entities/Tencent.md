@@ -84,3 +84,6 @@ reliability: high
 - [[WeVisOne-VL]] (WeChat Vision · 2B/4B · ★93): GitHub API `NOASSERTION` 인데 LICENSE 본문은 **Apache-2.0** — 위 벤더 규칙(서드파티 고지 병합 → 파서 실패)의 **3번째 재현**. 레포에 실코드·가중치 실존.
 - [[FAPL]] (Tencent Video 7인 참여): HF `organization`=tencent 이지만 **1저자·교신은 MMLab@HKUST** — 단일 org 필드가 주도 기관을 숨긴다 → [[복합지표-분해]]. 코드 레포는 README 만 → [[선언된-구현체-공백]].
 - [[IQuest-Q1]] 비교표에 [[Hy3]] 등장: Terminal-Bench 2.1 71.7 → 3.0 **3.0**(IQuest 자체측정 *).
+
+## 🔄 2026-10-28 추가
+- [[Hy-Nomas]] (Tencent Hunyuan · 8B 인터랙티브 월드모델 · ★328): GitHub API `NOASSERTION`, LICENSE 본문은 **Apache-2.0**(일부 서드파티는 Hunyuan Community License). 위 병합 고지 → 파서 실패 패턴이 다시 나타났다(10-24 기록의 3번째 재현 이후 추가 사례). 공간 기억에서는 Genie 3에 진다.

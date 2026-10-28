@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, code-quality, prompt-engineering]
 created: 2026-05-29
-updated: 2026-05-29
+updated: 2026-10-28
 sources: []
 reliability: medium
 ---
@@ -40,3 +40,6 @@ reliability: medium
 - 출처: https://github.com/Leonxlnx/taste-skill
 - 스타: 27,221 (2026-05-29 기준, +2,234 당일)
 - 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-10-28 (백링크)
+- ★**103,923**(2026-10-28 볼트 API 실측, 05-29 기록 27,221). 파생 사례: [[ai-design-skills]]의 `landing-page-design`이 이 레포의 content realism·motion·navigation 절을 MIT로 가져와 10-26에 다시 썼다고 명시한다(Credits).

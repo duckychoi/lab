@@ -102,3 +102,6 @@ reliability: medium
 ## 🔄 2026-10-26 — [[RSIHub]]: 동일 조건 비교가 처음 나왔다 (n=4 같은 방향)
 - AHE·Hyperagents·A-Evolve·GEPA 를 **공통 인프라에서 재구현**(ByteDance · 27 up · 코드 ★196). 최대 +13.5%p 는 **4×4 셀 중 1개**(MiniSWE·TB2) · 강한 시드(Codex)에선 TB2 최대 +2.2%p · A-Evolve 는 TB2 공동 1위인데 Banking·MiniSWE 전 split **+0.0** · sealed split **−2.1~−4.1%p 퇴행** · 1회 시행(저자 명시).
 - 🎯 볼트 RSI 계열 4건([[ModularRSI]] · [[RSIAgent]] · [[Physical-RSI]] · [[RSIHub]])이 **전부 '보고된 이득 ≠ 일반적 우위'** 방향. ⇒ 규칙 강화: 진화/RSI 기법 이득은 **시드 강도·벤치·sealed split** 3축을 확인하기 전 인용하지 않는다.
+
+## 🔄 2026-10-28 — [[The-Trinity]](NUS · 102 up · 코드 없음): 5번째 사례, 같은 방향
+- 헤드라인 +34/+26은 **Oracle 라우팅** 값(배포 가능한 self-routing은 +32.2/+23.5) · Train 28개 중 11개가 **에이전트가 직접 만든 벤치** · native 17개만 보면 **64.4→68.8(+4.4)** · 실로봇 2과제는 n=10. 규칙의 3축(시드 강도·벤치·sealed split)을 적용하면 이득이 크게 줄어든다.

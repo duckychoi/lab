@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, 오픈코어, 상업지원, agent-skills, 조직]
 created: 2026-09-26
-updated: 2026-09-26
+updated: 2026-10-28
 sources: [superpowers.md]
 reliability: low
 ---
@@ -22,3 +22,6 @@ reliability: low
 
 ## 관련 페이지
 - [[superpowers]] · [[mem0ai]] · [[에이전트-스킬]] · [[Anthropic]]
+
+## 🔄 2026-10-28
+- ✅ superpowers README `## Community`: *"Superpowers is built by Jesse Vincent and the rest of the folks at Prime Radiant"* — obra와의 관계가 원문으로 확인됐다. GitHub org `prime-radiant-inc`(2026-01-07 생성 · 공개 레포 57 · `superpowers-evals` ★139). 기본값 ON 버전 텔레메트리(로고 로드)도 이 조직 웹사이트로 간다 → [[superpowers]] 10-28 갱신. 반대 방향 상용화 사례: [[openbot]](비상업 라이선스 + CLA + Stripe).

@@ -48,3 +48,5 @@ reliability: high
 - arXiv: 2606.03890
 - 저자: InternLM
 - 신뢰도: ⭐⭐⭐⭐
+
+- 🔄 2026-10-28: [[ChronoReplay]] — Qwen3-VL-8B 대비 OVO-S **48.98→53.89**(adaptive frame selection을 쓰면 57.98)

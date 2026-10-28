@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-10-27
+updated: 2026-10-28
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -297,3 +297,24 @@ CNN을 이용한 희소 배열 설계가 광원·간섭각 범위에서 90% 이�
 - Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
 - Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration — https://arxiv.org/abs/2603.01623
 - Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.02447
+
+## 🔄 2026-10-28 크론 갱신 (🔴 덮어쓰기 → git `88ef0a0` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 `88ef0a0`(10-27 커밋) 시점 판본이다. 🔴 이 파일은 **10-26 · 10-27 · 10-28 3일 연속** 같은 파일명으로 덮어써졌다 → [[크론-덮어쓰기-소실]]. 아래는 금일판에서 새로 나온 항목과 값 대조만 적는다.
+
+> [!warning] 🔴 볼트 판정 (2026-10-28) — [[주제재생성-중복]] · arXiv ID 10개 · 재조회 0회
+> - `topic: neural-beamforming` 파일 수 **6 유지**(덮어쓰기 · `grep -l` 실측) — 🔴 10-26·10-27 판정의 "5 유지" 는 실측과 1 차이(볼트 계수 오차로 보임 · 원인 미확인).
+> - ✅ 핵심 수치 일관: STOI **97.65%** · SI-SNR **20.26dB** · 100mAh **약 20시간**(4개 회차 동일) · FID **142.48→100.45**(동일). 🔴 단 PESQ 3.676 · 45.9mW(10-27) · FLUX 4.79×/Wan2.1 4.67×(10-27) 는 금일판에 없다 — 위 본문에 보존.
+> - 🔴 [[문서내-값충돌]] **3일째 지속**: SCR 항목 `arXiv:2609.29505` 인데 본문 "(2026.8월)" — ID 접두 2609 는 9월. GNN 하이브리드 빔포밍 `2609.09708` ↔ PISD `2602.09708` 끝 5자리 동일도 그대로(금일판 출처 목록에 둘 다 있음).
+> - ⚖️ ID 표기 변동: Spectral Progressive Diffusion 은 10-26 판본에 `2605.18736` 으로 있었으나 금일판엔 ID 없이 본문에만 등장.
+> - 🔴 근거 없는 확장: 인사이트의 "**6G/양자 컴퓨팅** 등 차세대 응용으로 수렴" — 상세 본문에 양자 컴퓨팅 항목이 **하나도 없다** → [[한정어-탈락]] 의 반대(근거 없는 일반화).
+> - ⚖️ FID 100.45 는 CIFAR-10 기준으로 낮은 절대 수준 — 위 10-17 판정(기준선 축) 그대로 유효.
+
+### 금일판 신규 항목 (2차 인용 · 미검증)
+- **TNO(Topological Neural Operators)** 가 cell complex 위 PDE 학습 · Discrete Exterior Calculus 로 gradient/curl/divergence 차원 간 커플링 명시 · **Hierarchical TNO** 가 위상 종속 장거리 전파 — `2606.09806`(2026.6월) 🆕 ID.
+- **Learnable composition for neural operators** — composition-level 적응이 도메인 기하 변화에 따른 정확도 저하를 회복 — `2609.03069` 🆕 ID(10-27 판본엔 ID 없이 "구성 레벨 전이" 로만 있었다).
+- 카메라·LiDAR·RF pilot 멀티모달 빔포밍(`2609.21193`, 9월) · CNN 희소 배열 **90%+** 정확도 · GNN 하이브리드 빔포밍 imperfect CSI 강건 · 재학습 없이 멀티유저 확장 — 기존 항목 재서술.
+- Spectral Regularization(Fourier·wavelet 손실, `2603.02447`) · 단백질 동역학 스펙트럼 확산(`2607.04134`) — 기존 항목.
+
+> [!action] 검증 1회로 값충돌 2건 정리 가능
+> arXiv `2609.09708` · `2602.09708` · `2609.29505` 3건 abs 페이지만 조회하면 3일째 이월 중인 [[문서내-값충돌]] 2건이 닫힌다. → [[research-topics-ledger]] Neural Beamforming 스레드와 연결.

@@ -4685,3 +4685,31 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 ## [2026-10-27] 기타 낮음 항목
 - [[thinkrail]] 의 SPEC.md 그래프 + `spec_*` 도구 패턴을 볼트 위키 운영(CLAUDE.md·index.md)과 비교 · [[cindy]] open issues 2,066 을 `is:issue`/`is:pr` 로 분해 · [[DynaFlow]] 식 "오케스트레이터가 워크플로 코드 작성" 을 Claude Code 서브에이전트에 프롬프트 수준 1회 시험
 - **우선순위**: 낮음 · **상태**: 대기
+
+## [2026-10-28] 🗓️ CVPR 2027 — 투고 결정 11-03(D-6) · 초록 11-10(D-13) · 논문 11-16(D-19)
+- **도메인**: general
+- **출처**: [[리서치-2026년-주요-AI로봇-학회-논문-마감-및-CFP-일정]](크론 · low) — 11-10/11-16 이 **3개 회차 동일 값** ✅ · 🔴 본학회 날짜는 3종 충돌(6-20~24 / 6-20~25 / 6-22~25)
+- **할 것**: 11-03 까지 투고 여부 결정(이월 항목). 공식 CFP 원문에서 마감·본학회 날짜 1회 확정.
+- **우선순위**: 🔥 최상 · **상태**: 대기
+
+## [2026-10-28] 🔧 크론 프롬프트 수정 — 덮어쓰기 4일 연속 + 출력 잘림 3건
+- **도메인**: general (볼트 자체)
+- **출처**: [[크론-덮어쓰기-소실]]
+- **할 것**: 크론 리서치 프롬프트에 ① 쓰기 전 `test -e` → 존재 시 날짜 접미사 ② 출력 끝에 출처 목록 존재 확인(잘림 방지) 추가. 10-26·10-27 항목과 묶어 한 번에 집행.
+- **우선순위**: 높음 · **상태**: 대기
+
+## [2026-10-28] 🧪 Hy-Nomas INT8 를 RTX 4090 1장에서 실행
+- **도메인**: video-saas · slam-3dgs
+- **출처**: [[Hy-Nomas]]
+- **할 것**: Tencent Hunyuan 8B 인터랙티브 월드모델 INT8 가중치로 텍스트+카메라 다중 턴 생성 테스트(피크 20.53GiB 보고). dual_arm_robotics LoRA 로 로봇 데이터 생성 가능성 확인. Apache-2.0(일부 서드파티는 Hunyuan Community License).
+- **우선순위**: 중간 · **상태**: 대기
+
+## [2026-10-28] 🔍 arXiv ID 3건 조회 — Beamforming 노트 값충돌 3일째 이월
+- **도메인**: general
+- **출처**: [[리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026]]
+- **할 것**: `2609.09708` · `2602.09708` · `2609.29505` 실존·제목·월 확인 → 충돌 종결.
+- **우선순위**: 중간 · **상태**: 대기
+
+## [2026-10-28] 기타 낮음 항목
+- [[superpowers]] 설치 시 `SUPERPOWERS_DISABLE_TELEMETRY` 설정 · [[impeccable]] 바이너리 버전 고정 후 `overused-font` 규칙으로 Inter 가설 테스트 · [[ai-design-skills]] 는 Part A(인터뷰 질문)만 발췌, impeccable/hallmark 와 동시 설치 금지 · [[openbot]] 설치 금지(아키텍처 문서만) · [[hallmark]] 관점에서 reat-*/pptx 파이프라인의 Unsplash 자동 선택 여부 점검 · [[Qwen-Image-2.1-Uncensored-Quantized]] main/base 브랜치 `SHA256SUMS` 비교 · MemoryArena 원 논문 확인 · IRIS FY2027 신진연구 공고 확인(이월)
+- **우선순위**: 낮음 · **상태**: 대기

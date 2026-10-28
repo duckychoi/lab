@@ -4,12 +4,36 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-framework, skills, open-source, software-methodology, claude-code, 오픈코어, 런타임-이식]
 created: 2026-04-11
-updated: 2026-10-03
+updated: 2026-10-28
 sources: []
 reliability: high
 ---
 
 # obra/superpowers
+
+## 🔄 2026-10-28 갱신 (인제스트 2026-10-28) — ★306,797 · **v7 두 번의 릴리스 · 릴리스 노트가 스스로 밝힌 실패율 24/24 · 기본값 ON 텔레메트리**
+
+**GitHub API 실측(2026-10-28T09:10Z)**: ★**306,797**(수집기 306,792 · **+5**) · fork **27,309**(10-03 26,330 → +979) · open issues **365**(298 → +67) · **MIT** ✅ · created 2025-10-09 · pushed **2026-10-23T03:48:57Z** ✅(수집기 일치)
+- 볼트 기준선 ★294,627(10-03) → **+12,170 / 25일 ≈ 487/일**. 10-03 구간(≈405/일)보다 **빨라졌다**. 수집기 당일 +617도 25일 평균보다 높다.
+- 🔴 **수집기 해석 정정**: *"마지막 push가 10-23이라 당일증분이 낮다(위치는 크고 속도는 느림)"* 는 근거가 없다. ① 레포 자신의 최근 평균보다 오늘이 빠르다 ② push 날짜와 별 증분의 인과는 볼트 기록에서 이미 두 번 깨졌다(09-26 "정체" 판정 만료). "속도가 느리다"는 ★30만 대비 비율일 뿐이다. 📌 main 최신 커밋은 10-21 v7.0.1이다. 10-23 push는 다른 브랜치(`dev`, Contributing 절이 dev 브랜치 작업을 지시)로 보인다(미확인).
+
+**🆕 10-03 이후 새로 생긴 것 (릴리스 API 원문)**
+- **v7.0.0 (10-10)**: brainstorming을 처음부터 다시 만들었다. 작업 크기를 먼저 판정해 *"quick, clear task right away / small change agreed in chat / design document for a project"* 로 나눈다. 스펙 문서 리뷰어를 **"builder check"**(새 서브에이전트가 구현자 입장에서 남은 질문을 뽑는 방식)로 교체했다. Antigravity Marketplace 매니페스트를 추가했다. 동기 사례: *"a session designed an iOS app, never asked about platform, and built a web app."*
+- **v7.0.1 (10-21)**: 🔴 **부정적 결과를 릴리스 노트가 직접 적었다.** *"Many of you told us, rightly, that the new default questions **got annoying fast and felt formulaic**."* 그리고 *"in one of our test scenarios, it **skipped the doc without asking in 24 of 24 runs** before this change and **3 of 24 after**."* ⇒ v7.0.0 brainstorming은 한 시나리오에서 설계 문서 단계를 **100% 건너뛰었다.** 수정 후에도 12.5%가 남는다. 세 개의 긴 스킬을 *"better survive compaction on Claude Code"* 하도록 줄였다.
+- README에 **`diagnosing-superpowers`** 스킬(세션 트랜스크립트를 읽고 줄 단위 근거로 무엇이 잘못됐는지 보고·익명화 번들 생성)과 **`executing-plans`**(서브에이전트 없이 인라인 실행 + 마지막 1회 리뷰, *"cheapest"*)가 명시됐다. ⇒ 서브에이전트 주도 개발이 **유일 경로가 아니게 됐다.**
+- 평가 하네스: *"Skill-behavior tests use the drill eval harness from `prime-radiant-inc/superpowers-evals`"*(★139, 볼트 확인). ⚖️ 07-26 이래 미해소였던 *"that works" 정량 근거 미제시*에 대해 **평가 도구의 존재는 확인됐다.** 결과 수치 공개는 위 24/24·3/24 한 건뿐이다.
+
+> [!warning] 🔴 수집기 요약이 빠뜨린 것
+> 1. **텔레메트리가 기본값 ON이다.** README `## Visual companion telemetry`: brainstorming 비주얼 컴패니언의 Prime Radiant 로고가 *"loaded from our website. It includes the version of Superpowers in use."* 프로젝트·프롬프트 내용은 보내지 않는다고 적혀 있다. 끄기: `SUPERPOWERS_DISABLE_TELEMETRY` 또는 Claude Code의 `DISABLE_TELEMETRY` / `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC`.
+> 2. **v7.0.1의 24/24 실패 수치**(위). 수집기의 "검증된 워크플로 템플릿이라 실용성이 높다"는 평가와 정면으로 긴장하는 1차 자료인데 요약에서 빠졌다 → [[인용-부호]] 계열 "부정적 결론 누락" 사례.
+> 3. 기여 정책: *"we don't generally accept contributions of new skills"* · *"We also don't accept agent-written PRs that fix issues filed by someone else unless a maintainer asked"* · PR 템플릿에 *"the summary a human writes in their own words"* 필수(10-20 커밋). 에이전트 스킬 레포가 **에이전트가 쓴 PR을 막는** 정책이다.
+> 4. 🔴 **볼트 자체 기록 정정**: 아래 「도메인별 추출」의 *"전임 커뮤니티 엔지니어까지 채용 중"* 은 **만료**됐다. 07-27 커밋 *"docs: remove the "We're Hiring" section from the README"*. 3개월 동안 볼트가 낡은 주장을 유지했다.
+> 5. ✅ 볼트 미해결 해소: README `## Community`에 *"Superpowers is built by Jesse Vincent and the rest of the folks at **Prime Radiant**"*. obra와 [[Prime-Radiant]]의 관계가 README 원문으로 확인됐다(GitHub org `prime-radiant-inc` 2026-01-07 생성·공개 레포 57개).
+
+- ✅ 런타임 목록은 10-03과 같은 **16종**(수집기 "16종 이상" 일치). Muse 설치 절이 가장 길다.
+- 🔵 [[openbot]](같은 배치)이 Claude Code·Codex·OpenCode 등 7개 CLI를 묶는 관리 계층이라면, superpowers는 각 CLI **안에서** 프로세스를 강제하는 층이다. 둘은 겹치지 않는다.
+
+**관련 추가**: [[Prime-Radiant]] · [[openbot]] · [[인용-부호]] · [[에이전트-스킬]]
 
 > [!update] 2026-10-03 갱신 — ★294,627 (볼트 실측) · 🎯 **"명시"와 "유지"의 차이가 같은 배치에서 드러났다**
 > **볼트 독립 실측 ★294,627** ↔ 수집기 ★294,623 = **드리프트 +4**. 볼트 베이스라인 ★291,794(2026-09-26 실측) → **+2,833 / 7일 = 일평균 ≈405**.
