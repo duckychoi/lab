@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [video-saas, ai-news, 대학, 연구기관]
 created: 2026-10-15
-updated: 2026-10-15
+updated: 2026-10-29
 sources: [ATAS.md]
 reliability: medium
 ---
@@ -25,3 +25,4 @@ reliability: medium
 - [[ATAS]] — 등재 계기(월드스테이트 중심 에이전틱 영상생성)
 - [[Zhejiang-University]] · [[Monash-University]] · [[Adelaide-University]] — 공동 소속
 - [[video-saas]] · [[ai-news]]
+- [[DTCA]] — ZJU-OmniAI · 확산 언어모델 RL 토큰 신용할당(2026-10-29 · upvote 256 당일 1위)

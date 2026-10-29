@@ -7728,6 +7728,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-10-29 배치\n'최대'와 '베이스 대비'가 헤드라인을 만든다\n한정 조건 누락 4 · SHA256 이월 해소 · 크론 덮어쓰기 5일 연속",
+			"x": -640,
+			"y": 47600,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1029-ai-news-0",
+			"type": "file",
+			"file": "wiki/sources/DTCA.md",
+			"x": 60,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/Falcon-AVTSE.md",
+			"x": 520,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/Sensorimotor-Alignment.md",
+			"x": 980,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/OmniShowcase.md",
+			"x": 1440,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/TAO-Agentic-Serving.md",
+			"x": 1900,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/thinkrail.md",
+			"x": 2360,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/ai-design-skills.md",
+			"x": 2820,
+			"y": 47600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/superpowers.md",
+			"x": 60,
+			"y": 47860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/DeepTutor.md",
+			"x": 520,
+			"y": 47860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/hallmark.md",
+			"x": 980,
+			"y": 47860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-27B.md",
+			"x": 1440,
+			"y": 47860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/LTX-2.5.md",
+			"x": 1900,
+			"y": 47860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1029-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Quantized.md",
+			"x": 2360,
+			"y": 47860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -14463,6 +14603,152 @@
 			"fromSide": "bottom",
 			"toSide": "top",
 			"label": "10-27 → 10-28"
+		},
+		{
+			"id": "e1029-ai-news-0",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-0",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "베이스 대비 +9.0"
+		},
+		{
+			"id": "e1029-ai-news-1",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "실녹음 SOTA 부재"
+		},
+		{
+			"id": "e1029-ai-news-2",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "상관계수 없음"
+		},
+		{
+			"id": "e1029-ai-news-3",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "화질 competitive"
+		},
+		{
+			"id": "e1029-ai-news-4",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "지표별 기준선"
+		},
+		{
+			"id": "e1029-ai-news-5",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "3일 2.5배"
+		},
+		{
+			"id": "e1029-ai-news-6",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "커밋0 ★+1.3k"
+		},
+		{
+			"id": "e1029-ai-news-7",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "무푸시 6일"
+		},
+		{
+			"id": "e1029-ai-news-8",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "v1.7.0 L1→L3"
+		},
+		{
+			"id": "e1029-ai-news-9",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "50테마·8폭"
+		},
+		{
+			"id": "e1029-ai-news-10",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "30일창 2연속↓"
+		},
+		{
+			"id": "e1029-ai-news-11",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "누적 500만"
+		},
+		{
+			"id": "e1029-ai-news-12",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1029-ai-news-12",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "SHA256 11/11 상이"
+		},
+		{
+			"id": "e1029-ai-news-x0",
+			"fromNode": "b1029-ai-news-0",
+			"toNode": "b1028-ai-news-4",
+			"label": "신용할당 2연속"
+		},
+		{
+			"id": "e1029-ai-news-x1",
+			"fromNode": "b1029-ai-news-2",
+			"toNode": "b1028-ai-news-2",
+			"label": "VLA 평가"
+		},
+		{
+			"id": "e1029-ai-news-x2",
+			"fromNode": "b1029-ai-news-5",
+			"toNode": "b1029-ai-news-4",
+			"label": "병렬 에이전트↔서빙"
+		},
+		{
+			"id": "e1029-ai-news-x3",
+			"fromNode": "b1029-ai-news-8",
+			"toNode": "b1029-ai-news-4",
+			"label": "메모리/서빙"
+		},
+		{
+			"id": "e1029-ai-news-x4",
+			"fromNode": "b1029-ai-news-1",
+			"toNode": "b1029-ai-news-3",
+			"label": "video-saas 전처리↔생성"
+		},
+		{
+			"id": "e1029-ai-news-x5",
+			"fromNode": "b1029-ai-news-3",
+			"toNode": "b1029-ai-news-11",
+			"label": "상품 영상 파이프라인"
+		},
+		{
+			"id": "e1029-ai-news-x6",
+			"fromNode": "b1029-ai-news-hub",
+			"toNode": "b1028-ai-news-hub",
+			"label": "이전 배치"
 		}
 	]
 }

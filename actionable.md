@@ -4708,8 +4708,38 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **도메인**: general
 - **출처**: [[리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026]]
 - **할 것**: `2609.09708` · `2602.09708` · `2609.29505` 실존·제목·월 확인 → 충돌 종결.
-- **우선순위**: 중간 · **상태**: 대기
+- **우선순위**: 중간 · **상태**: ✅ 완료(2026-10-29) — 3건 실존 · **충돌 아니었음(볼트 오판)** → [[거짓-이월]]
 
 ## [2026-10-28] 기타 낮음 항목
 - [[superpowers]] 설치 시 `SUPERPOWERS_DISABLE_TELEMETRY` 설정 · [[impeccable]] 바이너리 버전 고정 후 `overused-font` 규칙으로 Inter 가설 테스트 · [[ai-design-skills]] 는 Part A(인터뷰 질문)만 발췌, impeccable/hallmark 와 동시 설치 금지 · [[openbot]] 설치 금지(아키텍처 문서만) · [[hallmark]] 관점에서 reat-*/pptx 파이프라인의 Unsplash 자동 선택 여부 점검 · [[Qwen-Image-2.1-Uncensored-Quantized]] main/base 브랜치 `SHA256SUMS` 비교 · MemoryArena 원 논문 확인 · IRIS FY2027 신진연구 공고 확인(이월)
 - **우선순위**: 낮음 · **상태**: 대기
+
+## [2026-10-29] 🗓️ CVPR 2027 — ✅ **공식 CFP 로 마감 확정**: Paper Enrollment **11-10** · Submission **11-16** · Supp 11-23 (전부 AOE · 연장 없음) — 투고 결정 11-03 **D-5**
+- **도메인**: general
+- **출처**: https://cvpr.thecvf.com/Conferences/2027/CallForPapers (볼트 직접 조회 2026-10-29 · HTTP 200) · 🔴 금일 크론 노트 [[리서치-2026년-AI로봇-주요-학회-논문-마감-일정-현황]] 에는 CVPR 2027 일정이 **없다**
+- **할 것**: 11-03 까지 투고 여부 결정 → 투고 시 11-10 Enrollment(저자 목록 잠금 주의) 전에 공저자 확정. 리뷰 공개 2027-01-25 · 리버틀 01-25~02-01 · 최종 결정 02-25.
+- **왜 이것인가**: 크론 노트 3회차 동일 값(low)이 1차 출처로 처음 확정됐다. "초록"이 아니라 **Enrollment(등록)** 이 정확한 명칭이다.
+- **우선순위**: 🔥 최상 · **상태**: 대기
+
+## [2026-10-29] 🔧 크론 프롬프트 수정 — 덮어쓰기 **5일 연속** + 잘림 2건 + 노트 크기 절반
+- **도메인**: general (볼트 자체)
+- **출처**: [[크론-덮어쓰기-소실]]
+- **할 것**: 10-28 항목과 동일(쓰기 전 `test -e` → 날짜 접미사 · 출처 목록 존재 확인) + 🆕 에이전트 내레이션 줄("~조사하겠습니다") 출력 제외. 금일 노트 크기 7~8KB → 3~4KB 로 줄어든 원인 확인.
+- **우선순위**: 높음 · **상태**: 대기 (10-24 이후 미이행 6배치째)
+
+## [2026-10-29] 📚 DeepTutor 에 이 볼트를 학습 소스로 연결
+- **도메인**: local-llm · ai-news
+- **출처**: [[DeepTutor]] (v1.7.0 · Obsidian 볼트 RAG 연결 지원 · L1→L3 메모리)
+- **할 것**: 셀프호스팅 후 `/home/monday/vault/wiki` 를 Obsidian 소스로 붙여 "볼트 기반 Q&A·퀴즈"가 index.md 수동 탐색보다 나은지 1회 비교. L3 종합이 볼트 synthesis/ 와 어떻게 다른지 관찰.
+- **우선순위**: 중간 · **상태**: 대기
+
+## [2026-10-29] 🔍 초록 한정 조건 3건 본문 확인 (무비용)
+- **도메인**: ai-news
+- **출처**: [[Falcon-AVTSE]] · [[DTCA]] · [[Sensorimotor-Alignment]]
+- **할 것**: arXiv HTML 에서 ① Falcon RealSSA-Real 표 순위 ② DTCA 의 RL 기준선(diffu-GRPO 류) 대비 증분 ③ S² 상관계수 확인 → 각 페이지 reliability 재판정. 📌 10-29 교훈: 무비용 확인은 이월하지 말고 다음 배치 첫 작업으로.
+- **우선순위**: 중간 · **상태**: 대기
+
+## [2026-10-29] 기타 낮음 항목
+- [[OmniShowcase]] 코드(justin4ai/OmniShowcase) 공개 범위 확인 → 실사 상품 사진 3~4장으로 360° 테스트 가능성([[video-saas]]) · [[Qwen-Image-2.1-Uncensored-Quantized]] GGUF 헤더 range 요청으로 UC/base 메타데이터 비교(텐서 수정 여부) · [[thinkrail]] 병렬 에이전트 IDE 시험(Agent Skills 공유 확인)
+- **우선순위**: 낮음 · **상태**: 대기
+

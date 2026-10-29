@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-10-26
+updated: 2026-10-29
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -581,3 +581,7 @@ _소스 ingest 시 자동 누적_
 ## 🔄 2026-10-26 배치
 - 🆕 [[RynnUnify]] — DAMO 16B 통합 임바디드(Cosmos3 Nano 기반 MoT) · +9.75 = **자기 베이스 대비** · RoboCasa365 **20선별** 과제 51.5% · 가중치 3종 HF 공개 → [[VLA]] · [[임바디드-AI]]
 - 📚 크론 노트 [[리서치-휴머노이드-로봇-VLASLAM로컬LLM-제어의-2026-최신-동향]] — humanoid 주제 12번째 파일 · 1차 논문은 오늘 자동수집 쪽에 있다
+
+## 🔄 2026-10-29 배치
+- 🆕 [[Sensorimotor-Alignment]] — 표현이 물리 운동 궤적 기하와 정렬되는가(S²) → VLA 백본 오프라인 선별 · 🔴 상관계수 미공개 → [[VLA]]
+- 📚 크론 노트 [[리서치-휴머노이드-로봇의-VLA로컬LLMSLAM-기반-제어-2026년-최신-동향]] — humanoid 주제 15번째 · 🔴 출처 URL 잘림 · LIN-SLAM · UniSim-SLAM(UNIST)

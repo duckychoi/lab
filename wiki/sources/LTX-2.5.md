@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-10-28
+updated: 2026-10-29
 sources: []
 reliability: medium
 ---
@@ -476,3 +476,25 @@ created 2026-07-23 · lastModified 2026-10-02 · `license: other` · 제공 [[Li
 - 볼트 실측: HF API expand + base(`cardData`·`tags` 29개) · `api/models?sort=trendingScore&limit=15`(7위) · `raw/main/README.md`(401) · HTML 페이지(200 · 238,333 B · 카드 본문 재스캔)
 - raw 대비: ✅ 30일·누적·likes·2.26배·트렌딩 7위·태그 11종·9개 언어·arXiv·라이선스·게이트·lastModified **전건 일치** · ✅ 벤치 0건 일치 · 🔴 **"fps·해상도 없음" 오류 + 볼트 상태 반대 인용**
 - 신뢰도: ⭐⭐⭐ (지표 전건 일치 / 🔴 품질 벤치 미공개 · 실행 테스트 0건)
+
+## 🔄 2026-10-29 갱신 (인제스트 2026-10-29) — **30일창 +3.3% · 배치 3건 중 유일한 성장 2일째 · 수집기가 이번엔 '벤치 확인 불가'로 정확히 적었다**
+
+**HF API 실측(2026-10-29T09:06Z · expand)**: `downloads`(30일) **2,234,788**(수집기 **정확히 일치**) · `downloadsAllTime` **5,003,838**(일치 · 🎯 **누적 500만 돌파**) · likes **9,763**(일치) · `trendingScore` **400**(일치) · 목록 API **9위** · `gated: auto` · `lastModified` **2026-10-11T07:00:53Z**(18일 무변경)
+**카드**: `raw/main/README.md` **401 / 126 B**(게이트 — 10-14·10-28 과 동일)
+
+| 지표 | 10-27 | 10-28 | **10-29** | Δ(1일) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 2,117,147 | 2,163,739 | **2,234,788** | +71,049 (+3.3%) |
+| 누적 다운로드 | 4,799,718 | 4,885,703 | **5,003,838** | +118,135 |
+| likes | 9,494 | 9,617 | **9,763** | +146 |
+| 누적/30일 | 2.27배 | 2.26배 | **2.24배** | — |
+
+- 🎯 같은 배치 3건 중 30일창이 오르는 **유일한 모델 2일째**([[Qwen3.8-27B]] −0.09% · [[Qwen-Image-2.1-Uncensored-Quantized]] −0.8%). 성장률도 +2.2% → +3.3% 로 **가속**.
+- ✅ 수집기 서술: "카드는 게이트라 벤치 수치는 확인하지 못함" — 볼트 판정(벤치 0건)과 일치하고, 10-28 의 **"fps·해상도 없음" 오류는 반복되지 않았다** ✅. 다만 정확한 원인은 "게이트" 가 아니라 **카드에 벤치 표가 원래 없음**(HTML 페이지 재스캔 · 10-14·10-28)이다 ⇒ 경미한 원인 오귀속 → [[무응답-오귀속]].
+- ✅ 태그(t2v·i2v·v2v·a2v·t2av …) · 9개 언어(ko 포함) · ComfyUI·diffusers single-file · LTX-2.x 커뮤니티 라이선스 — 10-28 `cardData` 실측과 일치.
+- 🔗 같은 배치 [[OmniShowcase]] — 다시점 → 3D 일관 피사체 영상. LTX-2.5(범용 AV 생성)와 결합하면 상품 영상 파이프라인의 "형태 일관성" 공백을 메울 후보([[video-saas]]).
+
+## 원본 (10-29 갱신)
+- 볼트 실측: HF API expand · `api/models?sort=trendingScore&limit=25`(9위) · `raw/main/README.md`(401)
+- raw 대비: ✅ 30일·누적·likes·trendingScore **전건 일치** · ⚖️ 벤치 부재 원인을 "게이트"로 귀속(경미)
+- 신뢰도: ⭐⭐⭐

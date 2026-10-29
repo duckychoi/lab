@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-10-28
+updated: 2026-10-29
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -318,3 +318,23 @@ CNN을 이용한 희소 배열 설계가 광원·간섭각 범위에서 90% 이�
 
 > [!action] 검증 1회로 값충돌 2건 정리 가능
 > arXiv `2609.09708` · `2602.09708` · `2609.29505` 3건 abs 페이지만 조회하면 3일째 이월 중인 [[문서내-값충돌]] 2건이 닫힌다. → [[research-topics-ledger]] Neural Beamforming 스레드와 연결.
+
+## 🔄 2026-10-29 크론 갱신 (🔴 덮어쓰기 → git `b33bbcc` 이전판 복원 후 병합)
+
+> [!note] 위 본문은 `b33bbcc`(10-28 커밋) 시점 판본이다. 🔴 이 파일은 **10-26 · 10-27 · 10-28 · 10-29 4일 연속** 같은 파일명으로 덮어써졌다 → [[크론-덮어쓰기-소실]]. 금일판은 4,261 B(이전판 대비 본문 262행 삭제 상태로 배달).
+
+> [!warning] 🔴 볼트 판정 (2026-10-29) — [[주제재생성-중복]] · arXiv ID 7개 · 재조회 0회
+> - `topic: neural-beamforming` 파일 수 **6 유지**(덮어쓰기라 증가 없음).
+> - ✅ **[[문서내-값충돌]] 종결 — 볼트 오판이었다**(아래 action 박스 참조). GNN 빔포밍 `2609.09708` · PISD `2602.09708` 둘 다 실존하는 별개 논문이고, SCR `2609.29505` 는 금일판에서 ID 가 빠졌지만 arXiv 상 **8월 24일 제출**이다.
+> - ✅ 일관 수치: FID **142.48→100.45**(5회차 동일) · FLUX.1 **4.79×** / Wan2.1-14B **4.67×**(10-27 판본 값이 금일 **재등장** · CVPR 2026 귀속 첫 표기). CNN 희소 배열 **90%+** 동일.
+> - 🔴 이전판의 MCU 빔포밍 핵심 수치(STOI 97.65% · SI-SNR 20.26dB · 100mAh 약 20시간)는 금일판에 **없다** — 위 본문에만 보존.
+> - 🆕 금일판 신규(미검증): Starter-Iterator Neural Operator `2606.18305` · Kuramoto Neural Operator(8월) · 대기화학 MCM 신경 에뮬레이터(10월) · Jacobian 스펙트럼 정규화 warm-start **3D 대규모 5.4배** · Inverse Neural Operator(조건부 FNO + Cross-Attention) · THz 초저전력 빔포밍 · ICASSP 2026 TF-bin 선형결합.
+> - 🔴 근거 없는 일반화 2회차: 인사이트 "6G/THz·과학 시뮬레이션·생성 모델 간 **기술 융합 가속**" — 본문은 세 분야를 나란히 나열할 뿐 교차 사례가 0건이다(10-28 "양자 컴퓨팅"과 같은 유형).
+
+> [!action] ✅ 2026-10-29 집행 완료 — arXiv abs 3건 조회 (HTTP 200 × 3)
+> | ID | 제목 | 제출일 | 판정 |
+> |---|---|---|---|
+> | `2609.09708` | Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming Optimization | 2026-09-09 | ✅ 실존 · 노트 서술 일치 |
+> | `2602.09708` | Physics-informed diffusion models in spectral space | 2026-02-10 | ✅ 실존 · 노트 서술 일치 |
+> | `2609.29505` | Spectral-Guided Diffusion: Accelerating Inference via Static Spectral Layer Scheduling | **2026-08-24** | ✅ 노트의 "(2026.8월)" 가 **맞았다** |
+> 🔴 **볼트 자기 정정**: 10-26~28 3일간 이월한 "값충돌 2건"은 둘 다 충돌이 아니었다. ① 끝 5자리 동일은 **우연의 일치**(별개 논문 2편) ② "ID 접두 2609 = 9월인데 본문은 8월" 은 볼트가 **ID 접두 = 제출월**이라고 가정한 탓이다 — 실제 제출일은 8-24(접두와 제출월이 어긋나는 경우가 있다). ⇒ 근거 확인 없이 3배치 이월한 **볼트 쪽 [[거짓-이월]]**. 조회 1회(무비용)로 닫힐 일을 3일 미뤘다.

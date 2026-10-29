@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agentic-ide, coding-agent, pi, jetbrains, git-worktree, spec-driven, agent-skills]
 created: 2026-10-27
-updated: 2026-10-27
+updated: 2026-10-29
 sources: [https://github.com/JetBrains/thinkrail]
 reliability: medium
 ---
@@ -40,3 +40,18 @@ reliability: medium
 ## 원본
 - README https://raw.githubusercontent.com/JetBrains/thinkrail/HEAD/README.md (볼트 열람 · 앞 5,000자)
 - 볼트 실측(2026-10-27T09:05Z UTC): ★3,360 · fork 179 · issues 226 · Apache-2.0
+
+## 🔄 2026-10-29 갱신 (인제스트 2026-10-29) — **3일 만에 ★2.5배 · 트렌딩 daily 1위. 10-26 수집기가 '증분 하위'로 탈락시킨 레포다**
+
+**GitHub API 실측(2026-10-29T09:06Z)**: ★ **5,534**(수집기 5,527 · **+7**) · Apache-2.0 ✅ · pushed **2026-10-29T08:46:50Z**(관측 20분 전)
+
+| 관측 | ★ | 비고 |
+|---|---:|---|
+| 10-26 (수집기 조건 B) | 2,183 | +51/일 · 증분 하위로 **탈락** |
+| 10-27 (볼트) | 3,360 | — |
+| **10-29 (볼트)** | **5,534** | 수집기 +1,068 today · daily **1위** |
+
+- 🎯 **[[선발창-누락]] 사례**: 10-26 수집기는 당일 증분(+51)으로 걸러냈는데 사흘 뒤 1위가 됐다. 증분순 선발은 "점화 직전" 레포를 놓친다 — 탈락 목록을 기록해 둔 조건 B 블록 덕분에 볼트가 이 궤적을 복원할 수 있었다.
+- ✅ README 대조(17,712 B): `pi` 코딩 에이전트 기반(→ [[pi-agent-harness]]) · git **worktree** 격리 워크스페이스(5회 언급) · `SPEC.md` + `spec_*` 도구 · Agent Skills 호환 — **수집기 서술 전건 일치.**
+- ⚖️ 수집기 "Claude Code 와는 별개 생태계" — 맞다(엔진이 pi). 다만 Agent Skills 를 그대로 읽으므로 **스킬 자산은 공유된다**.
+- 🔗 같은 배치 [[TAO-Agentic-Serving]] — 한 머신에서 병렬 에이전트가 도구 대기 중 KV/GPU 를 어떻게 나눌지의 서빙 측 문제.

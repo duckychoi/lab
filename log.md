@@ -5158,3 +5158,44 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 투고 결정 — 11-03 까지(D-6)** · 초록 11-10 · 논문 11-16 (3회차 동일 값)
 2. 크론 프롬프트 수정(쓰기 전 존재 확인 + 날짜 접미사 + 잘림 검사) — 4일 연속 덮어쓰기
 3. Hy-Nomas INT8 4090 실행 · arXiv ID 3건 조회로 Beamforming 값충돌 종결
+
+## [2026-10-29] ingest | **대기 20건 전량 처리** (자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: ai-news 13 (자동수집 · OmniShowcase→video-saas · TAO→local-llm · Sensorimotor→slam-3dgs 접점) · 크론 7 = 신규 5(general 3 · local-llm 1 · slam-3dgs 1) · 덮어쓰기 2파일 domain 유지
+- **분해**: 자동수집 **신규 5 · 갱신 8**(GitHub 5 [[thinkrail]]·[[ai-design-skills]]·[[superpowers]]·[[DeepTutor]]·[[hallmark]] + HF모델 3 [[Qwen3.8-27B]]·[[LTX-2.5]]·[[Qwen-Image-2.1-Uncensored-Quantized]] 전부 볼트 보유) · 크론 노트 **신규 5 · 🔴 덮어쓰기 2**(규약 ㉑ — `b33bbcc` 복원 + `🔄 2026-10-29` 병합 · numstat 삭제 각 1행 = `updated:` 만 ✅)
+- **추가 페이지**: **10개** (sources 5 [[DTCA]]·[[Falcon-AVTSE]]·[[Sensorimotor-Alignment]]·[[OmniShowcase]]·[[TAO-Agentic-Serving]] + 크론 신규 5) | **업데이트 페이지**: 소스 8 + 크론 2 + concepts 7([[한정어-탈락]]·[[지표-창길이]]·[[원본-파생-역전]]·[[선발창-누락]]·[[크론-덮어쓰기-소실]]·[[문서내-값충돌]]·[[거짓-이월]]) + entities 1([[Zhejiang-University]]) + domains 4
+- **페이지 수**: 1629 → **1639** ✅ `find wiki -name '*.md' | wc -l` (sources 1410 · entities 129 · concepts 92 · synthesis 4 · domains 4) · 증분 검산 통과
+- **canvas 업데이트**: **YES** — ai-news +14노드/+20엣지(허브 1 + 파일 13 · 교차 6 · 이전 배치 연결 1) · 순수 추가(삭제 0행)
+- **actionable 추가**: **YES** — 5항목(최상 1: CVPR 2027 공식 CFP 확정 D-5 / 높음 1: 크론 프롬프트 수정 / 중간 2: DeepTutor×볼트 · 초록 한정 조건 3건 본문 확인 / 낮음 묶음) · 10-28 arXiv ID 항목 **완료** 처리
+- **독립 검증**: **13/13** — GitHub API 5 + README 5 + 릴리스 API 2 · HF `api/papers` 5 · HF `api/models` expand 4(원본 Qwen-Image-2.1 포함) + 트렌딩 목록 + 카드 4 + SHA256SUMS 2 · arXiv abs 3 · CVPR 2027 CFP 1
+- **위키링크 검사**: 금일 신규 페이지·추가분 깨진 링크 **0**
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**"최대"와 "베이스 대비"가 헤드라인을 만든다.** [[DTCA]] +9.0 은 베이스 모델 대비라 RL 고유 기여가 안 보이고, [[TAO-Agentic-Serving]] 세 수치는 지표마다 다른 기준선이며, [[Falcon-AVTSE]] 는 "현실 장면"이 셀링포인트인데 자기 실녹음셋 순위를 초록에 쓰지 않았다. 수집기는 숫자를 정확히 옮겼지만 이 조건들을 놓쳤다. 그리고 볼트도 같은 실수를 했다 — Beamforming "값충돌"을 3일 이월했는데, abs 조회 1회로 **충돌이 아님**이 드러났다(ID 접두 = 제출월이라는 가정이 틀림). **확인 비용이 0 이면 판정 전에 확인한다.**
+
+### 🏆 주요 발견
+1. 🏆 **[[Qwen-Image-2.1-Uncensored-Quantized]] SHA256 대조** — UC 11종 전부 base 와 해시 상이(크기 같은 4종 포함) ⇒ "original upstream base weights" 문구와 파일 수준 불일치 · 텐서 수정 여부는 미확정 · 역전 배수 10.9배(재검토선 10배).
+2. 🗓️ **CVPR 2027 공식 CFP 확정** — Enrollment 11-10 · Submission 11-16 · Supp 11-23 AOE(연장 없음). 크론 노트 low 값이 1차 출처로 처음 확인됨. 금일 크론 학회 노트엔 CVPR 2027 일정이 **없다**.
+3. 🔴 **볼트 자기 정정** — Beamforming 값충돌 2건 = 볼트 오판 → [[거짓-이월]] · [[문서내-값충돌]] 규약 보강.
+4. 📈 [[thinkrail]] 3일 만에 ★2.5배 · daily 1위 — 10-26 수집기가 증분 하위로 탈락시킨 레포 → [[선발창-누락]] 시간형 사례. [[ai-design-skills]] 는 커밋 0 에 ★+1,293.
+5. 📉 [[Qwen3.8-27B]] 30일창 2회 연속 하락(누적 유입은 가속) → [[지표-창길이]] 등재 · [[LTX-2.5]] 누적 500만 · 배치 유일 성장 2일째.
+6. 🎬 [[OmniShowcase]] — 상품 360° 영상 직결 후보 · 단 학습·평가 모두 3D 에셋 렌더(실사 전이 미확인).
+7. 🔴 [[크론-덮어쓰기-소실]] **5일 연속**(2건) · 잘림 2건 · 노트 크기 절반(7~8KB → 3~4KB) · 7건 전부 에이전트 내레이션 유출.
+
+### 🔴 수집기 평가
+- ✅ 수치: dl 3/3 정확 일치 · ★ 드리프트 +3~+8 · upvote +0~+1 · README 서술 5/5 근거 있음.
+- ✅ 10-28 지적 반영 3건(LTX fps · Qwen Opus 값 병기 · Uncensored 문구).
+- 🔴 누락 3: Falcon 실녹음 SOTA 부재 · OmniShowcase 코드 레포·화질 한정 · TAO 지표별 기준선 ⇒ raw.md 📮 요청.
+- ⚖️ 측정 조건·조건 B 블록 미복구.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 크론 노트 7건 출처 재조회 0회(Beamforming arXiv 3건 제외) ⇒ 전건 `reliability: low`.
+2. 🔴 논문 5건은 초록만 확인(arXiv HTML 본문 미열람) — 한정 조건 3건 본문 확인은 actionable 로 이월.
+3. 🔴 외부 코드 실행 0건 · UC/base 텐서 diff 미실시.
+4. ⚖️ canvas 는 ai-news 만 갱신(video-saas·local-llm·slam-3dgs 접점은 domain 페이지·본문 링크로만).
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 투고 결정 — 11-03 까지(D-5)** · Enrollment 11-10 · Submission 11-16 (✅ 공식 CFP 확정)
+2. 크론 프롬프트 수정(쓰기 전 존재 확인 + 날짜 접미사 + 잘림 검사 + 내레이션 제거) — 5일 연속 덮어쓰기
+3. 초록 한정 조건 3건 arXiv 본문 확인(무비용 — 다음 배치 첫 작업)

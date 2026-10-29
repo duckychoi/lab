@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skills, design, landing-page, claude-code, cursor, codex, anti-ai-slop, 파생]
 created: 2026-10-28
-updated: 2026-10-28
+updated: 2026-10-29
 sources: []
 reliability: medium
 ---
@@ -56,3 +56,11 @@ reliability: medium
 - 볼트 실측(GitHub API, 2026-10-28T09:10Z): ★10,275 (수집기 10,268 → **드리프트 +7**) · fork 739 · issues 7 · MIT ✅ · created 2026-07-29 ✅ · pushed 2026-10-27T16:02:10Z
 - 확인 범위: README 2,464B 전문 · SKILL.md 18,801B 섹션 구조와 B1·B5·B7·B8~B11 본문 · git tree 전체(파일 5개) · 커밋 8건 · 계정 공개 레포 목록. 🔴 미실행.
 - 신뢰도: ⭐⭐ (★1만이지만 스킬 1개·평가 없음)
+
+## 🔄 2026-10-29 갱신 (인제스트 2026-10-29) — **커밋 없이 하루 ★+1,293. `Design-to-motion` 레포는 여전히 404**
+
+**GitHub API 실측(2026-10-29T09:06Z)**: ★ **11,568**(수집기 11,565 · **+3**) · MIT ✅ · pushed **2026-10-27T16:02:10Z**(10-28 과 동일 — **신규 커밋 0**)
+- `skills/` 디렉터리 실측 = **`landing-page-design` 1개** ✅(수집기 "스킬 하나뿐" 일치) · 최근 커밋 3건 모두 10-26~27 의 design-to-motion 추가→이전.
+- 🔴 `elayadesign/Design-to-motion` API **404 유지**(10-28 에 이어 2일째) — 커밋 메시지가 가리키는 이전 대상이 아직 공개되지 않았다.
+- 📈 10-28 ★10,275 → 10-29 ★11,568 = **+1,293/일**, 코드 변화 없음 ⇒ 급등은 내용이 아니라 노출(트렌딩 2위 자체의 순환 효과)로 보인다 → [[스타-근거-비동행]].
+- ✅ 수집기 "스타 수에 비해 내용이 얇음" — 10-28 볼트 판정(18.8KB 1개)과 같은 결론. 이번엔 **유리한 표면만 남기지 않았다** ✅.

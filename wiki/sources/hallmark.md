@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, design, frontend, anti-ai-slop, css]
 created: 2026-07-16
-updated: 2026-10-28
+updated: 2026-10-29
 sources: []
 reliability: high
 ---
@@ -66,3 +66,10 @@ reliability: high
 > hallmark README의 tell 목록 *"the eyebrow above every heading, tracked-capital labels, one coloured word in a headline…"* ↔ impeccable `antipatterns.json`의 `kicker-above-heading` · `hero-eyebrow-chip` · `wide-tracking` · `gradient-text`. 서로 인용하지 않는 두 프로젝트(Together AI / pbakaus)가 **같은 증상 목록**에 도달했다 → [[검사가능성-공사]]. 🔴 반대로 [[ai-design-skills]]는 impeccable이 슬롭으로 보는 Geist 폰트·그라디언트 텍스트를 **필수로 지시**한다. 안티 슬롭 도구끼리도 합의가 없는 항목이 있다.
 
 **관련 추가**: [[impeccable]] · [[ai-design-skills]] · [[taste-skill]] · [[검사가능성-공사]]
+
+## 🔄 2026-10-29 갱신 (인제스트 2026-10-29) — **★+1,602/일 · "50테마·8개 폭"은 README 원문과 일치**
+
+**GitHub API 실측(2026-10-29T09:06Z)**: ★ **41,254**(수집기 41,248 · **+6**) · MIT ✅ · pushed 2026-10-28T14:52:03Z
+- 📈 10-28 ★39,652 → **+1,602 / 약 24시간**(수집기 당일 +2,110 · 집계 창 차이).
+- ✅ README(8,742 B): *"fifty themes"* · *"deals three themes from a catalog of fifty"* · `scripts/sloplint.mjs --render` *"checks the page at **eight widths**, then a subagent reviews it"* · `npm i -g puppeteer-core` + Chrome 필요(없으면 정적 검사만) — **수집기 서술 전건 일치.** 10-28 의 48→50 테마 전환 이후 무변동.
+- ✅ "Together AI 가 만든" — README 하단 *"Made by Together AI."* 확인.
