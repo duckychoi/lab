@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, vla, robot-foundation-model, evaluation, offline-proxy, platonic-representation, slam-3dgs]
 created: 2026-10-29
-updated: 2026-10-29
+updated: 2026-10-31
 sources: [https://huggingface.co/papers/2610.31670]
 reliability: low
 ---
@@ -42,3 +42,10 @@ reliability: low
 - https://huggingface.co/papers/2610.31670 (초록)
 - 볼트 실측(2026-10-29T09:06Z, HF `api/papers`): upvote 33 · 저자 5 · githubStars 7 — 수집기 일치 · "초록에 상관계수 없음" 수집기 기재 ✅
 - 신뢰도: ⭐
+
+## 🔄 2026-10-31 본문 확인 (10-29 이월 해소) — **상관계수 r = +0.717 · 단 VLA 12개**
+
+arXiv HTML: S²와 SimplerEnv 과제 성공률의 **Pearson r = +0.717 · VLA 12개**. 저자는 원 VLM에서 계산한 S²가 파생 VLA 성공률과 **VQA 점수보다 더 강하게** 상관한다고 적는다. WAM은 6개를 ALOHA에서 계산해 RoboTwin 2.0 성공률과 대조했다.
+
+- ⚖️ 10-29 "🔴 상관계수 미공개"는 **초록 기준으로만 맞았고 본문에는 있다** — 볼트 판정을 해소한다.
+- 🔴 n=12 의 상관계수다. 이 표본 크기에서 r=0.717은 방향성 근거로는 쓸 수 있지만 **후보 순위를 믿고 롤아웃을 생략할 수준은 아니다**(볼트 판단). 신뢰구간은 미확인.

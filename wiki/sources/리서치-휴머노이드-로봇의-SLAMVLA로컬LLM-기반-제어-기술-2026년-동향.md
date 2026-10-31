@@ -4,8 +4,18 @@ created: 2026-10-30
 updated: 2026-10-30
 author: research-agent
 origin: cron-research-agent
-tags: [research-agent, ai-news]
+tags: [research-agent, 크론노트, 주제재생성-중복]
+type: source
+domain: slam-3dgs
+topic: humanoid-slam-vla   # 중복 판정 키 — 2026-10-31 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 일부 항목만 볼트 대조
 ---
+
+> [!warning] 🔴 볼트 판정 (2026-10-31 · 10-30 작성분) — [[주제재생성-중복]] · 출처 없음
+> - 🔴 **인사이트 문장 중간에서 잘렸고 출처 목록 전체가 없다** ⇒ 본문 어떤 수치도 추적 불가("5만 대 · 약 7배" · "2만 포인트 30ms" 포함).
+> - ⚖️ 로봇 제어 노트에 "Cline + Ollama / Continue.dev" 코딩 에이전트 서술이 섞여 있다 — 주제 이탈.
+> - ⚖️ 핵심 3줄 "로컬 LLM 표준화로 오프라인 실시간 제어 실현"은 본문 "대규모 프로덕션 검증 미달"과 긴장 → [[문서내-값충돌]] 성격.
 이제 한 가지 더 SLAM 기술의 최신 동향을 집중적으로 검색하겠습니다.
 좋습니다. 충분한 정보를 수집했습니다. 이제 사용자가 요청한 형식으로 정리하겠습니다.
 

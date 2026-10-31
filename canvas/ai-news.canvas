@@ -7868,6 +7868,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-10-31 배치\n초록의 '최고'에 격차를 붙이면 줄어든다\n논문 5편 본문 열람 · 이월 3건 해소 · 크론 덮어쓰기 5건",
+			"x": -640,
+			"y": 48200,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1031-ai-news-0",
+			"type": "file",
+			"file": "wiki/sources/Intrinsic-Distribution-Matching.md",
+			"x": 60,
+			"y": 48200,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/A-RSI.md",
+			"x": 520,
+			"y": 48200,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/Your-Benchmark-Empirical-Measure.md",
+			"x": 980,
+			"y": 48200,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/Youtu-Parsing-Omni.md",
+			"x": 1440,
+			"y": 48200,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/LOWN.md",
+			"x": 1900,
+			"y": 48200,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/impeccable.md",
+			"x": 60,
+			"y": 48460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/DeepTutor.md",
+			"x": 520,
+			"y": 48460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/superpowers.md",
+			"x": 980,
+			"y": 48460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/claude-mem.md",
+			"x": 1440,
+			"y": 48460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/t3code.md",
+			"x": 1900,
+			"y": 48460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-27B.md",
+			"x": 60,
+			"y": 48720,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Quantized.md",
+			"x": 520,
+			"y": 48720,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1031-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/LTX-2.5.md",
+			"x": 980,
+			"y": 48720,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -14749,6 +14889,128 @@
 			"fromNode": "b1029-ai-news-hub",
 			"toNode": "b1028-ai-news-hub",
 			"label": "이전 배치"
+		},
+		{
+			"id": "e1031-ai-news-0",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-0",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "영어 +0.32"
+		},
+		{
+			"id": "e1031-ai-news-1",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "선택보다 시점"
+		},
+		{
+			"id": "e1031-ai-news-2",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "벤치 편중·공백"
+		},
+		{
+			"id": "e1031-ai-news-3",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "SOTA +0.05"
+		},
+		{
+			"id": "e1031-ai-news-4",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "99.6%는 평균"
+		},
+		{
+			"id": "e1031-ai-news-5",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "PR 주석"
+		},
+		{
+			"id": "e1031-ai-news-6",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "볼트 연결 경로"
+		},
+		{
+			"id": "e1031-ai-news-7",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "pushed_at 착시"
+		},
+		{
+			"id": "e1031-ai-news-8",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "숨은 codex 230회"
+		},
+		{
+			"id": "e1031-ai-news-9",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "0.1.x nightly"
+		},
+		{
+			"id": "e1031-ai-news-10",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "30일창 반등"
+		},
+		{
+			"id": "e1031-ai-news-11",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "역전 11.8배"
+		},
+		{
+			"id": "e1031-ai-news-12",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1031-ai-news-12",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "♥10,001"
+		},
+		{
+			"id": "e1031-ai-news-x0",
+			"fromNode": "b1031-ai-news-hub",
+			"toNode": "b1029-ai-news-hub",
+			"label": "이전 배치"
+		},
+		{
+			"id": "e1031-ai-news-x1",
+			"fromNode": "b1031-ai-news-2",
+			"toNode": "b1031-ai-news-3",
+			"label": "1위 격차 진단"
+		},
+		{
+			"id": "e1031-ai-news-x2",
+			"fromNode": "b1031-ai-news-8",
+			"toNode": "b1031-ai-news-9",
+			"label": "네이티브 플러그인"
 		}
 	]
 }

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, design-system, ai-harness, frontend, claude-code, agent-skills, design-tokens]
 created: 2026-07-27
-updated: 2026-10-28
+updated: 2026-10-31
 sources: []
 reliability: high
 ---
@@ -130,3 +130,11 @@ reliability: high
 
 **검증**: `api.github.com/repos/pbakaus/impeccable` · `/languages` · `/git/trees/HEAD?recursive=1` · `/releases` · README 30,624B · `antipatterns.json` (전부 데이터로만 읽음, 🔴 미실행)
 **관련 추가**: [[ai-design-skills]] · [[hallmark]] · [[하네스-설계-축]] · [[메타데이터-부재-추론]] · [[검사가능성-공사]]
+
+## 🔄 2026-10-31 갱신 (인제스트 2026-10-31) — ★97,512 · **3일 +6,388 · CI 연동이 생겼다**
+
+**GitHub API 실측(10-31)**: ★**97,512**(수집기 97,501 · +11) · fork 5,746 · Apache-2.0 ✅ · pushed 2026-10-31T07:32Z · 최신 릴리스 `skill-v4.8.0`(10-26) · `engine-v0.1.18`(10-26)
+- 📈 10-28 ★91,124 → **약 2,129/일**(10-05~28 구간 630/일의 3.4배). 수집기 당일 +2,300 과 정합.
+- ✅ 수집기 서술 확인: 결정적 규칙 62개 · LLM/API 키 불요(README 29행) · live 모드 소스 반영(68행) · "기존 화면 쪽이 강하고 신규 제작은 더 어렵다"(31행).
+- 🆕 수집기 누락: v4.8.0 `impeccable detect --github` 가 발견 사항을 **PR 라인 주석**으로 올린다. `--list-rules` 는 규칙별 범주·설명을 출력한다. ⇒ 사람이 스킬을 부르지 않아도 CI 게이트로 쓸 수 있다.
+- 🔴 볼트 10-28 지적(첫 실행 시 네이티브 바이너리 다운로드)은 유효 — CI 도입 시 버전 고정이 먼저다.

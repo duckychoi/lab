@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, education-ai, adaptive-learning, personalization, agent]
 created: 2026-04-10
-updated: 2026-10-29
+updated: 2026-10-31
 sources: []
 reliability: high
 ---
@@ -60,3 +60,10 @@ reliability: high
 - 🎯 [[에이전트-메모리-레이어]] 관점: **L1 트레이스 → L2 요약 → L3 종합 + 사용자 편집 가능**은 같은 날 크론 노트 [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-최신-동향]] 의 "4단계(추출·관리·저장·검색)" 분해와 다른 축이다 — 저장 계층(추상화 수준) vs 처리 단계. 이 볼트(raw → wiki → synthesis)도 L1→L3 구조다 → [[LLM-Wiki]].
 - 🔗 Obsidian 볼트를 RAG 소스로 연결 가능 ⇒ **이 볼트를 DeepTutor 학습 소스로 붙이는 실험**이 actionable 후보.
 - ⚖️ 신뢰도 high 유지(★ 4.9만 · 대학 연구실 · 정기 릴리스).
+
+## 🔄 2026-10-31 갱신 (인제스트 2026-10-31) — ★52,141 · **출시 직후 가속이 식는 중 · 볼트 연결 문서 경로 확인**
+
+**GitHub API 실측(10-31)**: ★**52,141**(수집기 52,132 · +9) · fork 6,387 · Apache-2.0 ✅ · pushed 2026-10-31T09:02Z · 최신 릴리스 v1.7.0(10-28) ✅
+- 📈 10-29 ★48,810 → **약 1,666/일**. 10-29 수집기 당일 +2,371 · 금일 +2,282(트렌딩 창 기준) — 두 값의 창이 달라 직접 비교는 불가.
+- ✅ 수집기 서술 확인: LlamaIndex·GraphRAG·LightRAG 다중 엔진(README 248행) · v1.4.0 이후 3단 메모리(153·155행).
+- 🆕 볼트에 직결되는 문서: README 841행 *"Migrating an existing Obsidian, Hermes, or Markdown library? See Knowledge migration guide"* — **connected-vault 와 indexed-copy 두 경로**가 있다. 10-29 actionable(이 볼트 연결)의 시작점이다. 🔴 가이드 본문은 미열람.

@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-10-29
+updated: 2026-10-31
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -338,3 +338,83 @@ CNN을 이용한 희소 배열 설계가 광원·간섭각 범위에서 90% 이�
 > | `2602.09708` | Physics-informed diffusion models in spectral space | 2026-02-10 | ✅ 실존 · 노트 서술 일치 |
 > | `2609.29505` | Spectral-Guided Diffusion: Accelerating Inference via Static Spectral Layer Scheduling | **2026-08-24** | ✅ 노트의 "(2026.8월)" 가 **맞았다** |
 > 🔴 **볼트 자기 정정**: 10-26~28 3일간 이월한 "값충돌 2건"은 둘 다 충돌이 아니었다. ① 끝 5자리 동일은 **우연의 일치**(별개 논문 2편) ② "ID 접두 2609 = 9월인데 본문은 8월" 은 볼트가 **ID 접두 = 제출월**이라고 가정한 탓이다 — 실제 제출일은 8-24(접두와 제출월이 어긋나는 경우가 있다). ⇒ 근거 확인 없이 3배치 이월한 **볼트 쪽 [[거짓-이월]]**. 조회 1회(무비용)로 닫힐 일을 3일 미뤘다.
+
+## 🔄 2026-10-31 크론 갱신 (🔴 덮어쓰기 → git `8d12706` 이전판 복원 후 병합 · 인제스트 2026-10-31)
+
+> [!note] 위 본문은 `8d12706` 시점 판본이다. 이 섹션 아래가 10-31 배달분(3,876 B)이다 → [[크론-덮어쓰기-소실]].
+
+> [!warning] ⚖️ 볼트 판정 (2026-10-31) — arXiv ID 7개 · 표본 3건 존재 확인
+> - ✅ 2609.33755 · 2610.39041(Exponential-Nemytskii · 10-28) · 2606.21189(TF-SNO) 존재 · 제목 일치. 금일판의 신규 정보는 2610.39041 정도다.
+> - 🔴 이 파일은 **10-26~29 + 10-31 총 5회** 같은 파일명으로 덮어써졌다. 금일판 3,876 B.
+
+이 주제들의 최신 동향을 조사하겠습니다.
+## Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 최신 동향
+
+**핵심 3줄**
+- 
+Transformer 기반 Neural Beamforming이 MCU급 기기에서 최초로 실시간 다채널 배포됨
+
+- 
+Variable-step 연산자 학습에서 정확한 선형 전파와 비선형 함수를 결합하여 다양한 시간 해상도 학습 가능
+
+- 
+물리정보 스펙트럼 확산(PISD)이 격자 기반 모델 대비 본질적인 차원 축소로 계산 속도 대폭 가속화
+
+
+**상세**
+
+**[Neural Beamforming 영역]**
+- 
+6G 멀티캐리어 광대역 시스템에서 Graph Neural Network로 혼합 빔포밍 최적화, 완전 디지털 빔포밍보다 빔 스퀸팅 내성 우수
+
+- 
+신경망 기반 시간-주파수 빈-단위 선형결합(NN-TFLC) 프레임워크가 노이즈 공분산 명시 추정 없이 MPDR 빔포머 구성
+
+- 
+카메라·라이더·RF 파일럿 멀티모달 정보로 LoS/NLoS 혼재 환경에서 다중사용자 MISO 빔포밍 최적화
+
+- 
+CNN으로 희소 배열 구성을 학습하여 동적 전파 환경에서 신속한 재구성 가능
+
+
+**[Neural Operator 영역]**
+- 
+시간-주파수 게이팅 스펙트럼 신경 연산자(TF-SNO)로 비정상 편미분방정식 학습
+
+- 
+잠재공간 분해 확산모델(LatentDDM)이 소규모 부분도메인 사전훈련 후 경량 모듈로 구성하여 적응 시 오류 36~56% 감소
+
+- 
+동형 Fourier Neural Operator가 공간 대칭성을 보존하면서 매개변수 2D에서 16배, 3D에서 96배 감소
+
+- 
+TFNO를 원자핵 차트에 적용한 방사성 핵종 질량 모델 보정으로 198.2 keV RMSE 달성
+
+
+**[Spectral Diffusion 영역]**
+- 
+물리정보 스펙트럼 확산(PISD)이 편미분방정식 조건부 생성에서 잠재 스펙트럼 표현 공간에서 학습 후 추론 시 물리 제약 적용
+
+- 
+푸리에 변환을 귀납적 편향으로 하는 단백질 동역학 스펙트럼 표현이 느린 배치 모드와 빠른 원자 진동 분리
+
+- 
+에너지 조건부 노이즈 스케줄이 변환 계수의 에너지 분포에 따라 노이즈 할당을 동적으로 조절
+
+- 
+Chebyshev 다항식으로 스펙트럼 도메인의 잠재 특성을 근사하는 훈련 무료 확산 샘플링 가속 방식
+
+
+**💡 인사이트/시사점**
+- 세 분야 모두 **스펙트럼/푸리에 공간 계산**이 핵심 축으로 부상하고 있으며, 이는 고차원 데이터의 본질적 차원 축소와 계산 효율성 획기적 향상을 가능케함
+- Neural Operator와 Spectral Diffusion의 결합(예: PISD)이 물리 시뮬레이션의 생성적 조건부 추론을 가능하게 하여, 역문제 해결과 불확실성 정량화에 새로운 기회 창출
+- 실무 배포 수준의 진전(MCU 상의 실시간 빔포밍, 멀티모달 센싱 활용)으로 이론 연구가 산업 응용으로 빠르게 전이되는 단계
+
+**출처**
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming — https://arxiv.org/abs/2609.09708
+- Multimodal Learning for Beamforming Using Camera, LiDAR, and Radio-Frequency Pilots — https://arxiv.org/abs/2609.21193
+- Exponential-Nemytskii Neural Operators: Learning Field Evolution Across Step Sizes — https://arxiv.org/abs/2610.39041
+- Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
+- TF-SNO: Time-Frequency Gated Spectral Neural Operators — https://arxiv.org/abs/2606.21189
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134

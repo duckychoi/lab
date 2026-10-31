@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, diffusion-lm, dlm, rl, credit-assignment, llada, zju]
 created: 2026-10-29
-updated: 2026-10-29
+updated: 2026-10-31
 sources: [https://huggingface.co/papers/2610.35201]
 reliability: medium
 ---
@@ -42,3 +42,15 @@ reliability: medium
 - https://huggingface.co/papers/2610.35201 (초록)
 - 볼트 실측(2026-10-29T09:06Z, HF `api/papers`): upvote 256 · 저자 10 · githubRepo ZJU-OmniAI/DTCA · githubStars 3 — **수집기 전건 일치**
 - 신뢰도: ⭐⭐
+
+## 🔄 2026-10-31 본문 확인 (10-29 이월 해소) — **헤드라인 +9.0 의 RL 고유 기여는 +2.2 이다**
+
+arXiv HTML Table 1 (생성 예산 3단 · 표의 RL 기준선 d1·ESPO·TraceRL·Coupled-GRPO·RLDF 중 예산별 최고값과 비교):
+
+| 벤치 | DTCA | 베이스(LLaDA-8B) 대비 | **최고 RL 기준선 대비** |
+|---|---|---|---|
+| MATH500 | 39.8 / 43.2 / 44.0 | +9.0 / +6.8 / +4.8 | **+2.2 / +2.0 / +1.4** (ESPO 37.6 · RLDF 41.2 · RLDF 42.6) |
+| GSM8K | 80.6 / 85.3 / 85.4 | +5.3 / +2.1 / +2.5 | **+2.5 / +1.7 / +1.4** (ESPO 78.1 · Coupled-GRPO 83.6 · ESPO 84.0) |
+
+- ✅ 전 칸에서 최고 RL 기준선을 이긴다는 사실은 유지된다. 다만 **+9.0 → +2.2 로 4분의 1** 로 줄어든다 → [[천장-기준선]] 정량 사례.
+- ⚖️ 저자 공개 표 기준이며 재현 없음. "신뢰도" 재판정: 수치 신뢰 medium 유지, 헤드라인 해석만 하향.

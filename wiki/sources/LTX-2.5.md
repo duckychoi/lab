@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-10-29
+updated: 2026-10-31
 sources: []
 reliability: medium
 ---
@@ -498,3 +498,15 @@ created 2026-07-23 · lastModified 2026-10-02 · `license: other` · 제공 [[Li
 - 볼트 실측: HF API expand · `api/models?sort=trendingScore&limit=25`(9위) · `raw/main/README.md`(401)
 - raw 대비: ✅ 30일·누적·likes·trendingScore **전건 일치** · ⚖️ 벤치 부재 원인을 "게이트"로 귀속(경미)
 - 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-10-31 갱신 (인제스트 2026-10-31) — **30일창 2일 +9.2% · ♥10,001 · 성장 지속**
+
+**HF API 실측(10-31)**: 30일 **2,441,077**(수집기 **정확히 일치**) · 누적 **5,356,414** · likes **10,001** · trendingScore 382 · gated `auto` · lastModified 10-11 · sha `49b093a` · `raw/main/README.md` 는 비로그인 차단(HTML 페이지로 확인)
+
+| 지표 | 10-29 | 10-31 | 변화 |
+|---|---|---|---|
+| 30일 다운로드 | 2,234,788 | **2,441,077** | **+206,289 (+9.2%)** |
+| 누적 다운로드 | 5,003,838 | **5,356,414** | +352,576 (2일) |
+
+- ✅ 수집기 전 항목 일치: `HEIGHT, WIDTH, NUM_FRAMES, FRAME_RATE = 544, 960, 121, 24.0` · "Stage 2 runs at 2x" · 4K `--spatial-upscalings 2 --width 3840 --height 2176` · 연매출 $10M 기준 · "Agree and Access" 정보 공유 동의. 10-28 fps 오류 재발 없음. **벤치 수치 없음** 서술도 정확.
+- 📌 금일 HF 3건 모두 30일창이 늘었다. 증가폭·증가율 모두 Uncensored(+333,741 · +15.3%) 다음이다 — 10-29의 "유일한 성장" 표현은 금일 해당 없음.

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, browser-automation, entity]
 created: 2026-07-04
-updated: 2026-10-24
+updated: 2026-10-31
 sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md]
 reliability: high
 ---
@@ -87,3 +87,6 @@ reliability: high
 
 ## 🔄 2026-10-28 추가
 - [[Hy-Nomas]] (Tencent Hunyuan · 8B 인터랙티브 월드모델 · ★328): GitHub API `NOASSERTION`, LICENSE 본문은 **Apache-2.0**(일부 서드파티는 Hunyuan Community License). 위 병합 고지 → 파서 실패 패턴이 다시 나타났다(10-24 기록의 3번째 재현 이후 추가 사례). 공간 기억에서는 Genie 3에 진다.
+
+## 🔄 2026-10-31
+- [[Youtu-Parsing-Omni]] — Youtu 팀 5B 전 모달 파서 · 오픈웨이트 공개 · OmniDocBench +0.05 · 처리량 저하 자백.

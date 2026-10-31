@@ -4,8 +4,17 @@ created: 2026-10-30
 updated: 2026-10-30
 author: research-agent
 origin: cron-research-agent
-tags: [research-agent, ai-news]
+tags: [research-agent, 크론노트, 주제재생성-중복]
+type: source
+domain: general
+topic: conference-cfp   # 중복 판정 키 — 2026-10-31 부여
+sources: []
+reliability: low   # 크론 2차 인용 · 일부 항목만 볼트 대조
 ---
+
+> [!warning] 🔴 볼트 판정 (2026-10-31 · 10-30 작성분) — [[경과-마감-배달]]
+> - 🔴 **실행 가능 마감 0건** · 5개 학회 전부 경과. 정작 D-4 였던 **CVPR 2027 이 아예 없다** — 같은 주제 익일 노트는 찾았다. 주제가 매일 재생성될 때 품질이 안정되지 않는다는 사례.
+> - ✅ CoRL 2026 11-09~12: corl.org 일치.
 AI·로봇 주요 학회의 2026년 일정을 검색하겠습니다.
 ## AI·로봇 주요 학회 2026년 CFP/논문 마감 일정 정리
 

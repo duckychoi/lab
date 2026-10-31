@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, memory, context, session, plugin, llm-coding, workflow, 캐시된지표신선도, 관심검증역상관]
 created: 2026-04-13
-updated: 2026-10-10
+updated: 2026-10-31
 sources: []
 reliability: high
 ---
@@ -93,3 +93,16 @@ reliability: high
 - 수집: 2026-10-06 자동수집 (ai-news) · 인제스트 2026-10-10
 - 검증: GitHub API 실측 · `open_issues` 분해 86=25+61 검산 통과 · README i18n **26개 언어 이상**(한국어 `docs/i18n/README.ko.md`) — 10-04 [[ECC]] 14개 언어를 넘는다
 - 신뢰도: ⭐⭐⭐ (★96,801 · **능력 측정 0**)
+
+## 🔄 2026-10-31 갱신 (인제스트 2026-10-31) — ★106,828 · 🔴 **릴리스 노트가 밝힌 사고: 숨은 `codex exec` 약 230회 · "10배 절감"의 정체**
+
+**GitHub API 실측(10-31)**: ★**106,828**(수집기 106,816 · +12) · fork 9,396 · Apache-2.0 ✅ · pushed 2026-10-31T08:56Z · 최신 릴리스 **v15.7.0(10-30)** · v15.6.0(10-29)
+- 📈 볼트 마지막 기록 ★96,801(10-10 페이지) → +10,027. 릴리스가 매일 나오는 상태.
+
+> [!warning] 🔴 수집기 요약에 없는 사고 (v15.7.0 릴리스 노트 원문)
+> My Work 자동 새로고침에서 Claude Code 응답을 거부하면 로그인된 **다음 에이전트로 넘어갔고**, Codex가 깔린 기기에서는 *"hidden `codex exec --ephemeral` runs on the owner's ChatGPT account, even with `CLAUDE_MEM_PROVIDER=claude`"* 가 발생했다(#5189: **4일에 약 230회**). 사용자가 지정한 공급자 설정을 넘어 **다른 계정의 구독을 소모**한 사례다. v15.7.0에서 현재 에이전트에 머물도록 고쳤다. ⇒ **v15.7.0 미만이면 올린다.** 수집기의 "백그라운드 워커 상시 운용" 경고는 맞지만 위험의 실체는 이쪽이다.
+
+> [!insight] "약 10배 토큰 절감"은 측정값이 아니라 설계 비율이다
+> README 287·289·296행: 검색 색인 **~50-100 토큰/결과** vs 상세 조회 **~500-1,000 토큰/결과** → *"~10x token savings by filtering before fetching details"*. 즉 **결과 하나당 크기 비율**이고, 실사용 세션 전체의 절감을 잰 값이 아니다. 수집기가 "상세 조회 전 필터링 기준의 자체 수치"로 적은 것은 ✅ 정확하다. 볼트의 "능력 측정 0" 판정은 유지 → [[스타-근거-비동행]].
+
+- ✅ 수집기 서술 확인: SQLite FTS5(255행) · Chroma 하이브리드(256·275행) · MCP 도구 4종(283행) · 워커 서비스(254·272행). 🆕 [[t3code]] 에 네이티브 플러그인 등록 지원(171행) · npm 전역 설치는 SDK만 깔고 훅을 등록하지 않음(204행 주의).

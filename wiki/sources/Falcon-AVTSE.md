@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, speech-separation, audio-visual, target-speaker-extraction, streaming, edge-ai, benchmark, tsinghua]
 created: 2026-10-29
-updated: 2026-10-29
+updated: 2026-10-31
 sources: [https://huggingface.co/papers/2610.32749]
 reliability: medium
 ---
@@ -44,3 +44,17 @@ reliability: medium
 - https://huggingface.co/papers/2610.32749 (초록) · https://cslikai.cn/Falcon/
 - 볼트 실측(2026-10-29T09:06Z, HF `api/papers`): upvote 144 · 저자 5 · githubRepo JusperLee/Falcon · githubStars 13 — 수집기 수치 일치 · 🔴 실녹음셋 SOTA 부재 미기재
 - 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-10-31 본문 확인 (10-29 이월 해소) — **실녹음 1위는 자기 데이터로 학습했을 때만이다**
+
+arXiv HTML Table 6 (RealSSA-Real · 실녹음 · 비개입 지표):
+
+| 학습셋 | 지표 | Falcon | 최고값 |
+|---|---|---|---|
+| RealSSA-Sim(저자 제작) | NISQA | **3.615 (1위)** | 차점 Swift-Net-12 3.484 |
+| RealSSA-Sim(저자 제작) | DNSMOS | **3.276 (공동 1위)** | Swift-Net-12 3.276 |
+| VoxCeleb2 | NISQA | 2.431 | AV-TF-GridNet 2.495 |
+| VoxCeleb2 | DNSMOS | 2.878 | Swift-Net-12 3.064 |
+
+- ⚖️ 10-29 "실녹음셋 SOTA 부재" 판정을 **수정**한다: 부재가 아니라 **"저자 학습셋 조건에서 1위/공동 1위"** 다. 동시에 학습셋을 바꾸면 Falcon이 1위가 아니므로, 이 표의 주된 증거력은 모델이 아니라 **RealSSA-Sim 데이터셋의 효과**에 있다(저자도 5개 구조 중 DNSMOS 5/5 · NISQA 4/5 개선으로 적는다).
+- RealSSA-Sim SI-SNRi는 7.7 vs AV-TF-GridNet 7.6 dB로 근소. NISQA·DNSMOS는 정답 없는 지표라 분리 품질을 직접 재지 않는다. 🔴 WER 표는 미확인.

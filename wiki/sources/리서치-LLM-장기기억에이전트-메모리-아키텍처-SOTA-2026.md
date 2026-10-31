@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)"
 created: 2026-10-24
-updated: 2026-10-28
+updated: 2026-10-31
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news, 크론노트, 주제재생성-중복, 볼트판정-2026-10-25]
@@ -119,3 +119,78 @@ LLM 에이전트 장기기억 보안: 메모리 라이프사이클 전반의 공
 
 > [!insight] 금일판의 유일한 신규 방향
 > **"LoCoMo 만점 ≠ 행동 메모리"** (MemoryArena 40~60%). [[에이전트-메모리-레이어]] 선택 시 LoCoMo 점수(위 Memori 81.95% 등)를 근거로 쓰면 안 된다는 반증 후보 — 단 원 논문 확인 전.
+
+## 🔄 2026-10-31 크론 갱신 (🔴 덮어쓰기 → git `8d12706` 이전판 복원 후 병합 · 인제스트 2026-10-31)
+
+> [!note] 위 본문은 `8d12706` 시점 판본이다. 이 섹션 아래가 10-31 배달분(4,452 B)이다 → [[크론-덮어쓰기-소실]].
+
+> [!warning] ⚖️ 볼트 판정 (2026-10-31)
+> - ✅ 2603.07670 · 2604.12285(GAM) 존재 · 제목 일치. 🔴 출처 목록이 MAGMA 항목 중간에서 잘림.
+> - 🔴 "6가지 구성요소 아키텍처가 **표준화됨**": 인용처는 MS Research 논문 1편의 제안이다 — 표준이라는 근거 없음.
+> - ⚖️ Mem0 LoCoMo 91.6 · LongMemEval 93.4 는 벤더 자체 수치(재조회 0회).
+
+2026년 LLM 장기기억 및 에이전트 메모리 아키텍처의 최신 동향을 검색하겠습니다.
+더 구체적인 기술 트렌드를 확인하기 위해 추가 검색을 수행하겠습니다.
+## LLM 장기기억·에이전트 메모리 아키텍처 SOTA 2026
+
+**핵심 3줄**
+- 
+생물학적 인지 메커니즘에 기반한 6가지 구성요소(슬립 페이즈 통합, 간섭 기반 망각, 엔그람 성숙, 검색 기반 재통합, 엔티티 지식그래프, 하이브리드 멀티큐 검색)를 갖춘 메모리 아키텍처
+가 표준화됨
+- 
+강화학습으로 저장, 검색, 업데이트, 요약, 삭제 같은 5가지 메모리 작업을 에이전트 정책으로 학습하는 Agentic Memory(AgeMem)가 5개 벤치마크에서 모든 메모리 증강 베이스라인을 초과 성능
+
+- 
+단기 컨텍스트, 장기 벡터 RAG, 에피소딕 그래프 DB 세 가지 아키텍처가 경쟁하며, 프로덕션 에이전트는 세 가지를 조합한 하이브리드 구조 도입
+
+
+**상세**
+
+- **그래프 기반 메모리 아키텍처**: 
+MAGMA는 시맨틱, 시간, 인과관계, 엔티티 그래프 등 직교하는 다중 그래프로 각 메모리 항목을 표현
+. 
+GAM(계층 그래프 기반 에이전트 메모리)은 실시간 의존성 포착을 위한 에피소딕 버퍼링 단계와 시맨틱 이동 시 통합하는 이벤트 기반 시맨틱 통합 단계를 분리
+
+
+- **RL 기반 적응형 메모리 관리**: 
+Memory-R1은 ADD, UPDATE, DELETE, NOOP 작업을 학습하는 Memory Manager와 관련 항목을 사전 선택하는 Answer Agent로 구성되며, PPO와 GRPO로 미세조정
+. 
+2026년 에이전트는 메모리를 도구 집합으로 호출하고 RL이 정책을 학습
+
+
+- **통제된 통합 및 망각**: 
+명확한 망각과 통합이 안정성 연산자로 기능하며, 망각은 부수적이 아닌 통제되어야 한다는 공감대
+. 
+FiFA 벤치마크에서 Budget 인식 망각 정책(Priority Decay)이 계산 비용 감소뿐만 아니라 서사 일관성과 프라이버시 보호 달성
+
+
+- **하이브리드 타이어드 메모리**: 
+MemMachine은 단기 에피소딕 메모리, 장기 에피소딕 메모리, 프로파일 메모리의 2단계 구조로 과거 경험에 대한 회상과 추론을 비용 효율적으로 제공
+. 
+Mem0 최신 토큰 효율 알고리즘은 LoCoMo 91.6, LongMemEval 93.4 달성하면서 검색당 평균 7,000 토큰 미만 사용(전체 컨텍스트는 25,000+)
+
+
+- **시간 인식 시맨틱 메모리**: 
+TSM(Temporal Semantic Memory)은 시간 지식 그래프를 통해 시맨틱 타임라인을 구축하여 이벤트 발생 시점과 지속 기간에 메모리 정렬
+
+
+- **프로덕션 메모리 도구**: 
+Zep는 사용자, 엔티티, 토픽, 요약의 시간 인식 그래프로 메모리 모델링하고 BM25, 코사인 유사성, 그래프 순회를 blend 후 RRF 또는 MMR로 재순위화
+. 
+Letta는 편집 가능한 메모리 블록을 Postgres/SQLite로 지원하며, 핵심 메모리는 항상 프롬프트에 있고 아카이브 메모리는 DB에 저장되어 도구 호출로 검색
+
+
+**💡 인사이트/시사점**
+
+
+현대 LLM 에이전트는 검색으로 기억하며, 장기 학습이 아닌 엔지니어링 대체로 작동하되, 일부 조건에서는 조합적 표본 복잡도 갭과 프롬프트 주입 영구화 위험이 존재
+. 2026년 SOTA는 생물학적 메커니즘(통합, 망각, 검색 기반 재통합)을 강화학습으로 자동화하되, 단순 벡터 RAG에서 다중 그래프 기반 구조로 전환 중. 
+메모리 축적으로 인한 검색 성능 저하 해결(통합, 클러스터링, 요약)이 여전히 개발 중인 영역
+.
+
+**출처**
+- Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers — https://arxiv.org/pdf/2603.07670
+- Human-Inspired Memory Architecture for LLM Agents (Microsoft Research) — https://www.microsoft.com/en-us/research/publication/human-inspired-memory-architecture-for-llm-agents/
+- Memory-R1: Enhancing LLM Agents via Reinforcement Learning (ACL 2026) — https://aclanthology.org/2026.acl-long.583/
+- GAM: Hierarchical Graph-based Agentic Memory — https://arxiv.org/html/2604.12285v1
+- MAGMA: Multi-Graph based A

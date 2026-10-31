@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판, 봉인유지, 절제, 규약11]
 created: 2026-10-02
-updated: 2026-10-29
+updated: 2026-10-31
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -366,3 +366,17 @@ BF16 **14.23 GB** → NVFP4 **4.20 GB** (70.5% 감소) · MLX 4bit **4.00 GB** (
 - 볼트 실측: HF API expand 2건(파생·원본) · `api/models/.../refs` · `raw/main/SHA256SUMS`(18행) · `raw/base/SHA256SUMS`(14행) · README 200
 - raw 대비: ✅ dl30·likes·trendingScore **전건 일치** · ✅ 10-28 지적 반영
 - 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-10-31 갱신 (인제스트 2026-10-31) — **역전 배수 10.9 → 11.8배 · 좁혀지던 추세가 뒤집혔다**
+
+**HF API 실측(10-31)**: 30일 **2,516,721**(수집기 **정확히 일치**) · 누적 3,811,634 · likes 5,387 · trendingScore 303 · sha `7959e65`(무변경) · lastModified 10-12 · 카드 8,511 B(무변경)
+
+**[[원본-파생-역전]] 시계열 6점째** (원본 `Qwen/Qwen-Image-2.1` 실측: 30일 **212,670** · 누적 293,503)
+
+| 측정일 | 파생 DL30 | 원본 DL30 | 역전 배수 |
+|---|---|---|---|
+| 10-29 | 2,182,980 | 200,640 | 10.9 |
+| 10-31 | **2,516,721** | **212,670** | **11.8** |
+
+- 🔴 10-29 의 "10배 미만이면 분류 재검토" 조건이 멀어졌다. 파생 +15.3%(2일) ≫ 원본 +6.0%. 볼트가 읽던 "수렴"은 2~3점짜리 단기 패턴이었다 → [[지표-창길이]].
+- ✅ 수집기: GGUF·FP8·NVFP4·MLX · 4.00~14.23 GB(카드 34~44행) · qwen-research(3행) · 벤치 이미지 게시(28행) 일치. "제거 방식 미설명" 문구 유지 ✅. ⚖️ 카드 24행 *"original upstream base weights"* 와 10-29 해시 불일치는 여전히 미해소(텐서 diff 미실시).

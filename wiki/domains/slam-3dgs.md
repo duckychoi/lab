@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-10-29
+updated: 2026-10-31
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -585,3 +585,8 @@ _소스 ingest 시 자동 누적_
 ## 🔄 2026-10-29 배치
 - 🆕 [[Sensorimotor-Alignment]] — 표현이 물리 운동 궤적 기하와 정렬되는가(S²) → VLA 백본 오프라인 선별 · 🔴 상관계수 미공개 → [[VLA]]
 - 📚 크론 노트 [[리서치-휴머노이드-로봇의-VLA로컬LLMSLAM-기반-제어-2026년-최신-동향]] — humanoid 주제 15번째 · 🔴 출처 URL 잘림 · LIN-SLAM · UniSim-SLAM(UNIST)
+
+## 🔄 2026-10-31 배치
+- 🎯 UniSim-SLAM([arXiv 2608.01706](https://arxiv.org/pdf/2608.01706)) — 비보정 7-Scenes 궤적 오차 최대 45.9%↓ · TUM 38.5%↓(저자 수치) · 0.197초 vs VGGT-SLAM 3.41초(보도) · ECCV 2026. 🔴 본문 표 미대조 · 볼트 독립 페이지 없음 → [[리서치-휴머노이드-로봇의-AI-기술-3대-축-VLA로컬LLMSLAM-2026-최신-동향]].
+- 🔗 [[Sensorimotor-Alignment]] 본문 확인: r = +0.717 · VLA 12개 → [[VLA]].
+- 📚 [[리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-제어-기술-2026년-동향]](🔴 출처 없음).

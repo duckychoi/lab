@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, harness, control-plane, 자기제한, 메타데이터부재, mobile]
 created: 2026-10-10
-updated: 2026-10-10
+updated: 2026-10-31
 sources: []
 reliability: medium
 ---
@@ -69,3 +69,11 @@ reliability: medium
 - 수집: 2026-10-06 자동수집 (ai-news) · 인제스트 2026-10-10
 - 검증: GitHub API 실측 · `open_issues` 분해 2,499 = 1,162 + 1,337
 - 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-10-31 갱신 (인제스트 2026-10-31) — ★33,204 · **"에이전트 하네스 제어면"으로 자기 규정 · 아직 0.1.x nightly**
+
+**GitHub API 실측(10-31)**: ★**33,204**(수집기 33,195 · +9) · fork **8,694**(별 대비 26%) · MIT ✅ · pushed 2026-10-31T09:06Z · 릴리스 `v0.1.6-nightly.20261031.*` (하루 2회 이상)
+- 📈 볼트 마지막 기록 ★25,745(10-10 페이지) → +7,459.
+- ✅ 수집기 서술 확인: 지원 6종(Codex·Claude·Cursor·Grok Build·OpenCode·Antigravity, README 5·16행) · 자체 판매 없음(9행) · 각 CLI 사전 설치·로그인(18~23행). Antigravity는 예외적으로 CLI 불요(23행) — 수집기 "각 CLI 사전 설치"의 작은 예외.
+- ⚖️ 수집기 누락: 설치가 `curl -fsSL https://t3.codes/install.sh | sh` 이고 버전이 **0.1.x nightly** 다. 원격 조작 도구인 만큼 노출 범위(인증·포트)를 먼저 확인해야 한다 — 🔴 README에서 보안 모델은 확인 못 함.
+- 🔗 [[claude-mem]] 이 T3 Code 네이티브 플러그인을 지원한다(claude-mem README 171행) — 두 도구의 결합 경로가 실재한다.
