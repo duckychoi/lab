@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-10-31
+updated: 2026-11-01
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -417,4 +417,74 @@ Chebyshev 다항식으로 스펙트럼 도메인의 잠재 특성을 근사하�
 - Exponential-Nemytskii Neural Operators: Learning Field Evolution Across Step Sizes — https://arxiv.org/abs/2610.39041
 - Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
 - TF-SNO: Time-Frequency Gated Spectral Neural Operators — https://arxiv.org/abs/2606.21189
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+
+## 🔄 2026-11-01 크론 갱신 (🔴 덮어쓰기 → git `c50c90f` 이전판 복원 후 병합 · 인제스트 2026-11-01)
+
+> [!note] 위 본문은 `c50c90f` 시점 판본이다. 이 섹션 아래가 11-01 배달분(4,000 B)이다 → [[크론-덮어쓰기-소실]].
+
+> [!warning] ⚖️ 볼트 판정 (2026-11-01) — arXiv ID **8/8 존재 · 제목 일치**
+> ✅ 2609.33755 · 2609.09708 · 2606.09806 · 2609.03069 · 2610.33771 · 2602.09708 · 2603.02447 · 2607.04134. 🔴 수치·요약 내용은 대조하지 않았다. 🔴 "통신 엣지 혁신이 임박"은 출처에 없는 노트의 해석이다. 같은 파일명 덮어쓰기 **6회차**.
+
+웹검색으로 2026년 최신 논문 동향을 조사하겠습니다.
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026년 최신 동향
+
+**핵심 3줄**
+- 
+Neural beamforming은 MCU 기기에서 실행되는 Transformer 기반 파이프라인
+과 
+6G 무선통신을 위한 Graph Neural Networks 기반 최적화 기술
+이 주목됨
+- 
+Neural operator는 cell complexes 상의 위상 구조를 활용한 Topological Neural Operators와 Discrete Exterior Calculus를 통한 교차 차원 결합
+으로 진화 중
+- 
+Spectral diffusion은 Fourier·wavelet 기반 손실함수로 표준 확산 과정 수정 없이 주파수 균형과 다중 스케일 구조 개선
+
+
+**상세**
+- **Beamforming 신경망화**: 
+MCU급 디바이스에서 MVDR 빔포머의 실시간 실행 및 다중채널 Transformer 기반 신경 빔포밍 파이프라인 배포
+, 
+신경망 기반 시간-주파수 선형결합(NN-TFLC) 프레임워크로 명시적 노이즈 공분산 추정 제거
+
+- **6G 하이브리드 빔포밍**: 
+GNN을 활용한 다중 반송파 광대역 시스템 최적화로 빔 스쿠인팅과 불완전한 채널상태정보에 대한 강건성 증대
+, 
+카메라·LiDAR·RF 파일럿 다중모달 학습으로 LOS/NLOS 혼합 환경 지원
+
+- **Neural Operator 고도화**: 
+Topological Neural Operators(TNOs)로 세포복합체 상의 연산자 학습 및 discrete exterior calculus 통한 다차원 상호작용 모델링
+, 
+LatentDDM은 소규모 부분영역 사전학습 후 새로운 설정에서 경량 합성 모듈만 학습
+
+- **PDE 해결 신경연산자**: 
+FNO-MoE (Mixture of Experts)로 30분 화학 상태를 단일 호출로 예측하며 적극적 샘플링이 임의 샘플링보다 정확도 우수
+, 
+TF-SNO는 시간-주파수 게이트형 스펙트럼 신경연산자로 비정상 PDE 학습
+
+- **Spectral Diffusion 프레임워크**: 
+Physics-informed spectral diffusion(PISD)로 스펙트럼 표현의 잠재 확산을 통해 편미분방정식 조건부 생성
+, 
+단백질 동역학에 Fourier 변환 귀납편향 적용하여 느린 구조 변화와 빠른 원자 진동 분리
+
+- **Spectral Regularization**: 
+Fourier·wavelet 손실을 추가하는 손실 수준 정규화로 주파수 균형과 다중 스케일 구조 개선
+, 
+Spectral Progressive Diffusion으로 확산 궤적을 따라 해상도 점진적 증가 및 전력 스펙트럼에서 최적 스케줄 도출
+
+
+**💡 인사이트/시사점**
+- Neural beamforming은 저전력 임베디드 장치 실시간 구현에서 하이브리드 6G 대역폭 최적화까지 단계적 확대로, 통신 엣지 컴퓨팅 혁신이 임박함
+- Neural operator와 spectral diffusion의 결합(PISD 등)은 과학 시뮬레이션 가속화와 생물물리학 응용에서 신뢰도 높은 surrogate 모델 제공으로 계산비용 대폭 감소
+- 위상 기하학(TNO)과 다중모드 학습(multimodal beamforming)이 고차원 함수공간 및 복합 물리계 모델링의 새로운 패러다임이 될 가능성
+
+**출처**
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming — https://arxiv.org/abs/2609.09708
+- Topological Neural Operators — https://arxiv.org/abs/2606.09806
+- Learnable composition for neural operators — https://arxiv.org/abs/2609.03069
+- An actively trained neural operator for near-explicit atmospheric chemistry — https://arxiv.org/abs/2610.33771
+- Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
+- Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.02447
 - Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134

@@ -4,12 +4,16 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, moe, deepseek, ista-daslab, strata, 천장-기준선, 미완성카드, llama-cpp-미지원]
 created: 2026-10-25
-updated: 2026-10-25
+updated: 2026-11-01
 sources: [DeepSeek-V4.1-Flash-1017.md, Qwen3.8-27B-GSQ-RCO-GGUF.md, Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
 
 # ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF
+
+> [!warning] 🔄 2026-11-01 볼트 정정 — **아래 "llama.cpp 불가"는 더 이상 참이 아니다**
+> 10-25 당시에는 맞았다. 카드 10-27 공지: llama.cpp [b11870](https://github.com/ggml-org/llama.cpp/releases/tag/b11870)(2026-10-25 릴리스, GitHub API 확인) 이상에서 이미지 포함 로드되며, 파일을 **6샤드 구조로 교체**했다. 이전 다운로드분은 로드되지 않아 `convert_ds41_upstream.py` 변환이 필요하다. 세부는 하단 2026-11-01 절.
+
 
 **HF**: https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF · [[ISTA-DASLab]] · 베이스 [[DeepSeek-V4.1-Flash-1017]]
 **실측(2026-10-25 KST)**: downloads **32,479**(수집기 일치) · likes 240 · createdAt **2026-10-23** · `library_name: gguf` · MIT
@@ -46,3 +50,17 @@ reliability: medium
 ## 원본
 - 출처: https://huggingface.co/ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF
 - 신뢰도: ⭐⭐ (HF 다운로드 32,479 · 자기보고 · 카드 미완성)
+
+## 🔄 2026-11-01 갱신 — **7일 만에 6,300% 증가, 그러나 사용자 수로 읽으면 안 된다**
+
+**HF API 실측**: downloads **2,076,624**(수집기 정확히 일치 · all-time 동일) · likes 521(240에서) · `lastModified` 10-28 · 베이스 [[DeepSeek-V4.1-Flash-1017]] 156,373(13.3배).
+
+> [!warning] 🎯 다운로드 수는 GGUF **파일 요청** 수다
+> 10-25 32,479 → 11-01 2,076,624 = **+2,044,145**(약 29.2만/일). HF 규칙상 `gguf` 라이브러리는 **모든 `.gguf` 파일**이 계수 대상이고, **GET과 HEAD 요청마다 1건**이다([[계수기-배수]]). 이 저장소에는 `.gguf`가 **16개**다.
+> ⇒ 1빌드 6파일로 나눠도 34만 회, 전체 16파일로 나눠도 12.8만 회다. 1빌드 약 249GB를 34만 회 온전히 받았다면 약 85EB가 되므로 **온전한 다운로드 수로 해석하기 어렵다**. 샤드 교체와 llama.cpp 지원이 겹친 시기라 메타데이터 요청이나 자동화 트래픽이 섞였을 가능성이 있다. 🔴 **원인 분해 데이터는 없다. 이 문단의 해석은 볼트 추정이다.**
+
+- ✅ **해소**: llama.cpp 경로 · IQ2_XS 측정값(90.40 · 89.71 · 평균 93.37 · 99.8%). 카드 TBD 6 → **5**.
+- 🔴 **미해소**: 간판 주장 "12GB GPU"의 근거인 Memory requirements 섹션은 **여전히 TBD**. 🆕 Strata가 새 6샤드 구조를 읽는지도 TBD다. 수집기의 "미확정" 판단이 맞다.
+- ✅ 수집기 수치(248.84GB · 231.32GB · 100.00 · 90.91 · 89.71 · 93.54 · 92.32) 카드와 일치. 트리 합산도 248.8GB · 231.3GB로 맞는다. 🔴 단 10-27 런타임 변경은 요약에 없다.
+- ⚖️ **실용성 재판정**: 런타임 장벽은 사라졌지만 디스크 231~266GB · RAM 요구량 미기재가 남았다. 즉시 배포는 여전히 NO. 🔴 볼트 실행 0회.
+- 🔴 **볼트 정정**: [[천장-기준선]]의 97.97% 재계산은 표 값이 그대로라 유효하다.

@@ -4,7 +4,7 @@ type: concept
 domain: ai-news
 tags: [ai-news, concept, jepa, world-model, self-supervised, lecun, representation-learning]
 created: 2026-07-12
-updated: 2026-10-25
+updated: 2026-11-01
 sources: [C-JEPA.md, JEPA-월드모델-서베이-2026.md, Flow-JEPA-연구아이디어.md, LaLa-World.md]
 reliability: high
 ---
@@ -55,3 +55,6 @@ reliability: high
 
 ## 🔄 2026-10-25
 - [[LaLa-World]](NAVER) — LM 기반 예측기 + 언어로 기술한 행동 ⇒ 이종 도메인 공동학습 JEPA형 잠재 월드모델 · 비디오생성 정합 비교 동등 성능 · 13.9배 빠른 계획 → [[JEPA-vs-Diffusion-월드모델]]
+
+## 🔄 2026-11-01
+- [[Platonic-Representation-JEPA]] — PRH를 정리로 증명 · 좋은 양성 쌍이 스케일보다 정렬에 효율적. 🔴 42배는 next-token의 이른 체크포인트를 재지 않은 비교 · 네 번째 시드 .121 · CIDEr .838은 30k 쌍으로 맞춘 사상.

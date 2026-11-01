@@ -4772,3 +4772,33 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **출처**: [[Your-Benchmark-Empirical-Measure]] · [[DeepTutor]] · [[impeccable]]
 - **할 것**: ① 논문 Table 1에서 볼트가 자주 인용하는 벤치의 DDM·MaxGap 값 옮겨 적기(무비용) ② UniSim-SLAM(arXiv 2608.01706) 7-Scenes 표 대조 후 독립 페이지 판단 ③ DeepTutor `docs-for-dev/KNOWLEDGE_MIGRATION.md` 읽고 connected-vault 경로로 10-29 연결 항목 시작 ④ impeccable `detect --github` 는 버전 고정 후 CI 시험.
 - **우선순위**: 낮음 · **상태**: 대기
+
+## [2026-11-01] 🗓️ CVPR 2027 — 투고 결정 11-03 **D-2** · Enrollment 11-10 · Submission 11-16 · Supp 11-23 (AOE)
+- **도메인**: general
+- **출처**: https://cvpr.thecvf.com/Conferences/2027/CallForPapers (11-01 재조회 · 무변경) · 🔴 금일 크론 노트에 없음 → [[경과-마감-배달]]
+- **할 것**: 11-03까지 투고 여부를 정한다. 투고하면 11-10 전에 Enrollment.
+- **우선순위**: 높음 · **상태**: 대기
+
+## [2026-11-01] 🔒 lightpanda MCP 텔레메트리 끄기 여부 결정
+- **도메인**: ai-news
+- **출처**: [[lightpanda]] (README Telemetry 절 · `~/.claude.json` `env: {}`)
+- **할 것**: MCP 항목 env에 `LIGHTPANDA_DISABLE_TELEMETRY=true` 추가. 사용자 설정이라 볼트가 변경하지 않았다.
+- **우선순위**: 중간 · **상태**: 대기
+
+## [2026-11-01] 🏛️ NRF FY2027 1차 공고 — 11-01 검색 미발견, IRIS 확인 지속
+- **도메인**: general
+- **출처**: [[리서치-2026년-NRF-신진연구자우수신진장비인프라-사업-최신-동향]] (크론 일정은 2025년 값) · 전년 공고일 2025-11-13 · 2024-11-06
+- **할 것**: iris.go.kr · nrf.re.kr 직접 확인. 11월 중 공고는 과거 패턴 기반 추정이다.
+- **우선순위**: 높음 · **상태**: 대기
+
+## [2026-11-01] 🔧 크론 프롬프트 수정 + 자동 커밋 보호 (10-31 항목 승계)
+- **도메인**: general
+- **출처**: [[크론-덮어쓰기-소실]] · [[경과-마감-배달]]
+- **할 것**: ① 쓰기 전 존재 확인 → 날짜 접미사 ② 출처 목록 완결 확인 ③ 내레이션 제거 ④ CFP 주제를 "앞으로 90일 마감"으로 변경 ⑤ 09:40 백업 전 `리서치-*` 대량 삭제 감지
+- **우선순위**: 높음 · **상태**: 대기 (10-24 이후 미이행 8배치째)
+
+## [2026-11-01] 🧪 낮은 비용 실험 묶음
+- **도메인**: ai-news · local-llm
+- **출처**: [[mattpocock-skills]] · [[WorkFactory]] · [[claude-code-game-studios]]
+- **할 것**: ① `/grill-with-docs` 를 실제 작업 1건에 시험(플러그인·skills.sh 중복 설치 주의) ② 에이전트 평가셋을 만들 때 WorkFactory의 "프로브 실행 후 환경 수리" 절차 적용 ③ 템플릿 도입 시 최소 단계부터 시작
+- **우선순위**: 낮음 · **상태**: 대기

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, zhipu-ai, zai, GLM, chinese-llm, MoE, bilingual, monday-ai]
 created: 2026-04-10
-updated: 2026-09-03
+updated: 2026-11-01
 sources: [GLM-5.1.md, GLM-5.2.md, GLM-5.3-Flash.md, GLM-5.3.md]
 reliability: high
 ---
@@ -65,3 +65,6 @@ reliability: high
 - [[GLM-5]] — 에이전틱 엔지니어링 전환판
 - [[Qwythos-9B]] — 같은 배치 트렌딩 오픈 모델
 - [[local-llm]]
+
+## 🔄 2026-11-01
+- [[WorkFactory]] 의 교사 모델이 GLM-5.3(GDPval-AA v2.1 공식 1646)이다.

@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-10-31
+updated: 2026-11-01
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -590,3 +590,7 @@ _소스 ingest 시 자동 누적_
 - 🎯 UniSim-SLAM([arXiv 2608.01706](https://arxiv.org/pdf/2608.01706)) — 비보정 7-Scenes 궤적 오차 최대 45.9%↓ · TUM 38.5%↓(저자 수치) · 0.197초 vs VGGT-SLAM 3.41초(보도) · ECCV 2026. 🔴 본문 표 미대조 · 볼트 독립 페이지 없음 → [[리서치-휴머노이드-로봇의-AI-기술-3대-축-VLA로컬LLMSLAM-2026-최신-동향]].
 - 🔗 [[Sensorimotor-Alignment]] 본문 확인: r = +0.717 · VLA 12개 → [[VLA]].
 - 📚 [[리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-제어-기술-2026년-동향]](🔴 출처 없음).
+
+## 🔄 2026-11-01 배치
+- 🆕 [[L3G-World]] — KAIST · 장면 범위 비례 메모리 · 9.02 FPS(H100) · 🔴 정적 장면 위주 · 코드 공개.
+- 🔴 [[리서치-휴머노이드-로봇-SLAMVLA로컬LLM-제어-2026-최신-동향]] — 삼성 95% 수치는 맞지만 현장 투입은 이후 단계 → [[VLA]].

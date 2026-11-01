@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, deepseek, moe, agent, kv-cache, minor-update, self-reported, harness, 비매칭비교]
 created: 2026-10-24
-updated: 2026-10-25
+updated: 2026-11-01
 sources: [DeepSeek-V4.1-Flash.md, DeepSeek-V4.1-Flash-Paper.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
@@ -108,3 +108,6 @@ reliability: medium
 
 ## 🔄 2026-10-25 — 파생본 도착
 - [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] — 생성 6일 만에 ISTA 양자화(IQ2_XXS 2.00bpw 가 AIME25·GPQA-D·LCB v6 기준선 100.0% 주장 · AIME 는 기준선 만점 → [[천장-기준선]]) · 🔴 카드 TBD 6건
+
+## 🔄 2026-11-01
+- 📌 파생 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 기준 llama.cpp b11870(10-25)이 DeepSeek-V4.1을 지원한다. 베이스 다운로드 156,373 · likes 4,145 · 볼트 실행 0회.

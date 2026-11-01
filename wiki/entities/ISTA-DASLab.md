@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [local-llm, quantization, gguf, research-lab, gsq, rco]
 created: 2026-09-22
-updated: 2026-10-25
+updated: 2026-11-01
 sources: [Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md, Qwen3.8-27B-GSQ-RCO-GGUF.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
@@ -66,3 +66,6 @@ HF `ISTA-DASLab`. 이름으로 보아 오스트리아 IST Austria의 분산 알�
 > ⇒ 10-10 기록 *"두 번째 카드가 첫 번째보다 약하다"* 의 **3번째 점**: 27B(완비) → Flash-Next(대조군·perplexity 누락) → DeepSeek(근거 섹션 자체 공백). 🎯 **간판 "12GB GPU" 3회 반복 · 그 근거 섹션은 TBD.**
 > 🆕 3릴리스 전부 AIME25 기준선 **100.00** ⇒ [[천장-기준선]] 신설(IQ1_M 회복률 98.7% → 천장 제외 97.97%).
 > 📌 실행 경로가 llama.cpp → **Strata 단독**으로 바뀌었다(*"llama.cpp does not support DeepSeek-V4.1"* · 10-23 기준).
+
+## 🔄 2026-11-01
+- 🔴 **위 "Strata 단독" 정정**: [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 는 10-27 이후 llama.cpp b11870+ 경로가 있다. 12GB 주장 근거 섹션은 여전히 TBD. 다운로드 2,076,624는 파일 요청 수다 → [[계수기-배수]].

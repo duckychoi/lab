@@ -8008,6 +8008,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-11-01 배치\n숫자는 맞고, 무엇을 쟀는지가 빠졌다\n신규 8 · 갱신 5 · 크론 덮어쓰기 4건",
+			"x": -640,
+			"y": 49280,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1101-ai-news-0",
+			"type": "file",
+			"file": "wiki/sources/Platonic-Representation-JEPA.md",
+			"x": 60,
+			"y": 49280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/L3G-World.md",
+			"x": 520,
+			"y": 49280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/SpecSlot.md",
+			"x": 980,
+			"y": 49280,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/WorkFactory.md",
+			"x": 60,
+			"y": 49540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/MLLM-Retrieval-Heads.md",
+			"x": 520,
+			"y": 49540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/lightpanda.md",
+			"x": 980,
+			"y": 49540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/OpenMausBot.md",
+			"x": 60,
+			"y": 49800,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/Orkas.md",
+			"x": 520,
+			"y": 49800,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/mattpocock-skills.md",
+			"x": 980,
+			"y": 49800,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/claude-code-game-studios.md",
+			"x": 60,
+			"y": 50060,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md",
+			"x": 520,
+			"y": 50060,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/sam3.md",
+			"x": 980,
+			"y": 50060,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1101-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/flux-3-image-klein-comfy.md",
+			"x": 60,
+			"y": 50320,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -15011,6 +15151,116 @@
 			"fromNode": "b1031-ai-news-8",
 			"toNode": "b1031-ai-news-9",
 			"label": "네이티브 플러그인"
+		},
+		{
+			"id": "e1101-ai-news-0",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-0",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "42배 · 조건 3개"
+		},
+		{
+			"id": "e1101-ai-news-1",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "359배는 VAE"
+		},
+		{
+			"id": "e1101-ai-news-2",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "256은 +0.09"
+		},
+		{
+			"id": "e1101-ai-news-3",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "공식 대 로컬"
+		},
+		{
+			"id": "e1101-ai-news-4",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "2% 미만 공유"
+		},
+		{
+			"id": "e1101-ai-news-5",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "텔레메트리 기본"
+		},
+		{
+			"id": "e1101-ai-news-6",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "CLI 묶음"
+		},
+		{
+			"id": "e1101-ai-news-7",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "두 제품"
+		},
+		{
+			"id": "e1101-ai-news-8",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "★308,744"
+		},
+		{
+			"id": "e1101-ai-news-9",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "standard 최하위"
+		},
+		{
+			"id": "e1101-ai-news-10",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "파일 요청 207만"
+		},
+		{
+			"id": "e1101-ai-news-11",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "30일창 -7.0%"
+		},
+		{
+			"id": "e1101-ai-news-12",
+			"fromNode": "b1101-ai-news-hub",
+			"toNode": "b1101-ai-news-12",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "가속 철회"
+		},
+		{
+			"id": "e1101-ai-news-x1",
+			"fromNode": "b1101-ai-news-6",
+			"toNode": "b1101-ai-news-7",
+			"label": "에이전트 GUI 축"
 		}
 	]
 }

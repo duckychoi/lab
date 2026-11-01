@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-10-31
+updated: 2026-11-01
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -641,3 +641,7 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 - 🆕 [[Intrinsic-Distribution-Matching]] — 2스텝 긴 텍스트 렌더링 후보(중국어 94.25 · 영어 90.20 · 저자 측정) · 일반 품질은 APEX와 박빙.
 - 📈 [[LTX-2.5]] 30일창 2일 +9.2% · ♥10,001 · 벤치 수치 여전히 없음.
 - 🔗 [[Youtu-Parsing-Omni]] — 영상·음성을 시공간 레코드로 파싱 · `down-analysis` 대체 실험 후보(처리량 미상).
+
+## 🔄 2026-11-01 배치
+- 🔗 [[L3G-World]] — 생성 영상의 공간 일관성 메모리(소비자 GPU 수치 없음) · [[SpecSlot]] — 픽셀 공간 고해상도 비용 절감(연구 단계).
+- 📉 [[sam3]] 30일창 −7.0% · 마스킹 부품 후보 판단은 그대로.

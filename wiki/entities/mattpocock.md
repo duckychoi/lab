@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, github, agent-skills, harness, 자기제한]
 created: 2026-10-10
-updated: 2026-10-10
+updated: 2026-11-01
 sources: [mattpocock-skills.md]
 reliability: medium
 ---
@@ -42,3 +42,6 @@ reliability: medium
 ## 원본
 - 대표 산출물: [[mattpocock-skills]] (GitHub ★283,389)
 - 신뢰도: ⭐⭐⭐ (저장소 메타 실측 · 제공자 실체 미확인)
+
+## 🔄 2026-11-01
+- [[mattpocock-skills]] ★308,744 · 21일 일평균 약 1,126.

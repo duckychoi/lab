@@ -4,7 +4,7 @@ type: concept
 domain: slam-3dgs
 tags: [concept, vla, robotics, humanoid, slam, embodied-ai, manipulation, 로봇제어]
 created: 2026-10-17
-updated: 2026-10-17
+updated: 2026-11-01
 sources: [MJev-Spatial.md, 리서치.md, 리서치-2026년-휴머노이드-로봇-SLAMVLA로컬LLM-제어-최신-동향.md, 리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-제어-기술-2026년-실사용-단계-진입.md]
 reliability: low
 ---
@@ -58,3 +58,6 @@ reliability: low
 
 ## 🔄 2026-10-28
 - [[PDRVLA]] — 미래 RGB·깊이·광류 특징 예측으로 물리 토큰을 만들어 VLA를 조건화한다(LIBERO 99.3 · 전부 시뮬 · 코드 없음) · [[Rollback]] — 월드모델 반사실 분기로 정책을 개선한다(실로봇) · [[ChronoReplay]] — 공간 VLM의 interface lock-in
+
+## 🔄 2026-11-01
+- 삼성 VLA([디일렉](https://www.thelec.kr/news/articleView.html?idxno=44186)): 약 3,000 에피소드로 성공률 95% · 46개 움직임 40ms. 🔴 **같은 기사에서 현장 투입은 성공률과 속도를 더 올린 "이후"로 적혀 있다.** 크론 노트 [[리서치-휴머노이드-로봇-SLAMVLA로컬LLM-제어-2026-최신-동향]] 의 "즉시 활용 가능"은 원문과 어긋난다.

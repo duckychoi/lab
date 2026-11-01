@@ -4,12 +4,17 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, dotclaude, developer-tools, harness, 자기제한, 배포포맷]
 created: 2026-04-27
-updated: 2026-10-11
+updated: 2026-11-01
 sources: []
 reliability: high
 ---
 
 # mattpocock/skills
+
+> [!update] 2026-11-01 갱신 — ★**308,744**(10-11 285,094 → **+23,650 · 21일 · 일평균 약 1,126**) · fork 25,989 · 푸시 10-31T14:23Z · MIT
+> ✅ 수집기 ★308,737(+7 드리프트) · 당일 +883은 볼트 일평균보다 낮다(창이 다르면 비교 불가 → [[지표-창길이]]). 🔴 페이지 기록 공백 21일 — 그사이 볼트 다른 페이지 기록은 합치지 않았다.
+> 📌 README 구조 확인: 실패 유형 4개(#1 의도 불일치 · #2 장황함 · #3 작동 안 함 · #4 진흙 덩어리) · `/grill-with-docs` · `/setup-matt-pocock-skills`. **플러그인과 skills.sh를 함께 설치하면 스킬이 2배로 들어간다**고 README가 경고한다. 🔴 효과 수치는 여전히 없다(수집기 일치).
+
 
 
 > [!update] 2026-10-11 갱신 — ★**285,094**(+1,705 · +0.60%) · 🏆 **2일 연속 증분이 사실상 동일하다 = 선형 구간 확인**

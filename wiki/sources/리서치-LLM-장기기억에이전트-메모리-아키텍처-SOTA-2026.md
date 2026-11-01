@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)"
 created: 2026-10-24
-updated: 2026-10-31
+updated: 2026-11-01
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news, 크론노트, 주제재생성-중복, 볼트판정-2026-10-25]
@@ -194,3 +194,62 @@ Letta는 편집 가능한 메모리 블록을 Postgres/SQLite로 지원하며, �
 - Memory-R1: Enhancing LLM Agents via Reinforcement Learning (ACL 2026) — https://aclanthology.org/2026.acl-long.583/
 - GAM: Hierarchical Graph-based Agentic Memory — https://arxiv.org/html/2604.12285v1
 - MAGMA: Multi-Graph based A
+
+## 🔄 2026-11-01 크론 갱신 (🔴 덮어쓰기 → git `c50c90f` 이전판 복원 후 병합 · 인제스트 2026-11-01)
+
+> [!note] 위 본문은 `c50c90f` 시점 판본이다. 이 섹션 아래가 11-01 배달분(3,335 B)이다 → [[크론-덮어쓰기-소실]].
+
+> [!warning] ⚖️ 볼트 판정 (2026-11-01) — arXiv 4/4 존재 · Mastra 수치 일치 · **"업계 최고"는 자기 보고**
+> ✅ 2605.14906 · 2604.16548 · 2603.07670 · 2606.30306 존재. ✅ [Mastra](https://mastra.ai/research/observational-memory) 84.23%(gpt-4o) · 94.87%(gpt-5-mini) 원문 일치.
+> 🔴 Mastra 자체 글이다. 공식 비교 모델은 gpt-4o이고 94.87은 다른 모델 값이다. 오라클 대비 +2점(82.4)은 **"실행 분산 안에 들 만큼 작다"고 Mastra가 직접 적었다.** 🔴 "RL 최적화가 표준 방식으로 정착"은 근거가 AgeMem 1건뿐이라 과장이다. Hermes 5계층 서술은 미대조.
+
+웹에서 2026년 최신 동향을 검색하겠습니다.
+## LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)
+
+**핵심 3줄**
+- 
+생물학적 원리 기반 6가지 인지 메커니즘(수면-강화 통합, 간섭 기반 망각, 기억 성숙, 재-통합, 엔티티 그래프, 다중 큐 검색)이 주요 아키텍처 설계 원칙으로 부상
+
+- 
+Mastra의 Observational Memory가 LongMemEval 벤치마크에서 gpt-4o 기준 84.23%, gpt-5-mini 기준 94.87% 달성하여 업계 최고 성능 기록
+
+- 
+에이전트 메모리 OS(Operating System) 아키텍처가 메모리 레이어에서 라이프사이클 통합 관리·거버넌스로 진화하는 중
+
+
+**상세**
+- **계층화된 메모리 구조의 표준화**: 
+TriMem(원본, 원자적 사실, 합성 프로필), TierMem(불변 로그층, 요약층, 라우팅층) 등 3-4단계 계층 구조가 표준화
+
+- **강화학습 기반 메모리 연산**: 
+Agentic Memory(AgeMem)가 저장, 검색, 업데이트, 요약, 삭제 5가지 연산을 RL 액션으로 학습하며 5개 벤치마크에서 모든 메모리 증강 기준선 초과
+
+- **생물학적 망각 곡선 적용**: 
+MemoryBank가 Ebbinghaus 감쇠 곡선을 챗봇 메모리에 적용하여 AAAI 2024에 발표
+
+- **멀티모달 메모리 평가**: 
+MemLens가 대규모 비전-언어 모델의 멀티모달 장기기억을 벤치마킹하는 프레임워크 등장(arXiv:2605.14906, 2026)
+
+- **메모리 보안 및 거버넌스**: 
+LLM 에이전트 메모리 라이프사이클 전체에 걸친 공격·방어·거버넌스 연구가 2026년 추진 중(arXiv:2604.16548)
+
+- **오픈소스 표준화**: 
+Nous Research의 Hermes 에이전트가 agentskills.io 공개 표준을 따르는 절차적 기술 문서 포함 5계층 메모리 구조 구현
+
+- **컨텍스트 운영체제 개념**: 
+컨텍스트 윈도우를 빠른 메모리(RAM)로, 영구 저장층을 디스크 저장소로 취급하는 OS 설계 패턴이 업계 수렴점
+
+
+**💡 인사이트/시사점**
+- 2026년 메모리 아키텍처는 단순 벡터 검색에서 **라이프사이클 기반 거버넌스로 전환**: Mem0, Zep, EverOS 등이 메모리 생성→통합→검색→소거의 전체 사이클을 아키텍처로 설계하고 있으며, RL 최적화가 표준 방식으로 정착
+- 
+5가지 주요 설계 진영(원본 회상, 추출 프로필, 반성적 학습, 컨텍스트 OS, 코딩 에이전트 특화)이 분화되면서 태스크와 모델에 따라 최적 아키텍처가 달라지는 추세
+
+
+**출처**
+- Microsoft Research, "Human-Inspired Memory Architecture for LLM Agents" — May 2026
+- Mastra, "Observational Memory: 95% on LongMemEval" — 2026
+- arxiv.org/pdf/2603.07670, "Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers" — 2026
+- arxiv.org/pdf/2606.30306, "Always-OnAgents: A Survey of Persistent Memory, State, and Governance in LLM Agents" — 2026
+- EverMind AI, "Best AI Memory Systems in 2026: Why the Future Belongs to Agentic Memory OS" — August 2026
+- blog.bymar.co, "Agent Memory Systems in 2026: What Actually Matters" — 2026

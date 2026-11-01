@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-10-31
+updated: 2026-11-01
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -880,3 +880,8 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🆕 [[LOWN]] — 확산 VLM에서 "저렴한 예측이 직전과 일치하면 이미지 생략" · FLOPs 35.3% · 🔴 응답별 비용을 미리 못 정함.
 - 🔴 [[claude-mem]] 공급자 설정 우회 사고 → [[에이전트-메모리-레이어]] 도구를 쓸 때 **어느 계정으로 추론이 나가는지**가 평가 항목이 된다.
 - 📚 크론 노트: [[리서치-온디바이스-AI엣지-추론-시장이-2026년-실무-필수-전환점-도달]](🔴 "80% 로컬" 과장) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]] · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-최신-동향]](🔴 A-Mem 오귀속).
+
+## 🔄 2026-11-01 배치
+- 🔴 **정정**: 위 10-25 "[[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] llama.cpp 불가"는 b11870(10-25) 이후 해소. 12GB 근거는 여전히 TBD · 디스크 231~266GB.
+- 🆕 [[WorkFactory]] — 소형 모델 전문 업무 파인튜닝 · 30K에서 이득의 88~94% · 🔴 Elo는 로컬 추정.
+- 📚 크론 노트: [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]](✅ Mastra 수치 일치 · 🔴 자기 보고) · [[리서치-온디바이스-AI엣지-추론모델-경량화-2026년-최신-동향]](🔴 미대조 · 잘림).
