@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, claude-code, game-dev, agent, orchestration, workflow]
 created: 2026-04-16
-updated: 2026-11-01
+updated: 2026-11-02
 sources: []
 reliability: medium
 ---
@@ -57,3 +57,18 @@ reliability: medium
 > - 🔴 04-16 본 페이지의 "워크플로우 DAG 기반 의존성 관리" · "스토리작가, 레벨디자이너" 예시는 이번 README 확인 범위에서 근거를 다시 찾지 않았다. 신뢰하지 말 것.
 
 - **즉시 활용**: 게임 개발은 NO. 다른 에이전트 템플릿을 도입할 때 **가장 가벼운 단계부터 시작**할 근거로 쓴다.
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — ★32,830 · **스킬 수는 실측 74 (설명 72는 낡은 값) · v1.2.0이 "모든 셸 명령 사전 승인"을 걷어냈다**
+
+**GitHub API 실측(11-02 09시대)**: ★**32,830**(수집기 32,828 · +2 드리프트) · fork 4,456 · open_issues 76 · MIT · 언어 Shell ✅ · pushed **2026-10-19**(2주째 푸시 없음) · 최신 릴리스 **v1.2.0(10-19)** "the main path, rebuilt and tested"
+- 📈 볼트 마지막 기록 ★31,493(11-01) → **+1,337 / 1일**(수집기 당일 +967과 측정 창이 다름 — 트렌딩 값은 API로 재현 못 함).
+- ✅ 수집기 서술 확인: 49 에이전트(README 6·12·57행, `.claude/agents` 디렉터리 **49개** 실측) · Godot 4 / Unity / Unreal Engine 5(98~100행).
+- ⚖️ 수집기 오류: **"72 워크플로우 스킬"은 저장소 description 값이다.** README는 74(6·13·104·293행), `.claude/skills` 디렉터리 실측도 **74개**다. 11-01 갱신에서 적은 72/74 불일치가 그대로이고, 실물 기준은 74다.
+- ⚖️ 그 밖의 카운트: README 배지 hooks 15 · rules 14. `.claude/rules` 실측 14 ✅ · `.claude/hooks` 항목 **18개**(공용 스크립트 포함 여부는 🔴 미확인이라 불일치로 단정하지 않는다).
+
+> [!note] 권한 측면 (수집기 누락)
+> - v1.2.0 노트: *"no skill pre-approves every shell command any more"* — **이전 버전에는 모든 셸 명령을 사전 승인하는 스킬이 있었다**는 뜻이다. 1.2.0 미만 템플릿을 복사해 쓰고 있다면 갱신 대상.
+> - 현재 `.claude/settings.json`: `defaultMode: default` · allow는 `dir`, `pytest` 정도 · deny에 `rm -rf` 변형·`git push --force`·`git reset --hard`·`git clean -f` 류를 길게 나열. 문자열 패턴 차단이라 우회 가능성은 남는다(볼트 판단).
+> - v1.2.0은 큰 설계 문서 통째 읽기를 막는 read guard를 추가했다 — 토큰 비용 관리 장치.
+
+- 기본 rigor `minimal`(README 220·224행) 유지 — 11-01 갱신의 "문서를 더 쓰면 게임이 나빠졌다" 측정과 일관.

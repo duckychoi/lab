@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, harness, control-plane, 자기제한, 메타데이터부재, mobile]
 created: 2026-10-10
-updated: 2026-10-31
+updated: 2026-11-02
 sources: []
 reliability: medium
 ---
@@ -77,3 +77,19 @@ reliability: medium
 - ✅ 수집기 서술 확인: 지원 6종(Codex·Claude·Cursor·Grok Build·OpenCode·Antigravity, README 5·16행) · 자체 판매 없음(9행) · 각 CLI 사전 설치·로그인(18~23행). Antigravity는 예외적으로 CLI 불요(23행) — 수집기 "각 CLI 사전 설치"의 작은 예외.
 - ⚖️ 수집기 누락: 설치가 `curl -fsSL https://t3.codes/install.sh | sh` 이고 버전이 **0.1.x nightly** 다. 원격 조작 도구인 만큼 노출 범위(인증·포트)를 먼저 확인해야 한다 — 🔴 README에서 보안 모델은 확인 못 함.
 - 🔗 [[claude-mem]] 이 T3 Code 네이티브 플러그인을 지원한다(claude-mem README 171행) — 두 도구의 결합 경로가 실재한다.
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — ★39,168 · **이틀 새 +5,964, 트렌딩 1위 · 지원 대상 7종(fx 추가) · LAN 모드는 페어링 코드가 유일한 문**
+
+**GitHub API 실측(11-02 09시대)**: ★**39,168**(수집기 39,150 · +18 드리프트) · fork **8,975** · open_issues **4,051**(이슈+PR 합산, 10-10 2,499에서 1.6배) · MIT ✅ · description **null** ✅(수집기 "설명 비어 있음" 일치) · pushed 2026-11-02T08:48Z · 릴리스 `v0.1.7-nightly.20261102.4066`(11-02 하루에만 nightly 2개)
+- 📈 볼트 마지막 기록 ★33,204(10-31) → **+5,964 / 2일**. 수집기 당일 +3,094 · 트렌딩 1위는 트렌딩 페이지 값이라 API로 재현하지 못했다(미검증).
+- ✅ 수집기 서술 확인: "agent harness control surface" · iOS/Android/웹/Electron(README 3행) · 기존 구독 사용(5행) · 판매 없음(9행).
+- ⚖️ 수집기 누락 ① **지원 대상이 7종이다.** README 5·16·24행에 **fx**가 추가됐다(`fx login`, T3 Code 서버 머신에서). 수집기의 6종 목록은 10-31 시점 기준이다.
+- ⚖️ 수집기 누락 ② **원격 노출 모델**(10-31에 🔴 미확인으로 남긴 항목, `docs/user/remote-access.md` 확인):
+  - **T3 Connect**: 호스팅 계정 로그인으로 포트 포워딩 없이 다른 기기에서 접속(6~10행). 즉 제3자(T3) 중계 계정이 경로에 들어간다.
+  - **LAN 모드** `t3 up --lan` / `t3 serve --lan`: 로컬망과 tailnet 연결을 받으며 문서가 직접 *"a pairing code is all that keeps other devices on them out"* 이라고 쓴다(81~83행). 페어링은 이후 접속까지 영구 인가한다(104행).
+  - Linux/macOS에서는 백그라운드 서비스로 상주한다(20행).
+- ⚖️ 수집기 누락 ③ 설치는 여전히 `curl -fsSL https://t3.codes/install.sh | sh`(README 29행) · Windows `irm … | iex`(35행). README 100행 *"We are very very early in this project. Expect bugs."*
+- 📝 최신 nightly 노트(4066): 모델·effort 변경 이력 표시, Antigravity 서브에이전트 작업 표시, Codex의 T3 MCP 서버 직접 호출 등 기능·버그 수정. 사고 공지는 없다.
+
+> [!warning] 권한 면적
+> 로컬에 로그인된 에이전트 7종을 휴대폰에서 원격 구동하는 도구다. LAN 모드에서는 페어링 코드 하나가 경계다. 0.1.x nightly · 이슈+PR 4천 건 · 하루 복수 배포 상태에서 상주 서비스로 띄우는 것은 신중히. 🔴 실제 앱 동작·인증 구현은 볼트가 검증하지 않았다(문서 서술만).

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-10-31
+updated: 2026-11-02
 sources: []
 reliability: medium
 ---
@@ -510,3 +510,33 @@ created 2026-07-23 · lastModified 2026-10-02 · `license: other` · 제공 [[Li
 
 - ✅ 수집기 전 항목 일치: `HEIGHT, WIDTH, NUM_FRAMES, FRAME_RATE = 544, 960, 121, 24.0` · "Stage 2 runs at 2x" · 4K `--spatial-upscalings 2 --width 3840 --height 2176` · 연매출 $10M 기준 · "Agree and Access" 정보 공유 동의. 10-28 fps 오류 재발 없음. **벤치 수치 없음** 서술도 정확.
 - 📌 금일 HF 3건 모두 30일창이 늘었다. 증가폭·증가율 모두 Uncensored(+333,741 · +15.3%) 다음이다 — 10-29의 "유일한 성장" 표현은 금일 해당 없음.
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — **30일창 첫 감소(−0.4%) · 누적 증가 속도가 2일 35.3만 → 8.0만으로 4.4배 감속. 카드는 무변경**
+
+**HF API 실측(2026-11-02T09:05Z · expand)**: `downloads`(30일) **2,431,846**(수집기 **정확히 일치**) · `downloadsAllTime` **5,436,704** · likes **10,255**(일치) · `trendingScore` **367** · 목록 API(`limit=30`) **8위**(수집기 일치) · `gated: auto` · `lastModified` **2026-10-11T07:00:53Z**(22일 무변경 · 수집기 일치) · sha `49b093a`(무변경) · `license_name: ltx-2.x-community-license-agreement`
+**카드**: `raw/main/README.md` **401 / 126 B**(게이트) · HTML 페이지 **200 / 238,751 B**(카드 본문 포함 · 벤치 표 0)
+
+| 지표 | 10-29 | 10-31 | **11-02** | Δ(10-31→11-02) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 2,234,788 | 2,441,077 | **2,431,846** | **−9,231 (−0.4%)** |
+| 누적 다운로드 | 5,003,838 | 5,356,414 | **5,436,704** | +80,290 (2일) |
+| likes | 9,763 | 10,001 | **10,255** | +254 |
+| 누적/30일 | 2.24배 | 2.19배 | **2.24배** | — |
+| trendingScore | 400 | 382 | **367** | −15 |
+
+- 🔴 **10-27 이후 이어진 30일창 성장이 처음 꺾였다.** 더 큰 신호는 누적 쪽 — 2일 증가가 **352,576 → 80,290 (약 1/4.4)**. 볼트 규칙(2배 이상 변동 시 카드/커밋 설명)을 적용해 확인: `lastModified`·sha 무변경 ⇒ **카드·가중치 변경으로 설명되지 않는다.** 10-29~10-31 의 큰 증가가 일시 유입(외부 소개·워크플로 배포 등 — 미확인)이었을 가능성만 남는다. 단일 구간이라 추세로 읽지 않는다 → [[지표-창길이]].
+- ⚖️ 지표 의미: HF 문서상 다운로드는 **기준 파일에 대한 HTTP 요청(GET·HEAD) 수**이지 사용자 수가 아니다. 이 레포 `library_name: diffusion-single-file` 의 기준 파일 규칙은 문서에서 확인하지 못했다(미확인).
+
+> [!note] ✅ 수집기 서술 대조 (HTML 카드 직접)
+> ✅ *"Native multishot generation"* · *"New diffusion video decoder — replaces the VAE reconstruction stage"* · `HEIGHT, WIDTH, NUM_FRAMES, FRAME_RATE = 544, 960, 121, 24.0` + *"Stage 1 resolution; stage 2 runs at 2x this"* · CLI `--height 1088 --width 1920` · *"For 4K: --spatial-upscalings 2 --width 3840 --height 2176"* · *"Under $10M annual revenue — Commercial and production use at no cost"* · 벤치 표 없음 — **전건 일치.**
+> ⚖️ 표현 보정: 수집기 "dynamic compute" 는 카드상 기능명 **"Diffusion fidelity rendering"**(DFR)의 설명문(*"dynamically allocates compute by scene complexity and budget"*)이다. 1920×1088 은 **DFR 파이프라인 예시**(`--spatial-upscalings 1`)이고, distilled(fast) 예시는 해상도 인자 없이 `--num-frames 121` 만 준다.
+> 🔴 **수집기 누락**: ① 커뮤니티 라이선스도 *"Transfer of fine-tunes may require a paid license"* ② 매출은 *"whole entity, including subsidiaries and affiliates"* 합산(볼트 10-04 기록) ③ $10M 초과 유료 계약 문구에 *"full weights, engineering support, LoRAs"* — 무료판과 가중치 범위가 다른지 카드만으로는 **불명**(볼트 미검증) ④ 게이트 `auto` · 프로필 공유(username·email) + *"targeted and personalized advertisements"* 수신 동의 ⑤ 텍스트 인코더 Gemma 4 12B · duration predictor(옵션).
+
+> [!action] 당장 할 것
+> ⬜ 다음 배치에서 누적 증가가 2일 10만 미만이 이어지면 "10-29~31 일시 유입" 판정 → [[지표-창길이]] 사례 등재.
+> ⬜ (이월) duration head(`--num-frames` 생략) 로컬 1회 테스트 · 상업 사용 전 LICENSE-2_x 의 "full weights" 범위 확인.
+
+## 원본 (11-02 갱신)
+- 볼트 실측: HF API expand(+cardData) · `api/models?sort=trendingScore&limit=30`(8위) · `raw/main/README.md`(401) · HTML 페이지(200 · 238,751 B · 본문 텍스트 추출 재스캔) · HF 다운로드 통계 문서
+- raw 대비: ✅ dl30·likes·트렌딩 8위·lastModified·멀티샷·디코더·해상도·4K·$10M·벤치 없음 **전건 일치** · ⚖️ "dynamic compute" 기능명 보정 · 🔴 라이선스 세부·게이트 조건 누락
+- 신뢰도: ⭐⭐⭐

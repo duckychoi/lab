@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, memory, context, session, plugin, llm-coding, workflow, 캐시된지표신선도, 관심검증역상관]
 created: 2026-04-13
-updated: 2026-10-31
+updated: 2026-11-02
 sources: []
 reliability: high
 ---
@@ -106,3 +106,24 @@ reliability: high
 > README 287·289·296행: 검색 색인 **~50-100 토큰/결과** vs 상세 조회 **~500-1,000 토큰/결과** → *"~10x token savings by filtering before fetching details"*. 즉 **결과 하나당 크기 비율**이고, 실사용 세션 전체의 절감을 잰 값이 아니다. 수집기가 "상세 조회 전 필터링 기준의 자체 수치"로 적은 것은 ✅ 정확하다. 볼트의 "능력 측정 0" 판정은 유지 → [[스타-근거-비동행]].
 
 - ✅ 수집기 서술 확인: SQLite FTS5(255행) · Chroma 하이브리드(256·275행) · MCP 도구 4종(283행) · 워커 서비스(254·272행). 🆕 [[t3code]] 에 네이티브 플러그인 등록 지원(171행) · npm 전역 설치는 SDK만 깔고 훅을 등록하지 않음(204행 주의).
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — ★110,000 · 🔴 **설치 직후 최근 30일 프롬프트를 cmem.ai에 무동의 업로드(v15.2.0~v15.8.2) — v15.8.3에서 수정, 이미 올라간 것은 안 지워짐**
+
+**GitHub API 실측(11-02 09시대)**: ★**110,000**(수집기 109,992 · +8 드리프트) · fork 9,602 · Apache-2.0 ✅ · pushed 2026-11-02T08:57Z · 최신 릴리스 **v15.8.3(11-02 06:26Z)** · v15.8.2(11-02) · v15.8.1(11-01) · v15.8.0(11-01)
+- 📈 볼트 마지막 기록 ★106,828(10-31) → **+3,172 / 2일**.
+- ✅ 수집기 서술 확인: 캡처→AI 압축→주입(저장소 description) · SQLite(README 251·269행) · Chroma 하이브리드 검색(252·271행). 지원 목록은 description 기준 **Claude Code · OpenClaw · Codex · Gemini · Hermes · Copilot · OpenCode + More** — 수집기 5종 목록은 OpenClaw·Hermes를 뺐다. README 설치 절에는 Grok Bot(136)·T3 Code(164)·Antigravity(172)·OMP(178)·Pi/DeepSeek Harness(184~185)도 있다.
+
+> [!warning] 🔴 수집기 요약에 없는 프라이버시 사고 (v15.8.3 릴리스 노트 · issue #5176)
+> v15.2.0(2026-10-25)에서 도입된 브라우저 설치 흐름(#5031)이 로컬 에이전트 기록을 스캔한 뒤 **최근 30일 프롬프트 전문을 세션 ID·프로젝트명·폴더 경로·타임스탬프와 함께 cmem.ai로 묻지 않고 업로드**했다. 이슈 #5176 제목: *"Installing claude-mem uploads your last 30 days of prompts to cmem.ai, no opt-in"*(10-29 등록, API 조회 시점 **open**).
+> - v15.8.3(#5220): 스캔 후 멈추고 동의 패널을 띄운다. 도구별 체크한 것만 업로드, "Keep everything local" 선택 시 0건. 분석(analytics) 체크박스는 별도이며 기본 off.
+> - 릴리스 노트가 스스로 밝힌 한계: **이전 버전이 이미 올린 프롬프트는 이 업데이트로 삭제되지 않는다.** cmem.ai 서버 측 처리와 개인정보 정책 문구는 이 변경 범위 밖이다.
+> - 노출 범위 추정: v15.2.0 노트는 이 흐름이 **신규 설치**에서 열린다고 적는다(기존 설치는 My Work를 그대로 연다). 즉 10-25~11-02 사이 새로 `npx claude-mem install` 한 사용자가 대상이다 — 기존 설치 사용자의 노출 여부는 🔴 미확인.
+> ⇒ 10-31 갱신의 숨은 `codex exec` 사고에 이어 **일주일 안에 두 번째 "사용자 동의 범위 밖" 사고**다.
+
+- ⚖️ 수집기 누락 ② **호스팅 쪽으로 기울고 있다.** 설치기가 브라우저 로그인(이메일 매직링크)으로 **claude-mem observer 30일 무료 체험**을 열고, 체험 종료 후에는 Anthropic 플랜으로 되돌아간다(README 149행). Grok Bot 경로는 기본값이 **CMEM Pro(호스팅 메모리)**, 로컬 observer는 옵트인(139행). 로그인 회피: `--provider` 지정 또는 `CLAUDE_MEM_ONLINE_OPTIN=false`(151행).
+- ⚖️ 수집기 누락 ③ **텔레메트리 존재.** v15.8.2가 "telemetry volume cuts"(설치당 일별 롤업 이벤트)로 이벤트 양을 줄였다 — 텔레메트리 자체를 끄는 방법은 README에서 확인하지 못했다(🔴 미확인).
+- ⚖️ 수집기 누락 ④ OpenClaw 경로는 `curl -fsSL https://install.cmem.ai/openclaw.sh | bash`(README 207행) 파이프 설치다.
+- 📌 볼트 환경: `~/.claude-mem` 및 플러그인 설치 흔적은 이 머신에서 발견되지 않았다(11-02 확인) — 직접 노출 없음.
+
+> [!action] 당장 할 것
+> 도입 검토를 다시 한다면 **v15.8.3 이상 + `--provider` 지정(또는 `CLAUDE_MEM_ONLINE_OPTIN=false`)** 으로만 설치. 10-25 이후 이미 설치했다면 cmem.ai에 업로드된 데이터 삭제 요청 경로를 먼저 확인(🔴 릴리스 노트에 삭제 절차 없음). ★11만은 신뢰 근거가 아니다 → [[스타-근거-비동행]].

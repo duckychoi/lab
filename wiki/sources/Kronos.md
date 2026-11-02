@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, finance-ai, time-series, financial-llm, trading]
 created: 2026-04-10
-updated: 2026-08-13
+updated: 2026-11-02
 sources: []
 reliability: medium
 ---
@@ -49,3 +49,20 @@ reliability: medium
 - GitHub: https://github.com/shiyu-coder/Kronos — 스타 7,045 (2026-04-10)
 - arXiv 논문: https://arxiv.org/abs/2508.02739 — 45개 글로벌 거래소 120억 K-line 학습, 가격예측 RankIC +93%, 변동성 예측 MAE -9%
 - 신뢰도: ⭐⭐⭐ (논문 출판으로 상향, 벤치마크 수치 공개)
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — ★45,669 · **별은 계속 오르지만 코드는 2026-04-13 이후 멈춤 · large는 비공개**
+
+**GitHub API 실측(11-02 09시대)**: ★**45,669**(수집기 45,667 · +2 드리프트) · fork 7,533 · open_issues 295 · MIT · Python · created 2025-07-01 · **pushed 2026-04-13**(마지막 커밋: PR #243 batch dimension 수정 병합) · **릴리스 0개**(`/releases` 빈 목록)
+- 📈 볼트 마지막 기록 ⭐37,034(08-13) → **+8,635 / 81일**(일평균 약 107). 수집기 당일 +630은 트렌딩 값이라 API로 재현 못 함.
+- ✅ 수집기 서술 확인(README):
+  - 45+ 글로벌 거래소(47행) · decoder-only(61행) · 계층 이산 토큰(62행) · AAAI 2026 채택(53행, 2025-11-10 공지)
+  - 모델 표(77~82행): mini **4.1M** · small **24.7M** · base **102.3M** 공개(HF `NeoQuasar/*`) · large **499.2M ❌ 비공개** — 수치 모두 일치
+  - 파인튜닝 스크립트(54행 2025-08-17 공개, 217행~ Qlib A주 예시, torchrun 다중 GPU)
+- ⚖️ 수집기 누락:
+  - **문맥 길이 차이**: mini는 별도 `Kronos-Tokenizer-2k`·context **2048**, small/base는 **512**(79~81·99행). "작은 모델이 더 긴 문맥"이라는 역전이 있다.
+  - **README 스스로의 면책**: 파인튜닝 파이프라인은 시연용이며 프로덕션 퀀트 시스템이 아니다(221행). 출력은 raw 신호이고 pure alpha는 포트폴리오 최적화·리스크 중립화가 필요하다(302~304행).
+  - "first open-source foundation model for K-lines"(46행)는 **자기 주장**이다 — 볼트 미검증.
+  - Live Demo(BTC/USDT 24h, 69~72행)는 예측 시각화이고 성과 검증이 아니다.
+
+> [!insight] 관심과 유지보수의 탈동조
+> 마지막 커밋 이후 약 6.5개월 동안 ★가 약 1.2만 늘었다(볼트 기록 기준 07-25 33,610 → 11-02 45,669). 릴리스도 없다. 금융 예측은 백테스트↔라이브 괴리 검증이 필수인데, 그 검증을 할 신규 코드·이슈 대응 흔적이 API 수준에서는 보이지 않는다 → reliability **medium 유지**. [[스타-근거-비동행]] 사례로 추가할 만하다.

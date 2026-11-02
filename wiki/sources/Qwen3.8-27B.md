@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba, 하네스-설계-축, 비매칭-비교, 벤치-개조-재평가, 표-부분인용, 특화-역류, 하네스편향, 역휴리스틱, 이월종결]
 created: 2026-08-18
-updated: 2026-10-31
+updated: 2026-11-02
 sources: []
 reliability: medium
 ---
@@ -922,3 +922,48 @@ Qwen/Qwen3.8-27B
 
 - 🔴 **볼트 10-29 "30일창 2회 연속 하락" → 3번째 점에서 반등.** 하락은 추세로 볼 만한 크기(−0.09%)가 아니었다. [[지표-창길이]] 에 등재한 사례를 "노이즈 범위"로 낮춘다. 누적은 2일 +73만으로 계속 늘고 있다.
 - ✅ 수집기: 컨텍스트 262,144(최대 100만 확장) 카드 53행 일치 · 🔴 다만 **100만은 RoPE 스케일링 설정이 필요**하다(카드 514행 이하) — "확장 가능"이 공짜가 아니다. 호스팅판이 기본 1M이다(16행). "제조사 자체 측정" 표기 ✅.
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — **동결 80일 · 30일창 +4.1%로 2배치 연속 반등 · 수집기 벤치 7값 전건 일치, 단 비교 기준은 여전히 반쪽**
+
+**HF API 실측(2026-11-02T09:05Z · expand)**: `downloads`(30일) **7,892,866**(수집기 **정확히 일치**) · `downloadsAllTime` **20,486,593** · likes **18,957**(일치) · `trendingScore` **285** · 목록 API(`sort=trendingScore&limit=30`) **12위**(수집기 일치) · `gated: false` · `lastModified` **2026-08-14T15:00:01Z**(80일 무변경) · sha `1d4bf0f`(무변경) · license `apache-2.0`
+**모델 카드**: `raw/main/README.md` HTTP 200 · **65,012 B · 582행** — 10-28·10-29·10-31 과 동일 ⇒ **"lastModified 무변경 ⇒ 카드 무변경" 4회째 실증**
+
+| 지표 | 10-29 | 10-31 | **11-02** | Δ(10-31→11-02) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 7,515,620 | 7,581,050 | **7,892,866** | **+311,816 (+4.1%)** |
+| 누적 다운로드 | 19,207,907 | 19,937,861 | **20,486,593** | +548,732 (2일 · ≈27.4만/일) |
+| likes | 18,650 | 18,820 | **18,957** | +137 |
+| 누적/30일 | 2.56배 | 2.63배 | **2.60배** | — |
+| trendingScore | 317 | 278 | **285** | +7 |
+
+- 📌 **누적 2,000만 돌파.** 30일창은 10-27 정점(760.8만)을 넘어 **789.3만 신고점** ⇒ 10-29 "정점 부근" 판정은 완전히 무효, 10-31 의 "노이즈 범위로 하향"이 맞았다 → [[지표-창길이]].
+- 📌 2배 이상 변동 지표 없음 → 카드·커밋 이력 설명 의무 해당 없음(그래도 바이트 대조는 실시).
+- ⚖️ 지표 의미: HF 문서(`docs/hub/models-download-stats`) — *"Every HTTP request to these files, including GET and HEAD, will be counted as a download"*, 라이브러리 미지정 시 `config.json` 이 기준 파일. ⇒ **사람 수가 아니라 요청 수**다(고유 사용자 집계는 유료 Publisher Analytics 영역). 🔴 같은 문서 텍스트에서 "30 days" 문구는 오늘 찾지 못했다 — 창 길이 근거는 볼트 09-23 정정 기록에 의존(오늘 재검증 아님).
+
+> [!insight] ✅ 벤치 7값 — 카드 HTML 표 `<th>` 5열(Qwen3.8-27B · Qwen3.6-27B · Qwen3.7-Plus · Muse Glimmer-30B · Opus4.6 Max) 재파싱
+> | 벤치 | 3.8-27B | 3.6-27B | 3.7-Plus | Glimmer-30B | Opus4.6 Max | 수집기 |
+> |---|---:|---:|---:|---:|---:|---|
+> | Terminal Bench 2.1 | 73.0 | 63.4 | 64.0 | 51.7 | **78.2** | ✅ 73.0 |
+> | SWE-bench Pro | **61.7** | 53.5 | 57.6 | 51.2 | 53.4* | ✅ 61.7 |
+> | QwenSWEBench | **79.0** | 49.3 | 59.2 | -- | 63.8 | ✅ 79.0 |
+> | GPQA Diamond | 89.2 | 87.8 | 90.3 | 83.5 | **91.3** | ✅ 89.2 |
+> | LiveCodeBench v6 | **90.3** | 83.9 | 89.6 | -- | 88.8 | ✅ 90.3 |
+> | HLE | 30.8 | 24.0 | 34.7 | 22.0 | **40.0** | ✅ 30.8 |
+> | IFBench | **79.5** | 69.1 | 79.1 | 77.0 | 62.5 | ✅ 79.5 |
+> \* 177행 각주: *"Except for Opus4.6 Max, which uses the officially reported score, all models are evaluated with the Claude Code harness … Problematic tasks were corrected, and all baseline models were re-evaluated on the refined benchmark."*
+> 🔴 **수집기 "SWE-bench Pro 에서 Opus4.6 Max 53.4 보다 높다"** — 수치는 맞지만 **Opus 값만 공식 보고치, 나머지는 Qwen 측이 수정한 벤치에서 재평가** ⇒ 같은 조건 비교가 아니다 → [[비매칭-비교]](10-12 판정 유지). 수집기는 이 각주를 적지 않았다.
+> 🔴 **[[표-부분인용]] 재발**: Opus 가 앞선 TB2.1·GPQA·HLE 의 Opus 값(78.2·91.3·40.0)을 적지 않았다. 또 **같은 표의 자사 상위 모델 Qwen3.7-Plus 가 GPQA(90.3)·HLE(34.7)에서 27B 보다 높다**는 점도 생략.
+> 🆕 HLE 각주 *"Judged by GPT-4o"* · QwenSWEBench 는 **사내(in-house) 벤치**(각주) — 79.0 은 외부 재현 불가 수치다.
+
+> [!note] 사양 대조 (카드 직접)
+> ✅ dense 27B(20·37행) · 네이티브 262,144 · 1M 은 YaRN `factor 4.0` 오버라이드 필요(514~556행, *"static YaRN … potentially impacting performance on shorter texts"*) · thinking 기본 ON·요청별 OFF · `reasoning_effort` xhigh(기본)/medium/low(300행). 수집기 "1M ext" 는 맞지만 **짧은 입력 성능 저하 경고**를 생략. 게이트 없음 · Apache-2.0.
+
+> [!action] 당장 할 것
+> ⬜ 로컬 운용 시 YaRN 은 **262K 초과 작업에만** 켤 것(정적 YaRN 짧은 입력 손해 — 카드 556행).
+> ⬜ 벤치 인용 규약: Qwen 카드 수치는 "수정 벤치·자체 하네스" 표기 없이 외부 리더보드 값과 나란히 쓰지 않는다.
+
+## 원본 (11-02 갱신)
+- 수집: 2026-11-02 자동수집(ai-news) · 인제스트 2026-11-02
+- 볼트 실측: HF API expand · `api/models?sort=trendingScore&limit=30`(12위) · `raw/main/README.md`(200 · 65,012 B · 582행 · HTML 표 파싱) · HF 다운로드 통계 문서
+- raw 대비: ✅ dl30·likes·트렌딩 12위·lastModified·사양·벤치 7값 **전건 일치** · 🔴 SWE-Pro 각주(비매칭) 누락 · 🔴 Opus/3.7-Plus 우위 값 생략 · 🔴 YaRN 경고 생략
+- 신뢰도: ⭐⭐⭐⭐

@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA"
 created: 2026-10-24
-updated: 2026-10-26
+updated: 2026-11-02
 type: source
 domain: local-llm
 topic: llm-long-memory   # 중복 판정 키 — 2026-10-24 부여
@@ -9,7 +9,7 @@ sources: []
 reliability: low   # 크론 2차 인용 · 독립 검증 미실시
 author: research-agent
 origin: cron-research-agent
-tags: [research-agent, ai-news]
+tags: [research-agent, local-llm, agent-memory, 크론노트, 주제재생성-중복, 크론-덮어쓰기]
 ---
 ## LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA
 
@@ -137,5 +137,74 @@ Anthropic Dreaming(비동기 hippocampal 재생), Claude Opus 4.7의 1M flat-pri
 - Agent Memory Architectures: Patterns and Trade-offs (2026) — https://atlan.com/know/agent-memory-architectures/
 - Agent Memory in 2026: Dreaming, Memory Bank, and the Long-Context Shift — https://www.digitalapplied.com/blog/ai-agent-memory-vector-graph-episodic-2026
 
+## 🔄 2026-11-02 크론 갱신 (덮어쓰기 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 이 파일 **3번째**(10-24 생성 → 10-26 덮어쓰기 → 11-02 덮어쓰기)
+> 크론이 2026-11-02 08:3x 같은 파일명으로 덮어써 10-26 볼트 판정·`topic:`·`domain:`·`reliability:`·`created: 2026-10-24` 가 지워졌다. 볼트가 git `68f3fe4`(HEAD) 판본을 복원했고 위 본문이 그 판본이다. 이 섹션 아래가 11-02 배달분(3,890 B · 잘림 없음)이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-02) — 표본 3건 · 대부분 반복
+> - ✅ **Cognee**: $7.5M 시드(2026-02-19 · Pebblebed 리드)·"12,000+ 스타·80+ 기여자"는 [회사 발표](https://www.cognee.ai/cognee-raises-seven-million-five-hundred-thousand-dollars-seed)와 일치. 🔴 단 **2월 시점 수치** — 3분기 서드파티 집계는 약 27k 스타. 일부 매체는 €7.5M 표기. 🔴 "2026년 **가장 채택된** 그래프 네이티브 프레임워크" 는 출처가 **cognee.ai 자사 블로그** → 자기 평가.
+> - ✅ [arXiv 2608.21690](https://arxiv.org/abs/2608.21690) "Context as an Environment" 실존 · 2026-08-21 제출 · 제목 일치.
+> - 🔁 **"5가지 패턴 72.9%/17.12s ↔ 66.9%/1.44s"** · "21개 프레임워크·20개 벡터 스토어" · LoCoMo/LongMemEval/BEAM — **위 10-24·10-26 본문과 동일**(재조회 0회 · 벤더 자가 벤치).
+> - ⚖️ 미검증: "Karpathy LLM Wiki 2026년 4월" · MemPalace LongMemEval 96.6% R@5(볼트 내 타 노트 기존재) · "13개 프레임워크 그래프 지원" · Oblivion/Mnemis/Membox/Memex/Fademem 논문 실체.
+> - 🆕 **신규**: Cognee 펀딩·채택 수치 · 논문명 Mnemis/Membox/Memex/Fademem · 출처 2608.21690·2607.21962. 🔴 10-26 판정의 미확인 주장(Anthropic Dreaming · Opus 4.7 1M)은 금일판에 없음.
+
+## LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA
+
+**핵심 3줄**
+- 
+메모리가 정적 아카이브에서 살아있는 인지 과정으로 변화하고 있으며, 단기 컨텍스트·장기 에피소드 메모리·안정적 사용자 프로필을 포함한 다층 구조로 조직화되는 중
+
+- 
+5가지 아키텍처 패턴이 72.9% 정확도(17.12s p95 레이턴시)에서 66.9% 정확도(1.44s)로 확장되며, 그래프 기반 메모리가 2026년 초 프로덕션 상태에서 13개 프레임워크가 지원
+
+- 
+Cognee가 12,000개 GitHub 스타·80명 이상 기여자·750만 달러 시드펀딩·70개 이상 프로덕션 배포로 2026년 가장 채택된 그래프 네이티브 메모리 프레임워크
+
+
+**상세**
+• 
+장기기억은 모델 파라미터와 현재 컨텍스트 윈도우 외부의 정보를 활용하게 하며, RAG·대화/관찰/반성 저장·모델 자체 외부 메모리 관리·레코드 통합/풍부화/연결로 진화
+
+
+• 
+Karpathy의 LLM Wiki가 2026년 4월 제시되어 모델이 새로운 소스를 읽으면서 점진적으로 지속적 상호 연결 지식 베이스를 컴파일하도록 하고, MemPalace가 LongMemEval에서 96.6% R@5 달성
+
+
+• 
+2026년 최고 메모리 레이어는 Cognee·Mem0·Zep·Letta·LangMem·Graphiti이며, Mem0는 프로토타이핑용 벡터 기반 메모리, Zep는 대화형 에이전트용이고, Cognee가 그래프 추론 깊이와 벡터 검색 용이성을 결합
+
+
+• 
+메모리 인프라가 LangChain·LangGraph·LlamaIndex·CrewAI·AutoGen·Google ADK와 통합되고 있으며, 메모리를 선택적 플러그인이 아닌 1급 아키텍처 계층으로 설계하면서 비동기 메모리 쓰기·메타데이터 필터링·메모리 리랭킹·액터 인식 메모리·그래프 기반 엔티티 연결 지원
+
+
+• 
+2026년 21개 통합 프레임워크와 20개 벡터 스토어 백엔드가 있으며, 순수 벡터 유사도에서 메모리 시스템 내 엔티티 연결로 이동 중이고, 가장 일반적인 프로덕션 조합은 패턴 2(플랫 벡터) 또는 패턴 3(계층형) + 패턴 5(엔터프라이즈 컨텍스트 레이어)
+
+
+• 
+2026년 주요 논문들: Oblivion(감쇠 기반 활성화)·Mnemis(계층 그래프 검색)·Membox(토픽 연속성)·Memex(인덱스 경험 메모리)·Fademem(생물학적 망각)
+
+
+• 
+2026년 메모리 벤치마크로 LoCoMo·LongMemEval·BEAM이 출현했고, 메모리 포이징·안전 거버넌스·업데이트 갭 진단이 중요 연구 영역
+
+
+**💡 인사이트/시사점**
+
+메모리가 AI 시스템이 사용자와의 지속적 관계를 발전시키는 메커니즘으로 기능하고 있어
+, 단순 검색을 넘어 개인화·상태 추적·멀티 에이전트 협업이 핵심 경쟁 영역으로 부상했습니다. 벡터 검색 중심에서 시간 그래프·엔티티 연결·생물학적 망각 영감 설계로 전환되는 것이 핵심 트렌드입니다.
+
+**출처**
+- MemChain: Learning Interpretable Memory Traces for Memory-Augmented LLM Agents — arxiv.org/pdf/2607.24097
+- Context as an Environment: Programmatic Context Management for Long-Horizon Agents — arxiv.org/pdf/2608.21690
+- Ground Truth First: Longitudinal Evaluation Instrument for Agent Memory — arxiv.org/pdf/2607.21962
+- Agent Memory Architectures: Patterns and Trade-offs (2026) — atlan.com/know/agent-memory-architectures
+- State of AI Agent Memory 2026: Where AI Memory is Heading — dev.to/ponmiledaniel
+- Best AI Agent Memory Systems in 2026 — vectorize.io/articles/best-ai-agent-memory-systems
+- Top Open-Source Memory Frameworks for LLM Agents in 2026 — cognee.ai/blog/guides
+
 ## 관련 페이지
 - [[주제재생성-중복]] · [[local-llm]]
+- [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]] · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-최신-동향]] · [[에이전트-메모리-레이어]] · [[크론-덮어쓰기-소실]]

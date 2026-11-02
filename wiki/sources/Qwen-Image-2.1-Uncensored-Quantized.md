@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판, 봉인유지, 절제, 규약11]
 created: 2026-10-02
-updated: 2026-10-31
+updated: 2026-11-02
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -380,3 +380,46 @@ BF16 **14.23 GB** → NVFP4 **4.20 GB** (70.5% 감소) · MLX 4bit **4.00 GB** (
 
 - 🔴 10-29 의 "10배 미만이면 분류 재검토" 조건이 멀어졌다. 파생 +15.3%(2일) ≫ 원본 +6.0%. 볼트가 읽던 "수렴"은 2~3점짜리 단기 패턴이었다 → [[지표-창길이]].
 - ✅ 수집기: GGUF·FP8·NVFP4·MLX · 4.00~14.23 GB(카드 34~44행) · qwen-research(3행) · 벤치 이미지 게시(28행) 일치. "제거 방식 미설명" 문구 유지 ✅. ⚖️ 카드 24행 *"original upstream base weights"* 와 10-29 해시 불일치는 여전히 미해소(텐서 diff 미실시).
+
+## 🔄 2026-11-02 갱신 (인제스트 2026-11-02) — 🔴 **수집기 "safety/censor 0건 · 볼트 인용문 미존재"는 틀렸다. 문구는 초기 커밋부터 현재까지 카드에 있다 — 볼트 인용은 정확**
+
+**HF API 실측(2026-11-02T09:05Z · expand)**: `downloads`(30일) **2,548,468**(수집기 **정확히 일치**) · `downloadsAllTime` **3,989,530** · likes **5,502**(일치) · `trendingScore` **286** · 목록 API(`limit=30`) **11위**(수집기 일치) · `gated: false` · `lastModified` 2026-10-12T07:10:55Z(21일 무변경) · sha `7959e65`(무변경) · license `other / qwen-research`
+**모델 카드**: `raw/main/README.md` HTTP 200 · **8,511 B · 126행**(10-28·10-31 과 동일)
+
+| 지표 | 10-29 | 10-31 | **11-02** | Δ(10-31→11-02) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 2,182,980 | 2,516,721 | **2,548,468** | +31,747 (+1.3%) |
+| 누적 다운로드 | 3,320,887 | 3,811,634 | **3,989,530** | +177,896 (2일) |
+| likes | 5,284 | 5,387 | **5,502** | +115 |
+| 누적/30일 | — | 1.51배 | **1.57배** | — |
+
+> [!warning] 🔴🔴 수집기 오류 — **"safety/censor 텍스트 grep 0건, 10-28 볼트 인용 'no safety checker' 문구 없음"**
+> 볼트 검증(커밋 이력 대조): `api/models/<id>/commits/main` 8건 — 최신 `7959e65`(10-12 *"Update README … enable MLX/Quantized widgets"*). 각 리비전 README 를 `raw/<rev>/README.md` 로 받아 대조:
+> | 리비전 | 날짜 | README 크기 | *"no built-in safety checker"* |
+> |---|---|---:|---:|
+> | `1206d38` (Initial release) | 09-22 | 6,944 B | **1** |
+> | `8fa47c0` | 09-26 | 8,025 B | **1** |
+> | `a6dc609` | 10-11 | 8,037 B | **1** |
+> | `7959e65` (현재) | 10-12 | 8,511 B | **1** |
+> 현재 카드 117행 원문: *"This release has **no built-in safety checker or content filter**. It generates adult, NSFW, and sensitive imagery directly without prompt refusals or blacked-out images."* · 115행 `## Uncensored` · 22행 제목 *"Uncensored Quantized"* ⇒ `safety`·`censor` 모두 **0건이 아니다.** HTML 페이지(200 · 214,162 B)에도 같은 문장이 렌더된다.
+> ⇒ **카드는 바뀌지 않았고, 볼트 10-28 인용(117행)은 정확했다.** 수집기 측 원인은 미확인(다른 URL·인코딩·대소문자 처리 등 추정 — 확인 불가) → [[측정도구-먼저-반증]] 사례 추가.
+
+- 📌 [[원본-파생-역전]] 7점째 — 원본 `Qwen/Qwen-Image-2.1` 실측: 30일 **217,429** · 누적 302,817 · likes 3,524 · lastModified 09-30(무변경)
+  | 측정일 | 파생 DL30 | 원본 DL30 | 역전 배수 |
+  |---|---:|---:|---:|
+  | 10-31 | 2,516,721 | 212,670 | 11.8 |
+  | **11-02** | **2,548,468** | **217,429** | **11.7** |
+  누적 기준 13.2배 · likes 비 1.56배. 2일 파생 +1.3% · 원본 +2.2% — 횡보. 2배 이상 변동 지표 없음.
+- ⚖️ **10-28 actionable "GGUF·diffusers 계수 규칙 확인" 부분 해소**: HF 문서 — GGUF 는 *"all of them are counted"*(레포 전체 클론 시 이중 계수 명시), diffusers 는 *"internal codebase"* 의 별도 필터(라이브러리 로드 + 상위 safetensors 수동 다운로드 계수). GET·HEAD 모두 1회로 센다 ⇒ **요청 수이지 사용자 수가 아니다.** 🔴 이 레포는 `library_name: gguf` 인데 FP8·NVFP4·MLX safetensors 도 함께 있다 — 그 파일들이 계수 대상인지는 문서에 없다(미확인). ⇒ 11.7배는 여전히 **방향만 유효, 크기 미보정** → [[계수기-배수]].
+- ✅ 파일 대조(`tree/main` API): BF16 14,230,272,800 B(=14.23 GB) · Q4_K_M 4,604,558,112 B(=4.60 GB) · MLX 4bit 4,002,363,741 B(=4.00 GB) — 수집기 일치. 🔴 수집기 미언급: FP8 7,116,818,183 B 는 카드 표기 **6.63 → GiB 단위**(10진 7.12 GB), INT8 ConvRot 7,256,796,840 B 도 카드 6.76(GiB) ⇒ 기존 판정 [[단위-불일치]] 유지. 권장 Q4_K_M 은 카드 표기 기준.
+- 🔴 수집기 누락: `qwen-research` 라이선스(상업 사용 범위 확인 필요 — 볼트 미검증) · 텍스트 인코더 Qwen3-VL-8B Int8 9.35 GB 가 확산 Q4(4.60 GB)보다 크다는 실 VRAM 조건 · `qwen-image-2.1-uncensored-lora.safetensors`(33,586,704 B) 존재(09-27 커밋 `7cd41e7`) — 무검열 방식 단서. 게이트 없음.
+
+> [!action] 당장 할 것
+> ⬜ 수집기 규약 제안: "볼트 인용문이 카드에 없다"고 판정할 때는 **리비전별 README(`raw/<sha>/README.md`) 대조 결과**를 함께 낼 것(오늘 볼트 1회로 반증).
+> ⬜ (이월) GGUF 헤더 range 요청으로 UC/base 메타데이터 키 비교 — 해시 차이가 메타데이터인지 텐서인지.
+> ⬜ (이월) 역전 배수 10배 미만 시 분류 재검토 — 현재 11.7.
+
+## 원본 (11-02 갱신)
+- 볼트 실측: HF API expand 2건(파생·원본) · `commits/main`(8건) · `raw/{1206d38,8fa47c0,a6dc609,7959e65}/README.md` · HTML 페이지 · `tree/main` · HF 다운로드 통계 문서
+- raw 대비: ✅ dl30·likes·트렌딩 11위·파일 크기 3종 **일치** · 🔴🔴 "safety/censor 0건 · 볼트 오인용" **오류**(카드 무변경 · 볼트 인용 정확) · 🔴 라이선스·인코더·LoRA·단위 혼재 누락
+- 신뢰도: ⭐⭐⭐
