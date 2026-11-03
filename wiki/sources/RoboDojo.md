@@ -37,3 +37,6 @@ reliability: medium
 - arXiv: 2607.04434, RoboDojo
 - 평가축: 일반화 / 메모리 / 정밀도 / 롱호라이즌 / 오픈보캐뷸러리 · sim-and-real 통합
 - 신뢰도: ⭐⭐⭐ (초록 원문 검증 / 벤치 상세 미실측)
+
+## 🔄 2026-11-03 — 인용
+- [[uni-robot-agent]]: 42과제 · 하네스 대조(같은 Qwen3.8-Flash-Next가 RoboProbe 1.90 → uni-robot-agent 31.39) · 오픈웨이트 최고 31.39 · GPT-6 Astra + 같은 하네스 51.90.

@@ -8288,6 +8288,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-11-03 배치\n헤드라인 수치와 비교 대상이 다른 설정에서 왔다\n신규 5 · 갱신 8 · 크론 덮어쓰기 3건",
+			"x": -640,
+			"y": 52160,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1103-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/WaveForcing.md",
+			"x": 60,
+			"y": 52160,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/Video-Generation-Agent-Harness.md",
+			"x": 520,
+			"y": 52160,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/CoworkOS.md",
+			"x": 980,
+			"y": 52160,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/CUA-Master.md",
+			"x": 60,
+			"y": 52420,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/uni-robot-agent.md",
+			"x": 520,
+			"y": 52420,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/agent-desktop.md",
+			"x": 980,
+			"y": 52420,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/claude-mem.md",
+			"x": 60,
+			"y": 52680,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/claude-code-game-studios.md",
+			"x": 520,
+			"y": 52680,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/FreeToken.md",
+			"x": 980,
+			"y": 52680,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/t3code.md",
+			"x": 60,
+			"y": 52940,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-27B.md",
+			"x": 520,
+			"y": 52940,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Quantized.md",
+			"x": 980,
+			"y": 52940,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1103-ai-news-13",
+			"type": "file",
+			"file": "wiki/sources/LTX-2.5.md",
+			"x": 60,
+			"y": 53200,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -15511,6 +15651,122 @@
 			"fromNode": "b1102-ai-news-5",
 			"toNode": "b1102-ai-news-6",
 			"label": "제어면 + 메모리층"
+		},
+		{
+			"id": "e1103-ai-news-1",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "4스텝·더미가중치 FPS"
+		},
+		{
+			"id": "e1103-ai-news-2",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "하네스 서베이"
+		},
+		{
+			"id": "e1103-ai-news-3",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "1위 6/12 · 격차 1점 내"
+		},
+		{
+			"id": "e1103-ai-news-4",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "범용 27B보다 낮은 OSWorld"
+		},
+		{
+			"id": "e1103-ai-news-5",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "하네스 효과 1.90→31.39"
+		},
+		{
+			"id": "e1103-ai-news-6",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "vercel-labs 이관"
+		},
+		{
+			"id": "e1103-ai-news-7",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "#5176 재오픈 · DeepSeek 전달"
+		},
+		{
+			"id": "e1103-ai-news-8",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "스킬 74 재확인"
+		},
+		{
+			"id": "e1103-ai-news-9",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "5090 = 6스레드 렌트 서버"
+		},
+		{
+			"id": "e1103-ai-news-10",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "Kiro 8번째 제공자"
+		},
+		{
+			"id": "e1103-ai-news-11",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "81일 동결 · 21값 일치"
+		},
+		{
+			"id": "e1103-ai-news-12",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-12",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "벤치 PNG = 원본 비교표"
+		},
+		{
+			"id": "e1103-ai-news-13",
+			"fromNode": "b1103-ai-news-hub",
+			"toNode": "b1103-ai-news-13",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "반등 · LICENSE $10M 이상"
+		},
+		{
+			"id": "e1103-ai-news-x1",
+			"fromNode": "b1103-ai-news-1",
+			"toNode": "b1103-ai-news-9",
+			"label": "헤드라인 설정 불일치"
+		},
+		{
+			"id": "e1103-ai-news-x2",
+			"fromNode": "b1103-ai-news-3",
+			"toNode": "b1103-ai-news-5",
+			"label": "하네스 > 모델"
 		}
 	]
 }

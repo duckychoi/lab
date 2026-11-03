@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, claude-code, game-dev, agent, orchestration, workflow]
 created: 2026-04-16
-updated: 2026-11-02
+updated: 2026-11-03
 sources: []
 reliability: medium
 ---
@@ -72,3 +72,21 @@ reliability: medium
 > - v1.2.0은 큰 설계 문서 통째 읽기를 막는 read guard를 추가했다 — 토큰 비용 관리 장치.
 
 - 기본 rigor `minimal`(README 220·224행) 유지 — 11-01 갱신의 "문서를 더 쓰면 게임이 나빠졌다" 측정과 일관.
+
+## 🔄 2026-11-03 갱신 (인제스트 2026-11-03) — ★34,011 · **실측 에이전트 49·스킬 74 재확인(설명 72 그대로) · 15일 무푸시에 하루 +1,181**
+
+**GitHub API 실측(11-03 09시대)**: ★**34,011**(수집기 34,005 · +6) · fork **4,556**(수집기 4,555) · open_issues **92** · MIT ✅ · Shell ✅ · pushed **2026-10-19T02:43Z**(HEAD `05ad7c8` "Release 1.2.0", 이후 커밋 0) · 최신 릴리스 **v1.2.0(10-19)** — 신규 릴리스 없음 · description 여전히 *"49 AI agents, 72 workflow skills"*
+- 📈 볼트 마지막 기록 ★32,830 · fork 4,456 · open_issues 76(11-02) → **★ +1,181 · fork +100 · open_issues +16 / 1일.** 04-16(★10,867) 대비 3.1배.
+- ✅ **카운트 재측정**(측정 경로: `api.github.com/repos/Donchitos/Claude-Code-Game-Studios/git/trees/HEAD?recursive=1`, 782 항목 · `truncated: false`):
+  - `.claude/agents/*.md` = **49** ✅(설명·README 일치)
+  - `.claude/skills/` 직속 하위 디렉터리 = **74**, 그중 `SKILL.md` 보유 **74** ✅ — README 6·104·293행 "74 skills" 일치, description "72"는 낡은 값(11-01·11-02 볼트 판정 유지).
+  - `.claude/rules/` = **14** ✅(배지 일치) · `.claude/hooks/` 항목 = **18**(배지 15 — 공용 스크립트 포함 여부 🔴 미확인, 11-02와 동일).
+  - ⇒ 수집기 "에이전트 49 일치 · 스킬 +2" ✅ 정확하고 측정 경로까지 명시했다.
+- ✅ 수집기 서술 확인: v1.2.0 = 스토리 스킬 헬퍼 스크립트 중심 재작성 · 대용량 설계문서 전체읽기 차단 가드 · Godot 4.7/UE 5.8 레퍼런스. 🔴 품질·완성도 측정값 0건 — 단 볼트 11-01 기록대로 **README에 rigor별 게임 4개 비교(문서 많을수록 최하위)라는 자체 측정이 있다.** 수집기의 "측정값 0건"은 "외부·정량 벤치 0건"으로 좁혀 읽어야 한다(🟡 경미한 과잉 일반화).
+- ⚖️ 수집기 누락: v1.2.0의 **"no skill pre-approves every shell command any more"**(권한 축소) — 11-02 볼트가 기록, 수집기 요약에는 없음.
+
+> [!insight] 코드가 멈춘 템플릿이 하루 +1천씩 오른다
+> 마지막 커밋 15일 전, 릴리스 없음, open_issues는 하루 +16. 관심 지표(★·fork·이슈)가 전부 상승하는데 저장소 내용은 10-19에서 고정이다. 이 성장은 **변경이 아니라 노출(트렌딩 체류) 효과**로 읽힌다 — 3일 연속 트렌딩(11-01·11-02·11-03). description 72 → 실측 74 불일치가 15일째 방치되는 것도 같은 신호다 → [[메타데이터-부재-추론]] · [[스타-근거-비동행]].
+
+- **수집기 평가**: 이번 배치 5건 중 가장 정확(카운트·경로 일치). 감점은 "측정값 0건"의 범위 과잉 하나.
+- **즉시 활용**: 변동 없음 — 다른 에이전트 템플릿 도입 시 `minimal` 단계부터 시작하는 근거로만 쓴다 → [[에이전트-스킬]] · [[superpowers]].

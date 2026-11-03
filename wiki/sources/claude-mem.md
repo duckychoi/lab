@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, memory, context, session, plugin, llm-coding, workflow, 캐시된지표신선도, 관심검증역상관]
 created: 2026-04-13
-updated: 2026-11-02
+updated: 2026-11-03
 sources: []
 reliability: high
 ---
@@ -127,3 +127,35 @@ reliability: high
 
 > [!action] 당장 할 것
 > 도입 검토를 다시 한다면 **v15.8.3 이상 + `--provider` 지정(또는 `CLAUDE_MEM_ONLINE_OPTIN=false`)** 으로만 설치. 10-25 이후 이미 설치했다면 cmem.ai에 업로드된 데이터 삭제 요청 경로를 먼저 확인(🔴 릴리스 노트에 삭제 절차 없음). ★11만은 신뢰 근거가 아니다 → [[스타-근거-비동행]].
+
+## 🔄 2026-11-03 갱신 (인제스트 2026-11-03) — ★111,159 · 🔴 **#5176 재오픈 상태 · 업로드된 프롬프트는 cmem.ai→OpenRouter→DeepSeek로 전달(ZDR 미설정) · v15.9.0은 localhost 쓰기 차단 등 보안 수정**
+
+**GitHub API 실측(11-03 09시대)**: ★**111,159**(수집기 111,157 · +2) · fork **9,688**(수집기 9,687) · open_issues **135** · Apache-2.0 ✅ · pushed 2026-11-03T03:52Z · 최신 릴리스 **v15.9.0(11-02 18:03Z)** · v15.8.3(11-02 06:26Z) · v15.8.2 · v15.8.1 · v15.8.0
+- 📈 볼트 마지막 기록 ★110,000 · fork 9,602(11-02) → **★ +1,159 · fork +86 / 1일**.
+
+> [!warning] 🔴 수집기 오류 — "기존 업로드분 처리 여부는 릴리스 노트에 없음(미확인)" 은 틀렸다
+> v15.8.3 노트 원문 **"Not covered by this release — Prompts already uploaded by earlier versions are not removed by this update. Server-side handling at cmem.ai and privacy-policy wording are outside this change."** 릴리스 노트에 **명시돼 있다**(삭제하지 않는다고). 볼트 11-02 갱신은 이미 이 문장을 인용했다 — 수집기가 볼트보다 하루 뒤처진 판정을 냈다.
+
+- ✅ 수집기 서술 확인: v15.8.3 "Privacy fix" — v15.2.0부터 브라우저 셋업이 **최근 30일 프롬프트 전문 + 세션ID·프로젝트명·폴더경로·타임스탬프**를 묻지 않고 업로드, 이제 스캔 후 동의 패널에서 체크한 도구만 전송 · "Keep everything local" = 0건 · analytics 별도·기본 off · 신규 `POST /api/setup/scan/consent`(loopback 전용·origin 가드). v15.9.0 Devin CLI/Desktop 지원(#5172·#5276) · 원격 워커 `CLAUDE_MEM_WORKER_URL`(비로컬은 https 강제, #5285) ✅.
+- 📌 **이슈/PR 상태(API 실측)**:
+  - **#5176(issue) = `open` · state_reason `reopened`** — 10-29 등록, 11-02 06:12:21Z 메인테이너가 close 후 **9초 뒤 06:12:30Z 직접 reopen**. 즉 "수정됨"이 아니라 **미해결로 남겨 둔 상태**다.
+  - **#5220(PR) = closed · merged 2026-11-02T06:12:18Z** — 수정 본체.
+- ⚖️ **수집기·볼트 모두 누락 ① — 업로드된 데이터의 행선지(#5176 본문, 보고자가 cmem.ai 회신으로 확인했다고 서술)**:
+  - cmem.ai가 프롬프트를 **`deepseek/deepseek-v4-flash-0731` 로 OpenRouter 글로벌 엔드포인트**에 보냈고(최저가 공급자 우선 라우팅), 요청에 **zero data retention도 `data_collection: "deny"` 도 설정하지 않았다.** cmem.ai는 어느 공급자가 받았는지 기록이 없다고 했다.
+  - cmem.ai는 요청 시 **자사 DB 레코드는 삭제**했으나 **OpenRouter·하위 공급자 사본은 범위 밖**.
+  - 개인정보처리방침 *"Nothing leaves your device unless you explicitly turn on cloud sync"* 와 충돌한다고 보고자가 지적. 10-30 댓글: 계정 수준 OpenRouter 설정(학습 opt-out·로깅·ZDR) 확인 중.
+  - ⚠️ 이는 **이슈 작성자의 서술**이며 볼트가 cmem.ai·OpenRouter 측을 독립 검증하지 않았다.
+  - 노출 경로: Claude Code `~/.claude/projects/*/*.jsonl`(서브에이전트 포함) · Codex `~/.codex/sessions/…` · Gemini CLI · Antigravity · OpenCode DB(이슈 표). 설치기에서 고른 도구와 무관하게 읽었다고 서술.
+- ⚖️ 누락 ② **#5255(open, 11-01)**: 호스팅 셋업이 HTTP 503 "daily budget for anonymous hosted setup"으로 실패해도 **프롬프트 본문은 이미 `POST /api/pro/intent` 로 나간 뒤**라는 보고(로그상 6분에 3회 재시도). v15.8.3 이전 동작 기준 — 실패 = 미전송이 아니었다.
+- ⚖️ 누락 ③ **v15.9.0 "Privacy and security" 절(수집기는 Devin·원격워커만 언급)**:
+  - **#5200**: localhost의 **다른 웹사이트가 worker의 work-state·dedup·corpus·advisor 라우트로 쓰기 요청을 보낼 수 있었다** → 외부 origin 차단(11-02 merged). 브라우저 경유 로컬 서비스 공격면이 실재했다는 뜻.
+  - **#5272**: 오류 보고를 꺼도 **디스크에 저장된 오류는 전송되던** 문제 수정 — 11-02 볼트의 "텔레메트리 끄는 법 미확인"에 대한 부분 답(오류 보고 opt-out 존재, 이전엔 완전히 지켜지지 않음).
+  - 비밀값 마스킹 확대(Slack/Discord webhook·Stripe·PyPI·GitLab 토큰·`--auth-token` 등) · Kimi 설정 백업 권한 축소(#5290).
+  - 기존 업로드분 삭제·통지에 관한 문장은 **v15.9.0 노트에 0건**(전문 확인).
+- 📝 README(raw 461행): `CLAUDE_MEM_ONLINE_OPTIN=false` 로그인 회피(151행) 유지 · Devin은 README에 아직 0건(grep `devin`).
+
+> [!insight] 일주일에 세 번째 "동의 범위 밖" 사고 축이 열렸다
+> 10-31 숨은 `codex exec`(타 계정 구독 소모) → 11-02 무동의 프롬프트 업로드 → 11-03 확인된 **localhost 교차 origin 쓰기 허용(#5200)**. 앞의 둘은 "도구가 사용자 몰래 밖으로 보냄", 셋째는 "밖에서 도구로 들어옴"이다. 수정 속도는 빠르지만(모두 1~4일 내 패치) **수정 = 피해 회복이 아니다** — 업로드분은 제3자 LLM 경로까지 퍼졌고 삭제 경로는 cmem.ai DB에 한정된다. ★11만·하루 +1천은 이 신호와 무관하게 오른다 → [[스타-근거-비동행]] · [[관심-검증-역상관]] · [[에이전트-메모리-레이어]] "메모리 신뢰도" 축.
+
+- **수집기 평가**: 사고 포착은 정확하고 전일 볼트 지적을 반영했다. 그러나 ① 삭제 여부를 "릴리스 노트에 없음"으로 잘못 적었고 ② #5176이 재오픈 상태라는 점 ③ OpenRouter/DeepSeek 2차 전달 ④ v15.9.0 보안 절을 놓쳤다.
+- **실용성**: 볼트 머신 미설치(11-02 확인) 유지. 도입 재검토 조건에 **v15.9.0 이상**(localhost 쓰기 차단) 추가.

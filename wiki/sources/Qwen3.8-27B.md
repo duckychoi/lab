@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba, 하네스-설계-축, 비매칭-비교, 벤치-개조-재평가, 표-부분인용, 특화-역류, 하네스편향, 역휴리스틱, 이월종결]
 created: 2026-08-18
-updated: 2026-11-02
+updated: 2026-11-03
 sources: []
 reliability: medium
 ---
@@ -966,4 +966,38 @@ Qwen/Qwen3.8-27B
 - 수집: 2026-11-02 자동수집(ai-news) · 인제스트 2026-11-02
 - 볼트 실측: HF API expand · `api/models?sort=trendingScore&limit=30`(12위) · `raw/main/README.md`(200 · 65,012 B · 582행 · HTML 표 파싱) · HF 다운로드 통계 문서
 - raw 대비: ✅ dl30·likes·트렌딩 12위·lastModified·사양·벤치 7값 **전건 일치** · 🔴 SWE-Pro 각주(비매칭) 누락 · 🔴 Opus/3.7-Plus 우위 값 생략 · 🔴 YaRN 경고 생략
+- 신뢰도: ⭐⭐⭐⭐
+
+## 🔄 2026-11-03 갱신 (인제스트 2026-11-03) — **동결 81일 · 30일창 +0.29%(1일) 3배치 연속 증가 · 수집기가 SWE-Pro 각주를 처음 적었다, 벤치 7값 일치**
+
+**HF API 실측(2026-11-03T09:06Z · expand)**: `downloads`(30일) **7,915,637**(수집기 **정확히 일치**) · `downloadsAllTime` **20,706,092** · likes **19,040**(일치) · `trendingScore` **293** · 목록 API(`sort=trendingScore&limit=30`) **10위**(수집기 일치) · `gated: false` · `lastModified` 2026-08-14T15:00:01Z(81일 무변경) · sha `1d4bf0f`(무변경) · license `apache-2.0`
+**모델 카드**: `raw/main/README.md` HTTP 200 · **65,012 B · 582행**(11-02 와 동일) · `api/models/Qwen/Qwen3.8-27B/commits/main` **16건, 최신 `1d4bf0f`(08-14 "Update README.md")** ⇒ 수집기 "카드 변경 없음" ✅
+
+| 지표 | 10-31 | 11-02 | **11-03** | Δ(11-02→11-03, 1일) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 7,581,050 | 7,892,866 | **7,915,637** | **+22,771 (+0.29%)** |
+| 누적 다운로드 | 19,937,861 | 20,486,593 | **20,706,092** | +219,499 |
+| likes | 18,820 | 18,957 | **19,040** | +83 |
+| 누적/30일 | 2.63배 | 2.60배 | **2.62배** | — |
+| trendingScore | 278 | 285 | **293** | +8 |
+
+- 📌 30일창 신고점 갱신(791.6만) — 증가폭은 전 구간(2일 +4.1%) 대비 둔화했지만 측정 간격이 1일이라 직접 비교하지 않는다 → [[지표-창길이]]. 2배 이상 변동 지표 없음.
+
+> [!insight] ✅ 벤치 재파싱(카드 HTML 표 `<th>` 5열) — 수집기 인용 21개 수치 **전건 일치**
+> | 벤치 | 3.8-27B | 3.6-27B | 3.7-Plus | Glimmer-30B | Opus4.6 Max |
+> |---|---:|---:|---:|---:|---:|
+> | Terminal Bench 2.1 (Terminus) | 73.0 | 63.4 | 64.0 | 51.7 | **78.2** |
+> | SWE-bench Pro | **61.7** | 53.5 | 57.6 | 51.2 | 53.4* |
+> | GPQA Diamond | 89.2 | 87.8 | **90.3**(>27B) | 83.5 | **91.3** |
+> | HLE | 30.8 | 24.0 | **34.7**(>27B) | 22.0 | **40.0** |
+> | LiveCodeBench v6 | **90.3** | 83.9 | 89.6 | -- | 88.8 |
+> | IFBench | **79.5** | 69.1 | 79.1 | 77.0 | 62.5 |
+> \* 카드 177행 원문: *"SWE-bench Pro: Except for Opus4.6 Max, which uses the officially reported score, all models are evaluated with the Claude Code harness at temp=1.0, top_p=0.95, and a 256K context window. Problematic tasks were corrected, and all baseline models were re-evaluated on the refined benchmark."* ⇒ 수집기 요약("Opus만 공식값, 나머지는 Claude Code 하네스·temp 1.0·과제 수정 후 재실행") **정확**.
+> 🏆 **11-02 볼트 지적 3건 중 2건이 반영됐다**: ① SWE-Pro 각주 → [[비매칭-비교]] 명시 ② Opus 우위 값(78.2·91.3·40.0)과 3.7-Plus 값(90.3·34.7) 병기 → [[표-부분인용]] 해소. ③ YaRN 짧은 입력 손해 경고는 이번에도 없음(이번 요약은 컨텍스트 자체를 다루지 않아 누락으로 세지 않는다).
+> 🔴 **수집기 잔여 누락**: 표 4번째 비교열 **Muse Glimmer-30B** 를 "비교열" 목록에서 뺐다(5열 중 4열만 기재) · HLE 각주 *"Judged by GPT-4o"*(182행) 미기재. QwenSWEBench(79.0)를 뺀 것은 사내 벤치(180행 *"In-house coding benchmark"*)라 오히려 적절.
+
+## 원본 (11-03 갱신)
+- 수집: 2026-11-03 자동수집(ai-news) · 인제스트 2026-11-03
+- 볼트 실측: HF API expand · `api/models?sort=trendingScore&limit=30`(10위) · `raw/main/README.md`(200 · 65,012 B · 582행 · HTML 표 파싱) · `api/models/Qwen/Qwen3.8-27B/commits/main`(16건)
+- raw 대비: ✅ dl30·likes·트렌딩 10위·lastModified·벤치 21값·SWE-Pro 각주 **전건 일치** · 🔴 Glimmer-30B 비교열·HLE 판정모델 각주 누락
 - 신뢰도: ⭐⭐⭐⭐

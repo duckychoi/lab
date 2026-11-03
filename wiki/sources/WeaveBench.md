@@ -49,3 +49,6 @@ reliability: high
 - 소속: Microsoft Research
 - HF 업보트: 50 (2026-06-12)
 - 신뢰도: ⭐⭐⭐⭐
+
+## 🔄 2026-11-03 — 인용
+- [[CUA-Master]]: 27B가 GUI+CLI 혼합 모드에서 43.9(GUI 전용 6.6 · CLI 전용 11.5). Claude-Opus-5 55.7 · GPT-5.6-Sol 50.6 · Kimi-K3 43.2.

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, image-to-video, video-generation, lightricks, video-saas]
 created: 2026-08-14
-updated: 2026-11-02
+updated: 2026-11-03
 sources: []
 reliability: medium
 ---
@@ -539,4 +539,41 @@ created 2026-07-23 · lastModified 2026-10-02 · `license: other` · 제공 [[Li
 ## 원본 (11-02 갱신)
 - 볼트 실측: HF API expand(+cardData) · `api/models?sort=trendingScore&limit=30`(8위) · `raw/main/README.md`(401) · HTML 페이지(200 · 238,751 B · 본문 텍스트 추출 재스캔) · HF 다운로드 통계 문서
 - raw 대비: ✅ dl30·likes·트렌딩 8위·lastModified·멀티샷·디코더·해상도·4K·$10M·벤치 없음 **전건 일치** · ⚖️ "dynamic compute" 기능명 보정 · 🔴 라이선스 세부·게이트 조건 누락
+- 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-11-03 갱신 (인제스트 2026-11-03) — **30일창 +1.47% 반등 · 누적 1일 +11.6만으로 "일시 유입" 판정 보류 · LICENSE 원문 확인: 기준은 '연매출 $10M 이상'(계열사 합산), 출력물 학습 모델도 파생물**
+
+**HF API 실측(2026-11-03T09:06Z · expand)**: `downloads`(30일) **2,467,613**(수집기 **정확히 일치**) · `downloadsAllTime` **5,552,787** · likes **10,405**(수집기 10,402 → **+3**, 관측 시차) · `trendingScore` **384** · 목록 API(`limit=30`) **7위**(수집기 일치) · `gated: auto` · `lastModified` 2026-10-11T07:00:53Z(23일 무변경) · sha `49b093a`(무변경) · `license_name: ltx-2.x-community-license-agreement`
+**카드**: `raw/main/README.md` **401 / 126 B** · `api/models/Lightricks/LTX-2.5/commits/main` **401**(게이트 — 커밋 이력 확인 불가, sha·lastModified 무변경으로 대체 판정) · HTML 페이지 **200 / 238,901 B**(11-02 238,751 B 대비 +150 B — 페이지 동적 요소 추정, 카드 본문 문구 동일) · HTML 내 `<table>` 2개 = 파일 목록표(File/Notes), **벤치 표 0**
+
+| 지표 | 10-31 | 11-02 | **11-03** | Δ(11-02→11-03, 1일) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 2,441,077 | 2,431,846 | **2,467,613** | **+35,767 (+1.47%)** |
+| 누적 다운로드 | 5,356,414 | 5,436,704 | **5,552,787** | +116,083 |
+| likes | 10,001 | 10,255 | **10,405** | +150 |
+| 누적/30일 | 2.19배 | 2.24배 | **2.25배** | — |
+| trendingScore | 382 | 367 | **384** | +17 |
+
+- 📌 **11-02 의 "첫 감소(−0.4%)"는 1점짜리였다** — 하루 만에 30일창이 10-31 값(244.1만)을 넘어 246.8만. 누적도 1일 +11.6만으로 11-02 의 2일 +8.0만(≈4.0만/일)보다 빠르다 ⇒ 11-02 action *"누적 증가 2일 10만 미만이 이어지면 일시 유입 판정"* **조건 불충족 — 판정 보류·폐기**. 11-02 볼트가 "단일 구간이라 추세로 읽지 않는다"고 적은 것이 맞았다 → [[지표-창길이]].
+- ✅ 수집기 서술 대조(HTML 카드): 멀티샷 *"Native multishot generation … (previous versions produced a single continuous shot)"* · DFR(장면 복잡도별 연산) · *"New diffusion video decoder"* · *"Custom Gemma 4 12B text encoder"*(`gemma4-12b-with-proj-ltx-2.5-bf16.safetensors`) · *"Prompt enhancer"* · 2단계 `544, 960, 121, 24.0` + *"stage 2 runs at 2x"* · i2v 는 `--image PATH FRAME_IDX STRENGTH` — **전건 일치**. "정량 벤치 0건" ✅. 게이트로 커밋 401 → HTML 1회 확인 경로 서술도 정확.
+
+> [!insight] ⚖️ LICENSE 원문 대조 — `github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x`(카드가 링크하는 정본 · raw 200 · 34,428 B · 580행 · *"License date: August 11, 2026"* · 최근 변경 `69b6b7c` 10-13 *"Update License — Add email for license related questions"*)
+> - **§2.1 기준**: *"Entities with annual revenues of **at least $10,000,000** (the "Commercial Entities") are required to obtain a paid license for any use"* ⇒ 카드의 *"Under/Over $10M"* 과 달리 **정확히 $10M 도 유료 대상**(경계 표현 차이).
+> - **§1.6 합산**: 매출 판정 시 *"all subsidiaries, affiliates, and companies under common Control shall be considered collectively"* — 볼트 10-04 기록 재확인.
+> - **§2.1 위반 시 소급**: 무단 상업 사용은 *"material breach"* — 사용 기간에 대한 표준 상업 라이선스료를 **서면 요구 후 30일 내 지급**.
+> - **§2.2 비상업 예외(대기업도 허용)**: 개인 연구·학습·취미, 기업의 비프로덕션 테스트·평가. 단 *"to train, fine-tune, or distill any model … for commercial use"* 는 예외 아님.
+> - 🔴 **§1.5 파생물 정의가 넓다**: *"any other model which is created or initialized by transfer of patterns of the weights, parameters, activations or **output** of LTX-2.x … including … synthetic data by LTX-2.x for training the other model"* ⇒ **LTX 생성 영상으로 다른 모델을 학습해도 파생물** — 파생물은 이 라이선스로만 배포(§3.2), 상업 주체로 이전 시 상대방 유료 라이선스 선행(§3.5). 카드의 *"Transfer of fine-tunes may require a paid license"* 는 이 §3.5 의 요약.
+> - 📌 11-02 이월 질문 *"$10M 초과 유료 계약의 'full weights' 가 무료판과 다른가"*: LICENSE 원문에 "full weights" 문구 **0건**(grep "weights" 6건 모두 정의·파생물 맥락) ⇒ 라이선스상 가중치 범위 차등 근거 없음. 카드 문구는 영업 설명으로 판정(유료 계약서 원문은 미열람).
+> - ⚠️ 주의: 읽은 것은 GitHub `main` 의 현재본이다. HF 레포 내 동봉 LICENSE 는 게이트로 확인 못 함(`resolve/main/LICENSE` 404 — 파일명 상이 추정).
+
+> [!note] 🔴 수집기 누락
+> ① 라이선스 경계가 "이상(≥)"이라는 점·소급 과금 조항 ② §1.5 "출력물 기반 학습 = 파생물"(영상 SaaS 데이터 파이프라인에 직접 영향) ③ 게이트 동의에 *"targeted and personalized advertisements"* 수신 포함(11-02 지적, 재누락). 매출 기준·계열사 합산은 이번엔 적었다 ✅.
+
+> [!action] 당장 할 것
+> ⬜ LTX-2.5 출력으로 자체 모델 학습/증류 계획이 있으면 §1.5·§2.2(c) 기준으로 사전 검토 — 매출 $10M 미만이라도 파생물 배포 조건(§3.2) 적용.
+> ⬜ (이월) duration head(`--num-frames` 생략) 로컬 1회 테스트.
+
+## 원본 (11-03 갱신)
+- 볼트 실측: HF API expand(+cardData) · `api/models?sort=trendingScore&limit=30`(7위) · `raw/main/README.md`(401) · `commits/main`(401) · HTML 페이지(200 · 238,901 B · 텍스트 추출) · `raw.githubusercontent.com/Lightricks/LTX-2/main/LICENSE-2_x`(200 · 34,428 B) · GitHub commits API(path=LICENSE-2_x)
+- raw 대비: ✅ dl30·반등 +35,767·트렌딩 7위·lastModified·gated·기능 5종·해상도·벤치 0건·매출/계열사 기준 **일치** · ⚖️ likes +3(시차) · 🔴 ≥$10M 경계·소급·출력물 파생물·광고 동의 누락
 - 신뢰도: ⭐⭐⭐

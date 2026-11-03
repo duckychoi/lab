@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, harness, control-plane, 자기제한, 메타데이터부재, mobile]
 created: 2026-10-10
-updated: 2026-11-02
+updated: 2026-11-03
 sources: []
 reliability: medium
 ---
@@ -93,3 +93,22 @@ reliability: medium
 
 > [!warning] 권한 면적
 > 로컬에 로그인된 에이전트 7종을 휴대폰에서 원격 구동하는 도구다. LAN 모드에서는 페어링 코드 하나가 경계다. 0.1.x nightly · 이슈+PR 4천 건 · 하루 복수 배포 상태에서 상주 서비스로 띄우는 것은 신중히. 🔴 실제 앱 동작·인증 구현은 볼트가 검증하지 않았다(문서 서술만).
+
+## 🔄 2026-11-03 갱신 (인제스트 2026-11-03) — ★42,780 · **하루 +3,612 · 11-03 나이틀리 2회에 Kiro(beta) 8번째 제공자 · README 목록은 아직 7종**
+
+**GitHub API 실측(11-03 09시대)**: ★**42,780**(수집기 42,773 · +7) · fork **9,150**(수집기 9,149) · open_issues **4,499**(이슈+PR 합산) · MIT ✅ · TypeScript ✅ · description **null** ✅ · pushed 2026-11-03T09:02Z · 릴리스 `v0.1.7-nightly.20261103.4119`(08:49Z) · `…20261103.4106`(02:27Z) · 11-02 nightly 3개(4066·4080·4093)
+- 📈 볼트 마지막 기록 ★39,168 · fork 8,975 · open_issues 4,051(11-02) → **★ +3,612 · fork +175 · open_issues +448 / 1일.** 수집기 트렌딩 표시 +3,229와 창이 다르다(재현 불가).
+- ✅ **Kiro 주장 확인**: nightly **4106** 하이라이트 *"Kiro (beta). Use Kiro as a provider in T3 Code."* · PR #14693 `feat(provider-kiro): add Kiro as an ACP provider`. 4119에 #28253 `fix(provider-acp): Kiro's html_render pages show in the thread` 후속 수정. ⚠️ 단 **README 5·16행의 지원 목록에는 Kiro가 0건**(grep `kiro` · `api.github.com/repos/pingdotgg/t3code/readme` raw 153행) — 릴리스는 8종, 문서는 7종. 수집기 한줄요약의 7종 나열 + "Kiro(beta) 추가" 서술은 이 상태와 정합.
+- ✅ 나머지 수집기 서술 확인: 4119 "Imported Claude sessions — Continue an imported Claude Code conversation on the first follow-up" · "Pi messages during compaction … held and delivered instead of lost" ✅ · 11-03 나이틀리 **2회** ✅ · 설치 `curl | sh`(29행)·`irm | iex`(35행) ✅ · README 100행 "very very early … Expect bugs." 유지 · 🔴 성능 수치 0건 ✅.
+- ⚖️ 수집기 누락(보안 인접 항목, 노트 전문 grep `secur|auth|pair|secret|token|root|privacy`):
+  - 4119 #27961 *"T3 Connect repairs tunnel ingress that drifted from a matching origin"* — 11-02에 기록한 **T3 Connect 중계 터널**의 ingress가 origin과 어긋나는 버그가 있었다. 사고 서술은 없음.
+  - 4119 #23804 *"show why Claude refuses full access as root"* — root로 서버를 돌리는 사용자가 있다는 방증.
+  - 4106 #28529 Tailscale serve 명령이 멈추면 SIGKILL로 승격 — LAN/tailnet 노출 경로의 안정성 수정.
+  - 보안 공지·사고 공개 항목은 **0건**(두 노트 전문 확인).
+- 📝 4106 = 78 changes / 17 contributors, 4119 = 39 changes / 3 contributors — 하루 117개 변경. open_issues 하루 +448과 같은 속도감이다.
+
+> [!insight] 제공자 추가 속도가 문서 갱신 속도를 앞질렀다
+> 10-10 6종 → 11-02 7종(fx) → 11-03 8종(Kiro, 릴리스 노트에만). 하루 2회 나이틀리에서 기능이 먼저 나오고 README가 뒤따르는 구조라 **"지원 목록"은 README가 아니라 최신 nightly 노트로 판정**해야 한다. 같은 속도로 원격 노출 경로(T3 Connect 터널·Tailscale serve)도 매일 바뀌므로 11-02의 권한 면적 경고는 강화된다 → [[하네스-설계-축]] · [[메타데이터-부재-추론]](description null 지속).
+
+- **수집기 평가**: Kiro·나이틀리·설치 경고 모두 정확. 누락 = README 미반영 상태 명시 · T3 Connect/Tailscale 관련 수정. 
+- 🔗 [[claude-mem]] v15.9.0 #5283 *"T3 Code: default Claude and Codex providers are found even when T3 never saved them"* — 메모리층이 제어면의 미저장 기본값까지 탐색한다(두 도구 결합 경로가 계속 정비 중).

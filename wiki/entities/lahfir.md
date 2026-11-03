@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, 개인개발자, rust, computer-use, macos]
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-03
 sources: [agent-desktop.md]
 reliability: medium
 ---
@@ -30,8 +30,12 @@ reliability: medium
 - 다른 레포 미조회. `docs/faq.md`·`docs/architecture.png` 미열람.
 - 🔴 **코드 미실행** — macOS 13.0+ 전용이라 볼트 환경에서 구동 자체 불가.
 
+## 🔄 2026-11-03 갱신 — agent-desktop 조직 이관
+> [!note] `lahfir/agent-desktop` 은 현재 [[vercel-labs]]/agent-desktop 으로 리다이렉트된다(v1.0.2 릴리스 노트 #332·#333 에 이관 기재 · 인제스트 2026-11-03 GitHub API 확인). lahfir 는 원 작성자로 남는다.
+
 ## 관련 페이지
 - [[agent-desktop]] — 확인된 산출물
 - [[agent-browser]] — agent-desktop이 CDP 경로로 선호 지목
 - [[자기제한-명시]] · [[검사가능성-공사]] · [[PageIndex]]
+- [[vercel-labs]] — 2026-11 agent-desktop 이관처
 - [[ai-news]]

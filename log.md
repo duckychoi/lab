@@ -5330,3 +5330,46 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 2. NRF 2027년도 공고 IRIS 직접 확인(사전안내 존재)
 3. 크론 프롬프트 수정 + 자동 커밋 보호 — 9배치째 미이행(덮어쓰기 금일 1건)
 4. claude-mem 도입 시 v15.8.3+ · 온라인 옵트인 끄기
+
+## [2026-11-03] ingest | **대기 20건 전량 처리** (자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: 자동수집 13 = ai-news 10 · video-saas 2(WaveForcing · Video-Generation-Agent-Harness) · slam-3dgs 1(uni-robot-agent) · 크론 7(local-llm 2 · slam-3dgs 1 · general 4)
+- **분해**: 자동수집 **신규 5 · 갱신 8**(GitHub 5 · HF모델 3 볼트 보유) · 크론 **신규 4 · 🔴 덮어쓰기 3**(온디바이스 · LLM 장기기억(3회차) · Beamforming → HEAD `3074d4a` 복원 후 `🔄` 병합)
+- **추가 페이지**: **9개** (sources 5 + 크론 신규 4) | **업데이트 페이지**: 소스 8 + 크론 3 + 엔티티 2(lahfir · vercel-labs) + 개념 6 · 소스 3(링크 덧붙임)
+- **페이지 수**: 1675 → **1684** (sources 1455)
+- **canvas 업데이트**: **YES** — ai-news +14노드/+15엣지(순수 추가)
+- **actionable 추가**: **YES** — 5항목
+- **독립 검증**: GitHub API 5 + README 5 + 릴리스 5 + git tree 1 · HF `api/papers` 5 · arXiv HTML 본문 6(FreeToken 포함) · HF `api/models` 3 + 카드 3 + 벤치 PNG 1 · LTX LICENSE 원문 · CVPR·ICLR 공식 페이지 · arXiv API 4 · 웹검색 다수
+- **작업 방식**: 서브에이전트 4병렬(논문 · GitHub · HF모델 · 크론)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**헤드라인 수치는 그 수치에 가장 유리한 설정에서 나오고, 비교 대상은 다른 설정에 있다.** WaveForcing 속도는 4스텝·더미 가중치, 품질은 5스텝 · FreeToken "5090"은 6스레드 제한 렌트 서버 · uni-robot-agent "GPT-6 초과"는 하네스가 다른 비교. 숫자를 옮길 때 *그 숫자를 낸 설정*을 같이 옮겨야 한다.
+
+### 🏆 주요 발견
+1. 🔴 [[claude-mem]] — #5176 닫힘 9초 뒤 재오픈(open) · v15.8.3 노트가 기존 업로드분 미삭제 명시 · 이슈 서술상 cmem.ai→OpenRouter→DeepSeek 전달(ZDR 미설정, 미검증) · v15.9.0 localhost 쓰기 차단(#5200).
+2. 🏆 [[Qwen-Image-2.1-Uncensored-Quantized]] — 3주 "PNG 봉인" 판정이 curl 1회로 풀림: 원본 모델의 타사 비교 총점표(60.28 · 7위) · 양자화 측정값 0건.
+3. 🎯 [[uni-robot-agent]] — 같은 Qwen이 하네스만 바꿔 1.90→31.39(16배) · 하네스 효과가 모델 격차보다 크다는 가장 직접적인 증거.
+4. ⚖️ [[LTX-2.5]] — LICENSE 원문: $10M "이상" 유료 · 계열사 합산 · 출력물 학습 모델도 파생물. 전일 "첫 감소"는 1회로 끝나 판정 폐기.
+5. 🗓️ CVPR 2027 공식 페이지 재조회 무변경 · **투고 결정 D-0** · Enrollment 11-10.
+
+### 🔴 볼트 자기 정정 (숨기지 않는다)
+1. [[Qwen-Image-2.1-Uncensored-Quantized]] "PNG 봉인·경로 소진" 3주 판정 철회 — 볼트가 시도하지 않았을 뿐. 10-16 수집기 "재시도 안 함" 칭찬도 근거 약함.
+2. [[agent-desktop]] 볼트 기록(Windows/Linux `Planned` · 78–96% 수치 · lahfir 소유)이 현재 README와 불일치 — 09-24 이후 40일 미갱신이 원인.
+
+### 🔴 수집기 평가
+- ✅ 전일 요청 3건(사고 공개 · SWE-Pro 각주 · 측정 경로) 이행. dl 3/3 · 벤치 21값 일치.
+- 🔴 오류: claude-mem "기존 업로드분 처리 미기재"(노트에 명시) · Qwen-Image "2일 연속 감소"(1회) · base 변형 포맷 서술.
+- 🔴 누락: WaveForcing 설정 차이 · FreeToken 측정 기기 · CUA-Master 동급 Qwen 비교 · agent-desktop 이관 · Qwen3.8 Muse 열·HLE 각주 · 5편 도메인 일괄 ai-news ⇒ raw.md 📮 요청.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 외부 코드·모델 실행 0건. 논문 수치는 전부 저자 보고이며 재현 없음.
+2. 🔴 [[Video-Generation-Agent-Harness]] HTML §2 이후 미렌더(PDF 미열람) · [[uni-robot-agent]] 문서 내 값 충돌(55.83 vs 56.76) 미해소 · claude-mem DeepSeek 전달은 이슈 작성자 서술.
+3. 🔴 크론 노트는 **표본만** 대조 ⇒ 전건 `reliability: low`. 덮어쓰기 1 → **3건**으로 증가, 2건 잘림(온디바이스 · 휴머노이드).
+4. ⚖️ canvas 는 ai-news 만 갱신 · domains/ 미갱신. 볼트 git 커밋은 하지 않음(09:40 자동 백업에 맡김).
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 투고 결정 — 오늘(D-0)** · Enrollment 11-10 · Submission 11-16
+2. claude-mem v15.9.0+ · 옵트인 끄기
+3. NRF 2027년도 1차 공고 IRIS 확인(11월 초중순 예상)
+4. 크론 프롬프트 수정 + 자동 커밋 보호 — 10배치째 미이행(덮어쓰기 금일 3건)

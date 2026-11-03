@@ -105,3 +105,8 @@ reliability: medium
 
 ## 🔄 2026-10-28 — [[The-Trinity]](NUS · 102 up · 코드 없음): 5번째 사례, 같은 방향
 - 헤드라인 +34/+26은 **Oracle 라우팅** 값(배포 가능한 self-routing은 +32.2/+23.5) · Train 28개 중 11개가 **에이전트가 직접 만든 벤치** · native 17개만 보면 **64.4→68.8(+4.4)** · 실로봇 2과제는 n=10. 규칙의 3축(시드 강도·벤치·sealed split)을 적용하면 이득이 크게 줄어든다.
+
+## 🔄 2026-11-03 — 표본 2건 추가, 같은 방향
+- [[Video-Generation-Agent-Harness]](서베이): "No surveyed system yet revises the procedure that trains and validates the generator" — RSI 부재를 결론으로 적은 두 번째 서베이다.
+- [[CoworkOS]]: 자동 후학습 33.19→42.95(+9.76). 기준선은 자기 seed SFT뿐이고, 저자가 "concurrent interventions rather than isolated causal effects"라고 명시했다. JobBench −2.13.
+- [[CUA-Master]]: 한계 절에 "합성 데이터 품질 상한 = 어노테이터 모델 능력"이라고 적혀 있다 ⇒ 재귀개선의 일부는 강한 외부 모델의 증류다.

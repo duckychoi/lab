@@ -40,3 +40,6 @@ reliability: medium
 - 출처: https://arxiv.org/abs/2608.15930
 - 지표: HF 데일리 4위·업보트 26 (2026-08-18 자동수집)
 - 신뢰도: medium (미래형 arxiv ID·원문 미재현·소속/베이스 미검증·raw 자동수집·실WebFetch 미수행)
+
+## 🔄 2026-11-03 — 인용
+- [[CUA-Master]] 표에서 UI-Mate-27B 77.6/24.0/18.3/13.2(OSWorld V/2.0/WeaveBench/ALE)로 비교 기준점이 됐다. WindowsAgentArena에서는 UI-Mate 63.2가 CUA-Master 56.2보다 높다.

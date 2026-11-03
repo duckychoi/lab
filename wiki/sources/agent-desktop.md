@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, computer-use, accessibility, rust, macos, fail-closed, 검사가능성, tool]
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-03
 sources: []
 reliability: high
 ---
@@ -80,3 +80,23 @@ reliability: high
 - 출처: https://github.com/lahfir/agent-desktop
 - 확인 범위: **README 487행 전문** · GitHub API 실측 · `docs/faq.md`·`docs/architecture.png` **미열람**
 - 신뢰도: ⭐⭐⭐ (★1,621 · Apache-2.0 · 진술 검증 가능성 높음)
+
+## 🔄 2026-11-03 갱신 (인제스트 2026-11-03) — ★11,167 · **lahfir → vercel-labs 이관 · Windows/Linux 정식 지원 · 볼트가 찾은 alt 속성 수치(30,743→383)는 README에서 사라짐**
+
+**GitHub API 실측(11-03 09시대)**: `api.github.com/repos/lahfir/agent-desktop` 가 **`vercel-labs/agent-desktop` 으로 리다이렉트**된다(created 2026-02-19 동일 = 같은 저장소의 조직 이관). ★**11,167**(수집기 11,158 · +9 드리프트) · fork **768**(수집기 764) · open_issues **133**(이슈+PR 합산) · Apache-2.0 ✅ · Rust ✅ · pushed 2026-11-03T08:54Z · description *"Computer use CLI for AI agents"* · 최신 릴리스 **v1.1.0(11-03 04:13Z)** · v1.0.2(10-30) · v1.0.1(10-28) · **v1.0.0(10-28)** · v0.11.1(10-25)
+- 📈 볼트 마지막 기록 ★1,621 · fork 109 · open issues 20(09-24) → **★ +9,546(6.9배) · fork +659 · open_issues +113 / 40일.** 이 페이지는 09-24 이후 미갱신이었다 → [[캐시된-지표-신선도]].
+- 🔴 **볼트 페이지 자체가 낡았다(정정)**: 
+  - 소유자: 09-24 본문은 [[lahfir]] 개인 계정. v1.0.2 노트 #332 *"remove the personal funding link, badges and name references **before the org transfer**"* · #333 *"point repository links at vercel-labs/agent-desktop **after the org transfer**"* — [[vercel-labs]] 로 이관됐고 README 상단에 `LABS-PRODUCT` 배지가 붙었다. lahfir는 여전히 주 커밋자(v1.1.0 PR 다수).
+  - 플랫폼: 09-24 표는 Windows/Linux **`Planned`** 였다. 현재 README `## Platform support` 표(126~135행)는 Windows 전 항목 **Yes**, Linux는 AT-SPI 기반 **조건부 Yes**(마우스 X11 `--headed` · 스크린샷 X11 창/Wayland portal · 클립보드 Wayland는 `wl-clipboard` · 알림 GNOME Shell). 즉 09-24 "즉시 활용 NO — 플랫폼 제약" 판정의 근거가 바뀌었다.
+  - 명령 수: 58/54 → README 104행 **"60 command names, 56 operational commands"**. fail-closed 4개는 `key-down/key-up/mouse-down/mouse-up` 로 명시(데몬 전까지 거부) — [[자기제한-명시]] 성격은 유지.
+- 🔴 **성능 수치 0건 — 이번엔 alt 속성에도 없다.** README(raw 187행·9.7KB) 의 `alt=` 4개는 전부 배지(`Vercel Labs Product`·npm version·License·npm downloads). 09-24에 볼트가 29행 `<img alt>` 에서 찾은 *"30,743 tokens vs 383 skeleton"* 과 헤드라인 *"78–96% 토큰 감소"* 는 **현 README에서 0건**(grep `30,743|383|%` · 측정 경로: `api.github.com/repos/vercel-labs/agent-desktop/readme` raw). skeleton 기능 자체는 77행 `snapshot --skeleton --app Slack -i --compact` 로 남았다. ⇒ 수집기 "성능 수치 README 0건" ✅ 정확. 단 **이전에는 있었다가 이관 정리 과정에서 빠졌다**는 이력은 수집기가 모른다.
+- ✅ 수집기 서술 확인: "호출마다 별도 프로세스 · headless 시 포그라운드 활성화·합성입력 금지"(README 14행) · 프라이버시 문단(16행) · JEV helper 외부 전송(16행).
+  - ⚖️ 보강(docs/faq.md 74~80행): 네이티브 CLI는 원격 모델 서비스를 요구하지 않는다. JEV helper는 **목표(goal)와 화면 설명**을 공급자에 보내며, *"value-suppression 옵션이 라벨·제목·조상 경로·목표 자체의 사적 텍스트는 지우지 않는다"* 고 스스로 적는다. 디버그 HTML은 스크린샷+접근성 데이터를 내장하고, 세션 trace는 구조화 필드를 가려도 증거 아티팩트가 남는다. — 문서가 자기 마스킹의 한계를 값으로 적은 사례 → [[검사가능성-공사]].
+- ✅ v1.1.0 노트: Windows 종료 크래시(#342)·오버레이 좌표 이중 스케일링(#343)·검은 사각형 플래시(#344) 수정, Linux/Windows ref 재식별 규칙(#442), macOS Dock·메뉴바·시스템 패널 접근(#480). **사고·보안 공개 항목 0건**(v1.1.0·v1.0.2 노트 전문 확인) — 수집기 일치. 참고: v1.1.0의 "fix: remove the macOS command host"(#414), v1.0.2 "permission guide … leave no stale host"(#330)는 권한 위임 호스트 정리로 읽히나 사고 서술은 없다.
+
+> [!insight] 개인 레포가 벤더 Labs 제품이 되면 "수치 근거"가 먼저 정리된다
+> 09-24 볼트의 핵심 발견(헤드라인 78–96% · alt 속성의 98.75% 예시)이 이관 후 README에서 **둘 다 삭제**됐다. 과장 문구를 걷어낸 정리일 수도, 근거 있는 예시까지 함께 버린 것일 수도 있다(🔴 삭제 커밋·사유 미확인). 어느 쪽이든 **볼트가 인용하던 수치의 출처가 소멸**했으므로 09-24 본문의 98.75%는 "과거 README 기준"으로만 읽는다. ★는 이관 이후 7배가 됐고 측정값은 0이 됐다 → [[스타-근거-비동행]].
+
+- **즉시 활용(재판정)**: 🟡 **조건부 가능** — Linux는 AT-SPI + GNOME/X11 조건부 지원이라 이 볼트 서버(헤드리스 GCP)에서는 그래픽 세션이 없어 여전히 실익 낮음. 설치는 npm(`agent-desktop`). 코드 미실행.
+- **수집기 평가**: 수치·프라이버시·릴리스 확인 정확. 누락 = 조직 이관(v1.0.2 노트에 명시) · v1.0.0 메이저 도달(10-28) · 볼트 기존 판정(Planned·58/54·alt 수치)과의 충돌.
+- 관련: [[agent-browser]](같은 vercel-labs, 문서 사이트도 `agent-browser.dev/desktop` 에 합쳐짐 — v1.0.2 #335) · [[Vercel]] · [[에이전트-웹접근]]

@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, 조직, vercel, rust, npm]
 created: 2026-09-24
-updated: 2026-09-24
-sources: [agent-browser.md]
+updated: 2026-11-03
+sources: [agent-browser.md, agent-desktop.md]
 reliability: high
 ---
 
@@ -29,8 +29,12 @@ reliability: high
 - 다른 Labs 레포 보유 목록 미조회.
 - 월 532만 DL 중 CI 재설치·미러 비중 분리 불가.
 
+## 🔄 2026-11-03 갱신 — agent-desktop 편입
+> [!note] [[agent-desktop]] 이 [[lahfir]] 개인 레포에서 vercel-labs 로 이관됐다(v1.0.2 노트 #332·#333). 11-03 ★11,167 · 트렌딩 1위. [[agent-browser]](웹) + agent-desktop(OS 접근성 트리) ⇒ Vercel Labs 가 브라우저·데스크톱 양쪽 컴퓨터유즈 CLI 를 모두 보유.
+
 ## 관련 페이지
 - [[agent-browser]] — 확인된 산출물
 - [[상대속도-가림]] — ★ 둔화 vs npm 532만
 - [[에이전트-스킬]] · [[에이전트-웹접근]]
+- [[agent-desktop]] — 2026-11 이관 편입(원 작성자 [[lahfir]])
 - [[ai-news]]
