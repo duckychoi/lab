@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-11-01
+updated: 2026-11-04
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -125,3 +125,7 @@ reliability: medium
 
 ## 🔄 2026-11-01
 - [[WorkFactory]] — Qwen3.5-4B · Qwen3.6-27B · Qwen3.6-35B-A3B 파인튜닝(WorkPilot). 🔴 879→1565는 공식값과 로컬 추정의 비교다. [[MLLM-Retrieval-Heads]] — Qwen3-VL-8B 페이지 검색 Micro R@1 +6.03.
+
+## 🔄 2026-11-04
+- [[Qwen3.8-27B]] dl30 **8,014,877**(+99,240 · 1일) · 누적 20,960,828 · likes 19,105 · 모델 82일 동결. 🔴 수집기가 IFBench Opus 62.5 · 3.6/3.7-Plus/Glimmer 비교열 · HLE "Judged by GPT-4o" 각주 누락.
+- `Qwen/Qwen-Image-2.1-Turbo`(8스텝 · CFG 1 · 7B, 30일 42,908) 가 [[Qwen-Image-2.1-Uncensored-Quantized]](→ 개명 `abenzerps/Qwen-Image-2.1-Turbo-Quantized`)의 새 베이스가 됐다. 🔴 파생 카드의 "베이스가 무검열 네이티브 지원"은 공식 Turbo 카드에 근거 없음(grep 0건).

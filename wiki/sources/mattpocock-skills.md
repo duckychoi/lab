@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, dotclaude, developer-tools, harness, 자기제한, 배포포맷]
 created: 2026-04-27
-updated: 2026-11-01
+updated: 2026-11-04
 sources: []
 reliability: high
 ---
@@ -117,3 +117,25 @@ reliability: high
 - 스타: ⭐**269,908** (2026-09-26 API) ← ⭐253,347 (09-06 재관측) ← ⭐234,572 (08-24) ← ⭐232,854 (08-23) ← ⭐230,381 (2026-08-22 **GitHub API 실호출 검증**·트렌딩 데일리 1위·23만 돌파·raw 표기 230,374/당일 +3,362) ← ⭐210,434 (08-09, +1,359·21만 돌파) ← ⭐209,271 (08-08) ← ⭐207,870 (08-07, 20만 돌파) ← ⭐173,162 (07-16) ← ⭐156,933 (07-05) ← ⭐85,662 (2026-05-16) ← ⭐46,841 (2026-04-30)
 - 부가 실측(2026-08-22 API): 포크 19,683 · 이슈 377 · 언어 Shell · 라이선스 MIT · 생성 2026-02-03 · 최종 푸시 2026-08-21
 - 신뢰도: ⭐⭐⭐⭐ (수치 GitHub API 실검증 — 단 스킬 품질·재현성 벤치는 리포에 없음·스타는 저자 브랜드 기여분 포함)
+
+## 🔄 2026-11-04 갱신 (인제스트 2026-11-04) — ★311,954 · **SKILL.md 39개 실측 일치 · v1.3.2 노트가 밝힌 사고: 이 레포 클론에서 일하던 에이전트들이 남의 스펙·티켓을 mattpocock/skills 에 이슈로 올렸다(#541~#550) · `chief-of-staff` 가 LLM 위키를 메모리로 채택**
+
+**GitHub API 실측(11-04 09시대)**: ★**311,954**(수집기 311,944 · +10) · fork **26,209** · open_issues **209** · watchers 1,607 · MIT ✅ · Shell · 소유 `mattpocock`(User) · pushed 2026-11-01T11:42Z · topics 0개(유지) · 릴리스(최신 5) **v1.3.2(10-29)** · v1.3.1(10-04 12:48Z) · v1.3.0(10-04 12:47Z) · v1.2.3(08-06) · v1.2.2(08-05)
+- 📈 볼트 직전 ★308,744 · fork 25,989(11-01) → **★ +3,210 · fork +220 / 3일(일평균 약 1,070)** — 11-01의 21일 일평균 1,126과 비슷한 선형 구간. open_issues 165(10-11, 볼트 마지막 기록) → 209.
+- 🔴 볼트 정정: 이 페이지는 **릴리스를 한 번도 기록하지 않았다.** 11-01 갱신 시점에 v1.3.2(10-29)·v1.3.0/1.3.1(10-04)이 이미 있었다 → 릴리스 +0(11-01 대비) / +3(볼트 기록 기준).
+- ✅ **SKILL.md 39개 = engineering 20 · in-progress 8 · productivity 7 · misc 4** — `git/trees/main?recursive=1`(truncated=false) 직접 카운트로 수집기와 완전일치. v1.3.0/1.3.1에서 `implement-spec`·`pr`·`retro` 가 engineering으로 승격, `resolving-merge-conflicts` 삭제, `CONTEXT.md`→`GLOSSARY.md` 개명.
+
+> [!warning] 🔴 수집기 누락 — v1.3.2 노트 안의 사고 공개 (#1169)
+> *"Agents working in a clone or fork of this repo had filed their specs and tickets here ([#541] to [#550])."* `setup-matt-pocock-skills` 가 쓰는 GitHub 트래커 템플릿이 대상 레포를 확인하지 않아, **사용자 에이전트가 자기 작업 스펙·티켓을 이 공개 레포에 `gh issue create` 했다**(최소 10건). 수정: 이제 템플릿이 "사용자 자신의 레포에만, 첫 생성 전 대상 확인"을 지시한다. ⇒ 스킬을 클론해 쓰는 구조에서는 **git remote가 곧 공개 게시 대상**이 된다 — 사적 스펙 유출 경로. 이전에 `/setup-matt-pocock-skills` 를 돌렸다면 **재실행으로 `docs/agents/issue-tracker.md` 갱신 필요**(노트 문구).
+
+- ⚖️ v1.3.2 다른 항목(수집기는 `ask-matt` 1건만 언급):
+  - **#1304 `chief-of-staff`** — 메모리를 **LLM 위키(`index.md` + 주제별 페이지, ingest·query·lint로 유지)** 로 바꾸고 *"모든 주장에 날짜, 코드에 관한 주장엔 그 시점 커밋을 인용"* 하는 역사 기록으로 쓴다. **이 볼트와 같은 패턴**([[LLM-Wiki]])이고, 볼트에 없는 규칙(주장별 커밋 인용)을 하나 더 갖고 있다.
+  - **#1209 `diagnosing-bugs`** — 강제 변이를 원본 사본과 `diff` 한 뒤에만 red를 믿게 함: *"아무것도 안 바꾼 편집이 실패 테스트로 통과하는"* 경우 차단.
+  - **#1341** 서브에이전트를 띄우는 8개 스킬이 *"현재 대화를 fork하지 말고 새 컨텍스트로 시작"* 하도록 명시 — Codex가 기본으로 fork한다고 지목.
+  - **#1194 `ask-matt`** — 자기 한 줄 요약 대신 SKILL.md를 먼저 읽음 ✅(수집기 일치).
+- 📝 README(raw 258행): GSD·BMAD·Spec-Kit 비판(17행) ✅ · 플러그인+skills.sh 동시 설치 시 2배(27행) ✅ · 설치 경로에 **`claude plugin install mattpocock-skills@claude-plugins-official`**(35행 — Anthropic 공식 마켓플레이스 등재) · Codex·Copilot·VS Code 플러그인 경로. 정량 표현은 여전히 *"~60,000 devs"* 뉴스레터(21행)뿐 — 효과 수치 0(수집기 일치).
+
+> [!insight] 스킬 버그 수정 노트가 "에이전트가 실제로 저지른 실수 목록"이 됐다
+> v1.3.2 항목 대부분이 **이슈 번호가 붙은 실제 오작동**의 패치다: 남의 레포에 이슈 게시, yes/no 의미 역전(#1193), 임시 디렉터리 추측(#1184), 아무것도 안 바꾼 변이를 red로 신뢰(#1209), 서브에이전트 컨텍스트 오염(#1341). 품질 벤치는 없지만 **실패 사례 코퍼스**는 릴리스 노트에 쌓이고 있다 — ★31만보다 이 목록이 채택 근거로 더 쓸모 있다. → [[관심-검증-역상관]] · [[에이전트-스킬]]
+
+- **수집기 평가**: SKILL.md 39개·버킷 분포·GSD 대비·중복 설치 경고 정확, 카운트 방법(git tree API)까지 명시. 누락 = ① **#1169 이슈 오게시 사고** ② `chief-of-staff` LLM 위키 채택 ③ 서브에이전트 fresh-context 규칙 ④ Anthropic 공식 마켓플레이스 설치 경로.

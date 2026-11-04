@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-03 (✅ **대기 20건 전량 처리** — 자동수집 13(**신규 5 · 갱신 8**) + 크론 노트 7(신규 4 · 🔴 **덮어쓰기 3 복원 병합**). `^- URL:` **0** · `^- path:` **0**. 페이지 1675 → **1684**)
-total_pages: 1684  # 2026-11-03 실측(sources **1455** · entities 129 · concepts 92 · synthesis 4 · domains 4 · queries 0) — 증분 1675 + 9(자동 신규 5 + 크론 신규 4)
-total_sources: 1455  # 2026-11-03: 신규 소스 5 + 크론 신규 4 (덮어쓰기 3 · 갱신 8은 기존 계수)
+updated: 2026-11-04 (✅ **대기 20건 전량 처리** — 자동수집 13(**신규 5 · 갱신 8**) + 크론 노트 7(신규 6 · 🔴 **덮어쓰기 1 복원 병합**). `^- URL:` **0** · `^- path:` **0**. 페이지 1684 → **1695**)
+total_pages: 1695  # 2026-11-04 실측(sources **1466** · entities 129 · concepts 92 · synthesis 4 · domains 4 · queries 0) — 증분 1684 + 11(자동 신규 5 + 크론 신규 6)
+total_sources: 1466  # 2026-11-04: 신규 소스 5 + 크론 신규 6 (덮어쓰기 1 · 갱신 8은 기존 계수)
+# 🎯 배치 축(2026-11-04) = **같은 이름이 같은 것을 가리키지 않는다.** [[Qwen-Image-2.1-Uncensored-Quantized]] 는 개명과 함께 `main` 가중치가 Turbo로 통째로 교체됐는데 다운로드 계수기만 승계 · [[MoviEdit]] 'Overall 0.762'는 Video Quality 열(실제 Overall Edit Success 0.790) · [[DreamX-Latent-Action]] '성공률 96.7%'는 하위목표 평균(실제 서랍 닫기 93.3%) · [[Route-Anything]] 8.82배는 4개 테스트베드 산술평균(중앙값 약 4.2배) · [[heretic]] 은 v2.0에서 벤치 표를 삭제 → [[문서내-값충돌]] · [[배수-조건분산]].
 # 🎯 배치 축(2026-11-03) = **헤드라인 수치와 비교 대상이 서로 다른 설정에서 왔다.** [[WaveForcing]] 147.6 FPS는 4스텝·더미 가중치(품질 'comparable'은 5스텝) · [[FreeToken]] "RTX 5090"은 CPU 6스레드 제한 렌트 서버 · [[uni-robot-agent]] "GPT-6 초과"는 하네스가 다른 비교(같은 하네스에선 51.90 vs 31.39) · [[CUA-Master]] 는 같은 27B 범용 Qwen-3.8-27B보다 OSWorld가 낮다 → [[배수-조건분산]] · [[비매칭-비교]].
 # 🎯 배치 축(2026-11-02) = **"수치 없음"과 "문구 없음"이 둘 다 틀렸다.** 수집기가 "초록에 수치 없음"이라 한 [[R2Orch]] · [[FrameForge]] · [[HiFOR]] 는 본문 표에 수치가 있었고, [[Qwen-Image-2.1-Uncensored-Quantized]] "safety 문구 0건"은 전 리비전에 문구가 있었다. 🔴 [[claude-mem]] v15.2~15.8.2 가 설치 시 최근 30일 프롬프트를 동의 없이 업로드(v15.8.3 수정) → [[한정어-탈락]].
 # 🎯 배치 축(2026-11-01) = **숫자는 맞고, 무엇을 쟀는지가 빠졌다.** [[WorkFactory]] 879(공식)→1565(로컬 추정) · [[L3G-World]] 359배(VAE 경로 · RGB는 8.3~10.4배) · [[Platonic-Representation-JEPA]] CIDEr .838(30k 쌍으로 사상 학습) · [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 207만(파일 요청) → [[한정어-탈락]].
@@ -350,6 +351,18 @@ total_sources: 1455  # 2026-11-03: 신규 소스 5 + 크론 신규 4 (덮어쓰�
 ---
 
 ## sources
+
+### 2026-11-04 배치 (대기 **20건** 전량 처리 · 자동수집 13 = **신규 5 · 갱신 8**(GitHub 5 · HF모델 3 전부 볼트 보유) · 크론 노트 7(신규 6 · 🔴 **덮어쓰기 1 복원**) · 엔티티 갱신 6(vercel-labs·mattpocock·lahfir·Qwen·Black-Forest-Labs·abenzerps) · 개념 갱신 4 · 개념 신설 0)
+
+- 🆕 [[Route-Anything]] — 66 up · 25벤치 모델·정책 라우팅 연구 · 오라클 +5.4 vs 학습 라우터 +0.3 · 8.82배는 코딩 주도 산술평균(중앙값 ~4.2배) · 25.5배는 "항상 Opus" 대비 · `ai-news`
+- 🆕 [[Kling-MLLM-Report]] — 44 up · Kling 이해 스택 회고(캡션·PE·텍스트 인코더·보상모델) · GSB 1.10~1.27(Table 14, 표본 미공개) · Table 6 캡션 명세 = PE 템플릿 · 코드 없음 · `video-saas`
+- 🆕 [[MoviEdit]] — 38 up · Adobe·KAIST 장편 멀티샷 편집 · Edit Success 0.790 1위 · 🔴 수집기 0.762는 Video Quality 열 · 샷간 일관성 Aleph 2.0 0.981 > 0.904 · 증류로 30.9배(8×H100) · `video-saas`
+- 🆕 [[Pandora-Client-Simulator]] — 35 up · 심리치료 내담자 시뮬레이터 · "AI 같다" 7.2%는 공저자 평가자 4명 · 115케이스 중 97 중국어 단일셋 · `general`
+- 🆕 [[DreamX-Latent-Action]] — 33 up · KAIST·NVIDIA 비디오 확산 잠재행동 · 🔴 96.7%는 하위목표 평균(서랍 닫기 93.3% vs 6.7%) · 지연 19.1배↓(하드웨어 미기재) · 코드 없음 · [[DreamX-Phi]] 와 동명이작 · `slam-3dgs`
+- 🔄 [[claude-mem]] ★112,311 · 새 릴리스 0 · #5270(미릴리스)가 동의 패널을 업로드 기본 쪽으로 재설계 · 설정 미전달 결함 3회차(#5348) · [[agent-desktop]] ★13,659 · `agent-desktop mcp`(도구 67개) 머지·미릴리스 · [[colibri]] ★47,469(51일 +54.5%) · 🔴 볼트 누락 보안 권고 8건 · 9.0 tok/s는 6×5090+NUMA 인터리브(기본 5.8–6.8) · [[mattpocock-skills]] ★311,954 · SKILL.md 39 일치 · v1.3.2 에이전트 오작동 사고(#1169) · [[heretic]] ★39,065 · v2.0 기본 ARA · 벤치 표는 v1.4.0에 있었고 2.0에서 삭제
+- 🔄 [[Qwen3.8-27B]] dl 8.01M(+1.25%) · 82일 동결 · 수집기 비교열 Opus 1열로 후퇴 · IFBench Opus 62.5 누락 · [[Qwen-Image-2.1-Uncensored-Quantized]] → **Qwen-Image-2.1-Turbo-Quantized** 2차 개명 · 🔴 `main` 이력 재작성·가중치 Turbo로 교체(계수기만 승계) · Uncensored는 `base` 브랜치 잔존 · [[flux-3-image-klein-comfy]] dl 1.03M(3일 +11.5%, 수집기 +47%는 10-27 기준) · 연매출 US$5M 미만 기준 확인
+- 📚 크론(reliability low): [[리서치-온디바이스-AI엣지-추론모델-경량화의-2026년-최신-동향]](9회차 · 카카오 BBT는 워크숍 · 잘림) · [[리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-제어-기술-2026년-최신-동향]](20회차 · Hefei Keda '시연'은 특허 2건 · 잘림·출처 0) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-SOTA-현황]](11회차 · Mem0 수치 벤더 자기보고 · A-MEM 방식 혼동) · [[리서치-서울-성동구옥수금호왕십리성수-아파트-시장-2026년-동향]](21회차 · 분양가 ✅ · 🔴 종부세 낡은 안 2일 연속) · [[리서치-2026년-한국연구재단-신진연구자장비인프라-구축-사업-최신-동향]](20회차 · "12명"은 서울시립대 수치 · 12-16/12-18 충돌 해소) · [[리서치-2026년-AI로봇-주요-학회-CFP-일정-10월-11월-집중-제출-기간]](19회차 · 살아 있는 마감은 CVPR 2027뿐)
+- 🔴 크론 덮어쓰기 복원: [[리서치-2026년-Neural-BeamformingNeural-OperatorSpectral-Diffusio]](2일 연속 · arXiv 5건 실존 · "Spectrum"=2603.01623 해소)
 
 ### 2026-11-03 배치 (대기 **20건** 전량 처리 · 자동수집 13 = **신규 5 · 갱신 8**(GitHub 5 · HF모델 3 전부 볼트 보유) · 크론 노트 7(신규 4 · 🔴 **덮어쓰기 3 복원**) · 엔티티 갱신 2(lahfir·vercel-labs) · 개념 신설 0)
 

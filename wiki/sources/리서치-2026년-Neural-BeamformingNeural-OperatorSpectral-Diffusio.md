@@ -1,7 +1,7 @@
 ---
 title: "[리서치] 2026년 Neural Beamforming·Neural Operator·Spectral Diffusion 최신 동향"
 created: 2026-10-14
-updated: 2026-11-03
+updated: 2026-11-04
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
@@ -122,3 +122,110 @@ Transformer 빔포밍 MCU(2609.33755) · GNN 6G 광대역 하이브리드 빔포
 - [[리서치--2026년-Neural-BeamformingNeural-OperatorSpectral-Diffusi]] — 11-02 같은 topic 노트
 - [[리서치-신경-빔포밍신경-연산자스펙트럼-확산의-2026년-arXiv-최신-동향]] · [[리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026]]
 - [[Diffusion-월드모델]] · [[크론-덮어쓰기-소실]] · [[주제재생성-중복]]
+
+
+## 🔄 2026-11-04 갱신 (크론 리서치 노트 · 인제스트 2026-11-04)
+
+> [!note] 위 본문(10-14 원본 + 11-03 갱신 섹션)은 git HEAD 판본을 복원한 것이다. 11-04 크론이 같은 파일명을 **🔴 다시 덮어썼다**(2일 연속 · 4,062 B · 프론트매터 `created: 2026-11-04` 로 리셋, `topic`·`type`·`domain`·`reliability` 소실) → [[크론-덮어쓰기-소실]] · [[주제재생성-중복]] `neural-beamforming`. HEAD 프론트매터를 유지하고 `updated` 만 11-04 로 바꿨다.
+
+> [!warning] ⚖️ 볼트 판정 (2026-11-04) — arXiv API 5건 대조 · 🔴 잘림 · 신규 정보 거의 없음
+> - 🔴 **잘림**: 출처 5번째 항목이 "Adaptive Spectral Feature Forecasting for Diffusion" 에서 **URL 없이 끊겼다**(문장 중간 종료).
+> - ✅ 출처 4건 **전부 실존**(arXiv API · 제목 일치): [2609.33755](https://arxiv.org/abs/2609.33755) Hearable MCU 신경 MVDR 빔포머(2026-09-27) · [2609.09708](https://arxiv.org/abs/2609.09708) GNN 광대역 하이브리드 빔포밍(빔 스퀸트 대응 ✅ 초록) · [2606.09806](https://arxiv.org/abs/2606.09806) TNO(셀 복합체 · 이산 외미분 ✅ 초록) · [2602.09708](https://arxiv.org/abs/2602.09708) PISD(스펙트럼 잠재공간 · 차원 감소 ✅ 초록).
+> - ✅ **11-03 미해결 질문 해소**: "Spectrum" 스펙트럼 특성 예측기 = [2603.01623](https://arxiv.org/abs/2603.01623) ASFF 의 방법명이다(초록: *"spectral diffusion feature forecaster (Spectrum), a training-free approach"* · 체비쇼프 다항식 근사 · Ermon 그룹). 잘린 5번째 출처가 바로 이 논문.
+> - ❓ 출처 미표기(금일판): 카메라·LiDAR·RF 멀티모달 MU-MISO(11-03 에도 ❓) · LatentDDM · CAPA 빔포밍 GNN + FGB-INR(볼트 다른 `neural-beamforming` 노트에 기존 언급 · 이 페이지엔 첫 등장) · 구면조화함수 스펙트럼 확산 · 스펙트럼 점진적 확산.
+> - 🔴 오타 반복: "빔 스퀴팅"(→ 빔 스퀸트) · "연속 개구리배열"(→ 연속 개구 배열 CAPA). 정량 수치 0건(전일과 같음).
+> - 🔁 **중복 주제 7회차**(`neural-beamforming` topic 파일 6개 + 금일 재생성 1회 · 이 파일 자체는 11-03·11-04 2회 덮어쓰기). 🆕 이 페이지 기준 신규: CAPA/FGB-INR · 스펙트럼 점진적 확산 — 나머지는 HEAD·11-03 섹션 반복.
+
+### 금일판 원문 (크론 본문 그대로 · 첫 줄 잡담 1줄만 제거)
+#### 2026년 Neural Beamforming·Neural Operator·Spectral Diffusion 최신 동향
+
+**핵심 3줄**
+- 
+Neural Beamforming은 Transformer 기반의 실시간 음성 향상 시스템이 MCU급 저전력 장비에서 처음으로 배포되는 단계로 진입
+
+- 
+Neural Operator는 위상적 도메인으로 확장되어 셀 복소체에서 차원 간 상호작용을 이산외미분학으로 모델링하는 중
+
+- 
+Spectral Diffusion은 PDE 문제 해결을 위해 스펙트럼 표현 잠재공간에서 물리학 정보를 통합하며, 그리드 기반 방식 대비 차원 감소를 실현
+
+
+**상세**
+
+**Neural Beamforming**
+- 
+Hearable 장치에서 정확하고 효율적인 저지연 공간 빔포밍이 핵심 요소
+
+- 
+6G 무선통신을 위해 GNN(그래프 신경망)으로 멀티캐리어 광대역 하이브리드 빔포밍 최적화 추진 중
+
+- 
+제안된 GNN은 빔 스퀴팅과 불완전 채널 상태정보에 대해 기존 디지털 빔포밍보다 강건성 우수
+
+- 
+CNNs로 희소배열 구성 설계 학습, 기존 최적화 기반 알고리즘보다 동적 환경에서 빠른 재구성 가능
+
+- 
+카메라·LiDAR·RF 파일럿을 다중모드로 통합하여 LoS/NLoS 혼합 환경에서 MU-MISO 빔포밍 최적화
+
+- 
+연속 개구리배열(CAPA) 빔포밍 설계에 GNN과 함수-그래디언트 기반 음함수 신경표현 (FGB-INR) 조합 제안
+
+
+**Neural Operator**
+- 
+위상 신경 연산자(TNO)는 점/간선의 함수로부터 위상 도메인으로 신경 연산자를 확장하는 체계화된 틀 제공
+
+- 
+신경 연산자 정확도 저하 문제를 작은 부분도메인 사전훈련 후 경량 합성 모듈 학습으로 해결(LatentDDM)
+
+- 
+FNO-MoE(혼합전문가 퓨리에 신경 연산자) 사용하여 대기 화학을 30분 단위로 단일 호출로 예측, 활성 샘플링으로 임의 샘플링 대비 정확도 향상
+
+- 
+신경 연산자는 무한차원 함수공간 간 맵핑으로 설계되며, 다양한 복잡도의 해석 함수에서 기존 방식 상회
+
+- 
+TF-SNO(시간-주파수 게이트 스펙트럼 신경 연산자)로 비정상 PDE 학습
+
+
+**Spectral Diffusion**
+- 
+구면 데이터용 스펙트럼 확산 모델이 구면조화함수 표현에서 직접 정의된 프레임워크 개발
+
+- 
+단백질 동역학에 푸리에 변환 귀납적 편향으로, 스펙트럼 도메인 확산이 느린 배치도형 모드와 빠른 원자 진동 분리
+
+- 
+Diffusion Transformers의 추론 속도 개선을 위해 훈련 불필요한 스펙트럼 특성 예측기(Spectrum) 제안
+
+- 
+스펙트럼 정규화 틀로 퓨리에·웨이블릿 도메인 손실 추가하여 확산 훈련 개선
+
+- 
+스펙트럼 점진적 확산으로 저주파는 초기에, 고주파는 후기에 생성되는 구조 활용하여 해상도를 점진적으로 증가
+
+- 
+에너지 조건 잡음 일정 계획이 이미지 종속 에너지 경로로 계수별 잡음 할당을 조절
+
+
+**💡 인사이트/시사점**
+
+현장 배포 가능 저전력 신경 빔포밍의 실현으로 웨어러블 음성 기술 상용화 가속도가 높아지는 중
+이며, 
+스펙트럼 확산의 차원 감소 특성이 PDE 기반 과학 기계학습 계산 효율을 크게 개선하는 핵심 기술
+로 부상하고 있다.
+
+**출처**
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming Optimization — https://arxiv.org/abs/2609.09708
+- Topological Neural Operators — https://arxiv.org/abs/2606.09806
+- Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
+- Adaptive Spectral Feature Forecasting for Diffusion
+  ⟵ 🔴 (원문 여기서 잘림 · URL 없음 — 볼트 보충: https://arxiv.org/abs/2603.01623)
+
+### 관련 페이지 (11-04 추가)
+- [[리서치--2026년-Neural-BeamformingNeural-OperatorSpectral-Diffusi]] — 11-02 같은 topic 노트
+- [[리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-신규-논]] — 10-25 같은 topic
+- [[리서치-Neural-Beamforming-임베디드다중사용자-최적화-중심]] — CAPA/FGB-INR 기존 언급
+- [[크론-덮어쓰기-소실]] · [[주제재생성-중복]]

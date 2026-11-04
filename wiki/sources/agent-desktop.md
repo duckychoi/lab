@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, computer-use, accessibility, rust, macos, fail-closed, 검사가능성, tool]
 created: 2026-09-24
-updated: 2026-11-03
+updated: 2026-11-04
 sources: []
 reliability: high
 ---
@@ -100,3 +100,21 @@ reliability: high
 - **즉시 활용(재판정)**: 🟡 **조건부 가능** — Linux는 AT-SPI + GNOME/X11 조건부 지원이라 이 볼트 서버(헤드리스 GCP)에서는 그래픽 세션이 없어 여전히 실익 낮음. 설치는 npm(`agent-desktop`). 코드 미실행.
 - **수집기 평가**: 수치·프라이버시·릴리스 확인 정확. 누락 = 조직 이관(v1.0.2 노트에 명시) · v1.0.0 메이저 도달(10-28) · 볼트 기존 판정(Planned·58/54·alt 수치)과의 충돌.
 - 관련: [[agent-browser]](같은 vercel-labs, 문서 사이트도 `agent-browser.dev/desktop` 에 합쳐짐 — v1.0.2 #335) · [[Vercel]] · [[에이전트-웹접근]]
+
+## 🔄 2026-11-04 갱신 (인제스트 2026-11-04) — ★13,659 · **`agent-desktop mcp` 머지(67개 도구, 미릴리스) · README 하루 만에 재작성(187→178행) · 새 릴리스 0건**
+
+**GitHub API 실측(11-04 09시대)**: `vercel-labs/agent-desktop`(owner type **Organization** ✅) · ★**13,659**(수집기 13,652 · +7) · fork **935** · open_issues **152**(이슈+PR) · watchers 31 · Apache-2.0 ✅ · Rust · pushed 2026-11-03T23:16Z · topics에 `mcp` 추가 · 최신 릴리스 **여전히 v1.1.0(11-03 04:13Z)** — 이후 새 릴리스 0건. main은 v1.1.0보다 **5커밋 앞**(`/compare/v1.1.0...main`).
+- 📈 볼트 직전 ★11,167 · fork 768 · open 133(11-03) → **★ +2,492 · fork +167 · open +19 · 릴리스 +0 / 1일.**
+- ⚖️ 수집기 "+3,791 today"는 API 1일 차(+2,492)보다 크다 — 트렌딩 "today" 창과 볼트 관측 간격(약 24h)이 다르다 → [[지표-창길이]]. "금일 최대 증분"은 트렌딩 페이지 기준으로만 참.
+
+- 🆕 **#519 `feat: agent-desktop mcp`(11-03 23:13Z merged, lahfir)** — PR 본문: 각 leaf CLI 명령을 stdio MCP 도구 하나로 노출(**67개 도구**, `desktop_snapshot`·`desktop_session_start` 등), 도구 이름·스키마를 clap 명령 트리에서 런타임 생성, 호출마다 자식 프로세스 실행. 테스트: **Linux(Xvfb·openbox·AT-SPI·GTK3 앱)에서만 실기 확인, "macOS and Windows were not run"**. README 105~113행에 이미 문서화됐지만 **npm 최신(v1.1.0)에는 없다.**
+  - ⚖️ 수치 대조: README 117행 "60 command names, 56 operational" vs MCP 도구 67 — 도구는 *leaf* 명령(하위 명령 포함) 단위라 셈법이 다르다(PR 문구 기준 해석, 개별 대조 안 함).
+- 📝 **README 재작성(#481 "simplify the README", 11-03 18:01Z)** — 볼트 11-03 확인(09시대, raw 187행) 이후. 현재 raw **178행·8,950B**. `## Platform support`(131~139행)가 기능별 Yes 표 → **OS별 요구사항 표**(macOS 13+ AX API · Windows 10 1809+ UI Automation · Ubuntu 24.04+ X11/Wayland AT-SPI)로 바뀌고, *"각 플랫폼 페이지가 headless로 되는 것·`--headed` 필요한 것·거부하는 것을 적는다"* 로 세부를 외부 문서(agent-browser.dev/desktop)로 넘겼다. 🔴 **볼트 11-03 기록의 "126~135행 Linux 조건부 Yes(X11 `--headed`·Wayland portal·wl-clipboard·GNOME Shell)" 행 번호와 표 형태는 현 README에 없다** — 내용 자체의 폐기 여부는 플랫폼 페이지 미열람으로 ⬜ 미확인.
+- ✅ 수집기 서술 확인: 스크린샷·픽셀 매칭 없음/ref JSON/모델 내장 없음/CLI+C 라이브러리(12행) · 스냅샷·클립보드·스크린샷·디버그 산출물에 개인 데스크톱 정보 포함 경고(14행) · 3 OS(3행) · v1.1.0 = 수정 위주(11-03 볼트 확인, 사고·보안 항목 0건 유지). 성능 수치 0건 유지(`%`는 배지 URL의 `%20`뿐).
+- ⬜ 수집기 "접근성 트리 빈약한 앱(게임·캔버스형) 한계 예상(미검증)" — README는 이 한계를 직접 언급하지 않는다(grep `game|canvas` 0건). 수집기 추정임을 스스로 밝혀 둔 것은 적절.
+
+> [!insight] CLI가 MCP 서버를 겸하면 "에이전트 측 루프" 설계가 어느 하네스에도 꽂힌다
+> 12행 *"The loop lives in your agent; agent-desktop has no model inside"* + #519 = Claude Code·Codex 등 MCP 하네스가 설정 한 줄(`{"command":"agent-desktop","args":["mcp"]}`)로 데스크톱 조작을 얻는다. 단 **실기 검증은 Linux 하나뿐**이라 macOS/Windows MCP 경로는 저자도 돌려 보지 않은 상태다. 이 볼트 서버는 헤드리스라 Xvfb를 띄워야 같은 조건이 된다 — 저자 테스트 조건과 동일하므로 **재현 시도 비용이 낮은 드문 경우**. → [[에이전트-웹접근]] · [[검사가능성-공사]]
+
+- **수집기 평가**: 수치·경고·릴리스 서술 정확. 누락 = ① **MCP 서버 머지**(topics에도 반영) ② README 재작성으로 플랫폼 세부가 외부 문서로 빠짐 ③ 새 릴리스 0건(v1.1.0을 11-03 그대로 재서술).
+- **즉시 활용(재판정)**: 🟡 조건부 유지. 다음 릴리스(MCP 포함) 후 Xvfb+AT-SPI로 `desktop_snapshot` 1회 호출 정도는 저비용 실험 후보. 코드 미실행.

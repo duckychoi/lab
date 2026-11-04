@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [entity, company, image-generation, flux, bfl, 게이트배포]
 created: 2026-10-17
-updated: 2026-10-24
+updated: 2026-11-04
 sources: [flux-3-image-klein.md, flux-3-image-klein-comfy.md]
 reliability: medium
 ---
@@ -62,3 +62,5 @@ reliability: medium
 - [[계수기-배수]] · [[스타-근거-비동행]]
 
 - 🔄 **2026-10-24**: [[flux-3-image-klein-comfy]] **534,837** dl / [[flux-3-image-klein]] **105,768** / 🆕 klein-base **106,650** / klein-pup **43,391** (10-24T09:06Z 실측) · 라이선스 **`flux-kommunity-license`**(비상업 + Qualifying User 상업 출력 예외 · 정의 미확인) · 🔴 comfy:원본 5.06배는 계수 단위 차이(diffusion-single-file vs diffusers) → [[계수기-배수]] · 미해결 ③ "Base 레포 미확인" **해소**
+
+- 🔄 **2026-11-04**: [[flux-3-image-klein-comfy]] **1,032,077**(11-01 대비 +11.5% · 일평균 2구간 연속 감소) / [[flux-3-image-klein]] 159,405 / klein-base 120,013 / klein-pup 63,992 · 4레포 `lastModified` 11-02T23:49Z 일괄 갱신(내용은 게이트로 미확인) · 라이선스 Qualifying User = **연매출 US$5M 미만(계열사 포함)** 카드 문장 확인 → 10-24 미해결 해소

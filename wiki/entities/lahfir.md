@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, 개인개발자, rust, computer-use, macos]
 created: 2026-09-24
-updated: 2026-11-03
+updated: 2026-11-04
 sources: [agent-desktop.md]
 reliability: medium
 ---
@@ -39,3 +39,6 @@ reliability: medium
 - [[자기제한-명시]] · [[검사가능성-공사]] · [[PageIndex]]
 - [[vercel-labs]] — 2026-11 agent-desktop 이관처
 - [[ai-news]]
+
+## 🔄 2026-11-04
+- [[agent-desktop]] 이관 후에도 주 기여자 — `agent-desktop mcp`(#519, 11-03 23:13Z merged) 작성자.

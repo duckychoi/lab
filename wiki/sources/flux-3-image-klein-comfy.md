@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, image-generation, flux, comfyui, repackaging, t2i, image-edit, gated, 배포형태수요, 계수기-배수]
 created: 2026-10-17
-updated: 2026-11-01
+updated: 2026-11-04
 sources: []
 reliability: medium
 ---
@@ -165,3 +165,27 @@ reliability: medium
 - 원 배수 5.88 → **6.20**으로 늘었지만 구간 비는 12.4 → 7.5로 낮아졌다. comfy 일평균은 줄고 원본은 늘었다. ⚖️ **볼트 10-27 표현 "역전 폭이 가속"과 "수요가 ComfyUI 패키지로 이동 중"은 3일 구간의 과독이었다. 철회한다.** 배수 자체는 여전히 계수 규칙이 달라 사용자 수 비로 읽지 않는다 → [[계수기-배수]] · [[원본-파생-역전]].
 - 📌 두 저장소 모두 생성 30일 전이라 `downloads`와 all-time이 같다. comfy 생성 10-14 · 원본 10-13이므로 **11월 중순부터 창 효과가 시작**된다. 그 뒤 증분을 단순 차감하면 안 된다 → [[지표-창길이]].
 - ✅ 수집기 요약(5.6B · 참조 10장 · 16/50스텝 · 업샘플러 필수 · 벤치 없음 · gated auto) 기존 판과 모순 없음.
+
+## 🔄 2026-11-04 갱신 (인제스트 2026-11-04) — **100만 돌파 · 3일 +11.5%(수집기 "+47%"는 10-27 값 기준) · 11-02 에 4개 레포가 같은 시각 갱신됐다 · 라이선스 "Qualifying User = 연매출 US$5M 미만" 확인**
+
+**HF API 실측(2026-11-04T09:06Z · expand)**: comfy `downloads` **1,032,077**(수집기 정확히 일치) = `downloadsAllTime`(생성 10-14 → 21일째, 아직 30일창 이내) · likes **2,438**(일치) · `trendingScore` **264** · 목록 API(`sort=trendingScore&limit=30`) **13위** · `gated: "auto"` · 🆕 `lastModified` **2026-11-02T23:49:46Z**(11-01 까지 10-17) · sha `9d36114`
+
+| 레포 | 11-01 | **11-04** | 3일 증분 | 일평균 |
+|---|--:|--:|--:|--:|
+| **comfy** | 925,236 | **1,032,077** | **+106,841 (+11.5%)** | ≈35,600 |
+| 원본 [[flux-3-image-klein]] | 149,203 | **159,405** | +10,202 | ≈3,400 |
+| klein-base | (미수집) | 120,013 | — | — |
+| klein-pup(업샘플러) | (미수집) | 63,992 | — | — |
+| likes comfy / 원본 | 2,215 / 786 | **2,438 / 817** | +223 / +31 | — |
+
+- comfy 일평균 55,300(10-24→27) → 44,900(10-27→11-01) → **35,600** 으로 **2구간 연속 감소**. 원 배수 6.20 → **6.47**, 구간 비 7.5 → **10.5**. 원본 패밀리 3레포 합 343,410 대비 **3.01배**(10-24 2.09배). ⚖️ 10-27 의 "가속" 철회(11-01)는 유지 — 배수는 커지지만 절대 유입은 줄고 있다. 계수 단위 차이(`diffusion-single-file` vs `diffusers`)로 배수를 사용자 수 비로 읽지 않는다 → [[계수기-배수]] · [[원본-파생-역전]]. 창 효과는 **11-13 경**부터 → [[지표-창길이]].
+- 🆕 **동시 갱신**: comfy 11-02T23:49:46Z · klein 11-02T23:49:00Z · klein-base 11-02T23:49:06Z · klein-pup 11-03T05:15:14Z ⇒ BFL 이 패밀리 4레포를 **1분 안에 일괄 수정**했다(pup 은 6시간 뒤). 🔴 **무엇을 바꿨는지는 확인 불가** — `api/models/<id>/commits/main` 은 게이트로 `{"error":"Access … restricted"}`, HTML `commits/main` 은 HTTP 401.
+- 🏆 **10-24 미해결 ① 해소 — "Qualifying User" 정의**: 카드 HTML(익명 200 · 174,536 B) License 절 원문 *"non-commercial use, plus commercial output generation by Qualifying Users with **less than US$5M in gross annualized revenue, including affiliates**, subject to the license terms."* · 텍스트 인코더(Qwen3-VL-4B)와 업샘플러는 Apache-2.0. 🔴 이 문장이 11-02 갱신으로 추가된 것인지 10-24 볼트가 놓친 것인지는 **판별 불가**(10-24 볼트 인용은 Key Features 절 문장만 있었다 · 커밋 이력 게이트). Out-of-scope 절: *"commercial-use exception is not blanket permission for commercial fine-tuning or distribution"* — **출력물 상업 이용만** 예외다.
+- 📌 **카드 이미지 열람**: 벤치 이미지는 **0건**(카드 텍스트 `bench` grep 0 · `<img>` 는 로고·아바타 외 `media/main/launch-gallery.jpg` 1개). gallery 를 받아(HTTP 200 · 6,537,996 B · 5000×3360 JPEG) 직접 열었다: 18장 샘플 콜라주, **수치·축·모델 비교 없음**. ⚠️ 그 안의 우표 샘플 세로 텍스트가 *"IINTERNA TTIONA… / IPGSTAGE ESTAAMN…"* 로 깨져 있다(1400px 축소본 + 원본 크롭으로 확인) — 카드 Limitations *"text rendered may be inaccurate or subject to distortion"* 을 **공식 쇼케이스가 스스로 보여준다**. 단 이 콜라주가 전부 Klein 출력인지는 카드에 명시돼 있지 않다(추정).
+- ✅ 사양 재확인(카드 HTML): 5.6B(이미지 트랜스포머만) · 참조 최대 10장 · 증류 16스텝·가이던스 없음 / Base 50스텝·CFG 3.5 · BF16 11.1 / int8 5.8 / NVFP4 5.3 GB(증류·Base 동일) · int8 은 RTX 3070 8GB·FP8 미지원 GPU · NVFP4 는 Blackwell · 업샘플러 Qwen3.5-9B 파생 BF16 18.8 / int8 9.8 / w4a8 6.7 GB · 카드 권장 다운로드 명령은 **int8 트랜스포머 5.8 + 인코더 4.9 + VAE 0.3 + 업샘플러 9.8 = 20.8 GB** — "8GB GPU 에서 돈다"는 트랜스포머 기준이고 업샘플러까지 같은 GPU 에 올리는 조건은 아니다. CSAM·NCII 위험 평가·완화 문단 존재(수집기 기재 정확).
+
+- 수집기 평가: ✅ 지표 2종·사양·게이트 경로(raw `README.md` **HTTP 401** · 150 B 안내문 → HTML 200 · 174,536 B 전건 일치) · 🔴 **"볼트 직전값 700,652(10-27) 대비 +47%" — 볼트 최신값은 11-01 925,236 이다 → 실제 +11.5%**(직전값 오참조, 1.47 은 7일 구간) · 🔴 `lastModified` 10-17 → 11-02 변경 미지적 · 🔴 라이선스 US$5M 기준(볼트 미해결 ① 해소 근거) 미기재 · ⚖️ "라이선스 flux-kommunity-license" 만 적어 비상업 기본이라는 핵심 제약이 빠짐 · 🔴 업샘플러 포함 실 다운로드 용량(20.8 GB) 미기재
+
+## 원본 (11-04 갱신)
+- 볼트 실측: HF API expand(comfy · klein · klein-base · klein-pup) · `api/models?sort=trendingScore&limit=30`(13위) · `raw/main/README.md`(401 · 150 B) · HTML 모델 페이지(200 · 174,536 B, 텍스트 추출) · `api/.../commits/main`(게이트 에러) · HTML `commits/main`(401) · `expand[]=siblings`(파일 목록) · `media/main/launch-gallery.jpg`(별도 디렉토리 저장 후 직접 열람)
+- 신뢰도: ⭐⭐⭐

@@ -1,10 +1,11 @@
 ---
-title: "abenzerps/Qwen-Image-2.1-Uncensored-Quantized — '신규'가 아니라 개명이었다(307 리다이렉트). 원본의 15.4배, 벤치는 PNG 봉인, 표 안에서 단위가 섞였다"
+title: "abenzerps/Qwen-Image-2.1-Uncensored-Quantized → (11-03~04 개명) Qwen-Image-2.1-Turbo-Quantized — 두 번째 개명은 이름이 아니라 가중치까지 바꿨다. 계수기만 승계"
+aliases: [abenzerps/Qwen-Image-2.1-Turbo-Quantized, Qwen-Image-2.1-Turbo-Quantized]
 type: source
 domain: local-llm
-tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판, 봉인유지, 절제, 규약11]
+tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, turbo, 개명, 내용교체, 계수기-승계, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판, 봉인유지, 절제, 규약11]
 created: 2026-10-02
-updated: 2026-11-03
+updated: 2026-11-04
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -464,3 +465,56 @@ BF16 **14.23 GB** → NVFP4 **4.20 GB** (70.5% 감소) · MLX 4bit **4.00 GB** (
 - 볼트 실측: HF API expand 2건(파생·원본) · `commits/main`(8건) · `raw/main/README.md` · `tree/main?recursive=true` · `resolve/main/assets/Qwen-Image-2.1-Benchmark.png`(별도 빈 디렉토리에 저장 후 시각 판독) · 원본 `raw/main/README.md`·`tree/main`
 - raw 대비: ✅ dl30·likes(±1)·트렌딩 12위·lastModified·커밋·파일 크기·Q4_K_M 권장·"이미지만 제공" **일치** · 🔴 "2일 연속 감소" **오류**(1회 감소) · ⚖️ base 변형 형식 범위 과대 서술 · 수집기 "원본/양자화 판별 불가" → 볼트 열람으로 **원본 비교표로 판정**
 - 신뢰도: ⭐⭐⭐
+
+## 🔄 2026-11-04 갱신 (인제스트 2026-11-04) — 🔴🔴 **두 번째 개명: `…-Uncensored-Quantized` → `abenzerps/Qwen-Image-2.1-Turbo-Quantized`. 같은 `_id` 이지만 `main` 의 가중치가 통째로 Turbo 로 교체됐다 — 다운로드 계수기만 승계**
+
+**개명 독립 검증(2026-11-04T09:06Z)**:
+- `GET /api/models/abenzerps/Qwen-Image-2.1-Uncensored-Quantized` → **HTTP 307** `location: /api/models/abenzerps/Qwen-Image-2.1-Turbo-Quantized` · HTML 구 URL도 307 → 신 URL · 1차 구명 `…-Uncensored-GGUF` API 도 **307 → Turbo-Quantized**(체인이 신 이름으로 직결) · 리다이렉트를 따라가면 `_id` **`6ab000f1a587030ee97d13cf`** · `createdAt` **2026-09-20T15:51:13Z** ⇒ 수집기 주장(307 · `_id` 동일 · createdAt 동일) **전건 확인**.
+- 🔴 **그러나 "개명"만이 아니다** — `commits/main` 이 **1건(`24d33dd` 2026-11-03T23:51:10Z "Initial commit")** 으로 바뀌었다. 11-03 볼트가 본 **8건 · 최신 `7959e65`** 이력이 `main` 에서 사라졌고 `raw/7959e65/README.md` 는 **HTTP 404**(초기 커밋 `1206d38` 은 아직 200 — 객체 일부 잔존). ⇒ `main` 이 **강제 재작성**됐다. `refs`: `main`→`24d33dd` · `base`→`4db8efd`(09-22, 무변경).
+- 개명 시각은 **11-03T09:06Z(볼트가 구 이름 200 으로 측정) ~ 11-04T09:00Z(수집기 307)** 사이로만 좁혀진다. `lastModified` 11-03T23:51Z 는 재작성 커밋 시각이다.
+
+**HF API 실측(신 ID · expand)**: `downloads`(30일) **2,508,590**(수집기 일치) · `downloadsAllTime` **4,128,332**(일치) · likes **5,629**(일치) · `trendingScore` **278** · 목록 API(`sort=trendingScore&limit=30`) **12위**(11-03 동일) · `gated: false` · sha `24d33dd` · license `other / qwen-research`(무변경) · `cardData.base_model` **`Qwen/Qwen-Image-2.1-Turbo`**(11-03 까지 `Qwen/Qwen-Image-2.1`)
+
+| 지표 | 11-02 | 11-03 (UC 시대 마지막 측정) | **11-04 (Turbo 교체 후)** | Δ(1일) |
+|---|---:|---:|---:|---:|
+| 30일 다운로드 | 2,548,468 | 2,516,622 | **2,508,590** | −8,032 (−0.32%) |
+| 누적 다운로드 | 3,989,530 | 4,060,796 | **4,128,332** | +67,536 |
+| likes | 5,502 | 5,576 | **5,629** | +53 |
+| trendingScore | — | 291 | **278** | −13 |
+
+> [!warning] 🔴 위 Δ 는 **같은 모델의 시계열이 아니다**
+> 계수기는 레포 `_id` 에 붙어 있어 개명·내용 교체 후에도 이어진다. 11-04 의 30일창 250.9만은 **사실상 전부 UC 시대(10-05~11-03) 다운로드**이고, Turbo 파일의 몫은 최대 ~9시간분이다. ⇒ "Turbo 양자화본이 250만 다운로드"로 읽으면 안 된다. 30일창이 Turbo 를 반영하려면 **12월 초**까지 기다려야 한다 → [[지표-창길이]] · [[계수기-배수]]. 🆕 패턴 후보: **"동일 ID 내용 교체"** — [[동일대상-분리오판]](같은 것을 다르다고 봄)의 역방향, 다른 것을 같은 ID 로 봄.
+
+**무엇이 바뀌었나 — `tree/main?recursive=true` · `tree/base?recursive=true` · `SHA256SUMS` · 카드 대조**
+- 카드 `raw/main/README.md` 200 · **13,963 B · 266행**(11-03: 8,511 B · 126행) · 제목 *"Qwen-Image-2.1 Turbo Quantized"*. `uncensored` 는 33행 1회뿐이고 11-03 까지의 `## Uncensored` 절·*"generates adult, NSFW…"* 문장은 없다.
+- `main` 파일(18개): `qwen-image-2.1-turbo-*` 11종(FP8 7,133,546,412 · INT8 ConvRot 7,256,796,856 · NVFP4 4,197,574,688 · MLX 4/6/8bit 4,002,364,040 / 5,781,142,200 / 7,559,920,536 · Q8_0 7,591,558,176 · Q6_K 5,876,562,976 · Q5_K_M 4,936,078,368 · Q4_K_M 4,050,916,384 · Q4_0 4,050,906,144 B) + 텍스트 인코더 2 · VAE · PNG · LICENSE · Notice · SHA256SUMS. 🔴 **UC BF16(14.23 GB) · UC FP8/INT8/NVFP4/MLX · `qwen-image-2.1-uncensored-lora.safetensors`(33,586,704 B) 는 `main` 에서 사라졌다.** UC GGUF 6종 + base GGUF 5종은 **`base` 브랜치(09-22 상태)에만 남아 있다**(구 파일명 그대로).
+- ✅ [[단위-불일치]] **해소(신 파일 기준)**: FP8 7.13 GB · INT8 7.26 GB 가 바이트와 십진 GB 로 일치한다(11-03 까지 6.63/6.76 = GiB 표기).
+- 🔴🔴 **GGUF "K_M" 라벨이 실제 혼합과 다르다** — HTTP Range(앞 4 MB) 로 GGUF 헤더의 텐서 타입을 직접 셌다:
+  | 파일 | 크기 | 텐서 타입 분포(297개) | 메타데이터 KV |
+  |---|---:|---|---:|
+  | **turbo-Q4_K_M** | 4,050,916,384 | Q4_K 229 · BF16 68 · **Q6_K 0** | **0** |
+  | turbo-Q4_0 | 4,050,906,144 | Q4_0 293 · BF16 4 | 0 |
+  | turbo-Q5_K_M | 4,936,078,368 | Q5_K 229 · BF16 68 · **Q6_K 0** | 0 |
+  | (base 브랜치) UC-Q4_K_M | 4,604,558,112 | Q4_K 165 · **Q6_K 64** · BF16 68 | `general.file_type=15` 포함 |
+  | (base 브랜치) UC-Q5_K_M | 5,221,284,640 | Q5_K 165 · **Q6_K 64** · BF16 68 | 있음 |
+  ⇒ Turbo `Q4_K_M`·`Q5_K_M` 은 표준 *_K_M 의 Q6_K 승격 텐서 64개가 없는 **단일 K 타입(사실상 *_K_S 계열)** 이고, 그래서 Q4_K_M 이 Q4_0 과 **10,240 B 차이로 같은 4.05 GB** 가 됐다(UC Q4_K_M 대비 −12.0%). 카드 *"Start with Q4_K_M"* 권장의 품질 근거가 이전 UC 판과 같다고 가정할 수 없다. 원인(도구 버전 · 의도)은 **미확인**.
+- ✅ 베이스 표기 검증: 공식 `Qwen/Qwen-Image-2.1-Turbo` 카드(`raw/main/README.md` 200 · 15,116 B) 29행 *"accelerated checkpoint of Qwen-Image-2.1 … **8 denoising steps** … same **7B** visual generation architecture"* · 31행 *"CFG=1 by default"* ⇒ 수집기 "7B · 8스텝 · CFG 1" **정확**. 공식 레포 실측: 30일 **42,908**(=누적, 생성 10-09) · likes 1,109 · lastModified 10-12. (볼트 [[Qwen3.8-27B]] 747행에 이 레포가 9,665 로 한 차례 등장했을 뿐 **전용 페이지는 없다** — `ls wiki/sources | grep -i turbo` 확인.)
+- 🔴 **"베이스가 무검열을 네이티브 지원"(카드 33행)은 상류에서 확인되지 않는다** — 공식 Turbo 카드에서 `censor|safety|nsfw|filter` grep **0건**. "안전 필터가 없다"는 사실 진술과 "무검열을 지원한다"는 성능 주장은 다르다. UC 시대에는 별도 UC 가중치·LoRA 가 있었는데(볼트 10-29 SHA256 대조로 base 와 바이트 상이 확정), 이제 그 역할을 **원본 모델의 속성으로 재서술**했다.
+
+> [!insight] 🏆 벤치 PNG 재열람 — **Turbo 레포에 붙은 그림은 Turbo 의 그림이 아니다**
+> `resolve/main/assets/Qwen-Image-2.1-Benchmark.png` HTTP 200 · **269,621 B** · 1024×503 · sha256 `66a1481f…38ac5` = SHA256SUMS·LFS oid 일치 = **11-03 볼트 열람본과 동일 파일**. 직접 열람(Read): 강조 막대는 여전히 **"Qwen Image 2.1" 60.28 · 7B**, 18모델 "总分" 비교(GPT Image 2.5 Sunburst 67.01 최고 · FLUX 2 Pro 54.57 최저) — **Turbo 항목 0개 · 양자화 항목 0개**. ⇒ 카드 alt 텍스트도 *"Qwen-Image-2.1 benchmark comparison"*. 🔴 **8스텝 가속판 Turbo 가 원본 Qwen Image 2.1 과 품질이 같다는 근거가 그림에 없는데, 원본의 순위표가 Turbo 양자화 레포 상단(30행)에 그대로 남았다** → [[벤치마크-이미지-봉인]] 의 "파생 레포가 원본 순위를 자기 품질처럼 보이게 하는 배치"가 **한 단계 더 멀어졌다**(원본 → 증류본 → 증류본 양자화).
+
+- 📌 [[원본-파생-역전]] **시리즈 단절** — 분모(베이스)가 바뀌었다. 구 기준(파생 / `Qwen/Qwen-Image-2.1`) 은 2,508,590 / **230,375**(원본 11-03 223,194 → +7,181) = **10.9배**(10-29 와 같은 값)지만, 분자가 이제 다른 모델이라 이 값은 시계열로 잇지 않는다. 신 기준(파생 / Turbo 42,908) 58.5배는 **UC 시대 계수기 승계값**이라 의미가 없다. ⇒ 재측정 가능 시점 = 30일창이 Turbo 만 담는 12월 초.
+- 🔴 **볼트 자기 기록 점검**: 11-03 볼트 기록(sha `7959e65` · 8커밋 · 126행 · UC 파일 목록)은 **측정 시점에는 정확**했다. 다만 이제 그 리비전이 `main` 에서 404 이므로 **볼트 11-03 이전 인용의 일부는 외부에서 더 이상 재현할 수 없다**(UC GGUF 는 `base` 브랜치로 재현 가능, UC FP8/INT8/NVFP4/MLX·LoRA 는 불가). [[abenzerps]] 엔티티의 *"카드가 소스 리비전 해시(`b3179ad…`)·변환 도구 커밋을 공개"* 도 신 카드에서 grep 0건 — 과거형으로 읽어야 한다.
+
+- 수집기 평가: ✅ 307 · `_id` · createdAt · lastModified · 지표 3종 · 신 파일 크기 · 7B/8스텝/CFG 1 · 카드 33행 인용 **정확** · 🔴🔴 **"동일 레포의 개명"으로만 서술 — `main` 이력 재작성(8→1커밋)·UC 가중치/LoRA 삭제·Turbo 교체를 놓쳤다**, 그래서 "30일 −8,032 · 누적 +67,536"을 같은 모델의 연속치처럼 제시했다 · 🔴 **"벤치 PNG 미열람"** — 볼트 11-03 에 이미 열람·판독 기록이 있고 PNG sha 도 동일(볼트 기록 미참조) · 🔴 Q4_K_M ≈ Q4_0 크기 동일(4.05 GB) 이상 신호 미지적 · 🔴 "베이스가 무검열 네이티브 지원"을 상류 카드 대조 없이 사실처럼 인용 · 🔴 `base` 브랜치에 UC 파일 잔존 미기재
+
+> [!action] 당장 할 것
+> ⬜ UC 판이 필요하면 **`base` 브랜치의 UC GGUF 를 리비전 고정(`4db8efd`)으로 받을 것** — `main` 은 더 이상 UC 가 아니다. 기존 볼트 actionable 의 *"NVFP4 4.20GB 단일 파일 검증"* 후보는 **대상 파일이 Turbo 판으로 바뀌었다**(UC NVFP4 는 어디에도 없음).
+> ⬜ Turbo Q4_K_M(Q6_K 0개) vs UC Q4_K_M(Q6_K 64개) 품질 차를 보려면 동일 시드 비교 — 단 Turbo(8스텝)와 UC(원본 기반)는 베이스부터 달라 양자화 효과만 분리되지 않는다.
+
+## 원본 (11-04 갱신)
+- 볼트 실측: HF API expand(신 ID · 구 ID 307 · 1차 구명 307) · `commits/main`(1건) · `commits/base`(2건) · `refs` · `raw/main/README.md` · `raw/7959e65`(404) · `raw/1206d38`(200) · `raw/base/README.md` · `tree/main`·`tree/base` · `SHA256SUMS` · `resolve/main/assets/Qwen-Image-2.1-Benchmark.png`(별도 빈 디렉토리 저장 후 직접 열람) · GGUF Range 헤더 5건(turbo Q4_K_M·Q4_0·Q5_K_M · base UC-Q4_K_M·UC-Q5_K_M) · 공식 `Qwen/Qwen-Image-2.1-Turbo`·`Qwen/Qwen-Image-2.1` API + Turbo `raw/main/README.md`
+- raw 대비: ✅ 개명 3증거·지표·사양 **일치** · 🔴🔴 가중치 교체·이력 재작성 누락 · 🔴 PNG 미열람(볼트 기록 미참조) · 🔴 K_M 라벨 이상·상류 미확인 주장·base 브랜치 잔존 누락
+- 관련: [[Qwen-Image-2.1]] · [[Comfy-Org-Qwen-Image-2.1]](Turbo 8스텝·cfg 1 권장 선행 기록) · [[Qwen-Image-2.1-viggle-turbo]](별개 — Viggle 증류 LoRA) · [[Qwen-Image-2.1-Uncensored-GGUF]](1차 구명) · [[abenzerps]] · [[Qwen]]
+- 신뢰도: ⭐⭐(계수기는 크나 현재 내용물과 무관 · 카드 주장 일부 상류 미확인)

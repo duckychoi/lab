@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, quantization, gguf, comfyui, 원본-파생-역전]
 created: 2026-10-02
-updated: 2026-10-12
+updated: 2026-11-04
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -79,3 +79,6 @@ reliability: medium
 ## 관련 페이지 추가 (10-12)
 - [[Qwen-Image-2.1-Uncensored-Quantized]] — 현행 정규 페이지
 - [[정규명-우선-중복검사]] · [[원본-파생-역전]] · [[단위-불일치]] · [[검사가능성-공사]]
+
+## 🔄 2026-11-04
+- [[Qwen-Image-2.1-Uncensored-Quantized]] 2차 개명 → `abenzerps/Qwen-Image-2.1-Turbo-Quantized`(307 · `_id` 동일). 🔴 `main` 이력 재작성(8→1커밋 `24d33dd`) · UC 가중치·LoRA 삭제 · Turbo 가중치로 교체 — UC GGUF 는 `base` 브랜치에만 잔존. 다운로드 계수기는 승계(내용물과 무관). Turbo `Q4_K_M`/`Q5_K_M` 은 Q6_K 승격 텐서 0개(라벨과 실제 혼합 불일치) · GGUF 메타데이터 KV 0. 위 10-12 서술의 "소스 리비전 해시 공개"는 신 카드에서 사라졌다(과거형).

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, abliteration, uncensoring, safety, open-weights]
 created: 2026-07-14
-updated: 2026-08-31
+updated: 2026-11-04
 sources: []
 reliability: high
 ---
@@ -46,3 +46,32 @@ reliability: high
 ## 원본
 - 출처: https://github.com/p-e-w/heretic
 - 신뢰도: ⭐⭐⭐⭐ (GitHub ⭐26,261, 자동수집)
+
+## 🔄 2026-11-04 갱신 (인제스트 2026-11-04) — ★39,065 · **v2.0.0(11-01) 1.x 설정 비호환·기본 기법이 abliteration → ARA(전처리 논문 미공개) · 🔴 수집기 "벤치 표 없음"은 현재는 참, 그러나 v1.4.0 README엔 표가 있었고 2.0에서 삭제됐다**
+
+**GitHub API 실측(11-04 09시대)**: ★**39,065**(수집기 39,063 · +2) · fork **4,404** · open_issues **64** · watchers 199 · **AGPL-3.0** ✅ · Python · 소유 `p-e-w`(User) · created 2025-09-21 · pushed **2026-11-03T12:23Z** · topics 7개(`abliteration`·`anti-censorship`…) · 릴리스(최신 5) **v2.0.0(11-01)** · v1.4.0(06-14) · v1.3.0(05-05) · v1.2.0(02-14) · v1.1.0(2025-12-10)
+- 📈 볼트 직전 ★29,373 · fork 3,223 · 이슈 81(08-31) → **★ +9,692(+33.0%) · fork +1,181 · open −17 / 65일 · 릴리스 +1**(v2.0.0). 08-31 일평균 +65 → 이번 구간 일평균 **약 +149**(2.3배 가속). 이 페이지는 **65일 미갱신**이었다 → [[캐시된-지표-신선도]].
+- ✅ 08-31 보류 판정 해소: *"푸시 08-17 · 14일 정체 — 다음 회차 재확인"* → pushed 11-03, v2.0.0 노트에 변경 항목 **45개·신규 기여자 11명**. **유지보수 중단 아님.**
+- 🔴 볼트 정정: 07-14 본문·08-31 갱신 모두 **릴리스를 한 번도 기록하지 않았다**(v1.4.0은 07-14 생성 시점에 이미 최신이었다). 07-14 "★26,261 · 자동수집" 신뢰도 줄도 API 미검증값이었다.
+
+> [!warning] 🔴 수집기 주장 검증 — "README에 결과 벤치 표 없음"
+> - **현 README(raw master, 322행)**: 마크다운 표 구분자 `|` **0개**(grep `-c '|'` = 0). ✅ **수집기 주장은 현재 시점 기준 참.**
+> - **그러나 v1.4.0 README(raw `v1.4.0` 태그, 313행) 36~41행엔 표가 있었다** — gemma-3-12b-it 원본 거부 **97/100** · mlabonne abliterated-v2 **3/100, KL 1.04** · huihui-ai **3/100, KL 0.45** · **heretic 3/100, KL 0.16**. 조건: *"PyTorch 2.8 on an RTX 5090"*, 재현 명령 `heretic --model google/gemma-3-12b-it --evaluate-model p-e-w/gemma-3-12b-it-heretic`, "값은 플랫폼·하드웨어 의존".
+> - **2.0 README는 그 표를 지우고** 대신 60~65행 *"독립적으로 MMLU·GSM8K 등 표준 지표로 벤치마크되어 경쟁 abliteration 도구보다 유리한 것으로 나타났다"* + **Reddit r/LocalLLaMA 글 2개 각주**로 바꿨다. 즉 "벤치 없음"이 아니라 **자체 수치 → 외부 커뮤니티 링크로 이전**이다(Reddit 글 미열람).
+> - 🔴 **볼트 자기 정정**: 07-14 본문 *"「검열 완전 제거」는 과장 — 성능 손실 트레이드오프 존재"* 는 근거 인용 없이 쓴 일반론이었다. 당시 README엔 **KL 0.16(타 도구 대비 1/3~1/6)** 이라는 저자 측정이 있었고 볼트는 이를 보지 않았다. KL은 "무해 프롬프트 분포 변화"이지 능력 벤치가 아니므로 과장 경고 자체는 유효하나, **"성능 손실"을 단정할 근거도 볼트엔 없었다.**
+> → [[검사가능성-후퇴]] 사례 후보: 메이저 버전에서 **재현 명령이 붙은 자체 표**를 지우고 외부 링크로 대체. ⚖️ 반대 방향 증거도 있다 — 2.0은 `reproduce.json`(≈9KB)으로 **바이트 동일 재생성**(환경 동일 조건, 175~180행)과 내장 benchmark scorer(#444)를 넣었다. "표는 뺐고 재현 장치는 늘렸다"로 판정 보류.
+
+**처리 시간 수치 — 조건 병기 대조**
+- v2 README 100~102행: **RTX 3090 · 기본 설정 · Qwen3-4B-Instruct-2507 ≈ 30–40분** ✅(수집기 일치). 4bit `bnb_4bit` 온더플라이 양자화로 VRAM 절감 가능(각주 29~32행, "약간의 정확도 비용").
+- v1.4.0 README 119~121행: **같은 GPU·같은 모델·기본 설정 ≈ 20–30분.** ⇒ **2.0에서 기본 처리 시간이 10분 늘었다**(README 간 비교; 원인 서술 없음 — 기본 기법이 ARA로 바뀐 것과의 관련은 ⬜ 추정).
+- 53행 *"zero to removing censorship from your first model in a matter of seconds"* 는 **설치·시작까지의 시간**이고 처리 시간(30–40분)과 다르다 — 단독 인용 금지.
+
+- 🆕 **기본 기법 변경(수집기 누락)**: 153~156행 *"Arbitrary-Rank Ablation (ARA): This is the **default modifier**, and was specifically developed for use in Heretic"* — 각주 *"Weidmann 2026. **A preprint explaining the technique will be available soon.**"* 고전 abliteration(Arditi et al. 2024)은 두 번째 선택지로 내려갔다. ⇒ 수집기 "방향성 절제(abliteration) 등으로" 는 **기본값이 아닌 쪽을 앞세운 서술**이다. 기본 기법의 공개 논문은 아직 없다.
+- 🆕 v2.0.0 노트: 1.x 설정 **비호환**(마이그레이션 가이드 docs/migration_v1_to_v2.md) · 연구 기능 제거 → **Lophius(lophius.org)** · 범용 플러그인 시스템(#53)·modifier 플러그인+ARA(#446)·benchmark scorer(#444)·BERT 분류기 scorer(#500)·`config.nosyco.toml`(아첨 억제, #349)·Hyper-Connections 모델 지원(#519·#525)·헤드리스+E2E 테스트(#392). **보안·사고 공개 항목 0건**(노트 전문 확인).
+- 📌 생태계 규모: README 57~59행 커뮤니티가 Heretic으로 만든 모델 *"thousands"*(HF `other=heretic` 링크, 개수 미실측). 볼트 [[파생저장소-식별]] 의 Qwen3.8-27B 파생 중 "Heretic" 표기분의 공급원.
+
+> [!insight] 거부 억제 도구가 "행동 수정 프레임워크"로 이름을 바꿨다
+> description이 *"Training-free language model modification: Remove censorship, suppress slop, reduce sycophancy, and more"* 다. 기본값은 여전히 거부 억제(85행)지만 scorer 플러그인으로 **목적 함수를 사용자가 쓴다** — 아첨 억제(nosyco)·슬롭 억제(noslop)·유머 억제(v1.4.0). 같은 가중치 편집이 **안전장치 제거와 정렬 보강 양쪽**에 쓰인다는 점에서, 볼트 07-14의 "[[destructive_command_guard]] 반대 축" 배치는 반쪽만 맞다. 사용 책임·AGPL 주의(08-31)는 유지.
+
+- **수집기 평가**: ★·AGPL·30–40분 조건(RTX 3090·Qwen3-4B·기본 설정)·keyword_rate+KL·v2.0.0 요약·확인 경로 명시 모두 정확. 누락/오류 = ① **기본 기법이 ARA**(논문 미공개)인데 abliteration을 앞세움 ② "벤치 표 없음"이 **2.0에서 삭제된 결과**라는 이력 + 외부 MMLU/GSM8K 각주 존재 ③ v1.x 대비 처리 시간 증가(20–30→30–40분).
+- **즉시 활용**: NO 유지(볼트는 관측 대상으로만). 학습용으로는 `--evaluate-model` 재현 경로가 v1.4.0 문서에 있었다는 점만 기록.

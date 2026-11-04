@@ -5373,3 +5373,48 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 2. claude-mem v15.9.0+ · 옵트인 끄기
 3. NRF 2027년도 1차 공고 IRIS 확인(11월 초중순 예상)
 4. 크론 프롬프트 수정 + 자동 커밋 보호 — 10배치째 미이행(덮어쓰기 금일 3건)
+
+## [2026-11-04] ingest | **대기 20건 전량 처리** (자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: 자동수집 13 = ai-news 9(Route-Anything · GitHub 5 · Qwen3.8-27B 등) · video-saas 4(Kling-MLLM-Report · MoviEdit · Qwen-Image · flux-klein-comfy) · slam-3dgs 1(DreamX-Latent-Action) · general 1(Pandora) — 🔴 HF 모델 2건 도메인은 기존 페이지 값 유지 · 크론 7(local-llm 2 · slam-3dgs 1 · general 4)
+- **분해**: 자동수집 **신규 5 · 갱신 8**(GitHub 5 · HF모델 3 볼트 보유) · 크론 **신규 6 · 🔴 덮어쓰기 1**(Beamforming 2일 연속 → HEAD `1774215` 복원 후 `🔄` 병합, 124→231줄)
+- **추가 페이지**: **11개** (sources 5 + 크론 신규 6) | **업데이트 페이지**: 소스 8 + 크론 1 + 엔티티 6(vercel-labs · mattpocock · lahfir · Qwen · Black-Forest-Labs · abenzerps) + 개념 4(문서내-값충돌 · 배수-조건분산 · 요약자와-판정자-분리 · VLA)
+- **페이지 수**: 1684 → **1695** (sources 1466)
+- **canvas 업데이트**: **YES** — ai-news +14노드/+16엣지(순수 추가, 탭 들여쓰기 유지)
+- **actionable 추가**: **YES** — 8항목(CVPR 2027 D-6 · NRF 공고 · claude-mem #5270 · agent-desktop MCP · Kling 캡션 명세 · Qwen-Image Turbo 교체 · 출처 불명 GGUF · 크론 보호)
+- **독립 검증**: GitHub API 23 + README 6(heretic v1.4.0 태그 포함) · HF `api/papers` 5 · arXiv HTML 본문 5 · GitHub(논문 레포) 5 · HF 모델 API·커밋·refs·카드·SHA256·GGUF 헤더 약 39 · 이미지 직접 열람 2 · arXiv API 3 · WebFetch 6 · 웹검색 6
+- **작업 방식**: 서브에이전트 4병렬(논문 · GitHub · HF모델 · 크론)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**같은 이름·같은 ID·같은 열 제목이 같은 실체를 보장하지 않는다.** abenzerps 레포는 `_id` 가 같은 채 `main` 이 Turbo 가중치로 교체됐고 다운로드 계수기만 넘어왔다 · MoviEdit 0.762 는 "Overall" 이 아닌 Video Quality 열 · DreamX 96.7% 는 과제 성공률이 아닌 하위목표 평균 · DreamX 는 볼트의 DreamX-Phi 와 동명이작. 수치를 옮길 때 *그 수치가 붙어 있던 열 머리글과 리비전*을 같이 옮겨야 한다.
+
+### 🏆 주요 발견
+1. 🔴 [[Qwen-Image-2.1-Uncensored-Quantized]] — 2차 개명 + `main` 이력 재작성(8→1커밋) + Uncensored 가중치·LoRA 삭제 후 Turbo 교체 · Uncensored 는 `base` 브랜치 잔존 · Turbo GGUF Q4_K_M 에 Q6_K 텐서 0개(라벨 불일치) · 볼트 11-03 인용 리비전 `7959e65` 는 이제 404.
+2. ⚖️ [[Route-Anything]] — 라우팅 이득은 품질이 아니라 비용: 25.5배는 "항상 Opus 4.6" 대비, 최저가 고정만으로 20.1배(−4.2점) · 품질 하한은 200분할 중 12.5%만 유지, 인증판 200/200 · 19.4배.
+3. 🔴 [[claude-mem]] — #5270(미릴리스)이 동의 패널 기본 경로를 다시 업로드 쪽으로 기울임 · 사용자 설정이 백그라운드로 안 전달되는 결함 3회차(#5189→#5272→#5348).
+4. 🔴 [[colibri]] — 볼트가 51일간 놓친 보안 권고 8건(08-05 · high 6) · 09-11 볼트 인용 문구("no SLA on speed" 등) README 에서 사라짐.
+5. 📉 [[heretic]] — v1.4.0 README 의 재현 가능한 벤치 표(gemma-3-12b 거부 97→3/100 · KL 0.16)가 v2.0 에서 삭제되고 외부 링크로 대체 · 처리 시간 20–30분 → 30–40분.
+6. 🗓️ CVPR 2027 공식 페이지 무변경 · Registration 11-10(D-6) · 워크숍 제안서 오늘 AOE.
+
+### 🔴 볼트 자기 정정 (숨기지 않는다)
+1. [[colibri]] 보안 권고 8건 누락 · 프론트매터 updated 가 09-14 갱신 후에도 09-11 로 남아 있었음(수정).
+2. [[mattpocock-skills]] · [[heretic]] 페이지가 릴리스를 한 번도 기록하지 않았음 · heretic 07-14 "성능 손실 트레이드오프"는 근거 없는 일반론이었음(당시 README KL 수치 미확인).
+3. [[agent-desktop]] 11-03 기록의 README 행 번호·플랫폼 표는 현 README 에 없음(하루 만에 재작성).
+
+### 🔴 수집기 평가
+- ✅ 전일 요청(설정 병기 · 확인 경로 병기) 이행. colibri ★ 완전 일치 · SKILL.md 39 일치 · Pandora 수치 일치 · SWE-Pro 각주 정확.
+- 🔴 오류: MoviEdit 열 오귀속 · DreamX 지표 오귀속 · Route 8.82배/Kling GSB "미추출"(본문에 있음) · flux +47% 기준 시점 · claude-mem 새 릴리스로 오인.
+- 🔴 누락: Qwen-Image 가중치 교체 · Qwen3.8 비교열 3개·IFBench Opus 62.5·HLE 심사자 각주 · colibri NUMA/opt-in 조건·보안 권고 · heretic ARA 기본값·표 삭제 이력 · mattpocock #1169 사고 · agent-desktop MCP 머지 ⇒ raw.md 📮 요청 3건.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 외부 코드·모델 실행 0건. 논문 수치는 전부 저자 보고이며 재현 없음.
+2. 🔴 [[flux-3-image-klein-comfy]] 11-02 일괄 갱신 내용은 게이트(commits API·HTML 401)로 미확인 · [[DreamX-Latent-Action]] 지연 측정 하드웨어 미기재 · [[Pandora-Client-Simulator]] 언어 프로필 증류와 평가 기준 발화의 분리 여부 미확인.
+3. 🔴 크론 노트는 **표본만** 대조 ⇒ 전건 `reliability: low`. 신규 6건 전부 같은 주제 9~21회차 · 잘림 2건(온디바이스 · 휴머노이드).
+4. ⚖️ canvas 는 ai-news 만 갱신 · domains/ 미갱신. 볼트 git 커밋은 하지 않음(09:40 자동 백업에 맡김).
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Registration 11-10(D-6)** · Submission 11-16 · 워크숍 제안서 오늘 AOE
+2. NRF 2027년도 1차 공고 IRIS 확인(11월 중순 예상)
+3. 크론 프롬프트 수정 + 자동 커밋 보호 — 11배치째 미이행(덮어쓰기 금일 1건)
+4. claude-mem 설치 시 "Skip this step" / 옵트인 끄기

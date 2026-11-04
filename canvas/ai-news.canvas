@@ -8428,6 +8428,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-hub",
+			"type": "text",
+			"text": "## 2026-11-04 배치\n같은 이름이 같은 것을 가리키지 않는다\n신규 5 · 갱신 8 · 크론 덮어쓰기 1건",
+			"x": -640,
+			"y": 53600,
+			"width": 620,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "b1104-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/Route-Anything.md",
+			"x": 60,
+			"y": 53600,
+			"width": 400,
+			"height": 200,
+			"color": "5"
+		},
+		{
+			"id": "b1104-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/Kling-MLLM-Report.md",
+			"x": 520,
+			"y": 53600,
+			"width": 400,
+			"height": 200,
+			"color": "5"
+		},
+		{
+			"id": "b1104-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/MoviEdit.md",
+			"x": 980,
+			"y": 53600,
+			"width": 400,
+			"height": 200,
+			"color": "5"
+		},
+		{
+			"id": "b1104-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/Pandora-Client-Simulator.md",
+			"x": 60,
+			"y": 53860,
+			"width": 400,
+			"height": 200,
+			"color": "5"
+		},
+		{
+			"id": "b1104-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/DreamX-Latent-Action.md",
+			"x": 520,
+			"y": 53860,
+			"width": 400,
+			"height": 200,
+			"color": "5"
+		},
+		{
+			"id": "b1104-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/claude-mem.md",
+			"x": 980,
+			"y": 53860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/agent-desktop.md",
+			"x": 60,
+			"y": 54120,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/colibri.md",
+			"x": 520,
+			"y": 54120,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/mattpocock-skills.md",
+			"x": 980,
+			"y": 54120,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/heretic.md",
+			"x": 60,
+			"y": 54380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-27B.md",
+			"x": 520,
+			"y": 54380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Quantized.md",
+			"x": 980,
+			"y": 54380,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1104-ai-news-13",
+			"type": "file",
+			"file": "wiki/sources/flux-3-image-klein-comfy.md",
+			"x": 60,
+			"y": 54640,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -15767,6 +15907,128 @@
 			"fromNode": "b1103-ai-news-3",
 			"toNode": "b1103-ai-news-5",
 			"label": "하네스 > 모델"
+		},
+		{
+			"id": "e1104-ai-news-1",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-1",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "8.82배 = 산술평균"
+		},
+		{
+			"id": "e1104-ai-news-2",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-2",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "GSB 1.10~1.27 · 표본 미공개"
+		},
+		{
+			"id": "e1104-ai-news-3",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-3",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "0.762는 VQ 열"
+		},
+		{
+			"id": "e1104-ai-news-4",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-4",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "공저자 평가자 4명"
+		},
+		{
+			"id": "e1104-ai-news-5",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-5",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "96.7%는 하위목표 평균"
+		},
+		{
+			"id": "e1104-ai-news-6",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-6",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "동의 패널 재설계 #5270"
+		},
+		{
+			"id": "e1104-ai-news-7",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-7",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "MCP 67도구 머지"
+		},
+		{
+			"id": "e1104-ai-news-8",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-8",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "보안 권고 8건 누락"
+		},
+		{
+			"id": "e1104-ai-news-9",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-9",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "에이전트 오작동 사고 #1169"
+		},
+		{
+			"id": "e1104-ai-news-10",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-10",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "v2.0 벤치 표 삭제"
+		},
+		{
+			"id": "e1104-ai-news-11",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-11",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "82일 동결 · 비교열 후퇴"
+		},
+		{
+			"id": "e1104-ai-news-12",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-12",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "개명 + 가중치 교체"
+		},
+		{
+			"id": "e1104-ai-news-13",
+			"fromNode": "b1104-ai-news-hub",
+			"toNode": "b1104-ai-news-13",
+			"fromSide": "right",
+			"toSide": "left",
+			"label": "3일 +11.5%"
+		},
+		{
+			"id": "e1104-ai-news-x1",
+			"fromNode": "b1104-ai-news-12",
+			"toNode": "b1104-ai-news-3",
+			"label": "이름·열 ≠ 실체"
+		},
+		{
+			"id": "e1104-ai-news-x2",
+			"fromNode": "b1104-ai-news-2",
+			"toNode": "b1104-ai-news-3",
+			"label": "영상 생성·편집 평가"
+		},
+		{
+			"id": "e1104-ai-news-x3",
+			"fromNode": "b1104-ai-news-6",
+			"toNode": "b1104-ai-news-10",
+			"label": "안전장치 후퇴"
 		}
 	]
 }

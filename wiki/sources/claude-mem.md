@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, memory, context, session, plugin, llm-coding, workflow, 캐시된지표신선도, 관심검증역상관]
 created: 2026-04-13
-updated: 2026-11-03
+updated: 2026-11-04
 sources: []
 reliability: high
 ---
@@ -159,3 +159,31 @@ reliability: high
 
 - **수집기 평가**: 사고 포착은 정확하고 전일 볼트 지적을 반영했다. 그러나 ① 삭제 여부를 "릴리스 노트에 없음"으로 잘못 적었고 ② #5176이 재오픈 상태라는 점 ③ OpenRouter/DeepSeek 2차 전달 ④ v15.9.0 보안 절을 놓쳤다.
 - **실용성**: 볼트 머신 미설치(11-02 확인) 유지. 도입 재검토 조건에 **v15.9.0 이상**(localhost 쓰기 차단) 추가.
+
+## 🔄 2026-11-04 갱신 (인제스트 2026-11-04) — ★112,311 · 🔴 **동의 패널 고친 지 14시간 만에 "건너뛰기"를 작은 텍스트 링크로 낮췄다(#5270, 미릴리스 main) · #5176 여전히 reopened·무응답**
+
+**GitHub API 실측(11-04 09시대)**: ★**112,311**(수집기 112,309 · +2) · fork **9,764** · open_issues **133** · Apache-2.0 ✅ · 소유 `thedotmack`(User) · pushed 2026-11-04T08:19Z · 최신 릴리스 **여전히 v15.9.0(11-02 18:03Z)** — v15.9.0 이후 새 릴리스 **0건**(`/releases?per_page=5` 상위 = v15.9.0·15.8.3·15.8.2·15.8.1·15.8.0). main은 v15.9.0보다 **38커밋 앞**(`/compare/v15.9.0...main`).
+- 📈 볼트 직전 ★111,159 · fork 9,688(11-03) → **★ +1,152 · fork +76 · 릴리스 +0 / 1일.** 수집기 "트렌딩 +1,139 today"와 같은 크기.
+- 🔒 공개 보안 권고(GHSA) **0건**(`/security-advisories` 빈 배열) — 업로드 사고는 권고가 아니라 릴리스 노트·이슈로만 공개됐다.
+
+> [!warning] 🔴 수집기·볼트 모두 누락 — 동의 화면이 "업로드 쪽"으로 다시 기울었다 (PR #5270, 11-02 20:37Z merged, 작성자 thedotmack)
+> v15.8.3(06:26Z)이 무동의 업로드를 막으려 넣은 동의 패널을 **같은 날 밤 재설계**했다. PR 본문(+Cursor Bugbot 요약) 원문 기준:
+> - 기존 **대등한 두 버튼 "Keep everything local" / 업로드** → 전폭 주 버튼 **"Discover My Work, Rules & Focus"** + 그 아래 밑줄 텍스트 **"Skip this step"**.
+> - **30일 범위·전문(full-text) 설명·메타데이터 목록**을 접힌 "What gets uploaded?" 상세로 이동. 화면에 남는 건 "선택한 메시지가 cmem.ai와 AI 공급자로 간다"는 짧은 고지.
+> - 용어 **prompts → messages**, 단계 제목 "Pick up where you left off".
+> - PR 스스로 *"copy and presentation change; it makes no new data-retention promises"* — 도구별 체크박스·명시 동의·analytics 별도는 유지.
+> - v15.9.0(18:03Z) **이후** 머지라 아직 릴리스에 없다 → 다음 릴리스부터 사용자에게 간다.
+> ⇒ 기능적 동의 장치는 그대로지만, **선택지의 시각적 무게를 비대칭으로 바꾼 것**이 사고 수습 하루 안에 일어났다. 볼트는 이를 "동의 범위 밖" 축의 네 번째 사건이 아니라 **"동의는 있으나 기본 경로를 업로드로 유도"** 하는 별도 유형으로 기록한다(⚖️ 해석, 사용자 전환율 데이터 없음).
+
+- 📌 **#5176 상태(API 실측)**: `open` · state_reason `reopened` · updated_at **2026-11-02T06:12:30Z 그대로**(11-03 이후 갱신·댓글 0) · 댓글 총 2건. → 메인테이너 측 공개 답변·삭제 절차 공지 **여전히 없음**.
+  - ⚖️ 볼트 11-03 누락: 댓글 2(webpony2016, 11-01) — v15.7.0 커밋 70aa400 소스 리뷰로 *"CMEM 계정 없이도 업로드가 진행되고 `improveProduct=false` 로도 막히지 않는다"* (`src/services/work-view/hosted-intent.ts` L137-174 지목). ⚠️ 작성자 스스로 "소스 수준 발견, 내 기기 업로드 캡처 아님"이라 적음 — 볼트 미검증.
+- 📌 **#5255(503 실패해도 프롬프트는 이미 전송)** = 여전히 `open`, 메인테이너 응답 없음(본문은 15.8.0 기준).
+- 📌 **업로드분 처리**: v15.9.0 노트·main 커밋 메시지(38개 중 privacy/consent/upload 키워드 grep) 어디에도 **기존 업로드분 삭제·통지 문장 0건**. v15.8.3의 "not removed" 가 현재까지 유일한 공식 문장.
+- 🆕 미릴리스 main 수정: **#5348**(11-04 03:03Z merged) — observer가 `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS` 옵트아웃을 **환경 정리 과정에서 떨궈** 사용자가 끈 베타가 백그라운드 observer에선 꺼지지 않던 문제(#5346, 11-02 Anthropic Messages API threads 공지 관련). 사용자 설정이 백그라운드 프로세스에 전파되지 않은 **같은 모양의 결함 세 번째**(10-31 `CLAUDE_MEM_PROVIDER=claude` 무시(#5189) → 11-03 오류보고 꺼도 디스크 오류 전송(#5272) → 11-04 베타 옵트아웃 미전파(#5348)). 리댁션 확대 PR 다수(Groq·xAI·NVIDIA NIM·Google OAuth `ya29.`·Linear·Notion·Supabase·Sentry). **#5353 "capture disable setting"** 은 아직 open PR — 즉 캡처 자체를 끄는 설정은 현재 없다(PR 제목 기준 추정).
+- 📝 README(raw 464행): `CLAUDE_MEM_ONLINE_OPTIN=false`(151행) 유지 · 스크린샷 업로드는 opt-in·Cloud Sync 시에만(221행) · Devin은 README **0건**(grep `devin`) — 수집기 "Devin 지원"은 v15.9.0 노트 기준으로만 참.
+
+> [!insight] 고친 것을 하루 만에 다시 기울였다 — "수정 = 방향 전환"이 아니다
+> 11-02 아침 무동의 업로드를 동의제로 바꾸고, 같은 날 밤 **동의 화면의 기본 경로를 업로드로** 되돌렸다. 체크박스는 남았으니 규칙 위반은 아니지만, **제품 인센티브(호스팅 전환)는 사고 전과 같은 쪽을 가리킨다.** 볼트가 이 레포를 판정할 때 릴리스 노트("Privacy fix")만 읽으면 놓친다 — 다음 릴리스 노트에 #5270이 어떻게 서술되는지가 관찰 포인트. → [[스타-근거-비동행]] · [[에이전트-메모리-레이어]] "메모리 신뢰도" 축.
+
+- **수집기 평가**: v15.8.3 "not removed" 인용·v15.9.0 요약 정확(전일 오류 수정됨). 누락 = ① 새 릴리스 0건이라는 사실(요약이 v15.9.0을 신규처럼 서술) ② #5176 무응답 지속 ③ **#5270 동의 화면 재설계** ④ #5348 옵트아웃 전파 결함 ⑤ "설치 전 동의 패널 확인 필수" 권고가 곧 바뀔 패널을 전제로 함.
+- **실용성**: 볼트 머신 미설치 유지. 도입 재검토 조건 유지(v15.9.0+·`--provider`/`CLAUDE_MEM_ONLINE_OPTIN=false`) + **다음 릴리스부터는 설치 화면에서 "Skip this step" 텍스트 링크를 찾아야 한다.**

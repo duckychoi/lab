@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, 조직, vercel, rust, npm]
 created: 2026-09-24
-updated: 2026-11-03
+updated: 2026-11-04
 sources: [agent-browser.md, agent-desktop.md]
 reliability: high
 ---
@@ -38,3 +38,6 @@ reliability: high
 - [[에이전트-스킬]] · [[에이전트-웹접근]]
 - [[agent-desktop]] — 2026-11 이관 편입(원 작성자 [[lahfir]])
 - [[ai-news]]
+
+## 🔄 2026-11-04
+- [[agent-desktop]] ★13,659(11-03 대비 +2,492 · fork 935) · owner type Organization 실측. `agent-desktop mcp`(#519, 67개 MCP 도구, Linux만 실기 검증) main 머지 — 미릴리스. README가 상세 플랫폼 표를 agent-browser.dev/desktop 문서로 넘김(#481).
