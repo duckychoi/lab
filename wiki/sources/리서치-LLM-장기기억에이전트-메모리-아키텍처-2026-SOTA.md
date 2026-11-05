@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA"
 created: 2026-10-24
-updated: 2026-11-02
+updated: 2026-11-05
 type: source
 domain: local-llm
 topic: llm-long-memory   # 중복 판정 키 — 2026-10-24 부여
@@ -205,6 +205,100 @@ Karpathy의 LLM Wiki가 2026년 4월 제시되어 모델이 새로운 소스를 
 - Best AI Agent Memory Systems in 2026 — vectorize.io/articles/best-ai-agent-memory-systems
 - Top Open-Source Memory Frameworks for LLM Agents in 2026 — cognee.ai/blog/guides
 
+## 🔄 2026-11-05 크론 갱신 (덮어쓰기 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 이 파일 **4번째**(10-24 생성 → 10-26 → 11-02 → **11-05** 덮어쓰기)
+> 크론이 2026-11-05 같은 파일명으로 덮어써 `topic:`·`domain:`·`reliability:`·`created: 2026-10-24`·10-26/11-02 볼트 판정이 지워졌다. 볼트가 git `a258bd1`(HEAD) 판본을 복원했고 위 본문이 그 판본이다. 이 섹션 아래가 11-05 배달분(🔴 마지막 출처 URL `medium.com/@vekt` 에서 **잘림**)이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-05) — arXiv 2건 직접 조회 · 대부분 반복 · **중복 주제 11회차**
+> - ✅ [arXiv 2607.24097](https://arxiv.org/abs/2607.24097) MemChain · [arXiv 2606.30306](https://arxiv.org/abs/2606.30306) Always-On Agents 서베이 — 실존·제목 일치.
+> - 🔴 **"에이전트 메모리 연구 2023년 91편 → 2026년 2,233편"** 은 인용된 서베이(2606.30306) **초록에 없다**. 그 서베이의 코딩 코퍼스는 **435편**이며 저자가 스스로 *"scoped map rather than an exhaustive census"* 라고 한정한다. 2,233 의 출처는 미상(mem0 블로그 추정 · 미확인) ⇒ 헤드라인으로 쓰지 않는다.
+> - 🔁 Mem0 **LoCoMo 92.5 · LongMemEval 94.4**(벤더 자가 벤치) · Cognee 12,000+ 스타/$7.5M(2월 시점 수치 — 11-02 판정 참조) · LoCoMo/LongMemEval/BEAM · Letta 3계층 — 위 본문·볼트 기존재 반복.
+> - ❓ 🆕 MRAgent(재구성형 메모리) · "자기진화 에이전트 2.3% → 9.8%" · "실행 가능 정확도 35% 우월" — 출처 미대조.
+
+## LLM 장기기억·에이전트 메모리 아키텍처 2026 SOTA (11-05 배달분)
+
+**핵심 3줄**
+- 
+에이전트 메모리 연구가 2023년 91편에서 2026년 2,233편으로 폭증, 메모리가 단순 피처에서 인프라 수준 핵심 요소로 진화
+
+- 
+프로덕션 메모리 아키텍처는 의미론적·키워드·엔티티·그래프 기반 검색을 결합
+
+- 
+2026년 에이전트 메모리는 전용 벤치마크 스위트, 학술 문헌, 측정 가능한 성능 격차 갖춘 1급 아키텍처 컴포넌트
+
+
+**상세**
+
+**메모리 아키텍처 패러다임 전환**
+- 
+장기기억은 모델 파라미터와 컨텍스트 윈도우 밖의 정보 활용 가능하게 하며, RAG를 넘어 대화·관찰·반성을 저장하고 관리·보강·연계하는 진화형 시스템으로 발전
+
+- 
+Letta 프로젝트가 주도한 3계층 메모리 모델: Core(고정 정보·페르소나), Recall(최근 대화), Archival(역사적 세션 대규모 저장)
+
+- 
+A-MEM 등 최신 에이전트 메모리는 agentic RAG와 달리 메모리 구조 자체의 자율적 진화를 통해 agency 구현
+
+
+**주요 기술 트렌드 2026**
+- 
+트리 기반 크레딧 할당, 감쇠 활성화 제어(Oblivion), 강화학습 기반 메모리 구축(MemBuilder), 계층적 그래프 검색(Mnemis), 주제 연속성(MemBox), 인덱스된 경험 메모리(MemEx-RL), 생물학적 망각(FadeMem) 등 다양한 전문화된 메커니즘
+
+- 
+메모리 재구성(MRAgent): 검색이 아닌 재구성 원리, 큐-태그-콘텐트 메모리 그래프로 연상적 접근 경로 활성화
+
+- 
+에이전트가 메모리를 도구로 호출하며 강화학습 훈련, 자기진화 에이전트 비중이 2024년 2.3%에서 2026년 9.8%로 증가
+
+
+**벤치마크·평가 프레임워크**
+- 
+LoCoMo, LongMemEval, BEAM이 2026년 메인 메모리 벤치마크
+
+- 
+Mem0 성과: LoCoMo 92.5점, LongMemEval 94.4점 (약 6,900 토큰/쿼리)
+
+- 
+전문 메모리 엔진 사용 에이전트가 vanilla 롱컨텍스트 대비 '실행 가능 정확도' 35% 우월
+
+
+**주요 해결되지 않은 과제**
+- 
+시간적 추론, 메모리 노후화, 교차 세션 신원 연계, 프라이버시, 삭제 요청 처리, 애플리케이션별 평가
+
+- 
+장기기억이 공격 채널로 부상
+
+- 
+메모리 누적에 따른 검색 지연 악화, 통합·군집화·요약 영역 미성숙
+
+
+**프로덕션 프레임워크 현황 2026**
+- 
+Cognee(12,000+ GitHub 스타, 80+ 기여자, $7.5M 펀딩, 70+ 프로덕션 배포), Mem0, Zep, Letta, MemGPT, Graphiti, LangMem이 주요 오픈소스 프레임워크
+
+- 
+LangChain의 LangMem: 에피소드·의미·절차 메모리 3가지 타입 동시 지원, 에이전트의 자체 시스템 프롬프트 재작성(절차적 메모리 진화) 구현
+
+- 
+Mem0: 사용자별 메모리 도입 속도 최장
+
+
+**💡 인사이트/시사점**
+
+장기기억 기반 세션 연속성이 reactive 챗봇에서 proactive 에이전트로의 전환 축, 메모리 저장소를 LLM 토큰 카운트에서 분리하면 지연시간 감소·운영비 절감
+. 
+2026년 초 연구 컨센서스: 메모리 공간 급속 진화 중이나 여전히 초기 단계, 배포 에이전트들이 프로토타입 아닌 프로덕션급 메모리 요구
+.
+
+**출처**
+- MemChain: Learning Interpretable Memory Traces for Memory-Augmented LLM Agents — https://arxiv.org/pdf/2607.24097
+- Always-On Agents: A Survey of Persistent Memory, State, and Governance in LLM Agents — https://arxiv.org/pdf/2606.30306
+- State of AI Agent Memory 2026: Benchmarks & Trends — https://mem0.ai/blog/state-of-ai-agent-memory-2026
+- The State of AI Agent Memory in 2026: What the Research Actually Shows — https://medium.com/@vekt
+
 ## 관련 페이지
 - [[주제재생성-중복]] · [[local-llm]]
-- [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]] · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-최신-동향]] · [[에이전트-메모리-레이어]] · [[크론-덮어쓰기-소실]]
+- [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]] · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-최신-동향]] · [[에이전트-메모리-레이어]] · [[크론-덮어쓰기-소실]] · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-SOTA-현황]] (11-04 같은 topic)
