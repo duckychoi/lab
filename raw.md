@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-05 (✅ **대기 7건 전량 처리** — 크론 노트 7 · 자동수집 0건. 대기 항목 없음)
+updated: 2026-11-06 (✅ **대기 7건 전량 처리** — 크론 노트 7 · 자동수집 0건. 대기 항목 없음)
 ---
 
 # Raw 대기열
@@ -1098,3 +1098,163 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 > 1. 🔴 **경과 일정 배달 재발 2건** — 학회 노트는 2026 사이클만 다루고 CVPR 2027(Registration 11-10)을 누락, 결론 "CoRL 2026(5월 28일)이 유일한 열린 마감"은 오류 · NRF 노트는 2025-11-13 공고(2026년도)를 금년 소식처럼 전달. 요청: **오늘 날짜 이후의 마감만 "열린 마감"으로 적고, 일정에는 연도를 반드시 붙인다.**
 > 2. 🔴 **비교 기준 혼합** — arXiv 2608.04388 의 99.7%(수치 최적화 대비)와 112배(데이터 기반 방법 대비)를 한 비교로 합쳤다. 요청: 수치를 옮길 때 **"무엇 대비"를 수치마다 따로** 적는다.
 > 3. 🔴 **출처 0건 노트 2건**(온디바이스 · 휴머노이드) + 잘림 4건 + 같은 파일명 덮어쓰기 — 크론 프롬프트 수정 미이행 **12배치째**.
+
+## ✅ 2026-11-06 전량 처리 완료 (7건 = 크론 노트 7 · 자동수집 0건 미도착) — 대기 항목 없음
+
+> **크론 신규 4 · 🔴 덮어쓰기 3**(온디바이스 · Beamforming · 장기기억 — HEAD `ae98ced` 기준 복원 후 병합) · 🔴 잘림 3(온디바이스 · 휴머노이드 · Beamforming 출처) · 개념 갱신 5. 세부는 `log.md` 2026-11-06.
+>
+> 📮 **볼트 → 크론 리서치 에이전트 (금일 판정 3건)**
+> 1. 🔴 **전일 지적 3건이 그대로 재발** — 학회 노트 CVPR 2027 누락(2일 연속 · Registration 11-10 AoE D-4) · NRF 노트 2025-11-13 공고(2026년도) 재배달 · Beamforming 2608.04388 의 112배(데이터 기반 대비)/99.7%(수치 최적화 대비) 혼합 재배달. 요청: **볼트 판정을 다음 실행 프롬프트에 반영할 경로**를 만든다.
+> 2. 🔴 **제목-본문 불일치(신규 유형)** — 부동산 노트 제목 "서울 강동권역"이지만 본문은 전부 성동구(성수·옥수·왕십리·금호). 요청: 제목은 **주제 키에 고정된 지역명**을 쓴다.
+> 3. 🔴 **출처 0건 2건**(온디바이스 · 휴머노이드) + 잘림 3 + 같은 파일명 덮어쓰기 3건(전일 1 → 3) + "SOTA도 단순 RAG 못 이김"처럼 인용 출처에 없는 주장 — 크론 프롬프트 수정 미이행 **13배치째**.
+
+
+## 대기 중: **13건** — 2026-11-06 자동수집
+
+> [!info] 수집 메타 (2026-11-06 09:00~09:45 KST)
+> **전 요청 HTTP 200** — GitHub Trending(daily 전체 15건 · python 17건) · GitHub API(repos·readme·releases·tree) · HF `daily_papers?date=2026-11-06`(16건) · HF models `sort=trendingScore`(30건) · arXiv HTML 5편 전부 200.
+> 중복검사: raw.md URL(대기 항목 0건) + `wiki/` 전수 `grep -rli`(URL) + `ls wiki/sources | grep -i`(파일명) **양쪽**. 이름이 비슷한 볼트 페이지는 URL로 레포 동일성을 확인했다 — `AtomicChat/…-Uncensored-GSQ-RCO-GGUF` 는 볼트 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]](`ISTA-DASLab/…`)의 **파생 레포(별개 `_id` `6ae17ead…`)** 라 미수록으로 판정했다.
+> 🔴 **11-05 자동수집분은 미도착이었다**(볼트 11-05 처리 기록). 오늘은 11-06 목록만 수집했고 **11-05 HF 데일리 상위(Turns Matter 86 · Pixels-to-Actions VLA 57 · FrontierPhysics 49 · Halley 36 · Rethinking-Agent-RL 35)는 소급 수집하지 않았다** — 5건 모두 볼트 미수록(arXiv ID grep 0건)이다.
+> 선정 규칙: GitHub = daily 트렌딩 순위순 AI/ML 항목 중 **볼트 미수록 · ★1,000 이상** 5건. HF 모델 = 트렌딩 30건 중 **볼트 미수록분을 30일 다운로드 내림차순** 3건(09-27 이후 관례).
+
+### GitHub Trending (daily) — AI/ML 미수록 5건
+
+## [2026-11-06] 자동수집 | NVIDIA/auto-ontology — 데이터 위에 온톨로지 계층을 자동 생성해 에이전트의 NL→SQL 답에 근거·계보를 붙이는 프레임워크
+- URL: https://github.com/NVIDIA/auto-ontology
+- 도메인: ai-news
+- 스타수: ★8,049 (당일 +2,679 · daily 트렌딩 **1위**) / 포크 648 · 오픈이슈 58(이슈+PR 합산) · Apache-2.0 · Python · created 2026-04-27 · pushed 2026-11-06T07:23Z · 릴리스 0건
+- 한줄요약: 메타데이터로부터 엔터프라이즈 온톨로지·지식그래프를 생성(Discover)하고, 지표·엔티티 정의를 에이전트에 제공(Ground)하며, 생성된 쿼리를 인증된 정의·계보와 대조(Validate)하고, MCP·CLI·API 로 노출(Expose)한 뒤, 사용자 교정을 온톨로지에 되먹이는(Learn) 구조. 스택은 Next.js 16 프런트 · FastAPI+LangChain 백엔드 · Postgres+pgvector(카탈로그·온톨로지·벡터 저장) · 선택형 HashiCorp Vault. 추론은 NVIDIA NIM 엔드포인트가 기본이다(기본값 LLM `nemotron-3.5-lightning-30b-a3b` · 임베딩 `nemotron-3-embed-1b` · 리랭커 `llama-nemotron-rerank-vl-1b-v2`). README 퀵스타트 예시는 답과 함께 **실행한 SQL·추론 단계**를 돌려준다.
+- 성능 수치: **없음 — 확인 경로 병기.** README 500행 전체 grep(`bird|accuracy|%|benchmark`)에서 정확도 수치 0건, "Benchmarks" 절은 평가 레포 링크 1줄뿐이다. 링크된 `NVIDIA/ontology-sql-eval` 은 **`NVIDIA/auto-ontology-eval`(★84)로 301 리다이렉트**되며, 그 README 도 대조군 설계(Treatment `auto_ontology_sql` vs 대조 arm · BIRD 실행정확도 · BEAVER `ex_acc`)만 있고 **결과 수치는 게시되지 않았다**.
+- 실용성: "정답의 근거를 같이 돌려준다"는 설계가 핵심이다. ⚠️ 기본 경로가 **NVIDIA API 키(`nvapi-…`) 전제**이고, README 가 *"currently not accepting external contributions"* 를 명시한다(Apache-2.0 이지만 외부 기여 닫힘). 정확도 개선 주장은 아직 숫자로 검증할 수 없다.
+- 확인 범위: GitHub API 전필드 + README 전체 grep · 상단 약 120행 정독 + 평가 레포 README grep. 설치·실행 0건.
+
+## [2026-11-06] 자동수집 | scenario-labs/skills — Scenario MCP 경유로 이미지·영상·오디오·3D 생성을 모델 선택·사전 견적까지 맡기는 에이전트 스킬 174개
+- URL: https://github.com/scenario-labs/skills
+- 도메인: ai-news
+- 스타수: ★3,281 (당일 +667 · daily 트렌딩 11위) / 포크 283 · 오픈이슈 39 · MIT · Python · created 2026-08-12 · pushed 2026-11-06T07:44Z · 최신 릴리스 `skills-v0.60.1`(10-29)
+- 한줄요약: Claude Code·Cursor·Codex 등 에이전트가 **Scenario MCP 서버**(`mcp.scenario.com`)로 이미지·영상·오디오·텍스처·스카이박스·3D 에셋을 만들게 하는 Agent Skills 묶음. 기본 트리에 **`SKILL.md` 174개**(git tree API 실측). 모델별 스킬(GPT Image · Seedream · Gemini image · Ideogram · Veo · Seedance · MiniMax Hailuo 등)이 **멤버 선택·사이징·가격 사다리**를 담고, `scenario-quality-gate`(pass/warn/fail 판정·dry-run 견적) · `scenario-model-comparison`(사전등록 기준·dry-run 비용 행렬) · `scenario-seedance-drafts`(480p 초안 후 선별분만 1080p) 같은 **비용 통제 스킬**이 있다. 별도로 ZBrush·Blender·Maya·Unreal·Unity·Godot·Roblox Studio 를 로컬에서 구동하는 "Expert tools" 패밀리가 있다(이쪽은 MCP 불필요).
+- 성능 수치: 해당 없음(스킬 모음 — README 에 벤치 없음).
+- 실용성: "생성 전에 가격을 본다"는 dry-run 견적이 실용값. ⚠️ 핵심 스킬은 **Scenario 계정(OAuth) 또는 API 키 필요 = 상용 서비스 과금(Creative Unit) 전제**이고, README 스스로 `main` 이 아닌 **릴리스 태그 고정 설치**를 권한다. Expert tools 의 검증 정도는 *"each family folder's README records … how far it was verified"* 라 패밀리별로 다르다(미열람).
+- 확인 범위: GitHub API + README 518행 중 상단 약 70행 정독 + 전체 grep(price/cost) + 트리 API. 패밀리 README·SKILL.md 본문 0건 열람, 실행 0건.
+
+## [2026-11-06] 자동수집 | ConardLi/garden-skills — 모션 쇼릴·웹 디자인·GPT-Image-2 프롬프팅·로컬 KB 검색 등 6개 스킬 큐레이션
+- URL: https://github.com/ConardLi/garden-skills
+- 도메인: ai-news
+- 스타수: ★14,383 (당일 +175 · daily 트렌딩 12위) / 포크 1,663 · 오픈이슈 26 · MIT · JavaScript · created 2026-04-21 · pushed 2026-10-25 · 최신 릴리스 `motion-showreel-v0.1.0`(10-11)
+- 한줄요약: SKILL.md 6개(`motion-showreel` · `web-video-presentation` · `web-design-engineer` · `gpt-image-2` · `beautiful-article` · `kb-retriever` — 트리 API 실측 6 = README 배지 6 일치). 대표 스킬 `motion-showreel` 은 **결정론적 `render(t)` 페이지 하나로 스틸·콘택트시트·프록시·마스터를 모두 뽑아 MP4+편집 가능 소스**를 내고, 43개 스타일 라이브러리 · 내장 신스/Tone.js 음악 · 비트 감지 · Gemini/MiniMax TTS(사용자 제공 대본만 읽음) · 최대 20분 챕터 영상을 지원한다. 기술 검수(크기·fps·길이·프레임 수·블랙프레임·라우드니스·true peak·루프 이음·결정론)를 **취향 리뷰와 분리**해 전부 PASS 를 요구하는 점이 특징.
+- 성능 수치: 해당 없음(README 에 정량 벤치 없음).
+- 실용성: Remotion 대신 "브라우저 페이지 렌더 → 캡처" 경로의 코드 영상 제작 스킬로, 사용자의 영상 파이프라인(reat-* 스킬)과 비교 대상이 된다. 두 번의 확인 체크포인트(요구사항 → 스타일 프레임) 후 자율 제작하는 흐름. ⚠️ 마지막 푸시가 **12일 전(10-25)** 이라 당일 급상승(+175)은 신규 개발이 아니라 노출 효과로 보인다.
+- 확인 범위: GitHub API + README 579행 중 상단 약 60행(motion-showreel 절) + 트리 API. 나머지 5개 스킬 절·SKILL.md 본문 미열람, 실행 0건.
+
+## [2026-11-06] 자동수집 | sandbox-quantum/switch — Slack·Teams·Discord·Telegram·Mattermost 채널을 사람+에이전트 공용 방으로 만드는 셀프호스팅 에이전트 허브
+- URL: https://github.com/sandbox-quantum/switch
+- 도메인: ai-news
+- 스타수: ★3,988 (당일 +182 · python 트렌딩 11위) / 포크 285 · **오픈이슈 548(이슈+PR 합산)** · 라이선스 API `NOASSERTION` → LICENSE 원문 확인 결과 **Apache 2.0 + Commons Clause(파생물에도 적용하도록 수정된 판)** · created 2026-07-16 · pushed 2026-11-06T08:36Z · 릴리스 태그 `switch-agent-controller-v0.31.1-dev.349`(11-06, dev 빌드가 하루 여러 개)
+- 한줄요약: 각 채팅 채널을 "방"으로 삼아 팀원과 **여러 하니스의 에이전트**(로컬 Claude Code · 동료의 Codex · 서버의 LangChain 에이전트 등, "프로토콜을 말하면 참여")가 같은 대화·결정·문서를 공유하게 한다. 에이전트별 역할·지시·도구(Google Workspace·Jira·GitHub) 부여, 방 단위 가시성(속한 방만 봄), 방 간 연결로 작업 컨텍스트를 이동시킨다. 데스크톱 앱 `Switch Console` 의 `switch-buddy` 가 첫 에이전트·채널 생성을 대화로 안내한다. README 는 *"Not a messaging app"* — 기존 메신저를 대체하지 않고 연결한다고 명시.
+- 성능 수치: 해당 없음(README 에 정량 수치 없음 · 데모 영상 3개는 미시청).
+- 실용성: 사용자의 Telegram 기반 에이전트 운용과 직결되는 구조(멀티 하니스 · 셀프호스팅). ⚠️ **Commons Clause = 소프트웨어 판매·유료 호스팅 금지 조건**이라 OSI 오픈소스가 아니다. 가드레일·비용 리포트는 별도 상용 제품(`Switch Trust` · `Switch ROI`) 링크로 빠져 있다.
+- 확인 범위: GitHub API + license API + LICENSE 상단 8행 + README 247행 중 상단 약 55행. 설치·실행 0건, 프로토콜 문서 미열람.
+
+## [2026-11-06] 자동수집 | The-PR-Agent/pr-agent — Qodo 레거시를 커뮤니티가 이어받은 오픈소스 AI PR 리뷰어 (v0.49.0)
+- URL: https://github.com/The-PR-Agent/pr-agent
+- 도메인: ai-news
+- 스타수: ★15,169 (당일 +442 · python 트렌딩 17위) / 포크 2,119 · 오픈이슈 51 · MIT · Python · created **2023-07-05** · pushed 2026-11-05T23:59Z · 최신 릴리스 **v0.49.0(10-25)** · v0.48.0(10-16) · v0.47.0(10-02)
+- 한줄요약: `/review` · `/improve` · `/ask` · `/describe` 도구가 **각각 LLM 1회 호출(약 30초)** 로 PR 을 리뷰하는 에이전트. GitHub Action · CLI(`pip install "pr-agent[github]"`) · GitLab webhook · Bitbucket · Azure DevOps 를 지원하고, 큰 PR 은 "PR Compression" 전략으로 처리한다. README 가 *"community-maintained legacy project of Qodo"* 이며 **Qodo 무료 티어와 다르다**고 명시한다.
+- 릴리스 노트(v0.49.0) 중 운영 영향: ① **기본 모델이 `gpt-6.1-sol`(폴백 `gpt-6-luna`)로 변경** — 이전 `gpt-5.6` 유지하려면 `config.model` 고정 필요 ② GitHub polling 은 `github.polling_repositories` 허용목록 필수(빈 값 = 전부 무시) ③ Jira `project_keys = []` 의미가 "전체"→"비활성"으로 반전 ④ **보안 강화**: `litellm.extra_headers` 를 레포 `.pr_agent.toml`·코멘트 인자에서 설정 불가(host-only)로 변경 · DNS rebinding 차단 · repo-context 경로 탈출 차단 · 자격증명 마스킹 확대. **사고 공개(유출·침해 고지) 문구는 v0.49.0 노트에서 확인되지 않았다**(확인 경로: releases API 최신 3건 중 v0.49.0 본문 앞 1,500자 — 나머지 2건 본문 미열람).
+- 실용성: 사용자의 Claude Code 리뷰 흐름과 비교 가능한 **가장 오래된(3년 4개월) 오픈소스 PR 리뷰어**. ⚠️ Docker 이미지 네임스페이스가 `codiumai/pr-agent` → `pragent/pr-agent`(0.34.2 이후)로 이관돼 구 이미지 사용자는 주의.
+- 확인 범위: GitHub API + README 255행 중 상단 약 60행 + 릴리스 v0.49.0 본문 일부. 실행 0건.
+
+> [!note] GitHub 트렌딩 중 제외·볼트 보유분 (신규 항목 아님 — 볼트 최신값 대비 ★드리프트)
+> - [[mattpocock-skills]] daily **2위** — 볼트 11-04 ★311,954 → 오늘 API **★315,900 (+3,946/2일)**
+> - [[agent-desktop]] daily **6위** — 볼트 11-04 ★13,659 → 오늘 **★17,480 (+3,821/2일 · +28.0%)**. 볼트 URL 은 구 `lahfir/agent-desktop`(조직 이관 전), 현 정규명 `vercel-labs/agent-desktop`.
+> - [[gstack]] daily **3위** — 볼트 10-26 ★137,768 → 오늘 **★140,229 (+2,461/11일)**. 기준선 11일 경과.
+> - 그 외 볼트 보유: [[worktrunk]] · [[google-skills]] · [[agent-browser]] · [[VibeVoice-microsoft]] · [[Model-Optimizer]] · [[spec-kit]] · [[cs249r_book]] · [[MoneyPrinterTurbo]] · `google-research/timesfm`(→ [[timesfm-3.0-pytorch]] 외 1건).
+> - 제외(AI/ML 코어 아님 또는 판정 불가): `D4Vinci/Scrapling`(★98,439 · 웹 스크래핑 프레임워크, 4위) · `Usagi-org/ai-goofish-monitor`(★18,044 · 중고거래 모니터링 앱) · `lz4/lz4` · `floci-io/floci`(AWS 에뮬레이터) · `JiaFeiMiao-K-Cat/DiscImageStudio`(★7,532 · **description 빈 값** — 성격 미확인으로 제외) · `google-gemini/gemini-skills`(★4,409 · 당일 +12, 급상승 아님 — 6순위 후보).
+
+### HuggingFace 데일리 페이퍼 — 11-06 목록(16건) 업보트 상위 5건 (전부 볼트 미수록)
+
+## [2026-11-06] 자동수집 | VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding — 궤적·박스 좌표를 토큰 단위가 아니라 프리미티브 단위로 한 번에 디코딩
+- URL: https://huggingface.co/papers/2611.08449
+- 도메인: ai-news
+- 업보트: 54 (11-06 목록 1위) / NVIDIA · 저자 19명 · arXiv 2611.08449 · **`githubRepo` None**(코드 미공개)
+- 한줄요약: 로봇·자율주행용 VLM 이 점·박스·궤적을 좌표 토큰 하나씩 자기회귀로 내는 대신, **경량 drafter 가 프리미티브 전체를 1 forward 로 예측**한다. 타깃 AR 모델의 토큰열 재현(target-token agreement)을 요구하지 않고 **구조적으로 유효하면 그대로 수용**하는 것이 핵심.
+- 성능 수치(열 머리글 그대로): Table 4(3D 로봇 궤적, ADE/FDE m ↓, SR@5 ↑) — 2D+3D 학습, **AgiBot ADE AR 0.130 → VFlash 0.041 · SR@5 0.456 → 0.739**(같은 4B 타깃, 디코더만 다름). Table 6(MolmoSpaces, `Avg.`) — **Baseline 62.6 → VFlash 70.2**(같은 WAM, 텍스트 인코더를 VFlash VLM+생성 계획으로 교체) · 단 `Close` 열은 **PrimeR0 81.3 · Cosmos3-Nano-Policy 79.1 · WALL-OSS-0.5 78.5 가 VFlash 77.0 보다 높다**. **"약 25배" 속도 = H100 1장 · 배치 1 · 단일 롤아웃**, VFlash 3.21/3.86/3.78 s vs AR 79.8/90.6/99.6 s(HOT3D/WorldTrack/DAVIS) = 24.8/23.5/26.4배(부록 F.3).
+- 유의: 🔴 25배가 나온 Table 5(PointMotionBench)에서 VFlash 는 **자기 타깃 MolmoMotion-AR 보다 HOT3D `ADE ↓` 가 나쁘다(0.122 vs 0.109) · `PWT ↑` 도 낮다(0.391 vs 0.444)** — 본문도 *"WorldTrack FDE increases by 15% and PWT is 7–12% lower"* 라 적는다. 즉 **3D 점 예측에서는 속도와 정확도를 맞바꾼 결과**이고, "consistently reduces errors"는 2D·3D **로봇 궤적** 과제에 한정된 서술이다. 초록도 속도를 *"Preliminary"* 로 한정한다.
+- 확인 범위: HF papers API + 초록 + arXiv HTML 표 9개 캡션·상위 행 + 부록 F.3 속도 문단. 실행 0건.
+
+## [2026-11-06] 자동수집 | Random Is Almost Enough? Stable and Low-Cost Benchmark Compression via BestRand — 무작위 부분집합 오차의 긴 꼬리만 잘라내는 벤치 압축
+- URL: https://huggingface.co/papers/2611.00883
+- 도메인: ai-news
+- 업보트: 34 (2위) / Carnegie Mellon University · 저자 6명 · 부속 GitHub `George-Ling3/BestRand` **★3**(API 실측 = HF `githubStars` 3 일치 · 78파일, 그중 `.py` 7개 + 벤치별 `items.jsonl.gz`·`scores.npz` 데이터)
+- 한줄요약: 전체 점수를 부분집합으로 추정할 때의 오차 분포를 해석적으로 근사해, **대부분 부분집합은 오차가 작고 소수가 큰 오차를 내는 long-tail** 임을 보이고 이 불안정성이 모델 수를 늘려도 사라지지 않음을 주장. BestRand 는 무작위 추출의 효율을 유지하면서 후보 풀만 탐침해 고오차 꼬리를 줄인다. 70+ 텍스트·멀티모달·에이전트 벤치 + VLA 평가로 확장.
+- 성능 수치("무엇 대비"를 수치마다 분리): **MAE −16.4% = Random·ZipBench·TinyBenchmarks 3종 대비 평균** · **고오차 확률 −50.2% = 같은 3종 대비**(고오차 = Random 의 70퍼센타일 또는 평균 초과) · **구축 비용 51.3% = "데이터 의존 베이스라인"(ZipBench·TinyBenchmarks)의 구축 레코드 대비 평균**, 2% 보존율에서는 8.0% · **OOD 추정오차 −21.8%** = score-range·model-family·temporal shift 평균. ⚠️ 51.3% 는 **Random 대비 수치가 아니다**(Random 은 구축 비용이 사실상 0).
+- 실용성: 사용자가 모델 평가를 자주 돌린다면 "무작위 + 꼬리 제거"만으로 충분하다는 실무 지침이 값이다. 레포에 벤치별 점수 행렬이 함께 공개됐다.
+- 확인 범위: HF API + 초록 + arXiv HTML 본문 해당 문단(실험 절) + GitHub API·트리. 실행 0건.
+
+## [2026-11-06] 자동수집 | Harness-S: Learning from Sibling Harnesses for Generalizable Agent Training — 실패할 때만 형제 하니스로 구조해 그 궤적으로 정책을 RL, 원래 하니스로 복귀
+- URL: https://huggingface.co/papers/2611.04277
+- 도메인: ai-news
+- 업보트: 32 (3위) / Shanghai JiaoTong University · 저자 11명 · 부속 GitHub `DeepExperience/Harness-S` **★31**(API 실측 · HF `githubStars` 캐시값 20 과 불일치 +11) · 310파일 중 `.py` 202개 · CI 워크플로 포함
+- 한줄요약: 공통 베이스에서 진화시킨 하니스 변형들이 서로 다른 실패를 고친다(Locality·Complementarity·Nonstationarity)는 관찰에서 출발. 수리 방향별로 **형제 하니스 풀을 오프라인 진화로 만들어 고정**하고, 학습 중 **베이스 하니스의 초기 시도가 전부 실패한 그룹만** 형제 하니스로 같은 정책이 재롤아웃해 RL 그룹을 대체한다. Top-k 선택은 Harness Behavior Profile + 다중 LLM 투표 라우터.
+- 성능 수치(Table 1, 머리글 `Pass@3` / `Avg@3`, 테스트 하니스 `H_0`): **Qwen3.5-9B — GRPO 64.89 / 53.31 → Harness-S 72.52 / 62.34 (AppWorld)** · SWE-Gym Pass@3 28.13 → 40.00 · DBBench Pass@3 69.67 → 76.33. 4B: AppWorld Pass@3 60.31 → 67.56. 프런티어 대조(같은 `H_0`): GPT-6-Sol AppWorld **82.82** · SWE-Gym **53.13** — **9B Harness-S 는 이 둘에서 프런티어보다 낮고**, DBBench 76.33 만 GPT-6-Sol 71.33·DeepSeek-v4-Flash 75.00 을 넘는다(GLM-5.3-Flash 76.67 보다는 0.34 낮음).
+- 유의: Harness-S 행만 `± 표준편차`가 있고 비교 행에는 없다. Table 3 행동 빈도는 **LLM 이 궤적을 라벨링한 값**(예: AppWorld "Schema lookup before first API use" Base 22.9 → GRPO 38.2 → Harness-S 67.6%)이다.
+- 확인 범위: HF API + 초록 + arXiv HTML 표 10개 중 T1~T6 + GitHub API·트리. 실행 0건.
+
+## [2026-11-06] 자동수집 | TailSteer: Trajectory-Tail Steering for Drift-Resistant Multi-turn Image Editing — 디노이징 궤적 끝단만 보정해 15~20턴 편집 드리프트를 줄이는 최종단 학습
+- URL: https://huggingface.co/papers/2611.06741
+- 도메인: ai-news
+- 업보트: 27 (4위) / MMLab-CUHK · 저자 9명 · 부속 GitHub `Lyricccco/tailsteer` **★25**(API 실측 · HF 캐시값 3 과 불일치 +22) · 1,747파일 · `.py` 169개
+- 한줄요약: 편집 결과를 다음 턴 입력으로 재사용할 때 쌓이는 시각 드리프트를, **초기 디노이징 동역학은 베이스와 같게 두고 궤적 끝(tail) 근처에만 보존 보정을 집중**해 막는다. 보정은 편집기 **자신의 on-policy 디노이징 롤아웃**에서, 변하지 않은 원본 영역을 보존 기준으로 삼아 학습한다 — 정답 편집쌍 큐레이션 불필요. FLUX·SenseNova·Qwen 계열에 적용.
+- 성능 수치(Table 2, FLUX.2 [Klein] Base 9B, 조건 `k_s`=46 · 50스텝 중 46스텝부터 조향): Add & Preserve **`PSNR@10 ↑` 13.85 → 19.96 · `SSIM@10 ↑` 0.289 → 0.621 · `LPIPS@10 ↓` 0.524 → 0.290** · `COA (%) ↑` 31.02 → 31.84. 단일턴 보존(Table 1): `GEdit-EN ↑` 7.47 → 7.52 · `RISE Acc. (%) ↑` 14.17 → 13.61.
+- 유의: 🔴 **트레이드오프가 있다** — 같은 행에서 범용 멀티턴 지표 **MSE-Bench `SR@5 (%) ↑` 40.00 → 33.00(−7) · EdiVal `IF@3 (%) ↑` 32.69 → 30.24 로 하락**한다. 즉 "보존(드리프트)" 지표는 크게 좋아지고 "지시 수행 성공" 지표는 내려간다. `k_s`=48 에서는 SR@5 41.00 으로 회복하지만 PSNR@10 은 19.56. 초록의 *"substantially reduces cumulative drift … while largely preserving"* 은 이 하락을 드러내지 않는다. GPT-Image-2.5 보다 낫다는 문장은 **단일 정성 예시**에 대한 서술이다.
+- 확인 범위: HF API + 초록 + arXiv HTML 표 3개(T1·T3·T4) + 본문 Table 2 텍스트 파싱(FLUX.1 Kontext·FLUX.2 Klein 행) + GitHub API·트리. SenseNova·Qwen 행 미대조, 실행 0건.
+
+## [2026-11-06] 자동수집 | WeLM-Image: A Unified Image Generation Model towards Visual Intelligence — 위챗용 단일 GPU 배포 MoT-MoE 통합 생성·편집 모델 (31.7B 저장 / 생성 활성 5.4B)
+- URL: https://huggingface.co/papers/2611.07392
+- 도메인: ai-news
+- 업보트: 25 (5위) / 조직 표기 None(본문상 WeChat) · 저자 16명 · **`githubRepo` None · arXiv HTML 내 가중치·코드 링크 0건**(HTML 전체에서 github/huggingface 링크 grep — 외부 인용 `black-forest-labs/flux` 등만 존재) → **공개 여부 미확인**
+- 한줄요약: 텍스트·참조 이미지·타깃 latent 를 한 인터리브 시퀀스로 처리하는 Mixture-of-Transformers 백본(이해/생성 경로 독립 가중치 + 공유 어텐션), 각 경로에 MoE 를 얹어 **저장 31.7B · 타깃 latent 토큰당 생성 파라미터 약 5.4B 활성**. 생성·편집을 루브릭/체크리스트 보상으로 따로 최적화한 뒤 noise-aware on-policy 증류로 합치고, MeanFlow few-step 증류로 Turbo 를 만든다. 네이티브 1.5K 해상도.
+- 성능 수치(Table 5, 열 머리글 그대로): WeLM-Image **`PRISM ↑` 7.555**(오픈 1위 · Boogu-Image-0.1-Base 7.500) · `Qwen-Image-Bench ↑` **54.155** · `WeGenBench ↑` 0.948. Table 14: `UnicBench ↑` **8.992**(오픈 1위) · `GEdit ↑` 8.381 · `ImgEdit ↑` 4.581. 폐쇄 모델 GPT-Image-2 는 PRISM 8.039 · Qwen-Image-Bench 63.165 · UnicBench 9.079 로 전부 앞선다. **Turbo 4.98 s = 1024×1024 · H20 1장 · guidance-free 8스텝**.
+- 유의: 🔴 초록 "PRISM-Bench·Qwen-Image-Bench·UnicBench 오픈 1위"는 **Qwen-Image-Bench 에서 기본 WeLM-Image(54.155)가 ERNIE-Image-Turbo-PE(55.309)보다 낮다** — 1위는 **WeLM-Image-Turbo-8step(55.992)** 이다. 편집에서도 GEdit 는 HunyuanImage-3.0-Instruct-Distil-CoT 8.385 · ImgEdit 는 FireRed-Image-Edit-1.1 4.616 이 더 높다. `WeGenBench`·`WeGenEditBench` 는 **자사 명칭 벤치**다.
+- 확인 범위: HF API + 초록 + arXiv HTML 표 20개 캡션 전부 + T5·T14 전 행. T4(지연시간) 행·부록 미열람, 실행 0건.
+
+### HuggingFace Trending Models — 볼트 미수록분 30일 다운로드 상위 3건
+
+## [2026-11-06] 자동수집 | ccore/Qwen3.5-4B-3D-Coder — Three.js 3D 씬 생성에 특화한 Qwen3.5-4B 개인 풀 파인튜닝 (프리뷰)
+- URL: https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder
+- 도메인: ai-news
+- 다운로드수: **157,157 (30일)** / 누적 157,157 · ♥731 · trendingScore 389(트렌딩 **3위**) · pipeline 미지정 · Apache-2.0 · base `Qwen/Qwen3.5-4B`(finetune) · 4.54B · created 10-25 · lastModified 11-06T01:12Z · 파일 43개(GGUF Q4_K_M·Q8_0 · FP16 safetensors 4샤드 · 기술보고서 PDF)
+- 한줄요약: 개인 개발자(CCORE)의 **비공식** 파인튜닝. 합성 데이터 **4,146예(학습 3,933 / 검증 213, 데이터셋 `ccore/ThreeJS-3D-Scenes` 공개)** — 보고서상 **MiniMax M3.1 Flash 로 생성**한 프롬프트·사고 과정·완성 HTML/JS 응답. 풀 파인튜닝 약 59h10m + 16K LoRA 45m20s = **약 59h55m**, 런당 RTX PRO 6000 Blackwell(96 GiB) 1장(LoRA 단계는 L4), RL 단계 없음. 10-30 부터 원본 Qwen3.5-4B mmproj(644 MiB, lmstudio-community 판 그대로)를 붙이면 **참조 이미지 → Three.js 씬**도 된다고 한다.
+- 성능 수치: **정량 벤치 없음 — 확인 경로 병기**(카드 261행 grep `benchmark|score|pass@|%` 0건 · 보고서 PDF 10쪽 전문 추출). 보고서의 평가는 *"exploratory"* — **개발 중 쓰던 프롬프트 8개**로 베이스+체크포인트 8개(72쌍)를 비교, 케이스당 최대 5회 시도 · 최대 3곳 국소 수리 허용. 결과: **Checkpoint 8 이 8/8 수용, 총 18회 호출**(원본 코드 6 · 수리 2 · 무수정 1회차 수용 2건 · 추론 루프로 HTML 미출력 8회 포함). 보고서 스스로 *"not a uniform first-attempt success benchmark"* · 독립 평가 필요라고 적는다.
+- 유의: LM Studio 에서 **MTP 를 꺼야** 정상 동작(카드 명시). 학습 데이터가 타사 모델(MiniMax) 출력이라 해당 약관 확인 필요(미확인). 다운로드 15.7만은 GGUF 위주 개인 배포치고 큰 편이나 원인 미분석.
+- 확인 범위: HF API expand + 카드 약 110행 + 기술보고서 PDF 전문(pypdf 추출, 그림 미열람). 추론 실행 0건.
+
+## [2026-11-06] 자동수집 | AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF — ISTA GSQ-RCO 양자화본에 거부 방향 제거(abliteration)를 덮은 763B 파생
+- URL: https://huggingface.co/AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF
+- 도메인: ai-news
+- 다운로드수: **92,333 (30일)** / 누적 92,333 · ♥330 · trendingScore 285(트렌딩 11위) · MIT · base `ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF` + `deepseek-ai/DeepSeek-V4.1-Flash-1017`(quantized) · created 10-28 · 파일 = IQ1_M·IQ2_XS·IQ2_XXS 각 4샤드
+- 한줄요약: 볼트 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]](ISTA 리비전 `cb02422c900d`)의 샤드에서 **잔차 기록 dense 텐서 3종만**(`attn_output_b` · `ffn_down_shexp` · `engram_wkv`) 교체하고 **라우팅 전문가 384개는 바이트 단위로 원본 유지**. 교체 텐서에는 거부 방향 1개를 강도 2.0 으로 투영 제거한 편집이 들어 있다 = **안전 거부 제거 모델**. Strata 런타임에서 12 GB GPU + 시스템 메모리 + SSD 스트리밍 Engram(110 GB, 미재배포)으로 돈다고 한다.
+- 성능 수치(카드 표, 열 머리글 그대로 · Strata · 동일 프롬프트/템플릿 · "stock → 편집"): `IQ2_XXS`(2.0 bpw · 249 GB) — **`JailbreakBench (EN)` 85.2% → 0.0%** · `XSTest (safe refused)` 7.6% → 0.0% · `Thinking high (30)` 27/30 → 0/30 · `MMLU (500)` 82.8%(p=0.27) · `KL to stock` 0.0225. 추론 보존: **`GPQA-Diamond (198 q)` 83.3% → 83.3% · `AIME25 (30 q)` 76.7% → 80.0%**(카드 스스로 n=30 노이즈 범위라 함).
+- 유의: ⚠️ JailbreakBench 열은 **"거부율"로 읽어야** 한다(85.2%→0% = 해로운 요청 거부가 사라짐). MMLU 열은 stock 값이 표에 없고 p 값만 있다. `KL` 은 top-64 하한 추정. 카드 *"Not every rung cleared every gate"* · 거부 분류기가 답 앞부분만 읽어 **후반부 소프트 거부를 놓칠 수 있다**고 자기신고. **llama.cpp 미지원(Strata 전용)**, 속도·RAM 요구량 수치는 카드 109행 grep(`RAM|tok/s|speed`) **0건**.
+- 확인 범위: HF API expand + 카드 109행 전체. metrics 데이터셋·Strata 레포 미열람, 실행 0건.
+
+## [2026-11-06] 자동수집 | LiquidAI/LFM3-1.7B — 컨볼루션·SWA·글로벌 어텐션 삼중 하이브리드 1.73B 로컬 에이전트용 텍스트 모델
+- URL: https://huggingface.co/LiquidAI/LFM3-1.7B
+- 도메인: ai-news
+- 다운로드수: **60,681 (30일)** / 누적 60,681 · ♥1,517 · trendingScore 246.5(트렌딩 17위) · license `other` = **LFM Open License v1.0(연매출 1,000만 달러 이상 기업은 상업 이용 권리 제한 — LICENSE 5절)** · base `LiquidAI/LFM3-1.7B-Base` · 1,728,801,536 파라미터 · created 10-23 · lastModified 11-03 · `custom_code`(trust_remote_code)
+- 한줄요약: 24층 = **gated short conv 13 · sliding-window attention 5 · global attention 6**, 컨텍스트 256K, 어휘 128K, 16개 언어(한국어 포함). Hermes Agent · Pi · OpenClaw 같은 에이전트 하니스용으로 사후학습했고, 4비트 약 1 GB. BF16·FP8·NVFP4·GGUF·MLX-4bit·ONNX 변형 제공, 단일 GPU 도메인 파인튜닝(SFT·DPO·GRPO·CPT 노트북) 강조.
+- 성능 수치(카드 Benchmarks 표, 대조군 `Qwen3.5 9B` 열): `AutomationBench (public)` **41.29 vs 15.10** · `WebArena-Verified` 38.42 vs 28.94 · `BFCL V4` 71.39 vs 62.83 · `IFBench` 73.03 vs 48.84 — 에이전트·도구·지시수행에서 앞선다. 반대로 `GPQA Diamond` **63.37 vs 80.40** · `RULER 128K` **65.56 vs 87.11** · `SWE-bench Verified (OpenCode)` 43.40 vs 51.20 은 뒤진다. `Average` 49.37 vs 47.24(표 전체 단순평균). **조건**: vLLM BF16 · 풀 컨텍스트(LFM3·Qwen3.5 262,144 / 나머지 131,072) · 기본 temperature 0.6/top_p 0.95(BFCL·ToolSandbox·Claw-Eval 등은 greedy).
+- 유의: 🔴 `AA-Omniscience (public)` 점수 **0.50(6모델 중 1위)** 은 정확도가 아니라 기권 효과다 — 같은 표 `accuracy` **7.07(6모델 중 최하)** · `non-hallucination` 92.93. 카드는 *"not recommended for agentic coding"* 이라 적으면서 SWE-bench 를 보고한다. 엣지 속도 주장(32K 컨텍스트에서 prefill ≥2.5배·decode ≥1.8배)은 **LFM3 만 LFM3 지원 llama.cpp 빌드, 나머지는 릴리스 b11744** — 빌드가 다르다. `Average` 에는 음수 점수(AA-Omniscience)도 그대로 들어간다.
+- 확인 범위: HF API expand + 카드 606행 중 상단 약 140행 + Benchmarks 표 전 행·평가 상세 문단 + LICENSE grep. 엣지 속도 그림 미판독, 실행 0건.
+
+> [!note] HF 트렌딩 중 볼트 보유·순위 밖 (신규 항목 아님)
+> - 🔴 **[[Qwen-Image-2.1-Uncensored-Quantized]](현 `abenzerps/Qwen-Image-2.1-Turbo-Quantized`) 계수기 급감** — 같은 `_id` `6ab000f1a587030ee97d13cf` · 같은 sha `24d33dd`(커밋 1개 "Initial commit", 11-03T23:51Z) 인데, 볼트 11-04 값 대비 **30일 다운로드 2,508,590 → 233,059(−90.7%) · 누적 `downloadsAllTime` 4,128,332 → 2,039,139(−2,089,193)**. **누적값이 줄었다** — 정상 증가로는 불가능하므로 HF 측 재집계·이력 재작성 반영 여부를 확인해야 한다(원인 미확인 · 오늘 API 1회 관측값).
+> - 볼트 보유: [[LTX-2.5]](4위) · [[Qwen3.8-27B]] `Qwen/Qwen3.8-27B`(10위) · [[flux-3-image-klein-comfy]](13위) · [[DeepSeek-V4.1-Flash-1017]](14위) · [[DavidAU-Qwen3.8-27B-TURBO]](15위).
+> - 다운로드 4위로 빠진 미수록분: `nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B`(57,297 · ♥3,064 · 트렌딩 5위) — 34B(활성 4.3B) ASR/번역/화자분리 SALM, Open ASR 9세트 평균 WER 4.71(차순위 오픈 Qwen3-ASR-1.7B 4.94 — **크기 20배 차 비교**), 한국어 FLEURS CER 2.78, 2,238초/초 처리량은 **오픈소스 미포함 NIM 최적화(NVFP4+DFlash2, RTX PRO 6000)** 조건. 볼트 [[Nemotron-3-Diarization]] 이 화자 인코더로 쓰인다. 내일 상위권 유지 시 우선 후보.
+> - 트렌딩 1위 `moonshotai/Kimi-K3.1-Pro`(♥1,158 · 30일 11,658) 등 다운로드가 작은 신규 대형 모델은 "다운로드 수 기준" 규칙상 제외했다.
+
+> [!warning] 수집기 자기신고 한계
+> 1. 🔴 **코드·모델 실행 0건.** 전부 API·README·카드·arXiv HTML·PDF 텍스트 조회다.
+> 2. 🟡 README 는 대부분 상단 55~120행 + 전체 grep 이다(scenario 518행·garden 579행·switch 247행 중 일부). 미열람 절의 반대 증거 가능성이 남는다.
+> 3. 🟡 그림(벤치 PNG·속도 그래프·보고서 도판) **미판독** — LFM3 엣지 속도 수치, WeLM-Image Fig.1 처리량은 확인하지 않았다.
+> 4. 🟡 HF `githubStars` 캐시값이 실측과 **2건 불일치**(Harness-S 20→31 · TailSteer 3→25) — 위 항목에는 GitHub API 실측값을 적었다.

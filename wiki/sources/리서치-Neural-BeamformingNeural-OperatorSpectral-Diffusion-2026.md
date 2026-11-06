@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-11-01
+updated: 2026-11-06
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -488,3 +488,91 @@ Spectral Progressive Diffusion으로 확산 궤적을 따라 해상도 점진적
 - Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
 - Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.02447
 - Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+
+---
+
+## 🔄 2026-11-06 크론 갱신 (덮어쓰기 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 크론이 2026-11-06 같은 파일명으로 덮어써 490 → 83줄(`topic:`·`created: 2026-10-23`·10-24~11-01 볼트 판정 소실). 볼트가 git `ae98ced`(HEAD) 판본을 복원했고 위 본문이 그 판본이다. 이 섹션 아래가 11-06 배달분이다(🔴 7번째 출처 제목 중간에서 **잘림**).
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-06) — arXiv 6건 직접 조회 · **중복 주제 9회차**
+> - ✅ arXiv 2602.19136 · 2608.04388 · 2609.33755 · 2609.09708 · 2604.07219 · 2605.02597 — **전건 실존·제목 일치**.
+> - 🔴 **전일 지적 미반영**: *"112배 적은 파라미터로 최적화된 레이트의 99.7%"* — 2608.04388 초록은 99.7% 를 **수치 최적화** 대비, 112배를 **데이터 기반 방법** 대비로 따로 적었다. 11-05 볼트 판정과 같은 [[비매칭-비교]] 가 **그대로 재배달**됐다.
+> - 🔴 [[한정어-탈락]]: 등방 FNO *"2D 16배, 3D 96배 파라미터 감소"* — 초록은 *"by **up to** a factor of 16 in 2D and 96 in 3D"*(최대치).
+> - ❓ LatentDDM 오류 36~56% · TF-SNO · Tensorized FNO RMSE 198.2 keV · Spectral Progressive Diffusion — arXiv ID 미기재 또는 잘린 출처라 미대조.
+
+이 주제들의 최신 arXiv 논문 동향을 검색하겠습니다.
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026년 최신 동향 (11-06 배달분)
+
+**핵심 3줄**
+- 
+Neural beamforming은 Transformer 기반 MVDR 빔포머를 MCU 저전력 기기에 실시간 배포하는 단계에 진입
+했으며, 
+그래프 신경망이 6G 멀티캐리어 하이브리드 빔포밍 최적화에 적용되어 빔 스쿠인팅 강건성 입증
+
+- 
+Neural operator는 무한 차원 함수 공간 간 매핑을 학습하도록 설계
+되었으며, 
+Starter-Iterator Neural Operator는 복잡한 경계 조건과 장기 진화를 위한 스펙트럼-시공간 협력 모델링
+ 제시
+- 
+Physics-informed spectral diffusion은 부분 관찰 기반 PDE 해 생성을 위해 스펙트럼 표현의 잠재 공간에서 확산 과정을 학습
+하며, 
+Chebyshev 다항식 기반의 spectral feature 예측으로 훈련 없이 diffusion 샘플링 가속
+
+
+**상세**
+- **Neural Beamforming 트렌드**
+  - 
+Physics-guided neural Airy beamforming은 근거리 차단 완화용 경량 신경 예측기로 112배 적은 파라미터로 최적화된 레이트의 99.7% 달성
+
+  - 
+NOMA 하향링크에서 CNN 기반 접근으로 전송 전력 최소화 문제 해결, 채널 상태 정보 입력으로 정규화된 빔포밍 벡터 생성
+
+  - 
+Sub-THz 6G 시스템을 위해 액정 안테나와 액체 신경망(LNN) 통합한 하이브리드 빔포밍 프레임워크 제안
+
+  - 
+CNN 기반 희소 배열 설계로 동적 전파 환경에서 빠른 재구성 가능, 기존 최적화 대비 신속한 재적응
+
+
+- **Neural Operator 혁신**
+  - 
+등방 Fourier Neural Operator는 파동수에 따른 선형 변환을 공간 대칭성 기반으로 수정하여 2D에서 16배, 3D에서 96배 파라미터 감소
+
+  - 
+LatentDDM은 소규모 부분영역에서 사전학습한 후 새로운 영역에서 로컬 예측 합성 모듈만 훈련, 16개 타겟 시뮬레이션으로 오류 36~56% 감소
+
+  - 
+TF-SNO는 비정상 PDE 학습을 위해 시간-주파수 게이트 스펙트럼 신경연산자 개발(2026)
+
+  - 
+Tensorized Fourier Neural Operator가 핵자도 학습에 적용되어 RMSE 198.2 keV 달성, 높은 파라미터 효율성 유지
+
+
+- **Spectral Diffusion 응용**
+  - 
+표준 diffusion 과정 불변, 재구성 오류에 Fourier·Wavelet 도메인 페널티 추가하는 손실 수준 스펙트럼 정규화
+
+  - 
+구면 조화 표현에서 직접 정의되는 구면 spectral diffusion, 수정된 전진·역시간 확률미분방정식 및 노이즈 공분산 특성화
+
+  - 
+단백질 역학용 Fourier 변환 귀납 편향으로 저주파 구조 동역학과 고주파 원자 지터 분리
+
+  - 
+Spectral Progressive Diffusion은 pretrained 모델의 잡음 제거 궤적을 따라 해상도를 점진 증가, 파워 스펙트럼으로부터 최적 해상도 일정표 도출
+
+
+**💡 인사이트/시사점**
+- Neural beamforming이 무선 통신의 6G 대비 저전력 실시간 처리 단계로 진화하며, 액체 신경망·그래프 신경망 등 혁신적 아키텍처가 하드웨어 제약 극복에 기여하고 있음
+- Neural operator와 spectral diffusion의 결합이 PDE 해 생성·물리 시뮬레이션의 새 패러다임을 열고 있으며, 특히 스펙트럼 표현에서의 학습이 높은 차원 문제의 효율성·강건성을 크게 향상
+
+**출처**
+- Downlink Beamforming Design for NOMA Using Convolutional Neural Networks — https://arxiv.org/abs/2602.19136
+- Physics-Guided Neural Airy Beamforming for Near-Field Blockage Mitigation — https://arxiv.org/abs/2608.04388
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming Optimization — https://arxiv.org/abs/2609.09708
+- Robust Hybrid Beamforming with Liquid Crystal Antennas and Liquid Neural Networks — https://arxiv.org/abs/2604.07219
+- Isotropic Fourier Neural Operators — https://arxiv.org/abs/2605.02597
+- Starter-Iterator Neural Operator: A Unified Architecture for High-Fidelity Forward and

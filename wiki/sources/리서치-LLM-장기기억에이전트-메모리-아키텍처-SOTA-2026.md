@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)"
 created: 2026-10-24
-updated: 2026-11-01
+updated: 2026-11-06
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news, 크론노트, 주제재생성-중복, 볼트판정-2026-10-25]
@@ -253,3 +253,73 @@ Nous Research의 Hermes 에이전트가 agentskills.io 공개 표준을 따르�
 - arxiv.org/pdf/2606.30306, "Always-OnAgents: A Survey of Persistent Memory, State, and Governance in LLM Agents" — 2026
 - EverMind AI, "Best AI Memory Systems in 2026: Why the Future Belongs to Agentic Memory OS" — August 2026
 - blog.bymar.co, "Agent Memory Systems in 2026: What Actually Matters" — 2026
+
+---
+
+## 🔄 2026-11-06 크론 갱신 (덮어쓰기 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 크론이 2026-11-06 같은 파일명으로 덮어써 255 → 66줄(`topic:`·`domain:`·`reliability:`·`created: 2026-10-24`·볼트 판정 소실). 볼트가 git `ae98ced`(HEAD) 판본을 복원했고 위 본문이 그 판본이다. 이 섹션 아래가 11-06 배달분이다. (전일 덮어쓰기 대상 [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-SOTA]] 와는 **다른 파일**이다.)
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-06) — arXiv 3건 직접 조회 · 초록 대조 1 · **중복 주제 12회차**
+> - ✅ arXiv 2603.07670(Memory for Autonomous LLM Agents 서베이) · 2510.17281(MemoryBench) · 2607.21962(Ground Truth First) — **실존·제목 일치**.
+> - 🔴 핵심 3줄 *"A-Mem·Mem0·MemoryOS 등 SOTA 도 단순 RAG 베이스라인을 일관되게 능가하지 못함"* — 출처 목록 중 이 주장을 담은 초록은 없다. 가장 가까운 2607.21962 초록이 실제로 말하는 것은 **더 구체적이다**: *전체 이력 기준선이 3주 지평에선 최고 메모리 시스템과 동률·우위지만 9주에선 judge 독립적 우위가 없고 읽기 비용은 약 2배* · *3주 1위였던 예산형 curated-map 메모리가 9주에 축출 내용 재현율 96% → 72% 로 떨어지고 출처 타입 그래프가 90% 로 올라선다(순위 역전, 6명 전원 · exact p=0.031)* · *쓰기 단계 품질이 하류 품질과 강하게 상관(약하게 쓴 사실 실패 24% vs 2%)*.
+> - ❓ EverMind HaluMem 90.04%(벤더 블로그 자가 벤치) · MAF 2025-10 통합 — 미대조.
+
+이 주제를 웹검색으로 조사하겠습니다.
+## LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026) (11-06 배달분)
+
+**핵심 3줄**
+- 
+에이전트 메모리(AgeMem)가 강화학습 기반 통합 STM/LTM 정책으로 부상하며, 저장·검색·갱신·요약·폐기 5개 메모리 작업을 학습 가능한 도구로 최적화
+
+- 
+계층형 메모리(TriMem, TierMem) 아키텍처가 원본 로그·원자적 사실·통합 프로필을 다층 입도에서 관리하며 지속성 의미론 차등화
+
+- 
+A-Mem, Mem0, MemoryOS 등 SOTA 시스템도 단순 RAG 베이스라인을 일관되게 능가하지 못하면서 평가 기준 재편이 진행 중
+
+
+**상세**
+- 
+적응형 메모리 구조(Choosing how to remember), 자체 쇠퇴 활성화 제어(Oblivion), 시간 지식 그래프(Zep), RL 기반 장기기억 구축(MemBuilder), 계층 그래프 이중 경로 검색(Mnemis), 주제 연속성 통합(Membox), 인덱스 경험 메모리 확장(Memex-RL), 생물 영감 망각(FadeMem) 등 다양한 2026년 접근법 제시
+
+
+- 
+장기기억은 모델 파라미터와 컨텍스트 윈도우 외부 정보 활용이며, RAG·대화/관찰/반성 저장·외부 메모리 자체 관리·기록 통합·강화 링크 등 연속 진화
+
+
+- 
+트리 기반 계층 구조(RAPTOR, Memwalker), Ebbinghaus 망각곡선 통합 관리(MemoryBank, SAGE)가 무한 성장 문제 해결
+
+
+- 
+EverMind 8월 2026 벤치마크에서 HaluMem 90.04% 정확도, LoCoMo·LongMemEval·PersonaMem v2 등 신규 평가 지표 출범
+
+
+- 
+통합 데이터베이스 패턴이 PostgreSQL 기반 에피소딕·의미론적·절차적 메모리를 hypertable·pgvector·표준 테이블로 단일화하는 생산 수준 접근
+
+
+- 
+Mem0 추상화 메모리 API, Cognee 그래프 네이티브 컨트롤 플레인이 단일 쓰기로 임베딩과 타입화 관계 노드 동시 생성
+
+
+- 
+Microsoft가 2025년 10월 Semantic Kernel과 AutoGen을 Microsoft Agent Framework(MAF)로 통합, 엔터프라이즈 표준화 진행
+
+
+**💡 인사이트/시사점**
+
+2025-2026 학습 가능 메모리 제어·풍부한 평가 차원·에이전트 작업 결합이 주류화되며
+, 
+단순 RAG가 여전히 경쟁력을 유지하는 것으로 보아 메모리 복잡성과 실제 성능 간 괴리 해소가 핵심 과제
+. 
+단일 메모리 저장소 중심성 대신 다중 앵커 분산형 아키텍처로 전환하면 에이전트 연속성·신뢰도 제고
+.
+
+**출처**
+- Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers — arxiv.org/abs/2603.07670
+- MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems — alphaxiv.org/abs/2510.17281
+- Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory — arxiv.org/abs/2607.21962
+- Best AI Memory Systems in 2026: Why the Future Belongs to Agentic Memory OS — evermind.ai/blogs
+- Best AI Agent Memory Frameworks in 2026: Compared and Ranked — atlan.com/know
