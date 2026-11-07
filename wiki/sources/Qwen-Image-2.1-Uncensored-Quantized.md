@@ -5,7 +5,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, turbo, 개명, 내용교체, 계수기-승계, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판, 봉인유지, 절제, 규약11]
 created: 2026-10-02
-updated: 2026-11-04
+updated: 2026-11-07
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -518,3 +518,13 @@ BF16 **14.23 GB** → NVFP4 **4.20 GB** (70.5% 감소) · MLX 4bit **4.00 GB** (
 - raw 대비: ✅ 개명 3증거·지표·사양 **일치** · 🔴🔴 가중치 교체·이력 재작성 누락 · 🔴 PNG 미열람(볼트 기록 미참조) · 🔴 K_M 라벨 이상·상류 미확인 주장·base 브랜치 잔존 누락
 - 관련: [[Qwen-Image-2.1]] · [[Comfy-Org-Qwen-Image-2.1]](Turbo 8스텝·cfg 1 권장 선행 기록) · [[Qwen-Image-2.1-viggle-turbo]](별개 — Viggle 증류 LoRA) · [[Qwen-Image-2.1-Uncensored-GGUF]](1차 구명) · [[abenzerps]] · [[Qwen]]
 - 신뢰도: ⭐⭐(계수기는 크나 현재 내용물과 무관 · 카드 주장 일부 상류 미확인)
+
+## 🔄 2026-11-07 갱신 — 🔴 **누적 다운로드가 줄었다**
+> [!warning] 같은 `_id`·같은 sha `24d33dde`(11-03 "Initial commit") 인데 계수기가 역행했다
+> | 관측 | 30일 `downloads` | 누적 `downloadsAllTime` |
+> |---|---|---|
+> | 볼트 11-04 | 2,508,590 | 4,128,332 |
+> | 수집기 11-06 | 233,059 | 2,039,139 |
+> | **볼트 11-07** | **135,850** | **2,052,137** |
+> - 누적값이 11-04 → 11-06 사이 **−2,089,193** 감소. 정상 증가로는 불가능 — 11-04 에 기록한 "`main` 이력 재작성 · 가중치 Turbo 교체" 이후 **HF 측이 이력 재작성 이전 계수를 떼어낸 재집계**로 보는 것이 가장 단순한 설명이다(볼트 추론 · HF 공지 미확인). 11-06→11-07 은 +12,998 로 다시 정상 증가.
+> - 교훈: 이 레포의 이전 "수백만 다운로드"는 **현재 가중치에 대한 수요 지표가 아니었다** → [[계수기-배수]] · [[캐시된-지표-신선도]]. ♥5,693 · trendingScore 216.

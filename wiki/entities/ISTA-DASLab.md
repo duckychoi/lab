@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [local-llm, quantization, gguf, research-lab, gsq, rco]
 created: 2026-09-22
-updated: 2026-11-01
+updated: 2026-11-07
 sources: [Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md, Qwen3.8-27B-GSQ-RCO-GGUF.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
@@ -69,3 +69,6 @@ HF `ISTA-DASLab`. 이름으로 보아 오스트리아 IST Austria의 분산 알�
 
 ## 🔄 2026-11-01
 - 🔴 **위 "Strata 단독" 정정**: [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 는 10-27 이후 llama.cpp b11870+ 경로가 있다. 12GB 주장 근거 섹션은 여전히 TBD. 다운로드 2,076,624는 파일 요청 수다 → [[계수기-배수]].
+
+## 🔄 2026-11-07
+- 파생 등장: [[DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF]](AtomicChat) — ISTA 리비전 `cb02422c900d` 샤드를 기반으로 라우팅 전문가 384개는 바이트 그대로 두고 dense 3텐서만 abliteration 편집. 원본 양자화의 신뢰를 파생이 빌리는 구조 → [[파생저장소-식별]].

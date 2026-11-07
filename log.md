@@ -5481,3 +5481,38 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Paper Registration 11-10 AoE(D-4)** · Submission 11-16 · Supp 11-23
 2. NRF 2027년도 개인기초연구 1차 공고 IRIS 확인(11월 중순 예상 · 추정)
 3. 크론 프롬프트 수정 + 같은 파일명 덮어쓰기 방지 + **볼트 판정 피드백 경로** — **13배치째 미이행**
+
+## [2026-11-07] ingest | **대기 20건 전량 처리** (11-06 자동수집 13 + 크론 리서치 노트 7) · ⏳ 11-07 자동수집 13건은 실행 중 도착 → 다음 실행
+
+- **도메인**: 자동수집 13 = ai-news 4(auto-ontology · pr-agent · BestRand · Harness-S) · video-saas 4(scenario-skills · garden-skills · TailSteer · WeLM-Image) · local-llm 4(agent-switch · Qwen3.5-4B-3D-Coder · DeepSeek-Uncensored-GSQ · LFM3-1.7B) · slam-3dgs 1(VFlash) / 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 13 · 갱신 0**(모델 3건 포함 전건 신규) · 크론 **신규 5 · 🔴 덮어쓰기 2**(Beamforming 231→81 · NRF 88→65 → HEAD 복원 후 `🔄 2026-11-07` 병합, 순수 추가 314·158줄)
+- **추가 페이지**: **18개** (소스 13 + 크론 5) | **업데이트 페이지**: 크론 2 + 엔티티 3(NVIDIA · DeepSeek · ISTA-DASLab) + 기존 소스 5(DeepSeek-GSQ-RCO · Qwen-Image-2.1 · mattpocock-skills · agent-desktop · gstack) + 개념 6(비매칭-비교 · 한정어-탈락 · 경과-마감-배달 · 크론-덮어쓰기-소실 · 표-부분인용 · 문서내-값충돌)
+- **페이지 수**: 1705 → **1723** (sources 1494)
+- **canvas 업데이트**: NO (⚖️ 체납 유지)
+- **actionable 추가**: YES — 3항목(CVPR 2027 Registration D-3 · LFM3-1.7B 도구 라우팅 시험 · reat-render 기술 QA 체크리스트)
+- **독립 검증**: GitHub API 8레포 + releases·tree·LICENSE · HF papers API 5 + models API 4 · arXiv HTML 5편 전문(수집기 인용 수치 50개 전건 검출) · 모델 카드 raw 3건(25개 검출) · arXiv abs 15건(크론 Beamforming·장기기억 — 전건 실존·제목 일치) · CVPR 2027 공식 Dates 1 · 웹검색 2(카카오 Kanana-2 확인 · 부동산 38.3대 1 미확인)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**한 행·한 제목·한 계수기가 전체를 대표하지 않는다.** 수집기의 TailSteer 수치는 전부 정확했지만, 미대조로 남긴 SenseNova 행이 결론("보존↑·지시수행↓")을 뒤집었다. 크론은 "A Critical Analysis of MemPalace" 논문에서 "Critical Analysis"를 지워 찬사의 근거로 썼다. 값이 맞아도 *어느 범위의 값인지*가 빠지면 결론이 틀린다.
+
+### 🏆 주요 발견
+1. 🔴 [[TailSteer]] — 트레이드오프는 백본 의존: FLUX.2 Klein SR@5 40→33 · **SenseNova 50→55** · Qwen 38~44 → [[표-부분인용]].
+2. 🔴 [[VFlash]] — 25배가 나온 Table 5 에서 HOT3D ADE 0.122 > 타깃 AR 0.109 · PWT 0.391 < 0.444(볼트 행 직접 확인).
+3. 🔴 [[WeLM-Image]] — 초록 "오픈 1위" 중 Qwen-Image-Bench 는 Turbo-8step(55.992)의 몫, 기본 54.155 < ERNIE-PE 55.309.
+4. 🔴 [[Qwen-Image-2.1-Uncensored-Quantized]] — 같은 sha 인데 **누적 다운로드 4,128,332 → 2,052,137 역행**(HF 재집계 추정).
+5. 🔴 [[리서치-AI로봇-주요-5개-학회-2026년-CFP-일정-현황]] — CVPR 2027 3일 연속 누락, 결론 "모든 시즌 종료"는 오류(Registration **11-10 AoE · D-3**).
+6. 🆕🔴 [[크론-덮어쓰기-소실]] — 덮어쓰기 대상이 21~24일 전 파일명으로 확대.
+7. ✅ 수집기 "무엇 대비" 분리 첫 이행([[BestRand]] 51.3% = 데이터 의존 베이스라인 대비).
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 코드·모델 설치·추론 없음. README 는 수집기 판독 범위에 의존(scenario·garden·switch 상단 일부).
+2. 🔴 ccore 보고서 PDF·AtomicChat metrics·LFM3 엣지 속도 그림은 볼트 미열람(수집기 판독 기준으로 표기).
+3. 🔴 크론 노트는 표본만 대조 ⇒ 전건 `reliability: low`. 부동산·휴머노이드·NRF 수치는 독립 검증 0~1건.
+4. ⚖️ canvas · domains/ 미갱신. 볼트 git 커밋은 하지 않음(09:40 자동 백업에 맡김). 삭제한 raw 항목 사본: `/tmp/ing1107/raw.removed.md` · 크론 원본 사본: `/tmp/ing1107/cron_orig/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Paper Registration 11-10 AoE(D-3)** · Submission 11-16 · Supp 11-23
+2. [[LFM3-1.7B]] ChinameBot 도구 라우팅 시험
+3. 크론 프롬프트 연도 범위("오늘 이후 12개월") + 파일명 충돌 방지 — **14배치째 미이행**

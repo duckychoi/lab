@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-06 (✅ **대기 7건 전량 처리** — 크론 노트 7(신규 4 · 🔴 **덮어쓰기 3 복원 병합**) · 자동수집 0건(금일 미도착). `^- URL:` **0** · `^- path:` **0**. 페이지 1701 → **1705**)
-total_pages: 1705  # 2026-11-06 실측(sources **1476** · entities 129 · concepts 92 · synthesis 4 · domains 4 · queries 0) — 증분 1701 + 4(크론 신규 4)
-total_sources: 1476  # 2026-11-06: 크론 신규 4 (덮어쓰기 3은 기존 계수)
+updated: 2026-11-07 (✅ **대기 20건 전량 처리** — 자동수집 13(**전건 신규**) · 크론 노트 7(신규 5 · 🔴 **덮어쓰기 2 복원 병합**). `^- URL:` **13**(11-07 자동수집 · 실행 중 도착 → 다음 실행) · `^- path:` **0**. 페이지 1705 → **1723**)
+total_pages: 1723  # 2026-11-07 실측(sources **1494** · entities 129 · concepts 92 · synthesis 4 · domains 4 · queries 0) — 증분 1705 + 18(자동수집 신규 13 + 크론 신규 5)
+total_sources: 1494  # 2026-11-07: 자동수집 신규 13 + 크론 신규 5 (덮어쓰기 2는 기존 계수)
+# 🎯 배치 축(2026-11-07) = **한 행·한 제목·한 계수기가 전체를 대표하지 않는다.** [[TailSteer]] "보존↑·지시수행↓"는 FLUX.2 Klein 한 행(SenseNova 는 SR@5 상승) · [[VFlash]] 25배가 나온 표에서 ADE 는 타깃보다 나쁨 · [[WeLM-Image]] 오픈 1위 하나는 Turbo 변형 몫 · 크론 장기기억 노트는 "Critical Analysis" 논문을 MemPalace 찬사로 인용 · [[Qwen-Image-2.1-Uncensored-Quantized]] 누적 다운로드 −209만 역행 → [[표-부분인용]] · [[한정어-탈락]].
 # 🎯 배치 축(2026-11-06) = **판정이 되돌아가지 않으면 같은 오류가 날짜만 바꿔 온다.** [[리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-2026]] 112배·99.7% 혼합 재배달 · [[리서치-2026년-AI로봇-주요-학회-논문-마감CFP-일정-최신동향]] CVPR 2027 2일 연속 누락(D-4) · [[리서치-2026년-한국연구재단-신진연구자우수신진장비인프라-구축-사업-최신동향]] 작년 공고 재배달 · 🆕 [[리서치-서울-강동권역-아파트-시장-2026년-최신-동향]] 제목은 강동, 본문은 성동
 # 🎯 배치 축(2026-11-05) = **한 문장으로 줄이면 기준이 섞이고, 1년 전 일정이 오늘 소식이 된다.** [[리서치-1-Neural-Beamforming-무선통신음성처리-실시간-처리로-진화]] 99.7%(수치최적화 대비)와 112배(데이터기반 대비)가 한 비교로 합쳐짐 · [[리서치-주요-AI로봇-학회-2026년-논문-마감-일정-총정리]] "CoRL 2026(5월 28일)이 유일한 열린 마감" · [[리서치-2026년-한국연구재단-신진연구우수신진장비인프라-공고-동향]] 2025-11 공고를 금년 소식으로 배달
 # 🎯 배치 축(2026-11-04) = **같은 이름이 같은 것을 가리키지 않는다.** [[Qwen-Image-2.1-Uncensored-Quantized]] 는 개명과 함께 `main` 가중치가 Turbo로 통째로 교체됐는데 다운로드 계수기만 승계 · [[MoviEdit]] 'Overall 0.762'는 Video Quality 열(실제 Overall Edit Success 0.790) · [[DreamX-Latent-Action]] '성공률 96.7%'는 하위목표 평균(실제 서랍 닫기 93.3%) · [[Route-Anything]] 8.82배는 4개 테스트베드 산술평균(중앙값 약 4.2배) · [[heretic]] 은 v2.0에서 벤치 표를 삭제 → [[문서내-값충돌]] · [[배수-조건분산]].
@@ -353,6 +354,25 @@ total_sources: 1476  # 2026-11-06: 크론 신규 4 (덮어쓰기 3은 기존 계
 ---
 
 ## sources
+
+### 2026-11-07 배치 (대기 **20건** 전량 처리 · 자동수집 13 = **신규 13 · 갱신 0**(GitHub 5 · HF논문 5 · HF모델 3 — 9배치 만의 모델 전건 신규) · 크론 노트 7(신규 5 · 🔴 **덮어쓰기 2 복원** — 10-14·10-17 생성 파일과 충돌) · 잘림 4 · 엔티티 갱신 3(NVIDIA·DeepSeek·ISTA-DASLab) · 개념 갱신 6 · 신설 0)
+
+- 🆕 [[auto-ontology]] — NVIDIA · ★9,479(하루 +1,430 · daily 1위) · NL→SQL 답에 근거·계보를 붙이는 온톨로지 계층 · NIM 전제 · 🔴 정확도 수치 0건(평가 레포 결과 미게시) · `ai-news`
+- 🆕 [[scenario-skills]] — ★3,462 · Scenario MCP 생성 스킬 SKILL.md 175개 · dry-run 견적·quality-gate·Seedance 480p 초안 · 상용 과금 전제 · `video-saas`
+- 🆕 [[garden-skills]] — ★14,558 · motion-showreel(결정론 render(t) → MP4) · 기술 QA 와 취향 리뷰 분리 · 푸시 13일 전(노출 급상승) · `video-saas`
+- 🆕 [[agent-switch]] — SandboxAQ · ★4,144 · 메신저 채널을 사람+멀티하니스 에이전트 방으로 · 🔴 Apache 2.0 + 수정 Commons Clause(비OSI) · 오픈이슈 631 · `local-llm`
+- 🆕 [[pr-agent]] — ★15,354 · Qodo 레거시 커뮤니티판 · 도구당 LLM 1회 호출 · v0.49.0 기본 모델 `gpt-6.1-sol` 교체·보안 강화(host-only 헤더) · `ai-news`
+- 🆕 [[VFlash]] — 96 up · NVIDIA 프리미티브 단위 디코딩 · 25배는 H100·배치1·Preliminary · 🔴 HOT3D ADE 0.122 > AR 0.109 · 코드 없음 · `slam-3dgs`
+- 🆕 [[BestRand]] — 50 up · CMU 벤치 압축(무작위 + 꼬리 제거) · −16.4%/−50.2% vs 3종 · 51.3% 는 데이터 의존 베이스라인 대비(Random 아님) · `ai-news`
+- 🆕 [[Harness-S]] — 57 up · SJTU 형제 하니스 구조 RL · 9B AppWorld GRPO 64.89→72.52 · 프런티어(82.82) 아래 · `ai-news`
+- 🆕 [[TailSteer]] — 37 up · CUHK 멀티턴 편집 드리프트 · PSNR@10 13.85→19.96 · 🔴 볼트 대조: SR@5 하락은 FLUX.2 Klein 한정, SenseNova 는 50→55 상승 · `video-saas`
+- 🆕 [[WeLM-Image]] — 39 up · WeChat MoT-MoE 31.7B/활성 5.4B · Turbo 4.98 s(H20) · 🔴 Qwen-Image-Bench 오픈 1위는 Turbo 변형 · 가중치 공개 미확인 · `video-saas`
+- 🆕 [[Qwen3.5-4B-3D-Coder]] — dl 190,243(하루 +3.3만) · 개인 Three.js 특화 FT · 합성 4,146예(MiniMax 생성 · 수집기 PDF 판독) · 벤치 없음(프롬프트 8개 탐색 평가) · `local-llm`
+- 🆕 [[DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF]] — dl 108,162 · ISTA 양자화본 dense 3텐서 abliteration · JailbreakBench 거부율 85.2%→0% · Strata 전용 · `local-llm`
+- 🆕 [[LFM3-1.7B]] — dl 66,003 · Liquid conv13·SWA5·global6 하이브리드 · AutomationBench 41.29 vs Qwen3.5-9B 15.10 · GPQA 63.37 vs 80.40 · 🔴 AA-Omniscience 1위는 기권 효과(accuracy 7.07 최하) · `local-llm`
+- 🔄 볼트 보유 드리프트: [[mattpocock-skills]] ★317,045 · [[agent-desktop]] ★18,377(+34.5%/3일) · [[gstack]] ★140,541 · 🔴 [[Qwen-Image-2.1-Uncensored-Quantized]] **누적 다운로드 4,128,332 → 2,052,137 역행**(같은 sha · HF 재집계 추정) · [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 파생 등장 기록
+- 📚 크론(reliability low): [[리서치-온디바이스-AI엣지-추론모델-경량화양자화증류-2026-최신-동향]](12회차 · ✅ 출처 9건 회복 · 카카오 Kanana-2 확인 · AWQ 95%/GPTQ 90% 조건 없음 · 잘림) · [[리서치-휴머노이드-로봇-VLASLAM로컬LLM-기반-제어-2026년-최신-동향]](23회차 · 🔴 출처 0 · 잘림) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026년-최신동향]](13회차 · ✅ arXiv 2건 실존 · 🔴 "Critical Analysis" 논문을 MemPalace 찬사로 인용) · [[리서치-서울-한강변-아파트-청약실거래세제-변화-성동-강세-공급-절벽-세금-대전환]](24회차 · ✅ 제목-본문 일치 회복 · 🔴 출처 URL 0 · 38.3대 1 미확인 · 공정시장가액비율 80% vs 전일 70% 충돌) · [[리서치-AI로봇-주요-5개-학회-2026년-CFP-일정-현황]](22회차 · 🔴 CVPR 2027 3일 연속 누락 · Registration **D-3**)
+- 🔴 크론 덮어쓰기 복원: [[리서치-2026년-Neural-BeamformingNeural-OperatorSpectral-Diffusio]](10회차 · 231→81 복원 · ✅ arXiv **15건** 실존 · 🔴 112배/99.7% 혼합 3일 연속) · [[리서치-2026년-NRF-신진연구자우수신진장비인프라-구축-사업-최신-동향]](23회차 · 88→65 복원 · ✅ 연도 표기 · 🔴 2027년도 공고 0건)
 
 ### 2026-11-06 배치 (대기 **7건** 전량 처리 · 자동수집 **0건**(금일 미도착) · 크론 노트 7(신규 4 · 🔴 **덮어쓰기 3 복원**) · 잘림 3 · 개념 갱신 5(크론-덮어쓰기-소실 · 경과-마감-배달 · 비매칭-비교 · 한정어-탈락 · 주제재생성-중복) · 엔티티·개념 신설 0)
 

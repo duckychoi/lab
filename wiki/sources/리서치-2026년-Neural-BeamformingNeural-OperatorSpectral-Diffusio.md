@@ -1,7 +1,7 @@
 ---
 title: "[리서치] 2026년 Neural Beamforming·Neural Operator·Spectral Diffusion 최신 동향"
 created: 2026-10-14
-updated: 2026-11-04
+updated: 2026-11-07
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-17 소급 부여
 author: research-agent
 origin: cron-research-agent
@@ -229,3 +229,86 @@ Diffusion Transformers의 추론 속도 개선을 위해 훈련 불필요한 스
 - [[리서치-Neural-BeamformingNeural-OperatorSpectral-Diffusion-신규-논]] — 10-25 같은 topic
 - [[리서치-Neural-Beamforming-임베디드다중사용자-최적화-중심]] — CAPA/FGB-INR 기존 언급
 - [[크론-덮어쓰기-소실]] · [[주제재생성-중복]]
+
+## 🔄 2026-11-07 크론 갱신 (덮어쓰기 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 크론이 2026-11-07 같은 파일명으로 덮어써 231 → 81줄(`topic:`·`created: 2026-10-14`·11-03/11-04 볼트 갱신 소실). **이번엔 전날 파일이 아니라 24일 전(10-14) 생성 파일이 덮어써졌다** — 크론 파일명이 회차마다 흔들리다가 과거 이름과 우연히 일치한 것. 볼트가 git HEAD 판본을 복원했고 위 본문이 그 판본이다. 이 섹션 아래가 11-07 배달분이다(🔴 8번째 출처 URL 에서 **잘림**).
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-07) — arXiv **15건** 직접 조회 · **중복 주제 10회차**
+> - ✅ 본문·출처의 arXiv ID **15건 전건 실존·제목 일치**(2602.19136 · 2608.04388 · 2604.07219 · 2609.09708 · 2609.33755 · 2606.09806 · 2609.03069 · 2610.33771 · 2603.02447 · 2601.20498 · 2607.04134 · 2603.01623 · 2610.07206 — 볼트 abs 페이지 `citation_title` 확인).
+> - 🔴 **3일 연속 재배달**: *"수치 최적화의 99.7% 성능을 달성하면서 112배 적은 파라미터 사용"* — 2608.04388 초록 원문: *"retains 99.7% of the reference rate obtained through **numerical optimization**, and nearly matches the rate of the **data-driven method** despite using approximately 112× fewer neural-network parameters"*. 112배는 **데이터 기반 방법 대비**다 → [[비매칭-비교]].
+> - 🟡 출처 라벨 "FNO-MoE for Atmospheric Chemistry"의 실제 제목은 *"An actively trained neural operator for near-explicit atmospheric chemistry"* — 크론이 붙인 라벨.
+
+주제별로 최신 arXiv 논문 동향을 검색하겠습니다.
+## 2026년 Neural Beamforming·Neural Operator·Spectral Diffusion 최신 동향
+
+**핵심 3줄**
+- 
+Neural beamforming은 MCU급 저전력 디바이스에서 실시간 Transformer 기반 처리가 가능해지며 하드웨어 임베딩 기술로 확산
+
+- 
+Topological Neural Operators(TNO)가 셀 복합체(cell complex) 기반 고차원 연산자 학습을 정의하며, Discrete Exterior Calculus로 차원 간 상호작용을 모델링
+
+- 
+Spectral diffusion은 Fourier·wavelet 손실을 추가하여 다중 스케일 신호 구조를 학습하는 방향으로 진화
+
+
+**상세**
+
+• **Neural Beamforming 응용 확대**
+  - 
+NOMA(비직교 다중 접속) 시스템에서 CNN 기반 빔포밍으로 전송 전력 최소화 문제 해결 (arXiv:2602.19136, 2월 제출)
+
+  - 
+Physics-guided Neural Airy Beamforming이 근거리 blockage 완화를 위해 단일 패스로 궤적 선택 최적화하며, 수치 최적화의 99.7% 성능을 달성하면서 112배 적은 파라미터 사용 (arXiv:2608.04388, 8월 제출)
+
+  - 
+6G 통신을 위해 액정 안테나와 Liquid Neural Network을 결합한 하이브리드 빔포밍 프레임워크 제안 (arXiv:2604.07219, 4월 제출)
+
+  - 
+Graph Neural Networks(GNN)을 이용한 광대역 하이브리드 빔포밍 최적화가 beam squinting 복원력과 불완전한 CSI 강건성 개선 (arXiv:2609.09708, 9월 제출)
+
+
+• **Neural Operator 이론 고도화**
+  - 
+Topological Neural Operators가 고차 기하학 구조 처리에 특화되어 기울기·회전·발산 연산자를 통한 명시적 크로스 차원 결합 활성화 (arXiv:2606.09806, 6월 제출)
+
+  - 
+LatentDDM은 도메인 기하학·크기 변화에 대한 적응성 문제를 해결하기 위해 사전학습된 소규모 부분도메인 연산자를 고정하고 경량 합성 모듈만 학습 (arXiv:2609.03069, 9월 제출)
+
+  - 
+Fourier Neural Operator with Mixture of Experts(FNO-MoE)가 대기화학 예측에서 30분 단위 전체 화학 상태를 단일 호출로 예측 (arXiv:2610.33771, 10월 제출)
+
+
+• **Spectral Diffusion 생성 기술 혁신**
+  - 
+Spectral Regularization은 표준 diffusion 학습에 미분가능한 Fourier·wavelet 손실을 추가하여 프로세스·아키텍처·샘플링 절차는 유지 (arXiv:2603.02447, 3월 제출)
+
+  - 
+Spectral Diffusion Models on the Sphere가 구면 조화 표현에서 직접 정의된 diffusion을 통해 기하학적·확률적 복잡성 해결 (arXiv:2601.20498, 1월 제출)
+
+  - 
+단백질 동역학 예측에서 Fourier 변환을 귀납 편향으로 사용하여 느린 구조 변화와 빠른 원자 진동을 분해, 온도 변화에 따른 역학 예측 개선 (arXiv:2607.04134, 7월 제출)
+
+  - 
+Spectrum(Adaptive Spectral Feature Forecasting)이 학습 없이 Ridge regression으로 계수 예측하여 향후 여러 diffusion 스텝의 특징 사전 계산 (arXiv:2603.01623, 3월 제출·CVPR 2026 수용)
+
+  - 
+에너지 조건부 노이즈 스케줄이 개별 변환 계수의 에너지와 이미지 의존 에너지 경로에 따라 노이즈를 동적 할당 (arXiv:2610.07206, 10월 제출)
+
+
+**💡 인사이트/시사점**
+
+
+MCU 급 하드웨어에 MVDR 신경망 빔포머가 실시간 배포 가능해지면서
+, 신경망 신호처리 기술의 에지 디바이스 대중화가 임박했다. Spectral 기반 접근이 diffusion·operator 학습에서 확산되고 있으며, 이는 물리 제약 조건과 기하학 구조를 명시적으로 인코딩하는 귀납 편향의 중요성을 강조한다.
+
+**출처**
+- Downlink Beamforming Design for NOMA Using CNNs — https://arxiv.org/abs/2602.19136
+- Physics-Guided Neural Airy Beamforming — https://arxiv.org/abs/2608.04388
+- Transformer-based Neural Beamforming for Hearable Devices — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Wideband Hybrid Beamforming — https://arxiv.org/abs/2609.09708
+- Topological Neural Operators — https://arxiv.org/abs/2606.09806
+- Learnable Composition for Neural Operators — https://arxiv.org/abs/2609.03069
+- FNO-MoE for Atmospheric Chemistry — https://arxiv.org/abs/2610.33771
+- Spectral Regularization for Diffusion Models — https://arx

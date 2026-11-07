@@ -4919,3 +4919,24 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **우선순위**: 중간
 - **상태**: 대기
 
+
+## [2026-11-07] 🔴 CVPR 2027 Paper Registration 마감 D-3 (11-10 AoE)
+- **도메인**: general
+- **출처**: [[리서치-AI로봇-주요-5개-학회-2026년-CFP-일정-현황]] (크론은 3일 연속 누락 · 볼트가 공식 Dates 재조회)
+- **할 것**: 투고 예정이면 OpenReview 등록(Registration Nov 10 '26 AoE) → Submission Nov 16 '26 AoE → Supplementary Nov 23 '26 AoE
+- **우선순위**: 높음
+- **상태**: 대기
+
+## [2026-11-07] LFM3-1.7B 를 ChinameBot 도구 선택·라우팅용 경량 모델로 시험
+- **도메인**: local-llm
+- **출처**: [[LFM3-1.7B]]
+- **할 것**: GGUF 4bit(~1 GB) 로 로컬 실행 → 도구 호출 정확도(BFCL 71.39 주장)를 실제 봇 도구 목록으로 소규모 측정. 지식 질의·장문 요약은 큰 모델로 넘기는 분업 전제(GPQA 63.37 · RULER 128K 65.56 열세). 라이선스는 연매출 1천만 달러 미만 상업 허용.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-11-07] reat-render 후검사에 motion-showreel 기술 QA 체크리스트 이식
+- **도메인**: video-saas
+- **출처**: [[garden-skills]] · [[scenario-skills]]
+- **할 것**: 렌더 후 자동 PASS/FAIL — 해상도·fps·길이·프레임 수·블랙프레임·라우드니스(LUFS)·true peak·루프 이음. 취향 리뷰와 분리. 생성형 컷은 scenario 식 "480p 초안 → 선별분만 1080p" + dry-run 견적 규칙 차용.
+- **우선순위**: 중간
+- **상태**: 대기

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, dotclaude, developer-tools, harness, 자기제한, 배포포맷]
 created: 2026-04-27
-updated: 2026-11-04
+updated: 2026-11-07
 sources: []
 reliability: high
 ---
@@ -139,3 +139,5 @@ reliability: high
 > v1.3.2 항목 대부분이 **이슈 번호가 붙은 실제 오작동**의 패치다: 남의 레포에 이슈 게시, yes/no 의미 역전(#1193), 임시 디렉터리 추측(#1184), 아무것도 안 바꾼 변이를 red로 신뢰(#1209), 서브에이전트 컨텍스트 오염(#1341). 품질 벤치는 없지만 **실패 사례 코퍼스**는 릴리스 노트에 쌓이고 있다 — ★31만보다 이 목록이 채택 근거로 더 쓸모 있다. → [[관심-검증-역상관]] · [[에이전트-스킬]]
 
 - **수집기 평가**: SKILL.md 39개·버킷 분포·GSD 대비·중복 설치 경고 정확, 카운트 방법(git tree API)까지 명시. 누락 = ① **#1169 이슈 오게시 사고** ② `chief-of-staff` LLM 위키 채택 ③ 서브에이전트 fresh-context 규칙 ④ Anthropic 공식 마켓플레이스 설치 경로.
+
+- 🔄 2026-11-07 — ★**317,045**(볼트 API · 11-04 ★311,954 → +5,091/3일) · daily 트렌딩 2위(11-06 수집기).

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, china, frontier-lab, deepseek, moe, open-weights, reasoning]
 created: 2026-08-04
-updated: 2026-10-25
+updated: 2026-11-07
 sources: [DeepSeek-V4-Flash-0731.md, DeepSeek-V4.1-Flash-Paper.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: high
 ---
@@ -49,3 +49,6 @@ reliability: high
 
 ## 🔄 2026-10-25
 - [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] — [[ISTA-DASLab]] 서드파티 1.75~2.25bpw GGUF(231~266GB) · 🔴 llama.cpp 미지원(10-23) · Strata 단독 · 백본 551.9B + Engram 196.6B = 748.5B ↔ 763.2B(14.7B 미설명)
+
+## 🔄 2026-11-07
+- 🆕 [[DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF]] — AtomicChat 파생: ISTA [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] 샤드의 dense 텐서 3종만 교체(거부 방향 제거) · JailbreakBench 거부율 85.2%→0% · GPQA 83.3 유지 · 30일 108,162.

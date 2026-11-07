@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, agent-skills, slash-commands, role-prompting, openclaw, self-reported, auto-update]
 created: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-07
 sources: [https://github.com/garrytan/gstack]
 reliability: medium
 ---
@@ -44,3 +44,5 @@ reliability: medium
 - 볼트 실측(GitHub API, 2026-10-26T09:07Z): ★137,768(수집기 일치) · fork 20,424 · open issues 155 · MIT · TypeScript · created 2026-03-11 · pushed 2026-10-26T09:05Z · 루트 항목 111개
 - 비교 실측: openclaw/openclaw ★393,100 (README 인용 247K)
 - 신뢰도: ⭐⭐ (★ 최대급이나 효과 근거는 저자 자기측정)
+
+- 🔄 2026-11-07 — ★**140,541**(볼트 API · 10-26 ★137,768 → +2,773/12일) · daily 트렌딩 3위(11-06).

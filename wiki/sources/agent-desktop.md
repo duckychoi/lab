@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, computer-use, accessibility, rust, macos, fail-closed, 검사가능성, tool]
 created: 2026-09-24
-updated: 2026-11-04
+updated: 2026-11-07
 sources: []
 reliability: high
 ---
@@ -118,3 +118,5 @@ reliability: high
 
 - **수집기 평가**: 수치·경고·릴리스 서술 정확. 누락 = ① **MCP 서버 머지**(topics에도 반영) ② README 재작성으로 플랫폼 세부가 외부 문서로 빠짐 ③ 새 릴리스 0건(v1.1.0을 11-03 그대로 재서술).
 - **즉시 활용(재판정)**: 🟡 조건부 유지. 다음 릴리스(MCP 포함) 후 Xvfb+AT-SPI로 `desktop_snapshot` 1회 호출 정도는 저비용 실험 후보. 코드 미실행.
+
+- 🔄 2026-11-07 — ★**18,377**(볼트 API · 정규명 `vercel-labs/agent-desktop` · 11-04 ★13,659 → **+4,718/3일 · +34.5%**) · daily 트렌딩 6위(11-06).

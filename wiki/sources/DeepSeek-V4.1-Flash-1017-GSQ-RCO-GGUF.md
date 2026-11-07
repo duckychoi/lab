@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, moe, deepseek, ista-daslab, strata, 천장-기준선, 미완성카드, llama-cpp-미지원]
 created: 2026-10-25
-updated: 2026-11-01
+updated: 2026-11-07
 sources: [DeepSeek-V4.1-Flash-1017.md, Qwen3.8-27B-GSQ-RCO-GGUF.md, Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
@@ -64,3 +64,6 @@ reliability: medium
 - ✅ 수집기 수치(248.84GB · 231.32GB · 100.00 · 90.91 · 89.71 · 93.54 · 92.32) 카드와 일치. 트리 합산도 248.8GB · 231.3GB로 맞는다. 🔴 단 10-27 런타임 변경은 요약에 없다.
 - ⚖️ **실용성 재판정**: 런타임 장벽은 사라졌지만 디스크 231~266GB · RAM 요구량 미기재가 남았다. 즉시 배포는 여전히 NO. 🔴 볼트 실행 0회.
 - 🔴 **볼트 정정**: [[천장-기준선]]의 97.97% 재계산은 표 값이 그대로라 유효하다.
+
+## 🔄 2026-11-07 — 파생 레포 등장 (원본 페이지 변경 없음)
+> [!note] [[DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF]] (AtomicChat · 별개 `_id`) 가 이 레포 리비전 `cb02422c900d` 의 IQ1_M·IQ2_XS·IQ2_XXS 샤드에서 `attn_output_b` · `ffn_down_shexp` · `engram_wkv` 만 거부 방향 제거판으로 교체해 재배포했다. 30일 다운로드 108,162(볼트 11-07). 이름이 거의 같으므로 **URL·`_id` 로 구분** → [[정규명-우선-중복검사]] · [[파생저장소-식별]].
