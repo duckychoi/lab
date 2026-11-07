@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Research Radar — duckychoi</title>
+<!--
+  ============================================================
+  AI RESEARCH RADAR — 단일 HTML 라이브 보고서 (계속 업데이트)
+  업데이트 규칙:
+   1) 새 소식은 DATA.items 맨 앞(또는 날짜순)에 추가. {date:"YYYY-MM-DD", cat, title, desc, link, nodes:[graph node id...]}
+   2) PRUNE_DAYS(기본 14) 보다 오래된 items 는 하나씩 삭제(아카이브). 그래프 노드는 중요하면 유지.
+   3) 그래프 관계는 DATA.edges 에 {from,to,rel} 로. 연구 아이디어는 DATA.ideas.
+   4) 저장 경로 /home/monday/vault/html/ → duckychoi/lab 자동 푸시 → htmlpreview 로 열람.
+  ============================================================
+-->
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<script>MathJax={tex:{inlineMath:[['$','$']]}};</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+<style>
+:root{--bg:#0d1017;--card:#161a23;--fg:#e8eaed;--mut:#9aa4b2;--line:#252b36;
+ --c1:#6ea8fe;--c2:#7ee787;--c3:#f0883e;--c4:#db61a2;--c5:#e3b341;--c6:#56d4dd;--c7:#a371f7;--c8:#ff7b72;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:26px 18px 90px}
+h1{font-size:1.7rem;margin:.1em 0}
+.sub{color:var(--mut);font-size:.9rem}
+h2{font-size:1.25rem;margin:1.8em 0 .5em;border-top:1px solid var(--line);padding-top:.7em}
+.chips{margin:10px 0 4px}
+.chip{display:inline-block;font-size:.74rem;padding:3px 9px;border-radius:999px;margin:2px 4px 2px 0;border:1px solid var(--line);cursor:pointer;user-select:none}
+.chip.off{opacity:.35}
+.tabs{display:flex;gap:6px;margin:14px 0;flex-wrap:wrap}
+.tab{padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);cursor:pointer;font-size:.9rem}
+.tab.active{border-color:var(--c1);color:var(--c1)}
+.feed{display:grid;gap:10px}
+.item{background:var(--card);border:1px solid var(--line);border-left-width:3px;border-radius:10px;padding:11px 14px;transition:opacity .3s}
+.item .meta{font-size:.72rem;color:var(--mut);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.item .t{font-weight:600;margin:3px 0 2px;font-size:1.02rem}
+.item .d{font-size:.9rem;color:#cdd3db}
+.item .lnk{font-size:.78rem;margin-top:4px}
+.catdot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.old{opacity:.4}
+#graph{height:560px;background:#0a0d13;border:1px solid var(--line);border-radius:12px}
+.gpanel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;min-height:54px;font-size:.9rem}
+.idea{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+.idea .n{color:var(--c5);font-weight:700}
+.idea .h{font-size:1.08rem;font-weight:700;margin:2px 0 6px}
+.idea .row{font-size:.9rem;margin:3px 0}
+.idea .k{color:var(--mut)}
+.badge{font-size:.7rem;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin-right:4px;color:var(--mut)}
+a{color:var(--c1);text-decoration:none}a:hover{text-decoration:underline}
+.hide{display:none}
+.toggle{color:var(--mut);cursor:pointer;font-size:.82rem;margin:8px 0}
+footer{margin-top:40px;color:var(--mut);font-size:.8rem;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body><div class="wrap">
+
+<h1>🛰️ AI Research Radar</h1>
+<p class="sub">LLM 위키 자동수집 + Fryday 분석 · 최신 연구를 뉴스처럼 · 지식그래프로 연결 · <b>As of <span id="asof"></span></b> · duckychoi/lab (라이브, 계속 갱신)</p>
+
+<div class="tabs">
+ <div class="tab active" data-v="feed">📰 연구 레이더</div>
+ <div class="tab" data-v="graph">🕸️ 지식 그래프</div>
+ <div class="tab" data-v="ideas">💡 연구 아이디어 10</div>
+</div>
+
+<!-- ============ FEED ============ -->
+<section id="v-feed">
+<div class="chips" id="chips"></div>
+<div class="feed" id="feed"></div>
+<div class="toggle" id="moreTog">▾ 오래된 항목 더보기</div>
+</section>
+
+<!-- ============ GRAPH ============ -->
+<section id="v-graph" class="hide">
+<p class="sub">노드=주제/기술, 선=관계(융합·도입·응용·대조·확장). 노드 클릭 → 설명·이웃. 끌어서 이동, 휠로 확대.</p>
+<div id="graph"></div>
+<div class="gpanel" id="gpanel">노드를 클릭하면 설명과 연결관계가 여기 표시됩니다.</div>
+</section>
+
+<!-- ============ IDEAS ============ -->
+<section id="v-ideas" class="hide">
+<p class="sub">아래는 Fryday가 위 레이더의 신기술을 <b>도입·융합·응용</b>해 기존 병목을 넘을 수 있다고 본 <b>5대 학회(NeurIPS·ICML·ICLR·CVPR·CoRL/ICASSP)급</b> 연구주제 후보예요. 교수님 빔포밍·메모리·스펙트럴·로봇 스레드와 연결.</p>
+<div id="ideas"></div>
+</section>
+
+<footer>
+생성·관리: Fryday(Claude Opus 4.8) · 데이터: /home/monday/vault/wiki (크론 리서치 에이전트) · 연구주제 원장: wiki/synthesis/research-topics-ledger.md<br>
+업데이트 방식: 이 HTML의 <code>DATA</code> 블록에 새 소식 추가 + 14일 지난 항목 아카이브. 그래프·아이디어 동반 갱신.
+</footer>
+
+</div>
+<script>
+const PRUNE_DAYS=14, RECENT_DAYS=10;
+const CATS={
+ mem:{n:'LLM·메모리',c:'--c1'}, opt:{n:'학습·옵티마이저',c:'--c2'}, gen:{n:'생성·디퓨전',c:'--c3'},
+ rob:{n:'로봇·SLAM·VLA',c:'--c4'}, sig:{n:'신호·빔포밍·연산자',c:'--c5'}, rec3d:{n:'3D 복원·표현',c:'--c6'},
+ edge:{n:'온디바이스·효율',c:'--c7'}, sw:{n:'리버스ENG·SW·보안',c:'--c8'}
+};
+const DATA={
+ items:[
+  {date:'2026-11-05',cat:'gen',title:'Wave Forcing — 스트리밍 비디오 생성의 파이프라인화',desc:'이전 청크가 다 지워지기 전에 읽게 해 디노이징을 파이프라인으로. 실시간 비디오 디퓨전의 지연 병목 공략.',link:'',nodes:['diffusion','spectral']},
+  {date:'2026-11-05',cat:'mem',title:'Deep Fusion Memory(DFM) — 검색 0회 장기기억',desc:'백본을 얼린 채 청크 메모리를 예측, 은닉상태에 게이트 크로스어텐션으로 융합. RAG 지연·검색의존을 없앰.',link:'',nodes:['memory','dfm','retrieval']},
+  {date:'2026-11-04',cat:'gen',title:'GAFU — "생성 쪽 표현"이 미세 시각이해에 더 민감',desc:'압축 G토큰을 이해 경로에 공급 → SFT 대비 최대 +20%. 생성·이해 표현의 비대칭을 활용.',link:'',nodes:['diffusion','vlm']},
+  {date:'2026-11-04',cat:'rob',title:'Trajectory2Gym — "결정 시점의 근거 있는 행동"만 감독',desc:'성공 궤적 전체가 아니라 결정 지점 근거만 신호로. Qwen3 전 스케일 +16.9~29.8%p. 로봇 RL 감독신호 희소 문제.',link:'',nodes:['vla','rl','worldmodel']},
+  {date:'2026-11-04',cat:'edge',title:'Route Anything — 옴니모달 라우팅 (정직한 한계)',desc:'오라클 상한 +5.4점인데 학습 라우터 실제 이득은 +0.3점. MoE/라우팅의 현실 천장을 드러냄.',link:'',nodes:['moe','edge-ai']},
+  {date:'2026-11-01',cat:'rob',title:'InteractiveWorld(Meta) — AI가 사람에게 지시해 물리작업 완수',desc:'폐루프 환경. 최강 모델도 장기과제 20~25%. 임바디드 장기계획의 벽.',link:'',nodes:['vla','worldmodel','agent']},
+  {date:'2026-10-27',cat:'gen',title:'LayerEditor — 편집결과를 순서있는 RGBA 레이어로',desc:'"납작한 그림"이 아니라 레이어 스택으로 출력 → 편집가능성·분해.',link:'',nodes:['diffusion']},
+  {date:'2026-10-26',cat:'edge',title:'colibri — 744B~2.8T MoE를 순수 C로 소비자 HW에서',desc:'온디바이스 초거대 MoE 추론 엔진. 경량화·추론엔진 트렌드.',link:'',nodes:['edge-ai','moe','quant']},
+  {date:'2026-10-24',cat:'mem',title:'LLM 장기기억·에이전트 메모리 2026 SOTA 정리',desc:'Titans·Mem0·Letta·HippoRAG2·MAGMA… 외부검색/크기한계가 공통 병목.',link:'',nodes:['memory','titans']},
+  {date:'2026-10-24',cat:'rob',title:'휴머노이드 SLAM·VLA·로컬LLM 제어 동향',desc:'π0·GR00T·RoboTTT, 컬러라이즈드 LiDAR SLAM. 온디바이스 지각이 관건.',link:'',nodes:['vla','slam','edge-ai']},
+  {date:'2026-10-22',cat:'opt',title:'차세대 옵티마이저 — Muon·SOAP·MuonClip',desc:'Muon(모멘텀 직교화=스펙트럴 조건화)·SOAP가 대규모서 AdamW 추월(실전 채택). per-step 비용·수렴보장이 병목.',link:'',nodes:['muon','spectral','optimizer']},
+  {date:'2026-10-20',cat:'rec3d',title:'3D 복원 패러다임 이동 — 3DGS → pointmap(VGGT/DUSt3R)',desc:'포즈·캘리브 없이 피드포워드. "pointmap→3DGS→mesh" 단계 결합이 2026 트렌드.',link:'',nodes:['gaussian','pointmap','slam']},
+  {date:'2026-10-15',cat:'sw',title:'REA — 무엇이든 리버스 엔지니어링 (★42만)',desc:'AI 에이전트가 앱을 뜯어 재구현. "기능만 있는 SaaS는 해자 없다"는 테제로 확산.',link:'https://github.com/morluto/rea',nodes:['rea','agent']},
+ ],
+ nodes:[
+  {id:'spectral',label:'스펙트럴/푸리에',cat:'sig',info:'주파수영역 표현 — 메모리·디퓨전·빔포밍·옵티마이저를 잇는 공통 뼈대(교수님 코어 테마).'},
+  {id:'memory',label:'LLM 장기기억',cat:'mem',info:'Titans·Mem0·DFM… 외부검색/용량/크로스토크가 병목.'},
+  {id:'dfm',label:'Deep Fusion Memory',cat:'mem',info:'검색0회 게이트 크로스어텐션 메모리(2026).'},
+  {id:'titans',label:'Titans/복소SSM',cat:'mem',info:'테스트타임 신경 장기메모리 / S4D 복소 상태.'},
+  {id:'retrieval',label:'RAG/검색',cat:'mem',info:'지연·의존 문제 → retrieval-free 흐름.'},
+  {id:'muon',label:'Muon/SOAP',cat:'opt',info:'모멘텀 직교화=스펙트럴 조건화. AdamW 추월(실전).'},
+  {id:'optimizer',label:'옵티마이저',cat:'opt',info:'학습 안정성·수렴·강인성.'},
+  {id:'diffusion',label:'디퓨전',cat:'gen',info:'생성. "디퓨전=스펙트럴 자기회귀".'},
+  {id:'vlm',label:'비전-언어 이해',cat:'gen',info:'생성표현이 미세이해에 유리(GAFU).'},
+  {id:'vla',label:'VLA/로봇제어',cat:'rob',info:'π0·GR00T·RoboTTT. 장기과제·감독신호가 벽.'},
+  {id:'slam',label:'SLAM',cat:'rob',info:'컬러라이즈드 LiDAR, 3DGS-SLAM, 온디바이스.'},
+  {id:'worldmodel',label:'월드모델',cat:'rob',info:'InteractiveWorld·Trajectory2Gym.'},
+  {id:'rl',label:'로봇 RL',cat:'rob',info:'결정시점 근거 감독(Trajectory2Gym).'},
+  {id:'agent',label:'에이전트',cat:'sw',info:'툴콜·장기계획·자동화.'},
+  {id:'gaussian',label:'3D Gaussian Splatting',cat:'rec3d',info:'실시간 명시적 렌더 표준.'},
+  {id:'pointmap',label:'Pointmap(VGGT)',cat:'rec3d',info:'포즈프리 피드포워드 기하 — 신표준 후보.'},
+  {id:'muon',label:'Muon/SOAP',cat:'opt'},
+  {id:'moe',label:'MoE/라우팅',cat:'edge',info:'Route Anything: 실이득 미미한 현실천장.'},
+  {id:'edge-ai',label:'온디바이스 AI',cat:'edge',info:'양자화·추론엔진(colibri)·로컬LLM.'},
+  {id:'quant',label:'양자화',cat:'edge',info:'GPTQ/AWQ/QAT.'},
+  {id:'rea',label:'REA(리버스ENG)',cat:'sw',info:'AI가 SW 복제 → SaaS 해자 재정의.'},
+  {id:'beamforming',label:'신경 빔포밍',cat:'sig',info:'NBT·VF-MoNBT·공간 슈퍼트위스팅(교수님 플래그십).'},
+  {id:'smc',label:'슈퍼트위스팅/SMC',cat:'sig',info:'유한시간·강인. s=∇J → 옵티마이저로.'},
+  {id:'oam',label:'OAM/Airy/FDA',cat:'sig',info:'꼬인/미끄러지는 물리 빔.'}
+ ],
+ edges:[
+  {from:'spectral',to:'memory',rel:'기저 제공'},{from:'spectral',to:'diffusion',rel:'자기회귀 구조'},
+  {from:'spectral',to:'beamforming',rel:'빔스페이스=공간푸리에'},{from:'spectral',to:'muon',rel:'직교화=스펙트럴'},
+  {from:'memory',to:'dfm',rel:'검색0회 신기법'},{from:'memory',to:'titans',rel:'내부 기억'},{from:'memory',to:'retrieval',rel:'대체 대상'},
+  {from:'muon',to:'optimizer',rel:'SOTA'},{from:'smc',to:'optimizer',rel:'유한시간 GD(제안)'},{from:'muon',to:'smc',rel:'융합 여지'},
+  {from:'diffusion',to:'vlm',rel:'생성표현 활용'},{from:'diffusion',to:'beamforming',rel:'빔스페이스 생성사전(제안)'},
+  {from:'vla',to:'slam',rel:'지각 연동'},{from:'vla',to:'worldmodel',rel:'장기계획'},{from:'vla',to:'rl',rel:'감독신호'},
+  {from:'slam',to:'gaussian',rel:'3DGS-SLAM'},{from:'gaussian',to:'pointmap',rel:'포즈프리 결합'},{from:'pointmap',to:'slam',rel:'온디바이스 복원'},
+  {from:'edge-ai',to:'quant',rel:'경량화'},{from:'edge-ai',to:'moe',rel:'라우팅'},{from:'edge-ai',to:'vla',rel:'로컬 지각(휴머노이드)'},
+  {from:'rea',to:'agent',rel:'에이전트 리버스'},
+  {from:'beamforming',to:'smc',rel:'공간 슈퍼트위스팅'},{from:'beamforming',to:'oam',rel:'구조광 빔'},{from:'beamforming',to:'pointmap',rel:'멀티표적 인식'},
+  {from:'spectral',to:'optimizer',rel:'spectral allocation'}
+ ],
+ ideas:[
+  {h:'Neural Super-Twisting Optimizer',bottleneck:'대규모 학습 안정성·수렴 (Muon/SOAP의 per-step 비용·수렴 미보장)',approach:'융합: SMC 슈퍼트위스팅($s=\\nabla J$) + Muon 직교화(spectral) → 유한시간·강인·스펙트럴 조건화 옵티마이저',venue:'NeurIPS / ICML',tags:['opt','sig']},
+  {h:'Phase-Coded Holographic Infinite-Horizon Memory',bottleneck:'LLM 장기기억 용량·크로스토크 (외부검색 의존)',approach:'융합: FHRR 위상결합 + 복소 SSM(S4D) → 무한지평 스펙트럼 기억, "창의=위상 보강간섭"',venue:'ICLR / NeurIPS',tags:['mem','sig']},
+  {h:'Retrieval-Free Spectral Memory',bottleneck:'RAG 지연·검색 의존',approach:'도입+융합: Deep Fusion Memory(검색0회) × 주파수영역 chunk 기저 → 검색 없는 장기기억',venue:'ICLR',tags:['mem','gen']},
+  {h:'VF-MoNBT (근거리장 다중표적 ISAC 빔포머)',bottleneck:'가변 다중표적 근거리장 빔포밍',approach:'융합: NBT+MoE(전문가=초점)+set-prediction 쿼리(타겟)+Volumetric Focusing',venue:'ICASSP / ICLR',tags:['sig','rec3d']},
+  {h:'Spatial Super-Twisting Aperture',bottleneck:'저비트 RIS/메타표면 양자화 로브',approach:'이론융합: 1-bit 개구=공간 sign(), 슈퍼트위스팅=2차 슬라이딩 ΔΣ로 로브 셰이핑',venue:'ICASSP / TSP',tags:['sig']},
+  {h:'Spectral Diffusion in Beamspace',bottleneck:'빔포밍 생성형 사전확률 부재(채널·RIS·근거리장 필드)',approach:'응용: 주파수영역 디퓨전 + FNO → 빔스페이스 생성 사전확률',venue:'ICLR / 통신',tags:['sig','gen']},
+  {h:'Pointmap×Gaussian On-Device SLAM',bottleneck:'온디바이스 실시간·포즈프리 복원(로컬LLM 휴머노이드)',approach:'도입+응용: VGGT 포즈프리 pointmap + 3DGS + 저가 컬러라이즈드 LiDAR',venue:'CVPR / CoRL',tags:['rec3d','rob']},
+  {h:'Spectral-Bias-Matched Diffusion Schedule',bottleneck:'디퓨전 학습효율·대역별 품질',approach:'이론: (데이터 파워스펙트럼 × NTK 편향)에서 유도한 적응 노이즈/블러 스케줄',venue:'NeurIPS / ICML',tags:['gen','sig']},
+  {h:'Grounded-Action Spectral World Model',bottleneck:'로봇 RL 감독신호 희소·장기과제(InteractiveWorld 20%)',approach:'융합: Trajectory2Gym(결정시점 근거) + 주파수영역 월드모델',venue:'CoRL / NeurIPS',tags:['rob','sig']},
+  {h:'MoE-Experts-as-Foci for Multi-Target Perception',bottleneck:'가변 개수 표적 일반화(빔포밍·3D추적·메모리 공통)',approach:'응용: "전문가=타겟/초점" 구성성을 빔포밍·다중표적 추적·메모리로 이식',venue:'ICLR / CVPR',tags:['sig','rec3d','mem']},
+  {h:'Interpretable Spectral AI-Text Detection',bottleneck:'AI 텍스트 탐지의 불안정·오탐',approach:'도입+융합: detectorscope식 해석가능 + 스펙트럴 특징 + robustness',venue:'ACL / NeurIPS D&B',tags:['mem','sw']}
+ ]
+};
+
+// ---- render ----
+const cv=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const today=new Date(); document.getElementById('asof').textContent=today.toISOString().slice(0,10);
+const ageDays=d=>Math.round((today-new Date(d))/86400000);
+let activeCats=new Set(Object.keys(CATS)), showOld=false;
+
+// chips
+const chipBox=document.getElementById('chips');
+Object.entries(CATS).forEach(([k,v])=>{
+ const s=document.createElement('span'); s.className='chip'; s.dataset.k=k;
+ s.innerHTML=`<span class="catdot" style="background:${cv(v.c)}"></span> ${v.n}`;
+ s.style.borderColor=cv(v.c);
+ s.onclick=()=>{ s.classList.toggle('off'); activeCats.has(k)?activeCats.delete(k):activeCats.add(k); renderFeed(); };
+ chipBox.appendChild(s);
+});
+
+function renderFeed(){
+ const f=document.getElementById('feed'); f.innerHTML='';
+ DATA.items.filter(it=>ageDays(it.date)<=PRUNE_DAYS)
+  .sort((a,b)=>new Date(b.date)-new Date(a.date))
+  .forEach(it=>{
+   if(!activeCats.has(it.cat))return;
+   const old=ageDays(it.date)>RECENT_DAYS;
+   if(old&&!showOld)return;
+   const col=cv(CATS[it.cat].c);
+   const el=document.createElement('div'); el.className='item'+(old?' old':'');
+   el.style.borderLeftColor=col;
+   el.innerHTML=`<div class="meta"><span class="catdot" style="background:${col}"></span>
+     <b style="color:${col}">${CATS[it.cat].n}</b> · ${it.date} · ${ageDays(it.date)}일 전</div>
+     <div class="t">${it.title}</div><div class="d">${it.desc}</div>
+     ${it.link?`<div class="lnk">🔗 <a href="${it.link}" target="_blank">${it.link}</a></div>`:''}`;
+   f.appendChild(el);
+  });
+}
+document.getElementById('moreTog').onclick=function(){showOld=!showOld;this.textContent=showOld?'▴ 오래된 항목 접기':'▾ 오래된 항목 더보기';renderFeed();};
+renderFeed();
+
+// ideas
+const ib=document.getElementById('ideas');
+DATA.ideas.forEach((x,i)=>{
+ const el=document.createElement('div'); el.className='idea';
+ const badges=x.tags.map(t=>`<span class="badge" style="border-color:${cv(CATS[t].c)};color:${cv(CATS[t].c)}">${CATS[t].n}</span>`).join('');
+ el.innerHTML=`<div class="n">아이디어 #${i+1}</div><div class="h">${x.h}</div>
+  <div class="row"><span class="k">🔴 병목:</span> ${x.bottleneck}</div>
+  <div class="row"><span class="k">🧩 접근(도입·융합·응용):</span> ${x.approach}</div>
+  <div class="row"><span class="k">🎯 타겟:</span> ${x.venue} &nbsp; ${badges}</div>`;
+ ib.appendChild(el);
+});
+
+// graph
+let net;
+function buildGraph(){
+ const seen=new Set(), nodes=[];
+ DATA.nodes.forEach(n=>{ if(seen.has(n.id))return; seen.add(n.id);
+  nodes.push({id:n.id,label:n.label,group:n.cat,title:n.info||n.label,
+   color:{background:cv(CATS[n.cat].c)+'33',border:cv(CATS[n.cat].c),highlight:{background:cv(CATS[n.cat].c)+'66',border:cv(CATS[n.cat].c)}},
+   font:{color:'#e8eaed'},shape:'dot',value:(DATA.edges.filter(e=>e.from===n.id||e.to===n.id).length)+2});
+ });
+ const edges=DATA.edges.map(e=>({from:e.from,to:e.to,label:e.rel,arrows:'to',
+   color:{color:'#39414f',highlight:'#6ea8fe'},font:{color:'#8a93a2',size:10,strokeWidth:0}}));
+ const c=document.getElementById('graph');
+ net=new vis.Network(c,{nodes:new vis.DataSet(nodes),edges:new vis.DataSet(edges)},{
+  physics:{solver:'forceAtlas2Based',forceAtlas2Based:{gravitationalConstant:-45,springLength:110},stabilization:{iterations:180}},
+  interaction:{hover:true,tooltipDelay:120},
+  nodes:{scaling:{min:8,max:26}},edges:{smooth:{type:'continuous'}}
+ });
+ net.on('click',p=>{
+  const gp=document.getElementById('gpanel');
+  if(!p.nodes.length){gp.textContent='노드를 클릭하면 설명과 연결관계가 여기 표시됩니다.';return;}
+  const id=p.nodes[0], n=DATA.nodes.find(x=>x.id===id);
+  const nb=DATA.edges.filter(e=>e.from===id||e.to===id)
+    .map(e=>{const o=e.from===id?e.to:e.from;const on=DATA.nodes.find(x=>x.id===o);return `<b>${on?on.label:o}</b> <span style="color:#8a93a2">(${e.rel})</span>`;});
+  gp.innerHTML=`<b style="color:${cv(CATS[n.cat].c)}">${n.label}</b> — ${CATS[n.cat].n}<br>${n.info||''}
+    <br><span style="color:#8a93a2">연결:</span> ${nb.join(' · ')||'(없음)'}`;
+ });
+}
+
+// tabs
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
+ ['feed','graph','ideas'].forEach(v=>document.getElementById('v-'+v).classList.toggle('hide',v!==t.dataset.v));
+ if(t.dataset.v==='graph'&&!net) buildGraph();
+});
+</script>
+</body>
+</html>
