@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-11-06
+updated: 2026-11-08
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -576,3 +576,93 @@ Spectral Progressive Diffusion은 pretrained 모델의 잡음 제거 궤적을 �
 - Robust Hybrid Beamforming with Liquid Crystal Antennas and Liquid Neural Networks — https://arxiv.org/abs/2604.07219
 - Isotropic Fourier Neural Operators — https://arxiv.org/abs/2605.02597
 - Starter-Iterator Neural Operator: A Unified Architecture for High-Fidelity Forward and
+
+---
+
+## 🔄 2026-11-08 크론 갱신 (🔴 덮어쓰기 → git HEAD `fd6c305` 판본 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 크론이 2026-11-08 같은 파일명으로 덮어써 **578 → 85줄**(10-23 생성 이후 볼트 판정 전부 소실). 볼트가 git HEAD(`fd6c305`) 판본을 복원했고 위 본문이 그 판본이다. 이 섹션 아래가 11-08 배달분이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-08) — arXiv abs 7건 직접 조회 · **중복 주제 재생성**
+> - ✅ 2608.04388 · 2609.33755 · 2609.09708 · 2606.09806 · 2610.33771 · 2607.04134 · 2602.09708 — **전건 실존·제목 일치**. FNO-MoE *"30분 전체 근사 명시적 화학 상태를 한 번의 호출로"* 는 초록 원문(*"over 30 minutes in a single call"*)과 일치.
+> - 🔴 **[[비매칭-비교]] 4일 연속** — *"수치 최적화 대비 99.7% 성능을 유지하면서 신경망 파라미터 112배 감소"*. 초록은 99.7% 를 **수치 최적화의 레이트** 대비, 112배를 **데이터 기반 방법** 대비로 따로 적었다(*"nearly matches the rate of the data-driven method despite using approximately 112× fewer neural-network parameters"*). 이번엔 "수치 최적화 대비"를 붙였지만 112배의 비교 대상은 여전히 빠졌다 — **반쪽 이행**.
+> - 🔴 [[한정어-탈락]] 역방향(추가) — 2609.33755 를 *"MCU에서 실시간 실행되는 **첫** 다채널 MVDR 빔포머"* 로 적었으나 초록에 "first" 류 주장은 **없다**(*"We present an optimized methodology for the real-time execution…"*). 초록의 실제 정량치(15 ms/프레임 · STOI 97.65% · 45.9 mW · 100mAh 로 16h+)는 빠졌다.
+> - ❓ TF-SNO · TFNO 198.2 keV · LatentDDM · Spectrum(CVPR 2026) · Spectral Progressive Diffusion — ID 미기재, 미대조(11-06 과 동일 항목 재배달).
+
+이 주제들의 최신 arXiv 논문들을 검색해드리겠습니다.
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026 최신 동향
+
+**핵심 3줄**
+- 
+Neural beamforming은 통신 시스템의 blockage 문제를 해결하기 위해 물리 기반 설계와 경량 신경망을 결합하는 방향으로 진화
+
+- 
+Topological Neural Operators(TNOs)는 세포 복합체(cell complexes) 위에서 연산자 학습을 확장하며, 이산 외부 미적분을 통해 차원 간 상호작용 모델링
+
+- 
+Physics-informed spectral diffusion은 잠재 공간의 스펙트럼 표현에서 PDE 문제를 생성하며, 가우시안 노이즈를 제어된 정규성을 가진 함수로 매핑
+
+
+**상세**
+
+*Neural Beamforming*
+- 
+스마트 청각기 디바이스용 Transformer 기반 신경 빔포밍이 MCU에서 실시간 실행되는 첫 다채널 MVDR 빔포머로 구현(2026년 9월)
+
+- 
+물리 기반 신경 Airy 빔포밍이 수치 최적화 대비 99.7% 성능을 유지하면서 신경망 파라미터 112배 감소
+
+- 
+6G 무선 기술용 GNN 기반 다중 반송파 광대역 하이브리드 빔포밍이 빔 스쿼인팅과 불완전 CSI에 대해 높은 복원력 시현
+
+- 
+NOMA 시스템의 다운링크 빔포밍 설계에 CNN 기반 접근법이 계산 부담과 지연 감소(2026년 2월)
+
+- 
+CNN을 이용한 희소 배열 설계가 동적 환경에서 빠른 배열 재구성 가능(IEEE Radar Conference 2026 승인)
+
+
+*Neural Operator*
+- 
+Fourier Neural Operator with Mixture of Experts(FNO-MoE)가 30분 전체 근사 명시적 화학 상태를 한 번의 호출로 예측(2026년 10월)
+
+- 
+전이 학습 기반 LatentDDM은 사전 훈련된 신경 연산자를 동결하고 경량 합성 모듈만 훈련하여 배포 비용 감소
+
+- 
+TF-SNO: 시간-주파수 게이트 스펙트럼 신경 연산자가 비정상 편미분 방정식 학습(2026년)
+
+- 
+Tensorized Fourier Neural Operator(TFNO)가 핵 질량 보정 학습에서 198.2 keV RMSE 달성(CERN 2026)
+
+
+*Spectral Diffusion*
+- 
+스펙트럼 정규화 프레임워크가 확산 과정 수정 없이 Fourier·웨이블릿 도메인 손실 추가(2026년 3월)
+
+- 
+단백질 동역학용 스펙트럼 영역 확산이 Fourier 변환 귀납 편향으로 느린 구조 모드와 빠른 원자 진동 분리
+
+- 
+Spectrum: 학습 불필요 스펙트럼 기능 예측 방법이 다중 미래 확산 단계의 기능 사전 예측(CVPR 2026)
+
+- 
+에너지 조건화 노이즈 스케줄이 전역 스펙트럼 화이트닝으로 자연 이미지의 에너지 분포 따르는 확산 프로세스 적용
+
+- 
+Spectral Progressive Diffusion이 디노이징 궤적을 따라 해상도를 점진적으로 성장시키고 최적 해상도 스케줄 유도
+
+
+**💡 인사이트/시사점**
+- 세 분야 모두 '물리-스펙트럼 기반 구조'를 신경망과 결합하여 파라미터 효율성·해석 가능성·일반화 능력을 동시에 확보하는 추세. 특히 빔포밍의 경량화(112배 감소), 신경 연산자의 전이 학습, 확산 모델의 학습 불필요 가속화가 실무 배포의 핵심 동력.
+- 2026년 상반기~하반기에 걸쳐 6G/wireless(GNN), PDE solver(FNO-MoE, TNO), vision(spectral diffusion acceleration) 등 응용 영역별 수렴하는 패턴 관찰—각 분야 기초 이론이 실무 시스템(IEEE VTC/CVPR/arXiv preprint → conference accepted)으로 빠르게 전환.
+
+**출처**
+- Physics-Guided Neural Airy Beamforming for Near-Field Blockage Mitigation — https://arxiv.org/abs/2608.04388
+- Transformer-based Neural Beamforming for Smart Hearable Devices — https://arxiv.org/abs/2609.33755
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming — https://arxiv.org/abs/2609.09708
+- Topological Neural Operators — https://arxiv.org/abs/2606.09806
+- FNO-MoE for Atmospheric Chemistry — https://arxiv.org/abs/2610.33771
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+- Physics-informed Spectral Diffusion Models — https://arxiv.org/abs/2602.09708
+-

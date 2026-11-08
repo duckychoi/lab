@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, qwen3.5, fine-tune, threejs, 3d, code-generation, gguf, synthetic-data]
 created: 2026-11-07
-updated: 2026-11-07
+updated: 2026-11-08
 sources: [https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder]
 reliability: low
 ---
@@ -35,3 +35,6 @@ reliability: low
 - 출처: https://huggingface.co/ccore/Qwen3.5-4B-3D-Coder
 - 확인 범위: HF API expand(볼트 11-07) · 카드 raw grep(4,146 · 3,933 · MTP 검출 / MiniMax · 8/8 미검출) · 보고서 PDF 는 수집기 판독만 · 추론 실행 0회
 - 신뢰도: ⭐ (개인 비공식 · 벤치 없음 · 합성 데이터 출처 약관 미확인)
+
+## 🔄 2026-11-08
+- 후속 [[Qwen3.5-4B-GLB-3D-Coder]] — 장면 → **GLB 에셋 내보내기** 특화 · 데이터 `ThreeJS-3D-GLB-Assets` 3,918예(40도메인) · 평가는 DeepSeek V4.1 Flash 1017 과의 좌우 비교 이미지뿐.

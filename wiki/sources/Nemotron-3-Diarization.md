@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, nvidia, diarization, speaker, streaming, sortformer, edge-ai, on-device, 측정도구-먼저-반증, 지표-창길이, 도메인재판정]
 created: 2026-10-02
-updated: 2026-10-02
+updated: 2026-11-08
 sources: []
 reliability: high
 ---
@@ -89,3 +89,6 @@ reliability: high
 - 출처: https://huggingface.co/nvidia/Nemotron-3-Diarization
 - 신뢰도: ⭐⭐⭐⭐ (NVIDIA 1차 벤더 · DL 40,936 · **DER 수치 9개 완비** · **평가 프로토콜 자기 변호** · 상업 사용 가능 / 🔴 690행 중 120행만 열람 · 한국어 불명)
 - 검증: 2026-10-02 HF models API 실호출 — **DL30·DL누적·♥ 완전 일치** · `safetensors.total` **99,226,504 완전 일치** · trendingScore **−1** · 🆕 `gguf.total`·`license` **볼트 추가 확인**
+
+## 🔄 2026-11-08
+- [[Nemotron-3.5-Transcribe-30B-A4B]] 의 **화자 인코더**로 쓰인다(카드 링크 볼트 확인). 다화자 cpWER 15.80(vs DiCoW v3.3+DiariZen 16.83).

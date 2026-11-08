@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-11-04
+updated: 2026-11-08
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -129,3 +129,8 @@ reliability: medium
 ## 🔄 2026-11-04
 - [[Qwen3.8-27B]] dl30 **8,014,877**(+99,240 · 1일) · 누적 20,960,828 · likes 19,105 · 모델 82일 동결. 🔴 수집기가 IFBench Opus 62.5 · 3.6/3.7-Plus/Glimmer 비교열 · HLE "Judged by GPT-4o" 각주 누락.
 - `Qwen/Qwen-Image-2.1-Turbo`(8스텝 · CFG 1 · 7B, 30일 42,908) 가 [[Qwen-Image-2.1-Uncensored-Quantized]](→ 개명 `abenzerps/Qwen-Image-2.1-Turbo-Quantized`)의 새 베이스가 됐다. 🔴 파생 카드의 "베이스가 무검열 네이티브 지원"은 공식 Turbo 카드에 근거 없음(grep 0건).
+
+## 🔄 2026-11-08
+- 🆕 [[Qwen3.5-4B-GLB-3D-Coder]] — ccore 의 Qwen3.5-4B 파생 2호(전작 [[Qwen3.5-4B-3D-Coder]] 1주 후) · GLB 내보내기 특화 · 데이터 3,918예 · dl30 24,479(+4,223/1일) · 정량 벤치 0.
+- [[Nemotron-3.5-Transcribe-30B-A4B]] 의 비교 대상 Qwen3-ASR-1.7B(Open ASR 4.94 · 다국어 6.49) — 오픈 ASR 차순위로 인용됨.
+- [[DPDM]] 의 의미 인코더 = Qwen3.5-27B.

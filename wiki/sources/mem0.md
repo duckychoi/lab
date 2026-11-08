@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, agent-memory, github, ai-news, 본체-누락, 표-부분인용, 스킬-배급]
 created: 2026-09-20
-updated: 2026-09-20
+updated: 2026-11-08
 sources: []
 reliability: medium
 ---
@@ -89,3 +89,6 @@ reliability: medium
 - 수치 출처: README 47~54행 표(4행) · 63행 평가 하네스 · 189·192행 스킬 — **전부 README 원문 실열람**
 - raw 대비: 볼트 추가 = **본체 누락 3번째 사례 + 그 대가(VoiceMem 분모 미상)** · **4행 중 2행만 인용됨을 적발, 누락행이 유일한 하락 신호(BEAM 10M 48.6)** · **하네스는 공개·피측정물은 비공개** · **스킬 배급 축 4번째 + 상용 퍼널 스킬 첫 사례**
 - 신뢰도: ⭐⭐ (지표 완전일치·README 자기한정 명시는 높은 점수 / **핵심 수치가 비공개 플랫폼 소산이고 OSS 격차 미공개**)
+
+## 🔄 2026-11-08
+- [[EvoMemState]] 비교표(수집기 판독, Qwen3-8B): Overall Mem0 **39.2**(최하위권) vs EvoMemState 59.9 — 단 **MemTrapBench Safety 는 Mem0 69.3 > EvoMemState 62.3**. "사실 나열형" 메모리가 함정 질문엔 더 안전할 수 있다.

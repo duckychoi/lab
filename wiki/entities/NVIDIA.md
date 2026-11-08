@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, harness, agent, entity]
 created: 2026-07-04
-updated: 2026-11-07
+updated: 2026-11-08
 sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md]
 reliability: high
 ---
@@ -87,3 +87,6 @@ reliability: high
 - 🆕 [[auto-ontology]] — 데이터 위 온톨로지 계층(Discover→Ground→Validate→Expose→Learn) · ★9,479(하루 +1,430) · 기본 추론 NIM(`nemotron-3.5-lightning-30b-a3b`) · 🔴 정확도 수치 0건(평가 레포 `auto-ontology-eval` 결과 미게시) · 외부 기여 닫힘.
 - 🆕 [[VFlash]] — 궤적·박스 프리미티브 단위 디코딩 · "약 25배"는 H100·배치1 · 🔴 그 표(PointMotionBench)에서 HOT3D ADE 0.122 > 타깃 AR 0.109 · 코드 미공개.
 - 수집기 참고(미수록): `nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B` — 화자 인코더로 [[Nemotron-3-Diarization]] 사용(수집기 보고 · 볼트 미대조).
+
+## 🔄 2026-11-08
+- 🆕 [[Nemotron-3.5-Transcribe-30B-A4B]] — 11-07 "수집기 참고(미수록)" → **정식 수록**. 화자 인코더 = [[Nemotron-3-Diarization]] **카드 링크로 볼트 확인**(11-07 미대조 해소). 1시간 오디오 · 40개 언어 · Open ASR WER 4.71 · H100 80GB · OpenMDW-1.1 · dl30 63,798.

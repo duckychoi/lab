@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, tabular, china, 신설]
 created: 2026-09-19
-updated: 2026-09-19
+updated: 2026-11-08
 sources: [LimiX-2.md]
 reliability: medium
 ---
@@ -29,3 +29,6 @@ reliability: medium
 ## 원본
 - https://github.com/limix-ldm-ai/LimiX (LICENSE 법인명) · https://huggingface.co/stable-ai
 - 신뢰도: ⭐⭐ (법인명 원문 확인 · 규모·자금 미확인)
+
+## 🔄 2026-11-08
+- 🆕 [[DPDM]] — 동결된 [[LimiX-2]] 하나를 에이전트 의사결정(도구 판단·후보 선호·추론 평가) 공용 예측기로 사용. 50벤치 78.80 → 84.92%(각자 이력 예산) / 동일 조건 82.33%. LimiX 의 첫 에이전트 응용.

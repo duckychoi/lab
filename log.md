@@ -5516,3 +5516,37 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Paper Registration 11-10 AoE(D-3)** · Submission 11-16 · Supp 11-23
 2. [[LFM3-1.7B]] ChinameBot 도구 라우팅 시험
 3. 크론 프롬프트 연도 범위("오늘 이후 12개월") + 파일명 충돌 방지 — **14배치째 미이행**
+
+## [2026-11-08] ingest | **대기 20건 전량 처리** (11-07 자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: 자동수집 13 = ai-news 5(T3MP3ST · Paradev · DPDM · Drex · VisSearch-Bench) · local-llm 6(rivet · PrivateLM · pipeshub-ai · EvoMemState · Nemotron-3.5-Transcribe · Qwen3.5-4B-GLB-3D-Coder) · slam-3dgs 2(SLA · idol) / 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 13 · 갱신 0** · 크론 **신규 5 · 🔴 덮어쓰기 2**(Beamforming 578→85 · 장기기억 120→75 → git HEAD `fd6c305` 복원 후 `🔄 2026-11-08` 병합, 순수 추가 90·80줄)
+- **추가 페이지**: **18개** (소스 13 + 크론 5) | **업데이트 페이지**: 크론 2 + 엔티티 3(NVIDIA · Qwen · Stable-AI) + 기존 소스 4(LimiX-2 · Nemotron-3-Diarization · Qwen3.5-4B-3D-Coder · mem0) + 개념 6(계수기-배수 · 비매칭-비교 · 한정어-탈락 · 크론-덮어쓰기-소실 · 경과-마감-배달 · 문서내-값충돌)
+- **페이지 수**: 1723 → **1741** (sources 1512) ✅ `find` 실측 일치
+- **canvas 업데이트**: NO (⚖️ 체납 유지)
+- **actionable 추가**: YES — 3항목(CVPR 2027 Registration **D-2** · Drex 라우팅 시험 · idol 사진→3DGS 프로토타입)
+- **독립 검증**: GitHub API 8레포 · README raw 5건 grep · HF papers API 5 · HF models API 3 + 카드 raw 3건(인용 수치 전건 검출) · SLA 프로젝트 페이지 · arXiv abs 10건(크론 Beamforming 7 · 장기기억 3 — 전건 실존·제목 일치) · CVPR 2027 공식 Dates 1 · 🔴 arXiv export API 응답 0B(abs 페이지로 대체)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**헤드라인 증분의 일부는 모델이 아니라 조건이 만든다.** [[DPDM]] 의 +6.12%p 중 동일 조건 증분은 +3.53%p(나머지는 이력 예산 차이) · [[Nemotron-3.5-Transcribe-30B-A4B]] 는 34B 가 1.7B·0.6B 를 이긴 비교 · [[Drex]] 183ms 는 생성형과 형식이 다른 태스크의 지연. 수치는 전부 원문과 일치했다 — 틀린 건 숫자가 아니라 "무엇과 같은 조건에서"다.
+
+### 🏆 주요 발견
+1. 🔴 [[DPDM]] — 초록이 두 조건을 모두 적었다: *respective budgets* 84.92% / *identical histories* 82.33%.
+2. 🔴 HF 업보트 **감소** — [[SLA-Spatial-Language-Action]] 150→83 · [[DPDM]] 114→81 ⇒ 수집기·볼트가 다른 계수기를 읽음 → [[계수기-배수]] 규약 보강(엔드포인트 병기).
+3. ✅ [[Nemotron-3.5-Transcribe-30B-A4B]] 화자 인코더 = [[Nemotron-3-Diarization]] 카드 링크로 확인 — **11-07 볼트 미대조 항목 해소**.
+4. 🔴 [[PrivateLM]] — 이름은 Private, 내장은 Firebase Cloud Messaging.
+5. ✅ 크론 학회 노트 **CVPR 2027 4일 만에 포함** · 휴머노이드 출처 7건 회복 — 볼트 판정 반영 경로가 처음 작동.
+6. 🔴 크론 Beamforming — 112배 비교 대상 4일 연속 누락 + 초록에 없는 "첫" 삽입(한정어의 역방향 오류) · 같은 파일명 덮어쓰기 **7번째**(578줄).
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치·추론·벤치 재현 없음. README 는 grep 대조(전문 정독 아님).
+2. 🔴 SLA 베이스라인 대비 · VisSearch 모델별 점수 · EvoMemState 결과표 · Drex 벤치 정의 — 미열람(초록·수집기 판독 기준).
+3. 🔴 크론 노트는 표본만 대조 ⇒ 전건 `reliability: low`. 부동산 실거래가·NRF 2027년도 일정·휴머노이드 출하량 미대조. NRF "2026년도 공고" 판정은 자격 컷오프 날짜에 근거한 볼트 추론.
+4. ⚖️ canvas · domains/ 미갱신. 볼트 git 커밋은 하지 않음(09:40 자동 백업에 맡김). 삭제한 raw 항목 사본: `/tmp/ing1108/raw.removed.md` · 크론 원본 사본: `/tmp/ing1108/cron_orig/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Paper Registration 11-10 AoE(D-2)** · Submission 11-16 · Supp 11-23
+2. [[idol]] 사진→3DGS 회전 샷 시험(7.2GB · 약관 확인 선행)
+3. 크론 프롬프트 파일명 충돌 방지 — **15배치째 미이행**

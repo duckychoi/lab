@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, tabular, foundation-model, in-context-learning, pfn, causal-discovery, scm, scaling-law, stable-ai, tsinghua, non-commercial]
 created: 2026-09-19
-updated: 2026-09-19
+updated: 2026-11-08
 sources: [TabPFN.md, tabfm-1.0.0.md]
 reliability: medium
 ---
@@ -165,3 +165,6 @@ reliability: medium
 - 측정: HF papers API `upvotes` 261 · `authors` 60 · `organization.fullname` "Stable AI" · `githubStars` 4,211 · `publishedAt` 2026-09-15 / GitHub API `stargazers_count` 4,214 · `forks_count` 304 · `open_issues_count` 8 · `license` other / HF model `stable-ai/LimiX-2` `downloads` 348 · `likes` 41 · `createdAt` 2026-09-15 (전부 2026-09-19)
 - 가중치·라이선스: https://huggingface.co/stable-ai/LimiX-2 (README·LICENSE 원문)
 - 신뢰도: ⭐⭐⭐ (업보트 261 · 전문·CI 공개 · 자사 벤치 포함 · 비상업)
+
+## 🔄 2026-11-08 — 에이전트 판단 레이어로 재사용
+- [[DPDM]](arXiv 2611.02075) 이 LimiX-2 를 **동결한 채** 5개 에이전트 결정 범주의 공용 조건부 예측기로 썼다. `p(x,y)` 설계 덕에 "증거 + 질의"를 같은 표 인터페이스로 받는다 — 9월 볼트 인사이트("라벨 예측기 → 빈칸 채우기 기계")의 첫 외부 응용.
