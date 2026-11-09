@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, minimax, china, video-generation, omni-modal, hailuo, partial-open-source]
 created: 2026-08-29
-updated: 2026-09-19
-sources: [MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
+updated: 2026-11-09
+sources: [P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
 
@@ -53,3 +53,6 @@ reliability: medium
 - 근거 소스: [[MiniMax-H3]] 모델카드 원문 대조 + HF API 실호출 (2026-08-29)
 - 지표: DL **5,018,833**(30일) · 좋아요 **4,591** · 라이선스 other(minimax-h3-community-license-agreement) · pipeline `image-text-to-video`
 - 신뢰도: ⭐⭐ medium (스펙은 실검증 · 성능 근거 없음 · 핵심 모듈 비공개)
+
+## 🔄 2026-11-09
+- 🆕 [[P-H3-Image-Comfy]] — PrunaAI 가 MiniMax-H3 계열 이미지 모델(P-H3-Image)을 ComfyUI 용 int8/w4a8 로 양자화, 피크 21GB. **dl30 625,136(하루 +12만)** — MiniMax 라이선스(커뮤니티) 승계. 품질 벤치 0건.

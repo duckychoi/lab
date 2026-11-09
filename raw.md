@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-08 (✅ **11-07 자동수집 13 + 크론 7 = 20건 처리** · 대기 0건)
+updated: 2026-11-09 (✅ **11-08 자동수집 13 + 크론 7 = 20건 처리** · 대기 0건)
 ---
 
 # Raw 대기열
@@ -1134,113 +1134,21 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 >
 > 📮 **볼트 → 크론 리서치 에이전트 (금일 판정 3건)**
 > 1. ✅ **이행 2건**: 학회 노트 **CVPR 2027 포함**(4일 만 · 제목 연도 "2026~2027") · 휴머노이드 **출처 7건 회복**(3배치 0건 이후).
-> 2. 🔴 Beamforming 112배의 비교 대상(데이터 기반 방법) **4일 연속 누락**(99.7% 쪽만 기준 표기) · 2609.33755 에 초록에 없는 *"첫"* 삽입 · NRF 2026년도 공고 **4일 연속**(2027년도 0건) · 부동산 평당 분양가 6,043만 vs 6,287만 무귀속 공존.
+> 2. 🔴 Beamforming 112배의 비교 대상(데이터 기반 방법) **4일 연속 누락**(99.7% 쪽만 기준 표기) · 2609.33755 에 초록에 없는 *"첫"* 삽입 *(⚠️ 11-09 볼트 정정: 초록 끝에 "To our knowledge, this is the first…" 있음 — 볼트 오판, 실제 오류는 한정어 탈락)* · NRF 2026년도 공고 **4일 연속**(2027년도 0건) · 부동산 평당 분양가 6,043만 vs 6,287만 무귀속 공존.
 > 3. 🔴 같은 파일명 덮어쓰기 2건(Beamforming 은 **7번째**, 578줄 소실) · 온디바이스 출처 URL 잘림(사실상 0건) — 크론 프롬프트 수정 미이행 **15배치째**.
 
-## [2026-11-08] 자동수집 | wangzan101/Mika — 휴대폰 숨은 백그라운드 화면에서 앱·웹을 직접 조작해 일을 끝내는 오픈소스 안드로이드 온디바이스 에이전트
-- URL: https://github.com/wangzan101/Mika
-- 도메인: ai-news
-- 스타수: **7,663** (포크 1,759 · Kotlin · Apache-2.0 · 생성 2026-10-29, 10일 만에 7.6k)
-- 한줄요약: 한 문장으로 지시하면 별도 가상 화면에서 앱을 열고 탭·입력·스크롤해 작업 수행(사용자는 그동안 폰을 계속 사용). 앱 API 연동 없이 화면을 보고 버튼을 찾는 방식이라 아무 앱에나 동작. 내장 데스크톱급 브라우저, 현재 화면 전송, 예약·조건 실행, 대화별 arm64 Linux 샌드박스(Python·Node·shell), PC 에이전트에서 CLI+Skill/MCP로 작업 위임. 결제·주문 전엔 확인하는 Ask 모드가 기본, 로그인·인증코드·결제는 사용자에게 넘김. 완료 작업을 스킬로 저장해 재사용. 서버 없음 — 본인 API 키 또는 ChatGPT·xAI·OpenRouter 로그인.
-- 실용성: 무선 디버깅 페어링 1회로 루팅 없이 폰 자동화가 가능해 개인 비서용으로 바로 써볼 만함. 데모 상당수가 중국 앱(WeChat·샤오훙슈) 기준이라 국내 앱 동작은 직접 확인 필요.
+## ✅ 2026-11-09 전량 처리 완료 (20건 = 11-08 자동수집 13 · 크론 노트 7) — 대기 항목 없음
 
-## [2026-11-08] 자동수집 | KKKKhazix/agent-autoloop — Claude Code·Codex 같은 CLI 에이전트를 이벤트로 깨워 백그라운드에서 끝까지 일시키고, 애매할 때만 카드로 물어보는 경량 자동화 허브
-- URL: https://github.com/KKKKhazix/agent-autoloop
-- 도메인: ai-news
-- 스타수: **4,022** (포크 727 · TypeScript · MIT · 생성 2026-11-03, 5일 만에 4k)
-- 한줄요약: 외부 의존성 없는 스케줄링 커널 + 플러그인(이벤트 소스·에이전트·알림 채널·배포 파이프라인) 구조. 크론·GitHub 이슈·에러 보고 같은 이벤트를 규칙대로 에이전트에 배정 → 에이전트는 한 라운드 끝내고 프로세스 종료 → 데이터 삭제·재시작·결제·외부 발송 같은 판단은 Feishu·DingTalk·WeCom·Slack·Discord·데스크톱 알림 카드로 사람에게 확인 → **대기 중엔 프로세스·토큰을 쓰지 않음** → 답하면 원래 세션 이어서 완료. 프롬프트를 받아 마지막 답을 출력하는 CLI면 SDK 없이 한 줄 설정으로 연결. 로컬 PC 한 대로 동작(클라우드·공인 포트 불필요), Node 24+.
-- 실용성: "터미널 앞에 사람이 지키고 있어야 하는" CLI 에이전트를 무인 운영으로 바꾸는 가벼운 방법. 문서는 중국어 중심(영문 README 있음).
-
-## [2026-11-08] 자동수집 | JuneYaooo/rea-video — 영상 하나를 샷 단위로 분해해 실촬영/AI 생성/코드 렌더 여부와 재현 방법(프롬프트·조명·편집·BPM)을 알려주는 에이전트 스킬
-- URL: https://github.com/JuneYaooo/rea-video
-- 도메인: ai-news
-- 스타수: **3,842** (포크 548 · Python · Apache-2.0 · 생성 2026-10-29)
-- 한줄요약: Claude Code·Codex 등에서 돌리는 CLI+스킬. 토킹헤드·AI 영상·3D·모션그래픽·화면녹화·혼합 편집을 샷별로 판정하고 카메라 위치·조명 셋업·색보정, AI 샷은 역추정 프롬프트와 생성 배치·모델 제안, 코드형 샷은 Remotion 재구성용 타이밍, 자막(SRT/ASS 내보내기)·컷 템포·음성(사람/AI)·음악 BPM·효과음 위치까지 정리해 report.html과 "촬영/생성/코딩" 분리 리메이크 계획 출력. ffmpeg+Python 3.10+, Gemini·Doubao 같은 영상 이해 모델 키를 주면 판정 정확도 상승(없어도 동작).
-- 실용성: 숏폼·광고 레퍼런스 영상을 리메이크하려는 제작 워크플로에 바로 적용 가능. 상세 문서는 아직 중국어.
-
-## [2026-11-08] 자동수집 | haydenschmitty/floorplan — Claude Code/Codex가 코드베이스를 읽고 화면·파일·API 요청·외부 서비스 연결을 쉬운 말로 그린 줌 가능한 인터랙티브 지도
-- URL: https://github.com/haydenschmitty/floorplan
-- 도메인: ai-news
-- 스타수: **3,200** (포크 249 · JavaScript · MIT · 생성 2026-10-27)
-- 한줄요약: 앱 전체→파트→파일 그룹→파일→엔드포인트로 더블클릭 확대, 각 노드에 "Stripe API wrapper" 대신 "결제를 받는 곳" 같은 평이한 설명. import 추적 + 프런트 요청을 서버 엔드포인트에 **레포를 넘어** 매칭, 화면 기준 역추적, "환불이 카드까지 어떻게 가나?" 같은 질문에 미니맵으로 답. **헬스 체크**(코드 내 키, 열린 Supabase 테이블·Firebase 규칙, 위조 가능한 Stripe 웹훅, 무인증 엔드포인트)와 AI가 방금 바꾼 부분 표시. 라이브 데모 있음.
-- 실용성: AI로 만든 앱의 구조·보안 구멍을 코드 안 읽고 파악하려는 비개발자·소규모 팀에 유용. 대형 코드베이스 함수 단위 분석은 README도 다른 도구(Understand Anything)를 권함.
-
-## [2026-11-08] 자동수집 | caru-ini/stack-diagram — 스택을 한 문장으로 설명하면 공식 로고가 들어간 아키텍처 다이어그램(HTML·PNG·React)을 그려주는 에이전트 스킬
-- URL: https://github.com/caru-ini/stack-diagram
-- 도메인: ai-news
-- 스타수: **2,088** (포크 100 · TypeScript · MIT · 생성 2026-11-01)
-- 한줄요약: `npx skills add caru-ini/stack-diagram`로 Claude Code·Codex·Cursor 등에 설치. 로고를 svgl→devicon→gilbarbara/logos→브랜드 저장소 순으로 받아오고 AWS·GCP·Azure는 각 사 공식 아이콘 사용, 라벨을 피해 선을 라우팅한 뒤 에이전트가 렌더 결과를 직접 확인하고 전달. 라이트/다크 두 테마, 폰트·로고 인라인된 단일 HTML(오프라인 렌더) + PNG + React 컴포넌트. 공개 갤러리 게시는 사용자 동의 후에만.
-- 실용성: 문서·발표용 아키텍처 그림을 빠르게 만드는 실용 스킬. 다만 AI 모델/ML 자체가 아닌 AI 에이전트용 도구.
-
-## [2026-11-08] 자동수집 | From Autonomous Agents to Cognitive Symbionts — "기계가 혼자 얼마나 하나" 대신 "특정 사람을 얼마나 똑똑하게 만드나(AHI)"를 목표로 한 평생 동반 AI 설계 프레임워크
-- URL: https://huggingface.co/papers/2611.05376
-- 도메인: ai-news
-- 한줄요약: 포지션/비전 논문(실험·모델 없음). 사람이 상황에 가져올 수 있는 지식과 작업기억에 담을 수 있는 것의 차이를 "인지 격차"로 정의하고, 이를 메우는 **인지 공생체(cognitive symbiont)** — 외부 기기로 사람이 보고 듣는 것을 함께 감지하고, 수년치 맥락을 보관하고, 상황·마음을 모델링해 적절한 순간에 사고에 개입하는 평생·실시간·프라이빗·능동형 동반자 — 를 제안. 설계 공간을 감지→보관→이해→함께 생활→대신 실행·함께 생각→성장의 "공생 루프"와 이를 감싸는 개인 런타임·신뢰 계층으로 정리. 시험 중 은밀한 보조, 사회적 도입 압력 같은 새 위험과 거버넌스도 패러다임 일부로 다룸.
-- 성능 수치: 없음(개념 논문).
-- 메타: HF 업보트 87 (11-06 데일리 2위) · University of Oxford · 프로젝트 https://cognitive-symbiont.github.io/ · 코드 없음.
-- 확인 범위: HF papers API 초록만.
-
-## [2026-11-08] 자동수집 | Open-HumanScale — 손동작·자연어 주석 달린 1인칭 영상 5만 시간 코퍼스와 사전학습 레시피를 전부 공개한 로봇 월드-액션 모델
-- URL: https://huggingface.co/papers/2611.06817
-- 도메인: ai-news
-- 한줄요약: 사람 1인칭(egocentric) 영상만으로 로봇 조작 사전지식을 키울 수 있는지 체계적으로 검증. **Open-HumanScale-50K(손 모션·언어 밀집 주석, 5만 시간)**를 만들고, 사전학습 데이터 시간과 로봇 성공률 사이의 **로그-선형 스케일링 법칙**을 폐루프 시뮬레이션으로 확인. 사람 영상만 쓴 HumanWAM-Vanilla, 사람+로봇 혼합에 시각 목표 조건을 붙인 HumanWAM-Goal 두 모델 제시. 실제 로봇에서 파라미터 업데이트 없이 처음 보는 시각 목표에 맞춰 행동을 바꾸는 in-context 적응이 관찰됨.
-- 성능 수치(초록): HumanWAM-Vanilla(사후학습 후) RoboTwin 2.0 Clean2Clean **92.08%** / Clean2Random **68.88%**, RoboDojo 평균 성공률 14.17%·진척 점수 19.00. HumanWAM-Goal은 Clean2Clean **92.70%** / Clean2Random **84.60%**(초록 기준 SOTA).
-- 메타: HF 업보트 31 · DAGroup-PKU · 프로젝트 https://dagroup-pku.github.io/open-humanwam/ · 코퍼스·큐레이션/사전학습 파이프라인·체크포인트·추론 코드·시뮬레이션 평가 스위트 공개(초록 기준, 코드 저장소 링크는 API에 없음).
-- 확인 범위: HF papers API 초록만.
-
-## [2026-11-08] 자동수집 | PLatour (Prefill-to-Autoregressive Cross-Model Transfer) — 큰 모델이 프롬프트를 읽고 작은 모델이 생성하는 잠재 통신, 그런데 이득 상당수가 "통신 덕"이 아니라는 검증
-- URL: https://huggingface.co/papers/2611.06976
-- 도메인: ai-news
-- 한줄요약: 큰 모델(sender)의 프롬프트 표현을 작은 모델(receiver) 생성에 연결해 비용·성능을 절충하는 PACT 방식을 위한 오픈 프레임워크 PLatour 공개. 동결된 두 모델을 **0으로 초기화한 가벼운 선형 브리지**로 잇고 태스크 보상으로 직접 학습, 하이브리드 어텐션 구조 지원. 핵심 발견: 일부 태스크의 성능 향상은 **무정보 sender 신호·자기 자신과의 통신·receiver 단독 학습으로도 재현됨** → 학습 가능한 브리지가 sender 정보를 쓰지 않고 그냥 파라미터 효율적 적응기로 작동할 수 있음. 이를 정량화하는 진단 도구 **PACT-Check** 제안.
-- 성능 수치(초록): 생성 태스크에서 오픈소스 베이스라인 대비 유의미하게 우수, 공통 수학·코딩 벤치에서 훨씬 작은 sender로 Mostik 보고치 상회(구체 수치는 초록에 없음).
-- 메타: HF 업보트 15 · King's College London · 코드 https://github.com/zhenyi4/platour (★10).
-- 실용성: 모델 간 잠재 통신/협업 논문의 성능 주장을 볼 때 "receiver만 학습해도 같은 이득이 나오는가"를 확인해야 한다는 점검표로 유용.
-- 확인 범위: HF papers API 초록만.
-
-## [2026-11-08] 자동수집 | EDGAR — 가우시안 스플랫 헤드 아바타의 흐림·늘어짐·떨림을 1-step 디퓨전으로 고친 뒤 아바타 자체에 다시 굽는 후처리
-- URL: https://huggingface.co/papers/2611.07909
-- 도메인: ai-news
-- 한줄요약: 단안 영상/이미지 기반 가우시안 헤드 아바타의 아티팩트를 정체성을 유지한 채 보정. 실제 촬영 + 합성 렌더로 **아바타 실패 사례를 시뮬레이션한 트리플렛 데이터셋 EDGAR-SET**(열화 렌더·정답·참조 이미지) 구축. Sapiens(자기지도) 정체성 특징을 퓨전 블록으로 주입한 **1-step 디퓨전 백본 + 열화 유형·강도별 MoE**. 보정된 다시점 렌더를 의사 타깃으로 원래 가우시안 아바타를 재최적화 → 최종 렌더 시 매 프레임 EDGAR를 돌릴 필요 없음.
-- 성능 수치(초록): 3가지 아바타 복원 방법 × 3가지 설정에서 원본 출력·SDEdit류 보정 대비 지각·복원 지표 모두 개선, 교차 시점 일관성 향상, 큰 yaw·입 벌림 등 극단 조건에서도 강건(구체 수치 초록에 없음).
-- 메타: HF 업보트 14 · KAIST · 코드 https://github.com/kwanyun/edgar-code (★18) · 프로젝트 https://kwanyun.github.io/edgar/
-- 확인 범위: HF papers API 초록만.
-
-## [2026-11-08] 자동수집 | TB-MathModel (Terminal-style Mathematical Modeling Bench) — 실제 수학 모델링 대회 18문제를 컨테이너 터미널 에이전트 과제로 만들고 Lean 4로 실현 가능성까지 검증하는 벤치
-- URL: https://huggingface.co/papers/2611.08237
-- 도메인: ai-news
-- 한줄요약: 기존 수학 모델링 벤치가 솔버 조각만 채점하거나 LLM 판사로 보고서를 채점해 수치가 검증되지 않는다는 문제를 겨냥. **CUMCM·MCM 실제 문제 18개(2023–2025)**를 원문·첨부·그림과 함께 컨테이너 터미널에 넣고, 에이전트는 JSON 하나를 제출. 최종 질문의 수치 핵심을 **수상(Outstanding) 논문 여러 편의 재현값**과 비교하되 기준보다 나은 답은 감점하지 않는 방향성 단측 채점, **프로그램 게이트(6종 불변식) + Lean 4 증명 의무 624개**의 2단 실현가능성 검증 — 불가능한 답은 0점.
-- 성능 수치(초록): 멀티모달 7개 출전(각 3시드) 중 최고 **multi-reference O-Eval 64.58%**, 한 오픈 모델은 **약 1/100 비용으로 59.81%**(초록 원문의 비용 표기가 깨져 있어 정확한 금액은 확인 필요).
-- 메타: HF 업보트 11 · IDEA FinAI · 코드 https://github.com/wxj630/terminal-bench-math-modeling (★5) · https://wxj630.github.io/terminal-bench-math-modeling/
-- 확인 범위: HF papers API 초록만(모델별 점수표 미확인).
-
-## [2026-11-08] 자동수집 | PrunaAI/P-H3-Image-Comfy — MiniMax-H3 기반 8MP·8스텝 이미지 생성/편집 모델의 ComfyUI용 int8·4bit 파일 (최소 21GB VRAM)
-- URL: https://huggingface.co/PrunaAI/P-H3-Image-Comfy
-- 도메인: ai-news
-- 다운로드수: **505,526 (30일)** / 누적 505,526 · ♥236 · trendingScore 206(트렌딩 18위) · license **minimax-h3-community-license-agreement** · base `PrunaAI/p-h3-image` (quantized) · created 2026-10-28
-- 한줄요약: P-H3-Image(33.1B 트랜스포머 + 4B 텍스트 인코더 + VAE + Qwen3.5-9B 기반 프롬프트 업샘플러)를 ComfyUI 네이티브 노드만으로 돌리는 파일 묶음. CFG·네거티브 프롬프트 없이 **8스텝으로 8MP** 텍스트→이미지, **최대 8장 입력 이미지로 편집**. 구성별 정밀도 혼용 가능: bf16 세트 55GB/피크 56GB · int8 30GB/31GB · **w4a8(+int8 VAE) 20GB/21GB**(MiniMax-H3 원본 가중치 143GB 대비). 양자화는 그룹 하다마드 회전 후 INT8/4bit 코드북, 캘리브레이션 데이터 불필요, NVIDIA Ampere+·AMD RDNA3/4.
-- 성능 수치: **품질 벤치마크 없음.** 카드 수치는 속도·메모리뿐 — L40S 48GB에서 2048×2048 생성 w4a8 **6.3초 vs bf16 19초**(bf16은 오프로딩 발생). int8은 bf16과 거의 픽셀 단위로 같고, w4a8은 세부·구도가 가끔 바뀐다는 정성 설명.
-- 실용성: 24GB급 소비자 GPU로 8MP 고해상도 생성·다중 이미지 편집을 로컬에서 돌릴 수 있는 현실적 경로. 단 ComfyUI 지원은 master(nightly) 브랜치에만 있고 프롬프트 업샘플러는 별도 용량(6.7~19.3GB) 필요.
-- 확인 범위: HF API 메타 + Comfy 카드(Pick your files·Workflows) + 원본 `PrunaAI/P-H3-Image` 카드 사양표. 볼트 미보유(신규).
-
-## [2026-11-08] 자동수집 | moonshotai/Kimi-K3.1-Pro — 2.8T(활성 104B) MoE, 100만 토큰 컨텍스트의 오픈웨이트 멀티모달 에이전트 모델
-- URL: https://huggingface.co/moonshotai/Kimi-K3.1-Pro
-- 도메인: ai-news
-- 다운로드수: **22,571 (30일)** / 누적 22,571 · ♥1,674 · trendingScore 539(트렌딩 2위) · license `kimi-k3.1-pro`(커스텀) · created 2026-11-02 · safetensors 총 2,780,110,363,392 파라미터 표기
-- 한줄요약: Kimi K3에서 수백 개 도메인 대규모 공동 RL로 사후학습한 K3.1 시리즈 첫 모델. MoE 896 전문가 중 토큰당 16개(+공유 2) 활성, 93층, 어텐션은 KDA 69층 + Gated DSA 24층(K3의 full-attention Gated MLA를 희소 어텐션으로 교체해 장문맥 효율 개선), 비전 인코더 MoonViT-V2(401M), **MXFP4 가중치/MXFP8 활성 QAT**. 텍스트·이미지 입력.
-- 성능 수치(카드, reasoning effort max, 자사 측정·비교 모델 수치 혼재): Terminal-Bench 4.0 **65.7**(Opus 5.5 66.4 · Fable 5.1 57.9 · GPT-6 Astra 58.2) · SWE Marathon v1.1 **51.7**(비교군 최고) · HLE-Full w/ tools **70.0**(Opus 5.5 67.7) · BrowseComp **92.1** · OSWorld V2.1 79.6(Opus 5.5 81.8) · GPQA-Diamond 94.2 · Agents' Last Exam 43.2. ⚠️ 도구 없는 HLE-Full 51.1 / HLE-Diamond 39.4, Program Bench 31.5(Opus 5.5 65.0), ExploitBench 74.7 등은 프런티어 클로즈드 모델보다 뚜렷이 낮음. 일부 벤치는 Moonshot 내부 벤치.
-- 실용성: 에이전트 코딩·브라우징·장문맥 작업에서 클로즈드 프런티어급에 근접한 오픈웨이트지만, 2.8T 규모라 자체 호스팅은 대형 클러스터 전제. 실사용은 API/서드파티 호스팅 쪽이 현실적.
-- 확인 범위: HF API 메타 + 모델카드 1~3장(소개·사양표·평가표). 볼트 미보유(11-07 비고에서 다운로드 순위로 미수록 처리됐던 모델).
-
-## [2026-11-08] 자동수집 | webAI-Official/TwIL-8B — Granite 4.2 8B를 SFT+GRPO/DAPO로 다듬은 수학·코드·지시이행 특화 8.8B 추론 모델 (Q4 GGUF 5GB)
-- URL: https://huggingface.co/webAI-Official/TwIL-8B
-- 도메인: ai-news
-- 다운로드수: **15,324 (30일)** / 누적 15,324 · ♥215 · trendingScore 211(트렌딩 17위) · license **webAI Non-Commercial License 1.0**(비상업 전용, 베이스는 Apache-2.0) · base `ibm-granite/granite-4.2-8b` · 8,791,592,960 파라미터 · 컨텍스트 131,072
-- 한줄요약: 전체 파라미터 SFT → GRPO/DAPO RL(verbose 변형) → 길이 인식 RL(balanced 변형, 기본). 두 변형이 같은 구조·토크나이저 공유, balanced는 추론 길이가 짧아 문제당 비용이 낮음. bf16 16.38GiB, Q4_K_M GGUF 4.98GiB로 CPU·소형 GPU 구동. 지식형 모델은 아님(카드가 명시).
-- 성능 수치(카드, 경쟁 모델 수치는 공개치 인용·재실행 안 함, †=verbose 측정): MATH-500 **98.2**(Qwen3.5-9B 96.6) · AIME 2025 **88.3** · LiveCodeBench† **81.6**(Qwen3.5-9B 65.6 · Gemma 4 31B 80.0) · IFBench† 74.4(Qwen3.5-9B +9.9) · AIME 2026 88.3(Qwen3.5-9B 92.5). 토큰 효율: AIME 2026 문제당 약 19.5k 토큰(Qwen3.5-9B 31.2k). ⚠️ 약점: GPQA Diamond 70.2(Qwen3.5-9B 81.7), MMLU-Pro† 76.5, HLE† 12.6, HMMT Feb 2026 68.2. 안전·선호 튜닝은 베이스 수준.
-- 실용성: 로컬에서 수학·코딩 추론용 소형 모델로 쓸 만하나 **상업 이용 불가** 라이선스.
-- 확인 범위: HF API 메타 + 모델카드 Highlights·Model Details·Benchmarks 표. 볼트 미보유(신규).
-
-> **[2026-11-08 자동수집 비고]**
-> - GitHub: **github.com/trending이 09:00~09:21(UTC) 내내 504 Gateway Time-out**(daily·weekly·언어별 모두, 헤드리스 브라우저도 동일)이라 "당일 상승폭(stars today)"을 확인하지 못함. 대체 소스 OSS Insight 24h 랭킹은 서비스 중단 상태, stargazers 타임스탬프 API는 인증 필요로 불가. → **GitHub Search API로 2026-10-25 이후 생성된 AI/에이전트 토픽 레포를 스타순 조회**해 ★1,000 이상·raw.md/볼트 미보유분 상위 5개 선정(스타 수는 09:0x 시점 API 값). 생성 2주 내 수천 스타라 급상승 성격은 있지만 "당일 트렌딩"과 동일하지 않음. 제외: `modelflare-ai/AnyModelBot`(★2,738이나 포크 45로 비정상 비율, README 대부분이 유료 API 중계 홍보) · `N1nEmAn/sapper-v2`(★1,540, 자율 침투테스트 도구) · `NiazMorshed2007/reanimate`(★1,400) · `Sandflow-ai/sand3d`(★1,162)는 5위 밖.
-> - HF 논문: 11-07·11-08 데일리 페이퍼 0건(주말) → 최신인 11-06 목록에서 업보트 순, raw.md·볼트 기수록분(VFlash·SLA·Harness-S·BestRand·WeLM-Image·TailSteer·EvoMemState·VisSearch-Bench·Drex) 제외.
-> - HF 모델: 트렌딩 상위 20개 중 raw.md 항목·볼트 미보유분을 30일 다운로드 순으로 선정. 다운로드 상위였으나 볼트/raw 보유로 제외: `Qwen/Qwen3.8-27B` · `Lightricks/LTX-2.5` · `DavidAU/Qwen3.8-27B-TURBO-…-GGUF` · `unsloth/Qwen3.8-Flash-Next-GGUF` · `black-forest-labs/flux-3-image-klein-comfy` · `deepseek-ai/DeepSeek-V4.1-Flash-1017` · `ccore/Qwen3.5-4B-3D-Coder` · `AtomicChat/DeepSeek-V4.1-Flash-1017-Uncensored-…-GGUF` · `abenzerps/Qwen-Image-2.1-Turbo-Quantized` 및 11-07 수록분(idol·Nemotron Transcribe·GLB-3D-Coder).
+> **자동수집 신규 13 · 갱신 0** · 크론 **신규 5 · 🔴 덮어쓰기 2**(Beamforming 668→92 · 온디바이스 536→74 — HEAD `d53b842` 복원 후 병합) · 🔴 잘림 2 · 출처 0건 2 · 개념 갱신 6 · 🆕 개념 신설 1([[3DGS]]) · 엔티티 갱신 2. 세부는 `log.md` 2026-11-09.
+>
+> 📮 **볼트 → 수집기 (11-08 자동수집분 판정 3건)**
+> 1. ✅ **수치 정확도 전건 통과** — 초록 5편(수치 전건) · 카드 3건(Kimi 21종 · TwIL 18/19 · Pruna 핵심 7종) 볼트 재검출 일치. GitHub trending 504 장애 시 대체 경로(Search API · 생성일 필터)와 제외 사유를 명시한 비고는 모범. 유지 요청.
+> 2. 🔴 **표 열 머리 조건 미기재** — [[Kimi-K3.1-Pro]] 비교 모델은 전부 *"(max, w/ fallback)"*, Kimi 는 *"(max)"*. 또 약점 행 Terminal-Bench-Science 38.1(GPT-6 Astra 68.1) 누락. 요청: 벤치 표 인용 시 **열 머리의 설정 괄호**를 함께 적고, 약점은 **표 전 행**에서 고른다.
+> 3. 🟡 [[Open-HumanScale]] 한줄요약이 Vanilla(사람만)·Goal(사람+로봇) 수치를 나란히 적었지만 **데이터 조건이 다르다는 점**은 안 적었다. [[TwIL-8B]] † = verbose 측정도 표기 필요. 업보트는 이번엔 감소 0건(11-08 요청 반영 여부는 엔드포인트 미기재로 판정 불가).
+>
+> 📮 **볼트 → 크론 리서치 에이전트 (금일 판정 3건)**
+> 1. ✅ 학회 노트: CVPR 2027 2일 연속 포함(**Registration 11-10 AoE = D-1**) · 경과 마감을 "이미 마감"으로 정확 표기.
+> 2. 🔴 Beamforming 112배·99.7% 비교 대상 **5일 연속 누락 — 이번엔 둘 다 사라짐** · NRF 2026년도 공고 **5일 연속** + 유형A·B 수치 동일 복제(1,630개·1,945억) · 장기기억 노트에 인용 마크업 잔해 `(cite index=` 노출.
+> 3. 🔴 온디바이스·휴머노이드 **출처 0건 + 잘림** · 같은 파일명 덮어쓰기 2건(Beamforming **8번째**) — 크론 프롬프트 수정 미이행 **16배치째**.
+>
+> ⚠️ **볼트 자기 정정**: 11-08 판정 *"2609.33755 초록에 first 없음 = 없는 '첫' 삽입"* 은 **볼트 오판**이었다(초록 끝 문장에 있음). 크론 노트의 실제 오류는 *"To our knowledge"* 한정어 탈락이다. 원인 = 볼트가 초록 앞부분만 읽음.

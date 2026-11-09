@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-11-08
+updated: 2026-11-09
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -666,3 +666,98 @@ Spectral Progressive Diffusion이 디노이징 궤적을 따라 해상도를 점
 - Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
 - Physics-informed Spectral Diffusion Models — https://arxiv.org/abs/2602.09708
 -
+
+## 🔄 2026-11-09 크론 갱신 (🔴 덮어쓰기 668 → 92줄 → git HEAD `d53b842` 판본 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 위 본문은 git HEAD 판본이며, 이 섹션 아래가 11-09 배달분이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-09) — arXiv abs 3건 직접 조회(전문 초록 끝까지)
+> - 🔴 **[[비매칭-비교]] 5일 연속, 이번엔 더 나빠짐** — *"기준 성능의 99.7% 유지하면서 112배 적은 파라미터"*. 초록: 99.7% = **수치 최적화 레이트** 대비, 112배 = **데이터 기반 방법** 대비(*"nearly matches the rate of the data-driven method despite using approximately 112× fewer…"*). 11-08 에 붙었던 "수치 최적화 대비"마저 빠져 **비교 대상 0개**.
+> - ⚠️ **볼트 정정(11-08 판정 오류)** — 11-08 볼트는 2609.33755 에 대해 *"초록에 first 주장 없음 = 없는 최상급 삽입"* 이라 판정했으나 **틀렸다.** 초록 마지막 문장: *"To our knowledge, this is the **first** real-time multi-channel Transformer-based neural beamforming pipeline deployed on an MCU-class device."* 크론의 오류는 삽입이 아니라 **"To our knowledge" 한정어 탈락**([[한정어-탈락]] 정방향)이다. 원인: 볼트가 초록을 앞부분만 읽고 "없음"을 확정 — 볼트 자신의 [[표-부분인용]].
+> - ✅ 2609.03069 *Learnable composition for neural operators* 실존·제목 일치(신규 인용). 초록 정량치(Darcy 대형 도메인 오차 **36–56% 감소**, 타깃 시뮬 16개 적응 후)는 노트에 없음.
+> - 🔴 출처 7번째 URL 잘림(`2603.`) · 같은 파일명 덮어쓰기 **8번째**(668줄 소실 → HEAD 복원).
+
+이 주제들에 대해 최신 arXiv 논문들을 검색하겠습니다.
+## Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향
+
+**핵심 3줄**
+- 
+Neural beamforming은 고주파 통신의 근거리 차단 문제 해결을 위해 물리-신경망 하이브리드 방식으로 진화 중
+
+- 
+Neural operator는 셀 복소체와 위상학적 공간으로 확장되어 교차차원 결합을 명시적으로 모델링
+
+- 
+Spectral diffusion은 PDE 해법의 생성모델로 잠재공간 스펙트럼 표현에서 확산 과정을 수행하여 차원 축소 달성
+
+
+**상세**
+
+**Neural Beamforming 분야**
+- 
+Physics-guided Neural Airy Beamforming은 궤적 선택 최적화를 통해 기준 성능의 99.7% 유지하면서 112배 적은 신경망 파라미터 사용
+
+- 
+CNN 기반의 NOMA 다운링크 빔포밍은 전력 최소화 문제에서 복잡한 반복 알고리즘 대체로 계산 부담 및 지연 감소
+
+- 
+Transformer 기반 신경 빔포밍이 MCU 디바이스에서 실시간 다중채널 MVDR 빔포머로 최초 배포
+
+- 
+Graph Neural Network 기반의 멀티캐리어 광대역 하이브리드 빔포밍이 빔 스퀼팅에 강하고 불완전한 채널정보에 견고
+
+- 
+Liquid crystal 안테나와 Liquid Neural Network를 결합한 sub-THz 시스템이 손실 위상 시프터 제거하고 전압제어 튜너빌리티 활용
+
+
+**Neural Operator 분야**
+- 
+Topological Neural Operators는 셀 복소체 기반 위상학적 영역에서 신경 연산자를 확장한 통일적 프레임워크 제시
+
+- 
+Learnable composition은 도메인 기하학 및 크기 변화에 대응하기 위해 사전훈련된 소규모 부분영역 연산자를 가벼운 모듈로 합성
+
+- 
+FNO-MoE는 혼합 전문가 구조로 전체 화학 상태를 30분 단위로 단일 호출로 예측하며 능동 샘플링으로 정확도 개선
+
+- 
+Time-Frequency Gated Spectral Neural Operators (TF-SNO)는 비정상 PDE 학습에 시간-주파수 게이팅 적용
+
+- 
+Tensorized Fourier Neural Operator가 핵질량 모델 보정에 적용되어 198.2 keV 오차로 최신 기법 경쟁력 보유
+
+
+**Spectral Diffusion 분야**
+- 
+Spectral Regularization은 푸리에·웨이블릿 손실을 추가하여 자연신호의 다중 스케일 구조를 확산 모델 학습에 통합
+
+- 
+Spherical harmonic 표현을 기반으로 구면 데이터 확산 모델을 개발하여 기하학적·확률론적 난제 해결
+
+- 
+Spectral Diffusion for Protein Dynamics는 푸리에 변환을 귀납적 편향으로 사용하여 느린 구조 변화와 빠른 원자 진동 분리
+
+- 
+Energy-Conditioned Noise Schedule은 주파수 에너지에 따라 노이즈를 적응적으로 할당하여 스펙트럼 에너지 분포 반영
+
+- 
+Adaptive Spectral Feature Forecasting (Spectrum)은 훈련 불필요한 다중 단계 특징 예측으로 확산 샘플링 가속화
+
+
+**💡 인사이트/시사점**
+- 
+신경 빔포밍의 핵심 트렌드는 물리적 해석가능성을 유지하면서 극도의 파라미터 효율성 달성
+으로, 임베디드 5G/6G 장비 배포에 실질적 영향
+- Neural operator와 spectral diffusion의 결합(PDE 풀이, 분자동역학)은 
+스펙트럼 공간에서의 차원 축소로 전산 비용 대폭 절감
+하면서 물리 기반 제약 유지
+- 세 분야 모두 "물리-학습 하이브리드" 패러다임으로 수렴 중으로, 검증 가능성과 효율성을 동시에 추구하는 추세 확인
+
+**출처**
+- Physics-Guided Neural Airy Beamforming for Near-Field Blockage Mitigation — https://arxiv.org/abs/2608.04388
+- Efficient Graph Neural Networks for Multicarrier Wideband Hybrid Beamforming — https://arxiv.org/abs/2609.09708
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement — https://arxiv.org/abs/2609.33755
+- Topological Neural Operators — https://arxiv.org/abs/2606.09806
+- Learnable composition for neural operators — https://arxiv.org/abs/2609.03069
+- An actively trained neural operator for atmospheric chemistry — https://arxiv.org/abs/2610.33771
+- Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.

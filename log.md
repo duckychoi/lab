@@ -5550,3 +5550,37 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Paper Registration 11-10 AoE(D-2)** · Submission 11-16 · Supp 11-23
 2. [[idol]] 사진→3DGS 회전 샷 시험(7.2GB · 약관 확인 선행)
 3. 크론 프롬프트 파일명 충돌 방지 — **15배치째 미이행**
+
+## [2026-11-09] ingest | **대기 20건 전량 처리** (11-08 자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: 자동수집 13 = ai-news 5(Mika · floorplan · stack-diagram · TB-MathModel · Kimi-K3.1-Pro) · local-llm 4(agent-autoloop · Cognitive-Symbiont · PLatour · TwIL-8B) · video-saas 2(rea-video · P-H3-Image-Comfy) · slam-3dgs 2(Open-HumanScale · EDGAR) / 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 13 · 갱신 0** · 크론 **신규 5 · 🔴 덮어쓰기 2**(Beamforming 668→92 · 온디바이스 536→74 → git HEAD `d53b842` 복원 후 `🔄 2026-11-09` 병합, 순수 추가 95·77줄)
+- **추가 페이지**: **19개** (소스 13 + 크론 5 + 🆕 개념 [[3DGS]]) | **업데이트 페이지**: 크론 2 + 엔티티 2(Moonshot AI · MiniMax) + 개념 6(한정어-탈락 · 비매칭-비교 · 표-부분인용 · 크론-덮어쓰기-소실 · 문서내-값충돌 · 계수기-배수)
+- **페이지 수**: 1741 → **1760** (sources 1530 · concepts 93) ✅ `find` 실측 일치
+- **canvas 업데이트**: NO (⚖️ 체납 유지)
+- **actionable 추가**: YES — 4항목(CVPR 2027 Registration **D-1** · P-H3-Image w4a8 시험 · rea-video 역분석 · 승인 경로 패턴)
+- **독립 검증**: GitHub API 5레포 · HF papers API 5(초록 전문 · 수치 전건 검출) · HF models API 3 + 카드 raw 3건(Kimi 평가표 HTML 11행 전 열 파싱 · TwIL 18/19 · Pruna 7종) · arXiv abs 6건(Beamforming 3 · 장기기억 3 — 전건 실존·제목 일치)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**"원문에 없다"는 판정은 원문을 끝까지 읽어야만 쓸 수 있다 — 오늘 그 규칙을 어긴 쪽은 볼트였다.** 11-08 볼트는 크론이 2609.33755 에 "첫"을 지어냈다고 판정했지만, 초록 마지막 문장에 *"To our knowledge, this is the first…"* 가 있었다. 실제 오류는 크론의 **한정어 탈락**이고, 볼트는 초록 앞부분만 보고 "없음"을 확정했다. 같은 날 [[Kimi-K3.1-Pro]] 표 열 머리("w/ fallback")와 [[Open-HumanScale]] 의 데이터 조건 차이도 "끝까지/전 열 읽기"에서만 보였다.
+
+### 🏆 주요 발견
+1. ⚠️ **볼트 자기 정정** — 11-08 "없는 최상급 삽입" 판정 철회([[한정어-탈락]] 하위 유형 근거 0건 → 철회) · raw.md·index.md 11-08 항목에 정정 주석.
+2. 🔴 [[Kimi-K3.1-Pro]] — 비교 모델만 *"(max, w/ fallback)"* · 수집기 누락 약점 행 TB-Science 38.1(GPT-6 Astra 68.1) · K3 대비 GPQA +0.7 · BrowseComp +0.9.
+3. 🔴 [[Open-HumanScale]] — 84.60% SOTA 는 사람+로봇 혼합 + 목표 조건 모델 몫, 사람 영상만은 68.88%.
+4. ✅ [[PLatour]] — 저자가 "receiver 단독 학습으로도 이득 재현"을 초록에 넣은 자기 반증 사례.
+5. 📈 [[P-H3-Image-Comfy]] 하루 +12만 다운로드 · [[rea-video]] 하루 ★+29% — 배치 최대 채택 신호(둘 다 video-saas).
+6. 🔴 크론: Beamforming 112배/99.7% 비교 대상 5일 연속 누락(이번엔 0개) · NRF 2026년도 공고 5일 연속 + 유형A·B 수치 복제 · 출처 0건 2 · 덮어쓰기 Beamforming **8번째**.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치·추론·벤치 재현 없음. GitHub 5레포 README 미정독(수집기 요약 기준).
+2. 🔴 TB-MathModel 비용 문장 "$2.54" 는 깨진 LaTeX 에서 볼트 추정 · 모델별 점수표 미열람. MemoryBench "단순 RAG 미능가" 주장은 **초록에 없음, 본문 미확인**(오늘 교훈대로 "없다"고 확정하지 않음).
+3. 🔴 크론 노트는 표본만 대조 ⇒ 전건 `reliability: low`. 부동산 실거래가·NRF 2027년도 일정·휴머노이드 수치 미대조.
+4. ⚖️ canvas · domains/ 미갱신. 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 삭제한 raw 항목 사본: `/tmp/ing1109/raw.removed.md` · 크론 원본 사본: `/tmp/ing1109/cron_orig/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Paper Registration 11-10 AoE(D-1, 한국시간 11-11 20:59)** · Submission 11-16
+2. [[P-H3-Image-Comfy]] w4a8 8MP 시험(라이선스 확인 선행) · [[rea-video]] 숏폼 1편 역분석
+3. 크론 프롬프트 파일명 충돌 방지 — **16배치째 미이행**

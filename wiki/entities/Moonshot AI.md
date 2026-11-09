@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, china, frontier-lab, kimi, moe, open-weights]
 created: 2026-07-28
-updated: 2026-07-28
-sources: [Kimi-K3.md, Kimi-K2.6.md, Kimi-K2.7-Code.md]
+updated: 2026-11-09
+sources: [Kimi-K3.1-Pro.md, Kimi-K3.md, Kimi-K2.6.md, Kimi-K2.7-Code.md]
 reliability: high
 ---
 
@@ -29,3 +29,6 @@ reliability: high
 ## 원본
 - 대표 모델: https://huggingface.co/moonshotai/Kimi-K3
 - 신뢰도: ⭐⭐⭐⭐ (Kimi K2/K3 실물 모델·논문 공개, HF 트렌딩 상위 실사용층 확인. 벤치 자체발표는 잠정)
+
+## 🔄 2026-11-09
+- 🆕 [[Kimi-K3.1-Pro]] — K3 에 수백 도메인 공동 RL + 어텐션을 Gated MLA → **KDA 69 + Gated DSA 24층** 희소화, MXFP4/MXFP8 QAT. GPQA 93.5→94.2 · BrowseComp 91.2→92.1(자체 보고 간). 🔴 평가표에서 비교 모델만 "w/ fallback" 설정 · Program Bench 31.5 / TB-Science 38.1 은 프런티어 아래. dl30 25,569 · ♥1,751.
