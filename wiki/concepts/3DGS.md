@@ -4,7 +4,7 @@ type: concept
 domain: slam-3dgs
 tags: [slam-3dgs, 3dgs, gaussian-splatting, concept]
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-10
 sources: [EDGAR.md, idol.md, ME-World.md, OuroWorld.md, WorldSculpt.md, Introduction-to-Autonomous-Robots.md]
 reliability: medium
 ---
@@ -21,3 +21,6 @@ reliability: medium
 ## 관련 소스
 - [[EDGAR]] · [[idol]] · [[ME-World]] · [[OuroWorld]] · [[WorldSculpt]] · [[Introduction-to-Autonomous-Robots]]
 - [[월드모델]] · [[slam-3dgs]]
+
+## 🔄 2026-11-10 사례 추가 — [[SplatAnything]]
+- feed-forward 3DGS 의 스케일 불안정 원인을 "전역 반경 정규화로는 이웃 가우시안 **간격**이 고정되지 않는다"로 짚고 간격의 강건 통계로 정규화(GSNorm). 초록에 정량 수치 없음 · 레포 생성 이틀째(★123).

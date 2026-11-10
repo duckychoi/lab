@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, agent, desktop-app, orchestration]
 created: 2026-11-01
-updated: 2026-11-02
+updated: 2026-11-10
 sources: [https://github.com/milind-soni/OpenMausBot]
 reliability: medium
 ---
@@ -46,3 +46,12 @@ reliability: medium
 
 > [!warning] 이력 3개월 · 하루 1회 이상 배포 · 이슈+PR 649
 > 자기 컴퓨터 제어(macOS·Ubuntu Xorg 옵트인) + Composio 500+ 앱 + 외부 클라우드 VM이 한 앱에 묶인다. 측정 수치는 여전히 README에 없다. 액션은 11-01과 같이 **보류**.
+
+## 🔄 2026-11-10 갱신 (인제스트 2026-11-10) — ★20,210 · **8일 만에 약 2배** · 이슈+PR 983
+
+**GitHub API 실측(11-10 09:06Z)**: ★**20,210**(수집기 20,204 · +6 드리프트) · fork 2,773 · open_issues **983** · Apache-2.0 · TypeScript · pushed 2026-11-10T09:05Z(조회 1분 전)
+- 📈 볼트 마지막 기록 ★10,902(11-02) → **+9,308 / 8일**(일평균 약 1,160 · 수집기 당일 +1,587). fork 1,487 → 2,773.
+- 🔴 open_issues **649 → 983(+334 / 8일)** — 스타와 같은 속도로 미해결 표면이 는다. 11-02 경고("이력 3개월 · 하루 1회 이상 배포") 유지.
+- 수집기 서술 중 볼트 기존 확인과 겹치는 것: 로컬 CLI(`claude`/`codex`/`grok`) · 승인 카드 · 127.0.0.1 하네스 · `~/.openmausbot` · Wayland 호스트 제어 비활성(#345). **신규 서술**: 격리 로컬 VM 옵션 · 팀 모드 개발 중 — 볼트 README 미재열람(수집기 판독 기준).
+- ⚖️ 수집기 "중간 프록시 없음"은 로컬 CLI 경로 한정이다. 11-02 볼트 확인대로 **클라우드 컴퓨터 경로는 후원사 boat.dev 로 작업이 나간다.** 오늘 요약에는 이 구분이 빠졌다.
+- 액션: 보류 유지. 이 볼트 사용자는 이미 텔레그램으로 같은 형태를 쓰고 있다.

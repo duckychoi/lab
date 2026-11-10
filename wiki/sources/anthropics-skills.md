@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skills, anthropic, spec, claude-code, plugins]
 created: 2026-09-04
-updated: 2026-09-06
+updated: 2026-11-10
 sources: []
 reliability: high
 ---
@@ -74,3 +74,17 @@ raw 09-06 수집값 ⭐174,695와 일치. 09-04 기록 ⭐173,849 → **+850**.
 - 수집: 2026-09-04 자동수집 (ai-news)
 - 검증: README defuddle 원문 + GitHub API 실측 (2026-09-04)
 - 신뢰도: ⭐⭐⭐⭐⭐
+
+## 🔄 2026-11-10 갱신 (인제스트 2026-11-10) — ★191,561 · 🔴→✅ **Office 스킬 4종 Apache 2.0 전환 — 볼트 기존 "복사·재배포 금지" 지침 해제**
+
+**GitHub API 실측(11-10 09:06Z)**: ★**191,561**(수집기 191,550 · +11) · fork 22,493 · open_issues 1,511 · **레포 레벨 license 여전히 `null`** · pushed 2026-11-06T22:32Z
+- 📈 볼트 마지막 기록 ★174,699(09-06) → **+16,862 / 65일**.
+- ✅ **커밋 직접 확인**(commits API): 2026-11-06 *"Move Office skills to the Apache 2.0 license (#2146)"* · 10-28 mcp-builder → MCP TypeScript SDK v2(#2087) · 10-09 claude-api: dynamic workflows(#1995) · Haiku 5.5 · Managed Agents(#1991) · 09-29 Opus 5.5 기본 · Sonnet 5.5(#1930).
+- ✅ **파일 직접 확인**: `skills/docx/LICENSE.txt` 첫 줄 = *Apache License Version 2.0*. README 20행: 문서 스킬 4종(docx·pdf·pptx·xlsx)도 *"These are also open source (Apache 2.0)"*. (pdf·pptx·xlsx 의 LICENSE.txt 는 개별 미열람 — README 문장 기준.)
+
+> [!warning] ⚠️ 볼트 기존 서술 정정 (09-04 · 09-06 기록)
+> 이 페이지 위쪽의 *"문서 스킬 4종은 source-available · 복사·재배포 금지, 열람만"* 은 **11-06 이후 더 이상 맞지 않는다.** 당시 판정은 당시 라이선스 기준으로 옳았고, 바뀐 것은 원본이다. 다만 **레포 레벨 license 필드는 여전히 null** 이라 API 메타만 보면 변화가 보이지 않는다 — 폴더별 LICENSE.txt 를 봐야 한다.
+> 수집기의 "라이선스 전환이 급상승 원인"은 수집기 스스로 추정이라 표기 — 볼트도 인과는 확인하지 못했다.
+
+- ⬜ 이월 미해소: `./spec` 과 agentskills.io 표준의 버전 일치 여부 — **3회차 미확인**.
+- README 24행: *"provided for demonstration and educational purposes only"* · Claude 실제 동작과 다를 수 있음 — 수집기 판독 일치.

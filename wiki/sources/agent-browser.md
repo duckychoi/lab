@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, browser-automation, rust, agent-web, vercel, cdp, observability, tool]
 created: 2026-09-24
-updated: 2026-09-24
+updated: 2026-11-10
 sources: []
 reliability: high
 ---
@@ -68,3 +68,12 @@ macOS ARM64 · macOS x64 · Linux ARM64 · Linux x64 · Windows x64 — **전부
 - 출처: https://github.com/vercel-labs/agent-browser
 - 확인 범위: **README 2,036행 확보 + 섹션 구조 28개·핵심 6섹션 열람**(`Commands` 540행 미열람) · GitHub API 실측 · **npm registry·downloads API 실측**
 - 신뢰도: ⭐⭐⭐ (★43,140 · Apache-2.0 · Vercel Labs 공식 · npm 월 532만)
+
+## 🔄 2026-11-10 갱신 (인제스트 2026-11-10) — ★48,800 · open issues 813 → **545**
+
+**GitHub API 실측(11-10 09:06Z)**: ★**48,800**(수집기 48,797 · +3) · fork 3,331 · open_issues **545** · Apache-2.0 · Rust · pushed 2026-11-10T01:45Z
+- 📈 볼트 마지막 기록 ★43,140 → **+5,660**. ✅ **open issues 813 → 545(−268)** — 기존 "허" 항목(★ 대비 1.9% · 배치 최고 비율)이 **1.1%** 로 내려왔다. 닫힌 방식(해결/일괄 정리)은 볼트 미확인.
+- 🆕 수집기 서술(README 앞부분 판독 · 볼트 미재열람): 클릭 대상이 숨김·비활성·뷰포트 밖·배너에 가려지면 **성공으로 보고하지 않고 실패 반환** · `--session` 별 독립 데몬 · 1시간 무입력 시 상태 저장 후 종료 · Lightpanda·Obscura 엔진 · iOS 시뮬레이터 Safari · 클라우드 브라우저 5종 · 버전 일치 스킬 내장(`agent-browser skills get core`).
+- 📌 "가려진 요소 클릭은 실패로 돌려준다"는 [[에이전트-웹접근]] 축에서 중요한 성질이다 — 에이전트가 **거짓 성공**을 받지 않는다. 실제 동작은 미실행이라 미확인.
+- ⚖️ 수집기 "Playwright MCP 보다 토큰이 적다"는 **수치 없는 서술**이다. 스냅샷 방식상 그럴 개연성은 있으나 측정값은 README 에서도 볼트가 본 적 없다.
+- 액션: 09-24 등록분(`npm i -g agent-browser` 1회 구동) **미집행 상태 유지** — 오늘 수집기가 더 가벼운 경로 `npx agent-browser open example.com` 을 제시.

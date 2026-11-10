@@ -5584,3 +5584,38 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Paper Registration 11-10 AoE(D-1, 한국시간 11-11 20:59)** · Submission 11-16
 2. [[P-H3-Image-Comfy]] w4a8 8MP 시험(라이선스 확인 선행) · [[rea-video]] 숏폼 1편 역분석
 3. 크론 프롬프트 파일명 충돌 방지 — **16배치째 미이행**
+
+## [2026-11-10] ingest | **대기 20건 전량 처리** (11-10 자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: 자동수집 13 = ai-news 5(OpenMausBot · anthropics-skills · agent-browser · claude-quickstarts · PCBRouteAgent) · local-llm 4(Confucius4-R2T2 · P2-MOPD · DavidAU-Qwen3.8-27B-TURBO · DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic) · slam-3dgs 3(mujoco · SplatAnything · A2-MEAS) · video-saas 1(Viggle-Remake) — 수집기는 13건 전부 `ai-news` 로 표기, 볼트 재분류 / 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 9 · 갱신 4**(OpenMausBot · agent-browser · anthropics-skills · DavidAU) · 크론 **신규 4 · 🔴 덮어쓰기 3**(Beamforming 314→81 · 장기기억 191→60 · 학회 92→77 → git HEAD `ac43104` 복원 후 `🔄 2026-11-10` 병합)
+- **추가 페이지**: **13개** (소스 9 + 크론 신규 4) | **업데이트 페이지**: 소스 4 + 크론 3 + 엔티티 4(Viggle · DavidAU · Anthropic · vercel-labs) + 개념 6(온폴리시-증류 · 3DGS · 크론-덮어쓰기-소실 · 한정어-탈락 · 비매칭-비교 · 문서내-값충돌) + 도메인 4쪽
+- **페이지 수**: 1760 → **1773** (sources 1543 · concepts 93 · entities 129) ✅ `find` 실측 일치
+- **canvas 업데이트**: NO (⚖️ 체납 유지) · **domains/ 갱신**: YES — 4쪽 모두 `🔄 2026-11-10 배치` 추가(11-01 이후 처음, 11-02~11-09 분은 여전히 공백)
+- **actionable 추가**: YES — 5항목(CVPR 2027 Registration **D-DAY** · skills Office 라이선스 전환 반영 · Viggle-Remake MCP 구조 비교 · quickstarts Knowledge wiki 열람 · R2T2 한국어 시험)
+- **독립 검증**: GitHub API 10레포(트렌딩 5 + 논문 코드 5) · commits API 2(skills 8건 · quickstarts 6건) · releases API(mujoco 4.0.0 · 3.17.0) · skills `docx/LICENSE.txt` + README 20·24행 · HF papers API 5(초록 전문 · 수치 전건) · HF models API 3 + 카드 raw 4(DavidAU GGUF 393KB · NM-DAU · Viggle · xtools — 패턴 검색 대조) · R2T2 README 표 · arXiv API 3(장기기억 인용 논문)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**판정에는 유효기간이 있고, "근거 없음"은 "오류"가 아니다.** 오늘 볼트의 옛 판정 두 개가 무너졌다. ① [[anthropics-skills]] "Office 스킬은 source-available · 재배포 금지"는 당시엔 옳았지만 11-06 커밋 #2146 으로 원본이 바뀌었다 — 레포 레벨 license 가 여전히 null 이라 API 메타만 보면 변화가 안 보인다. ② [[DavidAU-Qwen3.8-27B-TURBO]] "비전 근거 없음 → pipeline_tag 오류 확정"은 태그 목록만 보고 내린 과한 판정이었다 — 현재 카드는 mmproj 비전 동작을 명시한다. 어제(11-09)의 "없다는 판정은 끝까지 읽은 뒤에만"이 하루 만에 볼트 자신에게 두 번째로 적용됐다.
+
+### 🏆 주요 발견
+1. ⚠️ **볼트 자기 정정 2건** — skills 라이선스 서술(원본 변경) · DavidAU 비전 판정(과잉 확정). 두 페이지에 정정 콜아웃, actionable 에 후속.
+2. 🔴 **수집기 "미수집" 오분류** — DavidAU 모델은 볼트 09-08 보유. 수집기의 중복 검사는 raw.md git 이력만 본다 → raw.md 로 요청 전달.
+3. 🔴 [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]] — 트렌딩 2위지만 카드의 GSM8K·MMLU-Pro 는 전부 검열 제거 **전** 원본 값. ♥당 다운로드 10.8회(DavidAU 는 548회) = 관심이 만든 순위.
+4. ✅ [[A2-MEAS]] — 저자가 2.21배 옆에 "벤치 에디션·학습 설정 다름"을 직접 명시(수집기도 보존). 100과제 성공률은 45.40%.
+5. 🔴 [[Confucius4-R2T2]] — 5.76% 는 full-context 5.15%·상용 B\* 와 함께 읽어야 한다. 한국어만 U=0(6.77) < U=1(7.52). 가중치 라이선스는 Apache 가 아니다(수집기 누락).
+6. 📈 [[OpenMausBot]] 8일 ★+9,308 · issues +334 / ✅ [[agent-browser]] issues 813 → 545.
+7. 🔴 크론: Beamforming 112배/99.7% **6일 연속** · NRF 2026년도 공고 **6일 연속** · 장기기억 "Critical Analysis" 제목 탈락 재발(arXiv API 확인) · 학회 노트 문서내 값충돌 3건(CoRL "완료(11월 9-12일)"은 오늘 기준 진행 중) · 덮어쓰기 3건.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치·추론·벤치 재현 없음. GitHub README 는 skills(2행) · R2T2(표)만 직접 열람, 나머지 4레포는 수집기 요약 기준. mujoco 호환성 깨짐 3항은 볼트 미재검출.
+2. 🔴 모델 카드는 **패턴 검색 대조**이지 전문 정독이 아니다. DavidAU "수치 재확인 중" 문구는 미검출 — 없다고 확정하지 않음. Viggle 라이선스 전문 · xtools 원본(Jackrong) 레포 미조회. 09-08 당시 DavidAU 카드 상태는 재확인 불가.
+3. 🔴 크론 노트는 표본만 대조 ⇒ 전건 `reliability: low`. 학회 날짜(공식 사이트) · 부동산 실거래가·세제 · NRF · 휴머노이드·온디바이스 수치 전부 미대조. Beamforming 은 금일 arXiv 재조회 없이 11-09 확인 문구와만 비교.
+4. ⚖️ canvas 미갱신. 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 삭제한 raw 항목 사본: `/tmp/ing1110/raw.removed.md` · 크론 원본 사본: `/tmp/ing1110/cron_orig/` · 처리 전 index/log/actionable 사본: `/tmp/ing1110/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Paper Registration 11-10 AoE(D-DAY, 한국시간 11-11 20:59)** · Submission 11-16 — 등록 전 공식 페이지 날짜 확인
+2. [[anthropics-skills]] Office 스킬 Apache 2.0 전환 반영 · [[Viggle-Remake]] MCP 컷 파이프라인 구조 열람(라이선스·동의 확인 선행)
+3. 크론 프롬프트 파일명 충돌 방지 — **17배치째 미이행**

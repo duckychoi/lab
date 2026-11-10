@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, anthropic, claude, api, agent-skills, bigtech, llm-vendor]
 created: 2026-07-12
-updated: 2026-10-26
+updated: 2026-11-10
 sources: [claude-cookbooks.md]
 reliability: high
 ---
@@ -72,3 +72,7 @@ reliability: high
 - 🎯 볼트 "외부 코드 실행 0건" 문제의 **격리 수단 후보** — actionable 참조.
 
 - 2026-10-28: [[The-Trinity]](NUS) — **동결된 Claude Opus 5** 백본 위에서 하니스만 재귀 진화시킨다(Base 39.06 → Oracle 73.16).
+
+## 🔄 2026-11-10 갱신 — 공식 저장소 2건 동시 트렌딩
+- [[anthropics-skills]] ★191,561 — **11-06 Office 스킬 4종(docx·pdf·pptx·xlsx) Apache 2.0 전환(#2146)**. 볼트가 09-04 부터 유지한 "source-available · 재배포 금지" 서술을 정정.
+- 🆕 [[claude-quickstarts]] ★20,198(MIT) — 최근 커밋이 dynamic workflow · Managed Agents · OpenShell 정책 · computer/browser 툴셋 쪽. 11-06 Knowledge wiki 퀵스타트는 이 볼트([[LLM-Wiki]])와 같은 문제의 공식 예제.

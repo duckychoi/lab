@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, 조직, vercel, rust, npm]
 created: 2026-09-24
-updated: 2026-11-04
+updated: 2026-11-10
 sources: [agent-browser.md, agent-desktop.md]
 reliability: high
 ---
@@ -41,3 +41,6 @@ reliability: high
 
 ## 🔄 2026-11-04
 - [[agent-desktop]] ★13,659(11-03 대비 +2,492 · fork 935) · owner type Organization 실측. `agent-desktop mcp`(#519, 67개 MCP 도구, Linux만 실기 검증) main 머지 — 미릴리스. README가 상세 플랫폼 표를 agent-browser.dev/desktop 문서로 넘김(#481).
+
+## 🔄 2026-11-10 갱신
+- [[agent-browser]] ★48,800(+5,660) · open issues 813 → **545**. 수집기 신규 서술: 가려진 요소 클릭은 실패 반환 · Lightpanda/Obscura 엔진 · iOS 시뮬레이터 Safari · 버전 일치 스킬 내장(볼트 README 미재열람).

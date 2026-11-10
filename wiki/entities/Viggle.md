@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [video-saas, ai-news, 증류, lora, 이미지생성]
 created: 2026-09-27
-updated: 2026-09-27
+updated: 2026-11-10
 sources: [Qwen-Image-2.1-viggle-turbo.md]
 reliability: low
 ---
@@ -29,3 +29,8 @@ reliability: low
 ## 원본
 - 출처: https://huggingface.co/Viggle
 - 신뢰도: ⭐ (**모델 1건 기준의 조직 판정** — 조직 실체 미조사)
+
+## 🔄 2026-11-10 갱신 — 두 번째 모델 [[Viggle-Remake]] (영상 편집 LoRA + MCP 에이전트)
+- 이미지 증류 LoRA([[Qwen-Image-2.1-viggle-turbo]]) 1건뿐이던 조직에 **영상 편집 모델**이 추가됐다: [[MiniMax-H3]] 위 rank-256 LoRA 2종(swap · edit) + 컷 단위 MCP 에이전트. dl30 97,356 · ♥246(HF API 11-10).
+- 조직 판정 근거가 모델 1건 → 2건. 둘 다 **남의 베이스 위 LoRA** 라는 점은 같다. 카드가 "모델 안에 안전장치 없음 · 동의 검증 불가"를 직접 적는다.
+- 조직 실체(회사 · 인력)는 여전히 미조사.

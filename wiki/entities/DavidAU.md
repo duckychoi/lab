@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, quantization, gguf, uncensored, community, derivative]
 created: 2026-09-17
-updated: 2026-09-17
+updated: 2026-11-10
 sources: [Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, DavidAU-Qwen3.8-27B-TURBO.md]
 reliability: low
 ---
@@ -35,3 +35,8 @@ HuggingFace 커뮤니티 모델 제작자. 오픈 베이스 모델을 **다단�
 - [[Qwen3.8-27B-TWIN-TURBO-709-GGUF]] · [[DavidAU-Qwen3.8-27B-TURBO]] — 제작물(같은 시리즈 2건)
 - [[파생저장소-식별]] — 🎯 저자 시리즈가 리터럴 필터를 통과하는 구조 · [[표-부분인용]] — 4개 표 중 1개 독해
 - [[Alibaba]](Qwen3.8-27B 원류) · [[한정어-탈락]] · [[선택비용과-중복성]] · [[HuggingFace]] · [[ai-news]]
+
+## 🔄 2026-11-10 갱신 — [[DavidAU-Qwen3.8-27B-TURBO]] dl30 1,530,688 · ⚠️ 볼트 판정 1건 정정
+- 09-08 dl30 348,753 · ♥314 → 11-10 **1,530,688 · ♥2,795**(누적 4,159,879). 볼트 보유 재배포자 모델 중 최대급 사용량.
+- ⚠️ 09-08 "`pipeline_tag: image-text-to-text` 는 메타데이터 오류 확정" 판정을 **정정**했다 — 현재 카드는 mmproj 로 비전이 동작한다고 적는다(소스 페이지 11-10 절). 재배포자 카드의 메타데이터를 의심하는 규칙은 유지하되, "근거 없음"을 "오류 확정"으로 올리지 않는다.
+- 수집기는 이 모델을 "미수집"으로 분류했으나 볼트는 09-08 부터 보유.

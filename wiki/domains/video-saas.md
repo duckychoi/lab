@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-01
+updated: 2026-11-10
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -645,3 +645,6 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 ## 🔄 2026-11-01 배치
 - 🔗 [[L3G-World]] — 생성 영상의 공간 일관성 메모리(소비자 GPU 수치 없음) · [[SpecSlot]] — 픽셀 공간 고해상도 비용 절감(연구 단계).
 - 📉 [[sam3]] 30일창 −7.0% · 마스킹 부품 후보 판단은 그대로.
+
+## 🔄 2026-11-10 배치
+- 🔗 [[Viggle-Remake]] — 인물 교체·장면 편집 LoRA + 컷 단위 MCP 에이전트. 제품의 핵심은 오케스트레이션(컷 분할 → 키프레임 → 렌더 → 이어붙이기). 5090 에서 12초 창당 약 28분 · 모델 안에 안전장치 없음.

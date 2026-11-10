@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-01
+updated: 2026-11-10
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -885,3 +885,7 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🔴 **정정**: 위 10-25 "[[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]] llama.cpp 불가"는 b11870(10-25) 이후 해소. 12GB 근거는 여전히 TBD · 디스크 231~266GB.
 - 🆕 [[WorkFactory]] — 소형 모델 전문 업무 파인튜닝 · 30K에서 이득의 88~94% · 🔴 Elo는 로컬 추정.
 - 📚 크론 노트: [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]](✅ Mastra 수치 일치 · 🔴 자기 보고) · [[리서치-온디바이스-AI엣지-추론모델-경량화-2026년-최신-동향]](🔴 미대조 · 잘림).
+
+## 🔄 2026-11-10 배치
+- 🔗 [[Confucius4-R2T2]] — 고쳐 쓰지 않는 스트리밍 ASR 1.7B(한국어는 U=0 이 더 낮은 CER) · [[P2-MOPD]] — 병합과 증류를 한 목적으로.
+- ⚠️ [[DavidAU-Qwen3.8-27B-TURBO]] dl30 153만 · 볼트 09-08 비전 판정 정정 · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]] 벤치는 검열 제거 전 원본 값.

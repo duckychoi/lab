@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-09 (✅ **대기 20건 전량 처리** — 11-08 자동수집 13(**전건 신규**) · 크론 노트 7(신규 5 · 🔴 **덮어쓰기 2 복원 병합**). `^- URL:` **0** · `^- path:` **0**. 페이지 1741 → **1760**)
-total_pages: 1760  # 2026-11-09 실측(sources **1530** · entities 129 · concepts 93 · synthesis 4 · domains 4 · queries 0) — 증분 1741 + 19(자동수집 신규 13 + 크론 신규 5 + 개념 신설 1)
-total_sources: 1530  # 2026-11-09: 자동수집 신규 13 + 크론 신규 5 (덮어쓰기 2는 기존 계수)
+updated: 2026-11-10 (✅ **대기 20건 전량 처리** — 11-10 자동수집 13(**신규 9 · 갱신 4**) · 크론 노트 7(신규 4 · 🔴 **덮어쓰기 3 복원 병합**). `^- URL:` **0** · `^- path:` **0**. 페이지 1760 → **1773**)
+total_pages: 1773  # 2026-11-10 실측(sources **1543** · entities 129 · concepts 93 · synthesis 4 · domains 4 · queries 0) — 증분 1760 + 13(자동수집 신규 9 + 크론 신규 4)
+total_sources: 1543  # 2026-11-10: 자동수집 신규 9 + 크론 신규 4 (갱신 4 · 덮어쓰기 3은 기존 계수)
+# 🎯 배치 축(2026-11-10) = **원본이 바뀌면 옳았던 판정도 낡는다 — 그리고 "근거 없음"을 "오류 확정"으로 올리면 안 된다.** [[anthropics-skills]] Office 스킬 4종이 11-06 Apache 2.0 으로 전환 → 볼트 09-04 "재배포 금지" 서술 정정 · [[DavidAU-Qwen3.8-27B-TURBO]] 카드가 mmproj 비전 동작을 명시 → 볼트 09-08 "pipeline_tag 오류 확정" 정정(수집기는 이 모델을 미수집으로 오분류) · [[A2-MEAS]] 2.21배는 저자가 "벤치 에디션 다름"을 스스로 명시 · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]] 벤치는 검열 제거 전 원본 값 · [[Confucius4-R2T2]] 5.76% 옆의 5.15%(full-context)와 한국어 U=0 역전 · 크론 학회 노트 한 문서 값 충돌 3건
 # 🎯 배치 축(2026-11-09) = **"없다"는 판정은 원문 끝까지 읽은 뒤에만.** 볼트가 11-08 에 2609.33755 초록 앞부분만 보고 "first 주장 없음"이라 오판 → 정정(실제 오류는 크론의 "To our knowledge" 탈락) · [[Kimi-K3.1-Pro]] 비교 모델만 "w/ fallback" 설정 + 수집기 누락 약점 행(TB-Science 38.1) · [[Open-HumanScale]] 84.60% SOTA 는 사람+로봇 혼합 모델 몫 · [[TwIL-8B]] † 점수는 verbose 변형 · ✅ [[PLatour]] 저자가 이득의 출처를 스스로 분해
 # 🎯 배치 축(2026-11-08) = **헤드라인 증분의 일부는 조건이 만든다.** [[DPDM]] 78.80→84.92% 는 *각자의 이력 예산* 기준(동일 조건 82.33% — 증분의 약 42%가 예산 차이) · [[Nemotron-3.5-Transcribe-30B-A4B]] 34B 가 1.7B·0.6B 를 이긴 비교 · [[Drex]] 183ms 는 생성형과 태스크 형식이 다른 지연 비교 · [[EvoMemState]] 평균 1위지만 Safety 는 Mem0 아래 · HF 업보트가 하루 새 **감소**(SLA 150→83) = 계수기 불일치 · ✅ 크론이 CVPR 2027 을 4일 만에 포함
 # 🎯 배치 축(2026-11-07) = **한 행·한 제목·한 계수기가 전체를 대표하지 않는다.** [[TailSteer]] "보존↑·지시수행↓"는 FLUX.2 Klein 한 행(SenseNova 는 SR@5 상승) · [[VFlash]] 25배가 나온 표에서 ADE 는 타깃보다 나쁨 · [[WeLM-Image]] 오픈 1위 하나는 Turbo 변형 몫 · 크론 장기기억 노트는 "Critical Analysis" 논문을 MemPalace 찬사로 인용 · [[Qwen-Image-2.1-Uncensored-Quantized]] 누적 다운로드 −209만 역행 → [[표-부분인용]] · [[한정어-탈락]].
@@ -357,6 +358,23 @@ total_sources: 1530  # 2026-11-09: 자동수집 신규 13 + 크론 신규 5 (덮
 ---
 
 ## sources
+
+### 2026-11-10 배치 (대기 **20건** 전량 처리 · 자동수집 13 = **신규 9 · 갱신 4**(GitHub 신규 2·갱신 3 · HF논문 신규 5 · HF모델 신규 2·갱신 1) · 크론 노트 7(신규 4 · 🔴 **덮어쓰기 3 복원** — Beamforming 314→81 · 장기기억 191→60 · 학회 92→77) · 잘림 2 · 출처 0건 3 · 엔티티 갱신 4(Viggle·DavidAU·Anthropic·vercel-labs) · 개념 갱신 6 · 도메인 4쪽 갱신 · ⚠️ 볼트 기존 판정 2건 정정)
+- 🆕 [[mujoco]] — ★17,112 · Apache-2.0 · **4.0.0(11-06)** speculative contact · 탄소성 · 파이썬 패키지 분리 · 🔴 sidesite·RK4·cable 제거로 기존 모델 결과 변동(수집기 판독) · `slam-3dgs`
+- 🆕 [[claude-quickstarts]] — ★20,198 · MIT · Anthropic 공식 스타터 · 11-06 Knowledge wiki 퀵스타트 dynamic workflow 재작성 · "프로덕션 코드 아님" · `ai-news`
+- 🆕 [[Confucius4-R2T2]] — 85 up · Netease Youdao · 고쳐 쓰지 않는 stable-prefix 스트리밍 ASR(1.7B) · 160ms 5.76% vs 베이스 21.01%(full-context 5.15%) · 🔴 상용 B\* 에 다수 행 열세 · 한국어 FLEURS U=0 6.77 < U=1 7.52 · 가중치 NetEase 라이선스 · `local-llm`
+- 🆕 [[SplatAnything]] — 65 up · zju3dv · feed-forward 3DGS 가우시안 간격 정규화(GSNorm) · 🔴 초록 수치 0 · 레포 생성 이틀째 · `slam-3dgs`
+- 🆕 [[P2-MOPD]] — 48 up · StepFun · 온폴리시 증류 + 학습 가능한 파라미터 사전지식 · 1.7B 94.7% vs MOPD 80.9% · 4B·도메인별 값 초록에 없음 · 레포 내용 미확인 · `local-llm`
+- 🆕 [[A2-MEAS]] — 43 up · SJTU AutoLab · 교정 코드 체화 멀티에이전트 · BEHAVIOR 2026 100과제 Q 0.6411·성공 45.40% · 🔴 "2.21배"는 에디션·설정 다름(저자 명시) · 실로봇 57.92% vs π0.5 26.67% · `slam-3dgs`
+- 🆕 [[PCBRouteAgent]] — 37 up · 전역 계획 + KiCad 네이티브 실행 · clean-pass 100/94.9/100% · 🔴 **D3-C 40%** · 베이스라인 이름 없음 · `ai-news`
+- 🆕 [[Viggle-Remake]] — dl30 97,356 · MiniMax-H3 LoRA 2종(swap·edit) + 컷 단위 MCP 에이전트 · 원본 사운드트랙 유지 · 🔴 벤치 0 · "모델 안에 안전장치 없음" · 5090 에서 12초 창당 28분 · `video-saas`
+- 🆕 [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]] — dl30 11,755 · ♥1,092(트렌딩 2위) · 🔴 벤치는 전부 검열 제거 전 원본(Jackrong) 값 · 자체 측정은 거부 3/100·KL 0.0422 뿐 · GSM8K 비교는 인용치 · `local-llm`
+- 🔄 [[OpenMausBot]] — ★10,902 → **20,210(8일 +9,308)** · open issues 649 → 983 · 클라우드 컴퓨터 경로는 boat.dev(11-02 확인 유지) · `ai-news`
+- 🔄 [[agent-browser]] — ★43,140 → 48,800 · ✅ open issues 813 → **545** · 가려진 요소 클릭은 실패 반환(수집기 판독) · `ai-news`
+- 🔄 [[anthropics-skills]] — ★174,699 → 191,561 · ✅ **11-06 Office 스킬 4종 Apache 2.0 전환(#2146 · docx LICENSE.txt 확인)** → ⚠️ 볼트 "재배포 금지" 서술 정정 · 레포 레벨 license 는 여전히 null · `ai-news`
+- 🔄 [[DavidAU-Qwen3.8-27B-TURBO]] — dl30 348,753 → **1,530,688** · ⚠️ 볼트 09-08 "pipeline_tag 오류 확정" **정정**(카드에 mmproj 비전 명시) · 🔴 수집기 "미수집" 오분류 · Stage 2 원본 거부 86/100 누락 · `local-llm`
+- 📚 크론 신규(reliability low · 전건 [[주제재생성-중복]]): [[리서치-온디바이스-AI엣지-추론모델-경량화-기술-동향-2026]](🔴 출처 0 · 잘림 · 2024년 세대 SLM 목록) · [[리서치-휴머노이드-로봇-제어-기술-혁신-VLA로컬LLMSLAM-통합-시대]](🔴 출처 0 · 잘림 · "7월 기준 Qwen3.6 27B") · [[리서치-2026년-서울-동부권옥수금호왕십리성수-부동산-시장-3대-변화]](✅ 출처 6 · 🔴 인사이트 공란 · 출처명↔도메인 불일치) · [[리서치-2026년-한국연구재단NRF-신진연구우수신진장비인프라-동향-분석]](🔴 2026년도 공고 6일 연속 · 유형A·B 1,630 복제 · 인사이트 공란)
+- 🔴 크론 덮어쓰기 복원: [[리서치-2026년-Neural-BeamformingNeural-OperatorSpectral-Diffusio]](314→81 · 112배/99.7% 비교 대상 **6일 연속** 누락 · 출처 0) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-2026-최신-동향]](191→60 · arXiv 3건 실존 · 🔴 "Critical Analysis" 제목 탈락 재발 · ✅ Memori 81.95%/1,294토큰 일치) · [[리서치-2026년-AI로봇-주요-학회-논문-마감-일정-현황]](92→77 · ✅ CVPR 2027 Registration **오늘** · 🔴 문서내 값충돌 3건)
 
 ### 2026-11-09 배치 (대기 **20건** 전량 처리 · 자동수집 13 = **신규 13 · 갱신 0**(GitHub 5 · HF논문 5 · HF모델 3) · 크론 노트 7(신규 5 · 🔴 **덮어쓰기 2 복원** — Beamforming 668→92 · 온디바이스 536→74) · 잘림 2 · 출처 0건 2 · 엔티티 갱신 2(Moonshot AI·MiniMax) · 개념 갱신 6 · 🆕 개념 신설 1([[3DGS]]) · ⚠️ 볼트 11-08 판정 1건 정정)
 - 🆕 [[Mika]] — ★7,830 · Apache-2.0 · 숨은 가상 화면에서 앱을 직접 탭하는 안드로이드 에이전트 · 두뇌는 클라우드 API · 정확도 수치 0 · `ai-news`
