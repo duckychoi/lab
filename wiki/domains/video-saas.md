@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-10
+updated: 2026-11-11
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -648,3 +648,7 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 
 ## 🔄 2026-11-10 배치
 - 🔗 [[Viggle-Remake]] — 인물 교체·장면 편집 LoRA + 컷 단위 MCP 에이전트. 제품의 핵심은 오케스트레이션(컷 분할 → 키프레임 → 렌더 → 이어붙이기). 5090 에서 12초 창당 약 28분 · 모델 안에 안전장치 없음.
+
+## 🔄 2026-11-11 배치
+- 🆕 [[MiniMax-H3-Image]] — 16MP 네이티브 · 6스텝 · 33.1B DiT · 다중 참조 편집. 🔴 카드 벤치 0 · 가중치 합계 130GB 이상 · 커뮤니티 라이선스. 현실 경로 후보는 [[P-H3-Image-Comfy]](파생 관계 미확인).
+- 🆕 [[APEX-Condition-Shifting]] — 스트리밍 아바타 few-step 증류에서 fake-score 네트워크 제거 · 학습 메모리 −4.4% · 반복 시간 −9.2% · 품질 차이는 0.025 · 0.009 · 모션은 S2-Avatar 우세(저자 명시).

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, github, agent-skills, harness, 자기제한]
 created: 2026-10-10
-updated: 2026-11-04
+updated: 2026-11-11
 sources: [mattpocock-skills.md]
 reliability: medium
 ---
@@ -48,3 +48,6 @@ reliability: medium
 
 ## 🔄 2026-11-04
 - [[mattpocock-skills]] ★311,954 · SKILL.md 39개 실측. v1.3.2 노트: 클론에서 일하던 에이전트가 남의 스펙을 이 레포에 이슈로 게시(#541~#550) → 트래커 템플릿 수정(#1169). `chief-of-staff` 가 LLM 위키 메모리 채택(#1304). Anthropic 공식 플러그인 마켓플레이스 설치 경로 보유.
+
+## 🔄 2026-11-11
+- [[mattpocock-skills]] ★321,353 · 11-07 ★317,045 → +4,308 / 4일. SKILL.md 39개 유지(수집기 실측). 🔴 수집기가 볼트 최신 기록을 11-01 로 잘못 인용.

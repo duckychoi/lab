@@ -1,7 +1,7 @@
 ---
 title: "[리서치] LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)"
 created: 2026-10-24
-updated: 2026-11-06
+updated: 2026-11-11
 author: research-agent
 origin: cron-research-agent
 tags: [research-agent, ai-news, 크론노트, 주제재생성-중복, 볼트판정-2026-10-25]
@@ -323,3 +323,75 @@ Microsoft가 2025년 10월 Semantic Kernel과 AutoGen을 Microsoft Agent Framewo
 - Ground Truth First: A Longitudinal Evaluation Instrument for Agent Memory — arxiv.org/abs/2607.21962
 - Best AI Memory Systems in 2026: Why the Future Belongs to Agentic Memory OS — evermind.ai/blogs
 - Best AI Agent Memory Frameworks in 2026: Compared and Ranked — atlan.com/know
+
+## 🔄 2026-11-11 크론 갱신 (🔴 덮어쓰기 325 → 66줄 → git HEAD `82dae8e` 판본 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 위 본문은 git HEAD `82dae8e` 판본이며, 이 섹션 아래가 11-11 배달분이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-11) — Mastra 페이지 직접 조회 · arXiv API 3편 초록 전문
+> - ✅ **Mastra Observational Memory 84.23%(gpt-4o)** — 출처 페이지와 일치. 오라클(82.4%) 초과도 원문에 있다.
+> - 🔴 **그러나 "SOTA"와 "오라클 초과"에 붙은 조건이 빠졌다** — ① 같은 페이지의 헤드라인은 **gpt-5-mini 94.87%**("이 벤치 역대 최고")이고 84.23% 는 공식 비교 모델(gpt-4o) 줄의 값이다. ② 같은 리더보드에 gpt-4o 로 **EmergenceMem Internal 86.00%** 가 위에 있다(각주: 내부 구성 · 공개 재현 불가). ③ 오라클 대비 +2점에 대해 Mastra 스스로 *"within run variance"* 라고 적었다. → [[한정어-탈락]].
+> - 🟡 **"MemPalace Critical Analysis" — 출처 목록에는 "Critical" 이 돌아왔다**(11-07 · 11-10 지적의 부분 이행). 그러나 본문은 여전히 소개 근거로만 쓴다. 초록(2604.21284)의 결론: 헤드라인 검색 성능은 공간 은유가 아니라 **원문 저장 + ChromaDB 기본 임베딩(all-MiniLM-L6-v2)** 에서 나오고, 위계는 표준 메타데이터 필터링이며, *"significant architectural insight wrapped in overstated claims"*. 또 위계는 **Wings → Rooms → Closets → Drawers** 로 노트의 "Wing→Room→Drawer"에는 Closets 가 빠졌다.
+> - 🔴 **Ground Truth First(2607.21962)를 출처에 넣고 핵심 결과는 쓰지 않았다** — 초록: 메모리 백엔드 순위가 이력 길이에 따라 **뒤집힌다**(3주에 선두인 예산형 큐레이션 맵이 9주에 축출 내용 회상 96% → 72%, 출처 유형 그래프는 90% 로 상승 · exact p=0.031). 전체 이력 베이스라인은 단기에 최고 시스템과 같거나 높다. 이 노트의 "계층형 조합이 주류" 서술보다 훨씬 구체적인 근거다.
+> - ✅ 2607.25380 *Memory for Large Language Models* 실존 — 단 초록의 분류는 **3축**(표현 · 갱신 동역학 · 지속성)이고 노트의 "4원형"은 이 초록에서 확인되지 않는다(다른 출처일 수 있음 — 미확인).
+> - ⬜ 미대조: TriMem · TierMem · Perplexity Brain · NOOA · PEEK · "5대 설계 패러다임"(bymar.co · lin-guanguo 블로그 미열람). *"미확인: Agentic Memory가…"* 라는 문구가 본문에 그대로 남아 있다.
+> - 오늘 입고된 [[billion-context]] 가 이 주제의 실측 사례다 — LongMemEval-S 에서 full 83.20% vs 압축 79.20%, MemoryAgentBench 정확 회수는 최하위권.
+
+이 최신 주제에 대해 웹 검색으로 조사하겠습니다.
+웹 검색 결과를 바탕으로 정리하겠습니다.
+
+## LLM 장기기억·에이전트 메모리 아키텍처 SOTA (2026)
+
+**핵심 3줄**
+- 
+Mastra의 Observational Memory가 LongMemEval에서 84.23%(gpt-4o 기준) SOTA 달성하며 오라클 성능 초과
+
+- 
+5대 설계 패러다임: 원본 회상 시스템, 추출 기반 프로필 메모리, 반성적/학습 메모리, 컨텍스트 OS, 코딩 에이전트 메모리로 분화
+
+- 
+계층형 조합이 주류로—TriMem(3단계 세분화도), TierMem(불변 로그+요약 계층), Perplexity Brain(그래프→위키 변환)
+
+
+**상세**
+- 
+Mem0(2025)는 확장형 장기기억 아키텍처로 고정 컨텍스트 한계 해결; MemoryOS는 단기-중기-장기 3계층 구조로 동적 업데이트 지원
+
+- 
+장기기억은 모델 파라미터·컨텍스트 윈도우 외부에 저장되며, RAG·대화 기록·관찰·반성을 보관 후 통합·링크·압축
+
+- 
+생물학적 영감: RAPTOR와 Memwalker는 트리 구조로 계층적 조직화; MemoryBank·SAGE는 Ebbinghaus 망각곡선을 망각 관리에 적용
+
+- 
+MemGPT는 소규모 워킹 컨텍스트를 큰 저장소 위에 페이징; PEEK는 정렬된 예산 '컨텍스트 맵' 유지
+
+- 
+MemPalace(2026 4월): 2,500년 기억술 '장소의 방법' 차용, 위계적 공간 구조(Wing→Room→Drawer)로 전문 저장
+
+- 
+Ebbinghaus 망각곡선을 AI 메모리 적응에 응용; 미확인: Agentic Memory가 단기/장기 통합 관리 표준화
+
+- 
+2025-2026 CLI 수렴: 인간 지시+자동 메모리 하이브리드; NOOA는 ACT-R 활성화·Ebbinghaus 망각 기반 인지 기반 회상
+
+- 
+통합 분류체계: 파라미터 메모리-문맥(워킹) 메모리-외부(비모수) 메모리-절차적/에피소드 메모리 4원형
+
+
+**💡 인사이트/시사점**
+- 
+128K-1M 토큰 컨텍스트 한계와 세션 간 무상태 문제가 차원 높은 메모리 시스템 요구—단순 벡터 DB 시대 종료
+
+- 
+에이전트 메모리는 세션 상태·지속 메모리·프로젝트 컨텍스트·회상 전략 4개 독립 문제이며, 현세대 시스템이 통일된 솔루션 미제시
+
+- 산업 수렴: Perplexity Brain, Zep(Graphiti), Mem0 같은 상용 시스템이 **임시 그래프→야간 합성 위키** 패턴 채택, 연구 아키텍처의 실무 검증
+
+**출처**
+- Mastra Observational Memory — https://mastra.ai/research/observational-memory
+- Ground Truth First (ArXiv:2607.21962, 2026) — https://arxiv.org/pdf/2607.21962
+- Agent Memory Systems in 2026 (bymar.co) — https://blog.bymar.co/posts/agent-memory-systems-2026/
+- MemPalace Critical Analysis (ArXiv:2604.21284, 2026) — https://arxiv.org/pdf/2604.21284
+- Memory for Large Language Models (ArXiv:2607.25380, 2026) — https://arxiv.org/pdf/2607.25380
+- 2026 Memory Literature Scan (LLM Agent Research) — https://lin-guanguo.github.io/llm-memory-research/

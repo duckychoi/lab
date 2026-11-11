@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-11-09
+updated: 2026-11-11
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -761,3 +761,86 @@ Adaptive Spectral Feature Forecasting (Spectrum)은 훈련 불필요한 다중 �
 - Learnable composition for neural operators — https://arxiv.org/abs/2609.03069
 - An actively trained neural operator for atmospheric chemistry — https://arxiv.org/abs/2610.33771
 - Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.
+
+## 🔄 2026-11-11 크론 갱신 (🔴 덮어쓰기 763 → 77줄 → git HEAD `82dae8e` 판본 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 위 본문은 git HEAD `82dae8e` 판본이며, 이 섹션 아래가 11-11 배달분이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-11) — arXiv API 로 인용 7편 제목 · 초록 전문 재조회
+> - 🔴 **[[비매칭-비교]] 7일 연속** — *"신경망 파라미터를 112배 이상 줄이면서 99.7% 성능 유지"*. 초록(2608.04388): 99.7% 는 **수치 최적화로 얻은 기준 레이트** 대비, 112배는 **데이터 기반 방법** 대비(*"nearly matches the rate of the data-driven method despite using approximately 112× fewer neural-network parameters"*). 비교 대상 2개가 여전히 하나로 합쳐져 있고, 오늘은 **"approximately" 가 "이상"으로 바뀌었다** — 근사가 하한으로 강화됐다([[한정어-탈락]] 강화형).
+> - 🔴 **"To our knowledge" 탈락 3일 연속** — *"…실행하는 최초 사례 달성"*. 초록(2609.33755) 마지막 문장은 *"To our knowledge, this is the first real-time multi-channel Transformer-based neural beamforming pipeline deployed on an MCU-class device."*
+> - ✅ 출처 7건 전부 실존 · 제목 일치(2608.04388 · 2609.33755 · 2609.03069 · 2610.33771 · 2602.09708 · 2607.04134 · 2603.01623). URL 잘림 없음(11-09 대비 개선).
+> - ✅ 초록과 맞는 서술: FNO-MoE 30분 단위 전체 화학 상태 예측(2610.33771) · 사전학습 연산자 고정 + 경량 모듈(2609.03069) · 스케일된 스펙트럼 표현의 잠재 확산(2602.09708) · 푸리에 표현으로 느린 구조 모드와 빠른 원자 진동 분리(2607.04134) · 훈련 없는 장거리 특징 재사용(2603.01623).
+> - 🔴 **출처 없는 주장 5건** — TF-SNO · Tensorized FNO "198.2 keV RMSE" · NOMA CNN 빔포밍 · 액정 안테나 + 액체 신경망 · CNN 희소 배열(IEEE Radar 2026). 출처 목록 7편 어디에도 없다. "(CVPR 2026)" 표기도 초록에는 없다(arXiv comment 필드는 볼트 미확인).
+> - 초록에 있는데 노트에 없는 정량치: 2609.03069 Darcy 대형 도메인 오차 36–56% 감소 · 2603.01623 FLUX.1 최대 4.79배 · 2607.04134 RMSF Pearson r 0.844 · 2609.33755 STOI 97.65% · 45.9mW.
+> - 🟡 인사이트 절의 "물리 프리텍스처링" · "에너지 적응 노이즈 일정화"는 뜻이 통하지 않는 조어다(후자는 과거 판본의 다른 논문 내용이 섞인 것으로 보인다 — 추정).
+
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026 최신 동향
+
+**핵심 3줄**
+- 
+Neural beamforming은 물리 기반 접근법과 가벼운 신경망을 결합해 최적 궤적을 선택하며, 신경망 파라미터를 112배 이상 줄이면서 99.7% 성능 유지
+
+- 
+Neural operator는 도메인 변화에 강건한 전이학습을 위해 사전학습된 연산자를 고정하고 경량 모듈로만 로컬 예측을 구성
+
+- 
+Spectral diffusion은 PDE 생성 모델에서 스케일된 주파수 표현을 활용해 차원 축소와 함수 공간 제약을 동시에 달성
+
+
+**상세**
+- **Neural Beamforming 응용 확대**
+  - 
+트랜스포머 기반 신경 빔포밍이 저전력 청각기기에서 실시간 MVDR 빔포머를 실행하는 최초 사례 달성(2026년 9월)
+
+  - 
+NOMA 하향링크 빔포밍에 CNN 기반 접근법 적용으로 전송전력 최소화 문제 해결
+
+  - 
+액정 안테나와 액체 신경망을 결합한 하이브리드 빔포밍으로 손실 많은 위상 시프터 제거
+
+  - 
+CNN 기반 희소 배열 설계가 동적 환경에서 빠른 재구성 가능(IEEE Radar 2026)
+
+
+- **Neural Operator의 전이학습 혁신**
+  - 
+FNO-MoE(Fourier Neural Operator with Mixture of Experts)가 대기화학에서 30분 단위 전체 화학상태 예측
+
+  - 
+TF-SNO(Time-Frequency Gated Spectral Neural Operators)가 비정상적 PDE 학습에 시간-주파수 게이팅 도입
+
+  - 
+신경망 기반 역학 에뮬레이터로 자동 미분을 통해 고유모드 계산, 비선형 동역학 패턴 추출
+
+  - 
+Tensorized FNO가 원자핵 질량 모델 보정에 적용, 198.2 keV RMSE 달성
+
+
+- **Spectral Diffusion의 물리 기반 접근**
+  - 
+단백질 동역학에 푸리에 변환 기반 표현을 사용해 느린 배치 모드와 빠른 원자 진동 분리
+
+  - 
+물리 기반 스펙트럼 확산이 PDE 조건 생성에서 잠재 스펙트럼 표현의 확산 과정 학습
+
+  - 
+픽셀 공간 확산의 스펙트럼 강제가 주파수 의존적 신호 가용성 활용
+
+  - 
+적응형 스펙트럼 특징 예측이 훈련 없이 장거리 특징 재사용으로 확산 샘플링 가속화(CVPR 2026)
+
+
+**💡 인사이트/시사점**
+- **하드웨어-소프트웨어 통합**: 액정 안테나·MCU 실시간 구현 등 신경 빔포밍이 물리적 제약을 고려한 경량화로 실용화 가속화
+- **물리 프리텍스처링**: 스펙트럼 표현·주파수 도메인 학습이 신경 연산자와 확산 모델 모두에서 차원 축소·안정성·물리 보존을 동시에 달성하는 핵심 트렌드
+- **신뢰성 재정의**: 파라미터 112배 감소, 선제적 전이학습, 에너지 적응 노이즈 일정화 등 모델 용량과 정확도의 새로운 균형점 모색
+
+**출처**
+- Physics-Guided Neural Airy Beamforming for Near-Field Blockage Mitigation — https://arxiv.org/abs/2608.04388
+- Transformer-based Neural Beamforming for Real-Time Speech Enhancement on Smart Low-Power Hearable Devices — https://arxiv.org/abs/2609.33755
+- Learnable composition for neural operators — https://arxiv.org/abs/2609.03069
+- An actively trained neural operator for near-explicit atmospheric chemistry — https://arxiv.org/abs/2610.33771
+- Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+- Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration — https://arxiv.org/abs/2603.01623

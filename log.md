@@ -5619,3 +5619,40 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Paper Registration 11-10 AoE(D-DAY, 한국시간 11-11 20:59)** · Submission 11-16 — 등록 전 공식 페이지 날짜 확인
 2. [[anthropics-skills]] Office 스킬 Apache 2.0 전환 반영 · [[Viggle-Remake]] MCP 컷 파이프라인 구조 열람(라이선스·동의 확인 선행)
 3. 크론 프롬프트 파일명 충돌 방지 — **17배치째 미이행**
+
+## [2026-11-11] ingest | **대기 20건 전량 처리** (11-11 자동수집 13 + 크론 리서치 노트 7) · 자동수집은 실행 중 09:04Z 도착분
+
+- **도메인**: 자동수집 13 = ai-news 6(ha-mcp · MMDM · dNaViT · mattpocock-skills · agent-skills · VoiceStudio) · local-llm 3(billion-context · Ripple-65B-Preview · Arete-27B) · slam-3dgs 2(RoboScript · DexForesight) · video-saas 2(MiniMax-H3-Image · APEX-Condition-Shifting) — 수집기는 13건 전부 `ai-news` 로 표기, 볼트 재분류 / 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 10 · 갱신 3**(mattpocock-skills · VoiceStudio · agent-skills) · 크론 **신규 4 · 🔴 덮어쓰기 3**(온디바이스 613→73 · Beamforming 763→77 · 장기기억 325→66 → git HEAD `82dae8e` 복원 후 `🔄 2026-11-11` 병합)
+- **추가 페이지**: **14개** (소스 10 + 크론 신규 4) | **업데이트 페이지**: 소스 3 + 크론 3 + 엔티티 4(MiniMax · NousResearch · mattpocock · Meituan) + 개념 10(크론-덮어쓰기-소실 · 한정어-탈락 · 경과-마감-배달 · 문서내-값충돌 · 주제재생성-중복 · 비매칭-비교 · 표-부분인용 · 에이전트-스킬 · VLA · 캐시된-지표-신선도) + 도메인 4쪽
+- **페이지 수**: 1773 → **1787** (sources 1557 · concepts 93 · entities 129) ✅ `glob` 실측 일치
+- **canvas 업데이트**: NO (⚖️ 체납 유지) · **domains/ 갱신**: YES — 4쪽 모두 `🔄 2026-11-11 배치` 추가
+- **actionable 추가**: YES — 5항목(NRF 2027년도 1차 공모 확인 · CVPR 2027 Submission 11-17 20:59 KST · billion-context 시험 · MiniMax-H3-Image 라이선스·양자화 경로 · agent-skills doubt-driven-development 열람)
+- **독립 검증**: GitHub API 7레포(트렌딩 5 + 논문 코드 2) · HF papers API 5(초록 전문 · 수치 전건) · HF models API 3 + 카드 raw 3(행 번호 대조) · billion-context README + 벤치 문서 표 · ha-mcp README · arXiv API 10편(Beamforming 7 · 장기기억 3 — 제목·초록 전문) · Mastra 페이지 · 학회 공식 페이지 6곳(CVPR 2026 CFP · **CVPR 2027 Dates** · NeurIPS · CoRL · ICRA · ICLR) · NRF 웹진 · 서울대 공지 · 헤럴드경제 기사 · 부동산 출처 3곳(1곳 봇 차단) · 웹 검색 1회(Gemini Robotics 2.5)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**답은 인용한 출처 안에 있었고, 요약이 그것을 버렸다.** 크론 NRF 노트는 "2027년도 시행계획 확정 · 1차 공모 11-05 개시 · 온라인 설명회 11일"이 적힌 기사를 출처로 달고도 2025년 12월 접수 기간을 행동 지침으로 썼다. 7일 동안 볼트는 "2027년도 언급 0건"이라고만 적었고, 오늘 출처 URL 을 직접 열자 한 번에 풀렸다 — 노트의 결함을 세는 것보다 출처를 여는 편이 빨랐다. 같은 모양이 자동수집 쪽에도 있었다: [[billion-context]] README 요약은 자기 벤치 문서의 불리한 두 행을 뺐고, [[Ripple-65B-Preview]] 헤드라인 80.5 는 GPQA 최하인 표에서 나왔다. 반대로 [[Arete-27B]] 카드와 [[APEX-Condition-Shifting]] 초록은 불리한 조건을 스스로 적었다.
+
+### 🏆 주요 발견
+1. 🔴🔴 **NRF 2027년도 개인기초연구 1차 공모가 11-05 에 열렸다**(헤럴드경제 11-05, 볼트 직접 조회) — 예산 2조 9,102억 · 신진 유형A 460 · 유형B 600 · 인프라 지원 100 → 70 · 지역장기연구 신설. 마감일은 기사에 없음 → actionable.
+2. 🔴🔴 **CVPR 2027 Paper Registration = 11-10 AoE(한국시간 오늘 20:59)** — 공식 Dates 재조회 일치. 크론 학회 노트는 사흘 포함 후 **마감 당일 누락**(회귀). Submission 11-16 AoE.
+3. 🔴 [[billion-context]] — LongMemEval-S full 83.20% vs 79.20%, MemoryAgentBench 매크로 43.54%(bm25 · embedding-rerank 아래), AR 27.00%. README 요약은 유리한 비교만. "5×" ↔ 약 3.5배.
+4. 🔴 **수집기 볼트 기록 오인용** — [[mattpocock-skills]] 최신 기록을 11-01 로 적음(실제 11-07 ★317,045). 11-10 DavidAU "미수집"에 이어 2일 연속 → raw.md 로 요청.
+5. 🔴 크론 부동산: 세제 **개정안**을 확정으로 서술 · "중위 19.6억" ↔ 출처 현재 16.8억(19.68억은 9월 평균) · 2,923세대 출처 미검출 · 제목 "강동" 재발.
+6. 🔴 크론 휴머노이드 "Gemini Robotics 2.5 · 96%" — 웹 검색 1회로 미확인(잡히는 것은 Gemini Robotics 2 · 과제별 32~92%). 틀렸다고 확정하지 않고 인용 금지로 처리.
+7. ✅ [[RoboScript]] 83.4%(RoboTwin 2.0 50과제 · 업데이트 0) · [[DexForesight]] 실로봇 58.3% vs 50.0% · [[MMDM]] 최고 Hard 다중선택 36.81% — 초록 수치 전건 일치. HF `githubStars` 캐시 차이 2건(36↔39 · 1↔8).
+8. 🔴 크론 Beamforming 112배/99.7% **7일 연속** + "approximately" → "이상" · 덮어쓰기 3건(합계 1,485줄이 배달본에 없음).
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치·추론·벤치 재현 없음. 논문 5편은 초록까지, 본문 표 미열람.
+2. 🔴 모델 카드 3종은 **패턴 검색 + 행 대조**이지 전문 정독이 아니다. MiniMax-H3-Image 라이선스 전문 · billion-context LICENSE 추가 조항 · ha-mcp 조직의 공식 여부 · VoiceStudio `docs/benchmarks.md` · mattpocock/agent-skills git tree(스킬 수)는 볼트 미확인 — 수집기 판독 기준으로 적고 그렇게 표시했다.
+3. 🔴 NRF 2027년도 값은 **기사 1건 기준**이다. NRF/IRIS 공고문 원문 미열람 — 마감일 · 자격 컷오프 모름. 부동산 실거래 단지별 가격 · homedubu(봇 차단) · 당근 페이지 미조회. economy-play 는 매주 갱신 페이지라 크론 수집 시점 판본은 확인 불가(19.6억 판정은 추정 포함).
+4. 🔴 크론 온디바이스·휴머노이드 노트는 출처 0건이라 대조 자체가 불가 — 수치 전부 미대조. 장기기억 노트의 블로그 출처 2건 미열람. 학회 일정 중 조회 페이지에 없던 값(ICRA 9-15 · 5,088건 · CoRL 5-25/5-28 등)은 "미검출"이지 "오류"가 아니다.
+5. ⚖️ canvas 미갱신 · 신규 엔티티 0(ricursiveAI · Sharpa · ArcheOne-AI 는 소스 1건씩이라 보류). 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 삭제한 raw 항목 사본: `/tmp/ing1111/raw.removed.md` · 크론 원본 사본: `/tmp/ing1111/cron_orig/` · HEAD 판본: `/tmp/ing1111/head/` · 처리 전 index/log/actionable/raw 사본: `/tmp/ing1111/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Paper Registration 오늘 20:59(KST) 종료** · Submission 11-17 20:59(KST)
+2. **NRF 2027년도 1차 공모** — 공고문에서 마감일·자격 확인(설명회: 온라인 11-11 · 수도권 11-23)
+3. 크론 프롬프트 수정(파일명 충돌 방지 · "오늘 이후 일정 우선") — **18배치째 미이행**

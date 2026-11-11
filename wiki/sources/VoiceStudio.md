@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, tts, asr, voice-cloning, local-first, agpl, mcp-server, dubbing, 양방향루프, AGPL, 이슈PR분해]
 created: 2026-09-03
-updated: 2026-10-16
+updated: 2026-11-11
 sources: []
 reliability: high
 ---
@@ -358,3 +358,13 @@ reliability: high
 - 볼트 실측 **4건**: GitHub API `/repos`(HTTP 200 · ★67,540) · **`git/trees/HEAD?recursive=1`(HTTP 200 · 3,539 엔트리 · 🆕 금일 최초 호출)** · **`docs/lang_id_name_map.tsv`(HTTP 200 · 15,672 B 전문 · 646행 파싱)** · **`docs/languages.md`(HTTP 200 · 26,696 B 전문)**
 - raw 대비: ✅ 스타(+22)·포크·언어·**AGPL-3.0**·생성일 **일치** · 🏆🏆🏆 **2배치 이월 항목 종결**(646 카탈로그 발굴 · N·총시간 산술 검산 통과) · 🏆 **볼트 신규 4건**: **등가가정 붕괴 정량화**(10,303,055:1 · 중앙값 10.18h · 상위 50=98.1%) · **화자 수 무관성**(Haitian 0.04h · Tigrinya 0.08h) · **646 의 귀속이 엔진 1종임을 본문에서 특정** · **한국어 8,609.28h 상위권 확인**(소유자 축 판정) · 🔴 **볼트 자기정정 1건**: *"목록 미제시"* 판정 철회
 - 신뢰도: ⭐⭐⭐ (**⭐⭐ 에서 상향** — 카탈로그 검산 통과·설계 정직성 확인 / 🔴 **품질 수치 4배치 연속 0건 · 코드 미실행 · AGPL 전파 범위 미판정**)
+
+## 🔄 2026-11-11 갱신 (인제스트 2026-11-11) — ★107,668 · 26일 +37,818 · Android/iOS Preview
+
+**GitHub API 실측(11-11 09:10Z경)**: ★**107,668**(수집기 107,663 · +5 드리프트) · fork **11,924** · open_issues 32 · AGPL-3.0 · Python · pushed 2026-11-11T09:03Z
+- 📈 볼트 마지막 기록 ★69,850(10-16) → **+37,818 / 26일**(일평균 약 1,455). fork 7,647 → 11,924(+4,277).
+- 🆕 수집기 판독(볼트 README 미재열람): 최신 릴리스 v0.5.7(10-26) · **Android 10+ · iOS 17+ Preview** · 로컬 API · CLI · MCP 제공 · Model Manager 에서 엔진 선택.
+- ✅ 수집기가 볼트의 10-15 · 10-16 확증을 그대로 승계했다 — *"646 languages 는 엔진 무관 지원이 아니라 [[OmniVoice]] 언어 목록 기준이며 언어별 학습량 격차가 극심"*. 이 한정어는 계속 붙여야 한다.
+- 🔴 README 는 `docs/benchmarks.md` 링크만 두고 본문에 수치가 없다(수집기 · 미열람). 볼트도 미열람 — 벤치 문서의 내용은 **양쪽 모두 모른다.**
+- ⚖️ AGPL-3.0 유지 — 서비스에 내장하면 소스 공개 의무 검토가 필요하다는 기존 판단 유지.
+- 액션: `docs/benchmarks.md` 1회 열람(다음 갱신 때).

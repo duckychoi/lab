@@ -4,8 +4,8 @@ type: concept
 domain: slam-3dgs
 tags: [concept, vla, robotics, humanoid, slam, embodied-ai, manipulation, 로봇제어]
 created: 2026-10-17
-updated: 2026-11-01
-sources: [MJev-Spatial.md, 리서치.md, 리서치-2026년-휴머노이드-로봇-SLAMVLA로컬LLM-제어-최신-동향.md, 리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-제어-기술-2026년-실사용-단계-진입.md]
+updated: 2026-11-11
+sources: [RoboScript.md, DexForesight.md, MJev-Spatial.md, 리서치.md, 리서치-2026년-휴머노이드-로봇-SLAMVLA로컬LLM-제어-최신-동향.md, 리서치-휴머노이드-로봇의-SLAMVLA로컬LLM-기반-제어-기술-2026년-실사용-단계-진입.md]
 reliability: low
 ---
 
@@ -64,3 +64,8 @@ reliability: low
 
 ## 🔄 2026-11-04
 - [[Route-Anything]] — RoboTwin에서 VLA 정책 7개를 장면별로 고르는 라우터: 성공률 +1.10점(CI −0.40~+2.55), 정책 시간 24% 절감 · [[DreamX-Latent-Action]] — 비디오 DiT(Cosmos-Predict2.5 2B)에서 뽑은 잠재 행동을 정책 예측 목표로 써 지연 19.1배 단축(서랍 닫기 단일 과제 · 10회×3).
+
+## 🔄 2026-11-11
+- 학습 없이 적응하는 계열이 이틀 연속 입고: 11-10 [[A2-MEAS]](동결 가중치 + 런타임 교정 코드) → 11-11 [[RoboScript]](시연 1개 + 시뮬 리허설을 컨텍스트에 기록 · RoboTwin 2.0 50과제 평균 83.4% · 그래디언트 업데이트 0). 전제는 같은 과제를 시뮬레이터에서 돌릴 수 있다는 것.
+- [[DexForesight]] — 3D 공간 월드모델은 학습 때만 쓰고 배포는 RGB 정책만. DexJoCo 11과제 49.4% → 60.5% · 실로봇 3과제 58.3% vs 50.0%. 개선 후에도 정교 손 조작 성공률은 60% 안팎이다.
+- 🔴 크론 휴머노이드 노트의 "Gemini Robotics 2.5 · 96%"는 볼트 검색으로 확인되지 않았다 → [[리서치-휴머노이드-로봇-SLAMVLA로컬LLM-기반-제어-최신-동향]].

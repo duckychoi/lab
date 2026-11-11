@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [entity, open-source-llm, agent-framework, hermes, fine-tuning]
 created: 2026-04-10
-updated: 2026-09-03
-sources: [hermes-agent.md]
+updated: 2026-11-11
+sources: [Arete-27B.md, hermes-agent.md]
 reliability: high
 ---
 
@@ -31,3 +31,6 @@ reliability: high
 
 - [[hermes-agent]] — 에이전트 프레임워크
 - [[AI-에이전트-프레임워크]]
+
+## 🔄 2026-11-11
+- 🆕 [[Arete-27B]] — Qwen3.8-27B 에 SFT 만으로 국가 프레이밍 답변 22% → 0.9%(자체 Propaganda_Eval 803문항 · 판정 Grok 4.7). 사실 점수 2.98/5 는 teacher 3.96 · Nemotron 3 Ultra 3.22 보다 낮다. 카드가 디코딩 조건 차이와 Terminal-Bench 향상 불귀속을 스스로 명시 — 서술 태도는 볼트 기준 모범.

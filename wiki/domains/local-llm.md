@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-10
+updated: 2026-11-11
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -889,3 +889,9 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 ## 🔄 2026-11-10 배치
 - 🔗 [[Confucius4-R2T2]] — 고쳐 쓰지 않는 스트리밍 ASR 1.7B(한국어는 U=0 이 더 낮은 CER) · [[P2-MOPD]] — 병합과 증류를 한 목적으로.
 - ⚠️ [[DavidAU-Qwen3.8-27B-TURBO]] dl30 153만 · 볼트 09-08 비전 판정 정정 · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]] 벤치는 검열 제거 전 원본 값.
+
+## 🔄 2026-11-11 배치
+- 🆕 [[billion-context]] — 프록시 계층 요약으로 100K 창 유지. LongMemEval-S full 83.20% vs 79.20%(입력 106.0k → 30.5k) · 🔴 정확 회수(AR) 27.00% 로 bm25 59.00% 에 크게 뒤짐. **압축은 추론 사슬을 지키고 원문 한 줄을 잃는다.** ↔ [[Ripple-65B-Preview]] 는 반대로 1M 창을 택했다.
+- 🆕 [[Ripple-65B-Preview]] — 65B dense · Terminal-Bench 2.1 80.5(self-reported) · 같은 표에서 GPQA 최하 · SWE-bench Verified 4위.
+- 🆕 [[Arete-27B]] — SFT 만으로 답변 성향 이동(22% → 0.9%) · 일반 능력 유지(Hermes Bench 65.77 → 65.60) · 자체 평가셋.
+- 📚 크론(reliability low): [[리서치-온디바이스-AI엣지-추론모델-경량화-2026년-최신-동향]](출처 0 · 잘림) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]](Mastra 84.23% 일치 · SOTA 조건 탈락 · Ground Truth First 순위 역전 미반영).

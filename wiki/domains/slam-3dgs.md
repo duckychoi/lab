@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-11-10
+updated: 2026-11-11
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -598,3 +598,8 @@ _소스 ingest 시 자동 누적_
 ## 🔄 2026-11-10 배치
 - 🔗 [[A2-MEAS]] — 동결 가중치 + 런타임 교정 코드(BEHAVIOR 2026 100과제 성공 45.40%) · [[SplatAnything]] — 가우시안 간격 정규화(초록 수치 0).
 - 🧱 [[mujoco]] 4.0.0 — 3.x 에서 학습한 정책의 평가 수치는 4.0 에서 같은 실험이 아닐 수 있다(RK4 · sidesite 변경).
+
+## 🔄 2026-11-11 배치
+- 🆕 [[RoboScript]] — 시연 1개 + 시뮬 리허설을 컨텍스트에 기록(WICL) · RoboTwin 2.0 50과제 평균 83.4% · 업데이트 0 · 실로봇 수치 없음.
+- 🆕 [[DexForesight]] — 학습 때만 3D 월드모델, 배포는 RGB 정책 · DexJoCo 49.4% → 60.5% · 실로봇 3과제 58.3% vs 50.0%.
+- 🔴 [[리서치-휴머노이드-로봇-SLAMVLA로컬LLM-기반-제어-최신-동향]] — "Gemini Robotics 2.5 · 96%" 볼트 검색 미확인(인용 금지) · 출처 0 · 잘림 → [[VLA]].

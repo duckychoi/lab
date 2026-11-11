@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, coding-agent, skills, engineering, productivity, reference]
 created: 2026-05-07
-updated: 2026-08-12
+updated: 2026-11-11
 sources: []
 reliability: high
 ---
@@ -57,3 +57,13 @@ reliability: high
 - 출처: https://github.com/addyosmani/agent-skills
 - 스타: ⭐86,408 (2026-08-12 자동수집, 당일 +578) ← ⭐85,395 (08-10, +680) ← ⭐84,779 (08-09, +779) ← ⭐84,117 (08-08) ← ⭐82,215 (08-06) ← ⭐71,362 (07-07) ← ⭐58,861 (06-14)
 - 신뢰도: ⭐⭐⭐⭐⭐ (84K 스타, Addy Osmani·raw 자동수집 수치)
+
+## 🔄 2026-11-11 갱신 (인제스트 2026-11-11) — ★115,456 · 볼트 기록 공백 91일 · 마지막 푸시 11-01
+
+**GitHub API 실측(11-11 09:10Z경)**: ★**115,456**(수집기 115,451 · +5 드리프트) · fork 12,116 · open_issues 133 · MIT · JavaScript · created 2026-02-15 · pushed **2026-11-01T19:24Z**
+- 이 페이지의 직전 `updated:` 는 2026-08-12 — **91일 만의 갱신**이다. 수집기 인용 기준 당시 ★86,408 → +29,048(볼트는 당시 값을 이 페이지에서 재검출하지 못했다 — 수집기 인용).
+- 🟡 **당일 +465(트렌딩 3위)인데 마지막 푸시는 10일 전**이다(API 확인). 새 개발이 아니라 노출이 만든 순위라는 수집기 해석에 동의 — [[mattpocock-skills]] 와 같은 날 동반 상승.
+- 수집기 판독(볼트 미재열람): `SKILL.md` **25개** = README "All 25 Skills" 일치 · 명령 `/spec` `/plan` `/build` `/test` `/constraints` `/review` `/webperf` `/code-simplify` `/ship` · `constraint-driven-development`(CONSTRAINTS 파일로 품질 기준 고정) · `doubt-driven-development`(진행 중 결정을 새 컨텍스트로 반박 검토) · `browser-testing-with-devtools`(Chrome DevTools MCP).
+- mattpocock 쪽과의 차이(수집기): 웹 성능 · 프런트엔드 · 접근성(WCAG 2.1 AA) 스킬이 더 두껍다.
+- 🔴 효과 검증 수치는 여전히 없다 → [[에이전트-스킬]]. 스킬 선택 정확도 관점은 [[MMDM]].
+- 액션: `doubt-driven-development` 스킬 1건 열람(이 볼트의 "자기 판정 정정" 루프와 비교) — actionable 등록.

@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, minimax, china, video-generation, omni-modal, hailuo, partial-open-source]
 created: 2026-08-29
-updated: 2026-11-09
-sources: [P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
+updated: 2026-11-11
+sources: [MiniMax-H3-Image.md, P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
 
@@ -56,3 +56,6 @@ reliability: medium
 
 ## 🔄 2026-11-09
 - 🆕 [[P-H3-Image-Comfy]] — PrunaAI 가 MiniMax-H3 계열 이미지 모델(P-H3-Image)을 ComfyUI 용 int8/w4a8 로 양자화, 피크 21GB. **dl30 625,136(하루 +12만)** — MiniMax 라이선스(커뮤니티) 승계. 품질 벤치 0건.
+
+## 🔄 2026-11-11
+- 🆕 [[MiniMax-H3-Image]] — H3 아키텍처에서 오디오 분기를 뗀 33.1B DiT 이미지 생성/편집 모델 · 16MP 네이티브 · 6스텝 · dl30 667 · likes 545 · 커뮤니티 라이선스. **카드 정량 벤치 0건** — H3 본체에 이어 "스펙은 확인되나 성능 근거가 없다"가 반복된다.

@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, meituan, longcat, moe, china, big-tech]
 created: 2026-07-09
-updated: 2026-07-09
-sources: [LongCat-2.0.md]
+updated: 2026-11-11
+sources: [dNaViT.md, LongCat-2.0.md]
 reliability: high
 ---
 
@@ -29,3 +29,6 @@ reliability: high
 ## 원본
 - 대표 산출물: [[LongCat-2.0]] (HF meituan-longcat/LongCat-2.0, MIT)
 - 신뢰도: ⭐⭐⭐⭐ (빅테크·MIT 오픈 모델카드 실측)
+
+## 🔄 2026-11-11
+- 🆕 [[dNaViT]] — LongCat 팀의 네이티브 해상도 이산 비전 토크나이저(HF Daily Papers 11-11 업보트 1위 · 28). 초록 수치 0 · 코드 미공개.
