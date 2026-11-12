@@ -8568,6 +8568,106 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-12 배치",
+			"x": 60,
+			"y": 54960,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1112-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/astryx.md",
+			"x": 60,
+			"y": 55080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/OpenSandbox.md",
+			"x": 520,
+			"y": 55080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/codex-security.md",
+			"x": 980,
+			"y": 55080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/shadcn-improve.md",
+			"x": 60,
+			"y": 55340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/daily_stock_analysis.md",
+			"x": 520,
+			"y": 55340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/One-Table-Benchmark.md",
+			"x": 980,
+			"y": 55340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/TOME-Math.md",
+			"x": 60,
+			"y": 55600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-ai-news-8",
+			"type": "file",
+			"file": "wiki/concepts/정규명-우선-중복검사.md",
+			"x": 520,
+			"y": 55600,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1112-ai-news-9",
+			"type": "file",
+			"file": "wiki/concepts/자기제한-명시.md",
+			"x": 980,
+			"y": 55600,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -16029,6 +16129,24 @@
 			"fromNode": "b1104-ai-news-6",
 			"toNode": "b1104-ai-news-10",
 			"label": "안전장치 후퇴"
+		},
+		{
+			"id": "b1112-ai-news-e0",
+			"fromNode": "b1112-ai-news-1",
+			"toNode": "b1112-ai-news-8",
+			"label": "레포 ID 동일"
+		},
+		{
+			"id": "b1112-ai-news-e1",
+			"fromNode": "b1112-ai-news-2",
+			"toNode": "b1112-ai-news-8",
+			"label": "구 alibaba"
+		},
+		{
+			"id": "b1112-ai-news-e2",
+			"fromNode": "b1112-ai-news-5",
+			"toNode": "b1112-ai-news-9",
+			"label": "논문이 수익 미입증 명시"
 		}
 	]
 }

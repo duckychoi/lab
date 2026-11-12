@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, openai, coding-agent, interop, entity]
 created: 2026-07-04
-updated: 2026-09-10
+updated: 2026-11-12
 sources: [codex-plugin-cc.md, openai-codex.md]
 reliability: high
 ---
@@ -54,3 +54,7 @@ reliability: high
 ## 원본
 - 대표 레포: https://github.com/openai/codex (본체·Apache-2.0·Rust·⭐114,383 2026-08-23 API 실검증) / https://github.com/openai/codex-plugin-cc (브리지)
 - 신뢰도: ⭐⭐⭐⭐⭐ (메이저 AI 랩)
+
+## 🔄 2026-11-12
+- 🆕 [[codex-security]] — 레포·`--diff` 단위 취약점 탐지 → 검증 → 패치 → 기존 수정 재검증 CLI/SDK · ★11,978 · Apache-2.0 · **OpenAI API 키 필수(과금)** · 일부 기능 "Trusted Access for Cyber" 승인 · 탐지율·오탐률 수치 0.
+- 같은 날 논문 2편에서 **GPT-6 Astra** 가 기준점으로 등장: [[Tree-Ising]](에이전트의 가중치 수리를 최적화기가 능가 — MATH-500 54.6 vs 51.7) · [[Embodied-First-Exam]](코딩 에이전트 로봇 제어 최고 34%, Codex).

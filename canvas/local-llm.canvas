@@ -1429,6 +1429,86 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1112-local-llm-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-12 배치",
+			"x": 60,
+			"y": 16950,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1112-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/Tree-Ising.md",
+			"x": 60,
+			"y": 17070,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/WikiTrace.md",
+			"x": 520,
+			"y": 17070,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-local-llm-3",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-27B-DSpine-b16.md",
+			"x": 980,
+			"y": 17070,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-local-llm-4",
+			"type": "file",
+			"file": "wiki/sources/리서치-LLM-에이전트-메모리-아키텍처-최신-동향-2026.md",
+			"x": 60,
+			"y": 17330,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-local-llm-5",
+			"type": "file",
+			"file": "wiki/concepts/에이전트-메모리-레이어.md",
+			"x": 520,
+			"y": 17330,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1112-local-llm-6",
+			"type": "file",
+			"file": "wiki/concepts/인용-부호.md",
+			"x": 980,
+			"y": 17330,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1112-local-llm-7",
+			"type": "file",
+			"file": "wiki/concepts/비매칭-비교.md",
+			"x": 60,
+			"y": 17590,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -2438,6 +2518,30 @@
 			"fromSide": "bottom",
 			"toSide": "top",
 			"label": "10-25 → 10-26"
+		},
+		{
+			"id": "b1112-local-llm-e0",
+			"fromNode": "b1112-local-llm-2",
+			"toNode": "b1112-local-llm-5",
+			"label": "증거 링크 메모리"
+		},
+		{
+			"id": "b1112-local-llm-e1",
+			"fromNode": "b1112-local-llm-4",
+			"toNode": "b1112-local-llm-6",
+			"label": "인용 논문이 반대 결론"
+		},
+		{
+			"id": "b1112-local-llm-e2",
+			"fromNode": "b1112-local-llm-2",
+			"toNode": "b1112-local-llm-6",
+			"label": "링크를 내려가 확인"
+		},
+		{
+			"id": "b1112-local-llm-e3",
+			"fromNode": "b1112-local-llm-3",
+			"toNode": "b1112-local-llm-7",
+			"label": "블록 16 vs 8"
 		}
 	]
 }

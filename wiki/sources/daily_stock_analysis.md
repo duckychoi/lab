@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, finance, stock-analysis, llm-agent, python, 금융-ai]
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-11-12
 sources: []
 reliability: medium
 ---
@@ -32,6 +32,14 @@ reliability: medium
 
 > [!question] 미해결 질문
 > 어떤 시장·데이터 소스(무료 API vs 유료)? LLM 환각·오분석 억제 장치는? 백테스트/실거래 성과 공개 여부? [[TradingAgents]]와의 실질 차이(분석 리포트 vs 트레이딩 실행)?
+
+## 🔄 2026-11-12 — ★62,436 → ★70,854 (+8,418 · 92일) · 논문 arXiv 2608.26990 이 자기 한계를 적었다
+> [!insight] 저자 논문이 "우리 테스트는 수익을 증명하지 않는다"고 직접 썼다
+> README 6행 신규 배지 → [arXiv 2608.26990](https://arxiv.org/abs/2608.26990) *DSA: Evidence-Aware LLM-Agent Orchestration for Multi-Market Stock Research*(Linsen Zhu · Yi Shi · 2026-08-27 — 볼트 arXiv API 초록 전문 조회). 구조: 증거 수집 → 구조화 컨텍스트 → 모델 라우팅 분석 → (선택) 역할·Strategy Skill 15종 → 리포트, 에이전트 프로필에선 의견 불일치를 결정 에이전트에 명시 전달 후 **보수적 리스크 오버라이드**. 평가는 **동결 스냅샷의 오프라인 계약 테스트 1,457개 통과**(596개를 6개 계약군에 사후 매핑)이고, 초록 마지막 문장: *"This evidence establishes implementation conformance for the tested software contracts, **not superior report quality, forecasting accuracy, or investment returns**."* → [[자기제한-명시]]의 모범 사례. 08-12 볼트 경고("백테스트·수익 미검증")를 저자가 스스로 확정했다.
+
+> [!warning] 갱신 수치 · 주의
+> GitHub API(볼트 09:04Z): ★**70,854** · fork **57,045**(★ 대비 80% — 포크 비율이 비정상적으로 높다: 개인이 GitHub Actions 로 돌리려고 포크하는 사용 형태로 추정, 확인 필요) · MIT · pushed 2026-11-12. 시장: A주·홍콩·미국·일본·**한국**·대만 + ETF(수집기 판독). README 상단이 LLM 중계 업체 스폰서 광고라 모델 추천은 걸러 읽는다(수집기 판독). 면책(README 300~302행, 볼트 확인): *"仅供学习和研究使用，不构成任何投资建议"*.
+> - **즉시 활용 재판정**: 여전히 "패턴만 YES". 한국 시장 지원은 새로 확인된 점이나 데이터 소스 한계는 `docs/market-support.md`(미열람).
 
 ## 관련 페이지
 - [[TradingAgents]] — LLM 멀티에이전트 트레이딩(금융 축 대표 앵커)

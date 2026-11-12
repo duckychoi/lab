@@ -1,7 +1,7 @@
 ---
 title: "[리서치] Neural Beamforming·Neural Operator·Spectral Diffusion: 2026년 arXiv 신규 논문 동향"
 created: 2026-10-23
-updated: 2026-11-11
+updated: 2026-11-12
 type: source
 domain: general
 topic: neural-beamforming   # 중복 판정 키 — 2026-10-24 부여
@@ -844,3 +844,98 @@ Tensorized FNO가 원자핵 질량 모델 보정에 적용, 198.2 keV RMSE 달�
 - Physics-informed diffusion models in spectral space — https://arxiv.org/abs/2602.09708
 - Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
 - Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration — https://arxiv.org/abs/2603.01623
+
+## 🔄 2026-11-12 크론 갱신 (🔴 덮어쓰기 846 → 90줄 → git HEAD `b1e67d5` 판본 복원 후 병합)
+
+> [!warning] 🔴 [[크론-덮어쓰기-소실]] 재발 — 위 본문은 git HEAD `b1e67d5` 판본이며, 이 섹션 아래가 11-12 배달분이다.
+
+> [!warning] ⚖️ 볼트 검증 (2026-11-12) — arXiv API 로 인용 10편 제목·초록·comment 재조회
+> - ✅ **출처 10편 전부 실존 · 제목 일치**(2602.19136 · 2609.33755 · 2608.04388 · 2604.07219 · 2606.18305 · 2603.25066 · 2602.09708 · 2603.02447 · 2607.04134 · 2603.01623). 11-11 에 "출처 없음"으로 판정한 5건 중 **2건이 오늘 출처를 얻었다**(NOMA CNN → 2602.19136 · 액정 안테나+액체 신경망 → 2604.07219) — 개선.
+> - ✅ **"(CVPR 2026)" 확인** — 2603.01623 의 arXiv comment 필드가 `CVPR 2026` 이다(11-11 볼트 미확인 항목 해소).
+> - 🟡 **[[비매칭-비교]] 8일째, 단 완화** — *"99.7% 참조 성능 유지 + 112배 적은 파라미터"*. 초록(2608.04388): 99.7% 는 **수치 최적화 기준 레이트** 대비, 112배는 **데이터 기반 방법** 대비이고 그 방법의 레이트를 *"nearly matches"* 한다. 두 비교 대상이 여전히 한 문장에 묶여 있으나 **어제의 "이상"(하한 강화)은 사라졌다**(approximately 112× → "112배").
+> - 🔴 **여전히 출처 없는 주장 3건** — Tensorized FNO "198.2 keV" · TF-SNO · CNN 희소 배열(IEEE Radar Conf. 2026). 그리고 **"에너지 적응 노이즈 스케줄과 화이트닝 (10월)"** 은 10편 중 10월 논문이 없다(11-11 에 지적한 "뜻이 통하지 않는 조어"가 출처 없이 재등장).
+> - 🟡 출처와 다른 서술: SINO 는 초록상 *"competitive accuracy"* 인데 노트는 *"복잡한 경계 조건과 장기 진화 문제 해결"* — "해결"은 초록보다 강하다. 2604.07219 의 정량치(SE **+88.6%** vs GRU 등 · 3GPP 모델 대비 **1.9배**)는 노트에 없다. 2604.07219 comment 는 *"to appear in IEEE VTC 2026-Spring"*.
+> - 🔴 **[[크론-덮어쓰기-소실]] 14회째** — 이 파일은 846줄 누적본이 90줄로 덮였다.
+
+이 세 가지 주제에 대해 2026년 최신 arXiv 논문들을 검색하겠습니다.
+## Neural Beamforming·Neural Operator·Spectral Diffusion 2026년 최신 동향
+
+**핵심 3줄**
+- 
+Neural beamforming은 저전력 기기에서 멀티채널 Transformer 기반 실시간 실행이 가능해짐
+(9월 논문)
+- 
+신경 연산자 기반 SINO 프레임워크가 복잡한 경계 조건과 장기 진화 문제 해결
+(6월 논문)
+- 
+Physics-informed spectral diffusion(PISD)은 편미분방정식(PDE) 해를 생성하는 새로운 생성 프레임워크
+(2월→6월 업데이트)
+
+**상세**
+- **Neural Beamforming 진화** 
+  - 
+CNN 기반 NOMA 다운링크 빔포밍으로 전송 전력 최소화 문제 해결
+(2월, arXiv:2602.19136)
+  - 
+물리 기반 신경 Airy 빔포밍이 99.7% 참조 성능 유지 + 112배 적은 파라미터 사용
+(8월, 근거리 신호 차단 해결)
+  - 
+액정 안테나+액체신경망 통합으로 sub-THz 시스템의 하드웨어 문제 극복
+(4월)
+  - 
+CNN으로 희소 배열 구조를 학습하여 동적 환경에서 신속한 재구성 가능
+(6월, IEEE Radar Conf. 2026 채택)
+
+- **Neural Operator 확장**
+  - 
+SINO(Starter-Iterator Neural Operator)가 정방향·역방향 PDE 문제 통합 해결
+(6월)
+  - 
+양자역학 기반 NOQS(Neural Operator Quantum State)가 드라이빙 프로토콜 전체에 대한 해 연산자 학습
+(3월)
+  - 
+Tensorized FNO를 핵 질량 예측에 적용, 198.2 keV 오차로 고효율 달성
+(5월)
+  - 
+TF-SNO가 비정상 편미분방정식 처리
+(6월)
+
+- **Spectral Diffusion 성과**
+  - 
+PISD가 스케일된 스펙트럼 표현의 잠재공간에서 PDE 매개변수-해의 결합분포 학습
+(2월 제출, 6월 수정)
+  - 
+스펙트럼 형식화로 그리드 기반 확산 모델 대비 상당한 차원 감소 및 계산 고속화
+
+  - 
+손실 수준 스펙트럼 정규화로 Fourier/Wavelet 영역 손실 추가
+(3월)
+  - 
+단백질 동역학에 스펙트럼 확산 적용, 느린 구조 변화와 빠른 원자 떨림 분리
+(7월)
+  - 
+Spectrum: 학습 불필요 방식으로 Ridge regression으로 미래 다중 단계 특성 예측
+(3월, CVPR 2026 채택)
+  - 
+에너지 적응 노이즈 스케줄과 화이트닝 전략으로 스펙트럼 에너지 분포 반영
+(10월)
+
+**💡 인사이트/시사점**
+- 
+기존의 복잡한 최적화 방법의 계산 부담과 지연을 신경망이 대체하는 추세 강화
+. 통신·센싱 시스템의 실시간성 요구에 대응하는 핵심 패러다임 전환
+- 
+스펙트럼 도메인 작업으로 고차원 PDE 문제의 계산 복잡성을 획기적으로 감소
+. 생성 모델과 과학 계산 통합의 새로운 길 제시
+
+**출처**
+- Downlink Beamforming Design for NOMA Using CNN — https://arxiv.org/abs/2602.19136
+- Transformer-based Neural Beamforming for Hearable Devices — https://arxiv.org/abs/2609.33755
+- Physics-Guided Neural Airy Beamforming — https://arxiv.org/abs/2608.04388
+- Robust Hybrid Beamforming with Liquid Crystal Antennas — https://arxiv.org/abs/2604.07219
+- Starter-Iterator Neural Operator (SINO) — https://arxiv.org/abs/2606.18305
+- Neural Operator Quantum State — https://arxiv.org/abs/2603.25066
+- Physics-Informed Spectral Diffusion (PISD) — https://arxiv.org/abs/2602.09708
+- Spectral Regularization for Diffusion Models — https://arxiv.org/abs/2603.02447
+- Spectral Diffusion for Protein Dynamics — https://arxiv.org/abs/2607.04134
+- Adaptive Spectral Feature Forecasting (Spectrum) — https://arxiv.org/abs/2603.01623

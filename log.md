@@ -5656,3 +5656,41 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Paper Registration 오늘 20:59(KST) 종료** · Submission 11-17 20:59(KST)
 2. **NRF 2027년도 1차 공모** — 공고문에서 마감일·자격 확인(설명회: 온라인 11-11 · 수도권 11-23)
 3. 크론 프롬프트 수정(파일명 충돌 방지 · "오늘 이후 일정 우선") — **18배치째 미이행**
+
+## [2026-11-12] ingest | **대기 20건 전량 처리** (11-12 자동수집 13 + 크론 리서치 노트 7)
+
+- **도메인**: 자동수집 13 = ai-news 7(astryx · shadcn-improve · codex-security · daily_stock_analysis · OpenSandbox · One-Table-Benchmark · TOME-Math) · local-llm 3(Tree-Ising · WikiTrace · Qwen3.8-27B-DSpine-b16) · video-saas 2(Comfy-Org-MiniMax-H3-Image · hyperflow-h3-flash) · slam-3dgs 1(Embodied-First-Exam) — 수집기는 13건 전부 `ai-news` 로 표기, 볼트 재분류 / 크론 7 = local-llm 2 · slam-3dgs 1 · general 4
+- **분해**: 자동수집 **신규 11 · 갱신 2**(daily_stock_analysis · 🔴 astryx — 수집기 "신규"였으나 `facebook→meta` 경로 변경된 같은 레포 ID) · 크론 **신규 5 · 🔴 덮어쓰기 2**(온디바이스 171→82 · Beamforming 846→90 → git HEAD `b1e67d5` 복원 후 `🔄 2026-11-12` 병합)
+- **추가 페이지**: **17개** (소스 11 + 크론 신규 5 + 개념 신설 1 [[라이선스-지역-제외]]) | **업데이트 페이지**: 소스 5(astryx · daily_stock_analysis · MiniMax-H3 · MiniMax-H3-Image · Qwen3.8-27B) + 크론 2 + 엔티티 5(MiniMax · Comfy-Org · Meta · OpenAI · Tencent) + 개념 12(정규명-우선-중복검사 · 인용-부호 · 에이전트-메모리-레이어 · 에이전트-스킬 · 경과-마감-배달 · 크론-덮어쓰기-소실 · 문서내-값충돌 · 자기제한-명시 · 임바디드-AI · 비매칭-비교 · 표-부분인용 · 라이선스-지역-제외 신설) + 도메인 4쪽
+- **페이지 수**: 1787 → **1804** (sources 1573 · concepts 94 · entities 129) ✅ `find` 실측 일치
+- **canvas 업데이트**: **YES** — ai-news · local-llm · slam-3dgs · video-saas 4종에 `b1112-*` 노드 29 + 엣지 16 (체납 해소 · 형식 보존 확인: git diff 삽입만)
+- **actionable 추가**: YES — 6항목(CVPR 2027 Submission D-5 · MiniMax H3 계열 보류 + 기준 모델 재선정 · LICENSE 지역 조항 검사 규약 · WikiTrace 식 메모리 · 수집기 레포 ID 중복 검사 · OpenSandbox 측정) + **11-11 MiniMax-H3-Image 항목 → 보류 전환**
+- **독립 검증**: GitHub API 5레포 + 리다이렉트 2건(facebook/astryx · alibaba/OpenSandbox → 레포 ID 대조) · HF papers API 5(초록 전문 · 저자) · HF models API 3 + 카드 raw 3(행 대조) · **원본 LICENSE 2종(MiniMax-H3 · MiniMax-H3-Image)** · arXiv API 17편(Beamforming 10 · 메모리 4 · VLA 리뷰 1 · DSA 2608.26990 · DSpine 2609.36173) · daily_stock_analysis README · CVPR 2027 CFP · ICLR 2027 Author Guidelines · Boston Dynamics 블로그 · 한국경제 11-12 · 매일일보 11-05 · economy-play
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**다운로드 버튼은 권리를 보증하지 않는다 — 그리고 "다르다"는 인용은 같은 점을 지운다.** 볼트는 08월부터 MiniMax-H3 를 "오픈 i2v 스팟체크" 기준으로 actionable 에 네 번 올렸고 라이선스는 매번 "확인 필요"로 넘겼다. 오늘 수집기가 hyperflow 카드 312행(*"excluding … the Republic of Korea"*)을 옮겨 왔고, 볼트가 원본 LICENSE 를 처음 열자 H3 · H3-Image 모두 10행에서 **대한민국을 적용 지역에서 제외**했다 — 석 달 묵은 질문이 grep 한 줄로 끝났다. 같은 날 DL 35만의 Comfy-Org 재포장 카드는 "원본과 라이선스가 다르다"며 매출 조항만 인용했는데, 두 라이선스가 공유하는 가장 큰 제약이 그 인용에서 빠졌다. 크론 메모리 노트도 같은 모양이었다 — 인용한 2603.04814 는 장문맥이 정확도에서 이긴다고 말했고, 노트는 반대로 결론냈다. **확인을 미루는 비용은 확인 비용보다 크다.**
+
+### 🏆 주요 발견
+1. 🔴🔴 **MiniMax H3 계열 전체 — 한국 Excluded Territory**(원본 LICENSE 2종 10행 · hyperflow 카드 312행 "before downloading") → 🆕 [[라이선스-지역-제외]] · 11-11 actionable 보류 전환 · video-saas 오픈 축 기준 모델 재선정 필요.
+2. 🔴 [[Comfy-Org-MiniMax-H3-Image]] 카드가 차이(매출 조항)만 인용하고 공통 제약(지역 제외)을 생략 → [[표-부분인용]] 라이선스판.
+3. 🔴🔴 크론 메모리 노트 — 인용 2603.04814: *"Long-context GPT-5-mini achieves higher factual recall on LongMemEval and LoCoMo"*, 메모리 우위는 비용(100k 에서 약 10턴 이후) → [[인용-부호]]. ↔ 같은 날 [[WikiTrace]] 가 "교훈 → 원본 링크 하강"으로 이 실패를 줄인다고 보고.
+4. 🔴 **조직 경로 변경 2건** — [[astryx]](facebook → meta · ID 1131202426) · [[OpenSandbox]](alibaba → opensandbox-group · ID 1118085970). 수집기 URL 중복 검사 통과 → [[정규명-우선-중복검사]]에 "레포 ID 로 대조" 규칙 추가.
+5. ✅ [[daily_stock_analysis]] 저자 논문(2608.26990): *"not superior report quality, forecasting accuracy, or investment returns"* — ★7만 레포의 [[자기제한-명시]].
+6. ✅ [[Tree-Ising]] MATH-500 54.6 vs 에이전트 51.7 · forward 4회 · $0.90(유의한 것은 MATH-500·GSM8K 2개) · [[Embodied-First-Exam]] Standard 34% — 초록 수치 전건 일치. GPT-6 Astra 가 두 논문 모두에서 비교 기준.
+7. 🔴 [[Qwen3.8-27B-DSpine-b16]] 블록 16 vs 8 비교([[비매칭-비교]]) — 카드가 스스로 명시, 실사용 조건(T=1 · MT-Bench)일수록 격차 축소.
+8. ✅ 크론 학회 노트 — 11-11 요청 하루 만에 반영(CVPR 2027 Submission 첫 줄 · 공식 CFP 원문 일치). Beamforming 출처 10편 전부 실존 · "(CVPR 2026)" arXiv comment 로 확인 · 112배 "이상" 소멸.
+9. 🔴 크론 NRF 2일 연속 — 인용 기사(매일일보 11-05) 의 2027년도 공모 정보(2조 9,102억 · 18,516과제 · 11-05 개시)를 두고 2026년도·2025-12 기술. 부동산 "19억 5,500만" 현재 판본 미검출(중위 16.8억 · 국평 9월 평균 19.68억) · 14주(11-12)↔13주(11-05). 휴머노이드 "조지아 공장"·"4시간 배터리" BD 블로그와 다름.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치·추론·벤치 재현 없음. 논문 5편은 초록까지, 본문 표 미열람(WikiTrace 수치 · Embodied First Exam 나머지 7개 에이전트).
+2. 🔴 MiniMax LICENSE 는 **지역 조항 패턴 검색**이지 전문 정독이 아니다. 법률 해석(다운로드 vs 사용 범위, 개인 연구 예외 유무)은 하지 않았다 — "승인 전 사용 불가"는 조항 문언 기준이다. P-H3-Image-Comfy · MiniMax-H3-Turbo-Lora 의 LICENSE 는 base_model 승계로 **추정**(직접 미확인).
+3. 🔴 shadcn/improve · codex-security · OpenSandbox README 본문은 수집기 판독 기준(볼트 미열람). OpenSandbox 성능 문서 · daily_stock_analysis `docs/market-support.md` 미열람.
+4. 🔴 크론: EverOS · Mem0 블로그 · techxplore · note.com · fnnews 8-03 · 이투데이 · zdnet · IRIS 공고 미열람. ICLR 2027 개최지·마감일과 CVPR 2027 "시애틀 6-20~25"는 조회 페이지에서 미검출(오류 확정 아님). 온디바이스 노트는 출처 0건이라 대조 불가.
+5. ⚖️ 신규 엔티티 0(shadcn · VideoRebirthAI · opensandbox-group 은 소스 1건씩이라 보류). 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 삭제한 raw 항목 사본: `/tmp/ing1112/raw.removed.md` · 크론 원본 사본: `/tmp/ing1112/cron_orig/` · HEAD 판본: `/tmp/ing1112/head/` · 처리 전 index/log/actionable/raw 사본: `/tmp/ing1112/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Submission — 11-17(화) 20:59 KST** (D-5)
+2. **MiniMax H3 계열 사용 보류** — 오픈 i2v·오디오 기준 모델을 바꾸기 전 그 모델 LICENSE 를 같은 방식으로 grep
+3. NRF 2027년도 1차 공모 마감일 확인(11-11 이월) · 크론 프롬프트 수정 — **19배치째 미이행**

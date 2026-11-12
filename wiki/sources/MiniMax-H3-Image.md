@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, hf-model, image-generation, image-editing, dit, minimax, open-weights]
 created: 2026-11-11
-updated: 2026-11-11
+updated: 2026-11-12
 sources: [https://huggingface.co/MiniMaxAI/MiniMax-H3-Image]
 reliability: medium
 ---
@@ -35,3 +35,7 @@ reliability: medium
 - 출처: https://huggingface.co/MiniMaxAI/MiniMax-H3-Image
 - 확인 범위: HF models API · 카드 raw(23,132B) 패턴 검색 · 🔴 카드 전문 정독 아님 · 라이선스 전문 · 실행 미확인
 - 신뢰도: ⭐⭐ (dl30 667 · likes 545 · 벤치 없음)
+
+## 🔄 2026-11-12 — 라이선스 전문 조회: 한국 제외
+> [!warning] 🔴 11-11 actionable 보류 전환
+> LICENSE(18,208B, 볼트 직접 조회) 10행: Excluded Territories = EU · 영국 · **대한민국** · 미국. 11-11 의 *"비표준 커뮤니티 라이선스 — 상업 이용 조건 전문 미열람"* 을 해소하면서 **사용 자체가 막힌다**는 답이 나왔다. Comfy 재포장본 [[Comfy-Org-MiniMax-H3-Image]](DL 351,803 — 이 원본 dl30 667 의 500배+)은 카드에서 이 조항을 생략했다. → [[라이선스-지역-제외]]

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, browser-automation, entity]
 created: 2026-07-04
-updated: 2026-10-31
+updated: 2026-11-12
 sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md]
 reliability: high
 ---
@@ -90,3 +90,6 @@ reliability: high
 
 ## 🔄 2026-10-31
 - [[Youtu-Parsing-Omni]] — Youtu 팀 5B 전 모달 파서 · 오픈웨이트 공개 · OmniDocBench +0.05 · 처리량 저하 자백.
+
+## 🔄 2026-11-12
+- 🆕 [[Qwen3.8-27B-DSpine-b16]] — [[Qwen3.8-27B]] 용 5층 병렬 드래프트(arXiv 2609.36173) · Apache-2.0 · 수락 길이 GSM8K 7.20 vs DFlash2 5.69. 🔴 블록 16 vs 8 비교([[비매칭-비교]]) · 에이전트 벤치 일부는 Tencent 자체 WorkBuddy Bench.

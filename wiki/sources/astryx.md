@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, design-system, agent-ready, react, stylex]
 created: 2026-07-09
-updated: 2026-07-09
+updated: 2026-11-12
 sources: []
 reliability: high
 ---
@@ -26,6 +26,13 @@ reliability: high
 - **대체 관계**: MUI·Chakra·shadcn/ui 계열과 경쟁하되 "agent-ready·open internals"로 차별. StyleX 채택이 진입장벽.
 - **허와 실**: "built for how we build now(에이전트와 함께)"는 강한 마케팅. 실체는 = 잘 만든 오픈 디자인 시스템 + 내부 투명성. 진짜 에이전트 친화성은 실사용 검증 필요, Beta 단계.
 - **액션**: astryx CLI로 스캐폴딩 후 에이전트에게 컴포넌트 조합 UI 1건을 생성시켜 shadcn/ui 대비 에이전트 편집성 비교.
+
+## 🔄 2026-11-12 — ★7,301 → ★25,696 (+18,395 · 126일) · 레포 경로 `facebook/astryx` → `meta/astryx`
+> [!note] 같은 레포다 — 수집기는 "신규"로 보냈다
+> GitHub API(볼트 09:05Z): `meta/astryx` ★**25,696** · fork 1,998 · MIT · TypeScript · created 2026-01-09 · pushed 2026-11-12. `repos/facebook/astryx` 는 **301 → repositories/1131202426** 이고 `meta/astryx` 의 ID 도 **1131202426** — 조직 경로만 바뀌었다. 수집기의 "볼트 URL 검색 0건"은 **옛 URL 로 저장된 페이지를 새 URL 로 찾았기 때문**이다 → [[정규명-우선-중복검사]](레포 ID 로 대조해야 한다). 같은 날 [[OpenSandbox]](구 `alibaba/OpenSandbox`)도 같은 형태.
+>
+> 수집기 판독 갱신분: 컴포넌트 150+ · 테마 7종 · CLI(`astryx docs`, `component --list`)로 **에이전트도 같은 방식으로 문서를 조회** · README *"Meta 내 13,000+ 앱에서 사용"* 은 자체 주장(외부 검증 없음) · charts/vega 패키지는 `@canary` 만. 당일 트렌딩 +2,776(1위).
+> ⚖️ 07-09 판정("agent-ready 의 실체 = 내부 투명성 + CLI 조회")은 유지. 4개월 만에 3.5배 — **AI 모델이 아닌 레포가 AI 트렌딩 1위**를 한 것은 "에이전트가 읽기 좋은 문서"가 독립된 가치가 됐다는 신호다.
 
 ## 관련 페이지
 - [[Meta]] — 제작사

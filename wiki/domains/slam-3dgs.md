@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-11-11
+updated: 2026-11-12
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -603,3 +603,7 @@ _소스 ingest 시 자동 누적_
 - 🆕 [[RoboScript]] — 시연 1개 + 시뮬 리허설을 컨텍스트에 기록(WICL) · RoboTwin 2.0 50과제 평균 83.4% · 업데이트 0 · 실로봇 수치 없음.
 - 🆕 [[DexForesight]] — 학습 때만 3D 월드모델, 배포는 RGB 정책 · DexJoCo 49.4% → 60.5% · 실로봇 3과제 58.3% vs 50.0%.
 - 🔴 [[리서치-휴머노이드-로봇-SLAMVLA로컬LLM-기반-제어-최신-동향]] — "Gemini Robotics 2.5 · 96%" 볼트 검색 미확인(인용 금지) · 출처 0 · 잘림 → [[VLA]].
+
+## 🔄 2026-11-12 배치
+- 🆕 [[Embodied-First-Exam]] — 코딩 에이전트 로봇 제어 평가(47종 · 1,156 과제). Standard(리셋 불가) 최고 **34%**. "LLM = 충분한 고수준 계획자"라는 크론 휴머노이드 노트 결론의 측정된 반례.
+- 📚 크론 [[리서치-2026년-휴머노이드-로봇-SLAMVLA로컬LLM-기반-제어-최신-동향]] — 출처 0 → 6건으로 개선, Atlas 사양 일치. 🔴 "Hyundai 조지아 공장"(블로그: RMAC) · "4시간 배터리"(미검출) · GR00T N1.6↔N1.7 값충돌.

@@ -4,7 +4,7 @@ type: concept
 domain: ai-news
 tags: [ai-news, concept, embodied-ai, vla, robot, world-model]
 created: 2026-07-09
-updated: 2026-07-09
+updated: 2026-11-12
 sources: [LaMem-VLA.md, LingBot-Video.md, RoboDojo.md, World-Infinity.md, VLA-Corrector.md, Embodied-cpp.md]
 reliability: high
 ---
@@ -38,3 +38,6 @@ reliability: high
 ## 원본
 - 근거 소스: [[LaMem-VLA]] · [[LingBot-Video]] · [[RoboDojo]] · [[World-Infinity]] · [[VLA-Corrector]] · [[Embodied-cpp]]
 - 신뢰도: ⭐⭐⭐⭐ (다수 HF 논문·소스에서 반복 확인된 도메인 트렌드)
+
+## 🔄 2026-11-12
+- 🆕 [[Embodied-First-Exam]] — 코딩 에이전트가 제어 방식(직접/코드/정책 학습)을 골라 로봇 47종 · 1,156 과제. Standard(리셋 불가) 최고 **34%**(GPT-6 Astra · Codex). Privileged(무제한 리셋)는 근사 상한 — 시뮬 반복 성능은 현실의 상한일 뿐.

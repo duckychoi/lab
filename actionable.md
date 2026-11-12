@@ -5053,11 +5053,54 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **출처**: [[MiniMax-H3-Image]] · [[P-H3-Image-Comfy]]
 - **할 것**: ① Community License 의 상업 이용 조건 열람 ② P-H3-Image-Comfy(피크 21GB)가 이 체크포인트의 파생인지 base_model 로 확인 ③ 맞다면 16MP 썸네일 1장 생성 시간을 잰다. 원본(DiT 66.28GB + 텍스트 인코더 66.7GB)은 시도하지 않는다.
 - **우선순위**: 낮음
-- **상태**: 대기
+- **상태**: 보류 — 🔴 2026-11-12 LICENSE 10행 확인: 대한민국은 Excluded Territory(사전 승인 전 사용 불가) → [[라이선스-지역-제외]]
 
 ## [2026-11-11] agent-skills 의 doubt-driven-development 스킬 열람 → 볼트 자기 정정 루프와 비교
 - **도메인**: ai-news
 - **출처**: [[agent-skills]] · [[에이전트-스킬]]
 - **할 것**: "진행 중 결정을 새 컨텍스트로 반박 검토"가 어떤 지시문으로 구현됐는지 읽고, 이 볼트의 인제스트(같은 실행 안에서 검증·판정)에 별도 컨텍스트 검토를 넣을 가치가 있는지 3줄로 기록.
+- **우선순위**: 낮음
+- **상태**: 대기
+
+## [2026-11-12] 🔴 CVPR 2027 Submission — 한국시간 11-17(화) 20:59 마감 (D-5)
+- **도메인**: general
+- **출처**: [[리서치-주요-AI로봇-학회-2026-2027-논문-마감-일정]] (볼트가 공식 CFP 2026-11-12 직접 조회: *"November 16th, 2026 Anywhere on Earth (UTC-12) and will not be changed"*) · [[경과-마감-배달]]
+- **할 것**: 11-10 AoE Paper Registration 을 마쳤다면 본문 PDF 를 11-16 AoE(= 11-17 20:59 KST)까지 제출. Supplementary 11-23 AoE(= 11-24 20:59 KST). 공저자 전원 OpenReview 프로필 최신화(기관 이메일 없는 프로필은 심사 최대 2주 — 크론 노트, 볼트 미확인). 11-11 항목의 후속.
+- **우선순위**: 높음
+- **상태**: 대기
+
+## [2026-11-12] 🔴 MiniMax H3 계열 전체 사용 보류 + 오픈 i2v 기준 모델 재선정
+- **도메인**: video-saas
+- **출처**: [[라이선스-지역-제외]] · [[MiniMax-H3]] · [[MiniMax-H3-Image]] · [[hyperflow-h3-flash]] · [[Comfy-Org-MiniMax-H3-Image]]
+- **할 것**: ① 08-06 · 08-11 · 09-04 · 11-11 의 H3 관련 actionable 을 "보류(지역 제외)"로 읽는다 — 원본 · Image · Turbo LoRA · Comfy 재포장 · [[P-H3-Image-Comfy]] · hyperflow 모두 해당. ② 오픈 i2v·오디오 동반 비교의 기준 모델을 [[LTX-2.5]] 등으로 바꾸기 전에 **그 모델의 LICENSE 를 같은 방식으로 grep**. ③ 꼭 H3 가 필요하면 platform.minimax.io 경로로 승인 문의(LICENSE 23행).
+- **왜 이것인가**: hyperflow 는 4090 에서 5.2초 영상+오디오 152 s 로 이 볼트 기준 가장 실용적인 오디오 동반 i2v 였다 — 기술적으로 맞아도 법적으로 막힌다.
+- **우선순위**: 높음
+- **상태**: 대기
+
+## [2026-11-12] 모델 actionable 작성 전 LICENSE 지역 조항 1줄 검사 (볼트 규약)
+- **도메인**: general (볼트 자체)
+- **출처**: [[라이선스-지역-제외]]
+- **할 것**: HF 모델로 actionable 을 만들 때 `curl -sL https://huggingface.co/<base_model>/raw/main/LICENSE | grep -n -i 'territor\|korea\|exclud'` 를 먼저 실행하고 결과를 actionable 에 적는다. 파생·재포장이면 base_model 쪽을 본다.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-11-12] WikiTrace 식 "교훈 → 원본 링크" 를 에이전트 메모리에 적용 검토
+- **도메인**: local-llm
+- **출처**: [[WikiTrace]] · [[에이전트-메모리-레이어]] · [[인용-부호]]
+- **할 것**: 에이전트(ChinameBot/Hermes) 메모리에 교훈을 저장할 때 원본 대화·로그 경로를 같이 저장하고, **실패 과제 유래 교훈은 사용 전 원본 확인**을 규칙으로 넣을지 판단. 먼저 논문 본문에서 하강 시 토큰 비용 수치를 확인(초록에는 없음).
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-11-12] 수집기 중복 검사를 GitHub 레포 ID 기반으로 (raw.md 요청 동반)
+- **도메인**: general (수집 파이프라인)
+- **출처**: [[정규명-우선-중복검사]] · [[astryx]] · [[OpenSandbox]]
+- **할 것**: 수집기가 "볼트 URL 검색 0건 → 신규"로 판정하기 전에 `api.github.com/repos/<owner>/<name>` 의 `id` 를 볼트 기존 페이지의 레포 ID 와 대조. 볼트 쪽도 새 GitHub 소스 페이지에 레포 ID 를 적어 두면 대조가 쉬워진다.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-11-12] OpenSandbox Docker 경로로 샌드박스 1개 생성 시간 측정
+- **도메인**: ai-news
+- **출처**: [[OpenSandbox]]
+- **할 것**: 로컬 Docker 경로에서 샌드박스 1개 생성 → 명령 1개 실행 → 삭제까지의 시간을 잰다(README 64 ms P50 은 Firecracker·K8s 경로). 외부 코드 실행 0건 이월 문제의 격리 환경 후보.
 - **우선순위**: 낮음
 - **상태**: 대기

@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, minimax, china, video-generation, omni-modal, hailuo, partial-open-source]
 created: 2026-08-29
-updated: 2026-11-11
+updated: 2026-11-12
 sources: [MiniMax-H3-Image.md, P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
@@ -59,3 +59,7 @@ reliability: medium
 
 ## 🔄 2026-11-11
 - 🆕 [[MiniMax-H3-Image]] — H3 아키텍처에서 오디오 분기를 뗀 33.1B DiT 이미지 생성/편집 모델 · 16MP 네이티브 · 6스텝 · dl30 667 · likes 545 · 커뮤니티 라이선스. **카드 정량 벤치 0건** — H3 본체에 이어 "스펙은 확인되나 성능 근거가 없다"가 반복된다.
+
+## 🔄 2026-11-12 — 🔴 라이선스 지역 제외 확인(한국 포함)
+- 볼트가 원본 LICENSE 2종을 직접 열었다: [[MiniMax-H3]] · [[MiniMax-H3-Image]] 모두 10행 *"Excluded Territories … the European Union, the United Kingdom, **the Republic of Korea** and the United States of America"*. → [[라이선스-지역-제외]]. 08월부터 "라이선스 확인 필요"로 남겨 둔 질문의 답이다 — **한국에서는 MiniMax 승인 전 사용 불가**.
+- 🆕 [[hyperflow-h3-flash]](VideoRebirthAI · H3 → 14B · 4~8스텝 · 오디오 동반 · 4090 5.2초 클립 152s) — 카드 312행이 지역 제외를 정직하게 명시. 🆕 [[Comfy-Org-MiniMax-H3-Image]](DL 351,803) — 카드가 매출 조항만 인용하고 지역 제외를 생략.

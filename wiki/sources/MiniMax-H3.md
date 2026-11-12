@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, omni-modal, audio-video, comfyui, minimax, video-saas, partial-open-source]
 created: 2026-08-06
-updated: 2026-09-19
+updated: 2026-11-12
 sources: [MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
@@ -157,3 +157,7 @@ reliability: medium
 - 성격: 이미지+텍스트→비디오 MiniMax-H3의 ComfyUI 통합 배포판
 - 베이스 원본: [[MiniMax]]AI/MiniMax-H3 DL **4,039,236**·좋아요 **4,355** (2026-08-23 **HF API 실검증**·400만 돌파·**트렌딩 11위**·image-text-to-video·생성 2026-07-28·최종수정 2026-08-13) ← 2.86M·4.16k (08-19·33B·트렌딩 상위) ← 2.4M (08-17) ← 2.21M (08-15) ← 2M (08-14) ← 59.4k (08-12)
 - 신뢰도: ⭐⭐ (실채택 상위, 원본 스펙/품질/라이선스 미검증·raw 자동수집 수치)
+
+## 🔄 2026-11-12 — 라이선스 질문(115행)의 답
+> [!warning] 🔴 한국은 Excluded Territory
+> LICENSE(17,604B, 볼트 직접 조회) 8·10·22행: 라이선스는 EU · 영국 · **대한민국** · 미국을 제외한 "Applicable Territory" 안에서만 부여된다. 제외 지역 사용자는 MiniMax 에 별도 문의(23행). → [[라이선스-지역-제외]] · 파생 [[hyperflow-h3-flash]] · 재포장 [[Comfy-Org-MiniMax-H3-Image]].

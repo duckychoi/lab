@@ -979,6 +979,46 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1112-slam-3dgs-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-12 배치",
+			"x": 60,
+			"y": 13345,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1112-slam-3dgs-1",
+			"type": "file",
+			"file": "wiki/sources/Embodied-First-Exam.md",
+			"x": 60,
+			"y": 13465,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-slam-3dgs-2",
+			"type": "file",
+			"file": "wiki/sources/리서치-2026년-휴머노이드-로봇-SLAMVLA로컬LLM-기반-제어-최신-동향.md",
+			"x": 520,
+			"y": 13465,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-slam-3dgs-3",
+			"type": "file",
+			"file": "wiki/concepts/임바디드-AI.md",
+			"x": 980,
+			"y": 13465,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -1693,6 +1733,18 @@
 			"fromSide": "bottom",
 			"toSide": "top",
 			"label": "10-25 → 10-26"
+		},
+		{
+			"id": "b1112-slam-3dgs-e0",
+			"fromNode": "b1112-slam-3dgs-1",
+			"toNode": "b1112-slam-3dgs-3",
+			"label": "Standard 34%"
+		},
+		{
+			"id": "b1112-slam-3dgs-e1",
+			"fromNode": "b1112-slam-3dgs-1",
+			"toNode": "b1112-slam-3dgs-2",
+			"label": "측정된 반례"
 		}
 	]
 }

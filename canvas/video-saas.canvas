@@ -959,6 +959,76 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1112-video-saas-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-12 배치",
+			"x": 60,
+			"y": 12440,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1112-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/hyperflow-h3-flash.md",
+			"x": 60,
+			"y": 12560,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-video-saas-2",
+			"type": "file",
+			"file": "wiki/sources/Comfy-Org-MiniMax-H3-Image.md",
+			"x": 520,
+			"y": 12560,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-video-saas-3",
+			"type": "file",
+			"file": "wiki/sources/MiniMax-H3.md",
+			"x": 980,
+			"y": 12560,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-video-saas-4",
+			"type": "file",
+			"file": "wiki/sources/MiniMax-H3-Image.md",
+			"x": 60,
+			"y": 12820,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1112-video-saas-5",
+			"type": "file",
+			"file": "wiki/concepts/라이선스-지역-제외.md",
+			"x": 520,
+			"y": 12820,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1112-video-saas-6",
+			"type": "file",
+			"file": "wiki/concepts/표-부분인용.md",
+			"x": 980,
+			"y": 12820,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -1621,6 +1691,48 @@
 			"fromSide": "bottom",
 			"toSide": "top",
 			"label": "10-25 → 10-26"
+		},
+		{
+			"id": "b1112-video-saas-e0",
+			"fromNode": "b1112-video-saas-1",
+			"toNode": "b1112-video-saas-5",
+			"label": "312행 명시"
+		},
+		{
+			"id": "b1112-video-saas-e1",
+			"fromNode": "b1112-video-saas-2",
+			"toNode": "b1112-video-saas-5",
+			"label": "카드 생략"
+		},
+		{
+			"id": "b1112-video-saas-e2",
+			"fromNode": "b1112-video-saas-2",
+			"toNode": "b1112-video-saas-6",
+			"label": "차이만 인용"
+		},
+		{
+			"id": "b1112-video-saas-e3",
+			"fromNode": "b1112-video-saas-3",
+			"toNode": "b1112-video-saas-5",
+			"label": "LICENSE 10행"
+		},
+		{
+			"id": "b1112-video-saas-e4",
+			"fromNode": "b1112-video-saas-4",
+			"toNode": "b1112-video-saas-5",
+			"label": "LICENSE 10행"
+		},
+		{
+			"id": "b1112-video-saas-e5",
+			"fromNode": "b1112-video-saas-1",
+			"toNode": "b1112-video-saas-3",
+			"label": "파생"
+		},
+		{
+			"id": "b1112-video-saas-e6",
+			"fromNode": "b1112-video-saas-2",
+			"toNode": "b1112-video-saas-4",
+			"label": "재포장"
 		}
 	]
 }

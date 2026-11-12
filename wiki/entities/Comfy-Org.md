@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, comfyui, repackage, distribution, runtime]
 created: 2026-09-17
-updated: 2026-10-26
+updated: 2026-11-12
 sources: [Comfy-Org-YuE2.md, Comfy-Org-MOSS-Image.md]
 reliability: medium
 ---
@@ -74,3 +74,6 @@ ComfyUI 생태계의 공식 조직. **모델을 만들지 않고 런타임에 �
 - 124,557 dl vs 원본 BRIA 2레포(dev 1,115 + edit-turbo 955) ⇒ 원값 **60.2배** · 파일당 보정(3~4파일/인) **15~20배(추정)** ⇒ 역전은 남는다 · 좋아요는 원본 우위(278 vs 186).
 - 🆕 원본은 `gated: auto`(회사명·용도 양식) · Comfy 재패키징은 **게이트 없음** ⇒ 역전 일부는 계수기가 아니라 **접근 마찰 차이**일 수 있다(몫 분리 불가). 🔴 CC BY-NC 4.0 은 재패키징에도 그대로.
 - 📌 Comfy 재패키징 누적 4사례 → [[계수기-배수]]
+
+## 🔄 2026-11-12
+- 🆕 [[Comfy-Org-MiniMax-H3-Image]] — MiniMax-H3-Image 재패키징(확산 3종 · 인코더 2종 · 워크플로 2종) · DL 351,803. 🔴 카드 License 절이 "원본 H3 와 다르다"며 매출·호스팅 조항만 인용 — **두 라이선스가 공유하는 지역 제외(한국 포함)는 생략**. → [[라이선스-지역-제외]] · [[표-부분인용]]

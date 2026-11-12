@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-11
+updated: 2026-11-12
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -895,3 +895,9 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🆕 [[Ripple-65B-Preview]] — 65B dense · Terminal-Bench 2.1 80.5(self-reported) · 같은 표에서 GPQA 최하 · SWE-bench Verified 4위.
 - 🆕 [[Arete-27B]] — SFT 만으로 답변 성향 이동(22% → 0.9%) · 일반 능력 유지(Hermes Bench 65.77 → 65.60) · 자체 평가셋.
 - 📚 크론(reliability low): [[리서치-온디바이스-AI엣지-추론모델-경량화-2026년-최신-동향]](출처 0 · 잘림) · [[리서치-LLM-장기기억에이전트-메모리-아키텍처-SOTA-2026]](Mastra 84.23% 일치 · SOTA 조건 탈락 · Ground Truth First 순위 역전 미반영).
+
+## 🔄 2026-11-12 배치
+- 🆕 [[Tree-Ising]] — 소형 모델(0.8B/2B) 추론 루프를 BF16 비트 편집 QUBO 로 수리. GPT-6 Astra 에이전트(158턴 · 89.7M 토큰) 대비 MATH-500 54.6 vs 51.7 · forward 4회 · 약 $0.90 · 2B GSM8K 21.6 → 69.4. **목적을 수식으로 쓸 수 있으면 에이전트보다 최적화기가 싸고 정확하다.**
+- 🆕 [[WikiTrace]] — 메모리 유발 성능 저하를 "교훈 → 원본 궤적 링크 + 조건부 하강"으로 줄임(수치는 본문). 이 볼트(wiki → source → URL)와 같은 구조.
+- 🆕 [[Qwen3.8-27B-DSpine-b16]] — 추측 디코딩 드래프트 · DFlash2 대비 수락 길이 우위, 단 블록 16 vs 8([[비매칭-비교]]) · 실사용에 가까울수록 격차 축소.
+- 📚 크론(reliability low): [[리서치-LLM-에이전트-메모리-아키텍처-최신-동향-2026]](🔴 인용한 2603.04814 가 결론과 반대 — 장문맥이 정확도에서 이김) · [[리서치-2026년-온디바이스-AI엣지-추론모델-경량화-최신-동향]](출처 0 · 잘림 · 덮어쓰기 2일 연속).

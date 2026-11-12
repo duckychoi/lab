@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-11
+updated: 2026-11-12
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -652,3 +652,8 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 ## 🔄 2026-11-11 배치
 - 🆕 [[MiniMax-H3-Image]] — 16MP 네이티브 · 6스텝 · 33.1B DiT · 다중 참조 편집. 🔴 카드 벤치 0 · 가중치 합계 130GB 이상 · 커뮤니티 라이선스. 현실 경로 후보는 [[P-H3-Image-Comfy]](파생 관계 미확인).
 - 🆕 [[APEX-Condition-Shifting]] — 스트리밍 아바타 few-step 증류에서 fake-score 네트워크 제거 · 학습 메모리 −4.4% · 반복 시간 −9.2% · 품질 차이는 0.025 · 0.009 · 모션은 S2-Avatar 우세(저자 명시).
+
+## 🔄 2026-11-12 배치
+- 🔴🔴 **MiniMax H3 계열 전체가 한국에서 승인 없이 사용 불가** — 원본 LICENSE 2종(H3 · H3-Image) 10행 Excluded Territories = EU · 영국 · **대한민국** · 미국. 08월부터 이 도메인의 "오픈 i2v 스팟체크" 기준 모델이었다 → [[라이선스-지역-제외]]. 오픈 축 레퍼런스는 지역 제한 없는 모델로 다시 잡아야 한다(후보 [[LTX-2.5]] — 라이선스 별도 확인).
+- 🆕 [[hyperflow-h3-flash]] — H3 → 14B · CFG 없이 6스텝 · 영상+32kHz 스테레오 · **4090 5.2초 클립 152 s / 15초 747 s**(ComfyUI INT8) · Q4_K_M 9.1GB · 품질 벤치 0. 카드 312행이 지역 제외를 정직하게 명시.
+- 🆕 [[Comfy-Org-MiniMax-H3-Image]] — DL 351,803(원본의 500배+) · 카드가 지역 제외를 생략 → [[표-부분인용]].
