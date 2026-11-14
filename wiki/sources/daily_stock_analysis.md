@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, finance, stock-analysis, llm-agent, python, 금융-ai]
 created: 2026-08-12
-updated: 2026-11-12
+updated: 2026-11-14
 sources: []
 reliability: medium
 ---
@@ -53,3 +53,9 @@ reliability: medium
 - GitHub ⭐62,436 (2026-08-12 자동수집, 당일 +243) · Python
 - 성격: LLM 기반 다중 시장 주식 자동 분석 파이프라인
 - 신뢰도: medium (raw 자동수집 API 수치·실WebFetch 미수행, 투자 판단 신뢰성·백테스트·데이터 소스 미검증)
+
+## 🔄 2026-11-14 — ★70,854 → ★71,958 (+1,104 · 2일) · 수집기 재배달(신규 형식)
+- GitHub API(볼트 11-14 09:04Z): ★**71,958** · fork **57,384**(11-12 57,045) · open_issues 55 · MIT · pushed 2026-11-14T07:25Z.
+- 🔴 11-12 에 갱신한 레포를 수집기가 🔄 없이 다시 보냈다 → [[정규명-우선-중복검사]].
+- 수집기 판독에서 새로 들어온 것: ① 포크가 ★의 80% 인 이유를 "포크해서 Actions 로 돌리는 배포 방식"으로 설명(볼트 11-12 추정과 같은 방향 — 여전히 README 근거 미대조) ② 추천 모델 게이트웨이 · 뉴스 API 다수가 **제휴(affiliate) 링크** ③ 내장 전략 15종 · 멀티턴 에이전트 질의 · 백테스트 Web UI. 볼트는 ②③을 직접 확인하지 않았다.
+- 같은 날 [[claude-trading-skills]] 가 들어왔다 — 자동 푸시형(이 레포) ↔ 사용자 호출 절차형. 둘 다 "수익 보장 없음"을 명시한다([[금융-AI]]).

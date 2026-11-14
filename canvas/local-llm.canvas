@@ -1509,6 +1509,96 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1114-local-llm-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-14 배치",
+			"x": 60,
+			"y": 17950,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1114-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/embeddinggemma-2.md",
+			"x": 60,
+			"y": 18070,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/AutoTrust-JEV-27B.md",
+			"x": 520,
+			"y": 18070,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-local-llm-3",
+			"type": "file",
+			"file": "wiki/sources/TensorFold.md",
+			"x": 980,
+			"y": 18070,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-local-llm-4",
+			"type": "file",
+			"file": "wiki/sources/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF.md",
+			"x": 60,
+			"y": 18330,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-local-llm-5",
+			"type": "file",
+			"file": "wiki/sources/DavidAU-Qwen3.5-9B-Defiant-Fable.md",
+			"x": 520,
+			"y": 18330,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-local-llm-6",
+			"type": "file",
+			"file": "wiki/sources/embeddinggemma-2-GGUF.md",
+			"x": 980,
+			"y": 18330,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-local-llm-7",
+			"type": "file",
+			"file": "wiki/concepts/System-One-모델.md",
+			"x": 60,
+			"y": 18590,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1114-local-llm-8",
+			"type": "file",
+			"file": "wiki/concepts/표-부분인용.md",
+			"x": 520,
+			"y": 18590,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -2542,6 +2632,30 @@
 			"fromNode": "b1112-local-llm-3",
 			"toNode": "b1112-local-llm-7",
 			"label": "블록 16 vs 8"
+		},
+		{
+			"id": "b1114-local-llm-e0",
+			"fromNode": "b1114-local-llm-1",
+			"toNode": "b1114-local-llm-6",
+			"label": "원본 ↔ GGUF 파생"
+		},
+		{
+			"id": "b1114-local-llm-e1",
+			"fromNode": "b1114-local-llm-2",
+			"toNode": "b1114-local-llm-7",
+			"label": "Qwen3.8-27B 기반 결정 모델"
+		},
+		{
+			"id": "b1114-local-llm-e2",
+			"fromNode": "b1114-local-llm-5",
+			"toNode": "b1114-local-llm-8",
+			"label": "7/7 → 6/7 · 6/7 · 5/7"
+		},
+		{
+			"id": "b1114-local-llm-e3",
+			"fromNode": "b1114-local-llm-2",
+			"toNode": "b1114-local-llm-8",
+			"label": "스킬 점수 ↔ 과제 점수 혼용"
 		}
 	]
 }

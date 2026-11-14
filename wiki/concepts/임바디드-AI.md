@@ -4,7 +4,7 @@ type: concept
 domain: ai-news
 tags: [ai-news, concept, embodied-ai, vla, robot, world-model]
 created: 2026-07-09
-updated: 2026-11-12
+updated: 2026-11-14
 sources: [LaMem-VLA.md, LingBot-Video.md, RoboDojo.md, World-Infinity.md, VLA-Corrector.md, Embodied-cpp.md]
 reliability: high
 ---
@@ -41,3 +41,7 @@ reliability: high
 
 ## 🔄 2026-11-12
 - 🆕 [[Embodied-First-Exam]] — 코딩 에이전트가 제어 방식(직접/코드/정책 학습)을 골라 로봇 47종 · 1,156 과제. Standard(리셋 불가) 최고 **34%**(GPT-6 Astra · Codex). Privileged(무제한 리셋)는 근사 상한 — 시뮬 반복 성능은 현실의 상한일 뿐.
+
+## 🔄 2026-11-14
+- [[Ropedia-Xperience-2]] — 3D 스캔 1,589개 + 1인칭 녹화 4,230개(74 과제 · 131시간). 스캔 → 상호작용 시뮬 환경 · 사람 동작 → 전신 로봇 궤적 리타깃. 초록 첫 문장이 "GPT-6 Astra · Claude Fable 5.1 이 시각 관측에서 로봇을 직접 제어하나 장기 · 접촉 과제에서 취약"이라고 진단 — 11-12 [[Embodied-First-Exam]](Standard 34%)과 같은 방향. 정책 성능 · 스케일링 곡선은 없다(토대 단계).
+- [[Actor-Judge-Teacher]] — ALFWorld 에서 6개 모델 전부가 쉬운 하위목표로 끌려간다(행위자). 사후 판정은 유효.

@@ -4,7 +4,7 @@ type: concept
 domain: ai-news
 tags: [concept, finance-ai, trading, time-series, multi-agent, LLM, quant]
 created: 2026-04-11
-updated: 2026-09-19
+updated: 2026-11-14
 sources: [Kronos.md, TradingAgents.md, TimesFM.md, tradingview-mcp.md, Electron-CDP-브리지.md]
 reliability: medium
 ---
@@ -50,3 +50,6 @@ LLM·에이전트·파운데이션 모델을 금융 데이터 분석, 트레이�
 - [[TimesFM]]
 - [[시계열-예측-파운데이션-모델]]
 - [[AI-에이전트-프레임워크]]
+
+## 🔄 2026-11-14
+- [[claude-trading-skills]] 신규 · [[daily_stock_analysis]] 재배달(★71,958). 자동 푸시형 ↔ 사용자 호출 절차형으로 형식은 다르지만 **둘 다 수익 · 예측 정확도를 주장하지 않는다**고 명시한다. 이 도메인에서 스타 수(7.2만 · 4천)와 검증 수치(둘 다 0)는 무관하다 → [[스타-근거-비동행]].

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, local-llm, system-one, typed-decisions, permutation-invariance, null-aware, caching, 수치-미제시]
 created: 2026-10-14
-updated: 2026-10-14
+updated: 2026-11-14
 sources: []
 reliability: medium
 ---
@@ -84,3 +84,8 @@ reliability: medium
 - 볼트 실측: HF Papers API HTTP 200 — 업보트 **52**(수집기 47) · publishedAt **2026-10-13** · 저자 **2명** · 초록 전문 수신·전수 검색
 - raw 대비: ✅ 4요건·"거의 완벽"·"상당한 지연 감소" 비정량 판정 **일치** · ✅ JEV-35B 구논문 인용 경고 **수용** · 🆕 **볼트 추가 3건**: *"strong typed-decision performance"도 비정량*(수집기 미지적) · *"without changing decisions"* 조건 발굴 · **저자 2명 = 금일 최소**(VideoJev 의 1/9)
 - 신뢰도: ⭐⭐ (설계 원칙은 명료 / 🔴 **벤치 이름조차 없음 · 구현체 없음**)
+
+## 🔄 2026-11-14 — 계열 소스 3건 추가
+- [[SO-Arena]] — System One 모델 벤치: 정확도 1위가 신뢰성 7위. `Noul`(답 부재)이 실제로 작동하는지를 재는 "missing-answer recognition" 지표 포함.
+- [[Actor-Judge-Teacher]] — JEV 를 교사로 Qwen2.5-1.5B 정책 ALFWorld 72.8 → 82.9% · WebShop 56.8 → 71.4%. 행위자로는 약하고 심판으로는 강하다.
+- [[AutoTrust-JEV-27B]] — Qwen3.8-27B 기반 결정 모델, 참조 열에 "JEV-27B" · "Jev 1.14".

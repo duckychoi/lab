@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, alibaba, qwen, china, big-tech]
 created: 2026-06-26
-updated: 2026-10-10
+updated: 2026-11-14
 sources: [zvec.md, Qwen3.6-27B.md, Qwen3.8-27B.md, Qwen3.8-Flash-Next.md, Qwen3.8-27B-GGUF.md, MiniMax-H3.md, NeoHorse-1-Paper.md]
 reliability: high
 ---
@@ -118,3 +118,7 @@ reliability: high
 - [[복합지표-분해]] — 자발적 지표 분해
 - [[벤치마크-이미지-봉인]] — 재발
 - [[요약자와-판정자-분리]] · [[숨김유인-부호]] · [[Qwen]]
+
+## 🔄 2026-11-14
+- 🔄 [[open-code-review]] ★50,923(10-10 대비 +5,297) · 벤치 수치 이미지 봉인 61일째 · 증가 속도 둔화(일평균 830 → 151).
+- 🆕 [[qwen-code]](QwenLM · ★30,134) — Gemini CLI 파생 다중 프로토콜 코딩 에이전트 · 7개 버전 SWE-bench Verified 76.40–77.80%(최고점은 최초 버전).

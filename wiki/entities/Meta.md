@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, meta, facebook, design-system, speech, multilingual, big-tech]
 created: 2026-07-09
-updated: 2026-11-12
+updated: 2026-11-14
 sources: [astryx.md, mms-300m.md]
 reliability: high
 ---
@@ -41,3 +41,6 @@ reliability: high
 
 ## 🔄 2026-11-12
 - [[astryx]] — 레포 경로 `facebook/astryx` → **`meta/astryx`**(301 · 레포 ID 1131202426 동일). ★7,301(07-09) → **★25,696**, 당일 트렌딩 1위(+2,776). README "Meta 내 13,000+ 앱 사용"은 자체 주장. 조직 경로가 바뀌면 URL 기반 중복 검사가 실패한다 → [[정규명-우선-중복검사]].
+
+## 🔄 2026-11-14
+- 🆕 [[dinov3-vitl16]] — DINOv3 ViT-L/16(7B 증류 · 3.03억 파라미터 · 누적 dl 8,824,385 · 수동 승인 게이트). 2025-08 모델의 재트렌딩. LICENSE "worldwide" — 지역 제외 조항 없음([[라이선스-지역-제외]] 음성 대조군).

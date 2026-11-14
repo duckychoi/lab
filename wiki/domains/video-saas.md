@@ -657,3 +657,11 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 - 🔴🔴 **MiniMax H3 계열 전체가 한국에서 승인 없이 사용 불가** — 원본 LICENSE 2종(H3 · H3-Image) 10행 Excluded Territories = EU · 영국 · **대한민국** · 미국. 08월부터 이 도메인의 "오픈 i2v 스팟체크" 기준 모델이었다 → [[라이선스-지역-제외]]. 오픈 축 레퍼런스는 지역 제한 없는 모델로 다시 잡아야 한다(후보 [[LTX-2.5]] — 라이선스 별도 확인).
 - 🆕 [[hyperflow-h3-flash]] — H3 → 14B · CFG 없이 6스텝 · 영상+32kHz 스테레오 · **4090 5.2초 클립 152 s / 15초 747 s**(ComfyUI INT8) · Q4_K_M 9.1GB · 품질 벤치 0. 카드 312행이 지역 제외를 정직하게 명시.
 - 🆕 [[Comfy-Org-MiniMax-H3-Image]] — DL 351,803(원본의 500배+) · 카드가 지역 제외를 생략 → [[표-부분인용]].
+
+## 🔄 2026-11-14 배치
+- 🔴 [[Pika-H3-Flex]] — MiniMax-H3 후학습 LoRA 2종(FL2VA · Ref2VA) · 6스텝 · 영상 + 동기 오디오 · 로컬 480p/768p, 1080p 이상은 유료 API. **LICENSE 가 H3 원본과 바이트 동일 → 한국 제외**([[라이선스-지역-제외]] 파생 4번째). 프롬프트 패턴은 참고 가치: 레퍼런스의 역할을 문장으로 한정(`@Image1 is the character sheet … @Video1 is the motion reference only`) · 샷 타임코드.
+- 🆕 [[PhysLoop]] — LLM 물리 지식을 하네스로 묶어 학습 영상 구축 + **추론 시점 국소 수리** · 영상 10만 개 공개 · 수치는 본문 · RSI 는 지향([[RSI-프레이밍]]).
+- 🆕 [[G-STAR]] — 32×/64× 압축 이산 AR 이미지 생성 · 1024px 2.5초(H200) · "20×"는 기존 이산 AR 대비.
+- 🆕 [[Duo]] — 전이중 시청각 상호작용 "Reciprocal World Model" v1 · 정량 평가 0 · 예고성(reliability low).
+- 🆕 엔티티 [[DAGroup-PKU]] — 같은 날 데일리 상위 10편 중 2편(PhysLoop · G-STAR).
+- 📌 오픈 i2v 기준 모델 재선정(11-12 actionable)은 미해결 — 이번 배치에 지역 제외 없는 후보는 들어오지 않았다.

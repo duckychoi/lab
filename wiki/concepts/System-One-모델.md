@@ -4,8 +4,8 @@ type: concept
 domain: ai-news
 tags: [concept, system-one, typed-decisions, scoring-head, caching, low-latency, agent]
 created: 2026-10-14
-updated: 2026-10-14
-sources: [Jeva.md, VideoJev.md, SearchJev.md]
+updated: 2026-11-14
+sources: [Jeva.md, VideoJev.md, SearchJev.md, SO-Arena.md, Actor-Judge-Teacher.md, AutoTrust-JEV-27B.md]
 reliability: medium
 ---
 
@@ -86,3 +86,14 @@ CLAUDE.md 규약(*"3개 이상 소스에서 등장한 개념은 반드시 concep
 - 생성: 2026-10-14 (인제스트 2026-10-14)
 - 근거: HF Papers API 초록 전문 2건(2610.18773 · 2610.18615) + HF 모델 목록 API(`JEV-35B` 트렌딩스코어 439) — 전건 볼트 직접 수신
 - 신뢰도: ⭐⭐ (용어·출력형식·캐시요건 **겹침은 확인** / 🔴 **연구 계열 동일성 미확인 · 표본 3 · 논문 2건이 같은 날 발행**)
+
+## 🔄 2026-11-14 — 표본 3건 추가: 외부 측정 축이 처음 생겼다
+| 소스 | 유형 | 무엇을 더했나 |
+|---|---|---|
+| [[SO-Arena]] (2611.15777 · 83 up) | 벤치 | 11개 도메인 · 21개 모델. **정확도 1위 System One 모델이 신뢰성 7위** — 선택지 변경 안정성 · 답 부재 인식을 별도 축으로 측정 |
+| [[Actor-Judge-Teacher]] (2611.17167 · 30 up) | 논문 | 결정 모델은 **행위자로는 쉬운 하위목표에 끌려가고, 심판 · 교사로는 유효** — JEV 교사로 ALFWorld 72.8 → 82.9% |
+| [[AutoTrust-JEV-27B]] (dl 147,541) | HF 모델 | Qwen3.8-27B 기반 · Decision Index 0.3 public 67.31 · 같은 크기 JEV-27B 대비 35/36 행 우위(자체 측정) |
+
+- 10-14 에 이 페이지가 적은 "공통 약점 = 검증 상태"에 대한 첫 외부 응답이 SO-Arena 다. 그리고 그 응답은 **정확도 표만으로는 결정 모델을 고를 수 없다**는 것이다 — AutoTrust 카드는 정확도/스킬 점수만 보고한다.
+- 용도 재정의: "빠른 행위자"보다 **"값싼 사후 판정자 · 보상 모델"** 쪽에 근거가 쌓인다(Actor-Judge-Teacher). 질문 형식은 "과제가 성공할까"가 아니라 "이 행동이 도움이 됐나".
+- 표본 독립성: SO-Arena(Xinchao Wang 그룹) · Actor-Judge-Teacher(ZJU-REAL 레포) · AutoTrust(vLLM Semantic Router Team 표기)는 서로 다른 주체로 보인다 — 10-14 의 "같은 날 발행 2건" 한계가 완화됐다. 단 저자 소속은 볼트 미확인.

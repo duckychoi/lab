@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, organization, bigtech, ai-agent, gemini, google-cloud]
 created: 2026-07-02
-updated: 2026-10-25
+updated: 2026-11-14
 sources: [agents-cli.md, gemini-cli.md]
 reliability: high
 ---
@@ -53,3 +53,7 @@ reliability: high
 
 ## 🔄 2026-10-25
 - [[gemini-cli]] — ★108,310 · README 첫 줄에서 자기 대체 공지(*"replaced by Antigravity CLI on June 18th, 2026"* · *"not been optimized for Gemini 4 Argon"*) · 당일 푸시는 계속 ⇒ 지표는 신선, 제품 지위는 레거시
+
+## 🔄 2026-11-14
+- 🆕 [[modern-web-guidance-src]](GoogleChrome · ★5,174) — 코딩 에이전트용 웹 표준 가이드 스킬 · 자체 eval 표(무가이드 52–60% → 가이드 82–96%) · 텔레메트리 기본 켜짐.
+- 🆕 [[embeddinggemma-2]](Google DeepMind · dl30 517,987) — 740M 4모달 임베딩 · 텍스트 다국어는 전작과 동급(+0.21), 코드 +9.92 · 128d 는 텍스트 전용. apache-2.0 · 게이트 없음.

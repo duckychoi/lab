@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, on-device, embedding, multimodal, gguf, quantization, 원본-파생-역전, 특화-역류, 배포출처-봉인, 수집기-정정]
 created: 2026-10-11
-updated: 2026-10-11
+updated: 2026-11-14
 sources: []
 reliability: medium
 ---
@@ -89,3 +89,6 @@ reliability: medium
   - 🔴 **볼트 자기지적**: 같은 성질의 GGUF 가 [[Qwen-Image-2.1-Uncensored-GGUF]]·[[Ternary-Bonsai-2-27B]] 에서는 `ai-news` 로 분류돼 있다 ⇒ **볼트 도메인 분류가 GGUF 에 대해 일관되지 않다.** 린트 항목으로 올린다.
 - 신뢰도: ⭐⭐ (✅ **볼트 독립 HF API 실측 집행** · 파생 64건 전수 열거 · base_model 확정 / 🔴 **GGUF 자체 벤치 0건 · 한국어 미확인 · 양자화 손실 미확인 · 코드 미실행**)
 - 확인 범위: ✅ **볼트가 직접 조회**: `api/models/unsloth/embeddinggemma-2-GGUF`(expand 8필드) · `api/models/google/embeddinggemma-2`(**2회**) · `api/models?search=embeddinggemma-2&limit=100`(파생 99건 열거 후 2세대 64건 필터). 🔴 **모델카드 본문·파일 목록은 미열람**이고 벤치 수치는 **수집기의 원본 카드 인용**이다.
+
+## 🔄 2026-11-14 — 원본 페이지 신설: [[embeddinggemma-2]]
+- 원본 `google/embeddinggemma-2`(dl30 517,987 · likes 3,418)가 자동수집으로 들어와 독립 페이지가 됐다. 카드 수치: MTEB 다국어 61.36(전작 61.15) · 코드 78.68(전작 68.76) · 128d 절단 시 멀티모달 열 59.01 → 45.65. 10-11 actionable(한국어 5쌍 측정)의 기준선으로 쓴다 — 768d vs 256d 두 조건 권장.

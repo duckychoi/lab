@@ -8668,6 +8668,176 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1114-ai-news-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-14 배치",
+			"x": 60,
+			"y": 55960,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1114-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/modern-web-guidance-src.md",
+			"x": 60,
+			"y": 56080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/qwen-code.md",
+			"x": 520,
+			"y": 56080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/CopilotKit-OpenBot.md",
+			"x": 980,
+			"y": 56080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/free-claude-code.md",
+			"x": 60,
+			"y": 56340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/open-code-review.md",
+			"x": 520,
+			"y": 56340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/codex-security.md",
+			"x": 980,
+			"y": 56340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/daily_stock_analysis.md",
+			"x": 60,
+			"y": 56600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/plannotator.md",
+			"x": 520,
+			"y": 56600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/claude-trading-skills.md",
+			"x": 980,
+			"y": 56600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/SO-Arena.md",
+			"x": 60,
+			"y": 56860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/SimpleHC.md",
+			"x": 520,
+			"y": 56860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/Actor-Judge-Teacher.md",
+			"x": 980,
+			"y": 56860,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-ai-news-13",
+			"type": "file",
+			"file": "wiki/concepts/System-One-모델.md",
+			"x": 60,
+			"y": 57120,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1114-ai-news-14",
+			"type": "file",
+			"file": "wiki/concepts/메타데이터-부재-추론.md",
+			"x": 520,
+			"y": 57120,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1114-ai-news-15",
+			"type": "file",
+			"file": "wiki/concepts/정규명-우선-중복검사.md",
+			"x": 980,
+			"y": 57120,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1114-ai-news-16",
+			"type": "file",
+			"file": "wiki/concepts/에이전트-스킬.md",
+			"x": 60,
+			"y": 57380,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -16147,6 +16317,66 @@
 			"fromNode": "b1112-ai-news-5",
 			"toNode": "b1112-ai-news-9",
 			"label": "논문이 수익 미입증 명시"
+		},
+		{
+			"id": "b1114-ai-news-e0",
+			"fromNode": "b1114-ai-news-10",
+			"toNode": "b1114-ai-news-13",
+			"label": "정확도 1위 = 신뢰성 7위"
+		},
+		{
+			"id": "b1114-ai-news-e1",
+			"fromNode": "b1114-ai-news-12",
+			"toNode": "b1114-ai-news-13",
+			"label": "행위자 약함 · 심판 유효"
+		},
+		{
+			"id": "b1114-ai-news-e2",
+			"fromNode": "b1114-ai-news-1",
+			"toNode": "b1114-ai-news-14",
+			"label": "eval 표는 README 593행"
+		},
+		{
+			"id": "b1114-ai-news-e3",
+			"fromNode": "b1114-ai-news-1",
+			"toNode": "b1114-ai-news-16",
+			"label": "모르는 것만 주입"
+		},
+		{
+			"id": "b1114-ai-news-e4",
+			"fromNode": "b1114-ai-news-9",
+			"toNode": "b1114-ai-news-16",
+			"label": "절차형 스킬 74개"
+		},
+		{
+			"id": "b1114-ai-news-e5",
+			"fromNode": "b1114-ai-news-5",
+			"toNode": "b1114-ai-news-15",
+			"label": "신규 형식 재배달"
+		},
+		{
+			"id": "b1114-ai-news-e6",
+			"fromNode": "b1114-ai-news-6",
+			"toNode": "b1114-ai-news-15",
+			"label": "이틀 만에 재배달"
+		},
+		{
+			"id": "b1114-ai-news-e7",
+			"fromNode": "b1114-ai-news-7",
+			"toNode": "b1114-ai-news-15",
+			"label": "신규 형식 재배달"
+		},
+		{
+			"id": "b1114-ai-news-e8",
+			"fromNode": "b1114-ai-news-3",
+			"toNode": "b1114-ai-news-15",
+			"label": "openbot 과 다른 레포"
+		},
+		{
+			"id": "b1114-ai-news-e9",
+			"fromNode": "b1114-ai-news-4",
+			"toNode": "b1114-ai-news-14",
+			"label": "NOASSERTION → AGPL-3.0-only"
 		}
 	]
 }

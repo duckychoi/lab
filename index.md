@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-12 (✅ **대기 20건 전량 처리** — 11-12 자동수집 13(**신규 11 · 갱신 2** — astryx 는 수집기 "신규"였으나 `facebook→meta` 경로 변경된 같은 레포) · 크론 노트 7(신규 5 · 🔴 **덮어쓰기 2 복원 병합**). `^- URL:` **0** · `^- path:` **0**. 페이지 1787 → **1804**)
-total_pages: 1804  # 2026-11-12 실측(sources **1573** · entities 129 · concepts **94** · synthesis 4 · domains 4 · queries 0) — 증분 1787 + 17(자동수집 신규 11 + 크론 신규 5 + 개념 신설 1)
-total_sources: 1573  # 2026-11-12: 자동수집 신규 11 + 크론 신규 5 (갱신 2 · 덮어쓰기 2는 기존 계수)
+updated: 2026-11-14 (✅ **대기 26건 전량 처리** — 11-13 자동수집 13 + 11-14 자동수집 13 = **신규 22 · 갱신 4**(free-claude-code · open-code-review · codex-security · daily_stock_analysis — 뒤 3건은 수집기가 신규 형식으로 재배달). 크론 노트 0건. `^- URL:` **0** · `^- path:` **0**. 페이지 1804 → **1829**)
+total_pages: 1829  # 2026-11-14 실측(sources **1595** · entities **130** · concepts **96** · synthesis 4 · domains 4 · queries 0) — 증분 1804 + 23(자동수집 신규 소스 22 + 엔티티 신설 1 [[DAGroup-PKU]]) + 2(11-13 타 프로세스 개념 2: feature-map-encryption · neural-superposition-comms)
+total_sources: 1595  # 2026-11-14: 자동수집 신규 22 (갱신 4는 기존 계수)
+# 🎯 배치 축(2026-11-14) = **"없다"고 적힌 것은 파일 하나 더 열면 있었고, 링크만 걸린 라이선스 뒤에는 한국 제외가 있었다.** 수집기의 부재 판정 3건이 볼트 실측에서 뒤집혔다 — [[modern-web-guidance-src]] "eval 수치 없음"(README 593–610행에 표: 무가이드 52–60% → 가이드 82–96%) · [[AutoTrust-JEV-27B]] "베이스 미명시"(`NOTICE.base`: Built on Qwen/Qwen3.8-27B) · "비전 근거 없음"(`config.json` 멀티모달 아키텍처) → [[메타데이터-부재-추론]]. 반대 방향으로 🔴 [[Pika-H3-Flex]] 는 LICENSE 가 MiniMax-H3 원본과 **바이트 동일**(sha256 일치) — 카드는 링크만 걸고 한국 제외를 말하지 않는다 → [[라이선스-지역-제외]] 파생 4번째, ✅ [[dinov3-vitl16]] 은 같은 검사로 "worldwide" 통과(음성 대조군). 같은 결: [[free-claude-code]] API `NOASSERTION` → LICENSE 원문 **AGPL-3.0-only** · [[DavidAU-Qwen3.5-9B-Defiant-Fable]] "7/7 초과"는 같은 카드 표에서 6/7 · 6/7 · 5/7([[표-부분인용]]) · 수집기 11-14 GitHub 5건 중 3건이 기보유 재배달([[정규명-우선-중복검사]]). ✅ 정방향: [[SO-Arena]](정확도 1위 = 신뢰성 7위) · [[Actor-Judge-Teacher]](행위자로 약한 모델이 심판 · 교사로 유효)로 [[System-One-모델]]에 외부 측정 축 · [[qwen-code]] 7개 버전 SWE-bench 76.40–77.80%(최고점은 최초 버전 — [[하네스-설계-축]] 포화).
 # 🎯 배치 축(2026-11-12) = **다운로드 버튼은 권리를 보증하지 않는다 — 그리고 "다르다"는 인용은 같은 점을 지운다.** 볼트가 원본 LICENSE 를 처음 열자 [[MiniMax-H3]] · [[MiniMax-H3-Image]] 모두 **대한민국을 적용 지역에서 제외**(10행) — 08월부터 "라이선스 확인 필요"로 넘긴 질문이 한 줄 grep 으로 끝났다. [[hyperflow-h3-flash]] 카드는 이를 정직하게 적었고(312행), DL 35만의 [[Comfy-Org-MiniMax-H3-Image]] 카드는 "원본과 다르다"며 매출 조항만 인용해 공통 제약을 생략 → 🆕 [[라이선스-지역-제외]] · [[표-부분인용]]. 같은 결의 발견 2건: 크론 메모리 노트가 인용한 2603.04814 는 **장문맥이 정확도에서 이긴다**고 결론([[인용-부호]]) · [[astryx]]·[[OpenSandbox]] 는 조직 경로가 바뀌어 URL 중복 검사를 통과([[정규명-우선-중복검사]] — 레포 ID 로 대조). ✅ 정방향: [[daily_stock_analysis]] 논문이 *"수익·예측 정확도를 입증하지 않는다"* 고 자기 범위를 자름 · 크론 학회 노트가 11-11 요청(오늘 이후 마감 우선)을 하루 만에 반영.
 # 🎯 배치 축(2026-11-11) = **답은 인용한 출처 안에 있었다 — 요약이 그것을 버렸다.** [[리서치-한국연구재단NRF-신진연구자우수신진장비인프라-구축-사업-2026년-최신-동향]] 은 "2027년도 1차 공모 11-05 개시 · 설명회 오늘"이 적힌 기사를 인용하고 2025년 12월 접수를 안내 · [[리서치-AI로봇-주요-학회-2026년-논문-마감CFP-일정-현황]] 은 CVPR 2027 을 등록 마감 당일에 누락 · [[billion-context]] README 요약은 같은 표의 full 대비 −4.0%p 와 정확 회수 최하위를 뺌 · [[Ripple-65B-Preview]] 80.5 옆 GPQA 최하 · 크론 부동산 노트는 '개정안'을 확정으로, 9월 평균을 중위로 · ✅ 정방향: [[Arete-27B]] · [[APEX-Condition-Shifting]] 은 불리한 조건을 스스로 적음 → [[표-부분인용]] · [[한정어-탈락]] · [[경과-마감-배달]].
 # 🎯 배치 축(2026-11-10) = **원본이 바뀌면 옳았던 판정도 낡는다 — 그리고 "근거 없음"을 "오류 확정"으로 올리면 안 된다.** [[anthropics-skills]] Office 스킬 4종이 11-06 Apache 2.0 으로 전환 → 볼트 09-04 "재배포 금지" 서술 정정 · [[DavidAU-Qwen3.8-27B-TURBO]] 카드가 mmproj 비전 동작을 명시 → 볼트 09-08 "pipeline_tag 오류 확정" 정정(수집기는 이 모델을 미수집으로 오분류) · [[A2-MEAS]] 2.21배는 저자가 "벤치 에디션 다름"을 스스로 명시 · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]] 벤치는 검열 제거 전 원본 값 · [[Confucius4-R2T2]] 5.76% 옆의 5.15%(full-context)와 한국어 U=0 역전 · 크론 학회 노트 한 문서 값 충돌 3건
@@ -42,6 +43,7 @@ total_sources: 1573  # 2026-11-12: 자동수집 신규 11 + 크론 신규 5 (갱
 
 ## entities
 
+- [[DAGroup-PKU]] — 🆕 2026-11-14 · 소스 2건([[G-STAR]] · [[PhysLoop]]) · 11-13 HF 데일리 상위 10편 중 2편 · 마지막 저자 Daquan Zhou 공통 · 헤드라인은 속도(20×) · 규모(10만), 초록 벤치 점수 미기재 · 🔴 소속 미확인
 - [[Mistral-AI]] — 🆕 2026-10-26 · 소스 2건([[Mistral-Medium-3.5-128B]] · [[Timestral-209M]]) · LLM 랩의 시계열 진입 · "Modified MIT" = 월매출 $20M 상한
 - [[Pollen-Robotics]] — 🆕 2026-10-25 · [[microduck]] 제작 · 학습(`microduck_rl`)·온보드 레포 분리 공개 · MuJoCo 시뮬로 하드웨어 없이 실제 데몬 구동
 - [[RecursiveSI]] — 🆕 2026-10-25 · Flint(39.8B/활성 ~2.5B 코딩 MoE) 발행 · 자기에게 불리한 TB 조정 선공개 · 🔴 비교표 PNG 봉인 → [[flint-GGUF]]
@@ -361,6 +363,34 @@ total_sources: 1573  # 2026-11-12: 자동수집 신규 11 + 크론 신규 5 (갱
 ---
 
 ## sources
+
+### 2026-11-14 배치 (대기 **26건** 전량 처리 · 11-13 자동수집 13 + 11-14 자동수집 13 = **신규 22 · 갱신 4** · GitHub 10(신규 6 · 갱신 4) · HF논문 10(신규 10) · HF모델 6(신규 6) · 크론 노트 0 · 엔티티 신설 1 · 개념 갱신 14 · 볼트 재분류: ai-news 12 · local-llm 5 · slam-3dgs 5 · video-saas 4)
+- 🆕 [[modern-web-guidance-src]] — ★5,174(하루 +1,325) · Google · 에이전트용 웹 표준 스킬 약 205 토큰 · 자체 eval 무가이드 52–60% → 가이드 82–96% · 🔴 수집기 "eval 수치 없음" 반증(README 593행) · 과제가 가이드 유래 · 텔레메트리 기본 켜짐 · `ai-news`
+- 🆕 [[qwen-code]] — ★30,134 · Apache-2.0 · Gemini CLI v0.8.2 파생 · 같은 Qwen 3.7 Max 로 7개 버전 SWE-bench Verified 76.40–77.80%(최고점 = 최초 버전 0.0.14) · `ai-news`
+- 🆕 [[TensorFold]] — ★2,085 · Zig 단일 바이너리 추론 서버(Metal · CUDA) · 설명의 "Vulkan" README 0건 · 신생 1인 주도 · `local-llm`
+- 🆕 [[CopilotKit-OpenBot]] — ★12,166 · 템플릿 MIT · CopilotKit Intelligence 별도 라이선스(운영은 유료) · 볼트 [[openbot]] 과 다른 레포 · `ai-news`
+- 🔄 [[free-claude-code]] — ★50,638(08-27) → **69,992** · 🔴 MIT → **AGPL-3.0-only**(LICENSE 원문 볼트 확인 · API 는 `NOASSERTION`) · 판정 `low` 유지 · `ai-news`
+- 🆕 [[SO-Arena]] — 83 up · System One 모델 벤치 11도메인 · 21모델 · **정확도 1위가 신뢰성 7위** · 🔴 초록에 모델명 · 점수 없음 · `ai-news`
+- 🆕 [[BirdDreams]] — 49 up · 카메라 영상 + BEV 영상 공동 생성 주행 월드모델 · 단일 카메라 입력 · 🔴 수치 · 코드 없음 · `slam-3dgs`
+- 🆕 [[G-STAR]] — 42 up · 32×/64× 압축 이산 AR 이미지 생성 · 1024px 2.5초(H200) · "20×"는 기존 이산 AR 대비 · 🔴 벤치 점수 미기재 · `video-saas`
+- 🆕 [[Duo]] — 38 up · 전이중 시청각 "Reciprocal World Model" v1 · 🔴 정량 평가 0 · 예고성 · 코드 inclusionAI/Duo(수집 후 연결) · `video-saas`
+- 🆕 [[SimpleHC]] — 26 up · Hyper-Connections 단순화 · 바닐라 대비 학습 시간 +2.4% · 15B → 30B MoE 에서 mHC 동급 · `ai-news`
+- 🆕 [[Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF]] — dl30 4,081,896(하루 −38,385) · 재양자화 없이 텐서 144/1,223 이식 · +0.25~0.44GB · 행동 검증 프롬프트 1개(카드 명시) · `local-llm`
+- 🆕 [[DavidAU-Qwen3.5-9B-Defiant-Fable]] — dl30 2,137,747 · 9B 무검열 파인튜닝 · KL 0.0793 · 거부 6/100 · 🔴 "7/7 초과" → 카드 표로 6/7 · 6/7 · 5/7 · `local-llm`
+- 🆕 [[dinov3-vitl16]] — 누적 dl 8,824,385 · DINOv3 ViT-L/16 3.03억 · ADE20k 54.9 · 수동 승인 게이트 · ✅ LICENSE "worldwide"(지역 제외 없음) · 2025-08 모델 재트렌딩 · `slam-3dgs`
+- 🔄 [[open-code-review]] — ★45,626(10-10) → **50,923** · 벤치 수치 이미지 봉인 **61일째** · 증가 둔화(일 830 → 151) · 🔴 수집기 신규 형식 재배달 · `ai-news`
+- 🔄 [[codex-security]] — ★11,978(11-12) → **13,323** · 탐지율 수치 0 유지 · 🔴 이틀 만에 신규 형식 재배달 · `ai-news`
+- 🔄 [[daily_stock_analysis]] — ★70,854(11-12) → **71,958** · fork 57,384 · 제휴 링크 · 🔴 신규 형식 재배달 · `ai-news`
+- 🆕 [[plannotator]] — ★10,603 · Apache-2.0 · 에이전트 plan · diff 브라우저 주석 → 다음 턴 · Inbox MCP · 텔레메트리 없음(릴리스 조회는 발생) · `ai-news`
+- 🆕 [[claude-trading-skills]] — ★4,352 · MIT · 스킬 74개 · 절차형 워크플로 · "신호 서비스 아님" 명시 · 🔴 성과 측정 0 · `ai-news`
+- 🆕 [[PhysLoop]] — 44 up · LLM 물리 지식 하네스로 학습 영상 구축 + 추론 시점 국소 수리 · 영상 10만 공개 · RSI 는 "toward" · 🔴 초록 수치 0 · `video-saas`
+- 🆕 [[Open-Vision-Banana]] — 32 up · 생성 모델로 분할 · 깊이 · Cityscapes 제로샷 73.9 vs 보고치 69.9 · 인스턴스 분할 열세 명시 · legend ensembling 최대 +8.7/+15.0 · `slam-3dgs`
+- 🆕 [[Actor-Judge-Teacher]] — 30 up · 결정 모델 6종 전부 행위자로 쉬운 하위목표에 끌림 · 심판 · 교사로 유효 · JEV 교사 ALFWorld 72.8 → 82.9% · WebShop 56.8 → 71.4% · `ai-news`
+- 🆕 [[Ropedia-Xperience-2]] — 26 up · 3D 스캔 1,589 + 1인칭 4,230(74 과제 · 131시간) · 스캔 → 시뮬 환경 · 🔴 정책 성능 0 · `slam-3dgs`
+- 🆕 [[TTB]] — 21 up · NVlabs · 교차 시점 어텐션을 MLP 에 굽기 · 디코더 전용 시점 합성 최대 23배 · 🔴 굽는 비용 미기재 · `slam-3dgs`
+- 🆕 [[embeddinggemma-2]] — dl30 517,987 · 740M 4모달 임베딩 · MTEB 다국어 61.36(전작 +0.21) · 코드 78.68(+9.92) · 256d 거의 무손실 · 128d 멀티모달 59.01 → 45.65 · apache-2.0 · [[embeddinggemma-2-GGUF]] 의 원본 · `local-llm`
+- 🔴 [[Pika-H3-Flex]] — dl 147,955 · MiniMax-H3 LoRA 2종 · 6스텝 영상 + 오디오 · 로컬 480p/768p · **LICENSE = H3 원본과 바이트 동일 → 한국 제외**(카드 본문 침묵) · 품질 수치 0 · `video-saas`
+- 🆕 [[AutoTrust-JEV-27B]] — dl 147,541 · Qwen3.8-27B 기반 결정 모델(🔴 수집기 "베이스 미명시" 반증) · Decision Index public 67.31 · JEV-27B 대비 35/36 · Jev 1.14 대비 26/36 · 자체 측정 · 레포 개명(307) · `local-llm`
 
 ### 2026-11-12 배치 (대기 **20건** 전량 처리 · 자동수집 13 = **신규 11 · 갱신 2**(GitHub 신규 3·갱신 2 · HF논문 신규 5 · HF모델 신규 3) · 크론 노트 7(신규 5 · 🔴 **덮어쓰기 2 복원** — 온디바이스 171→82 · Beamforming 846→90) · 잘림 3 · 출처 0건 1 · 개념 신설 1(라이선스-지역-제외) · 엔티티 갱신 5(MiniMax·Comfy-Org·Meta·OpenAI·Tencent) · 개념 갱신 12 · 도메인 4쪽 · canvas 4종 갱신 · 🔴 수집기 "신규" 오판 1(astryx — 경로 변경))
 - 🔄 [[astryx]] — ★7,301(07-09) → **25,696** · `facebook/astryx` 301 → `meta/astryx`(레포 ID 1131202426 동일) · 트렌딩 1위 +2,776 · "Meta 13,000+ 앱"은 자체 주장 · `ai-news`

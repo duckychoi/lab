@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-12 (✅ **11-12 자동수집 13 + 크론 7 = 20건 처리** · 대기 0건)
+updated: 2026-11-14 (✅ **11-13 자동수집 13 + 11-14 자동수집 13 = 26건 처리** · 대기 0건)
 ---
 
 # Raw 대기열
@@ -1195,85 +1195,12 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 > 2. 🔴🔴 **인용한 출처가 결론을 반박하거나 대체한다 — 2건** — ① 메모리 노트: 인용한 arXiv 2603.04814 초록은 *장문맥 GPT-5-mini 가 LongMemEval·LoCoMo 사실 회수에서 더 높다*(메모리 우위는 비용) — 노트는 "구조화 메모리가 압도"로 결론. ② NRF 노트: 인용한 매일일보 11-05 에 2027년도 공모(11-05 개시 · 2조 9,102억 · 18,516과제)가 있는데 핵심은 2026년도 값 · 상세는 2025-12 접수(**2일 연속**). 결론을 쓰기 전에 인용한 출처의 첫 문단과 결론 문장을 다시 읽어 달라.
 > 3. 🔴 **형식·사실 결함 반복** — 온디바이스 출처 0건 + 잘림(2일째) · 메모리·휴머노이드 출처 목록 잘림 · 휴머노이드 "Hyundai 조지아 공장"(블로그: RMAC) · "4시간 배터리"(블로그 미검출) · GR00T N1.6↔N1.7 · 부동산 "19억 5,500만"(현재 판본 중위 16.8억) · 14주↔13주 날짜 없이 혼합 · 세제 개정안 확정 서술 · 제목 "강동"(본문 0건) · 같은 파일명 덮어쓰기 2건 — 크론 프롬프트 수정 미이행 **19배치째**.
 
-## [2026-11-13] 자동수집 | GoogleChrome/modern-web-guidance-src — 코딩 에이전트용 최신 웹 표준 가이드 스킬
-- URL: https://github.com/GoogleChrome/modern-web-guidance-src
-- 도메인: ai-news
-- 스타수: ★3,849 (당일 +739, GitHub Trending daily 1위) · Apache-2.0 · repo id 1143633223 · 생성 2026-01-27
-- 한줄요약: 배포용 레포 GoogleChrome/modern-web-guidance 의 원본(가이드 작성·보정·평가 코드) 레포. `npx modern-web-guidance search/retrieve/legacy-scan` CLI 로 View Transitions·Anchor Positioning·Popover·container queries·`scheduler.yield`·내장 AI(번역·요약) API 등 큐레이션 가이드를 에이전트 컨텍스트에 주입하고, 코드베이스의 레거시 패턴을 스캔한다. README 기준 Chrome·Edge·Firefox·MDN 팀 공동 관리, 모델이 이미 아는 내용은 eval 로 걸러 토큰을 줄인다고 하나 README 본문에 eval 수치는 없음(별도 Eval Dashboard 링크만).
-- 실용성: 프론트엔드 작업을 에이전트에 맡길 때 "구식 JS·폴리필 남발"을 줄이는 용도로 즉시 시험 가치 있음. 효과 크기는 대시보드 확인 필요.
+## ✅ 2026-11-14 전량 처리 완료 (26건 = 11-13 자동수집 13 · 11-14 자동수집 13 · 크론 노트 0) — 대기 항목 없음
 
-## [2026-11-13] 자동수집 | QwenLM/qwen-code — 터미널·IDE·데스크톱 오픈소스 코딩 에이전트
-- URL: https://github.com/QwenLM/qwen-code
-- 도메인: ai-news
-- 스타수: ★30,037 (당일 +151) · Apache-2.0 · repo id 1008713177 · 생성 2025-06-26
-- 한줄요약: Gemini CLI v0.8.2 에서 출발해 v0.1 부터 업스트림 동기화를 끊은 코딩 에이전트. OpenAI·Anthropic·Gemini·Qwen API 와 Ollama/vLLM 로컬 모델을 런타임에 전환, Auto-Memory·Auto-Skills·SubAgents·Agent Teams·MCP 지원, IDE 플러그인·데스크톱·웹 UI·Telegram/DingTalk/WeChat/Feishu 연동. README 수치: SWE-bench Verified 에서 7개 버전이 **같은 Qwen 3.7 Max 모델**로 평균 76.40%–77.80%(500 과제 × 3회) — 하네스 버전 간 편차가 1.4%p 이내라는 뜻이지 타 에이전트 대비 우위를 보인 것은 아님. Qoder 하네스를 합친 "Qwen Code 1.0 Preview" 는 별도 태그(v1.0.0-preview).
-- 실용성: Claude Code/Codex 대안으로 로컬 모델까지 붙일 수 있는 성숙한 선택지. 기본 인증 경로가 Qwen 유료 구독(Plus/Pro)이라는 점은 유의.
-
-## [2026-11-13] 자동수집 | ashhart/TensorFold — Zig 단일 바이너리 LLM 추론 서버 (Metal·CUDA)
-- URL: https://github.com/ashhart/TensorFold
-- 도메인: ai-news
-- 스타수: ★2,032 (당일 +54) · Apache-2.0 · repo id 1274723381 · 생성 2026-06-19 · README 기준 릴리스 v1.2.7
-- 한줄요약: 체크포인트 로딩·토크나이즈·Metal/CUDA 커널 실행을 Zig 바이너리 하나로 처리해 Python·MLX 없이 OpenAI 호환 `/v1/chat/completions` 를 서빙. MLX 4/6-bit·NVFP4·EXL3 등 체크포인트, MTP 드래프트, 다중 GB10/M5 Ultra 텐서 병렬(GLM-5.3-Flash TP=2/3) 지원 표가 있음. CUDA 는 드라이버 R580+(CUDA 13) 필수. 레포 설명에는 "Vulkan" 이 있으나 **README 본문에 Vulkan 언급 0건** — 실제 지원 여부 확인 필요. 처리량(tok/s) 수치는 README 본문이 아닌 "Community benchmarks" 절·docs 로 위임.
-- 실용성: Apple Silicon·DGX Spark(GB10) 로컬 서빙 실험용으로 흥미롭지만 1인 주도·신생(5개월) 프로젝트라 llama.cpp 대체로 보기엔 이르다. 모델별 "checked on" 하드웨어가 1~2대로 한정적이라는 점을 README 가 스스로 명시.
-
-## [2026-11-13] 자동수집 | CopilotKit/OpenBot — 셀프호스팅 AI 동료(에이전트) 워크스페이스
-- URL: https://github.com/CopilotKit/OpenBot
-- 도메인: ai-news
-- 스타수: ★11,917 (당일 +298) · MIT(템플릿) · repo id 1336502227 · 생성 2026-08-17
-- 한줄요약: 각 봇에 브라우저·파일·도구가 있는 "컴퓨터"를 붙이고, 사인인·역할·도구 권한·승인·감사를 API 단에서 강제하는 엔터프라이즈 에이전트 워크스페이스. 모델은 OpenAI·Claude·Gemini·OpenAI 호환 엔드포인트, 외부 에이전트는 AG-UI 로, 도구는 MCP 로 연결. 프런트는 Mac/Windows/웹/iOS/Android/Slack/Teams, 백엔드는 Kubernetes+PostgreSQL. ⚠️ 볼트의 [[openbot]](nightly-labs/openbot)과 **다른 레포**. ⚠️ 템플릿은 MIT 지만 핵심 의존성 **CopilotKit Intelligence 는 별도 라이선스** — 로컬 개인용도 무료 로컬 라이선스 발급 필요, K8s 운영은 유료 production 라이선스 필요(README 107–113행).
-- 실용성: "오픈소스"라는 표현과 달리 운영 환경은 상용 라이선스 종속. 사내 에이전트 거버넌스 구조(승인·감사) 참고용으로는 유용.
-
-## [2026-11-13] 자동수집 | 🔄 Alishahryar1/free-claude-code — 갱신: ★69,622 · 라이선스 MIT→AGPL-3.0 표기 변경
-- URL: https://github.com/Alishahryar1/free-claude-code
-- 도메인: ai-news
-- 스타수: ★69,622 (당일 +415, Trending daily 12위 · Python 2위) · repo id 1144520675 · 볼트 최신 기록 ★50,638 @ 2026-08-27(프론트매터 `updated: 2026-08-27`, 이후 🔄 절 없음) → 약 2.5개월 +18,984
-- 한줄요약: 12개 하네스(Claude Code·Codex·Pi·OpenCode 등)를 61개 프로바이더 모델로 라우팅하는 프록시. 변경점: ① README 배지가 **AGPL v3** 로 바뀜(볼트 기록은 MIT, GitHub API `license.spdx_id` 는 현재 `NOASSERTION`) — 서버로 배포·수정 시 소스 공개 의무 발생 가능, LICENSE 파일 원문 확인 필요. ② "ToS friendly" 문구 대신 "FCC follows provider TOS and removes integrations if they stop being allowed" 로 서술 변경. ③ "1.3B+ free tokens per month" · "Up to 90% lower token usage(RTK·Headroom)" 는 여전히 산정 근거 없음. "Not affiliated with Anthropic" 고지 추가.
-- 실용성: 볼트 판정(신뢰도 low · 사용 권장 아님) 유지 근거 그대로. 라이선스 변경은 재검토 필요.
-
-## [2026-11-13] 자동수집 | SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models
-- URL: https://huggingface.co/papers/2611.15777
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-13 1위, 업보트 36 · 코드 holdrain/SO-Arena ★9)
-- 한줄요약: 긴 토큰 생성 없이 바로 결정하는 "System One" 모델을 11개 도메인·5개 능력군으로 평가하는 벤치. 정확도 외에 ① 선택지 집합을 통제 변경했을 때의 결정 안정성, ② 정답 선택지가 없을 때 "없음"을 인식하는 능력을 신뢰성 지표로 측정. 21개 모델 평가 결과 스케일·추가 추론의 이득이 도메인별로 크게 다르고, **전체 성능 1위 System One 모델이 신뢰성에선 7위** — 정확도와 신뢰성이 별개 축임을 보임. 초록에 개별 모델명·점수 없음.
-
-## [2026-11-13] 자동수집 | BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model
-- URL: https://huggingface.co/papers/2611.14815
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-13 공동 1위, 업보트 36 · 코드 링크 없음)
-- 한줄요약: 카메라 영상과 도식형 BEV(조감도) 영상을 두 개의 비디오 DiT 가 공동 어텐션으로 함께 생성하는 자기회귀 주행 월드모델. 주변 차량 궤적을 입력으로 받지 않고 BEV 로 "예측"하며, ego 궤적은 BEV 최신 프레임을 이동·회전시킨 소프트 조건으로 제어. 추론 시 단일 카메라 이미지만 필요(HD맵·차량 상태 불필요). PhysicalAI-AV·nuScenes 에서 기존 주행 월드모델보다 ego 궤적 추종이 충실하고, 사람 평가에서 perspective-only 베이스라인보다 주변 차량 거동이 현실적 — 초록에 정량 수치는 없음.
-
-## [2026-11-13] 자동수집 | G-STAR: Group-Scaled Token Capacity for Deeply Compressed Autoregressive Generation
-- URL: https://huggingface.co/papers/2611.13004
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-13 3위, 업보트 33 · 코드 DAGroup-PKU/G-STAR ★4)
-- 한줄요약: 곱 양자화(product quantization)에서 정보 예산이 고정일 때 그룹 크기를 축당 공간 압축률의 제곱에 비례해 키워야 한다는 원칙으로, 이산 자기회귀 이미지 생성 토크나이저를 32×(실효 64×)까지 압축. 그룹 내 의존성은 병렬 특징 계산+경량 인과 모델링의 반자기회귀 디코더로 처리. 1024×1024 에서 기존 이산 AR 대비 **20× 속도, H200 1장 이미지당 2.5초**. GenEval·DPG-Bench·PRISM·LongText-Bench·Qwen-Image-Bench 5종에서 "선도 모델과 경쟁적" — 초록에 점수 미기재, 비교 대상이 "prior discrete AR" 로 한정(확산 모델 대비 속도 아님).
-
-## [2026-11-13] 자동수집 | Duo: A Reciprocal World Model for Full-Duplex Interaction
-- URL: https://huggingface.co/papers/2611.15131
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-13 4위, 업보트 25 · 코드 링크 없음)
-- 한줄요약: 실시간 오디오·비디오·텍스트를 계속 지각하면서 끼어들기까지 포함한 전이중 대화를 하는 "Reciprocal World Model" Duo v1 기술 보고서. 상호작용 판단을 맡는 자기회귀 Intent 모듈과 시청각 출력을 생성하는 Realization 모듈을 청크 단위 공통 타임라인으로 동기화, 미래 입력 차단 어텐션 마스크, 자기 생성 이력으로 학습하는 dual rollout distillation 으로 분포 이동 완화. 실물 보여주기·가상 장면 수정·시청각 게임 등 데모 중심 — **초록에 정량 평가·벤치 수치 전무**, "다음 버전 곧 공개"라는 예고성 보고서.
-
-## [2026-11-13] 자동수집 | On the Design of Hyper-Connections: Simplification, Stability, and Scalability (SimpleHC)
-- URL: https://huggingface.co/papers/2611.05984
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-13 5위, 업보트 22 · 코드 aHapBean/SimpleHC ★20)
-- 한줄요약: 프런티어 LLM 에 쓰이는 Hyper-Connections(HC/mHC)를 분해 분석해, "믹싱 없는 학습형 읽기/쓰기 게이트" 또는 "고정 게이트+무제약 믹싱" 둘 중 하나만으로도 mHC 와 비슷한 성능이 난다는 것을 보이고, 학습 오버헤드의 주원인이 확장된 잔차 상태의 반복 접근임을 지목. 이를 바탕으로 잔차 믹싱을 제거하고 공유 메모리 접근(배치 읽기·지연 쓰기)으로 바꾼 SimpleHC 제안 — 최대 규모에서 바닐라 잔차 대비 **엔드투엔드 학습 시간 +2.4%**, 15B→30B MoE 에서 mHC 와 비슷한 성능, 더 매끄러운 그래디언트. 초록에 mHC 의 오버헤드 수치는 없어 절감 폭은 본문 확인 필요.
-
-## [2026-11-13] 자동수집 | SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF — 양자화 상태에서 거부 방향 제거
-- URL: https://huggingface.co/SC117/Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF
-- 도메인: ai-news
-- 다운로드수: 4,120,281 (HF API `downloads`, 좋아요 945 · trending 25위 · 볼트 미보유 중 다운로드 1위) · apache-2.0 · base ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF
-- 한줄요약: ISTA-DASLab GSQ-RCO 양자화본을 재양자화하지 않고, 48개 층의 잔차 쓰기 투영 텐서 144개(전체 1223개 중)를 orcarouter/Qwen3.8-Flash-Next-Uncensored-GGUF 의 abliterated 텐서로 바이트 단위 이식(135개)·GSQ 스케일로 재인코딩(9개)한 GGUF. 티어별 크기 IQ3_S 55.06GB / IQ3_XXS 47.34GB / IQ2_XS 39.67GB / Q2_0 38.02GB + 공용 n-gram 임베딩 샤드 28.80GB, 원본 대비 +0.25~0.44GB. 근거로 BF16 abliterated 판에서 ΔW 의 σ₂/σ₁=0.0032–0.0053(rank-1 편집) 측정을 제시. ⚠️ **거부율·KL·품질 벤치 수치 없음**(검증은 텐서 이름·메타데이터 일치 수준), 카드 스스로 "가드레일 없음·자체 모더레이션 필수" 경고. 다운로드 400만은 샤드 다중 파일 집계 영향 가능.
-
-## [2026-11-13] 자동수집 | DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF — 9B 다중 파인튜닝·머지 무검열 모델
-- URL: https://huggingface.co/DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF
-- 도메인: ai-news
-- 다운로드수: 2,127,483 (좋아요 1,651 · trending 38위 · 볼트 미보유 중 2위) · apache-2.0 · base Qwen/Qwen3.5-9B 계열
-- 한줄요약: Qwen3.5-9B 를 Heretic 처리 후 다단계 파인튜닝·머지한 무검열 GGUF(MTP 포함). 카드 수치(instruct 모드, mxfp8): ARC-C 0.647 · ARC-E 0.836 · BoolQ 0.895 · HellaSwag 0.706 · OBQA 0.460 · PIQA 0.784 · Wino 0.695 (원본 Qwen3.5-9B: 0.571/0.719/0.895/0.683/0.426/0.770/0.671). 무검열 지표: KL 0.0793, 거부 6/100(원본 100/100). ⚠️ "Qwen3.5-27B·Qwen3.6-35B-A3B 를 7/7 벤치 초과" 주장은 **카드 자체 표와 불일치** — 35B-A3B 대비 HellaSwag 0.706<0.751·PIQA 0.784<0.803, 27B 대비 Wino 0.695=0.695(동률). 모두 lm-eval 객관식 로그우도 과제로 추론·코딩 능력과는 별개, 자체 측정.
-
-## [2026-11-13] 자동수집 | facebook/dinov3-vitl16-pretrain-lvd1689m — DINOv3 ViT-L/16 (7B 증류) 비전 백본
-- URL: https://huggingface.co/facebook/dinov3-vitl16-pretrain-lvd1689m
-- 도메인: ai-news
-- 다운로드수: 698,339 (좋아요 2,168 · trending 24위 · 볼트 미보유 중 3위) · DINOv3 License(게이트, 수동 승인) · 약 3.03억 파라미터(safetensors total 303,129,600) · 2025-08 공개(arXiv 2508.10104)
-- 한줄요약: LVD-1689M 웹 이미지로 학습한 ViT-7B 를 교사로 증류한 자기지도 ViT-L/16 백본 — 파인튜닝 없이 선형 헤드만으로 분류·분할·깊이 추정에 쓰는 범용 dense feature 추출기. 모델 페이지 표(ViT-L/16): IN-ReaL 90.2 · IN-R 88.1 · ObjectNet 74.8 · Oxford-H 63.1 · ADE20k 54.9 mIoU · NYU depth 0.352(↓) · DAVIS 79.9 · NAVI 62.3 · SPair 61.3 — 7B 교사(ADE20k 55.9, NYU 0.309) 대비 dense 과제 격차 작고 SPair 는 오히려 높음(61.3 vs 58.7). 라이선스는 "worldwide" 부여로 **한국 지역 제외 조항 없음**(무역 통제·제재 조항만 존재), 다운로드 시 이름·생년월일·소속 등 제출 필요. 신규 모델이 아니라 1년+ 된 모델의 재트렌딩.
+> **자동수집 신규 22 · 갱신 4**(free-claude-code · open-code-review · codex-security · daily_stock_analysis) · 엔티티 신설 1([[DAGroup-PKU]]) · 개념 갱신 14 · 엔티티 갱신 9 · 도메인 4쪽 · canvas 4종. 볼트 재분류: ai-news 12 · local-llm 5 · slam-3dgs 5 · video-saas 4. 세부는 `log.md` 2026-11-14.
+>
+> 📮 **볼트 → 수집기 (11-13 · 11-14 자동수집분 판정 4건)**
+> 1. ✅ **수치 정확도 통과** — GitHub API 10레포(11-14 분 ±3★) · HF papers 초록 10편 전건 일치 · HF models 6건 메타 일치 · 카드 5종 행 대조. 모범: DavidAU "7/7" 과 카드 표의 불일치 지적(볼트가 9B 원본 BoolQ 동률 1건 추가) · TensorFold "Vulkan" README 0건 · CopilotKit Intelligence 별도 라이선스 행 번호 · DINOv3 "지역 제외 없음" 확인 · PhysLoop "limited" 한정어 보존 · OpenBot 이름 충돌 자진 표시. 유지 요청.
+> 2. 🔴 **"없다" 단정 3건이 원문에 있었다** — ① modern-web-guidance-src "README 본문에 eval 수치 없음" → 593–610행에 표(무가이드 52–60% → 가이드 82–96%). ② AutoTrust "베이스 모델 미명시" → `NOTICE.base`: *Built on Qwen/Qwen3.8-27B* · `decision_config.json` 에도 명시. ③ 같은 모델 "비전 입력 근거 없음" → `config.json` 이 `Qwen3_5ForConditionalGeneration` · `image_token_id` · 전처리 설정 2종(단, 비전 성능은 미측정이 맞다). 요청: "없음 · 미명시"를 적기 전에 **README 전체 grep + 파일 트리 1회 조회**. 확인 못 했으면 "미확인"으로 적는다(free-claude-code 의 "LICENSE 원문 확인 필요"처럼 — 그건 볼트가 열어 AGPL-3.0-only 로 확정했다).
+> 3. 🔴 **중복 판정 누락 3건** — 11-14 GitHub 5건 중 open-code-review(07-26 수록) · codex-security(**11-12 수록**) · daily_stock_analysis(11-12 갱신)가 🔄 없이 신규 형식으로 왔다. 레포 ID · 경로 변경 없음 — 단순 조회 누락이다. 11-13 분 free-claude-code 는 🔄 로 정확했다. 요청: 볼트 `wiki/sources/` 를 **레포 이름(owner 제외)** 으로 검색.
+> 4. 🔴 **11-12 요청 3(파생 모델 base LICENSE 지역 조항) 미이행 1건** — Pika-Labs/Pika-H3-Flex: 레포 LICENSE 가 MiniMax-H3 원본과 바이트 동일(한국 Excluded Territory). 요약에는 "MiniMax H3 Community License(파생물)"까지만. DINOv3 에서는 이행했다 — `base_model` 이 있는 모델에 같은 검사를 적용해 달라. 🟡 부가: AutoTrust 요약이 스킬 점수(BFCL 96.25)와 과제 점수(MMLU-Pro 73.65)를 한 문장에 섞었고, 같은 크기 JEV-27B 열(35/36 우위)을 빼고 Jev 1.14 열만 인용했다.

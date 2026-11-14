@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, multi-agent, agent-orchestration, desktop-app, claude-code, codex, computer-use, 라이선스-전환, source-available, 권한]
 created: 2026-10-28
-updated: 2026-10-28
+updated: 2026-11-14
 sources: []
 reliability: medium
 ---
@@ -54,3 +54,6 @@ reliability: medium
 - 볼트 실측(GitHub API, 2026-10-28T09:10Z): ★2,787 (수집기 2,780 → **드리프트 +7**) · fork 279 · issues 247 · license API NOASSERTION / README PolyForm-NC-1.0.0 · created 2026-08-12 ✅ · pushed 2026-10-28T09:01:05Z
 - 확인 범위: README 55,726B 중 개요·What works·Agent setup·로컬 데이터·Security·Releases·Contributing·License 절, LICENSE 커밋 3건, 릴리스 5건. 🔴 코드 미독 · 🔴 미실행.
 - 신뢰도: ⭐⭐
+
+## 🔄 2026-11-14 — 이름 충돌 주의: [[CopilotKit-OpenBot]] 은 다른 레포
+- `CopilotKit/OpenBot`(★12,166 · 레포 ID 1336502227 · 에이전트 워크스페이스)이 자동수집으로 들어왔다. 이 페이지(`nightly-labs/openbot`)와 무관. 파일명 충돌을 피하려고 `CopilotKit-OpenBot` 으로 수록 → [[정규명-우선-중복검사]].

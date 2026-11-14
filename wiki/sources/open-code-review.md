@@ -4,12 +4,19 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, code-review, llm-agent, static-analysis, alibaba, go, ci-cd, benchmark, 복합지표분해, 벤치마크이미지봉인]
 created: 2026-07-26
-updated: 2026-10-10
+updated: 2026-11-14
 sources: []
 reliability: high
 ---
 
 # alibaba/open-code-review (GitHub ⭐16,303)
+
+> [!update] 2026-11-14 갱신 — ⭐**50,923**(10-10 대비 **+5,297 · 35일**) · 🔴 벤치 수치 이미지 봉인 **61일째** · 🔴 수집기가 다시 "신규"로 배달
+> **GitHub API(볼트 11-14 09:04Z)**: ★**50,923** · fork **3,794**(10-10 3,293) · open_issues **340**(10-10 286) · Apache-2.0 · Go · repo id 1241960226 · pushed 2026-11-14T05:39Z. 수집기 수치와 일치.
+> 📉 **증가 속도 둔화**: 09-14 → 10-10 일평균 약 830 → 10-10 → 11-14 일평균 약 **151**. 트렌딩 1위(당일 +215)지만 누적 곡선은 완만해졌다.
+> 🔴 **README 69행은 여전히 `![Benchmark](imgs/benchmark-en.png)`** — Precision · Recall · F1 · Avg Token 의 값이 텍스트로 없다(63–67행은 지표 *정의* 표). 09-14 첫 관측 이후 61일 → [[벤치마크-이미지-봉인]] 지속. 55행의 자기 약점 서술(*"Recall is lower than general-purpose agents — a deliberate trade-off"*)은 유지 → [[복합지표-분해]].
+> 🔴 **수집기는 이 레포를 🔄 표시 없이 신규 형식으로 보냈다** — 볼트는 07-26 부터 보유(이번이 5번째 갱신). 같은 배치에서 [[codex-security]] · [[daily_stock_analysis]](둘 다 11-12 수록)도 같은 형식으로 재배달 → [[정규명-우선-중복검사]].
+> 🎯 **액션 이월**: 벤치 이미지 OCR 로 4지표 확정(10-10 ★2순위 · 미이행).
 
 > [!update] 2026-10-10 갱신 — ⭐**45,626**(09-14 대비 **+21,571 · +89.7%**) · 🏆 **본문 수치가 0개에서 일부 생겼다** · 🔴 **이미지 봉인은 26일째 그대로**
 > **2026-10-10 실측**: ★**45,626** · 당일 +326 · **트렌딩 5위** · fork **3,293**(09-14 1,772 → **+1,521**) · **open_issues 286 = 순수이슈 116 + PR 170**(PR 비중 **59.4%**) · Apache-2.0 · Go · pushed 2026-10-10 · watchers 135 · **OpenSSF Best Practices Gold**(09-14 기록 유지).

@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [local-llm, quantization, gguf, research-lab, gsq, rco]
 created: 2026-09-22
-updated: 2026-11-07
+updated: 2026-11-14
 sources: [Qwen3.8-Flash-Next-GSQ-RCO-GGUF.md, Qwen3.8-27B-GSQ-RCO-GGUF.md, DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF.md]
 reliability: medium
 ---
@@ -72,3 +72,6 @@ HF `ISTA-DASLab`. 이름으로 보아 오스트리아 IST Austria의 분산 알�
 
 ## 🔄 2026-11-07
 - 파생 등장: [[DeepSeek-V4.1-Flash-1017-Uncensored-GSQ-RCO-GGUF]](AtomicChat) — ISTA 리비전 `cb02422c900d` 샤드를 기반으로 라우팅 전문가 384개는 바이트 그대로 두고 dense 3텐서만 abliteration 편집. 원본 양자화의 신뢰를 파생이 빌리는 구조 → [[파생저장소-식별]].
+
+## 🔄 2026-11-14 — 양자화본 위에 제3자 편집이 얹혔다
+- [[Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF]](SC117 · dl30 4,081,896): GSQ-RCO 양자화본을 재양자화하지 않고 텐서 144개만 이식한 거부 제거판. "GSQ 가 학습한 값은 건드리지 않는다"가 판매 문구 — ISTA-DASLab 양자화의 품질이 파생 배포의 전제가 됐다.

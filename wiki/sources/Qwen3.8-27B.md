@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba, 하네스-설계-축, 비매칭-비교, 벤치-개조-재평가, 표-부분인용, 특화-역류, 하네스편향, 역휴리스틱, 이월종결]
 created: 2026-08-18
-updated: 2026-11-12
+updated: 2026-11-14
 sources: []
 reliability: medium
 ---
@@ -1036,3 +1036,6 @@ Qwen/Qwen3.8-27B
 
 ## 🔄 2026-11-12 — 추측 디코딩 드래프트 등장
 - 🆕 [[Qwen3.8-27B-DSpine-b16]](Tencent) — SGLang 에서 이 모델의 처리량을 AR 대비 2.7~3.8×(카드 · 에이전트 E2E). 비교 대상은 z-lab 의 공식 DFlash2(블록 8). 수집기 기준 이 모델 HF 트렌딩 DL **7,232,703**(11-12).
+
+## 🔄 2026-11-14 — 파생 1건: [[AutoTrust-JEV-27B]] (결정 모델)
+- `autotrust/AutoTrust-Decider-Pro-Vision-27B-v1.1` 의 `NOTICE.base` · `decision_config.json` 이 base 를 `Qwen/Qwen3.8-27B` 로 명시(볼트 직접 판독 — 수집기는 "베이스 미명시"). 생성형이 아니라 선택지 확률을 내는 결정 readout head 를 얹은 파생이다. Decision Index 0.3 public 67.31(자체 측정).

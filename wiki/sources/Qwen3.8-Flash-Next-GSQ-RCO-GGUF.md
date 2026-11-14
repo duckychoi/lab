@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mixed-precision, gsq, rco, moe, qwen4exp, llama.cpp, 단위-불일치, 파생저장소-식별]
 created: 2026-09-22
-updated: 2026-10-25
+updated: 2026-11-14
 sources: []
 reliability: medium
 ---
@@ -206,3 +206,6 @@ created 2026-09-07 · lastModified 2026-09-29 · 제공 [[ISTA-DASLab]]
 
 ## 🔄 2026-10-25
 - BF16 AIME25 100.00 = 천장 축 → 🆕 [[천장-기준선]] (n=3 · 같은 랩) · 후속 릴리스 [[DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF]]
+
+## 🔄 2026-11-14 — 파생 1건: [[Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF]]
+- SC117 이 이 양자화본을 **재양자화 없이** 텐서 144개(전체 1,223개 중)만 이식해 거부 제거판을 냈다(dl30 4,081,896 · 누적 5,544,959 · likes 994). 티어별 +0.25~0.44GB. 행동 검증은 프롬프트 1개(카드가 스스로 한계 명시). GSQ 가 학습한 값·스케일은 그대로 둔다는 것이 핵심 주장이다.

@@ -4194,3 +4194,14 @@ HF 기본 응답에서 `downloadsAllTime` 이 **0** 으로 보였다. 🔴 **10-
 - 🆕 [[codex-security]] — OpenAI 공식 보안 스캔·검증·패치 CLI · 성능 수치 0 · 과금. 🆕 [[shadcn-improve]] — 상위 모델 감사·계획 / 하위 모델 실행 스킬 · 측정 0.
 - 🔄 [[daily_stock_analysis]] — ★70,854 · 저자 논문(2608.26990)이 *"수익·예측 정확도를 입증하지 않는다"* 고 명시 → [[자기제한-명시]].
 - 🆕 논문: [[One-Table-Benchmark]](유용성 ↔ 충실도 순위 불일치) · [[TOME-Math]](+16.7%p 는 자체 홀드아웃 섞인 평균 · 미공개).
+
+## 🔄 2026-11-14 배치 (대기 26건 = 11-13 자동수집 13 + 11-14 자동수집 13)
+- 🎯 **축**: 수집기가 "없다"고 적은 것 3건이 원문에 있었고(eval 표 · 베이스 모델 · 비전 설정), "있다"고 넘긴 라이선스 링크 뒤에는 한국 제외 조항이 있었다([[Pika-H3-Flex]]) → [[메타데이터-부재-추론]] · [[라이선스-지역-제외]].
+- 🆕 [[modern-web-guidance-src]] — Google 의 에이전트용 웹 표준 스킬. 자체 eval: 무가이드 52–60% → 가이드 82–96%(과제가 가이드 유래 · [[분포내-우위]]). 텔레메트리 기본 켜짐. **프런트엔드 작업에 즉시 시험 가치.**
+- 🆕 [[qwen-code]] — 같은 모델로 7개 버전 SWE-bench Verified 76.40–77.80%, 최고점은 최초 버전 → 성숙 벤치에서 하네스 기능 추가의 한계 이득 ≈ 0([[하네스-설계-축]]).
+- 🆕 [[CopilotKit-OpenBot]] — 템플릿 MIT · 핵심 의존성(CopilotKit Intelligence) 별도 라이선스 · 볼트 [[openbot]] 과 다른 레포.
+- 🆕 [[plannotator]] — 에이전트 plan · diff 에 브라우저 주석 → 다음 턴. 텔레메트리 없음(릴리스 조회는 발생).
+- 🆕 [[claude-trading-skills]] — 스킬 74개 · 절차형 · "신호 서비스 아님".
+- 🆕 [[SO-Arena]] — System One 벤치: 정확도 1위가 신뢰성 7위. 🆕 [[Actor-Judge-Teacher]] — 결정 모델은 행위자로 약하고 심판 · 교사로 유효(ALFWorld 72.8 → 82.9%) → [[System-One-모델]] 표본 3건 추가.
+- 🆕 [[SimpleHC]] — Hyper-Connections 단순화 · 바닐라 대비 학습 시간 +2.4% · 15B → 30B MoE.
+- 🔄 [[free-claude-code]] ★69,992 — **AGPL-3.0-only 확정**(LICENSE 원문 · API 는 `NOASSERTION`). 🔄 [[open-code-review]] ★50,923 — 벤치 이미지 봉인 61일째. 🔄 [[codex-security]] ★13,323 · 🔄 [[daily_stock_analysis]] ★71,958 — 🔴 셋 다 수집기가 신규 형식으로 재배달([[정규명-우선-중복검사]]).

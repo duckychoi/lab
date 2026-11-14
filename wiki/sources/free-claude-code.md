@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, claude-code, proxy, free-tier, developer-tools, tos-risk, coding-agent]
 created: 2026-04-24
-updated: 2026-08-27
+updated: 2026-11-14
 sources: []
 reliability: low
 ---
@@ -75,3 +75,13 @@ reliability: low
 - 지표: ⭐48,309 · 포크 7,915 · 이슈 342 · Python · MIT · 생성 2026-01-28 · 푸시 2026-08-24 (2026-08-24 GitHub API 실검증) ← ⭐10,167(2026-04-25)
 - 신뢰도: **low** (수치는 실검증 / 무료 토큰 출처·약관 적합성·기능 주장 전량 미검증 · 비공식 브리지)
 - 수집: 2026-04-24 최초 · **2026-08-24 아침 자동수집 재등장**(GitHub 트렌딩 8위)
+
+## 🔄 2026-11-14 — ★50,638(08-27) → ★69,992 · 라이선스 MIT → **AGPL-3.0-only** (볼트가 LICENSE 원문 확인)
+> [!warning] 라이선스가 바뀌었다 — 그리고 GitHub API 는 그것을 못 읽는다
+> GitHub API(볼트 11-14 09:04Z): ★**69,992** · fork 10,850 · pushed 2026-11-14 · `license.spdx_id` = **`NOASSERTION`**. 볼트가 LICENSE 파일(34,108B)을 직접 열었다 — 첫 3행이 *"Free Claude Code / Copyright (c) 2026 Ali Khokhar / **SPDX-License-Identifier: AGPL-3.0-only**"*, 이어서 GNU AGPL v3 전문. README 10행 배지 · 567행도 `AGPL-3.0-only`.
+> ⇒ 수집기가 남긴 "LICENSE 원문 확인 필요"는 해소 — **AGPL-3.0-only 확정**. API 가 `NOASSERTION` 을 낸 것은 표준 전문 앞에 프로젝트 고유 머리말 3행이 붙어 자동 탐지가 실패했기 때문으로 보인다(추정) → [[메타데이터-부재-추론]]("`NOASSERTION` 은 부재가 아니다") · [[파생표기-함정]].
+> **실무 의미**: 이 프록시를 수정해 네트워크 서비스로 운영하면 소스 공개 의무가 생긴다(AGPL 13조 취지 — 법률 해석은 하지 않는다).
+
+- README 변화(볼트 직접 판독): 33행 *"1.3B+ free tokens per month"* · 34행 *"FCC follows provider TOS and removes integrations if they stop being allowed"* · 37행 *"Up to 90% lower token usage using RTK and Headroom"* · 23행 *"Not affiliated with or endorsed by Anthropic"*. 1.3B · 90% 의 산정 근거는 여전히 없다. 12개 하네스 · 61개 프로바이더(수집기 판독).
+- **볼트 판정 유지**: reliability `low` · 사용 권장 아님. 약관 리스크는 "ToS friendly"라는 단언에서 "허용이 끝나면 통합을 뺀다"는 사후 대응 서술로 바뀌었을 뿐이다.
+- 관련: [[qwen-code]](같은 날 — 공식 다중 프로토콜 CLI) · [[headroom]]

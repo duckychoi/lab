@@ -1019,6 +1019,86 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1114-slam-3dgs-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-14 배치",
+			"x": 60,
+			"y": 13825,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1114-slam-3dgs-1",
+			"type": "file",
+			"file": "wiki/sources/TTB.md",
+			"x": 60,
+			"y": 13945,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-slam-3dgs-2",
+			"type": "file",
+			"file": "wiki/sources/dinov3-vitl16.md",
+			"x": 520,
+			"y": 13945,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-slam-3dgs-3",
+			"type": "file",
+			"file": "wiki/sources/Open-Vision-Banana.md",
+			"x": 980,
+			"y": 13945,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-slam-3dgs-4",
+			"type": "file",
+			"file": "wiki/sources/BirdDreams.md",
+			"x": 60,
+			"y": 14205,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-slam-3dgs-5",
+			"type": "file",
+			"file": "wiki/sources/Ropedia-Xperience-2.md",
+			"x": 520,
+			"y": 14205,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-slam-3dgs-6",
+			"type": "file",
+			"file": "wiki/concepts/3DGS.md",
+			"x": 980,
+			"y": 14205,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1114-slam-3dgs-7",
+			"type": "file",
+			"file": "wiki/concepts/임바디드-AI.md",
+			"x": 60,
+			"y": 14465,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -1745,6 +1825,24 @@
 			"fromNode": "b1112-slam-3dgs-1",
 			"toNode": "b1112-slam-3dgs-2",
 			"label": "측정된 반례"
+		},
+		{
+			"id": "b1114-slam-3dgs-e0",
+			"fromNode": "b1114-slam-3dgs-1",
+			"toNode": "b1114-slam-3dgs-6",
+			"label": "굽기 패턴 · 3D 표현 없이"
+		},
+		{
+			"id": "b1114-slam-3dgs-e1",
+			"fromNode": "b1114-slam-3dgs-2",
+			"toNode": "b1114-slam-3dgs-3",
+			"label": "판별 백본 ↔ 생성 인식"
+		},
+		{
+			"id": "b1114-slam-3dgs-e2",
+			"fromNode": "b1114-slam-3dgs-5",
+			"toNode": "b1114-slam-3dgs-7",
+			"label": "환경 × 행동"
 		}
 	]
 }

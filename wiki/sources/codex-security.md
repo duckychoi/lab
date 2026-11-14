@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, security, sast, openai, ci]
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-14
 sources: [https://github.com/openai/codex-security]
 reliability: medium
 ---
@@ -33,3 +33,8 @@ reliability: medium
 - 출처: https://github.com/openai/codex-security
 - 확인 범위: GitHub API 메타 · 🔴 README 본문 수집기 판독 기준 · 실행 미확인
 - 신뢰도: ⭐⭐ (★11,978 · 측정 0)
+
+## 🔄 2026-11-14 — ★11,978 → ★13,323 (+1,345 · 2일) · 수집기 재배달(신규 형식)
+- GitHub API(볼트 11-14 09:04Z): ★**13,323** · fork 1,031(11-12 954) · open_issues 172 · pushed 2026-11-14T07:31Z · 트렌딩 3위 · 당일 +751(수집기).
+- 🔴 볼트가 **이틀 전(11-12)** 수록한 레포를 수집기가 🔄 표시 없이 다시 보냈다 → [[정규명-우선-중복검사]]. 내용상 새 정보는 없다(Deep 모드 · Trusted Access for Cyber · Node 22.13+/24/26 + Python 3.10+ · 탐지율 수치 없음 — 11-12 기록과 동일).
+- 판정 유지: 성능 수치 0 · 보류. 같은 날 [[open-code-review]] 는 "Recall 이 더 낮다"고 스스로 적는 반면 이 레포는 정확도 축을 아예 공개하지 않는다.

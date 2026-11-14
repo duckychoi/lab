@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, harness, agent, entity]
 created: 2026-07-04
-updated: 2026-11-08
+updated: 2026-11-14
 sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md]
 reliability: high
 ---
@@ -90,3 +90,6 @@ reliability: high
 
 ## 🔄 2026-11-08
 - 🆕 [[Nemotron-3.5-Transcribe-30B-A4B]] — 11-07 "수집기 참고(미수록)" → **정식 수록**. 화자 인코더 = [[Nemotron-3-Diarization]] **카드 링크로 볼트 확인**(11-07 미대조 해소). 1시간 오디오 · 40개 언어 · Open ASR WER 4.71 · H100 80GB · OpenMDW-1.1 · dl30 63,798.
+
+## 🔄 2026-11-14
+- 🆕 [[TTB]](NVlabs/DVSM ★35 · arXiv 2611.17331) — 교차 시점 어텐션을 경량 MLP 에 구워 디코더 전용 시점 합성 최대 23배 가속 · 품질은 SOTA 동급(초록). 굽는 비용 미기재.

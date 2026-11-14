@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, quantization, gguf, uncensored, community, derivative]
 created: 2026-09-17
-updated: 2026-11-10
+updated: 2026-11-14
 sources: [Qwen3.8-27B-TWIN-TURBO-709-GGUF.md, DavidAU-Qwen3.8-27B-TURBO.md]
 reliability: low
 ---
@@ -40,3 +40,6 @@ HuggingFace 커뮤니티 모델 제작자. 오픈 베이스 모델을 **다단�
 - 09-08 dl30 348,753 · ♥314 → 11-10 **1,530,688 · ♥2,795**(누적 4,159,879). 볼트 보유 재배포자 모델 중 최대급 사용량.
 - ⚠️ 09-08 "`pipeline_tag: image-text-to-text` 는 메타데이터 오류 확정" 판정을 **정정**했다 — 현재 카드는 mmproj 로 비전이 동작한다고 적는다(소스 페이지 11-10 절). 재배포자 카드의 메타데이터를 의심하는 규칙은 유지하되, "근거 없음"을 "오류 확정"으로 올리지 않는다.
 - 수집기는 이 모델을 "미수집"으로 분류했으나 볼트는 09-08 부터 보유.
+
+## 🔄 2026-11-14 — [[DavidAU-Qwen3.5-9B-Defiant-Fable]] dl30 2,137,747 · "7/7 초과" 불성립
+- 9B 다단계 파인튜닝 무검열 GGUF(누적 6,085,893 · likes 1,744). 헤드라인 "Qwen3.5-9B · 3.5-27B · 3.6-35B-A3B 를 7/7 초과"는 같은 카드 표에서 각각 6/7 · 6/7 · 5/7. 과장은 헤드라인, 반증 데이터는 본문 — 09월부터 기록한 패턴이 세 번째 모델에서 재현됐다.

@@ -5696,3 +5696,42 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 3. NRF 2027년도 1차 공모 마감일 확인(11-11 이월) · 크론 프롬프트 수정 — **19배치째 미이행**
 
 ## [2026-11-13 09:03:30] ingest | 대기 항목 없음
+
+## [2026-11-14] ingest | **대기 26건 전량 처리** (11-13 자동수집 13 + 11-14 자동수집 13 · 크론 노트 0)
+
+- **도메인**: ai-news 12(modern-web-guidance-src · qwen-code · CopilotKit-OpenBot · free-claude-code · open-code-review · codex-security · daily_stock_analysis · plannotator · claude-trading-skills · SO-Arena · SimpleHC · Actor-Judge-Teacher) · local-llm 5(TensorFold · Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF · DavidAU-Qwen3.5-9B-Defiant-Fable · embeddinggemma-2 · AutoTrust-JEV-27B) · slam-3dgs 5(BirdDreams · dinov3-vitl16 · Open-Vision-Banana · Ropedia-Xperience-2 · TTB) · video-saas 4(G-STAR · Duo · PhysLoop · Pika-H3-Flex) — 수집기는 26건 전부 `ai-news` 로 표기, 볼트 재분류
+- **분해**: **신규 22 · 갱신 4**(free-claude-code — 수집기 🔄 정확 / open-code-review · codex-security · daily_stock_analysis — 🔴 수집기 신규 형식 재배달). 11-13 분이 큐에 남아 있던 이유: 11-13 09:03:30 볼트 실행("대기 항목 없음") 이후에 수집기가 기록한 것으로 보인다(추정 — raw.md mtime 으로는 미확정)
+- **추가 페이지**: **23개** (소스 22 + 엔티티 신설 1 [[DAGroup-PKU]]) | **업데이트 페이지**: 소스 10(갱신 4 + 연결 메모 6: MiniMax-H3 · embeddinggemma-2-GGUF · Qwen3.8-Flash-Next-GSQ-RCO-GGUF · Qwen3.8-27B · openbot · Jeva) + 엔티티 9(MiniMax · DavidAU · ISTA-DASLab · Google · Alibaba · OpenAI · Meta · NVIDIA · Qwen) + 개념 14(라이선스-지역-제외 · System-One-모델 · 하네스-설계-축 · 정규명-우선-중복검사 · 메타데이터-부재-추론 · 표-부분인용 · 자기제한-명시 · RSI-프레이밍 · 월드모델 · 임바디드-AI · 에이전트-스킬 · 금융-AI · 분포내-우위 · 지표-창길이) + 도메인 4쪽
+- **페이지 수**: 1804 → **1829** (sources 1595 · entities 130 · concepts 96) ✅ `find` 실측 일치 — 증분 23 + 11-13 타 프로세스가 추가한 개념 2(feature-map-encryption · neural-superposition-comms)
+- **canvas 업데이트**: **YES** — ai-news · local-llm · slam-3dgs · video-saas 4종에 `b1114-*` 노드 42 + 엣지 21 (git diff 삽입만 546행)
+- **actionable 추가**: YES — 6항목(Pika-H3-Flex 보류 · modern-web-guidance 설치 시험 · embeddinggemma-2 768d vs 256d 한국어 측정 · 수집기 프롬프트 수정 3건 · 행동 단위 판정 질문 형식 · free-claude-code AGPL 기록)
+- **독립 검증**(09:04–09:10Z): GitHub API 10레포(메타 · 레포 ID) + inclusionAI/Duo + contents API(skills 74) + license API(free-claude-code) · README 원문 8종(free-claude-code · TensorFold · qwen-code · OpenBot · open-code-review · modern-web-guidance-src · plannotator · claude-trading-skills) · HF papers API 10편(초록 전문 · 저자 · 업보트 · 코드 링크) · daily_papers 11-13(34편 순위) · 11-14(0편) · HF models API 6건 + 카드 raw 5종(DINOv3 는 게이트로 불가) · 파일 트리 2건(Pika · AutoTrust) · LICENSE 원문 4종(Pika-H3-Flex ↔ MiniMax-H3 cmp/sha256 · DINOv3 GitHub · free-claude-code) · AutoTrust `NOTICE.base` · `config.json` · `decision_config.json` · 구 레포명 307
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**"없다"고 적힌 것은 파일 하나 더 열면 있었고, 링크만 걸린 라이선스 뒤에는 한국 제외가 있었다.** 수집기의 부재 판정 세 건(eval 수치 · 베이스 모델 · 비전 설정)이 README 후반과 100바이트짜리 `NOTICE.base` 에서 뒤집혔다. 반대로 "라이선스: MiniMax H3 Community(파생물)"이라는 한 줄은 맞는 서술이었지만, 그 링크를 따라가야만 한국이 제외 지역이라는 사실이 나온다 — Pika 카드 본문은 품질에 대해서는 정직하게 한계를 적고 권리에 대해서는 침묵했다. 같은 검사를 DINOv3 에 돌리니 "worldwide"가 나왔다. **검사는 한 줄이고, 결과는 양쪽으로 다 나온다 — 그래서 매번 해야 한다.** "모른다"고 넘긴 항목(free-claude-code LICENSE)은 문제가 없었고, 문제는 "없다"고 단정한 항목이었다.
+
+### 🏆 주요 발견
+1. 🔴🔴 [[Pika-H3-Flex]] LICENSE = [[MiniMax-H3]] LICENSE **바이트 동일**(17,604B · sha256 앞 20자 `59b99642b95ea21630e3`) → 한국 Excluded Territory. 카드 본문 `korea|territor|exclud` 0건. [[라이선스-지역-제외]] 파생 4번째 · 유형 ③ "링크만 걸고 침묵". 11-12 수집기 요청 3 미이행.
+2. 🔴 수집기 "없음" 3건 반증 — [[modern-web-guidance-src]] README 593–610행 eval 표(antigravity 58 → 94% · claude_code 57 → 88% · codex 54 → 82%, 11-08 행) · [[AutoTrust-JEV-27B]] `NOTICE.base` *Built on Qwen/Qwen3.8-27B* · `config.json` 멀티모달 아키텍처 → [[메타데이터-부재-추론]].
+3. ✅ [[free-claude-code]] 라이선스 확정 — LICENSE 머리말 `SPDX-License-Identifier: AGPL-3.0-only`(API 는 `NOASSERTION`). ★50,638 → 69,992.
+4. 🔴 [[DavidAU-Qwen3.5-9B-Defiant-Fable]] "exceeds 7 of 7" → 같은 카드 표로 9B 6/7(BoolQ 동률 — 볼트 추가) · 27B 6/7 · 35B-A3B 5/7 → [[표-부분인용]].
+5. ✅ [[System-One-모델]] 표본 3건 — [[SO-Arena]] 정확도 1위 = 신뢰성 7위 · [[Actor-Judge-Teacher]] 행위자 6/6 실패 · 교사로 ALFWorld 72.8 → 82.9% · [[AutoTrust-JEV-27B]] JEV-27B 대비 35/36 · Jev 1.14 대비 26/36(볼트 행 계수).
+6. ✅ [[qwen-code]] 같은 모델 7개 버전 76.40–77.80%, 최고점은 최초 버전 → 성숙 벤치에서 하네스 포화([[하네스-설계-축]]). ↔ [[modern-web-guidance-src]] 는 지식 주입으로 +27~36pp(단 과제가 가이드 유래 — [[분포내-우위]]).
+7. 🔴 수집기 중복 3건(open-code-review · codex-security · daily_stock_analysis) — 레포 ID · 경로 동일, 단순 조회 누락. [[open-code-review]] 벤치 수치 이미지 봉인 61일째 · 일평균 증가 830 → 151.
+8. ✅ [[embeddinggemma-2]] 원본 수록 — 텍스트 다국어 +0.21(사실상 동급) · 코드 +9.92 · 128d 멀티모달 59.01 → 45.65. [[dinov3-vitl16]] LICENSE "worldwide"(음성 대조군). [[TTB]] 굽기 패턴이 3D 표현 없이 재현 · 최대 23배.
+9. 🟡 [[Duo]] 수집기 "코드 링크 없음" → 현재 `inclusionAI/Duo`(★38) 연결 — 시점 차이 가능성이라 오류로 세지 않음. dl30 30일 창 감소 1건([[지표-창길이]]).
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치 · 추론 · 벤치 재현 없음. 논문 10편은 초록까지(본문 표 · 코드 미열람).
+2. 🔴 Pika LICENSE 는 **원본과의 동일성 대조 + 지역 조항 문언 확인**이지 법률 해석이 아니다. DINOv3 LICENSE 는 GitHub 레포본이며 HF 게이트 약관과의 동일성은 미대조. DINOv3 벤치 표(카드 게이트) · embeddinggemma-2 256d 행 · MIEB/MMEB 열 이름 대응 · SC117 "135 이식 + 9 재인코딩" 분해 · Pika "rank/alpha 128" · "이미지 9 · 영상 3 · 오디오 3"는 수집기 판독 기준.
+3. 🔴 README 를 직접 판독한 범위는 페이지별 "확인 범위"에 행 번호로 적었다. 그 밖의 기능 목록(qwen-code · OpenBot · TensorFold 지원 표 · codex-security · daily_stock_analysis 신규 서술)은 수집기 판독. modern-web-guidance Eval Dashboard 미열람.
+4. 🔴 저자 소속 미확인 — [[DAGroup-PKU]]("PKU" 의미) · Actor-Judge-Teacher(ZJU-REAL 레포명만) · SO-Arena. Zhejiang-University 엔티티는 근거 부족으로 갱신하지 않았다. AutoTrust 가 SO-Arena 21개 모델에 포함되는지 미확인.
+5. ⚖️ AutoTrust 승패 계수(35/36 · 26/36)는 볼트가 카드 표를 행 단위로 센 값(GSM8K 제외) — 재검 가능하도록 페이지에 패배 행을 전부 적었다. free-claude-code `NOASSERTION` 의 원인(머리말 3행)은 추정.
+6. ⚖️ 11-13 크론 리서치 노트는 큐(`^- path:` 0)에도 `wiki/sources/` 신규 파일에도 없어 처리 대상이 아니었다(11-12 이후 `리서치-*` 신규 0). 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 처리 전 index/log/raw/actionable/canvas 사본 · 삭제한 raw 항목(`raw.removed.md`) · 검증 원자료(`v/`) · 생성 스크립트: `/tmp/ing1114/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Submission — 11-17(화) 20:59 KST** (D-3 · 11-12 항목 이월)
+2. **MiniMax H3 계열 보류에 Pika-H3-Flex 추가** — 오픈 i2v 기준 모델 재선정은 여전히 미해결
+3. embeddinggemma-2 한국어 측정(768d vs 256d) — 10-11 최우선 항목과 묶어 실행 · modern-web-guidance 설치 시험(`DISABLE_TELEMETRY=1`)

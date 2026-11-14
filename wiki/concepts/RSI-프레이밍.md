@@ -4,7 +4,7 @@ type: concept
 domain: ai-news
 tags: [ai-news, concept, rsi, 한정어, 마케팅, 신설]
 created: 2026-09-18
-updated: 2026-10-26
+updated: 2026-11-14
 sources: [SoL-Pi.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, TokenRhythm.md, NeoHorse-1-Paper.md, ModularRSI.md, RSIAgent.md, Physical-RSI.md]
 reliability: medium
 ---
@@ -110,3 +110,6 @@ reliability: medium
 - [[Video-Generation-Agent-Harness]](서베이): "No surveyed system yet revises the procedure that trains and validates the generator" — RSI 부재를 결론으로 적은 두 번째 서베이다.
 - [[CoworkOS]]: 자동 후학습 33.19→42.95(+9.76). 기준선은 자기 seed SFT뿐이고, 저자가 "concurrent interventions rather than isolated causal effects"라고 명시했다. JobBench −2.13.
 - [[CUA-Master]]: 한계 절에 "합성 데이터 품질 상한 = 어노테이터 모델 능력"이라고 적혀 있다 ⇒ 재귀개선의 일부는 강한 외부 모델의 증류다.
+
+## 🔄 2026-11-14 — [[PhysLoop]]: 영상 생성 쪽 첫 사례, 같은 방향
+- *"marks a key milestone **toward** recursive self-improvement (RSI) in video generation models with **limited** human intervention"*(초록). 달성이 아니라 지향 · 사람 개입 0 이 아니라 "제한적". 루프 회차와 개선 폭은 초록에 없다. LLM 영역 밖(영상 생성)에서 RSI 어휘가 쓰인 볼트 첫 기록이다. 수집기 요약도 이 한정을 보존했다(✅).

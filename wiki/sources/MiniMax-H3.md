@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, omni-modal, audio-video, comfyui, minimax, video-saas, partial-open-source]
 created: 2026-08-06
-updated: 2026-11-12
+updated: 2026-11-14
 sources: [MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
@@ -161,3 +161,6 @@ reliability: medium
 ## 🔄 2026-11-12 — 라이선스 질문(115행)의 답
 > [!warning] 🔴 한국은 Excluded Territory
 > LICENSE(17,604B, 볼트 직접 조회) 8·10·22행: 라이선스는 EU · 영국 · **대한민국** · 미국을 제외한 "Applicable Territory" 안에서만 부여된다. 제외 지역 사용자는 MiniMax 에 별도 문의(23행). → [[라이선스-지역-제외]] · 파생 [[hyperflow-h3-flash]] · 재포장 [[Comfy-Org-MiniMax-H3-Image]].
+
+## 🔄 2026-11-14 — 파생 1건 추가: [[Pika-H3-Flex]] (LICENSE 바이트 동일)
+- Pika-Labs/Pika-H3-Flex(dl 147,955 · 6스텝 LoRA 2종 · 영상 + 오디오)의 `LICENSE` 가 이 레포 LICENSE 와 **cmp 동일 · sha256 일치**(17,604B). 한국 제외 조항 그대로 승계 → [[라이선스-지역-제외]]. Pika 카드 본문에는 지역 제외 언급이 없다(링크만).

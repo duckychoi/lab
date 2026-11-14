@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-11-08
+updated: 2026-11-14
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -134,3 +134,8 @@ reliability: medium
 - 🆕 [[Qwen3.5-4B-GLB-3D-Coder]] — ccore 의 Qwen3.5-4B 파생 2호(전작 [[Qwen3.5-4B-3D-Coder]] 1주 후) · GLB 내보내기 특화 · 데이터 3,918예 · dl30 24,479(+4,223/1일) · 정량 벤치 0.
 - [[Nemotron-3.5-Transcribe-30B-A4B]] 의 비교 대상 Qwen3-ASR-1.7B(Open ASR 4.94 · 다국어 6.49) — 오픈 ASR 차순위로 인용됨.
 - [[DPDM]] 의 의미 인코더 = Qwen3.5-27B.
+
+## 🔄 2026-11-14
+- 🆕 [[qwen-code]] ★30,134 — 공식 코딩 에이전트 CLI.
+- 파생 3건: [[AutoTrust-JEV-27B]](Qwen3.8-27B → 결정 모델) · [[Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF]](Flash-Next 양자화본 텐서 이식) · [[DavidAU-Qwen3.5-9B-Defiant-Fable]](Qwen3.5-9B 무검열 파인튜닝).
+- [[Actor-Judge-Teacher]] 의 정책 모델이 Qwen2.5-1.5B.

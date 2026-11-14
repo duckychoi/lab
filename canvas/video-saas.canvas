@@ -1029,6 +1029,86 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1114-video-saas-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-14 배치",
+			"x": 60,
+			"y": 13180,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1114-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/Pika-H3-Flex.md",
+			"x": 60,
+			"y": 13300,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-video-saas-2",
+			"type": "file",
+			"file": "wiki/sources/PhysLoop.md",
+			"x": 520,
+			"y": 13300,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-video-saas-3",
+			"type": "file",
+			"file": "wiki/sources/G-STAR.md",
+			"x": 980,
+			"y": 13300,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-video-saas-4",
+			"type": "file",
+			"file": "wiki/sources/Duo.md",
+			"x": 60,
+			"y": 13560,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1114-video-saas-5",
+			"type": "file",
+			"file": "wiki/concepts/라이선스-지역-제외.md",
+			"x": 520,
+			"y": 13560,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1114-video-saas-6",
+			"type": "file",
+			"file": "wiki/entities/DAGroup-PKU.md",
+			"x": 980,
+			"y": 13560,
+			"width": 400,
+			"height": 200,
+			"color": "3"
+		},
+		{
+			"id": "b1114-video-saas-7",
+			"type": "file",
+			"file": "wiki/sources/MiniMax-H3.md",
+			"x": 60,
+			"y": 13820,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -1733,6 +1813,30 @@
 			"fromNode": "b1112-video-saas-2",
 			"toNode": "b1112-video-saas-4",
 			"label": "재포장"
+		},
+		{
+			"id": "b1114-video-saas-e0",
+			"fromNode": "b1114-video-saas-1",
+			"toNode": "b1114-video-saas-5",
+			"label": "LICENSE 바이트 동일 · 한국 제외"
+		},
+		{
+			"id": "b1114-video-saas-e1",
+			"fromNode": "b1114-video-saas-1",
+			"toNode": "b1114-video-saas-7",
+			"label": "후학습 LoRA"
+		},
+		{
+			"id": "b1114-video-saas-e2",
+			"fromNode": "b1114-video-saas-2",
+			"toNode": "b1114-video-saas-6",
+			"label": "Daquan Zhou"
+		},
+		{
+			"id": "b1114-video-saas-e3",
+			"fromNode": "b1114-video-saas-3",
+			"toNode": "b1114-video-saas-6",
+			"label": "Daquan Zhou"
 		}
 	]
 }
