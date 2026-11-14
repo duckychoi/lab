@@ -1,7 +1,7 @@
 ---
 title: "연구주제 공유 원장 (Research Topics Ledger)"
 created: 2026-10-14
-updated: 2026-10-17
+updated: 2026-11-14
 author: fryday
 tags: [research-ledger, shared-hub]
 ---
@@ -72,6 +72,24 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - Glimmer 원리(공개): **logit distillation(Spark→30B) + on-policy distillation+RL + 4bit 양자화 + perception encoder + 제로샷 툴콜**
     - Wonder: **Active Memory / Active Focus**(기능만 공개, 메커니즘·논문 비공개) · "컨텍스트 길이보다 정보활용"
     - 연결: [[LLM 장기기억·에이전트 메모리 SOTA]](#23) · 온디바이스 경량화(#20-22)
+
+### J. 비직교·합승 통신 × 딥러닝 (신규 2026-11)
+30. **뉴럴 "합승통신" End-to-End 공동최적화** (교수님 발상: 타다 공유택시 ↔ 통신)
+    - 비유: 같은 목적지 신호 **묶기**(네트워크코딩 XOR·MPLS 라벨·광 그루밍·WiFi A-MPDU) vs **포개기**(NOMA+SIC / RSMA / SDMA·MU-MIMO)
+    - **RSMA** = 메시지를 공통+개별로 분할 → NOMA(완전디코딩)·SDMA(완전잡음처리)를 특수경우로 포함하는 **상위 프레임**
+    - 수신 분리 난이도: SDMA < RSMA < NOMA(SIC 부담). 핵심변수 = SIC순서·전력/빔 배분
+    - SOTA(2024–2026): 딥언폴딩 [[UWMMSE]]·**RS-BNN**(2407.06530) / GNN **NOMANet**(2502.05592)·**RS-GNN**(2607.11740)·gradient-GNN(2503.06077) / 오토인코더+**SICNet**(2603.12289)·super-constellation(2503.07509) / DRL mmW-NOMA(2205.06814) / 메타러닝 RSMA(2307.08822)
+    - 🟢 **빈 땅**: **클러스터링(이산·Gumbel-Softmax) + 빔·전력(연속·GNN/언폴딩) + 수신분리(SICNet)** 를 **하나의 미분가능 신경망**으로 end-to-end. 대부분 논문이 유저 페어링을 고정해 회피 중.
+    - 연결: [[CAT-MoEformer]](#3)(MoE=합승조합 선택) · [[VF-MoNBT]](#6) · 멀티빔 동시타격(#4) · 스펙트럴 빔스페이스(#14)
+
+### K. 프라이버시·보안 × 온디바이스 (신규 2026-11)
+31. **딥러닝 피처맵 보호·학습형 암호화** (교수님 질문: 피처맵 암호화 AI?)
+    - 동기: **분할추론(split inference)** 의 중간 피처맵에서 원본을 복원하는 **model/feature inversion 공격** 방어
+    - 암호연산형: **HE**(CryptoNets·CKKS) / **MPC**(Gazelle·Delphi·Cheetah) / **TEE**(Slalom) — 증명가능 보안이나 느림·고비용
+    - 학습형(AI다움): **학습형 암호화**(Kiya 블록셔플·채널순열, 암호도메인 학습) / **정보병목·적대적 난독화**(NoPeek=dCor($x,z$) 최소화·Shredder·Cloak·DISCO·DPFE) / InstaHide(⚠️ Carlini 등에 복원 공격으로 깨짐)
+    - 삼각 트레이드오프: 정확도 ↔ 보안강도 ↔ 연산/통신비용
+    - 🟢 **빈 땅**: ① **"양자화=피처맵 보호" 공동학습**(4bit 압축이 inversion도 차단) ② **물리계층 피처암호**(랜덤 빔/위상으로 피처맵 전송 = 학습형 난독화 × 물리계층 보안 PLS)
+    - 연결: 온디바이스 경량화(#20-22) · 양자화(#21) · [[공간 슈퍼트위스팅 개구]](#8)·위상결합 기억(#28)(물리계층 보안) · 뉴럴 합승통신(#30, 전송계층)
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 
