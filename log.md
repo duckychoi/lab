@@ -5735,3 +5735,5 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Submission — 11-17(화) 20:59 KST** (D-3 · 11-12 항목 이월)
 2. **MiniMax H3 계열 보류에 Pika-H3-Flex 추가** — 오픈 i2v 기준 모델 재선정은 여전히 미해결
 3. embeddinggemma-2 한국어 측정(768d vs 256d) — 10-11 최우선 항목과 묶어 실행 · modern-web-guidance 설치 시험(`DISABLE_TELEMETRY=1`)
+
+## [2026-11-15 09:05:05] ingest | 대기 항목 없음
