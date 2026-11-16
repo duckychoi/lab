@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, mcp, chrome, devtools, browser-automation, debug]
 created: 2026-04-18
-updated: 2026-09-03
+updated: 2026-11-16
 sources: []
 reliability: high
 ---
@@ -54,3 +54,24 @@ reliability: high
 - 스타: ⭐**48,211** (2026-07-31, 당일 +80, WebFetch "48.2k"·Apache-2.0 실확인) ← ⭐45,886 (2026-07-05, +304/일) ← ⭐35,992 (2026-04-18)
 - 라이선스: Apache-2.0 / TypeScript
 - 신뢰도: ⭐⭐⭐⭐⭐
+
+---
+
+## 📊 2026-11-16 재관측 — 커버리지 질문의 답: 도구 63개, 그리고 기본 수집되는 사용 통계
+
+★ **57,305**(볼트 11-16 09:04Z 실측 · 수집기 11-15 ★56,516) · fork 4,832 · Apache-2.0 · repo id 1054793726 · 최신 릴리스 v1.13.0(2026-11-11). 볼트 직전 기록 ★50,774 @ 09-03 → 74일간 약 +6,500.
+
+> [!insight] 09-03 미해결 "어떤 CDP 기능이 노출되는가" → `docs/tool-reference.md` 기준 **도구 63개 · 13범주**(볼트 `###` 계수 63 확인)
+> Input automation · Navigation · Emulation · Performance · Network · Debugging(`lighthouse_audit` · `get_css_styles` · screencast) · **Memory**(최대 범주, 수집기 14개) · Network mocks · Extensions · Third-party · WebMCP · PWA · WebAuthn. 볼트 기록에 없던 것(도입 시점 미확인): MCP 없는 `chrome-devtools` CLI, 스킬 7종(a11y · cookie · LCP · memory-leak · troubleshooting 등)과 Claude Code/Copilot/Gemini CLI 플러그인 경로 → [[에이전트-스킬]].
+
+> [!warning] 🔴 기본값이 "보낸다" — 브라우저에 로그인 세션이 있으면 먼저 끌 것 (README 39 · 45행 · 볼트 확인)
+> - *"Data collection is **enabled by default**"* — 도구 호출 성공률 · 지연 · 환경 정보를 Google 이 수집. `--no-usage-statistics` 또는 `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS`/`CI` 환경변수로 해제(Chrome 자체 통계 옵트아웃과 별개).
+> - 성능 도구가 트레이스 URL 을 CrUX API 로 전송 → `--no-performance-crux`.
+> - 브라우저 인스턴스 내용이 MCP 클라이언트에 노출 — 공식 지원은 Chrome · Chrome for Testing 뿐.
+
+## 관련 페이지 추가
+- [[에이전트-스킬]] · [[에이전트-웹접근]] · [[Electron-CDP-브리지]] · [[Google]]
+
+## 원본 갱신
+- 실측(2026-11-16 · GitHub API): ★57,305 · fork 4,832 · Apache-2.0 · pushed 2026-11-16T05:21Z
+- 확인 범위: README 39 · 45 · 48행 · tool-reference.md 범주 13 · 도구 63(볼트) · 🔴 범주별 개수 · 스킬 7종 목록은 수집기 판독 · 미실행

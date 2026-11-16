@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, copilotkit, react, frontend, ai-agent, generative-ui, ag-ui, open-source]
 created: 2026-06-07
-updated: 2026-06-07
+updated: 2026-11-16
 sources: []
 reliability: high
 ---
@@ -44,3 +44,6 @@ reliability: high
 
 - 출처: https://github.com/CopilotKit/CopilotKit
 - 신뢰도: ⭐⭐⭐⭐ (GitHub 33,451 스타, npm 활성 패키지)
+
+## 🔄 2026-11-16 — 프로토콜 [[ag-ui]] 별도 수록
+- AG-UI(★18,230 · MIT)가 독립 소스로 들어왔다. README 의 `docs.copilotkit.ai` 링크 15건 — 표준을 표방하지만 문서 동선은 CopilotKit. [[CopilotKit-OpenBot]] 의 외부 에이전트 연결 경로이기도 하다.

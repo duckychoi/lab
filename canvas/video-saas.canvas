@@ -1109,6 +1109,106 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-16 배치\n측정된 것 ≠ 쓰이는 것",
+			"x": 60,
+			"y": 14140,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1116-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/Comfy-Org-RelayVSR.md",
+			"x": 60,
+			"y": 14260,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-2",
+			"type": "file",
+			"file": "wiki/sources/MiniMax-H3-Character-Swap-LoRA.md",
+			"x": 520,
+			"y": 14260,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-3",
+			"type": "file",
+			"file": "wiki/sources/Veyra-NRVideo.md",
+			"x": 980,
+			"y": 14260,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-4",
+			"type": "file",
+			"file": "wiki/sources/VibePrevisBench.md",
+			"x": 60,
+			"y": 14500,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-5",
+			"type": "file",
+			"file": "wiki/sources/ffmpeg-skill.md",
+			"x": 520,
+			"y": 14500,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-6",
+			"type": "file",
+			"file": "wiki/sources/JVT.md",
+			"x": 980,
+			"y": 14500,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-7",
+			"type": "file",
+			"file": "wiki/sources/MiniMax-H3-Image-GGUF.md",
+			"x": 60,
+			"y": 14740,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-video-saas-x11",
+			"type": "file",
+			"file": "wiki/concepts/하네스-설계-축.md",
+			"x": 1440,
+			"y": 15220,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1116-video-saas-x12",
+			"type": "file",
+			"file": "wiki/concepts/에이전트-스킬.md",
+			"x": 1440,
+			"y": 15460,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -1837,6 +1937,77 @@
 			"fromNode": "b1114-video-saas-3",
 			"toNode": "b1114-video-saas-6",
 			"label": "Daquan Zhou"
+		},
+		{
+			"id": "b1116-video-saas-h1",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-1"
+		},
+		{
+			"id": "b1116-video-saas-h2",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-2"
+		},
+		{
+			"id": "b1116-video-saas-h3",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-3"
+		},
+		{
+			"id": "b1116-video-saas-e0",
+			"fromNode": "b1116-video-saas-2",
+			"toNode": "b1114-video-saas-5",
+			"label": "LICENSE 바이트 동일 · 한국 제외"
+		},
+		{
+			"id": "b1116-video-saas-e1",
+			"fromNode": "b1116-video-saas-1",
+			"toNode": "b1114-video-saas-7",
+			"label": "2× 후처리 후보"
+		},
+		{
+			"id": "b1116-video-saas-e2",
+			"fromNode": "b1116-video-saas-3",
+			"toNode": "b1116-video-saas-1",
+			"label": "재생 단계 vs 생성 단계 초해상"
+		},
+		{
+			"id": "b1116-video-saas-h4",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-4"
+		},
+		{
+			"id": "b1116-video-saas-h5",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-5"
+		},
+		{
+			"id": "b1116-video-saas-h6",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-6"
+		},
+		{
+			"id": "b1116-video-saas-h7",
+			"fromNode": "b1116-video-saas-hdr",
+			"toNode": "b1116-video-saas-7"
+		},
+		{
+			"id": "b1116-video-saas-e10",
+			"fromNode": "b1116-video-saas-7",
+			"toNode": "b1114-video-saas-5",
+			"label": "파생 6번째"
+		},
+		{
+			"id": "b1116-video-saas-e11",
+			"fromNode": "b1116-video-saas-4",
+			"toNode": "b1116-video-saas-x11",
+			"label": "하네스 혼입 순위"
+		},
+		{
+			"id": "b1116-video-saas-e12",
+			"fromNode": "b1116-video-saas-5",
+			"toNode": "b1116-video-saas-x12",
+			"label": "재probe 검증"
 		}
 	]
 }

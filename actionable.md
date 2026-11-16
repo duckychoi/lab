@@ -5150,3 +5150,60 @@ ingest할 때마다 LLM이 갱신한다. 완료된 항목은 삭제하지 말고
 - **할 것**: 사용하지 않는다(판정 유지). 참고 구현으로 코드를 가져올 일이 생기면 AGPL-3.0-only 임을 먼저 확인한다 — 볼트의 다른 스크립트에 섞지 않는다.
 - **우선순위**: 낮음
 - **상태**: 보류
+
+## [2026-11-16] 🔴 MiniMax-H3-Character-Swap-LoRA · MiniMax-H3-Image-GGUF 사용 보류 — 둘 다 LICENSE 가 H3 원본과 바이트 동일(한국 제외)
+- **도메인**: video-saas
+- **출처**: [[MiniMax-H3-Character-Swap-LoRA]] · [[MiniMax-H3-Image-GGUF]] · [[라이선스-지역-제외]] · [[MiniMax-H3]] · [[MiniMax-H3-Image]] · [[Pika-H3-Flex]]
+- **할 것**: 내려받지 않는다. 11-12 "MiniMax H3 계열 전체 사용 보류" 대상 목록에 추가. 캐릭터 교체 기능이 필요하면 지역 제한 없는 베이스(Wan 계열 등)의 동등 LoRA 를 별도로 찾는다.
+- **왜**: 볼트 cmp 대조 — Character-Swap = MiniMax-H3 LICENSE(17,604B, sha256 일치), Abiray GGUF = MiniMax-H3-Image LICENSE(18,208B). 10행 Excluded Territories 에 대한민국, 출력물 표시까지 금지.
+- **우선순위**: 높음
+- **상태**: 보류
+
+## [2026-11-16] chrome-devtools-mcp 사용 시 통계·CrUX 전송 끄기 (설정 1줄)
+- **도메인**: ai-news
+- **출처**: [[chrome-devtools-mcp]]
+- **할 것**: MCP 설정 `args` 에 `"--no-usage-statistics", "--no-performance-crux"` 추가(또는 `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS=1`). 로그인된 개인 프로필 대신 별도 프로필/Chrome for Testing 사용.
+- **왜**: README 45행 "Data collection is enabled by default" · 39행 성능 트레이스 URL 의 CrUX 전송. 도구 63개 중 Memory 범주가 최대라 메모리 덤프급 정보가 클라이언트에 노출된다.
+- **우선순위**: 중간(사용 시 즉시)
+- **상태**: 대기
+
+## [2026-11-16] Comfy-Org-RelayVSR 2× 화질 직접 비교 — H3/Wan 생성 영상 후처리 후보
+- **도메인**: video-saas
+- **출처**: [[Comfy-Org-RelayVSR]]
+- **할 것**: ComfyUI 에서 생성 영상 1편(5초 내외)을 RelayVSR 2× int8 과 기존 업스케일러(SeedVR2 또는 FlashVSR+)로 각각 처리해 플리커 · 디테일을 눈으로 비교하고, 처리 시간을 로컬 GPU 에서 1회 기록한다.
+- **왜**: 공개 수치는 H100 · LightX2V · 원본 가중치 속도뿐이고 화질 지표는 0건. Apache-2.0(지역 조항 없음 확인)이라 H3 와 달리 한국에서 쓸 수 있다.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-11-16] 에이전트 도구 응답에 "노출 예산" 규칙 적용 검토 (SparseRead 설계 이식)
+- **도메인**: local-llm
+- **출처**: [[SparseRead]] · [[에이전트-메모리-레이어]]
+- **할 것**: 로컬 에이전트(ChinameBot 등)에서 웹 · 파일 읽기 도구가 원문 전체를 반환하는 지점을 찾아, ① 에피소드당 원문 노출 토큰 상한 ② 요청 시 전체 보기 폴백 두 규칙만 먼저 넣고 같은 과제 3건의 토큰 수를 전후 비교한다. 코드(Liuzedooong/SparseReading ★83) 참고.
+- **왜**: 논문 헤드라인 −92.9% 는 최선 사례, 딥서치 −31~43%. 소형 모델은 컨텍스트가 비싸 효과가 더 클 수 있다 — 직접 재야 안다.
+- **우선순위**: 낮음
+- **상태**: 대기
+
+## [2026-11-16] elephant-goldfish-model 설치 시험 — 볼트 스키마·수집기 프롬프트 변경안을 Goldfish 로 검토
+- **도메인**: ai-news
+- **출처**: [[elephant-goldfish-model]] · [[요약자와-판정자-분리]]
+- **할 것**: Claude Code 에 플러그인 설치 후, 19배치째 미이행인 "크론 프롬프트 수정안"을 Markdown 설계 문서로 써서 `/egm:egm-review` 1회 실행. Goldfish 가 지적한 숨은 가정 수를 기록.
+- **왜**: 같은 문맥을 공유하는 작성자는 자기 맹점을 못 본다 — 문맥 격리 리뷰가 필요한 문서가 볼트에 실제로 있다. 효과 수치가 없으니 직접 1건 재본다.
+- **우선순위**: 중간
+- **상태**: 대기
+
+## [2026-11-16] SkillEvaluator Tier 1·2 로 자작 스킬 점검 (키 불필요)
+- **도메인**: ai-news
+- **출처**: [[SkillEvaluator]] · [[에이전트-스킬]]
+- **할 것**: `pip install skillevaluator` 후 `~/.claude/skills/wiki` 에 `quality-check` 실행 → 점수 · 중복 지침 목록을 기록. Tier 3(Docker + 키)은 보류.
+- **왜**: 볼트 스킬은 측정 0 상태. 정적 점수는 효과가 아니지만(도구 스스로 *INCOMPLETE*), 형식 · 중복 문제는 바로 잡을 수 있다.
+- **우선순위**: 낮음
+- **상태**: 대기
+
+## [2026-11-16] ffmpeg-skill 을 쇼츠 후처리에 시험 — 리프레임·라우드니스·규격 재검증
+- **도메인**: video-saas
+- **출처**: [[ffmpeg-skill]] · [[Remotion]]
+- **할 것**: `npx ffmpeg-skill` 설치 → 기존 렌더 mp4 1편에 9:16 리프레임 + −14 LUFS 정규화 + 플랫폼 내보내기 → 재probe 결과(해상도 · fps · 라우드니스)를 기록. `--dry-run` 으로 명령 먼저 확인.
+- **왜**: 로컬 전용 · 키 불필요 · 결과를 재probe 해 규격 대조하는 단계가 현 파이프라인에 없다.
+- **우선순위**: 중간
+- **상태**: 대기
+

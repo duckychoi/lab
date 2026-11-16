@@ -4,7 +4,7 @@ type: entity
 domain: video-saas
 tags: [entity, research-group, pku, image-generation, video-generation]
 created: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-16
 sources: [G-STAR.md, PhysLoop.md]
 reliability: medium
 ---
@@ -16,11 +16,15 @@ reliability: medium
 
 ## 소스
 - [[G-STAR]](arXiv 2611.13004 · 42 up · 코드 ★25) — 그룹 크기를 압축률 제곱으로 키워 32×/64× 압축 이산 AR 이미지 생성 · 1024px 2.5초(H200) · 기존 이산 AR 대비 20×.
+- 🆕 [[Criteria-Exposure]](arXiv 2611.08318 · 21 up · 코드 없음 · 2026-11-16 수록) — 체화 자기개선 코딩 에이전트가 벤치 성공 판정 기준을 보면 과제가 아니라 검증기에 과적합한다는 통제 실험. 마지막 저자 **Daquan Zhou**(3편째 동일) · HF papers API `organization` = DAGroup-PKU.
 - [[PhysLoop]](arXiv 2611.16748 · 44 up · 코드 ★34) — LLM 물리 지식을 하네스로 묶어 영상 생성 모델의 학습 영상 구축 · 국소 수리 · 영상 10만 개 공개.
 
 ## 관찰
 - 두 논문 모두 **생성 모델의 효율/데이터** 쪽이고, 초록에 벤치 점수를 적지 않는다(G-STAR "competitive" · PhysLoop 수치 0) — 헤드라인은 속도(20×) · 규모(10만)다.
 - 🔴 조직명의 "PKU"가 북경대 소속을 뜻하는지, 저자 소속이 무엇인지는 볼트 미확인(HF API `organization` 필드는 조회하지 않았다 — [[복합지표-분해]]의 경고대로 그 필드만으로 소속을 단정하지 않는다).
 
+## 🔄 2026-11-16
+- 3번째 논문 [[Criteria-Exposure]] 는 앞 2편(생성 효율 · 데이터)과 달리 **평가 타당성** 논문이고, 역시 초록 정량 수치 0건 — 이 그룹 초록 3편 연속 "수치 없음". 🔴 소속("PKU") 미확인은 그대로(조직 필드는 HF 조직명일 뿐).
+
 ## 관련 페이지
-- [[G-STAR]] · [[PhysLoop]] · [[AI-영상-생성-2026]] · [[video-saas]]
+- [[Criteria-Exposure]] · [[G-STAR]] · [[PhysLoop]] · [[AI-영상-생성-2026]] · [[video-saas]]

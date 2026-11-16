@@ -1599,6 +1599,116 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1116-local-llm-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-16 배치\n측정된 것 ≠ 쓰이는 것",
+			"x": 60,
+			"y": 18910,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1116-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/SteerDistill.md",
+			"x": 60,
+			"y": 19030,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/SparseRead.md",
+			"x": 520,
+			"y": 19030,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-3",
+			"type": "file",
+			"file": "wiki/sources/PISA-E.md",
+			"x": 980,
+			"y": 19030,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-4",
+			"type": "file",
+			"file": "wiki/sources/gemma-4-31B-it-ARA-heretic-GGUF.md",
+			"x": 60,
+			"y": 19270,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-x2",
+			"type": "file",
+			"file": "wiki/sources/heretic.md",
+			"x": 1440,
+			"y": 19510,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1116-local-llm-5",
+			"type": "file",
+			"file": "wiki/sources/qwen-concept-27b.md",
+			"x": 520,
+			"y": 19270,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-6",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Omni-Quantized.md",
+			"x": 980,
+			"y": 19270,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-7",
+			"type": "file",
+			"file": "wiki/sources/MMFlash.md",
+			"x": 60,
+			"y": 19510,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-local-llm-x11",
+			"type": "file",
+			"file": "wiki/sources/dflash.md",
+			"x": 1440,
+			"y": 19990,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1116-local-llm-x12",
+			"type": "file",
+			"file": "wiki/sources/Qwen-Image-2.1-Uncensored-Quantized.md",
+			"x": 1440,
+			"y": 20230,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -2656,6 +2766,77 @@
 			"fromNode": "b1114-local-llm-2",
 			"toNode": "b1114-local-llm-8",
 			"label": "스킬 점수 ↔ 과제 점수 혼용"
+		},
+		{
+			"id": "b1116-local-llm-h1",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-1"
+		},
+		{
+			"id": "b1116-local-llm-h2",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-2"
+		},
+		{
+			"id": "b1116-local-llm-h3",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-3"
+		},
+		{
+			"id": "b1116-local-llm-h4",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-4"
+		},
+		{
+			"id": "b1116-local-llm-e0",
+			"fromNode": "b1116-local-llm-4",
+			"toNode": "b1116-local-llm-1",
+			"label": "양자화본 재측정 필요"
+		},
+		{
+			"id": "b1116-local-llm-e1",
+			"fromNode": "b1116-local-llm-2",
+			"toNode": "b1112-local-llm-5",
+			"label": "입력단 노출 예산"
+		},
+		{
+			"id": "b1116-local-llm-e2",
+			"fromNode": "b1116-local-llm-4",
+			"toNode": "b1116-local-llm-x2",
+			"label": "ARA 21–56층"
+		},
+		{
+			"id": "b1116-local-llm-h5",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-5"
+		},
+		{
+			"id": "b1116-local-llm-h6",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-6"
+		},
+		{
+			"id": "b1116-local-llm-h7",
+			"fromNode": "b1116-local-llm-hdr",
+			"toNode": "b1116-local-llm-7"
+		},
+		{
+			"id": "b1116-local-llm-e10",
+			"fromNode": "b1116-local-llm-5",
+			"toNode": "b1116-local-llm-4",
+			"label": "원본 측정 · 양자화 배포"
+		},
+		{
+			"id": "b1116-local-llm-e11",
+			"fromNode": "b1116-local-llm-7",
+			"toNode": "b1116-local-llm-x11",
+			"label": "VLM 확장"
+		},
+		{
+			"id": "b1116-local-llm-e12",
+			"fromNode": "b1116-local-llm-6",
+			"toNode": "b1116-local-llm-x12",
+			"label": "이름 유사 · 다른 레포"
 		}
 	]
 }

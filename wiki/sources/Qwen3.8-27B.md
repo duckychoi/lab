@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, qwen, base-model, image-text-to-text, local-llm, alibaba, 하네스-설계-축, 비매칭-비교, 벤치-개조-재평가, 표-부분인용, 특화-역류, 하네스편향, 역휴리스틱, 이월종결]
 created: 2026-08-18
-updated: 2026-11-14
+updated: 2026-11-16
 sources: []
 reliability: medium
 ---
@@ -1039,3 +1039,6 @@ Qwen/Qwen3.8-27B
 
 ## 🔄 2026-11-14 — 파생 1건: [[AutoTrust-JEV-27B]] (결정 모델)
 - `autotrust/AutoTrust-Decider-Pro-Vision-27B-v1.1` 의 `NOTICE.base` · `decision_config.json` 이 base 를 `Qwen/Qwen3.8-27B` 로 명시(볼트 직접 판독 — 수집기는 "베이스 미명시"). 생성형이 아니라 선택지 확률을 내는 결정 readout head 를 얹은 파생이다. Decision Index 0.3 public 67.31(자체 측정).
+
+## 🔄 2026-11-16
+- 🆕 학습 없는 가중치 편집 파생 [[qwen-concept-27b]] — GPQA +4.3 [CI +1.8, +7.1] · LCB +13.0 · 사고 토큰 −27~54% · 랜덤 편집 대조군 CI 0 걸침. 측정 파일은 Q8_0.

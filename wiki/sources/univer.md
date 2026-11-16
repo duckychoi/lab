@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github, typescript, 오피스-sdk, 스프레드시트, 에이전트-툴, 리포지셔닝, 하네스-설계-축]
 created: 2026-09-23
-updated: 2026-09-23
+updated: 2026-11-16
 sources: []
 reliability: medium
 ---
@@ -83,3 +83,22 @@ reliability: medium
 - 수집기 대조: ★+2 · fork·issues·라이선스 **완전 일치** · 리포지셔닝 해석 **동의**, 볼트 추가 근거 = **topics 미갱신**
 - 확인 범위: API 메타만. 🔴 README·에이전트 API 문서 미열람 · 🔴 미실행
 - 신뢰도: ⭐⭐⭐ **medium**
+
+---
+
+## 📊 2026-11-16 재관측 — 09-29 질문("에이전트 API 가 실제로 붙어 있나")에 README 가 답했다: **붙어 있는데 유료 쪽에**
+
+★ **26,718**(볼트 11-16 실측 · 수집기 11-15 ★25,136) · fork 2,431 · Apache-2.0 · 최신 릴리스 **v1.5.1(2026-11-16T06:55Z)** — 수집기 기록 v1.5.0 다음 판. 볼트 09-29 ★21,526 → 48일간 +5,192.
+
+> [!insight] 오픈소스 경계가 README 에 명문화됨 (68 · 77 · 78 · 80 · 82행 · 볼트 확인)
+> 제품은 **Web SDK / Server SDK / AI SDK** 3부. *"This repository provides the Web SDK's core architecture and engine implementations under Apache-2.0"* — 콘텐츠 모델 · 명령 시스템 · 수식/렌더 엔진 · Facade API. **Server SDK**(실시간 협업 · 이력 · Office 파일 입출력)와 **AI SDK**(*"content tools, execution, and review integrations"*)는 별도 배포. 82행: *"Agents can use the same open-source APIs; your application supplies the model and tool orchestration."*
+> 📌 09-29 판정("AI Agent Harness" 는 리포지셔닝 간판)의 **유지 근거 강화** — 에이전트 도구 계층은 상용, 오픈소스로는 사용자가 오케스트레이션을 직접 짠다. XLSX 입출력도 *"separately distributed"*(279행). → [[파생표기-함정]] · [[간판-지체]].
+
+> [!note] v1.5.0 릴리스(수집기 판독): 차트 전용 시트 · 누적 꺾은선 · 시리즈별 오차 막대 · Board 다이어그램 레이아웃 API · LaTeX 패키지 · 수식 메모리 절감 · "Pro 무료 티어 범위 확대".
+
+## 관련 페이지 추가
+- [[dream-num]] · [[파생표기-함정]] · [[간판-지체]] · [[CopilotKit-OpenBot]](같은 "템플릿 오픈 · 지능 계층 상용" 구조)
+
+## 원본 갱신
+- 실측(2026-11-16 · GitHub API): ★26,718 · fork 2,431 · releases/latest v1.5.1
+- 확인 범위: README 68 · 77–82 · 222 · 279행(볼트) · 🔴 v1.5.0 릴리스 노트 내용은 수집기 판독 · 미실행

@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-12
+updated: 2026-11-16
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -665,3 +665,13 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 - 🆕 [[Duo]] — 전이중 시청각 상호작용 "Reciprocal World Model" v1 · 정량 평가 0 · 예고성(reliability low).
 - 🆕 엔티티 [[DAGroup-PKU]] — 같은 날 데일리 상위 10편 중 2편(PhysLoop · G-STAR).
 - 📌 오픈 i2v 기준 모델 재선정(11-12 actionable)은 미해결 — 이번 배치에 지역 제외 없는 후보는 들어오지 않았다.
+
+## 🔄 2026-11-16 배치
+🎯 **축**: **측정된 것과 쓰이는 것이 다르다** — 거부율은 BF16 원본(dl 551)에서, 사용은 270배 많은 GGUF([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 속도는 LightX2V 원본 가중치, 배포는 ComfyUI int8([[Comfy-Org-RelayVSR]]) · 점수는 판정 기준, 목표는 지시된 과제([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). 정방향: [[SteerDistill]] 은 양자화본을 에이전트 벤치로 **다시 잰다**.
+- 🆕 [[Comfy-Org-RelayVSR]] — Wan2.2 기반 희소 참조 + 경량 VSR 스트리밍 초해상 · 2× 45.44 FPS(H100 · LightX2V 원본) vs SeedVR2-3B 0.69 FPS. 화질 지표 0 · Apache-2.0(지역 조항 없음). **H3 등 생성 영상 2× 후처리 후보 — ComfyUI 에서 화질 직접 비교 필요.**
+- 🔴 [[MiniMax-H3-Character-Swap-LoRA]] — 포즈 · 표정은 소스, 정체성은 참조 이미지 · dl 139,046 · LICENSE = H3 원본 바이트 동일 → **한국 제외**([[라이선스-지역-제외]] 파생 5번째) · 정량 벤치 0.
+- 🆕 [[Veyra-NRVideo]] — Windows 실시간 영상 향상 호스트(RTX VSR · DLSS/XeSS/FSR · NR · FG) · ★2,900 · 간판 "GTA6 120FPS" vs README "Submitted FPS ≠ display FPS" · 화질 측정 0.
+- 🆕 [[VibePrevisBench]] (Kling-Keye) — 에이전트가 Blender 4D 프리비즈 → 그레이박스 프록시 영상 · GPT-6 Astra 77.7 · Opus 5.5 74.1 · 렌더를 보고도 못 고친다 · 하네스 혼입(Codex CLI vs Claude Code). **제어형 영상 생성 파이프라인 설계 레퍼런스.**
+- 🆕 [[ffmpeg-skill]] (★6,093) — probe → 무손실 → 재probe 검증 42도구 · MCP · 로컬 전용. **쇼츠 후처리(리프레임 · 라우드니스 · 자막)에 바로 붙일 수 있음.**
+- 🆕 [[JVT]] — 큰 패치 DiT 픽셀 공간 영상 확산 · RGB+디스패리티 동시 생성 · 본문 "능가"는 표 1 범위 한정(부록 반박).
+- 🔴 [[MiniMax-H3-Image-GGUF]] — Abiray · LICENSE = H3-Image 원본 바이트 동일(한국 제외) · "거의 무손실" 근거 0.

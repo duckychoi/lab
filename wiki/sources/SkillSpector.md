@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, security, agent-skills, static-analysis, nvidia, vulnerability]
 created: 2026-06-14
-updated: 2026-06-16
+updated: 2026-11-16
 sources: []
 reliability: high
 ---
@@ -41,3 +41,6 @@ reliability: high
 ## 원본
 - 출처: https://github.com/NVIDIA/SkillSpector
 - 신뢰도: ⭐⭐⭐⭐ (6.7K 스타, NVIDIA 공식)
+
+## 🔄 2026-11-16
+- [[SkillEvaluator]](NVIDIA · ★2,083)가 Tier 1 검증에서 SkillSpector 를 자동 설치해 호출 — 같은 Verified Skills 파이프라인의 상위 계층.

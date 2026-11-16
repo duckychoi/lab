@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [entity, huggingface, comfyui, repackage, distribution, runtime]
 created: 2026-09-17
-updated: 2026-11-12
+updated: 2026-11-16
 sources: [Comfy-Org-YuE2.md, Comfy-Org-MOSS-Image.md]
 reliability: medium
 ---
@@ -77,3 +77,6 @@ ComfyUI 생태계의 공식 조직. **모델을 만들지 않고 런타임에 �
 
 ## 🔄 2026-11-12
 - 🆕 [[Comfy-Org-MiniMax-H3-Image]] — MiniMax-H3-Image 재패키징(확산 3종 · 인코더 2종 · 워크플로 2종) · DL 351,803. 🔴 카드 License 절이 "원본 H3 와 다르다"며 매출·호스팅 조항만 인용 — **두 라이선스가 공유하는 지역 제외(한국 포함)는 생략**. → [[라이선스-지역-제외]] · [[표-부분인용]]
+
+## 🔄 2026-11-16
+- 🆕 [[Comfy-Org-RelayVSR]] — kopper/RelayVSR(4×) + lightx2v/RelayVSR_X2(2×) int8 재포장 · DL 182,094 · Apache-2.0(원본 LICENSE 지역 조항 없음 확인). 🔴 카드에 성능 수치 0 · 속도 표(45.44 FPS)는 lightx2v 카드의 **원본 가중치 · LightX2V 런타임** 기준 → 재포장본 미측정. 원본 kopper 다운로드 0(API 30일 창) vs 재포장 18만 → [[원본-파생-역전]].

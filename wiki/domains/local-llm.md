@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-12
+updated: 2026-11-16
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -908,3 +908,13 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🆕 [[TensorFold]] — Zig 단일 바이너리 추론 서버(Metal · CUDA). 설명의 "Vulkan"은 README 0건. 신생 · 1인 주도.
 - 🆕 [[Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF]] — 재양자화 없이 텐서 144개 이식 · +0.25~0.44GB · 행동 검증은 프롬프트 1개. dl30 408만(30일 창 감소 관측).
 - 🆕 [[DavidAU-Qwen3.5-9B-Defiant-Fable]] — 9B 무검열 파인튜닝 · MTP 130 → 185 t/s(5090 · 카드) · "7/7 초과"는 카드 표에서 6/7 · 6/7 · 5/7.
+
+## 🔄 2026-11-16 배치
+🎯 **축**: **측정된 것과 쓰이는 것이 다르다** — 거부율은 BF16 원본(dl 551)에서, 사용은 270배 많은 GGUF([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 속도는 LightX2V 원본 가중치, 배포는 ComfyUI int8([[Comfy-Org-RelayVSR]]) · 점수는 판정 기준, 목표는 지시된 과제([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). 정방향: [[SteerDistill]] 은 양자화본을 에이전트 벤치로 **다시 잰다**.
+- 🆕 [[SteerDistill]] — 폐루프 교사 조향 양자화 증류 · W4A16 에서 최강 양자화 대비 +1.67~2.18 · BF16 1점 이내 · τ²-Bench QeRL 대비 +1.84%p / GPU 시간 −67%. **양자화 에이전트 고를 때 '에이전트 벤치로 재측정됐나'를 기준에.**
+- 🆕 [[SparseRead]] — 읽기 제어 계층(의도 추적 · 백엔드 선택 · 노출 예산 게이트) · 토큰 최대 −92.9%(딥서치 −31~43%) · 97% 설정 품질 유지 · 코드 ★83. **로컬 소형 모델 컨텍스트 절약에 바로 쓸 수 있는 설계 규칙.**
+- 🆕 [[PISA-E]] — 프롬프트별 앙상블 구성 · 크기 라우팅 · 품질 우선 +2.09/+2.87%p · 저비용점 비용 −36/−25%. 지연 언급 없음 · 코드 없음.
+- 🆕 [[gemma-4-31B-it-ARA-heretic-GGUF]] — Gemma 4 31B ARA 거부 제거판 GGUF(Q4_K_M 18.8GB) · 원본 거부 0.6% vs 89.3% · 능력 −2.18%p — **전부 원본 기준, GGUF 미측정** · dl 원본 551 vs GGUF 149,532.
+- 🆕 [[qwen-concept-27b]] — 학습 없는 down-proj 9개 편집 · GPQA +4.3 [CI +1.8, +7.1] · 사고 토큰 −27~54% · **랜덤 편집 대조군** · 측정은 Q8_0(4비트 미측정 자인).
+- 🆕 [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] — chatrlabs · 비상업 연구 라이선스 · BF16 병합 기준 벤치(32k 중간본 SFW −4.0 → 90k 회복) · 양자화본 미측정.
+- 🆕 [[MMFlash]] — VLM 투기적 디코딩 · 시각 의존 토큰 가중 · 최대 3.58×(평균 미기재).

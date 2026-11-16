@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, local-llm, abliteration, uncensoring, safety, open-weights]
 created: 2026-07-14
-updated: 2026-11-04
+updated: 2026-11-16
 sources: []
 reliability: high
 ---
@@ -75,3 +75,6 @@ reliability: high
 
 - **수집기 평가**: ★·AGPL·30–40분 조건(RTX 3090·Qwen3-4B·기본 설정)·keyword_rate+KL·v2.0.0 요약·확인 경로 명시 모두 정확. 누락/오류 = ① **기본 기법이 ARA**(논문 미공개)인데 abliteration을 앞세움 ② "벤치 표 없음"이 **2.0에서 삭제된 결과**라는 이력 + 외부 MMLU/GSM8K 각주 존재 ③ v1.x 대비 처리 시간 증가(20–30→30–40분).
 - **즉시 활용**: NO 유지(볼트는 관측 대상으로만). 학습용으로는 `--evaluate-model` 재현 경로가 v1.4.0 문서에 있었다는 점만 기록.
+
+## 🔄 2026-11-16 — ARA 적용 파생물의 측정 범위
+- [[gemma-4-31B-it-ARA-heretic-GGUF]]: richardyoung 원본(heretic v2.0.0 · ARA 21–56층)은 WildGuard 972개 거부율 **0.6% vs 89.3%** · 능력 **−2.18%p** 를 카드에 공개(591–592행 볼트 확인). 그러나 다운로드는 원본 551 vs GGUF 149,532 — 측정은 원본에, 사용은 미측정 양자화본에. 11-04 기록("기본 기법이 ARA, 논문 미공개")과 같은 상태: 출처 논문 arXiv 링크 "추가 예정".

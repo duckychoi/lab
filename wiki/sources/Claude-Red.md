@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, github-trending, agent-skill, offensive-security, claude-code, 실카운트-일치]
 created: 2026-09-13
-updated: 2026-10-24
+updated: 2026-11-16
 sources: [raw.md]
 reliability: high
 identifiers: [SnailSploit/Claude-Red]
@@ -79,3 +79,6 @@ identifiers: [SnailSploit/Claude-Red]
 ### 원본 갱신
 - 검증: 2026-10-24 09:06 UTC GitHub API + git tree 전수(truncated=false) — ★+2·fork+1 드리프트 · **SKILL.md 79(배지 78과 +1 격차)** · 카테고리 23 불변 · 이슈/PR 분해(9+23)
 - 신뢰도: ⭐⭐⭐ (⭐8,703 · MIT · 실카운트 대조) / 🔴 효과 측정 0 · 배지 과소집계 · 12일 경과
+
+## 🔄 2026-11-16
+- 같은 계열 [[Claude-BugHunter]](★6,880 · 83 스킬) — 공개 HackerOne 리포트 681건 패턴 중 433건만 개별 출처 인용(README 자기 공개).

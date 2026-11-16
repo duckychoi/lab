@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, minimax, china, video-generation, omni-modal, hailuo, partial-open-source]
 created: 2026-08-29
-updated: 2026-11-14
+updated: 2026-11-16
 sources: [MiniMax-H3-Image.md, P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
@@ -66,3 +66,8 @@ reliability: medium
 
 ## 🔄 2026-11-14 — 파생 5번째: [[Pika-H3-Flex]]
 - Pika-Labs 의 H3 후학습 LoRA 어댑터 2종(6스텝 · 영상 + 오디오 · dl 147,955). 레포 LICENSE 가 H3 원본과 바이트 동일 → 한국 제외 승계([[라이선스-지역-제외]]). H3 생태계가 Comfy 재포장 · hyperflow 증류 · Pika 후학습으로 넓어지는 동안 **지역 제외를 카드 본문에 적은 곳은 hyperflow 하나**다.
+
+## 🔄 2026-11-16 — H3 파생 2건 추가, 둘 다 원본 LICENSE 바이트 동일(한국 제외)
+- 🔴 [[MiniMax-H3-Character-Swap-LoRA]](akatz-ai · dl 139,046) = MiniMax-H3 LICENSE 동일.
+- 🔴 [[MiniMax-H3-Image-GGUF]](Abiray · dl 127,803) = MiniMax-H3-Image LICENSE 동일(18,208B) · "거의 무손실" 근거 0.
+- 📌 [[라이선스-지역-제외]] 파생 누적 6건. H3 계열의 다운로드는 파생 쪽이 주도하는데, 파생 카드 대부분은 지역 조항을 본문에 적지 않는다.

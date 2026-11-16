@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, browser-automation, entity]
 created: 2026-07-04
-updated: 2026-11-12
+updated: 2026-11-16
 sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md]
 reliability: high
 ---
@@ -93,3 +93,6 @@ reliability: high
 
 ## 🔄 2026-11-12
 - 🆕 [[Qwen3.8-27B-DSpine-b16]] — [[Qwen3.8-27B]] 용 5층 병렬 드래프트(arXiv 2609.36173) · Apache-2.0 · 수락 길이 GSM8K 7.20 vs DFlash2 5.69. 🔴 블록 16 vs 8 비교([[비매칭-비교]]) · 에이전트 벤치 일부는 Tencent 자체 WorkBuddy Bench.
+
+## 🔄 2026-11-16
+- 🆕 [[LoopForge]] — 코딩 에이전트 CLI 10종을 역할 · SOP · human gate 로 묶는 셀프호스팅 워크스페이스(Go · MIT+서드파티) · ★1,056 → **2,028(하루 +972)**. README 가 Docker 소켓 · 전체 데이터 열람 · `0.0.0.0` 바인드를 스스로 한계로 명시 · 효과 측정 0. 자사 CodeBuddy 가 요구사항 명확화 · eval 에 고정.

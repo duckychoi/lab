@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, harness, agent, entity]
 created: 2026-07-04
-updated: 2026-11-14
+updated: 2026-11-16
 sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md]
 reliability: high
 ---
@@ -93,3 +93,7 @@ reliability: high
 
 ## 🔄 2026-11-14
 - 🆕 [[TTB]](NVlabs/DVSM ★35 · arXiv 2611.17331) — 교차 시점 어텐션을 경량 MLP 에 구워 디코더 전용 시점 합성 최대 23배 가속 · 품질은 SOTA 동급(초록). 굽는 비용 미기재.
+
+## 🔄 2026-11-16
+- 🆕 [[SkillEvaluator]] — ★2,083 · 스킬 3단계 평가(검증 · 중복 · 有/無 라이브 비교) · [[SkillSpector]] 와 같은 Verified Skills 파이프라인 · 정적 점수 86.2 는 *INCOMPLETE* 증거.
+- [[openworker]] 가 [[OpenShell]] 컨테이너를 샌드박스로 채택(수집기 판독) — NVIDIA 에이전트 보안 구성요소의 외부 채택 1건.

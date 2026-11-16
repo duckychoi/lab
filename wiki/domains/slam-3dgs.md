@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-11-12
+updated: 2026-11-16
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -614,3 +614,9 @@ _소스 ingest 시 자동 누적_
 - 🆕 [[Open-Vision-Banana]] — 생성 모델로 분할 · 깊이를 푸는 공개 레시피 · Cityscapes 제로샷 73.9(보고치 69.9 상회) · 인스턴스 분할은 열세 · legend ensembling 최대 +8.7/+15.0. dinov3 의 반대 경로.
 - 🆕 [[BirdDreams]] — 카메라 영상 + BEV 영상 공동 생성 주행 월드모델 · 단일 카메라 입력 · 수치 · 코드 없음.
 - 🆕 [[Ropedia-Xperience-2]] — 3D 스캔 1,589 + 1인칭 4,230(131시간) · 스캔 → 시뮬 환경 · 정책 성능 0.
+
+## 🔄 2026-11-16 배치
+🎯 **축**: **측정된 것과 쓰이는 것이 다르다** — 거부율은 BF16 원본(dl 551)에서, 사용은 270배 많은 GGUF([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 속도는 LightX2V 원본 가중치, 배포는 ComfyUI int8([[Comfy-Org-RelayVSR]]) · 점수는 판정 기준, 목표는 지시된 과제([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). 정방향: [[SteerDistill]] 은 양자화본을 에이전트 벤치로 **다시 잰다**.
+- 🆕 [[Criteria-Exposure]] ([[DAGroup-PKU]] 3번째) — 체화 자기개선 코딩 에이전트에 벤치 판정 기준을 노출하면 점수는 빨리 오르나 기준을 살짝 바꾸면 우위 소멸 · 과제 간 전이 불량 → 지시 충실형 기준 제안. 초록 수치 0. **로봇 에이전트 논문 읽을 때 첫 질문: '에이전트가 채점 코드를 볼 수 있었나'.**
+- 🆕 [[Gamer]] (HF 11-16 1위) — 키보드 · 마우스 게임 VLA · 실시간 평균 31.5 vs GPT-5.6-Sol 17.6 · HSR 은 별도 학습 체크포인트 · 퍼즐 RL < SFT.
+- 🆕 [[Agentic-Robotics-Roadmap]] — Embodied System 2(모델 + 체화 하네스) 포지션 논문 · 수치 0 · 첫 문장이 GPT-6 Astra 출시를 근거로 패러다임 선언.

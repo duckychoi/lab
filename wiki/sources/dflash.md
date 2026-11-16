@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, ai-news, speculative-decoding, block-diffusion, inference-acceleration, llm-efficiency]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-11-16
 sources: []
 reliability: medium
 ---
@@ -44,3 +44,6 @@ reliability: medium
 - 출처: https://github.com/z-lab/dflash
 - GitHub ⭐: 3,617 (오늘 +671)
 - 신뢰도: ⭐⭐ (초기 단계, 독립 벤치마크 검증 필요)
+
+## 🔄 2026-11-16
+- [[MMFlash]] — DFlash 류 블록 확산 드래프터를 VLM 으로 확장 · 시각 의존 토큰 수용률 46% → 22% 관찰 · DFlash 대비 최대 +17.1% · 최대 3.58×(모두 "up to").

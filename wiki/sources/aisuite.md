@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, llm-api, multi-provider, python, andrew-ng, openai-compatible]
 created: 2026-06-14
-updated: 2026-07-26
+updated: 2026-11-16
 sources: []
 reliability: high
 ---
@@ -47,3 +47,6 @@ reliability: high
 - 출처: https://github.com/andrewyng/aisuite
 - 스타: ⭐15,292 (2026-07-26 WebFetch 실검증) ← ⭐14,496 (06-15), Python
 - 신뢰도: ⭐⭐⭐⭐⭐ (15.3K 스타, Andrew Ng)
+
+## 🔄 2026-11-16
+- 같은 저자(andrewyng)의 [[openworker]](★19,364 · MIT)가 앱 엔진으로 aisuite 를 사용(수집기 판독) — 다중 제공자 추상화가 데스크톱 코워커의 모델 계층으로 쓰였다.

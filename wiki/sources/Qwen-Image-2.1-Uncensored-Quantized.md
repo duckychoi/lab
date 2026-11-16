@@ -5,7 +5,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, gguf, quantization, mlx, nvfp4, comfyui, qwen-image, uncensored, turbo, 개명, 내용교체, 계수기-승계, 원본-파생-역전, 벤치마크-이미지-봉인, 단위-불일치, 검사가능성-공사, 정규명-우선-중복검사, 동일대상-분리오판, 봉인유지, 절제, 규약11]
 created: 2026-10-02
-updated: 2026-11-07
+updated: 2026-11-16
 sources: [Qwen-Image-2.1-Uncensored-GGUF.md, Qwen-Image-2.1.md]
 reliability: medium
 ---
@@ -528,3 +528,6 @@ BF16 **14.23 GB** → NVFP4 **4.20 GB** (70.5% 감소) · MLX 4bit **4.00 GB** (
 > | **볼트 11-07** | **135,850** | **2,052,137** |
 > - 누적값이 11-04 → 11-06 사이 **−2,089,193** 감소. 정상 증가로는 불가능 — 11-04 에 기록한 "`main` 이력 재작성 · 가중치 Turbo 교체" 이후 **HF 측이 이력 재작성 이전 계수를 떼어낸 재집계**로 보는 것이 가장 단순한 설명이다(볼트 추론 · HF 공지 미확인). 11-06→11-07 은 +12,998 로 다시 정상 증가.
 > - 교훈: 이 레포의 이전 "수백만 다운로드"는 **현재 가중치에 대한 수요 지표가 아니었다** → [[계수기-배수]] · [[캐시된-지표-신선도]]. ♥5,693 · trendingScore 216.
+
+## 🔄 2026-11-16 — 이름이 비슷한 다른 레포 등장
+- [[Qwen-Image-2.1-Uncensored-Omni-Quantized]](chatrlabs · HF ID `6aea0825…`)는 이 레포(현 Turbo-Quantized · ID `6ab000f1…`)의 개명 · 이전이 아니다(볼트 API 대조). 이 레포의 11-04 개명 이력 때문에 이름만으로는 오인하기 쉽다 → [[정규명-우선-중복검사]].

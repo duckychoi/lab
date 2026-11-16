@@ -5737,3 +5737,40 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 3. embeddinggemma-2 한국어 측정(768d vs 256d) — 10-11 최우선 항목과 묶어 실행 · modern-web-guidance 설치 시험(`DISABLE_TELEMETRY=1`)
 
 ## [2026-11-15 09:05:05] ingest | 대기 항목 없음
+
+## [2026-11-16] ingest | **대기 26건 전량 처리** (11-15 자동수집 13 + 11-16 자동수집 13 · 크론 노트 0) · 11-16 분은 실행 중 큐에서 확인
+
+- **도메인**: ai-news 9(LoopForge · ag-ui · chrome-devtools-mcp · univer · BookNavigator-Self-Learning · elephant-goldfish-model · openworker · SkillEvaluator · Claude-BugHunter) · local-llm 7(SteerDistill · SparseRead · PISA-E · gemma-4-31B-it-ARA-heretic-GGUF · qwen-concept-27b · Qwen-Image-2.1-Uncensored-Omni-Quantized · MMFlash) · video-saas 7(Comfy-Org-RelayVSR · MiniMax-H3-Character-Swap-LoRA · Veyra-NRVideo · VibePrevisBench · ffmpeg-skill · JVT · MiniMax-H3-Image-GGUF) · slam-3dgs 3(Criteria-Exposure · Gamer · Agentic-Robotics-Roadmap) — 수집기는 26건 전부 `ai-news` 로 표기, 볼트 재분류
+- **분해**: **신규 24 · 갱신 2**(chrome-devtools-mcp · univer — 수집기 🔄 정확). 첫 `grep -c '^- URL:'` 는 13 이었으나 처리 중 26 으로 확인(raw.md mtime 09:03:54Z) — 11-11 선례대로 같은 실행에서 처리
+- **추가 페이지**: **24개** (소스 24) | **업데이트 페이지**: 소스 13(갱신 2 + 연결 메모 11: CopilotKit · MiniMax-H3 · heretic · MiniMax-H3-Image · Qwen-Image-2.1-Uncensored-Quantized · aisuite · SkillSpector · Claude-Red · dflash · Qwen3.8-27B) + 엔티티 8(Tencent · Comfy-Org · DAGroup-PKU · dream-num · Google · NVIDIA · MiniMax · Qwen) + 개념 4(라이선스-지역-제외 · 에이전트-스킬 · 요약자와-판정자-분리 · 하네스-설계-축) + 도메인 4쪽
+- **페이지 수**: 1829 → **1853** (sources 1619 · entities 130 · concepts 96) ✅ `find` 실측 일치
+- **canvas 업데이트**: **YES** — ai-news · local-llm · slam-3dgs · video-saas 4종에 `b1116-*` 노드 41 + 엣지 48 (git diff 삽입만)
+- **actionable 추가**: YES — 7항목(H3 파생 2건 보류 · chrome-devtools-mcp 통계 끄기 · RelayVSR 2× 화질 비교 · SparseRead 노출 예산 이식 · EGM 설치 시험 · SkillEvaluator 자작 스킬 점검 · ffmpeg-skill 쇼츠 후처리 시험)
+- **독립 검증**(09:04–09:15Z): GitHub API 10레포(ID · 스타 · 라이선스 · 생성일) + releases/latest 3 · README 원문 9종(LoopForge · Veyra · ag-ui · chrome-devtools-mcp + tool-reference · univer · EGM · openworker · SkillEvaluator · ffmpeg-skill · BugHunter) · LICENSE 원문 5종(LoopForge · kopper/RelayVSR · Character-Swap ↔ H3 `cmp`/sha256 · Abiray ↔ H3-Image `cmp` · chatrlabs) · HF papers API 10편(초록 전문 · 저자 · 조직 · 코드) · arXiv HTML 2편(Gamer 표 5·6 · VibePrevisBench 표 2) · HF models API 10건(내부 ID 대조 포함) · 카드 원문 5종(richardyoung · Comfy RelayVSR · lightx2v · Abiray · concept) + chatrlabs BENCHMARK.md
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**측정된 것과 쓰이는 것이 다르다 — 그리고 26건 중 정직한 카드는 그 간극을 스스로 적었다.** Gemma ARA 의 거부율 0.6% 는 다운로드 551 의 BF16 원본 값인데 사람들은 270배 많은 GGUF 를 받는다. RelayVSR 의 45.44 FPS 는 LightX2V 런타임 · 원본 가중치 속도이고 배포본은 ComfyUI int8, 화질 지표는 셋 다 0. qwen-concept 는 Q8_0 에서만 쟀고 "4비트는 따로 재야 한다"고 카드에 적었다. chatrlabs 는 "양자화 파일은 따로 벤치하지 않았다"고 적었다. Abiray 는 "거의 무손실"이라고만 적었다. **같은 간극이 정직 → 침묵 → 근거 없는 주장의 스펙트럼으로 나뉜다.** 반대 방향의 증거도 같은 배치에 있다: SteerDistill 은 양자화본을 에이전트 벤치로 다시 재서 BF16 1점 이내를 보였고, Criteria-Exposure 는 점수가 "판정 기준"에 과적합하면 기준을 살짝 바꾸는 것만으로 우위가 사라진다는 걸 보였다. 쓰는 형태로 다시 재지 않은 숫자는 다른 물건의 숫자다.
+
+### 🏆 주요 발견
+1. 🔴🔴 [[라이선스-지역-제외]] 파생 5 · 6번째 — [[MiniMax-H3-Character-Swap-LoRA]] = MiniMax-H3 LICENSE(17,604B · sha256 `59b99642b95ea21630e3`) · [[MiniMax-H3-Image-GGUF]] = MiniMax-H3-Image LICENSE(18,208B) **바이트 동일**. 이번엔 수집기가 둘 다 요약에 명시(11-12 요청 이행). 음성 대조군 [[Comfy-Org-RelayVSR]](Apache · grep 적중 3건은 "excluding").
+2. 🆕 볼트 추가 — [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] BENCHMARK 의 Step 32,000 열: 일반 SFW 79.8 → **75.8** · 해부학 70.3 → 67.7, 90k 에서 회복. 수집기는 Base vs 90k 만 인용([[표-부분인용]] 경미). 이름 유사 레포(abenzerps)와 HF 내부 ID 로 별개 확인.
+3. ✅ [[qwen-concept-27b]] — 노름 맞춤 **랜덤 편집 대조군**(CI 0 걸침) · 사전 등록 · GPQA CI 공개. 카드가 "기여는 편집이 아니라 대조군"이라고 쓴다 → [[측정도구-먼저-반증]] 의 모범 사례.
+4. 🔄 [[chrome-devtools-mcp]] 09-03 미해결 "커버리지" 해소 — `tool-reference.md` 도구 63개 · 13범주(볼트 계수). 🔴 사용 통계 **기본 수집** · CrUX 전송(README 39 · 45행). 🔄 [[univer]] README 80–82행이 오픈소스 = Web SDK 코어, AI SDK 상용을 명문화 → 09-29 판정 유지 근거.
+5. ✅ [[VibePrevisBench]] 표 2 대조 — GPT-6 Astra 77.7 · Opus 5.5 74.1 · 사진 입력 최고 59.8 · 판정자–사람 Spearman 0.90–0.94. 🔴 GPT 계열 Codex CLI / 나머지 Claude Code — 하네스 혼입([[하네스-설계-축]]). [[Gamer]] 표 5 대조 — 실시간 평균 31.5 vs GPT-5.6-Sol 17.6(일시정지 대비 −34.5).
+6. 🟡 시점 차이 — [[Veyra-NRVideo]] "README GTA 0건" → 수집 후 README 3회 수정으로 v2.1.9 코드명 2건 등장(120FPS 주장은 여전히 0). [[LoopForge]] ★1,056 → 2,028(하루 +972).
+7. ✅ [[DAGroup-PKU]] 3번째 논문 [[Criteria-Exposure]] — 마지막 저자 Daquan Zhou 동일 · 3편 연속 초록 수치 0.
+8. 📌 스킬 4건([[elephant-goldfish-model]] · [[ffmpeg-skill]] · [[Claude-BugHunter]] · chrome-devtools 스킬 7종) 효과 수치 0 — 같은 날 측정 도구 [[SkillEvaluator]](NVIDIA)가 "정적 점수는 INCOMPLETE 증거"라고 스스로 말한다([[에이전트-스킬]]).
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 🔴 실행 0건 — 설치 · 추론 · 벤치 재현 없음. 논문 10편 중 본문 표를 대조한 것은 2편(Gamer · VibePrevisBench), 나머지는 초록까지. JVT 부록 표 · MMFlash · BookNavigator 본문 미열람.
+2. 🔴 LICENSE 판정은 원본과의 동일성 대조 + 지역 조항 문언 확인이지 법률 해석이 아니다. Gemma 4 라이선스 본문 · lightx2v/RelayVSR_X2 라이선스(메타 없음)는 미확인.
+3. 🔴 README 직접 판독 범위는 페이지별 "확인 범위"에 행 번호로 적었다. 그 밖(LoopForge 지원 CLI 목록 · openworker 거버넌스 4단 · EGM 명령 흐름 · BugHunter 스킬 구성 · ffmpeg-skill 도구 목록 · RelayVSR SwiftVR/Open-H3 행 · Gemma GGUF 파일 크기)은 수집기 판독.
+4. ⚖️ 소속 미확인 — DAGroup-PKU("PKU") · internlm ↔ [[InternScience]] 관계 · Veyra 저자 Likely7 ↔ [[TNT-Likely]] 동일인 여부. 엔티티 신설은 하지 않았다(andrewyng · Kling-Keye · ConceptCountry 포함).
+5. ⚖️ 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 처리 전 index/log/raw/actionable/canvas 사본 · 삭제한 raw 항목(`raw.removed.md`) · 검증 원자료(`v/`) · 생성 스크립트: `/tmp/ing1116/`.
+
+### 🔥 actionable 최우선
+1. **CVPR 2027 Submission — 11-17(화) 20:59 KST** (D-1 · 11-12 항목 이월)
+2. **MiniMax H3 계열 보류에 Character-Swap LoRA · H3-Image-GGUF 추가** — 파생 6건 전부 한국 제외
+3. chrome-devtools-mcp 사용 시 `--no-usage-statistics --no-performance-crux` · ffmpeg-skill 쇼츠 후처리 시험 · EGM 으로 수집기 프롬프트 수정안 리뷰

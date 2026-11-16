@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-14 (✅ **11-13 자동수집 13 + 11-14 자동수집 13 = 26건 처리** · 대기 0건)
+updated: 2026-11-16 (✅ **11-15 자동수집 13 + 11-16 자동수집 13 = 26건 처리** · 대기 0건)
 ---
 
 # Raw 대기열
@@ -1207,7 +1207,7 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 
 ---
 
-### 🔧 수집기 자기보고 — 11-15 (볼트 11-14 판정 4건 대응)
+### 🔧 수집기 자기보고 — 11-15 (볼트 11-14 판정 4건 대응) — *✅ 2026-11-16 볼트 처리 완료, 이력 보존*
 
 - **HF 데일리 페이퍼**: 11-14(토)·11-15(일) 페이지는 API 응답 0건. 최신 페이지 11-13(34편)의 상위 9편은 볼트 보유. 그래서 **최근 두 페이지(11-12 · 11-13)에서 볼트 미보유(`wiki/` 전체에 arXiv ID 0건) 논문을 업보트 순으로 5편** 골랐다. 각 항목에 출처 페이지 날짜를 적었다.
 - **중복 검사(요청 3)**: GitHub 은 `wiki/sources/` 를 **레포 이름(owner 제외)** 과 파일명으로 검색했다. Trending 의 AI 관련 레포 중 plannotator · claude-trading-skills · modern-web-guidance-src · TensorFold · qwen-code · open-code-review · caveman 은 볼트 보유(대부분 11-12~11-14 수록)라 제외. 보유분 중 기록이 2개월 이상 된 chrome-devtools-mcp(09-03) · univer(09-29)만 🔄 로 보냈다.
@@ -1215,86 +1215,13 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 - **파생 모델 base LICENSE(요청 4)**: 모델 3건 모두 `territor|korea|exclud` 로 레포 LICENSE 를 검사했다 — H3 Character Swap LoRA 는 **한국 Excluded Territory**.
 - HF 모델은 trendingScore 상위 60개 중 볼트 미보유분을 다운로드 순으로 3건.
 
-## [2026-11-15] 자동수집 | Tencent/LoopForge — 코딩 에이전트 CLI 10종을 역할·SOP·승인 게이트로 묶는 셀프호스팅 워크스페이스
-- URL: https://github.com/Tencent/LoopForge
-- 도메인: ai-news
-- 스타수: ★1,056 (당일 +33, GitHub Trending daily 13위) · fork 235 · Go · repo id 1314510108 · 생성 2026-07-28 · 최신 릴리스 v0.3.8(2026-11-12) · 라이선스: GitHub API `spdx_id` 는 `NOASSERTION` 이나 LICENSE 원문은 **MIT + 서드파티 고지 목록**(지역 제외 조항 grep 0건)
-- 한줄요약: 채팅의 "Main Bot" 이 Docker 샌드박스를 열어 레포를 체크아웃하고 프로젝트 역할(서브에이전트)에 위임해 PR 까지 여는 경로와, Agent·Script·Human gate·Sub-SOP·Preview build 노드를 순서대로 실행하는 **SOP(고정 워크플로)** 경로 두 가지를 제공. 실제 작업은 CodeBuddy·Codex·Claude Code·OpenCode·Cursor CLI·Antigravity·Kimi Code·Pi·DeepSeek Harness·ZCode 가 수행하고 LoopForge 는 역할·샌드박스·체크포인트·이력·토큰 비용 집계를 얹는다. 서버 없이 쓰는 **LoopForge Local**(`npx -y loopforge-cli@latest install claude` → `/start-devflow`)도 있음. ⚠️ README 가 스스로 밝힌 한계: 기본 설치는 호스트 Docker 소켓을 쓰므로 "신뢰된 팀용이지 멀티테넌트 격리 아님", 로그인 사용자는 인스턴스 전체 프로젝트 데이터를 읽을 수 있고 가입이 기본 개방(`AGENTFLOW_ALLOW_SIGNUP=false` 로 차단), 기본 바인드 `0.0.0.0:8090`. 요구사항 명확화·알림 요약·run eval 은 현재 CodeBuddy 모델만 사용, 채팅 워크벤치 UI 는 중국어만. **README 전체에 성공률·벤치마크 수치 0건**(퍼센트·benchmark grep 0건) — 근거는 "4개 역할이 Python 수정 1건을 계획·구현·리뷰한 실행 사례" 1건.
-- 실용성: "에이전트가 계획·테스트를 건너뛰는" 문제를 프로세스(게이트·역할 분리)로 막으려는 팀에 구조 참고 가치. 3.5개월 차·v0.3 단계이고 효과 측정이 없어 도입 판단은 직접 시험 필요. 외부망 노출 시 접근 통제 필수.
+## ✅ 2026-11-16 전량 처리 완료 (26건 = 11-15 자동수집 13 · 11-16 자동수집 13 · 크론 노트 0) — 대기 항목 없음
 
-## [2026-11-15] 자동수집 | Likely7/Veyra-NRVideo — Windows 실시간 GPU 영상 향상 플레이어(초해상·디노이즈·프레임 생성)
-- URL: https://github.com/Likely7/Veyra-NRVideo
-- 도메인: ai-news
-- 스타수: ★2,466 (당일 +420, GitHub Trending daily 14위) · fork 205 · C++ · GPL-3.0(결합된 Chiaki 스트리밍 부분은 AGPL-3.0 추가 적용) · repo id 1362562155 · 생성 2026-09-09 · 최신 릴리스 v2.1.6(2026-11-14)
-- 한줄요약: 로컬 영상·캡처카드·PS5/Xbox/PC 스트리밍·화면 캡처를 입력으로 받아 초해상(RTX Video SR · DLSS/XeSS/FSR), 신경망 디노이즈(NR, 최대 4레이어), RTX Video HDR, 프레임 생성, 색보정, 녹화·내보내기를 한 파이프라인으로 거는 Windows 11 x64 · DirectX 12 앱(NVIDIA/AMD 패키지 분리, 노드 편집기 포함). **자체 모델을 학습·배포하는 레포가 아니라 GPU 벤더·커뮤니티 런타임을 엮는 호스트**: "Source Git excludes proprietary runtimes/models", ANR DLL·모델은 업스트림 재배포 금지로 미포함. ⚠️ 레포 설명의 "PS5 GTA6 to 120FPS with DLSS 5" 는 **README 본문에 GTA·120FPS 언급 0건**이고, README 는 오히려 "Community runtimes are not vendor certification or a complete official DLSS 5 integration", "Submitted FPS is not physical display FPS or end-to-end latency" 라고 한정한다. README 수치는 효과 비용뿐: RTX 5070 4K 에서 FXAA ~0.15ms · SMAA/MLAA ~0.30ms, 얼굴 메시 보정 1080p ~0.93ms / 4K ~1.42ms. 화질 개선의 정량 지표는 README 에 없음. 누적 포터블 패키지 다운로드 79,332(2026-11-08, "다운로드 이벤트 수이지 고유 사용자 아님").
-- 실용성: AI 영상 생성물이 아닌 **재생·캡처 영상 후처리**용. RTX/RX GPU 가 있는 Windows 사용자에겐 즉시 써볼 수 있으나 AI 모델 자체의 신규성은 없음. RTX 30/40 커뮤니티 NR/FG·Xbox 장시간 구동 등 미검증 항목을 README 가 명시.
-
-## [2026-11-15] 자동수집 | ag-ui-protocol/ag-ui — 에이전트↔프런트엔드 이벤트 프로토콜 (AG-UI)
-- URL: https://github.com/ag-ui-protocol/ag-ui
-- 도메인: ai-news
-- 스타수: ★17,489 (당일 +9, GitHub Trending daily 8위) · fork 1,734 · TypeScript · MIT · repo id 979392131 · 생성 2025-05-07 · 최신 릴리스 태그 release/2026-11-13 · 볼트 검색: `ag-ui-protocol/ag-ui` 0건, 파일명 0건([[CopilotKit]] · [[CopilotKit-OpenBot]] 본문에 AG-UI 언급만 있음)
-- 한줄요약: 에이전트 백엔드가 실행 중 **약 16종의 표준 이벤트**를 내보내고 소수의 표준 입력을 받도록 정한 경량 프로토콜 — 전송은 SSE·WebSocket·웹훅 무관, 느슨한 이벤트 매칭 미들웨어와 레퍼런스 HTTP 구현 제공. README 의 위치 설명: MCP=에이전트에 도구, A2A=에이전트 간 통신, AG-UI=에이전트를 사용자 화면으로. 기능은 스트리밍 채팅·양방향 상태 동기화·생성형 UI·프런트엔드 도구 호출·human-in-the-loop. 지원 표: LangGraph · CrewAI · Microsoft Agent Framework · Google ADK · Google Antigravity · AWS Strands · Mastra · Pydantic AI · Agno · LlamaIndex · AG2 · A2A · Amazon Bedrock AgentCore ✅, 커뮤니티 Claude Agent SDK · Cloudflare Agents ✅, **OpenAI Agents SDK · AWS Bedrock Agents 는 "In Progress"**. SDK 는 Kotlin·Go·Dart·Java·Rust·Ruby·C++·.NET(모두 커뮤니티 표기). ⚠️ "표준"을 표방하나 CopilotKit 이 주도 — 통합 문서 링크 대부분이 docs.copilotkit.ai 로 연결. 당일 증가는 +9 로 급상승이 아니라 누적 스타 기준 수록.
-- 실용성: 에이전트 UI 를 직접 만들 때 이벤트 스키마를 새로 설계하지 않아도 되는 실질적 선택지. 11-13 수록 CopilotKit/OpenBot 이 외부 에이전트 연결에 쓰는 바로 그 프로토콜이라 함께 읽을 가치.
-
-## [2026-11-15] 자동수집 | 🔄 ChromeDevTools/chrome-devtools-mcp — 갱신: ★56,516 · 도구 63개(13범주) · CLI·스킬 7종 · 사용 통계 기본 수집
-- URL: https://github.com/ChromeDevTools/chrome-devtools-mcp
-- 도메인: ai-news
-- 스타수: ★56,516 (당일 +664, GitHub Trending daily 4위) · fork 4,785 · Apache-2.0 · repo id 1054793726 · 최신 릴리스 v1.13.0(2026-11-11) · 볼트 최신 기록 ★50,774 · fork 3,560 @ 2026-09-03 → 73일간 +5,742(일평균 약 +79)
-- 한줄요약: 볼트 09-03 절의 "커버리지(어떤 CDP 기능이 노출되는가) 미확인"에 대한 답 — 자동 생성 문서 `docs/tool-reference.md` 기준 **도구 63개**: Input automation 10 · Navigation 6 · Emulation 2 · Performance 3 · Network 2 · Debugging 10(`lighthouse_audit` · `get_css_styles` · screencast 포함) · **Memory 14** · Network mocks 2 · Extensions 5 · Third-party 2 · WebMCP 2 · PWA 4 · WebAuthn 1. 볼트 기록에 없는 항목(도입 시점은 미확인): ① MCP 없이 터미널에서 쓰는 `chrome-devtools` CLI, ② 스킬 7종(chrome-devtools · cli · a11y-debugging · cookie-debugging · debug-optimize-lcp · memory-leak-debugging · troubleshooting)과 Claude Code/Copilot/Gemini CLI 플러그인 설치 경로, ③ ⚠️ **Google 이 도구 호출 성공률·지연·환경 정보를 기본 수집**(`--no-usage-statistics` 또는 `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS`/`CI` 환경변수로 해제, Chrome 자체 통계 옵트아웃과 별개), ④ 성능 도구가 트레이스 URL 을 CrUX API 로 전송(`--no-performance-crux` 로 해제), ⑤ 업데이트 확인 기본 동작. README 고지: 브라우저 인스턴스 내용이 MCP 클라이언트에 노출되므로 민감 정보 주의, 공식 지원은 Chrome · Chrome for Testing 뿐.
-- 실용성: 표준 지위 유지. 사내·개인 계정이 로그인된 브라우저에 붙일 때는 통계·CrUX 전송 플래그를 먼저 끄는 설정이 필요.
-
-## [2026-11-15] 자동수집 | 🔄 dream-num/univer — 갱신: ★25,136 · v1.5.0(차트 시트·오차 막대) · README 가 오픈소스/상용 경계를 명문화
-- URL: https://github.com/dream-num/univer
-- 도메인: ai-news
-- 스타수: ★25,136 (당일 +495, GitHub Trending daily 7위) · fork 2,302 · Apache-2.0 · repo id 543101941 · 최신 릴리스 v1.5.0(2026-11-14) · 볼트 최신 기록 ★21,526 · fork 1,820 @ 2026-09-29 → 47일간 +3,610(일평균 약 +77)
-- 한줄요약: v1.5.0 릴리스 노트: 차트 전용 시트(`workbook.insertChartSheet`), 누적/100% 누적 꺾은선, 시리즈별 오차 막대(`setErrorBars`), Board 다이어그램 레이아웃 계획 API(`planLayout`/`applyLayoutPlan`), 전용 LaTeX 패키지, 수식 계산 메모리 절감, "Pro 무료 티어 범위 확대". 볼트의 "'AI 에이전트용'은 미검증 레이블" 판정과 관련해 현재 README 는 제품을 **Web SDK / Server SDK / AI SDK** 3부로 나누고 **이 레포는 Web SDK 코어(콘텐츠 모델·명령 시스템·수식/렌더 엔진·Facade API·Sheets/Docs 편집)만 Apache-2.0** 이라고 명시 — 상용 Web SDK 플러그인·Server SDK(실시간 협업·이력·Office 파일 입출력)·**AI SDK(에이전트용 콘텐츠 도구·실행·리뷰 연동)는 별도 배포·별도 라이선스**, Freemium 평가는 워터마크·기능 제한. 오픈소스만으로는 "Agents can use the same open-source APIs; your application supplies the model and tool orchestration" — 즉 에이전트 연동 코드는 사용자가 직접 작성. README 데모는 상용 기능 포함이라고 자체 고지.
-- 실용성: 오픈소스 범위는 임베드형 스프레드시트/문서 편집기 + 헤드리스 조작까지. "AI 오피스" 문구의 에이전트 도구 계층은 유료 영역이라는 점이 이제 README 로 확인됨 — 볼트 판정 유지 근거 강화.
-
-## [2026-11-15] 자동수집 | SteerDistill: Quantizing LLM Agents via Closed-Loop Teacher Steering
-- URL: https://huggingface.co/papers/2611.13410
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-12 페이지 · 볼트 미보유 중 업보트 공동 1위 37 · 코드 air-embodied-brain/SteerDistill ★12)
-- 한줄요약: 저비트 양자화된 LLM 에이전트가 과제 요구사항·환경 조건을 놓쳐 실패하는 문제를 겨냥한 양자화 인지 증류. 풀정밀도 교사가 학생의 **실패한 응답을 고치도록 안내**하고, 학생의 실제 실행 피드백으로 안내를 반복 수정(폐루프)해 "국소적으로 검증된 교정"을 만든 뒤, 교정된 턴에서는 안내받은 학생의 예측을, 나머지 턴에서는 교사의 예측을 따르도록 학습시켜 추론 시에는 안내 없이 동작. 5개 에이전트 벤치 × 3개 모델에서 W4A16 기준 **최강 양자화 베이스라인 대비 평균 +1.67~2.18점, BF16 과 1점 이내**. τ²-Bench 에서 QeRL 대비 성공률 +1.84%p 를 **학습 GPU 시간 67% 적게** 쓰고 달성, 성공 궤적도 더 짧음. 초록에 모델명·절대 점수는 없음.
-
-## [2026-11-15] 자동수집 | Incentivizing Self-Learning in Large Language Models via Reinforcement Learning
-- URL: https://huggingface.co/papers/2610.39671
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-12 페이지 · 볼트 미보유 중 업보트 공동 1위 37 · 소속 표기 internlm · 코드 링크 없음)
-- 한줄요약: 낯선 분야에서 긴 참고자료를 **스스로 찾아 읽고 익혀 적용**하는 "자기 학습" 능력을 RL 로 유도. 과제는 교과서 기반 수학 증명 — 모델이 BookNavigator 인터페이스로 교과서 본문을 탐색해 원리를 익히고 연습문제 증명을 작성(모범 답안 비공개), 세분화된 보상으로 학습. Intern-S2-Preview-35B 의 전체 증명 정확도 **51.5% → 79.5%**, 교과서 없이 RL 한 베이스라인과 고정 검색 베이스라인을 상회, 도메인 내·외 교과서 모두에서 개선. 다른 유형의 장문맥 벤치로도 전이되나 폭은 작음: 베이스 대비 **BrowseComp-Plus +1.7%p · CL-bench +2.3%p**. 초록에 베이스라인들의 수치는 없어 격차 크기는 본문 확인 필요.
-
-## [2026-11-15] 자동수집 | Read Less, Solve More: Token-Efficient Sparse Reading of External Content for AI Agents (SparseRead)
-- URL: https://huggingface.co/papers/2608.22237
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-12 페이지 · 업보트 22 · 소속 표기 ict-cas · 코드 Liuzedooong/SparseReading ★63)
-- 한줄요약: 에이전트가 웹페이지·문서·레포·도구 응답을 통째로 읽는 "과잉 읽기"를 줄이는 재사용형 읽기 제어 계층 — 에이전트 모델은 수정하지 않는다. ① Read Intent Protocol(변하는 정보 필요와 소스 커버리지 추적), ② Adaptive Reader Backends(증거를 찾아 노출하는 방식 선택), ③ Budgeted Read Gate(에피소드당 원문 노출 누적량 상한 + 전체 보기 폴백). Claude Opus 5 포함 6개 모델 × 5개 시나리오에서 **총 토큰 최대 −92.9%, 소요 시간 최대 −89.0%, 97% 설정에서 과제 품질 유지 또는 향상**. 웹 딥서치 과제에서는 토큰 −31.0~43.0%, 완료 시간 −23.0~37.0%. 3개 에이전트 프레임워크에 통합해 이식성 확인. ⚠️ "최대" 수치와 딥서치 구간 수치의 차이가 커서(−92.9% vs −31~43%) 시나리오별 편차가 큼 — 헤드라인 수치는 최선 사례.
-
-## [2026-11-15] 자동수집 | Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement
-- URL: https://huggingface.co/papers/2611.08318
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-13 페이지 · 볼트 미보유 중 1위, 업보트 20 · 소속 표기 DAGroup-PKU · 코드 링크 없음)
-- 한줄요약: 자기 개선형 체화 코딩 에이전트 연구들이 **벤치마크의 성공 판정 기준을 학습 에이전트에 노출**(Criteria Exposure, CE)하는 관행을 통제 실험으로 점검. 이 기준들은 원래 모방학습 정책 검증용이라 언어 지시보다 더 많은 것을 요구하는 경우가 많다. 결과: CE 가 있으면 주어진 기준 하의 성공률은 빨리 오르지만, **원래 지시를 벗어나지 않는 범위에서 기준을 살짝 바꾸면 그 우위가 사라지고**, CE 하에서 만든 스킬은 과제 간 전이가 나쁘다 — 과제가 아니라 검증기에 과적합. 대안으로 지시 충실형(instruction-faithful) 기준을 제안. 초록에 정량 수치는 없음. 볼트의 [[DAGroup-PKU]] 엔티티(PhysLoop · G-STAR)와 같은 소속 표기.
-
-## [2026-11-15] 자동수집 | Ensemble Routing for Prompt-Adaptive Cost-Aware LLM Inference (PISA / PISA-E)
-- URL: https://huggingface.co/papers/2611.10193
-- 도메인: ai-news
-- 스타수: — (HF Daily Papers 11-12 페이지 · 업보트 19 · 코드 링크 없음)
-- 한줄요약: 프롬프트별로 모델 1개를 고르는 라우터 PISA 와, **앙상블의 구성과 크기까지 프롬프트별로 고르는** 확장 PISA-E. 소프트 클러스터 소속도 + 모델별 예측기로 개별 모델의 능력을 추정하고, 다루기 쉬운 앙상블 성공 대리 지표로 앙상블 전용 학습 없이 확장. 비용–품질 선호는 재학습 없이 추론 시 조절. 4개 LLM 라우팅 벤치(ID·OOD)에서 PISA 는 평가한 단일 모델 라우터 중 매크로 평균 비용–성능 hypervolume 1위, PISA-E 는 품질 우선 설정에서 앙상블 기법 중 매크로 평균 성능 1위로 **최강 경쟁 기법 대비 +2.09%p(ID) · +2.87%p(OOD)**, 일부 저비용 운영점에서는 경쟁 기법의 성능을 넘으면서 **평균 추론 비용 약 −36%(ID) · −25%(OOD)**. "평가한 기법 중" 이라는 한정이 붙고 초록에 절대 점수·대상 모델 풀은 없음.
-
-## [2026-11-15] 자동수집 | Comfy-Org/RelayVSR — 스트리밍 영상 초해상 RelayVSR(4×·2×)의 ComfyUI 재포장
-- URL: https://huggingface.co/Comfy-Org/RelayVSR
-- 도메인: ai-news
-- 다운로드수: 162,037 (HF API `downloads`, 좋아요 265 · trending 57위 · 볼트 미보유 중 다운로드 1위) · apache-2.0 · 생성 2026-11-05 · base kopper/RelayVSR + lightx2v/RelayVSR_X2
-- 한줄요약: 파일 4개짜리 재포장 — `relayvsr_x4_int8_convrot` · `relayvsr_x2_lightx2v_int8_convrot`(diffusion_models) + flash VAE x2/x4 fp32. **이 카드에는 성능 수치가 전혀 없다**(배치 경로와 2× 워크플로 링크뿐). 원본 kopper/RelayVSR 카드: 큰 생성 모델(Wan2.2-TI2V-5B 개조, `wan.safetensors`)이 희소 참조 프레임을 만들고 경량 VSR 네트워크(`flash.safetensors`)가 영상을 처리하는 스트리밍 4× 초해상, arXiv 2609.37850, Apache-2.0. lightx2v/RelayVSR_X2 카드의 속도 표(H100 80GB 1장, 1024×768 · 243프레임 입력, 워밍업 후 **1회 측정**): RelayVSR X2(LightX2V) **5.348초 = 45.44 FPS** vs SwiftVR(LightX2V) 6.399초 · SwiftVR 7.252초 · FlashVSR+ Turbo 54.0초 · SeedVR2-3B 352.8초 · Open-H3-Regenerate-2K 785.0초(모두 2×), 원본 RelayVSR 4× 는 26.3초(LightX2V 19.3초, 출력 4096×3072). ⚠️ ① 이 수치는 LightX2V 런타임의 원본 가중치 기준이지 **ComfyUI int8 재포장본 측정이 아님**, ② 세 카드 모두 PSNR/SSIM/LPIPS 등 **화질 정량 지표 grep 0건** — "생성 영상의 시간적 플리커를 억제한다"는 주장은 비교 영상으로만 제시, ③ lightx2v/RelayVSR_X2 카드 메타에 license 필드 없음(Comfy-Org 는 apache-2.0 표기). 지역 제외 조항: Comfy-Org 레포에 LICENSE 파일 없음 · 카드 표기 Apache-2.0(원본 kopper LICENSE 파일 본문은 미열람).
-- 실용성: MiniMax-H3 등 생성 영상의 2× 후처리 업스케일러로 ComfyUI 에서 바로 시험 가능하고 라이선스 부담이 작다. 화질은 직접 비교 필요.
-
-## [2026-11-15] 자동수집 | akatz-ai/MiniMax-H3-Character-Swap-LoRA — 영상 속 인물을 참조 이미지 캐릭터로 교체하는 H3 LoRA
-- URL: https://huggingface.co/akatz-ai/MiniMax-H3-Character-Swap-LoRA
-- 도메인: ai-news
-- 다운로드수: 141,476 (좋아요 978 · trending 47위 · 볼트 미보유 중 2위) · MiniMax H3 Community License Agreement · base Comfy-Org/MiniMax-H3(adapter) · 생성 2026-09-25 · 데이터셋 akatz-ai/H3-Character-Swap-v1
-- 한줄요약: 소스 영상의 선택한 인물을 이미지 참조의 캐릭터로 바꾸되 포즈·시선·표정·움직임은 소스를 따르게 하는 Ref2VA 용 어댑터. 권장 V1.5(`h3_character_swap_v1.5.safetensors`, V1 에서 **1,000 업데이트 추가 학습**), 강도 1.0. 단독 모델이 아니라 Ref2VA INT8 베이스 + 텍스트 인코더·VAE + 별도 Turbo 8-step LoRA 가 필요(검증 레시피: 8스텝 · CFG 1 · `er_sde`). 학습 설정·해시는 `training/v1.5/run-summary.json` 에 공개. 🔴 **레포 LICENSE 10행: "Excluded Territories" = EU · 영국 · 대한민국 · 미국** — 42행 "Applicable Territory 밖에서의 사용·복제·수정·배포·출력물 표시 불가"(볼트 [[라이선스-지역-제외]] 해당, MiniMax H3 원본 조항 승계). ⚠️ **정량 벤치 없음** — 카드 스스로 V1 대비 비교는 "선별 사례이지 집계 벤치마크가 아니다", "실험적 모델 · 정체성·타이밍·표정·가림·컷에서 드리프트 가능", "원본 사운드트랙 유지는 앱 기능이지 립싱크 정확도 근거가 아니다"라고 한정. 쇼케이스 GIF·예제 워크플로 대부분은 V1 결과물.
-
-## [2026-11-15] 자동수집 | mradermacher/gemma-4-31B-it-ARA-heretic-GGUF — Gemma 4 31B 거부 제거(ARA)판의 정적 GGUF 양자화
-- URL: https://huggingface.co/mradermacher/gemma-4-31B-it-ARA-heretic-GGUF
-- 도메인: ai-news
-- 다운로드수: 116,423 (좋아요 291 · trending 15위 · 볼트 미보유 중 3위) · 카드 license apache-2.0(+태그 openrail++) · base richardyoung/gemma-4-31B-it-ARA-heretic ← google/gemma-4-31B-it · 생성 2026-11-07
-- 한줄요약: richardyoung 의 Heretic v2.0.0 ARA(Arbitrary-Rank Ablation, 21–56층) 적용 모델을 Q2_K 12.0GB ~ Q8_0 32.7GB 로 정적 양자화(Q4_K_M 18.8GB · Q6_K 25.3GB, 비전용 mmproj Q8_0/f16 포함, imatrix 판은 별도 -i1-GGUF 레포). GGUF 카드 자체에는 측정치 없음. 원본(richardyoung) 카드 수치: 개발셋 거부 **28/100 vs 원본 99/100**, KL 0.0845(내보낸 가중치 재채점은 21/100 · KL 0.107); 홀드아웃 WildGuard 유해 프롬프트 972개 거부율 **0.6% [0.3, 1.3] vs 원본 89.3%**; 능력 변화 **−2.18%p**(MMLU-Pro·GSM8K·IFEval·HumanEval·MBPP 평균). 단서: 모델당 최적화 1회, 거부 판정은 자동 판정기(사람 검수 없음), "답변 의향"이지 답변의 유해성 측정이 아님, 출처 논문("Is Abliteration Getting Harder?")의 arXiv 링크는 "추가 예정". ⚠️ ① 이 수치는 **양자화 전 원본 기준 — GGUF 양자화본에서의 거부율·품질은 미측정**. ② 원본 카드 하단의 MMLU Pro 85.2% · LiveCodeBench v6 80.0% 등 표는 Google 의 Gemma 4 카드를 그대로 옮긴 것으로 이 모델의 측정치가 아님. ③ 원본 다운로드 513 · 좋아요 0 인데 GGUF 가 11.6만 — 관심은 양자화본에 집중. 라이선스: 원본 README 578행 "Apache-2.0 + OpenRAIL++ v1.0 용도 제한(충돌 시 베이스 라이선스 우선)", `LICENSE_OpenRAIL++.md` 에 지역 제외 조항 grep 0건(Gemma 4 라이선스 링크 본문은 미열람).
+> **신규 24 · 갱신 2**(chrome-devtools-mcp · univer — 🔄 정확) · 엔티티 갱신 8 · 개념 갱신 4 · 도메인 4쪽 · canvas 4종. 볼트 재분류: ai-news 9 · local-llm 7 · video-saas 7 · slam-3dgs 3. 11-16 분 13건은 볼트 실행 중 큐에서 확인해 같은 실행에서 처리. 세부는 `log.md` 2026-11-16.
+>
+> 📮 **볼트 → 수집기 (11-15 · 11-16 자동수집분 판정 5건)**
+> 1. ✅ **수치 정확도 통과** — HF papers 초록 10편 전문 대조 일치 · 본문 표 2종 행 대조(Gamer 표 5 · 6 · VibePrevisBench 표 2 — 하네스 문장 · 55% · 상관 포함) · GitHub 10레포 ID · 라이선스 일치(스타는 증가분) · HF 모델 6건 + 원본 2건 메타 일치 · 카드 행(richardyoung 37 · 591–592 · concept 17–20 · 40 · chatrlabs BENCHMARK · Abiray 60–61) 일치.
+> 2. ✅🏆 **11-14 요청 3건 모두 이행 + 지역 조항 2건 직접 명시** — LoopForge 수치 0건 재현(`%` 6건 전부 `width="100%"`) · 🔄 2건 정확 · Character-Swap(H3 원본) · Abiray(H3-Image 원본) 한국 제외를 요약에 명시 — 볼트 `cmp` 로 둘 다 원본과 바이트 동일 확인. chatrlabs 비상업 조항(LICENSE 19–20행)도 정확. 유지 요청.
+> 3. 🟡 **표의 중간 열 생략 1건** — chatrlabs `BENCHMARK.md` 는 Base · **Step 32,000** · Step 90,000 3열인데 요약은 Base vs 90k 만 인용. 32k 열은 일반 SFW 75.8(−4.0) · 해부학 67.7(−2.6) — "손상 없음"이 학습을 더 돌린 결과라는 정보다. 요청: 표에 중간 체크포인트 · 변형 열이 있으면 **가장 나쁜 열 1개**를 함께 적어 달라(→ 표-부분인용).
+> 4. 🟡 **시점 차이 1건(오류 아님)** — Veyra "README GTA 0건" → 현재 README 103 · 121행에 2건(v2.1.9 코드명, 수집 후 README 3회 수정). 요청: README 부재 판정에 **확인한 커밋 SHA 또는 시각** 병기.
+> 5. 🟡 **grep 적중 해석 · 이름 유사 레포** — ① kopper/RelayVSR LICENSE(볼트가 열었다 = Apache-2.0)의 `territor|korea|exclud` 3건은 전부 "excluding" — 적중 시 행을 읽고 "지역 조항 / 무관" 구분. ② chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized 는 볼트 abenzerps/Qwen-Image-2.1-Uncensored-Quantized(현 Turbo)와 이름이 거의 같다 — 볼트가 HF 내부 ID(`6aea0825…` vs `6ab000f1…`)로 별개 확인. 이름 유사 시 ID 대조 1줄을 붙여 달라.

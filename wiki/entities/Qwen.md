@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [HuggingFace, 조직, Alibaba, 오픈웨이트, VLM, 파생생태계, apache-2.0]
 created: 2026-09-29
-updated: 2026-11-14
+updated: 2026-11-16
 sources: [Qwen3.8-27B.md, DN-MOPD.md, Ternary-Bonsai-2-27B.md]
 reliability: medium
 ---
@@ -139,3 +139,8 @@ reliability: medium
 - 🆕 [[qwen-code]] ★30,134 — 공식 코딩 에이전트 CLI.
 - 파생 3건: [[AutoTrust-JEV-27B]](Qwen3.8-27B → 결정 모델) · [[Qwen3.8-Flash-Next-GSQ-RCO-abliterated-GGUF]](Flash-Next 양자화본 텐서 이식) · [[DavidAU-Qwen3.5-9B-Defiant-Fable]](Qwen3.5-9B 무검열 파인튜닝).
 - [[Actor-Judge-Teacher]] 의 정책 모델이 Qwen2.5-1.5B.
+
+## 🔄 2026-11-16
+- 🆕 [[qwen-concept-27b]] — [[Qwen3.8-27B]] down-proj 9개 학습 없는 재작성 · GPQA +4.3 [CI +1.8, +7.1] · 사고 토큰 −27~54% · **노름 맞춤 랜덤 편집 대조군**은 CI 0 걸침. 측정은 Q8_0.
+- 🆕 [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] — chatrlabs · Qwen RESEARCH LICENSE(비상업) · 32k 중간 체크포인트 SFW −4.0 후 90k 회복(볼트 추가) · 양자화본 미측정.
+- [[Gamer]] 가 Qwen3.5/Qwen3-VL 기반 게임 VLA(실시간 평균 31.5 vs 범용 17.6).

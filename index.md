@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-14 (✅ **대기 26건 전량 처리** — 11-13 자동수집 13 + 11-14 자동수집 13 = **신규 22 · 갱신 4**(free-claude-code · open-code-review · codex-security · daily_stock_analysis — 뒤 3건은 수집기가 신규 형식으로 재배달). 크론 노트 0건. `^- URL:` **0** · `^- path:` **0**. 페이지 1804 → **1829**)
-total_pages: 1829  # 2026-11-14 실측(sources **1595** · entities **130** · concepts **96** · synthesis 4 · domains 4 · queries 0) — 증분 1804 + 23(자동수집 신규 소스 22 + 엔티티 신설 1 [[DAGroup-PKU]]) + 2(11-13 타 프로세스 개념 2: feature-map-encryption · neural-superposition-comms)
-total_sources: 1595  # 2026-11-14: 자동수집 신규 22 (갱신 4는 기존 계수)
+updated: 2026-11-16 (✅ **대기 26건 전량 처리** — 11-15 자동수집 13 + 11-16 자동수집 13(실행 중 확인) = **신규 24 · 갱신 2**(chrome-devtools-mcp · univer — 수집기 🔄 정확). 크론 노트 0건. `^- URL:` 26 → 0)
+total_pages: 1853  # 2026-11-16 실측(sources **1619** · entities **130** · concepts **96** · synthesis 4 · domains 4 · queries 0) — 1829 + 24(자동수집 신규 소스 24)
+total_sources: 1619  # 2026-11-16: 자동수집 신규 24 (갱신 2는 기존 계수)
+# 🎯 배치 축(2026-11-16) = **측정된 것과 쓰이는 것이 다르다.** 거부율 0.6% · 능력 −2.18%p 는 BF16 원본(dl 551)의 값이고 사용자는 270배 많은 GGUF 를 받는다([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 45.44 FPS 는 LightX2V 런타임의 원본 가중치 속도이고 배포본은 ComfyUI int8([[Comfy-Org-RelayVSR]], 화질 지표 0) · 체화 에이전트 점수는 판정 기준을 배운 값이라 기준을 살짝 바꾸면 우위가 사라진다([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). ✅ 정방향: [[SteerDistill]] 은 양자화본을 **에이전트 벤치로 다시 재서** BF16 1점 이내를 보였다. 🔴 [[MiniMax-H3-Character-Swap-LoRA]] LICENSE = H3 원본 바이트 동일(한국 제외, [[라이선스-지역-제외]] 파생 5번째 — 이번엔 수집기가 직접 명시). 🔄 [[chrome-devtools-mcp]] 도구 63개 확인 + 사용 통계 기본 수집 · [[univer]] 에이전트 계층은 상용 SDK(README 명문화). **11-16 분 13건에서도 같은 축이 반복** — [[qwen-concept-27b]] 측정은 Q8_0(4비트 미측정을 자인, 대신 랜덤 편집 대조군을 둠) · [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] BF16 병합만 측정(볼트 추가: 32k 중간본 SFW −4.0) · [[MiniMax-H3-Image-GGUF]] "거의 무손실" 근거 0 + 한국 제외(파생 6번째) · [[VibePrevisBench]] 모델 순위에 하네스(Codex CLI vs Claude Code)가 섞임. 스킬 4건([[elephant-goldfish-model]] · [[ffmpeg-skill]] · [[Claude-BugHunter]] + chrome-devtools 스킬)은 효과 수치 0 — 같은 날 측정 도구 [[SkillEvaluator]] 가 나왔다.
 # 🎯 배치 축(2026-11-14) = **"없다"고 적힌 것은 파일 하나 더 열면 있었고, 링크만 걸린 라이선스 뒤에는 한국 제외가 있었다.** 수집기의 부재 판정 3건이 볼트 실측에서 뒤집혔다 — [[modern-web-guidance-src]] "eval 수치 없음"(README 593–610행에 표: 무가이드 52–60% → 가이드 82–96%) · [[AutoTrust-JEV-27B]] "베이스 미명시"(`NOTICE.base`: Built on Qwen/Qwen3.8-27B) · "비전 근거 없음"(`config.json` 멀티모달 아키텍처) → [[메타데이터-부재-추론]]. 반대 방향으로 🔴 [[Pika-H3-Flex]] 는 LICENSE 가 MiniMax-H3 원본과 **바이트 동일**(sha256 일치) — 카드는 링크만 걸고 한국 제외를 말하지 않는다 → [[라이선스-지역-제외]] 파생 4번째, ✅ [[dinov3-vitl16]] 은 같은 검사로 "worldwide" 통과(음성 대조군). 같은 결: [[free-claude-code]] API `NOASSERTION` → LICENSE 원문 **AGPL-3.0-only** · [[DavidAU-Qwen3.5-9B-Defiant-Fable]] "7/7 초과"는 같은 카드 표에서 6/7 · 6/7 · 5/7([[표-부분인용]]) · 수집기 11-14 GitHub 5건 중 3건이 기보유 재배달([[정규명-우선-중복검사]]). ✅ 정방향: [[SO-Arena]](정확도 1위 = 신뢰성 7위) · [[Actor-Judge-Teacher]](행위자로 약한 모델이 심판 · 교사로 유효)로 [[System-One-모델]]에 외부 측정 축 · [[qwen-code]] 7개 버전 SWE-bench 76.40–77.80%(최고점은 최초 버전 — [[하네스-설계-축]] 포화).
 # 🎯 배치 축(2026-11-12) = **다운로드 버튼은 권리를 보증하지 않는다 — 그리고 "다르다"는 인용은 같은 점을 지운다.** 볼트가 원본 LICENSE 를 처음 열자 [[MiniMax-H3]] · [[MiniMax-H3-Image]] 모두 **대한민국을 적용 지역에서 제외**(10행) — 08월부터 "라이선스 확인 필요"로 넘긴 질문이 한 줄 grep 으로 끝났다. [[hyperflow-h3-flash]] 카드는 이를 정직하게 적었고(312행), DL 35만의 [[Comfy-Org-MiniMax-H3-Image]] 카드는 "원본과 다르다"며 매출 조항만 인용해 공통 제약을 생략 → 🆕 [[라이선스-지역-제외]] · [[표-부분인용]]. 같은 결의 발견 2건: 크론 메모리 노트가 인용한 2603.04814 는 **장문맥이 정확도에서 이긴다**고 결론([[인용-부호]]) · [[astryx]]·[[OpenSandbox]] 는 조직 경로가 바뀌어 URL 중복 검사를 통과([[정규명-우선-중복검사]] — 레포 ID 로 대조). ✅ 정방향: [[daily_stock_analysis]] 논문이 *"수익·예측 정확도를 입증하지 않는다"* 고 자기 범위를 자름 · 크론 학회 노트가 11-11 요청(오늘 이후 마감 우선)을 하루 만에 반영.
 # 🎯 배치 축(2026-11-11) = **답은 인용한 출처 안에 있었다 — 요약이 그것을 버렸다.** [[리서치-한국연구재단NRF-신진연구자우수신진장비인프라-구축-사업-2026년-최신-동향]] 은 "2027년도 1차 공모 11-05 개시 · 설명회 오늘"이 적힌 기사를 인용하고 2025년 12월 접수를 안내 · [[리서치-AI로봇-주요-학회-2026년-논문-마감CFP-일정-현황]] 은 CVPR 2027 을 등록 마감 당일에 누락 · [[billion-context]] README 요약은 같은 표의 full 대비 −4.0%p 와 정확 회수 최하위를 뺌 · [[Ripple-65B-Preview]] 80.5 옆 GPQA 최하 · 크론 부동산 노트는 '개정안'을 확정으로, 9월 평균을 중위로 · ✅ 정방향: [[Arete-27B]] · [[APEX-Condition-Shifting]] 은 불리한 조건을 스스로 적음 → [[표-부분인용]] · [[한정어-탈락]] · [[경과-마감-배달]].
@@ -363,6 +364,34 @@ total_sources: 1595  # 2026-11-14: 자동수집 신규 22 (갱신 4는 기존 �
 ---
 
 ## sources
+
+### 2026-11-16 배치 (대기 **26건** 전량 처리 · 11-15 자동수집 13 + 11-16 자동수집 13 = **신규 24 · 갱신 2** · GitHub 10(신규 8 · 갱신 2) · HF논문 10(신규 10) · HF모델 6(신규 6) · 크론 노트 0 · 엔티티 갱신 8(Tencent · Comfy-Org · DAGroup-PKU · dream-num · Google · NVIDIA · MiniMax · Qwen) · 개념 갱신 4(라이선스-지역-제외 · 에이전트-스킬 · 요약자와-판정자-분리 · 하네스-설계-축) · 볼트 재분류: ai-news 9 · local-llm 7 · video-saas 7 · slam-3dgs 3)
+- 🆕 [[LoopForge]] — ★2,028(하루 +972) · Tencent · 코딩 에이전트 CLI 10종 위 역할 · SOP · human gate · 효과 측정 0 · README 자기 한계 명시(Docker 소켓 · 전체 데이터 열람) · `ai-news`
+- 🆕 [[ag-ui]] — ★18,230 · MIT · 에이전트↔UI 이벤트 프로토콜 ~16종 · OpenAI Agents SDK "In Progress" · 문서 동선 CopilotKit 15링크 · `ai-news`
+- 🔄 [[chrome-devtools-mcp]] — ★57,305 · 도구 63개 · 13범주 · 🔴 사용 통계 기본 수집 · CrUX 전송 · `ai-news`
+- 🔄 [[univer]] — ★26,718 · v1.5.1 · 오픈소스 = Web SDK 코어만, AI SDK 상용(README 80–82행) · `ai-news`
+- 🆕 [[BookNavigator-Self-Learning]] — 37 up · internlm · 교과서 탐색 RL · 증명 51.5 → 79.5% · 전이 +1.7/+2.3%p · `ai-news`
+- 🆕 [[SteerDistill]] — 40 up · 코드 ★13 · 폐루프 교사 조향 양자화 증류 · W4A16 BF16 1점 이내 · GPU 시간 −67% · `local-llm`
+- 🆕 [[SparseRead]] — 23 up · 코드 ★83 · 읽기 제어 계층 · 토큰 최대 −92.9%(딥서치 −31~43%) · `local-llm`
+- 🆕 [[PISA-E]] — 19 up · 프롬프트별 앙상블 라우팅 · +2.09/+2.87%p · 비용 −36/−25% · 코드 없음 · `local-llm`
+- 🆕 [[gemma-4-31B-it-ARA-heretic-GGUF]] — dl 149,532 · 원본 dl 551 · 거부 0.6% vs 89.3% · 능력 −2.18%p(원본 기준, GGUF 미측정) · `local-llm`
+- 🆕 [[Comfy-Org-RelayVSR]] — dl 182,094 · Apache-2.0 · 2× 45.44 FPS(H100 · LightX2V 원본) · 화질 지표 0 · `video-saas`
+- 🔴 [[MiniMax-H3-Character-Swap-LoRA]] — dl 139,046 · **LICENSE = H3 원본 바이트 동일 → 한국 제외** · 정량 벤치 0 · `video-saas`
+- 🆕 [[Veyra-NRVideo]] — ★2,900 · Windows 실시간 영상 향상 호스트 · 간판 "GTA6 120FPS" vs README "Submitted FPS ≠ display FPS" · `video-saas`
+- 🆕 [[Criteria-Exposure]] — 21 up · [[DAGroup-PKU]] 3번째 · 판정 기준 노출 시 검증기 과적합 · 초록 수치 0 · `slam-3dgs`
+- 🆕 [[elephant-goldfish-model]] — ★20,023 · Google · 작성자/검토자 문맥 분리 설계 리뷰 플러그인 · 측정 0 · `ai-news`
+- 🆕 [[openworker]] — ★19,364 · andrewyng · MIT · 로컬 우선 코워커 + Harness SDK · 하드 플로어 · 승인 사다리 · Windows 미서명 · `ai-news`
+- 🆕 [[SkillEvaluator]] — ★2,083 · NVIDIA · 스킬 3단계 평가 · 정적 86.2 = INCOMPLETE 증거 · `ai-news`
+- 🆕 [[Claude-BugHunter]] — ★6,880 · 83 스킬 · 패턴 681 중 433 출처 인용 · 허가 스코프 전용 · `ai-news`
+- 🆕 [[ffmpeg-skill]] — ★6,093 · 42 FFmpeg 도구 · probe → 무손실 → 재probe · 스키마 argparse 파생 · `video-saas`
+- 🆕 [[Gamer]] — 61 up · HF 11-16 1위 · 게임 VLA · 실시간 평균 31.5 vs GPT-5.6-Sol 17.6 · `slam-3dgs`
+- 🆕 [[Agentic-Robotics-Roadmap]] — 58 up · 포지션 논문 · Embodied System 2 · 수치 0 · `slam-3dgs`
+- 🆕 [[VibePrevisBench]] — 58 up · Kling-Keye · Blender 4D 프리비즈 242과제 · GPT-6 Astra 77.7 · 하네스 혼입 · `video-saas`
+- 🆕 [[MMFlash]] — 25 up · NUS · VLM 투기적 디코딩 최대 3.58× · `local-llm`
+- 🆕 [[JVT]] — 13 up · 픽셀 공간 영상 DiT · UCF-101 FVD 136.5 · 부록이 "능가" 반박 · `video-saas`
+- 🔴 [[MiniMax-H3-Image-GGUF]] — dl 127,803 · **LICENSE = H3-Image 원본 바이트 동일 → 한국 제외** · "거의 무손실" 근거 0 · `video-saas`
+- 🆕 [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] — dl 120,618 · chatrlabs · 비상업 연구 라이선스 · 양자화본 미측정 · 볼트 [[Qwen-Image-2.1-Uncensored-Quantized]] 와 다른 레포 · `local-llm`
+- 🆕 [[qwen-concept-27b]] — dl 63,964 · 학습 없는 가중치 편집 · GPQA +4.3 [CI +1.8, +7.1] · 랜덤 대조군 · Q8_0 측정 · `local-llm`
 
 ### 2026-11-14 배치 (대기 **26건** 전량 처리 · 11-13 자동수집 13 + 11-14 자동수집 13 = **신규 22 · 갱신 4** · GitHub 10(신규 6 · 갱신 4) · HF논문 10(신규 10) · HF모델 6(신규 6) · 크론 노트 0 · 엔티티 신설 1 · 개념 갱신 14 · 볼트 재분류: ai-news 12 · local-llm 5 · slam-3dgs 5 · video-saas 4)
 - 🆕 [[modern-web-guidance-src]] — ★5,174(하루 +1,325) · Google · 에이전트용 웹 표준 스킬 약 205 토큰 · 자체 eval 무가이드 52–60% → 가이드 82–96% · 🔴 수집기 "eval 수치 없음" 반증(README 593행) · 과제가 가이드 유래 · 텔레메트리 기본 켜짐 · `ai-news`

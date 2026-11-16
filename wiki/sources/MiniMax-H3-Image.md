@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, hf-model, image-generation, image-editing, dit, minimax, open-weights]
 created: 2026-11-11
-updated: 2026-11-12
+updated: 2026-11-16
 sources: [https://huggingface.co/MiniMaxAI/MiniMax-H3-Image]
 reliability: medium
 ---
@@ -39,3 +39,6 @@ reliability: medium
 ## 🔄 2026-11-12 — 라이선스 전문 조회: 한국 제외
 > [!warning] 🔴 11-11 actionable 보류 전환
 > LICENSE(18,208B, 볼트 직접 조회) 10행: Excluded Territories = EU · 영국 · **대한민국** · 미국. 11-11 의 *"비표준 커뮤니티 라이선스 — 상업 이용 조건 전문 미열람"* 을 해소하면서 **사용 자체가 막힌다**는 답이 나왔다. Comfy 재포장본 [[Comfy-Org-MiniMax-H3-Image]](DL 351,803 — 이 원본 dl30 667 의 500배+)은 카드에서 이 조항을 생략했다. → [[라이선스-지역-제외]]
+
+## 🔄 2026-11-16 — 파생 GGUF [[MiniMax-H3-Image-GGUF]] (LICENSE 바이트 동일)
+- Abiray 의 프루닝판 GGUF(Q4_K_M 11.60GB · dl 127,803) LICENSE 가 이 원본과 `cmp` 동일 → 한국 제외 승계. "Near-lossless" · "Indistinguishable from BF16" 주장의 정량 근거 0.

@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, omni-modal, audio-video, comfyui, minimax, video-saas, partial-open-source]
 created: 2026-08-06
-updated: 2026-11-14
+updated: 2026-11-16
 sources: [MiniMax-H3-Physical-Reasoning.md]
 reliability: medium
 ---
@@ -164,3 +164,6 @@ reliability: medium
 
 ## 🔄 2026-11-14 — 파생 1건 추가: [[Pika-H3-Flex]] (LICENSE 바이트 동일)
 - Pika-Labs/Pika-H3-Flex(dl 147,955 · 6스텝 LoRA 2종 · 영상 + 오디오)의 `LICENSE` 가 이 레포 LICENSE 와 **cmp 동일 · sha256 일치**(17,604B). 한국 제외 조항 그대로 승계 → [[라이선스-지역-제외]]. Pika 카드 본문에는 지역 제외 언급이 없다(링크만).
+
+## 🔄 2026-11-16 — 파생 1건 추가: [[MiniMax-H3-Character-Swap-LoRA]] (LICENSE 바이트 동일)
+- akatz-ai 캐릭터 교체 LoRA(dl 139,046 · Ref2VA + Turbo 8-step LoRA 조합)의 `LICENSE` 가 이 레포와 **cmp 동일**. 한국 제외 승계 → [[라이선스-지역-제외]] 파생 5번째. 같은 배치 [[Comfy-Org-RelayVSR]] 는 H3 생성 영상의 2× 후처리 후보(Apache-2.0).

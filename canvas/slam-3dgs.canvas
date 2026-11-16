@@ -1099,6 +1099,66 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1116-slam-3dgs-hdr",
+			"type": "text",
+			"text": "## 🔄 2026-11-16 배치\n측정된 것 ≠ 쓰이는 것",
+			"x": 60,
+			"y": 14785,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1116-slam-3dgs-1",
+			"type": "file",
+			"file": "wiki/sources/Criteria-Exposure.md",
+			"x": 60,
+			"y": 14905,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-slam-3dgs-x0",
+			"type": "file",
+			"file": "wiki/entities/DAGroup-PKU.md",
+			"x": 1440,
+			"y": 14905,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1116-slam-3dgs-x1",
+			"type": "file",
+			"file": "wiki/concepts/분포내-우위.md",
+			"x": 1440,
+			"y": 15145,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1116-slam-3dgs-2",
+			"type": "file",
+			"file": "wiki/sources/Gamer.md",
+			"x": 520,
+			"y": 14905,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1116-slam-3dgs-3",
+			"type": "file",
+			"file": "wiki/sources/Agentic-Robotics-Roadmap.md",
+			"x": 980,
+			"y": 14905,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -1843,6 +1903,45 @@
 			"fromNode": "b1114-slam-3dgs-5",
 			"toNode": "b1114-slam-3dgs-7",
 			"label": "환경 × 행동"
+		},
+		{
+			"id": "b1116-slam-3dgs-h1",
+			"fromNode": "b1116-slam-3dgs-hdr",
+			"toNode": "b1116-slam-3dgs-1"
+		},
+		{
+			"id": "b1116-slam-3dgs-e0",
+			"fromNode": "b1116-slam-3dgs-1",
+			"toNode": "b1116-slam-3dgs-x0",
+			"label": "3번째 논문"
+		},
+		{
+			"id": "b1116-slam-3dgs-e1",
+			"fromNode": "b1116-slam-3dgs-1",
+			"toNode": "b1116-slam-3dgs-x1",
+			"label": "검증기 과적합"
+		},
+		{
+			"id": "b1116-slam-3dgs-h2",
+			"fromNode": "b1116-slam-3dgs-hdr",
+			"toNode": "b1116-slam-3dgs-2"
+		},
+		{
+			"id": "b1116-slam-3dgs-h3",
+			"fromNode": "b1116-slam-3dgs-hdr",
+			"toNode": "b1116-slam-3dgs-3"
+		},
+		{
+			"id": "b1116-slam-3dgs-e10",
+			"fromNode": "b1116-slam-3dgs-2",
+			"toNode": "b1116-slam-3dgs-3",
+			"label": "데이터·RL vs 하네스 노선"
+		},
+		{
+			"id": "b1116-slam-3dgs-e11",
+			"fromNode": "b1116-slam-3dgs-3",
+			"toNode": "b1116-slam-3dgs-1",
+			"label": "평가 틀"
 		}
 	]
 }

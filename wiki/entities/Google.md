@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, organization, bigtech, ai-agent, gemini, google-cloud]
 created: 2026-07-02
-updated: 2026-11-14
+updated: 2026-11-16
 sources: [agents-cli.md, gemini-cli.md]
 reliability: high
 ---
@@ -57,3 +57,8 @@ reliability: high
 ## 🔄 2026-11-14
 - 🆕 [[modern-web-guidance-src]](GoogleChrome · ★5,174) — 코딩 에이전트용 웹 표준 가이드 스킬 · 자체 eval 표(무가이드 52–60% → 가이드 82–96%) · 텔레메트리 기본 켜짐.
 - 🆕 [[embeddinggemma-2]](Google DeepMind · dl30 517,987) — 740M 4모달 임베딩 · 텍스트 다국어는 전작과 동급(+0.21), 코드 +9.92 · 128d 는 텍스트 전용. apache-2.0 · 게이트 없음.
+
+## 🔄 2026-11-16
+- 🆕 [[elephant-goldfish-model]] — ★20,023 · Apache-2.0 · 문맥 가진 작성자(Elephant) + 문맥 없는 검토자(Goldfish) 설계 리뷰 플러그인 · Claude Code/Codex/Antigravity 지원 · "Google 공식 지원 제품 아님" · 효과 측정 0.
+- 🔄 [[chrome-devtools-mcp]] — 도구 63개 · **사용 통계 기본 수집**(Google) · CrUX 전송 — 끄는 플래그 2개.
+- [[gemma-4-31B-it-ARA-heretic-GGUF]] — Gemma 4 31B 거부 제거 파생 GGUF(dl 14.9만). 원본 카드 하단 벤치 표는 Google Gemma 4 카드 차용.
