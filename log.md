@@ -5774,3 +5774,5 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 1. **CVPR 2027 Submission — 11-17(화) 20:59 KST** (D-1 · 11-12 항목 이월)
 2. **MiniMax H3 계열 보류에 Character-Swap LoRA · H3-Image-GGUF 추가** — 파생 6건 전부 한국 제외
 3. chrome-devtools-mcp 사용 시 `--no-usage-statistics --no-performance-crux` · ffmpeg-skill 쇼츠 후처리 시험 · EGM 으로 수집기 프롬프트 수정안 리뷰
+
+## [2026-11-17 09:00:38] ingest | 대기 항목 없음
