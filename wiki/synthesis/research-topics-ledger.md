@@ -1,7 +1,7 @@
 ---
 title: "연구주제 공유 원장 (Research Topics Ledger)"
 created: 2026-10-14
-updated: 2026-11-14
+updated: 2026-11-18
 author: fryday
 tags: [research-ledger, shared-hub]
 ---
@@ -90,6 +90,15 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 삼각 트레이드오프: 정확도 ↔ 보안강도 ↔ 연산/통신비용
     - 🟢 **빈 땅**: ① **"양자화=피처맵 보호" 공동학습**(4bit 압축이 inversion도 차단) ② **물리계층 피처암호**(랜덤 빔/위상으로 피처맵 전송 = 학습형 난독화 × 물리계층 보안 PLS)
     - 연결: 온디바이스 경량화(#20-22) · 양자화(#21) · [[공간 슈퍼트위스팅 개구]](#8)·위상결합 기억(#28)(물리계층 보안) · 뉴럴 합승통신(#30, 전송계층)
+
+### L. 학습 동역학·오차보정 골격 (신규 2026-11)
+32. **STSA — 초격자(슈퍼트위스팅) 확률근사** (교수님 관찰: 칼만 ≈ RL 갱신식) → [[super-twisting-stochastic-approximation]]
+    - 통일 골격: **새 추정 = 옛 추정 + 게인×(관측−예측)** = 1차 확률근사(Robbins–Monro). 칼만 $x{+}K(z{-}Hx)$ ↔ TD $V{+}\alpha\delta$. 칼만·TD·SGD·미러하강·자연경사 모두 특수경우.
+    - 차이: 게인을 **계산**(칼만 $K=PH^\top(HPH^\top{+}R)^{-1}$, 공분산 전파) vs **정함**(RL $\alpha$). 간극 메움 = **KTD**(Geist-Pietquin 2010·MM-KTD·Gen-KF-TD 2026).
+    - PPO/SAC 이후 실주류 강자: **DreamerV3·TD-MPC2·MuZero/EfficientZero**(모델기반), LLM은 **GRPO/DPO**. 칼만식은 미개척(앙상블=가난한 칼만).
+    - 🟢 **제안**: 1차·무기억 가정을 깨 **분수차+적분기억** 2차 골격 — $\theta{+}\alpha(-k_1|\delta|^{1/2}\mathrm{sign}\delta + u),\ u{-}\alpha k_2\mathrm{sign}\delta$. 유한시간·유계교란 상쇄. 결정론 Lyapunov(Moreno-Osorio) 증명 존재, **STW×확률근사 유한시간 증명은 미존재**(검색 확인) = 기여 지점(노이즈볼 도달+가속 수렴률).
+    - ⚠️ 정직: 결정론 백본만 엄밀, 확률 확장은 출판가능 연구 프로그램(증명 미완).
+    - 연결: [[슈퍼트위스팅/슬라이딩모드 × 빔포밍]](#7) · sliding-as-optimization(#9) · 물리STW 개구(#8)=물리/학습 twist 쌍 · 탐험·활용·신용할당 스레드
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 
