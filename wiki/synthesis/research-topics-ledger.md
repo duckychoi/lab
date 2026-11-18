@@ -101,6 +101,7 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 연결: [[슈퍼트위스팅/슬라이딩모드 × 빔포밍]](#7) · sliding-as-optimization(#9) · 물리STW 개구(#8)=물리/학습 twist 쌍 · 탐험·활용·신용할당 스레드
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
+> 코드·검증: `note` 레포 **spectral-credit-stsa** 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
 
 ---
 
