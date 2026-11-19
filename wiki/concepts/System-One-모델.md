@@ -4,8 +4,8 @@ type: concept
 domain: ai-news
 tags: [concept, system-one, typed-decisions, scoring-head, caching, low-latency, agent]
 created: 2026-10-14
-updated: 2026-11-14
-sources: [Jeva.md, VideoJev.md, SearchJev.md, SO-Arena.md, Actor-Judge-Teacher.md, AutoTrust-JEV-27B.md]
+updated: 2026-11-19
+sources: [Jeva.md, VideoJev.md, SearchJev.md, SO-Arena.md, Actor-Judge-Teacher.md, AutoTrust-JEV-27B.md, Jeveration.md]
 reliability: medium
 ---
 
@@ -97,3 +97,8 @@ CLAUDE.md 규약(*"3개 이상 소스에서 등장한 개념은 반드시 concep
 - 10-14 에 이 페이지가 적은 "공통 약점 = 검증 상태"에 대한 첫 외부 응답이 SO-Arena 다. 그리고 그 응답은 **정확도 표만으로는 결정 모델을 고를 수 없다**는 것이다 — AutoTrust 카드는 정확도/스킬 점수만 보고한다.
 - 용도 재정의: "빠른 행위자"보다 **"값싼 사후 판정자 · 보상 모델"** 쪽에 근거가 쌓인다(Actor-Judge-Teacher). 질문 형식은 "과제가 성공할까"가 아니라 "이 행동이 도움이 됐나".
 - 표본 독립성: SO-Arena(Xinchao Wang 그룹) · Actor-Judge-Teacher(ZJU-REAL 레포) · AutoTrust(vLLM Semantic Router Team 표기)는 서로 다른 주체로 보인다 — 10-14 의 "같은 날 발행 2건" 한계가 완화됐다. 단 저자 소속은 볼트 미확인.
+
+## 2026-11-19 갱신 — "생성 대신 점수화"의 경계가 흐려졌다
+- 🆕 [[Jeveration]] (NUS · arXiv 2611.24738): 같은 System One 결정 패러다임(고정 VLM Jev + 병렬 예측)으로 **512px 이미지를 1회 forward 생성**(78ms · H200) + i2i · 밀집 예측까지 한 체크포인트. 공유 랜덤 상태로 병렬 예측을 하나의 이미지로 수렴시킨다.
+- ⚖️ 이 페이지의 정의("LLM/MLLM 에게 답을 생성시키지 않고 점수화")는 **출력이 타입화된 결정일 때**의 기술로 좁혀 읽어야 한다. 핵심 공통분모는 *병렬 · 단일 패스 · 저지연*.
+- 🔴 품질: GenEval 0.74 · DPG 78.24 — Janus-Pro-7B(0.80 · 83.91)보다 낮다(arXiv 표 볼트 대조). 속도 우위만 실측.

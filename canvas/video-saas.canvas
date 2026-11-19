@@ -1209,6 +1209,46 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1119-video-saas-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-19 배치\nH3 병합 · 한국 제외 7번째",
+			"x": 60,
+			"y": 15860,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1119-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/Minimax-h3_Singularity-x-10Eros-Max_PRISM.md",
+			"x": 60,
+			"y": 15980,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-video-saas-x1",
+			"type": "file",
+			"file": "wiki/concepts/라이선스-지역-제외.md",
+			"x": 60,
+			"y": 16220,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1119-video-saas-x2",
+			"type": "file",
+			"file": "wiki/sources/Minimax-h3_Singularity.md",
+			"x": 520,
+			"y": 16220,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -2008,6 +2048,21 @@
 			"fromNode": "b1116-video-saas-5",
 			"toNode": "b1116-video-saas-x12",
 			"label": "재probe 검증"
+		},
+		{
+			"id": "b1119-video-saas-h1",
+			"fromNode": "b1119-video-saas-hdr",
+			"toNode": "b1119-video-saas-1"
+		},
+		{
+			"id": "b1119-video-saas-e1",
+			"fromNode": "b1119-video-saas-1",
+			"toNode": "b1119-video-saas-x1"
+		},
+		{
+			"id": "b1119-video-saas-e2",
+			"fromNode": "b1119-video-saas-1",
+			"toNode": "b1119-video-saas-x2"
 		}
 	]
 }

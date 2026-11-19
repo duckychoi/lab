@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-16
+updated: 2026-11-19
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -675,3 +675,6 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 - 🆕 [[ffmpeg-skill]] (★6,093) — probe → 무손실 → 재probe 검증 42도구 · MCP · 로컬 전용. **쇼츠 후처리(리프레임 · 라우드니스 · 자막)에 바로 붙일 수 있음.**
 - 🆕 [[JVT]] — 큰 패치 DiT 픽셀 공간 영상 확산 · RGB+디스패리티 동시 생성 · 본문 "능가"는 표 1 범위 한정(부록 반박).
 - 🔴 [[MiniMax-H3-Image-GGUF]] — Abiray · LICENSE = H3-Image 원본 바이트 동일(한국 제외) · "거의 무손실" 근거 0.
+
+## 2026-11-19 배치 (video-saas 1)
+- 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] (dl 523,654) — H3 파인튜닝 2종 병합 · 정량 0 · LICENSE 404 · 원본 apache 표기 vs H3 한국 제외 충돌 → **사용 보류**([[라이선스-지역-제외]] 7번째).

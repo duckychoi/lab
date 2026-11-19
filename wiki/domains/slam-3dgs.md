@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-11-16
+updated: 2026-11-19
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -620,3 +620,6 @@ _소스 ingest 시 자동 누적_
 - 🆕 [[Criteria-Exposure]] ([[DAGroup-PKU]] 3번째) — 체화 자기개선 코딩 에이전트에 벤치 판정 기준을 노출하면 점수는 빨리 오르나 기준을 살짝 바꾸면 우위 소멸 · 과제 간 전이 불량 → 지시 충실형 기준 제안. 초록 수치 0. **로봇 에이전트 논문 읽을 때 첫 질문: '에이전트가 채점 코드를 볼 수 있었나'.**
 - 🆕 [[Gamer]] (HF 11-16 1위) — 키보드 · 마우스 게임 VLA · 실시간 평균 31.5 vs GPT-5.6-Sol 17.6 · HSR 은 별도 학습 체크포인트 · 퍼즐 RL < SFT.
 - 🆕 [[Agentic-Robotics-Roadmap]] — Embodied System 2(모델 + 체화 하네스) 포지션 논문 · 수치 0 · 첫 문장이 GPT-6 Astra 출시를 근거로 패러다임 선언.
+
+## 2026-11-19 배치 (slam-3dgs 1)
+- 🆕 [[Game2Player]] (UIUC) — 빌더/플레이어 공동 개발 웹게임 568 · 과제 3,436 · 궤적 15.7K. 9B: PlayerBench 14.3 → 31.2% · GameWorld 30.0 → 53.1%. [[Gamer]](11-16)의 실시간 조작 노선과 대비되는 검증 가능 과제 노선.

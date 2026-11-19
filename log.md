@@ -5776,3 +5776,38 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 3. chrome-devtools-mcp 사용 시 `--no-usage-statistics --no-performance-crux` · ffmpeg-skill 쇼츠 후처리 시험 · EGM 으로 수집기 프롬프트 수정안 리뷰
 
 ## [2026-11-17 09:00:38] ingest | 대기 항목 없음
+
+## [2026-11-19] ingest | **대기 13건 전량 처리** (11-19 자동수집 13 · 크론 노트 0)
+
+- **도메인**: ai-news 8(paper-orchestra · sellbird · awesome-mcp-servers · last30days-skill · Jeveration · PROLA · Resolution-Hypothesis · Meta-Llama-3-8B-Instruct) · local-llm 3(Tideway · openvino · DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF) · video-saas 1(Minimax-h3_Singularity-x-10Eros-Max_PRISM) · slam-3dgs 1(Game2Player) — 수집기는 13건 전부 `ai-news` 로 표기, 볼트 재분류
+- **분해**: **신규 12 · 갱신 1**(last30days-skill — 수집기 🔄 정확). 처리 시작 시 `grep -c '^- URL:'` = 13 → 처리 후 0
+- **추가 페이지**: **12개** (소스 12) | **업데이트 페이지**: 소스 4(last30days-skill 갱신 + 역링크 3: Minimax-h3_Singularity · DeepSeek heretic 원본 · Llama-3.1-8B-Instruct) + 엔티티 4(Google · Meta · MiniMax · UIUC) + 개념 5(System-One-모델 · 라이선스-지역-제외 · 측정도구-먼저-반증 · 원본-파생-역전 · 에이전트-스킬) + 도메인 4쪽
+- **페이지 수**: 1853 → **1866** (sources 1631 · entities 130 · concepts 97) ✅ `find` 실측. +1 은 11-18 ledger 커밋 `6ad9dd7` 의 super-twisting-stochastic-approximation(이번 배치 아님)
+- **canvas 업데이트**: **YES** — 4종에 `b1119-*` 노드 24 + 엣지 24 (원 서식 유지, git diff 삽입 360행만)
+- **actionable 추가**: YES — 3항목(last-30days v2.9.5 → v4.3.2 대조 · H3 보류 목록에 PRISM 추가 · 자율 개선 채택 기준에 재실행 분산)
+- **독립 검증**: GitHub API 5레포(스타 · 라이선스 · 언어 · 생성 · push) + last30days releases 4건 · README 1종(paper-orchestra 30–51행) · HF papers API 6편(초록 전문 · 업보트 · 조직 · githubRepo, PaperOrchestra 2604.05018 포함) · arXiv HTML 2편(Jeveration 비교 표 · PROLA 표 1) · HF models API 3건(내부 ID · dl30 · 누적 · gated · license · base_model) · GGUF 카드 raw(`%` 0) · PRISM LICENSE 404 · 로컬 스킬 버전
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**만드는 것보다 고르는 것이 병목이다.** [[Resolution-Hypothesis]] 는 에이전트 진화(프롬프트 · 스킬 · 메모리 자동 개선)에서 좋은 후보가 이미 있는데도 노이즈 평가가 그것을 무작위 이상으로 골라내지 못하고, 논문 간 방법 순위 차이가 같은 방법 재실행 차이보다 작다는 것을 1,000만+ 호출로 보였다. 같은 배치에서 후보만 늘리는 장치([[awesome-mcp-servers]] 1,403 항목 · 검증 0)와 판정을 검출 가능하게 만드는 장치([[Game2Player]] 상태 기반 성공 판정)가 나란히 왔고, [[PROLA]] 는 3 seed ± 와 Full FT 에 지는 칸을 함께 공개해 "순위를 믿어도 되는 표"의 모양을 보여 줬다. 볼트 규칙으로 옮기면: 재실행 분산이 없는 수 %p 우위는 순위로 기록하지 않는다.
+
+### 🏆 주요 발견
+1. 🔴 [[라이선스-지역-제외]] 파생 7번째 — [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] license `other`("원본 따름") · LICENSE 404 · 중간 원본 Singularity 는 apache-2.0 표기 → 상위 H3 의 한국 제외와 충돌. 🆕 규칙: base 체인 최상위 원본 LICENSE 적용.
+2. 🔴 볼트 로컬 `last-30days` 스킬 = **v2.9.5**, 상류 [[last30days-skill]] = v4.3.2(이틀에 릴리스 4개). 스킬 사본이 조용히 낡고 있었다.
+3. ✅ [[Jeveration]] 표 대조 — 122× 는 576-step Janus-Pro-7B 대비, GenEval 0.74 < 0.80. 같은 1-step SANA-Sprint 와는 해상도 절반에 비슷한 점수. [[System-One-모델]] 정의("생성 대신 점수화") 경계 갱신.
+4. 📈 [[원본-파생-역전]] — GGUF 파생 dl 800,958 vs 원본 35,450(약 23배), 두 단계 어디에서도 직접 측정 없음(11-16 축 연장).
+5. 🆕 코드 레포 누락 2건 볼트 보충 — Jeveration · Game2Player(HF `githubRepo`).
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 실행 0건 — 설치 · 추론 · 벤치 재현 없음. 논문 본문 표는 2편(Jeveration · PROLA)만 문자열 대조, PROLA 변수별 열 귀속 · Tideway 하드웨어 · Game2Player 본문은 미열람.
+2. 라이선스 판단은 문언 대조이지 법률 해석이 아니다. sellbird 의 구독 플랜 자동화 약관 적합성은 미확인.
+3. README 직접 판독은 paper-orchestra 30–51행뿐. openvino · sellbird · awesome-mcp-servers 내용, Llama 3 카드 벤치 수치는 수집기 판독.
+4. 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 처리 전 index/log/raw/actionable/canvas/domains 사본 · 삭제한 raw 항목(`raw.removed.md`) · 검증 원자료(`v/`) · 생성 스크립트: `/tmp/ing1119/`.
+
+### 🔥 actionable 최우선
+1. **MiniMax H3 계열 보류에 PRISM 병합본 추가** — 파생 7건 전부 한국 제외
+2. last-30days v2.9.5 → v4.3.2 diff 후 업그레이드 판단
+3. 자율 개선 실험 채택 기준에 재실행 분산 추가
+
+<!-- logged at 2026-11-19 09:11:40 -->

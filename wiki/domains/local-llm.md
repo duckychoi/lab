@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-16
+updated: 2026-11-19
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -918,3 +918,8 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🆕 [[qwen-concept-27b]] — 학습 없는 down-proj 9개 편집 · GPQA +4.3 [CI +1.8, +7.1] · 사고 토큰 −27~54% · **랜덤 편집 대조군** · 측정은 Q8_0(4비트 미측정 자인).
 - 🆕 [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] — chatrlabs · 비상업 연구 라이선스 · BF16 병합 기준 벤치(32k 중간본 SFW −4.0 → 90k 회복) · 양자화본 미측정.
 - 🆕 [[MMFlash]] — VLM 투기적 디코딩 · 시각 의존 토큰 가중 · 최대 3.58×(평균 미기재).
+
+## 2026-11-19 배치 (local-llm 3)
+- 🆕 [[Tideway]] (Duke · HF 11-19 1위) — VRAM+RAM 단일 풀 · 단계 인식 MoE 추론 · 지연 1.97× · TTFT 2.40× · decode 1.61×(초록, 하드웨어 미확인) · 코드 공개.
+- 🆕 [[openvino]] (★11,425 · Intel) — CPU · GPU · NPU 추론. Intel 하드웨어면 기본 경로, README 벤치 0.
+- 🆕 [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] — 원본의 약 23배 dl · 평가 0 → [[원본-파생-역전]] 반복.

@@ -4,7 +4,7 @@ type: source
 domain: video-saas
 tags: [video-saas, hf-model, video-generation, comfyui, minimax-h3, fine-tune, 지표전무, 드리프트, 가설반증]
 created: 2026-09-08
-updated: 2026-09-08
+updated: 2026-11-19
 sources: []
 reliability: low
 ---
@@ -76,3 +76,6 @@ reliability: low
 - 수집: 2026-09-08 자동수집 (video-saas)
 - 검증: HF 모델 API **3회 연속 측정 + gpt2 대조군**(raw의 드리프트 가설 검증 목적) (2026-09-08 09:08 KST · DL 58,060 **3회 전부 동일**)
 - 신뢰도: ⭐⭐ (지표는 실측·정착 확인 · **성능 근거 전무** · 데모 링크만)
+
+> [!update] 2026-11-19 — 파생 병합 등장
+> [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] 가 이 레포를 base 로 병합(dl 523,654 — 이 원본의 09-08 값 58,060 의 약 9배). 🔴 이 레포의 apache-2.0 표기는 상위 [[MiniMax-H3]] LICENSE(한국 제외)와 충돌 — [[라이선스-지역-제외]] 11-19 참조.

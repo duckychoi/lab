@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, meta, facebook, design-system, speech, multilingual, big-tech]
 created: 2026-07-09
-updated: 2026-11-14
+updated: 2026-11-19
 sources: [astryx.md, mms-300m.md]
 reliability: high
 ---
@@ -44,3 +44,6 @@ reliability: high
 
 ## 🔄 2026-11-14
 - 🆕 [[dinov3-vitl16]] — DINOv3 ViT-L/16(7B 증류 · 3.03억 파라미터 · 누적 dl 8,824,385 · 수동 승인 게이트). 2025-08 모델의 재트렌딩. LICENSE "worldwide" — 지역 제외 조항 없음([[라이선스-지역-제외]] 음성 대조군).
+
+## 2026-11-19 갱신
+- [[Meta-Llama-3-8B-Instruct]] — 2024-04 기준선 모델이 trendingScore 50.5 로 재부상(30일 dl 42.3만 · 누적 4,922만 · gated). 원인 미확인. 후속 [[Llama-3.1-8B-Instruct]] 대비 30일 dl 약 1/13.

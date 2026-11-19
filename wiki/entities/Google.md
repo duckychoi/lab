@@ -4,7 +4,7 @@ type: entity
 domain: ai-news
 tags: [ai-news, organization, bigtech, ai-agent, gemini, google-cloud]
 created: 2026-07-02
-updated: 2026-11-16
+updated: 2026-11-19
 sources: [agents-cli.md, gemini-cli.md]
 reliability: high
 ---
@@ -62,3 +62,6 @@ reliability: high
 - 🆕 [[elephant-goldfish-model]] — ★20,023 · Apache-2.0 · 문맥 가진 작성자(Elephant) + 문맥 없는 검토자(Goldfish) 설계 리뷰 플러그인 · Claude Code/Codex/Antigravity 지원 · "Google 공식 지원 제품 아님" · 효과 측정 0.
 - 🔄 [[chrome-devtools-mcp]] — 도구 63개 · **사용 통계 기본 수집**(Google) · CrUX 전송 — 끄는 플래그 2개.
 - [[gemma-4-31B-it-ARA-heretic-GGUF]] — Gemma 4 31B 거부 제거 파생 GGUF(dl 14.9만). 원본 카드 하단 벤치 표는 Google Gemma 4 카드 차용.
+
+## 2026-11-19 갱신
+- [[paper-orchestra]] (google-research · ★4,669 · Apache-2.0) — 연구 자료 → 투고용 LaTeX 원고 멀티에이전트. 사람 평가 승률 차 문헌조사 50–68% · 전체 14–38%(자체 벤치 · 데이터 미공개). 11-16 [[elephant-goldfish-model]] 에 이은 Google 의 "글쓰기 · 리뷰 에이전트" 2연속.

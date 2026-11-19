@@ -8978,6 +8978,116 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1119-ai-news-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-19 배치\n만드는 것보다 고르는 것이 병목",
+			"x": 60,
+			"y": 59420,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1119-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/paper-orchestra.md",
+			"x": 60,
+			"y": 59540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/sellbird.md",
+			"x": 520,
+			"y": 59540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/awesome-mcp-servers.md",
+			"x": 980,
+			"y": 59540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/last30days-skill.md",
+			"x": 1440,
+			"y": 59540,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/Jeveration.md",
+			"x": 60,
+			"y": 59780,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/PROLA.md",
+			"x": 520,
+			"y": 59780,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/Meta-Llama-3-8B-Instruct.md",
+			"x": 980,
+			"y": 59780,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/Resolution-Hypothesis.md",
+			"x": 1440,
+			"y": 59780,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-ai-news-x1",
+			"type": "file",
+			"file": "wiki/concepts/System-One-모델.md",
+			"x": 60,
+			"y": 60020,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1119-ai-news-x2",
+			"type": "file",
+			"file": "wiki/concepts/측정도구-먼저-반증.md",
+			"x": 520,
+			"y": 60020,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -16598,6 +16708,71 @@
 			"fromNode": "b1116-ai-news-7",
 			"toNode": "b1116-ai-news-x12",
 			"label": "앱 엔진"
+		},
+		{
+			"id": "b1119-ai-news-h1",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-1"
+		},
+		{
+			"id": "b1119-ai-news-h2",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-2"
+		},
+		{
+			"id": "b1119-ai-news-h3",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-3"
+		},
+		{
+			"id": "b1119-ai-news-h4",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-4"
+		},
+		{
+			"id": "b1119-ai-news-h5",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-5"
+		},
+		{
+			"id": "b1119-ai-news-h6",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-6"
+		},
+		{
+			"id": "b1119-ai-news-h7",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-7"
+		},
+		{
+			"id": "b1119-ai-news-h8",
+			"fromNode": "b1119-ai-news-hdr",
+			"toNode": "b1119-ai-news-8"
+		},
+		{
+			"id": "b1119-ai-news-e1",
+			"fromNode": "b1119-ai-news-8",
+			"toNode": "b1119-ai-news-3"
+		},
+		{
+			"id": "b1119-ai-news-e2",
+			"fromNode": "b1119-ai-news-8",
+			"toNode": "b1119-ai-news-4"
+		},
+		{
+			"id": "b1119-ai-news-e3",
+			"fromNode": "b1119-ai-news-8",
+			"toNode": "b1119-ai-news-1"
+		},
+		{
+			"id": "b1119-ai-news-e4",
+			"fromNode": "b1119-ai-news-5",
+			"toNode": "b1119-ai-news-x1"
+		},
+		{
+			"id": "b1119-ai-news-e5",
+			"fromNode": "b1119-ai-news-8",
+			"toNode": "b1119-ai-news-x2"
 		}
 	]
 }

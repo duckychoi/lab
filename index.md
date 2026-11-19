@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-16 (✅ **대기 26건 전량 처리** — 11-15 자동수집 13 + 11-16 자동수집 13(실행 중 확인) = **신규 24 · 갱신 2**(chrome-devtools-mcp · univer — 수집기 🔄 정확). 크론 노트 0건. `^- URL:` 26 → 0)
-total_pages: 1853  # 2026-11-16 실측(sources **1619** · entities **130** · concepts **96** · synthesis 4 · domains 4 · queries 0) — 1829 + 24(자동수집 신규 소스 24)
-total_sources: 1619  # 2026-11-16: 자동수집 신규 24 (갱신 2는 기존 계수)
+updated: 2026-11-19 (✅ **대기 13건 전량 처리** — 11-19 자동수집 13 = **신규 12 · 갱신 1**(last30days-skill — 수집기 🔄 정확). 크론 노트 0건. `^- URL:` 13 → 0)
+total_pages: 1866  # 2026-11-19 실측(sources **1631** · entities 130 · concepts **97**(11-16 기록 96 대비 +1 — 11-18 ledger 커밋 6ad9dd7 의 [[super-twisting-stochastic-approximation]] · 이번 배치 신설 아님) · synthesis 4 · domains 4 · queries 0) — 1853 + 12(신규 소스) + 1(concepts 계수 차)
+total_sources: 1631  # 2026-11-19: 자동수집 신규 12 (갱신 1은 기존 계수)
+# 🎯 배치 축(2026-11-19) = **만드는 것보다 고르는 것이 병목이다.** [[Resolution-Hypothesis]] — 에이전트 진화에서 후보 선택은 무작위와 다를 바 없고 방법 간 순위 차(수 %p) < 같은 방법 재실행 간 차(LLM 호출 1,000만+). 같은 날 [[awesome-mcp-servers]] 는 후보 1,403개를 검증 없이 늘리고, [[Game2Player]] 는 상태 기반 성공 판정으로 '개선을 검출 가능하게' 만드는 쪽에 투자했다. [[PROLA]] 는 3 seed ± 와 Full FT 에 지는 칸까지 공개(모범) · [[Jeveration]] 122× 는 가장 느린 Janus-Pro 대비, 품질은 그 아래. 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] — 원본 apache 표기 vs H3 한국 제외 충돌([[라이선스-지역-제외]] 7번째) · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] 원본의 23배 dl · 평가 0([[원본-파생-역전]]). 🔄 [[last30days-skill]] v4.3.2 — 볼트 로컬 스킬은 v2.9.5.
 # 🎯 배치 축(2026-11-16) = **측정된 것과 쓰이는 것이 다르다.** 거부율 0.6% · 능력 −2.18%p 는 BF16 원본(dl 551)의 값이고 사용자는 270배 많은 GGUF 를 받는다([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 45.44 FPS 는 LightX2V 런타임의 원본 가중치 속도이고 배포본은 ComfyUI int8([[Comfy-Org-RelayVSR]], 화질 지표 0) · 체화 에이전트 점수는 판정 기준을 배운 값이라 기준을 살짝 바꾸면 우위가 사라진다([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). ✅ 정방향: [[SteerDistill]] 은 양자화본을 **에이전트 벤치로 다시 재서** BF16 1점 이내를 보였다. 🔴 [[MiniMax-H3-Character-Swap-LoRA]] LICENSE = H3 원본 바이트 동일(한국 제외, [[라이선스-지역-제외]] 파생 5번째 — 이번엔 수집기가 직접 명시). 🔄 [[chrome-devtools-mcp]] 도구 63개 확인 + 사용 통계 기본 수집 · [[univer]] 에이전트 계층은 상용 SDK(README 명문화). **11-16 분 13건에서도 같은 축이 반복** — [[qwen-concept-27b]] 측정은 Q8_0(4비트 미측정을 자인, 대신 랜덤 편집 대조군을 둠) · [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] BF16 병합만 측정(볼트 추가: 32k 중간본 SFW −4.0) · [[MiniMax-H3-Image-GGUF]] "거의 무손실" 근거 0 + 한국 제외(파생 6번째) · [[VibePrevisBench]] 모델 순위에 하네스(Codex CLI vs Claude Code)가 섞임. 스킬 4건([[elephant-goldfish-model]] · [[ffmpeg-skill]] · [[Claude-BugHunter]] + chrome-devtools 스킬)은 효과 수치 0 — 같은 날 측정 도구 [[SkillEvaluator]] 가 나왔다.
 # 🎯 배치 축(2026-11-14) = **"없다"고 적힌 것은 파일 하나 더 열면 있었고, 링크만 걸린 라이선스 뒤에는 한국 제외가 있었다.** 수집기의 부재 판정 3건이 볼트 실측에서 뒤집혔다 — [[modern-web-guidance-src]] "eval 수치 없음"(README 593–610행에 표: 무가이드 52–60% → 가이드 82–96%) · [[AutoTrust-JEV-27B]] "베이스 미명시"(`NOTICE.base`: Built on Qwen/Qwen3.8-27B) · "비전 근거 없음"(`config.json` 멀티모달 아키텍처) → [[메타데이터-부재-추론]]. 반대 방향으로 🔴 [[Pika-H3-Flex]] 는 LICENSE 가 MiniMax-H3 원본과 **바이트 동일**(sha256 일치) — 카드는 링크만 걸고 한국 제외를 말하지 않는다 → [[라이선스-지역-제외]] 파생 4번째, ✅ [[dinov3-vitl16]] 은 같은 검사로 "worldwide" 통과(음성 대조군). 같은 결: [[free-claude-code]] API `NOASSERTION` → LICENSE 원문 **AGPL-3.0-only** · [[DavidAU-Qwen3.5-9B-Defiant-Fable]] "7/7 초과"는 같은 카드 표에서 6/7 · 6/7 · 5/7([[표-부분인용]]) · 수집기 11-14 GitHub 5건 중 3건이 기보유 재배달([[정규명-우선-중복검사]]). ✅ 정방향: [[SO-Arena]](정확도 1위 = 신뢰성 7위) · [[Actor-Judge-Teacher]](행위자로 약한 모델이 심판 · 교사로 유효)로 [[System-One-모델]]에 외부 측정 축 · [[qwen-code]] 7개 버전 SWE-bench 76.40–77.80%(최고점은 최초 버전 — [[하네스-설계-축]] 포화).
 # 🎯 배치 축(2026-11-12) = **다운로드 버튼은 권리를 보증하지 않는다 — 그리고 "다르다"는 인용은 같은 점을 지운다.** 볼트가 원본 LICENSE 를 처음 열자 [[MiniMax-H3]] · [[MiniMax-H3-Image]] 모두 **대한민국을 적용 지역에서 제외**(10행) — 08월부터 "라이선스 확인 필요"로 넘긴 질문이 한 줄 grep 으로 끝났다. [[hyperflow-h3-flash]] 카드는 이를 정직하게 적었고(312행), DL 35만의 [[Comfy-Org-MiniMax-H3-Image]] 카드는 "원본과 다르다"며 매출 조항만 인용해 공통 제약을 생략 → 🆕 [[라이선스-지역-제외]] · [[표-부분인용]]. 같은 결의 발견 2건: 크론 메모리 노트가 인용한 2603.04814 는 **장문맥이 정확도에서 이긴다**고 결론([[인용-부호]]) · [[astryx]]·[[OpenSandbox]] 는 조직 경로가 바뀌어 URL 중복 검사를 통과([[정규명-우선-중복검사]] — 레포 ID 로 대조). ✅ 정방향: [[daily_stock_analysis]] 논문이 *"수익·예측 정확도를 입증하지 않는다"* 고 자기 범위를 자름 · 크론 학회 노트가 11-11 요청(오늘 이후 마감 우선)을 하루 만에 반영.
@@ -364,6 +365,21 @@ total_sources: 1619  # 2026-11-16: 자동수집 신규 24 (갱신 2는 기존 �
 ---
 
 ## sources
+
+### 2026-11-19 배치 (대기 **13건** 전량 처리 · 11-19 자동수집 13 = **신규 12 · 갱신 1** · GitHub 5(신규 4 · 갱신 1) · HF논문 5(신규 5) · HF모델 3(신규 3) · 크론 노트 0 · 엔티티 갱신 4(Google · Meta · MiniMax · UIUC) · 개념 갱신 5(System-One-모델 · 라이선스-지역-제외 · 측정도구-먼저-반증 · 원본-파생-역전 · 에이전트-스킬) · 볼트 재분류: ai-news 8 · local-llm 3 · video-saas 1 · slam-3dgs 1)
+- 🆕 [[paper-orchestra]] — ★4,669 · Google · 연구 자료 → LaTeX 원고 · 승률 차 문헌조사 50–68% · 데이터 미공개 · `ai-news`
+- 🆕 [[openvino]] — ★11,425 · Intel CPU · GPU · NPU 추론 · README 벤치 0 · `local-llm`
+- 🆕 [[sellbird]] — ★6,580 · AGPL · 구독 플랜 콜드메일 에이전트 · 약관 미확인 · `ai-news`
+- 🆕 [[awesome-mcp-servers]] — ★98,174 · MCP 목록 1,403 항목 · 검증 0 · `ai-news`
+- 🔄 [[last30days-skill]] — ★70,378 · v4.3.2 · 🔴 로컬 스킬 v2.9.5 · `ai-news`
+- 🆕 [[Tideway]] — 60 up · HF 11-19 1위 · Duke · MoE VRAM+RAM 단일 풀 · 지연 1.97× · `local-llm`
+- 🆕 [[Jeveration]] — 34 up · NUS · System One 이미지 생성 78ms · GenEval 0.74 < Janus-Pro 0.80 · `ai-news`
+- 🆕 [[PROLA]] — 25 up · 주성분/직교 LoRA · Z500 −5.3% vs AdaLoRA · 일부 변수 Full FT 우세 · `ai-news`
+- 🆕 [[Game2Player]] — 21 up · UIUC · 검증 웹게임 568 · PlayerBench 14.3 → 31.2% · `slam-3dgs`
+- 🆕 [[Resolution-Hypothesis]] — 16 up · ShanghaiTech · 선택 ≈ 무작위 · 순위 차 < 재실행 차 · 코드 없음 · `ai-news`
+- 🆕 [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] — dl 800,958 · 원본의 약 23배 · 평가 0 · `local-llm`
+- 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] — dl 523,654 · H3 병합 · LICENSE 404 · 한국 제외 · `video-saas`
+- 🆕 [[Meta-Llama-3-8B-Instruct]] — dl30 423,008 · 2024 기준선 재부상 · gated · `ai-news`
 
 ### 2026-11-16 배치 (대기 **26건** 전량 처리 · 11-15 자동수집 13 + 11-16 자동수집 13 = **신규 24 · 갱신 2** · GitHub 10(신규 8 · 갱신 2) · HF논문 10(신규 10) · HF모델 6(신규 6) · 크론 노트 0 · 엔티티 갱신 8(Tencent · Comfy-Org · DAGroup-PKU · dream-num · Google · NVIDIA · MiniMax · Qwen) · 개념 갱신 4(라이선스-지역-제외 · 에이전트-스킬 · 요약자와-판정자-분리 · 하네스-설계-축) · 볼트 재분류: ai-news 9 · local-llm 7 · video-saas 7 · slam-3dgs 3)
 - 🆕 [[LoopForge]] — ★2,028(하루 +972) · Tencent · 코딩 에이전트 CLI 10종 위 역할 · SOP · human gate · 효과 측정 0 · README 자기 한계 명시(Docker 소켓 · 전체 데이터 열람) · `ai-news`

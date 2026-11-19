@@ -4,12 +4,17 @@ type: source
 domain: ai-news
 tags: [ai-news, agent-skill, social-media, research, reddit, youtube, hn]
 created: 2026-04-23
-updated: 2026-07-31
+updated: 2026-11-19
 sources: []
 reliability: high
 ---
 
 # mvanhorn/last30days-skill
+
+> [!update] 2026-11-19 갱신 — ⭐70,378 (당일 +1,059 · 07-31 대비 +14,603) · v4.3.2
+> ⭐**70,378**(GitHub API 11-19 볼트 확인 · MIT · Python · HEAD 2623916 11-19T08:23Z) ← 55,775(07-31). **릴리스(볼트 API 확인)**: v4.2.1(11-16) → **v4.3.0(11-16 23:57Z)** → v4.3.1 → **v4.3.2(11-17)** — 이틀에 4개. v4.3.0 변경(수집기 판독): Polymarket 엔티티 주제 우선 노출 · 부분 검색 결과 보고 · 회사 조사 시 채용 신호 탐지. 50+ Agent Skills 호스트(`npx skills add`).
+> 🔴 **로컬 `~/.claude/skills/last-30days/SKILL.md` 는 `v2.9.5`(볼트 확인 · 5행 제목) — 상류 v4.3.2 대비 메이저 2단계 뒤처짐.** 07-28 이후 추가된 소스(TikTok · Instagram · Bluesky · arXiv 등) · v4 파이프라인 반영 여부는 업그레이드 전 diff 필요. ✅ actionable 등록.
+> 📌 같은 날 [[Resolution-Hypothesis]]: engagement 가중(업보트 · 좋아요 · 베팅액) 요약도 결국 "무엇을 고를지"의 점수 함수다 — 가중치가 품질 신호인지 인기 신호인지는 이 스킬이 검증하지 않는다.
 
 > [!update] 2026-07-31 갱신 — ⭐55,775 (당일 +378, WebFetch "55.8k"·MIT 실확인)
 > ⭐**55,775**(2026-07-31 자동수집, 당일 +378) ← 54,415(07-28). **WebFetch 재확인: 55.8k·Python·MIT**, 조사 소스가 Reddit·X·YouTube·HN·Polymarket·웹까지 실사용 engagement 순으로 종합한다는 성격 동일. 이 vault [[last-30days]] 스킬의 상위 레퍼런스 — arXiv 소스 편입 후보 유지.
@@ -40,8 +45,9 @@ reliability: high
 - [[worldmonitor]]
 - [[awesome-agent-skills]]
 - [[AI-에이전트-프레임워크]]
+- [[에이전트-스킬]] · [[Resolution-Hypothesis]]
 
 ## 원본
 - 출처: https://github.com/mvanhorn/last30days-skill
-- 스타: ⭐**55,775** (2026-07-31, 당일 +378, WebFetch "55.8k"·MIT·Python 실확인) ← 54,415(07-28) ← 50,062(07-07) ← 39,417(06-11)
+- 스타: ⭐**70,378** (2026-11-19, 당일 +1,059, GitHub API · v4.3.2) ← ⭐55,775 (2026-07-31, 당일 +378, WebFetch "55.8k"·MIT·Python 실확인) ← 54,415(07-28) ← 50,062(07-07) ← 39,417(06-11)
 - 신뢰도: ⭐⭐⭐⭐

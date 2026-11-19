@@ -1159,6 +1159,36 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1119-slam-3dgs-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-19 배치\n검증 가능한 게임 과제",
+			"x": 60,
+			"y": 15545,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1119-slam-3dgs-1",
+			"type": "file",
+			"file": "wiki/sources/Game2Player.md",
+			"x": 60,
+			"y": 15665,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-slam-3dgs-x1",
+			"type": "file",
+			"file": "wiki/sources/Gamer.md",
+			"x": 60,
+			"y": 15905,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -1942,6 +1972,16 @@
 			"fromNode": "b1116-slam-3dgs-3",
 			"toNode": "b1116-slam-3dgs-1",
 			"label": "평가 틀"
+		},
+		{
+			"id": "b1119-slam-3dgs-h1",
+			"fromNode": "b1119-slam-3dgs-hdr",
+			"toNode": "b1119-slam-3dgs-1"
+		},
+		{
+			"id": "b1119-slam-3dgs-e1",
+			"fromNode": "b1119-slam-3dgs-1",
+			"toNode": "b1119-slam-3dgs-x1"
 		}
 	]
 }

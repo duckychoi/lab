@@ -4,7 +4,7 @@ type: source
 domain: local-llm
 tags: [local-llm, hf-model, distillation, uncensored, heretic, qwen3.5, deepseek, 파생저장소]
 created: 2026-11-10
-updated: 2026-11-10
+updated: 2026-11-19
 sources: [https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic]
 reliability: low
 ---
@@ -37,3 +37,6 @@ reliability: low
 - 출처: https://huggingface.co/xtools-at/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic
 - 확인 범위: HF API(expand) + 카드 raw 38,579B 표본 대조 · 🔴 원본 Jackrong 레포 미조회 · 추론 미실행
 - 신뢰도: ⭐ (dl30 11,755 · 재측정 벤치 0 · 검열 제거 파생)
+
+> [!update] 2026-11-19 — GGUF 파생이 원본을 압도
+> [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] (mradermacher · dl 800,958) — 이 원본(dl 35,450 · 수집기 11-19)의 약 23배. GGUF 카드 평가 수치 0([[원본-파생-역전]]).

@@ -4,7 +4,7 @@ type: entity
 domain: local-llm
 tags: [entity, 대학, 연구기관, diffusion-lm, usa]
 created: 2026-10-03
-updated: 2026-10-03
+updated: 2026-11-19
 sources: [HC-DLM.md]
 reliability: high
 ---
@@ -35,3 +35,6 @@ reliability: high
 - HF 논문 API `organization.name = UIUC-CS`
 - PDF 실측: `arXiv:2610.02193v1` 저자 각주 1
 - 신뢰도: ⭐⭐⭐⭐⭐ (PDF 1차 문서 확인)
+
+## 2026-11-19 갱신
+- [[Game2Player]] — 빌더 · 플레이어 공동 개발로 검증 가능한 웹게임 과제 3,436개 · 궤적 15.7K. Game2Player-9B PlayerBench 14.3 → 31.2% · GameWorld 30.0 → 53.1%.

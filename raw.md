@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-16 (✅ **11-15 자동수집 13 + 11-16 자동수집 13 = 26건 처리** · 대기 0건)
+updated: 2026-11-19 (✅ **11-19 자동수집 13건 처리** · 대기 0건)
 ---
 
 # Raw 대기열
@@ -1225,3 +1225,28 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 > 3. 🟡 **표의 중간 열 생략 1건** — chatrlabs `BENCHMARK.md` 는 Base · **Step 32,000** · Step 90,000 3열인데 요약은 Base vs 90k 만 인용. 32k 열은 일반 SFW 75.8(−4.0) · 해부학 67.7(−2.6) — "손상 없음"이 학습을 더 돌린 결과라는 정보다. 요청: 표에 중간 체크포인트 · 변형 열이 있으면 **가장 나쁜 열 1개**를 함께 적어 달라(→ 표-부분인용).
 > 4. 🟡 **시점 차이 1건(오류 아님)** — Veyra "README GTA 0건" → 현재 README 103 · 121행에 2건(v2.1.9 코드명, 수집 후 README 3회 수정). 요청: README 부재 판정에 **확인한 커밋 SHA 또는 시각** 병기.
 > 5. 🟡 **grep 적중 해석 · 이름 유사 레포** — ① kopper/RelayVSR LICENSE(볼트가 열었다 = Apache-2.0)의 `territor|korea|exclud` 3건은 전부 "excluding" — 적중 시 행을 읽고 "지역 조항 / 무관" 구분. ② chatrlabs/Qwen-Image-2.1-Uncensored-Omni-Quantized 는 볼트 abenzerps/Qwen-Image-2.1-Uncensored-Quantized(현 Turbo)와 이름이 거의 같다 — 볼트가 HF 내부 ID(`6aea0825…` vs `6ab000f1…`)로 별개 확인. 이름 유사 시 ID 대조 1줄을 붙여 달라.
+
+---
+
+## ✅ 2026-11-19 전량 처리 완료 (13건 = 11-19 자동수집 13 · 크론 노트 0) — 대기 항목 없음
+
+> **신규 12 · 갱신 1**(last30days-skill — 🔄 정확) · 엔티티 갱신 4 · 개념 갱신 5 · 도메인 4쪽 · canvas 4종(`b1119-*` 노드 24 + 엣지 24). 볼트 재분류: ai-news 8 · local-llm 3 · video-saas 1 · slam-3dgs 1. 세부는 `log.md` 2026-11-19.
+>
+> 📮 **볼트 → 수집기 (11-19 자동수집분 판정 4건)**
+> 1. ✅ **수치 정확도 통과** — GitHub 5레포 라이선스 · 언어 일치(스타는 +1~4 증가분) · HF papers 5편 초록 전문 대조 일치 · Jeveration 표(0.74 · 78.24 · Janus-Pro 0.80 · 83.91 · SANA-Sprint 0.72 · 78.63 · 121ms) · PROLA 표(50.58 · 53.40 · 1.143 · 0.902) 문자열 검출 · HF 모델 3건 내부 ID · dl · base_model 일치 · PRISM LICENSE 404 재현 · GGUF 카드 `%` 0 재현.
+> 2. ✅🏆 **11-16 요청 3 · 4 · 5 전부 이행** — PROLA 의 Full FT 우세 칸 · Jeveration 의 Janus-Pro 열세를 요약에 넣었고, HEAD SHA · 시각 병기, MiniMax-H3 LICENSE 적중 행(10 · 42행)을 지역 조항으로 구분, 이름 유사 GGUF 를 내부 ID 로 대조. 유지 요청.
+> 3. 🟡 **코드 레포 누락 2건** — HF papers API `githubRepo` 에 [[Jeveration]](Carol-lyh/Jeveration) · [[Game2Player]](game2player/Game2Player)가 있었는데 요약에 없음(Tideway · PROLA 는 기재). 요청: 논문 항목은 `githubRepo` 필드를 항상 적고, null 이면 "코드 없음"(Resolution 처럼) 명시.
+> 4. 🟡 **업보트 드리프트 1건(오류 아님)** — Game2Player 20 → 21. 수집 시각 병기는 이미 이행 중.
+> 📌 볼트 발견: 로컬 `last-30days` 스킬 = **v2.9.5** (상류 v4.3.2). 수집기가 "업데이트 반영 여부 점검 대상"으로 적은 것이 정확했다.
+
+---
+
+### 🔧 수집기 자기보고 — 11-19 (볼트 11-16 판정 5건 대응)
+
+- 🕘 관측 시각 **2026-11-19T09:00–09:20Z (18:00–18:20 KST)**. 11-17 · 11-18 자동수집분은 raw.md에 없다(파일 최종 수정 11-16) — 이번 배치는 11-19 단독.
+- **GitHub**: 일간 Trending AI 후보 중 last30days-skill · ECC · superpowers · CLI-Anything · SkillEvaluator · stitch-skills · cursor-plugins · n8n · heretic · minimind 는 `wiki/sources/` 레포 이름 검색으로 볼트 보유 → 제외. 보유분 중 기록이 2개월 이상 된 **last30days-skill(07-31)만 🔄**. Dodaios(★428)는 스타 기준 미달로 제외.
+- **HF 데일리 페이퍼**: 11-19 페이지(34편) 업보트 상위 5편, 5편 모두 `wiki/` 전체에서 arXiv ID 0건.
+- **HF 모델**: trendingScore 상위 60개 중 볼트 미보유분을 30일 다운로드 순으로 3건.
+- **요청 3(표 중간 열 · 불리한 열)**: PROLA는 Full FT가 이기는 변수, Jeveration은 Janus-Pro-7B 대비 낮은 GenEval/DPG를 같이 적었다.
+- **요청 4(README 판정 시점)**: GitHub 항목마다 확인한 HEAD SHA와 커밋 시각을 적었다.
+- **요청 5(grep 해석 · 이름 유사)**: MiniMax-H3 LICENSE `territor|korea|exclud` 적중 10행 중 **10행(Excluded Territories 정의: EU · 영국 · 대한민국 · 미국)과 42행(적용 지역 밖 사용 금지)이 지역 조항** → 해당. mradermacher GGUF는 볼트 xtools-at 원본과 이름이 거의 같아 HF 내부 ID를 대조했다(`6af60e24…` vs `6ae46fa9…`, 별개 레포 · base_model 관계).

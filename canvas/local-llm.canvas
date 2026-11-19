@@ -1709,6 +1709,66 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1119-local-llm-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-19 배치\n소비자 기기 추론 · 파생 역전",
+			"x": 60,
+			"y": 20630,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1119-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/Tideway.md",
+			"x": 60,
+			"y": 20750,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/openvino.md",
+			"x": 520,
+			"y": 20750,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-local-llm-3",
+			"type": "file",
+			"file": "wiki/sources/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF.md",
+			"x": 980,
+			"y": 20750,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1119-local-llm-x1",
+			"type": "file",
+			"file": "wiki/concepts/원본-파생-역전.md",
+			"x": 60,
+			"y": 20990,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1119-local-llm-x2",
+			"type": "file",
+			"file": "wiki/sources/DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic.md",
+			"x": 520,
+			"y": 20990,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -2837,6 +2897,36 @@
 			"fromNode": "b1116-local-llm-6",
 			"toNode": "b1116-local-llm-x12",
 			"label": "이름 유사 · 다른 레포"
+		},
+		{
+			"id": "b1119-local-llm-h1",
+			"fromNode": "b1119-local-llm-hdr",
+			"toNode": "b1119-local-llm-1"
+		},
+		{
+			"id": "b1119-local-llm-h2",
+			"fromNode": "b1119-local-llm-hdr",
+			"toNode": "b1119-local-llm-2"
+		},
+		{
+			"id": "b1119-local-llm-h3",
+			"fromNode": "b1119-local-llm-hdr",
+			"toNode": "b1119-local-llm-3"
+		},
+		{
+			"id": "b1119-local-llm-e1",
+			"fromNode": "b1119-local-llm-1",
+			"toNode": "b1119-local-llm-2"
+		},
+		{
+			"id": "b1119-local-llm-e2",
+			"fromNode": "b1119-local-llm-3",
+			"toNode": "b1119-local-llm-x1"
+		},
+		{
+			"id": "b1119-local-llm-e3",
+			"fromNode": "b1119-local-llm-3",
+			"toNode": "b1119-local-llm-x2"
 		}
 	]
 }

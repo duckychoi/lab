@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, huggingface, model, llama, gated, 8B, instruct, access-control]
 created: 2026-09-15
-updated: 2026-09-15
+updated: 2026-11-19
 sources: []
 reliability: medium
 ---
@@ -54,3 +54,6 @@ reliability: medium
 - 출처: https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
 - 검증: HF API 실호출(2026-09-15). **DL·♥·생성일·수정일·gated=manual·라이선스 전건 일치(드리프트 0)** · 카드 본문 **401 차단(미확인)**
 - 신뢰도: ⭐⭐
+
+> [!update] 2026-11-19 — 전작 재부상
+> [[Meta-Llama-3-8B-Instruct]](2024-04)가 trendingScore 50.5 로 트렌딩 상위 재등장(30일 dl 423,008 · 누적 4,922만). 같은 gated 규약 적용 — DL:♥ 비게이트 비교 금지.
