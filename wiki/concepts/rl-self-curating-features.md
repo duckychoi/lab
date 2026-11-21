@@ -68,6 +68,11 @@ $$r_t = \underbrace{[\mathcal L_{t-1}-\mathcal L_t]}_{\text{다운스트림 개�
 - 신용할당 스레드(RUDDER/HCA) — "어느 피처가 도움됐나" = feature-level credit.
 - 온디바이스 경량화(#20-22) — 비용항 c = 연산/메모리 예산.
 
-## 6. 상태 / 다음
-- 상태: **개념(research program)**, 코드·실험 없음.
-- 다음 후보: ① AFA survey·group-wise·multi-agent transform 원문 정독해 state/action/reward 설계 정교화 ② toy 프로토타입(스트리밍 피처에서 RL 선택+변환) 구현 ③ 피처 수준 신용할당 + STSA 결합 정식화.
+## 6. toy 검증 ✅ (note:rl-feature-curation)
+스트리밍 회귀(P=50, 관련 S=3, 120라운드마다 교체=비정상). 큐레이터 $q_f=$EMA($|x_f\cdot e|$)+top-k+ε+decay.
+- **RL-curated MSE 2.31 < all 2.92 < fixed 3.03** (oracle 0.72 상한). 관련피처 recall RL 0.39(랜덤 0.12 상회).
+- ✅ 능동 큐레이션이 "전부 사용"·"고정"을 이김(비정상·고차원서 선택이 노이즈 억제).
+- ⚠️ oracle 격차 큼·recall 불완전·적응속도 우위 불명확 → **크루스=피처 수준 신용할당**: $|x\cdot e|$는 '안 잡힌 피처' 신호라 fit되면 꺼짐(discovery↔retention 딜레마). **하이브리드 credit($|x\cdot e|$+$|W_f|$)** 이 핵심 to-do.
+
+## 7. 다음
+① 하이브리드 credit(discovery+retention) ② [획득+정렬+변환] 단일 미분가능 정책(Gumbel-Softmax) ③ 피처 수준 신용할당(RUDDER/HCA) + 비정상 강인 업데이트.

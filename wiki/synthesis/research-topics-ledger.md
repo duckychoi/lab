@@ -115,6 +115,7 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 🟢 **빈 땅**: 조각은 다 있으나 **[획득+정렬+변환]을 단일 RL 정책으로 + 스트리밍 + 자기 다운스트림 개선 보상**으로 묶은 self-improving end-to-end는 미존재.
     - 설계: Queue→추출→정책(3헤드 acquire/rank/transform, 계층·MoE)→다운스트림→보상 $r=\Delta$Perf$-\lambda$cost$-\mu$redund→피처수준 신용할당.
     - 난제: 보상 지연·노이즈(신용할당) · 행동공간 폭발(계층/MoE) · 스트리밍 비정상성(→STSA).
+    - ✅ toy(note:rl-feature-curation): 스트리밍 비정상 회귀. **RL-curated MSE 2.31 < all 2.92 < fixed 3.03**(oracle 0.72), recall 0.39. 큐레이션이 전부/고정 이김(modest 양성). 크루스=피처 신용할당(discovery $|x\cdot e|$↔retention $|W|$ 딜레마), 하이브리드 credit이 to-do.
     - 연결: [[피처맵 보호]](#31)(큐레이션↔보호 쌍) · [[STSA]](#32)(비정상 강인 엔진) · 합승통신 MoE(#30) · 신용할당 스레드(피처축 RUDDER/HCA) · 온디바이스 비용항(#20-22)
 
 ### N. 모션 리워드·위상-분포 (신규 2026-11)
