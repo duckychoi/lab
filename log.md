@@ -5824,3 +5824,5 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 - **미해결**: "Particle Filters and Flows" 원문 미확인 · toy 미실시 · B섹션(🅱) 신설·교차링크 미정
 
 <!-- logged at 2026-11-21 -->
+
+## [2026-11-21 09:03:42] ingest | 대기 항목 없음
