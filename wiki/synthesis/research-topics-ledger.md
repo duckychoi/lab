@@ -1,7 +1,7 @@
 ---
 title: "연구주제 공유 원장 (Research Topics Ledger)"
 created: 2026-10-14
-updated: 2026-11-18
+updated: 2026-11-21
 author: fryday
 tags: [research-ledger, shared-hub]
 ---
@@ -99,6 +99,14 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 🟢 **제안**: 1차·무기억 가정을 깨 **분수차+적분기억** 2차 골격 — $\theta{+}\alpha(-k_1|\delta|^{1/2}\mathrm{sign}\delta + u),\ u{-}\alpha k_2\mathrm{sign}\delta$. 유한시간·유계교란 상쇄. 결정론 Lyapunov(Moreno-Osorio) 증명 존재, **STW×확률근사 유한시간 증명은 미존재**(검색 확인) = 기여 지점(노이즈볼 도달+가속 수렴률).
     - ⚠️ 정직: 결정론 백본만 엄밀, 확률 확장은 출판가능 연구 프로그램(증명 미완).
     - 연결: [[슈퍼트위스팅/슬라이딩모드 × 빔포밍]](#7) · sliding-as-optimization(#9) · 물리STW 개구(#8)=물리/학습 twist 쌍 · 탐험·활용·신용할당 스레드
+
+### M. 표현학습·자기개선 피처 (신규 2026-11)
+33. **RL 자기개선 피처 큐레이션** (교수님 아이디어: 큐에 raw data → 능동 획득·정렬·변환) → [[rl-self-curating-features]]
+    - 분해 매핑: **능동획득=AFA**(AISTATS2025 CS-HPPO·survey 2502.11067) · **조정=RL 피처변환/생성**(group-wise 2501.10555·MARL 2504.17355·2511.21934) · **정렬=RL 피처선택** · **큐=스트리밍/OSFS**
+    - 🟢 **빈 땅**: 조각은 다 있으나 **[획득+정렬+변환]을 단일 RL 정책으로 + 스트리밍 + 자기 다운스트림 개선 보상**으로 묶은 self-improving end-to-end는 미존재.
+    - 설계: Queue→추출→정책(3헤드 acquire/rank/transform, 계층·MoE)→다운스트림→보상 $r=\Delta$Perf$-\lambda$cost$-\mu$redund→피처수준 신용할당.
+    - 난제: 보상 지연·노이즈(신용할당) · 행동공간 폭발(계층/MoE) · 스트리밍 비정상성(→STSA).
+    - 연결: [[피처맵 보호]](#31)(큐레이션↔보호 쌍) · [[STSA]](#32)(비정상 강인 엔진) · 합승통신 MoE(#30) · 신용할당 스레드(피처축 RUDDER/HCA) · 온디바이스 비용항(#20-22)
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa** 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
