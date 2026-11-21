@@ -4,7 +4,7 @@ created: 2026-11-21
 author: fryday
 tags: [concept, flow-matching, rope, phase, motion, humanoid, reward-free, distribution-matching, ledger-34]
 ledger: 34
-status: research-program
+status: research-program (toy 검증 완료)
 ---
 
 # Phase-RoPE × Flow-Matching Motion Prior
@@ -71,6 +71,19 @@ for each step:
 - [[rl-self-curating-features]] #33 — 모션 피처의 위상 큐레이션.
 - 휴머노이드 파쿠르 SOTA(Terrain-Indexed AMP 2611.08056 / Motion Matching 2602.15827): AMP·tracking을 **FM 프라이어로 대체**하는 포지션.
 
-## 6. 상태 / 다음
-- 상태: **개념(research program)**, 코드 없음.
-- 다음: ① FM 잔차→divergence 상한 증명 스케치 ② toy(1D/2D 주기모션에서 FM-잔차 리워드가 AMP보다 안정·멀티모달 유지하는지) ③ 위상조건 RoPE flow 미니 구현.
+## 6. 검증 결과 (toy, numpy, `note:spectral-credit-stsa`)
+증명 스케치 핵심: **고정 에너지 리워드최대화는 $q$에 선형→모드붕괴. max-ent(soft) RL 필수** ($q^*\propto\exp(r/\alpha)$, $r=\log p$, $\alpha=1$ → $q^*=p_{data}$).
+3-모드 GMM toy(`src/toy_fm_vs_amp.py`):
+- **C1**: argmax=단일점 붕괴. soft α 0.05→1모드, α=1→목표가중 [0.6,0.3,0.1] 복원(H 0.82). 이론 확인.
+- **C2**: 비모수 FM 잔차 에너지 corr(logp)=**0.93**, 에너지 순서=가중치 순서 → 유효 밀도점수.
+- **C3**: 완전수렴 AMP corr 0.61 / 덜학습 AMP corr 0.54·std **0.07(불안정)** vs **FM 0.93·분산0** → FM 더 정확·안정.
+설계 함의: **PPO 리워드최대화 ✗ → soft/max-ent RL ✓**.
+
+## 7. Style/Content Loss 접목 (교수님 질문: 도움 되나 → 됨)
+- CONTENT = 위상 민감 목표(과제 추종) / STYLE = 시간축 피처 **Gram = 자기상관 ↔(Wiener–Khinchin) 파워스펙트럼(PSD)** = 위상 불변 리듬 텍스처.
+- 세 분포매칭 축 상보: **AMP(적대·불안정) / FM(생성·안정) / Gram-PSD(모멘트·싸고 비적대·타이밍불변)**. Gram은 2차 통계라 고차는 FM 병용.
+- 리워드: $r=r_{task}(\text{content})+\beta\,r^{FM}_{style}-\gamma\|\text{PSD}_\pi-\text{PSD}_{data}\|$.
+- → **CONTENT=위상(RoPE) / STYLE=PSD(Gram) / 분포=FM** 로 리듬·flow를 스펙트럴 분해. [[스펙트럼 기억]] #28과 같은 언어.
+
+## 8. 다음
+위상조건 RoPE flow 미니 구현 · FM 잔차→f-divergence 상한 엄밀 증명 · PSD 스타일 항 toy.
