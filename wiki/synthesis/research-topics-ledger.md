@@ -114,7 +114,9 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 선행: Flow Policy Gradients(2602.02481,휴머노이드+sim2real)·VITA·CoLA-Flow·π0 / RoPECraft(2505.13344 RoPE위상+FM)·MotionHiFlow(CVPR26 Joint RoPE)·AV-Link(박자동기). 🟢 **빈 땅**: RoPE를 리듬위상으로+FM을 물리제어 프라이어로=리워드없는 emergent 리듬·flow(현 RoPE+FM은 전부 kinematic 생성).
     - **심화(b) FM 프라이어=스타일 리워드**: $r^{style}(x,\phi)=-\mathbb E_{t,x_0}\|v_\theta(x_t,t;\phi)-(x-x_0)\|^2$. AMP 판별자의 **비적대적·멀티모달 보존** 대체(고정 목표, GAN 불안정 없음). 위상조건으로 박자 강제.
     - 열린 정리: FM 잔차 최소화 ⟺ $p_\pi\to p_{data}$ 수렴(GAIL식 divergence 상한) 증명 · 위상정합 · closed-loop RL 결합 · 리워드해킹.
-    - 연결: [[스펙트럼 기억]](#28)(RoPE=복소SSM $e^{(-\alpha+j\omega)t}$ 어텐션판) · [[STSA]](#32)(강인 업데이트) · 파쿠르 SOTA(AMP/tracking을 FM으로 대체)
+    - ✅ **toy 검증**(note:spectral-credit-stsa): C1 리워드최대화=붕괴/α=1 soft=분포복원, C2 FM잔차 에너지 corr(logp)=0.93, C3 FM(분산0)이 AMP(덜학습 std 0.07)보다 정확·안정. **설계: soft/max-ent RL 필수**.
+    - **style/content 접목**: CONTENT=위상(RoPE)/STYLE=Gram=자기상관↔PSD(Wiener-Khinchin, 위상불변 리듬)/분포=FM → 리듬·flow 스펙트럴 3분해.
+    - 연결: [[스펙트럼 기억]](#28)(RoPE=복소SSM $e^{(-\alpha+j\omega)t}$ 어텐션판 · Gram=PSD) · [[STSA]](#32)(강인 업데이트) · 파쿠르 SOTA(AMP/tracking을 FM으로 대체)
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa** 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
