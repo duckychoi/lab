@@ -108,6 +108,14 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 난제: 보상 지연·노이즈(신용할당) · 행동공간 폭발(계층/MoE) · 스트리밍 비정상성(→STSA).
     - 연결: [[피처맵 보호]](#31)(큐레이션↔보호 쌍) · [[STSA]](#32)(비정상 강인 엔진) · 합승통신 MoE(#30) · 신용할당 스레드(피처축 RUDDER/HCA) · 온디바이스 비용항(#20-22)
 
+### N. 모션 리워드·위상-분포 (신규 2026-11)
+34. **Phase-RoPE × Flow-Matching 모션 프라이어** (교수님: 모션=위상+분포 → 리워드 설계 말고) → [[phase-rope-flowmatching-motion-reward]]
+    - 매핑: **RoPE=회전 위상**($e^{i\omega_i t}$, 다중주파수=리듬 기저) · **flow matching=모션 분포 생성**(속도장 $v_\theta$). 두 키워드 1:1.
+    - 선행: Flow Policy Gradients(2602.02481,휴머노이드+sim2real)·VITA·CoLA-Flow·π0 / RoPECraft(2505.13344 RoPE위상+FM)·MotionHiFlow(CVPR26 Joint RoPE)·AV-Link(박자동기). 🟢 **빈 땅**: RoPE를 리듬위상으로+FM을 물리제어 프라이어로=리워드없는 emergent 리듬·flow(현 RoPE+FM은 전부 kinematic 생성).
+    - **심화(b) FM 프라이어=스타일 리워드**: $r^{style}(x,\phi)=-\mathbb E_{t,x_0}\|v_\theta(x_t,t;\phi)-(x-x_0)\|^2$. AMP 판별자의 **비적대적·멀티모달 보존** 대체(고정 목표, GAN 불안정 없음). 위상조건으로 박자 강제.
+    - 열린 정리: FM 잔차 최소화 ⟺ $p_\pi\to p_{data}$ 수렴(GAIL식 divergence 상한) 증명 · 위상정합 · closed-loop RL 결합 · 리워드해킹.
+    - 연결: [[스펙트럼 기억]](#28)(RoPE=복소SSM $e^{(-\alpha+j\omega)t}$ 어텐션판) · [[STSA]](#32)(강인 업데이트) · 파쿠르 SOTA(AMP/tracking을 FM으로 대체)
+
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa** 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
 
