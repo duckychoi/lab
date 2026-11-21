@@ -93,7 +93,8 @@ for each step:
 **바이어스-분산 분해**: $\mathcal R(q)=B(q)+C(q)$. $B(q)=\mathbb E_t\mathbb E\|v^*-u_q\|^2$ (바이어스), $=0\iff q=p_{data}$ (proper). $C(q)$=기약 결합분산.
 **상한**: $\sigma{>}0$ 확률보간에서 Girsanov+데이터처리로 $\mathrm{KL}(q\|p_{data})\le\frac{1}{2\sigma^2}B(q)$; $\sigma{=}0$이면 연속방정식 안정성으로 $W_2^2\lesssim B(q)$. → FM 잔차 리워드 최대화(+max-ent)가 분포매칭.
 **수치검증**(`toy_fm_divergence.py`): base(KL=0) 잔차 최소(proper 확인), **Spearman corr(R,KL)=0.73**(단조·방향). 큰 shift 비단조는 비모수 $v^*$ OOD 열화(artifact).
-**미완(§4)**: $C(q)$ 상수화(rectified/OT 결합)·주변불일치 봉합·$v^*$ 실현오차.
+**미완(§4)**: 주변불일치 봉합·$v^*$ 실현오차.
+**§4.1 C 축소 시도 — 음성결과**(`toy_rectified_coupling.py`): OT결합이 데이터 경로 직선화(CFM잔차 4.36→0.82)하나 **독립 eval서 결합불일치로 corr 0.77→0.25 역효과**. 교훈: C 축소엔 **train/eval 결합 일관성** 필수 or **가능도/점수매칭형 리워드**(C floor 없음)가 더 유망.
 
 ## 10. 다음 (torch 필요)
 soft-RL(SAC)+FM리워드 실제 모션 파이프라인 · RoPE-flow NN 학습(sharp 생성) · 위상 $\phi$ 접촉동기.
