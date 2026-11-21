@@ -85,5 +85,9 @@ for each step:
 - 리워드: $r=r_{task}(\text{content})+\beta\,r^{FM}_{style}-\gamma\|\text{PSD}_\pi-\text{PSD}_{data}\|$.
 - → **CONTENT=위상(RoPE) / STYLE=PSD(Gram) / 분포=FM** 로 리듬·flow를 스펙트럴 분해. [[스펙트럼 기억]] #28과 같은 언어.
 
-## 8. 다음
-위상조건 RoPE flow 미니 구현 · FM 잔차→f-divergence 상한 엄밀 증명 · PSD 스타일 항 toy.
+## 8. 추가 검증 ✅ (note:spectral-credit-stsa)
+- **PSD 스타일 toy**(`toy_psd_style.py`): 같은 리듬·다른 위상 → per-frame L2 0.002→2.08 폭발, **PSD거리 0 유지**(위상불변); PSD가 리듬 판별; content는 per-frame만. **Wiener–Khinchin 수치확인 오차 2.84e-14**(Gram=PSD 쌍).
+- **RoPE 위상조건 flow 생성 toy**(`toy_rope_phase_flow.py`): 링(순환 위상)에서 비모수 조건 flow. **무조건 κ=0 각도오차 1.63rad(명령 무시) → RoPE조건 κ=8 0.33rad(추종)**, 반경 2.07(링 위). RoPE 위상조건이 생성 리듬 위상 제어 실증(비모수라 coarse, NN이면 sharp).
+
+## 9. 다음 (미완)
+FM 잔차→f-divergence 상한 엄밀 증명 · 위상 $\phi$ 접촉동기 · soft-RL(SAC)+FM리워드 실제 모션 파이프라인 · torch로 RoPE-flow NN 학습(sharp 생성).
