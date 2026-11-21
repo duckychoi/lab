@@ -31,7 +31,8 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
 ### B. 생성모델·디퓨전·스펙트럴
 12. 스펙트럴 편향(F-principle)·Fourier features
 13. Diffusion = spectral autoregression / 주파수영역 디퓨전(DCTdiff·blurring)
-14. **스펙트럴 디퓨전 × 빔스페이스** — 빔포밍 생성 사전확률(블루오션)
+14. **스펙트럴 디퓨전 × 빔스페이스** — 빔포밍 생성 사전확률(블루오션) → [[spectral-diffusion-beamspace]]
+    - ✅ toy(note:spectral-diffusion-beamspace): 매니폴드 유효차원 10/16. **(A) 게인제약 ill-posed→선형사전 실패**(-7 vs 매칭 -13dB, 방향 위상 비선형). **(B) inpainting→사전 유효**(k=8 -8.6 vs 영채움 -5.8dB). 결론: **선형 한계=비선형 스펙트럴 디퓨전 당위**.
 
 ### C. Neural Operators
 15. Neural operators (FNO, DeepONet) — ViT/연산자 릴스 연계
