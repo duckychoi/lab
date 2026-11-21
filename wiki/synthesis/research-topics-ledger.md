@@ -114,7 +114,8 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 선행: Flow Policy Gradients(2602.02481,휴머노이드+sim2real)·VITA·CoLA-Flow·π0 / RoPECraft(2505.13344 RoPE위상+FM)·MotionHiFlow(CVPR26 Joint RoPE)·AV-Link(박자동기). 🟢 **빈 땅**: RoPE를 리듬위상으로+FM을 물리제어 프라이어로=리워드없는 emergent 리듬·flow(현 RoPE+FM은 전부 kinematic 생성).
     - **심화(b) FM 프라이어=스타일 리워드**: $r^{style}(x,\phi)=-\mathbb E_{t,x_0}\|v_\theta(x_t,t;\phi)-(x-x_0)\|^2$. AMP 판별자의 **비적대적·멀티모달 보존** 대체(고정 목표, GAN 불안정 없음). 위상조건으로 박자 강제.
     - 열린 정리: FM 잔차 최소화 ⟺ $p_\pi\to p_{data}$ 수렴(GAIL식 divergence 상한) 증명 · 위상정합 · closed-loop RL 결합 · 리워드해킹.
-    - ✅ **toy 검증**(note:spectral-credit-stsa): C1 리워드최대화=붕괴/α=1 soft=분포복원, C2 FM잔차 에너지 corr(logp)=0.93, C3 FM(분산0)이 AMP(덜학습 std 0.07)보다 정확·안정. **설계: soft/max-ent RL 필수**.
+    - ✅ **toy 검증**(note:spectral-credit-stsa): C1 리워드최대화=붕괴/α=1 soft=분포복원, C2 FM잔차 에너지 corr(logp)=0.93, C3 FM(분산0)이 AMP(덜학습 std 0.07)보다 정확·안정. **설계: soft/max-ent RL 필수**. + PSD 스타일(위상불변 리듬, Wiener-Khinchin 2.8e-14) + RoPE 위상조건 생성(각도오차 1.63→0.33rad).
+    - ✅ **정리**(docs/05): 잔차 $\mathcal R=B(q)+C(q)$, $B{=}0\!\iff\!q{=}p_{data}$(proper), **KL$\le B/2\sigma^2$**(Girsanov)·$\sigma{=}0$이면 $W_2^2\lesssim B$. 수치: base=잔차최소, corr(R,KL)=0.73. 미완: $C(q)$ 상수화·주변불일치·실현오차.
     - **style/content 접목**: CONTENT=위상(RoPE)/STYLE=Gram=자기상관↔PSD(Wiener-Khinchin, 위상불변 리듬)/분포=FM → 리듬·flow 스펙트럴 3분해.
     - 연결: [[스펙트럼 기억]](#28)(RoPE=복소SSM $e^{(-\alpha+j\omega)t}$ 어텐션판 · Gram=PSD) · [[STSA]](#32)(강인 업데이트) · 파쿠르 SOTA(AMP/tracking을 FM으로 대체)
 

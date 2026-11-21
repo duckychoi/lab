@@ -89,5 +89,11 @@ for each step:
 - **PSD 스타일 toy**(`toy_psd_style.py`): 같은 리듬·다른 위상 → per-frame L2 0.002→2.08 폭발, **PSD거리 0 유지**(위상불변); PSD가 리듬 판별; content는 per-frame만. **Wiener–Khinchin 수치확인 오차 2.84e-14**(Gram=PSD 쌍).
 - **RoPE 위상조건 flow 생성 toy**(`toy_rope_phase_flow.py`): 링(순환 위상)에서 비모수 조건 flow. **무조건 κ=0 각도오차 1.63rad(명령 무시) → RoPE조건 κ=8 0.33rad(추종)**, 반경 2.07(링 위). RoPE 위상조건이 생성 리듬 위상 제어 실증(비모수라 coarse, NN이면 sharp).
 
-## 9. 다음 (미완)
-FM 잔차→f-divergence 상한 엄밀 증명 · 위상 $\phi$ 접촉동기 · soft-RL(SAC)+FM리워드 실제 모션 파이프라인 · torch로 RoPE-flow NN 학습(sharp 생성).
+## 9. 정리 — FM 잔차가 divergence를 상한 ✅ (docs/05)
+**바이어스-분산 분해**: $\mathcal R(q)=B(q)+C(q)$. $B(q)=\mathbb E_t\mathbb E\|v^*-u_q\|^2$ (바이어스), $=0\iff q=p_{data}$ (proper). $C(q)$=기약 결합분산.
+**상한**: $\sigma{>}0$ 확률보간에서 Girsanov+데이터처리로 $\mathrm{KL}(q\|p_{data})\le\frac{1}{2\sigma^2}B(q)$; $\sigma{=}0$이면 연속방정식 안정성으로 $W_2^2\lesssim B(q)$. → FM 잔차 리워드 최대화(+max-ent)가 분포매칭.
+**수치검증**(`toy_fm_divergence.py`): base(KL=0) 잔차 최소(proper 확인), **Spearman corr(R,KL)=0.73**(단조·방향). 큰 shift 비단조는 비모수 $v^*$ OOD 열화(artifact).
+**미완(§4)**: $C(q)$ 상수화(rectified/OT 결합)·주변불일치 봉합·$v^*$ 실현오차.
+
+## 10. 다음 (torch 필요)
+soft-RL(SAC)+FM리워드 실제 모션 파이프라인 · RoPE-flow NN 학습(sharp 생성) · 위상 $\phi$ 접촉동기.
