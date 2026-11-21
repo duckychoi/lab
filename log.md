@@ -5811,3 +5811,16 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 3. 자율 개선 실험 채택 기준에 재실행 분산 추가
 
 <!-- logged at 2026-11-19 09:11:40 -->
+
+## [2026-11-21] query | **와서스타인-SMC 생성수송 연구 심화** (텔레그램 — FM·확산의 ODE/PDE 전개를 입자필터로 대체) · ledger #35
+
+- **도메인**: 생성모델×추정이론 (B섹션 신설 전 잠정 — 🅰 L섹션 #32 계열)
+- **대화 흐름**: 칼만 갱신식 $x{+}K(z{-}Hx)$ ↔ TD $V{+}\alpha\delta$ 유사성 질문(#32 재확인) → RL 칼만식 알고리즘 존재 확인(DreamerV3·TD-MPC2·GRPO·DSAC-T) → "더 강한 골격 제안 가능?" → **PF로 GS 추적**(KF-GS→PF 치환) → **PF로 생성수송 대체** → 2안(와서스타인-SMC) 심화 선택
+- **추가 페이지**: 1개 ([[wasserstein-smc-generative-transport]], ledger #35) | **업데이트 페이지**: 1개 ([[research-topics-ledger]] L섹션 #35)
+- **핵심 인사이트**: ODE 전개는 보정항이 0인 예측 전용 골격이다 — 리샘플링을 얹으면 "예측-보정"으로 바뀌는데, 고치는 대상이 가중치 퇴화가 아니라 twist(중간분포 추정)와의 괴리라는 점이 조건부 SMC(FKC 계열)와 정반대다. W2를 고른 이유는 미학이 아니라 오차 합성(삼각부등식)이다.
+- **검색 검증**: FKC(ICML25)·Discrete FKC·GFKC·TDS·MCGdiff·PF-latent-diffusion 확인 — 무조건 생성 ODE 대체는 미존재. "Particle Filters and Flows" 제목 충돌 의심 → 원문 확인 전 실험 금지 규약 자설.
+- **canvas 업데이트**: NO (개념 1건 — 도메인 canvas는 B섹션 신설 시 일괄)
+- **actionable 추가**: NO (toy 액션은 노트 §9 내부 유지)
+- **미해결**: "Particle Filters and Flows" 원문 미확인 · toy 미실시 · B섹션(🅱) 신설·교차링크 미정
+
+<!-- logged at 2026-11-21 -->

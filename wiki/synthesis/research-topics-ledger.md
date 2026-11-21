@@ -100,6 +100,13 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - ⚠️ 정직: 결정론 백본만 엄밀, 확률 확장은 출판가능 연구 프로그램(증명 미완).
     - 연결: [[슈퍼트위스팅/슬라이딩모드 × 빔포밍]](#7) · sliding-as-optimization(#9) · 물리STW 개구(#8)=물리/학습 twist 쌍 · 탐험·활용·신용할당 스레드
 
+35. **Wasserstein-SMC 생성수송** (텔레그램: FM·확산의 ODE/PDE 전개를 입자필터로 대체 제안) → [[wasserstein-smc-generative-transport]]
+    - 관찰: ODE 전개 = **보정항이 0인 예측 전용 골격** — #32 골격("새 추정 = 옛 추정 + 게인×오차")의 오차항 결손. 제안: 시간축 Feynman–Kac(SMC)로 전파+보정(가중치·리샘플).
+    - 형식화: twist $\psi_t\approx\log\tilde p_t$(중간 주변분포 학습) · ESS-적응 스텝(NFE 절약) · **OT-리샘플**(와서스타인 바리센터).
+    - 이론 타깃: $W_2(\hat\mu_K,p_1)\le$ 전파항+twist괴리항+리샘플분산 — **W2 삼각부등식으로 오차 합성**(KL은 metric 아님 → 합성 불가가 W2 선택 근거). 조악한 스텝 레짐에서 SMC 항이 지배하는 경계조건이 증명 본체.
+    - 선행: FKC(ICML25)·TDS·MCGdiff — 전부 조건부/스티어링. 🟢 **빈 땅: 무조건 생성의 ODE 적분기 교체 + W2 오차 정리 + OT-리샘플**. ⚠️ "Particle Filters and Flows" 원문 확인 필수(제목 정면 충돌 의심).
+    - 연결: [[STSA]](#32)(같은 필터골격 RL판) · [[phase-rope-flowmatching-motion-reward]](#34)(W2 bound 근거) · 동적 3DGS-PF 아이디어(제3응용, 역이식 후보)
+
 ### M. 표현학습·자기개선 피처 (신규 2026-11)
 33. **RL 자기개선 피처 큐레이션** (교수님 아이디어: 큐에 raw data → 능동 획득·정렬·변환) → [[rl-self-curating-features]]
     - 분해 매핑: **능동획득=AFA**(AISTATS2025 CS-HPPO·survey 2502.11067) · **조정=RL 피처변환/생성**(group-wise 2501.10555·MARL 2504.17355·2511.21934) · **정렬=RL 피처선택** · **큐=스트리밍/OSFS**
