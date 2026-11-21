@@ -129,7 +129,7 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
 ### O. 생성모델 샘플링·추론 (신규 2026-11)
 35. **Particle-Filter 생성 플로우 — 확산/flow ODE를 PF로 대체** (교수님 아이디어) → [[pf-generative-flow]]
     - gap 확정: FKC(2503.02819)·SURGE·Wu2023 전부 **조건부/템퍼링**, 무조건 ODE 대체·NFE가속·오차한계는 미존재.
-    - ✅ toy(note:pf-generative-flow): 예측–보정(알려진 $p_t$ 가중)–리샘플. **N=3 SMC 에너지거리 0.022 vs Euler 0.108(5배↓)**, 저 NFE 압승. N≥8 경로퇴화 열화(크로스오버 N≈6~8), naive 어닐 실패.
+    - ✅ toy(note:pf-generative-flow): 예측–보정(알려진 $p_t$ 가중)–리샘플. **N=3 에너지거리 0.022 vs Euler 0.108(5배↓)** 저 NFE 압승. 순수 SMC는 N≥8 경로퇴화 열화 → **✅ rejuvenation(ULA move)이 봉합: N=5 0.0039 vs 0.052(13배↓), N=20 0.085→0.014 복구**. naive 어닐 실패.
     - 오차바운드: Euler $W_2{=}O(h)$ vs SMC $\le C_1/\sqrt K{+}C_2\epsilon_{score}$(h 1차항 없음). depth↔width 교환. rejuvenation으로 $\epsilon_{res}$ 억제가 핵심.
     - 각도: ESS-적응 SMC 생성기(메인)·Wasserstein SMC·compute 배분. (주: sliding/STW와 독립.)
 

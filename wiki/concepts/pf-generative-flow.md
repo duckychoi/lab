@@ -18,8 +18,8 @@ status: research-program (toy 검증)
 
 ## 2. 핵심 가설 & toy (note:pf-generative-flow)
 예측(조악 스텝)–보정(알려진 $p_t$로 가중)–리샘플 → 저 NFE 이산화 바이어스 교정.
-폐형 GMM 플로우: **N=3 SMC 에너지거리 0.022 vs Euler 0.108(5배↓), N=5 0.012 vs 0.055** → 저 NFE PF 압승. **N≥8 경로퇴화로 열화(크로스오버 N≈6~8)**. naive 노이즈어닐 실패(가중퇴화).
-→ **PF-flow=few-step 영역 방법**; 고 NFE엔 rejuvenation·stratified 리샘플 필수.
+폐형 GMM 플로우: N=3 SMC 에너지거리 0.022 vs Euler 0.108(5배↓) → 저 NFE PF 압승. 순수 SMC는 N≥8 경로퇴화로 열화.
+**✅ rejuvenation(알려진 $p_t$ score ULA move)이 해결**: **N=5 SMC+rej 0.0039 vs Euler 0.052(13배↓)**, **N=20 순수SMC 0.085(붕괴)→SMC+rej 0.014(≈Euler 복구)**. → rejuvenation이 핵심 enabling 기법(저 NFE 압도+고 NFE 안정) 실증. naive 노이즈어닐은 실패(가중퇴화).
 
 ## 3. 오차바운드 스케치 (핵심 기여)
 Euler $\mathcal W_2=O(h)$(이산화 바이어스, 교정불가) vs SMC $\le C_1/\sqrt K+C_2\epsilon_{score}$ ($h$ 1차항 없음 — 매 스텝 가중이 주변 교정). **depth(순차 NFE)↔width(병렬 K) 교환.** 도구: Del Moral SMC 전파오차·Banach 수축. ⚠️ $\epsilon_{res}$(경로퇴화)가 $N$ 누적 → rejuvenation으로 억제가 보조정리.
