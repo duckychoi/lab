@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>비디오 생성 모델 만드는 법 — 튜토리얼</title>
+<style>
+  :root{--bg:#0e1116;--card:#161b22;--line:#2a3340;--fg:#e6edf3;--mut:#9aa7b4;--acc:#58d6a0;--acc2:#6ea8fe;--warn:#f0b84a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.65}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 20px 80px}
+  h1{font-size:1.9rem;margin:0 0 4px}
+  .sub{color:var(--mut);margin-bottom:28px}
+  h2{font-size:1.3rem;margin:34px 0 10px;border-left:4px solid var(--acc);padding-left:10px}
+  h3{font-size:1.05rem;margin:18px 0 6px;color:var(--acc2)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+  code{background:#0b0f14;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--acc);font-size:.9em}
+  .pipe{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}
+  .step{background:#0b0f14;border:1px solid var(--line);border-radius:10px;padding:10px 12px;flex:1;min-width:140px}
+  .step b{color:var(--acc)}
+  .arrow{color:var(--mut);font-size:1.3rem}
+  .mut{color:var(--mut)}
+  .tag{display:inline-block;background:#0b0f14;border:1px solid var(--line);border-radius:20px;padding:2px 10px;font-size:.78rem;color:var(--acc2);margin:2px}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.92rem}
+  td,th{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#0b0f14;color:var(--acc)}
+  .warn{border-color:var(--warn)}
+  .warn h3{color:var(--warn)}
+  .foot{color:var(--mut);font-size:.82rem;margin-top:40px;border-top:1px solid var(--line);padding-top:14px}
+  .kbd{color:var(--warn)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🎬 비디오 생성 모델, 어떻게 만드나</h1>
+  <div class="sub">데이터 → VAE → DiT → RLHF → 증류. 그리고 "일관성"의 비밀 + 디퓨전 vs 플로우 + 이해모델·JEPA 대비. <span class="mut">(Fryday 연구노트)</span></div>
+
+  <h2>1. 전체 파이프라인 (공통 레시피)</h2>
+  <div class="pipe">
+    <div class="step"><b>① 데이터</b><br><span class="mut">영상-캡션 수억 쌍, 필터·리캡션</span></div>
+    <span class="arrow">→</span>
+    <div class="step"><b>② Video VAE</b><br><span class="mut">3D 인과적 압축(시공간 latent)</span></div>
+    <span class="arrow">→</span>
+    <div class="step"><b>③ DiT</b><br><span class="mut">시공간 트랜스포머, diffusion/flow 학습</span></div>
+    <span class="arrow">→</span>
+    <div class="step"><b>④ 튜닝</b><br><span class="mut">선호도/RLHF, 미학·정합</span></div>
+    <span class="arrow">→</span>
+    <div class="step"><b>⑤ 증류</b><br><span class="mut">소수 스텝 가속(1~4 NFE)</span></div>
+  </div>
+  <div class="card">
+    <h3>각 단계가 하는 일</h3>
+    <b>② Video VAE</b> — 원본 프레임(무거움)을 <code>시공간 latent</code>로 압축(예: 8×8×4배). 여기서 <b>시간을 latent에 접음</b> → 생성·연산이 싸짐.<br>
+    <b>③ DiT(Diffusion Transformer)</b> — latent 노이즈를 점점 깨끗이(디퓨전) 또는 노이즈→데이터로 직선 수송(플로우). <b>시공간 어텐션</b>으로 전 프레임을 한꺼번에 생성.<br>
+    <b>④ 튜닝</b> — 사람이 고른 "더 좋은 영상"으로 선호 학습(보기·정합·안전).<br>
+    <b>⑤ 증류</b> — 수십 스텝 샘플링을 <b>1~4스텝</b>으로 줄여 실시간화(consistency/rectified flow).
+  </div>
+
+  <h2>2. "일관성"의 비밀 — 5개 기술</h2>
+  <p class="mut">프레임이 안 튀고(물체 영속성·시간 일관성) 자연스러운 이유. <b>①②③⑤는 현대 비디오 DiT의 거의 공통 기본기, ④만 선택지가 갈림.</b></p>
+  <table>
+    <tr><th>기술</th><th>하는 일</th><th>공통성</th></tr>
+    <tr><td>① 시공간(3D) 어텐션</td><td>프레임 따로 아님 — 클립 전체 시공간 토큰을 한 번에 어텐션 → 일관성</td><td>거의 공통</td></tr>
+    <tr><td>② 3D VAE latent</td><td>시간축까지 압축, latent이 시간구조를 내장</td><td>거의 공통</td></tr>
+    <tr><td>③ 동시 denoising</td><td>전 프레임 동시 생성(순차 아님) → 전역 일관성</td><td>거의 공통</td></tr>
+    <tr><td>④ 시간 RoPE(회전 위상)</td><td>프레임 순서·주기 부여</td><td><span class="kbd">변수</span> (RoPE/학습형/정현파)</td></tr>
+    <tr><td>⑤ 데이터 스케일</td><td>물리(중력·관성·영속성)를 <b>통계적으로</b> 흡수</td><td>공통</td></tr>
+  </table>
+  <div class="card warn">
+    <h3>⚠️ 핵심 한계</h3>
+    이건 <b>진짜 물리엔진이 아니라 "통계적 암묵 세계모델"</b>이에요. 중력·충돌을 법칙으로 아는 게 아니라 수많은 영상에서 눈치로 익힘 → <b>물컵이 사라지거나 다리가 꼬이는</b> 실패. 이 "암묵 물리를 더 정확히"가 열린 연구(물리정보 손실·명시 3D·월드모델·<b>물리 potential SMC</b>).
+  </div>
+
+  <h2>3. Diffusion vs Flow Matching</h2>
+  <table>
+    <tr><th></th><th>Diffusion</th><th>Flow Matching (rectified flow)</th></tr>
+    <tr><td>원리</td><td>노이즈를 점진적으로 제거(SDE)</td><td>노이즈→데이터로 <b>직선 속도장</b> 수송(ODE)</td></tr>
+    <tr><td>샘플링</td><td>스텝 많음(느림)</td><td><b>경로 직선 → 적은 스텝(빠름)</b></td></tr>
+    <tr><td>학습</td><td>노이즈 스케줄 민감</td><td>단순·안정</td></tr>
+    <tr><td>백본</td><td colspan="2" style="text-align:center">같은 DiT — <b>목적함수만 다름</b></td></tr>
+  </table>
+  <p>최근 SOTA 다수가 <b>flow matching</b>으로 이동: <span class="tag">Meta Movie Gen</span><span class="tag">Wan</span><span class="tag">SD3/FLUX(이미지)</span>. 이유는 <b>적은 NFE(빠름)+안정성</b>. 품질은 좋은 샘플러 쓴 diffusion과 비등.</p>
+  <p class="mut">※ Diffusion 계보 예: Hailuo(MiniMax)는 "Noise-aware Compute Redistribution" = 디퓨전 노이즈 기반. 상용모델(Kling·Hailuo)은 정식 리포트 미공개가 많아 목적함수 단정 어려움.</p>
+
+  <h2>4. 생성 vs 이해 — 방향이 반대</h2>
+  <div class="card">
+    <b>생성(비디오 gen)</b>: (프롬프트) → 디퓨전/플로우 → <b>VAE 디코더로 픽셀 OUT</b> &nbsp;<span class="mut">"그린다"</span><br>
+    <b>이해(Video-LM)</b>: 프레임 → <b>비전 인코더(CLIP/ViT)로 토큰 IN</b> → LLM → 텍스트 &nbsp;<span class="mut">"읽는다"</span><br>
+    <span class="mut">인코더(CLIP)=이해쪽, 디코더(VAE)+디퓨전=생성쪽. SOTA 이해모델: Gemini 3 Pro / 오픈 Qwen3-VL·InternVL3.</span>
+  </div>
+
+  <h2>5. 다른 노선 — 르쿤의 JEPA (생성 안 함)</h2>
+  <div class="card">
+    르쿤은 <b>픽셀 생성에 반대</b>. <b>JEPA</b>=다음 <b>latent 임베딩(표현공간)</b>을 예측(픽셀 디테일 낭비 X). <b>V-JEPA 2 / LeWorldModel / LeJEPA</b>.<br>
+    대비: <span class="mut">Sora/디퓨전=픽셀 예측(보기 좋음·무거움·물리 불완전) ↔ JEPA=추상 상태 예측(생성 X·행동/계획에 효율·강건).</span>
+  </div>
+
+  <h2>6. 🟢 우리 연구와 맞닿는 지점</h2>
+  <div class="card">
+    <b>#35 PF 생성</b>: 확산 ODE를 파티클 필터로 대체(저 NFE 가속).<br>
+    <b>#36 물리-potential SMC</b>: 사후 ∝ <b>생성(통계 prior)</b> × <b>exp(−λ·물리에너지)</b>. 생성모델=제안, 물리=가중치, 리샘플=곱 강제 → <b>재학습 없이 추론때 물리 주입</b>.<br>
+    <b>#34 모션 flow</b>·<b>#25 JEPA 월드모델</b>·<b>#28 스펙트럼 위상(RoPE)</b> 과 연결.
+  </div>
+
+  <div class="foot">
+    Fryday 연구노트 · 비디오 생성 파이프라인 튜토리얼 · 상용모델 세부는 리포트 미공개 다수(단정 주의). 관련 코드: note 레포 <code>pf-generative-flow</code>, <code>spectral-memory-fhrr</code> 등.
+  </div>
+</div>
+</body>
+</html>

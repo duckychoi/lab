@@ -135,6 +135,10 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - ✅ toy(note:pf-generative-flow): 예측–보정(알려진 $p_t$ 가중)–리샘플. **N=3 에너지거리 0.022 vs Euler 0.108(5배↓)** 저 NFE 압승. 순수 SMC는 N≥8 경로퇴화 열화 → **✅ rejuvenation(ULA move)이 봉합: N=5 0.0039 vs 0.052(13배↓), N=20 0.085→0.014 복구**. naive 어닐 실패.
     - 오차바운드: Euler $W_2{=}O(h)$ vs SMC $\le C_1/\sqrt K{+}C_2\epsilon_{score}$(h 1차항 없음). depth↔width 교환. rejuvenation으로 $\epsilon_{res}$ 억제가 핵심.
     - 각도: ESS-적응 SMC 생성기(메인)·Wasserstein SMC·compute 배분. (주: sliding/STW와 독립.)
+36. **물리-potential SMC 생성 — 통계 prior × 물리 법칙 융합** (교수님 아이디어) → [[physics-potential-smc]]
+    - 사후 ∝ $p_\theta$(생성=통계)×$\exp(-\lambda E_{phys})$(물리). 생성=제안, 물리=가중치, 리샘플=곱강제. = #35 PF머신+물리 potential.
+    - ✅ toy(note:physics-smc-generation, 1D 중력): raw prior E=6.45 → 물리가이드 0.012/물리-SMC 0.041(참≈0), **다양성 보존**(std 0.27~0.29). 재학습 없이 추론때 통계+물리 융합 실증.
+    - 각도: 비디오 확장($x_0$-예측 디코드 후 물리가중)·물리 potential 설계·#35 rejuvenation. vs 르쿤 JEPA(생성X)=다른 노선. 튜토리얼: `html/video-gen-tutorial.html`.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa**(#28·#32·#34) · **pf-generative-flow**(#35) 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
