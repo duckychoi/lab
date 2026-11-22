@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연구 비전 #34–#38 — 개별 + 통합 서사</title>
+<style>
+  :root{--bg:#0e1116;--card:#161b22;--line:#2a3340;--fg:#e6edf3;--mut:#9aa7b4;--acc:#58d6a0;--acc2:#6ea8fe;--warn:#f0b84a;--pink:#e07aa8}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;line-height:1.62}
+  .wrap{max-width:960px;margin:0 auto;padding:30px 20px 90px}
+  h1{font-size:1.85rem;margin:0 0 4px}
+  .sub{color:var(--mut);margin-bottom:26px}
+  h2{font-size:1.15rem;margin:0}
+  .num{display:inline-block;background:var(--acc);color:#07140d;font-weight:700;border-radius:8px;padding:1px 9px;margin-right:8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
+  .card .row{margin:7px 0}
+  .lab{color:var(--acc2);font-weight:600;margin-right:6px}
+  code{background:#0b0f14;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:var(--acc);font-size:.88em}
+  .res{background:#0b0f14;border-left:3px solid var(--acc);border-radius:0 8px 8px 0;padding:8px 12px;margin:8px 0;font-size:.92rem}
+  .status{font-size:.82rem;color:var(--mut)}
+  .pill{display:inline-block;background:#0b0f14;border:1px solid var(--line);border-radius:20px;padding:1px 10px;font-size:.74rem;color:var(--pink);margin:2px 2px 0 0}
+  .scn{background:linear-gradient(180deg,#14201a,#121821);border:1px solid var(--acc)}
+  .scn h2{color:var(--acc)}
+  .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0;font-size:.9rem}
+  .node{background:#0b0f14;border:1px solid var(--line);border-radius:9px;padding:7px 10px}
+  .ar{color:var(--mut)}
+  .foot{color:var(--mut);font-size:.8rem;margin-top:36px;border-top:1px solid var(--line);padding-top:12px}
+  .axis{color:var(--warn)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧭 연구 비전 #34–#38</h1>
+  <div class="sub">각 주제는 <b>독립 연구</b>입니다(억지로 엮지 않음). 끝에 <b>통합 서사 시나리오</b>만 덧붙임. <span class="mut">Fryday 연구노트 · note 레포 브랜치별 코드</span></div>
+
+  <!-- 34 -->
+  <div class="card">
+    <h2><span class="num">34</span>Phase-RoPE × Flow-Matching 모션 리워드</h2>
+    <div class="row"><span class="lab">발단</span>모션은 무게중심·각도가 아니라 <b>리듬·연속 flow</b> — 이걸 <b>하나의 리워드로</b> 만들기 어렵다.</div>
+    <div class="row"><span class="lab">아이디어</span><b>RoPE(회전 위상)=리듬</b> + <b>Flow Matching(분포)=flow/스타일</b>. 리워드를 손으로 안 짜고 <b>FM 잔차 = 스타일 리워드</b>.</div>
+    <div class="res">FM 잔차 corr(logp)=<b>0.93</b> &gt; AMP(0.61·불안정) · <b>soft-RL 필수</b>(리워드최대화=붕괴) · PSD=위상불변 리듬(Wiener–Khinchin 2.8e-14) · RoPE 위상조건 생성 각도오차 1.63→<b>0.33</b> · FM잔차→KL 상한 정리(corr 0.73)</div>
+    <div class="status">상태: 이론+toy ✓ / 미완: f-divergence 완전증명·실제 모션 파이프라인(torch)</div>
+    <div><span class="pill">spectral-credit-stsa</span><span class="pill">위상+분포</span></div>
+  </div>
+
+  <!-- 35 -->
+  <div class="card">
+    <h2><span class="num">35</span>PF 생성 플로우 — 확산/flow ODE를 Particle Filter로 대체</h2>
+    <div class="row"><span class="lab">발단</span>생성 샘플링의 ODE/PDE 적분기를 <b>파티클 필터(SMC)</b>로 대체하면?</div>
+    <div class="row"><span class="lab">gap</span>FKC·SURGE 등은 <b>조건부·가속X·바운드X</b> → 무조건 ODE 대체는 미존재(빈 땅).</div>
+    <div class="res">저 NFE 압승: N=3 SMC 에너지거리 <b>5배↓</b> vs Euler · <b>rejuvenation(ULA)</b>으로 고 NFE 경로퇴화 봉합: N=5 <b>13배↓</b>, N=20 0.085→0.014 복구 · 바운드 Euler $O(h)$ vs SMC $C_1/\sqrt K$ (depth↔width)</div>
+    <div class="status">상태: toy+바운드 스케치 ✓ / 미완: rejuvenation $\epsilon_{res}$ 정리화</div>
+    <div><span class="pill">pf-generative-flow</span><span class="pill">샘플링·추론</span></div>
+  </div>
+
+  <!-- 36 -->
+  <div class="card">
+    <h2><span class="num">36</span>물리-potential SMC — 통계 prior × 물리 법칙 융합</h2>
+    <div class="row"><span class="lab">발단</span>생성모델의 <b>통계적 암묵 물리</b>에 물리를 <b>prior로 주입</b>(재학습 없이).</div>
+    <div class="row"><span class="lab">정식화</span>사후 ∝ <code>p_θ(생성)</code> × <code>exp(−λ·E_phys)</code>. 생성=제안, 물리=가중치, 리샘플=곱 강제.</div>
+    <div class="res">1D 중력: raw prior E_phys <b>6.45</b> → 물리가이드 <b>0.012</b> / 물리-SMC <b>0.041</b>(참≈0) · <b>다양성 보존</b>(초기속도 std 0.27~0.29, 한 궤적 붕괴 아님)</div>
+    <div class="status">상태: toy ✓ (Monday 교차리뷰: 위상 A/B/C 분해·PhysDiff=특수사례) / 미완: 비디오 확장($x_0$-예측 가중)</div>
+    <div><span class="pill">physics-smc-generation</span><span class="pill">물리정보</span></div>
+  </div>
+
+  <!-- 37 -->
+  <div class="card">
+    <h2><span class="num">37</span>생성형 JEPA — 표현공간에서 flow로 조건부 미래분포 예측</h2>
+    <div class="row"><span class="lab">발단</span>JEPA(표현예측)에 동의하되 <b>latent이 시공간에서 자유롭지 않아야</b> + <b>JEPA × flow matching 결합</b>.</div>
+    <div class="row"><span class="lab">논제</span>결정론 JEPA = 다봉 미래 <b>평균붕괴</b> → flow 예측기로 <b>조건부 미래 분포</b> 생성.</div>
+    <div class="res">분기미래 $z=c\pm2$: 결정론=전부 <b>갭(무효 붕괴)</b> · 생성형 flow=<b>좌·우 모드 복원</b>(0.35/0.40, 갭 0.01)</div>
+    <div class="status">상태: toy ✓ / 선행 Stochastic Latent JEPA(2611.09302), flow 버전 빈 땅 · 참고 Wan=DiT+Flow Matching</div>
+    <div><span class="pill">generative-jepa</span><span class="pill">표현학습</span></div>
+  </div>
+
+  <!-- 38 -->
+  <div class="card">
+    <h2><span class="num">38</span>LeWAM — LeWorldModel + Action + Flow Matching + RoPE</h2>
+    <div class="row"><span class="lab">LeWM 구조</span>인코더 CLS벡터 · 예측기(행동 AdaLN) · <b>결정론 MSE + SIGReg(latent→N(0,I))</b> · 학습형 PE · CEM 계획. 한계=다봉 평균·짧은 지평.</div>
+    <div class="row"><span class="lab">삽입점</span>① <b>Flow=예측기 MSE 교체</b> — 💎 <b>SIGReg가 latent을 N(0,I)로 만듦 = flow base 공짜(궁합 최적)</b>. ② <b>RoPE=시간축 PE</b> → 지평 외삽(짧은 지평 직격).</div>
+    <div class="res">행동조건부 분기: 결정론 a=0→갭붕괴 · flow a=−1→좌 0.82 / a=+1→우 0.81 / a=0→양쪽 → <b>행동이 미래 분포를 조절</b></div>
+    <div class="status">상태: 분석+toy ✓ / 기여: 가우시안 latent=native flow base · RoPE 지평 외삽</div>
+    <div><span class="pill">le-wam</span><span class="pill">세계모델</span></div>
+  </div>
+
+  <!-- 통합 서사 -->
+  <div class="card scn">
+    <h2>🧵 통합 서사 시나리오 (느슨한 연결)</h2>
+    <p style="margin:8px 0 4px">다섯 주제는 독립이지만, 돌아보니 <b>하나의 공통 축</b>으로 수렴합니다:</p>
+    <p class="axis" style="font-weight:700;margin:6px 0">"시공간 구조를 보존한 latent에서, 조건부 분포를 flow로 생성·교정한다."</p>
+    <div class="flow">
+      <span class="node">#35 flow를 PF로 생성</span><span class="ar">→</span>
+      <span class="node">#36 물리로 교정</span><span class="ar">→</span>
+      <span class="node">#34 리듬/flow 리워드</span><span class="ar">→</span>
+      <span class="node">#37 표현공간 생성예측</span><span class="ar">→</span>
+      <span class="node">#38 행동 세계모델</span>
+    </div>
+    <div class="row"><span class="lab">가로지르는 두 도구</span><b>위상(RoPE/복소SSM, #28·#34)</b> = 시공간 구조 · <b>PF/SMC(#35·#36)</b> = 분포 생성·교정.</div>
+    <div class="row"><span class="lab">한 문장 포지션</span>르쿤의 <b>JEPA(표현예측) 노선에 생성(flow)·위상(RoPE)·물리(SMC)를 심는 것</b>. 결정론·단일예측의 약점(다봉 붕괴·짧은 지평·물리 불완전)을 <b>조건부 분포 생성</b>으로 메움.</div>
+    <div class="row"><span class="lab">시나리오</span>① 생성형 JEPA(#37)를 행동조건부로(#38 LeWAM) → ② 예측기를 flow로, 시간축 RoPE로(지평·다봉) → ③ 롤아웃을 PF로 샘플링(#35) + 물리 potential로 교정(#36) → ④ 모션 리워드(#34)로 평가·계획. = <b>"생성·위상·물리를 심은 latent 세계모델"</b>.</div>
+    <div class="status">※ 통합은 "가능성 지도"일 뿐, 각 주제는 단독으로도 선다.</div>
+  </div>
+
+  <div class="foot">
+    코드: note 레포 브랜치 — <code>spectral-credit-stsa</code>(#34) · <code>pf-generative-flow</code>(#35) · <code>physics-smc-generation</code>(#36) · <code>generative-jepa</code>(#37) · <code>le-wam</code>(#38). 개념노트·원장: lab <code>wiki/</code>.
+  </div>
+</div>
+</body>
+</html>
