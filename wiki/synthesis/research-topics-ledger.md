@@ -153,6 +153,13 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa**(#28·#32·#34) · **pf-generative-flow**(#35) 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
 
+### O. 모방학습·분포 매칭 (신규 2026-11)
+39. **Occupancy-Matching 모방학습 — 궤적 추적 → 궤적 분포 매칭 리워드** (텔레그램: IL×RL 융합 제안) → [[occupancy-matching-imitation]]
+    - 발상의 이름 = 점유분포 매칭: GAIL(2016)→DICE/IQ-Learn→SMODICE→DM-IL(sliced-W 2023)→AMP(2021 전이분포 스타일 리워드)→2026 궤적수준 비적대·**리턴 분포 매칭**(리스크 감성, distributional RL의 IL 이식).
+    - #34가 이미 절반: FM 잔차 리워드=비적대 occupancy matching의 모션 스타일 특수사례 · §9 이론(KL≤B/2σ²·W2²≲B) 보유 · toy 완료(corr 0.93 vs AMP 불안정).
+    - 🟢 빈 땅: 비적대·판별자 없는 **전체 궤적** FM-잔차 occupancy matching + §9 상한의 occupancy bound 격상 + $r_{task}+\beta r^{FM}_{occ}$ 융합(물리성·다양성 파레토). ⚠️ "score-as-reward" 이웃 계열 확인 필요.
+    - 연결: #34(잔차 리워드 본가) · [[STSA]](#32)(max-ent 엔진) · #36(물리성 파레토) — "점 추정 대신 분포" 테마(IL판)의 세 번째 얼굴.
+
 ---
 
 ## 🅱 Monday 쪽 (텔레그램에서 거론 — Monday가 채워 넣기)

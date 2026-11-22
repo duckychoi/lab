@@ -5879,3 +5879,15 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 - **canvas 업데이트**: NO | **actionable 추가**: NO
 
 <!-- logged at 2026-11-22 -->
+
+## [2026-11-22] query | **IL×RL 융합(occupancy matching) 연구 심화 + 스타일/컨텐츠 loss 문헌 지도** · ledger #39 신설 · #34 갱신
+
+- **도메인**: 모방학습·분포 매칭(신규) + 모션 리워드
+- **대화 흐름**: "IL×RL 융합 — 궤적 추적 대신 궤적 분포 매칭, L2 대신 분포 매칭 리워드" 제안 → 문헌 지도(occupancy matching 계열 = GAIL→DICE→SMODICE→DM-IL→AMP→2026 리턴분포매칭) → **#34가 이미 절반**(FM 잔차=비적대 스타일 특수사례, §9 이론 보유) 판정 → 이어서 AMP·리턴분포매칭 쉬운 해설, 스타일/컨텐츠 loss 문헌 질문 두 건 답변 → 사용자: "둘 다 적절한 곳에 넣으라"
+- **배치 판정**: 스타일/컨텐츠 답변 → **#34 노트 §11** 문헌 지도로 병합(§7 본가와 직결) · IL 답변 → **신규 [[occupancy-matching-imitation]] 원장 #39**(모방학습·분포 매칭 신규 섹션 O)
+- **추가 페이지**: 1개(concepts) | **업데이트 페이지**: 3개(#34 노트 · 원장 · index)
+- **핵심 인사이트**: 제안된 IL 아이디어의 학술적 이름은 점유분포 매칭(10년 계열)이라 원형 그대로는 신규성 없음. 그러나 #34가 비적대 모션 스타일 특수사례+이론(KL≤B/2σ²)을 이미 보유 → **"전체 궤적 비적대 occupancy matching + §9 상한의 occupancy bound 격상"**이 빈 땅. AMP(전이 분포)·리턴 분포 매칭(결과 분포)은 "점 추정 대신 분포" 테마(#32→분포적 RL)의 IL판 두 얼굴.
+- **문헌 검증**: GAIL/DICE/IQ-Learn/SMODICE/DM-IL(sliced-W 2023)/AMP/2026 궤적수준·리턴분포매칭 확인. ⚠️ 미확인 잔여: "score-as-reward" 이웃 계열 1회 확인 필요(노트 §4 자기규약).
+- **canvas 업데이트**: NO | **actionable 추가**: NO
+
+<!-- logged at 2026-11-22 -->

@@ -98,3 +98,11 @@ for each step:
 
 ## 10. 다음 (torch 필요)
 soft-RL(SAC)+FM리워드 실제 모션 파이프라인 · RoPE-flow NN 학습(sharp 생성) · 위상 $\phi$ 접촉동기.
+
+## 11. 스타일/컨텐츠 loss 문헌 지도 (GLM, 2026-11-22 — 교수님 질문: "휴머노이드 학습에서 스타일·컨텐츠 loss 개념을 사용하나?")
+
+- **키네매틱 모션 그래픽 진영 — 용어 그대로, Gram loss가 표준**: 이미지 NST(Gatys)의 content+style(Gram) 구조가 모션으로 이식됨. `Fast Neural Style Transfer for Motion Data`(Gram→모션 최초 계열, 단 **content-style 강결합** 약점 지적) · **Style-ERD**(2022, 온라인 전이 — Gram이 스타일 표현 표준, reconstruction-only는 전이 불가 확인) · **Motion Puzzle**(부위별 스타일 추출+스켈레톤 구조 보존) · 2024 확산+Gram 조합.
+- **물리 휴머노이드 RL 진영 — 용어는 "style reward", 기능은 동일 분해**: **task reward(=content) + style reward(=AMP 판별자)** 구조가 AMP·ASE·CALM 표준. 목표달성=과제, "전문가처럼 보임"=전이분포 매칭. **단 RL 리워드로 Gram loss를 직접 쓰는 작업은 드묾** — 스타일 자리는 판별자가 차지.
+- **🟢 §7의 포지션 = 그 빈 칸**: Gram을 RL 리워드로 직접 쓰되, 시간축에서는 **자기상관↔PSD(Wiener–Khinchin)** 라서 위상 불변 리듬 텍스처만 잡는 loss가 된다. toy 실증: 같은 리듬·다른 위상 → per-frame L2 0.002→2.08 폭발 vs **PSD 거리 0(위상불변)**. 즉 "리듬 스타일만, 타이밍(content)은 건드리지 않는" loss의 실증적 근거.
+- 한 줄: **키네매틱=Gram loss 표준 · 물리 RL=기능적 보편(style reward)·Gram 직접 리워드는 드묾 — §7이 PSD 기반으로 그 빈 칸을 채운 상태.**
+
