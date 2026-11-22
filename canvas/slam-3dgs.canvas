@@ -1189,6 +1189,66 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1122-slam-3dgs-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-22 배치\n미터 깊이 · 체적 분할 · 합성 병목",
+			"x": 60,
+			"y": 16225,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1122-slam-3dgs-1",
+			"type": "file",
+			"file": "wiki/sources/Depth-Pro-2.md",
+			"x": 60,
+			"y": 16345,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-slam-3dgs-2",
+			"type": "file",
+			"file": "wiki/sources/VODA.md",
+			"x": 520,
+			"y": 16345,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-slam-3dgs-3",
+			"type": "file",
+			"file": "wiki/sources/Mind2Act-World.md",
+			"x": 980,
+			"y": 16345,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-slam-3dgs-x1",
+			"type": "file",
+			"file": "wiki/concepts/3DGS.md",
+			"x": 60,
+			"y": 16585,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1122-slam-3dgs-x2",
+			"type": "file",
+			"file": "wiki/entities/Apple.md",
+			"x": 520,
+			"y": 16585,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -1982,6 +2042,38 @@
 			"id": "b1119-slam-3dgs-e1",
 			"fromNode": "b1119-slam-3dgs-1",
 			"toNode": "b1119-slam-3dgs-x1"
+		},
+		{
+			"id": "b1122-slam-3dgs-h1",
+			"fromNode": "b1122-slam-3dgs-hdr",
+			"toNode": "b1122-slam-3dgs-1"
+		},
+		{
+			"id": "b1122-slam-3dgs-h2",
+			"fromNode": "b1122-slam-3dgs-hdr",
+			"toNode": "b1122-slam-3dgs-2"
+		},
+		{
+			"id": "b1122-slam-3dgs-h3",
+			"fromNode": "b1122-slam-3dgs-hdr",
+			"toNode": "b1122-slam-3dgs-3"
+		},
+		{
+			"id": "b1122-slam-3dgs-e1",
+			"fromNode": "b1122-slam-3dgs-1",
+			"toNode": "b1122-slam-3dgs-x1",
+			"label": "깊이 prior"
+		},
+		{
+			"id": "b1122-slam-3dgs-e2",
+			"fromNode": "b1122-slam-3dgs-2",
+			"toNode": "b1122-slam-3dgs-x1",
+			"label": "분할"
+		},
+		{
+			"id": "b1122-slam-3dgs-e3",
+			"fromNode": "b1122-slam-3dgs-1",
+			"toNode": "b1122-slam-3dgs-x2"
 		}
 	]
 }

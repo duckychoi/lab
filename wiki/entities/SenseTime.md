@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, company, china, multimodal, unified-model]
 created: 2026-09-11
-updated: 2026-09-11
-sources: [sensenova-u1.md, SenseNova-U1.5.md]
+updated: 2026-11-22
+sources: [sensenova-u1.md, SenseNova-U1.5.md, SenseNova-Loop-9B-GGUF.md]
 reliability: high
 ---
 
@@ -41,3 +41,6 @@ reliability: high
 ## 원본
 - 출처: https://huggingface.co/papers/2609.11929 (HF API 실호출 2026-09-11) · https://huggingface.co/papers/2605.12500
 - 신뢰도: ⭐⭐⭐⭐ (기업 실체 명확 · 논문 2세대 추적 / 코드 공개는 **예고 단계**)
+
+## 2026-11-22 갱신
+- 🆕 [[SenseNova-Loop-9B-GGUF]] — HF 조직 `sensenova` · Apache-2.0 · 루프형 9B(추론 환산 약 14.6B) · 512K 컨텍스트 · dl30 68,559. 09월 "코드 공개 예고 단계"에서 **가중치 + GGUF 공개**로 넘어왔다. Qwen3.8-27B 대비 NL2Repo 는 열세(41.36 vs 44.60). → [[파라미터-다중표기]]

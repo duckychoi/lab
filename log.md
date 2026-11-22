@@ -5826,3 +5826,44 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 <!-- logged at 2026-11-21 -->
 
 ## [2026-11-21 09:03:42] ingest | 대기 항목 없음
+
+## [2026-11-22] ingest | **대기 26건 전량 처리** (11-21 자동수집 13 + 11-22 자동수집 13 · 크론 노트 0)
+
+- **도메인**: ai-news 9(rtk · mini-swe-agent · app-store-compliance · phone-harness · mastra · rig · Posterior-Matching-Distillation · CurvDelta · MC-Lens) · local-llm 9(Inkling-2-Mini-GGUF · SenseNova-Loop-9B-GGUF · Hy4-flash-GGUF · Edge0-145B-NVFP4 · NVIDIA-Nemotron-3.5-Bolt-E4B-4GB · ZONOS3-Mini · splash · sherpa-onnx · jan) · video-saas 5(FreeVideo · Coda-DaVinci · WeMM-Video · ALIVE · WeVisForensics) · slam-3dgs 3(Depth-Pro-2 · VODA · Mind2Act-World) — 수집기는 26건 전부 `ai-news` 로 표기, 볼트 재분류
+- **분해**: **신규 26 · 갱신 0**(arXiv ID · 레포 경로 · 모델명 `wiki/` 전수 검색 0건). 처리 시작 시 `grep -c '^- URL:'` = 26 → 처리 후 0
+- **추가 페이지**: **30개** (소스 26 · 개념 2 · 엔티티 2) | **업데이트 페이지**: 엔티티 7(Edge0 · k2-fsa · unsloth · NVIDIA · Tencent · SenseTime · MiniMax) + 개념 3(라이선스-지역-제외 · 원본-파생-역전 · 에이전트-스킬) + 도메인 4쪽
+- **페이지 수**: 1872 → **1902** (sources 1657 · entities 132 · concepts 105 · synthesis 4 · domains 4) ✅ `find` 실측
+- **canvas 업데이트**: **YES** — 4종에 `b1122-*` 노드 40 + 엣지 52 (텍스트 삽입, 원 서식 유지, 삽입 후 JSON 파싱 · 엣지 참조 검증 통과)
+- **actionable 추가**: YES — 4항목(H3 보류에 FreeVideo · ZONOS3-Mini 한국어 청취 시험 · rtk gain 1주 기록 · Depth Pro 2 가중치 조건 확인)
+- **독립 검증**: GitHub API 10레포 + ml-depth-pro-2(스타 · 언어 · 라이선스 표기 · 생성 · push) · HF papers API 10편(초록 전문 · 업보트 · 조직 · githubRepo · 저자 수) · HF models API 8건(수집 6 + 원본 2: Inkling-2-Mini · Hy4-flash — 내부 ID · dl · 좋아요 · license · base_model) · 모델 카드 README 원문 6종(Nemotron · ZONOS3 · Edge0 · Inkling 원본/GGUF · Hy4 GGUF · SenseNova) 수치 문자열 검출 · LICENSE 원문 2종(Hy4 245행 · Depth Pro 2) · README 원문 3종(FreeVideo · rtk · splash)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**모델 크기 한 숫자가 더 이상 비용을 말하지 않는다.** 이틀 배치의 모델 6건이 전부 크기를 둘 이상의 숫자로 적었다 — [[Inkling-2-Mini-GGUF]] 26.4B / 활성 3.4B / 루프 실효 5.4B, [[SenseNova-Loop-9B-GGUF]] 저장 9B / 연산 14.6B, [[Hy4-flash-GGUF]] 220B / 활성 약 12B 인데 파일은 125–157GiB, [[Edge0-145B-NVFP4]] "24GB 구동"의 실제 청구서는 VRAM 23.25 + RAM 38.27GiB + 전용 엔진. 볼트 규칙으로 옮기면: 속도는 활성 × 루프 횟수로, 들어가는지는 총량 · 파일 크기로 읽고, "VRAM N GB"는 RAM · 스트리밍 · 엔진 조건과 함께 적는다([[파라미터-다중표기]] 신설). 같은 "한 숫자의 함정"이 선발에도 있었다 — 다운로드는 GGUF 에 약 30배 · 17배, 좋아요는 원본에 남아 수집기의 다운로드 순 기준이 원본을 떨어뜨린다.
+
+### 🏆 주요 발견
+1. 🆕 [[파라미터-다중표기]] · [[latent-MoE]] 개념 신설 — 루프형(가중치 공유 반복) 2건이 같은 날 도착, latent MoE 는 3소스(ZONOS3 · Edge0 · Hy4).
+2. 🔴 [[라이선스-지역-제외]] 파생 8번째 — [[FreeVideo]] 는 모델이 아니라 **추론 엔진**인데 README 149행이 가중치의 지역 제한을 명시. ✅ 반대 사례: [[Hy4-flash-GGUF]] 원본 Tencent Hy License 1.0 은 지역 적중 0건(상업 조항은 207 · 215행). GGUF 카드 license 필드가 비어 파생만 보면 조건을 알 수 없다.
+3. 🆕 볼트 README 직접 판독 — [[splash]] 배수는 비교 상대에 따라 1.3–2.0×(차순위 엔진 · M5 Pro 16코어 48GB) vs 2.5–5.3×(같은 UD-Q4_K_M 의 llama.cpp). 수집기 "기기 구성 미확인" 해소.
+4. 🆕 수집기 미기재 소속 2건 보충 — [[MC-Lens]] = UCL · [[Posterior-Matching-Distillation]] = NVIDIA(HF `organization`).
+5. 🆕 [[Depth-Pro-2]] 레포 LICENSE 는 Apple 표준 샘플코드 문언, `commercial` · `research` 0건 — 수집기의 "비상업 가능성" 질문에 소프트웨어 한정으로 답함.
+6. 📈 [[원본-파생-역전]] — Inkling GGUF 약 30배 · Hy4 GGUF 약 17배, 좋아요는 원본 우세(3,417 vs 712 · 567 vs 147). 새 관찰: 관심 지표와 사용 지표가 서로 다른 레포에 쌓인다.
+7. ✅ 지는 행을 공개한 카드 3건 — Nemotron Bolt(Qwen3.5-4B 에 8행) · Inkling-2-Mini(Qwen3.8-27B 에 9행 · 비환각률 63.4% vs 71.4%) · SenseNova-Loop(NL2Repo). [[Mind2Act-World]] 는 Mind 52.7 · Act 39.0 → 합성 12.0%(독립 가정 곱 20.6% 미만).
+8. 🟡 [[ZONOS3-Mini]] 좋아요 622(수집기 11-21) vs 574(볼트 11-22) — 판정 보류, 재확인 요청.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 실행 0건 — 설치 · 추론 · 음성 청취 · 벤치 재현 없음.
+2. **논문 본문 표는 10편 모두 열지 않았다.** 초록에 수치가 없는 8편(MC-Lens · WeMM-Video · PMD · ALIVE · Coda-DaVinci · VODA · Depth-Pro-2 · CurvDelta)은 서술형 주장 그대로다.
+3. 모델 카드 수치는 **문자열 존재**까지 확인했다. 어느 행 · 어느 열의 값인지(표 귀속)는 수집기 판독이며 볼트가 표 구조를 대조하지 않았다.
+4. GitHub README 직접 판독은 FreeVideo(25 · 27 · 149행) · rtk(14 · 55행) · splash(18 · 138–175행)뿐. 나머지 7레포 내용, rtk 의 "≠ 비용" 문장 · bytes/4 는 수집기 판독(볼트 grep 은 이미지 alt 텍스트만 적중).
+5. 라이선스 판단은 문언 대조이지 법률 해석이 아니다. Depth Pro 2 가중치 · Inkling AUP · Edge0 LICENSE 본문 · OpenRoots 라이선스는 미열람.
+6. 엔티티 [[Apple]] 은 소스 1건으로 신설했다(스키마의 "3개 이상" 기준은 개념 대상이며 엔티티는 기준 없음 — 추후 소스가 붙지 않으면 재검토).
+7. 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 처리 전 사본 · 삭제한 raw 항목(`raw.removed.md`) · 검증 원자료(`v/`) · 생성 스크립트: `/tmp/ing1122/`.
+
+### 🔥 actionable 최우선
+1. **MiniMax H3 계열 보류에 FreeVideo 추가** — 엔진이 가중치 조건을 끌고 온다
+2. ZONOS3-Mini 한국어 청취 시험(쇼츠 내레이션 로컬 후보)
+3. rtk 설치 후 `rtk gain` 1주 기록
+
+<!-- logged at 2026-11-22 09:15:37 -->

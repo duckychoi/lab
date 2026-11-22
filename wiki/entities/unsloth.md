@@ -4,8 +4,8 @@ type: entity
 domain: local-llm
 tags: [local-llm, ai-news, quantization, gguf, imatrix, 원본-파생-역전, 배포출처-봉인]
 created: 2026-10-15
-updated: 2026-10-15
-sources: [Qwen3.8-27B-GGUF.md]
+updated: 2026-11-22
+sources: [Qwen3.8-27B-GGUF.md, Inkling-2-Mini-GGUF.md]
 reliability: medium
 ---
 
@@ -47,3 +47,7 @@ reliability: medium
 - [[비매칭-비교]] · [[대체필드-대조]] · [[메타데이터-부재-추론]]
 - [[리서치-온디바이스-AI엣지-추론-기술-2026년-최신-동향]] — 🎯 **"무손실 양자화" 공백이 본 건 품질 공백과 같은 지점**
 - [[local-llm]] · [[ai-news]]
+
+## 2026-11-22 갱신
+- 🆕 [[Inkling-2-Mini-GGUF]] — 생성 이틀 만에 dl 238,152(원본 7,944 의 약 30배). 양자화별 **원본 대비 top token 일치율**을 카드에 실었다(UD-IQ1_S 89.4% · UD-Q4_K_M 97.9%) — 벤치 재측정은 아니지만 "양자화 손실 근거 0"이던 과거 카드보다 한 단계 나아간 양식. → [[원본-파생-역전]] · [[배포출처-봉인]]
+- [[splash]] 가 llama.cpp 비교 기준 가중치로 Unsloth UD-Q4_K_M 을 지정 — 사실상의 기준 양자화본으로 쓰인다.

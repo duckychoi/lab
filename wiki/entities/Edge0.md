@@ -4,8 +4,8 @@ type: entity
 domain: local-llm
 tags: [local-llm, edge-ai, moe, mlx, 조직]
 created: 2026-09-13
-updated: 2026-09-13
-sources: [Edge0-35B-A3B-preview.md]
+updated: 2026-11-22
+sources: [Edge0-35B-A3B-preview.md, Edge0-145B-NVFP4.md]
 reliability: medium
 identifiers: [Edge0, Edge0-AI]
 ---
@@ -33,3 +33,8 @@ identifiers: [Edge0, Edge0-AI]
 - [[Edge0-35B-A3B-preview]] · [[Alibaba]] · [[MetroLLM-Bench]]
 - [[IFM]] · [[XHToken]] — 조직 실체 미확인 선례
 - [[파생표기-함정]] · [[한정어-탈락]]
+
+## 2026-11-22 갱신
+- 🆕 [[Edge0-145B-NVFP4]] — 두 번째 공개물. [[Qwen3.8-Flash-Next]] 의 routed expert 48개 층을 latent 폭 1792 로 교체 후 4비트 네이티브 후학습(카드 주장) · 145B / 활성 10.12B · 전용 엔진 `edge0-infer` 필요. 24GB 에서 98.3 tok/s 이지만 VRAM 23.25GiB + 호스트 RAM 38.27GiB. dl 88,713 · 좋아요 700(볼트 API).
+- 📌 09-13 의 35B(apache-2.0)와 달리 이번은 **Edge0 Community Model License 1.0 + Qwen Community License** — 모델 판매 · 상업 모델 서비스는 별도 서면 라이선스. 조직의 라이선스 기조가 바뀌었다.
+- 조직 실체는 여전히 미확인. → [[latent-MoE]] · [[파라미터-다중표기]]

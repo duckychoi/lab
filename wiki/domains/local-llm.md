@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-19
+updated: 2026-11-22
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -923,3 +923,15 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 - 🆕 [[Tideway]] (Duke · HF 11-19 1위) — VRAM+RAM 단일 풀 · 단계 인식 MoE 추론 · 지연 1.97× · TTFT 2.40× · decode 1.61×(초록, 하드웨어 미확인) · 코드 공개.
 - 🆕 [[openvino]] (★11,425 · Intel) — CPU · GPU · NPU 추론. Intel 하드웨어면 기본 경로, README 벤치 0.
 - 🆕 [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] — 원본의 약 23배 dl · 평가 0 → [[원본-파생-역전]] 반복.
+
+## 2026-11-22 배치 (local-llm 9 · 11-21 + 11-22 자동수집)
+🎯 **축**: **모델 크기 한 숫자가 비용을 말하지 않는다** — 총량 · 활성 · 루프 환산 · 적재 메모리가 각각 다르다([[파라미터-다중표기]] 신설 · [[latent-MoE]] 신설).
+- 🆕 [[Inkling-2-Mini-GGUF]] — 26.4B / 활성 3.4B / 루프 실효 5.4B · UD-Q4_K_M 16.61GB(토큰 일치 97.9%) · SWE-bench Verified 79.2%(bash only) · 🔴 비환각률 63.4% vs Qwen3.8-27B 71.4% · dl 원본의 약 30배.
+- 🆕 [[SenseNova-Loop-9B-GGUF]] — 저장 9B / 연산 14.6B · 256K 에 약 15GiB · NL2Repo 는 Qwen3.8-27B 에 열세.
+- 🆕 [[Hy4-flash-GGUF]] — 220B / 활성 약 12B · **128GB 급 + 미병합 llama.cpp PR** · LICENSE 지역 조항 0건.
+- 🆕 [[Edge0-145B-NVFP4]] — 145B / 활성 10.12B · 24GB 에서 98.3 tok/s(VRAM 23.25 + RAM 38.27GiB) · 전용 엔진 · 상업 서비스 제한.
+- 🆕 [[NVIDIA-Nemotron-3.5-Bolt-E4B-4GB]] — 4GB 급 SLM · Q4_K_M 열 별도 공개 · 장문맥 · 도구 호출 8행은 Qwen3.5-4B 우세. **페르소나형 봇엔 맞고 메모리 · 함수 호출 중심이면 불리.**
+- 🆕 [[ZONOS3-Mini]] — 800M / 활성 100M TTS · **한국어 포함 43개 언어 · Apache-2.0** · WER/유사도 값은 그림 안.
+- 🆕 [[splash]] (★2,613) — Apple silicon 전용 엔진 · llama.cpp 대비 2.5–5.3×(같은 UD-Q4_K_M) · 차순위 엔진 대비 1.3–2.0× · M3+ · 모델 고정 목록.
+- 🆕 [[sherpa-onnx]] (★16,087) — 오프라인 ASR · TTS · 화자분리 · VAD 런타임.
+- 🆕 [[jan]] (★46,011) — 로컬 LLM 데스크톱 앱 · `localhost:1337` OpenAI 호환.

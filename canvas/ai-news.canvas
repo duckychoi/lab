@@ -9088,6 +9088,126 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1122-ai-news-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-22 배치\n모델 크기 숫자 ≠ 비용 · 성숙 레포 다수",
+			"x": 60,
+			"y": 60340,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1122-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/rtk.md",
+			"x": 60,
+			"y": 60460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/mini-swe-agent.md",
+			"x": 520,
+			"y": 60460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/app-store-compliance.md",
+			"x": 980,
+			"y": 60460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/phone-harness.md",
+			"x": 1440,
+			"y": 60460,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/mastra.md",
+			"x": 60,
+			"y": 60700,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/rig.md",
+			"x": 520,
+			"y": 60700,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/Posterior-Matching-Distillation.md",
+			"x": 980,
+			"y": 60700,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/CurvDelta.md",
+			"x": 1440,
+			"y": 60700,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/MC-Lens.md",
+			"x": 60,
+			"y": 60940,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-ai-news-x1",
+			"type": "file",
+			"file": "wiki/concepts/에이전트-스킬.md",
+			"x": 60,
+			"y": 61180,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1122-ai-news-x2",
+			"type": "file",
+			"file": "wiki/concepts/하네스-설계-축.md",
+			"x": 520,
+			"y": 61180,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -16773,6 +16893,79 @@
 			"id": "b1119-ai-news-e5",
 			"fromNode": "b1119-ai-news-8",
 			"toNode": "b1119-ai-news-x2"
+		},
+		{
+			"id": "b1122-ai-news-h1",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-1"
+		},
+		{
+			"id": "b1122-ai-news-h2",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-2"
+		},
+		{
+			"id": "b1122-ai-news-h3",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-3"
+		},
+		{
+			"id": "b1122-ai-news-h4",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-4"
+		},
+		{
+			"id": "b1122-ai-news-h5",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-5"
+		},
+		{
+			"id": "b1122-ai-news-h6",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-6"
+		},
+		{
+			"id": "b1122-ai-news-h7",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-7"
+		},
+		{
+			"id": "b1122-ai-news-h8",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-8"
+		},
+		{
+			"id": "b1122-ai-news-h9",
+			"fromNode": "b1122-ai-news-hdr",
+			"toNode": "b1122-ai-news-9"
+		},
+		{
+			"id": "b1122-ai-news-e1",
+			"fromNode": "b1122-ai-news-3",
+			"toNode": "b1122-ai-news-x1",
+			"label": "훅 게이트"
+		},
+		{
+			"id": "b1122-ai-news-e2",
+			"fromNode": "b1122-ai-news-2",
+			"toNode": "b1122-ai-news-x2",
+			"label": "기준선"
+		},
+		{
+			"id": "b1122-ai-news-e3",
+			"fromNode": "b1122-ai-news-6",
+			"toNode": "b1122-ai-news-x2"
+		},
+		{
+			"id": "b1122-ai-news-e4",
+			"fromNode": "b1122-ai-news-5",
+			"toNode": "b1122-ai-news-6",
+			"label": "TS ↔ Rust"
+		},
+		{
+			"id": "b1122-ai-news-e5",
+			"fromNode": "b1122-ai-news-2",
+			"toNode": "b1122-ai-news-6"
 		}
 	]
 }

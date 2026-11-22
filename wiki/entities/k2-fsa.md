@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, org, tts, asr, speech, open-source, multilingual]
 created: 2026-09-08
-updated: 2026-09-08
-sources: [OmniVoice.md]
+updated: 2026-11-22
+sources: [OmniVoice.md, sherpa-onnx.md]
 reliability: high
 ---
 
@@ -37,3 +37,6 @@ reliability: high
 - 출처: https://github.com/k2-fsa/OmniVoice · https://huggingface.co/k2-fsa/OmniVoice
 - 검증: GitHub API + HF 모델 API 실측 (2026-09-08)
 - 신뢰도: ⭐⭐⭐⭐
+
+## 2026-11-22 갱신
+- 🆕 [[sherpa-onnx]] (★16,087 · Apache-2.0 · 2022-09 생성) — 오프라인 ASR · TTS · 화자분리 · VAD 런타임. [[OmniVoice]] 가 모델 표면이라면 이쪽은 **기기 탑재 배관** 표면이다. 볼트 [[openwhispr]] 가 이미 구성요소로 사용.

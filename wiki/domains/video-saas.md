@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-19
+updated: 2026-11-22
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -678,3 +678,10 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 
 ## 2026-11-19 배치 (video-saas 1)
 - 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] (dl 523,654) — H3 파인튜닝 2종 병합 · 정량 0 · LICENSE 404 · 원본 apache 표기 vs H3 한국 제외 충돌 → **사용 보류**([[라이선스-지역-제외]] 7번째).
+
+## 2026-11-22 배치 (video-saas 5 · 11-21 + 11-22 자동수집)
+- 🔴 [[FreeVideo]] (★4,205) — MiniMax H3 를 VRAM 8GB 부터 · 정량은 "자기 이전 버전 대비 2.3배" 1건 · **가중치 H3 Community License(지역 제한) → 한국 사용 보류**([[라이선스-지역-제외]] 8번째). 영상에 워크플로를 내장하는 재현성 UX 는 참고.
+- 🆕 [[Coda-DaVinci]] (KlingAI Research) — 코드로 만든 3D 프록시가 영상 생성을 가이드 · 거친 프록시 = 모션 / 중간 세밀도 = 일관성 · **장편 전환 안정성 약점을 저자가 명시**. "편집 가능한 중간 표현" UX 의 연구 근거.
+- 🆕 [[WeMM-Video]] (Tencent) — 오픈 옴니모달 영상 이해 2B~35B-A3B · 초록 점수 0 · 한국어 언급 없음.
+- 🆕 [[ALIVE]] (Tsinghua) — 스트리밍 영상 LLM 의 능동 알림 · 되묻기 · 초록 수치 0.
+- 🆕 [[WeVisForensics]] (Tencent) — AI 생성 영상 탐지 에이전트 · 평균 95.2%(+9.0%) · OOD 단독 수치 미확인.

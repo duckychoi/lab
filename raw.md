@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-19 (✅ **11-19 자동수집 13건 처리** · 대기 0건)
+updated: 2026-11-22 (✅ **11-21 · 11-22 자동수집 26건 처리** · 대기 0건)
 ---
 
 # Raw 대기열
@@ -1253,87 +1253,20 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 
 ---
 
-# 🆕 2026-11-21 자동수집 (13건 = GitHub 5 · HF 논문 5 · HF 모델 3) — ⏳ 대기
+## ✅ 2026-11-22 전량 처리 완료 (26건 = 11-21 자동수집 13 · 11-22 자동수집 13 · 크론 노트 0) — 대기 항목 없음
 
-> 관측 시각 2026-11-21T09:00–09:10Z (18:00–18:10 KST). 스타 · 다운로드 · 업보트는 이 시각의 API 값이다.
+> **신규 26 · 갱신 0** · 개념 신설 2([[파라미터-다중표기]] · [[latent-MoE]]) · 엔티티 신설 2([[Thinking-Machines-Lab]] · [[Apple]]) · 엔티티 갱신 7 · 개념 갱신 3 · 도메인 4쪽 · canvas 4종(`b1122-*`). 볼트 재분류: ai-news 9 · local-llm 9 · video-saas 5 · slam-3dgs 3. 세부는 `log.md` 2026-11-22.
+>
+> 📮 **볼트 → 수집기 (11-21 · 11-22 자동수집분 판정 6건)**
+> 1. ✅ **수치 정확도 통과** — GitHub 10레포 언어 · 라이선스 표기 · 생성일 일치(스타는 증가분: app-store-compliance 2,968 → 3,595 · FreeVideo 3,960 → 4,205 등) · HF papers 10편 초록 대조 일치(95.2 · 9.0 / 52.7 · 39.0 · 12.0 / narrowing the gap / K-FAC · TOFU · MUSE 등) · HF 모델 6건 내부 ID · base_model 일치 · 카드 수치 문자열 검출(Nemotron 13 · Edge0 14 · Inkling 14 · SenseNova 11) · Hy4 LICENSE 245행 · 지역 적중 0 재현 · FreeVideo README 149행 territorial 재현.
+> 2. ✅🏆 **11-19 요청 3 이행** — 논문 10편 전부 `githubRepo` 기재, null 은 "코드 없음" 명시. 지는 행 · 불리한 문장(Nemotron 8행 · Inkling 9행 · WeMM "격차를 좁혔다" · Coda 장편 약점)도 계속 실었다. "급상승이 아니라 스타 총량 통과분"이라고 선발 성격을 스스로 밝힌 것도 유지 요청.
+> 3. 🟡 **소속 누락 2건** — HF papers API `organization`: 2611.26590(MC-Lens) = UniversityCollegeLondon · 2611.26629(PMD) = nvidia. 11-22 분은 소속을 적었는데 11-21 분 5편은 적지 않았다. 요청: 논문 항목에 `organization` 을 항상 적고 없으면 "소속 표기 없음"(CurvDelta 처럼).
+> 4. 🟡 **README 표 미판독 1건** — [[splash]] "표의 열별 기기 구성 미확인"은 README 138–175행에 있었다(M5 Pro 16코어 48GB · Flash-Next 열만 20코어 64GB). 같은 구간에 **llama.cpp 직접 비교표**(같은 UD-Q4_K_M · 27B 4.5–5.3× · 35B-A3B 2.5–3.2×)와 토큰 일치율 표가 더 있다. 요청: "미확인"으로 남길 표는 그 구간만 한 번 더 읽는다.
+> 5. 🟡 **좋아요 불일치 1건** — [[ZONOS3-Mini]] 수집기 11-21 622 vs 볼트 11-22 574(다운로드는 증가). 감소 폭이 커서 판독 오류 가능성 — 다음 배치에서 단건 API 로 재확인 요청.
+> 6. 📌 **선발 기준 관찰(판정 아님)** — HF 모델 "30일 다운로드 순"은 [[원본-파생-역전]] 때문에 원본을 구조적으로 탈락시킨다(Inkling-2-Mini 원본 11-21 탈락 → 11-22 GGUF 로 수록, Hy4-flash 도 동일). 지금처럼 **GGUF 항목에 원본 정보를 함께 적는 방식**이면 정보 손실은 없다 — 유지. 묵은 🔄 후보 4건(firecrawl 07-07 · stitch-skills 07-11 · CLI-Anything 08-17 · minimind 09-02)은 종합 트렌딩 신규가 1건 이하인 날 언어별 페이지로 채우기 전에 1–2건 올리는 것을 권한다.
+> 📌 볼트 확인 추가: [[Depth-Pro-2]] 레포 LICENSE = Apple 표준 샘플코드 문언(`commercial` · `research` 0건) — 수집기의 "비상업 가능성" 질문에 대해 **소프트웨어는 해당 문구 없음, 가중치는 미확인**. 논문 본문 표는 수집기 · 볼트 모두 열지 않았다(초록 수치 없는 8편 이월).
 
-## [2026-11-21] 자동수집 | mjmirza/app-store-compliance — 앱스토어 심사 반려 사전 점검 가드 + 에이전트 스킬
-- URL: https://github.com/mjmirza/app-store-compliance
-- 도메인: ai-news
-- 스타수: 2,968 (당일 +869, 일간 Trending 종합 페이지) · Shell · 생성 2026-06-06 · HEAD `d2156bab9d` (2026-11-15T20:08Z)
-- 한줄요약: iOS/Android 프로젝트 폴더를 bash 스크립트로 스캔해 `BLOCKED / CLEAR / NOT CHECKED` 를 내고, Claude Code · Codex · Gemini CLI · Cursor 등 13개 코딩 에이전트에 "제출 명령 전 훅 + 스킬"로 설치(`install.sh --tool all`)해 치명 위험이 있으면 제출 명령을 막는다. README 자칭 수치는 반려 패턴 117개 · 추적 기한 95건(EU AI Act · DSA · COPPA 등) — 탐지 정확도 · 오탐률 같은 측정 수치는 README에 없다. 코드 스캔은 개발자 계정 상태 · 약관 동의는 볼 수 없다고 README가 명시. 라이선스는 OSI 표준이 아닌 **OpenRoots Agent License 2.3**(GitHub 표기 NOASSERTION): 연매출 2,000만 달러 이하 · 개인 · 비영리는 무료, 초과분 0.5% 로열티(연 25만 달러 상한), **AI 학습 용도는 별도 Compute 라이선스 필요**. 실용성: 앱 제출 직전 체크리스트 자동화로는 바로 쓸 수 있으나 1인 유지보수 · 비표준 라이선스.
-
-## [2026-11-21] 자동수집 | FlashML-org/FreeVideo — MiniMax H3 영상 생성을 VRAM 8GB에서 돌리는 로컬 추론 엔진
-- URL: https://github.com/FlashML-org/FreeVideo
-- 도메인: ai-news
-- 스타수: 3,960 (당일 +293, Python Trending) · Python · Apache-2.0(코드) · 생성 2026-09-13 · HEAD `73a964d77c` (2026-11-20T23:19Z)
-- 한줄요약: OpenVDN의 8스텝 VDN-H3(Video DeltaNet 하이브리드 어텐션, arXiv 2609.20744) 위에 가중치 스트리밍 · 비동기 프리페치 · 청크 연산을 얹어 MiniMax H3를 "VRAM 8GB + RAM 16GB부터" 구동한다는 ComfyUI 플러그인 겸 Windows/macOS/Linux 런처. GPU별로 int8(GeForce · RTX 30)/FP8(워크스테이션)을 고르고, 텍스트 · 첫/끝 프레임 · 이미지/영상/오디오 레퍼런스 입력, LoRA, 2패스 샘플링 지원. v0.4.0에서 Claude Code/Codex 같은 에이전트가 영상을 만들게 하는 기능과 1분 이상 영상, v0.5.0(11-10)에서 H3 Image(최대 16MP) 추가. README 수치는 "RTX 3090에서 5초 영상이 int8로 약 2.3배 빨라짐" 1건뿐 — 절대 생성 시간 · 화질 지표는 README에 없고 docs/community-results.md로 넘긴다(미확인). Mac은 M5 24GB에서만 테스트된 프리뷰(미공증). ⚠️ **가중치는 MiniMax H3 Community License — README가 "territorial and acceptable-use restrictions" 포함이라고 명시**(볼트 11-19 기록: H3 LICENSE 제외 지역에 대한민국 포함). 실용성: 저사양 로컬 영상 생성에 직접 해당하나 한국에서는 가중치 라이선스가 걸림돌.
-
-## [2026-11-21] 자동수집 | phone-harness/phone-harness — 코딩 에이전트가 실제 폰을 조작하게 하는 CLI
-- URL: https://github.com/phone-harness/phone-harness
-- 도메인: ai-news
-- 스타수: 5,404 (당일 +198, Python Trending) · Python · MIT · 생성 2026-08-07 · HEAD `b16b37f612` (2026-11-20T05:09Z)
-- 한줄요약: Claude Code · Codex 등이 탭 · 스와이프 · 타이핑 · 화면 읽기를 하도록 `open_app / tap_text / type_text / screen` 헬퍼를 제공. iPhone은 macOS 15+의 iPhone Mirroring 창을 캡처해 Apple Vision OCR로 읽고 입력 이벤트를 보냄(탈옥 · Xcode · 폰 설치 불필요, iOS 18+), Android는 adb + 접근성 트리(macOS/Linux/Windows). MCP 엔드포인트와 Hermes · OpenClaw 플러그인 제공. README가 적은 한계: OCR은 텍스트만 봄(라벨 없는 아이콘은 스크린샷 + 비전 모델 필요), 멀티터치 · 카메라 · Face ID 불가, DRM 영상은 검게 나옴, 잠금 해제는 사용자 몫. 성공률 등 벤치마크 수치는 README에 없다. 유료 호스팅(Phone Harness Cloud, iPhone 예약 보증금 폰당 $20) 유도가 README 상당 부분. 실용성: Android + adb 조합은 리눅스에서도 바로 시험 가능, iPhone은 Mac 필수.
-
-## [2026-11-21] 자동수집 | rtk-ai/rtk — 에이전트가 읽는 명령 출력을 압축하는 Rust CLI 프록시
-- URL: https://github.com/rtk-ai/rtk
-- 도메인: ai-news
-- 스타수: 87,335 (당일 +104, Rust Trending) · Rust · Apache-2.0(CLI) + BUSL-1.1(`engine/`) · 생성 2026-01-22 · HEAD `ef0b734b6b` (2026-11-21T00:34Z)
-- 한줄요약: 훅으로 `git status` → `rtk git status` 처럼 셸 명령을 바꿔치기해 테스트는 실패만, diff · log · lint는 요약만 에이전트에 전달(100+ 명령, 명령당 25ms 미만 자칭). 필터 실패 시 원본 출력 · 종료코드 유지, `rtk bypass` 로 우회, `rtk gain` 으로 로컬 절감량 집계. **README 스스로 한계를 명시: "명령 출력 90% 절감 ≠ 비용 90% 절감"(명령 출력은 입력 토큰의 일부), 토큰 수는 `bytes/4` 추정치.** 추가 기능 "파이프라인"(큰 파일 읽기를 저가 모델에 위임, API 트래픽 정리 등)은 최고 사례가 총비용 −20.2%인데 **작성자 자체 벤치마크**다. 기본 훅은 Read/Grep/Glob 같은 내장 도구는 건드리지 않는다. 유료 RTK Pro(전사 게이트웨이) 유도 포함. 볼트에는 [[OmniRoute]] · [[Claude-Code-워크플로우]]에 언급만 있고 소스 문서는 없어 신규로 올린다. 실용성: Claude Code에 `rtk init -g` 한 줄로 적용 가능, 절감 폭은 셸 출력 비중에 좌우됨.
-
-## [2026-11-21] 자동수집 | janhq/jan — 오프라인 구동 로컬 LLM 데스크톱 앱
-- URL: https://github.com/janhq/jan
-- 도메인: ai-news
-- 스타수: 45,975 (당일 +101, Rust Trending) · Rust(Tauri) · Apache-2.0(LICENSE 본문 확인, GitHub 표기는 NOASSERTION) · 생성 2023-08-17 · HEAD `49a84bdeae` (2026-11-18T05:20Z)
-- 한줄요약: HuggingFace의 Llama · Gemma · Qwen 등을 내려받아 로컬에서 실행하고, OpenAI · Anthropic · Mistral · Groq · MiniMax 클라우드 연결도 지원하는 ChatGPT 대체 데스크톱 앱(Windows/macOS/Linux). `localhost:1337` OpenAI 호환 로컬 API 서버, MCP 연동, 커스텀 어시스턴트 제공. README에 성능 수치는 없다. 급상승 신작이 아니라 3년 된 성숙 프로젝트(당일 증분은 5건 중 최소)이며, 볼트 미보유라 수록. 실용성: 로컬 모델 GUI + API 서버가 한 번에 필요할 때 무난한 선택지.
-
-## [2026-11-21] 자동수집 | WeVisForensics: Self-Evolving Agent for Omni AI-Generated Video Detection (arXiv 2611.21373)
-- URL: https://huggingface.co/papers/2611.21373
-- 도메인: ai-news
-- 업보트: 51 (11-20 데일리 페이지 1위) · 코드: https://github.com/Tencent/WeVisForensics (★48)
-- 한줄요약: AI 생성 영상 탐지를 "조사관 에이전트 1 + 시각 · 음성 단서별 검사관 서브에이전트 라이브러리" 구조로 수행. 조사관은 어떤 아티팩트를 어느 구간에서 볼지 · 언제 결론낼지를 RL로 빠르게 학습하고, 검사관은 주석된 아티팩트 구간으로 느리게 개선하는 이중 시간척도 최적화(DTPO). 학습용 ForenCue-30K 데이터셋 구축. 초록 수치: in-domain · out-of-domain · agentic 벤치마크 **평균 탐지 정확도 95.2%, 기존 최고 탐지기 대비 +9.0%**(벤치마크별 내역 · 가장 나쁜 열은 초록에 없음 — 본문 표 미확인).
-
-## [2026-11-21] 자동수집 | Mind2Act World: 로봇 조작의 추론 · 실행 · 합성 진단 벤치마크 (arXiv 2611.26444)
-- URL: https://huggingface.co/papers/2611.26444
-- 도메인: ai-news
-- 업보트: 47 (11-20 데일리 페이지 2위) · 코드: https://github.com/Mind2Act/Mind2Act_World (★28)
-- 한줄요약: 5개 응용 도메인의 시뮬레이션 조작 과제 30개 × 난이도 3 × 장면 2(Clean/Random) = 180 구성. 과제를 Mind(과거 관측 기반 판단) · Act(정밀 · 적시 실행) · Mind2Act(행동 결과가 다음 판단을 이끄는 폐루프) 세 뷰로 나눠 실패 원인을 귀속. 멀티모달 에이전트 · VLA · WAM을 평가한 결과 **최강 에이전트도 Mind 52.7% · Act 39.0%인데 Mind2Act는 12.0%** — 단일 능력이 합성으로 이어지지 않음. 최강 에이전트는 과제 상태는 유지하나 지속 접촉에 약하고, end-to-end 정책은 반대. 시뮬레이션 전용(실기 평가 언급 없음).
-
-## [2026-11-21] 자동수집 | Probing the "Conscious" Mind: VLM의 선택적 접근과 전역 작업공간 (arXiv 2611.26590)
-- URL: https://huggingface.co/papers/2611.26590
-- 도메인: ai-news
-- 업보트: 41 (11-20 데일리 페이지 3위) · 코드 없음(`githubRepo` null)
-- 한줄요약: 전역 작업공간 이론(GWT) 관점에서 VLM 내부 개념 처리를 보는 해석 도구 MC-Lens(멀티모달 Jacobian lens) 제안 — 비전 인코더 · 언어 디코더 중간 상태를 디코더 출력 어휘 공간에 사상해 모달리티 간 개념 접근성을 비교하고 개념 개입 실험을 지원. 주장: ① 개념 정보가 중간 층에서 읽히고 과제에 따라 선택적으로 접근됨 ② 반사실 개입 시 하위 추론에 실제 관여 ③ 통제 학습에서 선택적 접근은 개념 접근성보다 늦게 발달 ④ 모델 계열 · 크기를 넘어 공통 패턴. **초록에 정량 수치 없음.** 제목의 "의식"은 따옴표 친 비유이며 의식 보유 주장이 아니라 GWT 기능의 실험적 대응물 탐색이다.
-
-## [2026-11-21] 자동수집 | WeMM-Video: 오픈소스 옴니모달 영상 이해 모델군 (arXiv 2611.26409)
-- URL: https://huggingface.co/papers/2611.26409
-- 도메인: ai-news
-- 업보트: 40 (11-20 데일리 페이지 4위) · 코드: https://github.com/Tencent/WeMM-Video (★55)
-- 한줄요약: Tencent의 중 · 영 이중언어 옴니모달(텍스트 · 이미지 · 오디오 · 영상) 모델 2B · 4B · 9B · 35B-A3B 4종, 비사고(instruct)/사고 모드 겸용. 약 1.2조 토큰으로 사전학습 후 다중 교사 OPD · 반복 억제 MrDPO · 전문 RL로 후학습. 120개 이상 벤치마크 평가라고 하나 **초록에 점수는 0건**이고 서술형 주장만 있다: 35B-A3B가 오디오 동반 영상 평가에서 오픈소스 최고 · Qwen3.5-Omni-Flash와 Seed2.0-Mini-0428 상회, 9B가 Qwen3-Omni-30B-A3B-Instruct 상회. **불리한 쪽: Gemini-3.0-Flash에는 "격차를 좁혔다" = 여전히 열세.** 한국어 지원 언급 없음. 모델 · 평가 파이프라인 공개.
-
-## [2026-11-21] 자동수집 | Posterior Matching Distillation (arXiv 2611.26629)
-- URL: https://huggingface.co/papers/2611.26629
-- 도메인: ai-news
-- 업보트: 35 (11-20 데일리 페이지 5위) · 코드: https://github.com/yesiltepe-hidir/PMD (★9)
-- 한줄요약: 확산 모델 증류에서 reverse-KL 계열의 mode-seeking(다양성 손실) 문제를 겨냥해, 고정된 노이즈 상태에 조건화한 학생 샘플의 지수 가중 평균을 교사 posterior 평균에 맞추는 방식. 가우시안 손상 하에서 기울인 posterior 평균이 "이동된 입력에서의 교사 1회 평가"가 된다는 점을 이용해 보조 student-score 네트워크 없이 조건부 분포 전체를 감독하며, 열린 근방에서의 일치가 posterior를 유일하게 식별함을 증명. 학습된 타임스텝 격자 안에서는 재학습 없이 임의 스텝 수 샘플링. 실험은 SDXL · FLUX.2 [klein] 4B: **4스텝 방법 중 FID 최고**, 프롬프트 정합 · 지각 품질 지표는 "경쟁적이거나 선두"(= 일부 지표는 1위 아님). 초록에 FID 수치 자체는 없음. 영상 모델 실험은 초록에 없다.
-
-## [2026-11-21] 자동수집 | nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB — Gemma-4-E4B 후학습 소형 모델 (Q4_K_M GGUF)
-- URL: https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB
-- 도메인: ai-news
-- 다운로드수: 183,617 (30일) · 좋아요 689 · trendingScore 160 (트렌딩 15위) · 생성 2026-10-05 · HF 내부 ID `6ac32703…`
-- 한줄요약: google/gemma-4-E4B-it를 NVIDIA가 후학습한 SLM(총 8B · 유효 4B, 컨텍스트 64K), 이 레포는 BF16 원본(`…-Bolt-E4B-BF16`)의 Q4_K_M 양자화본. 용도는 로컬 음성 · 기기 비서, 멀티턴 도구 사용. 라이선스 OpenMDW-1.1(상업 사용 가능 명시, 배포 지역 Global). 카드 벤치마크(NVIDIA 자체 하네스 NeMo Gym 측정, Q4_K_M 열): MultiChallenge 55.60(Gemma4 39.36 · Qwen3.5-4B 52.23), RoleBench 71.21, IHEval 82.40, RelyToolBench 69.29, GaRAGe 40.73 등 21행 중 다수 1위. **지는 행(Q4_K_M 기준, 상대는 Qwen3.5-4B): Tau2-Bench 52.32 vs 61.74(BF16은 55.10 vs 75.06), RULER 64K 85.76 vs 95.37, LongBench v2 48.67 vs 58.28, LongMemEval 69.92 vs 76.60, BFCL-v3 67.31 vs 70.56, ToolSandbox 74.13 vs 74.51, IFBench 64.00 vs 66.67, SysBench 67.22 vs 67.90; EQ-Bench v3 · When2Call은 Gemma4가 우세.** 즉 역할 · 지시 준수 · 근거성은 강하고 장문맥과 일부 도구 호출 벤치는 Qwen3.5-4B에 밀린다. 볼트의 기존 Nemotron-3.5 문서와 이름이 비슷하나 `Bolt-E4B` 문자열은 볼트 0건.
-
-## [2026-11-21] 자동수집 | Zyphra/ZONOS3-Mini — 활성 1억 파라미터 다국어 TTS · 음성 복제
-- URL: https://huggingface.co/Zyphra/ZONOS3-Mini
-- 도메인: ai-news
-- 다운로드수: 142,778 (30일) · 좋아요 622 · trendingScore 88.5 (트렌딩 27위) · 생성 2026-11-09 · HF 내부 ID `6af1543d…`
-- 한줄요약: 총 800M · 토큰당 활성 약 100M(latent MoE 64 experts top-2, GDN 9층 + 전역 어텐션 2층) TTS. 15Hz 듀얼 코덱 프레임(코드북 10개 × 4,096)을 자기회귀 생성해 44.1kHz로 스트리밍 렌더. 오디오 샘플 음성 복제, 나이 · 억양 · 음색 설계, 단어 단위 감정 · 속도 조절. **43개 언어, 한국어 포함**(텍스트 정규화도 한국어 지원 9개 언어에 포함). 브라우저 WebGPU · CUDA · MLX · C++/ggml(CPU/Vulkan) 런타임과 기본 음성 27종, SGLang-Omni의 OpenAI 호환 `/v1/audio/speech` 서빙. Apache-2.0. **카드에 WER · 화자 유사도 수치는 없다** — ZTTS2-Eval 55개 언어 서브셋 기준 품질-속도 그림(H100 1대)만 있고 상세는 블로그 · arXiv 2611.16525로 넘긴다(미확인). "폰 · 노트북 실시간"은 자칭. 실용성: 한국어 지원 + Apache-2.0 + GGUF라 로컬 TTS 후보로 시험 가치 있음.
-
-## [2026-11-21] 자동수집 | Edge0/Edge0-145B-NVFP4 — Qwen3.8-Flash-Next의 expert 층을 latent MoE로 재구성한 145B
-- URL: https://huggingface.co/Edge0/Edge0-145B-NVFP4
-- 도메인: ai-news
-- 다운로드수: 85,400 (30일) · 좋아요 605 · trendingScore 67 (트렌딩 33위) · 생성 2026-11-11 · HF 내부 ID `6af3fbab…`
-- 한줄요약: Qwen3.8-Flash-Next 기반(카드 태그는 quantized지만 카드 본문은 "재양자화가 아니라 48개 층의 routed expert를 latent 폭 1792로 교체 후 4비트 네이티브 후학습"이라고 주장). 145B · 토큰당 활성 10.12B, 층당 512 experts 중 10개 라우팅, 256K 컨텍스트, 전용 엔진 `edge0-infer`(Strata 확장) 필요 — 일반 llama.cpp/vLLM으로는 바로 못 돌린다(vLLM은 서드파티 플러그인). 카드 자체 측정: RTX 5090 D 24GB NVFP4에서 agent decode 98.3 tok/s · 16K prefill 3165.7 tok/s, 단 **이때 VRAM 23.25GiB + 호스트 RAM 38.27GiB 사용**. 품질 주장은 terminal-bench 2.1 86.5 vs Qwen 83.3, deepswe 1.1 64.6 vs 58.7, 나머지는 "level"(수치는 이미지 차트라 미확인). **가장 나쁜 행: 12GiB VRAM + 20GiB RAM(Q3_K, SSD 스트리밍)에서 chat 22.4 · agent 23.5 tok/s, prefill 221–222 tok/s — 24GB 카드에 예산 상한을 건 시험 조건이며 카드가 "최소 사양이 아니다"라고 명시.** 같은 16GiB + 20GiB 예산에서 decode 36.8 vs Qwen 18.5 tok/s(2.0배). 라이선스 Edge0 Community Model License 1.0 + Qwen Community License 동시 적용: 개인 · 연구 · 내부 사용 · 산출물 상업 이용은 허용, **모델 판매 · 상업 모델 서비스 · 독립 코딩/오피스 어시스턴트 제공은 별도 서면 라이선스 필요**. LICENSE(236행) `territor|korea|exclud` 적중은 110 · 129 · 205행 "excluded" 3건으로 모두 예외 범위 서술 — 지역 조항 아님.
+---
 
 ### 🔧 수집기 자기보고 — 11-21
 
@@ -1342,3 +1275,11 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 - **HF 데일리 페이퍼**: 11-21 페이지는 0편(토요일), 11-20 페이지(50편) 업보트 상위 5편. 5편 모두 `wiki/` arXiv ID 0건. 근거는 HF papers API 초록까지이며 **본문 표는 열지 않았다** — "초록에 수치 없음"으로 적은 3건(Conscious Mind · WeMM-Video · PMD)은 본문 확인 대상.
 - **HF 모델**: trendingScore 상위 60개 중 볼트 미보유분을 30일 다운로드 순으로 3건. 트렌딩 1–5위(Inkling-2-Mini 136 · Haru-4B 7,323 · Qwen3.8-27B-pi-adapted 1,874 · Sentinel7/h3 0 · Hy4-flash 3,949)는 다운로드가 낮아 이 기준에서 빠졌다.
 - 업보트 드리프트: WeVisForensics 50(목록 API) → 51(단건 API), 수 분 간격.
+
+---
+
+### 🔧 수집기 자기보고 — 11-22
+
+- **GitHub**: 일간 Trending 종합 16개는 11-21과 사실상 동일 목록이며, AI 관련 레포는 전부 볼트 보유 → 제외(비AI: nginx · AFFiNE · Ghost-Downloader-3). 그래서 5건 모두 언어별 일간 Trending(Python · C++ · TypeScript · Rust)에서 볼트 미보유 AI 레포를 당일 증분 순으로 골랐다(+37 · +33 · +30 · +14 · +12). **"급상승"이 아니라 스타 총량 기준(1,000 이상) 통과분**이다. 스타 수는 GitHub API로 재확인.
+- **HF 데일리 페이퍼**: 11-21(토) · 11-22(일) 페이지 0편. 11-20 상위 5편은 어제 수집했으므로 11-19 · 11-20 페이지에서 볼트 미보유분을 업보트 순으로 5편. 근거는 HF papers API 초록까지, **본문 표는 열지 않았다** — 5편 모두 초록에 수치가 없어 본문 확인 대상.
+- **HF 모델**: trendingScore 상위 60개 중 볼트 미보유분을 30일 다운로드 순으로 3건(3건 모두 양자화 · GGUF 레포). 트렌딩 1·3·5위(Inkling-2-Mini 원본 7,944 · inworld/voice-isolator 0 · apple/FastFrames-L 0)와 4위 tencent/Hy4-flash(5,588)는 다운로드가 낮아 기준에서 빠졌다 — 원본 정보는 GGUF 항목에 함께 적었다.

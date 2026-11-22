@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-19 (✅ **대기 13건 전량 처리** — 11-19 자동수집 13 = **신규 12 · 갱신 1**(last30days-skill — 수집기 🔄 정확). 크론 노트 0건. `^- URL:` 13 → 0)
-total_pages: 1866  # 2026-11-19 실측(sources **1631** · entities 130 · concepts **99** 실측(11-19 기록 97 + 11-18 ledger 커밋 6ad9dd7 [[super-twisting-stochastic-approximation]] + 11-21 ledger 커밋 [[wasserstein-smc-generative-transport]]) · synthesis 4 · domains 4 · queries 0) — 1853 + 12(신규 소스) + 1(concepts 계수 차)
-total_sources: 1631  # 2026-11-19: 자동수집 신규 12 (갱신 1은 기존 계수)
+updated: 2026-11-22 (✅ **대기 26건 전량 처리** — 11-21 자동수집 13 + 11-22 자동수집 13 = **신규 26 · 갱신 0**. 크론 노트 0건. `^- URL:` 26 → 0)
+total_pages: 1902  # 2026-11-22 실측(sources **1657** · entities 132 · concepts **105** · synthesis 4 · domains 4 · queries 0) — 처리 전 1872 + 30(신규 소스 26 · 개념 2 · 엔티티 2)
+total_sources: 1657  # 2026-11-22: 자동수집 신규 26
+# 🎯 배치 축(2026-11-22) = **모델 크기 한 숫자가 비용을 말하지 않는다.** 같은 이틀 배치에 [[Inkling-2-Mini-GGUF]] 26.4B / 활성 3.4B / 루프 실효 5.4B · [[SenseNova-Loop-9B-GGUF]] 저장 9B / 연산 14.6B · [[Hy4-flash-GGUF]] 220B / 활성 약 12B 인데 GGUF 125–157GiB · [[Edge0-145B-NVFP4]] 145B / 활성 10.12B 에 VRAM 23.25 + RAM 38.27GiB · [[ZONOS3-Mini]] 800M / 활성 100M 이 왔다 → [[파라미터-다중표기]] · [[latent-MoE]] 신설. 속도는 활성 × 루프로, 적재는 총량으로 읽는다. 같은 구조가 선발에도 작동: 다운로드는 파생(GGUF)에 약 30배 · 17배 몰리고 좋아요는 원본에 남아([[원본-파생-역전]]) 수집기의 '30일 다운로드 순' 기준이 원본을 탈락시킨다. 🔴 [[FreeVideo]] — H3 를 8GB 로 돌려도 가중치는 한국 제외([[라이선스-지역-제외]] 8번째, 엔진이 조건을 끌고 온 첫 사례) · ✅ 반대로 [[Hy4-flash-GGUF]] 원본 LICENSE 는 지역 조항 0건. 볼트 판독 추가: [[splash]] 배수는 비교 상대에 따라 1.3–2.0×(차순위 엔진) vs 2.5–5.3×(llama.cpp) · [[Depth-Pro-2]] 코드 LICENSE 에 비상업 문구 없음 · [[MC-Lens]] = UCL · [[Posterior-Matching-Distillation]] = NVIDIA(수집기 소속 미기재 2건).
 # 🎯 배치 축(2026-11-19) = **만드는 것보다 고르는 것이 병목이다.** [[Resolution-Hypothesis]] — 에이전트 진화에서 후보 선택은 무작위와 다를 바 없고 방법 간 순위 차(수 %p) < 같은 방법 재실행 간 차(LLM 호출 1,000만+). 같은 날 [[awesome-mcp-servers]] 는 후보 1,403개를 검증 없이 늘리고, [[Game2Player]] 는 상태 기반 성공 판정으로 '개선을 검출 가능하게' 만드는 쪽에 투자했다. [[PROLA]] 는 3 seed ± 와 Full FT 에 지는 칸까지 공개(모범) · [[Jeveration]] 122× 는 가장 느린 Janus-Pro 대비, 품질은 그 아래. 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] — 원본 apache 표기 vs H3 한국 제외 충돌([[라이선스-지역-제외]] 7번째) · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] 원본의 23배 dl · 평가 0([[원본-파생-역전]]). 🔄 [[last30days-skill]] v4.3.2 — 볼트 로컬 스킬은 v2.9.5.
 # 🎯 배치 축(2026-11-16) = **측정된 것과 쓰이는 것이 다르다.** 거부율 0.6% · 능력 −2.18%p 는 BF16 원본(dl 551)의 값이고 사용자는 270배 많은 GGUF 를 받는다([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 45.44 FPS 는 LightX2V 런타임의 원본 가중치 속도이고 배포본은 ComfyUI int8([[Comfy-Org-RelayVSR]], 화질 지표 0) · 체화 에이전트 점수는 판정 기준을 배운 값이라 기준을 살짝 바꾸면 우위가 사라진다([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). ✅ 정방향: [[SteerDistill]] 은 양자화본을 **에이전트 벤치로 다시 재서** BF16 1점 이내를 보였다. 🔴 [[MiniMax-H3-Character-Swap-LoRA]] LICENSE = H3 원본 바이트 동일(한국 제외, [[라이선스-지역-제외]] 파생 5번째 — 이번엔 수집기가 직접 명시). 🔄 [[chrome-devtools-mcp]] 도구 63개 확인 + 사용 통계 기본 수집 · [[univer]] 에이전트 계층은 상용 SDK(README 명문화). **11-16 분 13건에서도 같은 축이 반복** — [[qwen-concept-27b]] 측정은 Q8_0(4비트 미측정을 자인, 대신 랜덤 편집 대조군을 둠) · [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] BF16 병합만 측정(볼트 추가: 32k 중간본 SFW −4.0) · [[MiniMax-H3-Image-GGUF]] "거의 무손실" 근거 0 + 한국 제외(파생 6번째) · [[VibePrevisBench]] 모델 순위에 하네스(Codex CLI vs Claude Code)가 섞임. 스킬 4건([[elephant-goldfish-model]] · [[ffmpeg-skill]] · [[Claude-BugHunter]] + chrome-devtools 스킬)은 효과 수치 0 — 같은 날 측정 도구 [[SkillEvaluator]] 가 나왔다.
 # 🎯 배치 축(2026-11-14) = **"없다"고 적힌 것은 파일 하나 더 열면 있었고, 링크만 걸린 라이선스 뒤에는 한국 제외가 있었다.** 수집기의 부재 판정 3건이 볼트 실측에서 뒤집혔다 — [[modern-web-guidance-src]] "eval 수치 없음"(README 593–610행에 표: 무가이드 52–60% → 가이드 82–96%) · [[AutoTrust-JEV-27B]] "베이스 미명시"(`NOTICE.base`: Built on Qwen/Qwen3.8-27B) · "비전 근거 없음"(`config.json` 멀티모달 아키텍처) → [[메타데이터-부재-추론]]. 반대 방향으로 🔴 [[Pika-H3-Flex]] 는 LICENSE 가 MiniMax-H3 원본과 **바이트 동일**(sha256 일치) — 카드는 링크만 걸고 한국 제외를 말하지 않는다 → [[라이선스-지역-제외]] 파생 4번째, ✅ [[dinov3-vitl16]] 은 같은 검사로 "worldwide" 통과(음성 대조군). 같은 결: [[free-claude-code]] API `NOASSERTION` → LICENSE 원문 **AGPL-3.0-only** · [[DavidAU-Qwen3.5-9B-Defiant-Fable]] "7/7 초과"는 같은 카드 표에서 6/7 · 6/7 · 5/7([[표-부분인용]]) · 수집기 11-14 GitHub 5건 중 3건이 기보유 재배달([[정규명-우선-중복검사]]). ✅ 정방향: [[SO-Arena]](정확도 1위 = 신뢰성 7위) · [[Actor-Judge-Teacher]](행위자로 약한 모델이 심판 · 교사로 유효)로 [[System-One-모델]]에 외부 측정 축 · [[qwen-code]] 7개 버전 SWE-bench 76.40–77.80%(최고점은 최초 버전 — [[하네스-설계-축]] 포화).
@@ -45,6 +46,8 @@ total_sources: 1631  # 2026-11-19: 자동수집 신규 12 (갱신 1은 기존 �
 
 ## entities
 
+- [[Thinking-Machines-Lab]] — 🆕 2026-11-22 · 소스 2건([[Inkling]] · [[Inkling-2-Mini-GGUF]]) · HF `thinkingmachines` · Inkling-2-Mini 26.4B / 활성 3.4B 루프형 MoE(Apache-2.0 + AUP) · 지는 행 9개 공개 · 다운로드는 unsloth GGUF 가 약 30배 · 🔴 조직 실체 미확인
+- [[Apple]] — 🆕 2026-11-22 · 소스 1건([[Depth-Pro-2]]) · 미터 단위 이미지 · 비디오 단안 깊이 · 레포 LICENSE 는 표준 샘플코드 문언(비상업 문구 0) · 가중치 조건 미확인
 - [[DAGroup-PKU]] — 🆕 2026-11-14 · 소스 2건([[G-STAR]] · [[PhysLoop]]) · 11-13 HF 데일리 상위 10편 중 2편 · 마지막 저자 Daquan Zhou 공통 · 헤드라인은 속도(20×) · 규모(10만), 초록 벤치 점수 미기재 · 🔴 소속 미확인
 - [[Mistral-AI]] — 🆕 2026-10-26 · 소스 2건([[Mistral-Medium-3.5-128B]] · [[Timestral-209M]]) · LLM 랩의 시계열 진입 · "Modified MIT" = 월매출 $20M 상한
 - [[Pollen-Robotics]] — 🆕 2026-10-25 · [[microduck]] 제작 · 학습(`microduck_rl`)·온보드 레포 분리 공개 · MuJoCo 시뮬로 하드웨어 없이 실제 데몬 구동
@@ -216,6 +219,8 @@ total_sources: 1631  # 2026-11-19: 자동수집 신규 12 (갱신 1은 기존 �
 
 ## concepts
 
+- [[파라미터-다중표기]] — 🆕 **2026-11-22 신설 · n=6**([[Inkling-2-Mini-GGUF]] · [[SenseNova-Loop-9B-GGUF]] · [[Hy4-flash-GGUF]] · [[Edge0-145B-NVFP4]] · [[ZONOS3-Mini]] · [[NVIDIA-Nemotron-3.5-Bolt-E4B-4GB]]). 모델 크기는 총량 · 활성 · 루프 환산 · 적재 메모리 네 숫자다. 규칙: 속도는 활성 × 루프 횟수로, 들어가는지는 총량 · 파일 크기로, "VRAM N GB 구동"은 RAM · 스트리밍 · 전용 엔진 조건과 함께 읽는다.
+- [[latent-MoE]] — 🆕 **2026-11-22 신설 · n=3**([[ZONOS3-Mini]] 64 experts top-2 · [[Edge0-145B-NVFP4]] 층당 512 중 10 · [[Hy4-flash-GGUF]] 512 중 16+1). expert 를 좁은 잠재 폭에서 돌려 수를 수백 개로 늘리는 구조 — 병목이 연산에서 적재 · 스트리밍으로 이동하고 표준 런타임 지원이 늦다(전용 엔진 · 미병합 PR).
 - [[3DGS]] — 🆕 **2026-11-09 신설.** `[[3DGS]]` 링크 6소스 누적·페이지 부재 해소. 패턴: 무거운 생성/보정은 오프라인 1회, 결과는 가우시안에 굽는다([[EDGAR]] · [[idol]])
 - [[천장-기준선]] — 🆕 **2026-10-25 신설 · n=3(전부 [[ISTA-DASLab]]).** 기준 모델이 이미 만점인 축(AIME25 100.00)에서 "유지"는 정보가 아니고, 평균 회복률을 기계적으로 부풀린다 — IQ1_M **98.7% → 천장 제외 97.97%**(+0.73%p). 규칙: 천장 축 제외 회복률 재계산 병기
 - [[크론-덮어쓰기-소실]] — 🆕 **2026-10-24 신설 · `high` · git 확정 n=3.** 크론 재생성이 같은 파일명으로 **볼트 판정을 무경고 덮어쓴다** — 중복은 낭비, 덮어쓰기는 파괴. 지워진 구간에 CVPR 2027 보존 action 이 있었다 ⇒ 79줄 git 복원.
@@ -365,6 +370,34 @@ total_sources: 1631  # 2026-11-19: 자동수집 신규 12 (갱신 1은 기존 �
 ---
 
 ## sources
+
+### 2026-11-22 배치 (대기 **26건** 전량 처리 · 11-21 자동수집 13 + 11-22 자동수집 13 = **신규 26 · 갱신 0** · GitHub 10 · HF논문 10 · HF모델 6 · 크론 노트 0 · 🆕 개념 신설 2([[파라미터-다중표기]] · [[latent-MoE]]) · 🆕 엔티티 신설 2([[Thinking-Machines-Lab]] · [[Apple]]) · 엔티티 갱신 7(Edge0 · k2-fsa · unsloth · NVIDIA · Tencent · SenseTime · MiniMax) · 개념 갱신 3(라이선스-지역-제외 · 원본-파생-역전 · 에이전트-스킬) · 볼트 재분류: ai-news 9 · local-llm 9 · video-saas 5 · slam-3dgs 3)
+- 🆕 [[rtk]] — ★87,448 · 셸 출력 압축 프록시 · "출력 90% ≠ 비용 90%" 자기 명시 · 총비용 −20.2% 는 작성자 벤치 · `ai-news`
+- 🆕 [[mini-swe-agent]] — ★9,947 · bash 하나 · 약 100줄 · 모델 카드 측정 하네스 기준선 · `ai-news`
+- 🆕 [[app-store-compliance]] — ★3,595(하루 +627) · 제출 전 훅 게이트 스킬 · 정확도 수치 0 · 비표준 라이선스 · `ai-news`
+- 🆕 [[phone-harness]] — ★5,474 · 실기기 조작 CLI(iPhone Mirroring OCR · adb) · 한계 자기 명시 · `ai-news`
+- 🆕 [[mastra]] — ★29,728 · TS 에이전트 프레임워크 · `ee/` 별도 라이선스 · `ai-news`
+- 🆕 [[rig]] — ★9,218 · Rust LLM 라이브러리 + Bevy 플러그인형 코딩 에이전트 · `ai-news`
+- 🆕 [[Posterior-Matching-Distillation]] — 37 up · NVIDIA(볼트 확인) · 보조 네트워크 없는 확산 증류 · FID 값 초록에 없음 · `ai-news`
+- 🆕 [[CurvDelta]] — 26 up · 저곡률 공간 업데이트 · 목표 성능 "경쟁적" · 소속 · 코드 없음 · `ai-news`
+- 🆕 [[MC-Lens]] — 42 up · UCL(볼트 확인) · VLM 해석 렌즈 · "의식"은 비유 · 정량 0 · `ai-news`
+- 🆕 [[Inkling-2-Mini-GGUF]] — dl 238,152(원본의 약 30배) · 26.4B / 활성 3.4B / 실효 5.4B · SWE-bench V 79.2% · 🔴 비환각률 63.4% · `local-llm`
+- 🆕 [[SenseNova-Loop-9B-GGUF]] — dl30 68,559 · 저장 9B / 연산 14.6B · 256K 에 약 15GiB · NL2Repo 열세 · `local-llm`
+- 🆕 [[Hy4-flash-GGUF]] — dl30 94,791(원본의 약 17배) · 220B / 활성 약 12B · 128GB 급 · 미병합 PR · LICENSE 지역 조항 0 · `local-llm`
+- 🆕 [[Edge0-145B-NVFP4]] — dl30 88,713 · 145B / 활성 10.12B · 98.3 tok/s 에 VRAM 23.25 + RAM 38.27GiB · 전용 엔진 · `local-llm`
+- 🆕 [[NVIDIA-Nemotron-3.5-Bolt-E4B-4GB]] — dl30 195,916 · Q4_K_M 열 별도 · Qwen3.5-4B 에 지는 8행 공개 · `local-llm`
+- 🆕 [[ZONOS3-Mini]] — dl30 154,251 · 800M / 활성 100M TTS · 한국어 포함 · Apache-2.0 · WER 값 없음 · 🟡 좋아요 불일치 · `local-llm`
+- 🆕 [[splash]] — ★2,613 · Apple silicon 전용 엔진 · llama.cpp 대비 2.5–5.3× / 차순위 대비 1.3–2.0× · `local-llm`
+- 🆕 [[sherpa-onnx]] — ★16,087 · 오프라인 ASR · TTS · 화자분리 · VAD 런타임 · `local-llm`
+- 🆕 [[jan]] — ★46,011 · 로컬 LLM 데스크톱 앱 · `localhost:1337` · 성숙 프로젝트 · `local-llm`
+- 🔴 [[FreeVideo]] — ★4,205 · H3 를 VRAM 8GB 부터 · 가중치 H3 Community License(지역 제한) → 한국 보류 · `video-saas`
+- 🆕 [[Coda-DaVinci]] — 35 up · KlingAI Research · 코드 → 3D 프록시 → 영상 · 장편 전환 약점 자기 명시 · `video-saas`
+- 🆕 [[WeMM-Video]] — 45 up · Tencent · 옴니모달 영상 이해 2B~35B-A3B · 초록 점수 0 · Gemini-3.0-Flash 열세 · `video-saas`
+- 🆕 [[ALIVE]] — 40 up · Tsinghua · 스트리밍 영상 LLM 능동 알림 · 되묻기 · 초록 수치 0 · `video-saas`
+- 🆕 [[WeVisForensics]] — 54 up · Tencent · AI 생성 영상 탐지 에이전트 · 평균 95.2%(+9.0%) · `video-saas`
+- 🆕 [[Depth-Pro-2]] — 31 up · Apple · 이미지 · 비디오 미터 깊이 · 초록 수치 0 · 코드 LICENSE 비상업 문구 없음 · `slam-3dgs`
+- 🆕 [[VODA]] — 33 up · Yonsei · 3DGS 분할 체적 감독 · Removal-3D + RDE · `slam-3dgs`
+- 🆕 [[Mind2Act-World]] — 51 up · 로봇 조작 진단 벤치 · Mind 52.7 · Act 39.0 → Mind2Act 12.0% · `slam-3dgs`
 
 ### 2026-11-19 배치 (대기 **13건** 전량 처리 · 11-19 자동수집 13 = **신규 12 · 갱신 1** · GitHub 5(신규 4 · 갱신 1) · HF논문 5(신규 5) · HF모델 3(신규 3) · 크론 노트 0 · 엔티티 갱신 4(Google · Meta · MiniMax · UIUC) · 개념 갱신 5(System-One-모델 · 라이선스-지역-제외 · 측정도구-먼저-반증 · 원본-파생-역전 · 에이전트-스킬) · 볼트 재분류: ai-news 8 · local-llm 3 · video-saas 1 · slam-3dgs 1)
 - 🆕 [[paper-orchestra]] — ★4,669 · Google · 연구 자료 → LaTeX 원고 · 승률 차 문헌조사 50–68% · 데이터 미공개 · `ai-news`

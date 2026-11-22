@@ -4,8 +4,8 @@ type: entity
 domain: local-llm
 tags: [ai-news, nvidia, quantization, nvfp4, hardware, inference, harness, agent, entity]
 created: 2026-07-04
-updated: 2026-11-16
-sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md]
+updated: 2026-11-22
+sources: [Qwen3.6-27B-NVFP4.md, LocateAnything-3B.md, SoL-Pi.md, NVIDIA-Nemotron-3.5-Bolt-E4B-4GB.md, Posterior-Matching-Distillation.md]
 reliability: high
 ---
 
@@ -97,3 +97,7 @@ reliability: high
 ## 🔄 2026-11-16
 - 🆕 [[SkillEvaluator]] — ★2,083 · 스킬 3단계 평가(검증 · 중복 · 有/無 라이브 비교) · [[SkillSpector]] 와 같은 Verified Skills 파이프라인 · 정적 점수 86.2 는 *INCOMPLETE* 증거.
 - [[openworker]] 가 [[OpenShell]] 컨테이너를 샌드박스로 채택(수집기 판독) — NVIDIA 에이전트 보안 구성요소의 외부 채택 1건.
+
+## 🔄 2026-11-22
+- 🆕 [[NVIDIA-Nemotron-3.5-Bolt-E4B-4GB]] — Gemma-4-E4B 후학습 SLM 의 Q4_K_M(dl30 195,916). **Q4_K_M 열을 따로 내고 Qwen3.5-4B 에 지는 8행을 공개** — 역할 · 지시 준수 강, 장문맥 · 도구 호출 약. 하네스는 자체 NeMo Gym.
+- 🆕 [[Posterior-Matching-Distillation]] — HF 조직 `nvidia`(수집기 미기재, 볼트 확인) · 보조 score 네트워크 없는 확산 증류 · 4스텝 FID 최고 주장(값은 초록에 없음).

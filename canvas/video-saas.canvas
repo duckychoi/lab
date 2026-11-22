@@ -1249,6 +1249,86 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1122-video-saas-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-22 배치\nH3 8GB 구동 · 한국 제외 8번째 · Code2Video",
+			"x": 60,
+			"y": 16540,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1122-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/FreeVideo.md",
+			"x": 60,
+			"y": 16660,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-video-saas-2",
+			"type": "file",
+			"file": "wiki/sources/Coda-DaVinci.md",
+			"x": 520,
+			"y": 16660,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-video-saas-3",
+			"type": "file",
+			"file": "wiki/sources/WeMM-Video.md",
+			"x": 980,
+			"y": 16660,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-video-saas-4",
+			"type": "file",
+			"file": "wiki/sources/ALIVE.md",
+			"x": 1440,
+			"y": 16660,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-video-saas-5",
+			"type": "file",
+			"file": "wiki/sources/WeVisForensics.md",
+			"x": 60,
+			"y": 16900,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-video-saas-x1",
+			"type": "file",
+			"file": "wiki/concepts/라이선스-지역-제외.md",
+			"x": 60,
+			"y": 17140,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1122-video-saas-x2",
+			"type": "file",
+			"file": "wiki/sources/MiniMax-H3.md",
+			"x": 520,
+			"y": 17140,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -2063,6 +2143,55 @@
 			"id": "b1119-video-saas-e2",
 			"fromNode": "b1119-video-saas-1",
 			"toNode": "b1119-video-saas-x2"
+		},
+		{
+			"id": "b1122-video-saas-h1",
+			"fromNode": "b1122-video-saas-hdr",
+			"toNode": "b1122-video-saas-1"
+		},
+		{
+			"id": "b1122-video-saas-h2",
+			"fromNode": "b1122-video-saas-hdr",
+			"toNode": "b1122-video-saas-2"
+		},
+		{
+			"id": "b1122-video-saas-h3",
+			"fromNode": "b1122-video-saas-hdr",
+			"toNode": "b1122-video-saas-3"
+		},
+		{
+			"id": "b1122-video-saas-h4",
+			"fromNode": "b1122-video-saas-hdr",
+			"toNode": "b1122-video-saas-4"
+		},
+		{
+			"id": "b1122-video-saas-h5",
+			"fromNode": "b1122-video-saas-hdr",
+			"toNode": "b1122-video-saas-5"
+		},
+		{
+			"id": "b1122-video-saas-e1",
+			"fromNode": "b1122-video-saas-1",
+			"toNode": "b1122-video-saas-x1",
+			"label": "파생 8번째"
+		},
+		{
+			"id": "b1122-video-saas-e2",
+			"fromNode": "b1122-video-saas-1",
+			"toNode": "b1122-video-saas-x2",
+			"label": "가중치"
+		},
+		{
+			"id": "b1122-video-saas-e3",
+			"fromNode": "b1122-video-saas-3",
+			"toNode": "b1122-video-saas-4",
+			"label": "영상 이해"
+		},
+		{
+			"id": "b1122-video-saas-e4",
+			"fromNode": "b1122-video-saas-3",
+			"toNode": "b1122-video-saas-5",
+			"label": "Tencent"
 		}
 	]
 }

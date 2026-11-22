@@ -1769,6 +1769,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-22 배치\n총량 · 활성 · 루프 환산 · 적재 메모리",
+			"x": 60,
+			"y": 21310,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1122-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/Inkling-2-Mini-GGUF.md",
+			"x": 60,
+			"y": 21430,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/SenseNova-Loop-9B-GGUF.md",
+			"x": 520,
+			"y": 21430,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-3",
+			"type": "file",
+			"file": "wiki/sources/Hy4-flash-GGUF.md",
+			"x": 980,
+			"y": 21430,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-4",
+			"type": "file",
+			"file": "wiki/sources/Edge0-145B-NVFP4.md",
+			"x": 1440,
+			"y": 21430,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-5",
+			"type": "file",
+			"file": "wiki/sources/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB.md",
+			"x": 60,
+			"y": 21670,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-6",
+			"type": "file",
+			"file": "wiki/sources/ZONOS3-Mini.md",
+			"x": 520,
+			"y": 21670,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-7",
+			"type": "file",
+			"file": "wiki/sources/splash.md",
+			"x": 980,
+			"y": 21670,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-8",
+			"type": "file",
+			"file": "wiki/sources/sherpa-onnx.md",
+			"x": 1440,
+			"y": 21670,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-9",
+			"type": "file",
+			"file": "wiki/sources/jan.md",
+			"x": 60,
+			"y": 21910,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1122-local-llm-x1",
+			"type": "file",
+			"file": "wiki/concepts/파라미터-다중표기.md",
+			"x": 60,
+			"y": 22150,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1122-local-llm-x2",
+			"type": "file",
+			"file": "wiki/concepts/latent-MoE.md",
+			"x": 520,
+			"y": 22150,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1122-local-llm-x3",
+			"type": "file",
+			"file": "wiki/concepts/원본-파생-역전.md",
+			"x": 980,
+			"y": 22150,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1122-local-llm-x4",
+			"type": "file",
+			"file": "wiki/entities/Thinking-Machines-Lab.md",
+			"x": 1440,
+			"y": 22150,
+			"width": 400,
+			"height": 200,
+			"color": "4"
 		}
 	],
 	"edges": [
@@ -2927,6 +3067,129 @@
 			"id": "b1119-local-llm-e3",
 			"fromNode": "b1119-local-llm-3",
 			"toNode": "b1119-local-llm-x2"
+		},
+		{
+			"id": "b1122-local-llm-h1",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-1"
+		},
+		{
+			"id": "b1122-local-llm-h2",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-2"
+		},
+		{
+			"id": "b1122-local-llm-h3",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-3"
+		},
+		{
+			"id": "b1122-local-llm-h4",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-4"
+		},
+		{
+			"id": "b1122-local-llm-h5",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-5"
+		},
+		{
+			"id": "b1122-local-llm-h6",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-6"
+		},
+		{
+			"id": "b1122-local-llm-h7",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-7"
+		},
+		{
+			"id": "b1122-local-llm-h8",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-8"
+		},
+		{
+			"id": "b1122-local-llm-h9",
+			"fromNode": "b1122-local-llm-hdr",
+			"toNode": "b1122-local-llm-9"
+		},
+		{
+			"id": "b1122-local-llm-e1",
+			"fromNode": "b1122-local-llm-1",
+			"toNode": "b1122-local-llm-x1",
+			"label": "26.4B/3.4B/5.4B"
+		},
+		{
+			"id": "b1122-local-llm-e2",
+			"fromNode": "b1122-local-llm-2",
+			"toNode": "b1122-local-llm-x1",
+			"label": "9B → 14.6B"
+		},
+		{
+			"id": "b1122-local-llm-e3",
+			"fromNode": "b1122-local-llm-3",
+			"toNode": "b1122-local-llm-x1",
+			"label": "활성 12B · 128GB"
+		},
+		{
+			"id": "b1122-local-llm-e4",
+			"fromNode": "b1122-local-llm-4",
+			"toNode": "b1122-local-llm-x1",
+			"label": "VRAM+RAM"
+		},
+		{
+			"id": "b1122-local-llm-e5",
+			"fromNode": "b1122-local-llm-5",
+			"toNode": "b1122-local-llm-x1"
+		},
+		{
+			"id": "b1122-local-llm-e6",
+			"fromNode": "b1122-local-llm-6",
+			"toNode": "b1122-local-llm-x1"
+		},
+		{
+			"id": "b1122-local-llm-e7",
+			"fromNode": "b1122-local-llm-3",
+			"toNode": "b1122-local-llm-x2"
+		},
+		{
+			"id": "b1122-local-llm-e8",
+			"fromNode": "b1122-local-llm-4",
+			"toNode": "b1122-local-llm-x2"
+		},
+		{
+			"id": "b1122-local-llm-e9",
+			"fromNode": "b1122-local-llm-6",
+			"toNode": "b1122-local-llm-x2"
+		},
+		{
+			"id": "b1122-local-llm-e10",
+			"fromNode": "b1122-local-llm-1",
+			"toNode": "b1122-local-llm-x3",
+			"label": "약 30배"
+		},
+		{
+			"id": "b1122-local-llm-e11",
+			"fromNode": "b1122-local-llm-3",
+			"toNode": "b1122-local-llm-x3",
+			"label": "약 17배"
+		},
+		{
+			"id": "b1122-local-llm-e12",
+			"fromNode": "b1122-local-llm-1",
+			"toNode": "b1122-local-llm-x4"
+		},
+		{
+			"id": "b1122-local-llm-e13",
+			"fromNode": "b1122-local-llm-1",
+			"toNode": "b1122-local-llm-2",
+			"label": "루프형"
+		},
+		{
+			"id": "b1122-local-llm-e14",
+			"fromNode": "b1122-local-llm-6",
+			"toNode": "b1122-local-llm-8",
+			"label": "음성"
 		}
 	]
 }

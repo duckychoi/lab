@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-11-19
+updated: 2026-11-22
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -623,3 +623,8 @@ _소스 ingest 시 자동 누적_
 
 ## 2026-11-19 배치 (slam-3dgs 1)
 - 🆕 [[Game2Player]] (UIUC) — 빌더/플레이어 공동 개발 웹게임 568 · 과제 3,436 · 궤적 15.7K. 9B: PlayerBench 14.3 → 31.2% · GameWorld 30.0 → 53.1%. [[Gamer]](11-16)의 실시간 조작 노선과 대비되는 검증 가능 과제 노선.
+
+## 2026-11-22 배치 (slam-3dgs 3 · 11-21 + 11-22 자동수집)
+- 🆕 [[Depth-Pro-2]] (Apple · ★382) — 이미지 · 비디오 겸용 미터 단위 단안 깊이 · 선명도 + 시간 일관성 동시 주장 · 초록 수치 0 · 코드 LICENSE 에 비상업 문구 없음(가중치 조건 미확인). **3DGS 깊이 prior · 영상 VFX 전처리 후보.**
+- 🆕 [[VODA]] (Yonsei) — 3DGS 분할의 체적 감독 · Removal-3D + RDE 신설 · "렌더 마스크가 맞아도 객체는 다 선택되지 않았다". 객체 제거 잔여물 문제에 직접 해당.
+- 🆕 [[Mind2Act-World]] — 로봇 조작 진단 벤치 180 구성 · 최강 에이전트 Mind 52.7% · Act 39.0% → **Mind2Act 12.0%**(독립 가정 곱 약 20.6% 보다 낮음) · 시뮬 전용.

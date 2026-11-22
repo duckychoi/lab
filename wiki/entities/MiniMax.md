@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, minimax, china, video-generation, omni-modal, hailuo, partial-open-source]
 created: 2026-08-29
-updated: 2026-11-19
-sources: [MiniMax-H3-Image.md, P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md]
+updated: 2026-11-22
+sources: [MiniMax-H3-Image.md, P-H3-Image-Comfy.md, MiniMax-H3.md, MiniMax-M2.7.md, MiniMax-M3.md, MiniMax-Sparse-Attention.md, MiniMax-H3-Turbo-Lora.md, MiniMax-H3-Physical-Reasoning.md, FreeVideo.md]
 reliability: medium
 ---
 
@@ -74,3 +74,6 @@ reliability: medium
 
 ## 2026-11-19 갱신
 - 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] — H3 파인튜닝 2종 병합(dl 52.4만). 카드 license `other`("원본 따름") · LICENSE 404 · 원본 Singularity 는 apache-2.0 표기 → H3 원본의 한국 제외 조건과 충돌. [[라이선스-지역-제외]] 파생 7번째.
+
+## 2026-11-22 갱신
+- 🔴 [[FreeVideo]] (★4,205) — H3 를 VRAM 8GB 부터 돌린다는 서드파티 추론 엔진. 코드는 Apache-2.0, **가중치는 H3 Community License**(README 149행 "territorial and acceptable-use restrictions"). [[라이선스-지역-제외]] 파생 8번째 — 이번에는 파생 쪽이 제한의 존재를 README 에 적었다.

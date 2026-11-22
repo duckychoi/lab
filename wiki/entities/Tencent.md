@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, tencent, agent-infra, sandbox, hunyuan, browser-automation, entity]
 created: 2026-07-04
-updated: 2026-11-16
-sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md]
+updated: 2026-11-22
+sources: [teamai-cli.md, CubeSandbox.md, Multi-Layer-Agent-Red-Teaming.md, Distribution-wise-Rewards.md, Hy3.md, TencentDB-Agent-Memory.md, BrowserSkill.md, WeVisForensics.md, WeMM-Video.md, Hy4-flash-GGUF.md]
 reliability: high
 ---
 
@@ -96,3 +96,8 @@ reliability: high
 
 ## 🔄 2026-11-16
 - 🆕 [[LoopForge]] — 코딩 에이전트 CLI 10종을 역할 · SOP · human gate 로 묶는 셀프호스팅 워크스페이스(Go · MIT+서드파티) · ★1,056 → **2,028(하루 +972)**. README 가 Docker 소켓 · 전체 데이터 열람 · `0.0.0.0` 바인드를 스스로 한계로 명시 · 효과 측정 0. 자사 CodeBuddy 가 요구사항 명확화 · eval 에 고정.
+
+## 🔄 2026-11-22
+- 🆕 [[WeVisForensics]] — AI 생성 영상 탐지 에이전트 · 평균 95.2%(+9.0%) · 벤치별 내역 미확인.
+- 🆕 [[WeMM-Video]] — 옴니모달 영상 이해 2B~35B-A3B · 120+ 벤치 주장인데 초록 점수 0 · Gemini-3.0-Flash 에는 "격차를 좁혔다".
+- 🆕 [[Hy4-flash-GGUF]] — Hy4 flash(220B · 활성 약 12B) GGUF 는 128GB 급. 📌 **Tencent Hy License 1.0 에는 지역 제외 조항이 없다**(볼트 LICENSE 245행 grep 0건) — 이전 Hunyuan 계열과 다른 점. 상업 조항은 연매출 US$50M · MAU 1억 초과 MaaS.
