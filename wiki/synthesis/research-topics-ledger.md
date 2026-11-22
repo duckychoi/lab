@@ -139,6 +139,7 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 사후 ∝ $p_\theta$(생성=통계)×$\exp(-\lambda E_{phys})$(물리). 생성=제안, 물리=가중치, 리샘플=곱강제. = #35 PF머신+물리 potential.
     - ✅ toy(note:physics-smc-generation, 1D 중력): raw prior E=6.45 → 물리가이드 0.012/물리-SMC 0.041(참≈0), **다양성 보존**(std 0.27~0.29). 재학습 없이 추론때 통계+물리 융합 실증.
     - 각도: 비디오 확장($x_0$-예측 디코드 후 물리가중)·물리 potential 설계·#35 rejuvenation. vs 르쿤 JEPA(생성X)=다른 노선. 튜토리얼: `html/video-gen-tutorial.html`.
+    - 🆕 **GLM(Monday) 의견 반영(11-22)**: 융합 위상 3분해(노트=위상 B · C=STSA 칼만융합 재릴 · A=궤적수준) · PhysDiff=B의 결정론 특수사례(사영→확률융합 일반화 프레이밍) · PF 정당화=접촉 다봉성(랑제방 백색잡음→엔진 구조화 탐색 대체) · sim2real=제안-목표 KL 명시항 · 비디오 확장 디코드시점 가중의 조기퇴화 비판+λ어닐링 대안 · E-다양성 파레토 보고 권장 · #35 이중노트 병합 권장.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa**(#28·#32·#34) · **pf-generative-flow**(#35) 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.

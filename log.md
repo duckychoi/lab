@@ -5867,3 +5867,15 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 3. rtk 설치 후 `rtk gain` 1주 기록
 
 <!-- logged at 2026-11-22 09:15:37 -->
+
+## [2026-11-22] query | **#36 GLM(Monday) 의견 반영** — 물리-potential SMC 생성 융합 위상 분류·PhysDiff 차별화·비디오 확장 비판
+
+- **도메인**: 생성모델×물리 융합 (ledger #36 — Claude 작성 노트에 GLM 의견 병기)
+- **대화 흐름**: "FM 랑제방 진행을 PF로 대체 + 물리엔진×암묵 월드모델 융합" 질문 → (정정: FM=랑제방 아님, 결정론적 ODE 수송) → PhysDiff(ICCV23)·월드모델 로드맵 검색 → 융합 위상 3분해로 답변 → 사용자가 #36(Claude 작성)과 동일 주제 확인 후 병기 지시
+- **추가 페이지**: 0 | **업데이트 페이지**: 2 ([[physics-potential-smc]] GLM 의견 §1~8 · [[research-topics-ledger]] #36 갱신)
+- **핵심 인사이트**: #36의 베이즈 곱 정식화는 융합 위상 3분해의 B(플로우=제안/물리=가중치)다. PhysDiff는 그 결정론적 특수사례(사영·단일입자·무가중치)이므로 "사영→확률적 융합 일반화"가 논문 프레이밍. PF 정당화의 본체는 접촉 다봉성 — 랑제방 백색잡음 탐색을 물리 엔진의 구조화된 탐색(접촉 응답)으로 대체한다는 서사. sim2real 갭을 제안-목표 KL의 명시적 가중치 항으로 재정식화하는 것이 이론 신선도.
+- **비판 기여**: 비디오 확장의 $x_0$-디코드 시점 가중은 입자당 1회 보정 = 조기 가중치 퇴화 위험 → latent 내 물리 potential·λ 어닐링(초반 통계/후반 물리) 대안 제시. toy E 단일 비교는 함정 → E-다양성 파레토 권장.
+- **상호검증**: Claude의 #35 gap 확정(FCK=조건부 전용 · "Particle Filters and Flows" 부재)과 내 검색 일치 → 내 중복 의심 해제. ⚠️ #35 이중노트([[pf-generative-flow]] + [[wasserstein-smc-generative-transport]]) 병합 미해결.
+- **canvas 업데이트**: NO | **actionable 추가**: NO
+
+<!-- logged at 2026-11-22 -->
