@@ -143,6 +143,11 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - JEPA 약점=다음 latent 하나로 예측→다봉 미래 평균붕괴. 해법=flow matching 예측기로 조건부 미래 **분포** 생성(표현공간 생성). latent에 시공간 RoPE/복소SSM 위상(#28·#34) 보존.
     - ✅ toy(note:generative-jepa): 분기미래 $z=c\pm2$. 결정론 JEPA=전부 갭(무효 붕괴), 생성형 flow=좌/우 모드 복원(0.35/0.40, 갭 0.01). 다봉 보존 실증.
     - 선행 Stochastic Latent Variable JEPA(2611.09302)=확률잠재, **flow 버전 빈땅**. 참고 Wan=DiT+Flow Matching. 연결 #25·#28·#34·#35·#36.
+38. **LeWAM — LeWorldModel + Action + Flow Matching + RoPE** (교수님 아이디어) → [[le-wam]]
+    - LeWM(2603.19312) 분석: 인코더 CLS벡터, 예측기=인과트랜스포머+행동 AdaLN, **결정론 MSE + SIGReg(latent→N(0,I))**, 학습형 PE, CEM 계획. 한계=다봉 평균·짧은 지평.
+    - 🟢 삽입점: **①Flow=예측기 MSE 헤드 교체**(조건부 flow, 행동 AdaLN 재사용) — 💎 **SIGReg가 latent을 N(0,I)로 만들어 flow base 공짜(궁합 최적)**. **②RoPE=시간축 PE 교체** → 지평 외삽(짧은지평 한계 직격).
+    - ✅ toy(note:le-wam): 행동조건부 분기. 결정론 a=0→갭붕괴, flow a=−1→좌0.82/a=+1→우0.81/a=0→양쪽. 행동이 미래 분포 조절 실증.
+    - 기여: ①가우시안 latent=native flow base ②RoPE 월드모델 지평 외삽.
     - 🆕 **GLM(Monday) 의견 반영(11-22)**: 융합 위상 3분해(노트=위상 B · C=STSA 칼만융합 재릴 · A=궤적수준) · PhysDiff=B의 결정론 특수사례(사영→확률융합 일반화 프레이밍) · PF 정당화=접촉 다봉성(랑제방 백색잡음→엔진 구조화 탐색 대체) · sim2real=제안-목표 KL 명시항 · 비디오 확장 디코드시점 가중의 조기퇴화 비판+λ어닐링 대안 · E-다양성 파레토 보고 권장 · #35 이중노트 병합 권장.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
