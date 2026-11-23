@@ -1,0 +1,36 @@
+---
+title: "연구 시너지 지도 + 플래그십 통합 (#28·#32·#34–#40)"
+created: 2026-11-23
+author: fryday
+tags: [synthesis, synergy, flagship, energy, phase, world-model]
+---
+
+# 연구 시너지 지도
+
+지금까지 주제들(#25·#28·#32·#34~#40 + EBM/SIGReg + 🧭나침반)을 가로지르면 **두 공통 언어** 위에 있다.
+
+## 공통 2축
+- **🔋 에너지 축**: EBM(에너지 지형) · SIGReg(가우시안 규제) · [[dissipative-kf-worldmodel]] #39(소산성=에너지 발산 안 함) · [[super-twisting-stochastic-approximation]] #32(리야프노프 강인).
+- **🌀 위상 축**: [[spectral-memory-creativity]] #28(복소SSM 위상) · [[phase-rope-flowmatching-motion-reward]] #34(RoPE=$e^{i\omega t}$) · [[le-wam]] #38(RoPE 지평외삽) · #39 Mamba(SSM) · [[quantum-inspired-worldmodel]] #40(복소 간섭).
+
+## 시너지 클러스터 4
+1. **에너지 일관 세계모델** (#39+#32+EBM/SIGReg): 표현(SIGReg 가우시안·EBM)·동역학(#39 소산성)·업데이트(#32 STSA)가 **전부 에너지/리야프노프로 통합** → 증명 가능한 안정 세계모델.
+2. **위상 상태공간 백본** (#28+#34+#38+#39·#40): 복소/RoPE‑SSM 백본 하나가 **긴 기억(창의)·리듬 리워드·지평 외삽·효율 세계모델**을 동시에. RoPE=복소SSM=Mamba 상태전이=같은 수학 → 코드 공유 시너지. #40(quantum-inspired)이 이 축의 상한.
+3. **PF ↔ KF 상보(불확실성 스위치)** (#35/#36/#37 ↔ #39): KF=샘플프리·단봉·안정, PF/flow=다봉·생성·교정. 불확실성(공분산)으로 전환 — 평상시 KF, 접촉·분기(다봉)면 입자 분기(PF)+물리 potential(#36). 전환신호=#32 KTD.
+4. **물리·계획 삼위일체** (#36+#38+#39+V‑JEPA2‑AC): 물리 potential 교정(#36)+소산성 안정 rollout(#39)+행동조건 계획(#38). 르쿤 "현실 물리·행동결과·계획" 전부.
+
+## 🚩 플래그십 통합
+> **"소산성·위상(RoPE/복소SSM) Mamba 세계모델 + 적응적 KF↔PF(flow) 예측기 + 물리 potential 교정, SIGReg 표현"**
+
+- 백본 = 위상 Mamba(②) · 예측기 = KF 기본·다봉이면 flow/PF(③) · 안정성 = 소산성+STSA(①) · 교정 = 물리 potential(④) · 표현 = SIGReg(EBM).
+- #28·#32·#34~#40이 **한 시스템의 부품**으로 수렴. 르쿤 나침반에 생성(표현공간)·위상·물리를 심은 **우리 포지션**.
+
+## 정직한 긴장
+- 르쿤 "생성 버려라" vs ②③ flow(생성) 포함 → **단 표현공간**이라 픽셀 낭비는 회피(나침반 열린질문). 플래그십이 이 양립성의 구체적 답.
+- 미해결: 소산성 LMI→미분가능 손실 · KF↔PF 전환 임계 · 위상 Mamba+칼만 보정 · (양자영감) 텐서넷 상태표현.
+
+## 가장 값싼 다음 스텝
+클러스터 ③ **"적응적 KF↔PF" numpy toy** — 평상시 KF(#39 소산성) → 다봉(접촉 분기)서 PF 입자 분기로 전환, 양쪽 모드 보존 확인. #35+#39 코드 재사용.
+
+## 연결
+[[research-topics-ledger]] 전체 · 🧭 나침반(에너지·샘플효율·물리·표현예측·학계 소규모).
