@@ -176,6 +176,11 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 근접논문 **2512.00757**(Contraction-Conditioned Neural Filters)의 약점 제거: ①KF/PF 아님(게인·공분산 없음) ②라벨을 참값 **오라클**로 생성 → 우리는 **실데이터 관측**으로 대체 + 적응게인·공분산·수축 복원.
     - ✅ toy(note:filtering-synthetic-robust, 동일 real 예산 300시드): 평균붕괴 final|err| naive **0.704**(붕괴22%)·mix 0.230·**KF 0.146**(mix대비 37%↓) · 수축인자 naive **1.00**(발산)·mix 0.909·**KF 0.730** · 분산붕괴 naive **0.12**(꼬리소멸) vs KF 1.04 · 분포이동 회복 mix **35** vs KF **7** vs adaptive **3** 세대.
     - 통합: #32(KF≈학습update)+#39(수축/소산성)+#33(큐레이션)+모델붕괴. 한계: R 추정·선형가우시안, 딥넷은 KalmanNet식 학습게인+대각 공분산. 🧭 나침반(샘플효율·안정·학계 toy) 정중앙. 연결 #39·#41·#32·#33.
+43. **자기교정 디지털‑스튜디오 데이터 엔진 — 멀티태스크 일관성=공짜 관측 + 소량 실 보정** (텔레그램: AI 영상제작툴=합성데이터 공장, Apple Depth Pro 계기) → [[selfcorrecting-studio-engine]]
+    - 디지털 스튜디오가 뎁스·포즈·모캡·3DGS 데이터를 GT 공짜로 생성 → 태스크 간 **기하 일관성(reprojection)=공짜 관측**(오차 부분공간 n̂ 소거) + **소량 실촬영=게이지 ĝ 보정** + 칼만게인 + 수축(#39). = **#42를 멀티태스크 3D 비전으로 스케일.**
+    - 핵심 통찰: gauge ambiguity(bundle adjustment 구조) — 일관성이 부분공간을 공짜로 죽이니 비싼 실데이터는 게이지 한 축만 → 조금으로 충분.
+    - ✅ toy(note:selfcorrecting-studio-engine, 2D 오차 300시드): 동일예산(실 12회) naive **7.80**(붕괴100%)·일관성만 3.01·실혼합만 2.45·**ours 0.99**(실혼합 2.5×↓, reprojection 잔차 0.27 vs 2.26). 샘플효율 **ours 실 3회=1.88 > mix 실 12회=2.45**(4× 적게).
+    - 조각 존재(스플랫-포즈 2412.00138·few-real+synth 2512.13411·월드모델 데이터엔진 GigaWorld-0/Mirage2Matter) → 신규=필터지배 자기교정+멀티태스크 일관성 관측 루프+수축 붕괴보증. 한계: 일관성 단독은 게이지 drift 못 막음(실 앵커 필수), 선형·방향기지 가정→실제 EKF/학습게인. 수혜태스크=metric depth(Depth Pro)·pose·mocap·3DGS/4DGS. 연결 #42·#39·#41·#33.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa**(#28·#32·#34) · **pf-generative-flow**(#35) 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
