@@ -161,6 +161,10 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 선행: KalmanNet·DynaNet·DL-KF / **KalMamba**(Mamba+KF 세계모델). 🟢 **빈땅=dissipativity를 학습목적으로** 쓴 신경 KF 세계모델 없음.
     - ✅ toy(note:dissipative-kf-worldmodel): 샘플프리 SSM 적합. plain 불안정 11%·rollout발산 최대norm 16.0 vs **dissip 0%·최대 0.5**. 세계모델 '관측없는 상상 rollout' 안정성을 소산성이 보장(=#38 롤아웃 드리프트 근본해결).
     - 🧭 나침반(에너지기반·샘플효율·물리·학계 소규모) 전적 부합. 연결 #32(칼만≈RL)·#38·#35(PF↔KF 상보).
+40. **Quantum-inspired 세계모델 — 복소·간섭·텐서네트워크** (교수님 발상: 물리AI 다음은 양자물리AI?) → [[quantum-inspired-worldmodel]]
+    - 양자=단순확률 아님, **복소진폭+간섭+얽힘**. #28 복소SSM·FHRR·#34 RoPE가 이미 quantum-inspired(위상 간섭).
+    - 3갈래 분리: (A)QML on 양자컴(하이프·장기) (B)**quantum-inspired 고전컴**(텐서넷·복소NN·FHRR) (C)AI for 양자과학(고전, 실용). "0/1컴에 참 양자알고리즘=무의미(맞음), quantum-inspired 수학=고전서 유의미".
+    - 🧭 판정: **(B)(C) 고전=나침반 부합(근미래·학계·numpy toy 가능)**, QML-on-QPU=나침반 벗어남(장기 관찰). 다리: MPS 상태표현·복소SSM·NQS. 연결 #28·#34·#39.
     - 🆕 **GLM(Monday) 의견 반영(11-22)**: 융합 위상 3분해(노트=위상 B · C=STSA 칼만융합 재릴 · A=궤적수준) · PhysDiff=B의 결정론 특수사례(사영→확률융합 일반화 프레이밍) · PF 정당화=접촉 다봉성(랑제방 백색잡음→엔진 구조화 탐색 대체) · sim2real=제안-목표 KL 명시항 · 비디오 확장 디코드시점 가중의 조기퇴화 비판+λ어닐링 대안 · E-다양성 파레토 보고 권장 · #35 이중노트 병합 권장.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
