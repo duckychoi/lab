@@ -156,6 +156,11 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 🟢 삽입점: **①Flow=예측기 MSE 헤드 교체**(조건부 flow, 행동 AdaLN 재사용) — 💎 **SIGReg가 latent을 N(0,I)로 만들어 flow base 공짜(궁합 최적)**. **②RoPE=시간축 PE 교체** → 지평 외삽(짧은지평 한계 직격).
     - ✅ toy(note:le-wam): 행동조건부 분기. 결정론 a=0→갭붕괴, flow a=−1→좌0.82/a=+1→우0.81/a=0→양쪽. 행동이 미래 분포 조절 실증.
     - 기여: ①가우시안 latent=native flow base ②RoPE 월드모델 지평 외삽.
+39. **소산성 신경 KF 세계모델 — extended dissipativity로 학습** (교수님 아이디어) → [[dissipative-kf-worldmodel]]
+    - KF=PF와 달리 샘플프리 예측–보정 → 효율 세계모델. **extended dissipativity(H∞·L2-L∞·passivity 통합 에너지지표)로 학습** = 소산적·안정 필터. 백본 Mamba(선택적 SSM=학습 상태전이)+칼만 보정 헤드.
+    - 선행: KalmanNet·DynaNet·DL-KF / **KalMamba**(Mamba+KF 세계모델). 🟢 **빈땅=dissipativity를 학습목적으로** 쓴 신경 KF 세계모델 없음.
+    - ✅ toy(note:dissipative-kf-worldmodel): 샘플프리 SSM 적합. plain 불안정 11%·rollout발산 최대norm 16.0 vs **dissip 0%·최대 0.5**. 세계모델 '관측없는 상상 rollout' 안정성을 소산성이 보장(=#38 롤아웃 드리프트 근본해결).
+    - 🧭 나침반(에너지기반·샘플효율·물리·학계 소규모) 전적 부합. 연결 #32(칼만≈RL)·#38·#35(PF↔KF 상보).
     - 🆕 **GLM(Monday) 의견 반영(11-22)**: 융합 위상 3분해(노트=위상 B · C=STSA 칼만융합 재릴 · A=궤적수준) · PhysDiff=B의 결정론 특수사례(사영→확률융합 일반화 프레이밍) · PF 정당화=접촉 다봉성(랑제방 백색잡음→엔진 구조화 탐색 대체) · sim2real=제안-목표 KL 명시항 · 비디오 확장 디코드시점 가중의 조기퇴화 비판+λ어닐링 대안 · E-다양성 파레토 보고 권장 · #35 이중노트 병합 권장.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
