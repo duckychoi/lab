@@ -166,6 +166,10 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 양자=단순확률 아님, **복소진폭+간섭+얽힘**. #28 복소SSM·FHRR·#34 RoPE가 이미 quantum-inspired(위상 간섭).
     - 3갈래 분리: (A)QML on 양자컴(하이프·장기) (B)**quantum-inspired 고전컴**(텐서넷·복소NN·FHRR) (C)AI for 양자과학(고전, 실용). "0/1컴에 참 양자알고리즘=무의미(맞음), quantum-inspired 수학=고전서 유의미".
     - 🧭 판정: **(B)(C) 고전=나침반 부합(근미래·학계·numpy toy 가능)**, QML-on-QPU=나침반 벗어남(장기 관찰). 다리: MPS 상태표현·복소SSM·NQS. 연결 #28·#34·#39.
+41. **Quantum-inspired KF — 복소/텐서넷 상태 샘플프리 세계모델 필터** (교수님: 양자 PF는 별로? → 간섭을 표현에) → [[quantum-inspired-kf]]
+    - "양자 PF=간섭을 샘플링에 붙인 미스매치". 대신 복소/텐서넷 상태 + 샘플프리 KF(#39). 샘플프리+간섭+안정=나침반 정중앙.
+    - ✅ toy(note:quantum-inspired-kf): Part1 모호관측 bimodal → **복소/그리드 모드질량 0.97 vs 실수KF 0.25(갭붕괴)**. Part2 겹침질량 복소 Δφ=0 0.782/π 0.494 vs **고전 0.714 고정**(위상 블라인드) → 간섭=추가 표현력.
+    - 설계: 상태=복소 그리드/MPS(#40), 갱신=복소 KF 샘플프리(#39)+소산성 안정. 연결 #28·#39·#40, PF↔KF 상보 #35.
     - 🆕 **GLM(Monday) 의견 반영(11-22)**: 융합 위상 3분해(노트=위상 B · C=STSA 칼만융합 재릴 · A=궤적수준) · PhysDiff=B의 결정론 특수사례(사영→확률융합 일반화 프레이밍) · PF 정당화=접촉 다봉성(랑제방 백색잡음→엔진 구조화 탐색 대체) · sim2real=제안-목표 KL 명시항 · 비디오 확장 디코드시점 가중의 조기퇴화 비판+λ어닐링 대안 · E-다양성 파레토 보고 권장 · #35 이중노트 병합 권장.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
