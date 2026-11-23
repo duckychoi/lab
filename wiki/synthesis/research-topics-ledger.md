@@ -171,6 +171,11 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - ✅ toy(note:quantum-inspired-kf): Part1 모호관측 bimodal → **복소/그리드 모드질량 0.97 vs 실수KF 0.25(갭붕괴)**. Part2 겹침질량 복소 Δφ=0 0.782/π 0.494 vs **고전 0.714 고정**(위상 블라인드) → 간섭=추가 표현력.
     - 설계: 상태=복소 그리드/MPS(#40), 갱신=복소 KF 샘플프리(#39)+소산성 안정. 연결 #28·#39·#40, PF↔KF 상보 #35.
     - 🆕 **GLM(Monday) 의견 반영(11-22)**: 융합 위상 3분해(노트=위상 B · C=STSA 칼만융합 재릴 · A=궤적수준) · PhysDiff=B의 결정론 특수사례(사영→확률융합 일반화 프레이밍) · PF 정당화=접촉 다봉성(랑제방 백색잡음→엔진 구조화 탐색 대체) · sim2real=제안-목표 KL 명시항 · 비디오 확장 디코드시점 가중의 조기퇴화 비판+λ어닐링 대안 · E-다양성 파레토 보고 권장 · #35 이중노트 병합 권장.
+42. **필터링-기반 합성데이터 강건학습 — KF 예측·실데이터 보정 + 수축** (텔레그램: NN update from KF/PF for synthetic data) → [[filtering-synthetic-robust]]
+    - 합성데이터 재귀학습을 **칼만필터**로: 합성=노이즈 낀 예측, 실데이터=보정 관측, 게인 K=P/(P+R)=적응신뢰, (1-K)<1=수축(#39)→붕괴 없음 보증.
+    - 근접논문 **2512.00757**(Contraction-Conditioned Neural Filters)의 약점 제거: ①KF/PF 아님(게인·공분산 없음) ②라벨을 참값 **오라클**로 생성 → 우리는 **실데이터 관측**으로 대체 + 적응게인·공분산·수축 복원.
+    - ✅ toy(note:filtering-synthetic-robust, 동일 real 예산 300시드): 평균붕괴 final|err| naive **0.704**(붕괴22%)·mix 0.230·**KF 0.146**(mix대비 37%↓) · 수축인자 naive **1.00**(발산)·mix 0.909·**KF 0.730** · 분산붕괴 naive **0.12**(꼬리소멸) vs KF 1.04 · 분포이동 회복 mix **35** vs KF **7** vs adaptive **3** 세대.
+    - 통합: #32(KF≈학습update)+#39(수축/소산성)+#33(큐레이션)+모델붕괴. 한계: R 추정·선형가우시안, 딥넷은 KalmanNet식 학습게인+대각 공분산. 🧭 나침반(샘플효율·안정·학계 toy) 정중앙. 연결 #39·#41·#32·#33.
 
 > 상세: `html/neural-beamforming-research.html`(lab) · `note` 레포 neuralbeamforming 브랜치 · wiki sources/concepts.
 > 코드·검증: `note` 레포 **spectral-credit-stsa**(#28·#32·#34) · **pf-generative-flow**(#35) 브랜치 — #28 스펙트럴 신용할당(설계형 FIR Hann > TD(λ), AUC 0.170 vs 0.202) + #32 STSA(고정 STW 외란불변≈0.164, 적응게인 STW 양축 지배 A 0.051/D 0.132). proof-of-concept, 수렴정리 미완.
