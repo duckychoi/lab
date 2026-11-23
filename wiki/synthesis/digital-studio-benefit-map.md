@@ -76,4 +76,4 @@ purpose: 전방향 조명·카메라뷰 디지털 스튜디오가 공짜 GT로 �
 - 리스크: 학습된 스튜디오(생성뷰)에서 데이터 생성 시 그 오차 상속(garbage-in) → 실관측 보정이 차단기. sim2real 갭은 태스크마다 크기 다름(depth·matting 큼).
 
 ## 연결
-[[selfcorrecting-studio-engine]] #43(부모) · [[filtering-synthetic-robust]] #42 · [[research-topics-ledger]] · [[research-genesis-34-43]] · 🧭 나침반.
+[[selfcorrecting-studio-engine]] #43(부모) · [[filtering-synthetic-robust]] #42 · [[digital-studio-tech-stack]](구현 테크스택) · [[research-topics-ledger]] · [[research-genesis-34-43]] · 🧭 나침반.
