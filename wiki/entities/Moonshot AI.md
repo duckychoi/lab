@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [ai-news, entity, china, frontier-lab, kimi, moe, open-weights]
 created: 2026-07-28
-updated: 2026-11-09
-sources: [Kimi-K3.1-Pro.md, Kimi-K3.md, Kimi-K2.6.md, Kimi-K2.7-Code.md]
+updated: 2026-11-24
+sources: [Kimi-K3.1-Pro.md, Kimi-K3.md, Kimi-K2.6.md, Kimi-K2.7-Code.md, Mooncake.md]
 reliability: high
 ---
 
@@ -32,3 +32,6 @@ reliability: high
 
 ## 🔄 2026-11-09
 - 🆕 [[Kimi-K3.1-Pro]] — K3 에 수백 도메인 공동 RL + 어텐션을 Gated MLA → **KDA 69 + Gated DSA 24층** 희소화, MXFP4/MXFP8 QAT. GPQA 93.5→94.2 · BrowseComp 91.2→92.1(자체 보고 간). 🔴 평가표에서 비교 모델만 "w/ fallback" 설정 · Program Bench 31.5 / TB-Science 38.1 은 프런티어 아래. dl30 25,569 · ♥1,751.
+
+## 🔄 2026-11-24
+- 🆕 [[Mooncake]] — **KV캐시 Prefill/Decode 분리 서빙 프레임워크**(★7,120 · 수집기 11-23 6,914 · kvcache-ai 조직). Kimi 서빙 인프라 출신 오픈소스 — Moonshot AI 에서 가중치가 아닌 **서빙 계층**의 첫 페이지. [[torchtitan]](PyTorch 학습 스택)와의 통합 공개(11-23). 조직 귀속(kvcache-ai ↔ Moonshot AI)은 레포 문서 기준.

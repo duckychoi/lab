@@ -4240,3 +4240,14 @@ HF 기본 응답에서 `downloadsAllTime` 이 **0** 으로 보였다. 🔴 **10-
 - 🆕 [[Posterior-Matching-Distillation]] (NVIDIA) — 보조 네트워크 없는 확산 증류 · FID 값 초록에 없음.
 - 🆕 [[CurvDelta]] — 저곡률 공간 업데이트 · 목표 성능은 "경쟁적" · 소속 · 코드 없음.
 - 🆕 [[MC-Lens]] (UCL) — VLM 해석 렌즈 · "의식"은 비유 · 정량 0 · 코드 없음.
+
+## 2026-11-24 배치 (11-23 자동수집 13 중 ai-news 8)
+🎯 **축**: **판단이 생성 뒤로 간다** — 본체는 동결·최소 편집, 판별·교정·증명·제약은 얇은 바깥층([[동결-교정층]] 신설 — NoPeWorld · TAISR · GEPA · Inkling GGUF 가 한 날에 모였다).
+- 🆕 [[bend]] (★25,832) — Bend 2 가 **proof gate** 언어로 PR 병합을 증명에 묶음 — 실행 이전 판단 계층의 코드 쪽 사례([[검사가능성-공사]]).
+- 🆕 [[cli-agent-orchestrator]] (★1,660) — tmux 다중 CLI 에이전트 오케스트레이터 · 보드 관찰형([[LoopForge]] · [[Claude-Code-워크플로우]] 축).
+- 🆕 [[gepa]] (★7,558) — 반성적 진화로 **텍스트 파라미터만** 최적화 · 가중치 0 교정층의 가장 순수한 형태 · 스킬 진화([[SkillEvaluator]] · [[RSIHub]])와 접점.
+- 🆕 [[torchtitan]] (★5,968) — PyTorch 공식 학습 스택 + TitanRL · [[Mooncake]] 서빙과 통합 공개.
+- 🆕 [[Mooncake]] (★7,120) — KV캐시 Prefill/Decode 분리 서빙 · Moonshot AI 계열 인프라 오픈소스([[하네스-설계-축]] 서빙 쪽).
+- 🆕 [[cmHC]] (업보트 94) — mHC 를 Birkhoff 다면체 수축으로 단순화 · 본문 표 수치 **볼트 HTML 문자열 검증 통과**(3.4686 · 44.8 등 6수치).
+- 🆕 [[Clover-35B-A3B-Preview]] (업보트 40) — 확산 LM · RTX 5070 Ti 16GB 실측 표기(73.6 · 680 tok/s 등 검증 통과) · 가중치 공개 범위 확인 전 보류.
+- 🆕 [[Duopra]] (업보트 28) — 전이중 음성 모델에 도구 실행 학습 · Pass@1 4.7→44.7% · 실패는 도구 요청 '이전' 단계([[동결-교정층]] 부분 사례).

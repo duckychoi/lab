@@ -9208,6 +9208,106 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1124-ai-news-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-24 배치\n판단이 생성 뒤로 — 본체 동결 · 얇은 교정층",
+			"x": 60,
+			"y": 61500,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1124-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/bend.md",
+			"x": 60,
+			"y": 61620,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/cli-agent-orchestrator.md",
+			"x": 520,
+			"y": 61620,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/gepa.md",
+			"x": 980,
+			"y": 61620,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/torchtitan.md",
+			"x": 1440,
+			"y": 61620,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/Mooncake.md",
+			"x": 60,
+			"y": 61890,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/cmHC.md",
+			"x": 520,
+			"y": 61890,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/Clover-35B-A3B-Preview.md",
+			"x": 980,
+			"y": 61890,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/Duopra.md",
+			"x": 1440,
+			"y": 61890,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-ai-news-x1",
+			"type": "file",
+			"file": "wiki/concepts/동결-교정층.md",
+			"x": 60,
+			"y": 62160,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -16966,6 +17066,69 @@
 			"id": "b1122-ai-news-e5",
 			"fromNode": "b1122-ai-news-2",
 			"toNode": "b1122-ai-news-6"
+		},
+		{
+			"id": "b1124-ai-news-h1",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-1"
+		},
+		{
+			"id": "b1124-ai-news-h2",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-2"
+		},
+		{
+			"id": "b1124-ai-news-h3",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-3"
+		},
+		{
+			"id": "b1124-ai-news-h4",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-4"
+		},
+		{
+			"id": "b1124-ai-news-h5",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-5"
+		},
+		{
+			"id": "b1124-ai-news-h6",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-6"
+		},
+		{
+			"id": "b1124-ai-news-h7",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-7"
+		},
+		{
+			"id": "b1124-ai-news-h8",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-8"
+		},
+		{
+			"id": "b1124-ai-news-h9",
+			"fromNode": "b1124-ai-news-hdr",
+			"toNode": "b1124-ai-news-x1"
+		},
+		{
+			"id": "b1124-ai-news-e1",
+			"fromNode": "b1124-ai-news-8",
+			"toNode": "b1124-ai-news-x1",
+			"label": "부분 사례"
+		},
+		{
+			"id": "b1124-ai-news-e2",
+			"fromNode": "b1124-ai-news-6",
+			"toNode": "b1124-ai-news-x1",
+			"label": "대조군"
+		},
+		{
+			"id": "b1124-ai-news-e3",
+			"fromNode": "b1124-ai-news-1",
+			"toNode": "b1124-ai-news-x1",
+			"label": "같은 축 · 코드 쪽"
 		}
 	]
 }

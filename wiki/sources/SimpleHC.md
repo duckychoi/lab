@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, architecture, hyper-connections, residual, training-efficiency, moe]
 created: 2026-11-14
-updated: 2026-11-14
+updated: 2026-11-24
 sources: [https://huggingface.co/papers/2611.05984]
 reliability: medium
 ---
@@ -31,7 +31,7 @@ reliability: medium
 - **액션**: 없음.
 
 ## 관련 페이지
-- [[선택비용과-중복성]](둘 중 하나로 충분 = 중복된 부품) · [[Mamba4]] · [[ai-news]]
+- [[선택비용과-중복성]](둘 중 하나로 충분 = 중복된 부품) · [[Mamba4]] · [[cmHC]](같은 주제 mHC 의 후속 — 수축으로 단순화, 11-24) · [[ai-news]]
 
 ## 원본
 - 출처: https://huggingface.co/papers/2611.05984

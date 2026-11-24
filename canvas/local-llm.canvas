@@ -1909,6 +1909,46 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1124-local-llm-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-24 배치\n후행학습을 편집으로 대체",
+			"x": 60,
+			"y": 22470,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1124-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/Inkling-2-Mini-Uncensored-GGUF.md",
+			"x": 60,
+			"y": 22590,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/Olala-v1.0-mini-7A1B.md",
+			"x": 520,
+			"y": 22590,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-local-llm-x1",
+			"type": "file",
+			"file": "wiki/concepts/동결-교정층.md",
+			"x": 980,
+			"y": 22590,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -3190,6 +3230,27 @@
 			"fromNode": "b1122-local-llm-6",
 			"toNode": "b1122-local-llm-8",
 			"label": "음성"
+		},
+		{
+			"id": "b1124-local-llm-h1",
+			"fromNode": "b1124-local-llm-hdr",
+			"toNode": "b1124-local-llm-1"
+		},
+		{
+			"id": "b1124-local-llm-h2",
+			"fromNode": "b1124-local-llm-hdr",
+			"toNode": "b1124-local-llm-2"
+		},
+		{
+			"id": "b1124-local-llm-h3",
+			"fromNode": "b1124-local-llm-hdr",
+			"toNode": "b1124-local-llm-x1"
+		},
+		{
+			"id": "b1124-local-llm-e1",
+			"fromNode": "b1124-local-llm-1",
+			"toNode": "b1124-local-llm-x1",
+			"label": "교정층 표본 4"
 		}
 	]
 }

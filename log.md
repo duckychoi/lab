@@ -5893,3 +5893,43 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 <!-- logged at 2026-11-22 -->
 
 ## [2026-11-23 09:03:20] ingest | 대기 항목 없음
+
+## [2026-11-24] ingest | **대기 13건 전량 처리** (11-23 자동수집 13 · 크론 노트 0)
+
+- **도메인**: ai-news 8(bend · cli-agent-orchestrator · gepa · torchtitan · Mooncake · cmHC · Clover-35B-A3B-Preview · Duopra) · local-llm 2(Inkling-2-Mini-Uncensored-GGUF · Olala-v1.0-mini-7A1B) · video-saas 3(NoPeWorld · TAISR · Sulphur-3) — 수집기는 13건 전부 `ai-news` 표기, 볼트 재분류
+- **분해**: **신규 13 · 소스 갱신 3**(ZONOS3-Mini · SimpleHC · xHC). 처리 시작 `grep -c '^- URL:'` = 13 → 처리 완료 후 13(처리 중 수집기가 11-24 신규 13건 추가 — 이월, 대기 13건)
+- **추가 페이지**: **14개** (소스 13 · 개념 1) | **업데이트 페이지**: 엔티티 1(Moonshot AI) + 개념 2(원본-파생-역전 · 라이선스-지역-제외) + 소스 갱신 3 + 도메인 3쪽 + index.md + actionable.md
+- **페이지 수**: 1902 → **1931** (sources 1671 · entities 132 · concepts 116 · synthesis 8 · domains 4) ✅ 실측 — 이번 배치 기여 **+14**(소스 13 · 개념 1); 나머지 **+15 는 타 세션 증분**(concepts +10 · synthesis +4 · sources +1 MAI-Thinking-1-Rocket · 11-23 23:01~11-24 03:02 — log 미기록, mtime 실측으로 분리)
+- **canvas 업데이트**: YES — 3종에 `b1124-*` 노드 +10/+4/+5 · 엣지 +12/+3/+4 (헤더+파일 노드, 라벨 엣지 "부분 사례/대조군/같은 축·코드 쪽/교정층 표본 1·2·4/파생 9번째", 재파싱 + b1124 파일 존재 검증 통과)
+- **actionable 추가**: YES — 4항목(H3 보류에 Sulphur-3 · GEPA 볼트 스킬 진화 시험 · CAO 설치 시험 · Clover 가중치 공개 확인 후 조건부 시험)
+- **독립 검증**: GitHub API 5레포(스타 · 언어 · 라이선스 · 생성일 · HEAD) · HF papers API 5편(초록 · 업보트 · organization · githubRepo) + arXiv HTML 본문 표 2건(cmHC 표 1 · Clover 표 1·4 — 수집기 판독과 일치) · HF models API 5건(수집 3: Inkling GGUF · Sulphur-3 · Olala + 원본 2: Inkling-2-Mini · 계열 대조 — 내부 ID · dl · 좋아요 · base_model) · LICENSE 적중 행 1종(Sulphur-3, 수집기 판독 인용 — 원문 재열람은 미실시) · llama.cpp PR 2건(#32694 병합 · #32695 구버전 혼용 금지)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**판단이 생성 뒤로 간다 — 본체는 동결·최소 편집, 판별·교정·증명·제약은 얇은 바깥층.** 하루 배치에 같은 모양이 4번: [[NoPeWorld]] DiT 동결 + 궤적 prediction head, [[TAISR]] SR 본체 무학습 + MLLM 캡션 갈아끼움, [[gepa]] 가중치 0 텍스트 진화, [[Inkling-2-Mini-Uncensored-GGUF]] rank-1 LoRA 49지점(거부 방향 제거). [[동결-교정층]] 신설(n=4). 학습·수정의 단위가 "모델 전체"에서 "층"으로 내려오고 있고, 경계 사례가 방향을 확인한다 — [[Duopra]] projector 만 복구(부분 사례) · [[cmHC]] 새 파라미터 0(본체를 얇게 하는 반대쪽) · [[bend]] proof gate 는 같은 축의 코드 쪽.
+
+### 🏆 주요 발견
+1. 🆕 [[동결-교정층]] 개념 신설 — 명칭 볼트 자작 · 표본 4 · 하루 배치 — 경향 판단은 이르다.
+2. 📈 [[원본-파생-역전]] 2쌍 추가 — Inkling(파생 dl 7.9배 · ♥ 원본 8.1배) · Sulphur(1.45배 · ♥ 원본 2.6배, 계열 3번째). 🔴 Inkling 원본 dl 이틀 새 7,944 → 41,888(5.3배) — 11-22의 "약 30배"와 오늘의 7.9배 사이 **배수가 이틀 만에 4배 붕괴. 배수는 (파생 레포 × 측정일) 쌍으로만 의미가 있다** — 10-12 측정일 병기 규약 재확인.
+3. 🔴 [[라이선스-지역-제외]] 파생 9번째 — [[Sulphur-3]]: "검열을 풀었지만 권리는 못 풀었다." corrector(ComfyUI) 가 다른 H3 에도 적용된다고 카드 명시 — 모델이 잠기면 부속 도구만 남는 형태. actionable 등록.
+4. ✅ [[ZONOS3-Mini]] 정정 — 622(수집기 11-21) → 639(11-23) → 653(볼트 11-24) 단조 증가 ⇒ 볼트 11-22의 574 는 판독 오류 확정. **역방향 불일치(다운로드 증가 + 좋아요 감소)의 첫 기록** — "수치가 이상하면 볼트 표기부터 의심한다". 11-22 판정 5의 "판정 보류"가 정확했음이 확인.
+5. 🔴 [[Olala-v1.0-mini-7A1B]] 공식 llama.cpp · vLLM · Ollama · LM Studio · mlx-lm 전부 미지원(자체 포크 필수) — 일반 양자화 NaN · Mamba 상태 float32. 유럽 슈퍼컴 3기(JUPITER · Jean Zay · MeluXina) 12.8T 토큰 · 한국어 사전학습 포함 · Apache-2.0. 카드가 공백을 스스로 선언한 절제 사례.
+6. ✅ 지는 행 계속 — Clover(에이전트 7지표 1위지만 HLE 12.8 vs 21.6 · AIME 83.3 vs 90.4 — 지식·수학은 같은 체급 Qwen 밀림) · cmHC(FineWeb-Edu S · L val 은 최저 아님, 평균 순위만 1위 · λ=0.70 전층 수축은 순위 9.0) · NoPeWorld(WorldPlay2 에선 Overall 하락) · Olala(동급 Ling-3.0-tiny 에 대부분 밀림) · Inkling(MMLU −1.5%p p=0.006 자인).
+7. ✅ 수집기 11-23 이행 — 요청 3(organization 5편 전부) · 4(본문 표 열람 5편) · 5(ZONOS3 재확인) 전부 확인. Duopra 업보트 목록 10 vs 단건 20 드리프트를 스스로 기록 + 탈락 후보(MemOnce) 보존.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 실행 0건 — 설치 · 추론 · 스킬 적용 · 벤치 재현 없음.
+2. [[Sulphur-3]] LICENSE 원문 재열람 미실시 — 지역 제외 판단은 H3 3종([[Sulphur-2-base]] · [[MiniMax-H3]] · FreeVideo) 문언 이력 + 수집기의 적중 행 판독(83행 중 10행) 인용. 정확 문언 대조는 미완.
+3. [[동결-교정층]] — "동결"의 정의 스펙트럼(파라미터 완전 동결 ~ 본체 동결+head 학습)을 아직 경계 짓지 못했다. 표본 4 · 하루 배치.
+4. Olala 벤치 수치는 카드의 "전 모델 자체 클러스터 · 동일 코드 측정" 주장을 그대로 인용 — 열 귀속 확인만 하고 외부 벤치 대조 미실시.
+5. Inkling rank-1 LoRA 49지점 구조(attention 출력 · routed experts · 토큰 임베딩 · 12 looped 층 가중치 공유 → 48패스)는 카드 설명 판독 — 레포 코드 · LoRA 파일 구조 직접 확인 미실시.
+6. 볼트 git 커밋은 하지 않음(자동 백업에 맡김). 작업 자료 · canvas 스크립트: `/tmp/ing1124/`.
+7. 🔴 log 미기록 페이지 생성 확인 — 11-23 23:01~11-24 03:02 세션(연구 ledger 정리 추정: synthesis 4 · concepts 약 10) · 11-24 09:11 소스 1(MAI-Thinking-1-Rocket). 소속 세션 불명 · 해당 페이지와 canvas · index의 정합성은 미검증.
+
+### 🔥 actionable 최우선
+1. **Sulphur-3 를 MiniMax H3 보류 목록에 추가** — 지역 제외 9번째 · 카드 벤치 수치 0
+2. GEPA 로 볼트 스킬 프롬프트 진화 시험 — 가중치 0 교정층의 가장 순수한 형태
+3. Clover-35B-A3B 가중치 공개 확인 후 조건부 시험(16GB 단일 GPU 확산 LM 재현)
+
+<!-- logged at 2026-11-24 09:25:22 -->

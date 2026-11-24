@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-22 (✅ **대기 26건 전량 처리** — 11-21 자동수집 13 + 11-22 자동수집 13 = **신규 26 · 갱신 0**. 크론 노트 0건. `^- URL:` 26 → 0)
-total_pages: 1902  # 2026-11-22 실측(sources **1657** · entities 132 · concepts **105** · synthesis 4 · domains 4 · queries 0) — 처리 전 1872 + 30(신규 소스 26 · 개념 2 · 엔티티 2)
-total_sources: 1657  # 2026-11-22: 자동수집 신규 26
+updated: 2026-11-24 (✅ **대기 13건 전량 처리** — 11-23 자동수집 13 = **신규 13 · 소스 갱신 3(ZONOS3-Mini 좋아요 판독 정정 포함)**. 크론 노트 0건. `^- URL:` 13 → 13 — 처리 중 수집기가 11-24 신규 13건 추가, 다음 배치 이월)
+total_pages: 1931  # 2026-11-24 실측(sources **1671** · entities 132 · concepts **116** · synthesis **8** · domains 4 · queries 0) — 이번 배치 기여 +14(신규 소스 13 · 개념 1). ⚠️ 11-22 실측 1902 → 1931 사이 타 세션 증분 +15(concepts +10 · synthesis +4 · sources +1 [MAI-Thinking-1-Rocket]) — log 미기록, 11-24 mtime 실측으로 분리
+total_sources: 1671  # 2026-11-24: 자동수집 신규 13 + 타 세션 1(MAI-Thinking-1-Rocket)
+# 🎯 배치 축(2026-11-24) = **판단이 생성 뒤로 간다 — 본체는 동결·최소 편집, 판별·교정·증명·제약은 얇은 바깥층.** [[동결-교정층]] 신설 — 하루에 4표본: [[NoPeWorld]] DiT 동결 + prediction head · [[TAISR]] SR 본체 무학습 + MLLM 캡션 갈아끼움 · [[gepa]] 가중치 0 텍스트 진화 · [[Inkling-2-Mini-Uncensored-GGUF]] rank-1 LoRA 49지점 편집(거부 방향 제거, MMLU −1.5%p 자인). 경계: [[Duopra]] projector 만 복구(부분) · [[cmHC]] 새 파라미터 0(대조군 — 본체를 얇게). [[bend]] proof gate 는 같은 축의 코드 쪽([[검사가능성-공사]]). 반복 관찰: 다운로드는 파생으로 · 좋아요는 원본으로([[원본-파생-역전]] — Inkling 계열 급등 구간에서 배수가 이틀 만에 30배 → 7.9배) · 지역 제외 승계 9번째([[Sulphur-3]] — "검열을 풀었지만 권리는 못 풀었다"). ✅ 볼트 정정: [[ZONOS3-Mini]] 좋아요 574 → 653(11-22 판독 오류 확정 — 수치 이상 시 볼트 표기부터 의심한다). 🔴 [[Olala-v1.0-mini-7A1B]] 공식 llama.cpp/vLLM 미지원(포크 필수 — [[선언된-구현체-공백]] 역방향).
 # 🎯 배치 축(2026-11-22) = **모델 크기 한 숫자가 비용을 말하지 않는다.** 같은 이틀 배치에 [[Inkling-2-Mini-GGUF]] 26.4B / 활성 3.4B / 루프 실효 5.4B · [[SenseNova-Loop-9B-GGUF]] 저장 9B / 연산 14.6B · [[Hy4-flash-GGUF]] 220B / 활성 약 12B 인데 GGUF 125–157GiB · [[Edge0-145B-NVFP4]] 145B / 활성 10.12B 에 VRAM 23.25 + RAM 38.27GiB · [[ZONOS3-Mini]] 800M / 활성 100M 이 왔다 → [[파라미터-다중표기]] · [[latent-MoE]] 신설. 속도는 활성 × 루프로, 적재는 총량으로 읽는다. 같은 구조가 선발에도 작동: 다운로드는 파생(GGUF)에 약 30배 · 17배 몰리고 좋아요는 원본에 남아([[원본-파생-역전]]) 수집기의 '30일 다운로드 순' 기준이 원본을 탈락시킨다. 🔴 [[FreeVideo]] — H3 를 8GB 로 돌려도 가중치는 한국 제외([[라이선스-지역-제외]] 8번째, 엔진이 조건을 끌고 온 첫 사례) · ✅ 반대로 [[Hy4-flash-GGUF]] 원본 LICENSE 는 지역 조항 0건. 볼트 판독 추가: [[splash]] 배수는 비교 상대에 따라 1.3–2.0×(차순위 엔진) vs 2.5–5.3×(llama.cpp) · [[Depth-Pro-2]] 코드 LICENSE 에 비상업 문구 없음 · [[MC-Lens]] = UCL · [[Posterior-Matching-Distillation]] = NVIDIA(수집기 소속 미기재 2건).
 # 🎯 배치 축(2026-11-19) = **만드는 것보다 고르는 것이 병목이다.** [[Resolution-Hypothesis]] — 에이전트 진화에서 후보 선택은 무작위와 다를 바 없고 방법 간 순위 차(수 %p) < 같은 방법 재실행 간 차(LLM 호출 1,000만+). 같은 날 [[awesome-mcp-servers]] 는 후보 1,403개를 검증 없이 늘리고, [[Game2Player]] 는 상태 기반 성공 판정으로 '개선을 검출 가능하게' 만드는 쪽에 투자했다. [[PROLA]] 는 3 seed ± 와 Full FT 에 지는 칸까지 공개(모범) · [[Jeveration]] 122× 는 가장 느린 Janus-Pro 대비, 품질은 그 아래. 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] — 원본 apache 표기 vs H3 한국 제외 충돌([[라이선스-지역-제외]] 7번째) · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] 원본의 23배 dl · 평가 0([[원본-파생-역전]]). 🔄 [[last30days-skill]] v4.3.2 — 볼트 로컬 스킬은 v2.9.5.
 # 🎯 배치 축(2026-11-16) = **측정된 것과 쓰이는 것이 다르다.** 거부율 0.6% · 능력 −2.18%p 는 BF16 원본(dl 551)의 값이고 사용자는 270배 많은 GGUF 를 받는다([[gemma-4-31B-it-ARA-heretic-GGUF]]) · 45.44 FPS 는 LightX2V 런타임의 원본 가중치 속도이고 배포본은 ComfyUI int8([[Comfy-Org-RelayVSR]], 화질 지표 0) · 체화 에이전트 점수는 판정 기준을 배운 값이라 기준을 살짝 바꾸면 우위가 사라진다([[Criteria-Exposure]]) · "Submitted FPS is not physical display FPS"([[Veyra-NRVideo]]). ✅ 정방향: [[SteerDistill]] 은 양자화본을 **에이전트 벤치로 다시 재서** BF16 1점 이내를 보였다. 🔴 [[MiniMax-H3-Character-Swap-LoRA]] LICENSE = H3 원본 바이트 동일(한국 제외, [[라이선스-지역-제외]] 파생 5번째 — 이번엔 수집기가 직접 명시). 🔄 [[chrome-devtools-mcp]] 도구 63개 확인 + 사용 통계 기본 수집 · [[univer]] 에이전트 계층은 상용 SDK(README 명문화). **11-16 분 13건에서도 같은 축이 반복** — [[qwen-concept-27b]] 측정은 Q8_0(4비트 미측정을 자인, 대신 랜덤 편집 대조군을 둠) · [[Qwen-Image-2.1-Uncensored-Omni-Quantized]] BF16 병합만 측정(볼트 추가: 32k 중간본 SFW −4.0) · [[MiniMax-H3-Image-GGUF]] "거의 무손실" 근거 0 + 한국 제외(파생 6번째) · [[VibePrevisBench]] 모델 순위에 하네스(Codex CLI vs Claude Code)가 섞임. 스킬 4건([[elephant-goldfish-model]] · [[ffmpeg-skill]] · [[Claude-BugHunter]] + chrome-devtools 스킬)은 효과 수치 0 — 같은 날 측정 도구 [[SkillEvaluator]] 가 나왔다.
@@ -219,6 +220,7 @@ total_sources: 1657  # 2026-11-22: 자동수집 신규 26
 
 ## concepts
 
+- [[동결-교정층]] — 🆕 **2026-11-24 신설 · n=4**([[NoPeWorld]] DiT 동결+prediction head · [[TAISR]] 본체 무학습+MLLM 캡션 · [[gepa]] 가중치 0 텍스트 진화 · [[Inkling-2-Mini-Uncensored-GGUF]] rank-1 LoRA 49지점). 본체는 동결·최소 편집, 판별·교정·증명·제약은 얇은 바깥층 — 학습·수정의 단위가 "모델 전체"에서 "층"으로 내려온다. 경계: [[Duopra]] 부분(projector 만 복구) · [[cmHC]] 대조(파라미터 0 — 본체 축소) · [[bend]] 코드 쪽. 🔴 명칭 자작 · 하루 배치 표본 — 경향 판단은 이르다.
 - [[파라미터-다중표기]] — 🆕 **2026-11-22 신설 · n=6**([[Inkling-2-Mini-GGUF]] · [[SenseNova-Loop-9B-GGUF]] · [[Hy4-flash-GGUF]] · [[Edge0-145B-NVFP4]] · [[ZONOS3-Mini]] · [[NVIDIA-Nemotron-3.5-Bolt-E4B-4GB]]). 모델 크기는 총량 · 활성 · 루프 환산 · 적재 메모리 네 숫자다. 규칙: 속도는 활성 × 루프 횟수로, 들어가는지는 총량 · 파일 크기로, "VRAM N GB 구동"은 RAM · 스트리밍 · 전용 엔진 조건과 함께 읽는다.
 - [[latent-MoE]] — 🆕 **2026-11-22 신설 · n=3**([[ZONOS3-Mini]] 64 experts top-2 · [[Edge0-145B-NVFP4]] 층당 512 중 10 · [[Hy4-flash-GGUF]] 512 중 16+1). expert 를 좁은 잠재 폭에서 돌려 수를 수백 개로 늘리는 구조 — 병목이 연산에서 적재 · 스트리밍으로 이동하고 표준 런타임 지원이 늦다(전용 엔진 · 미병합 PR).
 - [[3DGS]] — 🆕 **2026-11-09 신설.** `[[3DGS]]` 링크 6소스 누적·페이지 부재 해소. 패턴: 무거운 생성/보정은 오프라인 1회, 결과는 가우시안에 굽는다([[EDGAR]] · [[idol]])
@@ -370,6 +372,21 @@ total_sources: 1657  # 2026-11-22: 자동수집 신규 26
 ---
 
 ## sources
+
+### 2026-11-24 배치 (대기 **13건** 전량 처리 · 11-23 자동수집 13 = **신규 13 · 소스 갱신 3** · GitHub 5 · HF논문 5 · HF모델 3 · 크론 노트 0 · 🆕 개념 신설 1([[동결-교정층]]) · 엔티티 갱신 1(Moonshot AI) · 개념 갱신 2(원본-파생-역전 — Inkling/Sulphur 2쌍 · 라이선스-지역-제외 — Sulphur-3 9번째) · 🔄 소스 보강 3(ZONOS3-Mini 좋아요 574→653 판독 정정 · SimpleHC · xHC cmHC 백링크) · 볼트 재분류: ai-news 8 · local-llm 2 · video-saas 3 · 본문 표 볼트 HTML 검증 2건(cmHC · Clover) · 수치 전건 볼트 API 재확인)
+- 🆕 [[bend]] — ★25,832 · proof gate 로 PR 병합을 증명에 묶는 언어 · `ai-news`
+- 🆕 [[cli-agent-orchestrator]] — ★1,660 · tmux 다중 CLI 에이전트 오케스트레이터 · `ai-news`
+- 🆕 [[gepa]] — ★7,558 · 반성적 진화로 텍스트 파라미터만 · **가중치 0** · `ai-news`
+- 🆕 [[torchtitan]] — ★5,968 · PyTorch 공식 학습 스택 + TitanRL · [[Mooncake]] 통합 · `ai-news`
+- 🆕 [[Mooncake]] — ★7,120 · KV캐시 Prefill/Decode 분리 서빙 · Moonshot AI 계열 인프라 · `ai-news`
+- 🆕 [[cmHC]] — 94 up · mHC 를 Birkhoff 다면체 수축으로 단순화 · 본문 표 검증 통과 · `ai-news`
+- 🆕 [[Clover-35B-A3B-Preview]] — 40 up · 확산 LM · RTX 5070 Ti 16GB 실측 표기 · 본문 표 검증 통과 · 가중치 공개 확인 전 보류 · `ai-news`
+- 🆕 [[Duopra]] — 28 up · 전이중 음성에 도구 실행 학습 · Pass@1 4.7→44.7% · 실패는 요청 '이전' 단계 · `ai-news`
+- 🆕 [[NoPeWorld]] — 56 up · DiT 동결 + 궤적 prediction head · 침투 방지를 head 책임으로 · `video-saas`
+- 🆕 [[TAISR]] — 22 up · 학습 불필요 RTC 플러그인 · MLLM 캡션으로 글자 복원 · PSNR 대가 자인 · `video-saas`
+- 🆕 [[Inkling-2-Mini-Uncensored-GGUF]] — dl 329,497(원본의 7.9배 · ♥ 원본 8.1배) · rank-1 LoRA 49지점 거부 방향 제거 · MMLU −1.5%p(p=0.006) 자인 · `local-llm`
+- 🔴 [[Sulphur-3]] — dl 133,732 · H3 기반 검열 해제 영상 생성 · **한국 제외 승계 9번째** · 카드 벤치 수치 0 · `video-saas`
+- 🆕 [[Olala-v1.0-mini-7A1B]] — dl 63,289 · Mamba-3 29 + 어텐션 7층 MoE(활성 1B) · 🔴 공식 llama.cpp/vLLM 미지원(포크 필수) · `local-llm`
 
 ### 2026-11-22 배치 (대기 **26건** 전량 처리 · 11-21 자동수집 13 + 11-22 자동수집 13 = **신규 26 · 갱신 0** · GitHub 10 · HF논문 10 · HF모델 6 · 크론 노트 0 · 🆕 개념 신설 2([[파라미터-다중표기]] · [[latent-MoE]]) · 🆕 엔티티 신설 2([[Thinking-Machines-Lab]] · [[Apple]]) · 엔티티 갱신 7(Edge0 · k2-fsa · unsloth · NVIDIA · Tencent · SenseTime · MiniMax) · 개념 갱신 3(라이선스-지역-제외 · 원본-파생-역전 · 에이전트-스킬) · 볼트 재분류: ai-news 9 · local-llm 9 · video-saas 5 · slam-3dgs 3)
 - 🆕 [[rtk]] — ★87,448 · 셸 출력 압축 프록시 · "출력 90% ≠ 비용 90%" 자기 명시 · 총비용 −20.2% 는 작성자 벤치 · `ai-news`

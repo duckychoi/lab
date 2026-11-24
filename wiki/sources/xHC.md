@@ -4,7 +4,7 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-paper, architecture, residual, hyper-connections, transformer]
 created: 2026-07-20
-updated: 2026-07-20
+updated: 2026-11-24
 sources: []
 reliability: medium
 ---
@@ -28,6 +28,7 @@ reliability: medium
 
 ## 관련 페이지
 - [[Mamba4]]
+- [[cmHC]] — HC 계열 후속(mHC 수축 단순화 · 2026-11-24)
 - [[Morphing-Hybrid-Attention]]
 - [[AttentionSink]]
 - [[ai-news]]

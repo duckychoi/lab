@@ -1329,6 +1329,56 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1124-video-saas-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-24 배치\n본체 동결 · 교정은 바깥 · 라이선스 승계",
+			"x": 60,
+			"y": 17460,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1124-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/NoPeWorld.md",
+			"x": 60,
+			"y": 17580,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-video-saas-2",
+			"type": "file",
+			"file": "wiki/sources/TAISR.md",
+			"x": 520,
+			"y": 17580,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-video-saas-3",
+			"type": "file",
+			"file": "wiki/sources/Sulphur-3.md",
+			"x": 980,
+			"y": 17580,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1124-video-saas-x1",
+			"type": "file",
+			"file": "wiki/concepts/동결-교정층.md",
+			"x": 1440,
+			"y": 17580,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -2192,6 +2242,44 @@
 			"fromNode": "b1122-video-saas-3",
 			"toNode": "b1122-video-saas-5",
 			"label": "Tencent"
+		},
+		{
+			"id": "b1124-video-saas-h1",
+			"fromNode": "b1124-video-saas-hdr",
+			"toNode": "b1124-video-saas-1"
+		},
+		{
+			"id": "b1124-video-saas-h2",
+			"fromNode": "b1124-video-saas-hdr",
+			"toNode": "b1124-video-saas-2"
+		},
+		{
+			"id": "b1124-video-saas-h3",
+			"fromNode": "b1124-video-saas-hdr",
+			"toNode": "b1124-video-saas-3"
+		},
+		{
+			"id": "b1124-video-saas-h4",
+			"fromNode": "b1124-video-saas-hdr",
+			"toNode": "b1124-video-saas-x1"
+		},
+		{
+			"id": "b1124-video-saas-e1",
+			"fromNode": "b1124-video-saas-1",
+			"toNode": "b1124-video-saas-x1",
+			"label": "교정층 표본 1"
+		},
+		{
+			"id": "b1124-video-saas-e2",
+			"fromNode": "b1124-video-saas-2",
+			"toNode": "b1124-video-saas-x1",
+			"label": "교정층 표본 2"
+		},
+		{
+			"id": "b1124-video-saas-e3",
+			"fromNode": "b1124-video-saas-3",
+			"toNode": "b1122-video-saas-x1",
+			"label": "파생 9번째"
 		}
 	]
 }
