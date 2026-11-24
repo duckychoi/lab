@@ -307,6 +307,10 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
 66. **최신 학습법 정리 + A6000×2 / 5090 축소 재현** (텔레그램: Depth Pro류·Wan류·LLM/VLM 학습법을 최신 논문으로 정리하고 데스크톱 규모 재현 계획·코드) → [[training-recipes-2026-11]]
     - 정리: 1차 기술보고서 25편 남짓(Depth Pro·DA2/3·MoGe-2·UniDepthV2·Metric3D v2·Marigold·VGGT·FoundationGeo / Wan·HunyuanVideo·Movie Gen·SD3·Seedance·LongCat / DeepSeek-V3·R1·V3.2·Qwen3·Kimi K2·GLM-5 / Qwen2.5-VL·Qwen3-VL·InternVL3·Kimi K2.5) TeX 정독, 7개 수치 원문 재대조. **"Apple Depth Pro 2"는 존재하지 않음**, Wan 2.5~3.0·Qwen3.5·DeepSeek-V4 보고서 없음.
     - 재현: note:training-recipes-repro — 사전등록 `docs/REPRO_PLAN.md`(트랙 D 깊이 전과정 / G rectified-flow DiT 커리큘럼 / L 사전학습 3단계+SFT→GRPO→증류 / V LLaVA식, 티어 A·B, 양성대조·가설·관문·중단조건) + 코드 `depth/ gen/ llm/ vlm/`.
+67. **월드 모델 · 월드 액션 모델(WAM) 2026-11 SOTA와 학습 절차** (텔레그램: 최신 WM/WAM을 조사해 계열별 모델 구성부터 학습까지 코드로 구현할 수 있게 설명) → [[world-models-2026-11]]
+    - 정리: 32편 TeX 원문으로 계열 3개(생성형: Cosmos 3·Predict2.5·Self-Forcing·Matrix-Game 2/3 / 잠재 JEPA: V-JEPA 2-AC·DINO-WM·LeWM / WAM: DreamZero·Cosmos Policy·LingBot-VA·Fast-WAM)와 VLA 대비. 핵심 수치 약 20개 원문 재대조(✔). 문서: note:training-recipes-repro `docs/WORLD_MODELS.md`.
+    - 정정: V-JEPA 2-AC는 IDM이 아니라 행동 조건 순방향 예측기 + CEM-MPC. GR00T N1.x는 VLA(원문 명시), WAM은 GR00T 2. Genie 3는 구조 비공개. Cosmos 3는 존재(2606.02800).
+    - ⚖️ 상태: 정리 문서만, 실험 없음. 축소 재현 후보(트랙 L/G/W)는 문서 5절에 제안만 — 사전등록 전.
     - ⚖️ 상태: **CPU 스모크만 통과, GPU 실행·성능 판정 없음.** 스모크에서 GRPO 정확도 하락(0.56→0.42)을 보고 부호 양성대조 실행 → 정상 GRPO +0.26 vs 어드밴티지 섞은 대조 −0.19(시드 3), 원인은 과대 학습률. 경계 F1 지표 단위검증(정답 1.0/블러 0.119), tol 변형 추가. 미검증: 사전학습 가중치 로드·HF 연결·VAE 잠재 계산·DDP.
 
 ---
