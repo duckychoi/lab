@@ -311,6 +311,15 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 정리: 32편 TeX 원문으로 계열 3개(생성형: Cosmos 3·Predict2.5·Self-Forcing·Matrix-Game 2/3 / 잠재 JEPA: V-JEPA 2-AC·DINO-WM·LeWM / WAM: DreamZero·Cosmos Policy·LingBot-VA·Fast-WAM)와 VLA 대비. 핵심 수치 약 20개 원문 재대조(✔). 문서: note:training-recipes-repro `docs/WORLD_MODELS.md`.
     - 정정: V-JEPA 2-AC는 IDM이 아니라 행동 조건 순방향 예측기 + CEM-MPC. GR00T N1.x는 VLA(원문 명시), WAM은 GR00T 2. Genie 3는 구조 비공개. Cosmos 3는 존재(2606.02800).
     - ⚖️ 상태: 정리 문서만, 실험 없음. 축소 재현 후보(트랙 L/G/W)는 문서 5절에 제안만 — 사전등록 전.
+68. **4DGS 사전정보 교체 — TAPNext++ 추적 + 최신 비디오 깊이** (텔레그램: Threads 깊이 글 + 릴스 TAPNext++(2604.10582) 융합 → 4DGS 성능) → [[tap-depth-fusion]]
+    - 최근접: Shape of Motion 2407.13764 · MoSca 2405.17421 · Prior-Enhanced GS 2512.11356(사전정보 품질이 병목). 새로움 낮음 — 교체 효과를 정직하게 재는 공학 실험, #69·#70의 기준점. 팔: 원설정/추적만/깊이만/둘다/+신뢰도가중/정답 상한. 사전등록 note:tap-depth-fusion `docs/68_4dgs_prior_swap.md`.
+    - ⚖️ 상태: 등재만(11-24), 실험 없음.
+69. **조밀 표면 추적 + 깊이 신뢰도가중 제약 단안 모캡** (같은 대화: 모캡 성능) → [[tap-depth-fusion]]
+    - SMPL 표면점↔TAPNext++ 조밀 추적 재투영 + 비디오 깊이 제약, 점별 신뢰도(가시성·시간잔차·깊이불확실성, #63 연결)로 옷처럼 고정 안 된 점 자동 배제. 최근접: AnthroTAP 2507.06233(역방향) · 깊이기반 HMR 2602.04257 · WHAM/TRAM/GVHMR · DensePose/CSE 피팅 — 정독 전 새로움 주장 보류. 합성 SMPL toy 먼저. 사전등록 note:tap-depth-fusion `docs/69_mocap_dense_track_depth.md`.
+    - ⚖️ 상태: 등재만(11-24), 실험 없음. 우선순위 1.
+70. **동적 장면 Visual SLAM — 장기 추적 움직임 분리 + 깊이 사전정보** (같은 대화: SLAM 성능) → [[tap-depth-fusion]]
+    - 최근접(이미 같은 조합): LEAP-VO 2401.01887 · MegaSaM 2412.04463 · ParticleSfM. 좁힌 질문: 온라인 추적기로 실시간 유지 + 가시성×정적확률을 BA 가중으로 직접 사용. #68/#69에서 실영상 추적 품질 확인 후 착수(조건부). 사전등록 note:tap-depth-fusion `docs/70_dynamic_slam.md`.
+    - ⚖️ 상태: 등재만(11-24), 실험 없음. 우선순위 3.
     - ⚖️ 상태: **CPU 스모크만 통과, GPU 실행·성능 판정 없음.** 스모크에서 GRPO 정확도 하락(0.56→0.42)을 보고 부호 양성대조 실행 → 정상 GRPO +0.26 vs 어드밴티지 섞은 대조 −0.19(시드 3), 원인은 과대 학습률. 경계 F1 지표 단위검증(정답 1.0/블러 0.119), tol 변형 추가. 미검증: 사전학습 가중치 로드·HF 연결·VAE 잠재 계산·DDP.
 
 ---
