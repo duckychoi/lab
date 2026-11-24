@@ -9,6 +9,7 @@ tags: [source, reinforcement-learning, grpo, llm-post-training, infrastructure, 
 
 - 원문: [MAI-Thinking-1 기술보고서(PDF, 109쪽)](https://microsoft.ai/pdf/mai-thinking-1.pdf) · [RL infrastructure at Microsoft AI](https://microsoft.ai/news/rl-infrastructure-at-microsoft-ai/) · 계기: Threads @choi.openai 요약
 - 구현 정리·코드: note 레포 `mai-rocket-grpo` 브랜치 (`docs/METHOD.md`, `src/mai_grpo.py`, `docs/PREREG.md`)
+- 대화·작업 로그(각색 없음): [[MAI-Thinking-1-Rocket-대화로그]] · 원장 #64
 
 ## 요지
 사내 RL 프레임워크 **Rocket**(컨트롤러·문제 워커·롤아웃 워커·SGLang 추론·YOLO 학습기)으로 수천 GPU에서 몇 주~몇 달 비동기 RL. 타사 모델 증류 없이 MAI Base 1→MAI-Thinking-1, 현재 MAI Base 2(3T) 후학습 중.
