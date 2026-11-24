@@ -304,6 +304,11 @@ Fryday·Monday가 텔레그램에서 교수님과 **연구주제로 거론한 �
     - 구현: note:rsi-survey-2609.11873 — `src/rsi_core.py`(HCI, 루프 데이터모델·상속기록, 단계 판정, HDSO식 쌍대 입장검사, Library Drift식 스킬 수명관리, RQGM식 에포크 동결 평가기, L3 학습자 조건부 선택, STOP식 자기개선기 골격, 예산장부), 테스트 11/11, `docs/ANALYSIS.md`(Rocket 델타 포함).
     - ⚖️ 상태: **분석·골격만, 실험 없음.** 서베이라 새 방법·통제 실험 없음, 산업 수치는 전부 자체 보고. 우리 판정 체계(VERDICTS·12규칙)가 서베이의 보호 평가·예산 일치·L5 평가기 앵커와 같은 구조 — 연구 절차 상속(L5 구조적)의 예. 후보(미검증): 원장에 상속 기록 + 쌍대 입장 검사를 붙여 '어떤 절차 변경이 이후 판정 품질을 올렸나' 측정.
 
+66. **최신 학습법 정리 + A6000×2 / 5090 축소 재현** (텔레그램: Depth Pro류·Wan류·LLM/VLM 학습법을 최신 논문으로 정리하고 데스크톱 규모 재현 계획·코드) → [[training-recipes-2026-11]]
+    - 정리: 1차 기술보고서 25편 남짓(Depth Pro·DA2/3·MoGe-2·UniDepthV2·Metric3D v2·Marigold·VGGT·FoundationGeo / Wan·HunyuanVideo·Movie Gen·SD3·Seedance·LongCat / DeepSeek-V3·R1·V3.2·Qwen3·Kimi K2·GLM-5 / Qwen2.5-VL·Qwen3-VL·InternVL3·Kimi K2.5) TeX 정독, 7개 수치 원문 재대조. **"Apple Depth Pro 2"는 존재하지 않음**, Wan 2.5~3.0·Qwen3.5·DeepSeek-V4 보고서 없음.
+    - 재현: note:training-recipes-repro — 사전등록 `docs/REPRO_PLAN.md`(트랙 D 깊이 전과정 / G rectified-flow DiT 커리큘럼 / L 사전학습 3단계+SFT→GRPO→증류 / V LLaVA식, 티어 A·B, 양성대조·가설·관문·중단조건) + 코드 `depth/ gen/ llm/ vlm/`.
+    - ⚖️ 상태: **CPU 스모크만 통과, GPU 실행·성능 판정 없음.** 스모크에서 GRPO 정확도 하락(0.56→0.42)을 보고 부호 양성대조 실행 → 정상 GRPO +0.26 vs 어드밴티지 섞은 대조 −0.19(시드 3), 원인은 과대 학습률. 경계 F1 지표 단위검증(정답 1.0/블러 0.119), tol 변형 추가. 미검증: 사전학습 가중치 로드·HF 연결·VAE 잠재 계산·DDP.
+
 ---
 
 ## 🅱 Monday 쪽 (텔레그램에서 거론 — Monday가 채워 넣기)
