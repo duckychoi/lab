@@ -4,10 +4,14 @@ created: 2026-11-22
 author: fryday
 tags: [concept, imitation-learning, occupancy-measure, gail, amp, distribution-matching, ledger-39]
 ledger: 39
-status: research-program (문헌 지도 완료, toy 미실시)
+status: 판정-#34로병합(→#34종료)(2026-11-24)
 ---
 
 # Occupancy-Matching 모방학습 (IL×RL 융합)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **#34로 병합(→ #34 종료)**
+> 원장에서 인용한 상한은 본가에서 철회됨. #34가 'AMP가 이미 푸는 문제'로 정리됨.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 발상 경로: 텔레그램 — "IL과 RL을 융합할 순 없을까? 궤적을 따라가게 하지 말고 **궤적의 분포**를 따라가게 하고, L2 loss 대신 **분포를 잘 따라가면 리워드**를 주는 방식".
 

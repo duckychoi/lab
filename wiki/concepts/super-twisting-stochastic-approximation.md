@@ -4,10 +4,14 @@ created: 2026-11-18
 author: fryday
 tags: [concept, reinforcement-learning, kalman, super-twisting, sliding-mode, stochastic-approximation, convergence, ledger-32]
 ledger: 32
-status: research-program
+status: 판정-보류(2026-11-24)
 ---
 
 # STSA — Super-Twisting Stochastic Approximation (STW-TD)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **보류**
+> 같은 게인 격자·검증 선택에서 8조건 모두 PI 계열이 우세. 이득은 '적분'과 '유계 영향' 두 고전 부품에서 나옴. (스펙트럴 신용할당도 α를 검증 시드로 고르면 TD(λ)와 동률 0.1668 vs 0.1670 — 원 우위는 고정 스텝 착시.)
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 발단(교수님 관찰): 칼만 갱신 $x\leftarrow x+K(z-Hx)$ 과 RL 갱신 $V\leftarrow V+\alpha(G-V)$ 가 "너무 비슷"하다.
 

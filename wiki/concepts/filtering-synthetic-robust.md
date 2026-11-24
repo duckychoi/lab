@@ -4,10 +4,14 @@ created: 2026-11-23
 author: fryday
 tags: [concept, kalman-filter, model-collapse, synthetic-data, contraction, dissipativity, robust-training, ledger-42]
 ledger: 42
-status: research-program (toy 검증)
+status: 판정-독립논문화보류(2026-11-24)
 ---
 
 # 필터링-기반 합성데이터 강건학습 (#42)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **독립 논문화 보류**
+> 칼만 갱신이 생성된 합성 표본을 실제로 쓰지 않음(합성 평균 = 자기 추정값 → 정보 0). 실측 이동평균만으로 최종 오차 0.1463·회복 7세대 재현. 즉 결과는 'KF가 이긴다'가 아니라 '자기 노이즈를 섞지 마라'. 재개: 같은 실측으로 합성 자료를 실제로 사용해 희소 모드 보존이 개선될 때.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 합성데이터 재귀학습을 **칼만필터**로 본다. 합성=노이즈 낀 예측, 실데이터=보정 관측, 칼만게인=적응신뢰, (1-K)<1=수축(#39)→붕괴 없음.
 

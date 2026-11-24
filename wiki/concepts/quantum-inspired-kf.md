@@ -4,10 +4,14 @@ created: 2026-11-23
 author: fryday
 tags: [concept, kalman-filter, complex, tensor-network, quantum-inspired, sample-free, world-model, ledger-41]
 ledger: 41
-status: research-program (toy 검증)
+status: 판정-표현력주장보류(2026-11-24)
 ---
 
 # Quantum-inspired KF (#41)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **표현력 주장 보류**
+> 모드 질량 0.25→0.97은 실수 격자 사후분포로도 재현됨(원 toy의 '복소/그리드'도 실제로는 실수 그리드 사후). 관측에서 위상을 식별할 수 있는 과제에서 실수 격자·텐서·혼합 필터와 경쟁해야 함.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > "양자 PF"는 양자를 샘플링(줄여야 할 부분)에 붙인 미스매치. 같은 직감을 **표현(복소/텐서넷 상태)** 에 붙이고 필터는 **샘플프리 KF/SSM**(#39)로.
 

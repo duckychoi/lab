@@ -4,10 +4,14 @@ created: 2026-11-22
 author: fryday
 tags: [concept, world-model, jepa, flow-matching, rope, action-conditioned, ledger-38]
 ledger: 38
-status: research-program (분석+toy)
+status: 판정-종료—살아남은신호는#36으로합류(2026-11-24)
 ---
 
 # LeWAM (#38)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **종료 — 살아남은 신호는 #36으로 합류**
+> 물성 분포 계획: 베이즈−MAP ≈ 0(70.6% vs 71.7%). 남은 격차 중 물성 몫 +0.5%p, 가려진 마지막 '상태' 몫 +28.9%p → #36 관문 10으로. 물성이 정해지면 미래가 결정론적인 무대에선 점예측이 최적.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 아이디어: LeWM에 flow matching·RoPE가 들어갈 자리 분석.
 

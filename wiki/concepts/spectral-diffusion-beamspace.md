@@ -4,10 +4,14 @@ created: 2026-11-21
 author: fryday
 tags: [concept, beamforming, diffusion, generative-prior, beamspace, spectral, ledger-14]
 ledger: 14
-status: research-program (toy 검증)
+status: 판정-보류(2026-11-24)
 ---
 
 # 스펙트럴 디퓨전 × 빔스페이스 (#14)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **보류**
+> 데이터가 1-모수 다양체라 모수(각도) 적합이 정답(−12.0 dB=진리), 가우시안 사전 −7.7·영채움 −5.4. 재개 조건: 기존 방법이 실패하는 현상을 먼저 찾을 때.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 빔패턴 $P(\theta)=|w^H a(\theta)|^2$ = 각도영역(DFT dual)=beam-space=스펙트럴. "좋은 빔포머 분포" 생성 사전으로 ill-posed 설계·복구.
 

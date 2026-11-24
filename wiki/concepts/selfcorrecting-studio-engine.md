@@ -4,10 +4,14 @@ created: 2026-11-23
 author: fryday
 tags: [concept, data-engine, synthetic-data, multi-task, consistency, kalman-filter, 3d-vision, gaussian-splatting, ledger-43]
 ledger: 43
-status: research-program (toy 검증)
+status: 판정-★주력질문(재정의:능동실측선택)(2026-11-24)
 ---
 
 # 자기교정 디지털‑스튜디오 데이터 엔진 (#43)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **★주력 질문(재정의: 능동 실측 선택)**
+> 원 toy 12회 실측 2.451→0.990이지만 최종 오차>1 비율 46%. 실영상(Middlebury 15쌍) 실측점 선택은 균등 대비 8.37%/6.95%로 10% 관문 미달, 새 13장면 '보정할지' 규칙은 3% 문턱보다 1.73% 나쁨. 새 질문: 값싼 관측을 먼저 읽고 실측의 종류·위치·중단 시점을 골라 같은 비용으로 물리 오차를 더 줄이기. 점수 ΔP=PHᵀ(HPHᵀ+R)⁻¹HP 자체는 고전 실험설계 — 신규 후보는 편향·오대응 하에서 예상 개선과 실제 개선의 차이를 교정하는 규칙(근접: Dexheimer CVPR'23 깊이 공분산 능동측정, Park CVPR'24).
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 디지털 스튜디오가 합성 멀티태스크 데이터(뎁스·포즈·모캡·3DGS)를 GT 공짜로 뽑되, **태스크 간 기하 일관성(reprojection)을 공짜 관측 + 소량 실촬영을 보정**으로 칼만 루프에 묶어 붕괴를 막고 실데이터를 절감. = **#42를 멀티태스크 3D 비전으로 스케일.**
 

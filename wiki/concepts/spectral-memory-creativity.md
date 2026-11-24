@@ -4,10 +4,14 @@ created: 2026-11-21
 author: fryday
 tags: [concept, memory, creativity, fhrr, complex-ssm, vsa, holographic, ledger-28]
 ledger: 28
-status: research-program (toy 검증)
+status: 판정-종료(음성)(2026-11-24)
 ---
 
 # 스펙트럼 기억·창의력 (#28)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **종료(음성)**
+> 2홉 질의에서 같은 바이트의 무작위 표본 버퍼에 패배(0.387 vs 0.499). 겹침 누화 SNR≈√(D/N) → ID 직접 저장보다 수십 배 비쌈. 위상 고유 몫은 '선후 관계'뿐. 원 '창의 아이템' 회수율은 용량 측정이었음.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 발상: **"창의력은 아주 긴 기억력이다"** — 위상 중첩 기억에서 새 조합(창의)이 **위상 보강간섭**으로 생긴다.
 

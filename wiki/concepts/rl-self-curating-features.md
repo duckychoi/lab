@@ -4,10 +4,14 @@ created: 2026-11-21
 author: fryday
 tags: [concept, reinforcement-learning, active-feature-acquisition, feature-selection, feature-transformation, streaming, representation-learning, ledger-33]
 ledger: 33
-status: research-program
+status: 판정-종료(2026-11-24)
 ---
 
 # RL 자기개선 피처 큐레이션 (Self-Curating Feature RL)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **종료**
+> 원 코드는 고르지 않은 피처도 매 라운드 읽어 예산이 없는 문제였음. 읽기 예산 엄수 무대에서 비교군(부호상관)을 같은 예산으로 튜닝하자 차이 0.7% → 처음 '통과' 철회.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 아이디어: 큐에 아무 raw data나 넣으면 → 피처 추출 → **능동으로 자기에게 도움되는 피처를 획득·정렬·조정하며** RL로 학습하는 시스템.
 

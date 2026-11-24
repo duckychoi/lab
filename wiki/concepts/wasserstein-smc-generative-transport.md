@@ -4,10 +4,14 @@ created: 2026-11-21
 author: fryday
 tags: [concept, flow-matching, diffusion, particle-filter, sequential-monte-carlo, optimal-transport, wasserstein, ledger-35]
 ledger: 35
-status: research-program (설계·정리 스케치, toy 미실시)
+status: 판정-종료(#35에포함)(2026-11-24)
 ---
 
 # Wasserstein-SMC 생성수송 (W-SMC-Gen)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **종료(#35에 포함)**
+> #35와 같은 판정: NFE 정직 집계 시 Heun 승, 오라클 밀도 의존. 정책판(FM 정책×e^{Q/β})도 재표집 고유 이득 없음, 학습된 Q_t는 CGQL-Linex·CEP가 선점.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 발상 경로: 텔레그램 대화. #32 에서 "칼만 ≈ RL 갱신식 = 예측-보정 골격"을 본 직후의 다음 질문 — **"FM·확산은 ODE/PDE(연속성 방정식)로 전개하는데, 그걸 입자필터(PF/SMC)로 대체하면 어떠냐"**. GS-PF(동적 3DGS 입자필터) 아이디어와 같은 골격의 생성모델 판.
 

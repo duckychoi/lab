@@ -4,10 +4,14 @@ created: 2026-11-21
 author: fryday
 tags: [concept, diffusion, flow-matching, sequential-monte-carlo, particle-filter, sampling, ledger-35]
 ledger: 35
-status: research-program (toy 검증)
+status: 판정-종료(음성)(2026-11-24)
 ---
 
 # PF 생성 플로우
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **종료(음성)**
+> NFE를 rejuvenation까지 정직하게 세면 12.4 NFE에서 SMC 0.0177 vs Heun 0.0066. SMC 가중에 정답 주변밀도 p_t를 오라클로 사용 — 학습된 flow엔 값싼 p_t 없음. 정확 log p_t로도 d=128에서 ESS 0.04로 붕괴. 살아남은 각 = 실제 관측이 있는 필터링 → #36.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 아이디어: 확산·flow matching 샘플링의 ODE/PDE 적분기를 **파티클 필터(SMC)** 로 대체.
 

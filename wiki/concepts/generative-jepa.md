@@ -4,10 +4,14 @@ created: 2026-11-22
 author: fryday
 tags: [concept, jepa, flow-matching, world-model, representation-learning, ledger-37]
 ledger: 37
-status: research-program (toy 검증)
+status: 판정-흡수(#38/#36비교군)(2026-11-24)
 ---
 
 # 생성형 JEPA (#37)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **흡수(#38/#36 비교군)**
+> 저차원에선 재표집이 이김(W1 0.173 vs 0.328), 선행 밀집.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 아이디어: JEPA(표현예측)에 동의하되, latent이 시공간에서 자유롭지 않아야 하고 **JEPA × flow matching 결합**.
 

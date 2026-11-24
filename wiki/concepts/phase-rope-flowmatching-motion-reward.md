@@ -4,10 +4,14 @@ created: 2026-11-21
 author: fryday
 tags: [concept, flow-matching, rope, phase, motion, humanoid, reward-free, distribution-matching, ledger-34]
 ledger: 34
-status: research-program (toy 검증 완료)
+status: 판정-종료—AMP가이미푸는문제(2026-11-24)
 ---
 
 # Phase-RoPE × Flow-Matching Motion Prior
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **종료 — AMP가 이미 푸는 문제**
+> FM 단독은 정지 함정. SAC 라벨교환 S3: AMP 3/3·템플릿 3/3·FM 0/3(학습 시범자 과적합), 정칙화 FM 3/3이나 AMP보다 약함. 다중 스타일 S4는 정답 보상 양성 대조도 실패 → 판정 불가. 원 '§9 상한'과 'FM은 구조적으로 모드를 덮는다' 주장은 철회(정책 쪽 기대값이라 mode-seeking).
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 발상: 모션 리워드의 두 키워드 = **위상 + 분포**. **RoPE(=회전 위상)** 로 리듬을, **flow matching(=분포 생성)** 으로 flow/스타일을 잡고, 스칼라 리워드를 설계하지 말자.
 

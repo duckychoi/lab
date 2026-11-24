@@ -4,10 +4,14 @@ created: 2026-11-23
 author: fryday
 tags: [concept, quantum-inspired, complex, tensor-network, phase, world-model, ledger-40]
 ledger: 40
-status: research-program (개념·전망)
+status: 판정-보류(#41과함께)(2026-11-24)
 ---
 
 # Quantum-inspired 세계모델 (#40)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **보류(#41과 함께)**
+> 부호 있는 실수 두 채널도 복소 간섭을 재현. 같은 바이트·연산의 실수 텐서 모형을 이길 구조적 조건부터 찾아야 함.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 발상: 양자물리는 확률적 → 물리 AI 다음 트렌드는 "양자물리 AI"? 단 0/1 컴퓨터엔 양자 알고리즘 무의미, 양자컴에 더 맞는 얘기 아닌가?
 

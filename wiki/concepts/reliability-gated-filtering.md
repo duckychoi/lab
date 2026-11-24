@@ -4,10 +4,14 @@ created: 2026-11-23
 author: fryday
 tags: [concept, kalman-filter, robust-filtering, observation-quality, contraction, variational, ledger-63]
 ledger: 63
-status: research-program (toy 검증)
+status: 판정-차순위연구질문(2026-11-24)
 ---
 
 # Reliability-Gated Filtering (#63)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **차순위 연구 질문**
+> 품질을 측정 잡음으로 바꾸는 선행이 이미 있음. 고정 품질표는 품질 신호가 무관/반전일 때 고정 필터보다 12.5%/64% 악화. toy#2의 '무정보면 안전 퇴화'는 ρ마다 재학습한 결과라 분포 변화엔 불성립. 큰 이득은 품질이 아니라 급변+센서 이상을 둘 다 모델링한 데서(38~56%). 남은 질문: 품질 신호가 깨진 시점을 관측만으로 알 수 있나 · 지금 결정 vs 한 프레임 뒤 확인(근접 CE-BASS 2007.03238). 실험 후보 #61·#56.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 칼만/PF 게인은 "예측 vs 관측" 한 축뿐. "이 관측이 유독 좋으니 더 가중"을 하려면 raw 관측에서 측정 가능한 품질 $q(z)$ 가 게인에 수식적으로 들어가고, 발산 안 함이 증명되어야 한다.
 

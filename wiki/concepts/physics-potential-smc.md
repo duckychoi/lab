@@ -4,10 +4,14 @@ created: 2026-11-22
 author: fryday
 tags: [concept, diffusion, smc, particle-filter, physics-informed, world-model, video-generation, ledger-36]
 ledger: 36
-status: research-program (toy 검증)
+status: 판정-★진행(주력)—flow제안PF로재정의(2026-11-24)
 ---
 
 # 물리-potential SMC 생성 (#36)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **★진행(주력) — flow 제안 PF로 재정의**
+> 지킬 기여: 초반 관측으로 출발 상태·물성을 flow로 제안하고 물리 시뮬로 후보를 가중. 같은 정확도에 시뮬 호출 약 6.1배 절약(엄격 장부), 관문 10(PF 신념 계획) 같은 입자 계산량에서 84.9% vs 60.5%(+24.4%p) 통과. 관문 7·8(마찰 식별) 불통과 = 그 카메라·투척에서 마찰이 관측을 거의 안 움직이는 식별불가 무대. 다음: 경사면 블록(0단계에서 마찰 식별 무대 확인). EIG 탐침 고유 이득 없음, flow 학습 비용은 장부 밖.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 아이디어: 생성모델의 "통계적 암묵 물리"에 **물리를 prior로 주입** — PF로 통계+물리 융합.
 

@@ -4,10 +4,14 @@ created: 2026-11-23
 author: fryday
 tags: [concept, kalman-filter, world-model, dissipativity, energy-based, mamba, ssm, ledger-39]
 ledger: 39
-status: research-program (아이디어+toy)
+status: 판정-이론후보(2026-11-24)
 ---
 
 # 소산성 신경 KF 세계모델 (#39)
+
+> [!warning] ⚖️ 외부 판정 (2026-11-24): **이론 후보**
+> 선형 적합에서 불안정 11%→0%는 인정. 단 모드가 바뀌면 각각 안정인 행렬의 곱도 발산 가능 → 공통 에너지 함수로 외란·전환을 다루고, 안정 제약 모델과 같은 표현력·예산에서 장기 예측 비교 필요.
+> 정본: note:fm-reward-v2 `VERDICTS.md` · `review/post38_20261124/README.md`. 아래 본문의 toy 결과·'빈 땅' 주장은 판정 이전 기록이다.
 
 > 교수님 아이디어: KF는 PF와 달리 **샘플 없이 예측–보정** → 효율적 세계모델. **extended dissipative performance**(에너지 지표)로 학습해 소산적=안정 필터를, Mamba/Transformer로.
 
