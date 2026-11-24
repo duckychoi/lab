@@ -7,7 +7,7 @@ source: note:tap-depth-fusion
 # #68–70 점 추적(TAPNext++) × 깊이 추정 → 4DGS · 모캡 · Visual SLAM
 
 출발점은 두 자료다.
-- Threads 글: 픽셀별 깊이 추정. 글에 나온 "Apple Depth Pro 2"는 존재하지 않는다(이전 확인).
+- Threads 글의 주제는 픽셀별 깊이 추정이다. Apple은 Depth Pro 2의 논문과 S·B·L·H+ 가중치를 공개했다. 해당 글에서 시연한 체크포인트는 별도 확인이 필요하다. [공식 논문](https://arxiv.org/html/2611.26603v1) · [Apple 코드와 가중치](https://github.com/apple-aiml-research/ml-depth-pro-2#models)
 - 인스타 릴스(@index.opensource): Google DeepMind TAPNext++(arXiv 2604.10582). 프레임 단위 온라인 점 추적으로 위치와 가시성을 예측한다. Apache-2.0.
 
 질문은 "이 두 모델을 도입하면 모캡, 4DGS, visual SLAM 성능이 오르나"이다.
