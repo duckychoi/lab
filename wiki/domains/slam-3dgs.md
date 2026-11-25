@@ -4,7 +4,7 @@ type: domain
 domain: slam-3dgs
 tags: [slam, 3dgs, gaussian-splatting, camera, robotics, nerf]
 created: 2026-04-09
-updated: 2026-11-22
+updated: 2026-11-25
 sources: [ActionPiece.md, WorldSculpt.md, Marigold-V2.md, LIT.md, GroundingPI.md]
 ---
 
@@ -628,3 +628,15 @@ _소스 ingest 시 자동 누적_
 - 🆕 [[Depth-Pro-2]] (Apple · ★382) — 이미지 · 비디오 겸용 미터 단위 단안 깊이 · 선명도 + 시간 일관성 동시 주장 · 초록 수치 0 · 코드 LICENSE 에 비상업 문구 없음(가중치 조건 미확인). **3DGS 깊이 prior · 영상 VFX 전처리 후보.**
 - 🆕 [[VODA]] (Yonsei) — 3DGS 분할의 체적 감독 · Removal-3D + RDE 신설 · "렌더 마스크가 맞아도 객체는 다 선택되지 않았다". 객체 제거 잔여물 문제에 직접 해당.
 - 🆕 [[Mind2Act-World]] — 로봇 조작 진단 벤치 180 구성 · 최강 에이전트 Mind 52.7% · Act 39.0% → **Mind2Act 12.0%**(독립 가정 곱 약 20.6% 보다 낮음) · 시뮬 전용.
+
+## 2026-11-25 배치 (11-24 + 11-25 자동수집 26 중 slam-3dgs 9 — 볼트 재분류)
+🎯 **축**: 로봇/3D도 "접합"으로 푼다 — 학습 0 하네스([[Embo-Harness]]) · 에이전트 팀 위임([[ACAP]]) · 동결 전문가 루프([[PartAgent]]) · model stitching([[Plan4D]]) · LoRA 공간 토큰([[S-Mind]]). 대조: 본체 신설([[Motion-Mamba-2.0]] PCM).
+- 🆕 [[Embo-Harness]] (업보트 52→99) — 프런티어 모델 무학습 로봇 정책 · RoboLab-120 83.3% vs 차순위 57.1 · 레시피: 청크 8 · 두 시점 · 640×360 · 암묵 계획 · 관절 직접 출력 금지.
+- 🆕 [[ACAP]] (업보트 49→50) — 제어 그룹별 상주 에이전트 + 하이퍼 에이전트 동적 위임 · 실로봇 4대 72회 −28.2% · 🔴 **고정 위임은 단일보다 나쁨**(AUC 36.3) · 백본 미기재(볼트 본문 전수 검색으로 확정).
+- 🆕 [[PartAgent]] (업보트 29) — 학습 0 3D 부품 분할 · mIoU 68.41(차순위 +8.53) · **검증 VLM 교체 영향 0.04–0.15점**(병목은 2D 전문가) · 🔴 유료 API 2종 · 레포 라이선스 없음.
+- 🆕 [[S-Mind]] (업보트 31→32) — 뷰당 장면 토큰 2개 + 카메라 토큰 4개 · 9B 74.03% · 도구 기반 대비 81배 · 🔴 초록이 지는 행(Claude 74.15) 생략([[자기제한-명시]] 반대 사례 — 볼트 본문 직접 확인).
+- 🆕 [[Plan4D]] (업보트 27→29) — 4D 월드모델 · Depth Anything 3 + LongCat-Video **stitching** + DPT 헤드 · 통합은 앞서고 단일 과제는 전용 모델 열세.
+- 🆕 [[Motion-Mamba-2.0]] (업보트 88→189 — 이틀 2.1배) — PCM 메모리 루트-바디 확산 · 장기 오차 7.55cm(전작 125.74) · 🔴 윈도 지연 283.7ms(경쟁 4–8배 느림) · Unitree G1 실기 18/20.
+- 🆕 [[3AGameFactory-Motion]] (업보트 41→59 · ★1,352) — 에이전트가 파라메트릭 모션 프로그램 작성 + 결정적 실행기 · 리깅 충실도 66.29 → 100% · 영상 경로(Seedance) 비용 6배 · 부정확 정량 입증.
+- 🆕 [[carla]] (★14,708) — **1.0 정식판**(UE 5.8 · 2026-11-17) · Agentic CARLA: Skills 64개 + Unreal MCP 서버(Claude Code 접속) · 권장 RTX 3070+/16GB.
+- 🆕 [[sam-3d-body-dinov3]] (trendingScore 119 · 18위) — 단일 이미지 전신 3D 메시 · MHR 리그(골격/표면 분리) · 🔴 벤치 0 · SAM License 상업 조건 미확인 · 수동 게이트.

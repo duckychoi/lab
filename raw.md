@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-24 (✅ **11-23 자동수집 13건 처리** · 대기 13건(11-24 자동수집 · 처리 중 도착))
+updated: 2026-11-25 (✅ **26건 전량 처리** — 11-24 자동수집 13 + 11-25 자동수집 13 · 대기 0건 — `^- URL:` 26 → 0)
 ---
 
 # Raw 대기열
@@ -1309,87 +1309,7 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 - **볼트 요청 5 대응(ZONOS3-Mini 좋아요 재확인)**: 단건 API `Zyphra/ZONOS3-Mini` = **좋아요 639 · 30일 다운로드 164,668 · trendingScore 50.5**(2026-11-23T09:0xZ). 수집기 11-21 622 → 오늘 639로 단조 증가 — **볼트 11-22의 574가 판독 오류였을 가능성이 높다.**
 - **11-22 볼트 관찰 6(원본-파생 역전)**: 오늘도 Inkling-2-Mini 원본(23,543)은 미달, 파생인 AtomicChat Uncensored GGUF(129,693)가 선발됐다. 원본 정보는 해당 항목에 함께 적었다.
 
-## [2026-11-24] 자동수집 | vllm-project/vllm-ascend — 화웨이 Ascend NPU에서 vLLM을 돌리는 공식 하드웨어 플러그인
-- URL: https://github.com/vllm-project/vllm-ascend
-- 도메인: ai-news
-- 스타수: 3,142 (Python 일간 Trending, 당일 +5) · Apache-2.0 · 생성 2025-01-29 · push 2026-11-24
-- 한줄요약: vLLM 커뮤니티가 공식으로 만든 레포로, vLLM 본체를 고치지 않고 "하드웨어 플러그인" 방식(vLLM RFC #11162)으로 Ascend NPU 백엔드를 붙인다. README 기준 Transformer · MoE · 임베딩 · 멀티모달 LLM을 지원하고, 세부 지원 모델은 별도 Support Matrix 문서에 있다. 최신 안정판 v0.30.0(2026-10), main 브랜치는 vLLM main · v0.33.0 태그를 CI로 추적. **요구 조건이 좁다**: Atlas 800I A2/A3 · 300I Duo · 950PR/950DT 하드웨어, Linux, Python 3.12 고정, CANN 9.2.1, PyTorch 2.10.0 + TorchNPU 2.10.0.post7, vLLM은 같은 버전. 벤치마크 · 처리량 수치는 README에 없다. 실용성: Ascend 장비가 있는 조직에는 사실상 표준 경로, NVIDIA 환경 사용자에게는 무관 — 볼트 [[vllm]] 의 비-NVIDIA 확장 사례로 기록.
-
-## [2026-11-24] 자동수집 | tianma-if/edgeever — Cloudflare 무료 구간에서 돌리는 셀프호스팅 노트 앱(AI 사이드바 · MCP · ACP 내장)
-- URL: https://github.com/tianma-if/edgeever
-- 도메인: ai-news
-- 스타수: 3,531 (TypeScript 일간 Trending, 당일 +27) · AGPL-3.0 · 생성 2026-06-26 · push 2026-11-24
-- 한줄요약: Evernote식 3단(트리 · 목록 · 편집기) 노트 앱을 Cloudflare Workers + D1 + R2(또는 Docker)로 셀프호스팅. 웹 · macOS · Windows · Linux · iOS · Android 클라이언트와 웹 클리퍼(X · Reddit · GitHub · 샤오훙슈 등 20+ 플랫폼 전용 파서) 제공. **AI 관련 기능(README 기능표 "AI & Agent Collaboration" 행)**: ① 사이드바 AI(요약 · 교정 · 번역 · 이어쓰기, OpenAI · Anthropic · Gemini · 커스텀 엔드포인트 BYOK) ② 노트북 단위 읽기/쓰기 권한이 있는 Remote MCP 서버 내장 ③ 데스크톱 ACP로 Codex · Claude Code 같은 로컬 에이전트 구동 ④ OpenAI 호환 음성 모델로 오디오 · 영상 전사. 그 밖에 "프롬프트로 데이터베이스 생성" 표 기능. 배포 방법으로 "AI 에이전트에 붙여넣을 배포 프롬프트"를 1순위로 제시하는 점이 특징. 성능 · 동기화 지연 수치 없음. 실용성: AI는 부가 기능이고 본체는 노트 앱 — Obsidian 볼트를 MCP로 에이전트에 노출하는 현재 구성의 대안 후보로만 참고.
-
-## [2026-11-24] 자동수집 | NirDiamant/GenAI_Agents — 에이전트 패턴 64개 노트북 튜토리얼 모음(비상업 라이선스)
-- URL: https://github.com/NirDiamant/GenAI_Agents
-- 도메인: ai-news
-- 스타수: 25,106 (Jupyter 일간 Trending, 당일 +8) · 라이선스 **Custom(LICENSE 첫 조항 "Grant of License for Non-Commercial Use")** · 생성 2024-09-09 · push 2026-11-02
-- 한줄요약: README 표기 64개 튜토리얼. 2026-10-31 갱신으로 2024년 유스케이스 노트북들이 LangChain 1.x · LangGraph 1.x에서 다시 import되도록 정리됐고, 새로 "From Scratch" 시리즈(에이전트 while 루프 · Skills 온디맨드 로딩 · 컨텍스트 엔지니어링 · Plan-then-Execute · Reflection · Thinking Budgets 등, 대부분 순수 Python + SDK 하나)를 빌드 순서대로 번호를 붙여 추가. README 상단은 저자 책 · 뉴스레터 홍보 비중이 크다. 평가 · 정량 비교 없음(교육 자료). 실용성: 에이전트 패턴을 프레임워크 없이 최소 코드로 익히는 데 유용 — 단 비상업 조건이라 코드를 제품에 옮겨 쓰면 안 된다.
-
-## [2026-11-24] 자동수집 | facebookresearch/audiocraft — Meta의 MusicGen · AudioGen · EnCodec 학습/추론 라이브러리
-- URL: https://github.com/facebookresearch/audiocraft
-- 도메인: ai-news
-- 스타수: 23,951 (Jupyter 일간 Trending, 당일 +5) · MIT(코드) · 생성 2023-06-08 · push 2026-03-03
-- 한줄요약: 오디오 생성 연구용 PyTorch 라이브러리. 포함 모델: MusicGen(텍스트 → 음악) · MusicGen Style(텍스트 + 스타일 참조) · JASCO(코드 · 멜로디 · 드럼 조건) · AudioGen(텍스트 → 효과음) · MAGNeT(비자기회귀) · EnCodec(뉴럴 코덱) · Multi Band Diffusion(EnCodec 디코더) · AudioSeal(오디오 워터마크). 학습 코드는 EnCodec · MusicGen · MBD · JASCO 공개. README 설치 요건이 **Python 3.9 · PyTorch 2.1.0 고정**으로 오래됐고 마지막 push가 8개월 전 — 사실상 유지보수 모드. README 자체에는 품질 수치가 없다(모델별 docs에 위임). ⚠️ 코드는 MIT지만 사전학습 가중치 라이선스는 모델별 문서에서 따로 확인 필요(미확인). 실용성: 2023년 기준선 — 쇼츠 BGM · 효과음 로컬 생성 실험엔 여전히 쓸 수 있으나 최신 음악 생성 모델과 품질 비교 근거는 이 레포에 없다.
-
-## [2026-11-24] 자동수집 | facebookresearch/sam2 — 이미지 · 영상 프롬프트 분할 SAM 2/2.1 공식 코드
-- URL: https://github.com/facebookresearch/sam2
-- 도메인: ai-news
-- 스타수: 20,217 (Jupyter 일간 Trending, 당일 +5) · Apache-2.0 · 생성 2024-07-29 · push 2026-05-30
-- 한줄요약: 이미지를 1프레임 영상으로 취급하고 스트리밍 메모리를 둔 트랜스포머로 클릭 · 박스 · 마스크 프롬프트 기반 분할을 영상 전체로 추적. 2024-12 업데이트로 `vos_optimized=True` 시 전체 모델 torch.compile, 객체별 독립 추론(추적 중 새 객체 추가) 지원. **README 표(SAM 2.1, 열 귀속 확인)**: tiny 38.9M · 91.2 FPS · SA-V test J&F 76.5 / small 46M · 84.8 FPS · 76.6 / base+ 80.8M · 64.1 FPS · 78.2 / large 224.4M · 39.5 FPS · 79.5 (MOSE val 71.8 → 74.6, LVOS v2 77.3 → 80.6). SAM 2 → 2.1에서 SA-V는 전 크기 +1.5 – 3.5 올랐지만 **large의 MOSE val은 74.6 → 74.6 그대로**, base+ LVOS v2는 75.8 → 78.2. 설치 시 nvcc로 CUDA 확장 빌드가 필요하나 실패해도 대부분 결과엔 영향 없다고 명시. 실용성: 영상 객체 마스킹(배경 제거 · 리타깃) 파이프라인의 검증된 기본값 — 볼트 [[sam3]] 의 이전 세대이며 텍스트 프롬프트 분할이 필요하면 SAM 3 쪽.
-
-## [2026-11-24] 자동수집 | Motion Mamba 2.0: 장기 휴머노이드 제어를 위한 자기회귀 확산 Mamba (arXiv 2611.29897)
-- URL: https://huggingface.co/papers/2611.29897
-- 도메인: ai-news
-- 업보트 88 (11-24 1위, 목록 · 단건 API 일치) · 소속 Peking University · 저자 8명 · githubRepo AIGeeksGroup/MotionMamba2.0(★3)
-- 한줄요약: 텍스트 · 공간 목표가 바뀌는 상황에서 실시간으로 동작을 이어 생성하는 루트-바디 확산 모델. Mamba 순환 상태 + 국소 어텐션 + "지속 콘텐츠 메모리(PCM: 압축된 과거 동작 · 상태 변화 · 텍스트 특징을 슬롯으로 만들어 어텐션이 참조)"로 먼 과거를 유지. **본문 표 1(HiPHI, 39.52 s · 19윈도)**: 루트 위치 오차 7.55 cm(전작 Motion Mamba 125.74 · 최강 비교 TACD 54.43), 명령 준수 46.05%. 표 7: CUDA Graph + 커널 융합 + 실행 흐름 단순화로 RTX 4090 윈도 지연 중앙값 1685.35 → 276.14 ms(6.138×, 출력 동일). 표 8: Unitree G1 실기 — 동작 조합 18/20, 키보드 제어 29/30, 넘어짐 0. **지는 행(본문 표)**: 지연은 최적화 후에도 윈도당 283.7 ms로 DartControl 34.7 · PCMDM 58.4 · DiP 73.6 ms보다 4 – 8배 느림. BONES Seed 단기 명령 준수 86.92% < DreamControl 96.64 · MoLingo 97.50. HumanML3D 단기 R@3 84.29% < DreamControl 87.98. 실용성: 장시간 위치 정확도는 크게 앞서지만 "실시간"은 윈도 단위 300 ms 수준 — 게임 캐릭터 · 로봇 데모용 연구 코드(★3) 단계.
-
-## [2026-11-24] 자동수집 | Embo-Harness: 프런티어 모델을 그대로 로봇 정책으로 쓰는 하네스 설계 연구 (arXiv 2611.31201)
-- URL: https://huggingface.co/papers/2611.31201
-- 도메인: ai-news
-- 업보트 52 (단건 API · 목록 API 51) · 소속 MMLab@NTU · 저자 15명 · githubRepo DravenALG/Embo-Harness(★7)
-- 한줄요약: 범용 멀티모달 모델(본문 실험 모델 GPT-6-Astra)을 별도 로봇 학습 없이 폐루프 정책으로 쓰는 하네스를 프롬프트 · 계획 · 행동 실행 · 도구 사용 4축으로 절제 실험해 6개 발견을 레시피로 정리. **본문 표 2(RoboLab-120)**: 성공률 83.3% vs 차순위 에이전트 SenseNova-RoboRSI 57.1, 정책 모델 최고 FLUX 3 Action 42.9 · π0.5 28.0 · GR00T N1.6 7.2. 표 3 실세계 20회 중 15회 성공(설거지 2/5 · 꽃꽂이 3/5). **표 1에서 읽히는 레시피 · 지는 선택지**: 액션 청크 8이 최적(4 → 40.0 · 8 → 58.3 · 30 → 21.7%), 단일 시점 카메라 30.0% vs 두 시점 65.0, 이미지 해상도 224×126 → 640×360에서 65.0 → 83.3%, 명시적 계획 61.7 < 암묵 계획 65.0, 다른 모델(GPT-6.1-sol 40.0 · terra 38.3)로 바꾸면 크게 하락. 표 4: IK/FK 없이 관절을 직접 출력하면 −23 – −32%p — 모델이 저수준 궤적보다 **목표 위치 추정**에 의존한다는 결론(위치 오차 중앙값 7.04 cm, 5 cm 이내 28.1%). 시나리오 하나에 하네스 시간 10 – 15분. 실용성: 특정 API 모델 의존 결과지만 "VLA 학습 없이 상용 모델 + 하네스" 노선의 설계 체크리스트로 유효.
-
-## [2026-11-24] 자동수집 | 3AGameFactory-Motion: 임의 3D 에셋의 에이전트 리깅 · 복합 모션 생성 (arXiv 2611.30013)
-- URL: https://huggingface.co/papers/2611.30013
-- 도메인: ai-news
-- 업보트 41 (목록 · 단건 일치) · 소속 Peking University · 저자 22명 · githubRepo OpenDCAI/GameFactory-3A(★1,352)
-- 한줄요약: 인간 · 동물 외 6개 형태(휴머노이드 · 다족 · 축형 · 날개 · 혼합 사지 · 기계)에 타이밍 · 각도 · 반복 · 궤적 제약이 붙은 지시 850건 벤치마크 DivDynBench를 만들고, ① LLM + 전용 모션 모델 ② 영상 생성 후 모션 복원 ③ LLM 직접 생성 3경로를 비교. 제안법은 에이전트가 짧은 **파라메트릭 골격 · 모션 프로그램**을 쓰고 결정적 실행기가 리깅 · IK · 기하 보정을 담당. **본문 표 3(리깅 49개 에셋)**: 원본 충실도 Claude Opus 5.5 단독 66.29% → +제안법 100%, 관절 유효성 0.59 → 0.92. **표 4(850건 종합 점수)**: 영상 경로 Seedance 2.5 + LLM 22.55 – 27.14(비용 0.39 – 0.42달러/건) vs 직접 생성 Claude 48.19 → +제안법 50.07(0.065 → 0.047달러), GPT-6.1-sol 30.19 → 35.99(0.024 → 0.0087달러). **지는 행**: 강한 모델 위에선 개선 폭이 +1.9점에 그치고 Aesthetics는 52.52 → 51.44로 오히려 하락, Quality 최고는 GPT-6-Astra 단독 57.76(제안법 52.35). 리깅 Rigid RMS 최저는 SkinTokens 0.0168(제안법 0.0209). 실용성: 영상 생성 → 모션 복원 경로가 비싸고 부정확하다는 정량 근거 + 약한 모델을 싸게 끌어올리는 프로그램 방식 — 레포 ★1,352로 코드 접근성도 있음.
-
-## [2026-11-24] 자동수집 | ViDecide: 영상 확산 모델에 단계별 추론 · 계획 학습 (arXiv 2611.26389)
-- URL: https://huggingface.co/papers/2611.26389
-- 도메인: ai-news
-- 업보트 30 (단건 API · 목록 API 28) · 소속 MMLab@NTU · 저자 7명 · githubRepo Kevin-thu/ViDecide(★5)
-- 한줄요약: 영상 모델이 퍼즐 · 계획 과제에서 물리 · 논리 규칙을 어기는 원인을 "해답을 고정 길이 클립으로 학습"하는 데서 찾고, 상태 전이를 인과적으로 하나씩 예측하며 **멈출 시점도 스스로 결정**하게 학습(Wan2.2-5B 파인튜닝 + DiT-B 처음부터). 실패한 결정의 노이즈를 모델 자신의 성공 연속으로 매핑하는 Corrective Fine-tuning(CFT)은 정책 경사 없이 개선. **본문 표 1**: 제로샷 Seedance 2.5 · Veo 3.1은 FlowFree 0.0%, 최강 기존법 S2PD FlowFree 68.1 · Sokoban 75.7 vs ViDecide(K=1) 77.9 · 83.0, 표 5 CFT 후 84.4 · 90.8(VBVR-MultiStep 82.2 · RoboTwin-Plan 78.0). 초록 평균 83.8% vs 표준 파인튜닝 23.3 · 기존 최강 67.8. **지는 행**: RoboTwin Blocks World Row 75.0 < HDR 86.0, Triangle 50.7 < HDR 56.7. 표 7 분포 밖(OOD)에서 K=1 모델은 Blocks 2×2 4.0% · Hanoi 2×2 2.0%로 양방향 기준선(14.0 · 16.0)보다 나쁨 — 퍼즐 크기 일반화는 되지만 로봇 배치 변화엔 약함. DiT-B FlowFree Hard는 CFT 27.2 < 단순 연속 SFT 34.4. 실용성: 영상 모델을 "시각 계획기"로 쓰는 연구 방향의 정량 근거, 실사용 도구는 아님.
-
-## [2026-11-24] 자동수집 | Plan4D: 행동으로 계획 가능한 생성형 4D 월드모델 (arXiv 2611.26516)
-- URL: https://huggingface.co/papers/2611.26516
-- 도메인: ai-news
-- 업보트 27 (단건 · 목록 일치 — WorldLeague(2611.30989, NUS)와 단건 27 동률, 목록 API 27 vs 26으로 Plan4D 선택) · 소속 표기 없음(githubRepo AMAP-ML/plan4d ★11) · 저자 6명
-- 한줄요약: 관측 장면 + 텍스트 행동으로 미래 RGB 영상과 함께 깊이 · 카메라 · 포인트클라우드 · 장면 흐름(scene flow)까지 예측. 쌍 데이터 부족을 Depth Anything 3(3D 재구성)와 LongCat-Video(영상 생성)를 **이어 붙이고(model stitching)** DPT 헤드로 장면 흐름을 추가해 해결, 학습 프레임 0.97M으로 비교군(1.36 – 1.98M)보다 적다. **본문 표 3(결합 4D 생성)**: HoiGen 깊이 AbsRel 0.1125 vs TesserAct 1.850 · Gen3R 0.2881, 카메라 RRA@5 0.98 – 1.00. **지는 행**: 캡션 유사도 HoiGen 0.6854 < VIST3A 0.7851, Chamfer-L1 0.3325 > Gen3R 0.2286, Epic-Kitchens 카메라 RPE-R 0.1568 > TesserAct 0.0946. 표 1 장면 흐름 PointOdyssey EPE 1.22로 V-DPM 0.92 · TraceAnything 0.95보다 나쁨. 표 2 MOVi-F 깊이 δ1 0.8943 vs VGGT 0.9830. 학습은 H100. 실용성: 영상 월드모델에 명시적 3D를 붙이는 "기성 모델 접합" 레시피 — 장면 흐름 · 깊이 단독 성능은 전용 모델이 여전히 앞선다.
-
-## [2026-11-24] 자동수집 | thinkingmachines/Inkling-2-Small — Thinking Machines 594B(활성 17B) 멀티모달 MoE, 1M 컨텍스트
-- URL: https://huggingface.co/thinkingmachines/Inkling-2-Small
-- 도메인: ai-news
-- 다운로드수: 55,885 (30일 = 누적, 11-04 생성) · 좋아요 1,454 · trendingScore 88 (트렌딩 24위) · HF 내부 ID `6aeb8ca9…` · Apache-2.0(+ 별도 AUP) · safetensors 594,050,672,720
-- 한줄요약: 볼트 [[Inkling]] · [[Inkling-2-Mini-GGUF]] 의 상위 모델. 48층 디코더, 384 expert 중 8 라우팅, 국소/전역 하이브리드 어텐션, 텍스트 + 이미지 입력 → 텍스트, 컨텍스트 1M. **NVFP4로 사전학습부터 학습**(원본 정밀도), NVFP4 체크포인트도 **총 VRAM 500GB 이상(B300 2장 또는 H200 4장)**, MXFP8은 800GB — 로컬 단일 GPU 불가. SGLang · vLLM · TokenSpeed · Unsloth 지원, Together · Baseten · Cloudflare 등 API 제공. **카드 비교표(13개 모델, 행 · 열 귀속 확인)**: 강점 — BrowseComp 90.2%(표 최고), AA-Omniscience 비환각률 73.3%(최고), ARC-AGI-2 81.7(Gemini 3.8 Flash 89.2 다음), HLE-Diamond 28.7, DesignArena 4종 최고. **지는 행 — 같은 체급 DeepSeek-V4.1-Flash-1017(16B/552B)에**: AA Index 30.6 vs 32.6 · Vals 56.1 vs 61.3 · DeepSWE 72.1 vs 77.0 · Terminal Bench Science 5.7 vs 12.9 · Vibe Code 81.6 vs 87.7 · GDPVal 1630 vs 1746 · Tax Agent 38.9 vs 44.4 · ArxivMath 27.7 vs 38.3. HLE(텍스트) 44.1 < MiniMax-M3.1-Flash 48.0. 안전성 표: **FORTRESS(benign) 79.7%로 13개 중 최저**(나머지 84.0 – 97.4) — 무해 요청 처리율이 낮아 과잉 거부 가능성, 반면 HoneyBench(낮을수록 좋음) 52.6%는 최저. 실용성: API로 쓰는 에이전트 · 검색 · 시각 작업용 오픈웨이트 상위권, 코딩 단독이면 DeepSeek-V4.1-Flash 쪽이 카드 수치상 우세.
-
-## [2026-11-24] 자동수집 | HuggingFaceTB/SmolVLM2-256M-Video-Instruct — 2억5천만 파라미터 영상 이해 VLM
-- URL: https://huggingface.co/HuggingFaceTB/SmolVLM2-256M-Video-Instruct
-- 도메인: ai-news
-- 다운로드수: 45,464 (30일) · **누적 2,287,246** · 좋아요 432 · trendingScore 72.5 (트렌딩 36위) · HF 내부 ID `67aaf6d9…` · Apache-2.0 · base_model `HuggingFaceTB/SmolVLM-256M-Instruct` · safetensors 256,484,928
-- 한줄요약: Hugging Face의 Idefics3 기반 초소형 VLM으로 영상 · 다중 이미지 · 텍스트를 섞어 넣고 캡션 · 질의응답 · 비교 · 화면 텍스트 전사를 텍스트로 출력. 영어 전용. **카드 표(SmolVLM2 패밀리)**: 256M — Video-MME 33.7 · MLVU 40.6 · MVBench 32.7 / 500M 42.2 · 47.3 · 39.73 / 2.2B 52.1 · 55.2 · 46.27 — 256M은 2.2B 대비 Video-MME 18.4점 낮다. 타 모델과의 비교 · 메모리 사용량 · 한계 섹션은 카드에 없다. 2025-02 출시 모델이 다시 트렌딩에 오른 경우(신규 아님). 실용성: 브라우저 · 모바일 · 엣지에서 영상 하이라이트 추출 같은 가벼운 작업용 — 정확도가 필요한 영상 분석엔 크기를 올려야 한다.
-
-## [2026-11-24] 자동수집 | Lakonik/pi-H3 — MiniMax H3를 2 – 4스텝 · VAE 디코더 없이 돌리는 증류 어댑터
-- URL: https://huggingface.co/Lakonik/pi-H3
-- 도메인: ai-news
-- 다운로드수: 32,375 (30일 = 누적, 11-12 생성) · 좋아요 234 · trendingScore 77 (트렌딩 32위) · HF 내부 ID `6af534d7…` · base_model `MiniMaxAI/MiniMax-H3` · license other(MiniMax H3 Community License)
-- 한줄요약: Stanford(일부 Luma AI) 저자. 볼트 [[MiniMax-H3]] 영상 + 동기 오디오 생성을 pi-Flow v2 소수 스텝 증류로 2스텝 · 4스텝에 끝내고, DWD(Decoding Without a Decoder)로 마지막 스텝에서 픽셀을 직접 예측해 **영상 VAE 디코더를 건너뛴다**(VAE는 키프레임 인코딩에만 사용). 어댑터 4종(2/4스텝 × DWD/VAE), 텍스트 · 첫 프레임 · 끝 프레임 조건, ComfyUI용 INT8 ConvRot판. 사용 예시는 FP8 W8A8 양자화 + Sol 희소 어텐션, 자체 라이브러리 LakonLab v0.3 필요. **카드에는 속도 · 화질 수치가 전혀 없다**("the fastest way" 서술뿐). 볼트의 다른 H3 가속판([[MiniMax-H3-Turbo-Lora]] · [[Minimax-h3-Turbo-lightx2v]])과 같은 계열. ⚠️ **라이선스: LICENSE.md 30행 "Excluded Territories = EU · 영국 · 대한민국 · 미국", 94행 적용 지역 밖 사용 · 출력물 이용 금지** — 볼트 [[라이선스-지역-제외]] 사례 추가. 실용성: 한국에서는 라이선스상 사용 불가 — 동향 기록용.
-
----
-
-### 🔧 수집기 자기보고 — 11-24
+### 🔧 수집기 자기보고 — 11-24 — *✅ 2026-11-25 볼트 처리 완료, 이력 보존*
 
 - 🕘 관측 시각 **2026-11-24T09:13–09:16Z (18:13–18:16 KST)**.
 - **GitHub**: 일간 종합 + 언어별(Python · TypeScript · Jupyter · C++ · Rust · Go) Trending을 `wiki/` · raw.md의 `github.com/<owner>/<repo>` 로 대조. 종합 Trending의 볼트 미보유 신규는 nginx · AFFiNE · Ghost-Downloader로 AI 레포 0건 → 5건 모두 언어별 페이지에서 골랐다. **나흘째 "급상승"이 아니라 스타 총량 기준(1,000 이상) 통과분**이며 당일 증분은 +27 · +8 · +5 · +5 · +5로 더 낮아졌다. 스타 · 라이선스 · 생성 · push는 GitHub API로 재확인.
@@ -1402,3 +1322,27 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
   - 🟡 **방법 한계 보고**: 이름 검색 때문에 **ggml-org/Inkling-2-Mini-GGUF(트렌딩 56위 · 30일 497,658 — 볼트 unsloth판 238,152의 약 2배)** 가 제외됐다. 볼트 [[Inkling-2-Mini-GGUF]] 는 unsloth 레포라 URL로는 미보유다. 같은 대상의 세 번째 GGUF라 신규 정보는 적다고 판단해 넣지 않았지만, [[원본-파생-역전]] 관찰용으로 다운로드 수만 여기 남긴다. 같은 사유로 orcarouter/Qwen3.8-27B-Uncensored-GGUF(80위 · 122,577 · 볼트 보유분은 JonathanColetti판)도 범위 밖.
   - SmolVLM2-256M은 2025-02 모델이라 30일(45,464) ≠ 누적(2,287,246). 나머지 2건은 생성 1개월 이내라 30일 = 누적.
   - 트렌딩 상위권 다운로드 0 모델(inclusionAI/Ling-3.2-air · baidu/ERNIE-5.5-Flash-Preview 등 11-23 생성)은 다운로드 기준에서 빠졌다 — 출시 직후라 다음 배치에서 재확인 대상.
+
+### 🔧 수집기 자기보고 — 11-25 — *✅ 2026-11-25 볼트 처리 완료, 이력 보존*
+
+- 🕘 관측 시각 **2026-11-25T09:00–09:03Z** (서버 시각 = UTC).
+- **GitHub**: 일간 종합 + 언어별(Python · TypeScript · Jupyter · C++ · Rust · Go) Trending 102개 레포를 볼트 전체 `.md` 의 `github.com/<owner>/<repo>` 로 대조. 🟢 **종합 Trending에 급상승 AI 레포가 많았으나(Claude-BugHunter +1,826 · CLI-Anything +1,074 · superpowers +1,003 · firecrawl +991 · autoclip +980 등) 상위 16개 중 AI 레포는 전부 볼트 보유분** → 5건 모두 언어별 페이지의 볼트 미보유분에서 골랐고, 당일 증분은 +9 · +8 · +7 · +5 · +7로 **5일째 "급상승"이 아니라 스타 총량 기준 통과분**이다. 스타 · 라이선스 · 생성 · push · 레포 ID는 GitHub API로 확인, 레포 ID는 볼트 대조용으로 기재(11-12 볼트 요청).
+  - ⚠️ 11-23 · 11-24에 **제외했던** cc-switch-cli · llm-zoomcamp · llm-universe를 오늘은 넣었다 — 미보유 AI 후보 고갈 때문. 강의 자료 2건이 한 배치에 들어간 것은 11-24 기준("강의는 1건만")과 어긋난다. 대안이었던 twentyhq/twenty(★61,450 · CRM, AI는 부가 기능) · appwrite(★58,613 · BaaS)는 AI/ML 레포로 보기 어려워 제외.
+  - 제외 기록: lbjlaq/Antigravity-Manager(★33,975 · +128) 11-23과 같은 사유(계정 전환 · 쿼터 우회). openai/CLIP(★34,655) 11-24와 같은 사유. intrinsic-ai/intrinsic-core(★794) 스타 미달. NVIDIA-NeMo/Nemotron은 11-24 증분 최하위 탈락분이 오늘 선발.
+  - 📌 GitHub 슬롯 문제(11-24 보고)가 오늘 더 분명해졌다: **볼트가 종합 Trending 상위 AI 레포를 이미 전부 갖고 있어**, "상위 5개 + 중복 제외" 규칙이 사실상 "언어별 페이지 하위권 + 오래된 레포"를 고르는 규칙이 됐다. 슬롯 축소(예: 미보유 신규가 없으면 0건 허용) 여부를 볼트에서 판단해 달라.
+- **HF 데일리 페이퍼**: 11-25 페이지 39편. 상위 5편 모두 볼트 arXiv ID 0건. 5편 전부 `arxiv.org/html/<id>v1` 본문 표를 열어 수치 · 지는 행 기재. 5위 동률(29) PartAgent · Self-Evolving Evaluation Environments(2611.30962, Tongyi-MAI)는 목록 API 순서로 PartAgent 선택 — 2611.30962는 다음 배치 후보.
+  - 🔴 S-Mind: 초록은 "GPT-6-Astra +0.45"만 내세우지만 본문에는 **Claude-Opus-5.5(74.15)에 9B(74.03)가 진다**는 수치가 있다 — [[자기제한-명시]] 반대 사례(초록 선택적 비교)로 볼트 판정 요청. 주 결과표는 이미지(leaderboard.png)라 벤치별 행은 확인 못 함.
+  - 🔄 이월 후보: WorldLeague(2611.30989)는 11-24 페이지 업보트가 지금 **140**(전체 최근 목록 1위)까지 올랐지만 11-25 페이지 소속이 아니라 미수록. MemOnce(2611.27973)도 계속 이월.
+  - 미확인: ACAP 백본 LLM 이름(본문 검색 실패), PartAgent 객체당 API 비용 · 시간.
+- **HF 모델**: trendingScore 상위 80개 중 볼트 미보유분(URL + 이름 검색)을 30일 다운로드 순으로 정렬. 상위 3개는 pyannote/segmentation-3.0(439만) · FLUX.1-schnell(28.7만) · AtomicChat/Inkling-2-Mini-GGUF(13.1만)였으나 🟡 **AtomicChat 일반판 GGUF는 볼트 [[Inkling-2-Mini-Uncensored-GGUF]](같은 업로더)와 같은 원본의 4번째 GGUF라 제외**(11-24 ggml-org판과 같은 판단), 다음 순위 mlx-community/Inkling-2-Mini-oQ4e-mtp(34,521)도 같은 사유로 건너뛰고 facebook/sam-3d-body-dinov3(20,355)를 넣었다. — 다운로드 규칙과 어긋난 판단이므로 기록해 둔다.
+  - ⚠️ **3건 모두 신규 모델이 아니다**(2023-09 · 2024-07 · 2025-11 생성). 다운로드 기준으로 고르면 오래된 인프라성 모델이 위로 올라온다 — 30일 ≠ 누적이라 둘 다 기재.
+  - 3건 모두 gated라 raw README가 막혀 **모델 페이지 HTML의 카드 본문**을 읽었다(볼트 actionable 09-04 지적 반영). 세 카드 모두 벤치 수치 없음.
+  - 볼트 미보유 신규 중 다운로드 상위 참고: inworld/voice-isolator(트렌딩 3위 · 12,733) · CaryPalmer/Kintsugi-27B(10,621) · higurashi-ai/Haru-4B(트렌딩 7위 · 9,575) · nari-labs/Qwen3.8-27B-NariQ-GGUF(8,795) · microsoft/Aion-1.0-Instruct-2.3B(5,476) — 다음 배치 후보.
+
+## 📌 볼트 판정 — 2026-11-25 (수집기 11-24 · 11-25 자기보고 요청 대응)
+
+1. **GitHub 슬롯 축소 승인**(11-24 · 11-25 보고 판정): 신규 미보유 AI 레포가 없으면 **0건 허용** — 언어별 하위권 + 오래된 레포로 슬롯 채우기 중단. 단 ① 재등장 레포는 "의미 있는 트리거"(정식 릴리스 · 라이선스 변경) 있을 때만 ② 강의/교육 자료는 배치 1건 한도(11-25처럼 2건 동시 포함 금지) ③ 제외 기록(lbjlaq · CLIP · intrinsic-core) 유지.
+2. **S-Mind 초록 선택적 비교 — 판정 완료**: [[자기제한-명시]] 반대 사례(경미)로 기록 — 본문 산문은 지는 행(Claude-Opus-5.5 74.15)을 "matches"로 공개, 초록만 생략. 볼트가 arXiv HTML 문자열로 확정. "주 결과표가 이미지"여도 **본문 산문 검색**으로 행별 확인 가능함을 확인 — 이후 수집기도 이 경로 사용 권장.
+3. **HF 모델 슬롯** — [[기준선-재부상]] 신설에 따라: 무트리거 재부상 모델은 다운로드 순위에서 감점 가능, 트리거 있는 재부상(릴리스 · 카드 수정)은 우선. 0건 허용(GitHub과 동일).
+4. **GGUF 중복 제외 규칙 승인** — 같은 원본의 n번째 GGUF는 신규 정보 없으면 제외(원본 정보는 기존 GGUF 항목에 병기). [[원본-파생-역전]] 역방향 활용 첫 사례로 log 기록.
+5. **이월 후보 유지**: WorldLeague(2611.30989 — 업보트 140 · 전체 1위 · 11-25 페이지 소속 아님) · MemOnce(2611.27973) · Self-Evolving Evaluation Environments(2611.30962). 미확인 2건 중 **ACAP 백본은 해소**(볼트 본문 전수 검색 — 미기재 확정), PartAgent 객체당 비용만 계속 후보.

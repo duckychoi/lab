@@ -1249,6 +1249,116 @@
 			"width": 400,
 			"height": 200,
 			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-25 배치\n로봇/3D도 접합으로 — 학습 0 · 위임 · stitching",
+			"x": 60,
+			"y": 17045,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1125-slam-3dgs-1",
+			"type": "file",
+			"file": "wiki/sources/Embo-Harness.md",
+			"x": 60,
+			"y": 17165,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-2",
+			"type": "file",
+			"file": "wiki/sources/ACAP.md",
+			"x": 60,
+			"y": 17425,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-3",
+			"type": "file",
+			"file": "wiki/sources/PartAgent.md",
+			"x": 60,
+			"y": 17685,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-4",
+			"type": "file",
+			"file": "wiki/sources/S-Mind.md",
+			"x": 60,
+			"y": 17945,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-5",
+			"type": "file",
+			"file": "wiki/sources/Plan4D.md",
+			"x": 60,
+			"y": 18205,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-6",
+			"type": "file",
+			"file": "wiki/sources/Motion-Mamba-2.0.md",
+			"x": 60,
+			"y": 18465,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-7",
+			"type": "file",
+			"file": "wiki/sources/3AGameFactory-Motion.md",
+			"x": 60,
+			"y": 18725,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-8",
+			"type": "file",
+			"file": "wiki/sources/carla.md",
+			"x": 60,
+			"y": 18985,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-9",
+			"type": "file",
+			"file": "wiki/sources/sam-3d-body-dinov3.md",
+			"x": 60,
+			"y": 19245,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-slam-3dgs-x1",
+			"type": "file",
+			"file": "wiki/concepts/동결-교정층.md",
+			"x": 560,
+			"y": 17165,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -2074,6 +2184,93 @@
 			"id": "b1122-slam-3dgs-e3",
 			"fromNode": "b1122-slam-3dgs-1",
 			"toNode": "b1122-slam-3dgs-x2"
+		},
+		{
+			"id": "b1125-slam-3dgs-h1",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-1"
+		},
+		{
+			"id": "b1125-slam-3dgs-h2",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-2"
+		},
+		{
+			"id": "b1125-slam-3dgs-h3",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-3"
+		},
+		{
+			"id": "b1125-slam-3dgs-h4",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-4"
+		},
+		{
+			"id": "b1125-slam-3dgs-h5",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-5"
+		},
+		{
+			"id": "b1125-slam-3dgs-h6",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-6"
+		},
+		{
+			"id": "b1125-slam-3dgs-h7",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-7"
+		},
+		{
+			"id": "b1125-slam-3dgs-h8",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-8"
+		},
+		{
+			"id": "b1125-slam-3dgs-h9",
+			"fromNode": "b1125-slam-3dgs-hdr",
+			"toNode": "b1125-slam-3dgs-9"
+		},
+		{
+			"id": "b1125-slam-3dgs-e1",
+			"fromNode": "b1125-slam-3dgs-1",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "학습 0 — 층 0"
+		},
+		{
+			"id": "b1125-slam-3dgs-e2",
+			"fromNode": "b1125-slam-3dgs-2",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "동적 위임"
+		},
+		{
+			"id": "b1125-slam-3dgs-e3",
+			"fromNode": "b1125-slam-3dgs-3",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "전체가 교정층"
+		},
+		{
+			"id": "b1125-slam-3dgs-e4",
+			"fromNode": "b1125-slam-3dgs-4",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "LoRA r64"
+		},
+		{
+			"id": "b1125-slam-3dgs-e5",
+			"fromNode": "b1125-slam-3dgs-5",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "model stitching"
+		},
+		{
+			"id": "b1125-slam-3dgs-e6",
+			"fromNode": "b1125-slam-3dgs-6",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "대조군·본체 신설"
+		},
+		{
+			"id": "b1125-slam-3dgs-e7",
+			"fromNode": "b1125-slam-3dgs-7",
+			"toNode": "b1125-slam-3dgs-x1",
+			"label": "프로그램+결정적 실행기"
 		}
 	]
 }

@@ -4,7 +4,7 @@ type: domain
 domain: video-saas
 tags: [video-saas, higgsfield, seedance, kling, 영상자동화]
 created: 2026-04-09
-updated: 2026-11-22
+updated: 2026-11-25
 sources: [Vidu-S2.md, Vidu-S1.md, Programmable-World-Model.md, instagram-저장-2026-02-2026-04.md, AI영상자동화-SaaS-Higgsfield-2026.md, VGI-BENCH.md, Motion-Omni.md, video-shotcraft.md, FastVideo.md]
 ---
 
@@ -691,3 +691,9 @@ few-step 증류의 통상적 불만은 *"빠르지만 구도가 바뀐다"* 이�
 - 🆕 [[NoPeWorld]] (업보트 56) — DiT 동결 + 궤적 조건 prediction head · 침투 방지를 head 쪽 책임으로 — 생성 본체를 못 믿는 구조의 영상판.
 - 🆕 [[TAISR]] (업보트 22) — **학습 불필요** RTC 플러그인: MLLM 이 글자를 추론해 캡션으로 넣어 초해상 · Level 2 글자는 SR 12종 전멸(최고 24.12) · RTC 로 24.54→45.84 · 대가는 PSNR 소폭 하락 자인 · 새 지표 GTTCA([[측정도구-먼저-반증]]).
 - 🔴 [[Sulphur-3]] (dl 133,732) — H3 기반 검열 해제 영상 생성 체크포인트 · **H3 Community License 승계 → 대한민국 사용 불가**([[라이선스-지역-제외]] 9번째) · 카드에 벤치 · 품질 수치 0 · actionable 보류 등록.
+
+## 2026-11-25 배치 (11-24 + 11-25 자동수집 26 중 video-saas 3 — 볼트 재분류)
+🎯 **축**: 영상 파이프라인의 "기준선 좌표" 확보 — 검증된 이전 세대([[sam2]])와 계획·증류의 다음 층([[ViDecide]] · [[pi-H3]]).
+- 🆕 [[sam2]] (★20,228) — SAM 2.1 표 수치 전건 기록(tiny 91.2 FPS · large J&F 79.5) · 영상 마스킹 검증 기본값 · 텍스트 프롬프트는 [[sam3]] 쪽.
+- 🆕 [[ViDecide]] (업보트 30→43) — 영상 확산을 단계별 인과 생성 + 종료 학습 · 평균 83.8%(표준 파인튜닝 23.3) · 상용 모델(Seedance 2.5 · Veo 3.1) 계획 과제 **0%** — 품질 경쟁과 물리 일관성 경쟁 분리 확인.
+- 🆕 [[pi-H3]] (dl 32,375→57,282 · 하루 +77%) — H3 2–4스텝 증류 + **DWD로 VAE 디코더 우회** · 🔴 라이선스 한국 사용 불가([[라이선스-지역-제외]] 10번째 — 볼트 LICENSE 원문 직접 확인).

@@ -5933,3 +5933,43 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 3. Clover-35B-A3B 가중치 공개 확인 후 조건부 시험(16GB 단일 GPU 확산 LM 재현)
 
 <!-- logged at 2026-11-24 09:25:22 -->
+
+## [2026-11-25] ingest | **대기 26건 전량 처리** (11-24 자동수집 13 + 11-25 자동수집 13 · 크론 노트 0)
+
+- **도메인**: ai-news 12(vllm-ascend · Loom-Attention · NightWatch · Nemotron · FLUX.1-schnell · pyannote-segmentation-3.0 · GenAI_Agents · audiocraft · cc-switch-cli · llm-zoomcamp · llm-universe · edgeever) · slam-3dgs 9(Motion-Mamba-2.0 · Embo-Harness · 3AGameFactory-Motion · Plan4D · ACAP · PartAgent · S-Mind · carla · sam-3d-body-dinov3) · video-saas 3(ViDecide · pi-H3 · sam2) · local-llm 2(Inkling-2-Small · SmolVLM2-256M-Video-Instruct) — 수집기는 26건 전부 `ai-news` 표기, 볼트 재분류
+- **분해**: **신규 26 · 소스 갱신 0**. 처리 시작 `grep -c '^- URL:'` = 26 → 처리 후 0(이틀치 한 배치 — 11-22(26건) 이후 최대)
+- **추가 페이지**: **30개** (소스 26 · 엔티티 3 — Peking-University · Nanyang-Technological-University · pyannote · 개념 1 — 기준선-재부상) | **업데이트 페이지**: 개념 5(동결-교정층 n=12 · 라이선스-지역-제외 10번째 · 자기제한-명시 반대 사례 · 원본-파생-역전 역방향 · 파라미터-다중표기 +2) + 도메인 4쪽 + canvas 4종 + index.md + actionable.md(+2) + raw.md(판정 5건)
+- **페이지 수**: → **1966** (sources **1699** · entities 135 · concepts 117 · synthesis 11 · domains 4) ✅ 실측 — 이번 배치 기여 **+30**(소스 26 · 엔티티 3 · 개념 1). 시작점 실측 1936 — 11-24 log 표기(1931 · sources 1671 · synthesis 8)보다 **+5 스테일**이었음: 타 세션 증분 sources +2(MAI-Thinking-1-Rocket-대화로그 · RSI-Survey-2609.11873 — mtime 11-24 10:48/20:45 · log 미기록) + synthesis +3(training-recipes-2026-11 · world-models-2026-11 · tap-depth-fusion — 11-24 22시대 연구 세션). 산술 검증: 1936+30=1966 ✓
+- **canvas 업데이트**: YES — 4종에 `b1125-*` 노드 +37(ai-news 14 · slam 11 · video 6 · local 6) · 엣지 +43 · 재파싱 + b1125 파일 존재 + 엣지 참조 검증 통과
+- **actionable 추가**: YES — 2항목(carla Agentic CARLA 시험 · sam-3d-body 게이트 승인+품질 확인)
+- **독립 검증**: GitHub API 10레포(★ · 언어 · 라이선스 · 생성 · push — 전건 일치, ★ 소폭 증가) · HF models API 6건(dl · 좋아요 · 내부 ID · safetensors · 생성 — 전건 일치, pyannote/FLUX/sam-3d-body는 수집값 정확 일치) · HF papers API 10편(업보트 자연 증가: Motion Mamba 88→189(2.1배) · Embo 52→99 · ViDecide 30→43 · 조직 · githubRepo 일치) · **arXiv HTML 직접 판독 2건**(ACAP 백본 미기재 확정 — 모델명 토큰 전수 검색 0건 · S-Mind Claude 지는 행 74.15를 본문 산문에서 확인) · **LICENSE.md 원문 1건**(pi-H3 30행 Excluded Territories 한국 포함 — 수집기 판독과 일치) · 🟡 자기정정 1건: HF API `expand[]=license` 는 유효 옵션이 아님(HTTP 400 — 8옵션 중 1개 오류가 전체 응답을 400으로 만든다, [[무응답-오귀속]] 적용해 상태코드 확인 후 재시도)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배운 것)
+
+**[[동결-교정층]] 이 신설 다음 날 표본 4 → 12로 확산했다.** 11-24의 "하루 4표본"이 우연이 아니었음을 오늘 확인 — 하드웨어 플러그인([[vllm-ascend]]) · 감시 플러그인([[NightWatch]]) · 프로그램+결정적 실행기([[3AGameFactory-Motion]]) · 학습 0 하네스([[Embo-Harness]]) · stitching([[Plan4D]]) · LoRA([[S-Mind]]) · 증류 어댑터([[pi-H3]]) · 동결 전문가 루프([[PartAgent]]) — 8개의 서로 다른 층 유형이 같은 모양. 대조군([[Loom-Attention]] 본체 재설계 — 이론 FLOPs +2% vs 실측 처리량 8–16% 감소 · [[Motion-Mamba-2.0]] PCM 본체 신설)까지 갖춰져 층 유형 분류가 가능해졌다. 단, 표본이 볼트 수집 편향(HF 데일리 상위 5편 선발)을 공유할 가능성은 미검증 — 명칭 자작 표시 유지.
+
+### 🏆 주요 발견
+1. 🆕 [[기준선-재부상]] 신설 — 하루 7건(carla 2017 · audiocraft 2023 · pyannote 2023 · sam2 2024 · FLUX.1-schnell 2024 · SmolVLM2 2025-02 · 11-19 Meta-Llama-3-8B) + 부분 1(sam-3d-body 2025-11). 11-19의 "원인 미확인" 1건이 **수집기 2채널 자기보고와 함께 시스템적 패턴으로 확정**. 유형 분리: 트리거 있는 재부상(carla 1.0 릴리스 · FLUX 카드 수정) vs 무트리거(검색 기본값 · 부품 수요 — pyannote 30일 439만).
+2. 🔴 [[라이선스-지역-제외]] 10번째 — [[pi-H3]]: **서드파티 어댑터가 원본 라이선스 전체를 승계**(지역 제외 + III.3 출력물 타 모델 학습 금지까지). 볼트가 LICENSE.md 원문 직접 확인(30행 한국 포함 — Sulphur-3 때 미실시했던 원문 재열람을 이번에 수행). "검열 해제 파생(Sulphur)과 증류 가속 파생(pi-H3)이 같은 조항에 묶인다".
+3. ✅ [[자기제한-명시]] 반대 사례(경미) — [[S-Mind]] **초록-본문 비대칭**: 초록은 이긴 3개만 나열, 본문 산문은 "matches ... Claude-Opus-5.5 (74.15%)"로 지는 행 공개. 볼트 arXiv HTML 직접 판독으로 확정 — 수집기가 "주 결과표가 이미지라 불가"라 했던 수치가 본문 산문에 존재. **"초록은 마케팅, 본문 산문이 근거"**.
+4. 🆕 [[원본-파생-역전]] **역방향 활용 첫 사례** — 수집기가 AtomicChat GGUF(30일 131,191)를 "같은 원본의 4번째 GGUF · 신규 정보 없음"으로 제외(mlx판도 동일) → 관찰 개념이 수집 필터 근거로 쓰인 첫 기록. 원본 [[Inkling-2-Small]] 등록(dl 55,885→67,132 · ♥1,454→1,480 — 계열 원본 3종 완비).
+5. ✅ 수집기 미확인 해소 — ACAP 백본 LLM: 본문 전수 토큰 검색(GPT/Claude/Gemini/Qwen/GLM/MiMo/DeepSeek/Kimi/SenseNova) 결과 **관련 인용 외 0건** — "미확인"을 "미기재 확정"으로 승격(재현 불가의 근거 명확화). 남은 것: PartAgent 객체당 비용(본문 없음 확인).
+6. ✅ 지는 행 계속 — Motion Mamba(지연 4–8배 · 단기 준수 DreamControl/MoLingo 밀림) · Embo(모델 교체 시 38–40%) · ViDecide(OOD 2–4% — 양방향 기준선 이하) · Loom(실측 8–16% 느림 · PIQA/HellaSwag/BoolQ/ARC-C 열세) · PartAgent(Part-T +0.18 근소 · 유료 API 2종) · ACAP(고정 위임 AUC 36.3 단일 이하 · T09/T19 직접 제어 열세) · 3AGameFactory(강한 모델 +1.9p · Aesthetics 하락 · Quality 최고는 GPT-6-Astra 단독) · NightWatch(성공률 동률 · Qwen3.8 개선 0 · 정적 문서 역효과) · Inkling-2-Small(FORTRESS benign 최저 79.7% · 코딩 8지표 DeepSeek 밀림) · pi-H3(성능 수치 0).
+7. ✅ 업보트 드리프트 — 11-24 수집 논문이 이틀 새 2배 내외(Motion Mamba 88→189 · Embo 52→99 · ViDecide 30→43). **HF 데일리 지수도 수집일 기준으로만 의미** — 측정일 병기는 [[원본-파생-역전]] 의 다운로드와 동일 원리.
+8. 📋 수집기 요청 판정 2건 — GitHub 슬롯 축소 **승인**(미보유 신규 0건 허용 · 강의 1건 한도 · 트리거 있는 재등장만) · GGUF 중복 제외 규칙 승인. raw.md 말미에 수집기용 판정 블록 기록.
+
+### 🔴 볼트 한계 (숨기지 않는다)
+1. 실행 0건 — 설치 · 추론 · 벤치 재현 없음.
+2. 본문 표 수치 검증은 2건만 직접 수행(S-Mind 산문 · ACAP 토큰 검색) — Motion Mamba · Embo · ViDecide · Plan4D · Loom · PartAgent · 3AGameFactory · NightWatch 표 수치는 수집기 11-24/25 판독 인용.
+3. [[동결-교정층]] n=12 — 층 유형 분류(어댑터/head/외부모듈/텍스트/하네스/인프라)는 볼트 판단 · "동결" 스펙트럼 경계 미확정 지속 · 수집 편향 공유 가능성 미검증.
+4. [[기준선-재부상]] — 무트리거 재부상의 원인(검색 알고리즘 · 자동 다운로드 · 실수요) 미검증 — 표본 유형 분류만 확실.
+5. S-Mind 프런티어 비교는 EASI 리더보드(2026-07-01) 인용값의 본문 재확인 — 리더보드 원본 미확인.
+6. pyannote-segmentation-3.0이 볼트 체인(/down-analysis · /reat-voice)에서 실제 사용 중인지 미검증(추정만).
+7. 볼트 git 커밋 안 함(자동 백업). 작업 스크립트: `/tmp/ing1125-scripts/` · 데이터: `/tmp/ing1125/`.
+
+### 🔥 actionable 최우선
+1. **carla 1.0 Agentic CARLA** — Unreal MCP + Skills 64를 Claude Code로 시험(GPU 16GB 확인 선행)
+2. **sam-3d-body-dinov3** — 수동 게이트 승인 신청 → 출력 품질 1차 확인(SAM License 상업 조건 병기)
+
+<!-- logged at 2026-11-25 09:24:35 -->

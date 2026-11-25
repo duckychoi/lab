@@ -4,7 +4,7 @@ type: domain
 domain: local-llm
 tags: [local-llm, edge-ai, slm, agent-memory, on-device]
 created: 2026-04-09
-updated: 2026-11-22
+updated: 2026-11-25
 sources: [XConf.md, ZGCM-1.md, MiniCPM5-2B.md, Qwen3.8-Flash-Next-NVFP4.md, Qwopus3.8-27B-Flash-GGUF.md, VoiceMem.md, Qwen3.8-27B-Uncensored-Aggressive-MTP-GGUF.md, Dont-Drop-Dropout.md, Tiel-Coder-35B-A3B-GGUF.md, Huihui-Qwen3.8-27B-abliterated-GGUF.md, openwhispr.md, kimi-k3-in-c.md, Spark-X2.5-4B.md, K2-Horizon-MoVA-36B-A4B.md, SAS.md, DeepSeek-V4.1-Flash.md, colibri.md, NeoHorse-1-4B.md, NeoHorse-1-9B.md, MiniCPM.md, DeepSeek-V4.1-Flash-Paper.md]
 ---
 
@@ -940,3 +940,8 @@ LoRA만 쓰거나 리플레이만 쓰는 구성은 **이 논문이 전부 실패
 🎯 **축**: **후행학습을 편집으로 대체** — [[동결-교정층]] 4번째 표본. 그리고 구현체는 있는데 표준 런타임이 못 따라오는 역방향([[선언된-구현체-공백]]).
 - 🆕 [[Inkling-2-Mini-Uncensored-GGUF]] — rank-1 LoRA 49지점 편집으로 거부 방향 제거(원본 동결) · MMLU −1.5%p(p=0.006) · KL 게이트 미달을 **카드가 스스로 공개** · ♥ 역방향([[원본-파생-역전]] 급등 구간 경고).
 - 🆕 [[Olala-v1.0-mini-7A1B]] (OVHcloud) — Mamba-3 29 + 어텐션 7층 MoE(총 6.8B · 활성 1B) · 🔴 **공식 llama.cpp/vLLM 미지원(포크 필수) · 일반 양자화 NaN**(공식 GGUF/MLX 만) · 동급 대비 열세 행(Ling-3.0-tiny · LFM3-1.7B) 공개 · Apache-2.0 · 한국어 사전학습 포함.
+
+## 2026-11-25 배치 (11-24 + 11-25 자동수집 26 중 local-llm 2 — 볼트 재분류)
+🎯 **축**: 오픈웨이트의 양극단 — 로컬 불가 상위권 원본([[Inkling-2-Small]])과 엣지 최소 VLM([[SmolVLM2-256M-Video-Instruct]]).
+- 🆕 [[Inkling-2-Small]] (dl 55,885→67,132 · ♥1,480) — 594B/활성 17B · **NVFP4 사전학습**(원본 정밀도) · VRAM 500GB+ → 로컬 불가, API 축 · BrowseComp 90.2% 최고 vs DeepSeek-V4.1-Flash 코딩 열세 · FORTRESS benign **최저 79.7%**(과잉 거부 주의) · [[원본-파생-역전]] 원본 축 등록.
+- 🆕 [[SmolVLM2-256M-Video-Instruct]] (30일 4.6만 · 누적 229만) — 256M 영상 VLM · Video-MME 33.7(2.2B 대비 −18.4) · 엣지 영상 "가능 vs 쓸만" 갭 기록.

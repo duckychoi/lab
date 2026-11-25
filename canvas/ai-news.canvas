@@ -9308,6 +9308,146 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1125-ai-news-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-25 배치\n동결-교정층 확산(n=12) · 기준선-재부상 신설",
+			"x": 60,
+			"y": 62620,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1125-ai-news-1",
+			"type": "file",
+			"file": "wiki/sources/vllm-ascend.md",
+			"x": 60,
+			"y": 62740,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-2",
+			"type": "file",
+			"file": "wiki/sources/Loom-Attention.md",
+			"x": 60,
+			"y": 63000,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-3",
+			"type": "file",
+			"file": "wiki/sources/NightWatch.md",
+			"x": 60,
+			"y": 63260,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-4",
+			"type": "file",
+			"file": "wiki/sources/Nemotron.md",
+			"x": 60,
+			"y": 63520,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-5",
+			"type": "file",
+			"file": "wiki/sources/FLUX.1-schnell.md",
+			"x": 60,
+			"y": 63780,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-6",
+			"type": "file",
+			"file": "wiki/sources/pyannote-segmentation-3.0.md",
+			"x": 60,
+			"y": 64040,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-7",
+			"type": "file",
+			"file": "wiki/sources/GenAI_Agents.md",
+			"x": 60,
+			"y": 64300,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-8",
+			"type": "file",
+			"file": "wiki/sources/audiocraft.md",
+			"x": 60,
+			"y": 64560,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-9",
+			"type": "file",
+			"file": "wiki/sources/cc-switch-cli.md",
+			"x": 60,
+			"y": 64820,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-10",
+			"type": "file",
+			"file": "wiki/sources/llm-zoomcamp.md",
+			"x": 60,
+			"y": 65080,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-11",
+			"type": "file",
+			"file": "wiki/sources/llm-universe.md",
+			"x": 60,
+			"y": 65340,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-12",
+			"type": "file",
+			"file": "wiki/sources/edgeever.md",
+			"x": 60,
+			"y": 65600,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-ai-news-x1",
+			"type": "file",
+			"file": "wiki/concepts/기준선-재부상.md",
+			"x": 560,
+			"y": 62740,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -17129,6 +17269,94 @@
 			"fromNode": "b1124-ai-news-1",
 			"toNode": "b1124-ai-news-x1",
 			"label": "같은 축 · 코드 쪽"
+		},
+		{
+			"id": "b1125-ai-news-h1",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-1"
+		},
+		{
+			"id": "b1125-ai-news-h2",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-2"
+		},
+		{
+			"id": "b1125-ai-news-h3",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-3"
+		},
+		{
+			"id": "b1125-ai-news-h4",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-4"
+		},
+		{
+			"id": "b1125-ai-news-h5",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-5"
+		},
+		{
+			"id": "b1125-ai-news-h6",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-6"
+		},
+		{
+			"id": "b1125-ai-news-h7",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-7"
+		},
+		{
+			"id": "b1125-ai-news-h8",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-8"
+		},
+		{
+			"id": "b1125-ai-news-h9",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-9"
+		},
+		{
+			"id": "b1125-ai-news-h10",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-10"
+		},
+		{
+			"id": "b1125-ai-news-h11",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-11"
+		},
+		{
+			"id": "b1125-ai-news-h12",
+			"fromNode": "b1125-ai-news-hdr",
+			"toNode": "b1125-ai-news-12"
+		},
+		{
+			"id": "b1125-ai-news-e1",
+			"fromNode": "b1125-ai-news-2",
+			"toNode": "b1125-ai-news-x1",
+			"label": "대조군·본체 재설계"
+		},
+		{
+			"id": "b1125-ai-news-e2",
+			"fromNode": "b1125-ai-news-3",
+			"toNode": "b1125-ai-news-x1",
+			"label": "층 유형: 감시 플러그인"
+		},
+		{
+			"id": "b1125-ai-news-e3",
+			"fromNode": "b1125-ai-news-5",
+			"toNode": "b1125-ai-news-x1"
+		},
+		{
+			"id": "b1125-ai-news-e4",
+			"fromNode": "b1125-ai-news-6",
+			"toNode": "b1125-ai-news-x1",
+			"label": "부품 수요"
+		},
+		{
+			"id": "b1125-ai-news-e5",
+			"fromNode": "b1125-ai-news-8",
+			"toNode": "b1125-ai-news-x1"
 		}
 	]
 }

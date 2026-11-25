@@ -1949,6 +1949,66 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1125-local-llm-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-25 배치\n오픈웨이트 양극단 — 594B 원본 vs 256M 엣지",
+			"x": 60,
+			"y": 23050,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1125-local-llm-1",
+			"type": "file",
+			"file": "wiki/sources/Inkling-2-Small.md",
+			"x": 60,
+			"y": 23170,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-local-llm-2",
+			"type": "file",
+			"file": "wiki/sources/SmolVLM2-256M-Video-Instruct.md",
+			"x": 60,
+			"y": 23430,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-local-llm-x1",
+			"type": "file",
+			"file": "wiki/concepts/원본-파생-역전.md",
+			"x": 560,
+			"y": 23170,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1125-local-llm-x2",
+			"type": "file",
+			"file": "wiki/concepts/파라미터-다중표기.md",
+			"x": 560,
+			"y": 23170,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1125-local-llm-x3",
+			"type": "file",
+			"file": "wiki/concepts/기준선-재부상.md",
+			"x": 560,
+			"y": 23170,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -3251,6 +3311,34 @@
 			"fromNode": "b1124-local-llm-1",
 			"toNode": "b1124-local-llm-x1",
 			"label": "교정층 표본 4"
+		},
+		{
+			"id": "b1125-local-llm-h1",
+			"fromNode": "b1125-local-llm-hdr",
+			"toNode": "b1125-local-llm-1"
+		},
+		{
+			"id": "b1125-local-llm-h2",
+			"fromNode": "b1125-local-llm-hdr",
+			"toNode": "b1125-local-llm-2"
+		},
+		{
+			"id": "b1125-local-llm-e1",
+			"fromNode": "b1125-local-llm-1",
+			"toNode": "b1125-local-llm-x1",
+			"label": "원본 축 등록"
+		},
+		{
+			"id": "b1125-local-llm-e2",
+			"fromNode": "b1125-local-llm-1",
+			"toNode": "b1125-local-llm-x2",
+			"label": "594B/17B/NVFP4 3축"
+		},
+		{
+			"id": "b1125-local-llm-e3",
+			"fromNode": "b1125-local-llm-2",
+			"toNode": "b1125-local-llm-x3",
+			"label": "2025-02 재부상"
 		}
 	]
 }

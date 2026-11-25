@@ -1379,6 +1379,66 @@
 			"width": 400,
 			"height": 200,
 			"color": "6"
+		},
+		{
+			"id": "b1125-video-saas-hdr",
+			"type": "text",
+			"text": "## 🆕 2026-11-25 배치\n기준선 좌표 — sam2 · 계획 · 증류+디코더 우회",
+			"x": 60,
+			"y": 18040,
+			"width": 400,
+			"height": 80,
+			"color": "5"
+		},
+		{
+			"id": "b1125-video-saas-1",
+			"type": "file",
+			"file": "wiki/sources/sam2.md",
+			"x": 60,
+			"y": 18160,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-video-saas-2",
+			"type": "file",
+			"file": "wiki/sources/ViDecide.md",
+			"x": 60,
+			"y": 18420,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-video-saas-3",
+			"type": "file",
+			"file": "wiki/sources/pi-H3.md",
+			"x": 60,
+			"y": 18680,
+			"width": 400,
+			"height": 200,
+			"color": "4"
+		},
+		{
+			"id": "b1125-video-saas-x1",
+			"type": "file",
+			"file": "wiki/concepts/동결-교정층.md",
+			"x": 560,
+			"y": 18160,
+			"width": 400,
+			"height": 200,
+			"color": "6"
+		},
+		{
+			"id": "b1125-video-saas-x2",
+			"type": "file",
+			"file": "wiki/concepts/라이선스-지역-제외.md",
+			"x": 560,
+			"y": 18160,
+			"width": 400,
+			"height": 200,
+			"color": "6"
 		}
 	],
 	"edges": [
@@ -2280,6 +2340,33 @@
 			"fromNode": "b1124-video-saas-3",
 			"toNode": "b1122-video-saas-x1",
 			"label": "파생 9번째"
+		},
+		{
+			"id": "b1125-video-saas-h1",
+			"fromNode": "b1125-video-saas-hdr",
+			"toNode": "b1125-video-saas-1"
+		},
+		{
+			"id": "b1125-video-saas-h2",
+			"fromNode": "b1125-video-saas-hdr",
+			"toNode": "b1125-video-saas-2"
+		},
+		{
+			"id": "b1125-video-saas-h3",
+			"fromNode": "b1125-video-saas-hdr",
+			"toNode": "b1125-video-saas-3"
+		},
+		{
+			"id": "b1125-video-saas-e1",
+			"fromNode": "b1125-video-saas-3",
+			"toNode": "b1125-video-saas-x1",
+			"label": "증류 어댑터+DWD"
+		},
+		{
+			"id": "b1125-video-saas-e2",
+			"fromNode": "b1125-video-saas-3",
+			"toNode": "b1125-video-saas-x2",
+			"label": "지역 제외 10번째 · 한국"
 		}
 	]
 }
