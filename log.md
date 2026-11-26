@@ -5973,3 +5973,5 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 2. **sam-3d-body-dinov3** — 수동 게이트 승인 신청 → 출력 품질 1차 확인(SAM License 상업 조건 병기)
 
 <!-- logged at 2026-11-25 09:24:35 -->
+
+## [2026-11-26 09:14:10] ingest | 대기 항목 없음
