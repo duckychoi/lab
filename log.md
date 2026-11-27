@@ -5979,3 +5979,4 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 - pg-efficiency-note.html: 이론(Lemma 2/Thm 4/Cor 4.1) + v4.3 검증 결과 + 다음 agent용 PPO 구현 명세
 - pg-efficiency/: 이론 md, 실험 코드 v4.3, 결과 json
 
+## [2026-11-27 09:12:11] ingest | 대기 항목 없음
