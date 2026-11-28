@@ -1,6 +1,6 @@
 ---
 title: Raw — 인제스트 대기열
-updated: 2026-11-25 (✅ **26건 전량 처리** — 11-24 자동수집 13 + 11-25 자동수집 13 · 대기 0건 — `^- URL:` 26 → 0)
+updated: 2026-11-28 (✅ **9건 전량 처리** — 11-28 자동수집 · 대기 0건 — `^- URL:` 9 → 0 · 수집 공백 2일(11-26·27) 기록은 자기보고 블록에 보존)
 ---
 
 # Raw 대기열
@@ -1346,3 +1346,18 @@ Fryday가 Claude 콘솔 크레딧($200/월)으로 도는 **자동화 에이전�
 3. **HF 모델 슬롯** — [[기준선-재부상]] 신설에 따라: 무트리거 재부상 모델은 다운로드 순위에서 감점 가능, 트리거 있는 재부상(릴리스 · 카드 수정)은 우선. 0건 허용(GitHub과 동일).
 4. **GGUF 중복 제외 규칙 승인** — 같은 원본의 n번째 GGUF는 신규 정보 없으면 제외(원본 정보는 기존 GGUF 항목에 병기). [[원본-파생-역전]] 역방향 활용 첫 사례로 log 기록.
 5. **이월 후보 유지**: WorldLeague(2611.30989 — 업보트 140 · 전체 1위 · 11-25 페이지 소속 아님) · MemOnce(2611.27973) · Self-Evolving Evaluation Environments(2611.30962). 미확인 2건 중 **ACAP 백본은 해소**(볼트 본문 전수 검색 — 미기재 확정), PartAgent 객체당 비용만 계속 후보.
+
+---
+
+### 🔧 수집기 자기보고 — 11-28
+
+- 🕘 관측 시각 **2026-11-28T09:00–09:10Z** (서버 시각 = UTC). ⚠️ raw.md 최종 수정이 11-25 → **11-26 · 11-27 배치는 실행 흔적 없음**(수집 공백 2일). 11-26 페이지 논문(Sage-Med 82 · Mixture-of-Loops 76 · DyLoMo-DiT 73 · VibeVideoAgent 58 · Video Editing Without Videos 47)은 이번 배치 범위 밖 — 볼트가 필요하면 다음 배치에서 보충 가능.
+- **GitHub (1건)**: 종합 + 언어별 6개 Trending 117개 레포 → 볼트 전체 `.md` `github.com/<owner>/<repo>` 대조. 종합 Trending 상위 AI 레포(Claude-BugHunter +1,608 · superpowers +922 · CLI-Anything +666 · minimind +660 등)는 **전부 볼트 보유**. 볼트 11-25 판정 1(0건 허용 · 하위권 오래된 레포로 슬롯 채우기 중단)에 따라 **릴리스 트리거가 있는 davinci-resolve-mcp 1건만** 수록.
+  - 제외 기록: mrdbourke/pytorch-deep-learning(★19,495 · +4 · 2021 강의) · google-research/google-research(★39,572 · +48 · 2018 모노레포, 식별 가능한 트리거 없음) — 둘 다 "언어별 하위권 + 오래된 레포". ed-donner/undercover(★135) 스타 미달. openai/CLIP · intrinsic-core · lbjlaq/Antigravity-Manager 기존 제외 유지. zero-to-mastery-ml · ml-course-hse 강의(하위권).
+- **HF 데일리 페이퍼 (5건)**: 11-28(토) 페이지는 09:00Z 기준 **0편** → 최신 11-27 페이지(22편) 업보트 상위 5편, 볼트 arXiv ID 0건. Stable GDN-2 · ProxyGenBench는 `arxiv.org/html/<id>v1` 본문에서 방법명 · 표 수치 확인(초록에서 방법명 누락돼 있었음). 6위 StateWeaver(2611.34290, 27)는 다음 후보.
+  - 🔄 이월 후보 WorldLeague(2611.30989) · MemOnce(2611.27973) · Self-Evolving Evaluation Environments(2611.30962)는 11-27 페이지 소속이 아니라 이번에도 미수록.
+- **HF 모델 (3건)**: trendingScore 상위 80개 중 볼트 미보유(URL + 이름 검색)를 30일 다운로드 순 정렬.
+  - 🟡 nokeepai/Inkling-2-Mini-Unbound-GGUF(157,746 · 2위)는 **판정 4(같은 원본 n번째 GGUF 제외)** 로 제외. 같은 사유로 ISTA-DASLab/Inkling-2-Mini-GSQ-RCO-GGUF(24,931) · orcarouter/Inkling-2-Mini-abliterated-GGUF(21,019) · AtomicChat/Ternary-Bonsai-2.5-27B-Uncensored-GGUF(28,699, 오늘 수록분의 파생) 제외.
+  - 🟡 krea/Krea-2-Turbo(85,374 · 생성 2026-06 · 최종 수정 07-24)는 **무트리거 재부상**이라 [[기준선-재부상]] 판정 3에 따라 감점 제외.
+  - Kolibri-1.1은 다운로드 순위를 **공식 GGUF(44,807)** 로 잡았으나 원본 정보가 카드에 있어 원본 URL로 수록 — 규칙 해석이 엇갈릴 수 있어 기록.
+  - 다음 후보: KRAFTON/Raon-1-mini(원본 1,477 · GGUF 18,778 · 11-27 카드 수정 = 트리거 · 30B-A4B 한국어 특화 · AIME 2026 96.7 자기신고) · ai-sage/GigaChat4-37B-A4B-GGUF(16,942) · inworld/voice-isolator(20,510, 이름 검색 히트로 볼트 보유 추정).

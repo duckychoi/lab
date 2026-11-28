@@ -4,12 +4,16 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, video-generation, image-to-video, omni-modal, audio-video, comfyui, minimax, video-saas, partial-open-source]
 created: 2026-08-06
-updated: 2026-11-16
-sources: [MiniMax-H3-Physical-Reasoning.md]
+updated: 2026-11-28
+sources: [MiniMax-H3-Physical-Reasoning.md, ProxyGenBench.md, Minimax-H3-Turbo-Fusion.md]
 reliability: medium
 ---
 
 # Comfy-Org/MiniMax-H3 — MiniMax-H3의 ComfyUI 통합 재패키지
+
+> [!update] 2026-11-28 — 🔴 **[[ProxyGenBench]]에서 Strict 5모델 최하위 확정(0.344)** + 파생 퓨전 1건 도착
+> 60 장면 · 312 케이스 체크리스트 벤치(수집기 판독): H3는 **Strict(프록시 유지) 0.344로 나열된 5개 중 최하위**(Seedance-2.5 0.450 · Kling-4.0 0.425 · Wan-3.0 0.399 · Seedance-2.0 0.375). **Joint(프록시+완전성+바인딩 동시 충족)는 전 모델이 7.2~17.4%로 붕괴**하며, 최고 Joint는 Strict 4위 Seedance-2.0(17.4%) — **H3의 Joint 개별값은 수집기 판독에 미기재**. 벤치가 보인 **"프록시 디테일↑ ↔ 완성도↓" 트레이드오프**는 모델 선택만으로 해결되지 않는 구조다.
+> ⇒ 08-29 발견("Context-IR 부재로 공식 품질 재현 불가")과 합쳐 **"H3 결과는 공식 데모·벤치와 간극이 있다"** 관측 강화. 파생 측: lightx2v 3-LoRA 가중합 퓨전([[Minimax-H3-Turbo-Fusion]] · DL 22,131 · 정량 근거 없음).
 
 > [!update] 2026-09-02 갱신 — DL 5,263,381 → **5,532,597**(+**269,216**) · 좋아요 **4,775**
 > 08-30 이후 3일 만의 재관측(08-31 배치에는 미포함). **동결 없이 정상 증분** — 같은 배치의 Qwen 두 모델이 동결됐던 08-31 구간에 [[LTX-2.5]]와 더불어 **집계가 전역 문제가 아니었음을 보강하는 관측**이다.

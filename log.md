@@ -5980,3 +5980,42 @@ ALFWorld 에서 Direct Prompting 은 **시뮬 성공률 97%** 로 Trace2Env(88%)
 - pg-efficiency/: 이론 md, 실험 코드 v4.3, 결과 json
 
 ## [2026-11-27 09:12:11] ingest | 대기 항목 없음
+
+<!-- logged at 2026-11-28 09:38:51 -->
+
+## [2026-11-28 09:38:51] ingest | **대기 9건 전량 처리** (11-28 자동수집 · 크론 노트 0 · 수집 공백 2일(11-26·27) 후 첫 배치)
+- **도메인**: ai-news 6 (Stable-GDN-2 · OS-Omni · Solve-Vision-with-Code · Vernier · ProxyGenBench · Ternary-Bonsai-2.5-27B-GGUF) / local-llm 1 (Kolibri-1.1) / video-saas 2 (davinci-resolve-mcp · Minimax-H3-Turbo-Fusion) — 수집기 9건 전부 ai-news 표기 → 볼트 재분류 7
+- **분해**: 신규 9 · 소스 갱신 0 · 처리 시작 \`grep -c '^- URL:'\` = 9 → 처리 후 0 (라인 시작 기준 — 잔존 13건은 과거 규약/판정 본문 속 문자열)
+- **추가 페이지** 11: 소스 9 · 엔티티 2 (**Aleph-Alpha** · **lightx2v** — HF 조직 실측 신설) · 개념 0 | **업데이트**: 엔티티 1 (Prism-ML — 후속 세대 블록) + 소스 3 (Ternary-Bonsai-2-27B successor · Minimax-h3-Turbo-lightx2v 드리프트+퓨전 · MiniMax-H3 ProxyGenBench) + 개념 3 (복합지표-분해 5건 동시 재현 · 자기제한-명시 4건 · 시계열-예측-파운데이션-모델 Vernier 해상도 경고) + 도메인 3쪽 + canvas 3종 + index.md + actionable.md(+1) + raw.md(9건 삭제 — 11-25 판정·자기보고 보존 · 1363 라인)
+- **페이지 수**: → **1977** (sources 1708 · entities 137 · concepts 117 · synthesis 11 · domains 4) — 산술 증분 1966+11=1977 ✓ (전면 재실측은 11-25 기록 유지)
+- **canvas 업데이트**: YES — b1128-* 3종: ai-news +10노드(945→955)/+12엣지 · video-saas +4/143 · local-llm +4/202 ⇒ 합계 +18 노드 +19 엣지
+- **actionable 추가**: YES — 1항목 (H3 8스텝 모션 열화 육안 비교 — 09-04 이월 분과 결합 · 우선순위 낮음)
+- **독립 검증**: HF papers API 5편 (업보트 131/109/61/58/36 — GDN-2 130→131 자연 드리프트 · 조직·githubRepo 일치) · HF models API 3건 (DL 382,546 / 1,725 / 22,131 전건 일치) · GitHub API 1레포 (davinci-resolve-mcp ★4,466 · MIT · release 트리거) · HF org API 2건 (lightx2v 54모델 · Aleph-Alpha 32모델 — 신설 엔티티 근거 · Minimax-h3-Turbo DL 1,824,393 = 09-04 대비 +706,884/85일 ≈ +8,316/일)
+- **작업 방식**: 단독 처리(서브에이전트 0)
+
+### 🎯 핵심 인사이트 (배치 축)
+**단일 집계 지표가 구성을 접는다** — 하루 5건 동시 재현: ProxyGenBench Strict-vs-Joint 역전 · OS-Omni avg vs 플랫폼 극단 · Kolibri Overall-vs-agentic · Ternary-Bonsai-2.5 툴콜-vs-일반 · + 신형 **Vernier "순위" 연산 자체의 해상도 붕괴**(6.8순위/구분 단계 2개 미만/43쌍 역전 — 순위 간격<노이즈). 집계 → 분해 → [!warning] 의 루틴이 하루에 5번 통과했다.
+
+### 🏆 주요 발견
+- 복합지표-분해 5건(신형 포함) — [[복합지표-분해]] 에 11-28 표 추가
+- 자기제한-명시 4건 — **"이긴 지표 옆 지는 지표" 자발 분해 2건**(Kolibri Overall 대비 에이전틱 열위 공개 · Ternary 일반 82.1 vs 84.3 나란히)
+- Prism-ML 후속 세대 도착 — 에이전트 코딩 63%→90% 닫힘 · 10-04 확정 측정 성향("불리한 것을 적는다") 유지 · **제3자 재현 0건 지속**
+- Aleph-Alpha 조직 — 공식 GGUF DL 44,807 vs 원본 1,725 (**26배 — [[원본-파생-역전]] 역방향 사례**) + ♥밀도 이상(222/DL1,725 · timesfm-3.0 동형)
+- lightx2v 드리프트 실측 — Minimax-h3-Turbo +706,884/85일 · 퓨전 모델 도착(비교 불가 명시)
+- 수집기 운영 — 공백 2일 기록 · 판정 3·4 **첫 대량 적용**(Inkling GGUFs 4건 제외 · Krea-2-Turbo 무트리거 제외) · 다음 후보 KRAFTON/Raon-1-mini
+- 라이선스·지역 제외 사례 없음 — 11-28 배치는 [[라이선스-지역-제외]] 트리거 0건
+
+### 🔴 볼트 한계 (숨기지 않는다)
+- **실행 0건** — 전건 문서/카드 판독만
+- 논문 본문 벤치 수치 다수는 **수집기 판독 인용**(Stable-GDN-2 · ProxyGenBench · OS-Omni 등 — 볼트 arXiv 직접 판독 0)
+- Ternary-Bonsai-2.5 지는 행 비교 상대(용량 1.7배 GSQ-RCO IQ3_XXS) — **수집기 판독 · 방향 미검증**
+- Aleph-Alpha 법인 실체·GPAI 서명 — **미검증**(HF 조직 실측만)
+- davinci 93.6% · Fusion 98.41% — **자기보고 그대로**(Solve-Vision 자인은 범위 자인이라 구분 기록)
+- MiniMax-H3 **Joint 개별값은 미기재 명시**(Strict 0.344 최하위만 검증 — 값 지어내지 않음)
+- git 커밋 안 함 (볼트는 git 미사용)
+
+### 🔥 actionable 최우선
+1. **H3 8스텝 모션 열화 육안 비교** — 09-04 이월 분에 ProxyGenBench 좌표 결합(video-saas · 낮음 · 이번 배치 유일 신규)
+- 후속 후보: KRAFTON/Raon-1-mini(트리거 있음 — 다음 배치 기대)
+
+<!-- logged at 2026-11-28 09:38:51 -->

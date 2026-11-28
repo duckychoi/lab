@@ -4,12 +4,16 @@ type: source
 domain: video-saas
 tags: [video-saas, ai-news, hf-model, lora, minimax, turbo, distillation, lightx2v]
 created: 2026-09-04
-updated: 2026-09-04
-sources: []
+updated: 2026-11-28
+sources: [Minimax-H3-Turbo-Fusion.md]
 reliability: high
 ---
 
 # lightx2v/Minimax-h3-Turbo — 파생 가속층이 본류가 된 지점
+
+> [!update] 2026-11-28 — 📈 **조직 실측 드리프트 + 🆕 후속 퓨전 도착([[Minimax-H3-Turbo-Fusion]])**
+> **볼트 실측(11-28 · HF API 조직 목록)**: 본 모델 DL **1,824,393** · ♥**1,252** — 09-04 실측 1,117,509 대비 **+706,884 / 약 85일 ≈ 일평균 +8,316**. 09-04의 "파생 가속층 = 표준 배포 구성품" 판정 이후 성장 지속. 조직 `lightx2v`는 공개 모델 **54개**(Turbo/Lightning 계열 전문 · 볼트 신규 엔티티 [[lightx2v]] 참조).
+> 후속물 **[[Minimax-H3-Turbo-Fusion]]** 은 LoRA 3종 가중합(×1.0/×0.4/×0.4) 단일 퓨전 · 레퍼런스 기반(Ref2VA) · DL 22,131(4일차) · **정량 벤치 0**. ⚖️ **이 페이지의 [!action](8스텝 모션 열화 육안 비교)은 그대로 이월** — 퓨전은 과제 축이 달라(레퍼런스 기반) i2v 비교 대상이 아니며, 대신 [[ProxyGenBench]]가 **베이스 H3의 위치**(Strict 5모델 최하위 0.344)를 정량으로 잡았다.
 
 **HuggingFace**: https://huggingface.co/lightx2v/Minimax-h3-Turbo
 **다운로드(30일)**: **1,117,509** — raw 자동수집 값과 **완전 일치**

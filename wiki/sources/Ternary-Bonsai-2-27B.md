@@ -4,12 +4,16 @@ type: source
 domain: ai-news
 tags: [ai-news, hf-model, gguf, quantization, ternary, 27b, local-llm, 단위-불일치, 검사가능성-후퇴]
 created: 2026-09-20
-updated: 2026-10-10
-sources: [Bonsai-27B.md]
+updated: 2026-11-28
+sources: [Bonsai-27B.md, Ternary-Bonsai-2.5-27B-GGUF.md]
 reliability: high
 ---
 
 # Ternary-Bonsai-2-27B-gguf (prism-ml)
+
+> [!update] 2026-11-28 — 🆕 **후속 도착: [[Ternary-Bonsai-2.5-27B-GGUF]]** (동일 베이스 Qwen3.8-27B · DL 382,546 · 4일차)
+> 이 페이지의 최대 약점이었던 **"에이전트 코딩 FP16 대비 63%"** 가 후속에서 **90%** 로 닫혔다(카드 자기보고): SWE-bench Verified **60.8→75.6** · Terminal-Bench 2.1 **52.8→60.1** · DeepSWE **0→27.0**. 툴콜 강점은 유지(평균 77.2 vs FP16 77.7). 용량 **5.93GB/1.76bpw** — 본 페이지 PTQ1_0(5.95GB)과 동급.
+> 🔴 지는 행: 일반 16벤치 **82.1 vs 84.3** · 코딩 **54.2 vs 55.5**(용량 1.7배 GSQ-RCO IQ3_XXS 양자 대비 · 수집기 판독). 상세·벤치 표는 후속 페이지 참조.
 
 > [!update] 2026-10-04 갱신 — DL **3,969,867**(볼트 실측 · **관측 2026-10-04T09:12:38Z**) · 🏆🏆 **편차 −3.187% 의 원인을 특정했다: 양자화가 아니라 집계 범위다(비전 타워 0.46B)** · 🏆 **카드 전문 열람으로 "벤치 14종 이름 미확정" 이월 해소**
 > **볼트 독립 실측**: downloadsAllTime **3,969,867** = downloads(30일) **3,969,867**(나이 18일 < 30일이므로 일치가 정상 — [[지표-창길이]]) · likes **2,400** · trendingScore **222** · `gguf.total` **26,895,998,464** · `safetensors.total` **None** · `base_model` **["Qwen/Qwen3.8-27B"]** · apache-2.0 · created **2026-09-16** · lastModified **2026-09-25**. **수집기와 전 필드 완전 일치(드리프트 0).**

@@ -4,8 +4,8 @@ type: entity
 domain: ai-news
 tags: [quantization, ternary, gguf, local-llm, llama-cpp, mlx]
 created: 2026-09-20
-updated: 2026-10-04
-sources: [Ternary-Bonsai-2-27B.md, Bonsai-27B.md]
+updated: 2026-11-28
+sources: [Ternary-Bonsai-2-27B.md, Bonsai-27B.md, Ternary-Bonsai-2.5-27B-GGUF.md]
 reliability: medium
 ---
 
@@ -14,6 +14,12 @@ reliability: medium
 > [!warning] 🔴 2026-10-04 **중복 엔티티 발견 — 같은 조직에 페이지가 두 개다**
 > `wiki/entities/` 에 **`Prism-ML.md`(이 페이지 · created 2026-09-20 · 참조 10건)** 과 **`prism-ml.md`(created 2026-09-29 · 참조 4건)** 이 공존한다. **같은 조직**(HF `prism-ml` · GitHub `PrismML-Eng`)이고 **sources 도 겹친다**([[Ternary-Bonsai-2-27B]]).
 > ⇒ 📌 **[[정규명-우선-중복검사]] 가 다루는 바로 그 실패이고, 볼트 자기 볼트에서 발생했다.** 🔴 **통합하지 않고 남긴다** — 양쪽이 참조되고 있어 삭제하면 링크가 끊긴다. ⚖️ **통합은 별도 작업으로 actionable 등록**(정본 = 참조 많은 `Prism-ML`, 대소문자 정규화 규칙 필요).
+
+> [!update] 2026-11-28 갱신 — 🆕 **후속 세대 [[Ternary-Bonsai-2.5-27B-GGUF]] 도착 — 전작 최대 약점(에이전트 코딩 63%)이 FP16 대비 90%로 닫혔다**
+> **볼트 실측(11-28 · HF API)**: `prism-ml/Ternary-Bonsai-2.5-27B-GGUF` DL **382,546**(created 2026-11-24 · 4일차 → 30일 창 = 누적, [[지표-창길이]]) · likes **655** · trending 4위 · apache-2.0 · base **Qwen/Qwen3.8-27B**(전작과 동일 베이스 → 직접 비교 가능한 계열). 초기 속도 **≈95,637/일** — 전작 5일 창 일평균(≈102,549)과 동급 수준.
+> - **세대 점프(카드 자기보고 · 전작 대비)**: SWE-bench Verified **60.8→75.6** · Terminal-Bench 2.1 **52.8→60.1** · DeepSWE **0→27.0**. **에이전트 코딩이 FP16 대비 63%(전작) → 90%**. 용량 **5.93GB / 1.76bpw** — 전작 PTQ1_0(5.95GB)과 동급 용량.
+> - **유지**: 툴콜 5종 평균 **77.2 vs FP16 77.7**(전작의 강점이었던 툴콜 보존). MTP 디코드 **1.5~1.8배(~300 tok/s, H200/B200)**.
+> - 🔴 **지는 행**: 일반 16벤치 **82.1 vs 84.3** · 코딩 **54.2 vs 55.5** — 비교 상대는 용량 1.7배인 GSQ-RCO IQ3_XXS 양자(수집기 판독). ⇒ 10-04에 확정한 **측정 성향("자기에게 불리한 것을 적는다")이 2.5에서도 유지** — 이긴 행과 진 행을 같은 카드에 나란히 둔다. 단 **제3자 재현은 여전히 0건**.
 
 > [!update] 2026-10-04 갱신 — 🏆 **[[Ternary-Bonsai-2-27B]] 카드 전문 열람으로 이 벤더의 측정 성향이 확정됐다**
 > **볼트 실측(2026-10-04T09:12:38Z)**: `prism-ml/Ternary-Bonsai-2-27B-gguf` DL **3,969,867**(09-29 실측 3,457,124 → **+512,743 / 5일 · 일평균 ≈102,549**) · likes **2,400** · trendingScore **222** · `gguf.total` **26,895,998,464** · `base_model` **Qwen/Qwen3.8-27B**.

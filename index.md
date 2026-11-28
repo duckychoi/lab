@@ -1,8 +1,9 @@
 ---
 title: Wiki Index
-updated: 2026-11-25 (✅ **대기 26건 전량 처리** — 11-24 자동수집 13 + 11-25 자동수집 13 = **신규 26**. 크론 노트 0건. `^- URL:` 26 → 0)
-total_pages: 1966  # 2026-11-25 실측(sources **1699** · entities **135** · concepts **117** · synthesis **11** · domains 4) — 이번 배치 기여 +30(신규 소스 26 · 엔티티 3 · 개념 1). 시작점 실측 1936: 이전 표기 1931은 타 세션 증분(sources +2 · synthesis +3, log 미기록)만큼 스테일이었음
-total_sources: 1699  # 2026-11-25 실측: 배치 신규 26 + 타 세션 2(MAI-Thinking-1-Rocket-대화로그 · RSI-Survey-2609.11873 — log 미기록, mtime으로 확인)
+updated: 2026-11-28 (✅ **대기 9건 전량 처리** — 11-28 자동수집 · 대기 0건. 크론 노트 0건. `^- URL:` 9 → 0)
+total_pages: 1977  # 2026-11-28 산술 증분: 이번 배치 +11(신규 소스 9 · 엔티티 2 · 개념 0) — 1966 기준. sources **1708** · entities **137** · concepts **117** · synthesis **11** · domains 4. 전면 재실측은 11-25 기록(1936 시작점 검증) 유지
+total_sources: 1708  # 2026-11-28: 배치 신규 9(11-28 자동수집 — 수집 공백 2일(11-26·27) 후 최초 배치)
+# 🎯 배치 축(2026-11-28) = **단일 집계 지표가 구성을 접는다** — [[복합지표-분해]] 하루 5건(Strict 4위가 Joint 최고([[ProxyGenBench]]) · Linux 인간 초과 ↔ 모바일 25p+([[OS-Omni]]) · 툴콜 평균이 일반·코딩 열화를 접음([[Ternary-Bonsai-2.5-27B-GGUF]]) · Overall +6.6 옆 에이전틱 후퇴([[Kolibri-1.1]]) · **신형: 순위 연산의 해상도 붕괴**([[Vernier]] — GIFT-Eval 6.8순위 · 43쌍 역전)). ✅ [[자기제한-명시]] 4건 — 이긴 지표 옆 지는 지표를 스스로 나란히(Solve-Vision-with-Code · Kolibri · Fusion 면책 · davinci Studio 전용 자인). 🆕 엔티티 2([[Aleph-Alpha]] · [[lightx2v]] — HF 조직 실측). 🔴 [[Prism-ML]] 후속 세대 도착(에이전트 코딩 63%→90%). 📋 수집 공백 2일(11-26·27) — 판정 4(n번째 GGUF 제외)·판정 3(무트리거 재부상 감점) 첫 대량 적용 배치.
 # 🎯 배치 축(2026-11-25) = **[[동결-교정층]] 확산 — 신설 다음 날 표본 4 → 12.** 하드웨어 플러그인([[vllm-ascend]]) · 감시 플러그인([[NightWatch]]) · 프로그램+결정적 실행기([[3AGameFactory-Motion]]) · 학습 0 하네스([[Embo-Harness]]) · stitching([[Plan4D]]) · LoRA([[S-Mind]]) · 증류 어댑터([[pi-H3]]) · 동결 전문가 루프([[PartAgent]]) — 대조군까지 갖춤([[Loom-Attention]] 본체 재설계 · [[Motion-Mamba-2.0]] 본체 신설). 부축: [[기준선-재부상]] 신설 — 하루 7건, 트리거 유형 분리. 🔴 [[라이선스-지역-제외]] 10번째([[pi-H3]] — 볼트 LICENSE 원문 직접 확인 · III.3 출력 학습 금지까지 승계 · 한국 포함). ✅ [[자기제한-명시]] 반대 사례([[S-Mind]] 초록-본문 비대칭 — 볼트 arXiv HTML 직접 판독). 🆕 [[원본-파생-역전]] 역방향 활용 첫 사례(같은 원본 n번째 GGUF 제외 규칙). 📋 수집기 GitHub 슬롯 축소 승인 — 미보유 신규 0건 허용(5일째 "급상승 아님" · 종합 트렌딩 AI 전량 보유).
 # 🎯 배치 축(2026-11-22) = **모델 크기 한 숫자가 비용을 말하지 않는다.** 같은 이틀 배치에 [[Inkling-2-Mini-GGUF]] 26.4B / 활성 3.4B / 루프 실효 5.4B · [[SenseNova-Loop-9B-GGUF]] 저장 9B / 연산 14.6B · [[Hy4-flash-GGUF]] 220B / 활성 약 12B 인데 GGUF 125–157GiB · [[Edge0-145B-NVFP4]] 145B / 활성 10.12B 에 VRAM 23.25 + RAM 38.27GiB · [[ZONOS3-Mini]] 800M / 활성 100M 이 왔다 → [[파라미터-다중표기]] · [[latent-MoE]] 신설. 속도는 활성 × 루프로, 적재는 총량으로 읽는다. 같은 구조가 선발에도 작동: 다운로드는 파생(GGUF)에 약 30배 · 17배 몰리고 좋아요는 원본에 남아([[원본-파생-역전]]) 수집기의 '30일 다운로드 순' 기준이 원본을 탈락시킨다. 🔴 [[FreeVideo]] — H3 를 8GB 로 돌려도 가중치는 한국 제외([[라이선스-지역-제외]] 8번째, 엔진이 조건을 끌고 온 첫 사례) · ✅ 반대로 [[Hy4-flash-GGUF]] 원본 LICENSE 는 지역 조항 0건. 볼트 판독 추가: [[splash]] 배수는 비교 상대에 따라 1.3–2.0×(차순위 엔진) vs 2.5–5.3×(llama.cpp) · [[Depth-Pro-2]] 코드 LICENSE 에 비상업 문구 없음 · [[MC-Lens]] = UCL · [[Posterior-Matching-Distillation]] = NVIDIA(수집기 소속 미기재 2건).
 # 🎯 배치 축(2026-11-19) = **만드는 것보다 고르는 것이 병목이다.** [[Resolution-Hypothesis]] — 에이전트 진화에서 후보 선택은 무작위와 다를 바 없고 방법 간 순위 차(수 %p) < 같은 방법 재실행 간 차(LLM 호출 1,000만+). 같은 날 [[awesome-mcp-servers]] 는 후보 1,403개를 검증 없이 늘리고, [[Game2Player]] 는 상태 기반 성공 판정으로 '개선을 검출 가능하게' 만드는 쪽에 투자했다. [[PROLA]] 는 3 seed ± 와 Full FT 에 지는 칸까지 공개(모범) · [[Jeveration]] 122× 는 가장 느린 Janus-Pro 대비, 품질은 그 아래. 🔴 [[Minimax-h3_Singularity-x-10Eros-Max_PRISM]] — 원본 apache 표기 vs H3 한국 제외 충돌([[라이선스-지역-제외]] 7번째) · [[DeepSeek-V4-Pro-Qwen3.5-9B-UNCENSORED-heretic-GGUF]] 원본의 23배 dl · 평가 0([[원본-파생-역전]]). 🔄 [[last30days-skill]] v4.3.2 — 볼트 로컬 스킬은 v2.9.5.
@@ -47,6 +48,8 @@ total_sources: 1699  # 2026-11-25 실측: 배치 신규 26 + 타 세션 2(MAI-Th
 
 ## entities
 
+- [[Aleph-Alpha]] — 🆕 2026-11-28 · 소스 1건([[Kolibri-1.1]]) · HF 조직 32모델 실측 · Kolibri 1.0(♥1,028)→1.1(♥222 · DL 1,725 — 공식 GGUF 44,807은 26배, [[원본-파생-역전]] 역방향) · 유럽 GPAI 서명국(수집기 보고 · 볼트 미검증)
+- [[lightx2v]] — 🆕 2026-11-28 · 소스 2건([[Minimax-h3-Turbo-lightx2v]] · [[Minimax-H3-Turbo-Fusion]]) · HF 조직 54모델 실측 · 베이스별 Turbo/Lightning 가속 LoRA 전문 · 정량 벤치 미공개 경향 2건 일관(09-04 · 11-28)
 - [[Thinking-Machines-Lab]] — 🆕 2026-11-22 · 소스 2건([[Inkling]] · [[Inkling-2-Mini-GGUF]]) · HF `thinkingmachines` · Inkling-2-Mini 26.4B / 활성 3.4B 루프형 MoE(Apache-2.0 + AUP) · 지는 행 9개 공개 · 다운로드는 unsloth GGUF 가 약 30배 · 🔴 조직 실체 미확인
 - [[Nanyang-Technological-University]] — 🆕 2026-11-25 · 소스 4건([[Embo-Harness]] · [[ViDecide]] · [[ACAP]] · [[S-Mind]] — 하루 배치 대학 조직 최다) · HF `mmlab-ntu` · "범용 모델을 물리/공간 문제에 접붙임" 포트폴리오(하네스 · 계획 · 위임 · 공간 토큰)
 - [[Peking-University]] — 🆕 2026-11-25 · 소스 2건([[Motion-Mamba-2.0]] · [[3AGameFactory-Motion]]) · HF `PekingUniversity` · 생성-제어 경계를 양쪽에서 공략
@@ -376,6 +379,17 @@ total_sources: 1699  # 2026-11-25 실측: 배치 신규 26 + 타 세션 2(MAI-Th
 ---
 
 ## sources
+
+### 2026-11-28 배치 (대기 **9건** 전량 처리 · 11-28 자동수집 = **신규 9** · GitHub 1 · HF논문 5 · HF모델 3 · 수집 공백 2일(11-26·27) · 🆕 엔티티 2([[Aleph-Alpha]] · [[lightx2v]]) · 기존 갱신 7([[Prism-ML]] · [[Ternary-Bonsai-2-27B]] · [[Minimax-h3-Turbo-lightx2v]] · [[MiniMax-H3]] · [[복합지표-분해]] · [[자기제한-명시]] · [[시계열-예측-파운데이션-모델]]))
+- 🆕 [[davinci-resolve-mcp]] — ★4,466 · MCP 로 Resolve 조작 · API 100% 커버(37/390툴) · 🔴 21.1+ 스크립팅 Studio 전용 자인 · `video-saas`
+- 🆕 [[Stable-GDN-2]] — 업보트 130→131 · 소거 연산자 정규화 → O(T) 상한 · RULER +6.80(순환형) · `ai-news`
+- 🆕 [[OS-Omni]] — 업보트 109 · 6플랫폼 CUA · 68.5% vs 인간 77.3% · Linux 초과 ↔ 모바일 25p+ · `ai-news`
+- 🆕 [[Solve-Vision-with-Code]] — 업보트 61 · 코딩 에이전트 0.923 · "계산 가능한 과제" 한정 자인 · `ai-news`
+- 🆕 [[Vernier]] — 업보트 58 · 리더보드 해상도 도구 · GIFT-Eval 6.8순위 · 풀 규칙만으로 43쌍 역전 · `ai-news`
+- 🆕 [[ProxyGenBench]] — 업보트 36 · 프록시 체크리스트(312 케이스) · Joint 최고 = Strict 4위 · H3 최하위 0.344 · `ai-news`
+- 🆕 [[Ternary-Bonsai-2.5-27B-GGUF]] — DL 382,546(4일차) · 에이전트 코딩 63%→90% · [[Prism-ML]] 후속 · `ai-news`
+- 🆕 [[Kolibri-1.1]] — DL 1,725 · GGUF 26배 역방향 · Overall 73.2(+6.6) · 에이전틱 후퇴 자발 공개 · `local-llm`
+- 🆕 [[Minimax-H3-Turbo-Fusion]] — DL 22,131 · 3-LoRA 퓨전 · "지각 품질 점수 아님" 면책 · `video-saas`
 
 ### 2026-11-25 배치 (대기 **26건** 전량 처리 · 11-24 자동수집 13 + 11-25 자동수집 13 = **신규 26** · GitHub 10 · HF논문 10 · HF모델 6 · 크론 노트 0 · 🆕 개념 신설 1([[기준선-재부상]]) · 개념 갱신 5(동결-교정층 n=12 · 라이선스-지역-제외 10번째 · 자기제한-명시 반대 사례 · 원본-파생-역전 역방향 · 파라미터-다중표기 +2) · 🆕 엔티티 신설 3([[Nanyang-Technological-University]] · [[Peking-University]] · [[pyannote]]) · 볼트 재분류: ai-news 12 · slam-3dgs 9 · video-saas 3 · local-llm 2 · 독립 검증: GitHub API 10 + HF models API 6 + HF papers API 10 전건 · arXiv 본문 직접 판독 2(ACAP 백본 미기재 확정 · S-Mind 지는 행) · LICENSE.md 원문 1(pi-H3))
 - 🆕 [[vllm-ascend]] — ★3,148 · vLLM 무수정 하드웨어 플러그인(Ascend NPU · RFC #11162) · `ai-news`
